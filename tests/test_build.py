@@ -24,6 +24,17 @@ HTML='''<!doctype html><html><head><title>BLUE SCHOLARS</title><base href="https
 <form action="/send"><input name="email"><button>Send</button></form>
 <div style="background:url(https://cdn.example/bg.png)">Background</div></body></html>'''
 
+def test_selected_archive_homepage_renders_despite_nested_metadata():
+    fixture=Path(__file__).parent/'fixtures'/'squarespace-homepage-20210529.html'
+    html=fixture.read_text(encoding='utf-8')
+    css='https://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/22/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/623-05142015/1371067617126/site.css'
+    resources={**RES,css:{'kind':'css','local_path':'/assets/site.css'}}
+    rendered,issues=render_html(html,HOME,resources,'')
+    soup=BeautifulSoup(rendered,'html.parser')
+    assert 'BLUE SCHOLARS' in rendered
+    assert soup.find('link',rel='stylesheet',href='/assets/site.css')
+    assert not soup.find('script',string=lambda value:value and 'COOKIE_BANNER' in value)
+
 def test_html_localizes_preserves_layout_and_removes_tracking():
     text,issues=render_html(HTML,HOME,RES,'/bluescholars')
     soup=BeautifulSoup(text,'html.parser')
@@ -85,7 +96,7 @@ def test_empty_preview_honest_and_links_valid(tmp_path):
     assert report['recovered_pages']==0
     assert report['placeholder_pages']>=6
     assert check(tmp_path/'_site','/bluescholars')==[]
-    assert 'not recovered' in (tmp_path/'_site/index.html').read_text().lower()
+    assert 'not recovered' in (tmp_path/'_site/2013/index.html').read_text().lower()
 
 def test_release_refuses_empty_site(tmp_path):
     fixture_root(tmp_path)
@@ -102,7 +113,7 @@ def test_raw_response_not_published_until_promoted(tmp_path):
     promote(tmp_path,reviewed=True)
     report=build(tmp_path,tmp_path/'_site','')
     assert report['recovered_pages']==1
-    assert 'Recovered historical sentence.' in (tmp_path/'_site/index.html').read_text()
+    assert 'Recovered historical sentence.' in (tmp_path/'_site/2013/index.html').read_text()
 
 def test_candidate_excludes_after_reference_without_approval(tmp_path):
     fixture_root(tmp_path);s=State(tmp_path)
@@ -110,6 +121,16 @@ def test_candidate_excludes_after_reference_without_approval(tmp_path):
     s.data['resources'][HOME]['status']='needs_review';s.save()
     assert build(tmp_path,tmp_path/'_candidate','',candidate=True)['recovered_pages']==0
     assert promote(tmp_path,reviewed=True)['promoted']==0
+
+def test_candidate_reports_stale_provider_error_as_a_gap(tmp_path):
+    fixture_root(tmp_path);s=State(tmp_path)
+    provider_error=(b'<html><head><title></title></head><body><p>This page cannot be displayed. '
+                    b'Please contact the service provider.</p></body></html>')
+    add_raw(s,HOME,'html',provider_error)
+    report=build(tmp_path,tmp_path/'_candidate','',candidate=True)
+    assert report['recovered_pages']==0
+    assert any(issue['type']=='invalid_source' and issue['url']==HOME for issue in report['issues'])
+    assert check(tmp_path/'_candidate','')==[]
 
 def test_later_capture_promotion_requires_resource_specific_review(tmp_path):
     fixture_root(tmp_path);s=State(tmp_path)
@@ -136,7 +157,75 @@ def test_project_subpath_and_nested_links(tmp_path):
         report=build(tmp_path,tmp_path/'_candidate',base,candidate=True)
         assert report['recovered_pages']==2
         assert check(tmp_path/'_candidate',base)==[]
-        assert (tmp_path/'_candidate/blog/deep/post/index.html').is_file()
+        assert (tmp_path/'_candidate/2013/blog/deep/post/index.html').is_file()
+
+def test_pre_squarespace_posts_do_not_enter_the_reference_edition(tmp_path):
+    fixture_root(tmp_path);s=State(tmp_path)
+    old=HOME+'blog/?p=555'
+    add_raw(s,old,'html',b'<html><body><p>WordPress era copy.</p></body></html>')
+    s.data['resources'][old]['actual_capture']='20100626072734';s.save()
+    promote(tmp_path,reviewed=True)
+    report=build(tmp_path,tmp_path/'_site','')
+    assert any(p['source']==old and p['path'].startswith('/2009/') for p in report['pages'])
+    assert not any(p['path'].startswith('/2013/archive-query/') for p in report['pages'])
+
+def test_legacy_article_navigation_has_a_local_edition_index(tmp_path):
+    fixture_root(tmp_path);s=State(tmp_path)
+    old=HOME+'blog/2010/01/saved-post'
+    add_raw(s,old,'html',b'<html><body><a href="/blog/">Blog</a><p>Recovered post.</p></body></html>')
+    s.data['resources'][old]['actual_capture']='20100626072734';s.save();promote(tmp_path,reviewed=True)
+    for base in ('','/bluescholars'):
+        build(tmp_path,tmp_path/'_site',base)
+        index=BeautifulSoup((tmp_path/'_site/2009/blog/index.html').read_text(),'html.parser')
+        assert index.find('h1',string='Recovered 2009 WordPress posts')
+        assert index.find('a',href=base+'/2009/blog/2010/01/saved-post/')
+        assert check(tmp_path/'_site',base)==[]
+
+def test_root_is_a_gateway_to_separate_historical_editions(tmp_path):
+    fixture_root(tmp_path);s=State(tmp_path)
+    add_raw(s,HOME,'html',b'<html><head><title>BLUE SCHOLARS</title></head><body><h1>Original Squarespace homepage</h1></body></html>')
+    s.data['resources'][HOME]['actual_capture']='20210529010817';s.save()
+    promote(tmp_path,reviewed=True)
+    report=build(tmp_path,tmp_path/'_site','')
+    root=BeautifulSoup((tmp_path/'_site/index.html').read_text(),'html.parser')
+    assert root.find('h1',string='Blue Scholars archive')
+    assert {a.get('href') for a in root.select('a.edition')}=={'/2007/','/2009/','/2013/'}
+    assert 'Original Squarespace homepage' in (tmp_path/'_site/2013/index.html').read_text()
+    assert all((tmp_path/'_site'/year/'index.html').is_file() for year in ('2007','2009','2013'))
+
+def test_same_homepage_url_keeps_older_and_squarespace_captures_separate(tmp_path):
+    fixture_root(tmp_path);s=State(tmp_path)
+    current=b'<html><body><h1>Squarespace May 2021</h1></body></html>'
+    add_raw(s,HOME,'html',current)
+    earlier=b'<html><body><h1>2007 independent design</h1></body></html>'
+    sha=hashlib.sha256(earlier).hexdigest();path='recovery/raw/'+sha+'.html'
+    (tmp_path/path).write_bytes(earlier)
+    s.data['resources'][HOME+'@@commoncrawl:20080907180956:'+sha[:12]]={
+        'url':HOME,'kind':'html','status':'recovered','raw_path':path,'sha256':sha,
+        'actual_capture':'20080907180956','bytes':len(earlier),'source_archive':'Common Crawl'}
+    s.save();promote(tmp_path,reviewed=True)
+    report=build(tmp_path,tmp_path/'_site','')
+    assert '2007 independent design' in (tmp_path/'_site/2007/index.html').read_text()
+    assert 'Squarespace May 2021' in (tmp_path/'_site/2013/index.html').read_text()
+    assert {p['path'] for p in report['pages']}>={'/2007/','/2013/'}
+
+def test_linked_current_article_gets_a_truthful_placeholder(tmp_path):
+    fixture_root(tmp_path);s=State(tmp_path)
+    listing=HOME+'blog/'
+    add_raw(s,listing,'html',b'<html><body><article><a href="/blog/original-observed-slug">Original title</a></article></body></html>')
+    promote(tmp_path,reviewed=True)
+    report=build(tmp_path,tmp_path/'_site','')
+    assert any(p['path']=='/2013/blog/original-observed-slug/' and p['status']=='not_recovered'
+               for p in report['pages'])
+
+def test_discovered_link_merges_existing_cdx_referrers_and_builds_placeholder(tmp_path):
+    fixture_root(tmp_path);s=State(tmp_path)
+    add_raw(s,HOME+'blog/','html',b'<html><body><a href="/blog/2009/01/linked-post/">Linked</a></body></html>')
+    target=HOME+'blog/2009/01/linked-post/'
+    s.add(target,'html','CDX:domain');s.save();promote(tmp_path,reviewed=True)
+    report=build(tmp_path,tmp_path/'_site','')
+    assert any(p['path']=='/2009/blog/2009/01/linked-post/' and p['status']=='not_recovered'
+               for p in report['pages'])
 
 def test_checker_detects_broken_local_link_and_remote_image(tmp_path):
     (tmp_path/'index.html').write_text('<html><body><a href="/missing/">Missing</a><img src="https://x.example/a.png"></body></html>')
@@ -159,7 +248,8 @@ def test_diagnostic_source_link_stays_on_wayback(tmp_path):
     fixture_root(tmp_path)
     build(tmp_path,tmp_path/'_site','/bluescholars')
     soup=BeautifulSoup((tmp_path/'_site/index.html').read_text(),'html.parser')
-    assert soup.find('a',string='Inspect the archived source')['href'].startswith('https://web.archive.org/web/')
+    source=(tmp_path/'_site/2013/index.html').read_text()
+    assert BeautifulSoup(source,'html.parser').find('a',string='Inspect the archived source')['href'].startswith('https://web.archive.org/web/')
 
 def test_css_import_media_whitespace_preserved():
     resources={'https://cdn.example/base.css':{'kind':'css','local_path':'/assets/base.css'}}

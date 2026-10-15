@@ -1,0 +1,452 @@
+/*
+Theme Name: Blue Scholars
+Theme URI: http://tubird.com/
+Description: Custom Theme Designed by WKND Studio, Developed by Tubird Creative Marketing
+Author: Tubird Creative Marketing
+Author URI: http://tubird.com/
+Version: 1.0
+Tags: black, blue, white, two-columns, fixed-width, custom-header, custom-background, threaded-comments, sticky-post, translation-ready, microformats, rtl-language-support, editor-style, custom-menu (optional)
+
+License:
+License URI:
+
+General comments (optional).
+*/
+
+* {margin:0; padding:0; border:0;}
+
+body { font-family:Helvetica, Arial, sans-serif; color: #333333; background: #FFFFFF; font-size:11px;}
+a {color: #333;text-decoration: none;}
+a:hover {color: #999; text-decoration: none;} 
+
+
+/************************************************************
+	header.php
+************************************************************/
+#page {margin: 0px auto; width: 900px; padding:0; overflow:hidden;}
+
+#search {overflow:hidden; padding:10px 0 0 0;}
+
+#header {padding:0px 0 0 0; position: relative; overflow:hidden;}
+#header h1 {float:left; font-size:26pt; text-transform:uppercase;}
+#header ul {list-style:none; float:right; margin:15px 0 0 0;}
+#header ul li {display:inline; margin:0 0 0 5px;}
+
+#nav {clear:both; float:none; width:900px; list-style: none; margin: 10px 0 0 0; border-top:2px solid #aaa; padding:10px 0 0 0;}
+#nav li {text-transform:uppercase; display:inline;}
+#nav a {color: #777;text-decoration: none; margin:0 5px 0 0; padding: 5px 10px 5px 0px; font-size:10pt;}
+#nav a:hover {color: #000000; }
+
+/************************************************************
+	index.php
+************************************************************/
+#content {padding: 10px 0px 30px 0px; float: left; width: 640px;  margin:0 20px 0 0; overflow: hidden; position:relative;}
+
+
+
+.post {clear:both; padding-top: 10px; overflow:hidden; padding:10px 0; border-bottom:1px solid #aaa;}
+.post img {float:left; margin:0 20px 0 0; width:200px; padding:5px; background:#eee; border:1px solid #ddd;}
+.post-date {float:left; font-size:7pt; color:#777;}
+.post-title {float: left; width: 400px; margin:0 0 0 0;}
+.post-title h2 {float:left; font-size:11pt; margin:1px 0 0 0;}
+.entry {float:left; padding-top: 5px; width:400px; height:140px; position:relative;}
+.entry p {font-size:9pt; line-height:140%;}
+.entry a {color:#56a1d5;}
+.entry a:hover {color:#aaa;}
+
+.frontnews {font-size:10pt; font-weight:bold; color:#000; margin:20px 0 0 0; padding:0 0 5px 0; border-bottom:1px solid #aaa; display:block;}
+.read_more {position:absolute; bottom:0; left:0; color:#aaa !important;}
+.read_more:hover {color:#000 !important;}
+
+.post-cat {background: url(images/mini-category.gif) no-repeat left center;padding-left: 18px;float:left;font-size: 95%;color: #999999;}
+.post-comments {background: url(images/mini-comments.gif) no-repeat left center;padding-left: 18px;float: right;font-size: 95%;}
+.post-calendar {background: url(images/mini-calendar.gif) no-repeat left center;padding-left: 18px;float: right;font-size: 95%;color: #999999;}
+.post-content {clear: both;padding-top: 10px;}
+
+.navigation {clear: both;padding: 10px 0px;}
+.navigation a, .navigation a:visited {color: #000;}
+.navigation a:hover {color:#aaa;}
+
+.previous-entries {float: left;padding-left: 18px;background: url(images/mini-nav-left.gif) no-repeat left center;font-size:8pt;color:#000;}
+.next-entries {float: right;padding-right: 18px;background: url(images/mini-nav-right.gif) no-repeat right center;font-size:8pt;color:#000;}
+
+#comments, #respond {border-bottom: 1px dotted #CCCCCC;padding-bottom: 5px;font-size:10pt;}
+
+.commentlist {margin: 10px 0px;padding-left: 20px;line-height: 130%; font-size:8pt;}
+.commentlist li{padding: 5px 10px;position: relative;}
+.commentlist .alt {background: #eee;}
+.commentlist cite, .commentlist cite a, .commentlist cite a:visited {font-weight: bold;font-style: normal;font-size: 120%;color: #000;}
+.commentlist small {margin-bottom: 5px;display: block;font-size: 87%;}
+
+#commentform {margin-top: 10px;font: 100% Helvetica, Arial, sans-serif;}
+#commentform p {padding: 6px 0px;margin: 0px;}
+#commentform label{font-weight: bold;color: #666666;font-size: 100%;}
+#commentform input{width: 153px;background:#eee;border: 1px solid #ddd;padding: 3px;margin-top: 3px;}
+#commentform textarea{width: 633px;height: 115px;background:#eee;border: 1px solid #ddd;padding: 2px;margin-top: 3px;}
+#commentform textarea:focus, #commentform input[type="text"]:focus {background: #ffffff;}
+#commentform #submit{font: bold 10px Helvetica, Arial, sans-serif;color: #000;border: none;float:right;width: 144px;height: 29px;}
+#commentform #submit:hover {background:#000; color:#fff; cursor:pointer;}
+
+#sidebar {
+	float: right;
+	padding: 0px 0px 20px 0px;
+	width: 240px;
+}
+#searchform {
+	width: 220px;
+	padding: 10px 10px 10px 10px;
+	float:right;
+	position:relative;
+}
+#searchform #s {
+	border:1px solid #203346;
+	width: 170px;
+	height: 22px;
+	padding: 2px 5px 0px 50px;
+	border: 1px solid #000;
+	background: #fff;
+	vertical-align: middle;
+	border-radius:10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	behavior:url(PIE.htc);
+}
+#searchform #searchsubmit {
+	width: 28px;
+	height: 24px;
+	vertical-align: middle;
+	position:absolute;
+	right:3px;
+	bottom:11px;
+	background:#000;
+	color:#fff;
+	z-index:3;
+	-webkit-border-radius:0px 10px 10px 0;
+	-moz-border-radius:0 10px 10px 0;
+	behavior:url(PIE.htc);
+}
+#searchform label {
+	position:absolute;
+	left:20px;
+	top:17px;
+	z-index:2;
+	font-size: 11px;
+	color: #41550e;
+}
+#sidebar h3 {
+	font: normal 140%/100% "Trebuchet MS", Tahoma, Arial;
+	color: #758d38;
+	margin: 10px 0px 5px;
+}
+.ul-cat {
+	list-style: none;
+	margin:0px 0px 15px;
+	padding:0px;
+	border-bottom: 1px solid #dceeb7;
+}
+.ul-cat li{
+	margin: 0px;
+	padding: 2px 0px 2px 20px;
+	border-top: 1px solid #dceeb7;
+	background: url(images/mini-category.gif) no-repeat left center;
+}
+.ul-cat li a, .ul-cat li a:visited{
+	color: #495233;
+	text-decoration: none;
+}
+.ul-cat li a:hover{
+	color: #FF6600;
+	text-decoration: none;
+}
+.ul-archives {
+	list-style: none;
+	margin:0px 0px 15px;
+	padding:0px;
+	border-bottom: 1px solid #dceeb7;
+}
+.ul-archives li{
+	margin: 0px;
+	padding: 2px 0px 2px 20px;
+	border-top: 1px solid #dceeb7;
+	background: url(images/mini-monthly-archive.gif) no-repeat left center;
+}
+.ul-archives li a, .ul-archives li a:visited{
+	color: #495233;
+	text-decoration: none;
+}
+.ul-archives li a:hover{
+	color: #FF6600;
+	text-decoration: none;
+}
+
+/************************************************************
+	sidebar.php
+************************************************************/
+
+.sidebartitle {font-size:10pt; font-weight:bold; color:#000; margin:20px 0 0 0; padding:0 0 5px 0; display:block;}
+.cinemetropolis {overflow:hidden; border:1px solid #aaa; padding:0px 0px;}
+.cinemetropolis h4 {font-size:16pt;}
+.cinemetropolis:hover {border:1px solid #56a1d5;}
+.sidebar-buffer {height:10px;}
+
+.sidebar-tour {overflow:hidden; border:1px solid #aaa; padding:22px 0px;}
+.sidebar-tour:hover {border:1px solid #56a1d5; cursor:pointer;}
+
+.subleft {float:left; width:99px; padding:0 10px;}
+.subleft p {font-size:8pt; margin:0 0 10px 0;}
+.subleft a {font-size:8pt; color:#56a1d5;}
+.subleft a:hover {color:#aaa;}
+
+img.latestdrop {float:left; margin:0 0 30px 0; height:150px;}
+#sidebar img {padding:0; }
+
+
+/************************************************************
+	single.php
+************************************************************/
+
+.single-post {clear:both; padding-top: 10px; overflow:hidden; padding:10px 0; border-bottom:1px solid #aaa;}
+.single-post img {text-align:center; display:block; margin:0 0 20px 0;}
+.single-post-date {font-size:7pt; color:#777;}
+.single-post-title {margin:0 0 0 0;}
+.single-post-title h2 {font-size:11pt; margin:2px 0;}
+.single-entry {float:left; padding-top: 5px; width:640px;}
+.single-entry p {font-size:9pt; line-height:140%; margin:0 0 20px 0;}
+.single-entry a {color:#56a1d5;}
+.single-entry a:hover {color:#aaa;}
+.single-author {font-size:9pt; color:#56a1d5;}
+
+.single-frontnews {font-size:10pt; font-weight:bold; color:#000; margin:20px 0 0 0; padding:0 0 5px 0; border-bottom:1px solid #aaa; display:block;}
+
+.single-post-cat {
+	background: url(images/mini-category.gif) no-repeat left center;
+	padding-left: 18px;
+	float:left;
+	font-size: 95%;
+	color: #999999;
+	display:none;
+}
+.single-post-comments {
+	background: url(images/mini-comments.gif) no-repeat left center;
+	padding-left: 18px;
+	float: right;
+	font-size: 95%;
+}
+.single-post-calendar {
+	background: url(images/mini-calendar.gif) no-repeat left center;
+	padding-left: 18px;
+	float: right;
+	font-size: 95%;
+	color: #999999;
+}
+.single-post-content {
+	clear: both;
+	padding-top: 10px;
+}
+
+
+/************************************************************
+	projects.php
+************************************************************/
+
+.cinemetropolisproject {font-size:10pt; color:#000; margin:15px 0 0 0; padding:5px 0; border-bottom:1px solid #aaa;}
+
+#projects-content {width:100%;}
+.projects-post {overflow:hidden; position:relative;}
+.projects-post h2 {font-size:11pt; display:none; float:left; position:absolute; right:332px; top:20px;}
+.projects-post h3 {font-size:9pt; margin:0 0 10px 0;}
+.projectsvideo {float:left; margin:0 10px 0 0;}
+
+.projects-entry {float:left; border-bottom:1px solid #aaa; font-size:10pt; line-height:130%; width:100%; margin:10px 0 20px 0;}
+.projects-entry p {margin:0 0 7px 0; font-size:8pt;}
+.projects-p {margin:0px 0 0 0;}
+
+#projects-pngs {overflow:hidden;}
+#projects-pngs img {float:left;}
+img.projectsleft {border-right:1px solid #56a1d5;}
+img.projectscenter {padding:0 0 10px 0;}
+
+.projects-separates {clear:left; overflow:hidden; padding:10px 0; border-bottom:1px solid #56a1d5;}
+
+/************************************************************
+	bio.php
+************************************************************/
+
+img.bio {float:none; margin:20px 0 20px 0;}
+.bio-post {overflow:hidden;}
+.bio-post h2 {display:none;}
+.bio-post h3 {font-size:10pt; color:#000; margin:0 0 20px 0;}
+
+.bio-entry p {margin:0 0 15px 0; font-size:8pt; color:#222; line-height:140%;}
+
+/************************************************************
+	holler.php
+************************************************************/
+
+#holler {overflow:hidden; padding:9px 0;}
+#holler h3 {float:left; font-size:13pt; margin:0 10px 20px 0; color:#000; letter-spacing:1pt; display:inline;}
+#holler span {color:#666;}
+
+#holler ul {list-style:none; display:inline;}
+#holler ul li {display:inline; float:left; margin:-7px 10px 20px 0;}
+
+.holler-person {clear:left; overflow:hidden; margin:10px 0 20px 0;}
+.holler-person img {float:left; margin:0 15px 0 0;}
+.holler-person h4 {margin:0 0 10px 0;}
+.holler-person ul li img {margin:0 0 0 0; padding:0; float:none;}
+.holler-person h5 {font-size:12pt; margin:0 0 3px 0; color:#666;}
+.holler-person h6 {font-size:12pt; margin:0 0 5px 0;}
+.holler-person a {color:#56a1d5;}
+.holler-person a:hover {color:#aaa;}
+
+/************************************************************
+	tourdates.php
+************************************************************/
+
+.imgbox {float:left; margin:0 20px 0 0; width:500px; padding:5px; background:#eee; border:1px solid #ddd;}
+.information {overflow:hidden; font-size:8pt; font-weight:normal; line-height:140%; padding:0 0 20px 0px;}
+.datesbook {margin:10px 0 20px 0; overflow:hidden;}
+.tour-entry p {font-size:9pt; color:#000; line-height:150%; margin:0 5px 20px 20px;}
+.tour-entry h3 {font-size:14pt; color:#000; margin:0 0 20px 0;}
+.tour-entry span {font-size:10pt; margin:0 0 20px 0; padding:0 5px 20px 20px;}
+span.address {font-weight:normal; font-size:8pt;}
+span.fineprint {font-weight:normal; font-weight:normal; margin:10px 0 0 0; font-size:8pt;}
+.datesbook a {font-size:8pt; color:#56a1d5;}
+.datesbook a:hover {color:#aaa;}
+
+/************************************************************
+	contest.php
+************************************************************/
+
+.contestvideo {float:left; margin:0 20px 0 0; width:560px; padding:5px; background:#eee; border:1px solid #ddd;}
+.contest p {font-size:9pt; color:#000; line-height:150%; margin:0 5px 20px 20px;}
+.contest span {font-size:10pt; margin:0 0 20px 0; padding:0 5px 20px 20px;}
+
+/************************************************************
+	shop & media.php
+************************************************************/
+.redirect-entry {padding:20px 0;}
+.redirect-entry p {font-size:12pt; font-weight:bold; margin:20px 0; color:#666;}
+.redirect-entry a {color:#56a1d5;}
+.redirect-entry a:hover {color:#000;}
+
+/************************************************************
+	PAGINATION
+************************************************************/
+
+.wp-pagenavi {font-size:9pt;}
+.wp-pagenavi span {margin:0 5px;}
+span.current {font-size:9pt; font-weight:bold; color:#56a1d5;}
+a.page {font-size:9pt; margin:0 5px; color:#000; font-weight:bold;}
+
+/************************************************************
+	releases.php
+************************************************************/
+
+.releases {font-size:8pt; float:left; width:600px; margin:20px 0 0 0;}
+.releases span {margin:10px 5px; display:block;}
+.releases img {margin:5px;}
+
+#l_sidebar {float:left; width:240px; margin:30px 0 0 0;}
+#l_sidebar h2 {font-size:12px; margin:10px 0;}
+#l_sidebar ul {list-style:none;}
+#l_sidebar ul li {display:inline; margin:0;}
+#l_sidebar ul li a {display:block; color:#000; font-size:11px; text-decoration:none; padding:5px 0; border-bottom:1px dotted #c0c0c0;}
+#l_sidebar ul li a:hover {color:#000099;}
+
+/************************************************************
+	media.php
+************************************************************/
+
+#submenu {width:130px; float:left; padding:15px 0 0 0; overflow:hidden;}
+#submenu span {font-weight:bold; font-size:11pt; float:right; margin:0 0 15px 0;}
+#submenu ul {list-style:none; text-align:right; clear:right;}
+#submenu ul li {display:block; margin:15px 0 0 0;}
+#submenu ul li a {font-size:10pt; color:#333;}
+#submenu ul li a:hover {color:#56a1d5;}
+#submenu ul li.active {color:#56a1d5; font-size:10pt;}
+
+#musiccontent {float:right; overflow:hidden; width:770px; margin:0 0 30px 0;}
+.mediathumb {width:224px; float:left; margin:15px 0 5px 30px;}
+.mediathumb img {margin:5px 0; width:224px; height:224px;}
+img.video {width:224px; height:167px;}
+p.vdescription {height:40px; overflow:hidden; margin:0 0 10px 0;}
+
+#videocontent {float:right; overflow:hidden; width:770px; margin:0 0 30px 0;}
+#videocontent h3 {height:30px;}
+#videocontent span {color:#56a1d5;}
+#videocontent a {color:#56a1d5;}
+#videocontent a:hover {text-decoration:underline;}
+
+.videopagination {clear:both; margin:10px 0 0 30px; float:left;}
+/************************************************************
+	footer.php
+************************************************************/
+#footer {clear: both; margin:20px 0 0 0; border-top:2px solid #aaa; padding:10px 0;}
+#footer a, #footer a:visited{color: #aaa;}
+#footer a:hover {color:#000;}
+#footer p {font-size:8pt; color:#888; margin:0 0 5px 0;}
+#footer img {float:right; margin:-5px 0 0 0;}
+
+#credits {
+	margin: 0px auto;
+	width: 760px;
+	color: #7a9299;
+	font-size: 85%;
+	line-height: 120%;
+}
+#credits a, #credit a:visited{
+	color: #048db4;
+}
+.rss {
+	background: url(images/mini-rss.gif) no-repeat left center;
+	padding-left: 18px;
+	padding-bottom: 2px;
+	margin-left: 10px;
+}
+.left {
+	float: left;
+}
+img.left, a img.left {
+	float:left;
+	margin: 4px 10px 5px 0px;
+	border: 1px solid #bdd77f;
+	padding: 3px;
+	background: #FFFFFF;
+}
+a:hover img.left{
+	border-color: #FF6600;
+	background: #FF6600;
+}
+.right {
+	float: right;
+}
+img.right, a img.right {
+	float:left;
+	margin: 4px 10px 5px 0px;
+	border: 1px solid #bdd77f;
+	padding: 3px;
+	background: #FFFFFF;
+}
+a:hover img.right{
+	border-color: #FF6600;
+	background: #FF6600;
+}
+.clear {
+	clear:both;
+}
+hr.clear {
+	clear:both;
+	visibility: hidden;
+	margin: 0px;
+	padding: 0px;
+}
+img.img_border, a img.img_border {
+	border: 1px solid #bdd77f;
+	padding: 3px;
+	background: #ffffff;
+}
+a:hover img.img_border{
+	border-color: #FF6600;
+	background: #FF6600;
+}

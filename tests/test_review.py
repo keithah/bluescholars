@@ -54,8 +54,8 @@ def test_legacy_offset_redirect_does_not_discard_filters(tmp_path):
     node_script='''const vm=require('vm'); const results=[];
     for (const search of ['?offset=1362122742000','?offset=1362122742000&tag=live']) {
       let redirected=null;
-      const location={pathname:'/bluescholars/blog',search,hash:'',replace:value=>{redirected=value}};
+      const location={pathname:'/bluescholars/2013/blog',search,hash:'',replace:value=>{redirected=value}};
       vm.runInNewContext(SCRIPT,{location,URLSearchParams});results.push(redirected);
     } console.log(JSON.stringify(results));'''.replace('SCRIPT',json.dumps(script))
     r=subprocess.run(['node','-e',node_script],text=True,capture_output=True,check=True)
-    assert json.loads(r.stdout)==['/bluescholars/blog/page/2/',None]
+    assert json.loads(r.stdout)==['/bluescholars/2013/blog/page/2/',None]

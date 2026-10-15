@@ -1,6 +1,6 @@
 import json
 import pytest
-from restore.urls import original_url, route, kind_for, is_site, base_path
+from restore.urls import original_url, route, kind_for, is_site, base_path, asset_route
 from restore.discover import discover_html, discover_css
 from restore.state import State
 
@@ -37,6 +37,19 @@ def test_explicit_pagination():
 
 def test_different_query_parameters_do_not_collapse():
     assert route(HOME+'blog?offset=1362122742000&tag=live') != '/blog/page/2/'
+
+def test_unusually_long_observed_endpoint_gets_a_safe_static_route():
+    endpoint=HOME+'api/blog-like-count/' + ','.join(['51b8c857e4b05bf73912a431']*80)
+    result=route(endpoint)
+    assert result.startswith('/archive-path/')
+    assert len(result)<64
+
+def test_legacy_file_routes_keep_html_paths_without_index_conflicts():
+    assert route(HOME+'artistedition/01_a.html') == '/artistedition/01_a.html'
+    assert route(HOME+'artistedition/index.html') == '/artistedition/'
+
+def test_css_asset_route_uses_a_css_extension_for_browser_mime_detection():
+    assert asset_route('https://static1.squarespace.com/site.css','css').endswith('.css')
 
 @pytest.mark.parametrize('bad',['/../private','/%2e%2e/private','//evil.example','/x/../../private','/x%2fy','/x\\y'])
 def test_unsafe_base_paths(bad):

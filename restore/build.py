@@ -64,8 +64,24 @@ def page_shell(title: str,body: str) -> str:
     return '<!doctype html><html lang="en"><head><title>'+html.escape(title)+' — Blue Scholars restoration</title></head><body><main class="archive-gap-page"><p class="archive-eyebrow">BLUE SCHOLARS / RESTORATION WORKSPACE</p><h1>'+html.escape(title)+'</h1>'+body+'</main></body></html>'
 
 def _write_page(output: Path,path: str,text: str):
-    destination=output/unquote(path.lstrip('/'))/'index.html'
+    relative=unquote(path.lstrip('/'))
+    destination=output/relative if relative.lower().endswith('.html') else output/relative/'index.html'
     destination.parent.mkdir(parents=True,exist_ok=True);destination.write_text(text,encoding='utf-8')
+
+def edition_prefix(url: str, record: dict) -> str:
+    """Place observed pages under the historical platform generation they belong to."""
+    from urllib.parse import urlsplit
+    path=urlsplit(url).path
+    segments=path.strip('/').split('/')
+    capture=record.get('actual_capture') or TARGET
+    if path.rstrip('/')=='/artistedition' or capture<'20090101000000':
+        return '/2007'
+    if (len(segments)>1 and segments[0]=='blog' and segments[1].isdigit()
+            and len(segments[1])==4 and int(segments[1])<=2012):
+        return '/2009'
+    if capture<'20140101000000':
+        return '/2009'
+    return '/2013'
 
 def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bool=False) -> dict:
     root=Path(root).resolve();output=Path(output).resolve();base=base_path(base)
@@ -87,32 +103,97 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
         records.setdefault(HOME.rstrip('/')+path,{'url':HOME.rstrip('/')+path,'kind':'html','status':'queued'})
     for r in inventory.get('pages',[]):
         records.setdefault(r['original_url'],{'url':r['original_url'],'kind':'html','status':'queued'})
-    usable={};raw={};issues=[]
-    for url,r in records.items():
+    explicit_page_ids={identity(HOME.rstrip('/')+path) for path,_ in CORE}
+    explicit_page_ids.update(identity(r['original_url']) for r in inventory.get('pages',[]))
+    usable={};usable_variants={};raw={};issues=[]
+    for source_key,r in records.items():
+        url=r.get('url',source_key)
         if r.get('raw_path') and r.get('status')=='recovered' and r['kind'] in ('html','css','image'):
-            raw[url]=read_record(root,r,candidate);usable[url]=r
-    # Discover destination stubs before rewriting links, including links not reached by the crawler yet.
-    for url,r in list(usable.items()):
-        if r['kind']=='html':
-            for ref in discover_html(raw[url].decode('utf-8',errors='replace'),r.get('final_original',url)):
-                records.setdefault(ref['url'],dict(ref,status='queued'))
+            try:
+                raw[source_key]=read_record(root,r,candidate)
+            except (OSError,ValueError) as exc:
+                issues.append({'type':'invalid_source','url':url,'source_key':source_key,
+                               'message':str(exc)})
+                continue
+            variant=dict(r);variant['_source_key']=source_key;variant['_source_url']=url
+            usable_variants[source_key]=variant
+            previous=usable.get(url)
+            if previous is None or r.get('actual_capture','')>=previous.get('actual_capture',''):
+                usable[url]=variant
+    # The default edition follows the Squarespace capture era. Older platform
+    # pages remain in the recovery/source catalog and are built separately.
+    min_reference_capture='20140101000000'
+    selected_page_ids={
+        identity(r['_source_url']) for url,r in usable_variants.items()
+        if r['kind']=='html' and (
+            r.get('actual_capture','')>=min_reference_capture or edition_prefix(r['_source_url'],r) in ('/2007','/2009')
+        )
+    }
+    selected_page_ids.update(identity(r.get('final_original','')) for r in usable_variants.values()
+                              if r['kind']=='html' and r.get('final_original'))
+    selected_page_ids.update(explicit_page_ids)
+    # Discover destination stubs only from pages selected into this edition.
+    record_by_identity={}
+    for key,value in records.items():
+        record_by_identity.setdefault(identity(value.get('url',key)),key)
+    for source_key,r in list(usable_variants.items()):
+        url=r['_source_url']
+        if r['kind']=='html' and identity(url) in selected_page_ids:
+            source_prefix=edition_prefix(url,r)
+            for ref in discover_html(raw[source_key].decode('utf-8',errors='replace'),r.get('final_original',url)):
+                discovered=dict(ref);referrer=discovered.pop('referrer','')
+                discovered.update(status='queued',referrers=[referrer] if referrer else [],edition_prefixes=[source_prefix])
+                target_id=identity(ref['url'])
+                existing_key=record_by_identity.get(target_id)
+                if existing_key is None:
+                    records[ref['url']]=discovered
+                    record_by_identity[target_id]=ref['url']
+                else:
+                    existing=records[existing_key]
+                    existing.setdefault('referrers',[])
+                    if referrer and referrer not in existing['referrers']:
+                        existing['referrers'].append(referrer)
+                    existing.setdefault('edition_prefixes',[])
+                    if source_prefix not in existing['edition_prefixes']:
+                        existing['edition_prefixes'].append(source_prefix)
     for url,r in usable.items():
         if r['kind'] in ('css','image'):
-            if r['kind']=='css': local=asset_route(url,'css')
+            if r['kind']=='css':
+                local=('/assets/'+r['sha256']+'.css') if r.get('source_archive') else asset_route(url,'css')
             else: local='/assets/'+r['sha256']+Path(r['raw_path']).suffix
             r['local_path']=local
+    render_resources={}
+    for key,r in records.items():
+        original=r.get('url',key)
+        if is_site(original):render_resources.setdefault(original,r)
+    render_resources.update(usable)
     pages={}
-    for url,r in records.items():
-        if r['kind']!='html' or not is_site(url): continue
-        try: page=route(url)
+    for source_key,r in records.items():
+        source_url=r.get('url',source_key)
+        if r['kind']!='html' or not is_site(source_url): continue
+        url=r.get('final_original') if is_site(r.get('final_original','')) else source_url
+        sourced_by_selected_page=any(
+            not ref.startswith('CDX:') and identity(ref) in selected_page_ids
+            for ref in r.get('referrers',[]) if ref
+        )
+        capture=r.get('actual_capture','')
+        selected_capture=bool(r.get('raw_path') and r.get('status')=='recovered'
+                              and (capture>=min_reference_capture or edition_prefix(url,r) in ('/2007','/2009')))
+        if identity(url) not in explicit_page_ids and not selected_capture and not sourced_by_selected_page:
+            continue
+        try:
+            prefixes={edition_prefix(source_url,r)}
+            if not r.get('raw_path') and r.get('edition_prefixes'):
+                prefixes.update(r['edition_prefixes'])
+            for prefix in prefixes:
+                page=prefix+route(url)
+                previous=pages.get(page)
+                if previous is None or (source_key in usable_variants, r.get('actual_capture',''))>(previous.get('_source_key') in usable_variants,previous.get('actual_capture','')):
+                    pages[page]=dict(r,url=url,source_url=source_url,edition_prefix=prefix,_source_key=source_key)
         except ValueError:
             issues.append({'type':'unsafe_route','url':url});continue
-        # Prefer verified bytes, then the closest pre-reference source date.
-        previous=pages.get(page)
-        if previous is None or (url in usable, r.get('actual_capture',''))>(previous['url'] in usable,previous.get('actual_capture','')):
-            pages[page]=dict(r,url=url)
     if release:
-        if '/' not in pages or pages['/']['url'] not in usable or not any(r['kind']=='css' for r in usable.values()):
+        if '/2013/' not in pages or pages['/2013/'].get('_source_key') not in usable_variants or not any(r['kind']=='css' for r in usable.values()):
             raise ValueError('Publication review cannot substitute for missing homepage HTML/CSS')
     if output.exists(): shutil.rmtree(output)
     (output/'assets').mkdir(parents=True)
@@ -120,14 +201,15 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
     (output/'assets/archive-ui.css').write_text(ui.read_text() if ui.exists() else FALLBACK_UI)
     # Generated, fixed destinations only. Unknown offsets stay visible rather than guessed.
     from .urls import PAGINATION
-    mappings={offset:base+path for offset,path in PAGINATION.items() if path in pages}
-    script='''"use strict"; (() => {\n const mapping = MAPPING;\n const params = new URLSearchParams(location.search);\n const offset = params.get("offset");\n if (location.pathname.replace(/\\/$/, "") === BLOG && [...params].length === 1 && offset && mapping[offset]) {\n  location.replace(mapping[offset] + location.hash);\n }\n})();\n'''.replace('MAPPING',json.dumps(mappings)).replace('BLOG',json.dumps(base+'/blog'))
+    mappings={offset:base+'/2013'+path for offset,path in PAGINATION.items() if '/2013'+path in pages}
+    script='''"use strict"; (() => {\n const mapping = MAPPING;\n const params = new URLSearchParams(location.search);\n const offset = params.get("offset");\n if (location.pathname.replace(/\\/$/, "") === BLOG && [...params].length === 1 && offset && mapping[offset]) {\n  location.replace(mapping[offset] + location.hash);\n }\n})();\n'''.replace('MAPPING',json.dumps(mappings)).replace('BLOG',json.dumps(base+'/2013/blog'))
     (output/'assets/legacy.js').write_text(script)
     for url,r in usable.items():
         if r['kind'] not in ('css','image'): continue
         destination=output/r['local_path'].lstrip('/')
         if r['kind']=='css':
-            text,found=render_css(raw[url].decode('utf-8',errors='replace'),r.get('final_original',url),usable,base)
+            source_key=r.get('_source_key',url)
+            text,found=render_css(raw[source_key].decode('utf-8',errors='replace'),r.get('final_original',url),render_resources,base)
             destination.write_text(text);issues.extend(found)
         elif destination.suffix=='.svg':
             destination.write_bytes(sanitize_svg(raw[url]))
@@ -135,8 +217,9 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
     recovered=0;placeholders=0;page_report=[]
     for page,r in sorted(pages.items()):
         url=r['url']
-        if url in usable:
-            text=raw[url].decode('utf-8',errors='replace');recovered+=1;status='recovered'
+        source_key=r.get('_source_key',url)
+        if source_key in usable_variants:
+            text=raw[source_key].decode('utf-8',errors='replace');recovered+=1;status='recovered'
         else:
             placeholders+=1;status='not_recovered'
             label=dict(CORE).get(page,page.strip('/') or 'Homepage')
@@ -157,9 +240,44 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
                     body+='</ol>'
             body+='<p><a class="archive-source-link" href="https://web.archive.org/web/'+TARGET+'/'+html.escape(url,quote=True)+'">Inspect the archived source</a></p>'
             text=page_shell(label,body)
-        rendered,found=render_html(text,r.get('final_original',url),usable,base)
+        rendered,found=render_html(text,r.get('final_original',url),render_resources,base,r.get('edition_prefix',''))
         issues.extend(found);_write_page(output,page,rendered)
-        page_report.append({'path':page,'source':url,'status':status,'actual_capture':r.get('actual_capture')})
+        page_report.append({'path':page,'source':r.get('source_url',url),'canonical_url':url,
+                            'source_archive':r.get('source_archive'),'status':status,
+                            'actual_capture':r.get('actual_capture')})
+    legacy_posts=[p for p in page_report if p['path'].startswith('/2009/blog/')
+                  and p['path']!='/2009/blog/' and p['status']=='recovered']
+    if legacy_posts:
+        links=''.join('<li><a href="'+html.escape(p['path'],quote=True)+'">'
+                      +html.escape(p['path'].strip('/').rsplit('/',1)[-1])+'</a></li>'
+                      for p in sorted(legacy_posts,key=lambda p:p['path']))
+        index=page_shell('Recovered 2009 WordPress posts',
+                         '<p>This local index lists surviving dated WordPress captures. It is a recovery index, not an archived original listing.</p>'
+                         '<ul>'+links+'</ul>')
+        index,_=render_html(index,HOME,render_resources,base)
+        _write_page(output,'/2009/blog/',index)
+    # Each platform generation gets its own index. Unrecovered editions are
+    # documented as gaps instead of being filled with invented historical copy.
+    for prefix,label in (('/2007','2007 site'),('/2009','2009 WordPress site'),
+                         ('/2013','Squarespace site (first located in 2013)')):
+        if prefix+'/' not in pages:
+            selected=[p for p in page_report if p['path'].startswith(prefix+'/')]
+            body='<p>This is a separate historical website generation. Pages below come from dated source captures.</p>'
+            if selected:
+                body+='<h2>Pages in this edition</h2><ul>'+''.join(
+                    '<li><a href="'+html.escape(p['path'],quote=True)+'">'+html.escape(p['path'])+'</a> — '+html.escape(p['status'].replace('_',' '))+'</li>' for p in selected)+'</ul>'
+            else:
+                body+='<p>No page bytes for this edition have been recovered yet. Its original appearance and blog content remain a documented gap.</p>'
+            edition_text=page_shell(label,body)
+            edition_text,_=render_html(edition_text,HOME,render_resources,base)
+            _write_page(output,prefix+'/',edition_text)
+    gateway='<p>Choose a preserved website generation. Each edition is built from its own dated source material; gaps remain marked.</p><nav class="edition-archive">'
+    for prefix,label in (('/2007/','2007'),('/2009/','2009'),('/2013/','2013 · first located Squarespace')):
+        gateway+='<a class="edition" href="'+base+prefix+'">'+html.escape(label)+'</a>'
+    gateway+='</nav><p><a href="'+base+'/archive-status/">Recovery status and source gaps</a></p>'
+    hub=page_shell('Blue Scholars archive',gateway)
+    hub=hub.replace('</head>','<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="'+base+'/assets/archive-ui.css"></head>')
+    _write_page(output,'/',hub)
     # Deduplicate identical findings without suppressing which page referenced a gap.
     issues=list({json.dumps(i,sort_keys=True):i for i in issues}.values())
     report={'mode':'unreviewed_candidate' if candidate else 'reviewed_source_build','base_path':base,
@@ -179,10 +297,10 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
         stats+='<ul>'+''.join('<li>'+html.escape(i['type'].replace('_',' ')+': '+str(i.get('url',i.get('source',''))))+'</li>' for i in issues)+'</ul>'
     else: stats+='<p>No dependency findings in the generated content. This does not imply missing source files were recovered.</p>'
     # Diagnostic links enter the same single base-path rewrite as original links.
-    status_text,_=render_html(page_shell('Recovery status',stats),HOME,usable,base)
+    status_text,_=render_html(page_shell('Recovery status',stats),HOME,render_resources,base)
     _write_page(output,'/archive-status/',status_text)
     write_json(output/'archive-status/report.json',report)
-    missing,_=render_html(page_shell('Page not recovered','<p>This historical page is not included in this restoration.</p><p><a href="/archive-status/">View the recovery inventory</a></p>'),HOME,usable,base)
+    missing,_=render_html(page_shell('Page not recovered','<p>This historical page is not included in this restoration.</p><p><a href="/archive-status/">View the recovery inventory</a></p>'),HOME,render_resources,base)
     (output/'404.html').write_text(missing)
     (output/'.nojekyll').touch()
     return report

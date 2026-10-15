@@ -1,30 +1,24 @@
-# Implementation and review status — October 15, 2026
+# Implementation and release status — October 15, 2026
 
-## Implemented locally
+## What is implemented
 
-The isolated local Git repository is named `bluescholars`, on `restoration/bootstrap`. Acquisition, checkpointing, CDX enumeration, dependency discovery, static sanitization/building, source promotion, offline link validation, CLI and GitHub workflow files are implemented.
+- A resumable Wayback CDX inventory with raw index batches and dated exact-capture variants.
+- Static editions separated at `/2007/`, `/2009/`, and `/2013/`, with a gateway at the root.
+- Candidate and reviewed-source build modes, local asset rewriting, capture provenance, an offline link/resource checker, and project-subpath handling.
+- Independent Common Crawl WARC/ARC retrieval and Arquivo.pt capture retrieval.
+- Targeted exact-CDX indexing of the 42 observed source-linked image URLs.
+- A manual, non-publishing GitHub Actions recovery workflow. It can continue from an earlier run's artifact.
 
-The package has 71 automated tests. Tests use synthetic fixtures and controlled HTTP responses, not a successfully downloaded Blue Scholars site. The suite tests real static files and executes the generated pagination JavaScript in Node.
+## Current evidence
 
-The handoff currently supplies 14 seed resource URLs: 9 page references and 5 image references. It separately includes 11 observed YouTube embed references. These are not counts of locally recovered original files.
+- Public repository: `https://github.com/keithah/bluescholars`, branch `main`; authenticated GitHub CLI account `keithah`.
+- Wayback domain checkpoint: complete; report records 8,178 indexed captures. The current state has 3,978 resource records and 7,631 capture rows attached. Capture metadata is not equivalent to recovered bytes.
+- Promoted source catalog: 3,268 resource records; 97 unique files under `source/raw/` are tracked. The publication and visual-review flags remain false.
+- The unreviewed candidate build has 396 recovered pages, 641 placeholders, and 27 locally rendered assets. Root and `/bluescholars/` offline checks passed after repairing a legacy WordPress navigation target.
+- The suite passes 97 tests; see [verification](VERIFICATION.md).
+- A prior recovery action successfully saved its checkpoint and downloaded material but failed its candidate build because an old provider-error response remained marked recovered. The builder now records invalid source bytes as a gap; the regression test passes. The next run uses the repaired builder.
+- Pages API returned 404 when checked, so Pages is disabled. No deployment URL exists yet.
 
-## Decisions and remaining work
+## Remaining before publication
 
-- The connected GitHub interface lacks a repository-creation action. A lookup of `keithah/bluescholars` returned 404. No other repository was modified. Authenticated creation, push and initial recovery dispatch are provided in `scripts/create-github-repo.sh`.
-- Execution-environment DNS prevents archive downloads. Live acquisition, GitHub workflow execution and public deployment remain unverified. The code does not treat that as evidence that archive content is absent.
-- Original HTML, stylesheets, photographs and logo files have not been saved locally. The preview has 9 labeled source-gap pages, a status page and a 404 page. Its styling is diagnostic, not a visual restoration.
-- Original typography is unverified; no font files are distributed. Embedded players are converted to outbound links and playback remains unverified. Source-derived geometry may need targeted repair after raw CSS and images arrive.
-- Recovery sources and deployment sources are separate. Later-than-reference responses require review, promotion verifies hashes, and publishing requires a separate affirmative visual/content review. Nothing is published by this package's setup script.
-- Final review was a self-review by the authoring assistant, not an independent reviewer. The live site must still be compared with archive renderings before release.
-
-## Regression findings fixed during self-review
-
-Malformed archived URLs no longer abort discovery. Linked image files are not classified as HTML. Escaped Squarespace video embeds are preserved as links. Homepage styles are acquired ahead of the blog backlog. Offset redirects no longer discard additional filter parameters. CSS import media-query whitespace is preserved, and diagnostic source links remain outbound archive links rather than becoming self-links. SVG active/external content is stripped. The local preview server preserves the GitHub project subpath when redirecting directory requests.
-
-## Full-restoration acceptance gates not yet met
-
-Obtain the domain index and raw source files in a network-capable environment; inspect additional blog/shop captures and missing-image variants; compare original and restored desktop/mobile views; review rights/credits; verify any optional external playback; and inspect the actual successful Pages deployment URL.
-
-## Final verification
-
-The final full suite passed: **71 passed in 5.94 seconds**. Python compilation, shell syntax checks, root and `/bluescholars` builds, and both offline dependency checks succeeded. An unapproved release build correctly failed. A browser test was attempted, but Chromium navigation was blocked by the execution environment (`ERR_BLOCKED_BY_ADMINISTRATOR`); no browser screenshot or visual-comparison pass is claimed. See `VERIFICATION.md`.
+Complete and merge the three per-era Wayback capture runs, exact image searches, and follow-up Common Crawl/Arquivo findings. Inspect newly recovered pages and image bytes, then reconcile the source and gap reports. Compare the rendered Squarespace homepage against the May 29, 2021 capture at desktop and mobile widths, and inspect the other editions and representative articles. Re-run release-mode and root/subpath checks on reviewed source files. Keep `source/review.json` false until source compatibility and visual review are honestly recorded.

@@ -2,7 +2,8 @@ import json
 from pathlib import Path
 import pytest
 from restore.archive import parse_cdx, validate_payload, ArchiveClient, Payload, capture_candidates
-from restore.recover import index, recover, resource_priority
+from restore import recover as recovery
+from restore.recover import index, recover, resource_priority, capture_variant,capture_era
 from restore.state import State
 from restore.urls import HOME, TARGET
 
@@ -58,7 +59,7 @@ def test_rank_before_reference_first():
 
 def test_core_pages_and_linked_dependencies_outrank_full_domain_legacy_css():
     homepage={'url':HOME,'kind':'html','referrers':['seed']}
-    core_css={'url':'https://www.squarespace.com/site.css','kind':'css',
+    core_css={'url':'https://static1.squarespace.com/site.css','kind':'css',
               'referrers':['http://bluescholars.com/']}
     legacy_css={'url':'http://bluescholars.com/blog/wp-content/theme.css','kind':'css',
                 'referrers':['CDX:domain']}
@@ -70,6 +71,27 @@ def test_article_pages_outrank_tag_filters_for_complete_blog_recovery():
              'referrers':[HOME+'blog/']}
     tag={'url':HOME+'blog/?tag=Seattle','kind':'html','referrers':['CDX:domain']}
     assert resource_priority(article)[0] < resource_priority(tag)[0]
+
+def test_final_squarespace_permalink_outranks_dated_wordpress_posts():
+    squarespace={'url':HOME+'blog/bringing-back-the-og-t-shirt-in-green-and-gold-if',
+                 'kind':'html','referrers':[HOME+'blog/']}
+    wordpress={'url':HOME+'blog/2013/05/13/old-wordpress-post/',
+               'kind':'html','referrers':['CDX:domain']}
+    assert resource_priority(squarespace)[0] < resource_priority(wordpress)[0]
+
+def test_squarespace_article_media_outranks_unlinked_legacy_assets():
+    inline={'url':'https://media.tumblr.com/inline-photo.jpg','kind':'image',
+            'referrers':[HOME+'blog/bringing-back-the-og-t-shirt-in-green-and-gold-if']}
+    legacy={'url':HOME+'blog/wp-content/uploads/2012/01/old-photo.jpg',
+            'kind':'image','referrers':['CDX:domain']}
+    assert resource_priority(inline)[0] < resource_priority(legacy)[0]
+
+def test_old_wordpress_media_is_not_treated_as_a_homepage_dependency():
+    inline={'url':'https://media.tumblr.com/inline-photo.jpg','kind':'image',
+            'referrers':[HOME+'blog/']}
+    wordpress={'url':HOME+'blog/wp-content/uploads/2010/11/legacy.jpg','kind':'image',
+               'referrers':[HOME]}
+    assert resource_priority(inline)[0] < resource_priority(wordpress)[0]
 
 class Response:
     def __init__(self,code=200,body=VALID,headers=None):
@@ -118,6 +140,19 @@ def test_index_interruption_preserves_cursor(tmp_path):
     assert reloaded.data['index_complete']
     assert 'resumeKey=continue' in client.calls[0]
 
+def test_seed_asset_index_queries_exact_observed_urls(tmp_path):
+    (tmp_path/'recovery/seeds').mkdir(parents=True)
+    first='https://images.squarespace-cdn.com/content/v1/site/front-page.jpg'
+    second='https://media.tumblr.com/photo.jpg'
+    (tmp_path/'recovery/seeds/inventory.json').write_text(json.dumps({'assets':[
+        {'original_url':first},{'original_url':second}]}))
+    response=json.dumps([HEADER,['20210529010844',first,'image/jpeg','200','DIGEST']]).encode()
+    client=Client(lambda url:Payload(response,url,200,{}))
+    result=recovery.index_seed_assets(State(tmp_path),client,max_assets=1)
+    assert result['queried_urls']==1 and result['indexed_capture_records']==1
+    assert 'matchType=exact' in client.calls[0] and 'front-page.jpg' in client.calls[0]
+    assert State(tmp_path).data['resources'][first]['captures'][0]['timestamp']=='20210529010844'
+
 def test_recover_checkpoints_and_skips_success(tmp_path):
     state=State(tmp_path);state.add(HOME,'html','seed',TARGET)
     client=Client(lambda u:Payload(VALID,u,200,{'Content-Type':'text/html'}))
@@ -138,6 +173,44 @@ def test_later_capture_needs_review(tmp_path):
     recover(state,client,max_files=1)
     assert state.data['resources'][HOME]['status']=='needs_review'
     assert state.data['resources'][HOME]['actual_capture']=='20250101000000'
+
+def test_exact_capture_is_saved_as_a_variant_without_overwriting_homepage(tmp_path):
+    state=State(tmp_path);state.add(HOME,'html','seed',TARGET)
+    state.data['resources'][HOME].update(status='recovered',actual_capture=TARGET,sha256='baseline')
+    client=Client(lambda u:Payload(VALID,'https://web.archive.org/web/20070724082915id_/'+HOME,200,{'Content-Type':'text/html'}))
+    result=capture_variant(state,client,HOME,'20070724082915')
+    key=result['source_key']
+    assert result['actual_capture']=='20070724082915'
+    assert key in state.data['resources'] and state.data['resources'][key]['raw_path']
+    assert state.data['resources'][HOME]['sha256']=='baseline'
+
+def test_capture_era_selects_latest_valid_record_and_resumes(tmp_path):
+    state=State(tmp_path);record=state.add(HOME,'html','seed',TARGET)
+    record['captures']=[{'timestamp':'20070701134606','statuscode':'200'},
+                        {'timestamp':'20070724082915','statuscode':'200'},
+                        {'timestamp':'20070929034602','statuscode':'404'}]
+    state.save()
+    client=Client(lambda u:Payload(VALID,'https://web.archive.org/web/20070724082915id_/'+HOME,200,{}))
+    report=capture_era(state,client,'2007',max_files=10)
+    assert report['eligible_urls']==1 and report['recovered']==1
+    assert state.data['resources'][HOME+'@@wayback:20070724082915:'+__import__('hashlib').sha256(VALID).hexdigest()[:12]]['status']=='recovered'
+    again=capture_era(state,client,'2007',max_files=10)
+    assert again['attempted']==0
+
+def test_capture_era_falls_back_when_newest_archive_body_is_a_provider_error(tmp_path):
+    state=State(tmp_path);record=state.add(HOME,'html','seed',TARGET)
+    newest='20070724082915';older='20070701134606'
+    record['captures']=[{'timestamp':older,'statuscode':'200'},
+                        {'timestamp':newest,'statuscode':'200'}]
+    state.save()
+    bad=b'<html><body>This page cannot be displayed. Contact the service provider.</body></html>'
+    def response(url):
+        if newest in url:return Payload(bad,url,200,{})
+        return Payload(VALID,'https://web.archive.org/web/'+older+'id_/'+HOME,200,{})
+    report=capture_era(state,Client(response),'2007',max_files=10)
+    assert report['recovered']==1
+    assert report['captures'][0]['actual_capture']==older
+    assert len(report['captures'][0]['attempted_captures'])==2
 
 def test_download_failure_is_not_missing_forever(tmp_path):
     state=State(tmp_path);state.add(HOME,'html','seed',TARGET)

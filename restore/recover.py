@@ -47,6 +47,28 @@ def index(state: State,client,max_pages: int=20,url: str='bluescholars.com',matc
             state.save();break
     return checkpoint
 
+def index_seed_assets(state:State,client,max_assets:int=100,max_pages:int=3)->dict:
+    """Index exact image URLs explicitly observed in the expanded source inventory."""
+    import json
+    inventory_path=state.root/'recovery/seeds/inventory.json'
+    inventory=json.loads(inventory_path.read_text()) if inventory_path.exists() else {'assets':[]}
+    urls=list(dict.fromkeys(item.get('original_url','') for item in inventory.get('assets',[])
+                            if item.get('original_url','').startswith(('http://','https://'))))
+    selected=urls[:max_assets]
+    report={'archive':'Internet Archive Wayback','query_type':'exact source-linked asset URL',
+            'inventory_urls':len(urls),'queried_urls':0,'indexed_capture_records':0,'failures':[]}
+    for url in selected:
+        before=sum(len(record.get('captures',[])) for key,record in state.data['resources'].items()
+                   if record.get('url',key)==url)
+        checkpoint=index(state,client,max_pages=max_pages,url=url,match='exact')
+        after=sum(len(record.get('captures',[])) for key,record in state.data['resources'].items()
+                  if record.get('url',key)==url)
+        report['queried_urls']+=1;report['indexed_capture_records']+=max(0,after-before)
+        if checkpoint.get('last_error'):
+            report['failures'].append({'url':url,'error':checkpoint['last_error']})
+    state.save();write_json(state.root/'recovery/asset-index-report.json',report)
+    return report
+
 def suffix(body,kind):
     if kind=='html': return '.html'
     if kind=='css': return '.css'
@@ -79,7 +101,22 @@ def resource_priority(record: dict) -> tuple[int,int]:
         and ref_parts.path.rstrip('/')==''
         for ref in refs if ref and not ref.startswith('CDX:')
     )
-    if record['kind'] in ('css','image') and linked_core:
+    cdn_host=parts.hostname in {
+        'static1.squarespace.com','static.squarespace.com','assets.squarespace.com',
+        'images.squarespace-cdn.com','media.tumblr.com','66.media.tumblr.com'
+    }
+    internal_core_asset=(own_host and not path.startswith(('/blog/wp-','/blog/tag/','/blog/20')))
+    if record['kind'] in ('css','image') and linked_core and (cdn_host or internal_core_asset):
+        return 1,len(url)
+    linked_squarespace_article=any(
+        (ref_parts:=urlsplit(ref)).hostname in ('bluescholars.com','www.bluescholars.com')
+        and ref_parts.path.startswith('/blog/')
+        and not (ref_parts.path.split('/')[2:3] and ref_parts.path.split('/')[2].isdigit()
+                 and len(ref_parts.path.split('/')[2])==4)
+        and not ref_parts.path.startswith(('/blog/wp-','/blog/tag/'))
+        for ref in refs if ref and not ref.startswith('CDX:')
+    )
+    if record['kind'] in ('css','image') and linked_squarespace_article:
         return 1,len(url)
     if (record['kind']=='html' and own_host and path in CORE_PATHS
             and not (path=='/blog' and query_keys.intersection({'tag','author'}))):
@@ -88,6 +125,11 @@ def resource_priority(record: dict) -> tuple[int,int]:
         return 3,len(url)
     if record['kind']=='html' and own_host and path.startswith('/blog/') and path!='/blog/':
         if not query_keys.intersection({'tag','author','offset'}):
+            # The current Squarespace edition uses direct slug permalinks. Dated
+            # /blog/YYYY/MM/... routes belong to the separate WordPress edition.
+            first_segment=path.split('/')[2:3]
+            if first_segment and len(first_segment[0])==4 and first_segment[0].isdigit():
+                return 7,len(url)
             return 3,len(url)
         return 5,len(url)
     if record['kind']=='html':
@@ -146,6 +188,84 @@ def recover(state: State,client,max_files: int=150,retry_failed: bool=False) -> 
             if phase==0: index(state,client,max_pages=3,url=url,match='exact')
     report=summary(state)
     write_json(state.root/'recovery/report.json',report)
+    return report
+
+def capture_variant(state:State,client,url:str,timestamp:str)->dict:
+    """Recover one explicitly selected capture without replacing a URL's other dates."""
+    if not timestamp.isdigit():raise ValueError('Capture timestamp must be numeric')
+    canonical=original_url(url)
+    if not canonical:raise ValueError('Invalid original URL')
+    kind=kind_for(canonical)
+    if kind not in ('html','css','image'):raise ValueError(f'Unsupported capture kind: {kind}')
+    replay=f'https://web.archive.org/web/{timestamp}id_/{canonical}'
+    response=client.get(replay)
+    validate_payload(response.body,kind)
+    actual=capture_from(response.url)
+    if not actual:raise ValueError('Resolved archive response has no capture timestamp')
+    digest=hashlib.sha256(response.body).hexdigest()
+    path='recovery/raw/'+digest+suffix(response.body,kind);destination=state.root/path
+    destination.parent.mkdir(parents=True,exist_ok=True)
+    if not destination.exists():destination.write_bytes(response.body)
+    final_original=original_url(response.url) or canonical
+    key=f'{canonical}@@wayback:{actual}:{digest[:12]}'
+    record={'url':canonical,'kind':kind,'status':'needs_review' if actual>TARGET else 'recovered',
+        'raw_path':path,'sha256':digest,'bytes':len(response.body),'actual_capture':actual,
+        'final_url':response.url,'final_original':final_original,
+        'content_type':response.headers.get('Content-Type',''),'source_archive':'Internet Archive Wayback',
+        'source_requested_capture':timestamp,'referrers':['explicit-capture-request'],'hints':[],
+        'captures':[],'attempts':[],'retrieved_at':now()}
+    state.data['resources'][key]=record
+    if kind=='html':
+        refs=discover_html(response.body.decode('utf-8',errors='replace'),final_original)
+    elif kind=='css':
+        refs=[{'url':u,'kind':kind_for(u),'referrer':canonical} for u in discover_css(response.body.decode('utf-8',errors='replace'),final_original)]
+    else:refs=[]
+    for ref in refs:state.add(ref['url'],ref['kind'],ref.get('referrer',canonical),actual)
+    state.save()
+    return {'url':canonical,'source_key':key,'requested_capture':timestamp,'actual_capture':actual,
+            'status':record['status'],'sha256':digest,'bytes':len(response.body),'kind':kind}
+
+ERA_BOUNDS={'2007':('20070101000000','20081231235959'),
+            '2009':('20090101000000','20130920235959'),
+            '2013':('20130921000000','20230930235959')}
+
+def capture_era(state:State,client,era:str,max_files:int=2000)->dict:
+    """Capture the latest successful Wayback response per URL in one site era."""
+    if era not in ERA_BOUNDS:raise ValueError('Era must be 2007, 2009, or 2013')
+    start,end=ERA_BOUNDS[era];selected=[]
+    existing_success={(r.get('url'),r.get('source_requested_capture')) for r in state.data['resources'].values()
+                       if r.get('source_requested_capture') and r.get('raw_path')
+                       and r.get('status') in ('recovered','needs_review')}
+    for key,record in state.data['resources'].items():
+        url=record.get('url',key)
+        if record.get('kind') not in ('html','css','image'):continue
+        candidates=[c.get('timestamp','') for c in record.get('captures',[])
+                    if c.get('statuscode')=='200' and start<=c.get('timestamp','')<=end]
+        if not candidates:continue
+        candidates=sorted(set(candidates),reverse=True)
+        if any((url,timestamp) in existing_success for timestamp in candidates):continue
+        selected.append((url,candidates))
+    selected=sorted(selected,key=lambda item:(item[1][0],item[0]))[:max_files]
+    report={'era':era,'date_start':start,'date_end':end,'eligible_urls':len(set(url for url,_ in selected)),
+            'attempted':0,'recovered':0,'failures':[],'captures':[]}
+    for url,candidates in selected:
+        report['attempted']+=1
+        attempted=[];result=None
+        for timestamp in candidates:
+            attempted.append(timestamp)
+            try:
+                result=capture_variant(state,client,url,timestamp)
+                result['attempted_captures']=list(attempted)
+                report['recovered']+=1;report['captures'].append(result)
+                break
+            except Exception as exc:
+                last_error=f'{type(exc).__name__}: {exc}'
+        if result is None:
+            report['failures'].append({'url':url,'timestamps':attempted,'error':last_error})
+        if report['attempted']%25==0:
+            state.save();write_json(state.root/f'recovery/era-{era}-report.json',report)
+    state.save();write_json(state.root/f'recovery/era-{era}-report.json',report)
+    report['eligible_urls']=len(set(url for url,_ in selected))
     return report
 
 def summary(state: State) -> dict:

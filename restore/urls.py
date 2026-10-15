@@ -92,6 +92,12 @@ def route(url: str) -> str:
     p=urlsplit(url)
     path=p.path or '/'
     safe_path(path)
+    # Squarespace exposes some runtime endpoints with comma-joined IDs in a
+    # single path segment. They are not real content routes and can exceed a
+    # filesystem's per-component filename limit when preserved literally.
+    if any(len(unquote(part).encode('utf-8'))>180 for part in path.split('/')):
+        key=hashlib.sha256(identity(url).encode()).hexdigest()[:20]
+        return '/archive-path/'+key+'/'
     q=parse_qs(p.query,keep_blank_values=True)
     if p.query:
         if path.rstrip('/')=='/blog' and set(q)=={'offset'} and len(q['offset'])==1 and q['offset'][0] in PAGINATION:
@@ -100,10 +106,14 @@ def route(url: str) -> str:
         return '/archive-query/'+key+'/'
     if path=='/':
         return '/'
+    if path.lower().endswith('/index.html'):
+        return path[:-len('index.html')]
+    if path.lower().endswith('.html'):
+        return path
     return path.rstrip('/')+'/'
 
 def asset_route(url: str, kind: str) -> str:
-    ext = '.css' if kind=='css' else urlsplit(url).path.rsplit('.',1)[-1].lower()
+    ext = 'css' if kind=='css' else urlsplit(url).path.rsplit('.',1)[-1].lower()
     if ext not in {'css','jpg','jpeg','png','gif','webp','svg','ico'}:
         ext='img'
     return '/assets/'+hashlib.sha256(url.encode()).hexdigest()[:24]+'.'+ext

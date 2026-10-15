@@ -6,8 +6,10 @@ from pathlib import Path
 import sys
 from .archive import ArchiveClient
 from .build import build,promote
+from .arquivo import harvest as harvest_arquivo
+from .commoncrawl import harvest as harvest_commoncrawl,import_rows as import_commoncrawl_rows
 from .check import check
-from .recover import index,recover,summary,now
+from .recover import index,recover,summary,now,capture_variant,capture_era,index_seed_assets
 from .state import State,write_json
 from .urls import base_path
 
@@ -38,12 +40,27 @@ def main(argv=None) -> int:
     commands=parser.add_subparsers(dest='command',required=True)
     commands.add_parser('seed',help='Load previously observed archive URLs')
     commands.add_parser('status',help='Show acquisition counts without network access')
+    p=commands.add_parser('commoncrawl',help='Search all published Common Crawl collections and preserve source WARC responses')
+    p.add_argument('--max-records',type=int,default=1800);p.add_argument('--workers',type=int,default=4)
+    p=commands.add_parser('arquivo',help='Search and preserve bluescholars.com captures from Arquivo.pt')
+    p.add_argument('--history-url',default='bluescholars.com',help='Domain or exact URL history to enumerate')
+    p=commands.add_parser('commoncrawl-import',help='Import saved Common Crawl CDX rows from a JSONL file')
+    p.add_argument('--rows',type=Path,required=True);p.add_argument('--collection',required=True)
     idx=commands.add_parser('index',help='Enumerate captures and persist the continuation cursor')
     idx.add_argument('--url',default='bluescholars.com');idx.add_argument('--match',choices=['domain','exact','prefix'],default='domain')
     idx.add_argument('--max-pages',type=int,default=20)
+    assets=commands.add_parser('index-assets',help='Index exact image URLs in the expanded source inventory')
+    assets.add_argument('--max-assets',type=int,default=100);assets.add_argument('--max-pages',type=int,default=3)
     rec=commands.add_parser('recover',help='Download original responses and discover dependencies')
     rec.add_argument('--max-files',type=int,default=150);rec.add_argument('--retry-failed',action='store_true')
-    for p in (idx,rec):
+    p=commands.add_parser('capture',help='Preserve an exact Wayback capture as a dated variant')
+    p.add_argument('--url',required=True);p.add_argument('--timestamp',required=True)
+    capture=p
+    p=commands.add_parser('capture-era',help='Preserve the last available capture per URL for a historical site era')
+    p.add_argument('--era',choices=['2007','2009','2013'],required=True)
+    p.add_argument('--max-files',type=int,default=2000)
+    capture_era_command=p
+    for p in (idx,rec,capture,capture_era_command):
         p.add_argument('--delay',type=float,default=1.2);p.add_argument('--timeout',type=int,default=30);p.add_argument('--retries',type=int,default=3)
     for name in ('build','check','serve'):
         p=commands.add_parser(name)
@@ -63,7 +80,18 @@ def main(argv=None) -> int:
         if args.command=='seed':
             s=State(root);s.seed();result=summary(s)
         elif args.command=='status':result=summary(State(root))
-        elif args.command in ('index','recover'):
+        elif args.command=='commoncrawl':
+            if args.max_records<1 or args.workers<1:raise ValueError('Common Crawl limits must be positive')
+            result=harvest_commoncrawl(root,args.max_records,args.workers)
+        elif args.command=='arquivo': result=harvest_arquivo(root,args.history_url)
+        elif args.command=='commoncrawl-import':
+            rows=[json.loads(line) for line in args.rows.read_text().splitlines() if line.strip()]
+            result=import_commoncrawl_rows(root,args.collection,rows)
+        elif args.command=='index-assets':
+            if args.max_assets<1 or args.max_pages<1:raise ValueError('Asset index limits must be positive')
+            client=ArchiveClient()
+            result=index_seed_assets(State(root),client,args.max_assets,args.max_pages)
+        elif args.command in ('index','recover','capture','capture-era'):
             if args.delay<0 or args.timeout<1 or args.retries<1: raise ValueError('Invalid network limits')
             client=ArchiveClient(delay=args.delay,timeout=args.timeout,retries=args.retries)
             s=State(root)
@@ -72,6 +100,13 @@ def main(argv=None) -> int:
                 if args.max_pages<1:raise ValueError('--max-pages must be positive')
                 result=index(s,client,args.max_pages,args.url,args.match)
                 print(json.dumps(result,indent=2));return 2 if result.get('last_error') and not result.get('complete') else 0
+            if args.command=='capture':
+                result=capture_variant(s,client,args.url,args.timestamp)
+                print(json.dumps(result,indent=2));return 0
+            if args.command=='capture-era':
+                if args.max_files<1:raise ValueError('--max-files must be positive')
+                result=capture_era(s,client,args.era,args.max_files)
+                print(json.dumps(result,indent=2));return 0
             if args.max_files<1:raise ValueError('--max-files must be positive')
             result=recover(s,client,args.max_files,args.retry_failed)
             print(json.dumps(result,indent=2))

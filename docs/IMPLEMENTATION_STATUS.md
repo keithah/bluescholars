@@ -15,7 +15,7 @@
 - Wayback domain checkpoint: complete; report records 8,178 indexed captures. The current state has 3,978 resource records and 7,631 capture rows attached. Capture metadata is not equivalent to recovered bytes.
 - Promoted source catalog: 3,268 resource records; 97 unique files under `source/raw/` are tracked. The publication and visual-review flags remain false.
 - The unreviewed candidate build has 396 recovered pages, 641 placeholders, and 27 locally rendered assets. Root and `/bluescholars/` offline checks passed after repairing a legacy WordPress navigation target.
-- The suite passes 97 tests; see [verification](VERIFICATION.md).
+- The suite passes 98 tests; see [verification](VERIFICATION.md).
 - A prior recovery action successfully saved its checkpoint and downloaded material but failed its candidate build because an old provider-error response remained marked recovered. The builder now records invalid source bytes as a gap; the regression test passes. The next run uses the repaired builder.
 - Pages API returned 404 when checked, so Pages is disabled. No deployment URL exists yet.
 

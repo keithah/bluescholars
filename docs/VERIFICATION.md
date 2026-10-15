@@ -2,7 +2,7 @@
 
 ## Automated checks
 
-- `.venv311/bin/python -m pytest -q` — **97 passed**.
+- `.venv311/bin/python -m pytest -q` — **98 passed**.
 - `.venv311/bin/python -m compileall -q restore tests` — passed.
 - `bash -n scripts/*.sh` — passed.
 - `git diff --check` on implementation, tests, and documentation — passed. Original archived HTML is preserved byte-for-byte, including its source whitespace, so the check excludes `source/raw/` and its original-HTML test fixture.
@@ -22,7 +22,9 @@ The counts above describe the current unreviewed candidate and will change after
 
 ## Visual review
 
-The local candidate was opened in the in-app browser at `/2013/`; the accessibility tree showed the original Blue Scholars header, navigation, social links, and front-page image. A full desktop/mobile pixel comparison against the archive has not yet been recorded. No human review is claimed. The visual and publication flags stay false.
+The reviewed local `/2013/` page was opened alongside the May 29, 2021 archive capture. At desktop width, the ribbon logo, navigation, sidebar spacing, photograph crop, and main image position match; the vertical offset is accounted for by the Wayback toolbar height versus the local restoration notice. The homepage image and recovered ribbon logo both rendered. At 390×844, the local page collapsed the navigation to the original mobile “Menu” treatment and displayed the photograph within the viewport. The browser did not apply that viewport override to the separate archive tab, so a pixel-matched mobile screenshot comparison remains open.
+
+The project-subpath page at `http://127.0.0.1:8080/bluescholars/2013/` rendered in the same browser with the same local image and navigation destinations under `/bluescholars/`. These are agent observations; no human review is claimed. The site-wide review is still incomplete (including the two older editions and representative blog/section pages), so the visual and publication flags stay false.
 
 ## Known limitations
 

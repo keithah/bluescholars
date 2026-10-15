@@ -68,6 +68,13 @@ def test_html_srcset_fallback_to_recovered_asset():
     text,_=render_html('<html><body><img srcset="https://cdn.example/photo.jpg 2x"></body></html>',HOME,RES,'')
     assert BeautifulSoup(text,'html.parser').img['src']=='/assets/photo.jpg'
 
+def test_html_asset_reuses_identical_source_path_over_other_scheme():
+    resources={'http://cdn.example/photo.jpg':{'kind':'image','local_path':'/assets/photo.jpg'}}
+    text,issues=render_html('<html><body><img src="https://cdn.example/photo.jpg"></body></html>',
+                            HOME,resources,'')
+    assert BeautifulSoup(text,'html.parser').img['src']=='/assets/photo.jpg'
+    assert not issues
+
 def test_javascript_encoded_control_characters_removed():
     text,_=render_html('<html><body><a href="java&#10;script:alert(1)">x</a><img src="x" onload="bad()"></body></html>',HOME,{},'')
     assert 'javascript:' not in text and 'onload=' not in text

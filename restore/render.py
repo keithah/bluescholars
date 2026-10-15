@@ -15,10 +15,22 @@ class Resolver:
         self.resources=resources;self.base=base_path(base);self.issues=issues
         self.route_prefix=route_prefix.rstrip('/')
         self.aliases={identity(u):r for u,r in resources.items()}
+    def _record(self,url):
+        record=self.resources.get(url) or self.aliases.get(identity(url),{})
+        if record.get('local_path'):
+            return record
+        parts=urlsplit(url)
+        if parts.scheme in ('http','https') and parts.hostname:
+            alternate=('http' if parts.scheme=='https' else 'https')+'://'+parts.netloc+parts.path
+            if parts.query:alternate+='?'+parts.query
+            fallback=self.resources.get(alternate) or self.aliases.get(identity(alternate),{})
+            if fallback.get('local_path'):
+                return fallback
+        return record
     def asset(self,value,url):
         if str(value).startswith('#'): return value
         u=original_url(value,url)
-        record=self.resources.get(u) or self.aliases.get(identity(u),{})
+        record=self._record(u)
         if record.get('local_path'):
             return self.base+record['local_path']
         if u:
@@ -29,7 +41,7 @@ class Resolver:
         u=original_url(value,url)
         if not u: return None
         fragment=urlsplit(value).fragment
-        record=self.resources.get(u) or self.aliases.get(identity(u),{})
+        record=self._record(u)
         if record.get('local_path'):
             target=self.base+record['local_path']
         elif is_site(u):

@@ -2,7 +2,7 @@
 
 ## Automated checks
 
-- `.venv311/bin/python -m pytest -q` — **100 passed** (including the new Arquivo.pt inventory-scan and resume tests).
+- `.venv311/bin/python -m pytest -q` — **101 passed** (including Arquivo.pt page-history and domain-CDX resume tests).
 - `.venv311/bin/python -m compileall -q restore tests` — passed.
 - `bash -n scripts/*.sh` — passed.
 - `git diff --check` on implementation, tests, and documentation — passed. Original archived HTML is preserved byte-for-byte, including its source whitespace, so the check excludes `source/raw/` and its original-HTML test fixture.

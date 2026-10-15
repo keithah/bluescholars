@@ -9,6 +9,7 @@
 - Font binaries are excluded by the repository policy, so original declared font families may fall back to system fonts.
 - Current reviewed source bytes include only three images. The current candidate emits 27 local static assets after including CSS and generated assets; many observed gallery, blog, and legacy-site images remain unavailable locally.
 - The Common Crawl all-collection endpoint sweep had 122 of 128 index queries fail locally. Six collections yielded 380 site responses. Separate targeted 2009–2010 and 2023–40 samples added material, but no complete Common Crawl sweep has passed.
+- Arquivo.pt has yielded three original root-page bodies from its exact URL-history API. Its complete domain CDX index and per-era page/style/image captures are now implemented as a bounded, resumable follow-up, but have not yet been run.
 - The first Squarespace-era root located in Wayback is September 21, 2013; the last intact homepage capture observed so far is September 30, 2023. The 2024 domain capture is post-takeover material and is excluded from the historical Squarespace edition.
 
 ## Still being searched

@@ -70,3 +70,52 @@ def test_arquivo_resumes_without_requerying_successful_urls(tmp_path, monkeypatc
     assert first['queried_urls'] == 1
     assert second['queried_urls'] == 0
     assert calls == ['https://bluescholars.com/']
+
+
+def test_arquivo_domain_index_preserves_latest_capture_per_edition_and_resumes(tmp_path, monkeypatch):
+    from restore.arquivo import harvest_domain
+    rows = [
+        {'url': 'https://bluescholars.com/', 'timestamp': '20191019105504', 'mime': 'text/html',
+         'status': '200', 'digest': 'root-old', 'collection': 'AWP30'},
+        {'url': 'https://bluescholars.com/', 'timestamp': '20210529010817', 'mime': 'text/html',
+         'status': '200', 'digest': 'root-new', 'collection': 'AWP40'},
+        {'url': 'https://bluescholars.com/2009/about', 'timestamp': '20120601000000', 'mime': 'text/html',
+         'status': '200', 'digest': 'wp', 'collection': 'AWP20'},
+        {'url': 'https://bluescholars.com/2009/about', 'timestamp': '20120701000000', 'mime': 'text/html',
+         'status': '404', 'digest': 'bad', 'collection': 'AWP20'},
+        {'url': 'https://bluescholars.com/image.jpg', 'timestamp': '20200501000000', 'mime': 'image/jpeg',
+         'status': '200', 'digest': 'photo', 'collection': 'AWP40'},
+        {'url': 'https://unrelated.example/page', 'timestamp': '20200501000000', 'mime': 'text/html',
+         'status': '200', 'digest': 'other', 'collection': 'AWP40'},
+    ]
+    index_body = '\n'.join(json.dumps(row) for row in rows).encode()
+    calls = []
+    def get(url, params=None, timeout=None, headers=None):
+        calls.append((url, params))
+        if params:
+            assert url == 'https://arquivo.pt/wayback/cdx'
+            return Response(index_body, url)
+        body = (b'\xff\xd8\xfffixture' if url.endswith('image.jpg') else
+                b'<html><head><title>Archive capture</title></head><body>historical text</body></html>')
+        return Response(body, url)
+    monkeypatch.setattr('restore.arquivo.requests.get', get)
+
+    first = harvest_domain(tmp_path, max_records=1, delay=0)
+    assert first['index_rows'] == 6
+    assert first['selected_latest_per_url_edition'] == 3
+    assert first['attempted_records'] == 1
+    assert first['remaining_records'] == 2
+    assert len([call for call in calls if call[1]]) == 1
+
+    second = harvest_domain(tmp_path, max_records=5, delay=0)
+    assert second['attempted_records'] == 2
+    assert second['recovered_records'] == 2
+    assert second['remaining_records'] == 0
+    assert len([call for call in calls if call[1]]) == 1
+    archived = [r for r in State(tmp_path).data['resources'].values()
+                if r.get('source_archive') == 'Arquivo.pt']
+    assert {r['actual_capture'] for r in archived} == {
+        '20210529010817', '20120601000000', '20200501000000'}
+    assert all(r['sha256'] and r['source_archive_url'] and r['source_digest'] for r in archived)
+    raw_index = tmp_path / 'recovery/index/arquivo-domain.jsonl'
+    assert raw_index.read_bytes() == index_body

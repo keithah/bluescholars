@@ -6,7 +6,7 @@ from pathlib import Path
 import sys
 from .archive import ArchiveClient
 from .build import build,promote
-from .arquivo import harvest as harvest_arquivo
+from .arquivo import harvest as harvest_arquivo,harvest_domain as harvest_arquivo_domain
 from .commoncrawl import harvest as harvest_commoncrawl,import_rows as import_commoncrawl_rows
 from .check import check
 from .recover import index,recover,summary,now,capture_variant,capture_era,index_seed_assets
@@ -46,6 +46,8 @@ def main(argv=None) -> int:
     p.add_argument('--history-url',default='bluescholars.com',help='Domain inventory or exact URL history to enumerate')
     p.add_argument('--max-urls',type=int,default=200,help='Maximum exact page histories to query this resumable batch')
     p.add_argument('--delay',type=float,default=0.5,help='Delay between Arquivo.pt history requests')
+    p=commands.add_parser('arquivo-domain',help='Enumerate Arquivo.pt domain CDX and preserve latest captures for every edition')
+    p.add_argument('--max-records',type=int,default=500);p.add_argument('--delay',type=float,default=0.5)
     p=commands.add_parser('commoncrawl-import',help='Import saved Common Crawl CDX rows from a JSONL file')
     p.add_argument('--rows',type=Path,required=True);p.add_argument('--collection',required=True)
     idx=commands.add_parser('index',help='Enumerate captures and persist the continuation cursor')
@@ -86,6 +88,7 @@ def main(argv=None) -> int:
             if args.max_records<1 or args.workers<1:raise ValueError('Common Crawl limits must be positive')
             result=harvest_commoncrawl(root,args.max_records,args.workers)
         elif args.command=='arquivo': result=harvest_arquivo(root,args.history_url,args.max_urls,args.delay)
+        elif args.command=='arquivo-domain': result=harvest_arquivo_domain(root,args.max_records,args.delay)
         elif args.command=='commoncrawl-import':
             rows=[json.loads(line) for line in args.rows.read_text().splitlines() if line.strip()]
             result=import_commoncrawl_rows(root,args.collection,rows)

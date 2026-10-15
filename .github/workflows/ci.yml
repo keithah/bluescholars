@@ -1,0 +1,33 @@
+name: Validate static restoration
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
+          cache: pip
+      - run: python -m pip install -r requirements-dev.txt
+      - run: python -m pytest -q
+      - name: Test root deployment
+        run: |
+          python -m restore build
+          python -m restore check
+      - name: Test project-subpath deployment
+        run: |
+          python -m restore build --base-path /bluescholars
+          python -m restore check --base-path /bluescholars
+      - uses: actions/upload-artifact@v7
+        with:
+          name: reviewed-source-preview
+          path: _site/
+          retention-days: 14

@@ -1,0 +1,56 @@
+[
+  {
+    "command": "python -m pytest -q -p no:cacheprovider",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "passed": true
+  },
+  {
+    "command": "bash -n scripts/create-github-repo.sh scripts/enable-pages.sh",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "passed": true
+  },
+  {
+    "command": "python -m compileall -q restore tests",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "passed": true
+  },
+  {
+    "command": "python -m restore seed",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "passed": true
+  },
+  {
+    "command": "python -m restore build",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "passed": true
+  },
+  {
+    "command": "python -m restore check",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "passed": true
+  },
+  {
+    "command": "python -m restore build --base-path /bluescholars",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "passed": true
+  },
+  {
+    "command": "python -m restore check --base-path /bluescholars",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "passed": true
+  },
+  {
+    "command": "python -m restore build --release --base-path /bluescholars",
+    "exit_code": 1,
+    "expected_exit_code": 1,
+    "passed": true
+  }
+]

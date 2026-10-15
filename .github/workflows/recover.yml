@@ -1,0 +1,82 @@
+name: Recover Internet Archive sources
+on:
+  workflow_dispatch:
+    inputs:
+      max_files:
+        description: Maximum resource URLs to attempt this run
+        default: '150'
+        required: true
+        type: string
+      max_index_pages:
+        description: Maximum CDX batches (500 capture records each)
+        default: '20'
+        required: true
+        type: string
+      resume_run:
+        description: Optional prior recovery run ID to resume
+        default: ''
+        required: false
+        type: string
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: archive-recovery
+  cancel-in-progress: false
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      MAX_FILES: ${{ inputs.max_files }}
+      MAX_INDEX_PAGES: ${{ inputs.max_index_pages }}
+      RESUME_RUN: ${{ inputs.resume_run }}
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
+          cache: pip
+      - run: python -m pip install -r requirements.txt
+      - name: Validate bounded inputs
+        run: |
+          [[ "$MAX_FILES" =~ ^[0-9]+$ && "$MAX_INDEX_PAGES" =~ ^[0-9]+$ ]]
+          (( MAX_FILES >= 1 && MAX_FILES <= 2000 && MAX_INDEX_PAGES >= 1 && MAX_INDEX_PAGES <= 200 ))
+          [[ -z "$RESUME_RUN" || "$RESUME_RUN" =~ ^[0-9]+$ ]]
+      - name: Restore a prior recovery checkpoint
+        if: inputs.resume_run != ''
+        run: gh run download "$RESUME_RUN" --repo "$GH_REPO" --name archive-recovery --dir .
+      - run: python -m restore seed
+      - name: Enumerate domain captures
+        id: index
+        continue-on-error: true
+        run: python -m restore index --max-pages "$MAX_INDEX_PAGES"
+      - name: Download and discover dependencies
+        id: acquire
+        continue-on-error: true
+        run: python -m restore recover --max-files "$MAX_FILES" --retry-failed
+      - name: Build a candidate for inspection (never publishes)
+        if: always()
+        run: |
+          python -m restore build --candidate
+          python -m restore check --candidate
+      - name: Preserve source bytes, checkpoint and candidate even after failure
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: archive-recovery
+          path: |
+            recovery/state.json
+            recovery/report.json
+            recovery/raw/
+            recovery/index/
+            _candidate/
+          retention-days: 30
+          if-no-files-found: error
+      - name: Report acquisition failure
+        if: steps.acquire.outcome == 'failure'
+        run: |
+          echo 'No successful new acquisition was established. Inspect the saved error report.'
+          exit 1

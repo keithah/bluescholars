@@ -1,0 +1,1504 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Blue Scholars website restoration: verified source locations, alternate archive strategies, and a 97-record recovery inventory."><title>Blue Scholars — Recovery & Source Report</title><style>
+:root{color-scheme:light;--ink:#182432;--muted:#566476;--line:#d8e1e8;--link:#155683;--paper:#fff;--soft:#f2f6f9}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--soft);color:var(--ink);font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.page{max-width:1200px;margin:30px auto;padding:52px 64px;background:var(--paper);box-shadow:0 3px 24px #1824320b}
+.eyebrow{font-size:12px;letter-spacing:.14em;font-weight:750;text-transform:uppercase;color:var(--muted);border-bottom:2px solid var(--ink);padding-bottom:14px;margin-bottom:26px}
+h1{font-size:38px;line-height:1.16;letter-spacing:-.025em;margin:0 0 25px;max-width:950px}h2{font-size:27px;line-height:1.3;margin:48px 0 18px;padding-top:22px;border-top:1px solid var(--line);scroll-margin-top:20px}h3{font-size:20px;line-height:1.4;margin:30px 0 14px;scroll-margin-top:20px}
+p{margin:0 0 17px}a{color:var(--link);text-underline-offset:3px;overflow-wrap:anywhere}strong{font-weight:720}code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.85em;overflow-wrap:anywhere}pre{background:var(--soft);border:1px solid var(--line);border-radius:5px;padding:18px;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.5;margin:20px 0}
+.table-wrap{overflow-x:auto;margin:18px 0 25px;border:1px solid var(--line);border-radius:4px}table{width:100%;border-collapse:collapse;font-size:13px;line-height:1.55}th{background:#e9f0f5;text-align:left;font-size:12px;letter-spacing:.02em;padding:12px 13px;vertical-align:top}td{padding:12px 13px;border-top:1px solid var(--line);vertical-align:top;overflow-wrap:anywhere}tr:nth-child(even) td{background:#f9fbfc}
+nav{padding:20px 24px;margin:24px 0 35px;border:1px solid var(--line);background:var(--soft);border-radius:5px;columns:2;column-gap:34px}nav a{display:block;font-size:13px;padding:4px 0;break-inside:avoid;line-height:1.5}summary{font-weight:700;cursor:pointer}ul{padding-left:24px}li{margin:8px 0}hr{border:0;border-top:2px solid var(--ink);margin:45px 0}.notice{font-size:13px;color:var(--muted);margin-top:28px;border-top:1px solid var(--line);padding-top:16px}
+@media(max-width:760px){.page{margin:0;padding:28px 20px}h1{font-size:30px}h2{font-size:24px}nav{columns:1}table{min-width:650px}th,td{padding:10px}}
+@media print{body{background:white;font-size:10pt}.page{max-width:none;box-shadow:none;padding:0;margin:0}h1{font-size:25pt}h2{font-size:17pt;break-after:avoid}h3{font-size:13pt;break-after:avoid}table{font-size:8pt;min-width:0!important}.table-wrap{overflow:visible}tr{break-inside:avoid}thead{display:table-header-group}nav{columns:2}pre{font-size:8pt}a{color:#182432;text-decoration:underline}@page{size:A4;margin:18mm 14mm}}
+</style></head><body><main class="page"><div class="eyebrow">Website preservation / Source audit / 15 October 2026</div><details><summary>Report contents</summary><nav><a href="#executive-findings">Executive findings</a><a href="#1-how-to-read-the-evidence">1. How to read the evidence</a><a href="#2-core-pages-exactly-where-to-start">2. Core pages: exactly where to start</a><a href="#3-what-to-recover-from-each-section">3. What to recover from each section</a><a href="#4-which-older-archives-we-need-and-why">4. Which older archives we need, and why</a><a href="#5-images-three-concrete-host-path-families">5. Images: three concrete host/path families</a><a href="#6-styling-and-layout-the-biggest-unresolved-dependency">6. Styling and layout: the biggest unresolved dependency</a><a href="#7-full-archive-indexing-the-acquisition-runbook">7. Full-archive indexing: the acquisition runbook</a><a href="#8-the-five-highest-value-gap-investigations">8. The five highest-value gap investigations</a><a href="#9-static-output-and-historical-behavior">9. Static output and historical behavior</a><a href="#10-how-this-expands-the-supplied-project">10. How this expands the supplied project</a><a href="#11-completion-criteria-and-remaining-unknowns">11. Completion criteria and remaining unknowns</a><a href="#appendix-a-every-observed-image-url">Appendix A. Every observed image URL</a><a href="#appendix-b-video-recovery-inventory">Appendix B. Video recovery inventory</a><a href="#appendix-c-forty-blog-entry-finding-aids">Appendix C. Forty blog-entry finding aids</a><a href="#appendix-d-external-sources-and-link-destinations">Appendix D. External sources and link destinations</a><a href="#appendix-e-deliverables-and-source-references">Appendix E. Deliverables and source references</a></nav></details><h1 id="blue-scholars-website-recovery-and-source-location-report">Blue Scholars: website recovery and source-location report</h1>
+<p><strong>Prepared:</strong> October 15, 2026<br/>
+<strong>Visual baseline:</strong> <a href="https://web.archive.org/web/20210529010817/http://bluescholars.com/" rel="noopener noreferrer">May 29, 2021 homepage</a><br/>
+<strong>Goal:</strong> Recover as much original material as possible and recreate a static site suitable for GitHub Pages.<br/>
+<strong>Scope of this report:</strong> Source discovery, capture selection, missing-content recovery, and handoff instructions. This is not a claim that the website has been downloaded or deployed.</p>
+<h2 id="executive-findings">Executive findings</h2>
+<p><strong>Yes: we need multiple archive dates, not just the 2021 homepage snapshot.</strong> The selected homepage sends several internal links to readable 2020 captures. The initially supplied 2019 blog request resolves to a provider error, while another blog capture is readable. The older-pagination chain also reaches an error capture with an earlier 2016 capture advertised in its toolbar. <a href="https://web.archive.org/web/20210529010817/http://bluescholars.com/" rel="noopener noreferrer">S01</a> <a href="https://web.archive.org/web/20201109000819/http://bluescholars.com/blog/" rel="noopener noreferrer">S02</a> <a href="https://web.archive.org/web/20200703230849/http://bluescholars.com/shows" rel="noopener noreferrer">S04</a> <a href="https://web.archive.org/web/20200802161924/http://bluescholars.com/video" rel="noopener noreferrer">S05</a> <a href="https://web.archive.org/web/20200703230805/http://bluescholars.com/holler" rel="noopener noreferrer">S07</a> <a href="https://web.archive.org/web/20190719224039/http://bluescholars.com/blog?offset=1358016466000" rel="noopener noreferrer">S09</a> <a href="https://web.archive.org/web/20190719224804/http://bluescholars.com/blog" rel="noopener noreferrer">S10</a></p>
+<p>The expanded inventory contains <strong>97 URL records: 14 site page/query targets, 42 image URLs, 11 video references, and 30 external source/navigation/media leads</strong>. These are the sources actually identified so far, not an exhaustive count of everything Internet Archive holds. The accompanying CSV and JSON contain full original URLs, replay URLs, capture hints, source pages, status, and generated exact-index queries.</p>
+<p>Of the 42 image URLs, <strong>five displayed in the archive reader, three returned a reported 404, and 34 produced tool cache misses</strong>. No original site files have been saved locally. The five displayed images are the homepage photograph and the four images linked by the Eugene gallery. The complete image-by-image record is in Appendix A. A cache miss in this tool must not be interpreted as a missing archive capture.</p>
+<p>A successful restoration needs two separate decisions for every resource: <strong>where the original material can be recovered</strong> and <strong>whether that version belongs in the 2021 presentation</strong>. Recover widely; publish a deliberately chosen combination. Older content that was no longer part of the reference site can be preserved separately rather than quietly inserted into its homepage or current navigation.</p>
+<h2 id="1-how-to-read-the-evidence">1. How to read the evidence</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Status</th>
+<th>What it establishes</th>
+<th>What it does not establish</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Readable page</td>
+<td>The replay exposes page text/structure.</td>
+<td>That original HTML, CSS, or all dependencies were downloaded.</td>
+</tr>
+<tr>
+<td>Displayed image</td>
+<td>The reader displayed that image request.</td>
+<td>A local binary backup, an exact original resolution, or archive-wide completeness.</td>
+</tr>
+<tr>
+<td>Reported 404</td>
+<td>That tested replay request failed with a reported 404.</td>
+<td>That no other capture or URL spelling works.</td>
+</tr>
+<tr>
+<td>Captured provider error</td>
+<td>The archive is replaying an error page rather than the intended website page.</td>
+<td>That the URL never had good captures.</td>
+</tr>
+<tr>
+<td>Tool cache miss / timeout</td>
+<td>This tool could not retrieve the requested object.</td>
+<td>An archive 404, deletion, or lack of captures.</td>
+</tr>
+<tr>
+<td>Candidate</td>
+<td>A search/retrieval instruction derived from a known source or documented format.</td>
+<td>A tested, successful location.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Dates need separate fields.</strong> A post publication date, parent HTML capture date, requested Wayback timestamp, actual resolved capture timestamp, and present-day retrieval time are different facts. Record all available values. Do not label a 2013 post as published in 2020 because that is when Wayback captured it.</p>
+<p>The exact-index and raw-download URLs in the manifest are generated instructions. They have not all been successfully fetched. A direct raw-homepage request in this session failed because the execution environment could not resolve <code>web.archive.org</code>; bulk-index and earlier-date probes were also inaccessible through the reader. This leaves the full archive inventory open.</p>
+<h2 id="2-core-pages-exactly-where-to-start">2. Core pages: exactly where to start</h2>
+<p>The links below point to known replay targets. Dates are the observed resolved captures where established, not an assertion that every page was captured on May 29, 2021.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Page / exact replay</th>
+<th>Observed capture</th>
+<th>Recovery state</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P01</td>
+<td><a href="https://web.archive.org/web/20210529010817/http://bluescholars.com/" rel="noopener noreferrer">Homepage</a></td>
+<td>2021-05-29 01:08:17</td>
+<td>Readable; original bytes still required</td>
+</tr>
+<tr>
+<td>P02</td>
+<td><a href="https://web.archive.org/web/20201109000819/http://bluescholars.com/blog/" rel="noopener noreferrer">Blog, first listing</a></td>
+<td>2020-11-09 00:08:19</td>
+<td>Readable; original bytes still required</td>
+</tr>
+<tr>
+<td>P03</td>
+<td><a href="https://web.archive.org/web/20200703230849/http://bluescholars.com/shows" rel="noopener noreferrer">Shows</a></td>
+<td>2020-07-03 23:08:49</td>
+<td>Readable; original bytes still required</td>
+</tr>
+<tr>
+<td>P04</td>
+<td><a href="https://web.archive.org/web/20200802161924/http://bluescholars.com/video" rel="noopener noreferrer">Video</a></td>
+<td>2020-08-02 16:19:24</td>
+<td>Readable; original bytes still required</td>
+</tr>
+<tr>
+<td>P05</td>
+<td><a href="https://web.archive.org/web/20200718164929/http://bluescholars.com/shop" rel="noopener noreferrer">Shop</a></td>
+<td>2020-07-18 16:49:29</td>
+<td>Provider error; replace from another capture</td>
+</tr>
+<tr>
+<td>P06</td>
+<td><a href="https://web.archive.org/web/20200703230805/http://bluescholars.com/holler" rel="noopener noreferrer">Holler</a></td>
+<td>2020-07-03 23:08:05</td>
+<td>Readable; original bytes still required</td>
+</tr>
+<tr>
+<td>P07</td>
+<td><a href="https://web.archive.org/web/20200220154840/http://bluescholars.com/blog?offset=1362122742000" rel="noopener noreferrer">Blog, second listing</a></td>
+<td>2020-02-20 15:48:40</td>
+<td>Readable; original bytes still required</td>
+</tr>
+<tr>
+<td>P08</td>
+<td><a href="https://web.archive.org/web/20200220154703/http://bluescholars.com/blog/2013/9/9/eugene-oregon-august-2013" rel="noopener noreferrer">Eugene article</a></td>
+<td>2020-02-20 15:47:03</td>
+<td>Readable; original bytes still required</td>
+</tr>
+<tr>
+<td>P09</td>
+<td><a href="https://web.archive.org/web/20190719224039/http://bluescholars.com/blog?offset=1358016466000" rel="noopener noreferrer">Blog, third listing</a></td>
+<td>2019-07-19 22:40:39</td>
+<td>Provider error; replace from another capture</td>
+</tr>
+</tbody>
+</table></div>
+<p>Source pages: <a href="https://web.archive.org/web/20210529010817/http://bluescholars.com/" rel="noopener noreferrer">S01</a> <a href="https://web.archive.org/web/20201109000819/http://bluescholars.com/blog/" rel="noopener noreferrer">S02</a> <a href="https://web.archive.org/web/20200220154840/http://bluescholars.com/blog?offset=1362122742000" rel="noopener noreferrer">S03</a> <a href="https://web.archive.org/web/20200703230849/http://bluescholars.com/shows" rel="noopener noreferrer">S04</a> <a href="https://web.archive.org/web/20200802161924/http://bluescholars.com/video" rel="noopener noreferrer">S05</a> <a href="https://web.archive.org/web/20200718164929/http://bluescholars.com/shop" rel="noopener noreferrer">S06</a> <a href="https://web.archive.org/web/20200703230805/http://bluescholars.com/holler" rel="noopener noreferrer">S07</a> <a href="https://web.archive.org/web/20200220154703/http://bluescholars.com/blog/2013/9/9/eugene-oregon-august-2013" rel="noopener noreferrer">S08</a> <a href="https://web.archive.org/web/20190719224039/http://bluescholars.com/blog?offset=1358016466000" rel="noopener noreferrer">S09</a></p>
+<h3 id="additional-internal-paths-already-identified">Additional internal paths already identified</h3>
+<p>These are real source-linked URLs, but their page bodies were not retrieved in this pass. Keep them in the queue rather than inventing replacement slugs.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Observed internal URL</th>
+<th>Why it matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://web.archive.org/web/20200220154703/http://bluescholars.com/blog/bringing-back-the-og-t-shirt-in-green-and-gold-if" rel="noopener noreferrer">P10</a></td>
+<td><code>/blog/bringing-back-the-og-t-shirt-in-green-and-gold-if</code></td>
+<td>Next article from the Eugene permalink</td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20201109000819/http://bluescholars.com/blog/el-primer-d-a-de-clase" rel="noopener noreferrer">P11</a></td>
+<td><code>/blog/el-primer-d-a-de-clase</code></td>
+<td>Campus article and its nine inline images</td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20201109000819/http://bluescholars.com/blog/?author=51c916c2e4b05db4f944ab44" rel="noopener noreferrer">P12</a></td>
+<td><code>/blog/?author=51c916c2e4b05db4f944ab44</code></td>
+<td>Author archive: Geo</td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20201109000819/http://bluescholars.com/blog/?author=51b3c159e4b0de8ae9a69517" rel="noopener noreferrer">P13</a></td>
+<td><code>/blog/?author=51b3c159e4b0de8ae9a69517</code></td>
+<td>Author archive: Alexei</td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20201109000819/http://bluescholars.com/blog?tag=Blue+Schoalrs" rel="noopener noreferrer">P14</a></td>
+<td><code>/blog?tag=Blue+Schoalrs</code></td>
+<td>Tag query; historical misspelling must survive</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="3-what-to-recover-from-each-section">3. What to recover from each section</h2>
+<h3 id="homepage-and-common-layout-first-priority">Homepage and common layout — first priority</h3>
+<p>Save the original HTML, head metadata, navigation, site-title/logo mechanism, footer, mobile-menu structure, inline styles, and every linked stylesheet. Record the ordering and roles of the five section links and the two external artist links. Obtain the homepage photograph as a separate asset, not as a screenshot of the archived page. <a href="https://web.archive.org/web/20210529010817/http://bluescholars.com/" rel="noopener noreferrer">S01</a> <a href="https://web.archive.org/web/20210529010844/https://images.squarespace-cdn.com/content/v1/51b8c20be4b0f1f8c9dcdf4c/1371078164544-2RKW5D1QDQ5IXSVM5B2N/ke17ZwdGBToddI8pDm48kIZpWXENTEukrBXe6_rB7blZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIF2CO6JwS3nXJTgmvDX6VE5p5CmEHphUtvFe0ff6hcA8KMshLAGzx4R3EDFOm1kBS/front-page.jpg" rel="noopener noreferrer">S11</a></p>
+<p>The homepage photograph's actual capture is <strong>20210529010844</strong>, 27 seconds after the HTML reference <strong>20210529010817</strong>. This is an important edge case: a blanket rule that discards every resource after the HTML timestamp would discard the reference image itself. Save its provenance and permit a specifically reviewed same-crawl dependency; do not turn that exception into unrestricted acceptance of later redesigns. <a href="https://web.archive.org/web/20210529010844/https://images.squarespace-cdn.com/content/v1/51b8c20be4b0f1f8c9dcdf4c/1371078164544-2RKW5D1QDQ5IXSVM5B2N/ke17ZwdGBToddI8pDm48kIZpWXENTEukrBXe6_rB7blZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIF2CO6JwS3nXJTgmvDX6VE5p5CmEHphUtvFe0ff6hcA8KMshLAGzx4R3EDFOm1kBS/front-page.jpg" rel="noopener noreferrer">S11</a></p>
+<p>Do not guess the logo or typography from the text reader's blank heading. The logo could be an image, a styled title, or a CSS-dependent element; its exact mechanism remains unverified. The report contains no recovered original stylesheet or logo file.</p>
+<h3 id="blog-preserve-posts-and-the-paths-connecting-them">Blog — preserve posts and the paths connecting them</h3>
+<p>The two readable listings contain 20 entries each. They expose publication dates spanning September 9 through January 12, 2013. Treat that as <strong>40 listing entries</strong>, not 40 separately recovered article pages or the site's lifetime post count. Appendix C records the finding aids. <a href="https://web.archive.org/web/20201109000819/http://bluescholars.com/blog/" rel="noopener noreferrer">S02</a> <a href="https://web.archive.org/web/20200220154840/http://bluescholars.com/blog?offset=1362122742000" rel="noopener noreferrer">S03</a></p>
+<p>For each raw article block, retain the original item ID, exact permalink, title or deliberately absent title, author, publication timestamp, body markup, source/reblog credits, tags, images, captions, embed IDs, and navigation neighbors. If only the listing survives, it may still preserve the complete body; confirm whether it is full text or an excerpt before reconstructing an article from it. Record that provenance instead of claiming an independently recovered permalink.</p>
+<p>The known pagination chain is:</p>
+<pre><code class="language-text">/blog/
+  -&gt; /blog?offset=1362122742000
+  -&gt; /blog?offset=1358016466000
+  -&gt; additional offsets not yet established
+</code></pre>
+<p>Offsets are part of content identity. Do not strip queries during crawling. Preserve author/tag queries as well. Rebuild browsable static paths for these queries and retain a mapping from the historical URLs; exact query behavior needs deliberate handling rather than a directory named after a question mark.</p>
+<h3 id="shows-the-poster-is-substantive-content">Shows — the poster is substantive content</h3>
+<p>The inspected Shows page references <code>EUGENE.jpg</code>; its tested image replay returned 404. Recover the original poster from another capture or source-linked URL variant. Do not infer a complete show schedule from the otherwise sparse reader output. Look for additional content in raw HTML, image captions, and older captures before concluding that the page had only that poster. <a href="https://web.archive.org/web/20200703230849/http://bluescholars.com/shows" rel="noopener noreferrer">S04</a></p>
+<h3 id="holler-preserve-the-historical-page-not-a-present-day-directory">Holler — preserve the historical page, not a present-day directory</h3>
+<p>Recover both image references, <code>scholars.jpg</code> and <code>sisters2.jpg</code>, plus the surrounding captions, roles, and social/contact link markup. Both tested image replays returned 404. The page's contact details are historical; this restoration should not imply that those roles, addresses, or handles are current. Extract public contact details from the source during recovery rather than expanding them into unrelated personal data. <a href="https://web.archive.org/web/20200703230805/http://bluescholars.com/holler" rel="noopener noreferrer">S07</a></p>
+<h3 id="shop-do-not-reproduce-the-provider-error-as-the-shop">Shop — do not reproduce the provider error as the shop</h3>
+<p>The tested Shop capture contains a provider error. Search alternate captures of <code>/shop</code>, its slash/protocol variants, and any shop destination revealed by valid older navigation or redirects. Product pages, photography, descriptions, and original displayed prices are candidates only if actually found. No usable catalog or particular external store platform is confirmed yet. <a href="https://web.archive.org/web/20200718164929/http://bluescholars.com/shop" rel="noopener noreferrer">S06</a></p>
+<p>Recommended static behavior: a read-only historical catalog with no working cart, stock claims, or checkout. If no catalog survives, retain an explicit missing-content notice rather than manufacturing products from unrelated material. The shirt posts can support a separate merchandise-history record, but they are not proof of the original Shop page's full contents.</p>
+<h3 id="video-preserve-the-list-before-solving-playback">Video — preserve the list before solving playback</h3>
+<p>The page exposes 11 YouTube embeds in a definite order. Their IDs and archived player-title observations are in Appendix B. Player replays displayed errors; those are not recovered video files. Keep historical order and verified metadata. Mark missing titles as unresolved rather than inferring a song from the URL or appearance. <a href="https://web.archive.org/web/20200802161924/http://bluescholars.com/video" rel="noopener noreferrer">S05</a></p>
+<h2 id="4-which-older-archives-we-need-and-why">4. Which older archives we need, and why</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Recovery target</th>
+<th>First choice</th>
+<th>Next search</th>
+<th>Selection rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Homepage design</td>
+<td>Selected May 2021 HTML and its dependencies</td>
+<td>Adjacent working captures, then compatible 2020 pages</td>
+<td>Compare the actual layout; do not substitute a different era's design.</td>
+</tr>
+<tr>
+<td>Main sections</td>
+<td>Exact readable 2020 captures listed above</td>
+<td>Other captures around those dates</td>
+<td>Recover raw markup and associated dependencies together.</td>
+</tr>
+<tr>
+<td>Third blog listing</td>
+<td>The toolbar's June 11, 2016 lead</td>
+<td>All captures of the exact offset URL; then indexed article URLs</td>
+<td>The 2019 error capture is unsuitable as content.</td>
+</tr>
+<tr>
+<td>Shop</td>
+<td>All captures of the exact shop path</td>
+<td>Earlier 2013–2019 captures, then older indexed variants</td>
+<td>These date ranges are search priorities, not confirmed good captures.</td>
+</tr>
+<tr>
+<td>Missing Squarespace images</td>
+<td>All captures of the exact observed asset URL</td>
+<td>Old parent-page captures and this site's other CDN URL families</td>
+<td>Match the actual image, crop, and source evidence.</td>
+</tr>
+<tr>
+<td>Nine Tumblr inline photos</td>
+<td>Exact image URL and its source post</td>
+<td>Captures near the 2013 publication period and later preserved copies</td>
+<td>Preserve image identity and credits; a current unrelated image is not a substitute.</td>
+</tr>
+<tr>
+<td>Earlier site history</td>
+<td>Full domain index across all years</td>
+<td>Older blog structures and source-discovered legacy paths</td>
+<td>Preserve separately when not part of the reference-era presentation.</td>
+</tr>
+<tr>
+<td>Later than May 2021</td>
+<td>Only a matching missing asset or explicitly approved content</td>
+<td>Compare with older references and, where available, identical byte hashes</td>
+<td>Never assume the newest snapshot is historically appropriate.</td>
+</tr>
+</tbody>
+</table></div>
+<p>The June 11, 2016 date is a <strong>toolbar-reported lead</strong>, not a verified good page. Its exact timestamp and body remain unknown. This date-based request is useful to try, but Wayback may redirect it: <a href="https://web.archive.org/web/20160611/http://bluescholars.com/blog?offset=1358016466000" rel="noopener noreferrer">try the June 2016 older-listing request</a>. Record the result, not the requested date. <a href="https://web.archive.org/web/20190719224039/http://bluescholars.com/blog?offset=1358016466000" rel="noopener noreferrer">S09</a></p>
+<p>A failed paginator does not end recovery. The domain index can expose individual posts or other offset URLs that are not reachable from the currently selected listing. Conversely, an index row is not itself proof that its replay contains the intended content. Validate the response.</p>
+<p><strong>Do not indiscriminately combine eras.</strong> The target is the 2021 site's appearance with documented gap-filling. Material recovered from an older site version but not shown to belong there should be placed in a separate legacy archive or held for review.</p>
+<h2 id="5-images-three-concrete-host-path-families">5. Images: three concrete host/path families</h2>
+<p>The 42 observed image URLs break down as follows. The exact URLs and tested replay states are in Appendix A and the manifest.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Observed host/path family</th>
+<th>URL count</th>
+<th>Special handling</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>images.squarespace-cdn.com/content/v1/51b8c20be4b0f1f8c9dcdf4c/…</code></td>
+<td>18</td>
+<td>Preserve long identity paths and query variants; many basenames repeat.</td>
+</tr>
+<tr>
+<td><code>static1.squarespace.com/static/51b8c20be4b0f1f8c9dcdf4c/…</code></td>
+<td>15</td>
+<td>These observed URLs end with <code>/</code>, not <code>.jpg</code>; validate MIME and bytes.</td>
+</tr>
+<tr>
+<td><code>media.tumblr.com/…</code></td>
+<td>9</td>
+<td>These are outside the main site's domain and need their own index lookups.</td>
+</tr>
+</tbody>
+</table></div>
+<p>The observed Squarespace site ID is:</p>
+<pre><code class="language-text">51b8c20be4b0f1f8c9dcdf4c
+</code></pre>
+<p>The older image paths also expose the shared collection identifier:</p>
+<pre><code class="language-text">51b8c857e4b05bf73912a42e
+</code></pre>
+<p>Use those identifiers to constrain searches. Do not crawl all of Squarespace or Tumblr. Start with each exact source-linked URL; then search the relevant site-specific prefix or original source post.</p>
+<h3 id="missing-image-recovery-ladder">Missing-image recovery ladder</h3>
+<p><strong>First: exact URL, all dates.</strong> The manifest supplies an exact CDX query and a capture-calendar link for every image. Try distinct valid captures, preserving the final redirected URL and capture timestamp. Do not overwrite a failed download with an HTML error body named <code>.jpg</code>.</p>
+<p><strong>Second: indexed variants of the same asset.</strong> Search the upload/item prefix and inspect other sizes, query strings, or historical URL spellings actually found there. The same basename <code>image-asset.jpeg</code> appears on different image identities; filename-only deduplication would destroy content. Keep URL identity and file-hash identity separate.</p>
+<p><strong>Third: older parent HTML.</strong> An earlier copy of the same page may reveal an older CDN path for the image. Inspect its <code>src</code>, lazy-load attributes, responsive sources, links, and embedded metadata. A nearest-date request against a newer URL cannot automatically reveal an older URL it does not know about.</p>
+<p><strong>Fourth: original source/reblog.</strong> Appendix D records source-linked Tumblr and other posts. Recover those narrowly as evidence for the missing material, including credits. An external source must match the specific image or body; a similar photograph from the same photographer is not enough.</p>
+<p><strong>Fifth: retain the gap.</strong> If every investigated route fails, record the attempts and render a clear missing-image state that preserves any surviving caption and layout dimensions. Do not fabricate a replacement and call it restored.</p>
+<p>HTTP/HTTPS aliases, old CDN host spellings, shorter Tumblr post URLs, <code>format=…</code> image sizes, and older Squarespace <code>/content/…</code> forms are <strong>candidate searches</strong>, not verified equivalent URLs. Only promote them after checking what they return.</p>
+<h2 id="6-styling-and-layout-the-biggest-unresolved-dependency">6. Styling and layout: the biggest unresolved dependency</h2>
+<p><strong>Recover original CSS before designing substitute styling.</strong> A content-only mirror can have every paragraph and still look nothing like the reference. None of the exact original stylesheet URLs, logo mechanism, favicon assets, font declarations, or desktop/mobile geometry has yet been verified.</p>
+<p>In the raw homepage and one good article page, collect these evidence classes:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Evidence to extract</th>
+<th>Where to look</th>
+<th>Why it matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stylesheet order</td>
+<td><code>&lt;link rel="stylesheet"&gt;</code>, inline <code>&lt;style&gt;</code>, CSS <code>@import</code></td>
+<td>Cascading order and template/site overrides affect the result.</td>
+</tr>
+<tr>
+<td>Image dependencies</td>
+<td><code>url(...)</code>, backgrounds, masks, icons, sprites</td>
+<td>Some visual assets are not in ordinary image tags.</td>
+</tr>
+<tr>
+<td>Logo/title</td>
+<td>Header markup, linked images, CSS, structured site metadata</td>
+<td>Avoid inventing a wordmark or treating an empty parsed heading as the design.</td>
+</tr>
+<tr>
+<td>Typography</td>
+<td><code>font-family</code>, weight/style, letter spacing, provider declarations</td>
+<td>Record names and requirements; do not bundle unlicensed font files.</td>
+</tr>
+<tr>
+<td>Layout rules</td>
+<td>Widths, spacing, breakpoints, alignments, image fitting/focal points</td>
+<td>Needed for an accurate static reconstruction.</td>
+</tr>
+<tr>
+<td>Lazy-load/gallery behavior</td>
+<td><code>src</code>, <code>data-src</code>, <code>srcset</code>, <code>data-image</code>, block metadata</td>
+<td>Recover the visible image rather than a loader placeholder.</td>
+</tr>
+<tr>
+<td>Hidden navigation/data</td>
+<td>Menu markup and source-discovered page metadata</td>
+<td>Can expose links that a text replay omits.</td>
+</tr>
+<tr>
+<td>Share/search metadata</td>
+<td>Canonical URL, descriptions, icons, Open Graph images</td>
+<td>Useful supplemental assets and content identity checks.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Candidate inspection strings include <code>Static.SQUARESPACE_CONTEXT</code> and site/template identifiers in raw scripts. Their presence in this specific page is not established. Read such data as evidence; do not execute arbitrary archived JavaScript in the restored site.</p>
+<p>Squarespace documents JSON context views such as <code>?format=json-pretty</code>. That makes JSON versions worth searching <strong>in the archive</strong>, but no such response for this site is confirmed here. Search the exact query URLs rather than asking today's site for a replacement. <a href="https://developers.squarespace.com/beginner-tutorial" rel="noopener noreferrer">S15</a></p>
+<p>Useful unverified candidates include:</p>
+<pre><code class="language-text">/?format=json-pretty
+/blog?format=json
+/blog?format=json-pretty
+/blog?offset=1362122742000&amp;format=json
+/blog?offset=1358016466000&amp;format=json
+/blog?format=rss
+/sitemap.xml
+/robots.txt
+</code></pre>
+<p>These are discovery probes, not a claim that every endpoint exists or was archived. Inspect a recovered sitemap's child links and preserve its capture date. If raw source reveals additional feed/API paths, use those exact paths.</p>
+<h2 id="7-full-archive-indexing-the-acquisition-runbook">7. Full-archive indexing: the acquisition runbook</h2>
+<h3 id="inventory-broadly-fetch-selectively">Inventory broadly; fetch selectively</h3>
+<p>Obtain the domain's capture index with original URLs and timestamps, then perform separate targeted queries for the source-linked CDN and media hosts. The CDX API supports exact, prefix, host/domain matching, JSON output, field selection, and resumable results. Do not collapse away all but one capture while collecting the master inventory. <a href="https://github.com/internetarchive/wayback/tree/master/wayback-cdx-server" rel="noopener noreferrer">S12</a></p>
+<p>Example first batch, runnable from an environment with working archive access:</p>
+<pre><code class="language-bash">mkdir -p recovery/index
+curl --fail --show-error --location --get \
+  'https://web.archive.org/cdx/search/cdx' \
+  --data-urlencode 'url=bluescholars.com' \
+  --data-urlencode 'matchType=domain' \
+  --data-urlencode 'output=json' \
+  --data-urlencode 'fl=timestamp,original,statuscode,mimetype,digest,length' \
+  --data-urlencode 'limit=500' \
+  --data-urlencode 'showResumeKey=true' \
+  -o recovery/index/domain-first-batch.json
+</code></pre>
+<p>This is a first batch, not a complete crawl. Follow returned continuation keys and keep each raw response. A resume key appears outside the ordinary capture rows; do not count it as an asset. The supplied recovery project already has resumable indexing logic. <a href="https://github.com/internetarchive/wayback/tree/master/wayback-cdx-server" rel="noopener noreferrer">S12</a> <a href="PROJECT-INSPECTION.md">S19</a></p>
+<p>Do not initially discard redirects, revisit records, or non-200 entries from the research inventory. They may explain moved resources. Separately choose usable payloads for the build. A success status alone does not validate a page: inspect for provider errors, parking pages, challenges, or an unrelated replacement site.</p>
+<p>For external assets, use these <strong>observed prefixes</strong> rather than an unconstrained global crawl:</p>
+<pre><code class="language-text">https://images.squarespace-cdn.com/content/v1/51b8c20be4b0f1f8c9dcdf4c/
+https://static1.squarespace.com/static/51b8c20be4b0f1f8c9dcdf4c/
+</code></pre>
+<p>For Tumblr, start with the nine exact image URLs and specific source post IDs in the manifest. Search any additional media hosts only when raw source or indexed redirects reveal them. For the main domain, preserve evidence of <code>www</code>, protocol, port, slash, and query variants before choosing a local canonical mapping.</p>
+<h3 id="retrieve-raw-originals-and-retain-provenance">Retrieve raw originals and retain provenance</h3>
+<p>A raw replay request has the form:</p>
+<pre><code class="language-text">https://web.archive.org/web/&lt;capture&gt;id_/&lt;original-url&gt;
+</code></pre>
+<p>Normal replay URLs are for inspection; image/iframe modifiers indicate resource context. <code>id_</code> requests unrewritten content in the documented replay convention. Validate what was returned rather than assuming that adding the modifier guarantees a successful original file. <a href="https://pywb.readthedocs.io/en/develop/manual/rewriter.html" rel="noopener noreferrer">S14</a></p>
+<p>For a single nearest-capture lead, the availability API can be useful, but it returns a closest snapshot rather than an archive-wide inventory. Inspect its actual timestamp and verify its body. <a href="https://archive.org/help/wayback_api.php" rel="noopener noreferrer">S13</a></p>
+<p>For every downloaded object record the requested original URL, referring page, requested timestamp, resolved replay URL, resolved original URL, actual capture timestamp, content type, byte count, SHA256, and local file. Add image dimensions after decoding and record the reason any alternate-date asset is accepted. Keep untouched source bytes outside the generated static directory.</p>
+<p>Use a resumable queue with conservative request pacing and backoff. Save failures rather than retrying a bad URL indefinitely. Network failures must not erase a checkpoint or silently trigger publication.</p>
+<h2 id="8-the-five-highest-value-gap-investigations">8. The five highest-value gap investigations</h2>
+<p><strong>A. Third blog listing.</strong> Query all captures of <code>/blog?offset=1358016466000</code>; inspect the June 2016 lead. In parallel, enumerate all indexed <code>/blog</code> URLs and potential article records. Search archived listing JSON/RSS only as a separate fallback. Goal: discover the next offset and older post identities without depending on a broken navigation link.</p>
+<p><strong>B. Three top-level images.</strong> Prioritize A03–A05: the Shows poster and both Holler photographs. Search their exact full URLs, then older versions of the parent pages. Their basenames are useful finding aids, but identity needs the original path and visual/source match.</p>
+<p><strong>C. Original CSS and logo.</strong> Fetch raw home/article HTML, preserve stylesheet order, and recursively collect CSS image dependencies. Match site-specific styles to the selected presentation. A shared library stylesheet alone does not establish the original site's complete appearance.</p>
+<p><strong>D. Older blog photographs.</strong> The 15 extensionless Squarespace URLs and nine Tumblr inline images need explicit attention. Preserve extensionless paths, search their exact indexes, and inspect original source posts for missing variants. This is why a main-domain-only image crawler will be incomplete.</p>
+<p><strong>E. Shop.</strong> Identify a capture with real content before implementing a catalog. Follow source-proven redirects and navigation destinations; do not assume a particular store provider. Keep any historic-commerce restoration read-only.</p>
+<h2 id="9-static-output-and-historical-behavior">9. Static output and historical behavior</h2>
+<p>GitHub Pages publishes static HTML, CSS, and JavaScript, making it suitable for the intended result. A project site conventionally lives under <code>/&lt;repositoryname&gt;/</code>; that prefix must be handled by generated links. This report does not claim that the target repository or Pages deployment is live. <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages" rel="noopener noreferrer">S16</a></p>
+<p>Recommended output mapping:</p>
+<pre><code class="language-text">/                           -&gt; index.html
+/blog/                      -&gt; blog/index.html
+/blog?offset=1362122742000   -&gt; blog/page/2/index.html
+/blog?offset=1358016466000   -&gt; blog/page/3/index.html
+/blog/&lt;original-slug&gt;/      -&gt; blog/&lt;original-slug&gt;/index.html
+/shows/                     -&gt; shows/index.html
+/video/                     -&gt; video/index.html
+/shop/                      -&gt; shop/index.html
+/holler/                    -&gt; holler/index.html
+</code></pre>
+<p>Do not generate a third blog page as recovered content until its body or constituent posts are recovered. An explicit unavailable-content page is different from a fabricated reconstruction.</p>
+<p>Preserve original internal slugs and significant tag spellings, and supply query-to-static navigation where appropriate. Keep ordinary page browsing independent of Wayback and Squarespace. Optional media playback can be an explicit external action; a local page and poster do not make a third-party stream self-contained.</p>
+<p>Remove archive toolbar assets, trackers, obsolete commerce/form submission endpoints, and scripts not required for the static behavior. Keep source evidence separately. Replace only the necessary navigation or gallery behavior with small local code after comparing it to the archived reference.</p>
+<p>Preserve visible credits. Before public release, review permission to republish text, photography, artwork, and other media; an archive capture should not be treated as a blanket reuse permission. This report includes URLs and metadata, not bundled original photos or font binaries.</p>
+<h2 id="10-how-this-expands-the-supplied-project">10. How this expands the supplied project</h2>
+<p>The earlier project is a recovery/build toolset with a small seed inventory, not a recovered site. Its supplied README documents the separation between candidate acquisition and reviewed publication. This report adds many concrete leads; it does not modify that project or run a new deployment. <a href="project-reference/README.md">S17</a> <a href="project-reference/VERIFICATION.md">S18</a></p>
+<p>Included here is <strong><code>recovery-seeds-expanded.json</code></strong>, matching the supplied project's seed schema. It contains <strong>14 page/query targets and 42 image URLs</strong>. The 11 video references remain metadata. The 30 external source leads are in the report/manifest for narrow manual investigation; they are not automatically added as local pages.</p>
+<p>For a fresh copy of the supplied project, merge the expanded seed file into <code>recovery/seeds/inventory.json</code> after preserving the existing file. Do not replace a newer working inventory with this report's older checkpoint. Then the documented commands are:</p>
+<pre><code class="language-bash">python -m restore seed
+python -m restore index --max-pages 50
+python -m restore recover --max-files 500 --retry-failed
+python -m restore status
+</code></pre>
+<p>To inventory an observed external prefix with that CLI:</p>
+<pre><code class="language-bash">python -m restore index \
+  --url 'https://static1.squarespace.com/static/51b8c20be4b0f1f8c9dcdf4c/' \
+  --match prefix --max-pages 50
+</code></pre>
+<p>The <code>50</code>/<code>500</code> limits above are batch limits, not declarations of completeness. Continue from the saved cursor and inspect statuses. After recovery, build a candidate, check it, and compare visually before promotion. <a href="project-reference/README.md">S17</a> <a href="PROJECT-INSPECTION.md">S19</a></p>
+<p>Important limitations found by inspecting the supplied code:</p>
+<ul>
+<li>Automatic HTML link discovery follows the apex/<code>www</code> site, not arbitrary external reblog pages. The domain index and exact/prefix queries are separate mechanisms.</li>
+<li>The seed loader reads page and image entries; it does not recover the <code>video_embeds</code> metadata as playable media.</li>
+<li>Fonts, original JavaScript, media binaries, and certain other downloads are excluded. That is intentional, but must be accounted for in completeness reporting.</li>
+<li>The discovery code handles several image attributes, stylesheet imports, block JSON, and JSON-LD. It is not a general extractor for every inline JavaScript configuration or archived JSON/RSS response.</li>
+<li>The renderer uses external media links and removes original scripts. This is not verified pixel-equivalent behavior.</li>
+<li>Resources resolving later than the exact target timestamp need review, including the legitimate homepage photo captured 27 seconds later.</li>
+</ul>
+<p>These findings are about the packaged files inspected for this report, not the current state of any remote repository. <a href="PROJECT-INSPECTION.md">S19</a></p>
+<h2 id="11-completion-criteria-and-remaining-unknowns">11. Completion criteria and remaining unknowns</h2>
+<p>Call the <strong>inventory</strong> complete only when the chosen domain/prefix index queries have finished, every discovered page has been considered, and all referenced dependencies have a status. A terminated query or tool cache miss is not proof of exhaustion.</p>
+<p>Call a <strong>resource</strong> recovered only when validated bytes exist locally and their provenance is recorded. A readable web-tool replay or a known video ID is not enough.</p>
+<p>Call the <strong>reference presentation</strong> restored only after desktop/mobile comparison of logo/title, typography, spacing, navigation, image order/crops, article structure, and key historical interactions. Suggested comparison widths such as 1440, 768, and 390 pixels are test choices, not claimed original breakpoints.</p>
+<p>Before publishing, verify that no automatic resource request depends on Wayback, Squarespace, or a missing local path; local navigation and historical query mappings work; gaps are honestly marked; and historic contacts, shows, and shop behavior are not presented as current services. A link/resource checker establishes technical consistency, not historical completeness.</p>
+<p>Still unresolved: the full capture index; original CSS/logo/font declarations; image bytes; good Shop content; the third and subsequent blog listings; most individual post bodies/permalinks; additional pages not exposed by these inspected links; source-linked variants; and actual external-media playback. <strong>There is no defensible recovery percentage yet.</strong> The manifest is a concrete starting set, not a denominator for the whole historical website.</p>
+<hr/>
+<h2 id="appendix-a-every-observed-image-url">Appendix A. Every observed image URL</h2>
+<p>Click an ID to try the observed image replay. “All dates” searches that original URL's capture history. Full original, raw-candidate, and exact CDX URLs are in <code>recovery-manifest.csv</code> and <code>recovery-manifest.json</code>.</p>
+<p><strong>Displayed</strong> means shown in the reader, not downloaded. <strong>404</strong> means the tested request reported 404. <strong>Cache miss</strong> means retrieval was inconclusive. All records have <code>local_file: null</code>.</p>
+<h3 id="named-top-level-and-eugene-assets">Named top-level and Eugene assets</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>ID / replay</th>
+<th>Finding aid</th>
+<th>Filename / final locator</th>
+<th>Test result</th>
+<th>Other captures</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://web.archive.org/web/20210529010817im_/https://images.squarespace-cdn.com/content/v1/51b8c20be4b0f1f8c9dcdf4c/1371078164544-2RKW5D1QDQ5IXSVM5B2N/ke17ZwdGBToddI8pDm48kIZpWXENTEukrBXe6_rB7blZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIF2CO6JwS3nXJTgmvDX6VE5p5CmEHphUtvFe0ff6hcA8KMshLAGzx4R3EDFOm1kBS/front-page.jpg" rel="noopener noreferrer">A01</a></td>
+<td>Homepage photograph</td>
+<td><code>front-page.jpg</code></td>
+<td>Displayed</td>
+<td><a href="https://web.archive.org/web/*/https://images.squarespace-cdn.com/content/v1/51b8c20be4b0f1f8c9dcdf4c/1371078164544-2RKW5D1QDQ5IXSVM5B2N/ke17ZwdGBToddI8pDm48kIZpWXENTEukrBXe6_rB7blZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIF2CO6JwS3nXJTgmvDX6VE5p5CmEHphUtvFe0ff6hcA8KMshLAGzx4R3EDFOm1kBS/front-page.jpg" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20201109000819im_/https://images.squarespace-cdn.com/content/v1/51b8c20be4b0f1f8c9dcdf4c/1378792276206-LCA0STYQMZGAB7MQD8EY/ke17ZwdGBToddI8pDm48kBtpJ0h6oTA_T7DonTC8zFdZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIBqmMCQ1OP129tpEIJko8bi_9nfbnt8dRsNvtvnXdL8M/bluescholars-1.jpeg" rel="noopener noreferrer">A02</a></td>
+<td>Eugene gallery / image 1</td>
+<td><code>bluescholars-1.jpeg</code></td>
+<td>Displayed</td>
+<td><a href="https://web.archive.org/web/*/https://images.squarespace-cdn.com/content/v1/51b8c20be4b0f1f8c9dcdf4c/1378792276206-LCA0STYQMZGAB7MQD8EY/ke17ZwdGBToddI8pDm48kBtpJ0h6oTA_T7DonTC8zFdZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIBqmMCQ1OP129tpEIJko8bi_9nfbnt8dRsNvtvnXdL8M/bluescholars-1.jpeg" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20200703230849im_/https://images.squarespace-cdn.com/content/v1/51b8c20be4b0f1f8c9dcdf4c/1371068135452-YPT6UJGS33RF1E9C3HPX/ke17ZwdGBToddI8pDm48kANPycS1xMmB2DHMj7XKyEhZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpzOeqS1g1ZYcZbvsTb-QQc_fimOWPjSeSh4xRIcQ1fETOzVZDfe4pqhvyCp_gm1wMU/EUGENE.jpg" rel="noopener noreferrer">A03</a></td>
+<td>Shows poster</td>
+<td><code>EUGENE.jpg</code></td>
+<td>404</td>
+<td><a href="https://web.archive.org/web/*/https://images.squarespace-cdn.com/content/v1/51b8c20be4b0f1f8c9dcdf4c/1371068135452-YPT6UJGS33RF1E9C3HPX/ke17ZwdGBToddI8pDm48kANPycS1xMmB2DHMj7XKyEhZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpzOeqS1g1ZYcZbvsTb-QQc_fimOWPjSeSh4xRIcQ1fETOzVZDfe4pqhvyCp_gm1wMU/EUGENE.jpg" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20200703230805im_/https://images.squarespace-cdn.com/content/v1/51b8c20be4b0f1f8c9dcdf4c/1371065206908-QJ2UFNNVS4QP4QJDMJSK/ke17ZwdGBToddI8pDm48kI6KiKQWAPCO4TdDSWDjF7tZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIyouxKf5guHCBBWIVtpbnsxyoyJg7S9G1Sy-6gAxXHq0KMshLAGzx4R3EDFOm1kBS/scholars.jpg" rel="noopener noreferrer">A04</a></td>
+<td>Holler / band photograph</td>
+<td><code>scholars.jpg</code></td>
+<td>404</td>
+<td><a href="https://web.archive.org/web/*/https://images.squarespace-cdn.com/content/v1/51b8c20be4b0f1f8c9dcdf4c/1371065206908-QJ2UFNNVS4QP4QJDMJSK/ke17ZwdGBToddI8pDm48kI6KiKQWAPCO4TdDSWDjF7tZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIyouxKf5guHCBBWIVtpbnsxyoyJg7S9G1Sy-6gAxXHq0KMshLAGzx4R3EDFOm1kBS/scholars.jpg" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20200703230805im_/https://images.squarespace-cdn.com/content/v1/51b8c20be4b0f1f8c9dcdf4c/1371080207993-GGZ7N5WRW3KFT8QIMZ0Y/ke17ZwdGBToddI8pDm48kBOznfT3IrUCBESS1QO4nqhZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIuQHnEEFVCfrIt2ctRmbCkrtPoqg0sd8u0r9TsdY-wh4KMshLAGzx4R3EDFOm1kBS/sisters2.jpg" rel="noopener noreferrer">A05</a></td>
+<td>Holler / team photograph</td>
+<td><code>sisters2.jpg</code></td>
+<td>404</td>
+<td><a href="https://web.archive.org/web/*/https://images.squarespace-cdn.com/content/v1/51b8c20be4b0f1f8c9dcdf4c/1371080207993-GGZ7N5WRW3KFT8QIMZ0Y/ke17ZwdGBToddI8pDm48kBOznfT3IrUCBESS1QO4nqhZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIuQHnEEFVCfrIt2ctRmbCkrtPoqg0sd8u0r9TsdY-wh4KMshLAGzx4R3EDFOm1kBS/sisters2.jpg" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20201109000819im_/https://images.squarespace-cdn.com/content/v1/51b8c20be4b0f1f8c9dcdf4c/1378792300499-WX44SOM6RD1J9EWMQSB6/ke17ZwdGBToddI8pDm48kBtpJ0h6oTA_T7DonTC8zFdZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIWkiAYz5ghgEgSGJuDQ4e1ZKXpRdhEMT7SgthRpD0vyIKMshLAGzx4R3EDFOm1kBS/bluescholars-2.jpeg" rel="noopener noreferrer">A06</a></td>
+<td>Eugene gallery / bluescholars-2.jpeg</td>
+<td><code>bluescholars-2.jpeg</code></td>
+<td>Displayed</td>
+<td><a href="https://web.archive.org/web/*/https://images.squarespace-cdn.com/content/v1/51b8c20be4b0f1f8c9dcdf4c/1378792300499-WX44SOM6RD1J9EWMQSB6/ke17ZwdGBToddI8pDm48kBtpJ0h6oTA_T7DonTC8zFdZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIWkiAYz5ghgEgSGJuDQ4e1ZKXpRdhEMT7SgthRpD0vyIKMshLAGzx4R3EDFOm1kBS/bluescholars-2.jpeg" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20201109000819im_/https://images.squarespace-cdn.com/content/v1/51b8c20be4b0f1f8c9dcdf4c/1378792314409-UYIDT6A1CYWCEYT20UT7/ke17ZwdGBToddI8pDm48kBtpJ0h6oTA_T7DonTC8zFdZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIWkiAYz5ghgEgSGJuDQ4e1ZKXpRdhEMT7SgthRpD0vyIKMshLAGzx4R3EDFOm1kBS/bluescholars-4.jpeg" rel="noopener noreferrer">A07</a></td>
+<td>Eugene gallery / bluescholars-4.jpeg</td>
+<td><code>bluescholars-4.jpeg</code></td>
+<td>Displayed</td>
+<td><a href="https://web.archive.org/web/*/https://images.squarespace-cdn.com/content/v1/51b8c20be4b0f1f8c9dcdf4c/1378792314409-UYIDT6A1CYWCEYT20UT7/ke17ZwdGBToddI8pDm48kBtpJ0h6oTA_T7DonTC8zFdZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIWkiAYz5ghgEgSGJuDQ4e1ZKXpRdhEMT7SgthRpD0vyIKMshLAGzx4R3EDFOm1kBS/bluescholars-4.jpeg" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20201109000819im_/https://images.squarespace-cdn.com/content/v1/51b8c20be4b0f1f8c9dcdf4c/1378792336701-VW176O3BLU30BR3HBJEL/ke17ZwdGBToddI8pDm48kBtpJ0h6oTA_T7DonTC8zFdZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIWkiAYz5ghgEgSGJuDQ4e1ZKXpRdhEMT7SgthRpD0vyIKMshLAGzx4R3EDFOm1kBS/bluescholars-5.jpeg" rel="noopener noreferrer">A08</a></td>
+<td>Eugene gallery / bluescholars-5.jpeg</td>
+<td><code>bluescholars-5.jpeg</code></td>
+<td>Displayed</td>
+<td><a href="https://web.archive.org/web/*/https://images.squarespace-cdn.com/content/v1/51b8c20be4b0f1f8c9dcdf4c/1378792336701-VW176O3BLU30BR3HBJEL/ke17ZwdGBToddI8pDm48kBtpJ0h6oTA_T7DonTC8zFdZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIWkiAYz5ghgEgSGJuDQ4e1ZKXpRdhEMT7SgthRpD0vyIKMshLAGzx4R3EDFOm1kBS/bluescholars-5.jpeg" rel="noopener noreferrer">All dates</a></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="other-first-listing-squarespace-assets">Other first-listing Squarespace assets</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>ID / replay</th>
+<th>Finding aid</th>
+<th>Filename / final locator</th>
+<th>Test result</th>
+<th>Other captures</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://web.archive.org/web/20201109000819im_/https://images.squarespace-cdn.com/content/v1/51b8c20be4b0f1f8c9dcdf4c/1371064432757-KN92FTUAVOIA6I9GOME4/ke17ZwdGBToddI8pDm48kPHgPSpJs3pqpkUZU93_mvpZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PInndiFr6ALsCf3uCDBRk4eJzsF3rQ925VZ6DZqxvBZkQKMshLAGzx4R3EDFOm1kBS/image-asset.jpeg" rel="noopener noreferrer">A09</a></td>
+<td>Green/gold shirt</td>
+<td><code>image-asset.jpeg</code></td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/https://images.squarespace-cdn.com/content/v1/51b8c20be4b0f1f8c9dcdf4c/1371064432757-KN92FTUAVOIA6I9GOME4/ke17ZwdGBToddI8pDm48kPHgPSpJs3pqpkUZU93_mvpZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PInndiFr6ALsCf3uCDBRk4eJzsF3rQ925VZ6DZqxvBZkQKMshLAGzx4R3EDFOm1kBS/image-asset.jpeg" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20201109000819im_/https://images.squarespace-cdn.com/content/v1/51b8c20be4b0f1f8c9dcdf4c/1371064432808-UERYRMFDJWKDV88LO8Y7/ke17ZwdGBToddI8pDm48kNyF6wJRgHLmJg9fTBX7WfBZw-zPPgdn4jUwVcJE1ZvWEtT5uBSRWt4vQZAgTJucoTqqXjS3CfNDSuuf31e0tVECKrtgJ-oZkY66qO5m9a2ekNaApMtwVSs5uIGYtprRSBur-lC0WofN0YB1wFg-ZW0/image-asset.png" rel="noopener noreferrer">A10</a></td>
+<td>Bellingham poster</td>
+<td><code>image-asset.png</code></td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/https://images.squarespace-cdn.com/content/v1/51b8c20be4b0f1f8c9dcdf4c/1371064432808-UERYRMFDJWKDV88LO8Y7/ke17ZwdGBToddI8pDm48kNyF6wJRgHLmJg9fTBX7WfBZw-zPPgdn4jUwVcJE1ZvWEtT5uBSRWt4vQZAgTJucoTqqXjS3CfNDSuuf31e0tVECKrtgJ-oZkY66qO5m9a2ekNaApMtwVSs5uIGYtprRSBur-lC0WofN0YB1wFg-ZW0/image-asset.png" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20201109000819im_/https://images.squarespace-cdn.com/content/v1/51b8c20be4b0f1f8c9dcdf4c/1371064433035-8OXUKEXL5A4TQCTQU0R6/ke17ZwdGBToddI8pDm48kPqQfq0L3n3wpHIsRapTfg8UqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKczo5Zn4xktlpMsMj-QlHXeMfNK6GwvtVkYEWiR8XAPyD3GfLCe_DXOSC_YcAacWL_/image-asset.jpeg" rel="noopener noreferrer">A11</a></td>
+<td>Trio photograph</td>
+<td><code>image-asset.jpeg</code></td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/https://images.squarespace-cdn.com/content/v1/51b8c20be4b0f1f8c9dcdf4c/1371064433035-8OXUKEXL5A4TQCTQU0R6/ke17ZwdGBToddI8pDm48kPqQfq0L3n3wpHIsRapTfg8UqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKczo5Zn4xktlpMsMj-QlHXeMfNK6GwvtVkYEWiR8XAPyD3GfLCe_DXOSC_YcAacWL_/image-asset.jpeg" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20201109000819im_/https://images.squarespace-cdn.com/content/v1/51b8c20be4b0f1f8c9dcdf4c/1371064433176-TOF0CZCDUTACMTTWFF5J/ke17ZwdGBToddI8pDm48kJVwuJMj7CH6fYOCWHXZJOdZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIqH84A2Hox5s9hwnuGKN-h28-azLtB5B9GL4qiiz7kIcKMshLAGzx4R3EDFOm1kBS/image-asset.jpeg" rel="noopener noreferrer">A12</a></td>
+<td>Boston photograph</td>
+<td><code>image-asset.jpeg</code></td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/https://images.squarespace-cdn.com/content/v1/51b8c20be4b0f1f8c9dcdf4c/1371064433176-TOF0CZCDUTACMTTWFF5J/ke17ZwdGBToddI8pDm48kJVwuJMj7CH6fYOCWHXZJOdZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIqH84A2Hox5s9hwnuGKN-h28-azLtB5B9GL4qiiz7kIcKMshLAGzx4R3EDFOm1kBS/image-asset.jpeg" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20201109000819im_/https://images.squarespace-cdn.com/content/v1/51b8c20be4b0f1f8c9dcdf4c/1371064433229-4GGG9HCJON3Q26P77RE7/ke17ZwdGBToddI8pDm48kNCH0IFo-E28D0rm_d_wnF4UqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKczdH3qUBwO6oWXP_OkYMa5KbLFw5Om5Yp_Nt25Y6nc5ZZuUUY1FOqARMqv9i1pcqr/image-asset.jpeg" rel="noopener noreferrer">A13</a></td>
+<td>Town Hall photograph</td>
+<td><code>image-asset.jpeg</code></td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/https://images.squarespace-cdn.com/content/v1/51b8c20be4b0f1f8c9dcdf4c/1371064433229-4GGG9HCJON3Q26P77RE7/ke17ZwdGBToddI8pDm48kNCH0IFo-E28D0rm_d_wnF4UqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKczdH3qUBwO6oWXP_OkYMa5KbLFw5Om5Yp_Nt25Y6nc5ZZuUUY1FOqARMqv9i1pcqr/image-asset.jpeg" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20201109000819im_/https://images.squarespace-cdn.com/content/v1/51b8c20be4b0f1f8c9dcdf4c/1371064433271-GFTNXZ4NDR2SQA3NDZ3D/ke17ZwdGBToddI8pDm48kIMgItuLfrBfs8_Vz6fY_v9Zw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIOoLtpHiREIxpGqLX9yLlbPF78fv36IoADR8RM4bC6WYKMshLAGzx4R3EDFOm1kBS/image-asset.jpeg" rel="noopener noreferrer">A14</a></td>
+<td>Los Angeles photograph / March</td>
+<td><code>image-asset.jpeg</code></td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/https://images.squarespace-cdn.com/content/v1/51b8c20be4b0f1f8c9dcdf4c/1371064433271-GFTNXZ4NDR2SQA3NDZ3D/ke17ZwdGBToddI8pDm48kIMgItuLfrBfs8_Vz6fY_v9Zw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIOoLtpHiREIxpGqLX9yLlbPF78fv36IoADR8RM4bC6WYKMshLAGzx4R3EDFOm1kBS/image-asset.jpeg" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20201109000819im_/https://images.squarespace-cdn.com/content/v1/51b8c20be4b0f1f8c9dcdf4c/1371064433298-UV185WK49E51HK2I2AXS/ke17ZwdGBToddI8pDm48kEP7RHrgx1EZ_8CHo_UWuGlZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PI-BtFo7T6gKWoc73CubQHwfeZyZCyowxCFx_85HpEbPUKMshLAGzx4R3EDFOm1kBS/image-asset.jpeg" rel="noopener noreferrer">A15</a></td>
+<td>Purple/gold shirt</td>
+<td><code>image-asset.jpeg</code></td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/https://images.squarespace-cdn.com/content/v1/51b8c20be4b0f1f8c9dcdf4c/1371064433298-UV185WK49E51HK2I2AXS/ke17ZwdGBToddI8pDm48kEP7RHrgx1EZ_8CHo_UWuGlZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PI-BtFo7T6gKWoc73CubQHwfeZyZCyowxCFx_85HpEbPUKMshLAGzx4R3EDFOm1kBS/image-asset.jpeg" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20201109000819im_/https://images.squarespace-cdn.com/content/v1/51b8c20be4b0f1f8c9dcdf4c/1371064433353-HUQHF53PD2XVDYB2IQEB/ke17ZwdGBToddI8pDm48kLdJ3j-ibWYU20S6E0aDMAl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QHyNOqBUUEtDDsRWrJLTmbFTSCh3GLTYkz25V6Y8urJIuD2y7fSNCnhoa9WQ4jB08vps1ci3DLG5R66hSaaIi/image-asset.jpeg" rel="noopener noreferrer">A16</a></td>
+<td>Photo pair / first</td>
+<td><code>image-asset.jpeg</code></td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/https://images.squarespace-cdn.com/content/v1/51b8c20be4b0f1f8c9dcdf4c/1371064433353-HUQHF53PD2XVDYB2IQEB/ke17ZwdGBToddI8pDm48kLdJ3j-ibWYU20S6E0aDMAl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QHyNOqBUUEtDDsRWrJLTmbFTSCh3GLTYkz25V6Y8urJIuD2y7fSNCnhoa9WQ4jB08vps1ci3DLG5R66hSaaIi/image-asset.jpeg" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20201109000819im_/https://images.squarespace-cdn.com/content/v1/51b8c20be4b0f1f8c9dcdf4c/1371064433366-HXN9QVN3HBWEHCRZAIUW/ke17ZwdGBToddI8pDm48kLdJ3j-ibWYU20S6E0aDMAl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QHyNOqBUUEtDDsRWrJLTmbFTSCh3GLTYkz25V6Y8urJIuD2y7fSNCnhoa9WQ4jB08vps1ci3DLG5R66hSaaIi/image-asset.jpeg" rel="noopener noreferrer">A17</a></td>
+<td>Photo pair / second</td>
+<td><code>image-asset.jpeg</code></td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/https://images.squarespace-cdn.com/content/v1/51b8c20be4b0f1f8c9dcdf4c/1371064433366-HXN9QVN3HBWEHCRZAIUW/ke17ZwdGBToddI8pDm48kLdJ3j-ibWYU20S6E0aDMAl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QHyNOqBUUEtDDsRWrJLTmbFTSCh3GLTYkz25V6Y8urJIuD2y7fSNCnhoa9WQ4jB08vps1ci3DLG5R66hSaaIi/image-asset.jpeg" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20201109000819im_/https://images.squarespace-cdn.com/content/v1/51b8c20be4b0f1f8c9dcdf4c/1371064433460-0U0R12B966WO3378H2F3/ke17ZwdGBToddI8pDm48kP0x04V1XEe0XPzqOX1MKaR7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QHyNOqBUUEtDDsRWrJLTmjw4y9jm25X_CplAKqpK2fkSw6YcmP1xW_gG8HCptQz72szHi8Rk0JAosDC56jamZ/image-asset.jpeg" rel="noopener noreferrer">A18</a></td>
+<td>Street portrait</td>
+<td><code>image-asset.jpeg</code></td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/https://images.squarespace-cdn.com/content/v1/51b8c20be4b0f1f8c9dcdf4c/1371064433460-0U0R12B966WO3378H2F3/ke17ZwdGBToddI8pDm48kP0x04V1XEe0XPzqOX1MKaR7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QHyNOqBUUEtDDsRWrJLTmjw4y9jm25X_CplAKqpK2fkSw6YcmP1xW_gG8HCptQz72szHi8Rk0JAosDC56jamZ/image-asset.jpeg" rel="noopener noreferrer">All dates</a></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="campus-article-nine-tumblr-inline-images">Campus article: nine Tumblr inline images</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>ID / replay</th>
+<th>Finding aid</th>
+<th>Filename / final locator</th>
+<th>Test result</th>
+<th>Other captures</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://web.archive.org/web/20201109000819im_/http://media.tumblr.com/6a3e0729d8abd8b7b849861cc11db33c/tumblr_inline_mkn0vq5Tel1qz4rgp.jpg" rel="noopener noreferrer">A19</a></td>
+<td>Campus article / inline image 1</td>
+<td><code>tumblr_inline_mkn0vq5Tel1qz4rgp.jpg</code></td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/http://media.tumblr.com/6a3e0729d8abd8b7b849861cc11db33c/tumblr_inline_mkn0vq5Tel1qz4rgp.jpg" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20201109000819im_/http://media.tumblr.com/86812e71c1fe259a78cef3d7cd7917e5/tumblr_inline_mkn0u4tvM51qz4rgp.jpg" rel="noopener noreferrer">A20</a></td>
+<td>Campus article / inline image 2</td>
+<td><code>tumblr_inline_mkn0u4tvM51qz4rgp.jpg</code></td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/http://media.tumblr.com/86812e71c1fe259a78cef3d7cd7917e5/tumblr_inline_mkn0u4tvM51qz4rgp.jpg" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20201109000819im_/http://media.tumblr.com/b507a3aa9ad9507602448b8627e43dd5/tumblr_inline_mkn0ubFVxL1qz4rgp.jpg" rel="noopener noreferrer">A21</a></td>
+<td>Campus article / inline image 3</td>
+<td><code>tumblr_inline_mkn0ubFVxL1qz4rgp.jpg</code></td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/http://media.tumblr.com/b507a3aa9ad9507602448b8627e43dd5/tumblr_inline_mkn0ubFVxL1qz4rgp.jpg" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20201109000819im_/http://media.tumblr.com/83322c66269ff7dec226340cff4c54c2/tumblr_inline_mkn0ufdGMl1qz4rgp.jpg" rel="noopener noreferrer">A22</a></td>
+<td>Campus article / inline image 4</td>
+<td><code>tumblr_inline_mkn0ufdGMl1qz4rgp.jpg</code></td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/http://media.tumblr.com/83322c66269ff7dec226340cff4c54c2/tumblr_inline_mkn0ufdGMl1qz4rgp.jpg" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20201109000819im_/http://media.tumblr.com/21a65ad1b9d672eddc17be48b09af183/tumblr_inline_mkn0ul9RPt1qz4rgp.jpg" rel="noopener noreferrer">A23</a></td>
+<td>Campus article / inline image 5</td>
+<td><code>tumblr_inline_mkn0ul9RPt1qz4rgp.jpg</code></td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/http://media.tumblr.com/21a65ad1b9d672eddc17be48b09af183/tumblr_inline_mkn0ul9RPt1qz4rgp.jpg" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20201109000819im_/http://media.tumblr.com/eb7153e91a9e03b8be5498d92dc59e21/tumblr_inline_mkn0uq8CvA1qz4rgp.jpg" rel="noopener noreferrer">A24</a></td>
+<td>Campus article / inline image 6</td>
+<td><code>tumblr_inline_mkn0uq8CvA1qz4rgp.jpg</code></td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/http://media.tumblr.com/eb7153e91a9e03b8be5498d92dc59e21/tumblr_inline_mkn0uq8CvA1qz4rgp.jpg" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20201109000819im_/http://media.tumblr.com/ab886deb86ad19885b3e6a726c8fae15/tumblr_inline_mkn0uwSMJY1qz4rgp.jpg" rel="noopener noreferrer">A25</a></td>
+<td>Campus article / inline image 7</td>
+<td><code>tumblr_inline_mkn0uwSMJY1qz4rgp.jpg</code></td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/http://media.tumblr.com/ab886deb86ad19885b3e6a726c8fae15/tumblr_inline_mkn0uwSMJY1qz4rgp.jpg" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20201109000819im_/http://media.tumblr.com/7b0791e6a86196a3dfe70b73ecbd7e41/tumblr_inline_mkn0v27fNl1qz4rgp.jpg" rel="noopener noreferrer">A26</a></td>
+<td>Campus article / inline image 8</td>
+<td><code>tumblr_inline_mkn0v27fNl1qz4rgp.jpg</code></td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/http://media.tumblr.com/7b0791e6a86196a3dfe70b73ecbd7e41/tumblr_inline_mkn0v27fNl1qz4rgp.jpg" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20201109000819im_/http://media.tumblr.com/1d353970ceef745a73f3649e932c22bb/tumblr_inline_mkn0v8iSTj1qz4rgp.jpg" rel="noopener noreferrer">A27</a></td>
+<td>Campus article / inline image 9</td>
+<td><code>tumblr_inline_mkn0v8iSTj1qz4rgp.jpg</code></td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/http://media.tumblr.com/1d353970ceef745a73f3649e932c22bb/tumblr_inline_mkn0v8iSTj1qz4rgp.jpg" rel="noopener noreferrer">All dates</a></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="second-listing-extensionless-squarespace-images">Second listing: extensionless Squarespace images</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>ID / replay</th>
+<th>Finding aid</th>
+<th>Filename / final locator</th>
+<th>Test result</th>
+<th>Other captures</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://web.archive.org/web/20200220154840im_/https://static1.squarespace.com/static/51b8c20be4b0f1f8c9dcdf4c/51b8c857e4b05bf73912a42e/51b8c857e4b05bf73912a4ab/1371064436683/" rel="noopener noreferrer">A28</a></td>
+<td>Residency photograph</td>
+<td><code>51b8c857e4b05bf73912a4ab/1371064436683/</code></td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/https://static1.squarespace.com/static/51b8c20be4b0f1f8c9dcdf4c/51b8c857e4b05bf73912a42e/51b8c857e4b05bf73912a4ab/1371064436683/" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20200220154840im_/https://static1.squarespace.com/static/51b8c20be4b0f1f8c9dcdf4c/51b8c857e4b05bf73912a42e/51b8c857e4b05bf73912a4b1/1371064435889/" rel="noopener noreferrer">A29</a></td>
+<td>Bowery photograph</td>
+<td><code>51b8c857e4b05bf73912a4b1/1371064435889/</code></td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/https://static1.squarespace.com/static/51b8c20be4b0f1f8c9dcdf4c/51b8c857e4b05bf73912a42e/51b8c857e4b05bf73912a4b1/1371064435889/" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20200220154840im_/https://static1.squarespace.com/static/51b8c20be4b0f1f8c9dcdf4c/51b8c857e4b05bf73912a42e/51b8c857e4b05bf73912a4bd/1371064439862/" rel="noopener noreferrer">A30</a></td>
+<td>Website announcement image</td>
+<td><code>51b8c857e4b05bf73912a4bd/1371064439862/</code></td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/https://static1.squarespace.com/static/51b8c20be4b0f1f8c9dcdf4c/51b8c857e4b05bf73912a42e/51b8c857e4b05bf73912a4bd/1371064439862/" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20200220154840im_/https://static1.squarespace.com/static/51b8c20be4b0f1f8c9dcdf4c/51b8c857e4b05bf73912a42e/51b8c857e4b05bf73912a4c3/1371064436018/" rel="noopener noreferrer">A31</a></td>
+<td>Los Angeles photograph / December</td>
+<td><code>51b8c857e4b05bf73912a4c3/1371064436018/</code></td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/https://static1.squarespace.com/static/51b8c20be4b0f1f8c9dcdf4c/51b8c857e4b05bf73912a42e/51b8c857e4b05bf73912a4c3/1371064436018/" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20200220154840im_/https://static1.squarespace.com/static/51b8c20be4b0f1f8c9dcdf4c/51b8c857e4b05bf73912a42e/51b8c857e4b05bf73912a4d3/1371064435828/" rel="noopener noreferrer">A32</a></td>
+<td>Tour / Boston</td>
+<td><code>51b8c857e4b05bf73912a4d3/1371064435828/</code></td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/https://static1.squarespace.com/static/51b8c20be4b0f1f8c9dcdf4c/51b8c857e4b05bf73912a42e/51b8c857e4b05bf73912a4d3/1371064435828/" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20200220154840im_/https://static1.squarespace.com/static/51b8c20be4b0f1f8c9dcdf4c/51b8c857e4b05bf73912a42e/51b8c857e4b05bf73912a4d9/1371064436860/" rel="noopener noreferrer">A33</a></td>
+<td>Tour / New York</td>
+<td><code>51b8c857e4b05bf73912a4d9/1371064436860/</code></td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/https://static1.squarespace.com/static/51b8c20be4b0f1f8c9dcdf4c/51b8c857e4b05bf73912a42e/51b8c857e4b05bf73912a4d9/1371064436860/" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20200220154840im_/https://static1.squarespace.com/static/51b8c20be4b0f1f8c9dcdf4c/51b8c857e4b05bf73912a42e/51b8c857e4b05bf73912a4df/1371064436759/" rel="noopener noreferrer">A34</a></td>
+<td>Tour / Brooklyn</td>
+<td><code>51b8c857e4b05bf73912a4df/1371064436759/</code></td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/https://static1.squarespace.com/static/51b8c20be4b0f1f8c9dcdf4c/51b8c857e4b05bf73912a42e/51b8c857e4b05bf73912a4df/1371064436759/" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20200220154840im_/https://static1.squarespace.com/static/51b8c20be4b0f1f8c9dcdf4c/51b8c857e4b05bf73912a42e/51b8c857e4b05bf73912a4e5/1371064436167/" rel="noopener noreferrer">A35</a></td>
+<td>Tour / Los Angeles</td>
+<td><code>51b8c857e4b05bf73912a4e5/1371064436167/</code></td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/https://static1.squarespace.com/static/51b8c20be4b0f1f8c9dcdf4c/51b8c857e4b05bf73912a42e/51b8c857e4b05bf73912a4e5/1371064436167/" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20200220154840im_/https://static1.squarespace.com/static/51b8c20be4b0f1f8c9dcdf4c/51b8c857e4b05bf73912a42e/51b8c857e4b05bf73912a4eb/1371064436244/" rel="noopener noreferrer">A36</a></td>
+<td>Tour / San Diego</td>
+<td><code>51b8c857e4b05bf73912a4eb/1371064436244/</code></td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/https://static1.squarespace.com/static/51b8c20be4b0f1f8c9dcdf4c/51b8c857e4b05bf73912a42e/51b8c857e4b05bf73912a4eb/1371064436244/" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20200220154840im_/https://static1.squarespace.com/static/51b8c20be4b0f1f8c9dcdf4c/51b8c857e4b05bf73912a42e/51b8c857e4b05bf73912a4f1/1371064436152/" rel="noopener noreferrer">A37</a></td>
+<td>Tour / San Francisco</td>
+<td><code>51b8c857e4b05bf73912a4f1/1371064436152/</code></td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/https://static1.squarespace.com/static/51b8c20be4b0f1f8c9dcdf4c/51b8c857e4b05bf73912a42e/51b8c857e4b05bf73912a4f1/1371064436152/" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20200220154840im_/https://static1.squarespace.com/static/51b8c20be4b0f1f8c9dcdf4c/51b8c857e4b05bf73912a42e/51b8c857e4b05bf73912a4f7/1371064442128/" rel="noopener noreferrer">A38</a></td>
+<td>Tour / Portland</td>
+<td><code>51b8c857e4b05bf73912a4f7/1371064442128/</code></td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/https://static1.squarespace.com/static/51b8c20be4b0f1f8c9dcdf4c/51b8c857e4b05bf73912a42e/51b8c857e4b05bf73912a4f7/1371064442128/" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20200220154840im_/https://static1.squarespace.com/static/51b8c20be4b0f1f8c9dcdf4c/51b8c857e4b05bf73912a42e/51b8c857e4b05bf73912a4fd/1371064437973/" rel="noopener noreferrer">A39</a></td>
+<td>Tour / Seattle</td>
+<td><code>51b8c857e4b05bf73912a4fd/1371064437973/</code></td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/https://static1.squarespace.com/static/51b8c20be4b0f1f8c9dcdf4c/51b8c857e4b05bf73912a42e/51b8c857e4b05bf73912a4fd/1371064437973/" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20200220154840im_/https://static1.squarespace.com/static/51b8c20be4b0f1f8c9dcdf4c/51b8c857e4b05bf73912a42e/51b8c857e4b05bf73912a503/1371064439664/" rel="noopener noreferrer">A40</a></td>
+<td>Tour / Bellingham</td>
+<td><code>51b8c857e4b05bf73912a503/1371064439664/</code></td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/https://static1.squarespace.com/static/51b8c20be4b0f1f8c9dcdf4c/51b8c857e4b05bf73912a42e/51b8c857e4b05bf73912a503/1371064439664/" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20200220154840im_/https://static1.squarespace.com/static/51b8c20be4b0f1f8c9dcdf4c/51b8c857e4b05bf73912a42e/51b8c857e4b05bf73912a509/1371064435819/" rel="noopener noreferrer">A41</a></td>
+<td>East Village photograph</td>
+<td><code>51b8c857e4b05bf73912a509/1371064435819/</code></td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/https://static1.squarespace.com/static/51b8c20be4b0f1f8c9dcdf4c/51b8c857e4b05bf73912a42e/51b8c857e4b05bf73912a509/1371064435819/" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20200220154840im_/https://static1.squarespace.com/static/51b8c20be4b0f1f8c9dcdf4c/51b8c857e4b05bf73912a42e/51b8c857e4b05bf73912a512/1371064436688/" rel="noopener noreferrer">A42</a></td>
+<td>Vancouver photograph</td>
+<td><code>51b8c857e4b05bf73912a512/1371064436688/</code></td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/https://static1.squarespace.com/static/51b8c20be4b0f1f8c9dcdf4c/51b8c857e4b05bf73912a42e/51b8c857e4b05bf73912a512/1371064436688/" rel="noopener noreferrer">All dates</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>The gallery references image numbers <strong>1, 2, 4, and 5</strong>. There is no observed image-3 reference in that gallery; do not invent an extra slot. A03–A05 are separate top-level assets, not substitutes for the gallery.</p>
+<h2 id="appendix-b-video-recovery-inventory">Appendix B. Video recovery inventory</h2>
+<p>The table preserves the order on the Video page. Titles are short finding aids from archived player metadata, not evidence of current playback. Each “Player capture” link points to the resolved replay observed during inspection. Full source-embed and resolved-embed URL variants are preserved in JSON.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Order</th>
+<th>Title / finding aid</th>
+<th>YouTube ID / watch link</th>
+<th>Player capture</th>
+<th>State</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Anna Karina</td>
+<td><a href="https://www.youtube.com/watch?v=3ZODZPRywUI" rel="noopener noreferrer">3ZODZPRywUI</a></td>
+<td><a href="https://web.archive.org/web/20160822214937if_/https://www.youtube.com/embed/3ZODZPRywUI?feature=oembed&amp;wmode=opaque&amp;enablejsapi=1" rel="noopener noreferrer">2016-08-22 21:49:37</a></td>
+<td>Player error; no media file</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Slick Watts</td>
+<td><a href="https://www.youtube.com/watch?v=IJnuXQM41Dk" rel="noopener noreferrer">IJnuXQM41Dk</a></td>
+<td><a href="https://web.archive.org/web/20161124115949if_/https://www.youtube.com/embed/IJnuXQM41Dk?feature=oembed&amp;wmode=opaque&amp;enablejsapi=1" rel="noopener noreferrer">2016-11-24 11:59:49</a></td>
+<td>Player error; no media file</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Seijun Suzuki</td>
+<td><a href="https://www.youtube.com/watch?v=t4y9z3eIFLk" rel="noopener noreferrer">t4y9z3eIFLk</a></td>
+<td><a href="https://web.archive.org/web/20161017034042if_/https://www.youtube.com/embed/t4y9z3eIFLk?feature=oembed&amp;wmode=opaque&amp;enablejsapi=1" rel="noopener noreferrer">2016-10-17 03:40:42</a></td>
+<td>Player error; no media file</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Fou Lee</td>
+<td><a href="https://www.youtube.com/watch?v=PJLZQVRMzYM" rel="noopener noreferrer">PJLZQVRMzYM</a></td>
+<td><a href="https://web.archive.org/web/20161130141740if_/https://www.youtube.com/embed/PJLZQVRMzYM?feature=oembed&amp;wmode=opaque&amp;enablejsapi=1" rel="noopener noreferrer">2016-11-30 14:17:40</a></td>
+<td>Player error; no media file</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Title unresolved</td>
+<td><a href="https://www.youtube.com/watch?v=yQwihvgbJsI" rel="noopener noreferrer">yQwihvgbJsI</a></td>
+<td><a href="https://web.archive.org/web/20240820155326if_/https://www.youtube.com/embed/yQwihvgbJsI?feature=oembed&amp;wmode=opaque&amp;enablejsapi=1" rel="noopener noreferrer">2024-08-20 15:53:26</a></td>
+<td>After reference; metadata only</td>
+</tr>
+<tr>
+<td>6</td>
+<td>HI-808</td>
+<td><a href="https://www.youtube.com/watch?v=9vFVp00-19M" rel="noopener noreferrer">9vFVp00-19M</a></td>
+<td><a href="https://web.archive.org/web/20161116045605if_/https://www.youtube.com/embed/9vFVp00-19M?feature=oembed&amp;wmode=opaque&amp;enablejsapi=1" rel="noopener noreferrer">2016-11-16 04:56:05</a></td>
+<td>Player error; no media file</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Title unresolved</td>
+<td><a href="https://www.youtube.com/watch?v=uIRZ14vIiOc" rel="noopener noreferrer">uIRZ14vIiOc</a></td>
+<td><a href="https://web.archive.org/web/20230627004435if_/https://www.youtube.com/embed/uIRZ14vIiOc?feature=oembed&amp;wmode=opaque&amp;enablejsapi=1" rel="noopener noreferrer">2023-06-27 00:44:35</a></td>
+<td>After reference; metadata only</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Joe Metro</td>
+<td><a href="https://www.youtube.com/watch?v=Wz79goWQrYU" rel="noopener noreferrer">Wz79goWQrYU</a></td>
+<td><a href="https://web.archive.org/web/20161226132526if_/https://www.youtube.com/embed/Wz79goWQrYU?feature=oembed&amp;wmode=opaque&amp;enablejsapi=1" rel="noopener noreferrer">2016-12-26 13:25:26</a></td>
+<td>Player error; no media file</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Loyalty</td>
+<td><a href="https://www.youtube.com/watch?v=PHDyPvF0KL8" rel="noopener noreferrer">PHDyPvF0KL8</a></td>
+<td><a href="https://web.archive.org/web/20170108235015if_/https://www.youtube.com/embed/PHDyPvF0KL8?feature=oembed&amp;wmode=opaque&amp;enablejsapi=1" rel="noopener noreferrer">2017-01-08 23:50:15</a></td>
+<td>Player error; no media file</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Back Home</td>
+<td><a href="https://www.youtube.com/watch?v=En8DwCeKa6M" rel="noopener noreferrer">En8DwCeKa6M</a></td>
+<td><a href="https://web.archive.org/web/20161224135201if_/https://www.youtube.com/embed/En8DwCeKa6M?feature=oembed&amp;wmode=opaque&amp;enablejsapi=1" rel="noopener noreferrer">2016-12-24 13:52:01</a></td>
+<td>Player error; no media file</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Freewheelin</td>
+<td><a href="https://www.youtube.com/watch?v=0wN10msgz88" rel="noopener noreferrer">0wN10msgz88</a></td>
+<td><a href="https://web.archive.org/web/20161115065611if_/https://www.youtube.com/embed/0wN10msgz88?wmode=opaque&amp;enablejsapi=1" rel="noopener noreferrer">2016-11-15 06:56:11</a></td>
+<td>Player error; no media file</td>
+</tr>
+</tbody>
+</table></div>
+<p>The fifth and seventh player replays resolve to 2024 and 2023, even though their embed IDs come from the 2020 site page. Those player capture dates must not be used as evidence of a post-2021 change to the site's video list. <a href="https://web.archive.org/web/20200802161924/http://bluescholars.com/video" rel="noopener noreferrer">S05</a></p>
+<p>The blog additionally references a SoundCloud player for <strong>track 87129356</strong> and an outbound <code>prometheusbrown/racist-accident</code> track URL (X29–X30). Both requests were cache misses here. Preserve the exact URLs and any artwork/metadata found; do not claim an audio file or working playback has been recovered.</p>
+<h2 id="appendix-c-forty-blog-entry-finding-aids">Appendix C. Forty blog-entry finding aids</h2>
+<p>These are compact location aids for entries seen in the two listings, <strong>not replacement titles or a complete permalink catalog</strong>. For titleless/reblog blocks, confirm boundaries and date associations against raw HTML before assigning content to a rebuilt article. The checklist CSV includes source pages and any known permalink record.</p>
+<h3 id="listing-1-source">Listing 1 — <a href="https://web.archive.org/web/20201109000819/http://bluescholars.com/blog/" rel="noopener noreferrer">source</a></h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Publication date observed</th>
+<th>Finding aid, not original title</th>
+<th>Permalink evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>B01</td>
+<td>2013-09-09</td>
+<td>Eugene gallery</td>
+<td><a href="https://web.archive.org/web/20200220154703/http://bluescholars.com/blog/2013/9/9/eugene-oregon-august-2013" rel="noopener noreferrer">P08</a></td>
+</tr>
+<tr>
+<td>B02</td>
+<td>2013-05-13</td>
+<td>Green/gold shirt</td>
+<td><a href="https://web.archive.org/web/20200220154703/http://bluescholars.com/blog/bringing-back-the-og-t-shirt-in-green-and-gold-if" rel="noopener noreferrer">P10</a></td>
+</tr>
+<tr>
+<td>B03</td>
+<td>2013-04-25</td>
+<td>Bellingham poster</td>
+<td>Extract from raw source</td>
+</tr>
+<tr>
+<td>B04</td>
+<td>2013-04-25</td>
+<td>Trio photo</td>
+<td>Extract from raw source</td>
+</tr>
+<tr>
+<td>B05</td>
+<td>2013-04-24</td>
+<td>Works preview</td>
+<td>Extract from raw source</td>
+</tr>
+<tr>
+<td>B06</td>
+<td>2013-04-09</td>
+<td>Audio embed</td>
+<td>Extract from raw source</td>
+</tr>
+<tr>
+<td>B07</td>
+<td>2013-04-08</td>
+<td>Boston photo</td>
+<td>Extract from raw source</td>
+</tr>
+<tr>
+<td>B08</td>
+<td>2013-04-07</td>
+<td>Town Hall photo</td>
+<td>Extract from raw source</td>
+</tr>
+<tr>
+<td>B09</td>
+<td>2013-04-05</td>
+<td>Los Angeles photo</td>
+<td>Extract from raw source</td>
+</tr>
+<tr>
+<td>B10</td>
+<td>2013-04-02</td>
+<td>Purple/gold shirt</td>
+<td>Extract from raw source</td>
+</tr>
+<tr>
+<td>B11</td>
+<td>2013-04-02</td>
+<td>Campus article</td>
+<td><a href="https://web.archive.org/web/20201109000819/http://bluescholars.com/blog/el-primer-d-a-de-clase" rel="noopener noreferrer">P11</a></td>
+</tr>
+<tr>
+<td>B12</td>
+<td>2013-03-31</td>
+<td>Tour reblog</td>
+<td>Extract from raw source</td>
+</tr>
+<tr>
+<td>B13</td>
+<td>2013-03-28</td>
+<td>Photo/reblog block</td>
+<td>Extract from raw source</td>
+</tr>
+<tr>
+<td>B14</td>
+<td>2013-03-21</td>
+<td>Event reminder</td>
+<td>Extract from raw source</td>
+</tr>
+<tr>
+<td>B15</td>
+<td>2013-03-19</td>
+<td>Street portrait</td>
+<td>Extract from raw source</td>
+</tr>
+<tr>
+<td>B16</td>
+<td>2013-03-19</td>
+<td>Video/reblog block</td>
+<td>Extract from raw source</td>
+</tr>
+<tr>
+<td>B17</td>
+<td>2013-03-16</td>
+<td>Photography event</td>
+<td>Extract from raw source</td>
+</tr>
+<tr>
+<td>B18</td>
+<td>2013-03-08</td>
+<td>Mixtape link</td>
+<td>Extract from raw source</td>
+</tr>
+<tr>
+<td>B19</td>
+<td>2013-03-01</td>
+<td>Pho article link</td>
+<td>Extract from raw source</td>
+</tr>
+<tr>
+<td>B20</td>
+<td>2013-02-28</td>
+<td>Thig reblog</td>
+<td>Extract from raw source</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="listing-2-source">Listing 2 — <a href="https://web.archive.org/web/20200220154840/http://bluescholars.com/blog?offset=1362122742000" rel="noopener noreferrer">source</a></h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Publication date observed</th>
+<th>Finding aid, not original title</th>
+<th>Permalink evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>B21</td>
+<td>2013-02-27</td>
+<td>Conversation audio</td>
+<td>Extract from raw source</td>
+</tr>
+<tr>
+<td>B22</td>
+<td>2013-02-26</td>
+<td>Residency</td>
+<td>Extract from raw source</td>
+</tr>
+<tr>
+<td>B23</td>
+<td>2013-02-19</td>
+<td>Bowery photo</td>
+<td>Extract from raw source</td>
+</tr>
+<tr>
+<td>B24</td>
+<td>2013-02-12</td>
+<td>SoundCloud notice</td>
+<td>Extract from raw source</td>
+</tr>
+<tr>
+<td>B25</td>
+<td>2013-02-12</td>
+<td>Website notice</td>
+<td>Extract from raw source</td>
+</tr>
+<tr>
+<td>B26</td>
+<td>2013-02-12</td>
+<td>Los Angeles photo</td>
+<td>Extract from raw source</td>
+</tr>
+<tr>
+<td>B27</td>
+<td>2013-02-04</td>
+<td>Conversation event</td>
+<td>Extract from raw source</td>
+</tr>
+<tr>
+<td>B28</td>
+<td>2013-02-01</td>
+<td>Photography essay</td>
+<td>Extract from raw source</td>
+</tr>
+<tr>
+<td>B29</td>
+<td>2013-01-18</td>
+<td>Tour: Boston</td>
+<td>Extract from raw source</td>
+</tr>
+<tr>
+<td>B30</td>
+<td>2013-01-18</td>
+<td>Tour: New York</td>
+<td>Extract from raw source</td>
+</tr>
+<tr>
+<td>B31</td>
+<td>2013-01-18</td>
+<td>Tour: Brooklyn</td>
+<td>Extract from raw source</td>
+</tr>
+<tr>
+<td>B32</td>
+<td>2013-01-18</td>
+<td>Tour: Los Angeles</td>
+<td>Extract from raw source</td>
+</tr>
+<tr>
+<td>B33</td>
+<td>2013-01-18</td>
+<td>Tour: San Diego</td>
+<td>Extract from raw source</td>
+</tr>
+<tr>
+<td>B34</td>
+<td>2013-01-18</td>
+<td>Tour: San Francisco</td>
+<td>Extract from raw source</td>
+</tr>
+<tr>
+<td>B35</td>
+<td>2013-01-18</td>
+<td>Tour: Portland</td>
+<td>Extract from raw source</td>
+</tr>
+<tr>
+<td>B36</td>
+<td>2013-01-18</td>
+<td>Tour: Seattle</td>
+<td>Extract from raw source</td>
+</tr>
+<tr>
+<td>B37</td>
+<td>2013-01-18</td>
+<td>Tour: Bellingham</td>
+<td>Extract from raw source</td>
+</tr>
+<tr>
+<td>B38</td>
+<td>2013-01-17</td>
+<td>East Village photo</td>
+<td>Extract from raw source</td>
+</tr>
+<tr>
+<td>B39</td>
+<td>2013-01-17</td>
+<td>Album interview link</td>
+<td>Extract from raw source</td>
+</tr>
+<tr>
+<td>B40</td>
+<td>2013-01-12</td>
+<td>Vancouver photo</td>
+<td>Extract from raw source</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="appendix-d-external-sources-and-link-destinations">Appendix D. External sources and link destinations</h2>
+<p>These are <strong>specific links found in the inspected pages</strong>, useful for recovering matching missing material. Most returned a tool cache miss, not a verified missing page. A whole external website is not part of the automatic mirror just because one source post is useful.</p>
+<p>For Tumblr-based posts, the numeric post ID is a useful locator. Search the exact observed URL first; a shortened <code>/post/ID</code> or another host alias remains an unverified candidate until inspected. The full external original URLs and exact-index queries are in the manifest.</p>
+<h3 id="first-listing-source-posts">First-listing source posts</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>ID / replay</th>
+<th>Purpose</th>
+<th>Original host / locator</th>
+<th>Test result</th>
+<th>Other captures</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://web.archive.org/web/20201109000819/http://prometheusbrown.tumblr.com/post/48778453576/come-be-the-first-to-see-and-hear" rel="noopener noreferrer">X01</a></td>
+<td>Works preview</td>
+<td>prometheusbrown.tumblr.com / 48778453576</td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/http://prometheusbrown.tumblr.com/post/48778453576/come-be-the-first-to-see-and-hear" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20201109000819/http://prometheusbrown.tumblr.com/post/47552337826/i-dont-know-about-you-but-ll-cool-j-still" rel="noopener noreferrer">X02</a></td>
+<td>Song reblog</td>
+<td>prometheusbrown.tumblr.com / 47552337826</td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/http://prometheusbrown.tumblr.com/post/47552337826/i-dont-know-about-you-but-ll-cool-j-still" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20201109000819/http://tumblr.behzod.net/post/45999182069/geo-and-thig-leading-town-hall-seattle-in-a" rel="noopener noreferrer">X03</a></td>
+<td>Town Hall photo source</td>
+<td>tumblr.behzod.net / 45999182069</td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/http://tumblr.behzod.net/post/45999182069/geo-and-thig-leading-town-hall-seattle-in-a" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20201109000819/http://brownouts.tumblr.com/post/47194105364/saba-los-angeles-march-2013" rel="noopener noreferrer">X04</a></td>
+<td>Los Angeles / March source</td>
+<td>brownouts.tumblr.com / 47194105364</td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/http://brownouts.tumblr.com/post/47194105364/saba-los-angeles-march-2013" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20201109000819/http://prometheusbrown.tumblr.com/post/46946596061/el-primer-dia-de-clase" rel="noopener noreferrer">X05</a></td>
+<td>Campus article source</td>
+<td>prometheusbrown.tumblr.com / 46946596061</td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/http://prometheusbrown.tumblr.com/post/46946596061/el-primer-dia-de-clase" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20201109000819/http://tigloandcole.com/post/46829552058/3-months-later-tour-is-still-distracting-me-from" rel="noopener noreferrer">X06</a></td>
+<td>Tour reblog source</td>
+<td>tigloandcole.com / 46829552058</td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/http://tigloandcole.com/post/46829552058/3-months-later-tour-is-still-distracting-me-from" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20201109000819/http://aviloud.tumblr.com/post/45978111504" rel="noopener noreferrer">X07</a></td>
+<td>Photographer source / photo pair</td>
+<td>aviloud.tumblr.com / 45978111504</td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/http://aviloud.tumblr.com/post/45978111504" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20201109000819/http://rapperswithcameras.tumblr.com/post/45928773522/tonight-click-photo-for-rsvp-if-it-isnt-full-yet" rel="noopener noreferrer">X08</a></td>
+<td>Event reminder source</td>
+<td>rapperswithcameras.tumblr.com / 45928773522</td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/http://rapperswithcameras.tumblr.com/post/45928773522/tonight-click-photo-for-rsvp-if-it-isnt-full-yet" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20201109000819/http://aviloud.tumblr.com/post/45815436731" rel="noopener noreferrer">X09</a></td>
+<td>Street portrait source</td>
+<td>aviloud.tumblr.com / 45815436731</td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/http://aviloud.tumblr.com/post/45815436731" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20201109000819/http://prometheusbrown.tumblr.com/post/45676173875/bambu-books-feat-prometheus-brown-official" rel="noopener noreferrer">X10</a></td>
+<td>Books video source</td>
+<td>prometheusbrown.tumblr.com / 45676173875</td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/http://prometheusbrown.tumblr.com/post/45676173875/bambu-books-feat-prometheus-brown-official" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20201109000819/http://rapperswithcameras.tumblr.com/post/45453724308/rappers-w-cameras-at-town-hall-seattle-march-21" rel="noopener noreferrer">X11</a></td>
+<td>Photography event source</td>
+<td>rapperswithcameras.tumblr.com / 45453724308</td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/http://rapperswithcameras.tumblr.com/post/45453724308/rappers-w-cameras-at-town-hall-seattle-march-21" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20201109000819/http://militantmantras.tumblr.com/post/44885431829/international-womens-day-mixtape" rel="noopener noreferrer">X12</a></td>
+<td>Mixtape reblog source</td>
+<td>militantmantras.tumblr.com / 44885431829</td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/http://militantmantras.tumblr.com/post/44885431829/international-womens-day-mixtape" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20201109000819/http://thignat.tumblr.com/post/44078103689/see-what-i-did-there" rel="noopener noreferrer">X13</a></td>
+<td>Thig reblog source</td>
+<td>thignat.tumblr.com / 44078103689</td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/http://thignat.tumblr.com/post/44078103689/see-what-i-did-there" rel="noopener noreferrer">All dates</a></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="second-listing-source-posts">Second-listing source posts</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>ID / replay</th>
+<th>Purpose</th>
+<th>Original host / locator</th>
+<th>Test result</th>
+<th>Other captures</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://web.archive.org/web/20200220154840/http://prometheusbrown.tumblr.com/post/44160858743/click-the-photo-to-listen-to-the-live-audio-of-my" rel="noopener noreferrer">X14</a></td>
+<td>Conversation audio source</td>
+<td>prometheusbrown.tumblr.com / 44160858743</td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/http://prometheusbrown.tumblr.com/post/44160858743/click-the-photo-to-listen-to-the-live-audio-of-my" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20200220154840/http://prometheusbrown.tumblr.com/post/44078753487/townhallday-this-month-i-started-a-three-month" rel="noopener noreferrer">X15</a></td>
+<td>Residency source</td>
+<td>prometheusbrown.tumblr.com / 44078753487</td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/http://prometheusbrown.tumblr.com/post/44078753487/townhallday-this-month-i-started-a-three-month" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20200220154840/http://tfortaylor.com/post/38201102577/thats-love-right-there-town-all-day-tour" rel="noopener noreferrer">X16</a></td>
+<td>Bowery photo source</td>
+<td>tfortaylor.com / 38201102577</td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/http://tfortaylor.com/post/38201102577/thats-love-right-there-town-all-day-tour" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20200220154840/http://townfolk.tumblr.com/post/42563818730/now-at-soundcloud-com-sabzi" rel="noopener noreferrer">X17</a></td>
+<td>SoundCloud announcement source</td>
+<td>townfolk.tumblr.com / 42563818730</td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/http://townfolk.tumblr.com/post/42563818730/now-at-soundcloud-com-sabzi" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20200220154840/http://prometheusbrown.tumblr.com/post/42956212601/prometheusbrown-com-back-in-business" rel="noopener noreferrer">X18</a></td>
+<td>Website announcement source</td>
+<td>prometheusbrown.tumblr.com / 42956212601</td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/http://prometheusbrown.tumblr.com/post/42956212601/prometheusbrown-com-back-in-business" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20200220154840/http://brownouts.tumblr.com/post/42939780633/saba-los-angeles-december-2012" rel="noopener noreferrer">X19</a></td>
+<td>Los Angeles / December source</td>
+<td>brownouts.tumblr.com / 42939780633</td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/http://brownouts.tumblr.com/post/42939780633/saba-los-angeles-december-2012" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20200220154840/http://prometheusbrown.tumblr.com/post/42295559707/fresh-off-the-boat-with-eddie-huang-the-bay-area" rel="noopener noreferrer">X20</a></td>
+<td>Conversation event source</td>
+<td>prometheusbrown.tumblr.com / 42295559707</td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/http://prometheusbrown.tumblr.com/post/42295559707/fresh-off-the-boat-with-eddie-huang-the-bay-area" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20200220154840/http://prometheusbrown.tumblr.com/post/42032696693/i-wrote-an-essay-on-rap-and-photography-for-the" rel="noopener noreferrer">X21</a></td>
+<td>Photography essay source</td>
+<td>prometheusbrown.tumblr.com / 42032696693</td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/http://prometheusbrown.tumblr.com/post/42032696693/i-wrote-an-essay-on-rap-and-photography-for-the" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20200220154840/http://brownouts.tumblr.com/post/40804720276/somewhere-in-the-east-village-new-york-december" rel="noopener noreferrer">X22</a></td>
+<td>East Village source</td>
+<td>brownouts.tumblr.com / 40804720276</td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/http://brownouts.tumblr.com/post/40804720276/somewhere-in-the-east-village-new-york-december" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20200220154840/http://brownouts.tumblr.com/post/40353069434/saba-vancouver-dec-2012" rel="noopener noreferrer">X23</a></td>
+<td>Vancouver source</td>
+<td>brownouts.tumblr.com / 40353069434</td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/http://brownouts.tumblr.com/post/40353069434/saba-vancouver-dec-2012" rel="noopener noreferrer">All dates</a></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="other-article-artist-and-audio-destinations">Other article, artist, and audio destinations</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>ID / replay</th>
+<th>Purpose</th>
+<th>Original host / locator</th>
+<th>Test result</th>
+<th>Other captures</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://web.archive.org/web/20201109000819/http://phatlip.tumblr.com/post/44907056828/international-womens-day-mixtape" rel="noopener noreferrer">X24</a></td>
+<td>Mixtape outbound article</td>
+<td>phatlip.tumblr.com / 44907056828</td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/http://phatlip.tumblr.com/post/44907056828/international-womens-day-mixtape" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20201109000819/http://www.bonappetit.com/blogsandforums/blogs/badaily/2013/03/macklemore-loves-pho.html" rel="noopener noreferrer">X25</a></td>
+<td>Pho outbound article</td>
+<td>www.bonappetit.com/blogsandforums/blogs/badaily/2013/03/macklemore-loves-pho.html</td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/http://www.bonappetit.com/blogsandforums/blogs/badaily/2013/03/macklemore-loves-pho.html" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20200220154840/http://www.xxlmag.com/features/2013/01/blue-scholars-break-down-cinemetropolis/" rel="noopener noreferrer">X26</a></td>
+<td>Album outbound article</td>
+<td>www.xxlmag.com/features/2013/01/blue-scholars-break-down-cinemetropolis/</td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/http://www.xxlmag.com/features/2013/01/blue-scholars-break-down-cinemetropolis/" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20210529010817/http://prometheusbrown.com/" rel="noopener noreferrer">X27</a></td>
+<td>Prometheus Brown navigation destination</td>
+<td>prometheusbrown.com/</td>
+<td>Timeout</td>
+<td><a href="https://web.archive.org/web/*/http://prometheusbrown.com/" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20210529010817/http://sabzi.co/" rel="noopener noreferrer">X28</a></td>
+<td>Sabzi navigation destination</td>
+<td>sabzi.co/</td>
+<td>Readable 2021 capture</td>
+<td><a href="https://web.archive.org/web/*/http://sabzi.co/" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20201109000819/https://soundcloud.com/prometheusbrown/racist-accident" rel="noopener noreferrer">X29</a></td>
+<td>SoundCloud track</td>
+<td>soundcloud.com/prometheusbrown/racist-accident</td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/https://soundcloud.com/prometheusbrown/racist-accident" rel="noopener noreferrer">All dates</a></td>
+</tr>
+<tr>
+<td><a href="https://web.archive.org/web/20201109000819/https://w.soundcloud.com/player/?liking=false&amp;origin=tumblr&amp;sharing=false&amp;url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F87129356&amp;wmode=opaque" rel="noopener noreferrer">X30</a></td>
+<td>SoundCloud player / track 87129356</td>
+<td>w.soundcloud.com/player/</td>
+<td>Cache miss</td>
+<td><a href="https://web.archive.org/web/*/https://w.soundcloud.com/player/?liking=false&amp;origin=tumblr&amp;sharing=false&amp;url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F87129356&amp;wmode=opaque" rel="noopener noreferrer">All dates</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>Preserve other outbound links—ticketing, social accounts, photographer credits, event pages, and reference articles—as they are extracted from the raw pages. Those destinations have not all been expanded into individual manifest records; the present 30 are a targeted recovery subset, not every outbound link on the site.</p>
+<h2 id="appendix-e-deliverables-and-source-references">Appendix E. Deliverables and source references</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>File</th>
+<th>Contents</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>REPORT.md</code></td>
+<td>This complete source-location and recovery report.</td>
+</tr>
+<tr>
+<td><code>REPORT.html</code></td>
+<td>Locally readable/printable HTML version; no external runtime assets.</td>
+</tr>
+<tr>
+<td><code>recovery-manifest.json</code></td>
+<td>All 97 records, evidence states, original/replay/raw/index URLs, and blog checklist.</td>
+</tr>
+<tr>
+<td><code>recovery-manifest.csv</code></td>
+<td>Flat URL inventory for sorting and handing to another worker.</td>
+</tr>
+<tr>
+<td><code>blog-entry-checklist.csv</code></td>
+<td>Forty listing entries with source and permalink evidence.</td>
+</tr>
+<tr>
+<td><code>recovery-seeds-expanded.json</code></td>
+<td>Compatible page/image seed data for the supplied recovery project; not a downloaded-site catalog.</td>
+</tr>
+<tr>
+<td><code>observed-archive-urls.txt</code></td>
+<td>Replay request URL list only.</td>
+</tr>
+<tr>
+<td><code>capture-search-queries.csv</code></td>
+<td>31 targeted archive queries, separating observed URLs from unverified candidates.</td>
+</tr>
+<tr>
+<td><code>REQUEST-OBSERVATIONS.md</code></td>
+<td>Additional raw/index/alternate-date and replay-modifier probe outcomes.</td>
+</tr>
+<tr>
+<td><code>PROJECT-INSPECTION.md</code></td>
+<td>What the supplied code actually handles, and what still needs manual investigation.</td>
+</tr>
+<tr>
+<td><code>project-reference/</code></td>
+<td>The supplied README and verification report, copied as context.</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="primary-reference-locations">Primary reference locations</h3>
+<p>S01. <a href="https://web.archive.org/web/20210529010817/http://bluescholars.com/" rel="noopener noreferrer">Selected homepage</a></p>
+<p>S02. <a href="https://web.archive.org/web/20201109000819/http://bluescholars.com/blog/" rel="noopener noreferrer">First readable blog listing</a></p>
+<p>S03. <a href="https://web.archive.org/web/20200220154840/http://bluescholars.com/blog?offset=1362122742000" rel="noopener noreferrer">Second readable blog listing</a></p>
+<p>S04. <a href="https://web.archive.org/web/20200703230849/http://bluescholars.com/shows" rel="noopener noreferrer">Shows</a></p>
+<p>S05. <a href="https://web.archive.org/web/20200802161924/http://bluescholars.com/video" rel="noopener noreferrer">Video</a></p>
+<p>S06. <a href="https://web.archive.org/web/20200718164929/http://bluescholars.com/shop" rel="noopener noreferrer">Shop / captured provider error</a></p>
+<p>S07. <a href="https://web.archive.org/web/20200703230805/http://bluescholars.com/holler" rel="noopener noreferrer">Holler</a></p>
+<p>S08. <a href="https://web.archive.org/web/20200220154703/http://bluescholars.com/blog/2013/9/9/eugene-oregon-august-2013" rel="noopener noreferrer">Eugene article</a></p>
+<p>S09. <a href="https://web.archive.org/web/20190719224039/http://bluescholars.com/blog?offset=1358016466000" rel="noopener noreferrer">Third blog listing / captured provider error</a></p>
+<p>S10. <a href="https://web.archive.org/web/20190719224804/http://bluescholars.com/blog" rel="noopener noreferrer">Original 2019 blog request, resolved error capture</a></p>
+<p>S11. <a href="https://web.archive.org/web/20210529010844/https://images.squarespace-cdn.com/content/v1/51b8c20be4b0f1f8c9dcdf4c/1371078164544-2RKW5D1QDQ5IXSVM5B2N/ke17ZwdGBToddI8pDm48kIZpWXENTEukrBXe6_rB7blZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIF2CO6JwS3nXJTgmvDX6VE5p5CmEHphUtvFe0ff6hcA8KMshLAGzx4R3EDFOm1kBS/front-page.jpg" rel="noopener noreferrer">Homepage photo / actual capture</a></p>
+<p>S12. <a href="https://github.com/internetarchive/wayback/tree/master/wayback-cdx-server" rel="noopener noreferrer">Internet Archive CDX API documentation</a></p>
+<p>S13. <a href="https://archive.org/help/wayback_api.php" rel="noopener noreferrer">Internet Archive availability API documentation</a></p>
+<p>S14. <a href="https://pywb.readthedocs.io/en/develop/manual/rewriter.html" rel="noopener noreferrer">Webrecorder pywb replay modifiers</a></p>
+<p>S15. <a href="https://developers.squarespace.com/beginner-tutorial" rel="noopener noreferrer">Squarespace JSON context documentation</a></p>
+<p>S16. <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages" rel="noopener noreferrer">GitHub Pages static hosting documentation</a></p>
+<p>S17. <a href="project-reference/README.md">Supplied project README</a></p>
+<p>S18. <a href="project-reference/VERIFICATION.md">Supplied project verification report</a></p>
+<p>S19. <a href="PROJECT-INSPECTION.md">Inspection notes on supplied recovery code</a></p>
+<h3 id="inspection-boundary">Inspection boundary</h3>
+<p>The page, image, and video observations were rechecked in this report session on October 15, 2026. Exact alternative June 2016 content, archive-wide CDX results, and original raw downloads were not obtained. Earlier-date/JSON/CDX candidates are clearly separated from successfully observed replay content. The supplied project was inspected, not redeployed. No new GitHub operation was performed for this report.</p>
+<p class="notice">Research report only. No original site payloads are bundled and no GitHub deployment is asserted.</p></main></body></html>

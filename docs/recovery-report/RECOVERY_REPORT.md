@@ -25,7 +25,7 @@ Common Crawl uses independent snapshots; identical capture hashes are deduplicat
 
 ### Arquivo.pt
 
-The Arquivo.pt version-history query returned 12 root-page captures from 2017–2023. Three successful 200 responses (April 2018, July 2018, and October 2019) were retrieved as original HTML and retained as independent variants. The other statuses did not yield site-body bytes and are recorded as capture metadata, not as recovered pages. A broader follow-up now uses Arquivo.pt's documented domain CDX endpoint to enumerate all indexed first- and third-party paths under the site, preserving the raw index and downloading the latest 200 response per URL in each of the 2007, 2009, and 2013+ editions. That new scan is not yet run; no wider Arquivo.pt coverage is claimed here.
+The Arquivo.pt version-history query returned 12 root-page captures from 2017–2023. Three successful 200 responses (April 2018, July 2018, and October 2019) were retrieved as original HTML and retained as independent variants. The other statuses did not yield site-body bytes and are recorded as capture metadata, not as recovered pages. A broader follow-up now uses Arquivo.pt's documented domain CDX endpoint to enumerate indexed site URLs, preserving the raw index and downloading the latest 200 response per URL in each of the 2007, 2009, and 2013+ editions. That new scan is not yet run; no wider Arquivo.pt coverage is claimed here.
 
 ## Current saved source collection
 

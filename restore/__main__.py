@@ -42,8 +42,10 @@ def main(argv=None) -> int:
     commands.add_parser('status',help='Show acquisition counts without network access')
     p=commands.add_parser('commoncrawl',help='Search all published Common Crawl collections and preserve source WARC responses')
     p.add_argument('--max-records',type=int,default=1800);p.add_argument('--workers',type=int,default=4)
-    p=commands.add_parser('arquivo',help='Search and preserve bluescholars.com captures from Arquivo.pt')
-    p.add_argument('--history-url',default='bluescholars.com',help='Domain or exact URL history to enumerate')
+    p=commands.add_parser('arquivo',help='Search and preserve inventoried Blue Scholars page captures from Arquivo.pt')
+    p.add_argument('--history-url',default='bluescholars.com',help='Domain inventory or exact URL history to enumerate')
+    p.add_argument('--max-urls',type=int,default=200,help='Maximum exact page histories to query this resumable batch')
+    p.add_argument('--delay',type=float,default=0.5,help='Delay between Arquivo.pt history requests')
     p=commands.add_parser('commoncrawl-import',help='Import saved Common Crawl CDX rows from a JSONL file')
     p.add_argument('--rows',type=Path,required=True);p.add_argument('--collection',required=True)
     idx=commands.add_parser('index',help='Enumerate captures and persist the continuation cursor')
@@ -83,7 +85,7 @@ def main(argv=None) -> int:
         elif args.command=='commoncrawl':
             if args.max_records<1 or args.workers<1:raise ValueError('Common Crawl limits must be positive')
             result=harvest_commoncrawl(root,args.max_records,args.workers)
-        elif args.command=='arquivo': result=harvest_arquivo(root,args.history_url)
+        elif args.command=='arquivo': result=harvest_arquivo(root,args.history_url,args.max_urls,args.delay)
         elif args.command=='commoncrawl-import':
             rows=[json.loads(line) for line in args.rows.read_text().splitlines() if line.strip()]
             result=import_commoncrawl_rows(root,args.collection,rows)

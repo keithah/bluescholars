@@ -83,7 +83,7 @@ jobs:
       - name: Search independent Arquivo.pt captures
         id: arquivo
         continue-on-error: true
-        run: python -m restore arquivo --history-url bluescholars.com
+        run: python -m restore arquivo --history-url bluescholars.com --max-urls 200 --delay 0.5
       - name: Preserve an edition's latest per-URL captures
         id: edition
         if: inputs.edition_era != 'none'
@@ -105,6 +105,7 @@ jobs:
             recovery/commoncrawl-report.json
             recovery/commoncrawl-*-report.json
             recovery/arquivo-report.json
+            recovery/arquivo-state.json
             recovery/era-*-report.json
             recovery/asset-index-report.json
             recovery/candidate-build-report.json

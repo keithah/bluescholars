@@ -111,6 +111,23 @@ def test_candidate_excludes_after_reference_without_approval(tmp_path):
     assert build(tmp_path,tmp_path/'_candidate','',candidate=True)['recovered_pages']==0
     assert promote(tmp_path,reviewed=True)['promoted']==0
 
+def test_later_capture_promotion_requires_resource_specific_review(tmp_path):
+    fixture_root(tmp_path);s=State(tmp_path)
+    first=HOME+'first';second=HOME+'second'
+    add_raw(s,first,'html',b'<html><body>First later capture</body></html>')
+    add_raw(s,second,'html',b'<html><body>Second later capture</body></html>')
+    for url in (first,second): s.data['resources'][url]['status']='needs_review'
+    s.data['resources'][first]['compatibility_review']={
+        'actor':'Codex agent','reason':'Matched same-crawl homepage dependency.'
+    }
+    s.save()
+    assert promote(tmp_path,reviewed=True)['promoted']==1
+    catalog=json.loads((tmp_path/'source/catalog.json').read_text())['resources']
+    assert first in catalog and catalog[first]['compatibility_review']['actor']=='Codex agent'
+    assert second in catalog and 'raw_path' not in catalog[second]
+    with pytest.raises(ValueError,match='Global later-capture'):
+        promote(tmp_path,reviewed=True,allow_later=True)
+
 def test_project_subpath_and_nested_links(tmp_path):
     fixture_root(tmp_path);s=State(tmp_path)
     add_raw(s,HOME,'html',b'<html><body><a href="/blog/deep/post">Post</a></body></html>')

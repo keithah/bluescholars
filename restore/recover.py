@@ -57,21 +57,52 @@ def suffix(body,kind):
     if body.startswith(b'\x00\x00'): return '.ico'
     return '.svg'
 
+CORE_PATHS={'','/blog','/shows','/video','/shop','/holler'}
+
+def resource_priority(record: dict) -> tuple[int,int]:
+    """Put the selected Squarespace pages and their observed dependencies first.
+
+    A full-domain CDX scan includes an unrelated older WordPress site and later
+    parked-domain captures. Its stylesheet rows must not starve the selected
+    2021 homepage and linked resources.
+    """
+    url=record['url'];parts=urlsplit(url);path=parts.path.rstrip('/')
+    query_keys={part.split('=',1)[0].lower() for part in parts.query.split('&') if part}
+    own_host=parts.hostname in ('bluescholars.com','www.bluescholars.com')
+    refs=record.get('referrers',[])
+    if record['kind']=='html' and own_host and path=='':
+        return 0,len(url)
+    if record['kind']=='image' and 'seed' in refs:
+        return 1,len(url)
+    linked_core=any(
+        (ref_parts:=urlsplit(ref)).hostname in ('bluescholars.com','www.bluescholars.com')
+        and ref_parts.path.rstrip('/')==''
+        for ref in refs if ref and not ref.startswith('CDX:')
+    )
+    if record['kind'] in ('css','image') and linked_core:
+        return 1,len(url)
+    if (record['kind']=='html' and own_host and path in CORE_PATHS
+            and not (path=='/blog' and query_keys.intersection({'tag','author'}))):
+        return 2,len(url)
+    if record['kind']=='html' and 'seed' in refs:
+        return 3,len(url)
+    if record['kind']=='html' and own_host and path.startswith('/blog/') and path!='/blog/':
+        if not query_keys.intersection({'tag','author','offset'}):
+            return 3,len(url)
+        return 5,len(url)
+    if record['kind']=='html':
+        return 4,len(url)
+    if record['kind']=='css':
+        return 6,len(url)
+    return 7,len(url)
+
 def recover(state: State,client,max_files: int=150,retry_failed: bool=False) -> dict:
     processed=0;visited=set()
     while processed<max_files:
         pending=[r for r in state.data['resources'].values() if r['url'] not in visited and
                  (r['status']=='queued' or (retry_failed and r['status']=='failed'))]
         if not pending: break
-        def priority(record):
-            kind=record['kind'];path=urlsplit(record['url']).path.rstrip('/')
-            if kind=='css': rank=0
-            elif kind=='html' and path in ('','/blog','/shows','/video','/shop','/holler'): rank=1
-            elif kind=='image' and any(original_url(ref,'http://bluescholars.com/')=='http://bluescholars.com/' for ref in record['referrers']): rank=2
-            elif kind=='html': rank=3
-            else: rank=4
-            return rank,len(record['url'])
-        pending.sort(key=priority)
+        pending.sort(key=resource_priority)
         r=pending[0];url=r['url'];visited.add(url);processed+=1
         if r['kind'] in ('font','script','unsupported'):
             r['status']='excluded';r['reason']='No font/script/media binary redistribution';state.save();continue
@@ -120,10 +151,11 @@ def recover(state: State,client,max_files: int=150,retry_failed: bool=False) -> 
 def summary(state: State) -> dict:
     resources=list(state.data['resources'].values())
     statuses={s:sum(r['status']==s for r in resources) for s in ('queued','recovered','needs_review','failed','excluded')}
+    valid=[r for r in resources if r['status'] in ('recovered','needs_review') and r.get('sha256')]
     return {'resource_urls':len(resources),'statuses':statuses,
             'indexed_capture_records':sum(len(r['captures']) for r in resources),
             'index_complete':state.data['index_complete'],
-            'unique_downloaded_files':len({r['sha256'] for r in resources if r.get('sha256')}),
-            'downloaded_bytes':sum({r['sha256']:r.get('bytes',0) for r in resources if r.get('sha256')}.values()),
+            'unique_downloaded_files':len({r['sha256'] for r in valid}),
+            'downloaded_bytes':sum({r['sha256']:r.get('bytes',0) for r in valid}.values()),
             'failed_attempts':sum(a['result']=='failed' for r in resources for a in r['attempts']),
             'generated_at':now()}

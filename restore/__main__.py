@@ -7,7 +7,7 @@ import sys
 from .archive import ArchiveClient
 from .build import build,promote
 from .check import check
-from .recover import index,recover,summary
+from .recover import index,recover,summary,now
 from .state import State,write_json
 from .urls import base_path
 
@@ -52,7 +52,10 @@ def main(argv=None) -> int:
         if name=='build':p.add_argument('--release',action='store_true',help='Require explicit visual/publish approval and original homepage/CSS')
         if name=='serve':p.add_argument('--port',type=int,default=8080)
     p=commands.add_parser('promote',help='Copy inspected downloads into the reviewed source collection')
-    p.add_argument('--reviewed',action='store_true');p.add_argument('--allow-later',action='store_true')
+    p.add_argument('--reviewed',action='store_true')
+    p.add_argument('--allow-later',action='store_true',help=argparse.SUPPRESS)
+    p=commands.add_parser('compatibility-review',help='Record an individual later-capture compatibility decision')
+    p.add_argument('--url',required=True);p.add_argument('--reason',required=True)
     p=commands.add_parser('approve',help='Record an explicit visual and publication review')
     p.add_argument('--visual-reviewed',action='store_true');p.add_argument('--publish-approved',action='store_true')
     args=parser.parse_args(argv);root=args.root.resolve()
@@ -85,6 +88,16 @@ def main(argv=None) -> int:
                 if not 1<=args.port<=65535:raise ValueError('Invalid port')
                 serve(output,args.base_path,args.port);return 0
         elif args.command=='promote': result=promote(root,args.reviewed,args.allow_later)
+        elif args.command=='compatibility-review':
+            state=State(root);record=state.data['resources'].get(args.url)
+            if record is None: raise ValueError('URL is not in the recovery inventory')
+            if record.get('status')!='needs_review': raise ValueError('Only a downloaded later capture can be reviewed')
+            if record.get('compatibility_review'): raise ValueError('This resource already has a compatibility review')
+            reason=args.reason.strip()
+            if not reason: raise ValueError('A resource-specific evidence note is required')
+            review={'actor':'Codex agent','reviewed_at':now(),'capture':record.get('actual_capture'),
+                    'sha256':record.get('sha256'),'reason':reason}
+            record['compatibility_review']=review;state.save();result={'url':args.url,**review}
         else:
             if not args.visual_reviewed or not args.publish_approved:
                 raise ValueError('Both --visual-reviewed and --publish-approved are required')

@@ -6,7 +6,7 @@ Restore the historical **bluescholars.com** site using the **May 29, 2021** home
 
 **The recovery/build tooling is implemented; the historical website is not yet recovered.**
 
-This package contains the archive seed inventory, a resumable downloader, a static sanitizer/builder, offline validation, GitHub workflows and 71 passing automated tests. No original HTML/CSS/image bytes could be downloaded in the preparation environment. The generated preview therefore contains **9 explicitly labeled recovery placeholders**, a status page and a 404 page. The Video placeholder includes the 11 previously observed YouTube references, not playable video files. Diagnostic styling is not the original website design.
+This project contains the archive recovery and static build tools. Recovery is now running against the live Internet Archive from both the local workspace and the manual GitHub Actions workflow. See [the work log](docs/WORK_LOG.md) and the generated provenance reports for current results. Until original homepage markup, styling and imagery have been inspected and reviewed, any preview remains a recovery candidate rather than a released restoration.
 
 The remote `keithah/bluescholars` repository was **not created**: the connected GitHub interface did not expose repository creation. The setup script below performs that operation from an authenticated terminal. Neither it nor the recovery workflow publishes the site.
 
@@ -122,7 +122,14 @@ python -m restore check --base-path /bluescholars
 python -m restore serve --base-path /bluescholars
 ```
 
-Promotion verifies source hashes, copies the raw responses into `source/raw`, and resets publication approval. `--allow-later` is a separate explicit choice for later captures already inspected for compatibility; do not use it indiscriminately.
+Promotion verifies source hashes and copies only reviewed responses into `source/raw`. Later captures require a separate compatibility decision for each resource. Record one only after inspecting that resource:
+
+```bash
+python -m restore compatibility-review --url 'EXACT_ORIGINAL_URL' --reason 'Resource-specific evidence for historical compatibility.'
+python -m restore promote --reviewed
+```
+
+The decision records the reviewing actor, capture, hash and evidence note. The former global `--allow-later` switch is rejected because it could approve unrelated later redesigns at once.
 
 Compare desktop and mobile renderings with the archived reference. Check the logo, typography, spacing, image sizes/order, article text and dates, blog pagination, historical contact/shop behavior and all reported gaps. The renderer preserves original markup/classes and localizes available assets, but removing Squarespace runtime behavior can still require targeted visual repairs. Fonts are not bundled; any typography fallback remains a known fidelity issue. Preservation of original credits does not establish a license to republish; review rights separately.
 

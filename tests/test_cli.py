@@ -3,6 +3,8 @@ import subprocess
 import sys
 from pathlib import Path
 import yaml
+from restore.state import State
+from restore.urls import HOME,TARGET
 
 ROOT=Path(__file__).resolve().parents[1]
 
@@ -27,6 +29,17 @@ def test_publish_approval_not_implicit(tmp_path):
     assert r.returncode!=0
     assert not (tmp_path/'source/review.json').exists()
 
+def test_later_capture_review_is_resource_specific(tmp_path):
+    state=State(tmp_path);record=state.add(HOME,'image','fixture',TARGET)
+    record.update(status='needs_review',actual_capture='20210529010844',sha256='abc123')
+    state.save()
+    reason='Exact linked homepage asset resolved in the same archive crawl.'
+    result=run('--root',tmp_path,'compatibility-review','--url',HOME,'--reason',reason)
+    assert result.returncode==0,result.stderr
+    saved=State(tmp_path).data['resources'][HOME]['compatibility_review']
+    assert saved['actor']=='Codex agent' and saved['reason']==reason
+    assert saved['capture']=='20210529010844' and saved['sha256']=='abc123'
+
 def test_recovery_workflow_never_deploys():
     text=(ROOT/'.github/workflows/recover.yml').read_text()
     doc=yaml.safe_load(text)
@@ -39,7 +52,7 @@ def test_deploy_requires_manual_confirmation_and_release_gate():
     text=(ROOT/'.github/workflows/pages.yml').read_text()
     doc=yaml.safe_load(text)
     assert 'inputs.confirm_publish' in text and '--release' in text
-    assert 'deploy-pages@v4' in text
+    assert 'deploy-pages@v5' in text
     assert set((doc.get('on') or doc.get(True)))=={'workflow_dispatch'}
 
 def test_shell_scripts_parse():

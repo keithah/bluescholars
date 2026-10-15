@@ -144,5 +144,7 @@ def validate_payload(body: bytes,kind: str) -> None:
     title=soup.title.get_text(' ',strip=True).lower() if soup.title else ''
     bad=('website expired','account not available','account unavailable','just a moment',
          'service unavailable','page not found','site not found','404 not found','wayback machine')
-    if any(s in title for s in bad) or (title.strip()=='error' and 'squarespace' in text.lower()):
+    body_text=' '.join(soup.get_text(' ',strip=True).lower().split())
+    provider_error=('page cannot be displayed' in body_text and 'service provider' in body_text)
+    if any(s in title for s in bad) or provider_error or (title.strip()=='error' and 'squarespace' in text.lower()):
         raise ValueError('Captured provider/archive error page, not site content')

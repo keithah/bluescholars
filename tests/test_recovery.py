@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 import pytest
 from restore.archive import parse_cdx, validate_payload, ArchiveClient, Payload, capture_candidates
-from restore.recover import index, recover
+from restore.recover import index, recover, resource_priority
 from restore.state import State
 from restore.urls import HOME, TARGET
 
@@ -35,6 +35,11 @@ def test_provider_error_with_200_rejected(body):
 def test_real_content_with_error_word_not_rejected():
     validate_payload(b'<html><title>BLUE SCHOLARS</title><p>Error is the song name</p></html>','html')
 
+def test_untitled_provider_error_capture_rejected():
+    body=b'<html><body>Error. Page cannot be displayed. Please contact your service provider for more details. (18)</body></html>'
+    with pytest.raises(ValueError,match='provider/archive error'):
+        validate_payload(body,'html')
+
 def test_html_masquerading_as_image_rejected():
     with pytest.raises(ValueError): validate_payload(VALID,'image')
 
@@ -50,6 +55,21 @@ def test_rank_before_reference_first():
     assert ranked[0]==TARGET
     assert ranked.index('20210401000000') < ranked.index('20250101000000')
     assert '20160101000000' in ranked
+
+def test_core_pages_and_linked_dependencies_outrank_full_domain_legacy_css():
+    homepage={'url':HOME,'kind':'html','referrers':['seed']}
+    core_css={'url':'https://www.squarespace.com/site.css','kind':'css',
+              'referrers':['http://bluescholars.com/']}
+    legacy_css={'url':'http://bluescholars.com/blog/wp-content/theme.css','kind':'css',
+                'referrers':['CDX:domain']}
+    assert resource_priority(homepage)[0] < resource_priority(core_css)[0]
+    assert resource_priority(core_css)[0] < resource_priority(legacy_css)[0]
+
+def test_article_pages_outrank_tag_filters_for_complete_blog_recovery():
+    article={'url':HOME+'blog/bringing-back-the-og-t-shirt','kind':'html',
+             'referrers':[HOME+'blog/']}
+    tag={'url':HOME+'blog/?tag=Seattle','kind':'html','referrers':['CDX:domain']}
+    assert resource_priority(article)[0] < resource_priority(tag)[0]
 
 class Response:
     def __init__(self,code=200,body=VALID,headers=None):

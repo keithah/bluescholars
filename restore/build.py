@@ -33,13 +33,17 @@ def read_record(root: Path,r: dict,allow_recovery: bool) -> bytes:
 
 def promote(root: Path,reviewed: bool=False,allow_later: bool=False) -> dict:
     if not reviewed: raise ValueError('Source review is required: pass --reviewed after inspection')
+    if allow_later:
+        raise ValueError('Global later-capture approval is disabled; review each resource with compatibility-review first')
     root=Path(root);state=State(root)
     catalog_path=root/'source/catalog.json'
     catalog=json.loads(catalog_path.read_text()) if catalog_path.exists() else {'version':1,'resources':{}}
     staged=[]
     # Verify all selected files before modifying the approved collection.
     for url,r in state.data['resources'].items():
-        eligible=r['status']=='recovered' or (allow_later and r['status']=='needs_review')
+        eligible=r['status']=='recovered' or (
+            r['status']=='needs_review' and bool(r.get('compatibility_review'))
+        )
         if eligible and r.get('raw_path') and r['kind'] in ('html','css','image'):
             staged.append((url,r,read_record(root,r,True)))
         elif url not in catalog['resources']:
@@ -47,7 +51,8 @@ def promote(root: Path,reviewed: bool=False,allow_later: bool=False) -> dict:
     for url,r,body in staged:
         copied=dict(r);path='source/raw/'+Path(r['raw_path']).name
         (root/path).parent.mkdir(parents=True,exist_ok=True);(root/path).write_bytes(body)
-        copied.update(raw_path=path,source_reviewed=True,later_capture_approved=r['status']=='needs_review',status='recovered')
+        copied.update(raw_path=path,source_reviewed=True,
+                      later_capture_approved=bool(r.get('compatibility_review')),status='recovered')
         catalog['resources'][url]=copied
     if staged:
         write_json(root/'source/review.json',{'publish_approved':False,'visual_reviewed':False,

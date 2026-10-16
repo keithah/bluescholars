@@ -82,6 +82,10 @@ def test_css_urls_imports_and_font_tracking():
     assert set(found)=={'https://cdn.example/css/base.css','https://cdn.example/css/font.woff2','https://cdn.example/img/a.png'}
     assert kind_for('https://cdn.example/font.woff2') == 'font'
 
+def test_legacy_tiff_is_an_image_but_flash_is_not_a_page():
+    assert kind_for('http://www.bluescholars.com/images/press/bs_chinatown.tif')=='image'
+    assert kind_for('http://www.bluescholars.com/player/player_longmarch.swf')=='unsupported'
+
 def test_state_seed_and_reload(tmp_path):
     s=State(tmp_path)
     s.add(HOME,'html','seed','20210529010817')
@@ -93,6 +97,14 @@ def test_state_seed_and_reload(tmp_path):
     assert r['referrers']==['seed','second']
     assert len(loaded.data['resources'])==1
     assert loaded.data['index_complete'] is False
+
+def test_state_refines_a_legacy_html_guess_when_image_mime_is_seen(tmp_path):
+    s=State(tmp_path);url='http://www.bluescholars.com/images/press/bs_chinatown.tif'
+    s.add(url,'html','old index guess')
+    assert s.add(url,'image','image/tiff index evidence')['kind']=='image'
+    flash='http://www.bluescholars.com/player/player_longmarch.swf'
+    s.add(flash,'html','old extension guess')
+    assert s.add(flash,kind_for(flash),'unsupported media evidence')['kind']=='unsupported'
 
 def test_checkpoint_is_valid_json(tmp_path):
     s=State(tmp_path);s.add(HOME,'html','seed');s.save()

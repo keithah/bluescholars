@@ -63,9 +63,9 @@ def kind_for(url: str, mime: str = '') -> str:
         return 'script'
     if ext=='.css' or 'text/css' in mime:
         return 'css'
-    if ext in {'.png','.jpg','.jpeg','.gif','.webp','.svg','.ico'} or mime.startswith('image/'):
+    if ext in {'.png','.jpg','.jpeg','.gif','.webp','.svg','.ico','.tif','.tiff'} or mime.startswith('image/'):
         return 'image'
-    if ext in {'.mp3','.mp4','.m4a','.wav','.ogg','.webm','.mov','.pdf','.zip'}:
+    if ext in {'.mp3','.mp4','.m4a','.wav','.ogg','.webm','.mov','.pdf','.zip','.swf'}:
         return 'unsupported'
     if 'html' in mime or in_domain(url):
         return 'html'
@@ -114,6 +114,6 @@ def route(url: str) -> str:
 
 def asset_route(url: str, kind: str) -> str:
     ext = 'css' if kind=='css' else urlsplit(url).path.rsplit('.',1)[-1].lower()
-    if ext not in {'css','jpg','jpeg','png','gif','webp','svg','ico'}:
+    if ext not in {'css','jpg','jpeg','png','gif','webp','svg','ico','tif','tiff'}:
         ext='img'
     return '/assets/'+hashlib.sha256(url.encode()).hexdigest()[:24]+'.'+ext

@@ -62,6 +62,7 @@ def main(argv=None) -> int:
     rec.add_argument('--max-files',type=int,default=150);rec.add_argument('--retry-failed',action='store_true')
     p=commands.add_parser('capture',help='Preserve an exact Wayback capture as a dated variant')
     p.add_argument('--url',required=True);p.add_argument('--timestamp',required=True)
+    p.add_argument('--kind',choices=['html','css','image'],help='Override extension inference for source-linked external resources')
     capture=p
     p=commands.add_parser('capture-era',help='Preserve the last available capture per URL for a historical site era')
     p.add_argument('--era',choices=['2007','2009','2013'],required=True)
@@ -112,7 +113,7 @@ def main(argv=None) -> int:
                 result=index(s,client,args.max_pages,args.url,args.match)
                 print(json.dumps(result,indent=2));return 2 if result.get('last_error') and not result.get('complete') else 0
             if args.command=='capture':
-                result=capture_variant(s,client,args.url,args.timestamp)
+                result=capture_variant(s,client,args.url,args.timestamp,args.kind)
                 print(json.dumps(result,indent=2));return 0
             if args.command=='capture-era':
                 if args.max_files<1:raise ValueError('--max-files must be positive')

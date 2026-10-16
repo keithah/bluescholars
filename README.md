@@ -5,6 +5,7 @@ This repository is reconstructing three archived versions of **bluescholars.com*
 - `/2007/` — the older early design
 - `/2009/` — the WordPress-era site, whose captures continue through 2013
 - `/2013/` — the Squarespace design, first located in September 2013; the last intact homepage capture located so far is September 30, 2023
+- `/lj/` — a separate archive for the separately hosted Blue Scholars LiveJournal; it is not presented as another official website design
 
 The root page is an edition gateway. The visual baseline for the Squarespace edition is the May 29, 2021 homepage capture. Original source bytes, capture dates, hashes, and archive provenance are retained separately from the rendered output.
 

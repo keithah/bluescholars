@@ -129,6 +129,7 @@ def validate_payload(body: bytes,kind: str) -> None:
         prefix=body.lstrip()[:1000].lower()
         valid=(body.startswith(b'\xff\xd8\xff') or body.startswith(b'\x89PNG\r\n\x1a\n') or
                body.startswith((b'GIF87a',b'GIF89a',b'\x00\x00\x01\x00')) or
+               body.startswith((b'II*\x00',b'MM\x00*',b'II+\x00',b'MM\x00+')) or
                (body.startswith(b'RIFF') and body[8:12]==b'WEBP') or
                (b'<svg' in prefix and b'<html' not in prefix))
         if not valid: raise ValueError('Expected image bytes; received HTML or unknown content')

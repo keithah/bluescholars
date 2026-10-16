@@ -44,6 +44,9 @@ def test_untitled_provider_error_capture_rejected():
 def test_html_masquerading_as_image_rejected():
     with pytest.raises(ValueError): validate_payload(VALID,'image')
 
+def test_tiff_image_payload_is_preserved():
+    validate_payload(b'II*\x00\x08\x00\x00\x00'+b'\x00'*16,'image')
+
 def test_font_download_forbidden():
     with pytest.raises(ValueError): validate_payload(b'wOF2xxx','font')
 
@@ -119,6 +122,23 @@ def test_live_redirect_refused():
     with pytest.raises(ValueError,match='archive'): c.get('https://web.archive.org/web/'+TARGET+'id_/'+HOME)
     assert len(s.calls)==1
 
+def test_archive_client_decodes_brotli_encoded_html():
+    import base64,io
+    from requests import Response as RequestsResponse
+    from urllib3._collections import HTTPHeaderDict
+    from urllib3.response import HTTPResponse
+
+    encoded=base64.b64decode('H1QAUBwHbkzHftbXiWqfMDI6xUNVZXPgkBOgC168RdQChxweNG6ehdRqAmT46ZcgA5gHJ7cI')
+    url='https://web.archive.org/web/20230930162408id_/https://bluescholars.com/'
+    response=RequestsResponse()
+    response.status_code=200
+    response.url=url
+    response.headers={'Content-Type':'text/html','Content-Encoding':'br'}
+    response.raw=HTTPResponse(body=io.BytesIO(encoded),headers=HTTPHeaderDict(response.headers),preload_content=False)
+    client=ArchiveClient(session=Session([response]),delay=0,sleep=lambda _:None)
+
+    assert client.get(url).body==b'<!doctype html><html><head><title>Test</title></head><body>Archive data</body></html>'
+
 def test_size_cap():
     c=ArchiveClient(session=Session([Response(body=b'x'*20)]),delay=0,max_bytes=10)
     with pytest.raises(ValueError,match='size'): c.get('https://web.archive.org/web/'+TARGET+'id_/'+HOME)
@@ -191,6 +211,15 @@ def test_exact_capture_is_saved_as_a_variant_without_overwriting_homepage(tmp_pa
     assert result['actual_capture']=='20070724082915'
     assert key in state.data['resources'] and state.data['resources'][key]['raw_path']
     assert state.data['resources'][HOME]['sha256']=='baseline'
+
+def test_exact_capture_can_preserve_external_html_not_on_site_domain(tmp_path):
+    state=State(tmp_path)
+    url='http://bluescholars.livejournal.com/16954.html'
+    client=Client(lambda replay:Payload(VALID,'https://web.archive.org/web/20090125012333id_/'+url,200,{'Content-Type':'text/html'}))
+    result=capture_variant(state,client,url,'20090125012333',kind_override='html')
+    record=state.data['resources'][result['source_key']]
+    assert result['kind']=='html' and record['kind']=='html'
+    assert (tmp_path/record['raw_path']).read_bytes()==VALID
 
 def test_capture_era_selects_latest_valid_record_and_resumes(tmp_path):
     state=State(tmp_path);record=state.add(HOME,'html','seed',TARGET)

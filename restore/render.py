@@ -169,6 +169,10 @@ def render_html(text: str,url: str,resources: dict,base: str,route_prefix='') ->
     # void <meta> tags open to html.parser, nesting head links inside them.
     stylesheet_links=[]
     for link in list(soup.find_all('link',href=True)):
+        # Decomposing a malformed stylesheet link can detach nested links
+        # retained by html.parser in older LiveJournal markup.
+        if link.attrs is None:
+            continue
         if 'stylesheet' in link.get('rel',[]):
             stylesheet_links.append({'href':link.get('href',''),'rel':link.get('rel',[]),
                                      'media':link.get('media'),'type':link.get('type')})
@@ -276,10 +280,13 @@ def render_html(text: str,url: str,resources: dict,base: str,route_prefix='') ->
     summary=soup.new_tag('summary');summary.string='Navigation';details.append(summary)
     nav=soup.new_tag('nav',attrs={'aria-label':'Static navigation'})
     nav_prefix=resolver.route_prefix or '/2013'
-    links=[('ARCHIVE HOME','/'),('EDITION HOME','/')]
-    if not resolver.route_prefix.startswith(('/2007','/2009')): links+=NAV
+    if resolver.route_prefix.startswith('/lj'):
+        links=[('ARCHIVE HOME','/'),('LIVEJOURNAL ARCHIVE','/lj/')]
+    else:
+        links=[('ARCHIVE HOME','/'),('EDITION HOME','/')]
+        if not resolver.route_prefix.startswith(('/2007','/2009')): links+=NAV
     for label,path in links:
-        target=path if label=='ARCHIVE HOME' else nav_prefix+path
+        target=path if label in ('ARCHIVE HOME','LIVEJOURNAL ARCHIVE') else nav_prefix+path
         a=soup.new_tag('a',href=base+target);a.string=label;nav.append(a)
     details.append(nav);aside.append(details);soup.body.insert(0,aside)
     return str(soup),issues

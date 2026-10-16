@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import os
 from pathlib import Path
+from urllib.parse import urlsplit
 from .urls import original_url,TARGET,HOME
 
 def write_json(path: Path,data) -> None:
@@ -31,8 +32,18 @@ class State:
             'status':'queued','attempts':[]})
         for key,value in (('referrers',referrer),('hints',capture)):
             if value and value not in r[key]: r[key].append(value)
-        # Type declarations in markup are better evidence than an extension guess.
-        if kind=='css': r['kind']='css'
+        # Explicit stylesheet references and known file extensions can correct
+        # an older MIME/extension guess before bytes exist. Never change an
+        # acquired payload's validated type.
+        path=urlsplit(url).path.lower()
+        extension='.'+path.rsplit('.',1)[-1] if '.' in path.rsplit('/',1)[-1] else ''
+        image_ext={'.png','.jpg','.jpeg','.gif','.webp','.svg','.ico','.tif','.tiff'}
+        other_ext={'.woff','.woff2','.ttf','.otf','.eot','.js','.mjs','.mp3','.mp4','.m4a',
+                   '.wav','.ogg','.webm','.mov','.pdf','.zip','.swf'}
+        if (kind=='css' or (kind=='image' and extension in image_ext)
+                or (kind in ('font','script','unsupported') and extension in other_ext)) \
+                and not r.get('raw_path') and r.get('status') in ('queued','failed'):
+            r['kind']=kind
         return r
 
     def save(self) -> None:

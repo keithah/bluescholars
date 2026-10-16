@@ -76,6 +76,7 @@ def suffix(body,kind):
     if body.startswith(b'\x89PNG'): return '.png'
     if body.startswith(b'GIF'): return '.gif'
     if body.startswith(b'RIFF'): return '.webp'
+    if body.startswith((b'II*\x00',b'MM\x00*',b'II+\x00',b'MM\x00+')): return '.tif'
     if body.startswith(b'\x00\x00'): return '.ico'
     return '.svg'
 
@@ -192,12 +193,12 @@ def recover(state: State,client,max_files: int=150,retry_failed: bool=False,prog
     write_json(state.root/'recovery/report.json',report)
     return report
 
-def capture_variant(state:State,client,url:str,timestamp:str)->dict:
+def capture_variant(state:State,client,url:str,timestamp:str,kind_override:str|None=None)->dict:
     """Recover one explicitly selected capture without replacing a URL's other dates."""
     if not timestamp.isdigit():raise ValueError('Capture timestamp must be numeric')
     canonical=original_url(url)
     if not canonical:raise ValueError('Invalid original URL')
-    kind=kind_for(canonical)
+    kind=kind_override or kind_for(canonical)
     if kind not in ('html','css','image'):raise ValueError(f'Unsupported capture kind: {kind}')
     replay=f'https://web.archive.org/web/{timestamp}id_/{canonical}'
     response=client.get(replay)

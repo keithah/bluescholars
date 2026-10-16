@@ -1,0 +1,233 @@
+{
+  "updated_at": "2026-10-16",
+  "scope": "Independent public web archives checked for Blue Scholars website captures, linked posts, and supporting material.",
+  "results": {
+    "Arquivo.pt": {
+      "domain_index": "https://arquivo.pt/wayback/cdx?url=bluescholars.com&matchType=domain&output=json&limit=100000&resolveRevisits=true",
+      "index_rows": 35,
+      "selected_latest_page_style_or_image_rows": 3,
+      "downloaded_valid_responses": 3,
+      "captures": [
+        {
+          "timestamp": "20191019105504",
+          "url": "http://bluescholars.com/",
+          "kind": "html",
+          "sha256": "2b31620b8e4f83e456b3ef40c562be89a836c0e74001a5b0f9b5e34344182aa0",
+          "notes": "Squarespace homepage; same site identity and main image as the 2021 reference."
+        },
+        {
+          "timestamp": "20191019105453",
+          "url": "http://bluescholars.com/blog",
+          "kind": "html",
+          "sha256": "d793efab7d317b6adb18ebeeffe6e37bd68260dba40ab43679c077882a4c618f",
+          "notes": "Twenty visible post cards and 51 image references. Eighteen internal post permalinks were checked against Arquivo.pt version history; zero additional captures were returned. The corresponding article HTML is already present from Common Crawl."
+        },
+        {
+          "timestamp": "20180720062129",
+          "url": "http://bluescholars.com/favicon.ico",
+          "kind": "image",
+          "sha256": "87d5db1bafa8c90663d3f8f286d88d8d07d4d8a19d29dbfc4a2abfe90591bea3",
+          "notes": "PNG favicon response."
+        }
+      ],
+      "failures": 0,
+      "raw_index_path": "recovery/index/arquivo-domain.jsonl",
+      "domain_report_path": "recovery/arquivo-domain-report.json"
+    },
+    "Archive.today / Archive.ph": {
+      "listing_url": "https://archive.ph/https://bluescholars.com/",
+      "snapshot_id": "TpBHi",
+      "snapshot_url": "https://archive.ph/TpBHi",
+      "snapshot_date": "2013-01-02T03:55:00Z",
+      "original_url": "http://bluescholars.com/",
+      "discovery": "The domain listing identified one saved homepage, titled Blue Scholars - Official Site, redirected from www.bluescholars.com.",
+      "source_bytes_retrieved": false,
+      "access_limit": "The first listing request succeeded; subsequent requests to archive.ph and its tested mirrors returned HTTP 429 CAPTCHA/security pages. The snapshot is recorded as a lead, not as acquired content."
+    },
+    "Archive-It": {
+      "public_site_search": {
+        "url": "https://archive-it.org/explore/?q=bluescholars.com&show=Sites",
+        "result": "0 site records for bluescholars.com."
+      },
+      "full_text_search": {
+        "url": "https://archive-it.org/explore/?q=bluescholars.com&show=ArchivedPages",
+        "result": "Related archived social/profile results were found."
+      },
+      "captures": [
+        {
+          "timestamp": "20090919113445",
+          "url": "https://twitter.com/bluescholars",
+          "collection_id": "194",
+          "replay_url": "https://wayback.archive-it.org/194/20090919113445/https://twitter.com/bluescholars",
+          "status": "Viewed in browser; source HTML not separately acquired.",
+          "observed": "Profile identifies Seattle, links the band website, describes Sabzi and Prometheus Brown, and shows archived 2009 posts. The profile page is related historical context, not one of the three site designs."
+        },
+        {
+          "timestamp": "20090919073718",
+          "url": "http://twitter.com/bluescholars",
+          "collection_id": "194",
+          "replay_url": "https://wayback.archive-it.org/194/20090919073718/http://twitter.com/bluescholars"
+        },
+        {
+          "timestamp": "20171014022611",
+          "url": "https://mobile.twitter.com/BlueScholars",
+          "collection_id": "5962",
+          "replay_url": "https://wayback.archive-it.org/5962/20171014022611/https://mobile.twitter.com/BlueScholars"
+        },
+        {
+          "timestamp": "20141118011836",
+          "url": "http://mybelltown.com/2009/08/bluescholars/",
+          "collection_id": "4224",
+          "replay_url": "https://wayback.archive-it.org/4224/20141118011836/http://mybelltown.com/2009/08/bluescholars/"
+        },
+        {
+          "timestamp": "20191215043532",
+          "url": "https://filmandmusic.seattle.gov/check-out-the-kexp-documentary-series-hip-hop-the-new-seattle-sound/bluescholars/embed/",
+          "collection_id": "3241",
+          "replay_url": "https://wayback.archive-it.org/3241/20191215043532/https://filmandmusic.seattle.gov/check-out-the-kexp-documentary-series-hip-hop-the-new-seattle-sound/bluescholars/embed/"
+        }
+      ],
+      "global_cdx": "The documented /all endpoint returned HTTP 403. The public full-text search and an individual replay were still usable. A collection-specific CDX request returned an interactive session-verification page to the command-line client."
+    },
+    "Library of Congress Web Archives": {
+      "catalog_queries": [
+        {
+          "query": "bluescholars.com",
+          "hits": 0
+        },
+        {
+          "query": "Blue Scholars",
+          "hits": 0
+        },
+        {
+          "query": "bluescholars",
+          "hits": 0
+        }
+      ],
+      "url_replay_test": "The documented wildcard URL replay endpoint returned HTTP 403 from this environment.",
+      "conclusion": "No catalog record was found, but the separate URL replay interface could not be queried; this is not an archive-wide absence finding.",
+      "documentation": "https://www.loc.gov/programs/web-archiving/for-researchers/searching-the-web-archive/"
+    },
+    "UK Web Archive": {
+      "result": "The URL lookup redirected to an error page. The University of Edinburgh's web-archiving guidance states that UK Web Archive captures have been unavailable since March 2025 following a cyber attack.",
+      "documentation": "https://library.ed.ac.uk/heritage-collections/collections-and-search/archives/digital-archives-and-preservation/web-archiving/frequently-asked-questions"
+    },
+    "Australian Web Archive / Trove": {
+      "result": "Trove search and replay entry points returned the site's Anubis anti-bot page; no Blue Scholars capture result was obtained."
+    },
+    "Ghostarchive": {
+      "query": "https://ghostarchive.org/search?term=https%3A%2F%2Fbluescholars.com%2F",
+      "result": "The exact homepage query returned 'No archives for that site.'"
+    },
+    "Wayback LiveJournal archive": {
+      "original_host": "http://bluescholars.livejournal.com/",
+      "restored_route": "/lj/",
+      "captures": [
+        {
+          "timestamp": "20110812180628",
+          "url": "http://bluescholars.livejournal.com/",
+          "kind": "html",
+          "sha256": "90b5c689488b1124f3d8ab4f4d04792d057a24482cf223f8c29d1f7acc06ab5e",
+          "route": "/lj/journal/",
+          "notes": "2011 journal front page; includes six visible full-text entries dated 2007–2008."
+        },
+        {
+          "timestamp": "20090125012333",
+          "url": "http://bluescholars.livejournal.com/16954.html",
+          "kind": "html",
+          "sha256": "16c0c8d11cd002a032829f1d3992e0a50ee2e349a2ddf916251eced1bd812d6d",
+          "route": "/lj/posts/16954.html",
+          "notes": "Individual 2007-09-30 post “friday mixdown”, including comments."
+        },
+        {
+          "timestamp": "20110812180252",
+          "url": "http://bluescholars.livejournal.com/17222.html",
+          "kind": "html",
+          "sha256": "b995e34843802ca1911ca1673027e7bc7575976f4403fe0b804f1f77e8add884",
+          "route": "/lj/posts/17222.html",
+          "notes": "Individual 2007-10-04 post “The Program”, including comments."
+        }
+      ],
+      "root_capture_content": {
+        "timestamp": "20100209202330",
+        "url": "http://bluescholars.livejournal.com/",
+        "source_archive": "Common Crawl",
+        "route": "/lj/captures/20100209202330/",
+        "notes": "Older 2010 root response has navigation but no captured post cards."
+      },
+      "profile_capture": {
+        "timestamp": "20090719034820",
+        "url": "http://bluescholars.livejournal.com/profile",
+        "source_archive": "Common Crawl",
+        "route": "/lj/profile/"
+      },
+      "visible_root_entries": [
+        "EVENTFUL.COM contest (2008-02-05; entry 17615)",
+        "The Program (2007-10-04; entry 17222)",
+        "friday mixdown (2007-09-30; entry 16954)",
+        "ATL (part uno) (2007-09-21; entry 16015)",
+        "atlantis music festival (2007-09-18; entry 16255)",
+        "kirkland is krackin (2007-09-11; entry 16460)"
+      ],
+      "image_recovery": {
+        "embedded_image_urls": 22,
+        "2007_2008_media_files_recovered": 20,
+        "media_host": "www.masslinemedia.com",
+        "candidate_asset_files": 20,
+        "additional_later_poster_captures": [
+          {
+            "timestamp": "20141130085328",
+            "sha256": "8a711dbbdb9c19dea8f86b5b699019920a3ed99b371e819a9e96c492ce1d367f",
+            "bytes": 57465
+          },
+          {
+            "timestamp": "20210125004449",
+            "sha256": "8a711dbbdb9c19dea8f86b5b699019920a3ed99b371e819a9e96c492ce1d367f",
+            "bytes": 57465
+          }
+        ],
+        "later_poster_status": "held out of the candidate because its captures post-date the entries and still need a resource-specific compatibility decision.",
+        "missing_url": "http://masslinemedia.com/news/newspics/213.jpg",
+        "missing_reason": "The 2024 Wayback URL resolves to a 114-byte HTML /lander redirect, not image bytes. Exact URL searches in Common Crawl CC-MAIN-2009-2010 and Arquivo.pt returned no image capture; do not bypass the lander."
+      },
+      "presentation_limitations": [
+        "No original LiveJournal CSS bundle was acquired; exact bundle replay at 20110812180628 returned Wayback HTTP 404. The renderer preserves safe captured markup but applies local restoration styling, so the original LiveJournal visual design is incomplete.",
+        "Four of the six entries visible on the 2011 index have no standalone article capture in the queried Wayback exact URL histories; they remain readable only in the saved index.",
+        "Common Crawl collection scans were partial and include endpoint failures."
+      ]
+    },
+    "Common Crawl LiveJournal": {
+      "collections_queried": [
+        "CC-MAIN-2009-2010",
+        "CC-MAIN-2008-2009",
+        "CC-MAIN-2012",
+        "CC-MAIN-2013-20",
+        "CC-MAIN-2013-48",
+        "CC-MAIN-2014-10"
+      ],
+      "successful_collection": "CC-MAIN-2009-2010",
+      "captures": [
+        {
+          "timestamp": "20100209202330",
+          "url": "http://bluescholars.livejournal.com/",
+          "kind": "html",
+          "route": "/lj/captures/20100209202330/",
+          "notes": "Root response includes navigation only."
+        },
+        {
+          "timestamp": "20090719034820",
+          "url": "http://bluescholars.livejournal.com/profile",
+          "kind": "html",
+          "route": "/lj/profile/"
+        }
+      ],
+      "other_collection_outcomes": "502, 504 and 404 responses; not evidence of archive absence."
+    }
+  },
+  "limitations": [
+    "Discovery records and visible replay pages are not equivalent to acquired original bytes.",
+    "Search and access failures do not establish absence from the underlying archive.",
+    "Archive-It social and third-party pages remain separate evidence and are not blended into the band's website editions.",
+    "The LiveJournal journal is preserved as a separate /lj/ archive, not merged into the 2007, 2009 WordPress, or Squarespace designs. CSS styling is missing, four entries have no individual capture, and one linked image remains unavailable."
+  ]
+}

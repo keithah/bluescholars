@@ -61,7 +61,7 @@ def promote(root: Path,reviewed: bool=False,allow_later: bool=False) -> dict:
     return {'promoted':len(staged),'publish_approved':False}
 
 def page_shell(title: str,body: str) -> str:
-    return '<!doctype html><html lang="en"><head><title>'+html.escape(title)+' — Blue Scholars restoration</title></head><body><main class="archive-gap-page"><p class="archive-eyebrow">BLUE SCHOLARS / RESTORATION WORKSPACE</p><h1>'+html.escape(title)+'</h1>'+body+'</main></body></html>'
+    return '<!doctype html><html lang="en"><head><meta charset="utf-8"><title>'+html.escape(title)+' — Blue Scholars restoration</title></head><body><main class="archive-gap-page"><p class="archive-eyebrow">BLUE SCHOLARS / RESTORATION WORKSPACE</p><h1>'+html.escape(title)+'</h1>'+body+'</main></body></html>'
 
 def _write_page(output: Path,path: str,text: str):
     relative=unquote(path.lstrip('/'))
@@ -162,6 +162,36 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
                 local=('/assets/'+r['sha256']+'.css') if r.get('source_archive') else asset_route(url,'css')
             else: local='/assets/'+r['sha256']+Path(r['raw_path']).suffix
             r['local_path']=local
+    # LiveJournal was a separately hosted Blue Scholars blog, not one of the
+    # three official site editions. Keep its captures in their own /lj/ tree.
+    from urllib.parse import urlsplit
+    lj_pages=[(key,r) for key,r in usable_variants.items()
+              if urlsplit(r['_source_url']).hostname in ('bluescholars.livejournal.com',)]
+    lj_route_by_key={}
+    newest_by_url={}
+    for key,r in lj_pages:
+        url=r['_source_url'];path=urlsplit(url).path
+        current=newest_by_url.get(url)
+        if current is None or r.get('actual_capture','')>current.get('actual_capture',''):
+            newest_by_url[url]=r
+    for key,r in lj_pages:
+        url=r['_source_url'];path=urlsplit(url).path
+        if path in ('','/'):
+            local='/lj/journal/' if newest_by_url[url] is r else '/lj/captures/'+r.get('actual_capture','unknown')+'/'
+        elif path=='/profile': local='/lj/profile/'
+        else:
+            from urllib.parse import quote
+            local='/lj/posts/'+quote(path.rsplit('/',1)[-1],safe='.-_')
+        lj_route_by_key[key]=local
+    # Resolver URLs use source URLs, while variant records retain exact capture
+    # provenance. Map each canonical LiveJournal URL to its latest recovered
+    # local copy so links among captures never return to the hosted service.
+    for url,r in newest_by_url.items():
+        r['local_path']=lj_route_by_key[r['_source_key']]
+    for url,r in usable.items():
+        host=urlsplit(url).hostname or ''
+        if r['kind']=='image' and (host.endswith('livejournal.com') or host.endswith('masslinemedia.com')):
+            r['local_path']='/lj/assets/'+r['sha256']+Path(r['raw_path']).suffix
     render_resources={}
     for key,r in records.items():
         original=r.get('url',key)
@@ -210,10 +240,15 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
         if r['kind']=='css':
             source_key=r.get('_source_key',url)
             text,found=render_css(raw[source_key].decode('utf-8',errors='replace'),r.get('final_original',url),render_resources,base)
+            destination.parent.mkdir(parents=True,exist_ok=True)
             destination.write_text(text);issues.extend(found)
-        elif destination.suffix=='.svg':
-            destination.write_bytes(sanitize_svg(raw[url]))
-        else: destination.write_bytes(raw[url])
+        else:
+            source_key=r.get('_source_key',url)
+            destination.parent.mkdir(parents=True,exist_ok=True)
+            if destination.suffix=='.svg':
+                destination.write_bytes(sanitize_svg(raw[source_key]))
+            else:
+                destination.write_bytes(raw[source_key])
     recovered=0;placeholders=0;page_report=[]
     for page,r in sorted(pages.items()):
         url=r['url']
@@ -256,6 +291,48 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
                          '<ul>'+links+'</ul>')
         index,_=render_html(index,HOME,render_resources,base)
         _write_page(output,'/2009/blog/',index)
+    lj_page_report=[]
+    for key,r in lj_pages:
+        local=lj_route_by_key[key]
+        text=raw[key].decode('utf-8',errors='replace')
+        rendered,found=render_html(text,r.get('final_original',r['_source_url']),
+                                   render_resources,base,'/lj')
+        issues.extend(found)
+        _write_page(output,local,rendered)
+        lj_page_report.append({'path':local,'source':r['_source_url'],
+                               'actual_capture':r.get('actual_capture'),
+                               'source_archive':r.get('source_archive'),'status':'recovered'})
+    if lj_page_report:
+        from datetime import datetime
+        labels={'/lj/journal/':'Journal front page','/lj/profile/':'LiveJournal profile',
+                '/lj/posts/16954.html':'“friday mixdown” · Sep 30, 2007',
+                '/lj/posts/17222.html':'“The Program” · Oct 4, 2007'}
+        capture_items=[]
+        for p in sorted(lj_page_report,key=lambda x:x['path']):
+            stamp=p.get('actual_capture') or ''
+            try: date=datetime.strptime(stamp,'%Y%m%d%H%M%S').strftime('%b %d, %Y').replace(' 0',' ')
+            except ValueError: date='date unavailable'
+            label=labels.get(p['path'],'Earlier journal capture')
+            capture_items.append('<li><a href="'+base+html.escape(p['path'],quote=True)+'">'
+                                 +html.escape(label)+'</a> — captured '+html.escape(date)+'</li>')
+        capture_links=''.join(capture_items)
+        lj_body='<p>A separately hosted Blue Scholars journal. These pages are reproduced from locally saved archive captures; they are not part of the 2007, 2009, or Squarespace website editions.</p>'
+        if lj_page_report:
+            lj_body+='<h2>Recovered journal captures</h2><ul>'+capture_links+'</ul>'
+            lj_body+='<p>Some older entries survive only within the captured journal front page. Missing images and uncaptured entries are left marked rather than recreated.</p>'
+        else:
+            lj_body+='<p>No LiveJournal page captures have been recovered into this build yet.</p>'
+        lj_index=page_shell('LiveJournal archive',lj_body)
+        lj_index=lj_index.replace('</head>','<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="'+base+'/assets/archive-ui.css"></head>')
+        _write_page(output,'/lj/',lj_index)
+        page_report.extend({'path':p['path'],'source':p['source'],'canonical_url':p['source'],
+                            'source_archive':p['source_archive'],'status':'recovered',
+                            'actual_capture':p['actual_capture']} for p in lj_page_report)
+        recovered+=len(lj_page_report)
+    else:
+        lj_index=page_shell('LiveJournal archive','<p>A separately hosted Blue Scholars journal, preserved separately from the official website editions.</p><p>No LiveJournal page captures have been recovered into this build yet.</p>')
+        lj_index=lj_index.replace('</head>','<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="'+base+'/assets/archive-ui.css"></head>')
+        _write_page(output,'/lj/',lj_index)
     # Each platform generation gets its own index. Unrecovered editions are
     # documented as gaps instead of being filled with invented historical copy.
     for prefix,label in (('/2007','2007 site'),('/2009','2009 WordPress site'),
@@ -274,6 +351,7 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
     gateway='<p>Choose a preserved website generation. Each edition is built from its own dated source material; gaps remain marked.</p><nav class="edition-archive">'
     for prefix,label in (('/2007/','2007'),('/2009/','2009'),('/2013/','2013 · first located Squarespace')):
         gateway+='<a class="edition" href="'+base+prefix+'">'+html.escape(label)+'</a>'
+    gateway+='<a class="lj-archive" href="'+base+'/lj/">LiveJournal archive</a>'
     gateway+='</nav><p><a href="'+base+'/archive-status/">Recovery status and source gaps</a></p>'
     hub=page_shell('Blue Scholars archive',gateway)
     hub=hub.replace('</head>','<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="'+base+'/assets/archive-ui.css"></head>')

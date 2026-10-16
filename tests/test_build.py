@@ -35,6 +35,19 @@ def test_selected_archive_homepage_renders_despite_nested_metadata():
     assert soup.find('link',rel='stylesheet',href='/assets/site.css')
     assert not soup.find('script',string=lambda value:value and 'COOKIE_BANNER' in value)
 
+def test_renderer_skips_stylesheet_detached_by_malformed_metadata(monkeypatch):
+    import restore.render as renderer
+    parser=renderer.BeautifulSoup
+    def nested_parser(*args,**kwargs):
+        soup=parser(*args,**kwargs)
+        parent=soup.find('link',rel='stylesheet')
+        if parent:
+            parent.append(soup.new_tag('link',href='https://cdn.example/nested-prev'))
+        return soup
+    monkeypatch.setattr(renderer,'BeautifulSoup',nested_parser)
+    rendered,_=render_html('<html><head><link rel="stylesheet" href="https://cdn.example/site.css"></head><body>x</body></html>',HOME,RES,'')
+    assert 'nested-prev' not in rendered
+
 def test_html_localizes_preserves_layout_and_removes_tracking():
     text,issues=render_html(HTML,HOME,RES,'/bluescholars')
     soup=BeautifulSoup(text,'html.parser')
@@ -122,6 +135,22 @@ def test_raw_response_not_published_until_promoted(tmp_path):
     assert report['recovered_pages']==1
     assert 'Recovered historical sentence.' in (tmp_path/'_site/2013/index.html').read_text()
 
+def test_candidate_build_uses_exact_dated_image_variant_payload(tmp_path):
+    fixture_root(tmp_path);s=State(tmp_path)
+    url=HOME+'images/bayaniposter.jpg'
+    body=b'\xff\xd8\xff\xe0fixture-image-bytes'
+    sha=hashlib.sha256(body).hexdigest()
+    path='recovery/raw/'+sha+'.jpg'
+    (tmp_path/path).parent.mkdir(parents=True,exist_ok=True)
+    (tmp_path/path).write_bytes(body)
+    key=url+'@@wayback:20070701135556:'+sha[:12]
+    s.data['resources'][key]={'url':url,'kind':'image','status':'recovered','raw_path':path,
+        'sha256':sha,'actual_capture':'20070701135556','bytes':len(body),'source_archive':'Internet Archive Wayback'}
+    s.save()
+    report=build(tmp_path,tmp_path/'_candidate','',candidate=True)
+    assert report['local_source_assets']==1
+    assert (tmp_path/'_candidate/assets'/f'{sha}.jpg').read_bytes()==body
+
 def test_candidate_excludes_after_reference_without_approval(tmp_path):
     fixture_root(tmp_path);s=State(tmp_path)
     add_raw(s,HOME,'html',b'<html><body>Later version</body></html>')
@@ -197,8 +226,35 @@ def test_root_is_a_gateway_to_separate_historical_editions(tmp_path):
     root=BeautifulSoup((tmp_path/'_site/index.html').read_text(),'html.parser')
     assert root.find('h1',string='Blue Scholars archive')
     assert {a.get('href') for a in root.select('a.edition')}=={'/2007/','/2009/','/2013/'}
+    assert root.find('a',href='/lj/',string='LiveJournal archive')
     assert 'Original Squarespace homepage' in (tmp_path/'_site/2013/index.html').read_text()
     assert all((tmp_path/'_site'/year/'index.html').is_file() for year in ('2007','2009','2013'))
+
+def test_livejournal_archive_is_a_separate_local_top_level_section(tmp_path):
+    fixture_root(tmp_path);s=State(tmp_path)
+    home='http://bluescholars.livejournal.com/'
+    post=home+'16954.html'
+    add_raw(s,home,'html',b'<html><body><a href="/16954.html">friday mixdown</a></body></html>')
+    add_raw(s,post,'html',b'<html><body><h1>friday mixdown</h1><p>Captured post text.</p></body></html>')
+    build(tmp_path,tmp_path/'_candidate','/bluescholars',candidate=True)
+    root=BeautifulSoup((tmp_path/'_candidate/index.html').read_text(),'html.parser')
+    assert root.find('a',href='/bluescholars/lj/',string='LiveJournal archive')
+    index=BeautifulSoup((tmp_path/'_candidate/lj/index.html').read_text(),'html.parser')
+    assert index.find('a',href='/bluescholars/lj/posts/16954.html')
+    rendered=(tmp_path/'_candidate/lj/posts/16954.html').read_text()
+    assert 'Captured post text.' in rendered
+    assert 'http://bluescholars.livejournal.com/16954.html' not in rendered
+
+def test_selected_edition_link_gets_local_gap_alias_for_unrecovered_target(tmp_path):
+    fixture_root(tmp_path);s=State(tmp_path)
+    source=HOME+'blog/2010/09/source-post/'
+    add_raw(s,source,'html',b'<html><body><a href="/blog/tourdates/">Tour dates</a></body></html>')
+    s.data['resources'][source]['actual_capture']='20100626072734'
+    s.add(HOME+'blog/tourdates/','html','CDX:domain')
+    s.save()
+    build(tmp_path,tmp_path/'_candidate','',candidate=True)
+    assert (tmp_path/'_candidate/2009/blog/tourdates/index.html').is_file()
+    assert check(tmp_path/'_candidate','')==[]
 
 def test_same_homepage_url_keeps_older_and_squarespace_captures_separate(tmp_path):
     fixture_root(tmp_path);s=State(tmp_path)

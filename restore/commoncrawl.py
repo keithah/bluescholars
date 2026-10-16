@@ -97,6 +97,7 @@ def suffix(body:bytes,kind:str)->str:
     if body.startswith(b'\x89PNG'):return '.png'
     if body.startswith(b'GIF'):return '.gif'
     if body.startswith(b'RIFF'):return '.webp'
+    if body.startswith((b'II*\x00',b'MM\x00*',b'II+\x00',b'MM\x00+')):return '.tif'
     return '.svg'
 
 def import_rows(root:Path,collection:str,rows:list[dict])->dict:

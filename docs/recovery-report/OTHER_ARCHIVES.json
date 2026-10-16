@@ -215,9 +215,9 @@
         "missing_reason": "The 2024 Wayback URL resolves to a 114-byte HTML /lander redirect, not image bytes. Exact URL searches in Common Crawl CC-MAIN-2009-2010 and Arquivo.pt returned no image capture; do not bypass the lander."
       },
       "presentation_limitations": [
-        "No original LiveJournal CSS bundle was acquired; exact bundle replay at 20110812180628 returned Wayback HTTP 404. The renderer preserves safe captured markup but applies local restoration styling, so the original LiveJournal visual design is incomplete.",
         "Four of the six entries visible on the 2011 index have no standalone article capture in the queried Wayback exact URL histories; they remain readable only in the saved index.",
-        "Common Crawl collection scans were partial and include endpoint failures."
+        "Common Crawl collection scans were partial and include endpoint failures.",
+        "The custom 2011 journal stylesheet was recovered and is served locally, but the separate l-stat LiveJournal platform CSS bundles linked by the captured HTML were not found in exact URL histories (404/no rows); the complete platform chrome is not verified. The 2025 interface stylesheet set is still needs_review."
       ],
       "host_index": {
         "rows": 226,
@@ -283,7 +283,27 @@
           "status": "needs_review",
           "notes": "Modern interface capture of a 2005 post; not yet inspected/promoted."
         }
-      ]
+      ],
+      "custom_stylesheet": {
+        "url": "http://bluescholars.livejournal.com/res/19020223/stylesheet",
+        "captures": [
+          {
+            "timestamp": "20110812180648",
+            "requested_url": "http://bluescholars.livejournal.com/res/19020223/stylesheet?1311097449",
+            "sha256": "87560599e9fb5ddc5cdba0675164f3bd80324540d346fc6ae38c26878e2f34ce",
+            "bytes": 7343,
+            "route": "served through locally rewritten journal capture"
+          },
+          {
+            "timestamp": "20111002074219",
+            "requested_url": "http://bluescholars.livejournal.com/res/19020223/stylesheet?1317269339",
+            "sha256": "87560599e9fb5ddc5cdba0675164f3bd80324540d346fc6ae38c26878e2f34ce",
+            "bytes": 7343,
+            "route": "served through locally rewritten journal capture"
+          }
+        ],
+        "notes": "Both dates have identical source bytes. Build emits a local content-addressed CSS asset; a builder regression test covers the HTML-vs-CSS distinction."
+      }
     },
     "Common Crawl LiveJournal": {
       "collections_queried": [
@@ -311,6 +331,51 @@
         }
       ],
       "other_collection_outcomes": "502, 504 and 404 responses; not evidence of archive absence."
+    },
+    "Wayback LiveJournal asset host": {
+      "host": "l-stat.livejournal.com",
+      "domain_index": {
+        "rows_returned": 10000,
+        "pages_fetched": 20,
+        "complete": false,
+        "resume_key_saved_in": "recovery/state.json",
+        "note": "A partial platform-asset-host inventory; not evidence that the remaining host index is empty."
+      },
+      "exact_core_stylesheet_histories": [
+        {
+          "url": "http://l-stat.livejournal.com/??lj_base.css,esn.css,contextualhover.css,share.css?v=1311096937",
+          "rows": 14,
+          "successful_css": 0,
+          "outcome": "All returned rows were HTTP 404."
+        },
+        {
+          "url": "http://l-stat.livejournal.com/??lj_base.css,esn.css,contextualhover.css,share.css?v=1317389878",
+          "rows": 3,
+          "successful_css": 0,
+          "outcome": "All returned rows were HTTP 404."
+        },
+        {
+          "url": "http://l-stat.livejournal.com/??lj_base.css,esn.css,contextualhover.css,share.css,lj_base-app.css,horizon/screen.css,horizon/layout.css,widget.css,statistics/un_stats.css,horizon/un_rblocks.css,horizon/loggedout.css,reskining/2011/august/noncyr/header.css?v=1311096963",
+          "rows": 0,
+          "outcome": "No exact history rows returned."
+        },
+        {
+          "url": "http://l-stat.livejournal.com/??ie.css?v=1317389878",
+          "rows": 0,
+          "outcome": "No exact history rows returned."
+        },
+        {
+          "url": "http://l-stat.livejournal.com/??interstitial_banner_us.css?v=1317389878",
+          "rows": 0,
+          "outcome": "No exact history rows returned."
+        }
+      ],
+      "other_assets": {
+        "url": "http://l-stat.livejournal.com/ad_base.css?v=1313682784",
+        "rows_seen": 500,
+        "complete": false,
+        "note": "A paginated exact history with many HTTP 200 rows; not acquired or used because it is ad-platform CSS, not the journal theme."
+      }
     }
   },
   "limitations": [

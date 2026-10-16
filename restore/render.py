@@ -5,7 +5,7 @@ import re
 from urllib.parse import urlsplit,parse_qs
 from bs4 import BeautifulSoup,Comment
 import tinycss2
-from .urls import HOME,TARGET,original_url,identity,is_site,route,base_path
+from .urls import HOME,TARGET,original_url,identity,is_site,route,base_path,livejournal_route
 
 NAV=[('BLOG','/blog/'),('SHOWS','/shows/'),('VIDEO','/video/'),('SHOP','/shop/'),('HOLLER','/holler/')]
 CSP="default-src 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; font-src 'none'; connect-src 'none'; frame-src 'none'; media-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"
@@ -44,6 +44,8 @@ class Resolver:
         record=self._record(u)
         if record.get('local_path'):
             target=self.base+record['local_path']
+        elif (local:=livejournal_route(u)):
+            target=self.base+local
         elif is_site(u):
             if record.get('kind') in ('image','css','font','script','unsupported'):
                 self.issues.append({'type':'linked_asset_not_recovered','source':url,'url':u})

@@ -5,13 +5,13 @@ import html
 import json
 from pathlib import Path
 import shutil
-from urllib.parse import unquote
+from urllib.parse import unquote,urlsplit
 from .archive import validate_payload
 from .discover import discover_html
 from .render import render_html,render_css,NAV
 from .svg import sanitize_svg
 from .state import State,write_json
-from .urls import HOME,TARGET,identity,is_site,route,asset_route,base_path
+from .urls import HOME,TARGET,identity,is_site,route,asset_route,base_path,livejournal_route
 
 CORE=[('/', 'Homepage'),('/blog/','Blog'),('/shows/','Shows'),('/video/','Video'),('/shop/','Shop'),('/holler/','Holler')]
 FALLBACK_UI='''.archive-restoration-notice,.archive-gap-page {font:16px/1.6 system-ui,sans-serif}
@@ -136,7 +136,7 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
     record_by_identity={}
     for key,value in records.items():
         record_by_identity.setdefault(identity(value.get('url',key)),key)
-    linked_html_routes=[]
+    linked_html_routes=[];linked_lj_routes=[]
     for source_key,r in list(usable_variants.items()):
         url=r['_source_url']
         if r['kind']=='html' and identity(url) in selected_page_ids:
@@ -144,7 +144,11 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
             for ref in discover_html(raw[source_key].decode('utf-8',errors='replace'),r.get('final_original',url)):
                 discovered=dict(ref);referrer=discovered.pop('referrer','')
                 if discovered.get('kind')=='html':
-                    linked_html_routes.append((source_prefix,discovered['url']))
+                    lj_target=livejournal_route(discovered['url'])
+                    if lj_target and lj_target.startswith('/lj/posts/'):
+                        linked_lj_routes.append(discovered['url'])
+                    elif not urlsplit(discovered['url']).hostname=='bluescholars.livejournal.com':
+                        linked_html_routes.append((source_prefix,discovered['url']))
                 discovered.update(status='queued',referrers=[referrer] if referrer else [],edition_prefixes=[source_prefix])
                 target_id=identity(ref['url'])
                 existing_key=record_by_identity.get(target_id)
@@ -167,9 +171,8 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
             r['local_path']=local
     # LiveJournal was a separately hosted Blue Scholars blog, not one of the
     # three official site editions. Keep its captures in their own /lj/ tree.
-    from urllib.parse import urlsplit
     lj_pages=[(key,r) for key,r in usable_variants.items()
-              if urlsplit(r['_source_url']).hostname in ('bluescholars.livejournal.com',)]
+              if r['kind']=='html' and urlsplit(r['_source_url']).hostname in ('bluescholars.livejournal.com',)]
     lj_route_by_key={}
     newest_by_url={}
     for key,r in lj_pages:
@@ -373,6 +376,19 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
                             'source_archive':None,'status':status,'actual_capture':None})
         reported_paths.add(target_path)
         route_notices.append({'path':target_path,'status':status})
+    for target_url in linked_lj_routes:
+        target_path=livejournal_route(target_url)
+        if not target_path or target_path in reported_paths or target_path in pages:
+            continue
+        body=('<p>This entry has not been recovered as a standalone page. It may still appear within a saved journal front-page capture:</p>'
+              '<p><a href="'+base+'/lj/journal/">Open the recovered LiveJournal front page</a></p>')
+        notice=page_shell('LiveJournal entry not recovered',body)
+        notice=notice.replace('</head>','<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="'+base+'/assets/archive-ui.css"></head>')
+        _write_page(output,target_path,notice)
+        page_report.append({'path':target_path,'source':target_url,'canonical_url':target_url,
+                            'source_archive':None,'status':'not_recovered','actual_capture':None})
+        reported_paths.add(target_path)
+        route_notices.append({'path':target_path,'status':'not_recovered'})
     placeholders+=len(route_notices)
     # Each platform generation gets its own index. Unrecovered editions are
     # documented as gaps instead of being filled with invented historical copy.

@@ -67,6 +67,8 @@ def kind_for(url: str, mime: str = '') -> str:
         return 'image'
     if ext in {'.mp3','.mp4','.m4a','.wav','.ogg','.webm','.mov','.pdf','.zip','.swf'}:
         return 'unsupported'
+    if urlsplit(url).hostname=='bluescholars.livejournal.com' and (path in ('','/','/profile') or path.endswith('.html')):
+        return 'html'
     if 'html' in mime or in_domain(url):
         return 'html'
     return 'image'  # Assets without extensions need MIME/byte validation on download.
@@ -111,6 +113,23 @@ def route(url: str) -> str:
     if path.lower().endswith('.html'):
         return path
     return path.rstrip('/')+'/'
+
+def livejournal_route(url: str) -> str | None:
+    """Map recovered and missing LiveJournal posts into the separate local archive."""
+    url=original_url(url)
+    if not url:
+        return None
+    parts=urlsplit(url)
+    if parts.hostname!='bluescholars.livejournal.com':
+        return None
+    if parts.path in ('','/'):
+        return '/lj/journal/'
+    if parts.path=='/profile':
+        return '/lj/profile/'
+    name=parts.path.rsplit('/',1)[-1]
+    if not name.endswith('.html'):
+        return None
+    return '/lj/posts/'+quote(name,safe='.-_')
 
 def asset_route(url: str, kind: str) -> str:
     ext = 'css' if kind=='css' else urlsplit(url).path.rsplit('.',1)[-1].lower()

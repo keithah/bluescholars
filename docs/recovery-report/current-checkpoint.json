@@ -9,8 +9,8 @@
   },
   "candidate_build": {
     "recovered_pages": 449,
-    "placeholder_pages": 765,
-    "local_source_assets": 417,
+    "placeholder_pages": 769,
+    "local_source_assets": 419,
     "publish_approved": false,
     "livejournal_html_captures": 8,
     "livejournal_local_media_files": 20
@@ -26,18 +26,18 @@
     }
   },
   "checkpoint": {
-    "resource_urls": 4956,
+    "resource_urls": 4960,
     "statuses": {
-      "queued": 3752,
-      "recovered": 1034,
+      "queued": 3754,
+      "recovered": 1036,
       "needs_review": 14,
       "failed": 156,
       "excluded": 0
     },
-    "indexed_capture_records": 8362,
+    "indexed_capture_records": 8874,
     "index_complete": true,
-    "unique_downloaded_files": 844,
-    "downloaded_bytes": 64208197,
+    "unique_downloaded_files": 845,
+    "downloaded_bytes": 64215540,
     "failed_attempts": 624
   },
   "latest_import": {
@@ -101,7 +101,7 @@
   "updated_at": "2026-10-16",
   "tests": {
     "command": ".venv311/bin/python -m pytest -q",
-    "result": "116 passed"
+    "result": "118 passed"
   },
   "livejournal_archive": {
     "route": "/lj/",
@@ -116,6 +116,12 @@
     "alternate_capture_routes": 3,
     "host_index_rows": 226,
     "host_index_unique_urls": 115,
-    "modern_interface_captures_needs_review": 2
+    "modern_interface_captures_needs_review": 2,
+    "custom_css_capture_dates": [
+      "20110812180648",
+      "20111002074219"
+    ],
+    "custom_css_sha256": "87560599e9fb5ddc5cdba0675164f3bd80324540d346fc6ae38c26878e2f34ce",
+    "platform_css": "not recovered after exact-URL searches"
   }
 }

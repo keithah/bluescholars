@@ -1,6 +1,7 @@
 """Discover dependencies without executing archived JavaScript or crawling external sites."""
 from __future__ import annotations
 import json
+from urllib.parse import urlsplit
 from bs4 import BeautifulSoup
 import tinycss2
 from .urls import original_url,is_site,kind_for
@@ -34,7 +35,8 @@ def discover_html(text: str,url: str) -> list[dict]:
     found={}
     def add(value, kind=None, pages=False):
         u=original_url(value,url)
-        if not u or (pages and not is_site(u)):
+        host=urlsplit(u).hostname if u else None
+        if not u or (pages and not (is_site(u) or host=='bluescholars.livejournal.com')):
             return
         found[u]={'url':u,'kind':kind or kind_for(u),'referrer':url}
     for a in soup.find_all('a',href=True):

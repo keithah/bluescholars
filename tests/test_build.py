@@ -260,6 +260,30 @@ def test_livejournal_keeps_post_capture_variants_without_overwriting(tmp_path):
     alternate=tmp_path/'_candidate/lj/captures/20090125012333/posts/16954.html'
     assert 'Older post capture.' in alternate.read_text()
 
+def test_livejournal_captured_stylesheet_is_served_locally(tmp_path):
+    fixture_root(tmp_path);s=State(tmp_path)
+    home='http://bluescholars.livejournal.com/'
+    css=home+'res/19020223/stylesheet?1317269339'
+    add_raw(s,home,'html',('<html><head><link rel="stylesheet" href="'+css+'"></head>'
+                            '<body><p>Journal entry.</p></body></html>').encode())
+    add_raw(s,css,'css',b'.entry { margin-bottom: 2em; }')
+    build(tmp_path,tmp_path/'_candidate','',candidate=True)
+    page=(tmp_path/'_candidate/lj/journal/index.html').read_text()
+    local_css=BeautifulSoup(page,'html.parser').find('link',rel='stylesheet')['href']
+    assert local_css.startswith('/assets/')
+    assert (tmp_path/'_candidate'/local_css.lstrip('/')).is_file()
+
+def test_livejournal_missing_entry_links_stay_inside_archive(tmp_path):
+    fixture_root(tmp_path);s=State(tmp_path)
+    home='http://bluescholars.livejournal.com/'
+    add_raw(s,home,'html',b'<html><body><a href="http://bluescholars.livejournal.com/16015.html">ATL (part uno)</a></body></html>')
+    build(tmp_path,tmp_path/'_candidate','',candidate=True)
+    page=(tmp_path/'_candidate/lj/journal/index.html').read_text()
+    gap=tmp_path/'_candidate/lj/posts/16015.html'
+    assert 'href="/lj/posts/16015.html"' in page
+    assert 'not been recovered as a standalone page' in gap.read_text()
+    assert check(tmp_path/'_candidate','')==[]
+
 def test_unrecovered_edition_links_get_gap_pages_or_honest_cross_edition_bridges(tmp_path):
     fixture_root(tmp_path);s=State(tmp_path)
     old_source=HOME+'blog/2010/09/source-post/'

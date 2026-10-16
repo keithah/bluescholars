@@ -17,6 +17,11 @@ on:
         default: ''
         required: false
         type: string
+      resume_runs:
+        description: Comma-separated recovery run IDs to merge into one checkpoint
+        default: ''
+        required: false
+        type: string
       commoncrawl_records:
         description: Maximum successful Common Crawl WARC records to preserve (0 disables Common Crawl)
         default: '0'
@@ -42,6 +47,7 @@ jobs:
       MAX_FILES: ${{ inputs.max_files }}
       MAX_INDEX_PAGES: ${{ inputs.max_index_pages }}
       RESUME_RUN: ${{ inputs.resume_run }}
+      RESUME_RUNS: ${{ inputs.resume_runs }}
       COMMONCRAWL_RECORDS: ${{ inputs.commoncrawl_records }}
       EDITION_ERA: ${{ inputs.edition_era }}
       GH_TOKEN: ${{ github.token }}
@@ -58,13 +64,20 @@ jobs:
           [[ "$MAX_FILES" =~ ^[0-9]+$ && "$MAX_INDEX_PAGES" =~ ^[0-9]+$ ]]
           (( MAX_FILES >= 1 && MAX_FILES <= 2000 && MAX_INDEX_PAGES >= 1 && MAX_INDEX_PAGES <= 200 ))
           [[ -z "$RESUME_RUN" || "$RESUME_RUN" =~ ^[0-9]+$ ]]
+          [[ -z "$RESUME_RUNS" || "$RESUME_RUNS" =~ ^[0-9]+(,[0-9]+)*$ ]]
+          [[ -z "$RESUME_RUN" || -z "$RESUME_RUNS" ]]
           [[ "$COMMONCRAWL_RECORDS" =~ ^[0-9]+$ && "$COMMONCRAWL_RECORDS" -le 3000 ]]
       - name: Restore a prior recovery checkpoint
-        if: inputs.resume_run != ''
+        if: inputs.resume_run != '' || inputs.resume_runs != ''
         run: |
-          mkdir -p "$RUNNER_TEMP/archive-recovery"
-          gh run download "$RESUME_RUN" --repo "$GH_REPO" --name archive-recovery --dir "$RUNNER_TEMP/archive-recovery"
-          python -m restore merge-recovery --artifact "$RUNNER_TEMP/archive-recovery" --run-id "$RESUME_RUN"
+          RUN_IDS="${RESUME_RUNS:-$RESUME_RUN}"
+          IFS=',' read -r -a recovery_runs <<< "$RUN_IDS"
+          for run_id in "${recovery_runs[@]}"; do
+            recovery_dir="$RUNNER_TEMP/archive-recovery/$run_id"
+            mkdir -p "$recovery_dir"
+            gh run download "$run_id" --repo "$GH_REPO" --name archive-recovery --dir "$recovery_dir"
+            python -m restore merge-recovery --artifact "$recovery_dir" --run-id "$run_id"
+          done
       - run: python -m restore seed
       - name: Enumerate domain captures
         id: index

@@ -137,7 +137,7 @@
     "unique_raw_files": 97,
     "visual_reviewed": false
   },
-  "updated_at": "2026-10-16T22:30:10Z",
+  "updated_at": "2026-10-16T22:33:00Z",
   "tests": {
     "command": "PYTHONPATH=. .venv311/bin/pytest -q",
     "result": "124 passed",
@@ -369,5 +369,18 @@
     "new_unique_raw_files": 5,
     "duplicate_file_hashes": 1748,
     "conflicting_files": []
+  },
+  "targeted_external_search": {
+    "post": "http://bluescholars.com/blog/2010/03/new-music-paul-valery/",
+    "third_party_leads": [
+      "https://www.newschoolers.com/forum/thread/533722/New-Blue-Scholars-Song",
+      "https://beforethedata.com/1809"
+    ],
+    "source_capture": "20101203004916",
+    "alternate_capture": "20230927122933",
+    "alternate_review": "needs_review; extracted text matches the 2010 original exactly (4704 chars, 11 image elements), so it adds no article text and remains excluded from the primary edition route",
+    "remaining_asset": "http://bluescholars.com/blog/wp-content/uploads/2010/03/PaulValery1.jpg",
+    "asset_status": "failed; exact capture index includes a 2023 403 row; earlier replay attempts had archive transport failures",
+    "video_lead": "Vimeo clip id 10370730 cited by the contemporaneous forum; no media file recovered"
   }
 }

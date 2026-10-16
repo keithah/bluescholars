@@ -81,6 +81,7 @@ def suffix(body,kind):
     return '.svg'
 
 CORE_PATHS={'','/blog','/shows','/video','/shop','/holler'}
+MAX_CAPTURE_ATTEMPTS_PER_RESOURCE=3
 
 def resource_priority(record: dict) -> tuple[int,int]:
     """Put the selected Squarespace pages and their observed dependencies first.
@@ -152,12 +153,24 @@ def recover(state: State,client,max_files: int=150,retry_failed: bool=False,prog
         r=pending[0];url=r['url'];visited.add(url);processed+=1
         if r['kind'] in ('font','script','unsupported'):
             r['status']='excluded';r['reason']='No font/script/media binary redistribution';state.save();continue
-        tried=set();r['status']='failed'
-        # First try the reference and observed hints. If necessary, discover other dates.
+        r['status']='failed';budget=MAX_CAPTURE_ATTEMPTS_PER_RESOURCE
+        attempted_captures={a.get('requested_capture') for a in r.get('attempts',[])}
+        # Try only a few capture dates per URL per batch. Failed dates stay in
+        # provenance and are skipped on resume, so one difficult URL cannot
+        # consume the whole runner before untouched pages are reached.
+        exact_queried=False
         for phase in range(2):
-            for capture in capture_candidates(r,state.data['target_capture']):
-                if capture in tried: continue
-                tried.add(capture)
+            candidates=[c for c in capture_candidates(r,state.data['target_capture'])
+                        if c not in attempted_captures]
+            if not candidates and budget>0 and phase==0:
+                exact=state.data['index'].get('exact:'+url,{})
+                if not exact.get('complete'):
+                    index(state,client,max_pages=3,url=url,match='exact')
+                    exact_queried=True
+                    candidates=[c for c in capture_candidates(r,state.data['target_capture'])
+                                if c not in attempted_captures]
+            for capture in candidates[:budget]:
+                attempted_captures.add(capture);budget-=1
                 replay=f'https://web.archive.org/web/{capture}id_/{url}'
                 attempt={'requested_capture':capture,'request_url':replay,'at':now()}
                 try:
@@ -189,7 +202,24 @@ def recover(state: State,client,max_files: int=150,retry_failed: bool=False,prog
                 r['attempts'].append(attempt);state.save()
                 if r['status'] in ('recovered','needs_review'): break
             if r['status'] in ('recovered','needs_review'): break
-            if phase==0: index(state,client,max_pages=3,url=url,match='exact')
+            if phase==0 and budget>0:
+                # Query the exact URL only after its already indexed dates have
+                # been exhausted; broad CDX rows usually make this redundant.
+                remaining=[c for c in capture_candidates(r,state.data['target_capture'])
+                           if c not in attempted_captures]
+                exact=state.data['index'].get('exact:'+url,{})
+                if not remaining and not exact.get('complete') and not exact_queried:
+                    index(state,client,max_pages=3,url=url,match='exact')
+                    exact_queried=True
+        if r['status'] not in ('recovered','needs_review'):
+            remaining=[c for c in capture_candidates(r,state.data['target_capture'])
+                       if c not in attempted_captures]
+            exact=state.data['index'].get('exact:'+url,{})
+            if remaining or not exact.get('complete'):
+                r['status']='queued';r['reason']='Untried capture dates or exact-URL index pages remain'
+            else:
+                r['status']='failed';r['reason']='All indexed capture dates failed validation or retrieval'
+            state.save()
         if progress and (processed%25==0 or processed==max_files):
             progress({'processed':processed,'limit':max_files,'url':url,'status':r['status']})
     report=summary(state)

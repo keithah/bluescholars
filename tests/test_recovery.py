@@ -200,6 +200,28 @@ def test_untouched_queued_pages_precede_retries_of_failed_high_priority_urls(tmp
     assert state.data['resources'][queued_url]['status']=='recovered'
     assert len(client.calls)==1 and queued_url in client.calls[0]
 
+def test_capture_date_attempts_resume_in_bounded_batches(tmp_path):
+    state=State(tmp_path);record=state.add(HOME,'html','seed',TARGET)
+    record['captures']=[{'timestamp':stamp,'statuscode':'200'} for stamp in
+                        ('20200101000000','20190101000000','20180101000000','20170101000000')]
+    successful='20180101000000'
+    def response(url):
+        if '/cdx/search/cdx?' in url:return Payload(json.dumps([HEADER]).encode(),url,200,{})
+        stamp=url.split('/web/')[1][:14]
+        if stamp!=successful:raise OSError('capture unavailable')
+        return Payload(VALID,url,200,{'Content-Type':'text/html'})
+    client=Client(response)
+
+    recover(state,client,max_files=1)
+
+    assert state.data['resources'][HOME]['status']=='queued'
+    first_attempts=[a['requested_capture'] for a in state.data['resources'][HOME]['attempts']]
+    assert len(first_attempts)==3 and successful not in first_attempts
+    recover(state,client,max_files=1,retry_failed=True)
+
+    assert state.data['resources'][HOME]['status']=='recovered'
+    assert [a['requested_capture'] for a in state.data['resources'][HOME]['attempts']]==first_attempts+[successful]
+
 def test_recover_progress_reports_resumable_batch_boundaries(tmp_path):
     state=State(tmp_path);state.add(HOME,'html','seed',TARGET)
     updates=[]
@@ -264,7 +286,9 @@ def test_capture_era_falls_back_when_newest_archive_body_is_a_provider_error(tmp
 
 def test_download_failure_is_not_missing_forever(tmp_path):
     state=State(tmp_path);state.add(HOME,'html','seed',TARGET)
-    def fail(u): raise OSError('Network unavailable')
+    def fail(u):
+        if '/cdx/search/cdx?' in u:return Payload(json.dumps([HEADER]).encode(),u,200,{})
+        raise OSError('Network unavailable')
     recover(state,Client(fail),max_files=1)
     record=State(tmp_path).data['resources'][HOME]
     assert record['status']=='failed'

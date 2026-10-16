@@ -233,7 +233,8 @@
     "latest_merged_run": "38960473470",
     "next_run": "38960845000",
     "capture_attempts_per_resource_per_batch": 3,
-    "note": "The 2013+ pass is active. After it finishes, merge its archive-recovery artifact using .venv311/bin/python -m restore merge-recovery --artifact <artifact-dir> --run-id <run-id>, then resume queued/retryable URLs and any remaining per-era selections. Preserve ignored recovery/state.json and recovery/raw/ before switching machines."
+    "note": "The 2013+ pass is active. After it finishes, merge its archive-recovery artifact using .venv311/bin/python -m restore merge-recovery --artifact <artifact-dir> --run-id <run-id>, then resume queued/retryable URLs and any remaining per-era selections. Preserve ignored recovery/state.json and recovery/raw/ before switching machines. A broad max-2000 resource-discovery continuation is queued after the active 2013+ per-URL pass.",
+    "queued_after": "38962246474"
   },
   "superseded_queued_run": {
     "run_id": "38889871799",
@@ -331,6 +332,14 @@
       "edition_era": "2013",
       "resume_run": "38960473470",
       "max_files": 1
+    },
+    "queued_follow_up": {
+      "run_id": "38962246474",
+      "url": "https://github.com/keithah/bluescholars/actions/runs/38962246474",
+      "status": "queued",
+      "edition_era": "none",
+      "resume_run": "38960845000",
+      "max_files": 2000
     }
   },
   "archive_homepage_change": {

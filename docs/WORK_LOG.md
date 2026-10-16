@@ -137,3 +137,5 @@
 
 - Merged 2009-era artifact `38960473470`: it indexed 41 eligible URLs, attempted all 41, and recovered two responses (a 2012 Bayani Redux post and a Seattle Weekly image); 39 failed, mostly feed or non-page endpoints and unavailable source responses. New bytes were already present as duplicate payloads; the merge added two resource records without conflicts. Local checkpoint is 8,580 URLs / 8,992 capture rows, with 2,624 recovered, 48 needing review, 1,018 failed, 4,890 queued, and 1,937 unique raw files.
 - Rebuilt the merged candidate after the historical redirect fix: 916 recovered pages, 1,875 placeholders, 727 local source assets; `/bluescholars/` check passes with zero errors. The 2013+ selection run `38960845000` is active from the 2009 artifact. Its runner uses commit `40b07f3` containing the fix.
+
+- Queued broad follow-up `38962246474` behind the active 2013+ per-URL pass, resuming from `38960845000` with `max_files=2000` to continue downloading the shared resource queue.

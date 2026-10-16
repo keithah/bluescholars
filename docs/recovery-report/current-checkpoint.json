@@ -52,50 +52,40 @@
     }
   },
   "checkpoint": {
-    "resource_urls": 8580,
+    "resource_urls": 8602,
     "statuses": {
-      "queued": 4890,
-      "recovered": 2624,
+      "queued": 4900,
+      "recovered": 2635,
       "needs_review": 48,
-      "failed": 1018,
+      "failed": 1019,
       "excluded": 0
     },
     "indexed_capture_records": 8992,
     "index_complete": true,
-    "unique_downloaded_files": 1937,
-    "downloaded_bytes": 105399588,
+    "unique_downloaded_files": 1943,
+    "downloaded_bytes": 105704279,
     "failed_attempts": 5541,
-    "local_updated_at": "2026-10-16T20:22:14.385660+00:00"
+    "local_updated_at": "2026-10-16T21:58:21Z"
   },
   "latest_import": {
-    "run_id": "38960473470",
-    "resources_in_artifact": 7943,
-    "copied_raw_files": 0,
+    "run_id": "38960845000",
+    "resources_in_artifact": 7965,
+    "copied_raw_files": 6,
     "copied_index_files": 0,
     "duplicate_files": 1660,
-    "new_resource_records": 2,
+    "new_resource_records": 22,
     "new_variant_records": 0,
-    "merged_records": 7909,
+    "merged_records": 7911,
     "conflicting_files": [],
-    "imported_at": "2026-10-16T20:22:04Z"
+    "imported_at": "2026-10-16T21:58:10Z"
   },
   "latest_wayback_batch": {
-    "run_id": "38948396209",
-    "url": "https://github.com/keithah/bluescholars/actions/runs/38948396209",
-    "status": "completed_cancelled_after_timeout",
-    "outcome": "Acquisition reached the 90-minute cap. The artifact saved 4 raw files, 29 CDX index batches, 85 new resource records, and 17 dated variants without conflicts. Runner candidate link-check failed on 76 historical /2009/menu/ links rewritten through an unreviewed 2025 restaurant redirect; local render fix now makes the merged project-subpath candidate check pass.",
+    "run_id": "38962246474",
+    "url": "https://github.com/keithah/bluescholars/actions/runs/38962246474",
+    "status": "in_progress_at_2026-10-16T21:58Z",
+    "outcome": "Broad Wayback continuation active; queued recovery was resumed from 38960845000.",
     "edition_era": "none",
-    "max_files": 2000,
-    "copied_raw_files": 4,
-    "copied_index_files": 29,
-    "new_resource_records": 85,
-    "new_variant_records": 17,
-    "conflicting_files": [],
-    "runner_candidate": {
-      "check_ok": false,
-      "check_errors": 76,
-      "first_error": "2009/blog/media/index.html: missing local target /2009/menu/"
-    }
+    "max_files": 2000
   },
   "older_edition_browser_observations": {
     "2007": "recovered homepage capture dated 2008-12-18 and August 2007 guestbook page; most linked routes remain placeholders; no full visual review recorded.",
@@ -105,11 +95,12 @@
     "archive_it": "Official /all CDX/C domain query returned HTTP 403, matching Archive-It guidance that the global endpoint is temporarily blocked. Collection-specific API queries need a collection ID; none located.",
     "archive_it_search": "Focused web search yielded no confirmed site-specific copy.",
     "archive_ph": "Prior request returned HTTP 429.",
-    "arquivo_pt": "Latest full-domain run queried 35 rows, selected three known 2013+ captures, and downloaded no new records.",
-    "common_crawl": "Prior broad index sweep reached 6 of 128 endpoints and saved 380 records; targeted 2009–2010 and 2023–40 samples were recovered. This is incomplete, and further Common Crawl work remains authorized.",
+    "arquivo_pt": "2013+ pass 38960845000: the 35-row domain index selected three known URLs; no new bodies recovered.",
+    "common_crawl": "Earlier independent queries recovered 380 domain responses from six of 128 published indexes; targeted 2009–2010 and 2023–40 runs are documented. A new up-to-3000-record independent Common Crawl pass is queued as run 38972843891 behind the broad Wayback batch.",
     "library_of_congress": "Direct catalog API lookup timed out; no absence conclusion.",
     "memento_time_travel": "Prior web-reader request inaccessible.",
-    "livejournal": "Separate /lj/ archive has eight recovered HTML capture routes from a complete host CDX index (226 rows/115 URLs), four article reading views derived from exact entry blocks in the October 2011 index capture (not standalone responses), 20 local photos, custom CSS local, platform CSS unavailable, one missing image, plus two modern-interface captures held in needs_review."
+    "livejournal": "Separate /lj/ archive has eight recovered HTML capture routes from a complete host CDX index (226 rows/115 URLs), four article reading views derived from exact entry blocks in the October 2011 index capture (not standalone responses), 20 local photos, custom CSS local, platform CSS unavailable, one missing image, plus two modern-interface captures held in needs_review.",
+    "wayback_2013": "Run 38960845000 attempted 171 per-URL captures dated 2013-09-21 through 2023-09-30; 11 valid responses recovered, mostly 2016 Squarespace HTML. Remaining selection includes feeds, APIs, invalid/error replay responses, or unavailable bodies; see artifact era-2013-report.json."
   },
   "pages_enabled": true,
   "reviewed_source_build": {
@@ -136,7 +127,7 @@
     "unique_raw_files": 97,
     "visual_reviewed": false
   },
-  "updated_at": "2026-10-16T20:22:14Z",
+  "updated_at": "2026-10-16T21:58:21Z",
   "tests": {
     "command": "PYTHONPATH=. .venv311/bin/pytest -q",
     "result": "124 passed",
@@ -347,5 +338,14 @@
     "description": "Three edition cards with year and source-era labels; LiveJournal and recovery status links secondary. Browser preview verified locally at /bluescholars/.",
     "published": false,
     "reason": "reviewed restoration release gates are not yet satisfied"
+  },
+  "next_queued_batch": {
+    "run_id": "38972843891",
+    "url": "https://github.com/keithah/bluescholars/actions/runs/38972843891",
+    "status": "queued_at_2026-10-16T21:58Z",
+    "source": "Common Crawl independent WARC records",
+    "commoncrawl_records": 3000,
+    "max_files": 1,
+    "resume_run": "38962246474"
   }
 }

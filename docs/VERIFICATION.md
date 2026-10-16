@@ -57,3 +57,12 @@ Four LiveJournal entry pages without standalone captures now render their exact 
 - Local unreviewed candidate from merged recovery state through run `38960473470`: 916 recovered pages, 1,875 placeholders, 727 local source assets; `/bluescholars/` checker passed with zero errors after redirect correction. The runner check on that earlier code revision had 76 broken `/2009/menu/` links.
 - Local browser view of the candidate gateway confirmed three edition cards with era labels, and secondary LiveJournal/recovery links. This is an agent visual inspection, not human release approval. No screenshot file was saved.
 - Public Pages was not redeployed; current public branch still has its prior candidate build.
+
+
+## Recovery continuation update — October 16, 2026
+
+- 2013+ Wayback pass `38960845000` completed: 171 URL captures attempted and 11 valid HTML responses recovered. Merge added 22 resource records and copied six new raw files; 1,660 file hashes duplicated bytes already stored. The Arquivo.pt step reported 35 domain-index rows and no new response bodies.
+- Consolidated local checkpoint after merge: 8,602 resource URLs; 2,635 recovered, 48 needs review, 1,019 failed and 4,900 queued; 8,992 capture rows; 1,943 unique files totaling 105,704,279 bytes.
+- Broad Wayback run `38962246474` is active. A separate Common Crawl run `38972843891` is queued behind it (up to 3,000 records).
+- Candidate rebuild from this newly merged checkpoint has not yet been verified; the build command encountered a local generated-output directory cleanup error. The previously documented successful candidate check predates this merge.
+- `source/review.json` still has `publish_approved: false` and `visual_reviewed: false`; no redeploy was made.

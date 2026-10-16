@@ -13,7 +13,7 @@
     "derived_pages": 4,
     "local_source_assets": 727,
     "base_path": "/bluescholars/",
-    "candidate_source": "merged local checkpoint through run 38948396209; rebuilt with unreviewed redirect fix",
+    "candidate_source": "merged local checkpoint through run 38960473470; rebuilt offline with redirect fix",
     "issues_by_type": {
       "external_media_link_only": 144,
       "font_not_packaged": 17,
@@ -23,17 +23,17 @@
     },
     "visual_fidelity_verified": false,
     "publish_approved": false,
-    "note": "Rendered candidate home page now presents separate edition cards. This is a candidate, not the reviewed release."
+    "note": "Project-prefix candidate checker passes. The landing page has three year/era cards; no human release review is claimed."
   },
   "candidate_checks": {
     "project_subpath": {
       "ok": true,
       "errors": [],
-      "source_checkpoint": "through run 38948396209, after redirect fix 40b07f3"
+      "source_checkpoint": "through run 38960473470, checked locally after commit 40b07f3"
     },
     "root": {
       "ok": null,
-      "source_checkpoint": "CI build of reviewed source catalog passed; merged recovery candidate root build not rerun"
+      "source_checkpoint": "CI root build/check passed against reviewed source catalog; merged candidate not rebuilt at root"
     },
     "runner_38948396209": {
       "ok": false,
@@ -44,15 +44,20 @@
       "run_id": "38960837794",
       "status": "success",
       "result": "tests and both reviewed-source build/check paths passed"
+    },
+    "runner_38960473470": {
+      "ok": false,
+      "errors": 76,
+      "reason": "workflow revision predates redirect fix; runner rewrote old menu links through a needs-review post-takeover redirect"
     }
   },
   "checkpoint": {
-    "resource_urls": 8578,
+    "resource_urls": 8580,
     "statuses": {
-      "queued": 4891,
-      "recovered": 2622,
+      "queued": 4890,
+      "recovered": 2624,
       "needs_review": 48,
-      "failed": 1017,
+      "failed": 1018,
       "excluded": 0
     },
     "indexed_capture_records": 8992,
@@ -60,19 +65,19 @@
     "unique_downloaded_files": 1937,
     "downloaded_bytes": 105399588,
     "failed_attempts": 5541,
-    "local_updated_at": "2026-10-16T20:14:31.574096+00:00"
+    "local_updated_at": "2026-10-16T20:22:14.385660+00:00"
   },
   "latest_import": {
-    "run_id": "38956253558",
-    "resources_in_artifact": 7941,
+    "run_id": "38960473470",
+    "resources_in_artifact": 7943,
     "copied_raw_files": 0,
     "copied_index_files": 0,
     "duplicate_files": 1660,
-    "new_resource_records": 0,
+    "new_resource_records": 2,
     "new_variant_records": 0,
     "merged_records": 7909,
     "conflicting_files": [],
-    "imported_at": "2026-10-16T20:14:30Z"
+    "imported_at": "2026-10-16T20:22:04Z"
   },
   "latest_wayback_batch": {
     "run_id": "38948396209",
@@ -131,7 +136,7 @@
     "unique_raw_files": 97,
     "visual_reviewed": false
   },
-  "updated_at": "2026-10-16T20:14:31Z",
+  "updated_at": "2026-10-16T20:22:14Z",
   "tests": {
     "command": "PYTHONPATH=. .venv311/bin/pytest -q",
     "result": "124 passed",
@@ -212,23 +217,23 @@
     "visual_screenshot": "No screenshot file saved; live browser panel timed out. Live URLs were verified directly over HTTPS."
   },
   "active_wayback_batch": {
-    "run_id": "38960473470",
-    "url": "https://github.com/keithah/bluescholars/actions/runs/38960473470",
+    "run_id": "38960845000",
+    "url": "https://github.com/keithah/bluescholars/actions/runs/38960845000",
     "status": "in_progress",
-    "resume_run": "38956253558",
-    "edition_era": "2009",
+    "resume_run": "38960473470",
+    "edition_era": "2013",
     "max_files": 1,
     "active_step": "Preserve an edition's latest per-URL captures",
-    "checkpoint_scope": "single consolidated checkpoint; after this edition-specific pass, queued 2013-era run 38960845000"
+    "head_commit": "40b07f3187b68b65a28e52dac38747aad2265756",
+    "checkpoint_scope": "single consolidated checkpoint; this is the separate 2013+ per-URL capture pass"
   },
   "resume_plan": {
     "workflow_commit": "40b07f3",
-    "workflow_input": "resume_run for one consolidated artifact; edition_era selects the latest per-URL capture in 2007, 2009, or 2013",
-    "latest_merged_run": "38956253558",
-    "next_run": "38960473470",
-    "queued_after": "38960845000",
+    "workflow_input": "resume_run for one consolidated artifact; edition_era selects latest per-URL capture in 2007, 2009, or 2013",
+    "latest_merged_run": "38960473470",
+    "next_run": "38960845000",
     "capture_attempts_per_resource_per_batch": 3,
-    "note": "Artifacts can be merged with .venv311/bin/python -m restore merge-recovery --artifact <artifact-dir> --run-id <run-id>. The ignored recovery/state.json and recovery/raw/ are local checkpoints; preserve them before switching machines."
+    "note": "The 2013+ pass is active. After it finishes, merge its archive-recovery artifact using .venv311/bin/python -m restore merge-recovery --artifact <artifact-dir> --run-id <run-id>, then resume queued/retryable URLs and any remaining per-era selections. Preserve ignored recovery/state.json and recovery/raw/ before switching machines."
   },
   "superseded_queued_run": {
     "run_id": "38889871799",
@@ -304,16 +309,25 @@
     },
     "run_2009": {
       "run_id": "38960473470",
-      "url": "https://github.com/keithah/bluescholars/actions/runs/38960473470",
-      "status": "in_progress",
-      "edition_era": "2009",
-      "resume_run": "38956253558",
-      "max_files": 1
+      "status": "completed_candidate_check_failed_on_old_workflow_revision",
+      "eligible_urls": 41,
+      "attempted": 41,
+      "recovered": 2,
+      "failures": 39,
+      "captured_examples": [
+        "2012 Bayani Redux article",
+        "Seattle Weekly image linked as source asset"
+      ],
+      "artifact_imported": true,
+      "local_candidate_check_after_redirect_fix": {
+        "ok": true,
+        "errors": []
+      }
     },
     "run_2013": {
       "run_id": "38960845000",
       "url": "https://github.com/keithah/bluescholars/actions/runs/38960845000",
-      "status": "queued",
+      "status": "in_progress",
       "edition_era": "2013",
       "resume_run": "38960473470",
       "max_files": 1

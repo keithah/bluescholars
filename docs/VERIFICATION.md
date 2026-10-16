@@ -54,6 +54,6 @@ Four LiveJournal entry pages without standalone captures now render their exact 
 
 - GitHub CI run `38960837794` passed the test suite and reviewed-source builds/checks at `/` and `/bluescholars/`.
 - Local suite after the homepage and redirect changes: `PYTHONPATH=. .venv311/bin/pytest -q` — 124 passed.
-- Local unreviewed candidate from merged recovery state through run `38948396209`: `/bluescholars/` checker passed with zero errors after redirect correction. The runner check on that earlier code revision had 76 broken `/2009/menu/` links.
+- Local unreviewed candidate from merged recovery state through run `38960473470`: 916 recovered pages, 1,875 placeholders, 727 local source assets; `/bluescholars/` checker passed with zero errors after redirect correction. The runner check on that earlier code revision had 76 broken `/2009/menu/` links.
 - Local browser view of the candidate gateway confirmed three edition cards with era labels, and secondary LiveJournal/recovery links. This is an agent visual inspection, not human release approval. No screenshot file was saved.
 - Public Pages was not redeployed; current public branch still has its prior candidate build.

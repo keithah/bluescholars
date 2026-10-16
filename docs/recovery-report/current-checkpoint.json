@@ -238,5 +238,25 @@
     "note": "After the active single-branch run completes, merge its artifact locally, then seed the next runner with all listed prior artifact IDs using resume_runs. The next runner will include the queued-first scheduler and bounded capture-date retry fix.",
     "recovery_code_commit": "6febb36",
     "capture_attempts_per_resource_per_batch": 3
+  },
+  "queued_consolidated_run": {
+    "run_id": "38889871799",
+    "url": "https://github.com/keithah/bluescholars/actions/runs/38889871799",
+    "status": "queued",
+    "max_files": 500,
+    "resume_runs": [
+      "38824767784",
+      "38834520393",
+      "38840327453",
+      "38847782580",
+      "38854577118",
+      "38855547034",
+      "38863795721",
+      "38873762766",
+      "38878544130",
+      "38880249610"
+    ],
+    "head_commit": "fdd42799610a413600ffe504722f9580f2b906c7",
+    "recovery_code_commit": "6febb36"
   }
 }

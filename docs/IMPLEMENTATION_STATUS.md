@@ -16,7 +16,7 @@
 - Promoted source catalog: 3,268 resource records; 97 unique files under `source/raw/` are tracked. The publication and visual-review flags remain false.
 - The latest local candidate, built before the `38878544130` artifact merge, has 916 recovered pages, 4 derived pages, 1,916 placeholders, and 628 local source assets. Its root and `/bluescholars/` checks passed with zero link errors; the build reported 4,085 missing assets and 9 provider-error sources. The next local rebuild is still pending. See [the current checkpoint](recovery-report/current-checkpoint.json).
 - The suite passes 121 tests; see [verification](VERIFICATION.md). Regressions cover queued-page priority and bounded, resumable capture-date attempts.
-- Latest merged checkpoint: run `38878544130`. Broad recovery `38880249610` is active, but it resumed from a single artifact branch. Workflow commit `9806ff2` adds multi-artifact resume support; the next run must merge the prior artifact set to restore full local coverage before continuing.
+- Latest merged checkpoint: run `38878544130`. Broad recovery `38880249610` is active from a single artifact branch; consolidation run `38889871799` is queued to merge all known artifact branches and continue with the updated bounded retry logic.
 - User-requested incomplete candidate preview is live at https://keithah.github.io/bluescholars/ from `gh-pages` commit `cc3ddeea338842c97ecbaa6970b591183faab384`; Pages run `38851321206` succeeded. New recovery-tool and ledger commits are on `main`; they do not change the published preview. Publication and visual-review flags remain false, and the reviewed-release workflow is still gated.
 
 ## Remaining before publication

@@ -167,6 +167,14 @@ def test_recover_checkpoints_and_skips_success(tmp_path):
     assert len(client.calls)==before+1 # fetch newly discovered blog, not homepage
     assert client.calls[0] != client.calls[-1]
 
+def test_recover_progress_reports_resumable_batch_boundaries(tmp_path):
+    state=State(tmp_path);state.add(HOME,'html','seed',TARGET)
+    updates=[]
+    client=Client(lambda u:Payload(VALID,u,200,{'Content-Type':'text/html'}))
+    recover(state,client,max_files=2,progress=updates.append)
+    assert updates
+    assert updates[-1]['processed']==2 and updates[-1]['url']
+
 def test_later_capture_needs_review(tmp_path):
     state=State(tmp_path);state.add(HOME,'html','seed',TARGET)
     client=Client(lambda u:Payload(VALID,'https://web.archive.org/web/20250101000000id_/'+HOME,200,{}))

@@ -138,7 +138,7 @@ def resource_priority(record: dict) -> tuple[int,int]:
         return 6,len(url)
     return 7,len(url)
 
-def recover(state: State,client,max_files: int=150,retry_failed: bool=False) -> dict:
+def recover(state: State,client,max_files: int=150,retry_failed: bool=False,progress=None) -> dict:
     processed=0;visited=set()
     while processed<max_files:
         pending=[r for r in state.data['resources'].values() if r['url'] not in visited and
@@ -186,6 +186,8 @@ def recover(state: State,client,max_files: int=150,retry_failed: bool=False) -> 
                 if r['status'] in ('recovered','needs_review'): break
             if r['status'] in ('recovered','needs_review'): break
             if phase==0: index(state,client,max_pages=3,url=url,match='exact')
+        if progress and (processed%25==0 or processed==max_files):
+            progress({'processed':processed,'limit':max_files,'url':url,'status':r['status']})
     report=summary(state)
     write_json(state.root/'recovery/report.json',report)
     return report

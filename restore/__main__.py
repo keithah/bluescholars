@@ -115,7 +115,8 @@ def main(argv=None) -> int:
                 result=capture_era(s,client,args.era,args.max_files)
                 print(json.dumps(result,indent=2));return 0
             if args.max_files<1:raise ValueError('--max-files must be positive')
-            result=recover(s,client,args.max_files,args.retry_failed)
+            result=recover(s,client,args.max_files,args.retry_failed,
+                progress=lambda p:print(json.dumps({'stage':'recover','progress':p}),file=sys.stderr,flush=True))
             print(json.dumps(result,indent=2))
             return 2 if result['unique_downloaded_files']==0 and result['failed_attempts'] else 0
         elif args.command in ('build','check','serve'):

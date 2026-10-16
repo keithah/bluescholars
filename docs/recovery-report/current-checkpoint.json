@@ -8,12 +8,12 @@
     "viewport": "desktop, approximately 1680×800"
   },
   "candidate_build": {
-    "recovered_pages": 916,
-    "placeholder_pages": 1875,
+    "recovered_pages": 922,
+    "placeholder_pages": 1871,
     "derived_pages": 4,
     "local_source_assets": 727,
     "base_path": "/bluescholars/",
-    "candidate_source": "merged local checkpoint through run 38960473470; rebuilt offline with redirect fix",
+    "candidate_source": "locally merged checkpoint through run 38960845000; offline candidate rebuilt after merge",
     "issues_by_type": {
       "external_media_link_only": 144,
       "font_not_packaged": 17,
@@ -23,17 +23,18 @@
     },
     "visual_fidelity_verified": false,
     "publish_approved": false,
-    "note": "Project-prefix candidate checker passes. The landing page has three year/era cards; no human release review is claimed."
+    "note": "Root and project-prefix candidate link/resource checks pass. Three edition cards remain; no human release approval is claimed."
   },
   "candidate_checks": {
     "project_subpath": {
       "ok": true,
       "errors": [],
-      "source_checkpoint": "through run 38960473470, checked locally after commit 40b07f3"
+      "source_checkpoint": "merged local checkpoint through run 38960845000; candidate rebuilt and checked at /bluescholars/ on 2026-10-16"
     },
     "root": {
-      "ok": null,
-      "source_checkpoint": "CI root build/check passed against reviewed source catalog; merged candidate not rebuilt at root"
+      "ok": true,
+      "errors": [],
+      "source_checkpoint": "merged local checkpoint through run 38960845000; candidate checked at root on 2026-10-16"
     },
     "runner_38948396209": {
       "ok": false,
@@ -43,7 +44,7 @@
     "root_project_ci": {
       "run_id": "38960837794",
       "status": "success",
-      "result": "tests and both reviewed-source build/check paths passed"
+      "result": "CI tests and both reviewed-source build/check paths passed; separate local candidate checks also pass at root and /bluescholars/ after run 38960845000 merge"
     },
     "runner_38960473470": {
       "ok": false,
@@ -127,7 +128,7 @@
     "unique_raw_files": 97,
     "visual_reviewed": false
   },
-  "updated_at": "2026-10-16T21:58:21Z",
+  "updated_at": "2026-10-16T22:12:00Z",
   "tests": {
     "command": "PYTHONPATH=. .venv311/bin/pytest -q",
     "result": "124 passed",

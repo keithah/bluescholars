@@ -11,7 +11,7 @@ The root page is an edition gateway. The visual baseline for the Squarespace edi
 
 ## Current status
 
-The target public repository is [keithah/bluescholars](https://github.com/keithah/bluescholars), on `main`. GitHub authentication currently works. GitHub Pages is not enabled and no deployment URL has been verified. The publication flags in `source/review.json` remain false.
+The target public repository is [keithah/bluescholars](https://github.com/keithah/bluescholars), on `main`. A user-requested public candidate preview is live at [keithah.github.io/bluescholars](https://keithah.github.io/bluescholars/); its static snapshot is on the separate `gh-pages` branch. This is an incomplete, unreviewed preview—not a finished restoration. The publication flags in `source/review.json` remain false, and the reviewed-release workflow remains gated.
 
 Recovery has reached the static reconstruction stage, but it is incomplete. The Wayback domain index is complete in the saved checkpoint; the current candidate build has substantial explicit gaps. Independent copies have also been recovered from Common Crawl and Arquivo.pt. See the current [recovery report](docs/recovery-report/RECOVERY_REPORT.md), [gap report](docs/recovery-report/GAP_REPORT.md), [verification record](docs/VERIFICATION.md), and [work log](docs/WORK_LOG.md) for exact counts and remaining work.
 
@@ -60,4 +60,4 @@ These commands preserve dated variants and provenance. A saved capture is not au
 
 ## Publication gate
 
-The normal static output uses only `source/catalog.json` and `source/raw/`; it does not depend on Wayback or remote asset hosts for ordinary rendering. Forms and embedded media are handled as historical references instead of active third-party services. The release build requires reviewed source bytes, accurate gap reporting, a successful visual comparison, root and `/bluescholars/` checks, and explicit publication approval. Pages remains disabled until those conditions pass. No custom domain or DNS change is part of this project.
+The normal static output uses only `source/catalog.json` and `source/raw/`; it does not depend on Wayback or remote asset hosts for ordinary rendering. Forms and embedded media are handled as historical references instead of active third-party services. The reviewed release build still requires reviewed source bytes, accurate gap reporting, a successful visual comparison, root and `/bluescholars/` checks, and explicit publication approval. The current Pages deployment is a clearly marked candidate preview requested by the owner; it does not satisfy or change those release gates. No custom domain or DNS change is part of this project.

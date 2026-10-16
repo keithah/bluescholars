@@ -84,7 +84,7 @@
     "memento_time_travel": "Prior web-reader request inaccessible.",
     "livejournal": "Separate /lj/ archive has eight recovered HTML capture routes from a complete host CDX index (226 rows/115 URLs), four article reading views derived from exact entry blocks in the October 2011 index capture (not standalone responses), 20 local photos, custom CSS local, platform CSS unavailable, one missing image, plus two modern-interface captures held in needs_review."
   },
-  "pages_enabled": false,
+  "pages_enabled": true,
   "reviewed_source_build": {
     "project_subpath": {
       "local_source_assets": 31,
@@ -151,5 +151,47 @@
         "http://www.bluescholars.com/player/player_bslp2005.swf"
       ]
     }
+  },
+  "pages_deployment": {
+    "mode": "public archive preview from the generated unreviewed candidate; not an approved final restoration",
+    "url": "https://keithah.github.io/bluescholars/",
+    "source_branch": "gh-pages",
+    "source_path": "/",
+    "branch_commit": "cc3ddeea338842c97ecbaa6970b591183faab384",
+    "pages_build_run": "38851321206",
+    "pages_build_status": "success",
+    "pages_api_status": "built",
+    "https_enforced": true,
+    "custom_domain": null,
+    "site_bytes": 50541086,
+    "files": 1568,
+    "verified_routes": {
+      "/bluescholars/": 200,
+      "/bluescholars/2007/": 200,
+      "/bluescholars/2009/": 200,
+      "/bluescholars/2013/": 200,
+      "/bluescholars/lj/": 200,
+      "/bluescholars/archive-status/": 200,
+      "/bluescholars/2009/blog/page/2/": 200,
+      "/bluescholars/2009/blog/2010/09/video-green-river-community-college/": 200,
+      "/bluescholars/2013/blog/2013/9/9/eugene-oregon-august-2013/": 200,
+      "/bluescholars/assets/archive-ui.css": 200,
+      "/bluescholars/does-not-exist/": 404
+    },
+    "top_level_links": [
+      "/bluescholars/2007/",
+      "/bluescholars/2009/",
+      "/bluescholars/2013/",
+      "/bluescholars/lj/"
+    ],
+    "automatically_loaded_local_assets": "Root/project-prefix candidate checker passed; live Squarespace CSS and archive UI CSS returned HTTP 200.",
+    "visual_screenshot": "No screenshot file saved; live browser panel timed out. Live URLs were verified directly over HTTPS."
+  },
+  "active_wayback_batch": {
+    "run_id": "38847782580",
+    "url": "https://github.com/keithah/bluescholars/actions/runs/38847782580",
+    "edition_era": "2009",
+    "status": "in_progress at Pages-preview verification",
+    "resume_run": "38840327453"
   }
 }

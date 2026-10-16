@@ -12,14 +12,16 @@
 - Reviewed-source build/check at `/bluescholars/` — passed with the same counts and no remote automatic asset dependency.
 - The checker verifies no broken local links or automatic remote resources. External navigation links, such as historical social profiles and video links, remain ordinary anchors.
 
-The counts above describe the current unreviewed candidate and will change after the remaining era captures are merged. The remaining checked targets are `/2009/blog/tourdates/` (linked from two recovered WordPress pages) and `/2013/archive-query/27bed984677400b185e8/` (a Squarespace-era post links to the preserved 2010 WordPress attachment query). A candidate check does not satisfy the release gate.
+The counts above describe the current unreviewed candidate snapshot published for browsing; they will change after remaining era captures are merged. The live preview is not release approval. The remaining checked targets are `/2009/blog/tourdates/` (linked from two recovered WordPress pages) and `/2013/archive-query/27bed984677400b185e8/` (a Squarespace-era post links to the preserved 2010 WordPress attachment query). A candidate check does not satisfy the release gate.
 
 ## Repository and Pages
 
 - GitHub CLI login: `keithah`; `repo` and `workflow` scopes are present.
 - Target repository: public `keithah/bluescholars`, default branch `main`.
-- GitHub Pages endpoint returned HTTP 404 on 2026-10-16; Pages remains disabled.
-- No deployment has been attempted and no live URL is claimed.
+- At the owner’s direct request, the current unreviewed candidate was deployed as a public preview from the `gh-pages` branch. GitHub Pages API reports `built`; `source/review.json` remains false and the reviewed-release workflow remains gated.
+- Live URL: [https://keithah.github.io/bluescholars/](https://keithah.github.io/bluescholars/). Pages build run [38851321206](https://github.com/keithah/bluescholars/actions/runs/38851321206) succeeded. Source branch commit: `cc3ddeea338842c97ecbaa6970b591183faab384`; it is separate from `main` and preserves main history.
+- Live HTTP checks returned 200 for the root gateway, `/2007/`, `/2009/`, `/2013/`, `/lj/`, archive status, a WordPress pagination page, a 2009 article, a Squarespace article, and the archive UI CSS; an unknown route returned 404. The root’s year and LJ anchors point at the expected project-prefixed paths. Root and `/bluescholars/` automatic-resource/link checks pass locally.
+- No screenshot file was saved. Browser-panel automation timed out during live navigation; route and asset checks were performed directly over HTTPS.
 
 ## Visual review
 
@@ -39,7 +41,7 @@ The project-subpath page at `http://127.0.0.1:8080/bluescholars/2013/` rendered 
 The root gateway now links to `/lj/`, separate from the three official website generations. The browser preview at `http://127.0.0.1:8083/lj/` and the project-path preview at `http://127.0.0.1:8084/bluescholars/lj/` each showed the eight capture routes; the individual 2007 post retained its text/comments and six local photos. A browser screenshot was visually inspected in-session but no screenshot file was saved. The custom stylesheet was recovered after this preview; its built output now serves it locally, while the LiveJournal platform CSS bundle remains missing and that preview did not verify the original design.
 
 
-The October 2011 LiveJournal captures were checked in the browser at both root and project-prefix previews. The `/lj/` index lists all eight saved HTML capture routes with dates. The custom journal CSS is now local, while the separate LiveJournal platform bundle remains unavailable. Candidate generation/check passed independently for `/` and `/bluescholars/` (449 recovered pages, 4 derived pages, 765 placeholders, 419 local assets, zero link errors). This is technical verification, not a human visual approval or release sign-off.
+The October 2011 LiveJournal captures were checked in the browser at both root and project-prefix previews. The `/lj/` index lists all eight saved HTML capture routes with dates. The custom journal CSS is now local, while the separate LiveJournal platform bundle remains unavailable. Candidate generation/check passed independently for `/` and `/bluescholars/` (449 recovered pages, 4 derived pages, 765 placeholders, 420 local assets, zero link errors). This is technical verification, not a human visual approval or release sign-off.
 
 A direct scan of the generated candidate HTML (`src`, `poster`, embedded data, and stylesheets) and CSS (`url()`) found zero automatic remote resource references. External web links remain ordinary clickable links.
 

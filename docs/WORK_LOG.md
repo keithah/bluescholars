@@ -117,3 +117,10 @@
 - Follow-up recovery run `38910883636` is active from the consolidated `38890188803` checkpoint. The local monitor waits for its artifact, merges it, recomputes retryable work, and queues another batch only if more remains. Local ignored recovery files are resumable from `recovery/state.json` and `recovery/raw/`; if the monitor stops, merge any finished artifact with `.venv311/bin/python -m restore merge-recovery --artifact <artifact-dir> --run-id <run-id>` and inspect `.venv311/bin/python -m restore status`.
 
 - Rebuilt the local candidate from the consolidated checkpoint: 916 recovered pages, four derived LiveJournal views, 1,916 placeholders, and 685 local source assets. Root and `/bluescholars/` checks both pass with zero link errors. The candidate reports 4,031 missing embedded assets and 295 linked assets not recovered; no visual review or publication approval was recorded.
+
+
+## 2026-10-16 — continued archive-wide recovery
+
+- Run `38910883636` reached its 90-minute acquisition cap, then successfully built and checked its candidate and uploaded its artifact. The merge had no conflicts and added five unique raw responses, three index batches, and four resource records. Aggregate counts: 8,352 URLs; 8,908 indexed captures; 2,421 recovered, 5,358 queued, 543 failed (195 retryable), 30 needs-review; 1,921 unique files totaling 102,638,507 bytes.
+- Rebuilt the local candidate from the newly merged checkpoint: 916 recovered pages, four derived LJ views, 1,916 placeholders, and 724 local source assets. Root and `/bluescholars/` candidate checks both pass. The build flags 4,011 missing embedded assets and 295 linked assets not recovered. It remains visually unreviewed and not approved for publishing.
+- Follow-up `38923706222` is active from the merged checkpoint. The local controller remains open to merge its artifact and continue while queued or retryable resources remain.

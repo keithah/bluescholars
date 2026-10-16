@@ -8,14 +8,14 @@
     "viewport": "desktop, approximately 1680×800"
   },
   "candidate_build": {
-    "recovered_pages": 922,
-    "placeholder_pages": 1842,
+    "recovered_pages": 924,
+    "placeholder_pages": 1878,
     "derived_pages": 4,
     "local_source_assets": 729,
     "base_path": "/bluescholars/",
-    "candidate_source": "locally merged checkpoint through run 38962246474; offline candidate rebuilt and checked at root and /bluescholars/",
+    "candidate_source": "locally merged checkpoint through run 38972843891; rebuilt and checked at root and /bluescholars/",
     "issues_by_type": {
-      "missing_asset": 4037,
+      "missing_asset": 4045,
       "linked_asset_not_recovered": 295,
       "external_media_link_only": 145,
       "font_not_packaged": 17,
@@ -23,18 +23,18 @@
     },
     "visual_fidelity_verified": false,
     "publish_approved": false,
-    "note": "Root and project-prefix checks pass with zero link errors. These issue counts describe unresolved source gaps, not checker failures. No human release approval is claimed."
+    "note": "Both root and project-prefix checks pass with zero local link errors. Gaps are measured source gaps, not checker failures. No human release approval is claimed."
   },
   "candidate_checks": {
     "project_subpath": {
       "ok": true,
       "errors": [],
-      "source_checkpoint": "merged local checkpoint through run 38962246474; rebuilt and checked at /bluescholars/ on 2026-10-16"
+      "source_checkpoint": "merged local checkpoint through run 38972843891; rebuilt and checked at /bluescholars/ on 2026-10-16"
     },
     "root": {
       "ok": true,
       "errors": [],
-      "source_checkpoint": "merged local checkpoint through run 38962246474; rebuilt and checked at root on 2026-10-16"
+      "source_checkpoint": "merged local checkpoint through run 38972843891; rebuilt and checked at root on 2026-10-16"
     },
     "runner_38948396209": {
       "ok": false,
@@ -53,32 +53,32 @@
     }
   },
   "checkpoint": {
-    "resource_urls": 8769,
+    "resource_urls": 8838,
     "statuses": {
-      "queued": 4718,
-      "recovered": 2881,
+      "queued": 4760,
+      "recovered": 2908,
       "needs_review": 50,
       "failed": 1120,
       "excluded": 0
     },
     "indexed_capture_records": 9210,
     "index_complete": true,
-    "unique_downloaded_files": 1946,
-    "downloaded_bytes": 107189680,
-    "failed_attempts": 6070,
-    "local_updated_at": "2026-10-16T22:13:29Z"
+    "unique_downloaded_files": 1969,
+    "downloaded_bytes": 107780030,
+    "failed_attempts": 6073,
+    "local_updated_at": "2026-10-16T22:30:10Z"
   },
   "latest_import": {
-    "run_id": "38962246474",
-    "resources_in_artifact": 7988,
-    "copied_raw_files": 3,
-    "copied_index_files": 61,
-    "duplicate_files": 1666,
-    "new_resource_records": 23,
-    "new_variant_records": 144,
-    "merged_records": 7789,
+    "run_id": "38972843891",
+    "resources_in_artifact": 8056,
+    "copied_raw_files": 5,
+    "copied_index_files": 0,
+    "duplicate_files": 1748,
+    "new_resource_records": 68,
+    "new_variant_records": 1,
+    "merged_records": 7811,
     "conflicting_files": [],
-    "imported_at": "2026-10-16T22:13:28Z"
+    "imported_at": "2026-10-16T22:23:55Z"
   },
   "latest_wayback_batch": {
     "run_id": "38962246474",
@@ -106,7 +106,7 @@
     "archive_it_search": "Focused web search yielded no confirmed site-specific copy.",
     "archive_ph": "Prior request returned HTTP 429.",
     "arquivo_pt": "2013+ pass 38960845000: the 35-row domain index selected three known URLs; no new bodies recovered.",
-    "common_crawl": "Earlier independent queries recovered 380 domain responses from six of 128 published indexes; targeted 2009–2010 and 2023–40 runs are documented. A new up-to-3000-record independent Common Crawl pass is queued as run 38972843891 behind the broad Wayback batch.",
+    "common_crawl": "Run 38972843891 attempted 28 Common Crawl WARC records and recovered 27. Merge added 68 resource records, one dated variant, and five unique raw files; 1,748 content hashes matched existing files. Another broad Wayback run is active.",
     "library_of_congress": "Direct catalog API lookup timed out; no absence conclusion.",
     "memento_time_travel": "Prior web-reader request inaccessible.",
     "livejournal": "Separate /lj/ archive has eight recovered HTML capture routes from a complete host CDX index (226 rows/115 URLs), four article reading views derived from exact entry blocks in the October 2011 index capture (not standalone responses), 20 local photos, custom CSS local, platform CSS unavailable, one missing image, plus two modern-interface captures held in needs_review.",
@@ -137,7 +137,7 @@
     "unique_raw_files": 97,
     "visual_reviewed": false
   },
-  "updated_at": "2026-10-16T22:20:00Z",
+  "updated_at": "2026-10-16T22:30:10Z",
   "tests": {
     "command": "PYTHONPATH=. .venv311/bin/pytest -q",
     "result": "124 passed",
@@ -350,12 +350,24 @@
     "reason": "reviewed restoration release gates are not yet satisfied"
   },
   "next_queued_batch": {
+    "run_id": "38975520061",
+    "url": "https://github.com/keithah/bluescholars/actions/runs/38975520061",
+    "status": "in_progress_at_2026-10-16T22:24Z",
+    "source": "Internet Archive Wayback broad continuation",
+    "max_files": 2000,
+    "resume_run": "38972843891",
+    "commoncrawl_records": 0
+  },
+  "latest_common_crawl": {
     "run_id": "38972843891",
     "url": "https://github.com/keithah/bluescholars/actions/runs/38972843891",
-    "status": "in_progress_at_2026-10-16T22:19Z",
-    "source": "Common Crawl independent WARC records",
-    "commoncrawl_records": 3000,
-    "max_files": 1,
-    "resume_run": "38962246474"
+    "status": "completed_success",
+    "attempted_warc_records": 28,
+    "recovered_warc_records": 27,
+    "failed_warc_records": 1,
+    "new_resource_records": 68,
+    "new_unique_raw_files": 5,
+    "duplicate_file_hashes": 1748,
+    "conflicting_files": []
   }
 }

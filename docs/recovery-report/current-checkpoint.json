@@ -126,7 +126,7 @@
   "updated_at": "2026-10-16",
   "tests": {
     "command": ".venv311/bin/python -m pytest -q",
-    "result": "120 passed"
+    "result": "121 passed"
   },
   "livejournal_archive": {
     "route": "/lj/",
@@ -235,6 +235,8 @@
       "38878544130",
       "38880249610"
     ],
-    "note": "merge artifact branches to seed the full local checkpoint before continuing; artifact IDs are preserved in recovery/imported/ locally"
+    "note": "After the active single-branch run completes, merge its artifact locally, then seed the next runner with all listed prior artifact IDs using resume_runs. The next runner will include the queued-first scheduler and bounded capture-date retry fix.",
+    "recovery_code_commit": "6febb36",
+    "capture_attempts_per_resource_per_batch": 3
   }
 }

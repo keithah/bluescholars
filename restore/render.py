@@ -50,7 +50,11 @@ class Resolver:
             if record.get('kind') in ('image','css','font','script','unsupported'):
                 self.issues.append({'type':'linked_asset_not_recovered','source':url,'url':u})
                 return self.base+'/archive-status/'
-            try: target=self.base+self.route_prefix+route(record.get('final_original') or u)
+            final_original=record.get('final_original','')
+            routed_url=final_original if (record.get('status')=='recovered'
+                                          and record.get('raw_path')
+                                          and is_site(final_original)) else u
+            try: target=self.base+self.route_prefix+route(routed_url)
             except ValueError:
                 self.issues.append({'type':'unsafe_route','source':url,'url':u})
                 return self.base+'/archive-status/'

@@ -347,6 +347,24 @@ def test_selected_edition_link_gets_local_gap_alias_for_unrecovered_target(tmp_p
     assert (tmp_path/'_candidate/2009/blog/tourdates/index.html').is_file()
     assert check(tmp_path/'_candidate','')==[]
 
+def test_unreviewed_post_takeover_redirect_does_not_rewrite_historical_menu_links(tmp_path):
+    fixture_root(tmp_path);s=State(tmp_path)
+    source=HOME+'blog/media/'
+    target=HOME+'blog/cinemetropolis/'
+    add_raw(s,source,'html',b'<html><body><a href="http://bluescholars.com/blog/cinemetropolis/">CINEMETROPOLIS</a></body></html>')
+    s.data['resources'][source]['actual_capture']='20110807103740'
+    record=s.add(target,'html','CDX:domain')
+    record.update(status='needs_review',actual_capture='20250627045146',
+                  final_original='https://www.incontro.restaurant/menu/')
+    s.save()
+    build(tmp_path,tmp_path/'_candidate','',candidate=True)
+    source_page=(tmp_path/'_candidate/2009/blog/media/index.html').read_text()
+    assert 'href="/2009/blog/cinemetropolis/"' in source_page
+    assert 'href="/2009/menu/"' not in source_page
+    gap=tmp_path/'_candidate/2009/blog/cinemetropolis/index.html'
+    assert gap.is_file() and 'not recovered' in gap.read_text().lower()
+    assert check(tmp_path/'_candidate','')==[]
+
 def test_same_homepage_url_keeps_older_and_squarespace_captures_separate(tmp_path):
     fixture_root(tmp_path);s=State(tmp_path)
     current=b'<html><body><h1>Squarespace May 2021</h1></body></html>'

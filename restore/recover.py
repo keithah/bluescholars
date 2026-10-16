@@ -145,7 +145,10 @@ def recover(state: State,client,max_files: int=150,retry_failed: bool=False,prog
         pending=[r for r in state.data['resources'].values() if r['url'] not in visited and
                  (r['status']=='queued' or (retry_failed and r['status']=='failed'))]
         if not pending: break
-        pending.sort(key=resource_priority)
+        # Do not let a repeatedly failing, high-priority resource starve
+        # untouched pages across resumable batches. Finish the queued frontier
+        # first, then use any remaining capacity to retry known failures.
+        pending.sort(key=lambda r:(r['status']!='queued',resource_priority(r)))
         r=pending[0];url=r['url'];visited.add(url);processed+=1
         if r['kind'] in ('font','script','unsupported'):
             r['status']='excluded';r['reason']='No font/script/media binary redistribution';state.save();continue

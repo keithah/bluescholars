@@ -187,6 +187,19 @@ def test_recover_checkpoints_and_skips_success(tmp_path):
     assert len(client.calls)==before+1 # fetch newly discovered blog, not homepage
     assert client.calls[0] != client.calls[-1]
 
+def test_untouched_queued_pages_precede_retries_of_failed_high_priority_urls(tmp_path):
+    state=State(tmp_path)
+    failed=state.add(HOME,'html','seed',TARGET)
+    failed.update(status='failed',hints=[TARGET],captures=[])
+    queued_url=HOME+'blog/archived-entry'
+    queued=state.add(queued_url,'html',HOME+'blog/',TARGET)
+    client=Client(lambda url:Payload(VALID,url,200,{'Content-Type':'text/html'}))
+
+    recover(state,client,max_files=1,retry_failed=True)
+
+    assert state.data['resources'][queued_url]['status']=='recovered'
+    assert len(client.calls)==1 and queued_url in client.calls[0]
+
 def test_recover_progress_reports_resumable_batch_boundaries(tmp_path):
     state=State(tmp_path);state.add(HOME,'html','seed',TARGET)
     updates=[]

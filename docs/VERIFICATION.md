@@ -2,7 +2,7 @@
 
 ## Automated checks
 
-- `.venv311/bin/python -m pytest -q` — **119 passed** (including Arquivo.pt page-history/domain-CDX resume tests and recovery progress reporting).
+- `.venv311/bin/python -m pytest -q` — **120 passed** (including a regression proving untouched queued URLs are fetched before retrying higher-priority failures).
 - `.venv311/bin/python -m compileall -q restore tests` — passed.
 - `bash -n scripts/*.sh` — passed.
 - `git diff --check` on implementation, tests, and documentation — passed. Original archived HTML is preserved byte-for-byte, including its source whitespace, so the check excludes `source/raw/` and its original-HTML test fixture.
@@ -12,7 +12,7 @@
 - Reviewed-source build/check at `/bluescholars/` — passed with the same counts and no remote automatic asset dependency.
 - The checker verifies no broken local links or automatic remote resources. External navigation links, such as historical social profiles and video links, remain ordinary anchors.
 
-The counts above describe the current unreviewed candidate snapshot published for browsing; they will change after remaining era captures are merged. The live preview is not release approval. The remaining checked targets are `/2009/blog/tourdates/` (linked from two recovered WordPress pages) and `/2013/archive-query/27bed984677400b185e8/` (a Squarespace-era post links to the preserved 2010 WordPress attachment query). A candidate check does not satisfy the release gate.
+Latest offline candidate verification, rebuilt from the locally merged checkpoint on October 16: root and `/bluescholars/` checks each pass with zero link errors. The candidate contains 916 recovered pages, 1,916 placeholders, 4 derived pages, and 628 local source assets. Its build report still lists 4,085 missing assets, 295 linked assets not recovered, 144 external-media links, and 9 provider-error source records; those are source gaps, not checker errors. This checkpoint predates the active broad run `38878544130`, whose artifact has not yet been merged. The live preview is not release approval, and these checks do not satisfy the release gate.
 
 ## Repository and Pages
 

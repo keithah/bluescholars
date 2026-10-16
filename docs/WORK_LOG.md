@@ -1,5 +1,13 @@
 # Restoration work log
 
+## 2026-10-16 archive-wide continuation
+
+- Merged completed recovery run `38873762766` into the local checkpoint with no conflicts. The aggregate checkpoint now has 8,348 resource URLs, 8,904 indexed capture records, 1,872 unique local raw files (99,127,968 bytes), and a complete domain CDX index. At that checkpoint 5,843 URLs remained queued; status reflects distinct URLs, not individual capture variants.
+- Started broad recovery run `38878544130` (150 URLs; resuming from the latest completed artifact). It is still active in its acquisition step and its final artifact has not yet been merged. Its workflow uses the prior recovery scheduler.
+- Fixed a starvation risk discovered while preparing continued batches: retried failures could be sorted ahead of untouched queued URLs on each resumable run. Recovery now processes all queued URLs ahead of failed retries while keeping the existing evidence-based resource priorities. Regression `test_untouched_queued_pages_precede_retries_of_failed_high_priority_urls` failed before the change and passes after it; the full suite passes 120 tests. Commit `dbea761` is pushed to `main`.
+- The queued follow-up `38880249610` was dispatched from `dbea761` for 400 URLs, resuming from `38878544130`. A local continuation loop is waiting for its completion, merging each artifact into the local checkpoint, and dispatching further 500-URL batches from the latest run while untouched resources remain. This loop is not a publication workflow. Preserve the local ignored `recovery/state.json` and `recovery/raw/` data; if the loop is interrupted, resume manually with `gh run download <latest-run-id> --name archive-recovery --dir <staging-dir>`, then `.venv311/bin/python -m restore merge-recovery --artifact <staging-dir> --run-id <latest-run-id>`, inspect `.venv311/bin/python -m restore status`, and dispatch `recover.yml` with that run ID as `resume_run`.
+- This is still partial acquisition: the active run has not completed, and no claim is made that every indexed page or alternate capture has been fetched. Keep candidate publication and source review flags unchanged.
+
 ## 2026-10-15
 
 - Extracted the complete handoff into the empty workspace and checked that it contained no `.git` directory or recovered site files.

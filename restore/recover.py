@@ -140,11 +140,20 @@ def resource_priority(record: dict) -> tuple[int,int]:
         return 6,len(url)
     return 7,len(url)
 
+def failure_has_untried_work(record:dict,state:State)->bool:
+    attempted={a.get('requested_capture') for a in record.get('attempts',[])}
+    if any(capture not in attempted for capture in
+           capture_candidates(record,state.data['target_capture'])):
+        return True
+    exact=state.data['index'].get('exact:'+record['url'],{})
+    return not exact.get('complete')
+
 def recover(state: State,client,max_files: int=150,retry_failed: bool=False,progress=None) -> dict:
     processed=0;visited=set()
     while processed<max_files:
         pending=[r for r in state.data['resources'].values() if r['url'] not in visited and
-                 (r['status']=='queued' or (retry_failed and r['status']=='failed'))]
+                 (r['status']=='queued' or
+                  (retry_failed and r['status']=='failed' and failure_has_untried_work(r,state)))]
         if not pending: break
         # Do not let a repeatedly failing, high-priority resource starve
         # untouched pages across resumable batches. Finish the queued frontier

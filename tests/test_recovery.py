@@ -200,6 +200,23 @@ def test_untouched_queued_pages_precede_retries_of_failed_high_priority_urls(tmp
     assert state.data['resources'][queued_url]['status']=='recovered'
     assert len(client.calls)==1 and queued_url in client.calls[0]
 
+def test_fully_exhausted_failure_is_not_retried_ahead_of_new_pages(tmp_path):
+    state=State(tmp_path)
+    failed=state.add(HOME,'html','seed',TARGET)
+    failed.update(status='failed',hints=[TARGET],captures=[],attempts=[
+        {'requested_capture':TARGET,'result':'failed'}])
+    state.data['index']['exact:'+HOME]={'complete':True,'pages':1,'rows':0}
+    retry_url=HOME+'blog/other-capture'
+    retry=state.add(retry_url,'html',HOME+'blog/',TARGET)
+    retry.update(status='failed',hints=[TARGET],captures=[])
+    state.data['index']['exact:'+retry_url]={'complete':True,'pages':1,'rows':1}
+    client=Client(lambda url:Payload(VALID,url,200,{'Content-Type':'text/html'}))
+
+    recover(state,client,max_files=1,retry_failed=True)
+
+    assert state.data['resources'][retry_url]['status']=='recovered'
+    assert len(client.calls)==1 and retry_url in client.calls[0]
+
 def test_capture_date_attempts_resume_in_bounded_batches(tmp_path):
     state=State(tmp_path);record=state.add(HOME,'html','seed',TARGET)
     record['captures']=[{'timestamp':stamp,'statuscode':'200'} for stamp in

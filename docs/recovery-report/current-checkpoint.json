@@ -8,42 +8,36 @@
     "viewport": "desktop, approximately 1680×800"
   },
   "candidate_build": {
-    "recovered_pages": 446,
-    "placeholder_pages": 758,
+    "recovered_pages": 449,
+    "placeholder_pages": 765,
     "local_source_assets": 417,
     "publish_approved": false,
-    "livejournal_html_captures": 5,
+    "livejournal_html_captures": 8,
     "livejournal_local_media_files": 20
   },
   "candidate_checks": {
     "root": {
-      "ok": false,
-      "errors": [
-        "/2009/blog/tourdates/ (linked from two recovered WordPress pages)",
-        "/2013/archive-query/27bed984677400b185e8/ (2010 WordPress attachment capture linked from a Squarespace-era page)"
-      ]
+      "ok": true,
+      "errors": []
     },
     "project_subpath": {
-      "ok": false,
-      "errors": [
-        "/bluescholars/2009/blog/tourdates/ (linked from two recovered WordPress pages)",
-        "/bluescholars/2013/archive-query/27bed984677400b185e8/ (2010 WordPress attachment capture linked from a Squarespace-era page)"
-      ]
+      "ok": true,
+      "errors": []
     }
   },
   "checkpoint": {
-    "resource_urls": 4893,
+    "resource_urls": 4956,
     "statuses": {
-      "queued": 3693,
-      "recovered": 1031,
-      "needs_review": 13,
+      "queued": 3752,
+      "recovered": 1034,
+      "needs_review": 14,
       "failed": 156,
       "excluded": 0
     },
     "indexed_capture_records": 8362,
     "index_complete": true,
-    "unique_downloaded_files": 840,
-    "downloaded_bytes": 63373118,
+    "unique_downloaded_files": 844,
+    "downloaded_bytes": 64208197,
     "failed_attempts": 624
   },
   "latest_import": {
@@ -58,12 +52,12 @@
     "note": "Artifact imported into local ignored recovery state; exact import timestamp was not recorded."
   },
   "latest_wayback_batch": {
-    "run_id": "38834520393",
-    "url": "https://github.com/keithah/bluescholars/actions/runs/38834520393",
-    "outcome": "2007 capture step completed and artifact preserved; later candidate build step failed.",
-    "era_2007_attempted": 373,
-    "era_2007_recovered": 368,
-    "candidate_build_failure": "KeyError caused by a dated image variant; builder fix and regression test now pass, but this workflow has not been rerun."
+    "run_id": "38840327453",
+    "url": "https://github.com/keithah/bluescholars/actions/runs/38840327453",
+    "outcome": "In progress at checkpoint refresh; first recovery step is running. Recovery artifact will be merged after it completes.",
+    "edition_era": "2007",
+    "max_files": 150,
+    "resume_run": "38834520393"
   },
   "older_edition_browser_observations": {
     "2007": "recovered homepage capture dated 2008-12-18 and August 2007 guestbook page; most linked routes remain placeholders; no full visual review recorded.",
@@ -77,7 +71,7 @@
     "common_crawl": "Prior broad index sweep reached 6 of 128 endpoints and saved 380 records; targeted 2009–2010 and 2023–40 samples were recovered. This is incomplete, and further Common Crawl work remains authorized.",
     "library_of_congress": "Direct catalog API lookup timed out; no absence conclusion.",
     "memento_time_travel": "Prior web-reader request inaccessible.",
-    "livejournal": "Separate /lj/ route includes five captured pages (Wayback and Common Crawl), 20 locally served 2007–2008 photos, four entries only on the 2011 root capture, missing original CSS, and two unresolved linked-image cases."
+    "livejournal": "Separate /lj/ archive has eight recovered HTML capture routes (complete Wayback host CDX index: 226 rows/115 URLs), 20 local photos, four entries only on the journal front page, unavailable original CSS, one missing image, plus two modern-interface captures held in needs_review."
   },
   "pages_enabled": false,
   "reviewed_source_build": {
@@ -107,16 +101,21 @@
   "updated_at": "2026-10-16",
   "tests": {
     "command": ".venv311/bin/python -m pytest -q",
-    "result": "114 passed"
+    "result": "116 passed"
   },
   "livejournal_archive": {
     "route": "/lj/",
-    "captures": 5,
+    "captures": 8,
     "local_photos": 20,
     "source_archives": [
       "Internet Archive Wayback",
       "Common Crawl"
     ],
-    "css": "not recovered; visual fidelity incomplete"
+    "css": "not recovered; visual fidelity incomplete",
+    "primary_capture": "20111002074201",
+    "alternate_capture_routes": 3,
+    "host_index_rows": 226,
+    "host_index_unique_urls": 115,
+    "modern_interface_captures_needs_review": 2
   }
 }

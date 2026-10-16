@@ -7,7 +7,7 @@ from restore.render import render_html,render_css
 from restore.build import build,promote
 from restore.check import check
 from restore.state import State,write_json
-from restore.urls import HOME,TARGET
+from restore.urls import HOME,TARGET,route
 
 RES={
  HOME+'site.css':{'kind':'css','local_path':'/assets/site.css'},
@@ -244,6 +244,41 @@ def test_livejournal_archive_is_a_separate_local_top_level_section(tmp_path):
     rendered=(tmp_path/'_candidate/lj/posts/16954.html').read_text()
     assert 'Captured post text.' in rendered
     assert 'http://bluescholars.livejournal.com/16954.html' not in rendered
+
+def test_livejournal_keeps_post_capture_variants_without_overwriting(tmp_path):
+    fixture_root(tmp_path);s=State(tmp_path)
+    home='http://bluescholars.livejournal.com/'
+    post=home+'16954.html'
+    add_raw(s,post,'html',b'<html><body><p>Older post capture.</p></body></html>')
+    older=s.data['resources'].pop(post)
+    older['actual_capture']='20090125012333'
+    older['source_archive']='Internet Archive Wayback'
+    s.data['resources'][post+'@@wayback:20090125012333:'+older['sha256'][:12]]=older
+    add_raw(s,post,'html',b'<html><body><p>Newer post capture.</p></body></html>')
+    build(tmp_path,tmp_path/'_candidate','',candidate=True)
+    assert 'Newer post capture.' in (tmp_path/'_candidate/lj/posts/16954.html').read_text()
+    alternate=tmp_path/'_candidate/lj/captures/20090125012333/posts/16954.html'
+    assert 'Older post capture.' in alternate.read_text()
+
+def test_unrecovered_edition_links_get_gap_pages_or_honest_cross_edition_bridges(tmp_path):
+    fixture_root(tmp_path);s=State(tmp_path)
+    old_source=HOME+'blog/2010/09/source-post/'
+    add_raw(s,old_source,'html',b'<html><body><a href="/blog/tourdates/">Tour dates</a></body></html>')
+    s.data['resources'][old_source]['actual_capture']='20100626072734'
+    squarespace_post=HOME+'blog/linked-post/'
+    attachment=HOME+'blog/?attachment_id=2764'
+    add_raw(s,squarespace_post,'html',b'<html><body><a href="/blog/?attachment_id=2764">Attachment</a></body></html>')
+    s.data['resources'][squarespace_post]['actual_capture']='20210529010817'
+    add_raw(s,attachment,'html',b'<html><body><p>2010 attachment capture.</p></body></html>')
+    s.data['resources'][attachment]['actual_capture']='20101219152112'
+    s.save()
+    report=build(tmp_path,tmp_path/'_candidate','',candidate=True)
+    tourdates=tmp_path/'_candidate/2009/blog/tourdates/index.html'
+    attachment_alias=tmp_path/'_candidate/2013/archive-query'/route(attachment).split('/')[-2]/'index.html'
+    assert 'not recovered' in tourdates.read_text().lower()
+    assert '/2009/archive-query/' in attachment_alias.read_text()
+    assert report['placeholder_pages'] >= 1
+    assert check(tmp_path/'_candidate','')==[]
 
 def test_selected_edition_link_gets_local_gap_alias_for_unrecovered_target(tmp_path):
     fixture_root(tmp_path);s=State(tmp_path)

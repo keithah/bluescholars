@@ -12,11 +12,11 @@
 ## Current evidence
 
 - Public repository: `https://github.com/keithah/bluescholars`, branch `main`; authenticated GitHub CLI account `keithah`.
-- Wayback domain checkpoint: complete; report records 8,178 indexed captures. After importing the partial 2007 recovery artifact, the local state has 4,259 resource records and 8,319 capture rows attached (the saved acquisition report counted 8,178 rows before the merge). Capture metadata is not equivalent to recovered bytes.
+- Wayback domain checkpoint: complete; report records 8,178 indexed captures. After importing the partial 2007 recovery artifact, the local state has 4,956 resource records and 8,362 capture rows attached (the saved acquisition report counted 8,178 rows before the merge). Capture metadata is not equivalent to recovered bytes.
 - Promoted source catalog: 3,268 resource records; 97 unique files under `source/raw/` are tracked. The publication and visual-review flags remain false.
-- The unreviewed candidate currently has 446 recovered pages, 758 placeholders, and 417 local source assets. The separate LiveJournal route includes five archived HTML captures and 20 locally served 2007–2008 photos; its original CSS remains missing. Root and `/bluescholars/` candidate checks each expose three link occurrences across two unresolved routes; see [the current checkpoint](recovery-report/current-checkpoint.json).
-- The suite passes 114 tests; see [verification](VERIFICATION.md).
-- The 2007 action `38834520393` recovered 368 of 373 selected responses, then its candidate build failed on a dated image-variant key. That code defect is fixed and tested; the workflow still needs a rerun. The previous `38834361363` continuation failed before acquisition during artifact extraction.
+- The unreviewed candidate currently has 449 recovered pages, 765 placeholders, and 417 local source assets. The separate LiveJournal route includes eight archived HTML capture routes and 20 locally served 2007–2008 photos; its original CSS remains missing. Root and `/bluescholars/` candidate link checks now pass with zero errors; see [the current checkpoint](recovery-report/current-checkpoint.json).
+- The suite passes 116 tests; see [verification](VERIFICATION.md).
+- The 2007 continuation `38840327453` is currently running from the preserved `38834520393` artifact (150-file bounded batch); merge its artifact after completion. Earlier recovery `38834520393` retrieved 368 of 373 selected responses, and the dated-image builder defect is now fixed and regression-tested. The previous `38834361363` continuation failed before acquisition during artifact extraction.
 - Pages API returned 404 when checked, so Pages is disabled. No deployment URL exists yet.
 
 ## Remaining before publication

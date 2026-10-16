@@ -136,12 +136,15 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
     record_by_identity={}
     for key,value in records.items():
         record_by_identity.setdefault(identity(value.get('url',key)),key)
+    linked_html_routes=[]
     for source_key,r in list(usable_variants.items()):
         url=r['_source_url']
         if r['kind']=='html' and identity(url) in selected_page_ids:
             source_prefix=edition_prefix(url,r)
             for ref in discover_html(raw[source_key].decode('utf-8',errors='replace'),r.get('final_original',url)):
                 discovered=dict(ref);referrer=discovered.pop('referrer','')
+                if discovered.get('kind')=='html':
+                    linked_html_routes.append((source_prefix,discovered['url']))
                 discovered.update(status='queued',referrers=[referrer] if referrer else [],edition_prefixes=[source_prefix])
                 target_id=identity(ref['url'])
                 existing_key=record_by_identity.get(target_id)
@@ -181,7 +184,9 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
         elif path=='/profile': local='/lj/profile/'
         else:
             from urllib.parse import quote
-            local='/lj/posts/'+quote(path.rsplit('/',1)[-1],safe='.-_')
+            post_path='/posts/'+quote(path.rsplit('/',1)[-1],safe='.-_')
+            if newest_by_url[url] is r: local='/lj'+post_path
+            else: local='/lj/captures/'+r.get('actual_capture','unknown')+post_path
         lj_route_by_key[key]=local
     # Resolver URLs use source URLs, while variant records retain exact capture
     # provenance. Map each canonical LiveJournal URL to its latest recovered
@@ -304,9 +309,14 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
                                'source_archive':r.get('source_archive'),'status':'recovered'})
     if lj_page_report:
         from datetime import datetime
-        labels={'/lj/journal/':'Journal front page','/lj/profile/':'LiveJournal profile',
+        labels={'/lj/journal/':'Journal front page (October 2011)',
+                '/lj/profile/':'LiveJournal profile',
                 '/lj/posts/16954.html':'“friday mixdown” · Sep 30, 2007',
-                '/lj/posts/17222.html':'“The Program” · Oct 4, 2007'}
+                '/lj/posts/17222.html':'“The Program” · Oct 4, 2007',
+                '/lj/captures/20110812180628/':'Journal front page (August 2011)',
+                '/lj/captures/20100209202330/':'Journal front page (Common Crawl, 2010)',
+                '/lj/captures/20090125012333/posts/16954.html':'“friday mixdown” · 2009 capture',
+                '/lj/captures/20110812180252/posts/17222.html':'“The Program” · August 2011 capture'}
         capture_items=[]
         for p in sorted(lj_page_report,key=lambda x:x['path']):
             stamp=p.get('actual_capture') or ''
@@ -333,6 +343,37 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
         lj_index=page_shell('LiveJournal archive','<p>A separately hosted Blue Scholars journal, preserved separately from the official website editions.</p><p>No LiveJournal page captures have been recovered into this build yet.</p>')
         lj_index=lj_index.replace('</head>','<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="'+base+'/assets/archive-ui.css"></head>')
         _write_page(output,'/lj/',lj_index)
+    route_notices=[]
+    reported_paths={p['path'] for p in page_report}
+    recovered_by_identity={}
+    for p in page_report:
+        canonical=p.get('canonical_url','')
+        if canonical and p['status']=='recovered':
+            recovered_by_identity.setdefault(identity(canonical),p['path'])
+    for prefix,target_url in linked_html_routes:
+        try: target_path=prefix+route(target_url)
+        except ValueError: continue
+        if target_path in pages or target_path in reported_paths: continue
+        target_id=identity(target_url)
+        edition_path=recovered_by_identity.get(target_id)
+        if edition_path:
+            body=('<p>This destination has source bytes in a different historical edition. '
+                  'To keep the original generations separate, its recovered page is here:</p>'
+                  '<p><a href="'+base+html.escape(edition_path,quote=True)+'">Open the recovered edition copy</a></p>')
+            status='edition_bridge'
+        else:
+            body=('<p>This linked page has not been recovered for this edition. '
+                  'No historical page content has been invented.</p>'
+                  '<p><a href="'+base+'/archive-status/">View the recovery inventory</a></p>')
+            status='not_recovered'
+        notice=page_shell('Historical link not recovered',body)
+        notice=notice.replace('</head>','<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="'+base+'/assets/archive-ui.css"></head>')
+        _write_page(output,target_path,notice)
+        page_report.append({'path':target_path,'source':target_url,'canonical_url':target_url,
+                            'source_archive':None,'status':status,'actual_capture':None})
+        reported_paths.add(target_path)
+        route_notices.append({'path':target_path,'status':status})
+    placeholders+=len(route_notices)
     # Each platform generation gets its own index. Unrecovered editions are
     # documented as gaps instead of being filled with invented historical copy.
     for prefix,label in (('/2007','2007 site'),('/2009','2009 WordPress site'),

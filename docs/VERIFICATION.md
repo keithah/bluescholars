@@ -2,12 +2,12 @@
 
 ## Automated checks
 
-- `.venv311/bin/python -m pytest -q` — **114 passed** (including Arquivo.pt page-history/domain-CDX resume tests and recovery progress reporting).
+- `.venv311/bin/python -m pytest -q` — **116 passed** (including Arquivo.pt page-history/domain-CDX resume tests and recovery progress reporting).
 - `.venv311/bin/python -m compileall -q restore tests` — passed.
 - `bash -n scripts/*.sh` — passed.
 - `git diff --check` on implementation, tests, and documentation — passed. Original archived HTML is preserved byte-for-byte, including its source whitespace, so the check excludes `source/raw/` and its original-HTML test fixture.
 - `actionlint .github/workflows/*.yml` — passed.
-- Unreviewed candidate checks at `/` and `/bluescholars/` report three link occurrences pointing to two unresolved routes: `/2009/blog/tourdates/` and `/2013/archive-query/27bed984677400b185e8/`. The `/lj/` pages have no broken local links or automatic remote resources.
+- After adding explicit notices/bridges without copying pages across historical editions, the root and `/bluescholars/` candidate checks pass with zero local-link errors. The `/lj/` pages have no broken local links or automatic remote resources.
 - Reviewed-source build/check at `/` — passed (57 recovered pages, 305 placeholders, 31 local source assets).
 - Reviewed-source build/check at `/bluescholars/` — passed with the same counts and no remote automatic asset dependency.
 - The checker verifies no broken local links or automatic remote resources. External navigation links, such as historical social profiles and video links, remain ordinary anchors.
@@ -36,4 +36,9 @@ The project-subpath page at `http://127.0.0.1:8080/bluescholars/2013/` rendered 
 
 ## LiveJournal archive preview
 
-The root gateway now links to `/lj/`, separate from the three official website generations. The browser preview at `http://127.0.0.1:8083/lj/` and the project-path preview at `http://127.0.0.1:8084/bluescholars/lj/` each showed the five captured pages; the individual 2007 post retained its text/comments and six local photos. A browser screenshot was visually inspected in-session but no screenshot file was saved. The CSS bundle was not recovered, so this visual inspection does not verify the original LiveJournal design.
+The root gateway now links to `/lj/`, separate from the three official website generations. The browser preview at `http://127.0.0.1:8083/lj/` and the project-path preview at `http://127.0.0.1:8084/bluescholars/lj/` each showed the eight capture routes; the individual 2007 post retained its text/comments and six local photos. A browser screenshot was visually inspected in-session but no screenshot file was saved. The CSS bundle was not recovered, so this visual inspection does not verify the original LiveJournal design.
+
+
+The October 2011 LiveJournal captures were checked in the browser at both root and project-prefix previews. The `/lj/` index lists all eight saved capture routes with dates; its original CSS bundle is still unavailable. Candidate generation/check passed independently for `/` and `/bluescholars/` (449 recovered pages, 765 placeholders, 417 local assets, zero link errors). This is technical verification, not a human visual approval or release sign-off.
+
+A direct scan of the generated candidate HTML (`src`, `poster`, embedded data, and stylesheets) and CSS (`url()`) found zero automatic remote resource references. External web links remain ordinary clickable links.

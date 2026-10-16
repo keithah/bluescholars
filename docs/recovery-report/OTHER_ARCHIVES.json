@@ -146,6 +146,30 @@
           "sha256": "b995e34843802ca1911ca1673027e7bc7575976f4403fe0b804f1f77e8add884",
           "route": "/lj/posts/17222.html",
           "notes": "Individual 2007-10-04 post “The Program”, including comments."
+        },
+        {
+          "timestamp": "20111002074201",
+          "url": "http://bluescholars.livejournal.com/",
+          "kind": "html",
+          "sha256": "c3224fded1a9251c567926254490da379d9142301717b1797613c1817cd7663e",
+          "route": "/lj/journal/",
+          "notes": "Latest old-layout front page found by complete host CDX enumeration; includes six full visible 2007–2008 entries."
+        },
+        {
+          "timestamp": "20111002073201",
+          "url": "http://bluescholars.livejournal.com/16954.html",
+          "kind": "html",
+          "sha256": "893e2a0b2f7f1cf4c33328a90bc6dca13a66aca47a6662408ee6608ade27e863",
+          "route": "/lj/posts/16954.html",
+          "notes": "Latest old-layout capture of the individual 2007-09-30 “friday mixdown” post, including comments."
+        },
+        {
+          "timestamp": "20111002073215",
+          "url": "http://bluescholars.livejournal.com/17222.html",
+          "kind": "html",
+          "sha256": "3af3bbfda5f52351f01e3b5c30e99443921c57b2a4d1c6f542ab45f5889b05f3",
+          "route": "/lj/posts/17222.html",
+          "notes": "Latest old-layout capture of the individual 2007-10-04 “The Program” post, including comments."
         }
       ],
       "root_capture_content": {
@@ -194,6 +218,71 @@
         "No original LiveJournal CSS bundle was acquired; exact bundle replay at 20110812180628 returned Wayback HTTP 404. The renderer preserves safe captured markup but applies local restoration styling, so the original LiveJournal visual design is incomplete.",
         "Four of the six entries visible on the 2011 index have no standalone article capture in the queried Wayback exact URL histories; they remain readable only in the saved index.",
         "Common Crawl collection scans were partial and include endpoint failures."
+      ],
+      "host_index": {
+        "rows": 226,
+        "unique_urls": 115,
+        "status_counts": {
+          "200": 152,
+          "404": 40,
+          "301": 24,
+          "-": 10
+        },
+        "mime_counts": {
+          "text/html": 161,
+          "text/plain": 19,
+          "warc/revisit": 10,
+          "text/xml": 9,
+          "unknown": 6,
+          "application/json": 5,
+          "image/vnd.microsoft.icon": 5,
+          "text/css": 5,
+          "application/rdf+xml": 4,
+          "none/none": 1,
+          "image/png": 1
+        },
+        "complete": true,
+        "pages": 1,
+        "raw_index_local": "recovery/index/7c082f3e70152fff88ea73d86ad6b1047b5a22cd09b6c5249467d3392b836a65.json"
+      },
+      "alternate_capture_routes": [
+        {
+          "timestamp": "20110812180628",
+          "url": "http://bluescholars.livejournal.com/",
+          "route": "/lj/captures/20110812180628/",
+          "sha256": "90b5c689488b1124f3d8ab4f4d04792d057a24482cf223f8c29d1f7acc06ab5e"
+        },
+        {
+          "timestamp": "20090125012333",
+          "url": "http://bluescholars.livejournal.com/16954.html",
+          "route": "/lj/captures/20090125012333/posts/16954.html",
+          "sha256": "16c0c8d11cd002a032829f1d3992e0a50ee2e349a2ddf916251eced1bd812d6d"
+        },
+        {
+          "timestamp": "20110812180252",
+          "url": "http://bluescholars.livejournal.com/17222.html",
+          "route": "/lj/captures/20110812180252/posts/17222.html",
+          "sha256": "b995e34843802ca1911ca1673027e7bc7575976f4403fe0b804f1f77e8add884"
+        }
+      ],
+      "modern_interface_captures": [
+        {
+          "timestamp": "20250602155501",
+          "url": "https://bluescholars.livejournal.com/",
+          "kind": "html",
+          "sha256": "337788e62127b5c1a4e8dd4acbd93f0b4a87de8ec6a69291259757996907ac27",
+          "bytes": 673739,
+          "status": "needs_review",
+          "notes": "Modern LiveJournal interface, six historical entries and 63 image references; not included in old-layout rendering. Several CSS bundles need separate acquisition/review."
+        },
+        {
+          "timestamp": "20231104011704",
+          "url": "https://bluescholars.livejournal.com/4807.html",
+          "kind": "html",
+          "sha256": "d2cbd5161874fedd9952022670ff6bc392c1265a6a75d9dfb87dd4ece8980f0c",
+          "status": "needs_review",
+          "notes": "Modern interface capture of a 2005 post; not yet inspected/promoted."
+        }
       ]
     },
     "Common Crawl LiveJournal": {

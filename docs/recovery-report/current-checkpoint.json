@@ -240,10 +240,10 @@
     "capture_attempts_per_resource_per_batch": 3
   },
   "queued_consolidated_run": {
-    "run_id": "38890017329",
-    "url": "https://github.com/keithah/bluescholars/actions/runs/38890017329",
+    "run_id": "38890188803",
+    "url": "https://github.com/keithah/bluescholars/actions/runs/38890188803",
     "status": "queued",
-    "max_files": 500,
+    "max_files": 2000,
     "resume_runs": [
       "38824767784",
       "38834520393",
@@ -256,12 +256,24 @@
       "38878544130",
       "38880249610"
     ],
-    "head_commit": "1e522043e8707cf0c7e7033eb0855b655249527c",
-    "supersedes_run": "38889871799"
+    "head_commit": "236b8e54b07e6d0d1363ad14c8061e61593989ae",
+    "supersedes_run": "38890017329"
   },
   "superseded_queued_run": {
     "run_id": "38889871799",
     "status": "cancelled_before_start",
     "reason": "queued on a stale code revision before the exhausted-failure retry filter was pushed"
-  }
+  },
+  "superseded_queued_runs": [
+    {
+      "run_id": "38889871799",
+      "status": "cancelled_before_start",
+      "reason": "queued on stale code before the exhausted-failure retry filter was pushed"
+    },
+    {
+      "run_id": "38890017329",
+      "status": "cancelled_before_start",
+      "reason": "raised batch ceiling to 2000 while preserving the 90-minute runner timeout"
+    }
+  ]
 }

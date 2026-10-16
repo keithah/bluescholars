@@ -445,7 +445,7 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
     gateway='<p>Choose a preserved website generation. Each edition is built from its own dated source material; gaps remain marked.</p><nav class="edition-archive">'
     for prefix,label in (('/2007/','2007'),('/2009/','2009'),('/2013/','2013 · first located Squarespace')):
         gateway+='<a class="edition" href="'+base+prefix+'">'+html.escape(label)+'</a>'
-    gateway+='<a class="lj-archive" href="'+base+'/lj/">LiveJournal archive</a>'
+    gateway+='<a class="lj-archive" href="'+base+'/lj/" aria-label="LiveJournal archive">lj</a>'
     gateway+='</nav><p><a href="'+base+'/archive-status/">Recovery status and source gaps</a></p>'
     hub=page_shell('Blue Scholars archive',gateway)
     hub=hub.replace('</head>','<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="'+base+'/assets/archive-ui.css"></head>')

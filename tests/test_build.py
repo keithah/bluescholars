@@ -226,7 +226,7 @@ def test_root_is_a_gateway_to_separate_historical_editions(tmp_path):
     root=BeautifulSoup((tmp_path/'_site/index.html').read_text(),'html.parser')
     assert root.find('h1',string='Blue Scholars archive')
     assert {a.get('href') for a in root.select('a.edition')}=={'/2007/','/2009/','/2013/'}
-    assert root.find('a',href='/lj/',string='LiveJournal archive')
+    assert root.find('a',href='/lj/',string='lj')
     assert 'Original Squarespace homepage' in (tmp_path/'_site/2013/index.html').read_text()
     assert all((tmp_path/'_site'/year/'index.html').is_file() for year in ('2007','2009','2013'))
 
@@ -238,7 +238,7 @@ def test_livejournal_archive_is_a_separate_local_top_level_section(tmp_path):
     add_raw(s,post,'html',b'<html><body><h1>friday mixdown</h1><p>Captured post text.</p></body></html>')
     build(tmp_path,tmp_path/'_candidate','/bluescholars',candidate=True)
     root=BeautifulSoup((tmp_path/'_candidate/index.html').read_text(),'html.parser')
-    assert root.find('a',href='/bluescholars/lj/',string='LiveJournal archive')
+    assert root.find('a',href='/bluescholars/lj/',string='lj')
     index=BeautifulSoup((tmp_path/'_candidate/lj/index.html').read_text(),'html.parser')
     assert index.find('a',href='/bluescholars/lj/posts/16954.html')
     rendered=(tmp_path/'_candidate/lj/posts/16954.html').read_text()

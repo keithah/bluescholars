@@ -5,16 +5,17 @@
     "human_review_claimed": false,
     "reference": "https://web.archive.org/web/20210529010817/http://bluescholars.com/",
     "result": "reviewed-source logo, left navigation, main image scale and crop visually align with reference after accounting for Wayback toolbar and local restoration notice",
-    "viewport": "desktop, approximately 1680×800"
+    "viewport": "desktop, approximately 1680\u00d7800"
   },
   "candidate_build": {
     "recovered_pages": 449,
     "placeholder_pages": 765,
-    "local_source_assets": 419,
+    "local_source_assets": 420,
     "publish_approved": false,
     "livejournal_html_captures": 8,
     "livejournal_local_media_files": 20,
-    "derived_pages": 4
+    "derived_pages": 4,
+    "candidate_source": "local merged checkpoint, rebuilt and checked at root and /bluescholars/"
   },
   "candidate_checks": {
     "root": {
@@ -29,36 +30,45 @@
   "checkpoint": {
     "resource_urls": 4960,
     "statuses": {
-      "queued": 3754,
-      "recovered": 1036,
+      "queued": 3717,
+      "recovered": 1037,
       "needs_review": 14,
-      "failed": 156,
+      "failed": 192,
       "excluded": 0
     },
-    "indexed_capture_records": 8874,
+    "indexed_capture_records": 8891,
     "index_complete": true,
-    "unique_downloaded_files": 845,
-    "downloaded_bytes": 64215540,
-    "failed_attempts": 624
+    "unique_downloaded_files": 846,
+    "downloaded_bytes": 64227608,
+    "failed_attempts": 1014,
+    "local_updated_at": "2026-10-16T03:48:43Z"
   },
   "latest_import": {
-    "run_id": "38834520393",
-    "resources_in_artifact": 3903,
-    "copied_raw_files": 275,
-    "copied_index_files": 2,
-    "duplicate_files": 226,
-    "new_resource_records": 483,
-    "merged_records": 3418,
+    "run_id": "38840327453",
+    "artifact_size_bytes": 68823757,
+    "resources_in_artifact": 3904,
+    "copied_raw_files": 1,
+    "copied_index_files": 1,
+    "duplicate_files": 504,
+    "new_resource_records": 0,
+    "new_variant_records": 0,
+    "merged_records": 3902,
     "conflicting_files": [],
-    "note": "Artifact imported into local ignored recovery state; exact import timestamp was not recorded."
+    "imported_at": "2026-10-16T03:48:43Z"
   },
   "latest_wayback_batch": {
     "run_id": "38840327453",
     "url": "https://github.com/keithah/bluescholars/actions/runs/38840327453",
-    "outcome": "In progress at checkpoint refresh; first recovery step is running. Recovery artifact will be merged after it completes.",
+    "outcome": "Completed. Wayback recovery step succeeded; Common Crawl was skipped; Arquivo.pt indexed 35 rows but had no new records to fetch; the 2007 era selection recovered one image and reported four unsupported Flash files. Candidate build completed; offline check failed on two 2009 edition links to /2009/blog/tourdates/ (three link instances). Artifact downloaded and merged locally.",
     "edition_era": "2007",
     "max_files": 150,
-    "resume_run": "38834520393"
+    "max_index_pages": 1,
+    "resume_run": "38834520393",
+    "candidate_check_errors": [
+      "2009/blog/2010/09/video-green-river-community-college/index.html: missing local target /2009/blog/tourdates/",
+      "2009/blog/page/3/index.html: missing local target /2009/blog/tourdates/"
+    ],
+    "artifact_retention_days": 30
   },
   "older_edition_browser_observations": {
     "2007": "recovered homepage capture dated 2008-12-18 and August 2007 guestbook page; most linked routes remain placeholders; no full visual review recorded.",
@@ -68,8 +78,8 @@
     "archive_it": "Official /all CDX/C domain query returned HTTP 403, matching Archive-It guidance that the global endpoint is temporarily blocked. Collection-specific API queries need a collection ID; none located.",
     "archive_it_search": "Focused web search yielded no confirmed site-specific copy.",
     "archive_ph": "Prior request returned HTTP 429.",
-    "arquivo_pt": "Three original HTML root captures recovered previously; full-domain mode has not yet run in the current continuation.",
-    "common_crawl": "Prior broad index sweep reached 6 of 128 endpoints and saved 380 records; targeted 2009–2010 and 2023–40 samples were recovered. This is incomplete, and further Common Crawl work remains authorized.",
+    "arquivo_pt": "Latest full-domain run queried 35 rows, selected three known 2013+ captures, and downloaded no new records.",
+    "common_crawl": "Prior broad index sweep reached 6 of 128 endpoints and saved 380 records; targeted 2009\u20132010 and 2023\u201340 samples were recovered. This is incomplete, and further Common Crawl work remains authorized.",
     "library_of_congress": "Direct catalog API lookup timed out; no absence conclusion.",
     "memento_time_travel": "Prior web-reader request inaccessible.",
     "livejournal": "Separate /lj/ archive has eight recovered HTML capture routes from a complete host CDX index (226 rows/115 URLs), four article reading views derived from exact entry blocks in the October 2011 index capture (not standalone responses), 20 local photos, custom CSS local, platform CSS unavailable, one missing image, plus two modern-interface captures held in needs_review."
@@ -124,5 +134,22 @@
     ],
     "custom_css_sha256": "87560599e9fb5ddc5cdba0675164f3bd80324540d346fc6ae38c26878e2f34ce",
     "platform_css": "not recovered after exact-URL searches"
+  },
+  "era_recovery": {
+    "2007": {
+      "attempted_urls": 5,
+      "recovered": 1,
+      "unsupported_capture_failures": 4,
+      "recovered_source": "http://www.bluescholars.com/images/press/bs_chinatown.tif",
+      "capture": "20070726233545",
+      "bytes": 8017828,
+      "sha256": "96f967aabee1f9a904fef8652f8693a2716d286dcf2d38d859a930da7572265b",
+      "unsupported": [
+        "http://www.bluescholars.com:80/player/player_bslp2005.swf",
+        "http://www.bluescholars.com:80/player/player_longmarch.swf",
+        "http://www.bluescholars.com/player/player_longmarch.swf",
+        "http://www.bluescholars.com/player/player_bslp2005.swf"
+      ]
+    }
   }
 }

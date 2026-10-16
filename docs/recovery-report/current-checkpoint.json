@@ -1,4 +1,12 @@
 {
+  "browser_visual_review": {
+    "candidate_limitation": "unreviewed candidate lacks main Squarespace styling and hero image; it is not the reviewed release build",
+    "edition": "/2013/",
+    "human_review_claimed": false,
+    "reference": "https://web.archive.org/web/20210529010817/http://bluescholars.com/",
+    "result": "reviewed-source logo, left navigation, main image scale and crop visually align with reference after accounting for Wayback toolbar and local restoration notice",
+    "viewport": "desktop, approximately 1680\u00d7800"
+  },
   "candidate_build": {
     "local_source_assets": 106,
     "placeholder_pages": 723,
@@ -59,7 +67,35 @@
     "run_id": "38824767784",
     "url": "https://github.com/keithah/bluescholars/actions/runs/38824767784"
   },
+  "older_edition_browser_observations": {
+    "2007": "no page bytes; explicit gap screen only",
+    "2009": "edition index lists recovered Common Crawl/Wayback pages alongside a large number of route gaps; inspect representative recovered post after the next acquisition"
+  },
+  "other_archive_search": {
+    "archive_it_search": "Focused web search yielded no confirmed site-specific copy.",
+    "archive_ph": "Prior request returned HTTP 429.",
+    "arquivo_pt": "Three original HTML root captures recovered previously; full-domain mode has not yet run in the current continuation.",
+    "common_crawl": "Prior broad index sweep reached 6 of 128 endpoints and saved 380 records; targeted 2009\u20132010 and 2023\u201340 samples were recovered. This is incomplete, and further Common Crawl work remains authorized.",
+    "library_of_congress": "Direct catalog API lookup timed out; no absence conclusion.",
+    "memento_time_travel": "Prior web-reader request inaccessible."
+  },
   "pages_enabled": false,
+  "reviewed_source_build": {
+    "project_subpath": {
+      "local_source_assets": 31,
+      "ok": true,
+      "placeholder_pages": 305,
+      "recovered_pages": 57
+    },
+    "publish_approved": false,
+    "remote_automatic_asset_dependencies": 0,
+    "root": {
+      "local_source_assets": 31,
+      "ok": true,
+      "placeholder_pages": 305,
+      "recovered_pages": 57
+    }
+  },
   "scope": "unreviewed local recovery checkpoint; separate 2007, 2009 WordPress, and 2013+ Squarespace editions",
   "source_collection": {
     "catalog_records": 3268,

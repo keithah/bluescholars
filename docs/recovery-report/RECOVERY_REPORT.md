@@ -1,6 +1,6 @@
 # Blue Scholars historical recovery report
 
-**Updated:** October 15, 2026. **Scope:** separate copies of the 2007, 2009/WordPress, and Squarespace-era sites, with the May 29, 2021 homepage as the Squarespace visual reference.
+**Updated:** October 16, 2026. **Scope:** separate copies of the 2007, 2009/WordPress, and Squarespace-era sites, with the May 29, 2021 homepage as the Squarespace visual reference.
 
 ## Evidence collected
 
@@ -25,7 +25,11 @@ Common Crawl uses independent snapshots; identical capture hashes are deduplicat
 
 ### Arquivo.pt
 
-The Arquivo.pt version-history query returned 12 root-page captures from 2017–2023. Three successful 200 responses (April 2018, July 2018, and October 2019) were retrieved as original HTML and retained as independent variants. The other statuses did not yield site-body bytes and are recorded as capture metadata, not as recovered pages. A broader follow-up now uses Arquivo.pt's documented domain CDX endpoint to enumerate indexed site URLs, preserving the raw index and downloading the latest 200 response per URL in each of the 2007, 2009, and 2013+ editions. The full-domain Arquivo.pt scan is still unverified against live results: the latest 2007 workflow hit its 90-minute job limit during Wayback recovery, before reaching the Arquivo.pt step. A bounded continuation is queued.
+The Arquivo.pt version-history query returned 12 root-page captures from 2017–2023. Three successful 200 responses (April 2018, July 2018, and October 2019) were retrieved as original HTML and retained as independent variants. The other statuses did not yield site-body bytes and are recorded as capture metadata, not as recovered pages. A broader follow-up now uses Arquivo.pt's documented domain CDX endpoint to enumerate indexed site URLs, preserving the raw index and downloading the latest 200 response per URL in each of the 2007, 2009, and 2013+ editions. The full-domain Arquivo.pt scan is still unverified against live results: the latest 2007 workflow hit its 90-minute job limit during Wayback recovery, before reaching the Arquivo.pt step. The corrected 2007 workflow `38834520393` is in progress; its Wayback dependency-recovery step began at 2026-10-16 01:20 UTC. Arquivo.pt has not yet been reached in this run.
+
+### Other archive checks
+
+The Library of Congress documents wildcard capture browsing for exact URLs; a focused catalog API query for `bluescholars.com` timed out without a response, so no conclusion is drawn from that service. Focused web searches for Archive-It, LoC, and other public indexes did not surface a specific independent site copy. A previous Archive.ph request was rate-limited (HTTP 429), and the previous Memento Time Travel query could not be accessed through the research reader. These are access/search limitations, not evidence that those archives contain no material. The Library of Congress documents its search interface at [Tips on Searching the Web Archive](https://www.loc.gov/programs/web-archiving/for-researchers/searching-the-web-archive/).
 
 ## Current saved source collection
 
@@ -35,7 +39,7 @@ The merged local checkpoint records 622 recovered, 11 review-needed, 157 failed,
 
 ## Current reconstruction and verification
 
-The static builder produces a gateway and separate `/2007/`, `/2009/`, and `/2013/` editions. Candidate output is clearly separate from promoted sources. The current candidate build contains 411 recovered pages, 723 source-gap placeholders, and 106 local source assets. Checks at both `/` and `/bluescholars/` report the missing 2009 `/blog/tourdates/` route (two links) and a 2013-era link to the recovered 2010 WordPress attachment query. See `current-checkpoint.json`; no successful check is claimed.
+A fresh desktop browser comparison of the reviewed-source `/2013/` page against the May 29, 2021 Wayback reference shows the logo, navigation, photo scale and crop align; see `current-checkpoint.json`. This is agent visual inspection, not human approval. The `/2007/` landing is still a gap screen because no original page bytes have been recovered; `/2009/` currently lists recovered items and gaps separately only at the route level, and is not yet a faithful final edition. The static builder produces a gateway and separate `/2007/`, `/2009/`, and `/2013/` editions. Candidate output is clearly separate from promoted sources. The current candidate build contains 411 recovered pages, 723 source-gap placeholders, and 106 local source assets. The current unreviewed candidate checks at both `/` and `/bluescholars/` report two unresolved routes (three link occurrences). The reviewed-source build/check passes at both paths (57 recovered pages, 305 placeholders, 31 source assets) with no remote automatic asset dependency. This is an incomplete reviewed collection and is not release approval. See `current-checkpoint.json`.
 
 The automated suite has 105 passing tests (including the new conservative recovery-artifact merge regression tests). Pages is not enabled. `source/review.json` still has `visual_reviewed: false` and `publish_approved: false`.
 

@@ -1,6 +1,6 @@
 # Recovery gap report
 
-**Updated:** October 15, 2026. This report distinguishes a checked limitation from a search still in progress. Network failures and unqueried URLs are not evidence that a resource is absent from every archive.
+**Updated:** October 16, 2026. This report distinguishes a checked limitation from a search still in progress. Network failures and unqueried URLs are not evidence that a resource is absent from every archive.
 
 ## Checked limitations
 
@@ -9,21 +9,22 @@
 - Font binaries are excluded by the repository policy, so original declared font families may fall back to system fonts.
 - Current reviewed source bytes include only three images. The unreviewed candidate now builds 106 local source assets alongside generated UI assets; many observed gallery, blog, and legacy-site images remain unavailable locally.
 - The Common Crawl all-collection endpoint sweep had 122 of 128 index queries fail locally. Six collections yielded 380 site responses. Separate targeted 2009–2010 and 2023–40 samples added material, but no complete Common Crawl sweep has passed.
-- Arquivo.pt has yielded three original root-page bodies from its exact URL-history API. Its complete domain CDX index and per-era page/style/image captures are now implemented as a bounded, resumable follow-up, but have not yet been run.
+- Arquivo.pt has yielded three original root-page bodies from its exact URL-history API. Its complete domain CDX index and per-era page/style/image capture step is implemented; the 2007 recovery run is currently in Wayback response retrieval and has not reached the Arquivo.pt step yet.
+- A focused Library of Congress Web Archives URL lookup is available in their documented archive interface, but our direct catalog API request timed out without a response. Search-engine results for the domain did not identify an LoC item. This is unverified, not a confirmed absence. Memento Time Travel was inaccessible in the existing web-reader attempt; Archive.ph returned HTTP 429 in the prior attempt. No independent copy has been confirmed from those services.
 - The first Squarespace-era root located in Wayback is September 21, 2013; the last intact homepage capture observed so far is September 30, 2023. The 2024 domain capture is post-takeover material and is excluded from the historical Squarespace edition.
 
 ## Still being searched
 
-- **2007:** the CDX inventory contains 2007 homepage captures, including July 24, 2007, but no 2007 page body has been saved in the current source collection. The first 2007 action recovered no complete per-era selection before timing out. Its artifact was merged and the first bounded continuation `38834361363` failed during artifact extraction before recovery began; the resume workflow has since been corrected. Inspect alternate 2007 captures individually after the next artifact is available. The older site is not visually restored yet.
+- **2007:** the CDX inventory contains 2007 homepage captures, including July 24, 2007, but no 2007 page body has been saved in the current source collection. The first 2007 action recovered no complete per-era selection before timing out. Its artifact was merged and the first bounded continuation `38834361363` failed during artifact extraction before recovery began. The corrected staging/merge workflow is committed, and the resumed 2007 run `38834520393` is in progress. Inspect alternate 2007 captures individually after its artifact is available. The older site is not visually restored yet.
 - **2009 / WordPress:** the independent Common Crawl sample yields early WordPress article/site pages, but per-URL Wayback captures across 2009–September 2013 remain to be fetched and compared. Many article image URLs and legacy navigation paths remain queued.
 - **Squarespace:** fetch every URL's final usable capture within September 2013–September 30, 2023, then inspect articles, both blog listings, shows, Holler, video, shop variants, and source-linked media. The domain index includes many pages that have not yet yielded source bodies.
 - **External images:** the 42 image URLs from the expanded source inventory need exact-URL archive indexing and dated retrieval. The current recovery workflow now performs these targeted index requests; it has not completed those new runs yet. Blog images discovered outside those 42 seeds also need exact, source-backed searches.
 - **Blog completeness:** the inventory contains 40 observed listing entries, not a verified lifetime post count. The full set of post permalinks, offsets, author/tag listings, captions, source credits, and attached images is not yet confirmed. Do not infer missing slugs or claim every post has been recovered.
-- **Original typography:** no font binaries are bundled. A local visual comparison is still needed to measure the resulting fallback difference.
+- **Original typography:** no font binaries are bundled. The May 2021 desktop comparison has been inspected, but the typography difference from omitted font binaries has not been measured and mobile/site-wide comparisons remain open.
 
 ## Release blockers
 
-1. Complete and merge resumable Wayback selections for 2007, 2009, and 2013+, plus source-linked image and independent-archive recovery. Current local candidate checks still have two route-level gaps (three link occurrences); see the current checkpoint JSON.
+1. Complete and merge resumable Wayback selections for 2007, 2009, and 2013+, plus source-linked image and independent-archive recovery. The corrected 2007 run `38834520393` is in progress. Current local candidate checks have two route-level gaps (three link occurrences); the candidate also lacks critical Squarespace styling/media.
 2. Rebuild the gap report from the final checkpoint and inspect each newly promoted source for date compatibility, provider errors, and content correctness.
 3. Record desktop and mobile comparison evidence for the May 2021 baseline, the two older editions, representative articles, and section pages. Do not claim human review unless a human has performed it.
 4. Pass the reviewed-source release build and root/project-subpath checks with no remote automatic asset dependency.

@@ -66,21 +66,35 @@
     "imported_at": "2026-10-16T10:44:06Z"
   },
   "latest_wayback_batch": {
-    "run_id": "38878544130",
-    "url": "https://github.com/keithah/bluescholars/actions/runs/38878544130",
-    "outcome": "Acquisition step reached the 90-minute workflow timeout. Candidate build/check and artifact upload succeeded; partial artifact merged locally without conflicts. It added no unique raw or index files and one resource became recovered.",
-    "edition_era": "none",
-    "max_files": 150,
-    "max_index_pages": 20,
-    "resume_run": "38873762766",
+    "run_id": "38890188803",
+    "url": "https://github.com/keithah/bluescholars/actions/runs/38890188803",
+    "outcome": "Reached the 90-minute acquisition cap; candidate build/check and artifact upload succeeded; artifact merged locally without conflicts.",
     "status": "completed_cancelled_after_timeout",
-    "candidate_check_errors": [],
-    "artifact_retention_days": 30,
+    "edition_era": "none",
+    "max_files": 2000,
+    "max_index_pages": 20,
+    "resume_runs": [
+      "38824767784",
+      "38834520393",
+      "38840327453",
+      "38847782580",
+      "38854577118",
+      "38855547034",
+      "38863795721",
+      "38873762766",
+      "38878544130",
+      "38880249610"
+    ],
+    "copied_raw_files": 43,
+    "copied_index_files": 2,
+    "new_resource_records": 0,
+    "new_variant_records": 0,
+    "conflicting_files": [],
     "runner_candidate": {
-      "recovered_pages": 519,
-      "placeholder_pages": 1545,
+      "recovered_pages": 778,
+      "placeholder_pages": 1855,
       "derived_pages": 0,
-      "local_source_assets": 578,
+      "local_source_assets": 662,
       "check_ok": true
     }
   },
@@ -202,62 +216,22 @@
     "visual_screenshot": "No screenshot file saved; live browser panel timed out. Live URLs were verified directly over HTTPS."
   },
   "active_wayback_batch": {
-    "run_id": "38880249610",
-    "url": "https://github.com/keithah/bluescholars/actions/runs/38880249610",
+    "run_id": "38910883636",
+    "url": "https://github.com/keithah/bluescholars/actions/runs/38910883636",
     "status": "in_progress",
-    "resume_run": "38878544130",
+    "resume_run": "38890188803",
     "edition_era": "none",
-    "max_files": 400,
-    "head_commit": "dbea7615d714678cbc9a68a360847eb93d600c33",
-    "checkpoint_scope": "single artifact branch; combine prior run artifacts before subsequent broad batches"
-  },
-  "queued_followup_batch": {
-    "run_id": "38880249610",
-    "url": "https://github.com/keithah/bluescholars/actions/runs/38880249610",
-    "status": "pending",
-    "resume_run": "38878544130",
-    "edition_era": "none",
-    "max_files": 400,
-    "head_commit": "dbea7615d714678cbc9a68a360847eb93d600c33"
+    "max_files": 2000,
+    "head_commit": "fcaa22ae0b0de9b8a0879039269f37287fda9579",
+    "checkpoint_scope": "single consolidated checkpoint; local controller is waiting to merge and continue if queued or retryable resources remain"
   },
   "resume_plan": {
-    "workflow_commit": "9806ff2",
-    "workflow_input": "resume_runs (comma-separated)",
-    "artifact_run_ids": [
-      "38824767784",
-      "38834520393",
-      "38840327453",
-      "38847782580",
-      "38854577118",
-      "38855547034",
-      "38863795721",
-      "38873762766",
-      "38878544130",
-      "38880249610"
-    ],
-    "note": "After the active single-branch run completes, merge its artifact locally, then seed the next runner with all listed prior artifact IDs using resume_runs. The next runner will include the queued-first scheduler and bounded capture-date retry fix.",
-    "recovery_code_commit": "1e52204",
-    "capture_attempts_per_resource_per_batch": 3
-  },
-  "queued_consolidated_run": {
-    "run_id": "38890188803",
-    "url": "https://github.com/keithah/bluescholars/actions/runs/38890188803",
-    "status": "queued",
-    "max_files": 2000,
-    "resume_runs": [
-      "38824767784",
-      "38834520393",
-      "38840327453",
-      "38847782580",
-      "38854577118",
-      "38855547034",
-      "38863795721",
-      "38873762766",
-      "38878544130",
-      "38880249610"
-    ],
-    "head_commit": "236b8e54b07e6d0d1363ad14c8061e61593989ae",
-    "supersedes_run": "38890017329"
+    "workflow_commit": "fcaa22a",
+    "workflow_input": "resume_run for subsequent consolidated batches; resume_runs for branch union",
+    "latest_merged_run": "38890188803",
+    "next_run": "38910883636",
+    "capture_attempts_per_resource_per_batch": 3,
+    "note": "Local controller merges each completed artifact into ignored recovery/state.json and recovery/raw/, checks the aggregate, and queues another batch only while queued or retryable resources remain. Resume manually with .venv311/bin/python -m restore merge-recovery --artifact <artifact-dir> --run-id <run-id>, then .venv311/bin/python -m restore status."
   },
   "superseded_queued_run": {
     "run_id": "38889871799",
@@ -275,5 +249,22 @@
       "status": "cancelled_before_start",
       "reason": "raised batch ceiling to 2000 while preserving the 90-minute runner timeout"
     }
-  ]
+  ],
+  "aggregate_checkpoint": {
+    "resource_urls": 8348,
+    "statuses": {
+      "queued": 5561,
+      "recovered": 2356,
+      "needs_review": 29,
+      "failed": 402,
+      "excluded": 0
+    },
+    "indexed_capture_records": 8908,
+    "index_complete": true,
+    "unique_downloaded_files": 1916,
+    "downloaded_bytes": 101984916,
+    "retryable_failed": 170,
+    "local_merge_run": "38890188803",
+    "conflicts": 0
+  }
 }

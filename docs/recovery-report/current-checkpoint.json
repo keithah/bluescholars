@@ -5,17 +5,25 @@
     "human_review_claimed": false,
     "reference": "https://web.archive.org/web/20210529010817/http://bluescholars.com/",
     "result": "reviewed-source logo, left navigation, main image scale and crop visually align with reference after accounting for Wayback toolbar and local restoration notice",
-    "viewport": "desktop, approximately 1680\u00d7800"
+    "viewport": "desktop, approximately 1680×800"
   },
   "candidate_build": {
-    "recovered_pages": 449,
-    "placeholder_pages": 765,
-    "local_source_assets": 420,
+    "recovered_pages": 916,
+    "placeholder_pages": 1916,
+    "local_source_assets": 628,
     "publish_approved": false,
     "livejournal_html_captures": 8,
     "livejournal_local_media_files": 20,
     "derived_pages": 4,
-    "candidate_source": "local merged checkpoint, rebuilt and checked at root and /bluescholars/"
+    "candidate_source": "local merged recovery checkpoint; rebuilt offline",
+    "base_path": "",
+    "issues_by_type": {
+      "invalid_source": 9,
+      "missing_asset": 4085,
+      "font_not_packaged": 16,
+      "linked_asset_not_recovered": 295,
+      "external_media_link_only": 144
+    }
   },
   "candidate_checks": {
     "root": {
@@ -28,46 +36,43 @@
     }
   },
   "checkpoint": {
-    "resource_urls": 4960,
+    "resource_urls": 8348,
     "statuses": {
-      "queued": 3717,
-      "recovered": 1037,
-      "needs_review": 14,
-      "failed": 192,
+      "queued": 5843,
+      "recovered": 2239,
+      "needs_review": 29,
+      "failed": 237,
       "excluded": 0
     },
-    "indexed_capture_records": 8891,
+    "indexed_capture_records": 8904,
     "index_complete": true,
-    "unique_downloaded_files": 846,
-    "downloaded_bytes": 64227608,
-    "failed_attempts": 1014,
-    "local_updated_at": "2026-10-16T03:48:43Z"
+    "unique_downloaded_files": 1872,
+    "downloaded_bytes": 99127968,
+    "failed_attempts": 2551,
+    "local_updated_at": "2026-10-16T09:42:04.156376+00:00"
   },
   "latest_import": {
-    "run_id": "38840327453",
-    "artifact_size_bytes": 68823757,
-    "resources_in_artifact": 3904,
-    "copied_raw_files": 1,
-    "copied_index_files": 1,
-    "duplicate_files": 504,
+    "run_id": "38873762766",
+    "resources_in_artifact": 6373,
+    "copied_raw_files": 0,
+    "copied_index_files": 0,
+    "duplicate_files": 1198,
     "new_resource_records": 0,
     "new_variant_records": 0,
-    "merged_records": 3902,
+    "merged_records": 6371,
     "conflicting_files": [],
-    "imported_at": "2026-10-16T03:48:43Z"
+    "imported_at": "2026-10-16T09:12:32Z"
   },
   "latest_wayback_batch": {
-    "run_id": "38840327453",
-    "url": "https://github.com/keithah/bluescholars/actions/runs/38840327453",
-    "outcome": "Completed. Wayback recovery step succeeded; Common Crawl was skipped; Arquivo.pt indexed 35 rows but had no new records to fetch; the 2007 era selection recovered one image and reported four unsupported Flash files. Candidate build completed; offline check failed on two 2009 edition links to /2009/blog/tourdates/ (three link instances). Artifact downloaded and merged locally.",
-    "edition_era": "2007",
+    "run_id": "38878544130",
+    "url": "https://github.com/keithah/bluescholars/actions/runs/38878544130",
+    "outcome": "In progress at the download/discovery step; no artifact merged yet.",
+    "edition_era": "none",
     "max_files": 150,
-    "max_index_pages": 1,
-    "resume_run": "38834520393",
-    "candidate_check_errors": [
-      "2009/blog/2010/09/video-green-river-community-college/index.html: missing local target /2009/blog/tourdates/",
-      "2009/blog/page/3/index.html: missing local target /2009/blog/tourdates/"
-    ],
+    "max_index_pages": 20,
+    "resume_run": "38873762766",
+    "status": "in_progress",
+    "candidate_check_errors": [],
     "artifact_retention_days": 30
   },
   "older_edition_browser_observations": {
@@ -79,7 +84,7 @@
     "archive_it_search": "Focused web search yielded no confirmed site-specific copy.",
     "archive_ph": "Prior request returned HTTP 429.",
     "arquivo_pt": "Latest full-domain run queried 35 rows, selected three known 2013+ captures, and downloaded no new records.",
-    "common_crawl": "Prior broad index sweep reached 6 of 128 endpoints and saved 380 records; targeted 2009\u20132010 and 2023\u201340 samples were recovered. This is incomplete, and further Common Crawl work remains authorized.",
+    "common_crawl": "Prior broad index sweep reached 6 of 128 endpoints and saved 380 records; targeted 2009–2010 and 2023–40 samples were recovered. This is incomplete, and further Common Crawl work remains authorized.",
     "library_of_congress": "Direct catalog API lookup timed out; no absence conclusion.",
     "memento_time_travel": "Prior web-reader request inaccessible.",
     "livejournal": "Separate /lj/ archive has eight recovered HTML capture routes from a complete host CDX index (226 rows/115 URLs), four article reading views derived from exact entry blocks in the October 2011 index capture (not standalone responses), 20 local photos, custom CSS local, platform CSS unavailable, one missing image, plus two modern-interface captures held in needs_review."
@@ -112,7 +117,7 @@
   "updated_at": "2026-10-16",
   "tests": {
     "command": ".venv311/bin/python -m pytest -q",
-    "result": "119 passed"
+    "result": "120 passed"
   },
   "livejournal_archive": {
     "route": "/lj/",
@@ -188,10 +193,20 @@
     "visual_screenshot": "No screenshot file saved; live browser panel timed out. Live URLs were verified directly over HTTPS."
   },
   "active_wayback_batch": {
-    "run_id": "38847782580",
-    "url": "https://github.com/keithah/bluescholars/actions/runs/38847782580",
-    "edition_era": "2009",
-    "status": "in_progress at Pages-preview verification",
-    "resume_run": "38840327453"
+    "run_id": "38878544130",
+    "url": "https://github.com/keithah/bluescholars/actions/runs/38878544130",
+    "status": "in_progress",
+    "resume_run": "38873762766",
+    "edition_era": "none",
+    "max_files": 150
+  },
+  "queued_followup_batch": {
+    "run_id": "38880249610",
+    "url": "https://github.com/keithah/bluescholars/actions/runs/38880249610",
+    "status": "pending",
+    "resume_run": "38878544130",
+    "edition_era": "none",
+    "max_files": 400,
+    "head_commit": "dbea7615d714678cbc9a68a360847eb93d600c33"
   }
 }

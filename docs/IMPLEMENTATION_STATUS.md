@@ -7,17 +7,17 @@
 - Candidate and reviewed-source build modes, local asset rewriting, capture provenance, an offline link/resource checker, and project-subpath handling.
 - Independent Common Crawl WARC/ARC retrieval and Arquivo.pt capture retrieval.
 - Targeted exact-CDX indexing of the 42 observed source-linked image URLs.
-- A manual, non-publishing GitHub Actions recovery workflow. It can continue from an earlier run's artifact.
+- A bounded, non-publishing GitHub Actions recovery workflow. Runs continue from a prior artifact; a local controller is advancing batches and merging each finished artifact.
 
 ## Current evidence
 
 - Public repository: `https://github.com/keithah/bluescholars`, branch `main`; authenticated GitHub CLI account `keithah`.
-- Wayback domain checkpoint: complete; report records 8,178 indexed captures. After importing the partial 2007 recovery artifact, the local state has 4,956 resource records and 8,362 capture rows attached (the saved acquisition report counted 8,178 rows before the merge). Capture metadata is not equivalent to recovered bytes.
+- Wayback domain checkpoint: complete; local state currently has 8,348 resource URLs and 8,904 indexed capture records. At the last merged checkpoint, 5,843 URLs remained queued, 2,239 were recovered, 29 needed review, and 237 had failed; 1,872 unique raw files (99,127,968 bytes) were present. Capture metadata is not equivalent to recovered bytes. The broad run `38878544130` is still acquiring; its artifact has not yet been merged.
 - Promoted source catalog: 3,268 resource records; 97 unique files under `source/raw/` are tracked. The publication and visual-review flags remain false.
-- The unreviewed candidate currently has 449 recovered pages, 4 derived pages, 765 placeholders, and 420 local source assets. The separate LiveJournal route includes eight archived HTML capture routes and 20 locally served 2007–2008 photos; the custom journal CSS is recovered, while the separate platform-wide CSS remains missing. Root and `/bluescholars/` candidate link checks now pass with zero errors; see [the current checkpoint](recovery-report/current-checkpoint.json).
-- The suite passes 119 tests; see [verification](VERIFICATION.md).
-- 2007 continuation `38840327453` completed and its artifact was merged locally. The current bounded 2009 continuation is run `38847782580`, resuming from `38840327453`; merge its artifact after completion. Earlier recovery `38834520393` retrieved 368 of 373 selected responses, and the dated-image builder defect is fixed and regression-tested.
-- User-requested incomplete candidate preview is live at https://keithah.github.io/bluescholars/ from `gh-pages` commit `cc3ddeea338842c97ecbaa6970b591183faab384`; Pages run `38851321206` succeeded. `main` remains separate and its history is unchanged. Publication and visual-review flags remain false; the reviewed-release workflow is still gated.
+- The current unreviewed candidate has 916 recovered pages, 4 derived pages, 1,916 placeholders, and 628 local source assets. Candidate link checks pass with zero errors at both `/` and `/bluescholars/`; it still reports 4,085 missing assets and 9 provider-error sources. See [the current checkpoint](recovery-report/current-checkpoint.json).
+- The suite passes 120 tests; see [verification](VERIFICATION.md). A new regression guards against failed high-priority URLs starving untouched pages.
+- Latest merged checkpoint: run `38873762766`. Broad recovery `38878544130` is in progress; queued follow-up `38880249610` uses the corrected queue order and resumes from it. Continue from the latest completed run artifact if the local continuation is interrupted.
+- User-requested incomplete candidate preview is live at https://keithah.github.io/bluescholars/ from `gh-pages` commit `cc3ddeea338842c97ecbaa6970b591183faab384`; Pages run `38851321206` succeeded. New recovery-tool and ledger commits are on `main`; they do not change the published preview. Publication and visual-review flags remain false, and the reviewed-release workflow is still gated.
 
 ## Remaining before publication
 

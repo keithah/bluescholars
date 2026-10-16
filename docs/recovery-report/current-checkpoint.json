@@ -137,7 +137,7 @@
     "unique_raw_files": 97,
     "visual_reviewed": false
   },
-  "updated_at": "2026-10-16T22:38:00Z",
+  "updated_at": "2026-10-16T22:39:00Z",
   "tests": {
     "command": "PYTHONPATH=. .venv311/bin/pytest -q",
     "result": "124 passed",
@@ -414,6 +414,8 @@
     "unknown_route_status": 404,
     "human_release_review": false,
     "publish_approved": false,
-    "note": "Owner-requested partial preview refresh; this is not a completed restoration or reviewed release."
+    "note": "Owner-requested partial preview refresh; this is not a completed restoration or reviewed release.",
+    "pages_deployment_run": "38976443204",
+    "pages_deployment_result": "success"
   }
 }

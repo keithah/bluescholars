@@ -2,7 +2,7 @@
 
 ## Automated checks
 
-- `.venv311/bin/python -m pytest -q` — **121 passed** (including regressions proving untouched queued URLs are fetched before failures and capture-date attempts resume in bounded batches).
+- `.venv311/bin/python -m pytest -q` — **122 passed** (including regressions for queued-page priority, bounded capture-date attempts, and skipping fully exhausted failures).
 - `.venv311/bin/python -m compileall -q restore tests` — passed.
 - `bash -n scripts/*.sh` — passed.
 - `git diff --check` on implementation, tests, and documentation — passed. Original archived HTML is preserved byte-for-byte, including its source whitespace, so the check excludes `source/raw/` and its original-HTML test fixture.

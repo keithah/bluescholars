@@ -68,3 +68,11 @@ Four LiveJournal entry pages without standalone captures now render their exact 
 - `source/review.json` still has `publish_approved: false` and `visual_reviewed: false`; no redeploy was made.
 
 The candidate was rebuilt locally from the merged checkpoint through run `38960845000`. It contains 922 recovered pages, 1,871 placeholders, four derived LiveJournal views and 727 local source assets. Candidate checks pass with zero local-link errors at both `/` and `/bluescholars/`. These checks establish path/link consistency, not completeness or release approval. The independent Common Crawl follow-up remains queued; see the current checkpoint for live run state.
+
+## Recovery continuation update — October 16, 2026 (run 38962246474)
+
+- The broad acquisition hit the 90-minute cap. Its always-run candidate generation and artifact upload succeeded; the runner candidate check passed with zero errors. Merge imported three additional raw files, 61 CDX batches, 23 new resources and 144 dated variants, with no conflicts.
+- Consolidated local checkpoint: 8,769 resource URLs; 2,881 recovered, 50 needs review, 1,120 failed and 4,718 queued; 9,210 capture rows; 1,946 unique files totaling 107,189,680 bytes.
+- Rebuilt candidate at root and `/bluescholars/`: 922 recovered pages, 1,842 placeholders, four derived views and 729 local source assets. Both candidate checks passed with zero local-link errors. Build report gaps: 4,037 missing embedded assets, 295 linked assets not recovered, 145 external media links, 17 fonts not packaged and 9 invalid source records.
+- Common Crawl independent run `38972843891` is active (up to 3,000 records), resuming from `38962246474`.
+- The new homepage remains on `main`; Pages still serves the older `gh-pages` preview. `source/review.json` approval flags remain false, so no redeploy occurred.

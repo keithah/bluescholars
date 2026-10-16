@@ -119,3 +119,12 @@ def test_arquivo_domain_index_preserves_latest_capture_per_edition_and_resumes(t
     assert all(r['sha256'] and r['source_archive_url'] and r['source_digest'] for r in archived)
     raw_index = tmp_path / 'recovery/index/arquivo-domain.jsonl'
     assert raw_index.read_bytes() == index_body
+
+
+def test_arquivo_domain_cli_propagates_index_failure(tmp_path, monkeypatch, capsys):
+    from restore import __main__ as cli
+    monkeypatch.setattr(cli, 'harvest_arquivo_domain',
+                        lambda *args: {'archive': 'Arquivo.pt', 'index_error': 'connection refused'})
+    code = cli.main(['--root', str(tmp_path), 'arquivo-domain'])
+    assert code == 2
+    assert json.loads(capsys.readouterr().out)['index_error'] == 'connection refused'

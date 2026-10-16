@@ -88,7 +88,9 @@ def main(argv=None) -> int:
             if args.max_records<1 or args.workers<1:raise ValueError('Common Crawl limits must be positive')
             result=harvest_commoncrawl(root,args.max_records,args.workers)
         elif args.command=='arquivo': result=harvest_arquivo(root,args.history_url,args.max_urls,args.delay)
-        elif args.command=='arquivo-domain': result=harvest_arquivo_domain(root,args.max_records,args.delay)
+        elif args.command=='arquivo-domain':
+            result=harvest_arquivo_domain(root,args.max_records,args.delay)
+            print(json.dumps(result,indent=2));return 2 if result.get('index_error') else 0
         elif args.command=='commoncrawl-import':
             rows=[json.loads(line) for line in args.rows.read_text().splitlines() if line.strip()]
             result=import_commoncrawl_rows(root,args.collection,rows)

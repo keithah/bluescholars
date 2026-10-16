@@ -442,12 +442,14 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
             edition_text=page_shell(label,body)
             edition_text,_=render_html(edition_text,HOME,render_resources,base)
             _write_page(output,prefix+'/',edition_text)
-    gateway='<p>Choose a preserved website generation. Each edition is built from its own dated source material; gaps remain marked.</p><nav class="edition-archive">'
-    for prefix,label in (('/2007/','2007'),('/2009/','2009'),('/2013/','2013 · first located Squarespace')):
-        gateway+='<a class="edition" href="'+base+prefix+'">'+html.escape(label)+'</a>'
-    gateway+='<a class="lj-archive" href="'+base+'/lj/" aria-label="LiveJournal archive">lj</a>'
-    gateway+='</nav><p><a href="'+base+'/archive-status/">Recovery status and source gaps</a></p>'
-    hub=page_shell('Blue Scholars archive',gateway)
+    gateway='<p class="archive-home-intro">Choose a preserved website generation. Each edition is built from its own dated source material; gaps remain marked.</p><nav class="edition-grid" aria-label="Preserved website generations">'
+    editions=(('/2007/','2007','Independent site'),
+              ('/2009/','2009','WordPress site'),
+              ('/2013/','2013','Squarespace site · first located in 2013'))
+    for prefix,year,era in editions:
+        gateway+='<a class="edition edition-card" href="'+base+prefix+'"><span class="edition-year">'+year+'</span><span class="edition-era">'+html.escape(era)+'</span><span class="edition-action">Explore this edition <span aria-hidden="true">↗</span></span></a>'
+    gateway+='</nav><nav class="archive-home-links" aria-label="Other archive resources"><a class="lj-archive" href="'+base+'/lj/">LiveJournal posts <span aria-hidden="true">↗</span></a><a class="recovery-status" href="'+base+'/archive-status/">Recovery status and source gaps <span aria-hidden="true">↗</span></a></nav>'
+    hub=page_shell('Blue Scholars archive',gateway).replace('<main class="archive-gap-page">','<main class="archive-gap-page archive-home">')
     hub=hub.replace('</head>','<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="'+base+'/assets/archive-ui.css"></head>')
     _write_page(output,'/',hub)
     # Deduplicate identical findings without suppressing which page referenced a gap.

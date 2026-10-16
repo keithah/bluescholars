@@ -226,9 +226,28 @@ def test_root_is_a_gateway_to_separate_historical_editions(tmp_path):
     root=BeautifulSoup((tmp_path/'_site/index.html').read_text(),'html.parser')
     assert root.find('h1',string='Blue Scholars archive')
     assert {a.get('href') for a in root.select('a.edition')}=={'/2007/','/2009/','/2013/'}
-    assert root.find('a',href='/lj/',string='lj')
+    cards=root.select('a.edition-card')
+    assert [card.select_one('.edition-year').get_text(strip=True) for card in cards]==['2007','2009','2013']
+    assert [card.select_one('.edition-era').get_text(strip=True) for card in cards]==[
+        'Independent site','WordPress site','Squarespace site · first located in 2013']
+    assert all(card.select_one('.edition-action') for card in cards)
+    assert root.select_one('a.lj-archive[href="/lj/"]')
+    assert root.select_one('a.recovery-status')
     assert 'Original Squarespace homepage' in (tmp_path/'_site/2013/index.html').read_text()
     assert all((tmp_path/'_site'/year/'index.html').is_file() for year in ('2007','2009','2013'))
+
+def test_root_edition_cards_use_project_prefix_and_have_compact_responsive_styles(tmp_path):
+    fixture_root(tmp_path);s=State(tmp_path)
+    (tmp_path/'public/archive-ui.css').write_text((Path(__file__).resolve().parents[1]/'public/archive-ui.css').read_text())
+    add_raw(s,HOME,'html',b'<html><head><title>BLUE SCHOLARS</title></head><body><h1>Original Squarespace homepage</h1></body></html>')
+    s.data['resources'][HOME]['actual_capture']='20210529010817';s.save()
+    promote(tmp_path,reviewed=True)
+    build(tmp_path,tmp_path/'_candidate','/bluescholars',candidate=True)
+    root=BeautifulSoup((tmp_path/'_candidate/index.html').read_text(),'html.parser')
+    assert {card['href'] for card in root.select('a.edition-card')}=={
+        '/bluescholars/2007/','/bluescholars/2009/','/bluescholars/2013/'}
+    styles=(tmp_path/'_candidate/assets/archive-ui.css').read_text()
+    assert '.edition-grid' in styles and '@media' in styles
 
 def test_livejournal_archive_is_a_separate_local_top_level_section(tmp_path):
     fixture_root(tmp_path);s=State(tmp_path)
@@ -238,7 +257,7 @@ def test_livejournal_archive_is_a_separate_local_top_level_section(tmp_path):
     add_raw(s,post,'html',b'<html><body><h1>friday mixdown</h1><p>Captured post text.</p></body></html>')
     build(tmp_path,tmp_path/'_candidate','/bluescholars',candidate=True)
     root=BeautifulSoup((tmp_path/'_candidate/index.html').read_text(),'html.parser')
-    assert root.find('a',href='/bluescholars/lj/',string='lj')
+    assert root.select_one('a.lj-archive[href="/bluescholars/lj/"]')
     index=BeautifulSoup((tmp_path/'_candidate/lj/index.html').read_text(),'html.parser')
     assert index.find('a',href='/bluescholars/lj/posts/16954.html')
     rendered=(tmp_path/'_candidate/lj/posts/16954.html').read_text()

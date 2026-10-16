@@ -2,7 +2,7 @@
 
 ## Automated checks
 
-- `.venv311/bin/python -m pytest -q` — **122 passed** (including regressions for queued-page priority, bounded capture-date attempts, and skipping fully exhausted failures).
+- `.venv311/bin/python -m pytest -q` — **124 passed** (including homepage card and unreviewed-redirect regressions).
 - `.venv311/bin/python -m compileall -q restore tests` — passed.
 - `bash -n scripts/*.sh` — passed.
 - `git diff --check` on implementation, tests, and documentation — passed. Original archived HTML is preserved byte-for-byte, including its source whitespace, so the check excludes `source/raw/` and its original-HTML test fixture.
@@ -48,3 +48,12 @@ A direct scan of the generated candidate HTML (`src`, `poster`, embedded data, a
 The exact October and August LiveJournal custom stylesheet captures are byte-identical (7,343 bytes, SHA-256 `87560599e9fb5ddc5cdba0675164f3bd80324540d346fc6ae38c26878e2f34ce`). Builder recovery now excludes CSS assets from its HTML-page route loop and emits the custom stylesheet locally. The separate LiveJournal platform CSS URLs remain missing.
 
 Four LiveJournal entry pages without standalone captures now render their exact saved `.entry` blocks from the October 2011 index, visibly state their source and capture date, and disclose the missing standalone comment threads. Browser inspection confirmed the entry text and source disclosure at the project prefix.
+
+
+## 2026-10-16 homepage and merged-candidate checks
+
+- GitHub CI run `38960837794` passed the test suite and reviewed-source builds/checks at `/` and `/bluescholars/`.
+- Local suite after the homepage and redirect changes: `PYTHONPATH=. .venv311/bin/pytest -q` — 124 passed.
+- Local unreviewed candidate from merged recovery state through run `38948396209`: `/bluescholars/` checker passed with zero errors after redirect correction. The runner check on that earlier code revision had 76 broken `/2009/menu/` links.
+- Local browser view of the candidate gateway confirmed three edition cards with era labels, and secondary LiveJournal/recovery links. This is an agent visual inspection, not human release approval. No screenshot file was saved.
+- Public Pages was not redeployed; current public branch still has its prior candidate build.

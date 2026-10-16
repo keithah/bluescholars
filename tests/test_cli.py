@@ -47,6 +47,8 @@ def test_recovery_workflow_never_deploys():
     assert 'workflow_dispatch' in (doc.get('on') or doc.get(True))
     assert 'if: always()' in text
     assert 'resume_run' in text and 'gh run download' in text
+    assert '--dir "$RUNNER_TEMP/archive-recovery"' in text
+    assert 'merge-recovery' in text
 
 def test_deploy_requires_manual_confirmation_and_release_gate():
     text=(ROOT/'.github/workflows/pages.yml').read_text()

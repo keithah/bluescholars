@@ -1,0 +1,72 @@
+{
+  "candidate_build": {
+    "local_source_assets": 106,
+    "placeholder_pages": 723,
+    "publish_approved": false,
+    "recovered_pages": 411
+  },
+  "candidate_checks": {
+    "project_subpath": {
+      "errors": [
+        "/bluescholars/2009/blog/tourdates/ (linked from two recovered WordPress pages)",
+        "/bluescholars/2013/archive-query/27bed984677400b185e8/ (attachment query linked from a Squarespace-era post)"
+      ],
+      "ok": false
+    },
+    "root": {
+      "errors": [
+        "/2009/blog/tourdates/ (linked from two recovered WordPress pages)",
+        "/2013/archive-query/27bed984677400b185e8/ (attachment query linked from a Squarespace-era post)"
+      ],
+      "ok": false
+    }
+  },
+  "checkpoint": {
+    "downloaded_bytes": 36969120,
+    "failed_attempts": 512,
+    "generated_at": "2026-10-16T01:18:30.722614+00:00",
+    "index_complete": true,
+    "indexed_capture_records": 8319,
+    "resource_urls": 4259,
+    "statuses": {
+      "excluded": 0,
+      "failed": 157,
+      "needs_review": 11,
+      "queued": 3469,
+      "recovered": 622
+    },
+    "unique_downloaded_files": 534
+  },
+  "latest_import": {
+    "conflicting_files": [],
+    "copied_index_files": 47,
+    "copied_raw_files": 75,
+    "duplicate_files": 101,
+    "imported_at": "2026-10-16T01:11:12Z",
+    "merged_records": 3124,
+    "new_resource_records": 279,
+    "new_variant_records": 2,
+    "resources_in_artifact": 3405,
+    "run_id": "38824767784"
+  },
+  "latest_wayback_batch": {
+    "artifact_sha256": "9450cf2c7b42c283ecd6d1933d34b8e97f265c32e48da7c959ad128923ec380c",
+    "continuation_run_id": "38834361363",
+    "continuation_run_outcome": "failed during artifact extraction before recovery due tracked report filename collision",
+    "independent_archive_steps": "skipped because the preceding acquisition step ran to the job ceiling",
+    "outcome": "cancelled at the 90-minute job ceiling during Wayback response recovery; saved artifact imported locally",
+    "resume_fix": "download artifact to RUNNER_TEMP staging and merge through restore merge-recovery",
+    "run_id": "38824767784",
+    "url": "https://github.com/keithah/bluescholars/actions/runs/38824767784"
+  },
+  "pages_enabled": false,
+  "scope": "unreviewed local recovery checkpoint; separate 2007, 2009 WordPress, and 2013+ Squarespace editions",
+  "source_collection": {
+    "catalog_records": 3268,
+    "publication_approved": false,
+    "tracked_raw_bytes_approx": 11500000,
+    "unique_raw_files": 97,
+    "visual_reviewed": false
+  },
+  "updated_at": "2026-10-16"
+}

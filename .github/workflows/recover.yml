@@ -61,7 +61,10 @@ jobs:
           [[ "$COMMONCRAWL_RECORDS" =~ ^[0-9]+$ && "$COMMONCRAWL_RECORDS" -le 3000 ]]
       - name: Restore a prior recovery checkpoint
         if: inputs.resume_run != ''
-        run: gh run download "$RESUME_RUN" --repo "$GH_REPO" --name archive-recovery --dir .
+        run: |
+          mkdir -p "$RUNNER_TEMP/archive-recovery"
+          gh run download "$RESUME_RUN" --repo "$GH_REPO" --name archive-recovery --dir "$RUNNER_TEMP/archive-recovery"
+          python -m restore merge-recovery --artifact "$RUNNER_TEMP/archive-recovery" --run-id "$RESUME_RUN"
       - run: python -m restore seed
       - name: Enumerate domain captures
         id: index
@@ -89,6 +92,9 @@ jobs:
         if: inputs.edition_era != 'none'
         continue-on-error: true
         run: python -m restore capture-era --era "$EDITION_ERA" --max-files 2000
+      - name: Refresh recovery summary
+        if: always()
+        run: python -m restore status > recovery/report.json
       - name: Build a candidate for inspection (never publishes)
         if: always()
         run: |

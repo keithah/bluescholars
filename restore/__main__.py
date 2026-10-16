@@ -8,6 +8,7 @@ from .archive import ArchiveClient
 from .build import build,promote
 from .arquivo import harvest as harvest_arquivo,harvest_domain as harvest_arquivo_domain
 from .commoncrawl import harvest as harvest_commoncrawl,import_rows as import_commoncrawl_rows
+from .merge import merge_artifact
 from .check import check
 from .recover import index,recover,summary,now,capture_variant,capture_era,index_seed_assets
 from .state import State,write_json
@@ -50,6 +51,8 @@ def main(argv=None) -> int:
     p.add_argument('--max-records',type=int,default=500);p.add_argument('--delay',type=float,default=0.5)
     p=commands.add_parser('commoncrawl-import',help='Import saved Common Crawl CDX rows from a JSONL file')
     p.add_argument('--rows',type=Path,required=True);p.add_argument('--collection',required=True)
+    p=commands.add_parser('merge-recovery',help='Safely merge a downloaded recovery artifact from a staging directory')
+    p.add_argument('--artifact',type=Path,required=True);p.add_argument('--run-id',required=True)
     idx=commands.add_parser('index',help='Enumerate captures and persist the continuation cursor')
     idx.add_argument('--url',default='bluescholars.com');idx.add_argument('--match',choices=['domain','exact','prefix'],default='domain')
     idx.add_argument('--max-pages',type=int,default=20)
@@ -94,6 +97,7 @@ def main(argv=None) -> int:
         elif args.command=='commoncrawl-import':
             rows=[json.loads(line) for line in args.rows.read_text().splitlines() if line.strip()]
             result=import_commoncrawl_rows(root,args.collection,rows)
+        elif args.command=='merge-recovery': result=merge_artifact(root,args.artifact,args.run_id)
         elif args.command=='index-assets':
             if args.max_assets<1 or args.max_pages<1:raise ValueError('Asset index limits must be positive')
             client=ArchiveClient()

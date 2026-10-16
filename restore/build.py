@@ -6,12 +6,13 @@ import json
 from pathlib import Path
 import shutil
 from urllib.parse import unquote,urlsplit
+from bs4 import BeautifulSoup
 from .archive import validate_payload
 from .discover import discover_html
 from .render import render_html,render_css,NAV
 from .svg import sanitize_svg
 from .state import State,write_json
-from .urls import HOME,TARGET,identity,is_site,route,asset_route,base_path,livejournal_route
+from .urls import HOME,TARGET,identity,is_site,route,asset_route,base_path,livejournal_route,original_url
 
 CORE=[('/', 'Homepage'),('/blog/','Blog'),('/shows/','Shows'),('/video/','Video'),('/shop/','Shop'),('/holler/','Holler')]
 FALLBACK_UI='''.archive-restoration-notice,.archive-gap-page {font:16px/1.6 system-ui,sans-serif}
@@ -380,6 +381,42 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
         target_path=livejournal_route(target_url)
         if not target_path or target_path in reported_paths or target_path in pages:
             continue
+        root_url='http://bluescholars.livejournal.com/'
+        root_record=newest_by_url.get(root_url)
+        extracted_entry=None;root_soup=None
+        if root_record:
+            root_soup=BeautifulSoup(raw[root_record['_source_key']],'html.parser')
+            for anchor in root_soup.find_all('a',href=True):
+                href=original_url(anchor['href'],root_record.get('final_original',root_url))
+                if href and identity(href)==identity(target_url):
+                    extracted_entry=anchor.find_parent('div',class_='entry')
+                    if extracted_entry:
+                        break
+        if extracted_entry:
+            title=(root_soup.find('a',href=lambda href: href and identity(original_url(href,root_url))==identity(target_url))
+                   .get_text(' ',strip=True))
+            source_capture=root_record.get('actual_capture','unknown')
+            note=('<p class="archive-source-note">This article view is extracted from the full-text entry on the '
+                  +html.escape(source_capture)+' LiveJournal front-page capture. A separate standalone post response was not found. '
+                  'The saved front page contains the article text shown here; a complete standalone comment thread is unavailable.</p>'
+                  '<p><a href="'+root_url+'">Open the captured LiveJournal front page</a></p>')
+            derived=page_shell(title,note+str(extracted_entry))
+            styles=''
+            for link in root_soup.find_all('link',href=True):
+                rel=link.get('rel',[])
+                href=original_url(link['href'],root_record.get('final_original',root_url))
+                if 'stylesheet' in rel and href and '/res/' in urlsplit(href).path:
+                    styles='<link rel="stylesheet" href="'+html.escape(href,quote=True)+'">'
+                    break
+            derived=derived.replace('</head>','<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="'+base+'/assets/archive-ui.css">'+styles+'</head>')
+            rendered,found=render_html(derived,root_record.get('final_original',root_url),render_resources,base,'/lj')
+            issues.extend(found);_write_page(output,target_path,rendered)
+            page_report.append({'path':target_path,'source':target_url,'canonical_url':target_url,
+                                'source_archive':root_record.get('source_archive'),
+                                'status':'derived_from_capture','actual_capture':source_capture,
+                                'derived_from':root_url})
+            reported_paths.add(target_path)
+            continue
         body=('<p>This entry has not been recovered as a standalone page. It may still appear within a saved journal front-page capture:</p>'
               '<p><a href="'+base+'/lj/journal/">Open the recovered LiveJournal front page</a></p>')
         notice=page_shell('LiveJournal entry not recovered',body)
@@ -417,6 +454,7 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
     issues=list({json.dumps(i,sort_keys=True):i for i in issues}.values())
     report={'mode':'unreviewed_candidate' if candidate else 'reviewed_source_build','base_path':base,
             'recovered_pages':recovered,'placeholder_pages':placeholders,
+            'derived_pages':sum(p['status']=='derived_from_capture' for p in page_report),
             'local_source_assets':sum(r['kind'] in ('css','image') for r in usable.values()),
             'visual_fidelity_verified':bool(review.get('visual_reviewed')) and not candidate,
             'publish_approved':bool(review.get('publish_approved')) and not candidate,

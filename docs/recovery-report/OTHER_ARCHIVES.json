@@ -215,7 +215,7 @@
         "missing_reason": "The 2024 Wayback URL resolves to a 114-byte HTML /lander redirect, not image bytes. Exact URL searches in Common Crawl CC-MAIN-2009-2010 and Arquivo.pt returned no image capture; do not bypass the lander."
       },
       "presentation_limitations": [
-        "Four of the six entries visible on the 2011 index have no standalone article capture in the queried Wayback exact URL histories; they remain readable only in the saved index.",
+        "Four entries have no standalone post response. Their original `.entry` blocks are served as clearly labeled derived views from the October 2011 front page; separate comment threads remain unavailable.",
         "Common Crawl collection scans were partial and include endpoint failures.",
         "The custom 2011 journal stylesheet was recovered and is served locally, but the separate l-stat LiveJournal platform CSS bundles linked by the captured HTML were not found in exact URL histories (404/no rows); the complete platform chrome is not verified. The 2025 interface stylesheet set is still needs_review."
       ],
@@ -303,7 +303,45 @@
           }
         ],
         "notes": "Both dates have identical source bytes. Build emits a local content-addressed CSS asset; a builder regression test covers the HTML-vs-CSS distinction."
-      }
+      },
+      "derived_entry_pages": [
+        {
+          "entry_id": "17615",
+          "title": "EVENTFUL.COM contest",
+          "route": "/lj/posts/17615.html",
+          "source_capture": "20111002074201",
+          "source_url": "http://bluescholars.livejournal.com/",
+          "status": "derived_from_capture",
+          "notes": "The exact .entry block is reused from the October 2011 front-page response. No separate post response was found; standalone comment threads are unavailable."
+        },
+        {
+          "entry_id": "16015",
+          "title": "ATL (part uno)",
+          "route": "/lj/posts/16015.html",
+          "source_capture": "20111002074201",
+          "source_url": "http://bluescholars.livejournal.com/",
+          "status": "derived_from_capture",
+          "notes": "The exact .entry block is reused from the October 2011 front-page response. No separate post response was found; standalone comment threads are unavailable."
+        },
+        {
+          "entry_id": "16255",
+          "title": "atlantis music festival",
+          "route": "/lj/posts/16255.html",
+          "source_capture": "20111002074201",
+          "source_url": "http://bluescholars.livejournal.com/",
+          "status": "derived_from_capture",
+          "notes": "The exact .entry block is reused from the October 2011 front-page response. No separate post response was found; standalone comment threads are unavailable."
+        },
+        {
+          "entry_id": "16460",
+          "title": "kirkland is krackin",
+          "route": "/lj/posts/16460.html",
+          "source_capture": "20111002074201",
+          "source_url": "http://bluescholars.livejournal.com/",
+          "status": "derived_from_capture",
+          "notes": "The exact .entry block is reused from the October 2011 front-page response. No separate post response was found; standalone comment threads are unavailable."
+        }
+      ]
     },
     "Common Crawl LiveJournal": {
       "collections_queried": [

@@ -284,6 +284,19 @@ def test_livejournal_missing_entry_links_stay_inside_archive(tmp_path):
     assert 'not been recovered as a standalone page' in gap.read_text()
     assert check(tmp_path/'_candidate','')==[]
 
+def test_livejournal_entry_content_is_reused_from_the_captured_front_page(tmp_path):
+    fixture_root(tmp_path);s=State(tmp_path)
+    home='http://bluescholars.livejournal.com/'
+    post=home+'16015.html'
+    html=('<html><body><div class="entry"><div class="entryheader"><h3><a href="'+post+'">ATL (part uno)</a></h3></div>'
+          '<div class="entrytext">This exact text survives in the captured front page.</div></div></body></html>')
+    add_raw(s,home,'html',html.encode())
+    report=build(tmp_path,tmp_path/'_candidate','',candidate=True)
+    page=(tmp_path/'_candidate/lj/posts/16015.html').read_text()
+    assert 'This exact text survives in the captured front page.' in page
+    assert 'derived_from_capture' in {r['status'] for r in report['pages']}
+    assert report['derived_pages']==1
+
 def test_unrecovered_edition_links_get_gap_pages_or_honest_cross_edition_bridges(tmp_path):
     fixture_root(tmp_path);s=State(tmp_path)
     old_source=HOME+'blog/2010/09/source-post/'

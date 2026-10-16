@@ -9,11 +9,12 @@
   },
   "candidate_build": {
     "recovered_pages": 449,
-    "placeholder_pages": 769,
+    "placeholder_pages": 765,
     "local_source_assets": 419,
     "publish_approved": false,
     "livejournal_html_captures": 8,
-    "livejournal_local_media_files": 20
+    "livejournal_local_media_files": 20,
+    "derived_pages": 4
   },
   "candidate_checks": {
     "root": {
@@ -71,7 +72,7 @@
     "common_crawl": "Prior broad index sweep reached 6 of 128 endpoints and saved 380 records; targeted 2009–2010 and 2023–40 samples were recovered. This is incomplete, and further Common Crawl work remains authorized.",
     "library_of_congress": "Direct catalog API lookup timed out; no absence conclusion.",
     "memento_time_travel": "Prior web-reader request inaccessible.",
-    "livejournal": "Separate /lj/ archive has eight recovered HTML capture routes (complete Wayback host CDX index: 226 rows/115 URLs), 20 local photos, four entries only on the journal front page, unavailable original CSS, one missing image, plus two modern-interface captures held in needs_review."
+    "livejournal": "Separate /lj/ archive has eight recovered HTML capture routes from a complete host CDX index (226 rows/115 URLs), four article reading views derived from exact entry blocks in the October 2011 index capture (not standalone responses), 20 local photos, custom CSS local, platform CSS unavailable, one missing image, plus two modern-interface captures held in needs_review."
   },
   "pages_enabled": false,
   "reviewed_source_build": {
@@ -101,7 +102,7 @@
   "updated_at": "2026-10-16",
   "tests": {
     "command": ".venv311/bin/python -m pytest -q",
-    "result": "118 passed"
+    "result": "119 passed"
   },
   "livejournal_archive": {
     "route": "/lj/",

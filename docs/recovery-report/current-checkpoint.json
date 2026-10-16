@@ -137,7 +137,7 @@
     "unique_raw_files": 97,
     "visual_reviewed": false
   },
-  "updated_at": "2026-10-16T22:35:00Z",
+  "updated_at": "2026-10-16T22:38:00Z",
   "tests": {
     "command": "PYTHONPATH=. .venv311/bin/pytest -q",
     "result": "124 passed",
@@ -381,7 +381,13 @@
     "alternate_review": "needs_review; extracted text matches the 2010 original exactly (4704 chars, 11 image elements), so it adds no article text and remains excluded from the primary edition route",
     "remaining_asset": "http://bluescholars.com/blog/wp-content/uploads/2010/03/PaulValery1.jpg",
     "asset_status": "failed; exact capture index includes a 2023 403 row; earlier replay attempts had archive transport failures",
-    "video_lead": "Vimeo clip id 10370730 cited by the contemporaneous forum; no media file recovered"
+    "video_lead": "Vimeo clip id 10370730 cited by the contemporaneous forum; no media file recovered",
+    "arquivo_pt_exact_image_query": {
+      "url": "http://bluescholars.com/blog/wp-content/uploads/2010/03/PaulValery1.jpg",
+      "http_status": 200,
+      "rows": 0,
+      "scope": "exact URL on Arquivo.pt CDX endpoint"
+    }
   },
   "preview_deployment": {
     "url": "https://keithah.github.io/bluescholars/",

@@ -56,7 +56,7 @@ Four LiveJournal entry pages without standalone captures now render their exact 
 - Local suite after the homepage and redirect changes: `PYTHONPATH=. .venv311/bin/pytest -q` — 124 passed.
 - Local unreviewed candidate from merged recovery state through run `38960473470`: 916 recovered pages, 1,875 placeholders, 727 local source assets; `/bluescholars/` checker passed with zero errors after redirect correction. The runner check on that earlier code revision had 76 broken `/2009/menu/` links.
 - Local browser view of the candidate gateway confirmed three edition cards with era labels, and secondary LiveJournal/recovery links. This is an agent visual inspection, not human release approval. No screenshot file was saved.
-- Public Pages was not redeployed; current public branch still has its prior candidate build.
+- At this checkpoint Pages had not yet been refreshed; see the newer preview deployment entry below.
 
 
 ## Recovery continuation update — October 16, 2026
@@ -65,7 +65,7 @@ Four LiveJournal entry pages without standalone captures now render their exact 
 - Consolidated local checkpoint after merge: 8,602 resource URLs; 2,635 recovered, 48 needs review, 1,019 failed and 4,900 queued; 8,992 capture rows; 1,943 unique files totaling 105,704,279 bytes.
 - Broad Wayback run `38962246474` is active. A separate Common Crawl run `38972843891` is queued behind it (up to 3,000 records).
 - Candidate rebuild from this newly merged checkpoint has not yet been verified; the build command encountered a local generated-output directory cleanup error. The previously documented successful candidate check predates this merge.
-- `source/review.json` still has `publish_approved: false` and `visual_reviewed: false`; no redeploy was made.
+- `source/review.json` still has `publish_approved: false` and `visual_reviewed: false`; the later deployment is only an owner-requested partial preview, not release approval.
 
 The candidate was rebuilt locally from the merged checkpoint through run `38960845000`. It contains 922 recovered pages, 1,871 placeholders, four derived LiveJournal views and 727 local source assets. Candidate checks pass with zero local-link errors at both `/` and `/bluescholars/`. These checks establish path/link consistency, not completeness or release approval. The independent Common Crawl follow-up remains queued; see the current checkpoint for live run state.
 
@@ -75,4 +75,11 @@ The candidate was rebuilt locally from the merged checkpoint through run `389608
 - Consolidated local checkpoint: 8,769 resource URLs; 2,881 recovered, 50 needs review, 1,120 failed and 4,718 queued; 9,210 capture rows; 1,946 unique files totaling 107,189,680 bytes.
 - Rebuilt candidate at root and `/bluescholars/`: 922 recovered pages, 1,842 placeholders, four derived views and 729 local source assets. Both candidate checks passed with zero local-link errors. Build report gaps: 4,037 missing embedded assets, 295 linked assets not recovered, 145 external media links, 17 fonts not packaged and 9 invalid source records.
 - Common Crawl independent run `38972843891` is active (up to 3,000 records), resuming from `38962246474`.
-- The new homepage remains on `main`; Pages still serves the older `gh-pages` preview. `source/review.json` approval flags remain false, so no redeploy occurred.
+- The latest gateway and recovery snapshot were subsequently published as a partial preview; release approval flags remain false.
+
+
+## Updated public preview — October 16, 2026
+
+- Pushed the generated `/bluescholars/` candidate as commit `903ee0acc230c42636ba2ebd28ea0b1f6f840028` on `gh-pages`, parent `cc3ddeea338842c97ecbaa6970b591183faab384`. This is a fast-forward commit; history is preserved. The candidate contains 3,383 files (76,770,346 bytes) and `.nojekyll`.
+- GitHub Pages API reports `built` from `gh-pages` at `/`. Live HTTP checks returned 200 for `/bluescholars/`, `/2007/`, `/2009/`, `/2013/`, `/lj/`, `/archive-status/`, the main CSS and a recovered 2009 Paul Valéry post; an unknown route returned 404. Browser inspection showed the three separate edition cards and secondary links. No screenshot file was saved.
+- The preview is still incomplete and unreviewed. `source/review.json` remains `publish_approved: false`, `visual_reviewed: false`. The reviewed release workflow remains gated; this preview refresh does not claim the restoration is complete.

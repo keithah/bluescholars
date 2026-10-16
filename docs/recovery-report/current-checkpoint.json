@@ -137,7 +137,7 @@
     "unique_raw_files": 97,
     "visual_reviewed": false
   },
-  "updated_at": "2026-10-16T22:33:00Z",
+  "updated_at": "2026-10-16T22:35:00Z",
   "tests": {
     "command": "PYTHONPATH=. .venv311/bin/pytest -q",
     "result": "124 passed",
@@ -382,5 +382,32 @@
     "remaining_asset": "http://bluescholars.com/blog/wp-content/uploads/2010/03/PaulValery1.jpg",
     "asset_status": "failed; exact capture index includes a 2023 403 row; earlier replay attempts had archive transport failures",
     "video_lead": "Vimeo clip id 10370730 cited by the contemporaneous forum; no media file recovered"
+  },
+  "preview_deployment": {
+    "url": "https://keithah.github.io/bluescholars/",
+    "pages_api_status": "built",
+    "pages_source": {
+      "branch": "gh-pages",
+      "path": "/"
+    },
+    "branch_commit": "903ee0acc230c42636ba2ebd28ea0b1f6f840028",
+    "parent_commit": "cc3ddeea338842c97ecbaa6970b591183faab384",
+    "fast_forward": true,
+    "candidate_files": 3383,
+    "candidate_bytes": 76770346,
+    "verified_http_200": [
+      "/bluescholars/",
+      "/2007/",
+      "/2009/",
+      "/2013/",
+      "/lj/",
+      "/archive-status/",
+      "/assets/archive-ui.css",
+      "/2009/blog/2010/03/new-music-paul-valery/"
+    ],
+    "unknown_route_status": 404,
+    "human_release_review": false,
+    "publish_approved": false,
+    "note": "Owner-requested partial preview refresh; this is not a completed restoration or reviewed release."
   }
 }

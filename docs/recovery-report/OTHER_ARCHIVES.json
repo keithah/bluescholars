@@ -458,7 +458,39 @@
           "decision": "Distinct print-view route with two comments; retained as its own captured page."
         }
       ],
-      "interpretation": "These records confirm one historically meaningful post and multiple dated/source-path variants. The third-party citation is a finding aid; the captured HTML remains the source for reconstruction."
+      "interpretation": "These records confirm one historically meaningful post and multiple dated/source-path variants. The third-party citation is a finding aid; the captured HTML remains the source for reconstruction.",
+      "normalized_content_comparison": {
+        "extractor": "BeautifulSoup .single-post; whitespace collapsed",
+        "lengths": {
+          "20110520234313": 3382,
+          "20110724140731": 5042,
+          "20120420035936": 5042,
+          "20120722033642": 5042
+        },
+        "20110724140731_equals_20120722033642": true,
+        "20120420035936_equals_20120722033642": true,
+        "notes": "May versus July differs by the four comments added by July; the July and 2012 no-/blog/ article+comment text is equal, while the 2012 page chrome adds a navigation item."
+      }
+    },
+    {
+      "lead": "OOF! EP and HI-808 announcement",
+      "third_party_citation": "https://www.dmzhawaii.org/?p=3149",
+      "official_route": "http://bluescholars.com/blog/releases/oof-ep/",
+      "local_capture": "20120215203246",
+      "local_sha256": "d95ea2b69c7a0396dbb3bb6553bd760a8b6620f8230488dc7918a64bae2643ee",
+      "local_bytes": 16290,
+      "edition_route": "/2009/blog/releases/oof-ep/",
+      "interpretation": "The 2009 contemporaneous Hawaii article links this official post route. The local WordPress HTML is a 2012 Wayback capture; the third-party article is corroboration, not a substitute or proof of the 2009 page design."
+    },
+    {
+      "lead": "Geo Goes Back to UW post and linked music",
+      "third_party_citation": "https://www.newschoolers.com/forum/thread/544689/3-new-songs-Feat--Prometheus-Brown--of-Blue-Scholars-",
+      "official_route": "http://bluescholars.com/blog/2010/06/music-geo-goes-back-to-uw/",
+      "local_capture": "20100626063830",
+      "local_sha256": "7825e9e37b9e69d9456677bba4e5faee23d2edc9ca82cdec7ade2d0c6a2d78c5",
+      "local_bytes": 31934,
+      "edition_route": "/2009/blog/2010/06/music-geo-goes-back-to-uw/",
+      "interpretation": "A contemporaneous forum links the exact official post and named audio collaborators. The post HTML was recovered from Wayback and is available in the preview; third-party download links are evidence leads, not recovered audio."
     }
   ]
 }

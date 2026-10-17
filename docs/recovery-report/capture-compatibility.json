@@ -33,5 +33,20 @@
       "decision": "Earliest retrieved /blog/ capture reviewed against July 2011: same article and old WordPress template, with 7 visible comments; retained as dated alternate, while July is the default /blog/ page."
     }
   ],
-  "method": "Compared local capture timestamp, original URL, SHA-256, title, article text, visible comment count, image references, and navigation labels. The raw source bytes were not modified."
+  "method": "Compared local capture timestamp, original URL, SHA-256, title, article text, visible comment count, image references, and navigation labels. The raw source bytes were not modified.",
+  "comparison_result": {
+    "normalization": "BeautifulSoup text extraction from .single-post, whitespace collapsed; source bytes remain untouched",
+    "capture_text_lengths": {
+      "20110520234313": 3382,
+      "20110724140731": 5042,
+      "20120420035936": 5042,
+      "20120722033642": 5042,
+      "20110522063211": 220
+    },
+    "same_post_body_and_comments": {
+      "20110724140731_vs_20120722033642": true,
+      "20120420035936_vs_20120722033642": true
+    },
+    "201105_vs_201107": "Post text is present in both, but the extracted single-post text differs because the later capture includes four additional visible comments (7 versus 11)."
+  }
 }

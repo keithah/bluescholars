@@ -82,8 +82,15 @@ jobs:
           for run_id in "${recovery_runs[@]}"; do
             recovery_dir="$RUNNER_TEMP/archive-recovery/$run_id"
             mkdir -p "$recovery_dir"
-            gh run download "$run_id" --repo "$GH_REPO" --name archive-recovery --dir "$recovery_dir"
-            python -m restore merge-recovery --artifact "$recovery_dir" --run-id "$run_id"
+            final_dir="$recovery_dir/final"
+            indexed_dir="$recovery_dir/indexed"
+            if gh run download "$run_id" --repo "$GH_REPO" --name archive-recovery --dir "$final_dir"; then
+              artifact_dir="$final_dir"
+            else
+              gh run download "$run_id" --repo "$GH_REPO" --name archive-recovery-indexed --dir "$indexed_dir"
+              artifact_dir="$indexed_dir"
+            fi
+            python -m restore merge-recovery --artifact "$artifact_dir" --run-id "$run_id"
           done
       - run: python -m restore seed
       - name: Enumerate domain captures
@@ -98,6 +105,22 @@ jobs:
         id: asset-index
         continue-on-error: true
         run: python -m restore index-assets --max-assets 100 --max-pages 3
+      - name: Refresh indexed recovery summary
+        if: always()
+        run: python -m restore status > recovery/report.json
+      - name: Preserve archive index before acquisition
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: archive-recovery-indexed
+          path: |
+            recovery/state.json
+            recovery/report.json
+            recovery/asset-index-report.json
+            recovery/index/
+            recovery/raw/
+          retention-days: 30
+          if-no-files-found: error
       - name: Download and discover dependencies
         id: acquire
         continue-on-error: true

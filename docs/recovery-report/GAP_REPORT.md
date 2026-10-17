@@ -55,7 +55,7 @@ A targeted 2010 post check confirmed the original `/blog/2010/03/new-music-paul-
 
 ## Current measured checkpoint — October 17, 2026
 
-See machine-readable [`GAP_REPORT.json`](GAP_REPORT.json). The merged checkpoint has 9,000 resource URLs and 21,149 indexed capture rows. Recovery state: 3,037 recovered resources, 50 held for review, 1,193 failed attempts, and 4,720 still queued. There are 1,977 unique raw files (109,432,650 bytes). The local candidate has 924 recovered pages, 1,851 placeholders, four derived LJ views, and 738 local source assets.
+See machine-readable [`GAP_REPORT.json`](GAP_REPORT.json). The merged checkpoint has 9,083 resource URLs and 21,506 indexed capture rows. Recovery state: 3,038 recovered resources, 50 held for review, 1,193 failed attempts, and 4,802 still queued. There are 1,978 unique raw files (109,441,718 bytes). The local candidate has 924 recovered pages, 1,851 placeholders, four derived LJ views, and 738 local source assets.
 
 Latest candidate findings are 4,110 missing embedded assets, 295 linked assets not recovered, 145 external media links without local media, 17 unbundled fonts, and nine invalid source records. Root and `/bluescholars/` checks each pass with zero broken local targets or remote automatic-resource errors; a passing checker does not reduce these recovery gaps. The public site remains an unreviewed preview with both release flags false. Wayback run 38985105267 is active, resuming from 38975520061; the previous run reached the 90-minute acquisition cap but its artifact merged without conflicts.
 
@@ -71,3 +71,6 @@ The 2016 stylesheet also references `squarespace-ui-font.woff`. The exact HTTPS 
 
 
 The exact Squarespace UI WOFF font is now recovered from `20130926135509` (9,068 bytes; stable CDX digest `BVAWN6UNBT4AATQKQJGQTFGUJ62IR3VN`) and served locally. Four linked CSS parts are also local. The separate social-icon font remains missing.
+
+A complete Squarespace site-ID CDX prefix query returned 372 rows across 715 related URLs; 357 rows were new to the local index, but none match the 20 image IDs from the recovered June 2016 listing. A tighter prefix query for the first image ID returned zero rows. The 20 exact image URLs were also tried at two archived dates (40 replay attempts), with no valid bytes. These specific photos remain unacquired; the broader related image URLs stay indexed for further matching.
+ A second prefix query against the modern `images.squarespace-cdn.com` URL form for the first target image ID also returned zero rows.

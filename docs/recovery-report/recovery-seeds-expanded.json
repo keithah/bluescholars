@@ -1527,11 +1527,11 @@
     }
   ],
   "current_recovery_state": {
-    "updated_at": "2026-10-17T01:15:00Z",
-    "resource_urls": 9000,
-    "indexed_capture_records": 21149,
-    "unique_downloaded_files": 1977,
-    "downloaded_bytes": 109432650,
+    "updated_at": "2026-10-17T01:04:30Z",
+    "resource_urls": 9083,
+    "indexed_capture_records": 21506,
+    "unique_downloaded_files": 1978,
+    "downloaded_bytes": 109441718,
     "candidate_pages_recovered": 924,
     "candidate_pages_placeholder": 1851,
     "candidate_local_source_assets": 738,
@@ -1577,6 +1577,16 @@
       "timestamp": "20130926135509",
       "bytes": 9068,
       "sha256": "b980267ac2254ef534bfe32055489ed677d461077b37f2ee62bf7b5fc4f7362f"
-    }
-  }
+    },
+    "statuses": {
+      "queued": 4802,
+      "recovered": 3038,
+      "needs_review": 50,
+      "failed": 1193,
+      "excluded": 0
+    },
+    "failed_attempts": 6416,
+    "index_complete": true
+  },
+  "updated_at": "2026-10-17T01:04:30Z"
 }

@@ -1,24 +1,24 @@
 {
-  "updated_at": "2026-10-17T01:20:00Z",
+  "updated_at": "2026-10-17T01:04:30Z",
   "source_checkpoint_run": "38975520061",
   "capture_index": {
-    "indexed_capture_records": 21149,
+    "indexed_capture_records": 21506,
     "complete": true,
-    "scope": "completed bluescholars.com domain capture inventory plus targeted resource indexes; capture rows are not downloaded files"
+    "scope": "completed bluescholars.com domain CDX inventory plus targeted Squarespace font/image-prefix indexes; rows are not downloaded files"
   },
   "resource_inventory": {
-    "resource_urls": 9000,
+    "resource_urls": 9083,
     "statuses": {
-      "queued": 4720,
-      "recovered": 3037,
+      "queued": 4802,
+      "recovered": 3038,
       "needs_review": 50,
       "failed": 1193,
       "excluded": 0
     }
   },
   "validated_local_files": {
-    "unique_sha256_files": 1977,
-    "bytes": 109432650,
+    "unique_sha256_files": 1978,
+    "bytes": 109441718,
     "candidate_local_source_assets": 738
   },
   "candidate": {
@@ -114,19 +114,28 @@
       "timestamp": "20130926135509",
       "sha256": "b980267ac2254ef534bfe32055489ed677d461077b37f2ee62bf7b5fc4f7362f",
       "bytes": 9068
-    }
+    },
+    "image_prefix_query": {
+      "rows": 372,
+      "new_rows_indexed": 357,
+      "distinct_urls_in_scope": 715,
+      "target_listing_image_ids_found": 0,
+      "image_id_prefix_rows": 0,
+      "validated_image_bytes_from_target_images": 0
+    },
+    "modern_cdn_image_alias_rows": 0
   },
-  "resource_urls": 9000,
-  "indexed_capture_records": 21149,
+  "resource_urls": 9083,
+  "indexed_capture_records": 21506,
   "statuses": {
-    "queued": 4720,
-    "recovered": 3037,
+    "queued": 4802,
+    "recovered": 3038,
     "needs_review": 50,
     "failed": 1193,
     "excluded": 0
   },
-  "unique_downloaded_files": 1977,
-  "downloaded_bytes": 109432650,
+  "unique_downloaded_files": 1978,
+  "downloaded_bytes": 109441718,
   "failed_attempts": 6416,
   "index_complete": true
 }

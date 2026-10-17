@@ -89,6 +89,17 @@ def test_2007_image_map_labels_get_local_navigation_targets():
         '/2007/news.html','/2007/bio.html','/2007/shows.html','/2007/media.html']
     assert all(area.get('tabindex')=='0' for area in areas)
 
+def test_2007_late_image_map_coordinates_match_recovered_640px_menu():
+    source='''<html><body><img src="images/new_menu.gif" width="800" height="180" usemap="#Map2">
+      <map name="Map2"><area alt="news" coords="357,156,401,176" shape="rect">
+      <area alt="bio" coords="415,157,445,177" shape="rect">
+      <area alt="shows" coords="456,158,516,176" shape="rect">
+      <area alt="media.htmll" coords="528,158,580,176" shape="rect"></map></body></html>'''
+    text,_=render_html(source,'http://bluescholars.com/news.html',{},'', '/2007')
+    areas=BeautifulSoup(text,'html.parser').find_all('area')
+    assert [area['coords'] for area in areas]==[
+        '98,158,150,176','161,159,194,177','205,160,261,176','271,160,323,177']
+
 def test_image_map_local_pages_are_discovered_and_missing_asset_links_are_honest():
     source='<html><body><map name="nav"><area href="forum.html"><area href="/press/missing.jpg"></map></body></html>'
     discovered=discover_html(source,'http://bluescholars.com/bio.html')

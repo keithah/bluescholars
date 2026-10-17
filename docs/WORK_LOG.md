@@ -252,3 +252,10 @@
 - Created and verified `/tmp/bluescholars-restoration-2026-10-17.zip`: 6,894 files (final measured size/checksum recorded after packaging). ZIP integrity passed; font binaries, credentials, and development caches are excluded. The archive includes the candidate site and resumable state/index/non-font raw sources.
 - Resumed Wayback workflow `39010473274` from `38995680425` for a 2013+ pass. It completed and uploaded recovery/candidate artifacts. Its report records 625 indexed URLs, 461 previously recovered, 164 attempted, three valid responses and 161 failures/remaining URLs. The valid payloads were already local: conservative merge reported zero new raw files, zero resource records and zero conflicts. The runner candidate was from its older checkpoint and was not used to replace the newer local output.
 - The runner pass showed that an archive redirect could return a response outside the requested era and still be counted as a success. Added an explicit actual-capture boundary check, retains redirected responses as `needs_review`, and corrected the regression test. Commit `1854171ceeb9bbc0421c237f8b3663e5857da0e` is pushed to `main`; the full suite still passes 153 tests.
+# 2007 image-map hit areas
+
+- Fixed late 2007 image maps whose 800px-era coordinates were paired with the recovered 640px menu image. Hit areas now match the visible menu labels after the image is stretched to 800px.
+- Added a regression test for the late-map/earlier-artwork pairing. `PYTHONPATH=. .venv311/bin/python -m pytest -q`: 161 passed.
+- Rebuilt the unreviewed `/bluescholars/` candidate (986 recovered pages, 2,221 placeholders, 1,055 local assets); build completed successfully.
+- Browser verified that tapping the visible Bio label opens `/2007/bio.html` in the rebuilt candidate. The deployed mobile Squarespace menu behavior was verified in the prior Pages refresh; this change only adjusts legacy image-map coordinates.
+- Publication remains an unreviewed preview; source and visual review approval are still false.

@@ -174,8 +174,22 @@ def render_html(text: str,url: str,resources: dict,base: str,route_prefix='',ali
             'contact.htmll':'contact.html','store.htmll':'store.html',
             'forum.htmll':'forum.htm','journal.htmll':'journal.html',
         }
+        # Several 2008 pages retain an 800px-era image map while their only
+        # recoverable new_menu.gif is the 640px 2007 artwork. The image is
+        # stretched by the old HTML, but image-map coordinates are not. Use
+        # the matching geometry documented by intact 2007 captures, scaled
+        # horizontally to the 800px CSS image width so taps land on labels.
+        menu_geometry={
+            'news':'98,158,150,176','bio':'161,159,194,177',
+            'shows':'205,160,261,176','media.htmll':'271,160,323,177',
+            'press.htmll':'333,160,383,177','contact.htmll':'402,161,468,176',
+            'store.htmll':'481,161,530,177','forum.htmll':'540,159,604,177',
+            'journal.htmll':'614,161,686,176',
+        }
         for area in soup.find_all('area'):
             label=' '.join(area.get('alt','').lower().split())
+            if label in menu_geometry and area.find_parent('map'):
+                area['coords']=menu_geometry[label]
             if not area.get('href') and area.find_parent('map') and label in destinations:
                 area['href']='http://bluescholars.com/'+destinations[label]
             if area.get('href'):

@@ -211,7 +211,6 @@ body>.login-wrapper{position:fixed;top:0;left:0;height:100%;width:100%;z-index:3
 body>.login-wrapper.hidden{opacity:0;}
 .sqs-follow-button-hidden{display:none;}
 .fadeable-plugged.display-status-hidden{display:none;}
-@font-face{font-family:"squarespace-ui-font";src:url("data:,");src:url("data:,") format("embedded-opentype"),url("data:,") format("svg"),url("/bluescholars/assets/b980267ac2254ef534bfe32055489ed677d461077b37f2ee62bf7b5fc4f7362f.woff") format("woff"),url("data:,") format("truetype");font-weight:normal;font-style:normal;}
 .sqs-ui-font-family{font-family:"squarespace-ui-font";font-style:normal;speak:none;font-weight:normal;-webkit-font-smoothing:antialiased;}
 [class^="sqs-ui-font-"]:before,[class*=" sqs-ui-font-"]:before{font-family:"squarespace-ui-font";font-style:normal;speak:none;font-weight:normal;-webkit-font-smoothing:antialiased;}
 [data-icon]:before{font-family:"squarespace-ui-font";font-style:normal;speak:none;font-weight:normal;-webkit-font-smoothing:antialiased;content:attr(data-icon);}

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T02:03:00Z",
+  "updated_at": "2026-10-17T02:40:00Z",
   "scope": "Independent public web archives checked for Blue Scholars website captures, linked posts, and supporting material.",
   "results": {
     "Arquivo.pt": {
@@ -443,6 +443,29 @@
         "2010": 48,
         "2011": 88,
         "2013": 1
+      },
+      "workflow_runs": {
+        "38992255338": {
+          "result": "completed successfully",
+          "downloaded_legacy_html": 0,
+          "recovered_legacy_html": 0,
+          "notes": "The 243 alias-host HTML URLs remained queued in the merged checkpoint because older 2009/2011 routes were ranked behind other pages. The complete run artifact is merged locally."
+        },
+        "38992483413": {
+          "result": "failed before acquisition",
+          "error": "The older workflow attempted the root-level state.json path; artifact state was not nested in recovery/ and the run acquired nothing."
+        },
+        "38995680425": {
+          "result": "in progress",
+          "configuration": "200 resources; resume from 38992255338; confirmed legacy host enabled; Common Crawl disabled",
+          "purpose": "Prioritize and acquire indexed legacy WordPress HTML pages."
+        }
+      },
+      "current_alias_html_inventory": {
+        "urls": 243,
+        "status": "all queued as of 2026-10-17T02:37Z",
+        "raw_html_acquired": 0,
+        "note": "The legacy-host acquisition is active in workflow run 38995680425; inspect its artifact after completion."
       },
       "new_unkeyed_paths_observed": [
         {

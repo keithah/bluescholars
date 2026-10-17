@@ -46,3 +46,5 @@ Two contemporaneous sources surfaced exact official post URLs and both now resol
 This search path is productive: start from contemporaneous press, forums, album citations and band/label pages; extract exact original URLs, image filenames, dates and embed IDs; query those exact URLs in Wayback and Common Crawl; then inspect each capture individually and keep third-party text separate from the official page.
 
 A fresh local retry of the 42 exact source-linked image URLs queried 42 URLs and found zero capture rows. One Tumblr image URL could not be queried because the connection to `web.archive.org` was refused by this environment; it remains an unknown result, not a confirmed absence. The exact query and failure are recorded in `current-checkpoint.json`, `GAP_REPORT.json`, and `OTHER_ARCHIVES.json`.
+
+The exact response metadata for this retry is preserved in [`asset-index-2026-10-17.json`](asset-index-2026-10-17.json).

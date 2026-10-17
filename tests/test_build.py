@@ -400,6 +400,18 @@ def test_root_edition_cards_use_project_prefix_and_have_compact_responsive_style
     styles=(tmp_path/'_candidate/assets/archive-ui.css').read_text()
     assert '.edition-grid' in styles and '@media' in styles
 
+def test_archive_ui_stylesheet_url_is_content_versioned(tmp_path):
+    fixture_root(tmp_path);s=State(tmp_path)
+    css=(Path(__file__).resolve().parents[1]/'public/archive-ui.css').read_text()
+    (tmp_path/'public/archive-ui.css').write_text(css)
+    add_raw(s,HOME,'html',b'<html><head><title>BLUE SCHOLARS</title></head><body><h1>Original homepage</h1></body></html>')
+    s.data['resources'][HOME]['actual_capture']='20210529010817';s.save()
+    build(tmp_path,tmp_path/'_candidate','/bluescholars',candidate=True)
+    expected='/bluescholars/assets/archive-ui.css?v='+hashlib.sha256(css.encode()).hexdigest()[:16]
+    for path in ('index.html','2013/index.html'):
+        page=BeautifulSoup((tmp_path/'_candidate'/path).read_text(),'html.parser')
+        assert page.find('link',rel='stylesheet',href=expected)
+
 def test_livejournal_archive_is_a_separate_local_top_level_section(tmp_path):
     fixture_root(tmp_path);s=State(tmp_path)
     home='http://bluescholars.livejournal.com/'

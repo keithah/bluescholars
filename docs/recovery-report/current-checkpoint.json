@@ -124,7 +124,7 @@
     "unique_raw_files": 97,
     "visual_reviewed": false
   },
-  "updated_at": "2026-10-17T01:22:36.451634+00:00",
+  "updated_at": "2026-10-17T01:26:02+00:00",
   "tests": {
     "command": ".venv311/bin/python -m pytest -q",
     "result": "125 passed",
@@ -573,5 +573,31 @@
       "20160611083006",
       "20190420025910"
     ]
+  },
+  "published_preview": {
+    "url": "https://keithah.github.io/bluescholars/",
+    "branch": "gh-pages",
+    "commit": "efad4d3e2a2fefefcb78b7d29761d474857d86cd",
+    "pages_build_run": "38990662133",
+    "pages_status": "built",
+    "https_enforced": true,
+    "verified_at": "2026-10-17T01:26:02+00:00",
+    "checks": {
+      "homepage_http": 200,
+      "2007_http": 200,
+      "2009_http": 200,
+      "new_article_http": 200,
+      "pagination_http": 200,
+      "woff_binary_http": 404,
+      "missing_route_http": 404
+    },
+    "browser": {
+      "homepage_accessibility_tree_verified": true,
+      "new_article_body_visible": true,
+      "console_errors": 0,
+      "screenshot_captured_in_browser": true,
+      "screenshot_file_saved": false,
+      "human_review_claimed": false
+    }
   }
 }

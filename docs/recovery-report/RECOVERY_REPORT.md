@@ -128,3 +128,9 @@ The October 17, 2026 local 2009 continuation attempted 98 eligible URLs from the
 
 
 A later broad 200-URL retry validated two additional 2009-era HTML captures, both duplicate payload hashes already in the raw corpus: the `/blog/category/the-music/` capture resolved to `2010-02-17`, and `/blog/n30-a-personal-history-by-geo/` resolved to `2011-03-12`. It added no bytes or rendered routes. Root and project-subpath candidate checks still pass. See `recovery/broad-200-local-20261017-report.json`.
+
+
+A second 200-URL retry validated nine 2009-era HTML responses, including the City Arts Fest listing, “7 Questions with Bambu,” the SXSW 2009 listing, “News: We Have a Winner,” and “Bayani Redux Dropping September 1.” It added two inventory URLs, eight CDX rows, and one unique 10,490-byte payload; candidate route counts remained 977 recovered pages. See `recovery/broad-200-local-20261017-second-report.json` for full provenance.
+
+
+The third broad retry validated ten additional WordPress HTML capture responses from 2009–2011, adding one URL and one CDX row. All ten payloads were already in the corpus. Candidate route totals remained 977 recovered pages, with root and project-subpath checks passing; the complete attempt log is in `recovery/broad-200-local-20261017-third-report.json`.

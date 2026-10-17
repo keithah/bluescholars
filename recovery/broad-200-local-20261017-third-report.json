@@ -1,0 +1,165 @@
+{
+  "batch": "third local broad recovery retry",
+  "started_at": "2026-10-17T16:52:00Z",
+  "finished_at": "2026-10-17T17:05:06.428576+00:00",
+  "command": ".venv311/bin/python -m restore recover --max-files 200 --retry-failed --delay 0.5 --timeout 25 --retries 1",
+  "processed_urls": 200,
+  "validated_responses": 10,
+  "validated_kind_counts": {
+    "html": 10
+  },
+  "captures": [
+    {
+      "url": "http://02cd02a.netsolhost.com/blog/bio/bluescholarscom-a-retrospective/",
+      "kind": "html",
+      "requested_capture": "20090813084738",
+      "actual_capture": "20090814173713",
+      "bytes": 16114,
+      "sha256": "e00a5061e4e3f25dc11c863c58261d0c273e6b17320a9ba6b3d03e7b83906fbc",
+      "raw_path": "recovery/raw/e00a5061e4e3f25dc11c863c58261d0c273e6b17320a9ba6b3d03e7b83906fbc.html",
+      "attempted_at": "2026-10-17T16:55:01.347034+00:00"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com/blog/you-call-it-thanksgiving-we-call-it/",
+      "kind": "html",
+      "requested_capture": "20110312120417",
+      "actual_capture": "20110312115758",
+      "bytes": 18337,
+      "sha256": "eca059dc591c5b9513a443e3c035bfb825506a320b1ccd4fc7a9fc002ed4d7dd",
+      "raw_path": "recovery/raw/eca059dc591c5b9513a443e3c035bfb825506a320b1ccd4fc7a9fc002ed4d7dd.html",
+      "attempted_at": "2026-10-17T16:55:13.170242+00:00"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com/blog/2009/12/goorin-bros-nye-prefunk-party/",
+      "kind": "html",
+      "requested_capture": "20100226185807",
+      "actual_capture": "20100218031053",
+      "bytes": 25812,
+      "sha256": "6f72091756da5b4e99359f335ecca90df276cd32deb0c5096724dd27f3bb5433",
+      "raw_path": "recovery/raw/6f72091756da5b4e99359f335ecca90df276cd32deb0c5096724dd27f3bb5433.html",
+      "attempted_at": "2026-10-17T16:55:33.656253+00:00"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com/blog/2009/12/music-bambu-the-queen-is-dead/",
+      "kind": "html",
+      "requested_capture": "20100226185807",
+      "actual_capture": "20100217180743",
+      "bytes": 27273,
+      "sha256": "00eb14556214a9ca8bc068d3ab1b29436b25a7dc436cd7595c8ebd3884d75145",
+      "raw_path": "recovery/raw/00eb14556214a9ca8bc068d3ab1b29436b25a7dc436cd7595c8ebd3884d75145.html",
+      "attempted_at": "2026-10-17T16:55:39.808577+00:00"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com/blog/2010/01/nye-goorin-bros-prefunk-party/",
+      "kind": "html",
+      "requested_capture": "20210529010817",
+      "actual_capture": "20100308065008",
+      "bytes": 27324,
+      "sha256": "801a86d03c43242bb2933b182cb5caaf1f67ffba3db5881fbb27bd47c0c50af7",
+      "raw_path": "recovery/raw/801a86d03c43242bb2933b182cb5caaf1f67ffba3db5881fbb27bd47c0c50af7.html",
+      "attempted_at": "2026-10-17T16:55:42.025058+00:00"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com/blog/photos-the-crowds-2010-by-geo-starring-you/",
+      "kind": "html",
+      "requested_capture": "20210529010817",
+      "actual_capture": "20110316144350",
+      "bytes": 15270,
+      "sha256": "c2525105e1aa62ee787ac165adc1bec909239a322f486a2aa6d304d470c7e2e1",
+      "raw_path": "recovery/raw/c2525105e1aa62ee787ac165adc1bec909239a322f486a2aa6d304d470c7e2e1.html",
+      "attempted_at": "2026-10-17T16:59:20.388116+00:00"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com/blog/hari-kondabolu-storms-the-pacific-northwest/",
+      "kind": "html",
+      "requested_capture": "20210529010817",
+      "actual_capture": "20110312104604",
+      "bytes": 13157,
+      "sha256": "47f3e21bcc3f4cc4fe9663eaa1ba444a8e535697501aaf755d2548db7844c3fd",
+      "raw_path": "recovery/raw/47f3e21bcc3f4cc4fe9663eaa1ba444a8e535697501aaf755d2548db7844c3fd.html",
+      "attempted_at": "2026-10-17T16:59:58.019060+00:00"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com/blog/the-hip-hop-word-count-blue-scholars-approved/",
+      "kind": "html",
+      "requested_capture": "20210529010817",
+      "actual_capture": "20110310154150",
+      "bytes": 11422,
+      "sha256": "7325388e4e51d7807137a7aa51fd0d9a09be1b8edb12bc5831fb185030d4e0a7",
+      "raw_path": "recovery/raw/7325388e4e51d7807137a7aa51fd0d9a09be1b8edb12bc5831fb185030d4e0a7.html",
+      "attempted_at": "2026-10-17T17:01:25.605426+00:00"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com:80/blog/2009/07/blue-scholars-duck-down-caffe-vita/",
+      "kind": "html",
+      "requested_capture": "20091003022824",
+      "actual_capture": "20091003022824",
+      "bytes": 28882,
+      "sha256": "4bdb04d5d77de019af7ea4967f555955fb61caf81f93d6a55189890d7375d174",
+      "raw_path": "recovery/raw/4bdb04d5d77de019af7ea4967f555955fb61caf81f93d6a55189890d7375d174.html",
+      "attempted_at": "2026-10-17T17:01:34.404011+00:00"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com:80/blog/photos-the-crowds-2010-by-geo-starring-you/",
+      "kind": "html",
+      "requested_capture": "20210529010817",
+      "actual_capture": "20110316144350",
+      "bytes": 15270,
+      "sha256": "c2525105e1aa62ee787ac165adc1bec909239a322f486a2aa6d304d470c7e2e1",
+      "raw_path": "recovery/raw/c2525105e1aa62ee787ac165adc1bec909239a322f486a2aa6d304d470c7e2e1.html",
+      "attempted_at": "2026-10-17T17:01:37.724427+00:00"
+    }
+  ],
+  "new_resource_urls": 1,
+  "new_index_rows": 1,
+  "new_unique_raw_files": 0,
+  "new_unique_raw_bytes": 0,
+  "before": {
+    "resource_urls": 11147,
+    "statuses": {
+      "queued": 5603,
+      "recovered": 3869,
+      "needs_review": 72,
+      "failed": 1603,
+      "excluded": 0
+    },
+    "indexed_capture_records": 23256,
+    "unique_downloaded_files": 2300,
+    "downloaded_bytes": 147565354,
+    "failed_attempts": 7831
+  },
+  "after": {
+    "resource_urls": 11148,
+    "statuses": {
+      "queued": 5531,
+      "recovered": 3879,
+      "needs_review": 72,
+      "failed": 1666,
+      "excluded": 0
+    },
+    "indexed_capture_records": 23257,
+    "index_complete": true,
+    "unique_downloaded_files": 2300,
+    "downloaded_bytes": 147565354,
+    "failed_attempts": 8071,
+    "generated_at": "2026-10-17T17:05:06.428576+00:00"
+  },
+  "candidate_rebuilds": {
+    "root": {
+      "recovered_pages": 977,
+      "placeholder_pages": 2180,
+      "local_source_assets": 1055,
+      "check_ok": true,
+      "errors": 0
+    },
+    "project_subpath": {
+      "recovered_pages": 977,
+      "placeholder_pages": 2180,
+      "local_source_assets": 1055,
+      "check_ok": true,
+      "errors": 0
+    }
+  },
+  "rendered_route_counts_changed": false,
+  "note": "Ten validated HTML captures had payload hashes already present in the recovery corpus. They are retained with requested and resolved timestamps. No unique raw files were added; unresolved entries remain retryable."
+}

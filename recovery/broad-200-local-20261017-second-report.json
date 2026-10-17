@@ -1,0 +1,155 @@
+{
+  "batch": "second local broad recovery retry",
+  "started_at": "2026-10-17T16:32:00Z",
+  "finished_at": "2026-10-17T16:49:39.868111+00:00",
+  "command": ".venv311/bin/python -m restore recover --max-files 200 --retry-failed --delay 0.5 --timeout 25 --retries 1",
+  "processed_urls": 200,
+  "validated_responses": 9,
+  "validated_kind_counts": {
+    "html": 9
+  },
+  "captures": [
+    {
+      "url": "http://02cd02a.netsolhost.com/blog/news-we-have-a-winner/",
+      "kind": "html",
+      "requested_capture": "20110314022321",
+      "actual_capture": "20110314032403",
+      "bytes": 14567,
+      "sha256": "0677958f58e48b76151c263a7ff09675e5830017c7f85bf0c54fb5ecf218b00c",
+      "raw_path": "recovery/raw/0677958f58e48b76151c263a7ff09675e5830017c7f85bf0c54fb5ecf218b00c.html",
+      "attempted_at": "2026-10-17T16:36:33.429202+00:00"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com/blog/category/shows/city-arts-fest/",
+      "kind": "html",
+      "requested_capture": "20110314052033",
+      "actual_capture": "20110314052033",
+      "bytes": 7021,
+      "sha256": "082b8f2391cc9bca6fbee97f5a06baedadfe95b6cc8b07d57cf81cb91ce05651",
+      "raw_path": "recovery/raw/082b8f2391cc9bca6fbee97f5a06baedadfe95b6cc8b07d57cf81cb91ce05651.html",
+      "attempted_at": "2026-10-17T16:39:06.089863+00:00"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com/blog/2010/03/7-questions-with-bambu/",
+      "kind": "html",
+      "requested_capture": "20100308065008",
+      "actual_capture": "20100308065232",
+      "bytes": 31739,
+      "sha256": "5a7afda56e70002fc8bfab0612f7e6c40db7be2a7e06da5bd3c8cff524dcb712",
+      "raw_path": "recovery/raw/5a7afda56e70002fc8bfab0612f7e6c40db7be2a7e06da5bd3c8cff524dcb712.html",
+      "attempted_at": "2026-10-17T16:39:15.304664+00:00"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com/blog/2010/03/7-questions-with-bambu",
+      "kind": "html",
+      "requested_capture": "20210529010817",
+      "actual_capture": "20100308065232",
+      "bytes": 31739,
+      "sha256": "5a7afda56e70002fc8bfab0612f7e6c40db7be2a7e06da5bd3c8cff524dcb712",
+      "raw_path": "recovery/raw/5a7afda56e70002fc8bfab0612f7e6c40db7be2a7e06da5bd3c8cff524dcb712.html",
+      "attempted_at": "2026-10-17T16:39:17.824783+00:00"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com/blog/coffee-and-snow-2-photos-recap/",
+      "kind": "html",
+      "requested_capture": "20110312221705",
+      "actual_capture": "20110312214611",
+      "bytes": 13720,
+      "sha256": "3ff45ab5a824e7213a987999ec1e3f6a5016af9a0e92067617d3183a98c61db7",
+      "raw_path": "recovery/raw/3ff45ab5a824e7213a987999ec1e3f6a5016af9a0e92067617d3183a98c61db7.html",
+      "attempted_at": "2026-10-17T16:39:20.010846+00:00"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com/blog/2009/03/sxsw-2009-where-well-be/",
+      "kind": "html",
+      "requested_capture": "20090803102535",
+      "actual_capture": "20100312073016",
+      "bytes": 29086,
+      "sha256": "c9c66c4e0135f097b6e1016490596c43ea04c0e288685207ab1ee8754412069d",
+      "raw_path": "recovery/raw/c9c66c4e0135f097b6e1016490596c43ea04c0e288685207ab1ee8754412069d.html",
+      "attempted_at": "2026-10-17T16:39:34.960671+00:00"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com/blog/2009/03/sxsw-2009-where-well-be",
+      "kind": "html",
+      "requested_capture": "20210529010817",
+      "actual_capture": "20100312073016",
+      "bytes": 29086,
+      "sha256": "c9c66c4e0135f097b6e1016490596c43ea04c0e288685207ab1ee8754412069d",
+      "raw_path": "recovery/raw/c9c66c4e0135f097b6e1016490596c43ea04c0e288685207ab1ee8754412069d.html",
+      "attempted_at": "2026-10-17T16:39:38.327678+00:00"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com/blog/bluescholarscom-a-retrospective/",
+      "kind": "html",
+      "requested_capture": "20110313174529",
+      "actual_capture": "20110313174529",
+      "bytes": 8268,
+      "sha256": "56eb45d5c842ad58d4540bd0d6b5fdd388eb76b5cf1a090334ce51a629c2f90a",
+      "raw_path": "recovery/raw/56eb45d5c842ad58d4540bd0d6b5fdd388eb76b5cf1a090334ce51a629c2f90a.html",
+      "attempted_at": "2026-10-17T16:39:45.704715+00:00"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com/blog/bayani-redux-dropping-september-1/",
+      "kind": "html",
+      "requested_capture": "20110312131606",
+      "actual_capture": "20110312131606",
+      "bytes": 10490,
+      "sha256": "cb721b282b60603e14d20094f99d5f64aada9fdfd8dc8246329fa856e92e96e0",
+      "raw_path": "recovery/raw/cb721b282b60603e14d20094f99d5f64aada9fdfd8dc8246329fa856e92e96e0.html",
+      "attempted_at": "2026-10-17T16:44:15.336919+00:00"
+    }
+  ],
+  "new_resource_urls": 2,
+  "new_index_rows": 8,
+  "new_unique_raw_files": 1,
+  "new_unique_raw_bytes": 10490,
+  "before": {
+    "resource_urls": 11145,
+    "statuses": {
+      "queued": 5705,
+      "recovered": 3860,
+      "needs_review": 72,
+      "failed": 1508,
+      "excluded": 0
+    },
+    "indexed_capture_records": 23248,
+    "unique_downloaded_files": 2299,
+    "downloaded_bytes": 147554864,
+    "failed_attempts": 7718
+  },
+  "after": {
+    "resource_urls": 11147,
+    "statuses": {
+      "queued": 5603,
+      "recovered": 3869,
+      "needs_review": 72,
+      "failed": 1603,
+      "excluded": 0
+    },
+    "indexed_capture_records": 23256,
+    "index_complete": true,
+    "unique_downloaded_files": 2300,
+    "downloaded_bytes": 147565354,
+    "failed_attempts": 7831,
+    "generated_at": "2026-10-17T16:49:39.868111+00:00"
+  },
+  "candidate_rebuilds": {
+    "root": {
+      "recovered_pages": 977,
+      "placeholder_pages": 2180,
+      "local_source_assets": 1055,
+      "check_ok": true,
+      "errors": 0
+    },
+    "project_subpath": {
+      "recovered_pages": 977,
+      "placeholder_pages": 2180,
+      "local_source_assets": 1055,
+      "check_ok": true,
+      "errors": 0
+    }
+  },
+  "rendered_route_counts_changed": false,
+  "note": "Nine validated WordPress HTML capture responses are preserved with dated provenance. One new unique raw file was added; other responses used hashes already present in the corpus. All unresolved work remains retryable."
+}

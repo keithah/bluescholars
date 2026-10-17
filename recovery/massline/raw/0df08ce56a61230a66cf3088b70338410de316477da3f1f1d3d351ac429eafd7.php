@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+		<title>Print Page - no1 disrespects my lady!</title>
+		<style type="text/css"><!--
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			*, a:link, a:visited, a:hover, a:active
+			{
+				color: black !important;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			.code
+			{
+				font-size: x-small;
+				font-family: monospace;
+				border: 1px solid #000000;
+				margin: 1px;
+				padding: 1px;
+			}
+			.quote
+			{
+				font-size: x-small;
+				border: 1px solid #000000;
+				margin: 1px;
+				padding: 1px;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		--></style>
+	</head>
+	<body bgcolor="#ffffff" text="#000000">
+		<h1 class="largetext">MASSLINE</h1>
+		<h2 class="normaltext">MASS LINE FORUMS => By Any Means => Topic started by: hypknowledge* on October 19, 2006, 09:46:31 am</h2>
+
+		<table width="90%" cellpadding="0" cellspacing="0" border="0">
+			<tr>
+				<td>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>no1 disrespects my lady!</b><br />
+					Post by: <b>hypknowledge*</b> on <b>October 19, 2006, 09:46:31 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">IM SO PISSED I GOTTA TELL YALL ABOUT THIS!<br /> <br />my lady and i attend south seattle. today she went to eng 101 like she usually does after printing her rough draft for group/peer editing. we see each other in between classes so i was walkin to the &#039;university center&#039; [new building] and i see her at the top of the stairs outside her classroom.<br /><br />her: hi babe<br />me: hey..why you out here...what happened..[i notice her crying]<br />her: some guy annoyed me...we were in our groups and you know how i wrote about me and the car...[she personified the car to tell how her personality is]<br />me: yeah and ...<br />her: this guy said i should write about tupac in it for some reason...and i told him i dont listen to tupac much..AND HE SAID I SHOULD GET MY HEAD BANGED ON THE TABLE... [mothaFUCKAA!! MAN I WAS READY TO KILL SOMEBODY!!]<br />me: what oh hell no! point him out to me...i just want to confront him<br />her: babe please dont do anything..<br /><br />so the class ends and this happens within 5 minutes...people start coming out and finally the punk ass comes out with this buddy...and i ask which one of you said that to my girl. and his punk ass cant even look at me...he keeps his eye contact to my lady and starts sayin i didnt mean it i didnt know you were gun take it like that..this whole time im there FURIOUS!! sayin well you dont know her DONT TALK TO MY LADY LIKE THAT! ...gettin loud!<br /><br />and one thing that pisses me off more..a bystander [student maybe in early 30s who happens to be white also] is saying in the background: &#039;okaay ..calm down...he said he&#039;s sorry [FUCK THAT! LIKE A SORRY IS GUN MAKE ME CALM DOWN!! she didnt even know what we were talkin about!!!]<br /><br />and finally guy walks away and has the nerve to say: why you trippin?&#039;<br />im still mad so i say: you wann do somethin about it?&#039;<br />you can tell he was scared &#039;cause he said: &#039;did i say i wanted to?&quot; as he got down the stairs<br /><br />we go into the classroom to get her stuff<br /><br />person in the background outside the classroom comes in and sits down: you need to calm down he already apologized.<br /><br />me: ITS NONE OF YOUR BUSINESS! [in my head im thinkin THIS AINT IRAQ BITCH STAY OUT!...IM NOT RACISTS and FAR FROM IGNORANT BUT I CANT BLAME MYSELF FOR&nbsp; ASSUMING SHE DEFENDED THE OTHER STUDENT &#039;CAUSE THEY ARE WHITE]<br /><br />she also had the nerve to say i was tryin to start a fight in her school<br />i told em i didnt touch anybody and she said i was gettin loud [WHAT! IM FROM THE THIRD WORLD I GOTTA GET LOUD TO BE HEARD]<br /><br />my lady was so worried i&#039;d follow the punk [who i recognize from franklin] and beat his ass! made me promise not to do anythin before she went to class. on my way to the library one asian friend of the punk was tryin to tell me he didnt mean it and the teacher wants to get involved...HAH I DONT CARE!<br /><br />***************writing this has calmed me down a bit BUT i just had to make sure it was clear they dont know my lady and they are not gun talk to her like that...she can hold her own i know that BUT I WILL NOT LET ANYONE DISRESPECT MY LADY!!! <br />AND I HOPE EVERYONE IN THIS FORUM HOLDS UP EVERY WOMAN IN THEIR LIFE...YA MOTHER..SISTAH..AUNT...WIFE..GF..FRIENDS<br /><br />thank you!<br />-hyp<br /><br /><br /><br /></div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: no1 disrespects my lady!</b><br />
+					Post by: <b>erik?</b> on <b>October 19, 2006, 10:36:27 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">sorry to hear about that shit brotha, i think u did the right thing cuz.....mcuh love from here man!!<br /></div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: no1 disrespects my lady!</b><br />
+					Post by: <b>nam</b> on <b>October 19, 2006, 12:35:13 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">hmm. wow sorry to hear about what happened. but it does seem(from how you are describing this story) that you overreacted a little. im not sayin that you shouldnt be mad...but it didnt have to come out like that...also....<br /><div class="quoteheader">Quote from: hypknowledge* on October 19, 2006, 09:46:31 am</div><div class="quote">and finally guy walks away and has the nerve to say: why you trippin?&#039;<br />im still mad so i say: you wann do somethin about it?&#039;<br />you can tell he was scared &#039;cause he said: &#039;did i say i wanted to?&quot; as he got down the stairs<br /><br />person in the background outside the classroom comes in and sits down: you need to calm down he already apologized.<br /><br />she also had the nerve to say i was tryin to start a fight in her school<br />i told em i didnt touch anybody and she said i was gettin loud [WHAT! IM FROM THE THIRD WORLD I GOTTA GET LOUD TO BE HEARD]<br /><br /></div><br /><br /><br />.... if i was someone that happened to be there and witness what happened...i would think that you were trying to fight as well. sometimes everything isnt as complex and deeper than it seems....sometimes the things people say and do, like what the dude wrote about ur girl just comes out of pure stupidity. Build, educate, and listen. Acknowlege that they were wrong and stupid, use it to let them know whats up and to &#039;fight without fighting&#039;....before literally tryin to fight.<br /><br />again im sorry to hear wut happened...and i completely understand why u would be so pissed. dont take this the wrong way homie. im just lettin you know what im hearing and what im gettin out of this.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: no1 disrespects my lady!</b><br />
+					Post by: <b>SKI MASK WAY</b> on <b>October 19, 2006, 12:38:58 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">i agree, maybe dude just didnt know better. but doesnt mean you gotta peice him in, although he might of not been as&nbsp; respectful as he should be, he need another brotha to check him on it. im sure you are that dude</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: no1 disrespects my lady!</b><br />
+					Post by: <b>daps</b> on <b>October 19, 2006, 01:36:42 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">say it with me now: <br /><br />&quot;when keepin it real....<i>goes wrong</i>...&quot;</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: no1 disrespects my lady!</b><br />
+					Post by: <b>SKI MASK WAY</b> on <b>October 19, 2006, 02:16:18 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: daps1 on October 19, 2006, 01:36:42 pm</div><div class="quote">say it with me now: <br /><br />&quot;when keepin it real....<i>goes wrong</i>...&quot;<br /></div><br /><br />wrap it up B!</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: no1 disrespects my lady!</b><br />
+					Post by: <b>Kirb.s</b> on <b>October 19, 2006, 02:43:02 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">I was kidding Nam.  Next time Ill make it more clear.  and Ill erase it.  but bottom line i was agreeing with you hahahahaha<br /><br /></div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: no1 disrespects my lady!</b><br />
+					Post by: <b>hypknowledge*</b> on <b>October 19, 2006, 03:42:56 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">Nam, for me to post in here and take replies negatively would be a waste of time. i agree that it is smarter to fight without fighting and that is what i did. i confronted him but didnt touch him at all. i got a good head on my shoulder thanks to filipino parents, 9 siblings and years of martial arts. </div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: no1 disrespects my lady!</b><br />
+					Post by: <b>hypknowledge*</b> on <b>October 19, 2006, 03:43:53 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: daps1 on October 19, 2006, 01:36:42 pm</div><div class="quote">say it with me now: <br /><br />&quot;when keepin it real....&lt;i&gt;goes wrong&lt;/i&gt;...&quot;<br /></div><br /><br />call me slow but i dont get it.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: no1 disrespects my lady!</b><br />
+					Post by: <b>daps</b> on <b>October 19, 2006, 04:14:29 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: hypknowledge* on October 19, 2006, 03:43:53 pm</div><div class="quote"><div class="quoteheader">Quote from: daps1 on October 19, 2006, 01:36:42 pm</div><div class="quote">say it with me now: <br /><br />&quot;when keepin it real....&lt;i&gt;goes wrong&lt;/i&gt;...&quot;<br /></div><br /><br />call me slow but i dont get it.<br /></div><br /><br />watch these:<br />http://youtube.com/results?search_query=Chappelle+Keeping+it+Real&amp;search=Search</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: no1 disrespects my lady!</b><br />
+					Post by: <b>igotseatacfunk</b> on <b>October 19, 2006, 05:04:00 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">from an outsiders point of view, It&#039;s one thing to stand up for your girl, but there is that point when you just have to back off.  He apoligized to her, now the ball is in her court, not yours.  Yes we give a woman our strength, but at times we need to let them flex their own muscles.  It wasn&#039;t a physical confrontation, only her pride and peace of mind were at stake.  And those battles for our peace of mind are the ones we fight on our own.<br /><br />You were right in defending her, but from what i&#039;ve gathered from your post, you hit the tipping point and kept going.  In doing so you elevated the situation beyond the point it needed to go. It&#039;s good that you got her back though.  Thick and thin right?<br /><br />Peace to you.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: no1 disrespects my lady!</b><br />
+					Post by: <b>nam</b> on <b>October 19, 2006, 05:13:06 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: SINCERE9 on October 19, 2006, 02:16:18 pm</div><div class="quote"><div class="quoteheader">Quote from: daps1 on October 19, 2006, 01:36:42 pm</div><div class="quote">say it with me now: <br /><br />&quot;when keepin it real....<i>goes wrong</i>...&quot;<br /></div><br /><br />wrap it up B!<br /></div><br /><br />they&#039;d find a bloody glove...at our house. we woulda made real Orange Juice out that muhfucka..</div>
+					<br /><br />
+					<div align="center" class="smalltext">
+		<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;">MASSLINE | Powered by <a href="http://www.simplemachines.org/" title="Simple Machines Forum" target="_blank">SMF 1.0.10</a>.<br />
+&copy; 2005, <a href="http://www.simplemachines.org/about/copyright.php" title="Free Forum Software" target="_blank">Simple Machines LLC</a>. All Rights Reserved.
+		</span></div>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

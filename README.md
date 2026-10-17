@@ -7,6 +7,7 @@ This repository is reconstructing three archived versions of **bluescholars.com*
 - `/2013/` — the Squarespace design, first located in September 2013; the last intact homepage capture located so far is September 30, 2023
 - `/lj/` — a separate archive for the separately hosted Blue Scholars LiveJournal; it is not presented as another official website design
 - `/prometheusbrown/` and `/sabzi/` — separate archives for the related artist sites, each with its own dated edition pages and source provenance
+- `/masslinemedia/` — separate 2006–2009 Mass Line Media homepage captures and a growing, locally rendered 2007 forum archive
 
 The root page is an edition gateway. The visual baseline for the Squarespace edition is the May 29, 2021 homepage capture. Original source bytes, capture dates, hashes, and archive provenance are retained separately from the rendered output.
 
@@ -19,6 +20,8 @@ Recovery has reached the static reconstruction stage, but it is incomplete. The 
 The artist-site expansion has indexed 1,580 Wayback rows for `prometheusbrown.com` and 322 for `sabzi.co`. The observed Prometheus Brown site generations include its 2008 film blog, 2009 and 2010 WordPress blog snapshots, 2013/2016 portfolio captures, and 2019/2022 Squarespace captures. Sabzi has 2013, 2016, 2019 and 2022 Squarespace snapshots. The current candidate renders 615 captured pages and 381 local assets across these 11 editions. Those sources remain candidate-only; 205 later-page captures need compatibility review, eight unsafe SVG files are withheld from rendered output, and many linked pages, original stylesheets and images remain unavailable. The 2009 Prometheus Brown numeric HTML set includes spam-injected captures; eight unique 2024 homepage captures were inspected and contain JAYA77 casino spam, so they are excluded from the site editions.
 
 See the per-capture [artist-site recovery report](docs/recovery-report/artist-sites-report.md) for the acquisition counts, source dates and current gaps.
+
+The Mass Line Media addition is a separate archive area. Its collapsed Wayback inventory contains 5,356 URL records, including 4,817 `/smf/` paths and nine observed forum boards; a separate uncollapsed query is complete at 7,121 capture events. Exact root-history queries found 213 distinct homepage captures, and authentic snapshots from 2006, 2007, 2008 and 2009 are kept separately. The last substantial original homepage capture located is August 13, 2009; later samples show the domain was replaced by parked, unrelated or verification pages. Forum recovery is in progress and resumes from its manifest. See the [Mass Line Media recovery report](docs/recovery-report/massline-report.md) for live counts, provenance and gaps.
 
 ## Preview and tests
 
@@ -61,6 +64,9 @@ python -m restore commoncrawl --max-records 1800 --workers 4
 python -m restore arquivo --history-url bluescholars.com
 python -m restore artist-index
 python -m restore artist-recover --max-files 1800
+python -m restore massline-index
+python -m restore massline-history --max-pages 1
+python -m restore massline-recover --max-files 250 --delay 0.4
 ```
 
 These commands preserve dated variants and provenance. A saved capture is not automatically a compatible or publishable source. Promotion verifies hashes; later captures remain individually review-gated.

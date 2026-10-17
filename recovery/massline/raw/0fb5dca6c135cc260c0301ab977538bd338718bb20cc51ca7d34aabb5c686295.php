@@ -1,0 +1,1059 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<meta name="description" content="Artwork" />
+	<meta name="keywords" content="PHP, MySQL, bulletin, board, free, open, source, smf, simple, machines, forum" />
+	<script language="JavaScript" type="text/javascript" src="http://masslinemedia.com/smf/Themes/default/script.js"></script>
+	<script language="JavaScript" type="text/javascript"><!--
+		var smf_theme_url = "http://masslinemedia.com/smf/Themes/safgrey105";
+		var smf_images_url = "http://masslinemedia.com/smf/Themes/safgrey105/images";
+	// --></script>
+	<title>Artwork</title>
+	<link rel="stylesheet" type="text/css" href="http://masslinemedia.com/smf/Themes/safgrey105/style.css" />
+	<link rel="help" href="http://masslinemedia.com/smf/index.php?action=help" target="_blank" />
+	<link rel="search" href="http://masslinemedia.com/smf/index.php?action=search" />
+	<link rel="contents" href="http://masslinemedia.com/smf/index.php" />
+	<link rel="prev" href="http://masslinemedia.com/smf/index.php?action=;topic=384.0;prev_next=prev" />
+	<link rel="next" href="http://masslinemedia.com/smf/index.php?action=;topic=384.0;prev_next=next" />
+	<link rel="index" href="http://masslinemedia.com/smf/index.php?action=;board=7.0" />
+
+	<script language="JavaScript" type="text/javascript"><!--
+		var current_header = false;
+
+		function shrinkHeader(mode)
+		{
+			document.cookie = "upshrink=" + (mode ? 1 : 0);
+			document.getElementById("upshrink").src = smf_images_url + (mode ? "/upshrink2.gif" : "/upshrink.gif");
+
+			document.getElementById("upshrinkHeader").style.display = mode ? "none" : "";
+
+			current_header = mode;
+		}
+	// --></script>
+</head>
+<body>
+        <center>
+        <table class="maintable" cellspacing="0" cellpadding="0" border="0" align="center" width="760
+        ">
+               <tr>
+                   <td class="header">&nbsp;
+
+                   </td>
+               </tr>
+               <tr>
+                   <td>
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+               <tr>
+        <td class="headerdown" align="left" width="60%">
+							Welcome, <b>Guest</b>. Please <a href="http://masslinemedia.com/smf/index.php?action=login">login</a> or <a href="http://masslinemedia.com/smf/index.php?action=register">register</a>.<br />
+							October 16, 2007, 11:44:08 am<br />
+                   <td class="headerdown" align="right" width="40%" style="padding-right: 8px;">
+							<b>36308</b> Posts in <b>2322</b> Topics by <b>478</b> Members<br />
+							Latest Member: <b> <a href="http://masslinemedia.com/smf/index.php?action=profile;u=2420">joey</a></b>
+	           </td>
+                   </tr>
+                   </table>
+                   </td>
+               </tr>
+               <tr>
+                   <td class="bodytd">
+        <div align="center" style="padding-top: 4px;">
+                
+				<a href="http://masslinemedia.com/smf/index.php"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/english/home.gif" alt="Home" style="margin: 2px 0;" border="0" /></a> 
+				<a href="http://masslinemedia.com/smf/index.php?action=help" target="_blank"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/english/help.gif" alt="Help" style="margin: 2px 0;" border="0" /></a> 
+				<a href="http://masslinemedia.com/smf/index.php?action=search"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/english/search.gif" alt="Search" style="margin: 2px 0;" border="0" /></a> 
+				<a href="http://masslinemedia.com/smf/index.php?action=calendar"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/english/calendar.gif" alt="Calendar" style="margin: 2px 0;" border="0" /></a> 
+				<a href="http://masslinemedia.com/smf/index.php?action=login"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/english/login.gif" alt="Login" style="margin: 2px 0;" border="0" /></a> 
+				<a href="http://masslinemedia.com/smf/index.php?action=register"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/english/register.gif" alt="Register" style="margin: 2px 0;" border="0" /></a>
+        </div>
+	<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+		<td>
+<a name="top"></a>
+<a name="msg5489"></a>
+<table width="100%" cellpadding="3" cellspacing="0">
+	<tr>
+		<td valign="bottom"><span class="nav"><b><a href="http://masslinemedia.com/smf/index.php" class="nav">MASSLINE</a></b> &nbsp;|&nbsp; <b><a href="http://masslinemedia.com/smf/index.php#1" class="nav">MASS LINE FORUMS</a></b> &nbsp;|&nbsp; <b><a href="http://masslinemedia.com/smf/index.php?board=7.0" class="nav">The Opium Den</a></b> &nbsp;|&nbsp; <b><a href="http://masslinemedia.com/smf/index.php?topic=384.0" class="nav">Artwork</a></b></span></td>
+		<td valign="bottom" align="right" class="smalltext">
+			<span class="nav"><a href="http://masslinemedia.com/smf/index.php?topic=384.0;prev_next=prev">&laquo; previous</a> <a href="http://masslinemedia.com/smf/index.php?topic=384;prev_next=next">next &raquo;</a></span>
+		</td>
+	</tr>
+</table>
+<table width="100%" cellpadding="3" cellspacing="0" border="0" class="tborder" style="margin-bottom: 1ex;">
+	<tr>
+		<td align="left" class="catbg" width="100%" height="35">
+			<table cellpadding="3" cellspacing="0" width="100%">
+				<tr>
+					<td>
+						<b>Pages:</b> [<b>1</b>] <a class="navPages" href="http://masslinemedia.com/smf/index.php?topic=384.15">2</a> <a class="navPages" href="http://masslinemedia.com/smf/index.php?topic=384.30">3</a> <b> ... </b><a class="navPages" href="http://masslinemedia.com/smf/index.php?topic=384.105">8</a>  <a href="#bot"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/english/go_down.gif" alt="Go Down" border="0" align="top" /></a>
+					</td>
+					<td align="right" style="font-size: smaller;"><a href="http://masslinemedia.com/smf/index.php?action=printpage;topic=384.0" target="_blank"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/english/print.gif" alt="Print" border="0" /></a></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<table width="100%" cellpadding="3" cellspacing="0" border="0" class="tborder" style="border-bottom: 0;">
+	<tr class="titlebg">
+		<td valign="middle" align="left" width="15%" style="padding-left: 6px;">
+			Author
+		</td>
+		<td valign="middle" align="left" width="85%" style="padding-left: 6px;">
+			Topic: Artwork &nbsp;(Read 4201 times)
+		</td>
+	</tr>
+</table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" class="bordercolor">
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://masslinemedia.com/smf/index.php?action=profile;u=27" title="View the profile of Jawn">Jawn</a></b>
+							<div class="smalltext">
+								Hero Member<br />
+								<img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><br />
+								Posts: 1605<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://img409.imageshack.us/img409/1155/dj3hf4.jpg" width="65" height="65" alt="" border="0" /></div><br />
+								Got Seoul like Korea...<br />
+								<br />
+								<a href="http://web.icq.com/whitepages/about_me/1,,,00.html?Uin=314130913" target="_blank"><img src="http://web.icq.com/whitepages/online?icq=314130913&amp;img=5" alt="314130913" width="18" height="18" border="0" /></a>
+								
+								<a href="aim:goim?screenname=djkooljawn&amp;message=Hi.+Are+you+there?"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/aim.gif" alt="djkooljawn" border="0" /></a>
+								<br />
+								<a href="http://masslinemedia.com/smf/index.php?action=profile;u=27"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/icons/profile_sm.gif" alt="View Profile" title="View Profile" border="0" /></a>
+								<a href="http://www.myspace.com/djkooljawn" title="MySpace" target="_blank"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/www_sm.gif" alt="WWW" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td align="left" valign="middle"><a href="http://masslinemedia.com/smf/index.php?topic=384.msg5489#msg5489"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td align="left" valign="middle">
+									<b><a href="http://masslinemedia.com/smf/index.php?topic=384.msg5489#msg5489">Artwork</a></b>
+									<div class="smalltext">&#171; <b> on:</b> November 16, 2006, 06:42:49 pm &#187;</div></td>
+								<td align="right" valign="bottom" height="20" nowrap="nowrap" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div style="overflow: auto; width: 100%;">Anyone here like to draw? I thought I&#039;d share some of my latest work. <br /><br />The female figure intrigues me most, so I really enjoy drawing girls (usually naked). I stayed up until 4:00 AM this morning sketching this piece out, and I like how it turned out:<br /><br /><img src="http://img156.imageshack.us/img156/386/nicolexm4.jpg" alt="" border="0" /><br /><br />Anyone else out there draw, tag, or even sketch recreationally? I&#039;d like to see what some of my Mass Line peeps can do.</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td align="left" colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td align="left" valign="bottom" class="smalltext">
+									&#171; <i>Last Edit: June 08, 2007, 02:54:54 am by Jawn</i> &#187;
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://masslinemedia.com/smf/Themes/safgrey105/images/ip.gif" alt="" border="0" />
+									Logged
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div style="overflow: auto; width: 100%; padding-bottom: 3px;" class="signature">&quot;It ain&#039;t where you&#039;re from, it&#039;s where you&#039;re at!&quot;<br /><br />- Rakim<br /><br /><a href="http&#58;//groups.google.com/group/sccchiphopcongress" target="_blank">http://groups.google.com/group/sccchiphopcongress</a></div>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg5503"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://masslinemedia.com/smf/index.php?action=profile;u=93" title="View the profile of Seaweed">Seaweed</a></b>
+							<div class="smalltext">
+								Hero Member<br />
+								<img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><br />
+								Posts: 695<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://i121.photobucket.com/albums/o221/seaweed831/CRW_4611.jpg" width="65" height="65" alt="" border="0" /></div><br />
+								Time is a trick to make me think the day is qucik<br />
+								<br />
+								
+								<a href="http://members.msn.com/seaofx@hotmail.com" target="_blank"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/msntalk.gif" alt="seaofx@hotmail.com" border="0" /></a>
+								<a href="aim:goim?screenname=se4w33d%40aol.com&amp;message=Hi.+Are+you+there?"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/aim.gif" alt="se4w33d@aol.com" border="0" /></a>
+								<a href="http://edit.yahoo.com/config/send_webmesg?.target=santadennis%40yahoo.com"><img src="http://opi.yahoo.com/online?u=santadennis%40yahoo.com&amp;m=g&amp;t=0" alt="santadennis@yahoo.com" border="0" /></a><br />
+								<a href="http://masslinemedia.com/smf/index.php?action=profile;u=93"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/icons/profile_sm.gif" alt="View Profile" title="View Profile" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td align="left" valign="middle"><a href="http://masslinemedia.com/smf/index.php?topic=384.msg5503#msg5503"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td align="left" valign="middle">
+									<b><a href="http://masslinemedia.com/smf/index.php?topic=384.msg5503#msg5503">Re: Artwork</a></b>
+									<div class="smalltext">&#171; <b>Reply #1 on:</b> November 16, 2006, 08:39:31 pm &#187;</div></td>
+								<td align="right" valign="bottom" height="20" nowrap="nowrap" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div style="overflow: auto; width: 100%;">Not much of a paper artist here (although I can carve stuff out of just about any food product), but your artwork is pretty good man. Would like to see more if ya got it. </div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td align="left" colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td align="left" valign="bottom" class="smalltext">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://masslinemedia.com/smf/Themes/safgrey105/images/ip.gif" alt="" border="0" />
+									Logged
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div style="overflow: auto; width: 100%; padding-bottom: 3px;" class="signature">Give a man a fish and he has a meal,<br />Teach a man to fish, and he steals your job.</div>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg5542"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://masslinemedia.com/smf/index.php?action=profile;u=27" title="View the profile of Jawn">Jawn</a></b>
+							<div class="smalltext">
+								Hero Member<br />
+								<img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><br />
+								Posts: 1605<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://img409.imageshack.us/img409/1155/dj3hf4.jpg" width="65" height="65" alt="" border="0" /></div><br />
+								Got Seoul like Korea...<br />
+								<br />
+								<a href="http://web.icq.com/whitepages/about_me/1,,,00.html?Uin=314130913" target="_blank"><img src="http://web.icq.com/whitepages/online?icq=314130913&amp;img=5" alt="314130913" width="18" height="18" border="0" /></a>
+								
+								<a href="aim:goim?screenname=djkooljawn&amp;message=Hi.+Are+you+there?"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/aim.gif" alt="djkooljawn" border="0" /></a>
+								<br />
+								<a href="http://masslinemedia.com/smf/index.php?action=profile;u=27"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/icons/profile_sm.gif" alt="View Profile" title="View Profile" border="0" /></a>
+								<a href="http://www.myspace.com/djkooljawn" title="MySpace" target="_blank"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/www_sm.gif" alt="WWW" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td align="left" valign="middle"><a href="http://masslinemedia.com/smf/index.php?topic=384.msg5542#msg5542"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td align="left" valign="middle">
+									<b><a href="http://masslinemedia.com/smf/index.php?topic=384.msg5542#msg5542">Re: Artwork</a></b>
+									<div class="smalltext">&#171; <b>Reply #2 on:</b> November 16, 2006, 10:06:09 pm &#187;</div></td>
+								<td align="right" valign="bottom" height="20" nowrap="nowrap" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div style="overflow: auto; width: 100%;">No doubt.<br /><br /><img src="http://img98.imageshack.us/img98/4763/doom3ew9.jpg" alt="" border="0" /><br /><br /></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td align="left" colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td align="left" valign="bottom" class="smalltext">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://masslinemedia.com/smf/Themes/safgrey105/images/ip.gif" alt="" border="0" />
+									Logged
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div style="overflow: auto; width: 100%; padding-bottom: 3px;" class="signature">&quot;It ain&#039;t where you&#039;re from, it&#039;s where you&#039;re at!&quot;<br /><br />- Rakim<br /><br /><a href="http&#58;//groups.google.com/group/sccchiphopcongress" target="_blank">http://groups.google.com/group/sccchiphopcongress</a></div>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg5544"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://masslinemedia.com/smf/index.php?action=profile;u=93" title="View the profile of Seaweed">Seaweed</a></b>
+							<div class="smalltext">
+								Hero Member<br />
+								<img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><br />
+								Posts: 695<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://i121.photobucket.com/albums/o221/seaweed831/CRW_4611.jpg" width="65" height="65" alt="" border="0" /></div><br />
+								Time is a trick to make me think the day is qucik<br />
+								<br />
+								
+								<a href="http://members.msn.com/seaofx@hotmail.com" target="_blank"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/msntalk.gif" alt="seaofx@hotmail.com" border="0" /></a>
+								<a href="aim:goim?screenname=se4w33d%40aol.com&amp;message=Hi.+Are+you+there?"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/aim.gif" alt="se4w33d@aol.com" border="0" /></a>
+								<a href="http://edit.yahoo.com/config/send_webmesg?.target=santadennis%40yahoo.com"><img src="http://opi.yahoo.com/online?u=santadennis%40yahoo.com&amp;m=g&amp;t=0" alt="santadennis@yahoo.com" border="0" /></a><br />
+								<a href="http://masslinemedia.com/smf/index.php?action=profile;u=93"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/icons/profile_sm.gif" alt="View Profile" title="View Profile" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td align="left" valign="middle"><a href="http://masslinemedia.com/smf/index.php?topic=384.msg5544#msg5544"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td align="left" valign="middle">
+									<b><a href="http://masslinemedia.com/smf/index.php?topic=384.msg5544#msg5544">Re: Artwork</a></b>
+									<div class="smalltext">&#171; <b>Reply #3 on:</b> November 16, 2006, 10:08:43 pm &#187;</div></td>
+								<td align="right" valign="bottom" height="20" nowrap="nowrap" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div style="overflow: auto; width: 100%;">Fucking Viktor Von Doom!!!!!!! <br /><br />By the way, that pic is sick.</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td align="left" colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td align="left" valign="bottom" class="smalltext">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://masslinemedia.com/smf/Themes/safgrey105/images/ip.gif" alt="" border="0" />
+									Logged
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div style="overflow: auto; width: 100%; padding-bottom: 3px;" class="signature">Give a man a fish and he has a meal,<br />Teach a man to fish, and he steals your job.</div>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg5579"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://masslinemedia.com/smf/index.php?action=profile;u=4" title="View the profile of daps">daps</a></b>
+							<div class="smalltext">
+								Global Moderator<br />
+								Hero Member<br />
+								<img src="http://masslinemedia.com/smf/Themes/safgrey105/images/stargmod.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/stargmod.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/stargmod.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/stargmod.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/stargmod.gif" alt="*" border="0" /><br />
+								Posts: 1148<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://i23.tinypic.com/2h4ayoi.jpg" width="65" height="65" alt="" border="0" /></div><br />
+								filipino warrior<br />
+								<br />
+								
+								
+								
+								<br />
+								<a href="http://masslinemedia.com/smf/index.php?action=profile;u=4"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/icons/profile_sm.gif" alt="View Profile" title="View Profile" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td align="left" valign="middle"><a href="http://masslinemedia.com/smf/index.php?topic=384.msg5579#msg5579"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td align="left" valign="middle">
+									<b><a href="http://masslinemedia.com/smf/index.php?topic=384.msg5579#msg5579">Re: Artwork</a></b>
+									<div class="smalltext">&#171; <b>Reply #4 on:</b> November 17, 2006, 12:37:17 am &#187;</div></td>
+								<td align="right" valign="bottom" height="20" nowrap="nowrap" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div style="overflow: auto; width: 100%;">you got any wolvie drawings?</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td align="left" colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td align="left" valign="bottom" class="smalltext">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://masslinemedia.com/smf/Themes/safgrey105/images/ip.gif" alt="" border="0" />
+									Logged
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div style="overflow: auto; width: 100%; padding-bottom: 3px;" class="signature">&quot;they say this kind of humor is the lowest form...i disagree.&quot;<br /><br /><img src="http://i8.tinypic.com/6394aox.jpg" alt="" border="0" /></div>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg5580"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://masslinemedia.com/smf/index.php?action=profile;u=30" title="View the profile of olaf">olaf</a></b>
+							<div class="smalltext">
+								Hero Member<br />
+								<img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><br />
+								Posts: 629<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://farm2.static.flickr.com/1223/869447584_6f40b9af0f_s.jpg" width="65" height="65" alt="" border="0" /></div><br />
+								
+								
+								<a href="aim:goim?screenname=the%2Bolaf&amp;message=Hi.+Are+you+there?"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/aim.gif" alt="the+olaf" border="0" /></a>
+								<br />
+								<a href="http://masslinemedia.com/smf/index.php?action=profile;u=30"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/icons/profile_sm.gif" alt="View Profile" title="View Profile" border="0" /></a>
+								<a href="http://www.myspace.com/schoolofdissent" title="School of Dissent" target="_blank"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/www_sm.gif" alt="WWW" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td align="left" valign="middle"><a href="http://masslinemedia.com/smf/index.php?topic=384.msg5580#msg5580"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td align="left" valign="middle">
+									<b><a href="http://masslinemedia.com/smf/index.php?topic=384.msg5580#msg5580">Re: Artwork</a></b>
+									<div class="smalltext">&#171; <b>Reply #5 on:</b> November 17, 2006, 01:18:23 am &#187;</div></td>
+								<td align="right" valign="bottom" height="20" nowrap="nowrap" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div style="overflow: auto; width: 100%;">great shading, with all of it</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td align="left" colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td align="left" valign="bottom" class="smalltext">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://masslinemedia.com/smf/Themes/safgrey105/images/ip.gif" alt="" border="0" />
+									Logged
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg5584"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://masslinemedia.com/smf/index.php?action=profile;u=27" title="View the profile of Jawn">Jawn</a></b>
+							<div class="smalltext">
+								Hero Member<br />
+								<img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><br />
+								Posts: 1605<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://img409.imageshack.us/img409/1155/dj3hf4.jpg" width="65" height="65" alt="" border="0" /></div><br />
+								Got Seoul like Korea...<br />
+								<br />
+								<a href="http://web.icq.com/whitepages/about_me/1,,,00.html?Uin=314130913" target="_blank"><img src="http://web.icq.com/whitepages/online?icq=314130913&amp;img=5" alt="314130913" width="18" height="18" border="0" /></a>
+								
+								<a href="aim:goim?screenname=djkooljawn&amp;message=Hi.+Are+you+there?"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/aim.gif" alt="djkooljawn" border="0" /></a>
+								<br />
+								<a href="http://masslinemedia.com/smf/index.php?action=profile;u=27"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/icons/profile_sm.gif" alt="View Profile" title="View Profile" border="0" /></a>
+								<a href="http://www.myspace.com/djkooljawn" title="MySpace" target="_blank"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/www_sm.gif" alt="WWW" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td align="left" valign="middle"><a href="http://masslinemedia.com/smf/index.php?topic=384.msg5584#msg5584"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td align="left" valign="middle">
+									<b><a href="http://masslinemedia.com/smf/index.php?topic=384.msg5584#msg5584">Re: Artwork</a></b>
+									<div class="smalltext">&#171; <b>Reply #6 on:</b> November 17, 2006, 08:04:16 am &#187;</div></td>
+								<td align="right" valign="bottom" height="20" nowrap="nowrap" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div style="overflow: auto; width: 100%;">Anyone ever met this girl?<br /><br /><img src="http://img136.imageshack.us/img136/79/monicanp7.jpg" alt="" border="0" /><br /><br />Massive Monkees, anyone?</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td align="left" colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td align="left" valign="bottom" class="smalltext">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://masslinemedia.com/smf/Themes/safgrey105/images/ip.gif" alt="" border="0" />
+									Logged
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div style="overflow: auto; width: 100%; padding-bottom: 3px;" class="signature">&quot;It ain&#039;t where you&#039;re from, it&#039;s where you&#039;re at!&quot;<br /><br />- Rakim<br /><br /><a href="http&#58;//groups.google.com/group/sccchiphopcongress" target="_blank">http://groups.google.com/group/sccchiphopcongress</a></div>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg5592"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://masslinemedia.com/smf/index.php?action=profile;u=25" title="View the profile of erik?">erik?</a></b>
+							<div class="smalltext">
+								Hero Member<br />
+								<img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><br />
+								Posts: 704<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://www.undergroundhiphop.com/store/covers_large/SAM7092TS.jpg" width="65" height="65" alt="" border="0" /></div><br />
+								
+								
+								
+								<br />
+								<a href="http://masslinemedia.com/smf/index.php?action=profile;u=25"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/icons/profile_sm.gif" alt="View Profile" title="View Profile" border="0" /></a>
+								<a href="mailto:hiphophoray24@yahoo.com"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/email_sm.gif" alt="Email" title="Email" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td align="left" valign="middle"><a href="http://masslinemedia.com/smf/index.php?topic=384.msg5592#msg5592"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td align="left" valign="middle">
+									<b><a href="http://masslinemedia.com/smf/index.php?topic=384.msg5592#msg5592">Re: Artwork</a></b>
+									<div class="smalltext">&#171; <b>Reply #7 on:</b> November 17, 2006, 08:31:03 am &#187;</div></td>
+								<td align="right" valign="bottom" height="20" nowrap="nowrap" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div style="overflow: auto; width: 100%;">that ones dope yo.....i write a little bit but i just dont know how to put the pics on my comp and post em soooo yall are out of luck haha</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td align="left" colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td align="left" valign="bottom" class="smalltext">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://masslinemedia.com/smf/Themes/safgrey105/images/ip.gif" alt="" border="0" />
+									Logged
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div style="overflow: auto; width: 100%; padding-bottom: 3px;" class="signature"><img src="http://i155.photobucket.com/albums/s302/bright-side_24/mingandfs_wall2_800.jpg" alt="" border="0" /></div>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg5683"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://masslinemedia.com/smf/index.php?action=profile;u=27" title="View the profile of Jawn">Jawn</a></b>
+							<div class="smalltext">
+								Hero Member<br />
+								<img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><br />
+								Posts: 1605<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://img409.imageshack.us/img409/1155/dj3hf4.jpg" width="65" height="65" alt="" border="0" /></div><br />
+								Got Seoul like Korea...<br />
+								<br />
+								<a href="http://web.icq.com/whitepages/about_me/1,,,00.html?Uin=314130913" target="_blank"><img src="http://web.icq.com/whitepages/online?icq=314130913&amp;img=5" alt="314130913" width="18" height="18" border="0" /></a>
+								
+								<a href="aim:goim?screenname=djkooljawn&amp;message=Hi.+Are+you+there?"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/aim.gif" alt="djkooljawn" border="0" /></a>
+								<br />
+								<a href="http://masslinemedia.com/smf/index.php?action=profile;u=27"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/icons/profile_sm.gif" alt="View Profile" title="View Profile" border="0" /></a>
+								<a href="http://www.myspace.com/djkooljawn" title="MySpace" target="_blank"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/www_sm.gif" alt="WWW" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td align="left" valign="middle"><a href="http://masslinemedia.com/smf/index.php?topic=384.msg5683#msg5683"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td align="left" valign="middle">
+									<b><a href="http://masslinemedia.com/smf/index.php?topic=384.msg5683#msg5683">Re: Artwork</a></b>
+									<div class="smalltext">&#171; <b>Reply #8 on:</b> November 17, 2006, 07:52:41 pm &#187;</div></td>
+								<td align="right" valign="bottom" height="20" nowrap="nowrap" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div style="overflow: auto; width: 100%;">I just edited the initial post. Check out the final, final version. <br /><br />Oh, and I&#039;ve actually thought about drawing Wolverine, among other comic book heroes I love. As of now, I&#039;m working on a badass sketch of the Punisher preparing to pump Spiderman and the Green Goblin full of led. Stay tuned.</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td align="left" colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td align="left" valign="bottom" class="smalltext">
+									&#171; <i>Last Edit: November 17, 2006, 07:54:42 pm by Jawn</i> &#187;
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://masslinemedia.com/smf/Themes/safgrey105/images/ip.gif" alt="" border="0" />
+									Logged
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div style="overflow: auto; width: 100%; padding-bottom: 3px;" class="signature">&quot;It ain&#039;t where you&#039;re from, it&#039;s where you&#039;re at!&quot;<br /><br />- Rakim<br /><br /><a href="http&#58;//groups.google.com/group/sccchiphopcongress" target="_blank">http://groups.google.com/group/sccchiphopcongress</a></div>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg5690"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://masslinemedia.com/smf/index.php?action=profile;u=30" title="View the profile of olaf">olaf</a></b>
+							<div class="smalltext">
+								Hero Member<br />
+								<img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><br />
+								Posts: 629<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://farm2.static.flickr.com/1223/869447584_6f40b9af0f_s.jpg" width="65" height="65" alt="" border="0" /></div><br />
+								
+								
+								<a href="aim:goim?screenname=the%2Bolaf&amp;message=Hi.+Are+you+there?"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/aim.gif" alt="the+olaf" border="0" /></a>
+								<br />
+								<a href="http://masslinemedia.com/smf/index.php?action=profile;u=30"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/icons/profile_sm.gif" alt="View Profile" title="View Profile" border="0" /></a>
+								<a href="http://www.myspace.com/schoolofdissent" title="School of Dissent" target="_blank"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/www_sm.gif" alt="WWW" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td align="left" valign="middle"><a href="http://masslinemedia.com/smf/index.php?topic=384.msg5690#msg5690"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td align="left" valign="middle">
+									<b><a href="http://masslinemedia.com/smf/index.php?topic=384.msg5690#msg5690">Re: Artwork</a></b>
+									<div class="smalltext">&#171; <b>Reply #9 on:</b> November 18, 2006, 02:36:17 am &#187;</div></td>
+								<td align="right" valign="bottom" height="20" nowrap="nowrap" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div style="overflow: auto; width: 100%;"><div class="quoteheader"><a href="http://masslinemedia.com/smf/index.php?topic=384.msg5683#msg5683">Quote from: Jawn on November 17, 2006, 07:52:41 pm</a></div><div class="quote">I just edited the initial post. Check out the final, final version. <br /><br />Oh, and I&#039;ve actually thought about drawing Wolverine, among other comic book heroes I love. As of now, I&#039;m working on a badass sketch of the Punisher preparing to pump Spiderman and the Green Goblin full of led. Stay tuned.<br /></div><br />yo, you read civil war 5?</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td align="left" colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td align="left" valign="bottom" class="smalltext">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://masslinemedia.com/smf/Themes/safgrey105/images/ip.gif" alt="" border="0" />
+									Logged
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg6919"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://masslinemedia.com/smf/index.php?action=profile;u=27" title="View the profile of Jawn">Jawn</a></b>
+							<div class="smalltext">
+								Hero Member<br />
+								<img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><br />
+								Posts: 1605<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://img409.imageshack.us/img409/1155/dj3hf4.jpg" width="65" height="65" alt="" border="0" /></div><br />
+								Got Seoul like Korea...<br />
+								<br />
+								<a href="http://web.icq.com/whitepages/about_me/1,,,00.html?Uin=314130913" target="_blank"><img src="http://web.icq.com/whitepages/online?icq=314130913&amp;img=5" alt="314130913" width="18" height="18" border="0" /></a>
+								
+								<a href="aim:goim?screenname=djkooljawn&amp;message=Hi.+Are+you+there?"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/aim.gif" alt="djkooljawn" border="0" /></a>
+								<br />
+								<a href="http://masslinemedia.com/smf/index.php?action=profile;u=27"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/icons/profile_sm.gif" alt="View Profile" title="View Profile" border="0" /></a>
+								<a href="http://www.myspace.com/djkooljawn" title="MySpace" target="_blank"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/www_sm.gif" alt="WWW" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td align="left" valign="middle"><a href="http://masslinemedia.com/smf/index.php?topic=384.msg6919#msg6919"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td align="left" valign="middle">
+									<b><a href="http://masslinemedia.com/smf/index.php?topic=384.msg6919#msg6919">Re: Artwork</a></b>
+									<div class="smalltext">&#171; <b>Reply #10 on:</b> November 28, 2006, 10:34:33 pm &#187;</div></td>
+								<td align="right" valign="bottom" height="20" nowrap="nowrap" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div style="overflow: auto; width: 100%;">I would&#039;ve scanned the complete version by now, but I injured my right hand earlier today and could barely draw to begin with. Here&#039;s what I&#039;ve sketched out so far.<br /><br /><img src="http://img245.imageshack.us/img245/2958/scan0077io3.jpg" alt="" border="0" /><br /><br />The face still needs work, I think.</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td align="left" colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td align="left" valign="bottom" class="smalltext">
+									&#171; <i>Last Edit: November 29, 2006, 05:41:45 pm by Jawn</i> &#187;
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://masslinemedia.com/smf/Themes/safgrey105/images/ip.gif" alt="" border="0" />
+									Logged
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div style="overflow: auto; width: 100%; padding-bottom: 3px;" class="signature">&quot;It ain&#039;t where you&#039;re from, it&#039;s where you&#039;re at!&quot;<br /><br />- Rakim<br /><br /><a href="http&#58;//groups.google.com/group/sccchiphopcongress" target="_blank">http://groups.google.com/group/sccchiphopcongress</a></div>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg6983"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://masslinemedia.com/smf/index.php?action=profile;u=27" title="View the profile of Jawn">Jawn</a></b>
+							<div class="smalltext">
+								Hero Member<br />
+								<img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><br />
+								Posts: 1605<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://img409.imageshack.us/img409/1155/dj3hf4.jpg" width="65" height="65" alt="" border="0" /></div><br />
+								Got Seoul like Korea...<br />
+								<br />
+								<a href="http://web.icq.com/whitepages/about_me/1,,,00.html?Uin=314130913" target="_blank"><img src="http://web.icq.com/whitepages/online?icq=314130913&amp;img=5" alt="314130913" width="18" height="18" border="0" /></a>
+								
+								<a href="aim:goim?screenname=djkooljawn&amp;message=Hi.+Are+you+there?"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/aim.gif" alt="djkooljawn" border="0" /></a>
+								<br />
+								<a href="http://masslinemedia.com/smf/index.php?action=profile;u=27"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/icons/profile_sm.gif" alt="View Profile" title="View Profile" border="0" /></a>
+								<a href="http://www.myspace.com/djkooljawn" title="MySpace" target="_blank"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/www_sm.gif" alt="WWW" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td align="left" valign="middle"><a href="http://masslinemedia.com/smf/index.php?topic=384.msg6983#msg6983"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td align="left" valign="middle">
+									<b><a href="http://masslinemedia.com/smf/index.php?topic=384.msg6983#msg6983">Re: Artwork</a></b>
+									<div class="smalltext">&#171; <b>Reply #11 on:</b> November 29, 2006, 01:59:06 pm &#187;</div></td>
+								<td align="right" valign="bottom" height="20" nowrap="nowrap" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div style="overflow: auto; width: 100%;">Comments, anyone??</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td align="left" colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td align="left" valign="bottom" class="smalltext">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://masslinemedia.com/smf/Themes/safgrey105/images/ip.gif" alt="" border="0" />
+									Logged
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div style="overflow: auto; width: 100%; padding-bottom: 3px;" class="signature">&quot;It ain&#039;t where you&#039;re from, it&#039;s where you&#039;re at!&quot;<br /><br />- Rakim<br /><br /><a href="http&#58;//groups.google.com/group/sccchiphopcongress" target="_blank">http://groups.google.com/group/sccchiphopcongress</a></div>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg7001"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://masslinemedia.com/smf/index.php?action=profile;u=93" title="View the profile of Seaweed">Seaweed</a></b>
+							<div class="smalltext">
+								Hero Member<br />
+								<img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><br />
+								Posts: 695<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://i121.photobucket.com/albums/o221/seaweed831/CRW_4611.jpg" width="65" height="65" alt="" border="0" /></div><br />
+								Time is a trick to make me think the day is qucik<br />
+								<br />
+								
+								<a href="http://members.msn.com/seaofx@hotmail.com" target="_blank"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/msntalk.gif" alt="seaofx@hotmail.com" border="0" /></a>
+								<a href="aim:goim?screenname=se4w33d%40aol.com&amp;message=Hi.+Are+you+there?"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/aim.gif" alt="se4w33d@aol.com" border="0" /></a>
+								<a href="http://edit.yahoo.com/config/send_webmesg?.target=santadennis%40yahoo.com"><img src="http://opi.yahoo.com/online?u=santadennis%40yahoo.com&amp;m=g&amp;t=0" alt="santadennis@yahoo.com" border="0" /></a><br />
+								<a href="http://masslinemedia.com/smf/index.php?action=profile;u=93"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/icons/profile_sm.gif" alt="View Profile" title="View Profile" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td align="left" valign="middle"><a href="http://masslinemedia.com/smf/index.php?topic=384.msg7001#msg7001"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td align="left" valign="middle">
+									<b><a href="http://masslinemedia.com/smf/index.php?topic=384.msg7001#msg7001">Re: Artwork</a></b>
+									<div class="smalltext">&#171; <b>Reply #12 on:</b> November 29, 2006, 05:19:16 pm &#187;</div></td>
+								<td align="right" valign="bottom" height="20" nowrap="nowrap" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div style="overflow: auto; width: 100%;">The left side of her face does look a little out of proportion then the right. But overall, pretty damn good. I know I couldn&#039;t draw that...</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td align="left" colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td align="left" valign="bottom" class="smalltext">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://masslinemedia.com/smf/Themes/safgrey105/images/ip.gif" alt="" border="0" />
+									Logged
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div style="overflow: auto; width: 100%; padding-bottom: 3px;" class="signature">Give a man a fish and he has a meal,<br />Teach a man to fish, and he steals your job.</div>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg7003"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://masslinemedia.com/smf/index.php?action=profile;u=27" title="View the profile of Jawn">Jawn</a></b>
+							<div class="smalltext">
+								Hero Member<br />
+								<img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><br />
+								Posts: 1605<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://img409.imageshack.us/img409/1155/dj3hf4.jpg" width="65" height="65" alt="" border="0" /></div><br />
+								Got Seoul like Korea...<br />
+								<br />
+								<a href="http://web.icq.com/whitepages/about_me/1,,,00.html?Uin=314130913" target="_blank"><img src="http://web.icq.com/whitepages/online?icq=314130913&amp;img=5" alt="314130913" width="18" height="18" border="0" /></a>
+								
+								<a href="aim:goim?screenname=djkooljawn&amp;message=Hi.+Are+you+there?"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/aim.gif" alt="djkooljawn" border="0" /></a>
+								<br />
+								<a href="http://masslinemedia.com/smf/index.php?action=profile;u=27"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/icons/profile_sm.gif" alt="View Profile" title="View Profile" border="0" /></a>
+								<a href="http://www.myspace.com/djkooljawn" title="MySpace" target="_blank"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/www_sm.gif" alt="WWW" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td align="left" valign="middle"><a href="http://masslinemedia.com/smf/index.php?topic=384.msg7003#msg7003"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td align="left" valign="middle">
+									<b><a href="http://masslinemedia.com/smf/index.php?topic=384.msg7003#msg7003">Re: Artwork</a></b>
+									<div class="smalltext">&#171; <b>Reply #13 on:</b> November 29, 2006, 05:43:16 pm &#187;</div></td>
+								<td align="right" valign="bottom" height="20" nowrap="nowrap" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div style="overflow: auto; width: 100%;">I fixed that problem using photoshop. I hope my hand heals up quick, &#039;cause I really want to finish that!</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td align="left" colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td align="left" valign="bottom" class="smalltext">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://masslinemedia.com/smf/Themes/safgrey105/images/ip.gif" alt="" border="0" />
+									Logged
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div style="overflow: auto; width: 100%; padding-bottom: 3px;" class="signature">&quot;It ain&#039;t where you&#039;re from, it&#039;s where you&#039;re at!&quot;<br /><br />- Rakim<br /><br /><a href="http&#58;//groups.google.com/group/sccchiphopcongress" target="_blank">http://groups.google.com/group/sccchiphopcongress</a></div>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg7020"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://masslinemedia.com/smf/index.php?action=profile;u=720" title="View the profile of CoupDeGrace">CoupDeGrace</a></b>
+							<div class="smalltext">
+								Hero Member<br />
+								<img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/star.gif" alt="*" border="0" /><br />
+								Posts: 808<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://img98.imageshack.us/img98/3513/diggtv4.jpg" width="65" height="65" alt="" border="0" /></div><br />
+								music makes me high<br />
+								<br />
+								
+								
+								<a href="aim:goim?screenname=emvepe&amp;message=Hi.+Are+you+there?"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/aim.gif" alt="emvepe" border="0" /></a>
+								<br />
+								<a href="http://masslinemedia.com/smf/index.php?action=profile;u=720"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/icons/profile_sm.gif" alt="View Profile" title="View Profile" border="0" /></a>
+								<a href="http://www.myspace.com/markpimentel" title="myspace" target="_blank"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/www_sm.gif" alt="WWW" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td align="left" valign="middle"><a href="http://masslinemedia.com/smf/index.php?topic=384.msg7020#msg7020"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td align="left" valign="middle">
+									<b><a href="http://masslinemedia.com/smf/index.php?topic=384.msg7020#msg7020">Re: Artwork</a></b>
+									<div class="smalltext">&#171; <b>Reply #14 on:</b> November 29, 2006, 10:18:12 pm &#187;</div></td>
+								<td align="right" valign="bottom" height="20" nowrap="nowrap" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div style="overflow: auto; width: 100%;"><img src="http://img168.imageshack.us/img168/4873/deadstockct8.jpg" alt="" border="0" /><br /><br />blah... workin on random characters... </div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td align="left" colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td align="left" valign="bottom" class="smalltext">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://masslinemedia.com/smf/Themes/safgrey105/images/ip.gif" alt="" border="0" />
+									Logged
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 0 0 1px 0;"></td></tr>
+</table>
+<a name="lastPost"></a>
+
+<table width="100%" cellpadding="3" cellspacing="0" border="0" class="tborder" style="margin-top: 1ex;">
+	<tr>
+		<td align="left" class="catbg" width="100%" height="30">
+			<table cellpadding="3" cellspacing="0" width="100%">
+				<tr>
+					<td>
+						<a name="bot"></a><b>Pages:</b> [<b>1</b>] <a class="navPages" href="http://masslinemedia.com/smf/index.php?topic=384.15">2</a> <a class="navPages" href="http://masslinemedia.com/smf/index.php?topic=384.30">3</a> <b> ... </b><a class="navPages" href="http://masslinemedia.com/smf/index.php?topic=384.105">8</a>  <a href="#top"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/english/go_up.gif" alt="Go Up" border="0" align="top" /></a>
+					</td>
+					<td align="right" style="font-size: smaller;"><a href="http://masslinemedia.com/smf/index.php?action=printpage;topic=384.0" target="_blank"><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/english/print.gif" alt="Print" border="0" /></a>&nbsp;
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<script language="JavaScript1.2" type="text/javascript"><!--
+	var currentSwap = true
+
+	function doQuote(messageid)
+	{
+		if (currentSwap)
+			window.location.href = "http://masslinemedia.com/smf/index.php?action=post;quote=" + messageid + ";topic=384.0;sesc=104fe07bba3a0772b1b1f0f4122969f4";
+		else
+		{
+			window.open("http://masslinemedia.com/smf/index.php?action=quotefast;quote=" + messageid + ";sesc=104fe07bba3a0772b1b1f0f4122969f4", "quote", "toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,top=40,left=40,width=240,height=90,resizable=no;");
+			if (navigator.appName == "Microsoft Internet Explorer")
+				window.location.hash = "quickreply";
+			else
+				window.location.hash = "#quickreply";
+		}
+	}
+// --></script>
+<table border="0" width="100%" cellpadding="0" cellspacing="0">
+	<tr>
+		<td valign="top" align="right" class="smalltext"> <span class="nav"> <a href="http://masslinemedia.com/smf/index.php?topic=384.0;prev_next=prev">&laquo; previous</a> <a href="http://masslinemedia.com/smf/index.php?topic=384;prev_next=next">next &raquo;</a></span></td>
+	</tr>
+</table>
+<div style="padding-top: 4px; padding-bottom: 4px;"></div>
+<div align="right" style="margin-bottom: 1ex;">
+	<form action="http://masslinemedia.com/smf/index.php" method="get" name="jumptoForm">
+		<span class="smalltext">Jump to:</span>
+		<select name="jumpto" onchange="if (this.options[this.selectedIndex].value) window.location.href='http://masslinemedia.com/smf/index.php' + this.options[this.selectedIndex].value;">
+			<option value="">Please select a destination:</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#1">MASS LINE FORUMS</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=1.0"> => Mass Line Artist Discussion</option>
+			<option value="?board=2.0"> => The Dialogue</option>
+			<option value="?board=3.0"> => By Any Means</option>
+			<option value="?board=8.0"> => The Review Section</option>
+			<option value="?board=9.0"> => The Business</option>
+			<option value="?board=6.0"> => Video Forum</option>
+			<option value="?board=7.0" selected="selected"> => The Opium Den</option>
+			<option value="?board=5.0"> => The Arena</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#3">MASS LINE STREET TEAM</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=4.0"> => Mass Line Street Team</option>
+		</select>&nbsp;
+		<input type="button" value="go" onclick="if (document.jumptoForm.jumpto.options[document.jumptoForm.jumpto.selectedIndex].value) window.location.href = 'http://masslinemedia.com/smf/index.php' + document.jumptoForm.jumpto.options[document.jumptoForm.jumpto.selectedIndex].value;" />
+	</form>
+</div>
+<br /><img src="http://masslinemedia.com/smf/Themes/safgrey105/images/blank.gif" alt="" id="fetchSessionTemp" /></td>
+	</tr></table><br />
+        </td>
+        </tr>
+        <tr>
+        <td class="footer">
+		<table cellspacing="0" cellpadding="3" border="0" align="center" width="100%">
+			<tr>
+				<td width="28%" valign="middle" align="right">
+					<a href="http://www.mysql.com/" target="_blank"><img id="powered-mysql" src="http://masslinemedia.com/smf/Themes/safgrey105/images/powered-mysql.gif" alt="Powered by MySQL" width="30" height="18" style="margin: 5px 16px;" border="0" /></a>
+					<a href="http://www.php.net/" target="_blank"><img id="powered-php" src="http://masslinemedia.com/smf/Themes/safgrey105/images/powered-php.gif" alt="Powered by PHP" width="30" height="18" style="margin: 5px 16px;" border="0" /></a>
+				</td>
+				<td valign="middle" align="center" style="white-space: nowrap;" class="copyright">
+					
+		<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;">MASSLINE | Powered by <a href="http://www.simplemachines.org/" title="Simple Machines Forum" target="_blank">SMF 1.0.10</a>.<br />
+&copy; 2005, <a href="http://www.simplemachines.org/about/copyright.php" title="Free Forum Software" target="_blank">Simple Machines LLC</a>. All Rights Reserved.
+		</span>
+				</td>
+				<td width="28%" valign="middle" align="left">
+					<a href="http://validator.w3.org/check/referer" target="_blank"><img id="valid-xhtml10" src="http://masslinemedia.com/smf/Themes/safgrey105/images/valid-xhtml10.gif" alt="Valid XHTML 1.0!" width="30" height="18" style="margin: 5px 16px;" border="0" /></a>
+					<a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank"><img id="valid-css" src="http://masslinemedia.com/smf/Themes/safgrey105/images/valid-css.gif" alt="Valid CSS!" width="30" height="18" style="margin: 5px 16px;" border="0" /></a>
+				</td>
+			</tr>
+		</table>
+        </td>
+        </tr>
+
+        </table>
+        </center>
+        </body>
+</html>

@@ -1,0 +1,108 @@
+{
+  "generated_at": "2026-10-17T22:55:04.681880+00:00",
+  "index_rows": 7121,
+  "urlkey_rows": 5356,
+  "eligible_rows": 5207,
+  "recovered": 1144,
+  "homepage_variants": 4,
+  "failed": 0,
+  "skipped": [],
+  "alternate_source_versions_preserved": 52,
+  "remaining": 4088,
+  "complete": false,
+  "batch_attempted": 250,
+  "source_period_end": "2009-08-31",
+  "resume": "python -m restore massline-recover --max-files 250 --delay 0.4",
+  "coverage_note": "The uncollapsed status-200 CDX query is checkpointed and complete for this domain pattern (7,121 capture events). This exhausts the returned query, not other archives, blocked responses, or unqueried subdomains.",
+  "index": {
+    "generated_at": "2026-10-17T22:40:21.196419+00:00",
+    "query": "https://web.archive.org/cdx/search/cdx?url=masslinemedia.com/*&output=json&filter=statuscode:200&collapse=urlkey",
+    "url": "masslinemedia.com/*",
+    "status_filter": "200",
+    "collapse": "urlkey",
+    "capture_history_complete": true,
+    "full_capture_rows": 7121,
+    "full_capture_query_pages": 1,
+    "coverage_note": "The uncollapsed status-200 CDX query is checkpointed and complete for this domain pattern (7,121 capture events). This exhausts the returned query, not other archives, blocked responses, or unqueried subdomains.",
+    "inventory": {
+      "source_rows": 5356,
+      "forum_pages": 4817,
+      "forum_html_pages": 4645,
+      "forum_topic_urls": 4014,
+      "forum_board_urls": 237,
+      "topic_ids": 672,
+      "board_ids": 9,
+      "years": {
+        "2006": 94,
+        "2007": 4912,
+        "2008": 105,
+        "2009": 26,
+        "2010": 2,
+        "2011": 30,
+        "2012": 7,
+        "2013": 1,
+        "2014": 36,
+        "2016": 89,
+        "2017": 2,
+        "2019": 2,
+        "2020": 1,
+        "2021": 3,
+        "2023": 25,
+        "2024": 5,
+        "2025": 10,
+        "2026": 6
+      },
+      "mime_types": {
+        "application/atom+xml": 1,
+        "application/javascript": 3,
+        "application/rss+xml": 1,
+        "application/x-javascript": 9,
+        "application/x-shockwave-flash": 1,
+        "audio/mpeg": 4,
+        "image/gif": 189,
+        "image/jpeg": 125,
+        "image/png": 1,
+        "image/x-icon": 1,
+        "text/css": 16,
+        "text/html": 5003,
+        "text/plain": 2
+      }
+    },
+    "homepage_versions": [
+      {
+        "year": "2006",
+        "timestamp": "20061231081225",
+        "source_url": "http://masslinemedia.com:80/",
+        "cdx_length": "6083"
+      },
+      {
+        "year": "2007",
+        "timestamp": "20071231082843",
+        "source_url": "http://masslinemedia.com:80/",
+        "cdx_length": "3568"
+      },
+      {
+        "year": "2008",
+        "timestamp": "20081026114152",
+        "source_url": "http://www.masslinemedia.com:80/",
+        "cdx_length": "5228"
+      },
+      {
+        "year": "2009",
+        "timestamp": "20090813183844",
+        "source_url": "http://www.masslinemedia.com:80/",
+        "cdx_length": "4042"
+      }
+    ],
+    "errors": []
+  },
+  "resources": {
+    "html": 1124,
+    "css": 6,
+    "images": 14,
+    "media": 0,
+    "homepage_versions": 4,
+    "bytes": 43460325
+  },
+  "failures": []
+}

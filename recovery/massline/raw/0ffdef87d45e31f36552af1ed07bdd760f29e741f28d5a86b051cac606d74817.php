@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+		<title>Print Page - IRANIAN UNIVERSITY INVITES GW</title>
+		<style type="text/css"><!--
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			*, a:link, a:visited, a:hover, a:active
+			{
+				color: black !important;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			.code
+			{
+				font-size: x-small;
+				font-family: monospace;
+				border: 1px solid #000000;
+				margin: 1px;
+				padding: 1px;
+			}
+			.quote
+			{
+				font-size: x-small;
+				border: 1px solid #000000;
+				margin: 1px;
+				padding: 1px;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		--></style>
+	</head>
+	<body bgcolor="#ffffff" text="#000000">
+		<h1 class="largetext">MASSLINE</h1>
+		<h2 class="normaltext">MASS LINE FORUMS => By Any Means => Topic started by: negoshagator on October 03, 2007, 09:57:18 am</h2>
+
+		<table width="90%" cellpadding="0" cellspacing="0" border="0">
+			<tr>
+				<td>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>IRANIAN UNIVERSITY INVITES GW</b><br />
+					Post by: <b>negoshagator</b> on <b>October 03, 2007, 09:57:18 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">(http://www.usmm.net/p2/freespeech.jpg)</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: IRANIAN UNIVERSITY INVITES GW</b><br />
+					Post by: <b>Blind Sage</b> on <b>October 03, 2007, 10:28:55 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">I seriously doubt that</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: IRANIAN UNIVERSITY INVITES GW</b><br />
+					Post by: <b>negoshagator</b> on <b>October 03, 2007, 11:17:06 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">(http://www.usmm.net/p/keepmum.jpg)</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: IRANIAN UNIVERSITY INVITES GW</b><br />
+					Post by: <b>Blind Sage</b> on <b>October 03, 2007, 12:27:00 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">Bush definitely won&#039;t show, but I&#039;m talkin&#039; about him being treated with respect.&nbsp; First, people really don&#039;t like him in Iran, lay person, scholar, or politician.&nbsp; Second, it would a complete farce, the rulers in Iran would never allow for a open and free dialogue in a University with the president of this country.&nbsp; I do want to ask this question though, I only saw a few bits of Ahmadinejad&#039;s session @ Columbia abut I&#039;m wondering how you think he was treated with disrespect, or were there other situations in which he was treated poorly while he was there?</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: IRANIAN UNIVERSITY INVITES GW</b><br />
+					Post by: <b>allahu aight</b> on <b>October 03, 2007, 06:15:29 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="smalltext">Quote:</div><div class="quote">Not like Bushie&#039;s cowardice will show up, but if he did I&#039;m willing to bet he&#039;d be treated 100 times better than when Iran&#039;s President came to NYC.</div><br /><br />god i hope not. he is as undeserving of respect as his iranian counterpart</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: IRANIAN UNIVERSITY INVITES GW</b><br />
+					Post by: <b>Budaho</b> on <b>October 03, 2007, 07:41:38 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: Blind Sage on October 03, 2007, 12:27:00 pm</div><div class="quote">Bush definitely won&#039;t show, but I&#039;m talkin&#039; about him being treated with respect.  First, people really don&#039;t like him in Iran, lay person, scholar, or politician.  Second, it would a complete farce, the rulers in Iran would never allow for a open and free dialogue in a University with the president of this country.  I do want to ask this question though, I only saw a few bits of Ahmadinejad&#039;s session @ Columbia abut I&#039;m wondering how you think he was treated with disrespect, or were there other situations in which he was treated poorly while he was there?<br /></div><br /><br />http://www.youtube.com/results?search_query=+Ahmadenijad+Columbia+Univ.+of+6&amp;search=Search<br /><br />decide for yourself.<br /><br />personally, i think being called a cruel and inhumane tyrant in the opening remarks of what is supposed to be an introduction for someone you invited to speak is disrespectful.&nbsp; even if they are somewhat justified remarks.&nbsp; i assume that this was the intention of the president of collumbia.&nbsp; if he had wished to be respectful he could have posed questions to ahmadenijad about reports we have of things he&#039;s done we disagree with here.&nbsp; but i don&#039;t see how calling someone cruel and inhumane to their face can be construed as anything but disrespectful.<br /><br />and personally, i think that the university memebers in iran who would be hosting president bush would be completely respectful.&nbsp; but there would be massive demonstrations and protests.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: IRANIAN UNIVERSITY INVITES GW</b><br />
+					Post by: <b>sabzi</b> on <b>October 04, 2007, 02:26:57 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">just watch how he introduces Ahmadinejad.<br /><br />LOL at &quot;open dialogue.&quot;</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: IRANIAN UNIVERSITY INVITES GW</b><br />
+					Post by: <b>Jawn</b> on <b>October 04, 2007, 03:06:19 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">Some turd posted the following comment on one of those YouTube links:<br /><div class="smalltext">Quote:</div><div class="quote">You miserable litte mut!<br />It is time to take Irans toys away!<br />Try disputing Hiroshima and Nagasaki you puny digusting little mongrel mut!<br />You don&#039;t like the scraps we give you, then you will get no scraps!<br />We have taken Iraq and Afghanistan, and soon enough we will take Iran!<br />Bomb-bomb-bomb, bomb-bomb Iran!<br />Can&#039;t you hear it?<br />Don&#039;t you realize what we did to Hitler.<br />You are next!<br />Miserable little mut. We will show you how to use Nuclear weapons once and for all! </div><br /><br />Someone want to nuke this guy already? Since he loves fantasizing about bombs and explosions so much.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: IRANIAN UNIVERSITY INVITES GW</b><br />
+					Post by: <b>shawn stone</b> on <b>October 04, 2007, 03:26:25 am</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: Jawn on October 04, 2007, 03:06:19 am</div><div class="quote">Someone want to nuke this guy already? Since he loves fantasizing about bombs and explosions so much.<br /></div><br /><br />feds watch this sight sun, unless you wanna get docked.<br /><br />i wouldnt say <b>nuke bush kill assassinate president</b> in any of your posts...<br /><br />and yes, before you respond, i know you werent talking about bombing bush.<br /><br />so surrious...</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: IRANIAN UNIVERSITY INVITES GW</b><br />
+					Post by: <b>M</b> on <b>October 04, 2007, 09:38:20 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">shhhh&nbsp; there are (double) agents everywhere....<br /><br /></div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: IRANIAN UNIVERSITY INVITES GW</b><br />
+					Post by: <b>negoshagator</b> on <b>October 04, 2007, 11:00:48 am</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: M on October 04, 2007, 09:38:20 am</div><div class="quote">shhhh&nbsp; there are (double) agents everywhere....<br /><br /><br /></div>why you gotta blow up my spot M?</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: IRANIAN UNIVERSITY INVITES GW</b><br />
+					Post by: <b>daps</b> on <b>October 04, 2007, 11:04:56 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">*andy samberg youtube clip in 3....2....*</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: IRANIAN UNIVERSITY INVITES GW</b><br />
+					Post by: <b>M</b> on <b>October 04, 2007, 11:06:20 am</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: negoshagator on October 04, 2007, 11:00:48 am</div><div class="quote"><div class="quoteheader">Quote from: M on October 04, 2007, 09:38:20 am</div><div class="quote">shhhh&nbsp; there are (double) agents everywhere....<br /><br /></div>why you gotta blow up my spot M?<br /></div><br /><br />I was talking about DAWSON but now that YOU said it...i got my eyes on you...heh ;) <br /></div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: IRANIAN UNIVERSITY INVITES GW</b><br />
+					Post by: <b>Blind Sage</b> on <b>October 04, 2007, 11:57:49 am</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: Budaho on October 03, 2007, 07:41:38 pm</div><div class="quote"><div class="quoteheader">Quote from: Blind Sage on October 03, 2007, 12:27:00 pm</div><div class="quote">Bush definitely won&#039;t show, but I&#039;m talkin&#039; about him being treated with respect.  First, people really don&#039;t like him in Iran, lay person, scholar, or politician.  Second, it would a complete farce, the rulers in Iran would never allow for a open and free dialogue in a University with the president of this country.  I do want to ask this question though, I only saw a few bits of Ahmadinejad&#039;s session @ Columbia abut I&#039;m wondering how you think he was treated with disrespect, or were there other situations in which he was treated poorly while he was there?<br /></div><br /><br />http://www.youtube.com/results?search_query=+Ahmadenijad+Columbia+Univ.+of+6&amp;search=Search<br /><br />decide for yourself.<br /><br />personally, i think being called a cruel and inhumane tyrant in the opening remarks of what is supposed to be an introduction for someone you invited to speak is disrespectful.  even if they are somewhat justified remarks.  i assume that this was the intention of the president of collumbia.  if he had wished to be respectful he could have posed questions to ahmadenijad about reports we have of things he&#039;s done we disagree with here.  but i don&#039;t see how calling someone cruel and inhumane to their face can be construed as anything but disrespectful.<br /><br />and personally, i think that the university memebers in iran who would be hosting president bush would be completely respectful.  but there would be massive demonstrations and protests.<br /></div><br /><br />Yeah, I agree that calling a speaker names before he speaks, during the introduction to the event you invited him to, is somewhat disrespectful, though, I don&#039;t know that the university is beholden to treat him with a level of respect higher than they would hold anyone else. Nor are they beholden to use kid gloves with someone they strongly disagree with, and believe is dangerous, political leader or not.<br /><div class="quoteheader">Quote from: sabzi on October 04, 2007, 02:26:57 am</div><div class="quote">LOL at &quot;open dialogue.&quot;<br /></div><br /><br />What about it?</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: IRANIAN UNIVERSITY INVITES GW</b><br />
+					Post by: <b>shawn stone</b> on <b>October 04, 2007, 03:24:31 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">posts with big texts... gross</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: IRANIAN UNIVERSITY INVITES GW</b><br />
+					Post by: <b>Jawn</b> on <b>October 04, 2007, 06:00:04 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: shawn stone on October 04, 2007, 03:26:25 am</div><div class="quote">i wouldnt say <b>nuke bush kill assassinate president</b> in any of your posts...<br /></div><br /><br />Nuke Bush kill assassinate president fertilizer mail bomb embassy Allahu Akbar Jihad death to America and Israel same-sex marriages Patagonia Nader for president!<br /><br />Uh-oh. I shouldn&#039;t have typed all that out. Let&#039;s see how far the Constitution and Bill of Rights protect me.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: IRANIAN UNIVERSITY INVITES GW</b><br />
+					Post by: <b>shawn stone</b> on <b>October 04, 2007, 09:31:55 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">jawn jawn jawn, heres some valuable advice.<br /><br />it ain&#039;t where you&#039;re from, it&#039;s where you&#039;re at.<br /><br />you think about that.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: IRANIAN UNIVERSITY INVITES GW</b><br />
+					Post by: <b>igotseatacfunk</b> on <b>October 04, 2007, 09:52:24 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: Jawn on October 04, 2007, 06:00:04 pm</div><div class="quote"></div><br /><br />Uh-oh. I shouldn&#039;t have typed all that out. Let&#039;s see how far the Constitution and Bill of Rights protect me.<div class="smalltext">Quote:</div><div class="quote"></div><br /><br />The Patriot act cock blocks you on those rights....<br /><br />Welcome to the F.B.I. watch list Jawn.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: IRANIAN UNIVERSITY INVITES GW</b><br />
+					Post by: <b>Jawn</b> on <b>October 04, 2007, 09:55:56 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">Step your quote game up, sunny.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: IRANIAN UNIVERSITY INVITES GW</b><br />
+					Post by: <b>igotseatacfunk</b> on <b>October 04, 2007, 10:35:20 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: Jawn on October 04, 2007, 09:55:56 pm</div><div class="quote">Step your quote game up, sunny.<br /></div><br /><br />Bump a quote game!&nbsp; You&#039;re on the F.B.I. watchlist now.... so jokes on you.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: IRANIAN UNIVERSITY INVITES GW</b><br />
+					Post by: <b>Jawn</b> on <b>October 04, 2007, 10:41:32 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">Awesome!</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: IRANIAN UNIVERSITY INVITES GW</b><br />
+					Post by: <b>Jawn</b> on <b>October 04, 2007, 11:11:12 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">On a more serious note, I can&#039;t think of anything the government does more ineffectively than compile these &quot;terror watch&quot; lists (besides save lives after natural disasters). <br /><br />Have you actually read about that 500,000+ name FBI list, homes? Why, they even managed to include Cat Stevens on there! I sure wouldn&#039;t want his treasonin&#039; ass lulling me to sleep with another campy folk song! &quot;OOH, BABY BABY, IT&#039;S A WILD WORLD...&quot;<br /><br />OH NOZ! ITS A TERRERIST!!!1!1! SHOOT HIM SHOOT HIM!!!!</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: IRANIAN UNIVERSITY INVITES GW</b><br />
+					Post by: <b>Budaho</b> on <b>October 05, 2007, 12:15:52 am</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: Jawn on October 04, 2007, 11:11:12 pm</div><div class="quote">On a more serious note, I can&#039;t think of anything the government does more ineffectively than compile these &quot;terror watch&quot; lists (besides save lives after natural disasters). <br /><br />Have you actually read about that 500,000+ name FBI list, homes? Why, they even managed to include Cat Stevens on there! I sure wouldn&#039;t want his treasonin&#039; ass lulling me to sleep with another campy folk song! &quot;OOH, BABY BABY, IT&#039;S A WILD WORLD...&quot;<br /><br />OH NOZ! ITS A TERRERIST!!!1!1! SHOOT HIM SHOOT HIM!!!!<br /></div><br /><br />yeah, you think they do some kind of research to compile those lists?&nbsp; i&nbsp; always thought they just pulled all the names that sound like they might have come out of middle eastern culture and put them together in a big list.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: IRANIAN UNIVERSITY INVITES GW</b><br />
+					Post by: <b>Budaho</b> on <b>October 05, 2007, 12:23:30 am</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: Blind Sage on October 04, 2007, 11:57:49 am</div><div class="quote"><div class="quoteheader">Quote from: Budaho on October 03, 2007, 07:41:38 pm</div><div class="quote"><div class="quoteheader">Quote from: Blind Sage on October 03, 2007, 12:27:00 pm</div><div class="quote">Bush definitely won&#039;t show, but I&#039;m talkin&#039; about him being treated with respect.  First, people really don&#039;t like him in Iran, lay person, scholar, or politician.  Second, it would a complete farce, the rulers in Iran would never allow for a open and free dialogue in a University with the president of this country.  I do want to ask this question though, I only saw a few bits of Ahmadinejad&#039;s session @ Columbia abut I&#039;m wondering how you think he was treated with disrespect, or were there other situations in which he was treated poorly while he was there?<br /></div><br /><br />http://www.youtube.com/results?search_query=+Ahmadenijad+Columbia+Univ.+of+6&amp;search=Search<br /><br />decide for yourself.<br /><br />personally, i think being called a cruel and inhumane tyrant in the opening remarks of what is supposed to be an introduction for someone you invited to speak is disrespectful.  even if they are somewhat justified remarks.  i assume that this was the intention of the president of collumbia.  if he had wished to be respectful he could have posed questions to ahmadenijad about reports we have of things he&#039;s done we disagree with here.  but i don&#039;t see how calling someone cruel and inhumane to their face can be construed as anything but disrespectful.<br /><br />and personally, i think that the university memebers in iran who would be hosting president bush would be completely respectful.  but there would be massive demonstrations and protests.<br /></div><br /><br />Yeah, I agree that calling a speaker names before he speaks, during the introduction to the event you invited him to, is somewhat disrespectful, though, I don&#039;t know that the university is beholden to treat him with a level of respect higher than they would hold anyone else. Nor are they beholden to use kid gloves with someone they strongly disagree with, and believe is dangerous, political leader or not.<br /><br /></div><br /><br />oh, i agree with you.&nbsp; i don&#039;t think they were beholden to treat him with any great deal of respect, i heard an interview with the collubia president where he said in their letter of introduction that they would be a somewhat hostile host and audience(can&#039;t remember his terminology but...).&nbsp; but the point was that in iran being inhospitable rude and or disrespectful to any guest but most especially an invited guest is one of the biggest cultural taboos imaginable (hearsay i have little direct experience with iranians who haven&#039;t been americans for most of their lives but...).&nbsp; so for the collumbia president to act as he did, while not entirely inappropriate by american standards, was completely unacceptable by iranian standards.&nbsp; to the point where it even earned decries from ahmadinejad&#039;s staunchest opponents in iran, and rallied support behind him there like hasn&#039;t been seen in several years.&nbsp; making it at least a blunder.<br /><br /><br />and whats up with the edit on the initial post of the thread?&nbsp; </div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: IRANIAN UNIVERSITY INVITES GW</b><br />
+					Post by: <b>Blind Sage</b> on <b>October 05, 2007, 10:26:35 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">I&#039;ve had a large number of experience with people from &quot;polite&quot; or &quot;respectful&quot; cultures where extremely rude things were expressed but since they were said in the culturally acceptable way of expressing them &quot;politely&quot; it was somehow seen as acceptable.  This is the same as respect, and I think its a huge assumption to think that the people who expressed disdain at the way Ahmadinejad was addressed are any less hypocritical than people in this country can be, observation of the world seems to indicate the opposite.<br /><div class="quoteheader">Quote from: Budaho on October 05, 2007, 12:23:30 am</div><div class="quote">and whats up with the edit on the initial post of the thread? <br /></div><br /><br />I&#039;m wondering the same thing.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: IRANIAN UNIVERSITY INVITES GW</b><br />
+					Post by: <b>MTK</b> on <b>October 05, 2007, 09:22:53 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">YOU LIBERAL SCUMBAGS NEED TO QUIT SHOVELIN&#039; THIS LIMP WRISTED SHIT, GO EAT SOME GODDAMN BRISKIT FIND CHRIST AND BECOME A MAN<br /><br />/sarcasm</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: IRANIAN UNIVERSITY INVITES GW</b><br />
+					Post by: <b>Budaho</b> on <b>October 10, 2007, 03:11:33 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">mmm, got briskit?</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: IRANIAN UNIVERSITY INVITES GW</b><br />
+					Post by: <b>allahu aight</b> on <b>October 10, 2007, 06:29:49 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="smalltext">Quote:</div><div class="quote">the point was that in iran being inhospitable rude and or disrespectful to any guest but most especially an invited guest is one of the biggest cultural taboos imaginable</div><br /><br />even if the guest is queer?</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: IRANIAN UNIVERSITY INVITES GW</b><br />
+					Post by: <b>Blind Sage</b> on <b>October 11, 2007, 12:44:10 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">They don&#039;t exist in Iran.&nbsp; Once he crossed the border he would magically become straight for the duration of his visit..but very, very chaste, because they probably don&#039;t have adultery, pre-marital sex, or fornication of any kind either.</div>
+					<br /><br />
+					<div align="center" class="smalltext">
+		<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;">MASSLINE | Powered by <a href="http://www.simplemachines.org/" title="Simple Machines Forum" target="_blank">SMF 1.0.10</a>.<br />
+&copy; 2005, <a href="http://www.simplemachines.org/about/copyright.php" title="Free Forum Software" target="_blank">Simple Machines LLC</a>. All Rights Reserved.
+		</span></div>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

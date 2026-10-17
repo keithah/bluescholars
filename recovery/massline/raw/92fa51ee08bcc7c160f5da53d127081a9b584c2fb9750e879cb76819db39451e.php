@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+		<title>Print Page - SUPPORT RAJNII - STOP POLICE BRUTALITY!!!</title>
+		<style type="text/css"><!--
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			*, a:link, a:visited, a:hover, a:active
+			{
+				color: black !important;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			.code
+			{
+				font-size: x-small;
+				font-family: monospace;
+				border: 1px solid #000000;
+				margin: 1px;
+				padding: 1px;
+			}
+			.quote
+			{
+				font-size: x-small;
+				border: 1px solid #000000;
+				margin: 1px;
+				padding: 1px;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		--></style>
+	</head>
+	<body bgcolor="#ffffff" text="#000000">
+		<h1 class="largetext">MASSLINE</h1>
+		<h2 class="normaltext">MASS LINE FORUMS => By Any Means => Topic started by: gabriel teodros on April 09, 2007, 01:49:00 pm</h2>
+
+		<table width="90%" cellpadding="0" cellspacing="0" border="0">
+			<tr>
+				<td>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>SUPPORT RAJNII - STOP POLICE BRUTALITY!!!</b><br />
+					Post by: <b>gabriel teodros</b> on <b>April 09, 2007, 01:49:00 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">Transmitting live from South Seattle, WA.<br /><br />Teaching artists should not be sent to jail for asking about the well-being of their students.&nbsp; The madness has to stop.&nbsp; Come through tomorrow!!!<br /><br />TUESDAY, APRIL 10TH @ 2:30PM, AT KING COUNTY CORRECTIONAL FACILITY, 500 5TH AVE<br /><br />Rajnii&#039;s personal account is below... if you know my music, you know Rajnii.&nbsp; If you know Rajnii, you know there aren&#039;t that many people more committed to justice, truth-telling and raising up the next generation than him.&nbsp; <br /><br /><br /><br />ON APRIL 5TH APPROX 3:30PM ON RAINIER AND HENDERSON OUT SIDE RAINIER BEACH HIGHSCHOOL I WITNESSED A HUGE GROUP OF POLICE JUST OUTSIDE THE GATE OF LAKE WASHINGTON APTS.<br /> <br /> AS I WALKED TOWARD THE SCHOOL I SAW ONE OF THE CAST MEMBERS IN THE PLAY I&#039;M DIRECTING, TIA HOLIDAY AND SHE TOLD&nbsp; ME HER CLASSMATE WAS BEING ARRESTED FOR SPITTING OUT A PIECE OF GUM.<br />I TURNED TO SEE ONE MALE OFFICER PLACING THE GIRL IN CUFFS INTO THE BACK OF A SQUAD CAR WHILE TWO OTHER MALE OFFICERS STOOD BY THE OFFICER (I CAME LATER TO KNOW WAS OFFICER NELSON I WAS CONCERNED THAT THE GIRL&#039;S PARENTS SHOULD BE NOTIFIED). AND VERY SLOWLY SO AS NOT TO APPEAR A THREAT I APPROACHED THE OFFICERS TO FIND OUT THAT INFORMATION.&nbsp; OFFICER NELSON WAS NOW IN THE FRONT SEAT ON THE RADIO.&nbsp; I SAID EXCUSE ME OFFICER I AM A TEACHING ARTIST DIRECTING A PLAY HERE AT RAINIER BEACH AND WOULD LIKE TO KNOW WHAT THE GIRL IS BEING CHARGED AND AM CONCERNED ABOUT HER SAFETY.<br />I WAS ASKED WHAT MY RELATIONSHIP TO THE GIRL WAS.<br />I SAID SHE IS ONE OF MY STUDENTS&#039; CLASSMATES.<br />I WAS TOLD TO BACK UP BY OFFICER NELSON.<br />I DID BACK UP.<br />I ASKED AGAIN.<br />I WAS TOLD BY OFFICER ATOFAU TO BACK UP AS WELL.<br />I DID.<br />I ASKED AGAIN.<br />OFFICER NELSON GOT OUT OF HIS VEHICLE<br />GRABBED MY RIGHT ARM BEHIND MY BACK AND SLIGHTLY TWISTED IT AND HELD IT FOR SEVERAL SECONDS AS IF TO INSTIGATE SOME RESPONSE OR RESISTANCE.<br />WHEN I DID NOT RESIST<br />I WAS RELEASED AND TOLD TO PUT MY HANDS ON THE HOOD OF THE SQUAD CAR.<br />I THEN ASKED THE GIRL IN CUSTODY WHAT SHE WAS BEING CHARGED WITH.<br />SHE DID NOT RESPOND.<br />OFFICER NELSON ASKED ME MY NAME I GAVE IT.<br />AND TOLD HIM I HAVE NO RECORD AND REITERATED I AM A TEACHING ARTIST DIRECTING A PLAY HERE AT RAINIER BEACH.<br />OFFICER NELSON PROMPTED OFFICER ATOFAU TO CHECK ME FOR DRUGS AND WEAPONS.<br />MY POCKETS WERE EMPTIED AND MY BAG TAKEN<br />I WAS THEN TOLD BY OFFICER NELSON I WAS GOING TO JAIL TOO.<br />I ASKED FOR WHAT<br />AND WAS TOLD FOR INTERFERING.<br />I SAID THIS IS RIDICULOUS.<br />I JUST WANT TO MAKE SURE THE GIRL IS SAFE AND THAT HER PARENTS ARE NOTIFIED I HAVE NO RECORD AND I HAVE COMPLIED WITH YOUR REQUESTS.<br />I WAS PUT IN CUFFS AND TAKEN BY OFFICER ATOFAU TO THE OTHER<br />SQUAD CAR.<br />I YELLED TO TIA TO TELL BRANDIE FLOOD THE TRAINER ON TOBACCO THAT I HAD BEEN UNJUSTLY ARRESTED AND TO NOTIFY MY MOTHER.<br />I STILL HAD NOT BEEN READ MY RIGHTS OR GIVEN A CLEAR INDICATION OF WHAT MY OFFENSE HAD BEEN.<br />I WAS TAKEN TO THE SOUTH PRECINCT AND HELD IN CUSTODY FOR ABOUT 30MINUTES I BELIEVE<br />BEFORE MY RIGHTS WERE READ TO ME BY MY OFFICER ATOFAU.<br />SARGENT MCGINNIS AND OFFICER ATOFAU RETURNED TO GET<br />MY VERSION OF WHAT HAPPENED.<br />OFFICER NELSON AND OFFICER MCRAE CAME TO EXPRESSS NELSON VERSION OF WHAT HAD OCCURRED TO JUSTIFY MY ARREST.<br />I WAS TAKEN TO KING COUNTY APPROX 6:30PM STILL UNAWARE OF WHAT MY EXACT CHARGES WERE.<br />MY BELONGINGS WERE TRANSFERRED TO A PLASTIC BAG AND I WAS TOLD I WOULD HAVE TO RETRIEVE MY PUMA BAG FROM A SITE ON AIRPORT WAY.<br /> I WAS TOLD TO CHANGE INTO RED JAIL CLOTHING AND GIVEN A<br />SACK LUNCH AND PLACED IN A CELL.<br />FOR THE NEXT 5 1/2 HRS I WAS&nbsp; TRANSFERRED FROM CELL TO CELL AND FINALLY RELEASED AT MIDNIGHT TO DISCOVER I HAD A HEARING FOR OBSTRUCTION OF A PUBLIC OFFICIAL.<br />THIS WAS THE FIRST TIME I WAS INFORMED OF WHAT I HAD BEEN ARRESTED FOR.<br />PLEASE ATTEND OR WRITE A LETTER OF REFERENCE<br />to rajniie@yahoo.com<br />Please call KOMO KIRO ALL MEDIA SOURCES<br />FLOOD THEM WITH THIS STORY<br /> - FOR QUESTIONS ON A CHILD&#039;S BEHALF<br /> A TEACHER MUST BE ARRESTED?!<br />MY HEARING IS ON APRIL 10TH @2:30PM 500 5TH AVE KING COUNTY CORRECTIONAL FACILITY.<br />PLEASE SUPPORT!<br />I GREATLY APPRECIATE IT!<br /> <br />PEACE,<br /> <br />RAJNII</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: SUPPORT RAJNII - STOP POLICE BRUTALITY!!!</b><br />
+					Post by: <b>Look everyone! I can stick my foot in my Mouth(matician)</b> on <b>April 09, 2007, 02:01:34 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">I&#039;ll put $100.00 on it and say that if this high school was in Bellevue, nobody would have been arrested.<br /><br />Were there other witnesses that can hold this story down? Anyone have a camera/video phone?</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: SUPPORT RAJNII - STOP POLICE BRUTALITY!!!</b><br />
+					Post by: <b>Budaho</b> on <b>April 09, 2007, 02:41:18 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">dang, thats some f&#039;d up shit.&nbsp; i gotta work tomorow unfortunately but i&#039;ll definately wright some letters on this one.&nbsp; I&#039;m amazed at how similar, and similarly disrespectful this sounds to the incident with DV1, i&#039;m going to call attention to this similarity in the letters i write too.&nbsp; This is not a pattern i want to see expanded among the seattle police force, but it seems to be all too common behavior among those who are supposed to serve and protect.&nbsp; </div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: SUPPORT RAJNII - STOP POLICE BRUTALITY!!!</b><br />
+					Post by: <b>Blind Sage</b> on <b>April 09, 2007, 03:15:50 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">Knowing Raj, his account is no doubt exactly how it went down.&nbsp; I&#039;ll do everything in my power to support.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: SUPPORT RAJNII - STOP POLICE BRUTALITY!!!</b><br />
+					Post by: <b>chillmatic</b> on <b>April 09, 2007, 03:36:20 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">that shit is lame.&nbsp; can&#039;t stand it when police abuse their power w/ general assholishness like that.&nbsp; i been on that end of things before (oddly enough they wouldn&#039;t get my parent either).</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: SUPPORT RAJNII - STOP POLICE BRUTALITY!!!</b><br />
+					Post by: <b>Look everyone! I can stick my foot in my Mouth(matician)</b> on <b>April 09, 2007, 03:39:20 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">I can picture it exactly how he tells it.... it&#039;s cold blooded.<br /><br />I&#039;ve sen the cops around ANYTHING taht&#039;s hiphop take actions before asking questions...<br /><br />It&#039;s unfortunate that the SPD still feel that Hiphop music supports a negative enviroment.<br /><br />So from the jump cops think everybody in the area of something involving Urban Arts are going to &quot;interfere&quot; with their business.<br /><br />That&#039;s why the best weapon we as a community (when these types of things happen) can use, is a camera phone, or something of the sort with a video camera option on it....<br /><br />I was infront of Tommy&#039;s awhile back, and one of our friends &quot;Graham&quot; got hemmed up by 2 bike cops that abruptly wanted to clear all the crowd smoking infront of the club... so as soon as he got grabbed by the female cop... 3 people pulled out their camera phones, and were about 8 feet from Graham (pushed up against the wall) video&#039;ing the whole thing going down.... <br /><br />Needless to say, the police saw us video recording it with our phones, and they may have been treating him a little less rough. <br /><br />It&#039;s sad that we have to take these precautions when dealing wit our own &quot;PROTECTORS&quot;.... but first things first....<br /><br />Protect yourself from them (sometimes).... Especially when you&#039;re upset with the way the handle a situation that is petty, but escalates into something ridiculous.<br /><br /></div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: SUPPORT RAJNII - STOP POLICE BRUTALITY!!!</b><br />
+					Post by: <b>Budaho</b> on <b>April 09, 2007, 04:48:53 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">does anybody have a copy of the police report or the official version of what happened?&nbsp; its always good to compare both sides of the story.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: SUPPORT RAJNII - STOP POLICE BRUTALITY!!!</b><br />
+					Post by: <b>Budaho</b> on <b>April 09, 2007, 05:04:45 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: Budaho on April 09, 2007, 04:48:53 pm</div><div class="quote">does anybody have a copy of the police report or witness accounts of what happened?  its always good to compare both sides of the story.<br /></div></div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: SUPPORT RAJNII - STOP POLICE BRUTALITY!!!</b><br />
+					Post by: <b>MTK</b> on <b>April 09, 2007, 10:09:05 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">I will be there, and I will make some signs up tonight.&nbsp; This is ridiculous.&nbsp; I know it&#039;s on short notice but what do people want the signs to say?</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: SUPPORT RAJNII - STOP POLICE BRUTALITY!!!</b><br />
+					Post by: <b>The Illestrator</b> on <b>April 09, 2007, 10:18:05 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: MTK on April 09, 2007, 10:09:05 pm</div><div class="quote">I will be there, and I will make some signs up tonight.  This is ridiculous.  I know it&#039;s on short notice but what do people want the signs to say?<br /></div><br /><br />&quot;STOP POLICE BRUTALITY!!! &quot;<br /><br />its too bad i can&#039;t make it though. But this will spread through my word of mouth.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: SUPPORT RAJNII - STOP POLICE BRUTALITY!!!</b><br />
+					Post by: <b>shawn stone</b> on <b>April 09, 2007, 10:27:01 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: MTK on April 09, 2007, 10:09:05 pm</div><div class="quote">I will be there, and I will make some signs up tonight.&nbsp; This is ridiculous.&nbsp; I know it&#039;s on short notice but what do people want the signs to say?<br /></div><br />maybe try some justice tip stuff, or equality sumtin.<br /><br />i know everyone has a story, so i mine as well share mine. about everyweekend i take the bus out of seattle, the 194 off of 2nd, right by pike, itsa hot spot for crack, i was chillin in the pay for parking spot across the street of my bus stop, with my headphones and duffle bag, two bike cops came up to me, took my bag, went threw it, after fuckin up my underwear and cd&#039;s tossed it on the ground and had me empty my pockets and checked my id on some palm pilot shit, end of the story is after getting hassled for 15 minutes, i had to catch the next bus cuz i missed mine... fucked my day up..</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: SUPPORT RAJNII - STOP POLICE BRUTALITY!!!</b><br />
+					Post by: <b>Matt Jay</b> on <b>April 10, 2007, 05:06:44 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">So how did it go?<br /><br />I was there in spirit....</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: SUPPORT RAJNII - STOP POLICE BRUTALITY!!!</b><br />
+					Post by: <b>nam</b> on <b>April 10, 2007, 05:34:29 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">the courtroom viewing was packed. and when the hearing was done, there were still folks coming in. had a little gathering outside the courtroom and exchanged a bunch of info about trial dates and such. migrated outside of the building where it was about 100 people in support. cypher session, video cameras, even a reporter from KIRO 7 i think. I think the judge set the court date/trial for May 29th, from what i heard. <br /><br /><br />the unity, support, love and energy was definitely in full affect. <br /><br /> O0</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: SUPPORT RAJNII - STOP POLICE BRUTALITY!!!</b><br />
+					Post by: <b>The Illestrator</b> on <b>April 10, 2007, 09:25:42 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">i was watching fox tonight. did you guys happen to hear anything about it on tv?<br /><br /></div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: SUPPORT RAJNII - STOP POLICE BRUTALITY!!!</b><br />
+					Post by: <b>Guam</b> on <b>April 11, 2007, 12:07:44 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">chanel 7</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: SUPPORT RAJNII - STOP POLICE BRUTALITY!!!</b><br />
+					Post by: <b>Guam</b> on <b>April 11, 2007, 12:09:12 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">oooooooooooh. <br /><br />and the cipher was fresh</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: SUPPORT RAJNII - STOP POLICE BRUTALITY!!!</b><br />
+					Post by: <b>shawn stone</b> on <b>April 11, 2007, 01:22:49 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">when i was like 8, i wanted my alias to be cipher... damn you neo...</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>....Up to  72 hours</b><br />
+					Post by: <b>rdm26</b> on <b>April 25, 2007, 07:34:54 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">I see this post has been up for a while, but I just wanted to put my 2 cents in. In regards to Rajnii being held for 5 1/2 hours with out being told what he was arrested for; In washington state, by law they can hold you for up to 72 hours with out having to tell you what you were arrested for. I know this is only a tiny part of the whole picture, but I just thought it needed to be said.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: SUPPORT RAJNII - STOP POLICE BRUTALITY!!!</b><br />
+					Post by: <b>isRAel</b> on <b>April 27, 2007, 11:45:02 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">ahhh, well then...</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: SUPPORT RAJNII - STOP POLICE BRUTALITY!!!</b><br />
+					Post by: <b>shawn stone</b> on <b>April 29, 2007, 03:53:14 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">i dont mind the sun somtimes, the images it shows...</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: SUPPORT RAJNII - STOP POLICE BRUTALITY!!!</b><br />
+					Post by: <b>Flowside</b> on <b>April 29, 2007, 12:19:25 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">I like how the dude signs up just to say that. well you also don&#039;t have to be read miranda rights until you get questioned, which could very well be never. blah blah blah ::)</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: SUPPORT RAJNII - STOP POLICE BRUTALITY!!!</b><br />
+					Post by: <b>isRAel</b> on <b>May 01, 2007, 11:41:08 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">&quot;never forget that everything hitler did in germany was legal.&quot;<br /><br />--- MLK, jr.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: SUPPORT RAJNII - STOP POLICE BRUTALITY!!!</b><br />
+					Post by: <b>Fuzed</b> on <b>July 17, 2007, 07:13:56 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">Rajnii Eddins&#039; next courtdate for the episode of police misconduct that occurred outside Rainier Beach in April is set for...<br /><br />July 26th 2:30pm <br />@ 600 5th Ave in Courtroom 1102<br /><br />We want to bring at least 100 people out and swarm the courtroom and the block outside - Please Pass It On And Tell your Friends To Do The Same! The only way to get these people&#039;s attention is to impact their income!!!<br />And the most effective way to do this is to effect their reputation!!!!<br />So let&#039;s make sure we have such a strong presence <br />that the media can not ignore it!!! No Justice No Peace!<br /></div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: SUPPORT RAJNII - STOP POLICE BRUTALITY!!!</b><br />
+					Post by: <b>isRAel</b> on <b>August 22, 2007, 09:46:15 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">spoke to rajni last wednesday - he said there was an upcoming hearing this week.&nbsp;  any word?</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: SUPPORT RAJNII - STOP POLICE BRUTALITY!!!</b><br />
+					Post by: <b>Guam</b> on <b>August 27, 2007, 11:54:37 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">well, there was a court date, but it got pushed back AGAIN.</div>
+					<br /><br />
+					<div align="center" class="smalltext">
+		<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;">MASSLINE | Powered by <a href="http://www.simplemachines.org/" title="Simple Machines Forum" target="_blank">SMF 1.0.10</a>.<br />
+&copy; 2005, <a href="http://www.simplemachines.org/about/copyright.php" title="Free Forum Software" target="_blank">Simple Machines LLC</a>. All Rights Reserved.
+		</span></div>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

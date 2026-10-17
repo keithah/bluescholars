@@ -15,6 +15,7 @@ from .state import State,write_json
 from .urls import base_path
 from .artist_sites import (index_artist_sites,recover_artist_sites,promote_artist_sites,
                            review_artist_capture)
+from .massline import index_massline,index_massline_history,recover_massline
 
 def serve(directory: Path,base: str,port: int):
     from http.server import ThreadingHTTPServer,SimpleHTTPRequestHandler
@@ -62,6 +63,11 @@ def main(argv=None) -> int:
     p.add_argument('--url',required=True);p.add_argument('--reason',required=True)
     p=commands.add_parser('artist-promote',help='Promote inspected artist-site sources; later captures need individual compatibility notes')
     p.add_argument('--reviewed',action='store_true')
+    commands.add_parser('massline-index',help='Validate and summarize the saved masslinemedia.com Wayback CDX inventory')
+    p=commands.add_parser('massline-history',help='Page and checkpoint uncollapsed Mass Line Wayback capture history')
+    p.add_argument('--max-pages',type=int,default=1);p.add_argument('--delay',type=float,default=0.8);p.add_argument('--timeout',type=int,default=60)
+    p=commands.add_parser('massline-recover',help='Resumably recover Mass Line Media pages, forum threads, and local assets')
+    p.add_argument('--max-files',type=int,default=250);p.add_argument('--delay',type=float,default=0.6);p.add_argument('--retry-failed',action='store_true')
     p=commands.add_parser('merge-recovery',help='Safely merge a downloaded recovery artifact from a staging directory')
     p.add_argument('--artifact',type=Path,required=True);p.add_argument('--run-id',required=True)
     idx=commands.add_parser('index',help='Enumerate captures and persist the continuation cursor')
@@ -121,6 +127,14 @@ def main(argv=None) -> int:
             result=review_artist_capture(root,args.edition,args.url,args.reason)
         elif args.command=='artist-promote':
             result=promote_artist_sites(root,args.reviewed)
+        elif args.command=='massline-index':result=index_massline(root)
+        elif args.command=='massline-history':
+            result=index_massline_history(root,args.max_pages,args.delay,args.timeout)
+            print(json.dumps(result,indent=2));return 2 if result.get('errors') else 0
+        elif args.command=='massline-recover':
+            if args.max_files<1 or args.delay<0:raise ValueError('Invalid Massline recovery limits')
+            result=recover_massline(root,args.max_files,args.delay,args.retry_failed,
+                progress=lambda p:print(json.dumps({'stage':'massline-recover','progress':p}),file=sys.stderr,flush=True))
         elif args.command=='merge-recovery': result=merge_artifact(root,args.artifact,args.run_id)
         elif args.command=='index-assets':
             if args.max_assets<1 or args.max_pages<1:raise ValueError('Asset index limits must be positive')

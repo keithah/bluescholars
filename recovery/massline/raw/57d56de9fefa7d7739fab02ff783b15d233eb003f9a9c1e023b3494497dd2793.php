@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+		<title>Print Page - RELEASE JOMA SISON!!</title>
+		<style type="text/css"><!--
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			*, a:link, a:visited, a:hover, a:active
+			{
+				color: black !important;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			.code
+			{
+				font-size: x-small;
+				font-family: monospace;
+				border: 1px solid #000000;
+				margin: 1px;
+				padding: 1px;
+			}
+			.quote
+			{
+				font-size: x-small;
+				border: 1px solid #000000;
+				margin: 1px;
+				padding: 1px;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		--></style>
+	</head>
+	<body bgcolor="#ffffff" text="#000000">
+		<h1 class="largetext">MASSLINE</h1>
+		<h2 class="normaltext">MASS LINE FORUMS => By Any Means => Topic started by: Geo on August 28, 2007, 11:06:33 am</h2>
+
+		<table width="90%" cellpadding="0" cellspacing="0" border="0">
+			<tr>
+				<td>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>RELEASE JOMA SISON!!</b><br />
+					Post by: <b>Geo</b> on <b>August 28, 2007, 11:06:33 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">News Release<br />August 28, 2007<br /><br />Reference: Berna Ellorin, Secretary-General, BAYAN USA, email: secgen@bayanusa.org<br /><br />RELEASE JOMA SISON!!! --- BAYAN USA<br />Fil-Am Alliance Condemns Dubious Arrest of NDF Political Consultant<br /><br />The US Chapter of Bagong Alyansang Makabayan, or BAYAN USA, an alliance of over 12 Filipino organizations in the US, vehemently condemned the arrest of the National Democratic Front Chief Political Consultant Jose Maria Sison last night by the Dutch Police on false charges of multiple murders.<br /><br />The alliance further condemned the raiding of homes by the Dutch police of the NDF personnel.<br /><br />Sison was arrested last night for multiple murders of Romulo Kintanar and Arturo Tabara. Police say Sison ordered the murders from the Netherlands back in 2003. Sison will be put on trial in the Netherlands, not the Philippines.<br /><br />While the New People&#039;s Army has already come forward with admittance to the killings, Sison maintains he is not in the leadership of the NPA nor the Communist Party of the Philippines (CPP).<br /><br />BAYAN USA maintains the real reasons for Sison&#039;s arrest are political not criminal. Emergency actions will also be set at Dutch consulates across the country calling for Sison&#039;s immediate release.<br /><br />&quot;Behind the actions of the Dutch police is the Arroyo government, which since its ascendency has been in pursuit of Joma Sison and worked tirelessly to subdue his meaning to the people,&quot; states BAYAN USA Chair Chito Quijano.<br /><br />The alliance, a member of the International League of Peoples Struggle, an international organization of which Sison serves as Chair, has been calling for a de-listing of Sison from the US and EU terrorist lists.<br /><br />&quot;It is in every interest of the US and Arroyo governments to confine Professor Sison for his politics. As the Chief Political Consultant to the organization that comprises one half of the stalled NDF-GRP peace negotiations, the Arroyo government is declaring to the world it is not interested in resuming peace talks,&quot; Quijano added.<br /><br />BAYAN USA has also supported the resumption of peace talks between the NDF and GRP. The Arroyo administration just recently called to intensify the all-out war in Mindanao under the auspices of the US War on Terror as a measure to raise its annual pork barrel of military aid from the US government.<br /><br />BAYAN USA also asserted it&#039;s been a year of hot water for the Arroyo administration, with isolation from human rights watchdogs such as the UNHRC, Amnesty International, Human Rights Watch, and even a US Senate hearing that may influence US military aid to the Philippines. Sison, a political refugee in the Netherlands for nearly 20 years, has been one of the most famous and vocal critics of the Arroyo regime.<br /><br />Earlier this year, a European court nullified Sison&#039;s terrorist listing. Since his listing of 2001, Sison had his assets frozen and right to work stripped. Sison remains on the US State Department&#039;s terrorist list.<br /><br />For more information, contact BAYAN USA at info @ bayanusa.org. ###</div>
+					<br /><br />
+					<div align="center" class="smalltext">
+		<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;">MASSLINE | Powered by <a href="http://www.simplemachines.org/" title="Simple Machines Forum" target="_blank">SMF 1.0.10</a>.<br />
+&copy; 2005, <a href="http://www.simplemachines.org/about/copyright.php" title="Free Forum Software" target="_blank">Simple Machines LLC</a>. All Rights Reserved.
+		</span></div>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

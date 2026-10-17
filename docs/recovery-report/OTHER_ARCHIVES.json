@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T02:40:00Z",
+  "updated_at": "2026-10-17T02:48:00Z",
   "scope": "Independent public web archives checked for Blue Scholars website captures, linked posts, and supporting material.",
   "results": {
     "Arquivo.pt": {
@@ -625,8 +625,34 @@
       "local_capture": null,
       "local_sha256": null,
       "edition_route": "/2009/blog/2011/01/the-hip-hop-word-count-blue-scholars-approved/",
-      "acquisition_status": "Indexed through the legacy NetSolHost origin; original HTML not yet downloaded or verified. Cross-reference articles were located in search results but their pages could not be opened by the browser tool in this pass.",
-      "interpretation": "Use the contemporaneous Seattle coverage only as route/context evidence. Do not substitute it for the official article text or layout."
+      "acquisition_status": "Individual Wayback replay inspected in browser; title, Jan. 31, 2011 date, article content and two comments confirmed. Local original HTML bytes are pending workflow run 38995680425; do not yet count as a recovered local source.",
+      "interpretation": "The contemporaneous Seattle coverage corroborates the lead. Use the official captured HTML—not the third-party quotation—as the reconstruction source.",
+      "browser_inspection": {
+        "inspected_at": "2026-10-17",
+        "replay_url": "https://web.archive.org/web/20110302034042/http://02cd02a.netsolhost.com/blog/2011/01/the-hip-hop-word-count-blue-scholars-approved/",
+        "confirmed_title": "The Hip Hop Word Count: Blue Scholars Approved",
+        "posted": "January 31, 2011",
+        "comments_visible": 2,
+        "notes": "Wayback replay rendered in the in-app browser. Full article text and two comments were visibly present; original HTTP response bytes and SHA-256 are still pending the recovery workflow artifact."
+      }
+    },
+    {
+      "lead": "SXSW 2009: WHERE WE’LL BE",
+      "official_route": "http://02cd02a.netsolhost.com/blog/2009/03/sxsw-2009-where-well-be/",
+      "archive_capture_observed": "20100312073016",
+      "edition_route": "/2009/blog/2009/03/sxsw-2009-where-well-be/",
+      "browser_inspection": {
+        "inspected_at": "2026-10-17",
+        "replay_url": "https://web.archive.org/web/20100312073016/http://02cd02a.netsolhost.com/blog/2009/03/sxsw-2009-where-well-be/",
+        "confirmed_title": "SXSW 2009: WHERE WE’LL BE",
+        "posted": "March 11, 2009",
+        "comments_visible": 4,
+        "notes": "Wayback replay rendered in the in-app browser. Visible article lists four SXSW 2009 events and four comments; original HTTP response bytes and SHA-256 are pending the recovery workflow artifact."
+      },
+      "local_capture": null,
+      "local_sha256": null,
+      "acquisition_status": "Individual Wayback replay inspected in browser; event details and four comments visible. Local original HTML bytes are pending workflow run 38995680425; not yet counted as a recovered local source.",
+      "interpretation": "Use the archived official page as the source; event listings are historical and are not current schedule information."
     }
   ],
   "latest_targeted_image_index": {

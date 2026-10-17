@@ -115,3 +115,8 @@ The candidate was rebuilt locally from the merged checkpoint through run `389608
 - The preview is not the release build. Remaining gaps and the full local checkpoint counts are in `docs/recovery-report/GAP_REPORT.json`; both review flags remain false.
 
 - The final documentation-only `main` commit `451caccb671c4b819d9792bb070fd52e11fb2a6e` passed validation run [39002061515](https://github.com/keithah/bluescholars/actions/runs/39002061515), including unit tests and root/project-subpath builds.
+
+
+## Post-deployment acquisition update — October 17, 2026
+
+A second local 200-URL pass recovered 11 additional host-page records and five former placeholder routes, without adding unique bytes. The local root and `/bluescholars/` candidate check both passed after rebuild (955 recovered pages; 2,352 placeholders). The new 2009 capture routes have not yet been live-checked in this deployment snapshot; verify them after refreshing Pages. The previous public candidate commit remains `f192c6bb` until that refresh succeeds.

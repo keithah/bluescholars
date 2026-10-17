@@ -1,18 +1,18 @@
 {
-  "updated_at": "2026-10-17T04:13:14+00:00",
+  "updated_at": "2026-10-17T04:40:02+00:00",
   "source_checkpoint_run": "38992255338 (artifact merged); local recovery/checkpoint counts above supersede the prior run-only snapshot.",
   "capture_index": {
-    "indexed_capture_records": 22579,
+    "indexed_capture_records": 22636,
     "complete": true,
     "scope": "Completed Bluescholars domain CDX plus targeted Squarespace CSS/font/image prefix indexes; local checkpoint count includes all merged captures."
   },
   "resource_inventory": {
-    "resource_urls": 10093,
+    "resource_urls": 10094,
     "statuses": {
-      "queued": 5408,
-      "recovered": 3310,
+      "queued": 5272,
+      "recovered": 3321,
       "needs_review": 64,
-      "failed": 1311,
+      "failed": 1437,
       "excluded": 0
     }
   },
@@ -23,7 +23,7 @@
   },
   "candidate": {
     "recovered_pages": 955,
-    "placeholder_pages": 2357,
+    "placeholder_pages": 2352,
     "derived_livejournal_views": 4,
     "publish_approved": false,
     "visual_fidelity_verified": false,
@@ -204,20 +204,97 @@
   "index_complete": true,
   "active_recovery_run": null,
   "local_checkpoint_after_recovery_sweep": {
-    "origin": "Locally merged recovery checkpoint; no new GitHub run ID (latest run artifact was already imported).",
-    "resource_urls": 10093,
-    "indexed_capture_records": 22579,
+    "origin": "Locally merged checkpoint plus a completed resumable 200-resource recovery pass; no GitHub workflow needed for this batch.",
+    "last_batch": {
+      "max_files": 200,
+      "processed": 200,
+      "new_recovered_resource_urls": 11,
+      "new_unique_raw_files": 0,
+      "new_unique_raw_bytes": 0,
+      "additional_capture_rows": 57,
+      "new_inventory_urls": 1,
+      "newly_recovered_capture_routes": [
+        {
+          "url": "http://02cd02a.netsolhost.com/blog/2009/07/photos-tone/",
+          "capture": "20090803102535",
+          "bytes": 16743,
+          "sha256": "96652df344f681d2c0d8fb2028625df046979f3d8ec75c3c97c932b68e991df6"
+        },
+        {
+          "url": "http://02cd02a.netsolhost.com/blog/2009/12/photo-hello/",
+          "capture": "20100226174320",
+          "bytes": 24834,
+          "sha256": "89ca01f1b81c3704b94712d65bd5eb8d4af19f71ad4e87a214efa45119a3baec"
+        },
+        {
+          "url": "http://02cd02a.netsolhost.com/blog/bio/",
+          "capture": "20110313072202",
+          "bytes": 9613,
+          "sha256": "bd4da8a58c1e18f48a7f6b5a84e87a8213f928cd793b3c455556709d9d011a69"
+        },
+        {
+          "url": "http://02cd02a.netsolhost.com/blog/category/artsculture/",
+          "capture": "20110312094618",
+          "bytes": 9495,
+          "sha256": "8f035fd213e5eecd7d4dbcd53389f42ba36eb98959595d0aed8914fc6ae5068e"
+        },
+        {
+          "url": "http://02cd02a.netsolhost.com/blog/category/news/",
+          "capture": "20100218030931",
+          "bytes": 25630,
+          "sha256": "7e7235f973001664b28575c1c1840643035fc4558032f4ab9e6e049cf00fb1de"
+        },
+        {
+          "url": "http://02cd02a.netsolhost.com/blog/category/photos/",
+          "capture": "20110314052022",
+          "bytes": 10700,
+          "sha256": "4e7bde5d44a057ef451e7484c9b59dcbf0d3131a6c5c5d8ced6101bea4785eb2"
+        },
+        {
+          "url": "http://02cd02a.netsolhost.com/blog/category/shows/",
+          "capture": "20110314052027",
+          "bytes": 10769,
+          "sha256": "aa66f2ed801068f1c761e4ce8c0ecd3c3e31e7467d3eef56df8d8c6218f5cecf"
+        },
+        {
+          "url": "http://02cd02a.netsolhost.com/blog/category/sxsw/",
+          "capture": "20090813113347",
+          "bytes": 15630,
+          "sha256": "18bed214b60610e46f43a306badb50944a1dd1529b953eda43ddae53e3330b8b"
+        },
+        {
+          "url": "http://02cd02a.netsolhost.com/blog/category/web/",
+          "capture": "20110312094624",
+          "bytes": 6985,
+          "sha256": "5db819cc424b71ac31de48ca692fdf3e94031219f67ca8561783463a52d6f809"
+        },
+        {
+          "url": "http://02cd02a.netsolhost.com/blog/cinemetropolis/",
+          "capture": "20110313072206",
+          "bytes": 11392,
+          "sha256": "d57c3a49ac073433006bcbef96291742c702edc36baccdc11e948f9079035e10"
+        },
+        {
+          "url": "http://02cd02a.netsolhost.com/blog/happy-halloween/",
+          "capture": "20110314022321",
+          "bytes": 9943,
+          "sha256": "5b6195f82126022c8a744fae56f1f156439d72d9087f51e43029eb7bfce314db"
+        }
+      ]
+    },
+    "resource_urls": 10094,
+    "indexed_capture_records": 22636,
     "index_complete": true,
     "statuses": {
-      "queued": 5408,
-      "recovered": 3310,
+      "queued": 5272,
+      "recovered": 3321,
       "needs_review": 64,
-      "failed": 1311,
+      "failed": 1437,
       "excluded": 0
     },
     "unique_downloaded_files": 2095,
     "downloaded_bytes": 112816864,
-    "failed_attempts": 7022
+    "failed_attempts": 7230
   },
   "local_editions_recovered": [
     {

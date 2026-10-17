@@ -8,6 +8,8 @@ The resumable Wayback checkpoint contains 10,951 resource URLs and 23,238 indexe
 
 The latest root and `/bluescholars/` candidate builds each contain 976 recovered pages, 2,181 placeholders, four derived LiveJournal reading views, and 934 local source CSS/image assets. Build findings include 7,504 unavailable embedded assets, 338 linked assets not recovered, 145 external media links without local recordings, 111 font resources omitted under the no-font-binary policy, and nine invalid source records. Both offline link/resource checks pass with zero errors, and the generated candidate was scanned for remote automatic resources. This remains an unreviewed preview; publication flags remain false.
 
+The owner-requested preview was refreshed from this candidate. Pages build [39010340075](https://github.com/keithah/bluescholars/actions/runs/39010340075) succeeded for `gh-pages` commit `1885e30b42b23023bfa69650399e88b29c170a47`, a normal child of the previous branch tip. The Pages API reports `built`, HTTPS is enforced, and there is no custom domain. Live checks after the build returned 200 for `/bluescholars/`, all three edition roots, `/2013/blog/page/3/`, the Eugene article, `/lj/`, `/archive-status/`, and local CSS; an unknown route returned 404. This is an incomplete candidate preview, not a reviewed release.
+
 ## Latest checkpoint — October 16, 2026
 
 The complete Wayback domain CDX index currently records 8,992 capture rows across 8,580 resource URLs. The local checkpoint contains 1,937 unique downloaded files (105,399,588 bytes): 2,624 recovered resources, 48 held for review, 1,018 failed, and 4,890 queued. Counts refer to resource URLs and saved files; they do not count every dated snapshot body.

@@ -105,12 +105,11 @@
     "outcome": "Wayback acquisition hit the 90-minute cap; candidate build and artifact upload succeeded."
   },
   "latest_wayback_batch": {
-    "run_id": "38985105267",
-    "url": "https://github.com/keithah/bluescholars/actions/runs/38985105267",
-    "status": "in_progress",
-    "resume_run": "38975520061",
-    "last_observed_at": "2026-10-17T01:10:17Z",
-    "note": "Long-running bounded dependency recovery; no completed artifact has been merged from this run."
+    "run_id": "38995680425",
+    "url": "https://github.com/keithah/bluescholars/actions/runs/38995680425",
+    "status": "completed",
+    "conclusion": "success",
+    "note": "Workflow succeeded; local checkpoint counts and focused captures described above are measured separately."
   },
   "older_edition_browser_observations": {
     "2007": "recovered homepage capture dated 2008-12-18 and August 2007 guestbook page; most linked routes remain placeholders; no full visual review recorded.",
@@ -201,30 +200,31 @@
     }
   },
   "pages_deployment": {
-    "mode": "public, unreviewed recovery preview; not an approved final restoration",
+    "mode": "public, unreviewed incomplete candidate preview; not an approved final restoration",
     "url": "https://keithah.github.io/bluescholars/",
     "source_branch": "gh-pages",
     "source_path": "/",
-    "branch_commit": "a507923",
-    "pages_build_run": "38985421271",
+    "branch_commit": "1885e30b42b23023bfa69650399e88b29c170a47",
+    "parent_commit": "9f8fdbb6f6c3497a77215e2b0bc88ff48d80e907",
+    "pages_build_run": "39010340075",
     "pages_build_status": "success",
     "pages_api_status": "built",
     "https_enforced": true,
     "custom_domain": null,
-    "files": 3358,
-    "candidate_source": "local merged checkpoint through run 38975520061",
+    "candidate_source": "local candidate build from checkpoint measured 2026-10-17T06:30:00Z",
     "verified_routes": {
       "/": 200,
       "/2007/": 200,
       "/2009/": 200,
       "/2013/": 200,
+      "/2013/blog/page/3/": 200,
+      "/2013/blog/2013/9/9/eugene-oregon-august-2013/": 200,
       "/lj/": 200,
       "/archive-status/": 200,
-      "/2013/blog/": 200,
       "/assets/archive-ui.css": 200,
-      "/unrecognized-route/": 404
+      "/not-a-route/": 404
     },
-    "homepage_browser_accessibility_verified": true,
+    "year_cards_visible": true,
     "ordinary_rendering_remote_automatic_assets": 0,
     "release_approved": false
   },
@@ -604,26 +604,28 @@
   "published_preview": {
     "url": "https://keithah.github.io/bluescholars/",
     "branch": "gh-pages",
-    "commit": "efad4d3e2a2fefefcb78b7d29761d474857d86cd",
-    "pages_build_run": "38990662133",
+    "commit": "1885e30b42b23023bfa69650399e88b29c170a47",
+    "pages_build_run": "39010340075",
     "pages_status": "built",
     "https_enforced": true,
-    "verified_at": "2026-10-17T01:26:02+00:00",
+    "verified_at": "2026-10-17T06:34:00Z",
     "checks": {
       "homepage_http": 200,
       "2007_http": 200,
       "2009_http": 200,
-      "new_article_http": 200,
+      "2013_http": 200,
       "pagination_http": 200,
-      "woff_binary_http": 404,
+      "eugene_article_http": 200,
+      "lj_http": 200,
+      "archive_status_http": 200,
+      "local_css_http": 200,
       "missing_route_http": 404
     },
+    "homepage_year_links_verified": true,
     "browser": {
-      "homepage_accessibility_tree_verified": true,
-      "new_article_body_visible": true,
-      "console_errors": 0,
-      "screenshot_captured_in_browser": true,
-      "screenshot_file_saved": false,
+      "gateway_accessibility_tree_verified": true,
+      "2007_original_artwork_and_show_content_inspected": true,
+      "2013_logo_nav_and_hero_inspected": true,
       "human_review_claimed": false
     }
   },

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T06:30:00.208998+00:00",
+  "updated_at": "2026-10-17T06:34:00Z",
   "source_checkpoint_run": "local resumable checkpoint after 2026-10-17 2013 continuation; prior workflow merges documented below.",
   "capture_index": {
     "indexed_capture_records": 23238,
@@ -370,10 +370,13 @@
   },
   "portable_archive": {
     "filename": "bluescholars-restoration-2026-10-17.zip",
-    "contents": "generated candidate site, source code, reports, recovery state, indexes and non-font raw files",
+    "path": "/tmp/bluescholars-restoration-2026-10-17.zip",
+    "contents": "candidate site, tracked source, reports/screenshots, recovery state/index, and non-font raw sources",
+    "file_count": 6732,
     "integrity_test": "passed",
     "font_binaries_included": false,
-    "development_caches_or_credentials_included": false
+    "development_caches_or_credentials_included": false,
+    "checksum_note": "SHA-256 is reported in the task handoff to avoid embedding a self-referential ZIP checksum."
   },
   "unavailable_assets_verified": [
     {
@@ -557,5 +560,27 @@
     },
     "comparison": "The recovered 2013 logo, navigation and photo position/scale/crop align with the reference after accounting for the Wayback toolbar and local notice. See VISUAL_REVIEW.md.",
     "responsive_limit": "No 1440, 768 or 390 px capture because viewport resizing was unavailable."
+  },
+  "latest_preview_refresh": {
+    "url": "https://keithah.github.io/bluescholars/",
+    "branch": "gh-pages",
+    "commit": "1885e30b42b23023bfa69650399e88b29c170a47",
+    "parent_commit": "9f8fdbb6f6c3497a77215e2b0bc88ff48d80e907",
+    "pages_build_run": "39010340075",
+    "pages_build_status": "success",
+    "verified_routes": {
+      "/": 200,
+      "/2007/": 200,
+      "/2009/": 200,
+      "/2013/": 200,
+      "/2013/blog/page/3/": 200,
+      "/2013/blog/2013/9/9/eugene-oregon-august-2013/": 200,
+      "/lj/": 200,
+      "/archive-status/": 200,
+      "/assets/archive-ui.css": 200,
+      "/not-a-route/": 404
+    },
+    "homepage_year_links_verified": true,
+    "release_approved": false
   }
 }

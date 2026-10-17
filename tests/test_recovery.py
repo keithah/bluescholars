@@ -83,6 +83,12 @@ def test_final_squarespace_permalink_outranks_dated_wordpress_posts():
                'kind':'html','referrers':['CDX:domain']}
     assert resource_priority(squarespace)[0] < resource_priority(wordpress)[0]
 
+def test_confirmed_legacy_wordpress_host_pages_get_acquisition_priority():
+    alias={'url':'http://02cd02a.netsolhost.com:80/blog/2009/03/sxsw-2009-where-well-be/',
+           'kind':'html','referrers':['CDX:domain:02cd02a.netsolhost.com']}
+    unrelated={'url':'https://example.org/old-post/','kind':'html','referrers':['CDX:domain']}
+    assert resource_priority(alias)[0] < resource_priority(unrelated)[0]
+
 def test_squarespace_article_media_outranks_unlinked_legacy_assets():
     inline={'url':'https://media.tumblr.com/inline-photo.jpg','kind':'image',
             'referrers':[HOME+'blog/bringing-back-the-og-t-shirt-in-green-and-gold-if']}

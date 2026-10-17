@@ -104,6 +104,8 @@ def resource_priority(record: dict) -> tuple[int,int]:
     query_keys={part.split('=',1)[0].lower() for part in parts.query.split('&') if part}
     own_host=parts.hostname in ('bluescholars.com','www.bluescholars.com')
     refs=record.get('referrers',[])
+    if record['kind']=='html' and parts.hostname=='02cd02a.netsolhost.com':
+        return 3,len(url)
     if record['kind']=='html' and own_host and path=='':
         return 0,len(url)
     if record['kind']=='image' and 'seed' in refs:

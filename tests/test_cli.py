@@ -50,6 +50,10 @@ def test_recovery_workflow_never_deploys():
     assert 'recovery_dir="$RUNNER_TEMP/archive-recovery/$run_id"' in text
     assert '--name archive-recovery --dir "$final_dir"' in text
     assert '--name archive-recovery-indexed --dir "$indexed_dir"' in text
+    assert '[[ -f "$final_dir/state.json" ]]' in text
+    assert 'cp "$final_dir/state.json" "$final_dir/recovery/state.json"' in text
+    assert '[[ -f "$indexed_dir/state.json" ]]' in text
+    assert 'cp "$indexed_dir/state.json" "$indexed_dir/recovery/state.json"' in text
     assert 'merge-recovery' in text
     assert text.index('name: Preserve archive index before acquisition') < text.index('name: Download and discover dependencies')
     assert text.index('name: Preserve recovery checkpoint and source bytes') < text.index('name: Build a candidate for inspection')

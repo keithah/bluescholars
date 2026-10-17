@@ -118,7 +118,8 @@ def import_rows(root:Path,collection:str,rows:list[dict])->dict:
             refs=[]
             if kind=='html':refs=discover_html(body.decode('utf-8',errors='replace'),url)
             elif kind=='css':refs=[{'url':u,'kind':kind_for(u),'referrer':url} for u in discover_css(body.decode('utf-8',errors='replace'),url)]
-            state.data['resources'][key]={'url':url,'kind':kind,'status':'recovered','raw_path':path,'sha256':sha,
+            status='needs_review' if row['timestamp']>state.data['target_capture'] else 'recovered'
+            state.data['resources'][key]={'url':url,'kind':kind,'status':status,'raw_path':path,'sha256':sha,
                 'bytes':len(body),'actual_capture':row['timestamp'],'final_original':url,'final_url':url,
                 'content_type':meta['headers'].get('content-type',row.get('mime','')),'source_archive':'Common Crawl',
                 'source_collection':collection,'source_warc':row['filename'],'source_offset':int(row['offset']),
@@ -213,7 +214,8 @@ def harvest(root:Path,max_rows:int=1800,workers:int=4)->dict:
                 refs=[]
                 if kind=='html':refs=discover_html(body.decode('utf-8',errors='replace'),url)
                 elif kind=='css':refs=[{'url':u,'kind':kind_for(u),'referrer':url} for u in discover_css(body.decode('utf-8',errors='replace'),url)]
-                record={'url':url,'kind':kind,'status':'recovered','raw_path':path,'sha256':sha,
+                status='needs_review' if row['timestamp']>state.data['target_capture'] else 'recovered'
+                record={'url':url,'kind':kind,'status':status,'raw_path':path,'sha256':sha,
                     'bytes':len(body),'actual_capture':row['timestamp'],'final_original':url,
                     'final_url':url,'content_type':meta['headers'].get('content-type',row.get('mime','')),
                     'source_archive':'Common Crawl','source_collection':index['id'],

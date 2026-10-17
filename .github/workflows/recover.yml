@@ -85,9 +85,27 @@ jobs:
             final_dir="$recovery_dir/final"
             indexed_dir="$recovery_dir/indexed"
             if gh run download "$run_id" --repo "$GH_REPO" --name archive-recovery --dir "$final_dir"; then
+              if [[ -f "$final_dir/state.json" ]]; then
+                mkdir -p "$final_dir/recovery"
+                cp "$final_dir/state.json" "$final_dir/recovery/state.json"
+                [[ ! -d "$final_dir/raw" ]] || cp -R "$final_dir/raw" "$final_dir/recovery/"
+                [[ ! -d "$final_dir/index" ]] || cp -R "$final_dir/index" "$final_dir/recovery/"
+                for report in "$final_dir"/*report.json; do
+                  [[ ! -f "$report" ]] || cp "$report" "$final_dir/recovery/"
+                done
+              fi
               artifact_dir="$final_dir"
             else
               gh run download "$run_id" --repo "$GH_REPO" --name archive-recovery-indexed --dir "$indexed_dir"
+              if [[ -f "$indexed_dir/state.json" ]]; then
+                mkdir -p "$indexed_dir/recovery"
+                cp "$indexed_dir/state.json" "$indexed_dir/recovery/state.json"
+                [[ ! -d "$indexed_dir/raw" ]] || cp -R "$indexed_dir/raw" "$indexed_dir/recovery/"
+                [[ ! -d "$indexed_dir/index" ]] || cp -R "$indexed_dir/index" "$indexed_dir/recovery/"
+                for report in "$indexed_dir"/*report.json; do
+                  [[ ! -f "$report" ]] || cp "$report" "$indexed_dir/recovery/"
+                done
+              fi
               artifact_dir="$indexed_dir"
             fi
             python -m restore merge-recovery --artifact "$artifact_dir" --run-id "$run_id"

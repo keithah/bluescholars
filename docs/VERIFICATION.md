@@ -104,3 +104,12 @@ The candidate was rebuilt locally from the merged checkpoint through run `389608
 - Resource compatibility notes were added to `docs/recovery-report/capture-compatibility.json`; the exact URL, capture time and hash for every inspected source are in the recovery state and per-edition report. Later-capture approvals remain resource-specific. `source/review.json` still has `publish_approved: false` and `visual_reviewed: false`.
 - The latest local recovery state contains 10,093 URLs, 22,579 indexed captures, 2,095 unique raw files / 112,816,864 bytes, and statuses 3,310 recovered, 64 needs-review, 1,311 failed and 5,408 queued. The detailed gap report distinguishes these counts and notes the 2008 compromised root exclusion.
 - Any deployed refresh remains the already-authorized **unreviewed candidate preview**, not a completed release. The strict release gates remain unmet because of the remaining source gaps and absence of a saved visual-comparison artifact/human approval; do not set the review flags to work around them.
+
+
+## Live candidate refresh — October 17, 2026
+
+- `main` validation run [39001969501](https://github.com/keithah/bluescholars/actions/runs/39001969501) succeeded for commit `7d6f74cdc6bb9eba28d1dedd54a3bda5fce7384b`.
+- Project Pages deployment [39001990053](https://github.com/keithah/bluescholars/actions/runs/39001990053) succeeded for `gh-pages` commit `f192c6bb67ba9b29f6071d85e39a92cca0f6bee7`; the Pages API reports `built` and serves [https://keithah.github.io/bluescholars/](https://keithah.github.io/bluescholars/).
+- Live checks: 200 for `/`, `/2007/`, `/2009/`, `/2013/`, `/lj/`, `/archive-status/`, the SXSW and Word Count legacy articles, `/2013/blog/page/3/`, the recovered 2013 stylesheet, hero JPEG and original 2007 GIF; 404 for a missing route. Project-prefix assets and links load from GitHub Pages.
+- The deployed 2013 page was visually inspected in the browser with its recovered styles, ribbon logo and front-page image. The 2007 and 2009 pages were inspected against the local project-prefix build. No screenshot file was saved. This is an agent-performed visual inspection; no human approval is claimed.
+- The preview is not the release build. Remaining gaps and the full local checkpoint counts are in `docs/recovery-report/GAP_REPORT.json`; both review flags remain false.

@@ -248,5 +248,54 @@
       "sha256": "18c5bcc0e9866c3129854f786782ba95b58e9747a4a672626ffccb34ce3bc75b",
       "notes": "Reference HTML with exact same-crawl CSS/logo/hero assets; candidate browser shows historic styling and locally served media."
     }
-  ]
+  ],
+  "published_candidate": {
+    "url": "https://keithah.github.io/bluescholars/",
+    "pages_source": {
+      "branch": "gh-pages",
+      "path": "/"
+    },
+    "commit": "f192c6bb67ba9b29f6071d85e39a92cca0f6bee7",
+    "workflow_run": 39001990053,
+    "workflow_conclusion": "success",
+    "pages_api_status": "built",
+    "classification": "owner-authorized unreviewed candidate preview; not a completed restoration release",
+    "source_review_flags": {
+      "publish_approved": false,
+      "visual_reviewed": false
+    }
+  },
+  "verification": {
+    "tests": "140 passed",
+    "main_branch_validation_run": 39001969501,
+    "main_branch_validation_conclusion": "success",
+    "root_build_check": "passed, zero errors",
+    "project_subpath_build_check": "passed, zero errors",
+    "live_checks": {
+      "homepage": 200,
+      "2007": 200,
+      "2009": 200,
+      "2013": 200,
+      "lj": 200,
+      "archive_status": 200,
+      "sxsw_article": 200,
+      "word_count_article": 200,
+      "2013_page_three": 200,
+      "squarespace_css": 200,
+      "squarespace_hero": 200,
+      "original_2007_panel": 200,
+      "unknown_route": 404
+    },
+    "live_browser": "Agent inspected styled Squarespace-era home page; local browser inspection also covered 2007 and 2009; no screenshot file saved.",
+    "external_automatic_dependencies_in_candidate": 0
+  },
+  "portable_archive": {
+    "path": "/tmp/bluescholars-restoration-2026-10-17.zip",
+    "zip_entries": 6578,
+    "bytes": 128797343,
+    "sha256": "e9de0e97c95fd248db903ba38a14e78c5f72dfa345f73fa5edfa5e68b36f4bf0",
+    "integrity_test": "passed",
+    "font_binaries_included": false,
+    "development_caches_or_credentials_included": false
+  }
 }

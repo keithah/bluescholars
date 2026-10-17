@@ -9,93 +9,79 @@
   },
   "candidate_build": {
     "recovered_pages": 924,
-    "placeholder_pages": 1878,
+    "placeholder_pages": 1851,
     "derived_pages": 4,
-    "local_source_assets": 729,
+    "local_source_assets": 732,
     "base_path": "/bluescholars/",
-    "candidate_source": "locally merged checkpoint through run 38972843891; rebuilt and checked at root and /bluescholars/",
+    "candidate_source": "local merged recovery checkpoint through run 38975520061; rebuilt and checked at root and /bluescholars/ on 2026-10-17",
     "issues_by_type": {
-      "missing_asset": 4045,
+      "missing_asset": 4110,
       "linked_asset_not_recovered": 295,
       "external_media_link_only": 145,
-      "font_not_packaged": 17,
+      "font_not_packaged": 18,
       "invalid_source": 9
     },
     "visual_fidelity_verified": false,
     "publish_approved": false,
-    "note": "Both root and project-prefix checks pass with zero local link errors. Gaps are measured source gaps, not checker failures. No human release approval is claimed."
+    "note": "Both base-path checkers pass with zero local-link or remote automatic-resource errors. Missing assets and links remain source gaps; the preview is not final-release approved."
   },
   "candidate_checks": {
-    "project_subpath": {
-      "ok": true,
-      "errors": [],
-      "source_checkpoint": "merged local checkpoint through run 38972843891; rebuilt and checked at /bluescholars/ on 2026-10-16"
-    },
     "root": {
       "ok": true,
       "errors": [],
-      "source_checkpoint": "merged local checkpoint through run 38972843891; rebuilt and checked at root on 2026-10-16"
+      "source_checkpoint": "merged through run 38975520061; candidate built and checked locally on 2026-10-17"
     },
-    "runner_38948396209": {
-      "ok": false,
-      "errors": 76,
-      "reason": "old workflow revision used an unreviewed post-takeover redirect when resolving historical links"
+    "project_subpath": {
+      "ok": true,
+      "errors": [],
+      "source_checkpoint": "merged through run 38975520061; candidate built with /bluescholars/ and checked locally on 2026-10-17"
     },
-    "root_project_ci": {
-      "run_id": "38960837794",
-      "status": "success",
-      "result": "CI tests and both reviewed-source build/check paths passed; separate local candidate checks also pass at root and /bluescholars/ after run 38960845000 merge"
-    },
-    "runner_38960473470": {
-      "ok": false,
-      "errors": 76,
-      "reason": "workflow revision predates redirect fix; runner rewrote old menu links through a needs-review post-takeover redirect"
+    "remote_automatic_resources": {
+      "root": 0,
+      "project_subpath": 0
     }
   },
   "checkpoint": {
-    "resource_urls": 8838,
+    "resource_urls": 8952,
     "statuses": {
-      "queued": 4760,
-      "recovered": 2908,
+      "queued": 4677,
+      "recovered": 3032,
       "needs_review": 50,
-      "failed": 1120,
+      "failed": 1193,
       "excluded": 0
     },
-    "indexed_capture_records": 9210,
+    "indexed_capture_records": 9271,
     "index_complete": true,
-    "unique_downloaded_files": 1969,
-    "downloaded_bytes": 107780030,
-    "failed_attempts": 6073,
-    "local_updated_at": "2026-10-16T22:30:10Z"
+    "unique_downloaded_files": 1972,
+    "downloaded_bytes": 108454143,
+    "failed_attempts": 6416,
+    "local_updated_at": "2026-10-17T00:10:09Z"
   },
   "latest_import": {
-    "run_id": "38972843891",
-    "resources_in_artifact": 8056,
-    "copied_raw_files": 5,
-    "copied_index_files": 0,
-    "duplicate_files": 1748,
-    "new_resource_records": 68,
-    "new_variant_records": 1,
-    "merged_records": 7811,
+    "run_id": "38975520061",
+    "imported_at": "2026-10-17T00:10:07Z",
+    "resources_in_artifact": 8140,
+    "copied_raw_files": 3,
+    "copied_index_files": 86,
+    "duplicate_files": 1753,
+    "new_resource_records": 81,
+    "new_variant_records": 33,
+    "merged_records": 7849,
     "conflicting_files": [],
-    "imported_at": "2026-10-16T22:23:55Z"
+    "outcome": "Wayback acquisition hit the 90-minute cap; candidate build and artifact upload succeeded."
   },
   "latest_wayback_batch": {
-    "run_id": "38962246474",
-    "url": "https://github.com/keithah/bluescholars/actions/runs/38962246474",
+    "run_id": "38975520061",
+    "url": "https://github.com/keithah/bluescholars/actions/runs/38975520061",
     "status": "completed_cancelled_after_timeout",
-    "outcome": "The acquisition step hit the 90-minute cap. The always-run candidate build and artifact upload succeeded. Merge added 61 CDX batches, 23 new resource records, 144 dated variants, and three new raw files with no conflicts.",
-    "edition_era": "none",
+    "resume_run": "38972843891",
     "max_files": 2000,
     "copied_raw_files": 3,
-    "copied_index_files": 61,
-    "new_resource_records": 23,
-    "new_variant_records": 144,
-    "conflicting_files": [],
-    "candidate_check": {
-      "ok": true,
-      "errors": []
-    }
+    "copied_index_files": 86,
+    "new_resource_records": 81,
+    "new_variant_records": 33,
+    "conflicts": 0,
+    "artifact_upload": "success"
   },
   "older_edition_browser_observations": {
     "2007": "recovered homepage capture dated 2008-12-18 and August 2007 guestbook page; most linked routes remain placeholders; no full visual review recorded.",
@@ -137,12 +123,14 @@
     "unique_raw_files": 97,
     "visual_reviewed": false
   },
-  "updated_at": "2026-10-16T22:39:00Z",
+  "updated_at": "2026-10-17T00:15:00Z",
   "tests": {
-    "command": "PYTHONPATH=. .venv311/bin/pytest -q",
-    "result": "124 passed",
-    "ci_run": "38960837794",
-    "ci_result": "success; root and /bluescholars/ reviewed-source builds and checks passed"
+    "command": ".venv311/bin/python -m pytest -q",
+    "result": "125 passed",
+    "compileall": "passed",
+    "git_diff_check": "passed",
+    "ci_run": "38985439462",
+    "ci_status": "in_progress at documentation update"
   },
   "livejournal_archive": {
     "route": "/lj/",
@@ -183,50 +171,43 @@
     }
   },
   "pages_deployment": {
-    "mode": "public archive preview from the generated unreviewed candidate; not an approved final restoration",
+    "mode": "public, unreviewed recovery preview; not an approved final restoration",
     "url": "https://keithah.github.io/bluescholars/",
     "source_branch": "gh-pages",
     "source_path": "/",
-    "branch_commit": "cc3ddeea338842c97ecbaa6970b591183faab384",
-    "pages_build_run": "38851321206",
+    "branch_commit": "a507923",
+    "pages_build_run": "38985421271",
     "pages_build_status": "success",
     "pages_api_status": "built",
     "https_enforced": true,
     "custom_domain": null,
-    "site_bytes": 50541086,
-    "files": 1568,
+    "files": 3358,
+    "candidate_source": "local merged checkpoint through run 38975520061",
     "verified_routes": {
-      "/bluescholars/": 200,
-      "/bluescholars/2007/": 200,
-      "/bluescholars/2009/": 200,
-      "/bluescholars/2013/": 200,
-      "/bluescholars/lj/": 200,
-      "/bluescholars/archive-status/": 200,
-      "/bluescholars/2009/blog/page/2/": 200,
-      "/bluescholars/2009/blog/2010/09/video-green-river-community-college/": 200,
-      "/bluescholars/2013/blog/2013/9/9/eugene-oregon-august-2013/": 200,
-      "/bluescholars/assets/archive-ui.css": 200,
-      "/bluescholars/does-not-exist/": 404
+      "/": 200,
+      "/2007/": 200,
+      "/2009/": 200,
+      "/2013/": 200,
+      "/lj/": 200,
+      "/archive-status/": 200,
+      "/2013/blog/": 200,
+      "/assets/archive-ui.css": 200,
+      "/unrecognized-route/": 404
     },
-    "top_level_links": [
-      "/bluescholars/2007/",
-      "/bluescholars/2009/",
-      "/bluescholars/2013/",
-      "/bluescholars/lj/"
-    ],
-    "automatically_loaded_local_assets": "Root/project-prefix candidate checker passed; live Squarespace CSS and archive UI CSS returned HTTP 200.",
-    "visual_screenshot": "No screenshot file saved; live browser panel timed out. Live URLs were verified directly over HTTPS."
+    "homepage_browser_accessibility_verified": true,
+    "ordinary_rendering_remote_automatic_assets": 0,
+    "release_approved": false
   },
   "active_wayback_batch": {
-    "run_id": "38960845000",
-    "url": "https://github.com/keithah/bluescholars/actions/runs/38960845000",
+    "run_id": "38985105267",
+    "url": "https://github.com/keithah/bluescholars/actions/runs/38985105267",
     "status": "in_progress",
-    "resume_run": "38960473470",
-    "edition_era": "2013",
-    "max_files": 1,
-    "active_step": "Preserve an edition's latest per-URL captures",
-    "head_commit": "40b07f3187b68b65a28e52dac38747aad2265756",
-    "checkpoint_scope": "single consolidated checkpoint; this is the separate 2013+ per-URL capture pass"
+    "resume_run": "38975520061",
+    "max_files": 2000,
+    "max_index_pages": 1,
+    "commoncrawl_records": 0,
+    "edition_era": "none",
+    "active_step": "Download and discover dependencies"
   },
   "resume_plan": {
     "workflow_commit": "40b07f3",
@@ -272,11 +253,11 @@
     "conflicts": 0
   },
   "local_candidate": {
-    "built_from_merged_checkpoint": "38910883636",
-    "recovered_pages": 916,
-    "placeholder_pages": 1916,
+    "built_from_merged_checkpoint": "38975520061",
+    "recovered_pages": 924,
+    "placeholder_pages": 1851,
     "derived_pages": 4,
-    "local_source_assets": 724,
+    "local_source_assets": 732,
     "root_check": {
       "ok": true,
       "errors": []
@@ -286,17 +267,16 @@
       "ok": true,
       "errors": []
     },
+    "remote_automatic_resource_errors": 0,
     "build_issues": {
-      "total": 4475,
-      "external_media_link_only": 144,
-      "font_not_packaged": 16,
-      "invalid_source": 9,
+      "missing_asset": 4110,
       "linked_asset_not_recovered": 295,
-      "missing_asset": 4011
+      "external_media_link_only": 145,
+      "font_not_packaged": 18,
+      "invalid_source": 9
     },
     "visual_fidelity_verified": false,
-    "publish_approved": false,
-    "reference_capture": "20210529010817"
+    "publish_approved": false
   },
   "candidate_rebuilt_before_next_artifact": true,
   "edition_recovery": {
@@ -350,13 +330,15 @@
     "reason": "reviewed restoration release gates are not yet satisfied"
   },
   "next_queued_batch": {
-    "run_id": "38975520061",
-    "url": "https://github.com/keithah/bluescholars/actions/runs/38975520061",
-    "status": "in_progress_at_2026-10-16T22:24Z",
-    "source": "Internet Archive Wayback broad continuation",
+    "run_id": "38985105267",
+    "url": "https://github.com/keithah/bluescholars/actions/runs/38985105267",
+    "status": "in_progress",
+    "resume_run": "38975520061",
     "max_files": 2000,
-    "resume_run": "38972843891",
-    "commoncrawl_records": 0
+    "max_index_pages": 1,
+    "commoncrawl_records": 0,
+    "edition_era": "none",
+    "active_step": "Download and discover dependencies"
   },
   "latest_common_crawl": {
     "run_id": "38972843891",

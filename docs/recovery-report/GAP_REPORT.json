@@ -1,0 +1,55 @@
+{
+  "updated_at": "2026-10-17T00:15:00Z",
+  "source_checkpoint_run": "38975520061",
+  "capture_index": {
+    "indexed_capture_records": 9271,
+    "complete": true,
+    "scope": "bluescholars.com domain inventory plus targeted resource indexes; includes capture rows, not captured files"
+  },
+  "resource_inventory": {
+    "resource_urls": 8952,
+    "statuses": {
+      "queued": 4677,
+      "recovered": 3032,
+      "needs_review": 50,
+      "failed": 1193
+    }
+  },
+  "validated_local_files": {
+    "unique_sha256_files": 1972,
+    "bytes": 108454143,
+    "candidate_local_source_assets": 732
+  },
+  "candidate": {
+    "recovered_pages": 924,
+    "placeholder_pages": 1851,
+    "derived_livejournal_views": 4,
+    "publish_approved": false,
+    "visual_fidelity_verified": false
+  },
+  "known_missing_dependencies": {
+    "images_or_other_embedded_assets": 4110,
+    "linked_assets_not_recovered": 295,
+    "external_media_link_only": 145,
+    "fonts_not_packaged": 18,
+    "invalid_source_records": 9
+  },
+  "checks": {
+    "root": {
+      "ok": true,
+      "errors": 0
+    },
+    "project_subpath": {
+      "base_path": "/bluescholars/",
+      "ok": true,
+      "errors": 0
+    },
+    "remote_automatic_resources": 0
+  },
+  "notable_known_gaps": [
+    "2010-03 Paul Valery attachment PaulValery1.jpg: exact Wayback row status 403; Arquivo.pt exact query returned zero rows.",
+    "Vimeo clip 10370730 is referenced by a contemporaneous forum post; video bytes were not recovered.",
+    "A 2025 LiveJournal modern-interface capture and a 2023 post variant remain needs_review and are not mixed into the old-layout /lj/ edition."
+  ],
+  "interpretation": "Queued and failed resource records describe attempted discovery state, not a claim that the archive has no material. Alternate captures still require individual compatibility review."
+}

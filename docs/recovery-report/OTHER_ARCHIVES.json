@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-16",
+  "updated_at": "2026-10-17",
   "scope": "Independent public web archives checked for Blue Scholars website captures, linked posts, and supporting material.",
   "results": {
     "Arquivo.pt": {
@@ -421,5 +421,44 @@
     "Search and access failures do not establish absence from the underlying archive.",
     "Archive-It social and third-party pages remain separate evidence and are not blended into the band's website editions.",
     "The LiveJournal journal is preserved as a separate /lj/ archive, not merged into the 2007, 2009 WordPress, or Squarespace designs. CSS styling is missing, four entries have no individual capture, and one linked image remains unavailable."
+  ],
+  "source_linked_leads": [
+    {
+      "lead": "Cinemetropolis advance-download post",
+      "third_party_citation": "https://en.wikipedia.org/wiki/Cinemetropolis#References",
+      "archived_primary": "https://web.archive.org/web/20110520234313/http://bluescholars.com/blog/update-cinemetropolis-advance-digital-download-out-now-official-release-date-june-14/",
+      "date_corroboration": "Wikipedia reference cites the Blue Scholars post dated May 17, 2011 and a May 20, 2011 Wayback capture; the replay exposes the article text and seven comments.",
+      "local_capture": "20110520234313",
+      "local_sha256": "584a3828d3b5afc1f420f46404ef1bb8a8b0d573191c675718ac6870bcb6c3ce",
+      "local_bytes": 14191,
+      "edition_route": "/2009/blog/update-cinemetropolis-advance-digital-download-out-now-official-release-date-june-14/",
+      "alternate_captures_reviewed": [
+        {
+          "timestamp": "20110724140731",
+          "original_url": "http://bluescholars.com/blog/update-cinemetropolis-advance-digital-download-out-now-official-release-date-june-14/",
+          "sha256": "66323d775b5babe8823bc509253879674548f8a2e26478f892d6f85b15056759",
+          "decision": "Same 2011 WordPress article and page style; 11 visible comments versus 7 in May; chosen as default for the /blog/ route because it is the later compatible capture."
+        },
+        {
+          "timestamp": "20120722033642",
+          "original_url": "http://bluescholars.com/update-cinemetropolis-advance-digital-download-out-now-official-release-date-june-14/",
+          "sha256": "8c2a5d41fe8bcd120e02f4f006c4236b3897f281de59f2786b345954e83ff026",
+          "decision": "Same article text and 11 comments; separate no-/blog/ source URL with an additional contest navigation item. Kept as its own route in the 2009 WordPress edition."
+        },
+        {
+          "timestamp": "20120420035936",
+          "original_url": "http://bluescholars.com:80/update-cinemetropolis-advance-digital-download-out-now-official-release-date-june-14/",
+          "sha256": "9191899edd84db16e79c870e12af5c8a1683868a130169148e700eca8d7bad5a",
+          "decision": "Same no-/blog/ route and template; alternate capture, not merged with the 2011 /blog/ route."
+        },
+        {
+          "timestamp": "20110522063211",
+          "original_url": "http://bluescholars.com:80/blog/update-cinemetropolis-advance-digital-download-out-now-official-release-date-june-14/print-2/",
+          "sha256": "ce8e9c8a004150d43074dbd495eeaa37eb8ac2f974fa0665304e3ef14044ea2c",
+          "decision": "Distinct print-view route with two comments; retained as its own captured page."
+        }
+      ],
+      "interpretation": "These records confirm one historically meaningful post and multiple dated/source-path variants. The third-party citation is a finding aid; the captured HTML remains the source for reconstruction."
+    }
   ]
 }

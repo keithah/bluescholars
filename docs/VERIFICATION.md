@@ -83,3 +83,14 @@ The candidate was rebuilt locally from the merged checkpoint through run `389608
 - Pushed the generated `/bluescholars/` candidate as commit `903ee0acc230c42636ba2ebd28ea0b1f6f840028` on `gh-pages`, parent `cc3ddeea338842c97ecbaa6970b591183faab384`. This is a fast-forward commit; history is preserved. The candidate contains 3,383 files (76,770,346 bytes) and `.nojekyll`.
 - GitHub Pages deployment run [38976443204](https://github.com/keithah/bluescholars/actions/runs/38976443204) succeeded; API reports `built` from `gh-pages` at `/`. Live HTTP checks returned 200 for `/bluescholars/`, `/2007/`, `/2009/`, `/2013/`, `/lj/`, `/archive-status/`, the main CSS and a recovered 2009 Paul Valéry post; an unknown route returned 404. Browser inspection showed the three separate edition cards and secondary links. No screenshot file was saved.
 - The preview is still incomplete and unreviewed. `source/review.json` remains `publish_approved: false`, `visual_reviewed: false`. The reviewed release workflow remains gated; this preview refresh does not claim the restoration is complete.
+
+## October 17 continuation and refreshed preview
+
+- `.venv311/bin/python -m pytest -q` — **125 passed**.
+- `.venv311/bin/python -m compileall -q restore tests` and `git diff --check` — passed.
+- Candidate built and checked at `/` and `/bluescholars/` after merge of run 38975520061 — both checks passed with zero errors, including zero remote automatic-resource errors.
+- Refreshed candidate: 924 recovered pages, 1,851 placeholders, four derived LJ views, and 732 local assets. The remaining measured source gaps are in `docs/recovery-report/GAP_REPORT.json`.
+- Code commit `413c4b6` pushed to `main`; CI run [38985439462](https://github.com/keithah/bluescholars/actions/runs/38985439462) was still running at this report update.
+- Unreviewed preview commit `a507923` pushed fast-forward to `gh-pages`; Pages build/deploy [38985421271](https://github.com/keithah/bluescholars/actions/runs/38985421271) succeeded and the Pages API reports `built`. Live browser accessibility inspection confirmed the three year/era cards and secondary LJ/status links. HTTPS checks returned 200 for `/`, `/2007/`, `/2009/`, `/2013/`, `/lj/`, `/archive-status/`, `/2013/blog/`, the UI stylesheet, and a recovered 2011 WordPress post; an unknown route returned 404. Gateway markup had three edition links and no automatically loaded remote assets.
+- The live 2011 post route `/bluescholars/2009/blog/update-cinemetropolis-advance-digital-download-out-now-official-release-date-june-14/` returned the recovered article and May 17, 2011 date. Its May 20 Wayback source capture and July/2012 alternatives are individually documented in `capture-compatibility.json`.
+- No screenshot file was saved in this continuation. Browser review was agent-performed; no human review is claimed. Visual-fidelity and publication flags remain false.

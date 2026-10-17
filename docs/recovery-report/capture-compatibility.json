@@ -1,0 +1,37 @@
+{
+  "updated_at": "2026-10-17",
+  "scope": "Individually compared alternate captures for a source-linked Blue Scholars WordPress post. Raw captures remain in recovery/raw and their immutable capture records remain in the recovery checkpoint.",
+  "records": [
+    {
+      "timestamp": "20110724140731",
+      "original_url": "http://bluescholars.com/blog/update-cinemetropolis-advance-digital-download-out-now-official-release-date-june-14/",
+      "sha256": "66323d775b5babe8823bc509253879674548f8a2e26478f892d6f85b15056759",
+      "decision": "Same 2011 WordPress article and page style; 11 visible comments versus 7 in May; chosen as default for the /blog/ route because it is the later compatible capture."
+    },
+    {
+      "timestamp": "20120722033642",
+      "original_url": "http://bluescholars.com/update-cinemetropolis-advance-digital-download-out-now-official-release-date-june-14/",
+      "sha256": "8c2a5d41fe8bcd120e02f4f006c4236b3897f281de59f2786b345954e83ff026",
+      "decision": "Same article text and 11 comments; separate no-/blog/ source URL with an additional contest navigation item. Kept as its own route in the 2009 WordPress edition."
+    },
+    {
+      "timestamp": "20120420035936",
+      "original_url": "http://bluescholars.com:80/update-cinemetropolis-advance-digital-download-out-now-official-release-date-june-14/",
+      "sha256": "9191899edd84db16e79c870e12af5c8a1683868a130169148e700eca8d7bad5a",
+      "decision": "Same no-/blog/ route and template; alternate capture, not merged with the 2011 /blog/ route."
+    },
+    {
+      "timestamp": "20110522063211",
+      "original_url": "http://bluescholars.com:80/blog/update-cinemetropolis-advance-digital-download-out-now-official-release-date-june-14/print-2/",
+      "sha256": "ce8e9c8a004150d43074dbd495eeaa37eb8ac2f974fa0665304e3ef14044ea2c",
+      "decision": "Distinct print-view route with two comments; retained as its own captured page."
+    },
+    {
+      "timestamp": "20110520234313",
+      "original_url": "http://bluescholars.com:80/blog/update-cinemetropolis-advance-digital-download-out-now-official-release-date-june-14/",
+      "sha256": "584a3828d3b5afc1f420f46404ef1bb8a8b0d573191c675718ac6870bcb6c3ce",
+      "decision": "Earliest retrieved /blog/ capture reviewed against July 2011: same article and old WordPress template, with 7 visible comments; retained as dated alternate, while July is the default /blog/ page."
+    }
+  ],
+  "method": "Compared local capture timestamp, original URL, SHA-256, title, article text, visible comment count, image references, and navigation labels. The raw source bytes were not modified."
+}

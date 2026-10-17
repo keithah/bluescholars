@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T00:15:00Z",
+  "updated_at": "2026-10-17T00:30:00Z",
   "source_checkpoint_run": "38975520061",
   "capture_index": {
     "indexed_capture_records": 9271,
@@ -66,5 +66,17 @@
     ],
     "interpretation": "No new image captures were found in the successful exact-URL queries. The one failed request is unknown, not a confirmed no-capture result.",
     "source_report": "asset-index-2026-10-17.json"
+  },
+  "squarespace_listing_coverage": {
+    "observed_listing_entries": 60,
+    "listing_captures": [
+      "20201109000819",
+      "20200220154840",
+      "20160611143343"
+    ],
+    "newly_added_entries": 20,
+    "new_entries_ids": "B41-B60",
+    "older_listing_raw_sha256": "8dc84128b2368456b9bbe1f8d107acbee3a2f89e8511353ea1bbaff323f27fda",
+    "post_bodies": "Not implied by listing observations; inventory/recovery statuses remain independent."
   }
 }

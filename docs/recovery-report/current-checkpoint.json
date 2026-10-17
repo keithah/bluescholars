@@ -85,7 +85,8 @@
   },
   "older_edition_browser_observations": {
     "2007": "recovered homepage capture dated 2008-12-18 and August 2007 guestbook page; most linked routes remain placeholders; no full visual review recorded.",
-    "2009": "edition index lists recovered Common Crawl/Wayback pages alongside many route gaps; broad route and image coverage incomplete."
+    "2009": "edition index lists recovered Common Crawl/Wayback pages alongside many route gaps; broad route and image coverage incomplete.",
+    "2013_squarespace": "An individually inspected 2016-06-11 Squarespace blog listing adds 20 observed entries (B41-B60); its 2019 replay is a provider error. Article body statuses are tracked independently."
   },
   "other_archive_search": {
     "archive_it": "Official /all CDX/C domain query returned HTTP 403, matching Archive-It guidance that the global endpoint is temporarily blocked. Collection-specific API queries need a collection ID; none located.",
@@ -123,7 +124,7 @@
     "unique_raw_files": 97,
     "visual_reviewed": false
   },
-  "updated_at": "2026-10-17T00:20:00Z",
+  "updated_at": "2026-10-17T00:30:24Z",
   "tests": {
     "command": ".venv311/bin/python -m pytest -q",
     "result": "125 passed",
@@ -417,5 +418,28 @@
     ],
     "interpretation": "No new image captures were found in the successful exact-URL queries. The one failed request is unknown, not a confirmed no-capture result.",
     "source_report": "asset-index-2026-10-17.json"
+  },
+  "squarespace_older_listing": {
+    "source_capture": "20160611143343",
+    "source_page": "https://web.archive.org/web/20160611143343/http://bluescholars.com/blog?offset=1358016466000",
+    "raw_file": "recovery/raw/8dc84128b2368456b9bbe1f8d107acbee3a2f89e8511353ea1bbaff323f27fda.html",
+    "bytes": 124320,
+    "sha256": "8dc84128b2368456b9bbe1f8d107acbee3a2f89e8511353ea1bbaff323f27fda",
+    "observed_entries": 20,
+    "inventory_range": "B41-B60",
+    "requested_2019_capture": "provider error",
+    "article_bodies_inferred_recovered": false
+  },
+  "squarespace_post_route_cdx": {
+    "report": "post-route-cdx-2026-10-17.json",
+    "routes_queried": 18,
+    "successful_queries": 18,
+    "indexed_rows": 18,
+    "additional_capture_rows": 7,
+    "additional_capture_review": {
+      "provider_error_pages": 3,
+      "transport_failures_unknown": 4
+    },
+    "no_new_compatible_post_body_claimed": true
   }
 }

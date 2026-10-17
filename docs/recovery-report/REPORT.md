@@ -44,13 +44,13 @@ The links below point to known replay targets. Dates are the observed resolved c
 | P06 | [Holler](https://web.archive.org/web/20200703230805/http://bluescholars.com/holler) | 2020-07-03 23:08:05 | Readable; original bytes still required |
 | P07 | [Blog, second listing](https://web.archive.org/web/20200220154840/http://bluescholars.com/blog?offset=1362122742000) | 2020-02-20 15:48:40 | Readable; original bytes still required |
 | P08 | [Eugene article](https://web.archive.org/web/20200220154703/http://bluescholars.com/blog/2013/9/9/eugene-oregon-august-2013) | 2020-02-20 15:47:03 | Readable; original bytes still required |
-| P09 | [Blog, third listing](https://web.archive.org/web/20190719224039/http://bluescholars.com/blog?offset=1358016466000) | 2019-07-19 22:40:39 | Provider error; replace from another capture |
+| P09 | [Blog, third listing](https://web.archive.org/web/20190719224039/http://bluescholars.com/blog?offset=1358016466000) | 2019 replay: provider error; fallback 2016-06-11 14:33:43 | Fallback retrieved and inspected: 20 entries, 18 distinct article routes; all 18 article pages recovered separately from Wayback/Common Crawl |
 
 Source pages: [S01](https://web.archive.org/web/20210529010817/http://bluescholars.com/) [S02](https://web.archive.org/web/20201109000819/http://bluescholars.com/blog/) [S03](https://web.archive.org/web/20200220154840/http://bluescholars.com/blog?offset=1362122742000) [S04](https://web.archive.org/web/20200703230849/http://bluescholars.com/shows) [S05](https://web.archive.org/web/20200802161924/http://bluescholars.com/video) [S06](https://web.archive.org/web/20200718164929/http://bluescholars.com/shop) [S07](https://web.archive.org/web/20200703230805/http://bluescholars.com/holler) [S08](https://web.archive.org/web/20200220154703/http://bluescholars.com/blog/2013/9/9/eugene-oregon-august-2013) [S09](https://web.archive.org/web/20190719224039/http://bluescholars.com/blog?offset=1358016466000)
 
 ### Additional internal paths already identified
 
-These are real source-linked URLs, but their page bodies were not retrieved in this pass. Keep them in the queue rather than inventing replacement slugs.
+These are real source-linked URLs. The third-listing article routes were later recovered individually; other rows below remain governed by their source-record statuses.
 
 | ID | Observed internal URL | Why it matters |
 | --- | --- | --- |
@@ -72,7 +72,7 @@ Do not guess the logo or typography from the text reader's blank heading. The lo
 
 ### Blog — preserve posts and the paths connecting them
 
-The two readable listings contain 20 entries each. They expose publication dates spanning September 9 through January 12, 2013. Treat that as **40 listing entries**, not 40 separately recovered article pages or the site's lifetime post count. Appendix C records the finding aids. [S02](https://web.archive.org/web/20201109000819/http://bluescholars.com/blog/) [S03](https://web.archive.org/web/20200220154840/http://bluescholars.com/blog?offset=1362122742000)
+The first two recovered listings contain 20 entries each, and a third listing captured in 2016 contributes 20 earlier entries, spanning November 13, 2012 through September 9, 2013. Treat these as **60 observed listing entries**, not the site's lifetime post count. The third listing points to 18 distinct article routes; all 18 pages are recovered separately through Wayback or Common Crawl. Appendix C records the finding aids. [S02](https://web.archive.org/web/20201109000819/http://bluescholars.com/blog/) [S03](https://web.archive.org/web/20200220154840/http://bluescholars.com/blog?offset=1362122742000)
 
 For each raw article block, retain the original item ID, exact permalink, title or deliberately absent title, author, publication timestamp, body markup, source/reblog credits, tags, images, captions, embed IDs, and navigation neighbors. If only the listing survives, it may still preserve the complete body; confirm whether it is full text or an excerpt before reconstructing an article from it. Record that provenance instead of claiming an independently recovered permalink.
 
@@ -432,9 +432,9 @@ The fifth and seventh player replays resolve to 2024 and 2023, even though their
 
 The blog additionally references a SoundCloud player for **track 87129356** and an outbound `prometheusbrown/racist-accident` track URL (X29–X30). Both requests were cache misses here. Preserve the exact URLs and any artwork/metadata found; do not claim an audio file or working playback has been recovered.
 
-## Appendix C. Forty blog-entry finding aids
+## Appendix C. Sixty blog-entry finding aids
 
-These are compact location aids for entries seen in the two listings, **not replacement titles or a complete permalink catalog**. For titleless/reblog blocks, confirm boundaries and date associations against raw HTML before assigning content to a rebuilt article. The checklist CSV includes source pages and any known permalink record.
+These are compact location aids for entries seen across three recovered listings, **not replacement titles or a complete permalink catalog**. Labels are research aids, not asserted original titles. B41–B60 were inspected in the recovered 2016-06-11 Squarespace listing. Their 20 entries point to 18 distinct routes; all 18 routes have separately recovered pages from Wayback or Common Crawl. The checklist CSV includes source pages, observed permalink URLs, and linked source-record IDs.
 
 ### Listing 1 — [source](https://web.archive.org/web/20201109000819/http://bluescholars.com/blog/)
 
@@ -487,6 +487,26 @@ These are compact location aids for entries seen in the two listings, **not repl
 | B38 | 2013-01-17 | East Village photo | Extract from raw source |
 | B39 | 2013-01-17 | Album interview link | Extract from raw source |
 | B40 | 2013-01-12 | Vancouver photo | Extract from raw source |
+| B41 | 2013-01-12 | Los Angeles tour photos | Recovered route: `/blog/brownouts-la-crane-thig-hollis-los-angeles` |
+| B42 | 2013-01-11 | Los Angeles tour photo reblog | Recovered route: `/blog/brownouts-la-crane-thig-hollis-los-angeles` |
+| B43 | 2013-01-08 | TourAllday footage | Recovered route: `/blog/12-minutes-of-random-ass-footage-from-tourallday` |
+| B44 | 2012-12-11 | Santa Cruz tour photo | Recovered route: `/blog/tigloandcole-jackwnewton-tourallday-santa` |
+| B45 | 2012-12-07 | Hollis family photo | Recovered route: `/blog/photo-by-holliss-mom` |
+| B46 | 2012-12-07 | Sabzi portrait | Recovered route: `/blog/jackwnewton-sabzi-of-the-blue-scholars-by` |
+| B47 | 2012-12-07 | Wild Buffalo performance photo | Recovered route: `/blog/pamjane-blue-scholars-the-wild-buffalo` |
+| B48 | 2012-12-07 | Geo portrait | Recovered route: `/blog/jackwnewton-geo-of-the-blue-scholars-by-jack` |
+| B49 | 2012-12-07 | Geo pulled on stage | Recovered route: `/blog/youh0esdown-got-pulled-up-on-stage-last-night` |
+| B50 | 2012-12-07 | Townfolk at Santa Cruz | Recovered route: `/blog/thignat-townfolk-at-santa-cruz-main-beach` |
+| B51 | 2012-12-01 | Unmixed Blue Scholars track request | Recovered route: `/blog/bluescholars-new-unmixed-unmastered-track` |
+| B52 | 2012-11-30 | Unmixed track master request | Recovered route: `/blog/new-unmixed-unmastered-track-anybody-wanna-master` |
+| B53 | 2012-11-28 | Sabzi at QC Cleaners | Recovered route: `/blog/jordanloveskats-shot-from-today-2-sabzi-in` |
+| B54 | 2012-11-27 | Anna Karina film text | Recovered route: `/blog/bluescholars-anna-karina-is-distinct-for` |
+| B55 | 2012-11-27 | Anna Karina film text reblog | Recovered route: `/blog/anna-karina-is-distinct-for-making-eye-contact` |
+| B56 | 2012-11-27 | Anna Karina music video notice | Recovered route: `/blog/bluescholars-anna-karina-music-video-directed` |
+| B57 | 2012-11-26 | Anna Karina video reminder | Recovered route: `/blog/bluescholars-anna-karina-music-video-directed` |
+| B58 | 2012-11-26 | Anna Karina video promotion | Recovered route: `/blog/anna-karina-music-video-directed-by-matt-jay` |
+| B59 | 2012-11-13 | TownAllday tour announcement | Recovered route: `/blog/bluescholars-townallday-tour-tickets-on-sale` |
+| B60 | 2012-11-13 | Sabzi guest in local video | Recovered route: `/blog/jordanloveskats-if-you-do-only-one-thing-today` |
 
 ## Appendix D. External sources and link destinations
 
@@ -550,12 +570,12 @@ Preserve other outbound links—ticketing, social accounts, photographer credits
 | --- | --- |
 | `REPORT.md` | This complete source-location and recovery report. |
 | `REPORT.html` | Locally readable/printable HTML version; no external runtime assets. |
-| `recovery-manifest.json` | All 97 records, evidence states, original/replay/raw/index URLs, and blog checklist. |
+| `recovery-manifest.json` | All 115 records, evidence states, original/replay/raw/index URLs, and 60 blog-listing observations. |
 | `recovery-manifest.csv` | Flat URL inventory for sorting and handing to another worker. |
-| `blog-entry-checklist.csv` | Forty listing entries with source and permalink evidence. |
+| `blog-entry-checklist.csv` | Sixty listing entries with source and permalink evidence. |
 | `recovery-seeds-expanded.json` | Compatible page/image seed data for the supplied recovery project; not a downloaded-site catalog. |
 | `observed-archive-urls.txt` | Replay request URL list only. |
-| `capture-search-queries.csv` | 31 targeted archive queries, separating observed URLs from unverified candidates. |
+| `capture-search-queries.csv` | 49 targeted archive queries, including exact searches for all 18 post routes found in the 2016 Squarespace listing. |
 | `REQUEST-OBSERVATIONS.md` | Additional raw/index/alternate-date and replay-modifier probe outcomes. |
 | `PROJECT-INSPECTION.md` | What the supplied code actually handles, and what still needs manual investigation. |
 | `project-reference/` | The supplied README and verification report, copied as context. |

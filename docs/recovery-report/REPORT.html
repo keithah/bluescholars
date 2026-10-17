@@ -9,7 +9,7 @@ p{margin:0 0 17px}a{color:var(--link);text-underline-offset:3px;overflow-wrap:an
 nav{padding:20px 24px;margin:24px 0 35px;border:1px solid var(--line);background:var(--soft);border-radius:5px;columns:2;column-gap:34px}nav a{display:block;font-size:13px;padding:4px 0;break-inside:avoid;line-height:1.5}summary{font-weight:700;cursor:pointer}ul{padding-left:24px}li{margin:8px 0}hr{border:0;border-top:2px solid var(--ink);margin:45px 0}.notice{font-size:13px;color:var(--muted);margin-top:28px;border-top:1px solid var(--line);padding-top:16px}
 @media(max-width:760px){.page{margin:0;padding:28px 20px}h1{font-size:30px}h2{font-size:24px}nav{columns:1}table{min-width:650px}th,td{padding:10px}}
 @media print{body{background:white;font-size:10pt}.page{max-width:none;box-shadow:none;padding:0;margin:0}h1{font-size:25pt}h2{font-size:17pt;break-after:avoid}h3{font-size:13pt;break-after:avoid}table{font-size:8pt;min-width:0!important}.table-wrap{overflow:visible}tr{break-inside:avoid}thead{display:table-header-group}nav{columns:2}pre{font-size:8pt}a{color:#182432;text-decoration:underline}@page{size:A4;margin:18mm 14mm}}
-</style></head><body><main class="page"><div class="eyebrow">Website preservation / Source audit / 15 October 2026</div><details><summary>Report contents</summary><nav><a href="#executive-findings">Executive findings</a><a href="#1-how-to-read-the-evidence">1. How to read the evidence</a><a href="#2-core-pages-exactly-where-to-start">2. Core pages: exactly where to start</a><a href="#3-what-to-recover-from-each-section">3. What to recover from each section</a><a href="#4-which-older-archives-we-need-and-why">4. Which older archives we need, and why</a><a href="#5-images-three-concrete-host-path-families">5. Images: three concrete host/path families</a><a href="#6-styling-and-layout-the-biggest-unresolved-dependency">6. Styling and layout: the biggest unresolved dependency</a><a href="#7-full-archive-indexing-the-acquisition-runbook">7. Full-archive indexing: the acquisition runbook</a><a href="#8-the-five-highest-value-gap-investigations">8. The five highest-value gap investigations</a><a href="#9-static-output-and-historical-behavior">9. Static output and historical behavior</a><a href="#10-how-this-expands-the-supplied-project">10. How this expands the supplied project</a><a href="#11-completion-criteria-and-remaining-unknowns">11. Completion criteria and remaining unknowns</a><a href="#appendix-a-every-observed-image-url">Appendix A. Every observed image URL</a><a href="#appendix-b-video-recovery-inventory">Appendix B. Video recovery inventory</a><a href="#appendix-c-forty-blog-entry-finding-aids">Appendix C. Forty blog-entry finding aids</a><a href="#appendix-d-external-sources-and-link-destinations">Appendix D. External sources and link destinations</a><a href="#appendix-e-deliverables-and-source-references">Appendix E. Deliverables and source references</a></nav></details><h1 id="blue-scholars-website-recovery-and-source-location-report">Blue Scholars: website recovery and source-location report</h1>
+</style></head><body><main class="page"><div class="eyebrow">Website preservation / Source audit / 15 October 2026</div><details><summary>Report contents</summary><nav><a href="#executive-findings">Executive findings</a><a href="#1-how-to-read-the-evidence">1. How to read the evidence</a><a href="#2-core-pages-exactly-where-to-start">2. Core pages: exactly where to start</a><a href="#3-what-to-recover-from-each-section">3. What to recover from each section</a><a href="#4-which-older-archives-we-need-and-why">4. Which older archives we need, and why</a><a href="#5-images-three-concrete-host-path-families">5. Images: three concrete host/path families</a><a href="#6-styling-and-layout-the-biggest-unresolved-dependency">6. Styling and layout: the biggest unresolved dependency</a><a href="#7-full-archive-indexing-the-acquisition-runbook">7. Full-archive indexing: the acquisition runbook</a><a href="#8-the-five-highest-value-gap-investigations">8. The five highest-value gap investigations</a><a href="#9-static-output-and-historical-behavior">9. Static output and historical behavior</a><a href="#10-how-this-expands-the-supplied-project">10. How this expands the supplied project</a><a href="#11-completion-criteria-and-remaining-unknowns">11. Completion criteria and remaining unknowns</a><a href="#appendix-a-every-observed-image-url">Appendix A. Every observed image URL</a><a href="#appendix-b-video-recovery-inventory">Appendix B. Video recovery inventory</a><a href="#appendix-c-sixty-blog-entry-finding-aids">Appendix C. Sixty blog-entry finding aids</a><a href="#appendix-d-external-sources-and-link-destinations">Appendix D. External sources and link destinations</a><a href="#appendix-e-deliverables-and-source-references">Appendix E. Deliverables and source references</a></nav></details><h1 id="blue-scholars-website-recovery-and-source-location-report">Blue Scholars: website recovery and source-location report</h1>
 <p><strong>Prepared:</strong> October 15, 2026<br/>
 <strong>Visual baseline:</strong> <a href="https://web.archive.org/web/20210529010817/http://bluescholars.com/" rel="noopener noreferrer">May 29, 2021 homepage</a><br/>
 <strong>Goal:</strong> Recover as much original material as possible and recreate a static site suitable for GitHub Pages.<br/>
@@ -127,7 +127,7 @@ nav{padding:20px 24px;margin:24px 0 35px;border:1px solid var(--line);background
 <td>P09</td>
 <td><a href="https://web.archive.org/web/20190719224039/http://bluescholars.com/blog?offset=1358016466000" rel="noopener noreferrer">Blog, third listing</a></td>
 <td>2019-07-19 22:40:39</td>
-<td>Provider error; replace from another capture</td>
+<td>2019 replay is a provider error; 2016-06-11 fallback recovered (20 entries, 18 routes; each route page recovered separately)</td>
 </tr>
 </tbody>
 </table></div>
@@ -176,7 +176,7 @@ nav{padding:20px 24px;margin:24px 0 35px;border:1px solid var(--line);background
 <p>The homepage photograph's actual capture is <strong>20210529010844</strong>, 27 seconds after the HTML reference <strong>20210529010817</strong>. This is an important edge case: a blanket rule that discards every resource after the HTML timestamp would discard the reference image itself. Save its provenance and permit a specifically reviewed same-crawl dependency; do not turn that exception into unrestricted acceptance of later redesigns. <a href="https://web.archive.org/web/20210529010844/https://images.squarespace-cdn.com/content/v1/51b8c20be4b0f1f8c9dcdf4c/1371078164544-2RKW5D1QDQ5IXSVM5B2N/ke17ZwdGBToddI8pDm48kIZpWXENTEukrBXe6_rB7blZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIF2CO6JwS3nXJTgmvDX6VE5p5CmEHphUtvFe0ff6hcA8KMshLAGzx4R3EDFOm1kBS/front-page.jpg" rel="noopener noreferrer">S11</a></p>
 <p>Do not guess the logo or typography from the text reader's blank heading. The logo could be an image, a styled title, or a CSS-dependent element; its exact mechanism remains unverified. The report contains no recovered original stylesheet or logo file.</p>
 <h3 id="blog-preserve-posts-and-the-paths-connecting-them">Blog — preserve posts and the paths connecting them</h3>
-<p>The two readable listings contain 20 entries each. They expose publication dates spanning September 9 through January 12, 2013. Treat that as <strong>40 listing entries</strong>, not 40 separately recovered article pages or the site's lifetime post count. Appendix C records the finding aids. <a href="https://web.archive.org/web/20201109000819/http://bluescholars.com/blog/" rel="noopener noreferrer">S02</a> <a href="https://web.archive.org/web/20200220154840/http://bluescholars.com/blog?offset=1362122742000" rel="noopener noreferrer">S03</a></p>
+<p>The first two recovered listings contain 20 entries each, and a third listing captured in 2016 contributes 20 earlier entries, spanning November 13, 2012 through September 9, 2013. Treat these as <strong>60 observed listing entries</strong>, not the site's lifetime post count. The third listing points to 18 distinct article routes; all 18 pages are recovered separately through Wayback or Common Crawl. Appendix C records the finding aids. <a href="https://web.archive.org/web/20201109000819/http://bluescholars.com/blog/" rel="noopener noreferrer">S02</a> <a href="https://web.archive.org/web/20200220154840/http://bluescholars.com/blog?offset=1362122742000" rel="noopener noreferrer">S03</a></p>
 <p>For each raw article block, retain the original item ID, exact permalink, title or deliberately absent title, author, publication timestamp, body markup, source/reblog credits, tags, images, captions, embed IDs, and navigation neighbors. If only the listing survives, it may still preserve the complete body; confirm whether it is full text or an excerpt before reconstructing an article from it. Record that provenance instead of claiming an independently recovered permalink.</p>
 <p>The known pagination chain is:</p>
 <pre><code class="language-text">/blog/
@@ -900,8 +900,8 @@ python -m restore status
 </table></div>
 <p>The fifth and seventh player replays resolve to 2024 and 2023, even though their embed IDs come from the 2020 site page. Those player capture dates must not be used as evidence of a post-2021 change to the site's video list. <a href="https://web.archive.org/web/20200802161924/http://bluescholars.com/video" rel="noopener noreferrer">S05</a></p>
 <p>The blog additionally references a SoundCloud player for <strong>track 87129356</strong> and an outbound <code>prometheusbrown/racist-accident</code> track URL (X29–X30). Both requests were cache misses here. Preserve the exact URLs and any artwork/metadata found; do not claim an audio file or working playback has been recovered.</p>
-<h2 id="appendix-c-forty-blog-entry-finding-aids">Appendix C. Forty blog-entry finding aids</h2>
-<p>These are compact location aids for entries seen in the two listings, <strong>not replacement titles or a complete permalink catalog</strong>. For titleless/reblog blocks, confirm boundaries and date associations against raw HTML before assigning content to a rebuilt article. The checklist CSV includes source pages and any known permalink record.</p>
+<h2 id="appendix-c-sixty-blog-entry-finding-aids">Appendix C. Sixty blog-entry finding aids</h2>
+<p>These are compact location aids for entries seen across three recovered listings, <strong>not replacement titles or a complete permalink catalog</strong>. Labels are research aids, not asserted original titles. B41–B60 were inspected in the recovered 2016-06-11 Squarespace listing. Their 20 entries point to 18 distinct routes, and all 18 routes have separately recovered pages from Wayback or Common Crawl. The checklist CSV includes source pages, observed permalink URLs, and linked source-record IDs.</p>
 <h3 id="listing-1-source">Listing 1 — <a href="https://web.archive.org/web/20201109000819/http://bluescholars.com/blog/" rel="noopener noreferrer">source</a></h3>
 <div class="table-wrap"><table>
 <thead>
@@ -1443,7 +1443,7 @@ python -m restore status
 </tr>
 <tr>
 <td><code>recovery-manifest.json</code></td>
-<td>All 97 records, evidence states, original/replay/raw/index URLs, and blog checklist.</td>
+<td>All 115 records, evidence states, original/replay/raw/index URLs, and 60 blog-listing observations.</td>
 </tr>
 <tr>
 <td><code>recovery-manifest.csv</code></td>
@@ -1451,7 +1451,7 @@ python -m restore status
 </tr>
 <tr>
 <td><code>blog-entry-checklist.csv</code></td>
-<td>Forty listing entries with source and permalink evidence.</td>
+<td>Sixty listing entries with source and permalink evidence.</td>
 </tr>
 <tr>
 <td><code>recovery-seeds-expanded.json</code></td>
@@ -1463,7 +1463,7 @@ python -m restore status
 </tr>
 <tr>
 <td><code>capture-search-queries.csv</code></td>
-<td>31 targeted archive queries, separating observed URLs from unverified candidates.</td>
+<td>49 targeted archive queries, including exact searches for all 18 post routes found in the 2016 Squarespace listing.</td>
 </tr>
 <tr>
 <td><code>REQUEST-OBSERVATIONS.md</code></td>

@@ -1,17 +1,17 @@
 {
-  "updated_at": "2026-10-17T06:54:54Z",
-  "source_checkpoint_run": "local resumable checkpoint after 2026-10-17 2013 continuation; prior workflow merges documented below.",
+  "updated_at": "2026-10-17T16:05:00Z",
+  "source_checkpoint_run": "Local resumable checkpoint after the 2013 pass on 2026-10-17; GitHub Actions run 39044681280 is separately recorded because it resumed an older artifact.",
   "capture_index": {
     "indexed_capture_records": 23238,
     "complete": true,
     "scope": "Completed Bluescholars domain CDX plus targeted Squarespace CSS/font/image prefix indexes; local checkpoint count includes all merged captures."
   },
   "resource_inventory": {
-    "resource_urls": 10951,
+    "resource_urls": 11118,
     "statuses": {
-      "queued": 5687,
-      "recovered": 3727,
-      "needs_review": 64,
+      "queued": 5736,
+      "recovered": 3837,
+      "needs_review": 72,
       "failed": 1473,
       "excluded": 0
     },
@@ -19,15 +19,17 @@
     "index_complete": true
   },
   "validated_local_files": {
-    "unique_sha256_files": 2238,
-    "bytes": 137024767,
-    "candidate_local_source_assets": 934
+    "unique_sha256_files": 2291,
+    "bytes": 147533392,
+    "candidate_local_source_assets": 1044
   },
   "candidate": {
     "recovered_pages": 976,
     "placeholder_pages": 2181,
     "derived_pages": 4,
-    "local_source_assets": 934,
+    "local_source_assets": 1044,
+    "publish_approved": false,
+    "visual_fidelity_verified": false,
     "recovered_pages_by_edition": {
       "2007": 36,
       "2009": 500,
@@ -35,13 +37,11 @@
     },
     "issue_counts": {
       "invalid_source": 9,
-      "missing_asset": 7504,
-      "font_not_packaged": 111,
+      "missing_asset": 8293,
+      "font_not_packaged": 183,
       "linked_asset_not_recovered": 338,
       "external_media_link_only": 145
     },
-    "publish_approved": false,
-    "visual_fidelity_verified": false,
     "root_check": {
       "ok": true,
       "errors": 0
@@ -53,10 +53,10 @@
     "remote_automatic_resources": 0
   },
   "known_missing_dependencies": {
-    "images_or_other_embedded_assets": 7504,
+    "images_or_other_embedded_assets": 8293,
     "linked_assets_not_recovered": 338,
     "external_media_link_only": 145,
-    "fonts_not_packaged": 111,
+    "fonts_not_packaged": 183,
     "invalid_source_records": 9
   },
   "checks": {
@@ -77,7 +77,7 @@
     "A 2025 LiveJournal modern-interface capture and a 2023 post variant remain needs_review and are not mixed into the old-layout /lj/ edition.",
     "2009 PHOTOS: TONE image l_bf6ff3f3d208456f9cd4c58a4b8dd822.jpg: exact URL CDX returned zero rows; an individually requested 2009-08-14 response returned 404. The source image remains a named gap."
   ],
-  "interpretation": "Queued and failed resource records describe attempted discovery state, not a claim that the archive has no material. Alternate captures still require individual compatibility review. The latest build is an unreviewed candidate preview.",
+  "interpretation": "The latest local 2013 pass recovered 118 in-era CSS responses from a 1,014-URL checkpoint; 83 selected URLs remain unresolved. A separate GitHub workflow run used an older 9,118-resource artifact and recovered no valid 2013 responses. The local candidate still has 976 recovered pages and 2,181 placeholders. Newly discovered CSS dependencies increased the missing embedded-resource and unbundled-font counts; these counts do not mean previously local assets were removed.",
   "targeted_image_index": {
     "archive": "Internet Archive Wayback",
     "query": "exact source-linked image URLs from expanded inventory",
@@ -190,18 +190,18 @@
     },
     "modern_cdn_image_alias_rows": 0
   },
-  "resource_urls": 10951,
+  "resource_urls": 11118,
   "indexed_capture_records": 23238,
   "statuses": {
-    "queued": 5687,
-    "recovered": 3727,
-    "needs_review": 64,
+    "queued": 5736,
+    "recovered": 3837,
+    "needs_review": 72,
     "failed": 1473,
     "excluded": 0
   },
-  "unique_downloaded_files": 2238,
-  "downloaded_bytes": 137024767,
-  "failed_attempts": 7261,
+  "unique_downloaded_files": 2291,
+  "downloaded_bytes": 147533392,
+  "failed_attempts": 7339,
   "index_complete": true,
   "active_recovery_run": null,
   "local_checkpoint_after_recovery_sweep": {
@@ -371,12 +371,14 @@
   "portable_archive": {
     "filename": "bluescholars-restoration-2026-10-17.zip",
     "path": "/tmp/bluescholars-restoration-2026-10-17.zip",
-    "contents": "candidate site, tracked source, reports/screenshots, recovery state/index, and non-font raw sources",
-    "file_count": 6894,
+    "contents": "candidate site, tracked and untracked source, reports/screenshots, recovery state/index, and non-font raw sources",
+    "file_count": 7416,
+    "uncompressed_bytes": 356786794,
+    "compressed_bytes": 148047078,
+    "sha256": "62c95e5c8e4ab3018eb9c8bd88ca01e8e7d83759938e9376aa90f7f0b7b248ac",
     "integrity_test": "passed",
     "font_binaries_included": false,
-    "development_caches_or_credentials_included": false,
-    "checksum_note": "SHA-256 is reported in the task handoff to avoid embedding a self-referential ZIP checksum."
+    "development_caches_or_credentials_included": false
   },
   "unavailable_assets_verified": [
     {
@@ -389,22 +391,22 @@
     }
   ],
   "latest_local_checkpoint": {
-    "description": "October 17 continuation focused on 2007/2013 source recovery, 2009 content and candidate verification.",
+    "description": "Current local recovery checkpoint after 118 validated 2013-era stylesheet captures.",
     "recovery": {
-      "updated_at": "2026-10-17T06:54:54Z",
-      "resource_urls": 10951,
+      "resource_urls": 11118,
       "statuses": {
-        "queued": 5687,
-        "recovered": 3727,
-        "needs_review": 64,
+        "queued": 5736,
+        "recovered": 3837,
+        "needs_review": 72,
         "failed": 1473,
         "excluded": 0
       },
       "indexed_capture_records": 23238,
-      "unique_downloaded_files": 2238,
-      "downloaded_bytes": 137024767,
-      "failed_attempts": 7261,
-      "index_complete": true
+      "unique_downloaded_files": 2291,
+      "downloaded_bytes": 147533392,
+      "failed_attempts": 7339,
+      "index_complete": true,
+      "updated_at": "2026-10-17T16:00:55.426785+00:00"
     },
     "capture_batches": {
       "2007": {
@@ -480,13 +482,48 @@
         "net_new_raw_files": 0,
         "merge_report": "recovery/imported/39010473274/merge-report.json",
         "detailed_report": "recovery/era-2013-run-39010473274-report.json"
+      },
+      "2013_local_20261017": {
+        "origin": "Current local checkpoint (1,014 indexed URLs); not the older 625-URL GitHub Actions snapshot.",
+        "eligible_urls": 201,
+        "already_recovered_before_batch": 813,
+        "selected_urls": 201,
+        "attempted": 201,
+        "validated_responses": 118,
+        "validated_kind_counts": {
+          "css": 118
+        },
+        "remaining_urls": 83,
+        "failures": 83,
+        "date_start": "20130921000000",
+        "date_end": "20230930235959",
+        "report": "recovery/era-2013-local-20261017-report.json",
+        "indexed_urls": 1014,
+        "validated_status_counts": {
+          "recovered": 110,
+          "needs_review": 8
+        }
+      },
+      "2013_github_runner_39044681280": {
+        "run_id": "39044681280",
+        "url": "https://github.com/keithah/bluescholars/actions/runs/39044681280",
+        "status": "completed successfully; artifact imported without conflicts",
+        "checkpoint_resource_urls": 9118,
+        "indexed_2013_urls": 625,
+        "attempted": 161,
+        "validated_responses": 0,
+        "new_resource_records": 0,
+        "new_variant_records": 0,
+        "interpretation": "Resumed an older saved artifact than the local checkpoint; not a replacement for the local 1,014-URL continuation."
       }
     },
     "candidate": {
       "recovered_pages": 976,
       "placeholder_pages": 2181,
       "derived_pages": 4,
-      "local_source_assets": 934,
+      "local_source_assets": 1044,
+      "publish_approved": false,
+      "visual_fidelity_verified": false,
       "recovered_pages_by_edition": {
         "2007": 36,
         "2009": 500,
@@ -494,13 +531,11 @@
       },
       "issue_counts": {
         "invalid_source": 9,
-        "missing_asset": 7504,
-        "font_not_packaged": 111,
+        "missing_asset": 8293,
+        "font_not_packaged": 183,
         "linked_asset_not_recovered": 338,
         "external_media_link_only": 145
       },
-      "publish_approved": false,
-      "visual_fidelity_verified": false,
       "root_check": {
         "ok": true,
         "errors": 0
@@ -512,13 +547,19 @@
       "remote_automatic_resources": 0
     },
     "verification": {
-      "tests": "153 passed",
+      "tests": "153 passed (2026-10-17; no code changes in this recovery pass)",
       "compileall": "passed",
       "shell_syntax": "passed",
       "actionlint": "passed",
       "git_diff_check": "passed",
-      "root_build_check": "passed (zero errors)",
-      "project_subpath_build_check": "passed (zero errors)",
+      "root_build_check": {
+        "ok": true,
+        "errors": 0
+      },
+      "project_subpath_build_check": {
+        "ok": true,
+        "errors": 0
+      },
       "remote_automatic_requests": 0,
       "browser": "Agent compared local 2013 page with exact May 2021 Wayback capture at 1265x712, and inspected local 2007 and hub; four screenshots saved. Mobile widths unavailable; no human approval claimed."
     },
@@ -544,7 +585,7 @@
         "dimensions": "1265x712"
       }
     },
-    "resume": "Resume from recovery/state.json, recovery/raw/ and recovery/index/. Retry 2013 article URLs only when a new capture timestamp or archive lead is identified; no response from a failed request is an absence finding."
+    "resume": "Run .venv311/bin/python -m restore capture-era --era 2013 --max-files 2000 from the preserved local recovery/state.json; retry the 83 unresolved URLs, then rebuild and check root and /bluescholars/ outputs."
   },
   "browser_visual_review": {
     "reference_capture": "https://web.archive.org/web/20210529010817/http://bluescholars.com/",
@@ -597,5 +638,21 @@
     },
     "homepage_year_links_verified": true,
     "release_approved": false
+  },
+  "checkpoint": {
+    "resource_urls": 11118,
+    "statuses": {
+      "queued": 5736,
+      "recovered": 3837,
+      "needs_review": 72,
+      "failed": 1473,
+      "excluded": 0
+    },
+    "indexed_capture_records": 23238,
+    "unique_downloaded_files": 2291,
+    "downloaded_bytes": 147533392,
+    "failed_attempts": 7339,
+    "index_complete": true,
+    "updated_at": "2026-10-17T16:00:55.426785+00:00"
   }
 }

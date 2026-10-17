@@ -1,7 +1,7 @@
 {
   "browser_visual_review": {
     "reference_capture": "https://web.archive.org/web/20210529010817/http://bluescholars.com/",
-    "viewport": "1265×712 browser screenshot; reference and local candidate were captured at the same viewport.",
+    "viewport": "1265\u00d7712 browser screenshot; reference and local candidate were captured at the same viewport.",
     "agent_reviewed": true,
     "human_review_claimed": false,
     "comparison": "After accounting for the Internet Archive toolbar and local historical-restoration notice, the 2013 Squarespace-era candidate matches the reference logo size and left offset, navigation placement, main-image left/top position, width and crop. The May 2021 photograph is the same locally recovered hero.",
@@ -35,7 +35,7 @@
     "recovered_pages": 976,
     "placeholder_pages": 2181,
     "derived_pages": 4,
-    "local_source_assets": 934,
+    "local_source_assets": 1044,
     "recovered_pages_by_edition": {
       "2007": 36,
       "2009": 500,
@@ -43,22 +43,13 @@
     },
     "issue_counts": {
       "invalid_source": 9,
-      "missing_asset": 7504,
-      "font_not_packaged": 111,
+      "missing_asset": 8293,
+      "font_not_packaged": 183,
       "linked_asset_not_recovered": 338,
       "external_media_link_only": 145
     },
     "publish_approved": false,
-    "visual_fidelity_verified": false,
-    "root_check": {
-      "ok": true,
-      "errors": 0
-    },
-    "project_subpath_check": {
-      "ok": true,
-      "errors": 0
-    },
-    "remote_automatic_resources": 0
+    "visual_fidelity_verified": false
   },
   "candidate_checks": {
     "root": {
@@ -76,19 +67,19 @@
     }
   },
   "checkpoint": {
-    "updated_at": "2026-10-17T06:30:00.208998+00:00",
-    "resource_urls": 10951,
+    "updated_at": "2026-10-17T16:00:55.426785+00:00",
+    "resource_urls": 11118,
     "statuses": {
-      "queued": 5687,
-      "recovered": 3727,
-      "needs_review": 64,
+      "queued": 5736,
+      "recovered": 3837,
+      "needs_review": 72,
       "failed": 1473,
       "excluded": 0
     },
     "indexed_capture_records": 23238,
-    "unique_downloaded_files": 2238,
-    "downloaded_bytes": 137024767,
-    "failed_attempts": 7261,
+    "unique_downloaded_files": 2291,
+    "downloaded_bytes": 147533392,
+    "failed_attempts": 7339,
     "index_complete": true
   },
   "latest_import": {
@@ -153,7 +144,7 @@
     "unique_raw_files": 97,
     "visual_reviewed": false
   },
-  "updated_at": "2026-10-17T06:15:26.021817+00:00",
+  "updated_at": "2026-10-17T16:00:55.426785+00:00",
   "tests": {
     "command": ".venv311/bin/python -m pytest -q",
     "result": "153 passed",
@@ -229,25 +220,15 @@
     "ordinary_rendering_remote_automatic_assets": 0,
     "release_approved": false
   },
-  "active_wayback_batch": {
-    "run_id": "38985105267",
-    "url": "https://github.com/keithah/bluescholars/actions/runs/38985105267",
-    "status": "in_progress",
-    "resume_run": "38975520061",
-    "max_files": 2000,
-    "max_index_pages": 1,
-    "commoncrawl_records": 0,
-    "edition_era": "none",
-    "active_step": "Download and discover dependencies"
-  },
+  "active_wayback_batch": null,
   "resume_plan": {
-    "workflow_commit": "40b07f3",
-    "workflow_input": "resume_run for one consolidated artifact; edition_era selects latest per-URL capture in 2007, 2009, or 2013",
-    "latest_merged_run": "38960473470",
-    "next_run": "38960845000",
-    "capture_attempts_per_resource_per_batch": 3,
-    "note": "The 2013+ pass is active. After it finishes, merge its archive-recovery artifact using .venv311/bin/python -m restore merge-recovery --artifact <artifact-dir> --run-id <run-id>, then resume queued/retryable URLs and any remaining per-era selections. Preserve ignored recovery/state.json and recovery/raw/ before switching machines. A broad max-2000 resource-discovery continuation is queued after the active 2013+ per-URL pass.",
-    "queued_after": "38962246474"
+    "latest_completed_workflow": "39044681280",
+    "workflow_url": "https://github.com/keithah/bluescholars/actions/runs/39044681280",
+    "current_authoritative_checkpoint": "local recovery/state.json and recovery/raw/ (ignored by Git; preserve or package before changing machines)",
+    "next_action": ".venv311/bin/python -m restore capture-era --era 2013 --max-files 2000",
+    "expected_scope": "Retry the 83 unresolved 2013-era URLs from the current local checkpoint; then rebuild/check root and /bluescholars/ candidates.",
+    "publish_approved": false,
+    "visual_fidelity_verified": false
   },
   "superseded_queued_run": {
     "run_id": "38889871799",
@@ -500,20 +481,20 @@
     "modern_cdn_alias_rows": 0
   },
   "recovery_state": {
-    "updated_at": "2026-10-17T06:30:00.208998+00:00",
-    "resource_urls": 10951,
+    "resource_urls": 11118,
     "statuses": {
-      "queued": 5687,
-      "recovered": 3727,
-      "needs_review": 64,
+      "queued": 5736,
+      "recovered": 3837,
+      "needs_review": 72,
       "failed": 1473,
       "excluded": 0
     },
     "indexed_capture_records": 23238,
-    "unique_downloaded_files": 2238,
-    "downloaded_bytes": 137024767,
-    "failed_attempts": 7261,
-    "index_complete": true
+    "unique_downloaded_files": 2291,
+    "downloaded_bytes": 147533392,
+    "failed_attempts": 7339,
+    "index_complete": true,
+    "updated_at": "2026-10-17T16:00:55.426785+00:00"
   },
   "squarespace_additional_listings": {
     "captures": [
@@ -787,5 +768,32 @@
       }
     },
     "resume": "Resume from recovery/state.json, recovery/raw/ and recovery/index/. Retry 2013 article URLs only when a new capture timestamp or archive lead is identified; no response from a failed request is an absence finding."
+  },
+  "latest_2013_local_capture_pass": {
+    "report": "recovery/era-2013-local-20261017-report.json",
+    "eligible_urls": 201,
+    "attempted": 201,
+    "validated_responses": 118,
+    "validated_kind_counts": {
+      "css": 118
+    },
+    "status_counts": {
+      "recovered": 110,
+      "needs_review": 8
+    },
+    "remaining_urls": 83,
+    "date_start": "20130921000000",
+    "date_end": "20230930235959",
+    "new_article_html_or_image_bytes": 0,
+    "merge_report": "recovery/imported/39044681280/merge-report.json"
+  },
+  "portable_archive": {
+    "path": "/tmp/bluescholars-restoration-2026-10-17.zip",
+    "file_count": 7416,
+    "uncompressed_bytes": 356786794,
+    "compressed_bytes": 148047078,
+    "sha256": "62c95e5c8e4ab3018eb9c8bd88ca01e8e7d83759938e9376aa90f7f0b7b248ac",
+    "integrity_test": "passed",
+    "font_binaries_included": false
   }
 }

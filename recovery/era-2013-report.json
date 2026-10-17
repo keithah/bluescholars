@@ -1,129 +1,1546 @@
 {
-  "already_recovered_urls": 787,
-  "attempted": 25,
-  "batch_limit": 50,
+  "already_recovered_urls": 813,
+  "attempted": 201,
+  "batch_limit": 2000,
   "captures": [
     {
-      "actual_capture": "20150628012443",
+      "actual_capture": "20150819120552",
       "attempted_captures": [
-        "20150628012443"
+        "20150819120552"
       ],
-      "bytes": 36676,
+      "bytes": 137505,
       "kind": "css",
-      "requested_capture": "20150628012443",
-      "sha256": "1ff788276a5c6112943ea5c0d159711115304f2a478323fdaff327dd0f5ce407",
-      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=2@@wayback:20150628012443:1ff788276a5c",
+      "requested_capture": "20150819120552",
+      "sha256": "fbe16e0f16a3abe167f5a297148bd3325ab7a83c2ea23af38b5e3a9f49dee3da",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/586-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=3@@wayback:20150819120552:fbe16e0f16a3",
       "status": "recovered",
-      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=2"
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/586-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=3"
     },
     {
-      "actual_capture": "20150628012448",
+      "actual_capture": "20151005214919",
       "attempted_captures": [
-        "20150628012448"
+        "20151005214919"
       ],
-      "bytes": 36676,
+      "bytes": 566615,
       "kind": "css",
-      "requested_capture": "20150628012448",
-      "sha256": "1ff788276a5c6112943ea5c0d159711115304f2a478323fdaff327dd0f5ce407",
-      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&part=2@@wayback:20150628012448:1ff788276a5c",
+      "requested_capture": "20151005214919",
+      "sha256": "13f61c6d20fe166afb29baa2fd71f787cb000d32c3f08367e500cb97445c4e12",
+      "source_key": "http://static.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/498/1371067617126/site.css@@wayback:20151005214919:13f61c6d20fe",
       "status": "recovered",
-      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&part=2"
+      "url": "http://static.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/498/1371067617126/site.css"
     },
     {
-      "actual_capture": "20150628012453",
+      "actual_capture": "20160313145905",
       "attempted_captures": [
-        "20150628012453"
+        "20160313145905"
       ],
-      "bytes": 571096,
+      "bytes": 175177,
       "kind": "css",
-      "requested_capture": "20150628012453",
-      "sha256": "beb8c17c55f99db15d86af0773a3cef77d86d2ff29002f73355170cd0270bc4b",
-      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false@@wayback:20150628012453:beb8c17c55f9",
+      "requested_capture": "20160313145905",
+      "sha256": "3186f7caa74c8e4313387705fb034e23cc547dd2ce0bff1e7077a75b9cda6088",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/589-05142015/1371067617126/site.css?&filterFeatures=false&part=3@@wayback:20160313145905:3186f7caa74c",
       "status": "recovered",
-      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false"
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/589-05142015/1371067617126/site.css?&filterFeatures=false&part=3"
     },
     {
-      "actual_capture": "20150628012458",
+      "actual_capture": "20160313222825",
       "attempted_captures": [
-        "20150628012458"
+        "20160313222825"
       ],
-      "bytes": 37264,
+      "bytes": 27680,
       "kind": "css",
-      "requested_capture": "20150628012458",
-      "sha256": "3ca14898a05cd035a41914da5d2584cdf86ad0532bb9e55db59ce0095b27b7e5",
-      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=1@@wayback:20150628012458:3ca14898a05c",
+      "requested_capture": "20160313222825",
+      "sha256": "14e6a5ad2b9f9124f62a9ab29841652ed2c9b9b4a0b594b53647a3b5796ce728",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/589-05142015/1371067617126/site.css?&filterFeatures=false&part=1@@wayback:20160313222825:14e6a5ad2b9f",
       "status": "recovered",
-      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=1"
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/589-05142015/1371067617126/site.css?&filterFeatures=false&part=1"
     },
     {
-      "actual_capture": "20150628012503",
+      "actual_capture": "20160313233123",
       "attempted_captures": [
-        "20150628012503"
+        "20160313233123"
       ],
-      "bytes": 359760,
+      "bytes": 342758,
       "kind": "css",
-      "requested_capture": "20150628012503",
-      "sha256": "5d04b8bf81a655d95f447bc10d64e0c60df5f2084326a8ca351316325ffb7ab4",
-      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=4@@wayback:20150628012503:5d04b8bf81a6",
+      "requested_capture": "20160313233123",
+      "sha256": "df1e1df89b4b8472cd65ba087ef74f2d0a27f7b59980d1a4ca990a8c040cb7ae",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/589-05142015/1371067617126/site.css?&filterFeatures=false&part=4@@wayback:20160313233123:df1e1df89b4b",
       "status": "recovered",
-      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=4"
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/589-05142015/1371067617126/site.css?&filterFeatures=false&part=4"
     },
     {
-      "actual_capture": "20150628012629",
+      "actual_capture": "20160314040554",
       "attempted_captures": [
-        "20150628012629"
+        "20160314040554"
       ],
-      "bytes": 359760,
+      "bytes": 32430,
       "kind": "css",
-      "requested_capture": "20150628012629",
-      "sha256": "5d04b8bf81a655d95f447bc10d64e0c60df5f2084326a8ca351316325ffb7ab4",
-      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&part=4@@wayback:20150628012629:5d04b8bf81a6",
+      "requested_capture": "20160314040554",
+      "sha256": "ed21f2e30030b61e4587d9482e77082cb01e14b1bfde83e85e6fbe5be1e07891",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/589-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=2@@wayback:20160314040554:ed21f2e30030",
       "status": "recovered",
-      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&part=4"
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/589-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=2"
     },
     {
-      "actual_capture": "20150628012634",
+      "actual_capture": "20160314051652",
       "attempted_captures": [
-        "20150628012634"
+        "20160314051652"
       ],
-      "bytes": 37264,
+      "bytes": 27680,
       "kind": "css",
-      "requested_capture": "20150628012634",
-      "sha256": "3ca14898a05cd035a41914da5d2584cdf86ad0532bb9e55db59ce0095b27b7e5",
-      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&part=1@@wayback:20150628012634:3ca14898a05c",
+      "requested_capture": "20160314051652",
+      "sha256": "14e6a5ad2b9f9124f62a9ab29841652ed2c9b9b4a0b594b53647a3b5796ce728",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/589-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=1@@wayback:20160314051652:14e6a5ad2b9f",
       "status": "recovered",
-      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&part=1"
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/589-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=1"
     },
     {
-      "actual_capture": "20150628012639",
+      "actual_capture": "20160314052353",
       "attempted_captures": [
-        "20150628012639"
+        "20160314052353"
       ],
-      "bytes": 137333,
+      "bytes": 175177,
       "kind": "css",
-      "requested_capture": "20150628012639",
-      "sha256": "f3b66f727e2081cc687490bdbbb72b02f712e82622fa43f5db84f83dafc473c1",
-      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&part=3@@wayback:20150628012639:f3b66f727e20",
+      "requested_capture": "20160314052353",
+      "sha256": "6ad4094a92b62f1c4f530d1b0bedce1086969047ad17d0d661626649ff4fd632",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/589-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=3@@wayback:20160314052353:6ad4094a92b6",
       "status": "recovered",
-      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&part=3"
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/589-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=3"
     },
     {
-      "actual_capture": "20150628012721",
+      "actual_capture": "20160314064500",
       "attempted_captures": [
-        "20150628012721"
+        "20160314064500"
       ],
-      "bytes": 137333,
+      "bytes": 342758,
       "kind": "css",
-      "requested_capture": "20150628012721",
-      "sha256": "378c0d0f967ae867ae0a4d05eaead7d61d306d8158a6521c41a2ca5976c0da2b",
-      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=3@@wayback:20150628012721:378c0d0f967a",
+      "requested_capture": "20160314064500",
+      "sha256": "df1e1df89b4b8472cd65ba087ef74f2d0a27f7b59980d1a4ca990a8c040cb7ae",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/589-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=4@@wayback:20160314064500:df1e1df89b4b",
       "status": "recovered",
-      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=3"
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/589-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=4"
+    },
+    {
+      "actual_capture": "20160314071926",
+      "attempted_captures": [
+        "20160314071926"
+      ],
+      "bytes": 32430,
+      "kind": "css",
+      "requested_capture": "20160314071926",
+      "sha256": "ed21f2e30030b61e4587d9482e77082cb01e14b1bfde83e85e6fbe5be1e07891",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/589-05142015/1371067617126/site.css?&filterFeatures=false&part=2@@wayback:20160314071926:ed21f2e30030",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/589-05142015/1371067617126/site.css?&filterFeatures=false&part=2"
+    },
+    {
+      "actual_capture": "20160418054900",
+      "attempted_captures": [
+        "20160418054900"
+      ],
+      "bytes": 29251,
+      "kind": "css",
+      "requested_capture": "20160418054900",
+      "sha256": "c750b27e2ccc9d57a3e8605dce6143777b160e573fd21f09619ea15692ae5a6b",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/590-05142015/1371067617126/site.css?&filterFeatures=false&part=1@@wayback:20160418054900:c750b27e2ccc",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/590-05142015/1371067617126/site.css?&filterFeatures=false&part=1"
+    },
+    {
+      "actual_capture": "20160418072733",
+      "attempted_captures": [
+        "20160418072733"
+      ],
+      "bytes": 32474,
+      "kind": "css",
+      "requested_capture": "20160418072733",
+      "sha256": "466ce5390471f28521acae55b852923992a60e3fd70ca4819e79b39d4ac59be2",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/590-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=2@@wayback:20160418072733:466ce5390471",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/590-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=2"
+    },
+    {
+      "actual_capture": "20160418095442",
+      "attempted_captures": [
+        "20160418095442"
+      ],
+      "bytes": 343135,
+      "kind": "css",
+      "requested_capture": "20160418095442",
+      "sha256": "491b4fa95821ce75b79bb879c2134574a2bf4b4b18a5ac1480d7beab47246471",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/590-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=4@@wayback:20160418095442:491b4fa95821",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/590-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=4"
+    },
+    {
+      "actual_capture": "20160418120311",
+      "attempted_captures": [
+        "20160418120311"
+      ],
+      "bytes": 175177,
+      "kind": "css",
+      "requested_capture": "20160418120311",
+      "sha256": "6ad4094a92b62f1c4f530d1b0bedce1086969047ad17d0d661626649ff4fd632",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/590-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=3@@wayback:20160418120311:6ad4094a92b6",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/590-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=3"
+    },
+    {
+      "actual_capture": "20160418170858",
+      "attempted_captures": [
+        "20160418170858"
+      ],
+      "bytes": 343135,
+      "kind": "css",
+      "requested_capture": "20160418170858",
+      "sha256": "491b4fa95821ce75b79bb879c2134574a2bf4b4b18a5ac1480d7beab47246471",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/590-05142015/1371067617126/site.css?&filterFeatures=false&part=4@@wayback:20160418170858:491b4fa95821",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/590-05142015/1371067617126/site.css?&filterFeatures=false&part=4"
+    },
+    {
+      "actual_capture": "20160418181126",
+      "attempted_captures": [
+        "20160418181126"
+      ],
+      "bytes": 175177,
+      "kind": "css",
+      "requested_capture": "20160418181126",
+      "sha256": "fa2d81d5aaf1187cefeaa59f3076ab4b75da93dafb3b575c0ee024c1cf8e1ca3",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/590-05142015/1371067617126/site.css?&filterFeatures=false&part=3@@wayback:20160418181126:fa2d81d5aaf1",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/590-05142015/1371067617126/site.css?&filterFeatures=false&part=3"
+    },
+    {
+      "actual_capture": "20160418224315",
+      "attempted_captures": [
+        "20160418224315"
+      ],
+      "bytes": 29251,
+      "kind": "css",
+      "requested_capture": "20160418224315",
+      "sha256": "c750b27e2ccc9d57a3e8605dce6143777b160e573fd21f09619ea15692ae5a6b",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/590-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=1@@wayback:20160418224315:c750b27e2ccc",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/590-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=1"
+    },
+    {
+      "actual_capture": "20160419024222",
+      "attempted_captures": [
+        "20160419024222"
+      ],
+      "bytes": 32474,
+      "kind": "css",
+      "requested_capture": "20160419024222",
+      "sha256": "466ce5390471f28521acae55b852923992a60e3fd70ca4819e79b39d4ac59be2",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/590-05142015/1371067617126/site.css?&filterFeatures=false&part=2@@wayback:20160419024222:466ce5390471",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/590-05142015/1371067617126/site.css?&filterFeatures=false&part=2"
+    },
+    {
+      "actual_capture": "20160624014650",
+      "attempted_captures": [
+        "20160624014650"
+      ],
+      "bytes": 176834,
+      "kind": "css",
+      "requested_capture": "20160624014650",
+      "sha256": "a6f81770b5d3e776ba92ebc85153ef7d71027fe0372343bd36a1bdb1c038127a",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/591-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=3@@wayback:20160624014650:a6f81770b5d3",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/591-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=3"
+    },
+    {
+      "actual_capture": "20160624015220",
+      "attempted_captures": [
+        "20160624015220"
+      ],
+      "bytes": 342048,
+      "kind": "css",
+      "requested_capture": "20160624015220",
+      "sha256": "24d8845600c004322c57d62f25a302444c8ca7cdace8dc9c3550ee8b8bc1acc0",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/591-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=4@@wayback:20160624015220:24d8845600c0",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/591-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=4"
+    },
+    {
+      "actual_capture": "20160624015430",
+      "attempted_captures": [
+        "20160624015430"
+      ],
+      "bytes": 29297,
+      "kind": "css",
+      "requested_capture": "20160624015430",
+      "sha256": "60651f5152ee05114057cb19baade7270906222e40f4566470288400b32b1349",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/591-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=1@@wayback:20160624015430:60651f5152ee",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/591-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=1"
+    },
+    {
+      "actual_capture": "20160624020359",
+      "attempted_captures": [
+        "20160624020359"
+      ],
+      "bytes": 32901,
+      "kind": "css",
+      "requested_capture": "20160624020359",
+      "sha256": "4ecf4a691741b79a76bcd5a699d4e114a1dcbac2c1f609f4f906ba7814da472f",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/591-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=2@@wayback:20160624020359:4ecf4a691741",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/591-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=2"
+    },
+    {
+      "actual_capture": "20161111015256",
+      "attempted_captures": [
+        "20161111015256"
+      ],
+      "bytes": 125506,
+      "kind": "css",
+      "requested_capture": "20161111015256",
+      "sha256": "a0dcbe667bb2d4b83ac1ac1f42ebe43da852d3a1753f94465bf221d029d07e52",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/594-05142015/1371067617126/site.css?&filterFeatures=false&part=3@@wayback:20161111015256:a0dcbe667bb2",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/594-05142015/1371067617126/site.css?&filterFeatures=false&part=3"
+    },
+    {
+      "actual_capture": "20161111015653",
+      "attempted_captures": [
+        "20161111015653"
+      ],
+      "bytes": 29367,
+      "kind": "css",
+      "requested_capture": "20161111015653",
+      "sha256": "05e440f03591ccc3c614c4ce45fe371877727eb455f313e0ebc7c42413080c7f",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/594-05142015/1371067617126/site.css?&filterFeatures=false&part=1@@wayback:20161111015653:05e440f03591",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/594-05142015/1371067617126/site.css?&filterFeatures=false&part=1"
+    },
+    {
+      "actual_capture": "20161111015927",
+      "attempted_captures": [
+        "20161111015927"
+      ],
+      "bytes": 178977,
+      "kind": "css",
+      "requested_capture": "20161111015927",
+      "sha256": "318fc5dff7d089dd51c4fbfc2441fef4dc5dd27d43188c31f483a8f7c83582ae",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/594-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=4@@wayback:20161111015927:318fc5dff7d0",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/594-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=4"
+    },
+    {
+      "actual_capture": "20161111015937",
+      "attempted_captures": [
+        "20161111015937"
+      ],
+      "bytes": 29367,
+      "kind": "css",
+      "requested_capture": "20161111015937",
+      "sha256": "05e440f03591ccc3c614c4ce45fe371877727eb455f313e0ebc7c42413080c7f",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/594-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=1@@wayback:20161111015937:05e440f03591",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/594-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=1"
+    },
+    {
+      "actual_capture": "20161111020305",
+      "attempted_captures": [
+        "20161111020305"
+      ],
+      "bytes": 33873,
+      "kind": "css",
+      "requested_capture": "20161111020305",
+      "sha256": "d8eb5ed1dc20c3a99817d10f3f12fc197ecdfdf30aa7dad6cd590935e65919f3",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/594-05142015/1371067617126/site.css?&filterFeatures=false&part=2@@wayback:20161111020305:d8eb5ed1dc20",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/594-05142015/1371067617126/site.css?&filterFeatures=false&part=2"
+    },
+    {
+      "actual_capture": "20161111020550",
+      "attempted_captures": [
+        "20161111020550"
+      ],
+      "bytes": 125506,
+      "kind": "css",
+      "requested_capture": "20161111020550",
+      "sha256": "3a623640dae1471cfcee81364e04e04acf72ffd519041e397280246280f2f643",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/594-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=3@@wayback:20161111020550:3a623640dae1",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/594-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=3"
+    },
+    {
+      "actual_capture": "20161111024836",
+      "attempted_captures": [
+        "20161111024836"
+      ],
+      "bytes": 33873,
+      "kind": "css",
+      "requested_capture": "20161111024836",
+      "sha256": "d8eb5ed1dc20c3a99817d10f3f12fc197ecdfdf30aa7dad6cd590935e65919f3",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/594-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=2@@wayback:20161111024836:d8eb5ed1dc20",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/594-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=2"
+    },
+    {
+      "actual_capture": "20161111034724",
+      "attempted_captures": [
+        "20161111034724"
+      ],
+      "bytes": 178977,
+      "kind": "css",
+      "requested_capture": "20161111034724",
+      "sha256": "318fc5dff7d089dd51c4fbfc2441fef4dc5dd27d43188c31f483a8f7c83582ae",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/594-05142015/1371067617126/site.css?&filterFeatures=false&part=4@@wayback:20161111034724:318fc5dff7d0",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/594-05142015/1371067617126/site.css?&filterFeatures=false&part=4"
+    },
+    {
+      "actual_capture": "20170531062707",
+      "attempted_captures": [
+        "20170531062707"
+      ],
+      "bytes": 394774,
+      "kind": "css",
+      "requested_capture": "20170531062707",
+      "sha256": "7527cf08f7897d9d4b26dad3640d0590d5a18ace4d5546ef05673715f87281bb",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/605-05142015/1371067617126/site.css?&filterFeatures=false@@wayback:20170531062707:7527cf08f789",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/605-05142015/1371067617126/site.css?&filterFeatures=false"
+    },
+    {
+      "actual_capture": "20170606101710",
+      "attempted_captures": [
+        "20170606101710"
+      ],
+      "bytes": 23258,
+      "kind": "css",
+      "requested_capture": "20170606101710",
+      "sha256": "734bde26e9d675ebededec52c66b122e2c5fd4a6b3d3144affaf93264b864d9b",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/607-05142015/1371067617126/site.css?&filterFeatures=false&part=2@@wayback:20170606101710:734bde26e9d6",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/607-05142015/1371067617126/site.css?&filterFeatures=false&part=2"
+    },
+    {
+      "actual_capture": "20170606132641",
+      "attempted_captures": [
+        "20170606132641"
+      ],
+      "bytes": 23258,
+      "kind": "css",
+      "requested_capture": "20170606132641",
+      "sha256": "734bde26e9d675ebededec52c66b122e2c5fd4a6b3d3144affaf93264b864d9b",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/607-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=2@@wayback:20170606132641:734bde26e9d6",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/607-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=2"
+    },
+    {
+      "actual_capture": "20170606150422",
+      "attempted_captures": [
+        "20170606150422"
+      ],
+      "bytes": 21922,
+      "kind": "css",
+      "requested_capture": "20170606150422",
+      "sha256": "7ef6e727e73c60ce8857c60a4c13058814e490002d5231d9542349e8b73666a9",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/607-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=1@@wayback:20170606150422:7ef6e727e73c",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/607-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=1"
+    },
+    {
+      "actual_capture": "20170713093524",
+      "attempted_captures": [
+        "20170713093524"
+      ],
+      "bytes": 14837,
+      "kind": "css",
+      "requested_capture": "20170713093524",
+      "sha256": "1159aaace15d0b1ce39d4c2fcd93dac05398b0c309b96a51b4501cd9ab422fe5",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/607-05142015/1371067617126/site.css?&filterFeatures=false&part=1@@wayback:20170713093524:1159aaace15d",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/607-05142015/1371067617126/site.css?&filterFeatures=false&part=1"
+    },
+    {
+      "actual_capture": "20171017143949",
+      "attempted_captures": [
+        "20171017143949"
+      ],
+      "bytes": 181517,
+      "kind": "css",
+      "requested_capture": "20171017143949",
+      "sha256": "9e23865cb48a0338027918bcfbebef70af33187c704410293d961dde2e7fafe4",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/609-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=4@@wayback:20171017143949:9e23865cb48a",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/609-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=4"
+    },
+    {
+      "actual_capture": "20171017160448",
+      "attempted_captures": [
+        "20171017160448"
+      ],
+      "bytes": 14837,
+      "kind": "css",
+      "requested_capture": "20171017160448",
+      "sha256": "1159aaace15d0b1ce39d4c2fcd93dac05398b0c309b96a51b4501cd9ab422fe5",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/609-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=1@@wayback:20171017160448:1159aaace15d",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/609-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=1"
+    },
+    {
+      "actual_capture": "20171017163839",
+      "attempted_captures": [
+        "20171017163839"
+      ],
+      "bytes": 179227,
+      "kind": "css",
+      "requested_capture": "20171017163839",
+      "sha256": "4f53df271e143784378c3adf0ca13cf220ee66d32a1c5dd172ebaf60d1a99006",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/609-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=3@@wayback:20171017163839:4f53df271e14",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/609-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=3"
+    },
+    {
+      "actual_capture": "20171017190629",
+      "attempted_captures": [
+        "20171017190629"
+      ],
+      "bytes": 18874,
+      "kind": "css",
+      "requested_capture": "20171017190629",
+      "sha256": "31aca1228507e3f6d2abc0016d6e785026032a3e92c3af8d0cf20bac44126f9d",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/609-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=2@@wayback:20171017190629:31aca1228507",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/609-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=2"
+    },
+    {
+      "actual_capture": "20171019073335",
+      "attempted_captures": [
+        "20171019073335"
+      ],
+      "bytes": 182245,
+      "kind": "css",
+      "requested_capture": "20171019073335",
+      "sha256": "a846a25de9aaa61efdeb5078f3045eb9c532f7512f3bd56e0c319e416ebfc114",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/607-05142015/1371067617126/site.css?&filterFeatures=false&part=4@@wayback:20171019073335:a846a25de9aa",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/607-05142015/1371067617126/site.css?&filterFeatures=false&part=4"
+    },
+    {
+      "actual_capture": "20171019110431",
+      "attempted_captures": [
+        "20171019110431"
+      ],
+      "bytes": 395246,
+      "kind": "css",
+      "requested_capture": "20171019110431",
+      "sha256": "79065748fa3da654240ee4ce13e2081a37948719254ad0734b253a4238a35124",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/607-05142015/1371067617126/site.css?&filterFeatures=false@@wayback:20171019110431:79065748fa3d",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/607-05142015/1371067617126/site.css?&filterFeatures=false"
+    },
+    {
+      "actual_capture": "20171029113924",
+      "attempted_captures": [
+        "20171029113924"
+      ],
+      "bytes": 179227,
+      "kind": "css",
+      "requested_capture": "20171029113924",
+      "sha256": "4f53df271e143784378c3adf0ca13cf220ee66d32a1c5dd172ebaf60d1a99006",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/607-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=3@@wayback:20171029113924:4f53df271e14",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/607-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=3"
+    },
+    {
+      "actual_capture": "20171029113929",
+      "attempted_captures": [
+        "20171029113929"
+      ],
+      "bytes": 182601,
+      "kind": "css",
+      "requested_capture": "20171029113929",
+      "sha256": "c4497a771d49abef701f57255627dcbf3aa37ee7ccdfef560da4a41aef39d092",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/607-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=4@@wayback:20171029113929:c4497a771d49",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/607-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=4"
+    },
+    {
+      "actual_capture": "20171029142336",
+      "attempted_captures": [
+        "20171029142336"
+      ],
+      "bytes": 179227,
+      "kind": "css",
+      "requested_capture": "20171029142336",
+      "sha256": "4f53df271e143784378c3adf0ca13cf220ee66d32a1c5dd172ebaf60d1a99006",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/607-05142015/1371067617126/site.css?&filterFeatures=false&part=3@@wayback:20171029142336:4f53df271e14",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/607-05142015/1371067617126/site.css?&filterFeatures=false&part=3"
+    },
+    {
+      "actual_capture": "20180102230954",
+      "attempted_captures": [
+        "20180102230954"
+      ],
+      "bytes": 396914,
+      "kind": "css",
+      "requested_capture": "20180102230954",
+      "sha256": "06098757242ce601fed97e63eab491e590bdc19001d868504f2c72fdf3ba4799",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/615-05142015/1371067617126/site.css?&filterFeatures=false@@wayback:20180102230954:06098757242c",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/615-05142015/1371067617126/site.css?&filterFeatures=false"
+    },
+    {
+      "actual_capture": "20180114070144",
+      "attempted_captures": [
+        "20180114070144"
+      ],
+      "bytes": 14438,
+      "kind": "css",
+      "requested_capture": "20180114070144",
+      "sha256": "c5249cec7996c5db70b008fffce31d84dfd6da0adb3711013209e1babfcf1d83",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/616-05142015/1371067617126/site.css?&filterFeatures=false&part=1@@wayback:20180114070144:c5249cec7996",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/616-05142015/1371067617126/site.css?&filterFeatures=false&part=1"
+    },
+    {
+      "actual_capture": "20180202071135",
+      "attempted_captures": [
+        "20180202071135"
+      ],
+      "bytes": 179536,
+      "kind": "css",
+      "requested_capture": "20180202071135",
+      "sha256": "f0a575ec1a7c23635489f13dcbf2012ec86841c73dd7797607c2f4f6693dc03c",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/616-05142015/1371067617126/site.css?&filterFeatures=false&part=3@@wayback:20180202071135:f0a575ec1a7c",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/616-05142015/1371067617126/site.css?&filterFeatures=false&part=3"
+    },
+    {
+      "actual_capture": "20180202071136",
+      "attempted_captures": [
+        "20180202071136"
+      ],
+      "bytes": 184073,
+      "kind": "css",
+      "requested_capture": "20180202071136",
+      "sha256": "fff3bd58cda968963435a64ddc640ea5c25dba77b89a27cd0bb2a6250bcbdcbf",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/616-05142015/1371067617126/site.css?&filterFeatures=false&part=4@@wayback:20180202071136:fff3bd58cda9",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/616-05142015/1371067617126/site.css?&filterFeatures=false&part=4"
+    },
+    {
+      "actual_capture": "20180202071139",
+      "attempted_captures": [
+        "20180202071139"
+      ],
+      "bytes": 179536,
+      "kind": "css",
+      "requested_capture": "20180202071139",
+      "sha256": "f0a575ec1a7c23635489f13dcbf2012ec86841c73dd7797607c2f4f6693dc03c",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/616-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=3@@wayback:20180202071139:f0a575ec1a7c",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/616-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=3"
+    },
+    {
+      "actual_capture": "20180202071140",
+      "attempted_captures": [
+        "20180202071140"
+      ],
+      "bytes": 184073,
+      "kind": "css",
+      "requested_capture": "20180202071140",
+      "sha256": "fff3bd58cda968963435a64ddc640ea5c25dba77b89a27cd0bb2a6250bcbdcbf",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/616-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=4@@wayback:20180202071140:fff3bd58cda9",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/616-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=4"
+    },
+    {
+      "actual_capture": "20180202071142",
+      "attempted_captures": [
+        "20180202071142"
+      ],
+      "bytes": 397427,
+      "kind": "css",
+      "requested_capture": "20180202071142",
+      "sha256": "ddf14e573ac5dac4fbc80d797d29fde2b0b4910a2179d70e5ac4a6b7d3544063",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/616-05142015/1371067617126/site.css?&filterFeatures=false@@wayback:20180202071142:ddf14e573ac5",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/616-05142015/1371067617126/site.css?&filterFeatures=false"
+    },
+    {
+      "actual_capture": "20180212213510",
+      "attempted_captures": [
+        "20180212213510"
+      ],
+      "bytes": 397427,
+      "kind": "css",
+      "requested_capture": "20180212213510",
+      "sha256": "ddf14e573ac5dac4fbc80d797d29fde2b0b4910a2179d70e5ac4a6b7d3544063",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/590-05142015/1371067617126/site.css?&filterFeatures=false@@wayback:20180212213510:ddf14e573ac5",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/590-05142015/1371067617126/site.css?&filterFeatures=false"
+    },
+    {
+      "actual_capture": "20180331043659",
+      "attempted_captures": [
+        "20180331043659"
+      ],
+      "bytes": 400695,
+      "kind": "css",
+      "requested_capture": "20180331043659",
+      "sha256": "f26e946e573bc8088af208a8f02e23472a52acc7fe370f11dfa004b317c46715",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/611-05142015/1371067617126/site.css?&filterFeatures=false@@wayback:20180331043659:f26e946e573b",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/611-05142015/1371067617126/site.css?&filterFeatures=false"
+    },
+    {
+      "actual_capture": "20180619103054",
+      "attempted_captures": [
+        "20180619103054"
+      ],
+      "bytes": 15607,
+      "kind": "css",
+      "requested_capture": "20180619103054",
+      "sha256": "9ee640f224bf146252585a3f1e48a74826d66220325b0c2b6ea2dd7cf6100f96",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/617-05142015/1371067617126/site.css?&filterFeatures=false&part=1@@wayback:20180619103054:9ee640f224bf",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/617-05142015/1371067617126/site.css?&filterFeatures=false&part=1"
+    },
+    {
+      "actual_capture": "20180619104329",
+      "attempted_captures": [
+        "20180619104329"
+      ],
+      "bytes": 186517,
+      "kind": "css",
+      "requested_capture": "20180619104329",
+      "sha256": "2824d211760603055a9ac52a24d500040742aee77e964dd7d504d2d9e4ea996d",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/617-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=4@@wayback:20180619104329:2824d2117606",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/617-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=4"
+    },
+    {
+      "actual_capture": "20180619225937",
+      "attempted_captures": [
+        "20180619225937"
+      ],
+      "bytes": 15607,
+      "kind": "css",
+      "requested_capture": "20180619225937",
+      "sha256": "9ee640f224bf146252585a3f1e48a74826d66220325b0c2b6ea2dd7cf6100f96",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/617-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=1@@wayback:20180619225937:9ee640f224bf",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/617-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=1"
+    },
+    {
+      "actual_capture": "20180621055829",
+      "attempted_captures": [
+        "20180621055829"
+      ],
+      "bytes": 182071,
+      "kind": "css",
+      "requested_capture": "20180621055829",
+      "sha256": "99ff06653ce69f5d158ba7621ff567a6e8f566e39333c15f24d315b1e7d68d19",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/617-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=3@@wayback:20180621055829:99ff06653ce6",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/617-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=3"
+    },
+    {
+      "actual_capture": "20180621055832",
+      "attempted_captures": [
+        "20180621055832"
+      ],
+      "bytes": 19757,
+      "kind": "css",
+      "requested_capture": "20180621055832",
+      "sha256": "99f79ee468725afee9b7b1543c5fdce9fcbe0ca6464f90eae23fa7b6a50909b1",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/617-05142015/1371067617126/site.css?&filterFeatures=false&part=2@@wayback:20180621055832:99f79ee46872",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/617-05142015/1371067617126/site.css?&filterFeatures=false&part=2"
+    },
+    {
+      "actual_capture": "20180629121035",
+      "attempted_captures": [
+        "20180629121035"
+      ],
+      "bytes": 19757,
+      "kind": "css",
+      "requested_capture": "20180629121035",
+      "sha256": "99f79ee468725afee9b7b1543c5fdce9fcbe0ca6464f90eae23fa7b6a50909b1",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/617-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=2@@wayback:20180629121035:99f79ee46872",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/617-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=2"
+    },
+    {
+      "actual_capture": "20180629121039",
+      "attempted_captures": [
+        "20180629121039"
+      ],
+      "bytes": 182071,
+      "kind": "css",
+      "requested_capture": "20180629121039",
+      "sha256": "99ff06653ce69f5d158ba7621ff567a6e8f566e39333c15f24d315b1e7d68d19",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/617-05142015/1371067617126/site.css?&filterFeatures=false&part=3@@wayback:20180629121039:99ff06653ce6",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/617-05142015/1371067617126/site.css?&filterFeatures=false&part=3"
+    },
+    {
+      "actual_capture": "20180630003755",
+      "attempted_captures": [
+        "20180630003755"
+      ],
+      "bytes": 186517,
+      "kind": "css",
+      "requested_capture": "20180630003755",
+      "sha256": "2824d211760603055a9ac52a24d500040742aee77e964dd7d504d2d9e4ea996d",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/617-05142015/1371067617126/site.css?&filterFeatures=false&part=4@@wayback:20180630003755:2824d2117606",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/617-05142015/1371067617126/site.css?&filterFeatures=false&part=4"
+    },
+    {
+      "actual_capture": "20180905122836",
+      "attempted_captures": [
+        "20180905122836"
+      ],
+      "bytes": 446932,
+      "kind": "css",
+      "requested_capture": "20180905122836",
+      "sha256": "02ca56b0a1cc9eac3333fde2af3e3d6d4df30474897b465dcf597a59de60b4be",
+      "source_key": "https://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/618-05142015/1371067617126/site.css?&filterFeatures=false@@wayback:20180905122836:02ca56b0a1cc",
+      "status": "recovered",
+      "url": "https://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/618-05142015/1371067617126/site.css?&filterFeatures=false"
+    },
+    {
+      "actual_capture": "20190213231358",
+      "attempted_captures": [
+        "20190213231358"
+      ],
+      "bytes": 452101,
+      "kind": "css",
+      "requested_capture": "20190213231358",
+      "sha256": "1bcf0c6befba9b262acafddd4b8a60f10499dea542fe546d45c5685bb01dd105",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/604-05142015/1371067617126/site.css?&filterFeatures=false@@wayback:20190213231358:1bcf0c6befba",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/604-05142015/1371067617126/site.css?&filterFeatures=false"
+    },
+    {
+      "actual_capture": "20190213231405",
+      "attempted_captures": [
+        "20190213231405"
+      ],
+      "bytes": 14958,
+      "kind": "css",
+      "requested_capture": "20190213231405",
+      "sha256": "1fc1085d06a4e47afedc141bed8d351bbb86c248b4f4df3381f45577a1c679ae",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/604-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=1@@wayback:20190213231405:1fc1085d06a4",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/604-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=1"
+    },
+    {
+      "actual_capture": "20190213231411",
+      "attempted_captures": [
+        "20190213231411"
+      ],
+      "bytes": 19841,
+      "kind": "css",
+      "requested_capture": "20190213231411",
+      "sha256": "f42284c6da225a1b13e3ceb2c23661c9ac7b402f6e550f62fcf2554f06584b50",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/604-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=2@@wayback:20190213231411:f42284c6da22",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/604-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=2"
+    },
+    {
+      "actual_capture": "20190213231417",
+      "attempted_captures": [
+        "20190213231417"
+      ],
+      "bytes": 235665,
+      "kind": "css",
+      "requested_capture": "20190213231417",
+      "sha256": "d8615d33fe4de72c70de43ea1cb46bdc49dc4ae4a6154c6360c9bee7e9763a61",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/604-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=3@@wayback:20190213231417:d8615d33fe4d",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/604-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=3"
+    },
+    {
+      "actual_capture": "20190213231423",
+      "attempted_captures": [
+        "20190213231423"
+      ],
+      "bytes": 181574,
+      "kind": "css",
+      "requested_capture": "20190213231423",
+      "sha256": "8ccfc7841a9e44c8337715d8878fbd01f855609ed3b171e776ac8ef52f23290a",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/604-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=4@@wayback:20190213231423:8ccfc7841a9e",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/604-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=4"
+    },
+    {
+      "actual_capture": "20190213231429",
+      "attempted_captures": [
+        "20190213231429"
+      ],
+      "bytes": 14958,
+      "kind": "css",
+      "requested_capture": "20190213231429",
+      "sha256": "1fc1085d06a4e47afedc141bed8d351bbb86c248b4f4df3381f45577a1c679ae",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/604-05142015/1371067617126/site.css?&filterFeatures=false&part=1@@wayback:20190213231429:1fc1085d06a4",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/604-05142015/1371067617126/site.css?&filterFeatures=false&part=1"
+    },
+    {
+      "actual_capture": "20190213231504",
+      "attempted_captures": [
+        "20190213231504"
+      ],
+      "bytes": 19841,
+      "kind": "css",
+      "requested_capture": "20190213231504",
+      "sha256": "f42284c6da225a1b13e3ceb2c23661c9ac7b402f6e550f62fcf2554f06584b50",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/604-05142015/1371067617126/site.css?&filterFeatures=false&part=2@@wayback:20190213231504:f42284c6da22",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/604-05142015/1371067617126/site.css?&filterFeatures=false&part=2"
+    },
+    {
+      "actual_capture": "20190213231512",
+      "attempted_captures": [
+        "20190213231512"
+      ],
+      "bytes": 235665,
+      "kind": "css",
+      "requested_capture": "20190213231512",
+      "sha256": "d8615d33fe4de72c70de43ea1cb46bdc49dc4ae4a6154c6360c9bee7e9763a61",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/604-05142015/1371067617126/site.css?&filterFeatures=false&part=3@@wayback:20190213231512:d8615d33fe4d",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/604-05142015/1371067617126/site.css?&filterFeatures=false&part=3"
+    },
+    {
+      "actual_capture": "20190213231518",
+      "attempted_captures": [
+        "20190213231518"
+      ],
+      "bytes": 181574,
+      "kind": "css",
+      "requested_capture": "20190213231518",
+      "sha256": "8ccfc7841a9e44c8337715d8878fbd01f855609ed3b171e776ac8ef52f23290a",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/604-05142015/1371067617126/site.css?&filterFeatures=false&part=4@@wayback:20190213231518:8ccfc7841a9e",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/604-05142015/1371067617126/site.css?&filterFeatures=false&part=4"
+    },
+    {
+      "actual_capture": "20190503154454",
+      "attempted_captures": [
+        "20190503154454"
+      ],
+      "bytes": 439947,
+      "kind": "css",
+      "requested_capture": "20190503154454",
+      "sha256": "afe10cf65307b2ea620b1d579834485a06a94ed364410585b527489f7e75de4a",
+      "source_key": "https://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/620-05142015/1371067617126/site.css?&filterFeatures=false@@wayback:20190503154454:afe10cf65307",
+      "status": "recovered",
+      "url": "https://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/620-05142015/1371067617126/site.css?&filterFeatures=false"
+    },
+    {
+      "actual_capture": "20190516182951",
+      "attempted_captures": [
+        "20190516182951"
+      ],
+      "bytes": 110999,
+      "kind": "css",
+      "requested_capture": "20190516182951",
+      "sha256": "de6922191e56e8372061c861ff37e0035d8765c35b38878f63f64ab7257da5fd",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/619-05142015/1371067617126/site.css?&filterFeatures=false&part=3@@wayback:20190516182951:de6922191e56",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/619-05142015/1371067617126/site.css?&filterFeatures=false&part=3"
+    },
+    {
+      "actual_capture": "20190516183925",
+      "attempted_captures": [
+        "20190516183925"
+      ],
+      "bytes": 294086,
+      "kind": "css",
+      "requested_capture": "20190516183925",
+      "sha256": "dea3a0e6141f31eec554f48cc13bf9e74c0b89abfb4bcd7d03c0d5bc0107f91a",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/619-05142015/1371067617126/site.css?&filterFeatures=false&part=4@@wayback:20190516183925:dea3a0e6141f",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/619-05142015/1371067617126/site.css?&filterFeatures=false&part=4"
+    },
+    {
+      "actual_capture": "20190516190847",
+      "attempted_captures": [
+        "20190516190847"
+      ],
+      "bytes": 19841,
+      "kind": "css",
+      "requested_capture": "20190516190847",
+      "sha256": "f42284c6da225a1b13e3ceb2c23661c9ac7b402f6e550f62fcf2554f06584b50",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/619-05142015/1371067617126/site.css?&filterFeatures=false&part=2@@wayback:20190516190847:f42284c6da22",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/619-05142015/1371067617126/site.css?&filterFeatures=false&part=2"
+    },
+    {
+      "actual_capture": "20190516194902",
+      "attempted_captures": [
+        "20190516194902"
+      ],
+      "bytes": 14958,
+      "kind": "css",
+      "requested_capture": "20190516194902",
+      "sha256": "1fc1085d06a4e47afedc141bed8d351bbb86c248b4f4df3381f45577a1c679ae",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/619-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=1@@wayback:20190516194902:1fc1085d06a4",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/619-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=1"
+    },
+    {
+      "actual_capture": "20190516201914",
+      "attempted_captures": [
+        "20190516201914"
+      ],
+      "bytes": 19841,
+      "kind": "css",
+      "requested_capture": "20190516201914",
+      "sha256": "f42284c6da225a1b13e3ceb2c23661c9ac7b402f6e550f62fcf2554f06584b50",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/619-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=2@@wayback:20190516201914:f42284c6da22",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/619-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=2"
+    },
+    {
+      "actual_capture": "20190516202859",
+      "attempted_captures": [
+        "20190516202859"
+      ],
+      "bytes": 14958,
+      "kind": "css",
+      "requested_capture": "20190516202859",
+      "sha256": "1fc1085d06a4e47afedc141bed8d351bbb86c248b4f4df3381f45577a1c679ae",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/619-05142015/1371067617126/site.css?&filterFeatures=false&part=1@@wayback:20190516202859:1fc1085d06a4",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/619-05142015/1371067617126/site.css?&filterFeatures=false&part=1"
+    },
+    {
+      "actual_capture": "20190516213019",
+      "attempted_captures": [
+        "20190516213019"
+      ],
+      "bytes": 439947,
+      "kind": "css",
+      "requested_capture": "20190516213019",
+      "sha256": "afe10cf65307b2ea620b1d579834485a06a94ed364410585b527489f7e75de4a",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/619-05142015/1371067617126/site.css?&filterFeatures=false@@wayback:20190516213019:afe10cf65307",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/619-05142015/1371067617126/site.css?&filterFeatures=false"
+    },
+    {
+      "actual_capture": "20190516213536",
+      "attempted_captures": [
+        "20190516213536"
+      ],
+      "bytes": 110999,
+      "kind": "css",
+      "requested_capture": "20190516213536",
+      "sha256": "de6922191e56e8372061c861ff37e0035d8765c35b38878f63f64ab7257da5fd",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/619-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=3@@wayback:20190516213536:de6922191e56",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/619-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=3"
+    },
+    {
+      "actual_capture": "20190516223414",
+      "attempted_captures": [
+        "20190516223414"
+      ],
+      "bytes": 294086,
+      "kind": "css",
+      "requested_capture": "20190516223414",
+      "sha256": "dea3a0e6141f31eec554f48cc13bf9e74c0b89abfb4bcd7d03c0d5bc0107f91a",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/619-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=4@@wayback:20190516223414:dea3a0e6141f",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/619-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=4"
+    },
+    {
+      "actual_capture": "20190517005127",
+      "attempted_captures": [
+        "20190517005127"
+      ],
+      "bytes": 14958,
+      "kind": "css",
+      "requested_capture": "20190517005127",
+      "sha256": "1fc1085d06a4e47afedc141bed8d351bbb86c248b4f4df3381f45577a1c679ae",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/620-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=1@@wayback:20190517005127:1fc1085d06a4",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/620-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=1"
+    },
+    {
+      "actual_capture": "20190518101307",
+      "attempted_captures": [
+        "20190518101307"
+      ],
+      "bytes": 19841,
+      "kind": "css",
+      "requested_capture": "20190518101307",
+      "sha256": "f42284c6da225a1b13e3ceb2c23661c9ac7b402f6e550f62fcf2554f06584b50",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/620-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=2@@wayback:20190518101307:f42284c6da22",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/620-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=2"
+    },
+    {
+      "actual_capture": "20190518164212",
+      "attempted_captures": [
+        "20190518164212"
+      ],
+      "bytes": 110999,
+      "kind": "css",
+      "requested_capture": "20190518164212",
+      "sha256": "de6922191e56e8372061c861ff37e0035d8765c35b38878f63f64ab7257da5fd",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/620-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=3@@wayback:20190518164212:de6922191e56",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/620-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=3"
+    },
+    {
+      "actual_capture": "20190519095845",
+      "attempted_captures": [
+        "20190519095845"
+      ],
+      "bytes": 294086,
+      "kind": "css",
+      "requested_capture": "20190519095845",
+      "sha256": "dea3a0e6141f31eec554f48cc13bf9e74c0b89abfb4bcd7d03c0d5bc0107f91a",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/620-05142015/1371067617126/site.css?&filterFeatures=false&part=4@@wayback:20190519095845:dea3a0e6141f",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/620-05142015/1371067617126/site.css?&filterFeatures=false&part=4"
+    },
+    {
+      "actual_capture": "20190519202816",
+      "attempted_captures": [
+        "20190519202816"
+      ],
+      "bytes": 294086,
+      "kind": "css",
+      "requested_capture": "20190519202816",
+      "sha256": "dea3a0e6141f31eec554f48cc13bf9e74c0b89abfb4bcd7d03c0d5bc0107f91a",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/620-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=4@@wayback:20190519202816:dea3a0e6141f",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/620-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=4"
+    },
+    {
+      "actual_capture": "20190520001613",
+      "attempted_captures": [
+        "20190520001613"
+      ],
+      "bytes": 19841,
+      "kind": "css",
+      "requested_capture": "20190520001613",
+      "sha256": "f42284c6da225a1b13e3ceb2c23661c9ac7b402f6e550f62fcf2554f06584b50",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/620-05142015/1371067617126/site.css?&filterFeatures=false&part=2@@wayback:20190520001613:f42284c6da22",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/620-05142015/1371067617126/site.css?&filterFeatures=false&part=2"
+    },
+    {
+      "actual_capture": "20190520025930",
+      "attempted_captures": [
+        "20190520025930"
+      ],
+      "bytes": 14958,
+      "kind": "css",
+      "requested_capture": "20190520025930",
+      "sha256": "1fc1085d06a4e47afedc141bed8d351bbb86c248b4f4df3381f45577a1c679ae",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/620-05142015/1371067617126/site.css?&filterFeatures=false&part=1@@wayback:20190520025930:1fc1085d06a4",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/620-05142015/1371067617126/site.css?&filterFeatures=false&part=1"
+    },
+    {
+      "actual_capture": "20190520120807",
+      "attempted_captures": [
+        "20190520120807"
+      ],
+      "bytes": 110999,
+      "kind": "css",
+      "requested_capture": "20190520120807",
+      "sha256": "de6922191e56e8372061c861ff37e0035d8765c35b38878f63f64ab7257da5fd",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/620-05142015/1371067617126/site.css?&filterFeatures=false&part=3@@wayback:20190520120807:de6922191e56",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/620-05142015/1371067617126/site.css?&filterFeatures=false&part=3"
+    },
+    {
+      "actual_capture": "20190814091100",
+      "attempted_captures": [
+        "20190814091100"
+      ],
+      "bytes": 294911,
+      "kind": "css",
+      "requested_capture": "20190814091100",
+      "sha256": "59f000636110af874cabce5b8fcababb8a4c543ed582424be8fea8270122eafd",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/621-05142015/1371067617126/site.css?&filterFeatures=false&part=4@@wayback:20190814091100:59f000636110",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/621-05142015/1371067617126/site.css?&filterFeatures=false&part=4"
+    },
+    {
+      "actual_capture": "20190814091101",
+      "attempted_captures": [
+        "20190814091101"
+      ],
+      "bytes": 19841,
+      "kind": "css",
+      "requested_capture": "20190814091101",
+      "sha256": "50d4eeac15ec5f4d2938197996cd65ad767d144c709c67eced44bc6209b30b2d",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/621-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=2@@wayback:20190814091101:50d4eeac15ec",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/621-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=2"
+    },
+    {
+      "actual_capture": "20190814091102",
+      "attempted_captures": [
+        "20190814091102"
+      ],
+      "bytes": 14958,
+      "kind": "css",
+      "requested_capture": "20190814091102",
+      "sha256": "69a29de896cff421071ed1a6665b2ed5b37082f5c11f174ed45af10ffebd3eed",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/621-05142015/1371067617126/site.css?&filterFeatures=false&part=1@@wayback:20190814091102:69a29de896cf",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/621-05142015/1371067617126/site.css?&filterFeatures=false&part=1"
+    },
+    {
+      "actual_capture": "20190814091102",
+      "attempted_captures": [
+        "20190814091102"
+      ],
+      "bytes": 19841,
+      "kind": "css",
+      "requested_capture": "20190814091102",
+      "sha256": "50d4eeac15ec5f4d2938197996cd65ad767d144c709c67eced44bc6209b30b2d",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/621-05142015/1371067617126/site.css?&filterFeatures=false&part=2@@wayback:20190814091102:50d4eeac15ec",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/621-05142015/1371067617126/site.css?&filterFeatures=false&part=2"
+    },
+    {
+      "actual_capture": "20190814091103",
+      "attempted_captures": [
+        "20190814091103"
+      ],
+      "bytes": 112525,
+      "kind": "css",
+      "requested_capture": "20190814091103",
+      "sha256": "47610e52028262ac503ab968fd0b5ebbaa1bcdb7bd980281ef3a1cbcea1a4bb9",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/621-05142015/1371067617126/site.css?&filterFeatures=false&part=3@@wayback:20190814091103:47610e520282",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/621-05142015/1371067617126/site.css?&filterFeatures=false&part=3"
+    },
+    {
+      "actual_capture": "20190814091105",
+      "attempted_captures": [
+        "20190814091105"
+      ],
+      "bytes": 14958,
+      "kind": "css",
+      "requested_capture": "20190814091105",
+      "sha256": "69a29de896cff421071ed1a6665b2ed5b37082f5c11f174ed45af10ffebd3eed",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/621-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=1@@wayback:20190814091105:69a29de896cf",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/621-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=1"
+    },
+    {
+      "actual_capture": "20190814091105",
+      "attempted_captures": [
+        "20190814091105"
+      ],
+      "bytes": 294911,
+      "kind": "css",
+      "requested_capture": "20190814091105",
+      "sha256": "59f000636110af874cabce5b8fcababb8a4c543ed582424be8fea8270122eafd",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/621-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=4@@wayback:20190814091105:59f000636110",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/621-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=4"
+    },
+    {
+      "actual_capture": "20190814091108",
+      "attempted_captures": [
+        "20190814091108"
+      ],
+      "bytes": 112525,
+      "kind": "css",
+      "requested_capture": "20190814091108",
+      "sha256": "47610e52028262ac503ab968fd0b5ebbaa1bcdb7bd980281ef3a1cbcea1a4bb9",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/621-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=3@@wayback:20190814091108:47610e520282",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/621-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=3"
+    },
+    {
+      "actual_capture": "20200221155804",
+      "attempted_captures": [
+        "20200221155804"
+      ],
+      "bytes": 446546,
+      "kind": "css",
+      "requested_capture": "20200221155804",
+      "sha256": "23e4fe4f0fc6b123166d9b6db9150d75de883df083ca1db556474754f24d7282",
+      "source_key": "http://static.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/533/1371067617126/site.css@@wayback:20200221155804:23e4fe4f0fc6",
+      "status": "recovered",
+      "url": "http://static.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/533/1371067617126/site.css"
+    },
+    {
+      "actual_capture": "20200221155857",
+      "attempted_captures": [
+        "20200221155857"
+      ],
+      "bytes": 446546,
+      "kind": "css",
+      "requested_capture": "20200221155857",
+      "sha256": "23e4fe4f0fc6b123166d9b6db9150d75de883df083ca1db556474754f24d7282",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/588-05142015/1371067617126/site.css?&filterFeatures=false@@wayback:20200221155857:23e4fe4f0fc6",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/588-05142015/1371067617126/site.css?&filterFeatures=false"
+    },
+    {
+      "actual_capture": "20200221155942",
+      "attempted_captures": [
+        "20200221155942"
+      ],
+      "bytes": 446546,
+      "kind": "css",
+      "requested_capture": "20200221155942",
+      "sha256": "23e4fe4f0fc6b123166d9b6db9150d75de883df083ca1db556474754f24d7282",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/596-05142015/1371067617126/site.css?&filterFeatures=false@@wayback:20200221155942:23e4fe4f0fc6",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/596-05142015/1371067617126/site.css?&filterFeatures=false"
+    },
+    {
+      "actual_capture": "20200423075243",
+      "attempted_captures": [
+        "20200423075243"
+      ],
+      "bytes": 15359,
+      "kind": "css",
+      "requested_capture": "20200423075243",
+      "sha256": "35c62f78815eb89c6da5caec1e3ebf08e9f7d948603fd3a4aec5b04fef396f86",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/622-05142015/1371067617126/site.css?&filterFeatures=false&part=1@@wayback:20200423075243:35c62f78815e",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/622-05142015/1371067617126/site.css?&filterFeatures=false&part=1"
+    },
+    {
+      "actual_capture": "20200423075622",
+      "attempted_captures": [
+        "20200423075622"
+      ],
+      "bytes": 294795,
+      "kind": "css",
+      "requested_capture": "20200423075622",
+      "sha256": "1fbc558c6aea262822f6eb5d66363ed14a92bbf7d350da811e1f5bbdbcf98db7",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/622-05142015/1371067617126/site.css?&filterFeatures=false&part=4@@wayback:20200423075622:1fbc558c6aea",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/622-05142015/1371067617126/site.css?&filterFeatures=false&part=4"
+    },
+    {
+      "actual_capture": "20200423080832",
+      "attempted_captures": [
+        "20200423080832"
+      ],
+      "bytes": 117067,
+      "kind": "css",
+      "requested_capture": "20200423080832",
+      "sha256": "f5435a85782f7356dc2f72deff0f3a00d189d99bf28a62b1fb68007b1e910c30",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/622-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=3@@wayback:20200423080832:f5435a85782f",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/622-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=3"
+    },
+    {
+      "actual_capture": "20200423081829",
+      "attempted_captures": [
+        "20200423081829"
+      ],
+      "bytes": 15359,
+      "kind": "css",
+      "requested_capture": "20200423081829",
+      "sha256": "35c62f78815eb89c6da5caec1e3ebf08e9f7d948603fd3a4aec5b04fef396f86",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/622-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=1@@wayback:20200423081829:35c62f78815e",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/622-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=1"
+    },
+    {
+      "actual_capture": "20200423082243",
+      "attempted_captures": [
+        "20200423082243"
+      ],
+      "bytes": 294795,
+      "kind": "css",
+      "requested_capture": "20200423082243",
+      "sha256": "1fbc558c6aea262822f6eb5d66363ed14a92bbf7d350da811e1f5bbdbcf98db7",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/622-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=4@@wayback:20200423082243:1fbc558c6aea",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/622-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=4"
+    },
+    {
+      "actual_capture": "20200423084100",
+      "attempted_captures": [
+        "20200423084100"
+      ],
+      "bytes": 117067,
+      "kind": "css",
+      "requested_capture": "20200423084100",
+      "sha256": "f5435a85782f7356dc2f72deff0f3a00d189d99bf28a62b1fb68007b1e910c30",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/622-05142015/1371067617126/site.css?&filterFeatures=false&part=3@@wayback:20200423084100:f5435a85782f",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/622-05142015/1371067617126/site.css?&filterFeatures=false&part=3"
+    },
+    {
+      "actual_capture": "20200423100934",
+      "attempted_captures": [
+        "20200423100934"
+      ],
+      "bytes": 20053,
+      "kind": "css",
+      "requested_capture": "20200423100934",
+      "sha256": "d3a9c2ab4277cb028a7a74121b84db28667eca19f48f5889f4ee26f0bc6a834e",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/622-05142015/1371067617126/site.css?&filterFeatures=false&part=2@@wayback:20200423100934:d3a9c2ab4277",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/622-05142015/1371067617126/site.css?&filterFeatures=false&part=2"
+    },
+    {
+      "actual_capture": "20200423104652",
+      "attempted_captures": [
+        "20200423104652"
+      ],
+      "bytes": 20053,
+      "kind": "css",
+      "requested_capture": "20200423104652",
+      "sha256": "d3a9c2ab4277cb028a7a74121b84db28667eca19f48f5889f4ee26f0bc6a834e",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/622-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=2@@wayback:20200423104652:d3a9c2ab4277",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/622-05142015/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=2"
+    },
+    {
+      "actual_capture": "20200928022250",
+      "attempted_captures": [
+        "20200928022250"
+      ],
+      "bytes": 464384,
+      "kind": "css",
+      "requested_capture": "20200928022250",
+      "sha256": "4336854f4a1bc8786b6e94750c2bc16282abc5cd6d16fc9a2712936325b333aa",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/12/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/623-05142015/1371067617126/site.css?&filterFeatures=false@@wayback:20200928022250:4336854f4a1b",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/12/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/623-05142015/1371067617126/site.css?&filterFeatures=false"
+    },
+    {
+      "actual_capture": "20210504132653",
+      "attempted_captures": [
+        "20210504132653"
+      ],
+      "bytes": 463280,
+      "kind": "css",
+      "requested_capture": "20210504132653",
+      "sha256": "9f3db4d5d1c07e8c8908fce7cb595487d1eb7c8e94fde276a904769f58dea4a2",
+      "source_key": "https://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/19/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/623-05142015/1371067617126/site.css@@wayback:20210504132653:9f3db4d5d1c0",
+      "status": "recovered",
+      "url": "https://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/19/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/623-05142015/1371067617126/site.css"
+    },
+    {
+      "actual_capture": "20210819003531",
+      "attempted_captures": [
+        "20210819003531"
+      ],
+      "bytes": 460634,
+      "kind": "css",
+      "requested_capture": "20210819003531",
+      "sha256": "7ed2f4e21c29a676ebd7744c6b14642d53372027d6679ca3d393a004849f3236",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/17/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/623-05142015/1371067617126/site.css?filterFeatures=false@@wayback:20210819003531:7ed2f4e21c29",
+      "status": "needs_review",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/17/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/623-05142015/1371067617126/site.css?filterFeatures=false"
+    },
+    {
+      "actual_capture": "20220206025024",
+      "attempted_captures": [
+        "20220206025024"
+      ],
+      "bytes": 468668,
+      "kind": "css",
+      "requested_capture": "20220206025024",
+      "sha256": "03021d57ac4447f0c84054e8749fbc6d09985eff84792d18174262b6e9c1515d",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/8/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/623-05142015/1371067617126/site.css?filterFeatures=false@@wayback:20220206025024:03021d57ac44",
+      "status": "needs_review",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/8/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/623-05142015/1371067617126/site.css?filterFeatures=false"
+    },
+    {
+      "actual_capture": "20230326135224",
+      "attempted_captures": [
+        "20230326135224"
+      ],
+      "bytes": 475400,
+      "kind": "css",
+      "requested_capture": "20230326135224",
+      "sha256": "24b17d0c355f6ce68ae86c45fa5f675483addc8735636e85e90be7f091ac416d",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/612-05142015/1371067617126/site.css?&filterFeatures=false@@wayback:20230326135224:24b17d0c355f",
+      "status": "needs_review",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/612-05142015/1371067617126/site.css?&filterFeatures=false"
+    },
+    {
+      "actual_capture": "20230418192920",
+      "attempted_captures": [
+        "20230418192920"
+      ],
+      "bytes": 475441,
+      "kind": "css",
+      "requested_capture": "20230418192920",
+      "sha256": "a6f1a7dad0dfd702840fe6118809e5a56bf5679b6e05653903a74ae84b455ca0",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/18/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/623-05142015/1371067617126/site.css?&filterFeatures=false@@wayback:20230418192920:a6f1a7dad0df",
+      "status": "needs_review",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/18/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/623-05142015/1371067617126/site.css?&filterFeatures=false"
+    },
+    {
+      "actual_capture": "20230710220855",
+      "attempted_captures": [
+        "20230710220855"
+      ],
+      "bytes": 478269,
+      "kind": "css",
+      "requested_capture": "20230710220855",
+      "sha256": "c6205c195219b40e8cd56d191462bd0fb93a75d474689567fe3d8c663547e431",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/17/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/623-05142015/1371067617126/site.css?&filterFeatures=false@@wayback:20230710220855:c6205c195219",
+      "status": "needs_review",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/17/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/623-05142015/1371067617126/site.css?&filterFeatures=false"
+    },
+    {
+      "actual_capture": "20230801142957",
+      "attempted_captures": [
+        "20230801142957"
+      ],
+      "bytes": 479401,
+      "kind": "css",
+      "requested_capture": "20230801142957",
+      "sha256": "0750da56c4638a2ae3c2425393a0499901f553ca9785034b0b44eae2ac7afca6",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/623-05142015/1371067617126/site.css?&filterFeatures=false@@wayback:20230801142957:0750da56c463",
+      "status": "needs_review",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/623-05142015/1371067617126/site.css?&filterFeatures=false"
+    },
+    {
+      "actual_capture": "20230807162203",
+      "attempted_captures": [
+        "20230807162203"
+      ],
+      "bytes": 479401,
+      "kind": "css",
+      "requested_capture": "20230807162203",
+      "sha256": "0750da56c4638a2ae3c2425393a0499901f553ca9785034b0b44eae2ac7afca6",
+      "source_key": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/608-05142015/1371067617126/site.css?&filterFeatures=false@@wayback:20230807162203:0750da56c463",
+      "status": "needs_review",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/608-05142015/1371067617126/site.css?&filterFeatures=false"
+    },
+    {
+      "actual_capture": "20230811061958",
+      "attempted_captures": [
+        "20230811061958"
+      ],
+      "bytes": 479401,
+      "kind": "css",
+      "requested_capture": "20230811061958",
+      "sha256": "0750da56c4638a2ae3c2425393a0499901f553ca9785034b0b44eae2ac7afca6",
+      "source_key": "http://static.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/502/1371067617126/site.css@@wayback:20230811061958:0750da56c463",
+      "status": "needs_review",
+      "url": "http://static.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/502/1371067617126/site.css"
     }
   ],
   "date_end": "20230930235959",
   "date_start": "20130921000000",
-  "eligible_urls": 50,
+  "eligible_urls": 201,
   "era": "2013",
   "failures": [
     {
@@ -246,10 +1663,702 @@
         "20150122095126"
       ],
       "url": "http://static.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/558/1371067617126/icon_close_14_light.png"
+    },
+    {
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "timestamps": [
+        "20150722163654"
+      ],
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/584-05142015/1371067617126/gallery-play-big@2x.png"
+    },
+    {
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "timestamps": [
+        "20150722164735"
+      ],
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/584-05142015/1371067617126/icon_close_14_light.png"
+    },
+    {
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "timestamps": [
+        "20150722165449"
+      ],
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/584-05142015/1371067617126/gallery-play-big.png"
+    },
+    {
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "timestamps": [
+        "20150801073727"
+      ],
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/gallery-play-big.png"
+    },
+    {
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "timestamps": [
+        "20150801075659"
+      ],
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/gallery-play-big@2x.png"
+    },
+    {
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "timestamps": [
+        "20150801100445"
+      ],
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/icon_close_14_light.png"
+    },
+    {
+      "error": "ValueError: Expected a full HTML document",
+      "timestamps": [
+        "20160306003222",
+        "20141113165149",
+        "20131226173228"
+      ],
+      "url": "http://02cd02a.netsolhost.com/blog/xmlrpc.php?rsd"
+    },
+    {
+      "error": "ValueError: Expected a full HTML document",
+      "timestamps": [
+        "20160306003301",
+        "20141114092803"
+      ],
+      "url": "http://02cd02a.netsolhost.com/blog/xmlrpc.php"
+    },
+    {
+      "error": "ValueError: Expected a full HTML document",
+      "timestamps": [
+        "20160306003301",
+        "20141114092803"
+      ],
+      "url": "http://02cd02a.netsolhost.com:80/blog/xmlrpc.php"
+    },
+    {
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "timestamps": [
+        "20160417111432"
+      ],
+      "url": "http://static1.squarespace.com/static/51b8c20be4b0f1f8c9dcdf4c/51b8c857e4b05bf73912a42e/51b8c857e4b05bf73912a443/1366865739000/?format=1000w"
+    },
+    {
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "timestamps": [
+        "20160417123623"
+      ],
+      "url": "http://static1.squarespace.com/static/51b8c20be4b0f1f8c9dcdf4c/51b8c857e4b05bf73912a42e/51b8c857e4b05bf73912a479/1363896540000/?format=1000w"
+    },
+    {
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "timestamps": [
+        "20160418004928"
+      ],
+      "url": "http://static1.squarespace.com/static/51b8c20be4b0f1f8c9dcdf4c/51b8c857e4b05bf73912a42e/51b8c857e4b05bf73912a453/1365356029000/?format=1000w"
+    },
+    {
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "timestamps": [
+        "20160418065334"
+      ],
+      "url": "http://static1.squarespace.com/static/51b8c20be4b0f1f8c9dcdf4c/51b8c857e4b05bf73912a42e/51b8c857e4b05bf73912a46e/1364490941000/?format=1000w"
+    },
+    {
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "timestamps": [
+        "20160418093431"
+      ],
+      "url": "http://static1.squarespace.com/static/51b8c20be4b0f1f8c9dcdf4c/51b8c857e4b05bf73912a42e/51b8c857e4b05bf73912a47f/1363757136000/?format=1000w"
+    },
+    {
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "timestamps": [
+        "20160418135440"
+      ],
+      "url": "http://static1.squarespace.com/static/51b8c20be4b0f1f8c9dcdf4c/51b8c857e4b05bf73912a42e/51b8c857e4b05bf73912a489/1363472584000/?format=1000w"
+    },
+    {
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "timestamps": [
+        "20160418194907"
+      ],
+      "url": "http://static1.squarespace.com/static/51b8c20be4b0f1f8c9dcdf4c/51b8c857e4b05bf73912a42e/51b8c857e4b05bf73912a449/1365539415000/?format=1000w"
+    },
+    {
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "timestamps": [
+        "20160419123255"
+      ],
+      "url": "http://static1.squarespace.com/static/51b8c20be4b0f1f8c9dcdf4c/51b8c857e4b05bf73912a42e/51b8c857e4b05bf73912a495/1362122742000/?format=1000w"
+    },
+    {
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "timestamps": [
+        "20160422020549",
+        "20160328053943",
+        "20160314124317",
+        "20160305182859",
+        "20160305182614",
+        "20160305182120",
+        "20160304042646",
+        "20160122174949",
+        "20160122144300",
+        "20150528104519",
+        "20141113220912",
+        "20141112213623",
+        "20140621054119",
+        "20131216184949",
+        "20131113200610",
+        "20131017051320"
+      ],
+      "url": "http://02cd02a.netsolhost.com/robots.txt"
+    },
+    {
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "timestamps": [
+        "20160624105451"
+      ],
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/590-05142015/1371067617126/gallery-play-big@2x.png"
+    },
+    {
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "timestamps": [
+        "20160624111726"
+      ],
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/590-05142015/1371067617126/gallery-play-big.png"
+    },
+    {
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "timestamps": [
+        "20160624122022"
+      ],
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/590-05142015/1371067617126/icon_close_14_light.png"
+    },
+    {
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "timestamps": [
+        "20160913093001",
+        "20160109135326"
+      ],
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/589-05142015/1371067617126/gallery-play-big@2x.png"
+    },
+    {
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "timestamps": [
+        "20160913093006",
+        "20160109135327"
+      ],
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/589-05142015/1371067617126/icon_close_14_light.png"
+    },
+    {
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "timestamps": [
+        "20160927020737"
+      ],
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/591-05142015/1371067617126/gallery-play-big@2x.png"
+    },
+    {
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "timestamps": [
+        "20160927020741"
+      ],
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/591-05142015/1371067617126/icon_close_14_light.png"
+    },
+    {
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "timestamps": [
+        "20170110081626"
+      ],
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/598-05142015/1371067617126/gallery-play-big@2x.png"
+    },
+    {
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "timestamps": [
+        "20170622150544"
+      ],
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/605-05142015/1371067617126/gallery-play-big@2x.png"
+    },
+    {
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "timestamps": [
+        "20170622150549"
+      ],
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/605-05142015/1371067617126/gallery-play-big.png"
+    },
+    {
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "timestamps": [
+        "20171123195029"
+      ],
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/609-05142015/1371067617126/gallery-play-big.png"
+    },
+    {
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "timestamps": [
+        "20171124085514"
+      ],
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/609-05142015/1371067617126/gallery-play-big@2x.png"
+    },
+    {
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "timestamps": [
+        "20171127173902",
+        "20170627210031"
+      ],
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/607-05142015/1371067617126/gallery-play-big@2x.png"
+    },
+    {
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "timestamps": [
+        "20171127175408",
+        "20170627231846"
+      ],
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/607-05142015/1371067617126/gallery-play-big.png"
+    },
+    {
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "timestamps": [
+        "20180103031749"
+      ],
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/615-05142015/1371067617126/gallery-play-big@2x.png"
+    },
+    {
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "timestamps": [
+        "20180103031753"
+      ],
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/615-05142015/1371067617126/gallery-play-big.png"
+    },
+    {
+      "error": "ValueError: Expected a full HTML document",
+      "timestamps": [
+        "20180331043712"
+      ],
+      "url": "http://bluescholars.com/api/blog-like-count/522eb2f2e4b0f3d0e830c6d2,51b8c857e4b05bf73912a431,51b8c857e4b05bf73912a437,51b8c857e4b05bf73912a43d,51b8c857e4b05bf73912a443,51b8c857e4b05bf73912a449,51b8c857e4b05bf73912a44d,51b8c857e4b05bf73912a453,51b8c857e4b05bf73912a459,51b8c857e4b05bf73912a45f,51b8c857e4b05bf73912a465,51b8c857e4b05bf73912a468,51b8c857e4b05bf73912a46e,51b8c857e4b05bf73912a479,51b8c857e4b05bf73912a47f,51b8c857e4b05bf73912a485,51b8c857e4b05bf73912a489,51b8c857e4b05bf73912a48f,51b8c857e4b05bf73912a492,51b8c857e4b05bf73912a495"
+    },
+    {
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "timestamps": [
+        "20180905122938",
+        "20180801115724",
+        "20180609092706",
+        "20180514105534"
+      ],
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/617-05142015/1371067617126/gallery-play-big@2x.png"
+    },
+    {
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "timestamps": [
+        "20180907041608"
+      ],
+      "url": "https://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/618-05142015/1371067617126/gallery-play-big.png"
+    },
+    {
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "timestamps": [
+        "20180907041610"
+      ],
+      "url": "https://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/618-05142015/1371067617126/gallery-play-big@2x.png"
+    },
+    {
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "timestamps": [
+        "20190427122522",
+        "20190314162348",
+        "20190115060638"
+      ],
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/620-05142015/1371067617126/gallery-play-big@2x.png"
+    },
+    {
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "timestamps": [
+        "20190427122524",
+        "20190314162346",
+        "20190113094123"
+      ],
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/620-05142015/1371067617126/gallery-play-big.png"
+    },
+    {
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "timestamps": [
+        "20190504061916"
+      ],
+      "url": "https://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/620-05142015/1371067617126/gallery-play-big.png"
+    },
+    {
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "timestamps": [
+        "20190504061916"
+      ],
+      "url": "https://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/620-05142015/1371067617126/gallery-play-big@2x.png"
+    },
+    {
+      "error": "ValueError: Captured provider/archive error page, not site content",
+      "timestamps": [
+        "20190717081858"
+      ],
+      "url": "http://bluescholars.com:80/blog/jordanloveskats-if-you-do-only-one-thing-today"
+    },
+    {
+      "error": "ValueError: Captured provider/archive error page, not site content",
+      "timestamps": [
+        "20190717082651"
+      ],
+      "url": "http://bluescholars.com:80/blog/bluescholars-townallday-tour-tickets-on-sale"
+    },
+    {
+      "error": "ValueError: Captured provider/archive error page, not site content",
+      "timestamps": [
+        "20190717083426"
+      ],
+      "url": "http://bluescholars.com:80/blog/click-photo-to-download-blue-scholars-john"
+    },
+    {
+      "error": "ValueError: Captured provider/archive error page, not site content",
+      "timestamps": [
+        "20190717085821"
+      ],
+      "url": "http://bluescholars.com:80/blog/bluescholars-anna-karina-is-distinct-for"
+    },
+    {
+      "error": "ValueError: Captured provider/archive error page, not site content",
+      "timestamps": [
+        "20190717090358"
+      ],
+      "url": "http://bluescholars.com:80/blog/new-unmixed-unmastered-track-anybody-wanna-master"
+    },
+    {
+      "error": "ValueError: Captured provider/archive error page, not site content",
+      "timestamps": [
+        "20190717091740"
+      ],
+      "url": "http://bluescholars.com:80/blog/bluescholars-new-unmixed-unmastered-track"
+    },
+    {
+      "error": "ValueError: Captured provider/archive error page, not site content",
+      "timestamps": [
+        "20190717091843"
+      ],
+      "url": "http://bluescholars.com:80/blog/thignat-townfolk-at-santa-cruz-main-beach"
+    },
+    {
+      "error": "ValueError: Captured provider/archive error page, not site content",
+      "timestamps": [
+        "20190719224026"
+      ],
+      "url": "http://bluescholars.com/blog/?attachment_id=2764"
+    },
+    {
+      "error": "ValueError: Captured provider/archive error page, not site content",
+      "timestamps": [
+        "20190719230733"
+      ],
+      "url": "http://bluescholars.com:80/blog/youh0esdown-got-pulled-up-on-stage-last-night"
+    },
+    {
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "timestamps": [
+        "20190721233729"
+      ],
+      "url": "http://www.bluescholars.com/images/splash_enter_on.gif"
+    },
+    {
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "timestamps": [
+        "20190721234121"
+      ],
+      "url": "http://bluescholars.com/blog/wp-content/uploads/2010/03/DR2.gif"
+    },
+    {
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "timestamps": [
+        "20190721234400"
+      ],
+      "url": "http://bluescholars.com/blog/wp-content/plugins/shadowbox-js/shadowbox/loading.gif"
+    },
+    {
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "timestamps": [
+        "20190721235202"
+      ],
+      "url": "http://www.bluescholars.com/images/txt_archive.svg"
+    },
+    {
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "timestamps": [
+        "20190721235202"
+      ],
+      "url": "http://www.bluescholars.com/images/txt_internet.svg"
+    },
+    {
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "timestamps": [
+        "20191031053845",
+        "20190812132536",
+        "20190622181141"
+      ],
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/621-05142015/1371067617126/gallery-play-big@2x.png"
+    },
+    {
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "timestamps": [
+        "20191031053846",
+        "20190812132535",
+        "20190622181141"
+      ],
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/621-05142015/1371067617126/gallery-play-big.png"
+    },
+    {
+      "error": "ValueError: Expected a full HTML document",
+      "timestamps": [
+        "20200220154835",
+        "20191019105513",
+        "20190814091100",
+        "20181011220823",
+        "20171201161142",
+        "20170606105154",
+        "20160429071845",
+        "20160319232705",
+        "20160130142922",
+        "20150919055439",
+        "20140113082200",
+        "20130927192053"
+      ],
+      "url": "http://bluescholars.com/blog?format=RSS"
+    },
+    {
+      "error": "ValueError: Expected a full HTML document",
+      "timestamps": [
+        "20200220154835",
+        "20191019105513",
+        "20190814091100",
+        "20181011220823",
+        "20171201161142",
+        "20170606105154",
+        "20160429071845",
+        "20160319232705",
+        "20160130142922",
+        "20150919055439",
+        "20140113082200",
+        "20130927192053"
+      ],
+      "url": "http://bluescholars.com/blog?format=rss"
+    },
+    {
+      "error": "ValueError: Expected a full HTML document",
+      "timestamps": [
+        "20200220154835",
+        "20191019105513",
+        "20190814091100",
+        "20181011220823",
+        "20171201161142",
+        "20170606105154",
+        "20160429071845",
+        "20160319232705",
+        "20160130142922",
+        "20150919055439",
+        "20140113082200",
+        "20130927192053"
+      ],
+      "url": "http://bluescholars.com:80/blog?format=rss"
+    },
+    {
+      "error": "ValueError: Expected a full HTML document",
+      "timestamps": [
+        "20200221155853"
+      ],
+      "url": "http://bluescholars.com/api/template/GetTemplateSchema?componentType=widget&type=9"
+    },
+    {
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "timestamps": [
+        "20200503102642",
+        "20191225014832",
+        "20191201123843",
+        "20191111063222"
+      ],
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/622-05142015/1371067617126/gallery-play-big@2x.png"
+    },
+    {
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "timestamps": [
+        "20200503103527",
+        "20191225014833",
+        "20191201123843",
+        "20191111063224"
+      ],
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/622-05142015/1371067617126/gallery-play-big.png"
+    },
+    {
+      "error": "ValueError: Expected a full HTML document",
+      "timestamps": [
+        "20201029222218",
+        "20200506230657",
+        "20190324032756",
+        "20180716211459",
+        "20180620133644",
+        "20180411093418",
+        "20170613130930",
+        "20160514083103",
+        "20160320021657",
+        "20160316105715",
+        "20160316093617",
+        "20160316091408",
+        "20160316080852",
+        "20160306234141",
+        "20160306022901",
+        "20160305005310",
+        "20160303205645",
+        "20160223132413",
+        "20160120005450",
+        "20151116111827",
+        "20150907204516",
+        "20150207134801",
+        "20140815081830",
+        "20140602211831",
+        "20140601170410",
+        "20140113023659",
+        "20131214134225"
+      ],
+      "url": "http://www.bluescholars.com/robots.txt"
+    },
+    {
+      "error": "ValueError: Expected a full HTML document",
+      "timestamps": [
+        "20230418192932"
+      ],
+      "url": "http://bluescholars.com/api/1/performance/settings"
+    },
+    {
+      "error": "ValueError: Expected a full HTML document",
+      "timestamps": [
+        "20230906132159",
+        "20230906093000",
+        "20230906092946",
+        "20200511210219",
+        "20200414161219",
+        "20191019105442",
+        "20190814091103",
+        "20190814091058",
+        "20190814091055",
+        "20190723145553",
+        "20190419135356",
+        "20190219052553",
+        "20181117031646",
+        "20181114123324",
+        "20181012095450",
+        "20180907173501",
+        "20180801061658",
+        "20180720062121",
+        "20180629021718",
+        "20180625092500",
+        "20180525091027",
+        "20180416132608",
+        "20171201161138",
+        "20171102190540",
+        "20171024232206",
+        "20171024230024",
+        "20171024221817",
+        "20171011225043",
+        "20170919180558",
+        "20170917204619",
+        "20170413061045",
+        "20170317205553",
+        "20170307002923",
+        "20170307002922",
+        "20170304064952",
+        "20170217030144",
+        "20170106121959",
+        "20161111044647",
+        "20161101140104",
+        "20160903193227",
+        "20160701235230",
+        "20160624002314",
+        "20160429071841",
+        "20160422020042",
+        "20160411200147",
+        "20160411175008",
+        "20160319230150",
+        "20160316105718",
+        "20160316091412",
+        "20160316072430",
+        "20160315174950",
+        "20160306223557",
+        "20160306030706",
+        "20160306022904",
+        "20160304221051",
+        "20160304082516",
+        "20160304070357",
+        "20160303205649",
+        "20160303205502",
+        "20160219155826",
+        "20160210143902",
+        "20160202222813",
+        "20160130142920",
+        "20160126012829",
+        "20160122045731",
+        "20160122042020",
+        "20160122000659",
+        "20160121160749",
+        "20160120075559",
+        "20160119072437",
+        "20160116024709",
+        "20160109103449",
+        "20151118120201",
+        "20151108053341",
+        "20151009223059",
+        "20150912084405",
+        "20150907205821",
+        "20150907205809",
+        "20150907204520",
+        "20150907021035",
+        "20150906234826",
+        "20150810175033",
+        "20150810162119",
+        "20150810154705",
+        "20150810145257",
+        "20150801022324",
+        "20150706195551",
+        "20150518084417",
+        "20150226201215",
+        "20150208223552",
+        "20150208203357",
+        "20150208202725",
+        "20150208194930",
+        "20150208183427",
+        "20141220154809",
+        "20141216222054",
+        "20140602211834",
+        "20140601170414",
+        "20140520043646",
+        "20140517211415",
+        "20140317235521",
+        "20140302084953",
+        "20140113082547",
+        "20140113082410",
+        "20140113082322",
+        "20140113082251",
+        "20140113082220",
+        "20140113082157",
+        "20140113023702",
+        "20140113023611",
+        "20131214235537",
+        "20131214234405",
+        "20131214134229",
+        "20131016061256",
+        "20131014150342",
+        "20131008233004",
+        "20131007103439",
+        "20131005091222",
+        "20131003014434",
+        "20131002052126",
+        "20130927113203",
+        "20130926210318",
+        "20130923093049",
+        "20130921192017",
+        "20130921054900"
+      ],
+      "url": "http://bluescholars.com/robots.txt"
     }
   ],
   "indexed_urls": 1014,
-  "recovered": 9,
-  "remaining_urls": 218,
-  "selected_urls": 50
+  "recovered": 118,
+  "remaining_urls": 83,
+  "selected_urls": 201
 }

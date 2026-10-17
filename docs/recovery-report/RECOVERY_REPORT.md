@@ -2,6 +2,12 @@
 
 **Updated:** October 17, 2026. **Scope:** separate copies of the 2007, 2009/WordPress, and Squarespace-era sites, with the May 29, 2021 homepage as the Squarespace visual reference.
 
+## Latest local checkpoint — October 17, 2026
+
+The current resumable checkpoint contains 11,118 resource URLs and 23,238 indexed capture rows. It holds 2,291 verified raw files (147,533,392 bytes): 3,837 recovered resources, 72 held for review, 1,473 failed, and 5,736 queued. The completed local 2013 continuation recovered 118 valid in-era CSS responses from 201 selected URLs; 110 are classified recovered and eight later captures remain needs_review. Eighty-three URLs remain unresolved. It found no new article HTML or image bytes in this batch. Detailed capture provenance is in [GAP_REPORT.md](GAP_REPORT.md) and [era-2013-local-20261017-report.json](../../recovery/era-2013-local-20261017-report.json).
+
+The candidate contains 976 recovered pages, 2,181 placeholders, four derived LiveJournal views, and 1,044 local assets. Both root and /bluescholars/ offline checks pass with zero errors. Newly recovered CSS revealed more missing embedded dependencies, so current gap counts increased to 8,293 missing embedded resources and 183 unbundled font references. These remain source gaps; no font binaries are published. The public GitHub Pages site remains an incomplete candidate, with publication approval false. The latest 2013 capture report and current resumable checkpoint are preserved locally; see [current-checkpoint.json](current-checkpoint.json).
+
 ## Evidence collected
 
 ### Internet Archive Wayback Machine

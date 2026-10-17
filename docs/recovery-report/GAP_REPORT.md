@@ -4,7 +4,7 @@
 
 ## Current measured local checkpoint — October 17, 2026, after the 2013, 2009 and broad queue continuations
 
-The resumable Wayback checkpoint contains 11,148 resource URLs and 23,257 indexed capture rows: 3,879 resources recovered, 72 held for compatibility review, 1,666 failed attempts, and 5,531 queued. The raw directory contains 2,300 unique response files (147,565,354 bytes). These counts include page, stylesheet, image, and other resource URLs; they are not page counts.
+The resumable Wayback checkpoint contains 11,150 resource URLs and 23,279 indexed capture rows: 3,900 resources recovered, 72 held for compatibility review, 1,792 failed attempts, and 5,386 queued. The raw directory contains 2,301 unique response files (147,591,597 bytes). These counts include page, stylesheet, image, and other resource URLs; they are not page counts.
 
 The latest root and `/bluescholars/` candidate builds each contain 977 recovered pages, 2,180 placeholders, four derived LiveJournal reading views, and 1,055 local source assets. Build findings include 8,286 unavailable embedded assets, 338 linked assets not recovered, 145 external media links without local recordings, 183 font resources omitted under the no-font-binary policy, and nine invalid source records. Both offline link/resource checks pass with zero errors, and the generated candidate was scanned for remote automatic resources. This remains an unreviewed preview; publication flags remain false.
 
@@ -154,7 +154,7 @@ The rebuilt candidate remains at 976 recovered pages, 2,181 placeholders, four d
 
 ## Portable recovery bundle
 
-The current portable bundle is `/tmp/bluescholars-restoration-2026-10-17.zip`. It includes the candidate output, source, reports, screenshots, recovery state/index, and non-font raw captures. ZIP integrity check passed for 7,445 files; The SHA-256 is stored in the adjacent `.sha256` sidecar and final task handoff. Font binaries and development caches/credentials are excluded.
+The current portable bundle is `/tmp/bluescholars-restoration-2026-10-17.zip`. It includes the candidate output, source, reports, screenshots, recovery state/index, and non-font raw captures. ZIP integrity check passed for 7,456 files; The SHA-256 is stored in the adjacent `.sha256` sidecar and final task handoff. Font binaries and development caches/credentials are excluded.
 
 ## Refreshed Pages candidate — October 17, 2026
 
@@ -188,3 +188,11 @@ A further 200-URL retry validated ten 2009–2011 WordPress HTML captures, inclu
 
 
 The current Pages preview is at `gh-pages` commit `dc3bd1921dc043534555e3d32536eceae58e8aee`; workflow [39052250053](https://github.com/keithah/bluescholars/actions/runs/39052250053) succeeded and the Pages API reports `built`. HTTPS is enforced, there is no custom domain, and the hub, all edition roots, the recovered Hari Kondabolu article, `/lj/`, archive status, and local CSS return 200; an unknown route returns 404. This remains an unreviewed candidate, not a completed restoration release.
+
+
+## Fourth and fifth broad recovery retries — October 17, 2026
+
+Two further 200-URL retries validated 21 WordPress HTML responses. The fourth added one URL and nine index rows, including the Seattle 100 article; it added one 26,243-byte raw file. The fifth added one URL and 13 index rows; all response bytes were already present. The rebuilds each pass at `/` and `/bluescholars/` with zero errors and 977 recovered routes, while recovered content replaces placeholders and updates source-backed pages. Exact provenance is recorded in [retry four](../../recovery/broad-200-local-20261017-04-report.json) and [retry five](../../recovery/broad-200-local-20261017-05-report.json).
+
+
+The latest preview is at `gh-pages` commit `52616d2690af246d2400565476e1c70a30575ac2`; Pages workflow [39054150559](https://github.com/keithah/bluescholars/actions/runs/39054150559) succeeded and the Pages API reports `built`. The hub, all edition roots, the recovered Seattle police and Cinemetropolis entries, the Portland video post, `/lj/`, archive status, and local CSS return HTTP 200; an unknown route returns 404. HTTPS remains enforced, with no custom domain. This is still an unreviewed candidate.

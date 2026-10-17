@@ -333,8 +333,8 @@
       "branch": "gh-pages",
       "path": "/"
     },
-    "commit": "dc3bd1921dc043534555e3d32536eceae58e8aee",
-    "workflow_run": 39052250053,
+    "commit": "52616d2690af246d2400565476e1c70a30575ac2",
+    "workflow_run": 39054150559,
     "workflow_conclusion": "success",
     "pages_api_status": "built",
     "classification": "owner-authorized unreviewed candidate preview; not a completed restoration release",
@@ -347,15 +347,17 @@
       "/bluescholars/2007/",
       "/bluescholars/2009/",
       "/bluescholars/2013/",
-      "/bluescholars/2009/blog/2010/12/hari-kondabolu-storms-the-pacific-northwest/",
+      "/bluescholars/2009/blog/news-eyes-ears-and-tweets-on-seattle-police/",
+      "/bluescholars/2009/blog/the-cinemetropolis-listening-party-part-1/c5d8d0c/",
+      "/bluescholars/2009/blog/video-portland-the-last-time-we-were-here/",
       "/bluescholars/lj/",
       "/bluescholars/archive-status/",
       "/bluescholars/assets/archive-ui.css"
     ],
     "human_review_claimed": false,
     "release_approved": false,
-    "pages_workflow_url": "https://github.com/keithah/bluescholars/actions/runs/39052250053",
-    "candidate_source": "local build after third broad recovery retry; archive-status and newly recovered 2009 source updated",
+    "pages_workflow_url": "https://github.com/keithah/bluescholars/actions/runs/39054150559",
+    "candidate_source": "local build after fifth broad recovery retry; 2009 post and photo-entry content refreshed",
     "unknown_route_http": 404
   },
   "verification": {
@@ -387,7 +389,7 @@
     "filename": "bluescholars-restoration-2026-10-17.zip",
     "path": "/tmp/bluescholars-restoration-2026-10-17.zip",
     "contents": "candidate site, source, reports/screenshots, recovery state/index, and non-font raw sources",
-    "file_count": 7445,
+    "file_count": 7456,
     "integrity_test": "passed",
     "font_binaries_included": false,
     "development_caches_or_credentials_included": false,
@@ -404,22 +406,22 @@
     }
   ],
   "latest_local_checkpoint": {
-    "description": "Current local recovery checkpoint after three bounded broad recovery retries.",
+    "description": "Current local checkpoint after five bounded broad recovery retries.",
     "recovery": {
-      "resource_urls": 11148,
+      "resource_urls": 11150,
       "statuses": {
-        "queued": 5531,
-        "recovered": 3879,
+        "queued": 5386,
+        "recovered": 3900,
         "needs_review": 72,
-        "failed": 1666,
+        "failed": 1792,
         "excluded": 0
       },
-      "indexed_capture_records": 23257,
+      "indexed_capture_records": 23279,
       "index_complete": true,
-      "unique_downloaded_files": 2300,
-      "downloaded_bytes": 147565354,
-      "failed_attempts": 8071,
-      "generated_at": "2026-10-17T17:05:06.428576+00:00"
+      "unique_downloaded_files": 2301,
+      "downloaded_bytes": 147591597,
+      "failed_attempts": 8486,
+      "generated_at": "2026-10-17T17:31:24.906254+00:00"
     },
     "capture_batches": {
       "2007": {
@@ -602,6 +604,38 @@
         "new_unique_raw_bytes": 0,
         "rendered_route_counts_changed": false,
         "report": "recovery/broad-200-local-20261017-third-report.json"
+      },
+      "broad_200_local_20261017_4": {
+        "processed_urls": 200,
+        "validated_responses": 21,
+        "validated_kind_counts": {
+          "html": 21
+        },
+        "new_resource_urls": 1,
+        "new_index_rows": 9,
+        "new_unique_raw_files": 1,
+        "new_unique_raw_bytes": 26243,
+        "changed_rendered_routes": [
+          "/2009/blog/video-portland-the-last-time-we-were-here/",
+          "/2013/archive-query/4553c0d3b819c77c651f/"
+        ],
+        "report": "recovery/broad-200-local-20261017-04-report.json"
+      },
+      "broad_200_local_20261017_5": {
+        "processed_urls": 200,
+        "validated_responses": 11,
+        "validated_kind_counts": {
+          "html": 11
+        },
+        "new_resource_urls": 1,
+        "new_index_rows": 13,
+        "new_unique_raw_files": 0,
+        "new_unique_raw_bytes": 0,
+        "changed_rendered_routes": [
+          "/2009/blog/news-eyes-ears-and-tweets-on-seattle-police/",
+          "/2009/blog/the-cinemetropolis-listening-party-part-1/"
+        ],
+        "report": "recovery/broad-200-local-20261017-05-report.json"
       }
     },
     "candidate": {
@@ -747,19 +781,21 @@
     "url": "https://keithah.github.io/bluescholars/",
     "source_branch": "gh-pages",
     "source_path": "/",
-    "branch_commit": "dc3bd1921dc043534555e3d32536eceae58e8aee",
-    "pages_build_run": "39052250053",
+    "branch_commit": "52616d2690af246d2400565476e1c70a30575ac2",
+    "pages_build_run": "39054150559",
     "pages_build_status": "success",
     "pages_api_status": "built",
     "https_enforced": true,
     "custom_domain": null,
-    "candidate_source": "local build after third broad recovery retry; status dashboard and 2009 source updated",
+    "candidate_source": "local build after fifth broad recovery retry; 2009 post and photo-entry content refreshed",
     "verified_routes": {
       "/bluescholars/": 200,
       "/bluescholars/2007/": 200,
       "/bluescholars/2009/": 200,
       "/bluescholars/2013/": 200,
-      "/bluescholars/2009/blog/2010/12/hari-kondabolu-storms-the-pacific-northwest/": 200,
+      "/bluescholars/2009/blog/news-eyes-ears-and-tweets-on-seattle-police/": 200,
+      "/bluescholars/2009/blog/the-cinemetropolis-listening-party-part-1/c5d8d0c/": 200,
+      "/bluescholars/2009/blog/video-portland-the-last-time-we-were-here/": 200,
       "/bluescholars/lj/": 200,
       "/bluescholars/archive-status/": 200,
       "/bluescholars/assets/archive-ui.css": 200
@@ -774,19 +810,21 @@
     "url": "https://keithah.github.io/bluescholars/",
     "source_branch": "gh-pages",
     "source_path": "/",
-    "branch_commit": "dc3bd1921dc043534555e3d32536eceae58e8aee",
-    "pages_build_run": "39052250053",
+    "branch_commit": "52616d2690af246d2400565476e1c70a30575ac2",
+    "pages_build_run": "39054150559",
     "pages_build_status": "success",
     "pages_api_status": "built",
     "https_enforced": true,
     "custom_domain": null,
-    "candidate_source": "local build after third broad recovery retry; status dashboard and 2009 source updated",
+    "candidate_source": "local build after fifth broad recovery retry; 2009 post and photo-entry content refreshed",
     "verified_routes": {
       "/bluescholars/": 200,
       "/bluescholars/2007/": 200,
       "/bluescholars/2009/": 200,
       "/bluescholars/2013/": 200,
-      "/bluescholars/2009/blog/2010/12/hari-kondabolu-storms-the-pacific-northwest/": 200,
+      "/bluescholars/2009/blog/news-eyes-ears-and-tweets-on-seattle-police/": 200,
+      "/bluescholars/2009/blog/the-cinemetropolis-listening-party-part-1/c5d8d0c/": 200,
+      "/bluescholars/2009/blog/video-portland-the-last-time-we-were-here/": 200,
       "/bluescholars/lj/": 200,
       "/bluescholars/archive-status/": 200,
       "/bluescholars/assets/archive-ui.css": 200

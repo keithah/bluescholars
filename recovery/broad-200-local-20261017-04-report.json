@@ -1,0 +1,278 @@
+{
+  "batch": "4th local broad recovery retry",
+  "started_at": "2026-10-17T17:02:00Z",
+  "finished_at": "2026-10-17T17:18:27.885108+00:00",
+  "command": ".venv311/bin/python -m restore recover --max-files 200 --retry-failed --delay 0.5 --timeout 25 --retries 1",
+  "processed_urls": 200,
+  "validated_responses": 21,
+  "validated_kind_counts": {
+    "html": 21
+  },
+  "captures": [
+    {
+      "url": "http://02cd02a.netsolhost.com/blog/2010/01/snowed-out-in-raleigh-nc/",
+      "kind": "html",
+      "requested_capture": "20100226174323",
+      "actual_capture": "20100219124154",
+      "bytes": 26243,
+      "sha256": "cb70d50182aacddb50fe3808223ecf81fc8bda6d60f88ca1c88d9dda306e33d3",
+      "raw_path": "recovery/raw/cb70d50182aacddb50fe3808223ecf81fc8bda6d60f88ca1c88d9dda306e33d3.html",
+      "attempted_at": "2026-10-17T17:08:03.957999+00:00"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com/blog/2009/12/minority-fest-in-brooklyn/",
+      "kind": "html",
+      "requested_capture": "20100219124154",
+      "actual_capture": "20100217191954",
+      "bytes": 26257,
+      "sha256": "cfba17bcb0721a86b32818828fe11205ee3b6985296d7b26d67b7bd685b72421",
+      "raw_path": "recovery/raw/cfba17bcb0721a86b32818828fe11205ee3b6985296d7b26d67b7bd685b72421.html",
+      "attempted_at": "2026-10-17T17:08:13.750621+00:00"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com/blog/2010/01/photos-goorin-bros-part-2/",
+      "kind": "html",
+      "requested_capture": "20100220045606",
+      "actual_capture": "20100219124151",
+      "bytes": 26231,
+      "sha256": "39425618b1af98536e78512f34a810bc498a4e5df20b22e343ca604e51b7db56",
+      "raw_path": "recovery/raw/39425618b1af98536e78512f34a810bc498a4e5df20b22e343ca604e51b7db56.html",
+      "attempted_at": "2026-10-17T17:08:19.277845+00:00"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com/blog/2010/01/last-night-in-lincoln-nebraska/",
+      "kind": "html",
+      "requested_capture": "20100709062339",
+      "actual_capture": "20100709110402",
+      "bytes": 25617,
+      "sha256": "ad41e0a805399acceff0a8bbb5d6168322f2bfb7f699858d640565d9009f7ba0",
+      "raw_path": "recovery/raw/ad41e0a805399acceff0a8bbb5d6168322f2bfb7f699858d640565d9009f7ba0.html",
+      "attempted_at": "2026-10-17T17:09:03.804593+00:00"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com/blog/photos-saturday-night-at-the-crocodile/",
+      "kind": "html",
+      "requested_capture": "20110312120401",
+      "actual_capture": "20110312115748",
+      "bytes": 12019,
+      "sha256": "1d6a8763c489ed76871b7b4440a5203f586da59a3681a9a24506a8347539d69d",
+      "raw_path": "recovery/raw/1d6a8763c489ed76871b7b4440a5203f586da59a3681a9a24506a8347539d69d.html",
+      "attempted_at": "2026-10-17T17:09:21.540583+00:00"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com/blog/thanks-paramount-show-yes-that-was-rad/",
+      "kind": "html",
+      "requested_capture": "20110312094553",
+      "actual_capture": "20110314032407",
+      "bytes": 9081,
+      "sha256": "8a9a9ae161f8a60656c87a7eb4c5520d2e4257a9e1c0e583edfd7a9dc54b3b2e",
+      "raw_path": "recovery/raw/8a9a9ae161f8a60656c87a7eb4c5520d2e4257a9e1c0e583edfd7a9dc54b3b2e.html",
+      "attempted_at": "2026-10-17T17:09:25.150720+00:00"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com/blog/2009/07/bluescholarscom-a-retrospective/",
+      "kind": "html",
+      "requested_capture": "20090813084738",
+      "actual_capture": "20090813084738",
+      "bytes": 17124,
+      "sha256": "8476e93aacd53cbe50521ca49421b20e18c7d2ddce10923e886e9d57e53c8f8b",
+      "raw_path": "recovery/raw/8476e93aacd53cbe50521ca49421b20e18c7d2ddce10923e886e9d57e53c8f8b.html",
+      "attempted_at": "2026-10-17T17:09:33.785598+00:00"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com/blog/2010/02/bambu-paper-cuts-ep-drops-today/",
+      "kind": "html",
+      "requested_capture": "20100308065232",
+      "actual_capture": "20100226185807",
+      "bytes": 31407,
+      "sha256": "d6bc919de25f4c8cb64280df55a1b39c297cbea063488bb2756d896815b5baa5",
+      "raw_path": "recovery/raw/d6bc919de25f4c8cb64280df55a1b39c297cbea063488bb2756d896815b5baa5.html",
+      "attempted_at": "2026-10-17T17:09:35.334986+00:00"
+    },
+    {
+      "url": "http://bluescholars.com/blog/seattle-100-portrait-of-a-city-by-chase-jarvis/",
+      "kind": "html",
+      "requested_capture": "20190825235032",
+      "actual_capture": "20190825235032",
+      "bytes": 37712,
+      "sha256": "7affa18c6058079db38234ec2118ce4c4735344d9d00f4f9234235627d93308a",
+      "raw_path": "recovery/raw/7affa18c6058079db38234ec2118ce4c4735344d9d00f4f9234235627d93308a.html",
+      "attempted_at": "2026-10-17T17:09:51.361568+00:00"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com/blog/video-portland-the-last-time-we-were-here/",
+      "kind": "html",
+      "requested_capture": "20110312110324",
+      "actual_capture": "20110314032412",
+      "bytes": 11661,
+      "sha256": "6cd0dc27cec55726d3e6f04e8efca5c6986b444a7339d2d5d73098b36f4c63e8",
+      "raw_path": "recovery/raw/6cd0dc27cec55726d3e6f04e8efca5c6986b444a7339d2d5d73098b36f4c63e8.html",
+      "attempted_at": "2026-10-17T17:10:10.486925+00:00"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com/blog/news-eyes-ears-and-tweets-on-seattle-police/",
+      "kind": "html",
+      "requested_capture": "20110312120417",
+      "actual_capture": "20110312120417",
+      "bytes": 12586,
+      "sha256": "11560b5f984d16258d994d054222f8f2dd4f9ea3181249d5c00648773e5309c7",
+      "raw_path": "recovery/raw/11560b5f984d16258d994d054222f8f2dd4f9ea3181249d5c00648773e5309c7.html",
+      "attempted_at": "2026-10-17T17:20:29.138068+00:00"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com:80/blog/2009/07/blue-scholars-duck-down-caffe-vita",
+      "kind": "html",
+      "requested_capture": "20100113144311",
+      "actual_capture": "20100113144311",
+      "bytes": 33110,
+      "sha256": "81e93bad955f761f0814585900524a4ef70a12079190f36277e282f51432e2f5",
+      "raw_path": "recovery/raw/81e93bad955f761f0814585900524a4ef70a12079190f36277e282f51432e2f5.html",
+      "attempted_at": "2026-10-17T17:20:42.290363+00:00"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com:80/blog/the-cinemetropolis-listening-party-part-1/c5d8d0c/",
+      "kind": "html",
+      "requested_capture": "20210529010817",
+      "actual_capture": "20110402090304",
+      "bytes": 8707,
+      "sha256": "25eba6e37854f0c9bdd9df4ea27dca6670ae09a710e4e4418afdaabc067350ef",
+      "raw_path": "recovery/raw/25eba6e37854f0c9bdd9df4ea27dca6670ae09a710e4e4418afdaabc067350ef.html",
+      "attempted_at": "2026-10-17T17:23:01.982706+00:00"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com:80/blog/the-cinemetropolis-listening-party-part-1/e8c3acb/",
+      "kind": "html",
+      "requested_capture": "20210529010817",
+      "actual_capture": "20110402090309",
+      "bytes": 8707,
+      "sha256": "70e07af49b8003d552b4ea196390fdb99fa11841656c31b0cd698ce9df676e2d",
+      "raw_path": "recovery/raw/70e07af49b8003d552b4ea196390fdb99fa11841656c31b0cd698ce9df676e2d.html",
+      "attempted_at": "2026-10-17T17:23:04.047809+00:00"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com:80/blog/the-cinemetropolis-listening-party-part-1/eaba022/",
+      "kind": "html",
+      "requested_capture": "20210529010817",
+      "actual_capture": "20110402090030",
+      "bytes": 8707,
+      "sha256": "02a1e7a3d4a34846df6b2da67d5a89d47c101bacc763565c9143940098baaf67",
+      "raw_path": "recovery/raw/02a1e7a3d4a34846df6b2da67d5a89d47c101bacc763565c9143940098baaf67.html",
+      "attempted_at": "2026-10-17T17:23:06.276552+00:00"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com:80/blog/the-cinemetropolis-listening-party-part-1/ee5ce53/",
+      "kind": "html",
+      "requested_capture": "20210529010817",
+      "actual_capture": "20110402090313",
+      "bytes": 8707,
+      "sha256": "d75b78c897de4f7684cbdeafafaa4960d7086fc596b0e4f2584a8db239619894",
+      "raw_path": "recovery/raw/d75b78c897de4f7684cbdeafafaa4960d7086fc596b0e4f2584a8db239619894.html",
+      "attempted_at": "2026-10-17T17:23:08.205413+00:00"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com/blog/2011/01/the-hip-hop-word-count-blue-scholars-approved/",
+      "kind": "html",
+      "requested_capture": "20110302034042",
+      "actual_capture": "20110302034042",
+      "bytes": 27088,
+      "sha256": "75c3611ebfc23f9b806d947e7a130bf3446693626bb7666261dc4495a08e8e7b",
+      "raw_path": "recovery/raw/75c3611ebfc23f9b806d947e7a130bf3446693626bb7666261dc4495a08e8e7b.html",
+      "attempted_at": "2026-10-17T17:23:49.656874+00:00"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com:80/blog/2010/01/music-geoprometheus-brown-b-sides-2008-2009/",
+      "kind": "html",
+      "requested_capture": "20210529010817",
+      "actual_capture": "20100226174323",
+      "bytes": 24880,
+      "sha256": "2ac11fb9a6c324a2d2fa64558d3097182e4bf89b8540f3894beb88fc9bc9064a",
+      "raw_path": "recovery/raw/2ac11fb9a6c324a2d2fa64558d3097182e4bf89b8540f3894beb88fc9bc9064a.html",
+      "attempted_at": "2026-10-17T17:24:16.513661+00:00"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com:80/blog/the-cinemetropolis-listening-party-part-1/fd685f4-1/",
+      "kind": "html",
+      "requested_capture": "20210529010817",
+      "actual_capture": "20110402090035",
+      "bytes": 8721,
+      "sha256": "fd87c1b97d97dec927b6e6e08a921686866588ddb8ee7a05b6666c7d8e87816c",
+      "raw_path": "recovery/raw/fd87c1b97d97dec927b6e6e08a921686866588ddb8ee7a05b6666c7d8e87816c.html",
+      "attempted_at": "2026-10-17T17:24:18.421101+00:00"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com/blog/2010/02/video-behind-the-scenes-bambugeo-slow-down-video-shoot/",
+      "kind": "html",
+      "requested_capture": "20210529010817",
+      "actual_capture": "20100330043334",
+      "bytes": 25426,
+      "sha256": "ca634b05dcd3fbb37004e5a32d64926f4a88b50f5a6125865593e7d08b5c3db0",
+      "raw_path": "recovery/raw/ca634b05dcd3fbb37004e5a32d64926f4a88b50f5a6125865593e7d08b5c3db0.html",
+      "attempted_at": "2026-10-17T17:27:13.038205+00:00"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com/blog/blue-scholars-final-2010-show-in-seattle-tonight-at-the-crocodile/",
+      "kind": "html",
+      "requested_capture": "20210529010817",
+      "actual_capture": "20110312120401",
+      "bytes": 10481,
+      "sha256": "a1514074bf4fa44a547488b74bc89def7ae6a4dce9c2c99cf0aacdedf78c8b63",
+      "raw_path": "recovery/raw/a1514074bf4fa44a547488b74bc89def7ae6a4dce9c2c99cf0aacdedf78c8b63.html",
+      "attempted_at": "2026-10-17T17:27:53.936504+00:00"
+    }
+  ],
+  "new_resource_urls": 1,
+  "new_index_rows": 9,
+  "new_unique_raw_files": 1,
+  "new_unique_raw_bytes": 26243,
+  "before": {
+    "resource_urls": 11148,
+    "statuses": {
+      "queued": 5531,
+      "recovered": 3879,
+      "needs_review": 72,
+      "failed": 1666,
+      "excluded": 0
+    },
+    "indexed_capture_records": 23257,
+    "unique_downloaded_files": 2300,
+    "downloaded_bytes": 147565354,
+    "failed_attempts": 8071
+  },
+  "after": {
+    "resource_urls": 11149,
+    "statuses": {
+      "queued": 5436,
+      "recovered": 3889,
+      "needs_review": 72,
+      "failed": 1752,
+      "excluded": 0
+    },
+    "indexed_capture_records": 23266,
+    "index_complete": true,
+    "unique_downloaded_files": 2301,
+    "downloaded_bytes": 147591597,
+    "failed_attempts": 8254,
+    "generated_at": "2026-10-17T17:18:27.885108+00:00"
+  },
+  "candidate_rebuilds": {
+    "root": {
+      "recovered_pages": 977,
+      "placeholder_pages": 2180,
+      "local_source_assets": 1055,
+      "check_ok": true,
+      "errors": 0
+    },
+    "project_subpath": {
+      "recovered_pages": 977,
+      "placeholder_pages": 2180,
+      "local_source_assets": 1055,
+      "check_ok": true,
+      "errors": 0
+    }
+  },
+  "changed_rendered_routes": [
+    "/2009/blog/video-portland-the-last-time-we-were-here/",
+    "/2013/archive-query/4553c0d3b819c77c651f/"
+  ],
+  "note": "Capture records retain requested and actual timestamps and hashes. The candidate route count did not increase, but recovered content replaced placeholders or updated existing route content. Unresolved entries remain retryable."
+}

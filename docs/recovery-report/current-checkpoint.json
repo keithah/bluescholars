@@ -67,20 +67,20 @@
     }
   },
   "checkpoint": {
-    "resource_urls": 11148,
+    "resource_urls": 11150,
     "statuses": {
-      "queued": 5531,
-      "recovered": 3879,
+      "queued": 5386,
+      "recovered": 3900,
       "needs_review": 72,
-      "failed": 1666,
+      "failed": 1792,
       "excluded": 0
     },
-    "indexed_capture_records": 23257,
+    "indexed_capture_records": 23279,
     "index_complete": true,
-    "unique_downloaded_files": 2300,
-    "downloaded_bytes": 147565354,
-    "failed_attempts": 8071,
-    "generated_at": "2026-10-17T17:05:06.428576+00:00"
+    "unique_downloaded_files": 2301,
+    "downloaded_bytes": 147591597,
+    "failed_attempts": 8486,
+    "generated_at": "2026-10-17T17:31:24.906254+00:00"
   },
   "latest_import": {
     "run_id": "38975520061",
@@ -144,7 +144,7 @@
     "unique_raw_files": 97,
     "visual_reviewed": false
   },
-  "updated_at": "2026-10-17T17:05:06.428576+00:00",
+  "updated_at": "2026-10-17T17:31:24.906254+00:00",
   "tests": {
     "command": ".venv311/bin/python -m pytest -q",
     "result": "153 passed",
@@ -577,18 +577,20 @@
   "published_preview": {
     "url": "https://keithah.github.io/bluescholars/",
     "branch": "gh-pages",
-    "commit": "dc3bd1921dc043534555e3d32536eceae58e8aee",
-    "pages_build_run": "39052250053",
+    "commit": "52616d2690af246d2400565476e1c70a30575ac2",
+    "pages_build_run": "39054150559",
     "pages_status": "built",
     "https_enforced": true,
     "custom_domain": null,
-    "verified_at": "2026-10-17T17:04:00Z",
+    "verified_at": "2026-10-17T17:29:00Z",
     "checks": {
       "/bluescholars/": 200,
       "/bluescholars/2007/": 200,
       "/bluescholars/2009/": 200,
       "/bluescholars/2013/": 200,
-      "/bluescholars/2009/blog/2010/12/hari-kondabolu-storms-the-pacific-northwest/": 200,
+      "/bluescholars/2009/blog/news-eyes-ears-and-tweets-on-seattle-police/": 200,
+      "/bluescholars/2009/blog/the-cinemetropolis-listening-party-part-1/c5d8d0c/": 200,
+      "/bluescholars/2009/blog/video-portland-the-last-time-we-were-here/": 200,
       "/bluescholars/lj/": 200,
       "/bluescholars/archive-status/": 200,
       "/bluescholars/assets/archive-ui.css": 200
@@ -780,7 +782,7 @@
     "filename": "bluescholars-restoration-2026-10-17.zip",
     "path": "/tmp/bluescholars-restoration-2026-10-17.zip",
     "contents": "candidate site, source, reports/screenshots, recovery state/index, and non-font raw sources",
-    "file_count": 7445,
+    "file_count": 7456,
     "integrity_test": "passed",
     "font_binaries_included": false,
     "development_caches_or_credentials_included": false,
@@ -831,5 +833,23 @@
     "new_unique_raw_files": 0,
     "new_unique_raw_bytes": 0,
     "rendered_route_counts_changed": false
+  },
+  "latest_fourth_broad_retry": {
+    "report": "recovery/broad-200-local-20261017-04-report.json",
+    "processed_urls": 200,
+    "validated_responses": 21,
+    "new_resource_urls": 1,
+    "new_index_rows": 9,
+    "new_unique_raw_files": 1,
+    "new_unique_raw_bytes": 26243
+  },
+  "latest_fifth_broad_retry": {
+    "report": "recovery/broad-200-local-20261017-05-report.json",
+    "processed_urls": 200,
+    "validated_responses": 11,
+    "new_resource_urls": 1,
+    "new_index_rows": 13,
+    "new_unique_raw_files": 0,
+    "new_unique_raw_bytes": 0
   }
 }

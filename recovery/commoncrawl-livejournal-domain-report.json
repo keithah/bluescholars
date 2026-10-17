@@ -1,0 +1,87 @@
+{
+  "archive": "Common Crawl",
+  "query": "bluescholars.livejournal.com domain match, status 200; latest available collection for each year 2012-2026",
+  "queried_collections": [
+    {
+      "collection": "CC-MAIN-2012",
+      "status": "error",
+      "error": "HTTP 504: <html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body>\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n<hr><center>nginx/1.31.7</center>\r\n</body>\r\n</"
+    },
+    {
+      "collection": "CC-MAIN-2013-48",
+      "status": "error",
+      "error": "HTTP 504: <html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body>\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n<hr><center>nginx/1.31.7</center>\r\n</body>\r\n</"
+    },
+    {
+      "collection": "CC-MAIN-2014-52",
+      "status": "error",
+      "error": "HTTP 504: <html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body>\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n<hr><center>nginx/1.31.7</center>\r\n</body>\r\n</"
+    },
+    {
+      "collection": "CC-MAIN-2015-48",
+      "status": "error",
+      "error": "HTTP 404: {\"message\": \"No Captures found for: bluescholars.livejournal.com\"}"
+    },
+    {
+      "collection": "CC-MAIN-2016-50",
+      "status": "error",
+      "error": "HTTP 404: {\"message\": \"No Captures found for: bluescholars.livejournal.com\"}"
+    },
+    {
+      "collection": "CC-MAIN-2017-51",
+      "status": "error",
+      "error": "HTTP 504: <html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body>\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n<hr><center>nginx/1.31.7</center>\r\n</body>\r\n</"
+    },
+    {
+      "collection": "CC-MAIN-2018-51",
+      "status": "ok",
+      "rows": 3
+    },
+    {
+      "collection": "CC-MAIN-2019-51",
+      "status": "error",
+      "error": "HTTP 404: {\"message\": \"No Captures found for: bluescholars.livejournal.com\"}"
+    },
+    {
+      "collection": "CC-MAIN-2020-50",
+      "status": "error",
+      "error": "HTTP 404: {\"message\": \"No Captures found for: bluescholars.livejournal.com\"}"
+    },
+    {
+      "collection": "CC-MAIN-2021-49",
+      "status": "error",
+      "error": "HTTP 404: {\"message\": \"No Captures found for: bluescholars.livejournal.com\"}"
+    },
+    {
+      "collection": "CC-MAIN-2022-49",
+      "status": "error",
+      "error": "HTTP 502: <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.31.7</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "collection": "CC-MAIN-2023-50",
+      "status": "error",
+      "error": "HTTP 404: {\"message\": \"No Captures found for: bluescholars.livejournal.com\"}"
+    },
+    {
+      "collection": "CC-MAIN-2024-51",
+      "status": "error",
+      "error": "HTTP 504: <html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body>\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n<hr><center>nginx/1.31.7</center>\r\n</body>\r\n</"
+    },
+    {
+      "collection": "CC-MAIN-2025-51",
+      "status": "error",
+      "error": "HTTP 504: <html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body>\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n<hr><center>nginx/1.31.7</center>\r\n</body>\r\n</"
+    },
+    {
+      "collection": "CC-MAIN-2026-39",
+      "status": "error",
+      "error": "HTTP 504: <html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body>\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n<hr><center>nginx/1.31.7</center>\r\n</body>\r\n</"
+    }
+  ],
+  "total_rows": 3,
+  "distinct_urls": 3,
+  "rows_file": "recovery/index/livejournal-domain-20261017.jsonl",
+  "rows_sha256": "9269b7de9c9e54d642f16028eab51e7638d1128f21ce2c1085f5d7cf3113d6f9",
+  "html_rows": 2,
+  "generated_at": "2026-10-17T20:12:41Z"
+}

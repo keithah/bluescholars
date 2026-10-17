@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T19:13:29.033025+00:00",
+  "updated_at": "2026-10-17T20:47:54.493315+00:00",
   "source_checkpoint_run": "Local resumable checkpoint after the 2013 pass on 2026-10-17; GitHub Actions run 39044681280 is separately recorded because it resumed an older artifact.",
   "capture_index": {
     "indexed_capture_records": 23238,
@@ -7,40 +7,40 @@
     "scope": "Completed Bluescholars domain CDX plus targeted Squarespace CSS/font/image prefix indexes; local checkpoint count includes all merged captures."
   },
   "resource_inventory": {
-    "resource_urls": 11118,
+    "resource_urls": 11915,
     "statuses": {
-      "queued": 5736,
-      "recovered": 3837,
-      "needs_review": 72,
-      "failed": 1473,
+      "queued": 5550,
+      "recovered": 4090,
+      "needs_review": 75,
+      "failed": 2200,
       "excluded": 0
     },
-    "indexed_capture_records": 23238,
+    "indexed_capture_records": 26115,
     "index_complete": true
   },
   "validated_local_files": {
-    "unique_sha256_files": 2291,
-    "bytes": 147533392,
-    "candidate_local_source_assets": 1044
+    "unique_sha256_files": 2388,
+    "bytes": 155227643,
+    "candidate_local_source_assets": 1055
   },
   "candidate": {
-    "recovered_pages": 985,
-    "placeholder_pages": 2185,
-    "derived_pages": 4,
+    "recovered_pages": 1028,
+    "placeholder_pages": 2237,
+    "derived_pages": 1,
     "local_source_assets": 1055,
     "publish_approved": false,
     "visual_fidelity_verified": false,
     "recovered_pages_by_edition": {
-      "2007": 36,
+      "2007": 44,
       "2009": 501,
-      "2013": 432
+      "2013": 433
     },
     "issue_counts": {
       "invalid_source": 9,
-      "missing_asset": 8286,
+      "missing_asset": 8940,
       "font_not_packaged": 183,
-      "linked_asset_not_recovered": 338,
-      "external_media_link_only": 145
+      "linked_asset_not_recovered": 384,
+      "external_media_link_only": 150
     },
     "root_check": {
       "ok": true,
@@ -62,22 +62,27 @@
   "checks": {
     "root": {
       "ok": true,
-      "errors": 0
+      "errors": [],
+      "remote_automatic_resources": 0
     },
     "project_subpath": {
       "base_path": "/bluescholars/",
       "ok": true,
-      "errors": 0
-    },
-    "remote_automatic_resources": 0
+      "errors": [],
+      "remote_automatic_resources": 0
+    }
   },
   "notable_known_gaps": [
     "2010-03 Paul Valery attachment PaulValery1.jpg: exact Wayback row status 403; Arquivo.pt exact query returned zero rows.",
     "Vimeo clip 10370730 is referenced by a contemporaneous forum post; video bytes were not recovered.",
     "A 2025 LiveJournal modern-interface capture and a 2023 post variant remain needs_review and are not mixed into the old-layout /lj/ edition.",
-    "2009 PHOTOS: TONE image l_bf6ff3f3d208456f9cd4c58a4b8dd822.jpg: exact URL CDX returned zero rows; an individually requested 2009-08-14 response returned 404. The source image remains a named gap."
+    "2009 PHOTOS: TONE image l_bf6ff3f3d208456f9cd4c58a4b8dd822.jpg: exact URL CDX returned zero rows; an individually requested 2009-08-14 response returned 404. The source image remains a named gap.",
+    "LiveJournal: three Common Crawl WARC requests failed after retries (16015.html?thread=49295 at 20170423174431; 16460.html at 20171022044512 and 20180426051232); those failures do not prove absence.",
+    "LiveJournal: post 17615 (“EVENTFUL.COM contest”) survives only in a captured journal front page; posts 15781 and other linked entries lack validated full standalone responses in this sweep.",
+    "LiveJournal: several linked comment threads have local gap pages; the missing comment bodies remain unavailable in validated local captures.",
+    "LiveJournal: platform CSS and many userpic/image URLs remain missing; the current local journal view is not a visual-fidelity reconstruction."
   ],
-  "interpretation": "The latest local 2013 pass recovered 118 in-era CSS responses from a 1,014-URL checkpoint; 83 selected URLs remain unresolved. A separate GitHub workflow run used an older 9,118-resource artifact and recovered no valid 2013 responses. The local candidate still has 976 recovered pages and 2,181 placeholders. Newly discovered CSS dependencies increased the missing embedded-resource and unbundled-font counts; these counts do not mean previously local assets were removed.",
+  "interpretation": "The current resumable checkpoint includes 11,915 inventory URLs and 26,115 indexed capture rows. The rebuilt candidate has 1,028 recovered pages, 2,237 documented placeholders, 1,055 local source assets and one derived page. Root and /bluescholars/ offline checks pass; these checks do not establish human visual approval or source completeness.",
   "targeted_image_index": {
     "archive": "Internet Archive Wayback",
     "query": "exact source-linked image URLs from expanded inventory",
@@ -190,18 +195,18 @@
     },
     "modern_cdn_image_alias_rows": 0
   },
-  "resource_urls": 11326,
-  "indexed_capture_records": 25989,
+  "resource_urls": 11915,
+  "indexed_capture_records": 26115,
   "statuses": {
-    "queued": 5148,
-    "recovered": 4004,
-    "needs_review": 74,
-    "failed": 2100,
+    "queued": 5550,
+    "recovered": 4090,
+    "needs_review": 75,
+    "failed": 2200,
     "excluded": 0
   },
-  "unique_downloaded_files": 2342,
-  "downloaded_bytes": 148253779,
-  "failed_attempts": 9809,
+  "unique_downloaded_files": 2388,
+  "downloaded_bytes": 155227643,
+  "failed_attempts": 10288,
   "index_complete": true,
   "active_recovery_run": null,
   "local_checkpoint_after_recovery_sweep": {
@@ -489,20 +494,20 @@
     "visual_reviewed": false
   },
   "checkpoint": {
-    "resource_urls": 11201,
+    "resource_urls": 11915,
     "statuses": {
-      "queued": 5200,
-      "recovered": 3931,
-      "needs_review": 72,
-      "failed": 1998,
+      "queued": 5550,
+      "recovered": 4090,
+      "needs_review": 75,
+      "failed": 2200,
       "excluded": 0
     },
-    "indexed_capture_records": 23344,
+    "indexed_capture_records": 26115,
     "index_complete": true,
-    "unique_downloaded_files": 2309,
-    "downloaded_bytes": 147740118,
-    "failed_attempts": 9199,
-    "generated_at": "2026-10-17T18:28:42.122584+00:00"
+    "unique_downloaded_files": 2388,
+    "downloaded_bytes": 155227643,
+    "failed_attempts": 10288,
+    "generated_at": "2026-10-17T20:47:54.443065+00:00"
   },
   "pages_deployment": {
     "commit": "3cbf1906ba30091a0e808aac21bee839ab0fcae4",
@@ -634,5 +639,92 @@
     "new_unique_raw_files": 12,
     "new_unique_raw_bytes": 292111,
     "changed_rendered_routes": 21
+  },
+  "livejournal_archive": {
+    "route": "/lj/",
+    "source_archives": [
+      "Internet Archive Wayback",
+      "Common Crawl"
+    ],
+    "recovered_capture_pages": 35,
+    "recovered_full_or_derived_post_routes": 7,
+    "comment_thread_routes": 29,
+    "full_article_ids": [
+      "16015",
+      "16255",
+      "16460",
+      "16641",
+      "16954",
+      "17222"
+    ],
+    "front_page_only_entry_ids": [
+      "17615"
+    ],
+    "commoncrawl": {
+      "report": "recovery/commoncrawl-livejournal-2013-2018-report.json",
+      "all_rows": 58,
+      "distinct_urls": 22,
+      "html_rows": 43,
+      "collection_queries": 53,
+      "queries_with_rows": 13,
+      "validated_html_responses": 42,
+      "failed_warc_responses": [
+        {
+          "error": "OSError: Archive request retries exhausted",
+          "timestamp": "20170423174431",
+          "url": "http://bluescholars.livejournal.com/16015.html?thread=49295"
+        },
+        {
+          "error": "OSError: Archive request retries exhausted",
+          "timestamp": "20171022044512",
+          "url": "http://bluescholars.livejournal.com/16460.html"
+        },
+        {
+          "error": "OSError: Archive request retries exhausted",
+          "timestamp": "20180426051232",
+          "url": "https://bluescholars.livejournal.com/16460.html"
+        }
+      ],
+      "interpretation": "Collection-query transport/service failures and WARC fetch failures are not evidence that a page was absent."
+    },
+    "primary_capture": "20180219080958",
+    "platform_css": "not recovered; visual fidelity incomplete",
+    "locally_recovered_photos_from_prior_work": 20,
+    "latest_browser_inspection": {
+      "routes": [
+        "/lj/",
+        "/lj/posts/16641.html",
+        "/2007/news.html"
+      ],
+      "result": "Local article renders original post body and four preserved comment excerpts; archive index labels dated captures and comment threads explicitly.",
+      "human_review_claimed": false
+    }
+  },
+  "latest_livejournal_commoncrawl": {
+    "report": "recovery/commoncrawl-livejournal-2013-2018-report.json",
+    "all_rows": 58,
+    "distinct_urls": 22,
+    "html_rows": 43,
+    "collection_queries": 53,
+    "queries_with_rows": 13,
+    "validated_html_responses": 42,
+    "failed_warc_responses": [
+      {
+        "error": "OSError: Archive request retries exhausted",
+        "timestamp": "20170423174431",
+        "url": "http://bluescholars.livejournal.com/16015.html?thread=49295"
+      },
+      {
+        "error": "OSError: Archive request retries exhausted",
+        "timestamp": "20171022044512",
+        "url": "http://bluescholars.livejournal.com/16460.html"
+      },
+      {
+        "error": "OSError: Archive request retries exhausted",
+        "timestamp": "20180426051232",
+        "url": "https://bluescholars.livejournal.com/16460.html"
+      }
+    ],
+    "interpretation": "Collection-query transport/service failures and WARC fetch failures are not evidence that a page was absent."
   }
 }

@@ -146,6 +146,17 @@ def resource_priority(record: dict) -> tuple[int,int]:
                 return 7,len(url)
             return 3,len(url)
         return 5,len(url)
+    linked_legacy_post=(
+        record['kind']=='html' and own_host and len(path.strip('/').split('/'))==1
+        and any(
+            (ref_parts:=urlsplit(ref)).hostname in ('bluescholars.com','www.bluescholars.com')
+            and (segments:=ref_parts.path.strip('/').split('/'))[0]=='page'
+            and len(segments)==2 and segments[1].isdigit()
+            for ref in refs if ref and not ref.startswith('CDX:')
+        )
+    )
+    if linked_legacy_post:
+        return 3,len(url)
     if record['kind']=='html':
         return 4,len(url)
     if record['kind']=='css':

@@ -1,7 +1,7 @@
 {
   "browser_visual_review": {
     "reference_capture": "https://web.archive.org/web/20210529010817/http://bluescholars.com/",
-    "viewport": "1265\u00d7712 browser screenshot; reference and local candidate were captured at the same viewport.",
+    "viewport": "1265×712 browser screenshot; reference and local candidate were captured at the same viewport.",
     "agent_reviewed": true,
     "human_review_claimed": false,
     "comparison": "After accounting for the Internet Archive toolbar and local historical-restoration notice, the 2013 Squarespace-era candidate matches the reference logo size and left offset, navigation placement, main-image left/top position, width and crop. The May 2021 photograph is the same locally recovered hero.",
@@ -32,24 +32,33 @@
     "responsive_limit": "The connected browser exposed a fixed viewport; 1440px, 768px and 390px screenshots were not available in this run. This is not a mobile visual-review pass."
   },
   "candidate_build": {
-    "recovered_pages": 985,
-    "placeholder_pages": 2185,
-    "derived_pages": 4,
+    "recovered_pages": 1028,
+    "placeholder_pages": 2237,
+    "derived_pages": 1,
     "local_source_assets": 1055,
+    "publish_approved": false,
+    "visual_fidelity_verified": false,
     "recovered_pages_by_edition": {
-      "2007": 36,
+      "2007": 44,
       "2009": 501,
-      "2013": 432
+      "2013": 433
     },
     "issue_counts": {
       "invalid_source": 9,
-      "missing_asset": 8286,
+      "missing_asset": 8940,
       "font_not_packaged": 183,
-      "linked_asset_not_recovered": 338,
-      "external_media_link_only": 145
+      "linked_asset_not_recovered": 384,
+      "external_media_link_only": 150
     },
-    "publish_approved": false,
-    "visual_fidelity_verified": false
+    "root_check": {
+      "ok": true,
+      "errors": 0
+    },
+    "project_subpath_check": {
+      "ok": true,
+      "errors": 0
+    },
+    "remote_automatic_resources": 0
   },
   "candidate_checks": {
     "root": {
@@ -65,20 +74,20 @@
     }
   },
   "checkpoint": {
-    "resource_urls": 11326,
+    "resource_urls": 11915,
     "statuses": {
-      "queued": 5148,
-      "recovered": 4004,
-      "needs_review": 74,
-      "failed": 2100,
+      "queued": 5550,
+      "recovered": 4090,
+      "needs_review": 75,
+      "failed": 2200,
       "excluded": 0
     },
-    "indexed_capture_records": 25989,
+    "indexed_capture_records": 26115,
     "index_complete": true,
-    "unique_downloaded_files": 2342,
-    "downloaded_bytes": 148253779,
-    "failed_attempts": 9809,
-    "generated_at": "2026-10-17T19:13:29.033025+00:00"
+    "unique_downloaded_files": 2388,
+    "downloaded_bytes": 155227643,
+    "failed_attempts": 10288,
+    "generated_at": "2026-10-17T20:47:54.443065+00:00"
   },
   "latest_import": {
     "run_id": "38975520061",
@@ -142,35 +151,74 @@
     "unique_raw_files": 97,
     "visual_reviewed": false
   },
-  "updated_at": "2026-10-17T19:13:29.033025+00:00",
+  "updated_at": "2026-10-17T20:47:54.493315+00:00",
   "tests": {
-    "command": ".venv311/bin/python -m pytest -q",
-    "result": "153 passed",
-    "compileall": "passed",
+    "command": "PYTHONPATH=. .venv311/bin/python -m pytest -q",
+    "result": "169 passed",
+    "root_build_check": "passed (1,028 recovered pages; zero errors)",
+    "project_subpath_build_check": "passed (1,028 recovered pages; zero errors)",
     "git_diff_check": "passed",
-    "shell_syntax": "passed",
-    "actionlint": "passed"
+    "human_review_claimed": false
   },
   "livejournal_archive": {
     "route": "/lj/",
-    "captures": 8,
-    "local_photos": 20,
     "source_archives": [
       "Internet Archive Wayback",
       "Common Crawl"
     ],
-    "css": "not recovered; visual fidelity incomplete",
-    "primary_capture": "20111002074201",
-    "alternate_capture_routes": 3,
-    "host_index_rows": 226,
-    "host_index_unique_urls": 115,
-    "modern_interface_captures_needs_review": 2,
-    "custom_css_capture_dates": [
-      "20110812180648",
-      "20111002074219"
+    "recovered_capture_pages": 35,
+    "recovered_full_or_derived_post_routes": 7,
+    "comment_thread_routes": 29,
+    "full_article_ids": [
+      "16015",
+      "16255",
+      "16460",
+      "16641",
+      "16954",
+      "17222"
     ],
-    "custom_css_sha256": "87560599e9fb5ddc5cdba0675164f3bd80324540d346fc6ae38c26878e2f34ce",
-    "platform_css": "not recovered after exact-URL searches"
+    "front_page_only_entry_ids": [
+      "17615"
+    ],
+    "commoncrawl": {
+      "report": "recovery/commoncrawl-livejournal-2013-2018-report.json",
+      "all_rows": 58,
+      "distinct_urls": 22,
+      "html_rows": 43,
+      "collection_queries": 53,
+      "queries_with_rows": 13,
+      "validated_html_responses": 42,
+      "failed_warc_responses": [
+        {
+          "error": "OSError: Archive request retries exhausted",
+          "timestamp": "20170423174431",
+          "url": "http://bluescholars.livejournal.com/16015.html?thread=49295"
+        },
+        {
+          "error": "OSError: Archive request retries exhausted",
+          "timestamp": "20171022044512",
+          "url": "http://bluescholars.livejournal.com/16460.html"
+        },
+        {
+          "error": "OSError: Archive request retries exhausted",
+          "timestamp": "20180426051232",
+          "url": "https://bluescholars.livejournal.com/16460.html"
+        }
+      ],
+      "interpretation": "Collection-query transport/service failures and WARC fetch failures are not evidence that a page was absent."
+    },
+    "primary_capture": "20180219080958",
+    "platform_css": "not recovered; visual fidelity incomplete",
+    "locally_recovered_photos_from_prior_work": 20,
+    "latest_browser_inspection": {
+      "routes": [
+        "/lj/",
+        "/lj/posts/16641.html",
+        "/2007/news.html"
+      ],
+      "result": "Local article renders original post body and four preserved comment excerpts; archive index labels dated captures and comment threads explicitly.",
+      "human_review_claimed": false
+    }
   },
   "era_recovery": {
     "2007": {
@@ -954,5 +1002,32 @@
     "new_unique_raw_files": 12,
     "new_unique_raw_bytes": 292111,
     "changed_rendered_routes": 21
+  },
+  "latest_livejournal_commoncrawl": {
+    "report": "recovery/commoncrawl-livejournal-2013-2018-report.json",
+    "all_rows": 58,
+    "distinct_urls": 22,
+    "html_rows": 43,
+    "collection_queries": 53,
+    "queries_with_rows": 13,
+    "validated_html_responses": 42,
+    "failed_warc_responses": [
+      {
+        "error": "OSError: Archive request retries exhausted",
+        "timestamp": "20170423174431",
+        "url": "http://bluescholars.livejournal.com/16015.html?thread=49295"
+      },
+      {
+        "error": "OSError: Archive request retries exhausted",
+        "timestamp": "20171022044512",
+        "url": "http://bluescholars.livejournal.com/16460.html"
+      },
+      {
+        "error": "OSError: Archive request retries exhausted",
+        "timestamp": "20180426051232",
+        "url": "https://bluescholars.livejournal.com/16460.html"
+      }
+    ],
+    "interpretation": "Collection-query transport/service failures and WARC fetch failures are not evidence that a page was absent."
   }
 }

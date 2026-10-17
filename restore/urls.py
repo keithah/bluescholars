@@ -51,13 +51,15 @@ def in_domain(url: str) -> bool:
     return host=='bluescholars.com' or host.endswith('.bluescholars.com')
 
 def identity(url: str) -> str:
-    """Unify the official site and its confirmed old host without queries lost."""
+    """Unify proven aliases while retaining meaningful query strings."""
     url=original_url(url)
     if not url:
         return ''
     p=urlsplit(url)
     if is_site(url):
         return urlunsplit(('http','bluescholars.com',p.path.rstrip('/') or '/',p.query,''))
+    if p.hostname=='bluescholars.livejournal.com':
+        return urlunsplit(('http',p.netloc,p.path or '/',p.query,''))
     return url
 
 def historical_route_prefix(url: str, fallback: str = '', capture: str = '') -> str:
@@ -165,7 +167,11 @@ def livejournal_route(url: str) -> str | None:
     name=parts.path.rsplit('/',1)[-1]
     if not name.endswith('.html'):
         return None
-    return '/lj/posts/'+quote(name,safe='.-_')
+    local='/lj/posts/'+quote(name,safe='.-_')
+    thread=parse_qs(parts.query).get('thread',[''])[0]
+    if re.fullmatch(r'\d{1,20}',thread):
+        local='/lj/comments/'+quote(name,safe='.-_')+'/'+thread+'/'
+    return local
 
 def asset_route(url: str, kind: str) -> str:
     ext = 'css' if kind=='css' else urlsplit(url).path.rsplit('.',1)[-1].lower()

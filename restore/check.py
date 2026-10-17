@@ -41,6 +41,7 @@ def check(output: Path,base: str='') -> list[str]:
         if target.is_dir(): target=target/'index.html'
         if not target.is_file(): errors.append(f'{source}: missing local target {value}')
     for file in output.rglob('*.html'):
+        if not file.is_file(): continue
         source=file.relative_to(output).as_posix();soup=BeautifulSoup(file.read_text(),'html.parser')
         for node in soup.find_all(True):
             if any(k.lower().startswith('on') for k in node.attrs): errors.append(f'{source}: active inline handler')
@@ -64,6 +65,7 @@ def check(output: Path,base: str='') -> list[str]:
             for u in discover_css(style.get_text(),ORIGIN+base+'/'+source):
                 verify(u.removeprefix(ORIGIN) if u.startswith(ORIGIN+'/') else u,source,True)
     for file in output.rglob('*.css'):
+        if not file.is_file(): continue
         source=file.relative_to(output).as_posix()
         for u in discover_css(file.read_text(),ORIGIN+base+'/'+source):
             verify(u.removeprefix(ORIGIN) if u.startswith(ORIGIN+'/') else u,source,True)

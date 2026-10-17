@@ -89,6 +89,12 @@ def test_confirmed_legacy_wordpress_host_pages_get_acquisition_priority():
     unrelated={'url':'https://example.org/old-post/','kind':'html','referrers':['CDX:domain']}
     assert resource_priority(alias)[0] < resource_priority(unrelated)[0]
 
+def test_posts_linked_from_recovered_wordpress_archive_pages_are_prioritized():
+    linked={'url':HOME+'cinemetropolis-now-available-for-digital-download/','kind':'html',
+            'referrers':[HOME+'page/5/']}
+    unrelated={'url':HOME+'legacy-tool-endpoint/','kind':'html','referrers':['CDX:domain']}
+    assert resource_priority(linked)[0] < resource_priority(unrelated)[0]
+
 def test_squarespace_article_media_outranks_unlinked_legacy_assets():
     inline={'url':'https://media.tumblr.com/inline-photo.jpg','kind':'image',
             'referrers':[HOME+'blog/bringing-back-the-og-t-shirt-in-green-and-gold-if']}

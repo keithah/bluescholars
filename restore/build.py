@@ -197,6 +197,8 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
         previous=usable_variant_by_identity.get(key)
         if previous is None or variant.get('actual_capture','')>previous.get('actual_capture',''):
             usable_variant_by_identity[key]=variant
+    lj_pages=[(key,r) for key,r in usable_variants.items()
+              if r['kind']=='html' and urlsplit(r['_source_url']).hostname=='bluescholars.livejournal.com']
     linked_html_routes=[];linked_lj_routes=[]
     for source_key,r in list(usable_variants.items()):
         url=r['_source_url']
@@ -206,7 +208,7 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
                 discovered=dict(ref);referrer=discovered.pop('referrer','')
                 if discovered.get('kind')=='html':
                     lj_target=livejournal_route(discovered['url'])
-                    if lj_target and lj_target.startswith('/lj/posts/'):
+                    if lj_target and lj_target.startswith(('/lj/posts/','/lj/comments/')):
                         linked_lj_routes.append(discovered['url'])
                     elif not urlsplit(discovered['url']).hostname=='bluescholars.livejournal.com':
                         destination_id=identity(discovered['url'])
@@ -229,6 +231,14 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
                     existing.setdefault('edition_prefixes',[])
                     if source_prefix not in existing['edition_prefixes']:
                         existing['edition_prefixes'].append(source_prefix)
+    # LiveJournal itself is outside the three official editions above, but its
+    # own post captures can link to comment-thread URLs that need local gap pages.
+    for key,r in lj_pages:
+        for ref in discover_html(raw[key].decode('utf-8',errors='replace'),r.get('final_original',r['_source_url'])):
+            if ref.get('kind')!='html': continue
+            lj_target=livejournal_route(ref['url'])
+            if lj_target and lj_target.startswith('/lj/comments/'):
+                linked_lj_routes.append(ref['url'])
     for url,r in usable.items():
         if r['kind'] in ('css','image'):
             if r['kind']=='css':
@@ -237,24 +247,22 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
             r['local_path']=local
     # LiveJournal was a separately hosted Blue Scholars blog, not one of the
     # three official site editions. Keep its captures in their own /lj/ tree.
-    lj_pages=[(key,r) for key,r in usable_variants.items()
-              if r['kind']=='html' and urlsplit(r['_source_url']).hostname in ('bluescholars.livejournal.com',)]
     lj_route_by_key={}
     newest_by_url={}
     for key,r in lj_pages:
-        url=r['_source_url'];path=urlsplit(url).path
-        current=newest_by_url.get(url)
+        url=r['_source_url'];path=urlsplit(url).path;url_id=identity(url)
+        current=newest_by_url.get(url_id)
         if current is None or r.get('actual_capture','')>current.get('actual_capture',''):
-            newest_by_url[url]=r
+            newest_by_url[url_id]=r
     for key,r in lj_pages:
-        url=r['_source_url'];path=urlsplit(url).path
+        url=r['_source_url'];path=urlsplit(url).path;is_latest=newest_by_url[identity(url)] is r
         if path in ('','/'):
-            local='/lj/journal/' if newest_by_url[url] is r else '/lj/captures/'+r.get('actual_capture','unknown')+'/'
+            local='/lj/journal/' if is_latest else '/lj/captures/'+r.get('actual_capture','unknown')+'/'
         elif path=='/profile': local='/lj/profile/'
         else:
-            from urllib.parse import quote
-            post_path='/posts/'+quote(path.rsplit('/',1)[-1],safe='.-_')
-            if newest_by_url[url] is r: local='/lj'+post_path
+            post_route=livejournal_route(url) or '/lj/posts/'+path.rsplit('/',1)[-1]
+            post_path=post_route.removeprefix('/lj')
+            if is_latest: local='/lj'+post_path
             else: local='/lj/captures/'+r.get('actual_capture','unknown')+post_path
         lj_route_by_key[key]=local
     # Resolver URLs use source URLs, while variant records retain exact capture
@@ -406,7 +414,7 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
                                'source_archive':r.get('source_archive'),'status':'recovered'})
     if lj_page_report:
         from datetime import datetime
-        labels={'/lj/journal/':'Journal front page (October 2011)',
+        labels={'/lj/journal/':'Journal front page (February 2018)',
                 '/lj/profile/':'LiveJournal profile',
                 '/lj/posts/16954.html':'“friday mixdown” · Sep 30, 2007',
                 '/lj/posts/17222.html':'“The Program” · Oct 4, 2007',
@@ -419,7 +427,30 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
             stamp=p.get('actual_capture') or ''
             try: date=datetime.strptime(stamp,'%Y%m%d%H%M%S').strftime('%b %d, %Y').replace(' 0',' ')
             except ValueError: date='date unavailable'
-            label=labels.get(p['path'],'Earlier journal capture')
+            label=labels.get(p['path'])
+            if not label:
+                source=next((raw[key].decode('utf-8',errors='replace') for key,r in lj_pages
+                             if lj_route_by_key.get(key)==p['path']), '')
+                source_soup=BeautifulSoup(source,'html.parser')
+                subject=source_soup.select_one('.entrysubject a.subj-link, .entrysubject a, .entrysubject')
+                title=' '.join(subject.get_text(' ',strip=True).split()) if subject else ''
+                if not title or title.lower()=='bluescholars':
+                    title_node=source_soup.title
+                    title=' '.join(title_node.get_text(' ',strip=True).split()) if title_node else ''
+                    if ':' in title: title=title.split(':',1)[1].strip()
+                    if title.lower()=='bluescholars': title=''
+                path=p['path']
+                if '/comments/' in path:
+                    parts=path.strip('/').split('/')
+                    label='Comments on '+parts[-2]+' · thread '+parts[-1]
+                elif path.endswith('/calendar'):
+                    label='Journal calendar'
+                elif path.endswith('/profile/'):
+                    label='LiveJournal profile'
+                elif path.endswith('/journal/') or (path.startswith('/lj/captures/') and path.endswith('/')):
+                    label='Journal front page'
+                else:
+                    label=title or ('Journal entry '+path.rsplit('/',1)[-1] if path.endswith('.html') else 'LiveJournal page')
             capture_items.append('<li><a href="'+base+html.escape(p['path'],quote=True)+'">'
                                  +html.escape(label)+'</a> — captured '+html.escape(date)+'</li>')
         capture_links=''.join(capture_items)
@@ -440,6 +471,96 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
         lj_index=page_shell('LiveJournal archive','<p>A separately hosted Blue Scholars journal, preserved separately from the official website editions.</p><p>No LiveJournal page captures have been recovered into this build yet.</p>')
         lj_index=lj_index.replace('</head>','<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="'+ui_href+'"></head>')
         _write_page(output,'/lj/',lj_index)
+    # The 2007 site's News page is an image-map shell that linked readers to
+    # LiveJournal. Surface the original 2007 entries that survive in that
+    # separately captured journal, and link to their full local transcriptions.
+    recovered_2007_posts=[]
+    journal_root=newest_by_url.get(identity('http://bluescholars.livejournal.com/'))
+    if journal_root:
+        journal_soup=BeautifulSoup(raw[journal_root['_source_key']],'html.parser')
+        for entry in journal_soup.select('div.entry'):
+            date_node=entry.select_one('.entrytimestampdate')
+            subject=entry.select_one('a.subj-link, .entrysubject a')
+            content=entry.select_one('.entrycontent, .entrytext')
+            if not date_node or not subject or not content: continue
+            published=' '.join(date_node.get_text(' ',strip=True).split())
+            if not (published.endswith('/07') or '2007' in published): continue
+            target=original_url(subject.get('href',''),journal_root.get('final_original','http://bluescholars.livejournal.com/'))
+            local=livejournal_route(target or '')
+            if not local or not local.startswith('/lj/posts/'): continue
+            title=' '.join(subject.get_text(' ',strip=True).split())
+            excerpt=' '.join(content.get_text(' ',strip=True).split())
+            if len(excerpt)>360: excerpt=excerpt[:357].rsplit(' ',1)[0]+'…'
+            if not excerpt: continue
+            capture=journal_root.get('actual_capture','')
+            try:
+                from datetime import datetime
+                capture_label=datetime.strptime(capture,'%Y%m%d%H%M%S').strftime('%b %d, %Y').replace(' 0',' ')
+            except ValueError: capture_label='date unavailable'
+            recovered_2007_posts.append((published,title,excerpt,capture,local,capture_label))
+    # Some older posts fell off LiveJournal's six-entry front page. Add any
+    # independently preserved 2007 permalink that is not already represented.
+    known_post_routes={entry[4] for entry in recovered_2007_posts}
+    for url,record in newest_by_url.items():
+        parts=urlsplit(url)
+        if parts.query or not parts.path.endswith('.html'):
+            continue
+        local=livejournal_route(record['_source_url'])
+        if not local or local in known_post_routes:
+            continue
+        post_soup=BeautifulSoup(raw[record['_source_key']],'html.parser')
+        entry=post_soup.select_one('div.entry')
+        if not entry:
+            continue
+        date_node=entry.select_one('.entrytimestampdate')
+        subject=entry.select_one('h3.entrysubject a.subj-link, .entrysubject a')
+        content=entry.select_one('.entrycontent, .entrytext')
+        if not date_node or not subject or not content:
+            continue
+        published=' '.join(date_node.get_text(' ',strip=True).split())
+        if not (published.endswith('/07') or '2007' in published):
+            continue
+        title=' '.join(subject.get_text(' ',strip=True).split())
+        excerpt=' '.join(content.get_text(' ',strip=True).split())
+        if len(excerpt)>360: excerpt=excerpt[:357].rsplit(' ',1)[0]+'…'
+        if not excerpt: continue
+        capture=record.get('actual_capture','')
+        try:
+            from datetime import datetime
+            capture_label=datetime.strptime(capture,'%Y%m%d%H%M%S').strftime('%b %d, %Y').replace(' 0',' ')
+        except ValueError: capture_label='date unavailable'
+        recovered_2007_posts.append((published,title,excerpt,capture,local,capture_label))
+        known_post_routes.add(local)
+    news_path=output/'2007/news.html'
+    if recovered_2007_posts and news_path.is_file():
+        news_page=BeautifulSoup(news_path.read_text(encoding='utf-8'),'html.parser')
+        section=news_page.new_tag('section',attrs={'class':'recovered-news','aria-label':'Recovered 2007 news entries'})
+        heading=news_page.new_tag('h2');heading.string='News from the Blue Scholars journal'
+        section.append(heading)
+        intro=news_page.new_tag('p')
+        intro.string=('The archived News page linked to LiveJournal. These 2007 entries survive in separately archived '
+                      'LiveJournal front-page and individual post captures; open each local entry for the text preserved in its dated source.')
+        section.append(intro)
+        for published,title,excerpt,capture,local,capture_label in recovered_2007_posts:
+            article=news_page.new_tag('article',attrs={'class':'recovered-news-entry'})
+            h3=news_page.new_tag('h3')
+            link=news_page.new_tag('a',href=base+local);link.string=title
+            h3.append(link);article.append(h3)
+            date=news_page.new_tag('p',attrs={'class':'recovered-news-date'})
+            date.string=published+' · surviving capture: '+capture_label
+            article.append(date)
+            summary=news_page.new_tag('p');summary.string=excerpt;article.append(summary)
+            section.append(article)
+        container=news_page.select_one('td.body1') or news_page.body
+        container.insert(0,section)
+        style=news_page.new_tag('style',attrs={'type':'text/css'})
+        style.string=('.recovered-news{margin:24px auto;max-width:760px;padding:18px 24px;border-top:1px solid #9bb7c8;'
+                      'border-bottom:1px solid #9bb7c8;color:#333300;font:14px/1.55 Arial,sans-serif}'
+                      '.recovered-news h2{font-size:20px;margin:0 0 10px}.recovered-news-entry{padding:12px 0;'
+                      'border-top:1px solid #d7dfe3}.recovered-news-entry h3{font-size:17px;margin:0}'
+                      '.recovered-news-entry p{margin:6px 0}.recovered-news-date{font-size:11px;color:#666}')
+        news_page.head.append(style)
+        news_path.write_text(str(news_page),encoding='utf-8')
     route_notices=[]
     reported_paths={p['path'] for p in page_report}
     recovered_by_identity={}
@@ -474,8 +595,22 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
         target_path=livejournal_route(target_url)
         if not target_path or target_path in reported_paths or target_path in pages:
             continue
+        if target_path.startswith('/lj/comments/'):
+            parent_url=target_url.partition('?')[0]
+            parent_path=livejournal_route(parent_url)
+            body=('<p>This comment thread was linked from a recovered LiveJournal post, but the comment thread was not '
+                  'recovered from the available archive captures.</p>'
+                  '<p><a href="'+base+html.escape(parent_path or '/lj/',quote=True)+'">Open the locally archived post</a></p>')
+            notice=page_shell('LiveJournal comment thread not recovered',body)
+            notice=notice.replace('</head>','<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="'+ui_href+'"></head>')
+            _write_page(output,target_path,notice)
+            page_report.append({'path':target_path,'source':target_url,'canonical_url':target_url,
+                                'source_archive':None,'status':'not_recovered','actual_capture':None})
+            reported_paths.add(target_path)
+            route_notices.append({'path':target_path,'status':'not_recovered'})
+            continue
         root_url='http://bluescholars.livejournal.com/'
-        root_record=newest_by_url.get(root_url)
+        root_record=newest_by_url.get(identity(root_url))
         extracted_entry=None;root_soup=None
         if root_record:
             root_soup=BeautifulSoup(raw[root_record['_source_key']],'html.parser')
@@ -520,6 +655,50 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
         reported_paths.add(target_path)
         route_notices.append({'path':target_path,'status':'not_recovered'})
     placeholders+=len(route_notices)
+    # Make every full or front-page-derived LiveJournal entry directly
+    # discoverable from /lj/, while keeping the capture basis explicit.
+    lj_index_path=output/'lj/index.html'
+    lj_entries=[p for p in page_report if p['path'].startswith('/lj/posts/') and p['path'].endswith('.html')
+                and p['status'] in ('recovered','derived_from_capture')]
+    lj_comment_threads=[p for p in page_report if p['path'].startswith('/lj/comments/')
+                        and p['status'] in ('recovered','not_recovered')]
+    if lj_index_path.is_file() and (lj_entries or lj_comment_threads):
+        lj_index_page=BeautifulSoup(lj_index_path.read_text(encoding='utf-8'),'html.parser')
+        def make_lj_list(entries,css_class,basis):
+            result=lj_index_page.new_tag('ul',attrs={'class':css_class})
+            for entry in sorted(entries,key=lambda p:p['path']):
+                entry_file=output/entry['path'].lstrip('/')
+                if entry_file.is_dir(): entry_file=entry_file/'index.html'
+                if not entry_file.is_file(): continue
+                entry_soup=BeautifulSoup(entry_file.read_text(encoding='utf-8'),'html.parser')
+                heading=(entry_soup.select_one('.entrysubject a.subj-link, .entrysubject a, .entrysubject')
+                         or entry_soup.find('h1'))
+                title=heading.get_text(' ',strip=True) if heading else ''
+                if title.lower()=='bluescholars': title=''
+                if not title:
+                    title_node=entry_soup.find('title')
+                    title=title_node.get_text(' ',strip=True) if title_node else ''
+                    if ':' in title: title=title.split(':',1)[1].strip()
+                if not title: title=Path(entry['path']).stem
+                item=lj_index_page.new_tag('li')
+                link=lj_index_page.new_tag('a',href=base+entry['path']);link.string=title
+                item.append(link);item.append(' — '+basis(entry))
+                result.append(item)
+            return result
+        if lj_entries:
+            entry_list=make_lj_list(lj_entries,'recovered-journal-entries',
+                lambda entry:('full archived post' if entry['status']=='recovered'
+                              else 'text preserved in captured journal front page'))
+            heading=lj_index_page.new_tag('h2');heading.string='Recovered journal entries'
+            lj_index_page.main.append(heading);lj_index_page.main.append(entry_list)
+        if lj_comment_threads:
+            thread_list=make_lj_list(lj_comment_threads,'recovered-comment-threads',
+                lambda entry:('captured comment-thread view · '+entry.get('actual_capture','date unavailable')
+                              if entry['status']=='recovered' else 'comment thread not recovered'))
+            heading=lj_index_page.new_tag('h2');heading.string='Archived comment threads'
+            lj_index_page.main.append(heading);lj_index_page.main.append(thread_list)
+        if lj_entries or lj_comment_threads:
+            lj_index_path.write_text(str(lj_index_page),encoding='utf-8')
     # Each platform generation gets its own index. Unrecovered editions are
     # documented as gaps instead of being filled with invented historical copy.
     for prefix,label in (('/2007','2007 site'),('/2009','2009 WordPress site'),

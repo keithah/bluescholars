@@ -8,7 +8,7 @@ from restore.discover import discover_html
 from restore.build import build,promote,documented_asset_aliases
 from restore.check import check
 from restore.state import State,write_json
-from restore.urls import HOME,TARGET,route,historical_route_prefix,route_capture_hint
+from restore.urls import HOME,TARGET,route,historical_route_prefix,route_capture_hint,livejournal_route
 
 RES={
  HOME+'site.css':{'kind':'css','local_path':'/assets/site.css'},
@@ -325,6 +325,32 @@ def test_legacy_wordpress_origin_page_uses_the_2009_site_route(tmp_path):
     assert page.is_file()
     assert 'Recovered entry.' in page.read_text()
 
+def test_2007_news_page_lists_recovered_livejournal_entries(tmp_path):
+    fixture_root(tmp_path);s=State(tmp_path)
+    add_raw(s,'http://bluescholars.com/news.html','html',
+            b'<html><head><title>Blue Scholars - [news]</title></head><body><p>View my LiveJournal</p></body></html>')
+    s.data['resources']['http://bluescholars.com/news.html']['actual_capture']='20070701134800';s.save()
+    add_raw(s,'http://bluescholars.livejournal.com/16954.html','html',
+            b'<html><body><div style="margin-left: 30px"><font><b>friday mixdown</b></font><br>Mixing the Joe Metro EP at Jupiter Studios.</div></body></html>')
+    add_raw(s,'http://bluescholars.livejournal.com/17222.html','html',
+            b'<html><body><div style="margin-left: 30px"><font><b>The Program</b></font><br>Five nights of Seattle hip hop shows in December 2007.</div></body></html>')
+    add_raw(s,'http://bluescholars.livejournal.com/','html',
+            b'<html><body><div class="entry"><h3 class="entrysubject"><a class="subj-link" href="http://bluescholars.livejournal.com/16015.html">ATL (part uno)</a></h3><span class="entrytimestampdate">9/21/07</span><div class="entrycontent">Atlanta and the Atlantis Music Conference.</div></div><div class="entry"><h3 class="entrysubject"><a class="subj-link" href="http://bluescholars.livejournal.com/16954.html">friday mixdown</a></h3><span class="entrytimestampdate">9/30/07</span><div class="entrycontent">Mixing the Joe Metro EP at Jupiter Studios.</div></div><div class="entry"><h3 class="entrysubject"><a class="subj-link" href="http://bluescholars.livejournal.com/17222.html">The Program</a></h3><span class="entrytimestampdate">10/4/07</span><div class="entrycontent">Five nights of Seattle hip hop shows in December 2007.</div></div></body></html>')
+
+    build(tmp_path,tmp_path/'_candidate','/bluescholars',candidate=True)
+
+    page=BeautifulSoup((tmp_path/'_candidate/2007/news.html').read_text(),'html.parser')
+    news=page.select_one('.recovered-news')
+    assert news is not None
+    assert 'separately archived LiveJournal' in news.get_text(' ',strip=True)
+    assert page.select_one('a[href="/bluescholars/lj/posts/16954.html"]')
+    assert page.select_one('a[href="/bluescholars/lj/posts/17222.html"]')
+    assert page.select_one('a[href="/bluescholars/lj/posts/16015.html"]')
+    assert 'Jupiter Studios' in news.get_text(' ',strip=True)
+    assert 'Atlantis Music Conference' in news.get_text(' ',strip=True)
+    assert [a.get_text(strip=True) for a in news.select('.recovered-news-entry h3 a')]==[
+        'ATL (part uno)','friday mixdown','The Program']
+
 
 def test_legacy_alias_host_pages_with_explicit_html_kind_are_selected(tmp_path):
     fixture_root(tmp_path);s=State(tmp_path)
@@ -592,12 +618,20 @@ def test_livejournal_archive_is_a_separate_local_top_level_section(tmp_path):
     home='http://bluescholars.livejournal.com/'
     post=home+'16954.html'
     add_raw(s,home,'html',b'<html><body><a href="/16954.html">friday mixdown</a></body></html>')
-    add_raw(s,post,'html',b'<html><body><h1>friday mixdown</h1><p>Captured post text.</p></body></html>')
+    add_raw(s,post,'html',b'<html><head><title>bluescholars: friday mixdown</title></head><body><h1></h1><p>Captured post text.</p></body></html>')
+    current=s.data['resources'].pop(post)
+    older=dict(current);older['actual_capture']='20090125012333'
+    older['raw_path']=current['raw_path'];older['sha256']=current['sha256']
+    s.data['resources'][post+'@@wayback:20090125012333:'+older['sha256'][:12]]=older
+    calendar=home+'calendar'
+    add_raw(s,calendar,'html',b'<html><head><title>Journal Calendar</title></head><body>Archive</body></html>')
     build(tmp_path,tmp_path/'_candidate','/bluescholars',candidate=True)
     root=BeautifulSoup((tmp_path/'_candidate/index.html').read_text(),'html.parser')
     assert root.select_one('a.lj-archive[href="/bluescholars/lj/"]')
     index=BeautifulSoup((tmp_path/'_candidate/lj/index.html').read_text(),'html.parser')
-    assert index.find('a',href='/bluescholars/lj/posts/16954.html')
+    assert index.select_one('.recovered-journal-entries a[href="/bluescholars/lj/posts/16954.html"]').get_text(strip=True)=='friday mixdown'
+    assert 'Earlier journal capture' not in index.get_text(' ',strip=True)
+    assert index.select_one('.recovered-journal-entries a[href="/bluescholars/lj/posts/calendar"]') is None
     rendered=(tmp_path/'_candidate/lj/posts/16954.html').read_text()
     assert 'Captured post text.' in rendered
     assert 'http://bluescholars.livejournal.com/16954.html' not in rendered
@@ -616,6 +650,77 @@ def test_livejournal_keeps_post_capture_variants_without_overwriting(tmp_path):
     assert 'Newer post capture.' in (tmp_path/'_candidate/lj/posts/16954.html').read_text()
     alternate=tmp_path/'_candidate/lj/captures/20090125012333/posts/16954.html'
     assert 'Older post capture.' in alternate.read_text()
+
+def test_livejournal_http_and_https_copies_share_routes_but_keep_capture_variants(tmp_path):
+    fixture_root(tmp_path);s=State(tmp_path)
+    post='http://bluescholars.livejournal.com/16954.html'
+    add_raw(s,post,'html',b'<html><body><p>2011 archived post.</p></body></html>')
+    older=s.data['resources'].pop(post)
+    older['actual_capture']='20111002073201'
+    older['source_archive']='Internet Archive Wayback'
+    s.data['resources'][post+'@@wayback:20111002073201:'+older['sha256'][:12]]=older
+    secure='https://bluescholars.livejournal.com/16954.html'
+    add_raw(s,secure,'html',b'<html><body><p>2018 Common Crawl post.</p></body></html>')
+    newer=s.data['resources'].pop(secure)
+    newer.update(actual_capture='20181210163833',source_archive='Common Crawl',
+                 source_collection='CC-MAIN-2018-51',source_warc='crawl-data/example.warc.gz',
+                 source_offset=123,source_length=456,source_digest='archive-digest')
+    s.data['resources'][secure+'@@commoncrawl:20181210163833:'+newer['sha256'][:12]]=newer
+    build(tmp_path,tmp_path/'_candidate','',candidate=True)
+    assert '2018 Common Crawl post.' in (tmp_path/'_candidate/lj/posts/16954.html').read_text()
+    alternate=tmp_path/'_candidate/lj/captures/20111002073201/posts/16954.html'
+    assert '2011 archived post.' in alternate.read_text()
+    assert '2018 Common Crawl post.' not in alternate.read_text()
+
+def test_2007_news_includes_an_individually_recovered_livejournal_entry(tmp_path):
+    fixture_root(tmp_path);s=State(tmp_path)
+    add_raw(s,'http://bluescholars.com/news.html','html',b'<html><head><title>Blue Scholars - [news]</title></head><body><p>View my LiveJournal</p></body></html>')
+    s.data['resources']['http://bluescholars.com/news.html']['actual_capture']='20070701134800'
+    root='http://bluescholars.livejournal.com/'
+    add_raw(s,root,'html',b'<html><body><div class="entry"><h3 class="entrysubject"><a class="subj-link" href="/16015.html">ATL (part uno)</a></h3><span class="entrytimestampdate">9/21/07</span><div class="entrycontent">Atlanta entry excerpt.</div></div></body></html>')
+    s.data['resources'][root].update(actual_capture='20180219080958',source_archive='Common Crawl')
+    post='https://bluescholars.livejournal.com/16641.html'
+    add_raw(s,post,'html',b'<html><body><div class="entry"><h3 class="entrysubject"><a class="subj-link" href="/16641.html">hip hop &amp; violence</a></h3><span class="entrytimestampdate">8/15/07</span><div class="entrycontent">An archived essay about hip hop and violence.</div></div></body></html>')
+    s.data['resources'][post].update(actual_capture='20171119082055',source_archive='Common Crawl')
+    s.save()
+    build(tmp_path,tmp_path/'_candidate','',candidate=True)
+    news=BeautifulSoup((tmp_path/'_candidate/2007/news.html').read_text(),'html.parser')
+    link=news.select_one('.recovered-news a[href="/lj/posts/16641.html"]')
+    assert link and link.get_text(strip=True)=='hip hop & violence'
+    assert '8/15/07' in news.get_text(' ',strip=True)
+    assert 'surviving capture: Nov 19, 2017' in news.get_text(' ',strip=True)
+
+def test_livejournal_comment_thread_captures_get_distinct_local_routes():
+    post='http://bluescholars.livejournal.com/16015.html'
+    assert livejournal_route(post+'?thread=49039')=='/lj/comments/16015.html/49039/'
+    assert livejournal_route(post+'?thread=50319')=='/lj/comments/16015.html/50319/'
+    assert livejournal_route(post)=='/lj/posts/16015.html'
+
+def test_livejournal_comment_thread_captures_render_at_distinct_routes(tmp_path):
+    fixture_root(tmp_path);s=State(tmp_path)
+    for thread,text in (('49039','First preserved reply.'),('50319','Second preserved reply.')):
+        url=f'http://bluescholars.livejournal.com/16015.html?thread={thread}'
+        add_raw(s,url,'html',f'<html><body><h1>Comment thread {thread}</h1><p>{text}</p></body></html>'.encode())
+        s.data['resources'][url].update(actual_capture='20180219081048',source_archive='Common Crawl')
+    build(tmp_path,tmp_path/'_candidate','',candidate=True)
+    first=(tmp_path/'_candidate/lj/comments/16015.html/49039/index.html').read_text()
+    second=(tmp_path/'_candidate/lj/comments/16015.html/50319/index.html').read_text()
+    assert 'First preserved reply.' in first and 'Second preserved reply.' not in first
+    assert 'Second preserved reply.' in second and 'First preserved reply.' not in second
+    index=BeautifulSoup((tmp_path/'_candidate/lj/index.html').read_text(),'html.parser')
+    assert len(index.select('.recovered-comment-threads a'))==2
+    assert not index.select('.recovered-journal-entries a[href*="/comments/"]')
+
+def test_unrecovered_livejournal_comment_links_get_local_gap_pages(tmp_path):
+    fixture_root(tmp_path);s=State(tmp_path)
+    post='http://bluescholars.livejournal.com/16954.html'
+    add_raw(s,post,'html',b'<html><body><h1>friday mixdown</h1><a href="?thread=999999#t999999">Read comment</a></body></html>')
+    build(tmp_path,tmp_path/'_candidate','/bluescholars',candidate=True)
+    gap=tmp_path/'_candidate/lj/comments/16954.html/999999/index.html'
+    page=BeautifulSoup(gap.read_text(),'html.parser')
+    assert 'comment thread was not recovered' in page.get_text(' ',strip=True).lower()
+    assert page.select_one('a[href="/bluescholars/lj/posts/16954.html"]')
+    assert check(tmp_path/'_candidate','/bluescholars')==[]
 
 def test_livejournal_captured_stylesheet_is_served_locally(tmp_path):
     fixture_root(tmp_path);s=State(tmp_path)
@@ -653,6 +758,9 @@ def test_livejournal_entry_content_is_reused_from_the_captured_front_page(tmp_pa
     assert 'This exact text survives in the captured front page.' in page
     assert 'derived_from_capture' in {r['status'] for r in report['pages']}
     assert report['derived_pages']==1
+    index=BeautifulSoup((tmp_path/'_candidate/lj/index.html').read_text(),'html.parser')
+    assert index.select_one('a[href="/lj/posts/16015.html"]')
+    assert 'Recovered journal entries' in index.get_text(' ',strip=True)
 
 def test_unrecovered_edition_links_get_gap_pages_or_honest_cross_edition_bridges(tmp_path):
     fixture_root(tmp_path);s=State(tmp_path)

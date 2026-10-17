@@ -18,10 +18,23 @@ def check(output: Path,base: str='') -> list[str]:
             elif parsed.scheme not in ('http','https','mailto','tel'): errors.append(f'{source}: unsafe link {value}')
             return
         source_url=ORIGIN+base+'/'+source
-        path=unquote(urlsplit(urljoin(source_url,value)).path)
-        if base and not path.startswith(base+'/'):
-            errors.append(f'{source}: escaped deployment base {value}');return
-        rel=path[len(base):].lstrip('/')
+        # Generated site links are root-absolute and intentionally include the
+        # GitHub Pages mount prefix. Resolve them from that mount directly;
+        # relative links still resolve from their containing document.
+        if value.startswith('/'):
+            path=unquote(urlsplit(value).path)
+            # Root-mounted shared resources are an exception: the source HTML
+            # contains /assets/* while Pages serves them below the project base.
+            if base and path.startswith('/assets/'):
+                path=base+path
+            if base and not path.startswith(base+'/'):
+                errors.append(f'{source}: escaped deployment base {value}');return
+            rel=path[len(base):].lstrip('/') if base else path.lstrip('/')
+        else:
+            path=unquote(urlsplit(urljoin(source_url,value)).path)
+            if base and not path.startswith(base+'/'):
+                errors.append(f'{source}: escaped deployment base {value}');return
+            rel=path[len(base):].lstrip('/') if base else path.lstrip('/')
         target=(output/rel).resolve()
         if not target.is_relative_to(output):
             errors.append(f'{source}: path traversal {value}');return

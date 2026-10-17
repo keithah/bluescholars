@@ -48,6 +48,16 @@ def test_renderer_skips_stylesheet_detached_by_malformed_metadata(monkeypatch):
     rendered,_=render_html('<html><head><link rel="stylesheet" href="https://cdn.example/site.css"></head><body>x</body></html>',HOME,RES,'')
     assert 'nested-prev' not in rendered
 
+def test_renderer_localizes_stylesheets_in_conditional_comments():
+    url='https://cdn.example/period.css?part=1'
+    resources={**RES,url:{'kind':'css','local_path':'/assets/period-part-1.css'}}
+    text='''<html><head><!--[if gte IE 9]><link rel="stylesheet" href="https://cdn.example/period.css?part=1"><![endif]--></head><body>archive</body></html>'''
+    rendered,issues=render_html(text,HOME,resources,'/bluescholars')
+    soup=BeautifulSoup(rendered,'html.parser')
+    assert soup.find('link',rel='stylesheet',href='/bluescholars/assets/period-part-1.css')
+    assert 'cdn.example' not in rendered
+    assert not issues
+
 def test_html_localizes_preserves_layout_and_removes_tracking():
     text,issues=render_html(HTML,HOME,RES,'/bluescholars')
     soup=BeautifulSoup(text,'html.parser')
@@ -406,6 +416,15 @@ def test_discovered_link_merges_existing_cdx_referrers_and_builds_placeholder(tm
     report=build(tmp_path,tmp_path/'_site','')
     assert any(p['path']=='/2009/blog/2009/01/linked-post/' and p['status']=='not_recovered'
                for p in report['pages'])
+
+def test_checker_accepts_project_prefixed_root_absolute_links(tmp_path):
+    (tmp_path/'2007').mkdir()
+    (tmp_path/'2007/index.html').write_text('<html></html>')
+    (tmp_path/'assets').mkdir()
+    (tmp_path/'assets/site.css').write_text('body{}')
+    (tmp_path/'index.html').write_text('<html><head><link rel="stylesheet" href="/bluescholars/assets/site.css"></head><body><a href="/bluescholars/2007/">2007</a></body></html>')
+    assert check(tmp_path,'/bluescholars')==[]
+
 
 def test_checker_detects_broken_local_link_and_remote_image(tmp_path):
     (tmp_path/'index.html').write_text('<html><body><a href="/missing/">Missing</a><img src="https://x.example/a.png"></body></html>')

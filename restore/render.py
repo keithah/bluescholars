@@ -179,18 +179,35 @@ def render_html(text: str,url: str,resources: dict,base: str,route_prefix='',ali
     # Extract stylesheet tags first. The archived Squarespace document leaves
     # void <meta> tags open to html.parser, nesting head links inside them.
     stylesheet_links=[]
+    stylesheet_hrefs=set()
     for link in list(soup.find_all('link',href=True)):
         # Decomposing a malformed stylesheet link can detach nested links
         # retained by html.parser in older LiveJournal markup.
         if link.attrs is None:
             continue
         if 'stylesheet' in link.get('rel',[]):
-            stylesheet_links.append({'href':link.get('href',''),'rel':link.get('rel',[]),
-                                     'media':link.get('media'),'type':link.get('type')})
+            descriptor={'href':link.get('href',''),'rel':link.get('rel',[]),
+                        'media':link.get('media'),'type':link.get('type')}
+            stylesheet_links.append(descriptor);stylesheet_hrefs.add(descriptor['href'])
             # A malformed void <link> can own later script tags in html.parser.
             # Destroy the entire untrusted subtree and recreate a clean tag below.
             link.decompose()
-    for comment in list(soup.find_all(string=lambda s:isinstance(s,Comment))): comment.extract()
+    for comment in list(soup.find_all(string=lambda s:isinstance(s,Comment))):
+        # Squarespace's 2013–2016 template placed its only stylesheet references
+        # inside conditional comments. Scripts are removed from the static copy,
+        # so recover observed stylesheet tags without executing their code or
+        # retaining remote links. The `noMedia` variants target legacy browsers.
+        embedded=BeautifulSoup(str(comment),'html.parser')
+        for link in embedded.find_all('link',href=True):
+            rel=link.get('rel',[])
+            if 'stylesheet' not in rel or 'noMedia=true' in link['href']:
+                continue
+            href=link['href']
+            if href not in stylesheet_hrefs and resolver.asset(href,url):
+                stylesheet_links.append({'href':href,'rel':rel,
+                                         'media':link.get('media'),'type':link.get('type')})
+                stylesheet_hrefs.add(href)
+        comment.extract()
     for node in list(soup.select('#wm-ipp,#wm-ipp-base,#donato,#wm-capinfo-notice,.wb-autocomplete-suggestions')):
         node.decompose()
     for node in list(soup.find_all(['script','base','object','embed','applet','noscript'])): node.decompose()
@@ -260,6 +277,20 @@ def render_html(text: str,url: str,resources: dict,base: str,route_prefix='',ali
                 if urlsplit(target).scheme: a['rel']='noopener noreferrer'
             else:
                 a.attrs.pop('href',None)
+    if base:
+        for node in soup.find_all(True):
+            for attr in ('href','src','poster','background'):
+                value=node.get(attr)
+                if isinstance(value,str) and value.startswith('/') and not value.startswith(base+'/'):
+                    node[attr]=base+value
+            if node.get('srcset'):
+                entries=[]
+                for entry in node['srcset'].split(','):
+                    bits=entry.strip().split()
+                    if bits and bits[0].startswith('/') and not bits[0].startswith(base+'/'):
+                        bits[0]=base+bits[0]
+                    if bits: entries.append(' '.join(bits))
+                node['srcset']=', '.join(entries)
     for node in soup.find_all(True):
         for attr in list(node.attrs):
             if attr.lower().startswith(('on','data-')) or attr.lower() in ('srcdoc','action','formaction','manifest','ping','background','xlink:href'):

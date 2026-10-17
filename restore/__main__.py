@@ -62,7 +62,7 @@ def main(argv=None) -> int:
     rec.add_argument('--max-files',type=int,default=150);rec.add_argument('--retry-failed',action='store_true')
     p=commands.add_parser('capture',help='Preserve an exact Wayback capture as a dated variant')
     p.add_argument('--url',required=True);p.add_argument('--timestamp',required=True)
-    p.add_argument('--kind',choices=['html','css','image'],help='Override extension inference for source-linked external resources')
+    p.add_argument('--kind',choices=['html','css','image','font'],help='Override extension inference for source-linked external resources')
     capture=p
     p=commands.add_parser('capture-era',help='Preserve the last available capture per URL for a historical site era')
     p.add_argument('--era',choices=['2007','2009','2013'],required=True)

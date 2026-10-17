@@ -68,7 +68,7 @@ Save the original HTML, head metadata, navigation, site-title/logo mechanism, fo
 
 The homepage photograph's actual capture is **20210529010844**, 27 seconds after the HTML reference **20210529010817**. This is an important edge case: a blanket rule that discards every resource after the HTML timestamp would discard the reference image itself. Save its provenance and permit a specifically reviewed same-crawl dependency; do not turn that exception into unrestricted acceptance of later redesigns. [S11](https://web.archive.org/web/20210529010844/https://images.squarespace-cdn.com/content/v1/51b8c20be4b0f1f8c9dcdf4c/1371078164544-2RKW5D1QDQ5IXSVM5B2N/ke17ZwdGBToddI8pDm48kIZpWXENTEukrBXe6_rB7blZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIF2CO6JwS3nXJTgmvDX6VE5p5CmEHphUtvFe0ff6hcA8KMshLAGzx4R3EDFOm1kBS/front-page.jpg)
 
-Do not guess the logo or typography from the text reader's blank heading. The logo could be an image, a styled title, or a CSS-dependent element; its exact mechanism remains unverified. The report contains no recovered original stylesheet or logo file.
+Do not guess the logo or typography from the text reader's blank heading. The logo could be an image, a styled title, or a CSS-dependent element; its exact mechanism remains unverified. No original homepage stylesheet or logo file has been verified for the May 2021 capture.
 
 ### Blog — preserve posts and the paths connecting them
 
@@ -332,7 +332,7 @@ Call the **reference presentation** restored only after desktop/mobile compariso
 
 Before publishing, verify that no automatic resource request depends on Wayback, Squarespace, or a missing local path; local navigation and historical query mappings work; gaps are honestly marked; and historic contacts, shows, and shop behavior are not presented as current services. A link/resource checker establishes technical consistency, not historical completeness.
 
-Still unresolved: the full capture index; original CSS/logo/font declarations; image bytes; good Shop content; the third and subsequent blog listings; most individual post bodies/permalinks; additional pages not exposed by these inspected links; source-linked variants; and actual external-media playback. **There is no defensible recovery percentage yet.** The manifest is a concrete starting set, not a denominator for the whole historical website.
+This October 15 report was the initial audit. Since then the domain capture index was enumerated, a third Squarespace listing and 18 linked posts were recovered, and four 2016 Squarespace stylesheet parts were retrieved. Still unresolved: the May 2021 original stylesheet/logo mechanism, fonts, many image bytes, good Shop content, later listings/posts, additional pages beyond inspected links, source-linked variants, and actual external-media playback. **There is no defensible recovery percentage.** The manifest remains a sourced inventory, not a denominator for the whole historical website.
 
 ---
 
@@ -570,7 +570,7 @@ Preserve other outbound links—ticketing, social accounts, photographer credits
 | --- | --- |
 | `REPORT.md` | This complete source-location and recovery report. |
 | `REPORT.html` | Locally readable/printable HTML version; no external runtime assets. |
-| `recovery-manifest.json` | All 115 records, evidence states, original/replay/raw/index URLs, and 60 blog-listing observations. |
+| `recovery-manifest.json` | All 120 records, evidence states, original/replay/raw/index URLs, and 60 blog-listing observations. |
 | `recovery-manifest.csv` | Flat URL inventory for sorting and handing to another worker. |
 | `blog-entry-checklist.csv` | Sixty listing entries with source and permalink evidence. |
 | `recovery-seeds-expanded.json` | Compatible page/image seed data for the supplied recovery project; not a downloaded-site catalog. |
@@ -651,3 +651,10 @@ The recovery and static build continued beyond the original research handoff. Th
 A separate `/lj/` section now has eight recovered HTML capture routes from a complete 226-row/115-URL Wayback host index plus Common Crawl: the latest old-layout October 2011 front page and two individual 2007 posts, three dated alternate captures, a 2010 Common Crawl root response, and a 2009 Common Crawl profile. Twenty locally recovered 2007–2008 photos are used by those captured pages. Four of six entry texts on the 2011 page have no standalone capture. The custom journal stylesheet is now retrieved; the separate platform stylesheet bundle was not retrieved, the 2014/2021 Eventful poster remains unapproved for compatibility, and one image request yields only a Wayback HTML lander. See [the independent archive report](OTHER_ARCHIVES.md) for per-capture hashes and exact limits.
 
 The unreviewed candidate contains 449 recovered pages, 4 derived pages, 765 placeholders, and 420 local source assets. Candidate builds at both `/` and `/bluescholars/` have no remote automatic asset dependencies, and all eight `/lj/` capture routes have local page routes; the formerly unresolved 2009 and cross-era links now have explicit gap or edition-bridge pages, and both candidate path checks pass with zero local-link errors. A scan of generated HTML automatic references and CSS `url()` also found zero remote dependencies. The full suite passes 119 tests, but incomplete source/visual coverage and the false publication-review flags prevent release. The public `keithah/bluescholars` repository remains on `main`. At the owner’s direct request, an incomplete candidate preview is live at `https://keithah.github.io/bluescholars/` from the separate `gh-pages` branch (Pages build `38851321206`, commit `cc3ddeea338842c97ecbaa6970b591183faab384`). This preview is not a reviewed release; `source/review.json` remains false.
+
+
+## Update — October 17, 2026
+
+Four exact CSS parts from the 2016 Squarespace template are now individually recovered and rendered locally (P35–P38; 581,080 bytes). They support the source-linked older `/2013/blog/page/3/` capture. This does not supply the May 2021 homepage stylesheet, Squarespace icon fonts, or its unrecovered images. The candidate preview is live at [keithah.github.io/bluescholars](https://keithah.github.io/bluescholars/) and has been checked for `/bluescholars/` hosting. It is still a partial, unreviewed preview. See `GAP_REPORT.md` and `RECOVERY_REPORT.md` for current status.
+
+A further exact source-linked WOFF capture was recovered: the Squarespace UI font from 20130926135509, 9,068 bytes, valid WOFF signature, SHA-256 `b980267ac2254ef534bfe32055489ed677d461077b37f2ee62bf7b5fc4f7362f` (P39). Wayback lists 57 successful binary rows for the exact font URL with a stable digest; the selected capture predates and matches the unchanged URL referenced by the June 2016 CSS. The renderer now retains font-face declarations only when it can localize a valid font file. The social icon font remains missing.

@@ -75,13 +75,14 @@ def test_html_localizes_preserves_layout_and_removes_tracking():
     assert '/bluescholars/assets/bg.png' in text
     assert 'Content-Security-Policy' in text
 
-def test_css_rewrites_dependencies_and_removes_fonts():
+def test_css_rewrites_dependencies_and_keeps_only_recovered_fonts():
     mapping=dict(RES)
     mapping['https://cdn.example/base.css']={'kind':'css','local_path':'/assets/base.css'}
+    mapping['https://cdn.example/a.woff2']={'kind':'font','local_path':'/assets/a.woff2'}
     text,issues=render_css('''@import "base.css" screen; @font-face {font-family:x;src:url(a.woff2)}
     .x {background:url(bg.png);font-family:Georgia;behavior:url(evil.htc)}
     .y{background:url(missing.png)}''','https://cdn.example/style.css',mapping,'/bluescholars')
-    assert '@font-face' not in text and 'a.woff2' not in text
+    assert '@font-face' in text and '/bluescholars/assets/a.woff2' in text
     assert '/bluescholars/assets/base.css' in text
     assert '/bluescholars/assets/bg.png' in text
     assert 'behavior' not in text
@@ -122,11 +123,27 @@ def fixture_root(root):
 def add_raw(state,url,kind,body):
     r=state.add(url,kind,'fixture',TARGET)
     sha=hashlib.sha256(body).hexdigest()
-    path='recovery/raw/'+sha+('.css' if kind=='css' else '.html')
+    suffix={'css':'.css','font':'.woff','image':'.jpg'}.get(kind,'.html')
+    path='recovery/raw/'+sha+suffix
     (state.root/path).parent.mkdir(parents=True,exist_ok=True)
     (state.root/path).write_bytes(body)
     r.update(status='recovered',sha256=sha,raw_path=path,actual_capture=TARGET,bytes=len(body))
     state.save()
+
+def test_candidate_publishes_recovered_font_and_localizes_font_face(tmp_path):
+    fixture_root(tmp_path);s=State(tmp_path)
+    css='https://static.example/site.css'
+    font='https://static.example/universal/fonts/ui.woff'
+    add_raw(s,HOME,'html',('<html><head><link rel="stylesheet" href="'+css+'"></head><body>Home</body></html>').encode())
+    add_raw(s,css,'css',b"@font-face{font-family:ui;src:url('/universal/fonts/ui.woff') format('woff')}body{font-family:ui}")
+    add_raw(s,font,'font',b'wOFF\x00\x01fixture')
+    report=build(tmp_path,tmp_path/'_candidate','/bluescholars',candidate=True)
+    assert report['local_source_assets']>=2
+    output=(tmp_path/'_candidate/assets'/ (hashlib.sha256(b'wOFF\x00\x01fixture').hexdigest()+'.woff'))
+    assert output.read_bytes()==b'wOFF\x00\x01fixture'
+    css_path=tmp_path/'_candidate/assets'/ (hashlib.sha256(css.encode()).hexdigest()[:24]+'.css')
+    assert '@font-face' in css_path.read_text() and '/bluescholars/assets/'+hashlib.sha256(b'wOFF\x00\x01fixture').hexdigest()+'.woff' in css_path.read_text()
+
 
 def test_empty_preview_honest_and_links_valid(tmp_path):
     fixture_root(tmp_path)

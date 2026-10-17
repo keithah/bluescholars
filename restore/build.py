@@ -45,7 +45,7 @@ def promote(root: Path,reviewed: bool=False,allow_later: bool=False) -> dict:
         eligible=r['status']=='recovered' or (
             r['status']=='needs_review' and bool(r.get('compatibility_review'))
         )
-        if eligible and r.get('raw_path') and r['kind'] in ('html','css','image'):
+        if eligible and r.get('raw_path') and r['kind'] in ('html','css','image','font'):
             staged.append((url,r,read_record(root,r,True)))
         elif url not in catalog['resources']:
             catalog['resources'][url]={k:v for k,v in r.items() if k not in ('raw_path','sha256')}
@@ -109,7 +109,7 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
     usable={};usable_variants={};raw={};issues=[]
     for source_key,r in records.items():
         url=r.get('url',source_key)
-        if r.get('raw_path') and r.get('status')=='recovered' and r['kind'] in ('html','css','image'):
+        if r.get('raw_path') and r.get('status')=='recovered' and r['kind'] in ('html','css','image','font'):
             try:
                 raw[source_key]=read_record(root,r,candidate)
             except (OSError,ValueError) as exc:
@@ -165,7 +165,7 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
                     if source_prefix not in existing['edition_prefixes']:
                         existing['edition_prefixes'].append(source_prefix)
     for url,r in usable.items():
-        if r['kind'] in ('css','image'):
+        if r['kind'] in ('css','image','font'):
             if r['kind']=='css':
                 local=('/assets/'+r['sha256']+'.css') if r.get('source_archive') else asset_route(url,'css')
             else: local='/assets/'+r['sha256']+Path(r['raw_path']).suffix
@@ -245,13 +245,17 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
     script='''"use strict"; (() => {\n const mapping = MAPPING;\n const params = new URLSearchParams(location.search);\n const offset = params.get("offset");\n if (location.pathname.replace(/\\/$/, "") === BLOG && [...params].length === 1 && offset && mapping[offset]) {\n  location.replace(mapping[offset] + location.hash);\n }\n})();\n'''.replace('MAPPING',json.dumps(mappings)).replace('BLOG',json.dumps(base+'/2013/blog'))
     (output/'assets/legacy.js').write_text(script)
     for url,r in usable.items():
-        if r['kind'] not in ('css','image'): continue
+        if r['kind'] not in ('css','image','font'): continue
         destination=output/r['local_path'].lstrip('/')
         if r['kind']=='css':
             source_key=r.get('_source_key',url)
             text,found=render_css(raw[source_key].decode('utf-8',errors='replace'),r.get('final_original',url),render_resources,base,aliases)
             destination.parent.mkdir(parents=True,exist_ok=True)
             destination.write_text(text);issues.extend(found)
+        elif r['kind']=='font':
+            source_key=r.get('_source_key',url)
+            destination.parent.mkdir(parents=True,exist_ok=True)
+            destination.write_bytes(raw[source_key])
         else:
             source_key=r.get('_source_key',url)
             destination.parent.mkdir(parents=True,exist_ok=True)
@@ -458,7 +462,7 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
     report={'mode':'unreviewed_candidate' if candidate else 'reviewed_source_build','base_path':base,
             'recovered_pages':recovered,'placeholder_pages':placeholders,
             'derived_pages':sum(p['status']=='derived_from_capture' for p in page_report),
-            'local_source_assets':sum(r['kind'] in ('css','image') for r in usable.values()),
+            'local_source_assets':sum(r['kind'] in ('css','image','font') for r in usable.values()),
             'visual_fidelity_verified':bool(review.get('visual_reviewed')) and not candidate,
             'publish_approved':bool(review.get('publish_approved')) and not candidate,
             'pages':page_report,'issues':issues,'reference_capture':TARGET,

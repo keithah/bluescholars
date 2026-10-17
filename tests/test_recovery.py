@@ -47,8 +47,9 @@ def test_html_masquerading_as_image_rejected():
 def test_tiff_image_payload_is_preserved():
     validate_payload(b'II*\x00\x08\x00\x00\x00'+b'\x00'*16,'image')
 
-def test_font_download_forbidden():
-    with pytest.raises(ValueError): validate_payload(b'wOF2xxx','font')
+def test_font_capture_requires_a_recognized_binary_signature():
+    validate_payload(b'wOF2fixture','font')
+    with pytest.raises(ValueError,match='font signature'): validate_payload(b'<html>landed page</html>','font')
 
 def test_rank_before_reference_first():
     r={'url':HOME,'hints':['20200101000000'],'captures':[

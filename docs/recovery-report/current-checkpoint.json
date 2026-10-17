@@ -11,30 +11,30 @@
     "recovered_pages": 924,
     "placeholder_pages": 1851,
     "derived_pages": 4,
-    "local_source_assets": 732,
+    "local_source_assets": 738,
     "base_path": "/bluescholars/",
-    "candidate_source": "local merged recovery checkpoint through run 38975520061; rebuilt and checked at root and /bluescholars/ on 2026-10-17",
+    "candidate_source": "local merged checkpoint plus recovered linked Squarespace CSS and WOFF, built for /bluescholars/",
     "issues_by_type": {
       "missing_asset": 4110,
       "linked_asset_not_recovered": 295,
       "external_media_link_only": 145,
-      "font_not_packaged": 18,
+      "font_not_packaged": 17,
       "invalid_source": 9
     },
     "visual_fidelity_verified": false,
     "publish_approved": false,
-    "note": "Both base-path checkers pass with zero local-link or remote automatic-resource errors. Missing assets and links remain source gaps; the preview is not final-release approved."
+    "note": "Partial unreviewed preview; no visual or publication approval recorded."
   },
   "candidate_checks": {
     "root": {
       "ok": true,
       "errors": [],
-      "source_checkpoint": "merged through run 38975520061; candidate built and checked locally on 2026-10-17"
+      "source_checkpoint": "merged recovery candidate plus locally restored Squarespace CSS/WOFF; checked 2026-10-17"
     },
     "project_subpath": {
       "ok": true,
       "errors": [],
-      "source_checkpoint": "merged through run 38975520061; candidate built with /bluescholars/ and checked locally on 2026-10-17"
+      "source_checkpoint": "merged recovery candidate plus locally restored Squarespace CSS/WOFF; checked 2026-10-17"
     },
     "remote_automatic_resources": {
       "root": 0,
@@ -124,7 +124,7 @@
     "unique_raw_files": 97,
     "visual_reviewed": false
   },
-  "updated_at": "2026-10-17T00:30:24Z",
+  "updated_at": "2026-10-17T01:20:00Z",
   "tests": {
     "command": ".venv311/bin/python -m pytest -q",
     "result": "125 passed",
@@ -441,5 +441,47 @@
       "transport_failures_unknown": 4
     },
     "no_new_compatible_post_body_claimed": true
+  },
+  "squarespace_css_recovery": {
+    "records": "P35-P38",
+    "capture_timestamps": [
+      "20160624015144",
+      "20160624020908",
+      "20160624014732",
+      "20160624015113"
+    ],
+    "asset_bytes": 581080,
+    "local_assets": [
+      "/assets/60651f5152ee05114057cb19baade7270906222e40f4566470288400b32b1349.css",
+      "/assets/4ecf4a691741b79a76bcd5a699d4e114a1dcbac2c1f609f4f906ba7814da472f.css",
+      "/assets/0aec7fb307db454ff9f3f84084786c11fdcada5bb7e5282c6896e8ab25e4d894.css",
+      "/assets/24d8845600c004322c57d62f25a302444c8ca7cdace8dc9c3550ee8b8bc1acc0.css"
+    ],
+    "css_references_localized": true,
+    "shared_icon_fonts_recovered": false,
+    "visual_inspection": "browser shows recovered 2013 structure and styling; article images and icon-font glyphs remain unavailable",
+    "publish_preview_commit": "c7bd4bdeaf8ccc256e35d212069a56218c855dfd",
+    "squarespace_ui_font": {
+      "id": "P39",
+      "timestamp": "20130926135509",
+      "bytes": 9068,
+      "sha256": "b980267ac2254ef534bfe32055489ed677d461077b37f2ee62bf7b5fc4f7362f",
+      "status": "valid WOFF recovered and locally packaged"
+    }
+  },
+  "recovery_state": {
+    "resource_urls": 9000,
+    "indexed_capture_records": 21149,
+    "statuses": {
+      "queued": 4720,
+      "recovered": 3037,
+      "needs_review": 50,
+      "failed": 1193,
+      "excluded": 0
+    },
+    "unique_downloaded_files": 1977,
+    "downloaded_bytes": 109432650,
+    "failed_attempts": 6416,
+    "index_complete": true
   }
 }

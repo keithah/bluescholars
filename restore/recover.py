@@ -72,6 +72,7 @@ def index_seed_assets(state:State,client,max_assets:int=100,max_pages:int=3)->di
 def suffix(body,kind):
     if kind=='html': return '.html'
     if kind=='css': return '.css'
+    if kind=='font': return '.woff2' if body.startswith(b'wOF2') else '.woff' if body.startswith(b'wOFF') else '.otf' if body.startswith(b'OTTO') else '.ttf'
     if body.startswith(b'\xff\xd8'): return '.jpg'
     if body.startswith(b'\x89PNG'): return '.png'
     if body.startswith(b'GIF'): return '.gif'
@@ -241,7 +242,7 @@ def capture_variant(state:State,client,url:str,timestamp:str,kind_override:str|N
     canonical=original_url(url)
     if not canonical:raise ValueError('Invalid original URL')
     kind=kind_override or kind_for(canonical)
-    if kind not in ('html','css','image'):raise ValueError(f'Unsupported capture kind: {kind}')
+    if kind not in ('html','css','image','font'):raise ValueError(f'Unsupported capture kind: {kind}')
     replay=f'https://web.archive.org/web/{timestamp}id_/{canonical}'
     response=client.get(replay)
     validate_payload(response.body,kind)

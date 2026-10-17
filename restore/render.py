@@ -8,7 +8,7 @@ import tinycss2
 from .urls import HOME,TARGET,original_url,identity,is_site,route,base_path,livejournal_route
 
 NAV=[('BLOG','/blog/'),('SHOWS','/shows/'),('VIDEO','/video/'),('SHOP','/shop/'),('HOLLER','/holler/')]
-CSP="default-src 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; font-src 'none'; connect-src 'none'; frame-src 'none'; media-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"
+CSP="default-src 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; font-src 'self'; connect-src 'none'; frame-src 'none'; media-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"
 
 class Resolver:
     def __init__(self,resources,base,issues,route_prefix='',aliases=None):
@@ -99,7 +99,17 @@ def _rules(text,resolver,url):
         if rule.type=='at-rule':
             name=rule.lower_at_keyword
             if name=='font-face':
-                resolver.issues.append({'type':'font_not_packaged','source':url})
+                declarations=tinycss2.parse_declaration_list(tinycss2.serialize(rule.content),skip_comments=True,skip_whitespace=True)
+                source_declaration=' '.join(tinycss2.serialize(d.value) for d in declarations if d.type=='declaration' and d.lower_name=='src')
+                local_font=False
+                for match in re.finditer(r'''url\(\s*['\"]?([^'\")]+)''',source_declaration,re.I):
+                    candidate=original_url(match.group(1).strip(),url)
+                    if candidate and resolver._record(candidate).get('local_path'):
+                        local_font=True;break
+                if not local_font:
+                    resolver.issues.append({'type':'font_not_packaged','source':url})
+                    continue
+                result.append('@font-face{'+_declarations(tinycss2.serialize(rule.content),resolver,url)+'}')
                 continue
             if name in ('charset','namespace'): continue
             if name=='import':

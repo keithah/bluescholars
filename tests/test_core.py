@@ -109,3 +109,10 @@ def test_state_refines_a_legacy_html_guess_when_image_mime_is_seen(tmp_path):
 def test_checkpoint_is_valid_json(tmp_path):
     s=State(tmp_path);s.add(HOME,'html','seed');s.save()
     assert json.loads((tmp_path/'recovery/state.json').read_text())['version']==1
+
+
+def test_font_payload_validator_accepts_woff_and_rejects_html():
+    from restore.archive import validate_payload
+    validate_payload(b'wOFF\x00\x01font bytes', 'font')
+    with pytest.raises(ValueError, match='font signature'):
+        validate_payload(b'<html>archive error</html>', 'font')

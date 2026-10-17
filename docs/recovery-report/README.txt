@@ -1,14 +1,8 @@
-BLUE SCHOLARS RECOVERY REPORT — 2026-10-15
+BLUE SCHOLARS RECOVERY REPORT — initial audit 2026-10-15; updated through 2026-10-17
 
-Start with REPORT.html or REPORT.md.
-Full URL inventories: recovery-manifest.csv and recovery-manifest.json.
-The expanded seed file is compatible with the supplied recovery project's page/image seed schema; it is not a recovered-source catalog.
+Start with REPORT.md for the historical audit and dated updates, or RECOVERY_REPORT.md and GAP_REPORT.md for active findings.
+Full URL inventories: recovery-manifest.csv and recovery-manifest.json (120 provenance records, including 4 CSS parts and 1 WOFF font).
 
-There are 97 observed URL records: 14 page/query targets, 42 image URLs,
-11 video references, and 30 external leads. Five images displayed in the web
-reader; no original site binaries have been downloaded into this bundle.
-The archive-wide URL index is not complete. Candidate/raw/index links must
-be tested in a network-enabled environment.
+Current recovery checkpoint: 9,000 resource URLs; 21,149 indexed capture rows; 1,977 unique downloaded files (109,432,650 bytes). The expanded seed file distinguishes this live state from the original handoff baseline.
 
-No image or font binaries, credentials, or executable archived site scripts
-are bundled. Report HTML uses no external runtime dependencies.
+The partial, unreviewed Pages preview is https://keithah.github.io/bluescholars/. Main source release flags remain false.

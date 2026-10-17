@@ -123,7 +123,11 @@ def capture_candidates(record: dict,target: str=TARGET) -> list[str]:
 
 def validate_payload(body: bytes,kind: str) -> None:
     if not body: raise ValueError('Empty archive response')
-    if kind in ('font','script','unsupported'):
+    if kind=='font':
+        if not body.startswith((b'wOFF',b'wOF2',b'OTTO',b'\x00\x01\x00\x00')):
+            raise ValueError('Expected a valid font signature; received HTML or unknown content')
+        return
+    if kind in ('script','unsupported'):
         raise ValueError(f'{kind} files are excluded from recovery output')
     if kind=='image':
         prefix=body.lstrip()[:1000].lower()

@@ -1,6 +1,6 @@
 # Original material and restoration tooling
 
-The recovery and static-build code is newly prepared tooling. The original Blue Scholars photographs, logos, writing, music, video and design remain attributable to their respective creators and rights holders. An Internet Archive capture is not proof of a public-domain or redistribution license.
+The recovery and static-build code is newly prepared tooling. The original Blue Scholars, Prometheus Brown and Sabzi photographs, logos, writing, music, video and design remain attributable to their respective creators and rights holders. An Internet Archive capture is not proof of a public-domain or redistribution license.
 
 Keep historical bylines, captions, copyright notices and credits in recovered source. Verify permission before publishing original material. Do not mark the entire repository with a blanket license that purports to relicense third-party artwork or writing.
 

@@ -13,6 +13,7 @@ from .render import render_html,render_css,resource_aliases,NAV
 from .svg import sanitize_svg
 from .state import State,write_json
 from .urls import HOME,TARGET,SQUARESPACE_START,identity,is_site,route,asset_route,base_path,livejournal_route,original_url,historical_route_prefix,route_capture_hint
+from .artist_sites import build_artist_sites
 
 CORE=[('/', 'Homepage'),('/blog/','Blog'),('/shows/','Shows'),('/video/','Video'),('/shop/','Shop'),('/holler/','Holler')]
 FALLBACK_UI='''.archive-restoration-notice,.archive-gap-page {font:16px/1.6 system-ui,sans-serif}
@@ -720,7 +721,8 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
               ('/2013/','2013','Squarespace site · first located in 2013'))
     for prefix,year,era in editions:
         gateway+='<a class="edition edition-card" href="'+base+prefix+'"><span class="edition-year">'+year+'</span><span class="edition-era">'+html.escape(era)+'</span><span class="edition-action">Explore this edition <span aria-hidden="true">↗</span></span></a>'
-    gateway+='</nav><nav class="archive-home-links" aria-label="Other archive resources"><a class="lj-archive" href="'+base+'/lj/">LiveJournal posts <span aria-hidden="true">↗</span></a><a class="recovery-status" href="'+base+'/archive-status/">Recovery status and source gaps <span aria-hidden="true">↗</span></a></nav>'
+    satellite_report=build_artist_sites(root,output,base,candidate)
+    gateway+='</nav><h2>Related artist archives</h2><nav class="archive-home-links" aria-label="Related artist archives"><a href="'+base+'/prometheusbrown/">Prometheus Brown site editions <span aria-hidden="true">↗</span></a><a href="'+base+'/sabzi/">Sabzi site editions <span aria-hidden="true">↗</span></a></nav><nav class="archive-home-links" aria-label="Other archive resources"><a class="lj-archive" href="'+base+'/lj/">LiveJournal posts <span aria-hidden="true">↗</span></a><a class="recovery-status" href="'+base+'/archive-status/">Recovery status and source gaps <span aria-hidden="true">↗</span></a></nav>'
     hub=page_shell('Blue Scholars archive',gateway).replace('<main class="archive-gap-page">','<main class="archive-gap-page archive-home">')
     hub=hub.replace('</head>','<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="'+ui_href+'"></head>')
     _write_page(output,'/',hub)
@@ -732,7 +734,7 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
             'local_source_assets':sum(r['kind'] in ('css','image') for r in usable.values()),
             'visual_fidelity_verified':bool(review.get('visual_reviewed')) and not candidate,
             'publish_approved':bool(review.get('publish_approved')) and not candidate,
-            'pages':page_report,'issues':issues,'reference_capture':TARGET,
+            'pages':page_report,'issues':issues,'reference_capture':TARGET,'artist_sites':satellite_report,
             'note':'A successful build is not proof of source completeness or visual fidelity.'}
     stats=f'<p class="archive-lead">{recovered} recovered pages · {placeholders} recovery placeholders</p>'
     stats+='<p>The build is offline. It does not use Wayback or Squarespace to display its content. Original typography and layout still require visual review; the diagnostic styling is not the historical site design.</p>'

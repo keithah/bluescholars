@@ -13,6 +13,8 @@ from .check import check
 from .recover import index,recover,summary,now,capture_variant,capture_era,index_seed_assets
 from .state import State,write_json
 from .urls import base_path
+from .artist_sites import (index_artist_sites,recover_artist_sites,promote_artist_sites,
+                           review_artist_capture)
 
 def serve(directory: Path,base: str,port: int):
     from http.server import ThreadingHTTPServer,SimpleHTTPRequestHandler
@@ -51,6 +53,15 @@ def main(argv=None) -> int:
     p.add_argument('--max-records',type=int,default=500);p.add_argument('--delay',type=float,default=0.5)
     p=commands.add_parser('commoncrawl-import',help='Import saved Common Crawl CDX rows from a JSONL file')
     p.add_argument('--rows',type=Path,required=True);p.add_argument('--collection',required=True)
+    p=commands.add_parser('artist-index',help='Index dated Internet Archive captures for Prometheus Brown and Sabzi')
+    p.add_argument('--delay',type=float,default=0.2)
+    p=commands.add_parser('artist-recover',help='Recover linked pages and local visual assets for each dated artist-site edition')
+    p.add_argument('--max-files',type=int,default=1800);p.add_argument('--delay',type=float,default=0.6);p.add_argument('--retry-failed',action='store_true')
+    p=commands.add_parser('artist-compatibility-review',help='Record an individual later-page compatibility decision')
+    p.add_argument('--edition',required=True,help='Edition key, e.g. sabzi.co/2013')
+    p.add_argument('--url',required=True);p.add_argument('--reason',required=True)
+    p=commands.add_parser('artist-promote',help='Promote inspected artist-site sources; later captures need individual compatibility notes')
+    p.add_argument('--reviewed',action='store_true')
     p=commands.add_parser('merge-recovery',help='Safely merge a downloaded recovery artifact from a staging directory')
     p.add_argument('--artifact',type=Path,required=True);p.add_argument('--run-id',required=True)
     idx=commands.add_parser('index',help='Enumerate captures and persist the continuation cursor')
@@ -98,6 +109,18 @@ def main(argv=None) -> int:
         elif args.command=='commoncrawl-import':
             rows=[json.loads(line) for line in args.rows.read_text().splitlines() if line.strip()]
             result=import_commoncrawl_rows(root,args.collection,rows)
+        elif args.command=='artist-index':
+            if args.delay<0:raise ValueError('--delay must not be negative')
+            result=index_artist_sites(root,args.delay)
+        elif args.command=='artist-recover':
+            if args.max_files<1 or args.delay<0:raise ValueError('Invalid artist-site recovery limits')
+            result=recover_artist_sites(root,args.max_files,args.delay,
+                progress=lambda p:print(json.dumps({'stage':'artist-recover','progress':p}),file=sys.stderr,flush=True),
+                retry_failed=args.retry_failed)
+        elif args.command=='artist-compatibility-review':
+            result=review_artist_capture(root,args.edition,args.url,args.reason)
+        elif args.command=='artist-promote':
+            result=promote_artist_sites(root,args.reviewed)
         elif args.command=='merge-recovery': result=merge_artifact(root,args.artifact,args.run_id)
         elif args.command=='index-assets':
             if args.max_assets<1 or args.max_pages<1:raise ValueError('Asset index limits must be positive')

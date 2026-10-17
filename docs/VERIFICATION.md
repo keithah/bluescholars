@@ -1,5 +1,14 @@
 # Verification record — October 16, 2026
 
+## Artist-site editions — October 17, 2026
+
+- `PYTHONPATH=. .venv311/bin/python -m pytest -q` — **181 passed**. `compileall -q restore tests` passed. `git diff --check` passed for code/docs/reports with byte-preserved `recovery/artist-sites/raw/` payloads excluded; their original CRLF whitespace remains intact.
+- Candidate build/check at the domain root and at `/bluescholars/` both completed; `restore check` returned `{ "ok": true, "errors": [] }` for both. The checker scanned the rendered pages and stylesheets, including the new 11 artist-site editions, and found no remote automatic resource requests.
+- The candidate contains 615 renderable artist-site pages and 381 local assets from 674 unique source payloads. Browser inspection confirmed the main gateway links to both hubs; Prometheus Brown’s 2009/2010 cards lead to the archived `/blog/` homes, and Sabzi’s cards lead to dated homepages. A 2010 WordPress blog page and the Sabzi 2019 homepage were opened locally.
+- Visual inspection exposed real gaps: the Prometheus Brown 2010 theme stylesheet and several photographs have no usable capture; the Sabzi page’s remaining site-specific layout imagery is incomplete. Missing photographs now render as labeled gap markers linked to dated Wayback sources. Eight unsafe SVG payloads are preserved in the raw source collection but excluded from rendering. No replacement artwork or CSS was fabricated. 205 later-page captures await compatibility review.
+- The capture/source records are in [artist-sites-report.json](recovery-report/artist-sites-report.json), with the human-readable summary in [artist-sites-report.md](recovery-report/artist-sites-report.md). The 2024 casino spam exclusions and source digests are recorded there; 2025–2026 Prometheus Brown rows remain indexed but uninspected.
+- Browser checking was agent-performed; no screenshot file was saved and no human review is claimed. `source/artist-sites.json` is not promoted, `source/review.json` remains false for both publication and visual review, and Pages was not redeployed. These additions are still an unreviewed recovery candidate.
+
 ## Automated checks
 
 - `.venv311/bin/python -m pytest -q` — **124 passed** (including homepage card and unreviewed-redirect regressions).

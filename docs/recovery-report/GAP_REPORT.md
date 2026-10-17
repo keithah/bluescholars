@@ -215,3 +215,6 @@ The latest Pages commit is `3dd2369a78cffbd608fbb12036643850459815a6`; workflow 
 
 
 The seventh broad retry processed 200 URLs, validated eight HTML responses, added 11 resource URLs and 13 index rows, and saved three previously unseen bodies totaling 78,504 bytes. It changed nine 2009 archive-query views. Per-capture provenance is preserved in `recovery/state.json`; the batch totals are recorded in [the seventh retry report](../../recovery/broad-200-local-20261017-07-report.json).
+
+
+A tenth broad retry validated 9 HTML capture responses from 200 URLs. It added seven resource URLs, 38 index rows, and three previously unseen raw bodies totaling 35,479 bytes. The new source updated the Jean Quan and Paramount photo entries and restored edition-specific bio/store pages; one recovered route was added overall, leaving 978 recovered pages and 2,176 placeholders. Both root and `/bluescholars/` checks pass. Capture timestamps, hashes and source URLs are in [the tenth retry report](../../recovery/broad-200-local-20261017-10-report.json).

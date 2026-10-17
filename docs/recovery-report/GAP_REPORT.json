@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T18:20:36.233357+00:00",
+  "updated_at": "2026-10-17T18:28:42.122584+00:00",
   "source_checkpoint_run": "Local resumable checkpoint after the 2013 pass on 2026-10-17; GitHub Actions run 39044681280 is separately recorded because it resumed an older artifact.",
   "capture_index": {
     "indexed_capture_records": 23238,
@@ -24,8 +24,8 @@
     "candidate_local_source_assets": 1044
   },
   "candidate": {
-    "recovered_pages": 977,
-    "placeholder_pages": 2179,
+    "recovered_pages": 978,
+    "placeholder_pages": 2176,
     "derived_pages": 4,
     "local_source_assets": 1055,
     "publish_approved": false,
@@ -477,20 +477,20 @@
     "release_approved": false
   },
   "checkpoint": {
-    "resource_urls": 11118,
+    "resource_urls": 11201,
     "statuses": {
-      "queued": 5736,
-      "recovered": 3837,
+      "queued": 5200,
+      "recovered": 3931,
       "needs_review": 72,
-      "failed": 1473,
+      "failed": 1998,
       "excluded": 0
     },
-    "indexed_capture_records": 23238,
-    "unique_downloaded_files": 2291,
-    "downloaded_bytes": 147533392,
-    "failed_attempts": 7339,
+    "indexed_capture_records": 23344,
     "index_complete": true,
-    "updated_at": "2026-10-17T16:00:55.426785+00:00"
+    "unique_downloaded_files": 2309,
+    "downloaded_bytes": 147740118,
+    "failed_attempts": 9199,
+    "generated_at": "2026-10-17T18:28:42.122584+00:00"
   },
   "pages_deployment": {
     "mode": "public, unreviewed incomplete candidate preview; not an approved final restoration",
@@ -571,5 +571,28 @@
     "new_unique_raw_files": 1,
     "new_unique_raw_bytes": 8745,
     "changed_rendered_routes": 0
+  },
+  "candidate_checks": {
+    "root": {
+      "ok": true,
+      "errors": [],
+      "remote_automatic_resources": 0
+    },
+    "project_subpath": {
+      "base_path": "/bluescholars/",
+      "ok": true,
+      "errors": [],
+      "remote_automatic_resources": 0
+    }
+  },
+  "latest_tenth_broad_retry": {
+    "report": "recovery/broad-200-local-20261017-10-report.json",
+    "processed_urls": 200,
+    "validated_responses": 9,
+    "new_resource_urls": 7,
+    "new_index_rows": 38,
+    "new_unique_raw_files": 3,
+    "new_unique_raw_bytes": 35479,
+    "changed_rendered_routes": 7
   }
 }

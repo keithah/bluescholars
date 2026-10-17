@@ -1,0 +1,164 @@
+{
+  "batch": "tenth local broad recovery retry",
+  "started_at": "2026-10-17T18:20:36Z",
+  "finished_at": "2026-10-17T18:28:42.122584+00:00",
+  "command": ".venv311/bin/python -m restore recover --max-files 200 --retry-failed --delay 0.5 --timeout 25 --retries 1",
+  "processed_urls": 200,
+  "validated_responses": 9,
+  "validated_kind_counts": {
+    "html": 9
+  },
+  "captures": [
+    {
+      "url": "http://02cd02a.netsolhost.com/blog/jean-quan-from-cal-activist-to-mayor-of-oakland/",
+      "requested_capture": "20110312120404",
+      "actual_capture": "20110312120404",
+      "sha256": "76a4977e225c923b3e57d8d34f3651ce28c90ae2349c54df0c8ec3262d35fe4c",
+      "bytes": 12591,
+      "kind": "html",
+      "attempted_at": "2026-10-17T18:22:06.832804+00:00",
+      "raw_path": "recovery/raw/76a4977e225c923b3e57d8d34f3651ce28c90ae2349c54df0c8ec3262d35fe4c.html"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com/blog/photos-the-paramount-oct-20-2010-by-greg-nissen/",
+      "requested_capture": "20110316015758",
+      "actual_capture": "20110316015758",
+      "sha256": "065d87cd8130c85a57283e96bc0647ea41662ea550416a30289a332cbbd221aa",
+      "bytes": 9543,
+      "kind": "html",
+      "attempted_at": "2026-10-17T18:22:09.746256+00:00",
+      "raw_path": "recovery/raw/065d87cd8130c85a57283e96bc0647ea41662ea550416a30289a332cbbd221aa.html"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com:80/blog/photos-the-paramount-oct-20-2010-by-greg-nissen",
+      "requested_capture": "20110316015758",
+      "actual_capture": "20110316015758",
+      "sha256": "065d87cd8130c85a57283e96bc0647ea41662ea550416a30289a332cbbd221aa",
+      "bytes": 9543,
+      "kind": "html",
+      "attempted_at": "2026-10-17T18:22:47.815066+00:00",
+      "raw_path": "recovery/raw/065d87cd8130c85a57283e96bc0647ea41662ea550416a30289a332cbbd221aa.html"
+    },
+    {
+      "url": "http://bluescholars.com/bio.htm",
+      "requested_capture": "20060623005547",
+      "actual_capture": "20060623005547",
+      "sha256": "458adf46c34555885f012600df02b7de543cf104852e931175249a09f9628f0b",
+      "bytes": 10470,
+      "kind": "html",
+      "attempted_at": "2026-10-17T18:26:32.548289+00:00",
+      "raw_path": "recovery/raw/458adf46c34555885f012600df02b7de543cf104852e931175249a09f9628f0b.html"
+    },
+    {
+      "url": "http://bluescholars.com/blog/cine-release-show-special-guests-macklemore-el-mizell-dj-sosa/217714_190959544280955_100001007324337_457600_7610494_n/",
+      "requested_capture": "20110614162232",
+      "actual_capture": "20110614162232",
+      "sha256": "6aeb6841ff51eeca5c28fef93dc6260bb33a69440ae2d03ca3388f8411691d51",
+      "bytes": 9221,
+      "kind": "html",
+      "attempted_at": "2026-10-17T18:25:50.882936+00:00",
+      "raw_path": "recovery/raw/6aeb6841ff51eeca5c28fef93dc6260bb33a69440ae2d03ca3388f8411691d51.html"
+    },
+    {
+      "url": "http://bluescholars.com/media/",
+      "requested_capture": "20130205125857",
+      "actual_capture": "20130205125819",
+      "sha256": "58c6ea313373e023ed01c6e4d26939b5fd9e9f6519fbf0bd44a5f873eeb3fa74",
+      "bytes": 10185,
+      "kind": "html",
+      "attempted_at": "2026-10-17T18:26:16.465889+00:00",
+      "raw_path": "recovery/raw/58c6ea313373e023ed01c6e4d26939b5fd9e9f6519fbf0bd44a5f873eeb3fa74.html"
+    },
+    {
+      "url": "http://bluescholars.com/store",
+      "requested_capture": "20110724142217",
+      "actual_capture": "20110724142301",
+      "sha256": "6e0f48836491f9d535faff620e42b25a15c8e497ad1d6c37a37c8faa120c5966",
+      "bytes": 14989,
+      "kind": "html",
+      "attempted_at": "2026-10-17T18:26:13.431500+00:00",
+      "raw_path": "recovery/raw/6e0f48836491f9d535faff620e42b25a15c8e497ad1d6c37a37c8faa120c5966.html"
+    },
+    {
+      "url": "http://bluescholars.com:80/bio",
+      "requested_capture": "20120421033656",
+      "actual_capture": "20120421033656",
+      "sha256": "c154697940655023f24aca416a8f0df53eb70678d53dc439dd615a76ab6e510e",
+      "bytes": 10093,
+      "kind": "html",
+      "attempted_at": "2026-10-17T18:26:20.090015+00:00",
+      "raw_path": "recovery/raw/c154697940655023f24aca416a8f0df53eb70678d53dc439dd615a76ab6e510e.html"
+    },
+    {
+      "url": "http://bluescholars.com:80/store",
+      "requested_capture": "20090828155055",
+      "actual_capture": "20090828155055",
+      "sha256": "931c5bfff45472674238e678db30b461df024436dc7914ac0f08c969f3e568d4",
+      "bytes": 14916,
+      "kind": "html",
+      "attempted_at": "2026-10-17T18:28:37.505373+00:00",
+      "raw_path": "recovery/raw/931c5bfff45472674238e678db30b461df024436dc7914ac0f08c969f3e568d4.html"
+    }
+  ],
+  "new_resource_urls": 7,
+  "new_index_rows": 38,
+  "new_unique_raw_files": 3,
+  "new_unique_raw_bytes": 35479,
+  "before": {
+    "resource_urls": 11194,
+    "statuses": {
+      "queued": 5265,
+      "recovered": 3922,
+      "needs_review": 72,
+      "failed": 1935,
+      "excluded": 0
+    },
+    "indexed_capture_records": 23306,
+    "unique_downloaded_files": 2306,
+    "downloaded_bytes": 147704639,
+    "failed_attempts": 9048
+  },
+  "after": {
+    "resource_urls": 11201,
+    "statuses": {
+      "queued": 5200,
+      "recovered": 3931,
+      "needs_review": 72,
+      "failed": 1998,
+      "excluded": 0
+    },
+    "indexed_capture_records": 23344,
+    "index_complete": true,
+    "unique_downloaded_files": 2309,
+    "downloaded_bytes": 147740118,
+    "failed_attempts": 9199,
+    "generated_at": "2026-10-17T18:28:42.122584+00:00"
+  },
+  "candidate_rebuilds": {
+    "root": {
+      "recovered_pages": 978,
+      "placeholder_pages": 2176,
+      "local_source_assets": 1055,
+      "check_ok": true,
+      "errors": 0
+    },
+    "project_subpath": {
+      "base_path": "/bluescholars/",
+      "recovered_pages": 978,
+      "placeholder_pages": 2176,
+      "local_source_assets": 1055,
+      "check_ok": true,
+      "errors": 0
+    }
+  },
+  "changed_rendered_routes": [
+    "/2013/bio.htm/",
+    "/2013/store/",
+    "/2007/bio.htm/",
+    "/2009/blog/photos-the-paramount-oct-20-2010-by-greg-nissen/",
+    "/2009/blog/jean-quan-from-cal-activist-to-mayor-of-oakland/",
+    "/archive-status/",
+    "/archive-status/report.json"
+  ],
+  "note": "The source adds one rendered route and updates recovered bio/store and 2009 WordPress material. Candidate output remains marked unreviewed and not approved for final release."
+}

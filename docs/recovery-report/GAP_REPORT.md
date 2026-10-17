@@ -110,3 +110,10 @@ The 2007 edition uses the latest intact captured homepage (`20070724082915`) and
 A local bounded batch processed 200 URLs from the existing queue. It added 11 recovered legacy-host HTML records (photo posts, category indexes, and supporting pages), one newly inventoried URL and 57 CDX rows. It added no unique raw bytes because every downloaded response matched a SHA-256 file already in the checkpoint. Five former placeholder routes now resolve to recovered local page output; the total candidate route inventory is 955 recovered pages and 2,352 remaining placeholders. Exact URL, capture timestamp, payload size and SHA-256 for all 11 records are in `GAP_REPORT.json` under `local_checkpoint_after_recovery_sweep.last_batch.newly_recovered_capture_routes`.
 
 The final local checkpoint is 10,094 URLs and 22,636 capture rows, with 3,321 recovered, 64 needs-review, 1,437 failed, and 5,272 queued; 2,095 unique verified files total 112,816,864 bytes. The updated root and project-path candidate checks both pass. These counts replace the earlier October 17 snapshot above.
+
+
+## Exact-image gap validation — October 17, 2026
+
+The newly recovered `PHOTOS: TONE` page links its lead image at `http://02cd02a.netsolhost.com/blog/wp-content/uploads/2009/07/l_bf6ff3f3d208456f9cd4c58a4b8dd822.jpg`. A fresh exact-URL CDX request returned zero rows, and an individually requested August 14, 2009 capture returned HTTP 404. That image stays marked missing; no other-year photograph was substituted. The four missing generic social-share button images are retained as small labeled gaps so they do not overwhelm the article layout; real post-photo gaps remain full, visible notices.
+
+Candidate checks after this change: 955 recovered pages, 2,352 placeholders, four derived LJ views, 750 local assets; root and `/bluescholars/` check with zero errors. All 3,312 candidate HTML pages and packaged CSS were scanned; zero remote automatic dependencies were found. The refreshed candidate now includes a compact representation for unrecovered `Post to …` share icons while preserving the larger named gap for the article’s actual photograph.

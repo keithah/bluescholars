@@ -120,3 +120,10 @@ The candidate was rebuilt locally from the merged checkpoint through run `389608
 ## Post-deployment acquisition update — October 17, 2026
 
 A second local 200-URL pass recovered 11 additional host-page records and five former placeholder routes, without adding unique bytes. The local root and `/bluescholars/` candidate check both passed after rebuild (955 recovered pages; 2,352 placeholders). The new 2009 capture routes have not yet been live-checked in this deployment snapshot; verify them after refreshing Pages. The previous public candidate commit remains `f192c6bb` until that refresh succeeds.
+
+
+## October 17 final local candidate check before preview refresh
+
+- Added regression `test_missing_social_share_icons_are_compact_without_hiding_article_photo_gaps`: it failed before the renderer change and now passes. `PYTHONPATH=. .venv311/bin/pytest -q`: **141 passed**. Compileall, shell syntax, `actionlint`, and `git diff --check` passed.
+- Root and `/bluescholars/` candidate builds each report 955 recovered pages, 2,352 placeholders, four derived LJ views and 750 local assets; both checks return zero errors. A scan of 3,312 generated HTML documents plus local CSS found no automatic external asset URLs.
+- Exact CDX for the PHOTOS: TONE lead image returned zero rows and the dated replay returned 404. The page keeps a named photo gap; only the small missing social-share icon labels were compacted. This does not add a source image or imply fidelity where the photograph is unavailable. The candidate is rebuilt locally but awaits the next Pages deploy.

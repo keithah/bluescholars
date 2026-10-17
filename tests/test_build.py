@@ -100,6 +100,19 @@ def test_html_srcset_fallback_to_recovered_asset():
     text,_=render_html('<html><body><img srcset="https://cdn.example/photo.jpg 2x"></body></html>',HOME,RES,'')
     assert BeautifulSoup(text,'html.parser').img['src']=='/assets/photo.jpg'
 
+def test_missing_social_share_icons_are_compact_without_hiding_article_photo_gaps():
+    source='''<html><body><a href="https://twitter.com/share"><img alt="Post to Twitter" src="https://cdn.example/twitter.gif"></a>
+    <img alt="Original tour photo" src="https://cdn.example/tour-photo.jpg"></body></html>'''
+    text,issues=render_html(source,HOME,{},'')
+    soup=BeautifulSoup(text,'html.parser')
+    spans=soup.select('span.archive-missing-image')
+    assert len(spans)==2
+    assert 'archive-missing-control' in spans[0].get('class',[])
+    assert spans[0].get_text()=='Image not recovered — Post to Twitter'
+    assert 'archive-missing-control' not in spans[1].get('class',[])
+    assert spans[1].get_text()=='Image not recovered — Original tour photo'
+    assert sum(issue['type']=='missing_asset' for issue in issues)==2
+
 def test_html_asset_reuses_identical_source_path_over_other_scheme():
     resources={'http://cdn.example/photo.jpg':{'kind':'image','local_path':'/assets/photo.jpg'}}
     text,issues=render_html('<html><body><img src="https://cdn.example/photo.jpg"></body></html>',

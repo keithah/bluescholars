@@ -50,7 +50,7 @@
     "pages_build_status": "success",
     "pages_url": "https://keithah.github.io/bluescholars/",
     "font_binaries_in_public_output": false,
-    "browser_review": "Agent-performed local visual inspection of 2007 homepage, 2009 SXSW article and 2013 Squarespace homepage; screenshots were displayed in the browser tool but no screenshot files were saved."
+    "browser_review": "Agent inspected 2007, 2009 SXSW, 2013 homepage and a newly captured 2009 photo post. The main 2009 photo is unavailable; missing share-icon gaps are compact. No screenshot file saved."
   },
   "known_missing_dependencies": {
     "images_or_other_embedded_assets": 5352,
@@ -74,7 +74,8 @@
   "notable_known_gaps": [
     "2010-03 Paul Valery attachment PaulValery1.jpg: exact Wayback row status 403; Arquivo.pt exact query returned zero rows.",
     "Vimeo clip 10370730 is referenced by a contemporaneous forum post; video bytes were not recovered.",
-    "A 2025 LiveJournal modern-interface capture and a 2023 post variant remain needs_review and are not mixed into the old-layout /lj/ edition."
+    "A 2025 LiveJournal modern-interface capture and a 2023 post variant remain needs_review and are not mixed into the old-layout /lj/ edition.",
+    "2009 PHOTOS: TONE image l_bf6ff3f3d208456f9cd4c58a4b8dd822.jpg: exact URL CDX returned zero rows; an individually requested 2009-08-14 response returned 404. The source image remains a named gap."
   ],
   "interpretation": "Queued and failed resource records describe attempted discovery state, not a claim that the archive has no material. Alternate captures still require individual compatibility review.",
   "targeted_image_index": {
@@ -343,7 +344,7 @@
     }
   },
   "verification": {
-    "tests": "140 passed",
+    "tests": "141 passed",
     "main_branch_validation_run": 39002061515,
     "main_branch_validation_conclusion": "success",
     "root_build_check": "passed, zero errors",
@@ -373,5 +374,15 @@
     "integrity_test": "passed",
     "font_binaries_included": false,
     "development_caches_or_credentials_included": false
-  }
+  },
+  "unavailable_assets_verified": [
+    {
+      "url": "http://02cd02a.netsolhost.com/blog/wp-content/uploads/2009/07/l_bf6ff3f3d208456f9cd4c58a4b8dd822.jpg",
+      "referring_page": "http://02cd02a.netsolhost.com/blog/2009/07/photos-tone/",
+      "exact_url_cdx_rows": 0,
+      "attempted_capture": "20090814170612",
+      "attempt_result": "HTTP 404",
+      "interpretation": "The original article photo remains missing; no other-era photograph was substituted."
+    }
+  ]
 }

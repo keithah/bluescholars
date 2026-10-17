@@ -266,6 +266,8 @@ def render_html(text: str,url: str,resources: dict,base: str,route_prefix='',ali
         else:
             span=soup.new_tag('span',attrs={'class':'archive-missing-image','role':'img'})
             alt=img.get('alt','').strip()
+            if alt.lower().startswith('post to '):
+                span['class'].append('archive-missing-control')
             span.string='Image not recovered'+(' — '+alt if alt else '')
             img.replace_with(span)
     for form in list(soup.find_all('form')):

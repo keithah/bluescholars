@@ -119,12 +119,7 @@ jobs:
       - name: Refresh recovery summary
         if: always()
         run: python -m restore status > recovery/report.json
-      - name: Build a candidate for inspection (never publishes)
-        if: always()
-        run: |
-          python -m restore build --candidate > recovery/candidate-build-report.json
-          python -m restore check --candidate > recovery/candidate-check-report.json
-      - name: Preserve source bytes, checkpoint and candidate even after failure
+      - name: Preserve recovery checkpoint and source bytes
         if: always()
         uses: actions/upload-artifact@v7
         with:
@@ -140,13 +135,26 @@ jobs:
             recovery/arquivo-domain-state.json
             recovery/era-*-report.json
             recovery/asset-index-report.json
-            recovery/candidate-build-report.json
-            recovery/candidate-check-report.json
-            recovery/raw/
             recovery/index/
-            _candidate/
+            recovery/raw/
           retention-days: 30
           if-no-files-found: error
+      - name: Build a candidate for inspection (never publishes)
+        if: always()
+        run: |
+          python -m restore build --candidate > recovery/candidate-build-report.json
+          python -m restore check --candidate > recovery/candidate-check-report.json
+      - name: Preserve candidate for inspection
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: archive-recovery-candidate
+          path: |
+            recovery/candidate-build-report.json
+            recovery/candidate-check-report.json
+            _candidate/
+          retention-days: 30
+          if-no-files-found: ignore
       - name: Report acquisition failure
         if: steps.acquire.outcome == 'failure'
         run: |

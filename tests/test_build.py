@@ -4,6 +4,7 @@ from pathlib import Path
 import pytest
 from bs4 import BeautifulSoup
 from restore.render import render_html,render_css
+from restore.discover import discover_html
 from restore.build import build,promote,documented_asset_aliases
 from restore.check import check
 from restore.state import State,write_json
@@ -87,6 +88,26 @@ def test_2007_image_map_labels_get_local_navigation_targets():
     assert [area['href'] for area in areas]==[
         '/2007/news.html','/2007/bio.html','/2007/shows.html','/2007/media.html']
     assert all(area.get('tabindex')=='0' for area in areas)
+
+def test_image_map_local_pages_are_discovered_and_missing_asset_links_are_honest():
+    source='<html><body><map name="nav"><area href="forum.html"><area href="/press/missing.jpg"></map></body></html>'
+    discovered=discover_html(source,'http://bluescholars.com/bio.html')
+    assert any(r['url']=='http://bluescholars.com/forum.html' and r['kind']=='html' for r in discovered)
+    rendered,_=render_html(source,'http://bluescholars.com/bio.html',{},'','/2007')
+    areas=BeautifulSoup(rendered,'html.parser').find_all('area')
+    assert areas[0]['href']=='/2007/forum.html'
+    assert areas[1]['href']=='/archive-status/'
+
+def test_2007_image_map_button_has_an_explicit_local_gap_page(tmp_path):
+    fixture_root(tmp_path);s=State(tmp_path)
+    url='http://bluescholars.com/bio.html'
+    add_raw(s,url,'html',b'<html><body><map name="nav"><area href="forum.html" alt="Forum"></map></body></html>')
+    s.data['resources'][url]['actual_capture']='20070724082915';s.save()
+    report=build(tmp_path,tmp_path/'_candidate','',candidate=True)
+    page=BeautifulSoup((tmp_path/'_candidate/2007/bio.html').read_text(),'html.parser')
+    assert page.select_one('area[alt="Forum"]')['href']=='/2007/forum.html'
+    assert (tmp_path/'_candidate/2007/forum.html').is_file()
+    assert any(item['path']=='/2007/forum.html' and item['status']=='not_recovered' for item in report['pages'])
 
 def test_squarespace_mobile_menu_control_is_keyboard_and_touch_operable():
     source='''<html><body><div id="mobileNav"><nav><a href="/blog">BLOG</a></nav></div>
@@ -714,6 +735,14 @@ def test_checker_accepts_project_prefixed_root_absolute_links(tmp_path):
     (tmp_path/'assets/site.css').write_text('body{}')
     (tmp_path/'index.html').write_text('<html><head><link rel="stylesheet" href="/bluescholars/assets/site.css"></head><body><a href="/bluescholars/2007/">2007</a></body></html>')
     assert check(tmp_path,'/bluescholars')==[]
+
+def test_checker_treats_image_map_areas_as_user_navigation(tmp_path):
+    (tmp_path/'news.html').write_text('<html></html>')
+    (tmp_path/'index.html').write_text('''<html><body><map name="nav">
+      <area href="/news.html" alt="News" shape="rect" coords="0,0,20,10">
+      <area href="https://example.org/" alt="External" shape="rect" coords="20,0,40,10">
+    </map></body></html>''')
+    assert check(tmp_path,'')==[]
 
 
 def test_checker_detects_broken_local_link_and_remote_image(tmp_path):

@@ -53,7 +53,10 @@ def check(output: Path,base: str='') -> list[str]:
                         for entry in node[attr].split(','):
                             if entry.strip(): verify(entry.strip().split()[0],source,True)
                     else: verify(node[attr],source,True)
-            if node.get('href'): verify(node['href'],source,node.name!='a')
+            # Image-map areas are navigation controls like anchors. Their
+            # destinations are fetched only after user activation, never as
+            # automatic page dependencies.
+            if node.get('href'): verify(node['href'],source,node.name not in ('a','area'))
             if node.get('style'):
                 for u in discover_css('x{'+node['style']+'}',ORIGIN+base+'/'+source):
                     verify(u.removeprefix(ORIGIN) if u.startswith(ORIGIN+'/') else u,source,True)

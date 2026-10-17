@@ -41,6 +41,11 @@ def discover_html(text: str,url: str) -> list[dict]:
         found[u]={'url':u,'kind':kind or kind_for(u),'referrer':url}
     for a in soup.find_all('a',href=True):
         add(a['href'],None,True)
+    # Image-map regions are ordinary user-activated navigation links. Discover
+    # their local HTML destinations so missing pages can receive explicit gap
+    # routes just like links inside anchors.
+    for area in soup.find_all('area',href=True):
+        add(area['href'],None,True)
     for link in soup.find_all('link',href=True):
         rel=link.get('rel',[])
         if 'stylesheet' in rel:

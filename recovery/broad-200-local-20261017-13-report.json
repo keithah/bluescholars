@@ -1,0 +1,416 @@
+{
+  "batch": "thirteenth local broad recovery retry",
+  "started_at": "2026-10-17T18:56:53Z",
+  "finished_at": "2026-10-17T19:13:29.033025+00:00",
+  "command": ".venv311/bin/python -m restore recover --max-files 200 --retry-failed --delay 0.5 --timeout 25 --retries 1",
+  "processed_urls": 200,
+  "validated_responses": 32,
+  "validated_kind_counts": {
+    "html": 31,
+    "css": 1
+  },
+  "captures": [
+    {
+      "url": "http://bluescholars.com/blog?tag=BAMBU",
+      "requested_capture": "20190821121230",
+      "actual_capture": "20160529150507",
+      "sha256": "363a15d0a3b0fdc3a71dd7aef1911762f1e3d6d458b172c182218fde8c7449c1",
+      "bytes": 95323,
+      "kind": "html",
+      "attempted_at": "2026-10-17T19:12:23.713926+00:00",
+      "raw_path": "recovery/raw/363a15d0a3b0fdc3a71dd7aef1911762f1e3d6d458b172c182218fde8c7449c1.html"
+    },
+    {
+      "url": "http://bluescholars.com/blog?tag=XXL",
+      "requested_capture": "20160611083006",
+      "actual_capture": "20160611083006",
+      "sha256": "529c9ee4730fe238467844277ba66067721891fd99a6a869472658371aa168f8",
+      "bytes": 33795,
+      "kind": "html",
+      "attempted_at": "2026-10-17T19:07:50.421004+00:00",
+      "raw_path": "recovery/raw/529c9ee4730fe238467844277ba66067721891fd99a6a869472658371aa168f8.html"
+    },
+    {
+      "url": "http://bluescholars.com/cinecontest",
+      "requested_capture": "20120910150509",
+      "actual_capture": "20120910150509",
+      "sha256": "b715fc77e64aeeee837195a045d498ede71a4f7207c247c1b534275cafd94cc4",
+      "bytes": 6308,
+      "kind": "html",
+      "attempted_at": "2026-10-17T19:06:48.683360+00:00",
+      "raw_path": "recovery/raw/b715fc77e64aeeee837195a045d498ede71a4f7207c247c1b534275cafd94cc4.html"
+    },
+    {
+      "url": "http://bluescholars.com/cinecontest/",
+      "requested_capture": "20120823090543",
+      "actual_capture": "20120910150509",
+      "sha256": "b715fc77e64aeeee837195a045d498ede71a4f7207c247c1b534275cafd94cc4",
+      "bytes": 6308,
+      "kind": "html",
+      "attempted_at": "2026-10-17T19:08:02.688763+00:00",
+      "raw_path": "recovery/raw/b715fc77e64aeeee837195a045d498ede71a4f7207c247c1b534275cafd94cc4.html"
+    },
+    {
+      "url": "http://bluescholars.com/shop/showbox",
+      "requested_capture": "20151209001407",
+      "actual_capture": "20151209001407",
+      "sha256": "dbfb764cc2b4dd1b97989e32f01f365585339fef61f65cc3b77edce8a545766a",
+      "bytes": 38485,
+      "kind": "html",
+      "attempted_at": "2026-10-17T19:08:06.915566+00:00",
+      "raw_path": "recovery/raw/dbfb764cc2b4dd1b97989e32f01f365585339fef61f65cc3b77edce8a545766a.html"
+    },
+    {
+      "url": "http://bluescholars.com:80/cinecontest",
+      "requested_capture": "20120626155635",
+      "actual_capture": "20120626155635",
+      "sha256": "b715fc77e64aeeee837195a045d498ede71a4f7207c247c1b534275cafd94cc4",
+      "bytes": 6308,
+      "kind": "html",
+      "attempted_at": "2026-10-17T19:13:11.033827+00:00",
+      "raw_path": "recovery/raw/b715fc77e64aeeee837195a045d498ede71a4f7207c247c1b534275cafd94cc4.html"
+    },
+    {
+      "url": "http://bluescholars.com:80/events.htm",
+      "requested_capture": "20060209161003",
+      "actual_capture": "20060218165210",
+      "sha256": "a9289eda2cd6959ce5b5ee23dd1d1f66cbd5ecbe1690133e4cb73fd8856060ac",
+      "bytes": 9263,
+      "kind": "html",
+      "attempted_at": "2026-10-17T19:09:57.468377+00:00",
+      "raw_path": "recovery/raw/a9289eda2cd6959ce5b5ee23dd1d1f66cbd5ecbe1690133e4cb73fd8856060ac.html"
+    },
+    {
+      "url": "http://bluescholars.com:80/index.htm",
+      "requested_capture": "20060715153605",
+      "actual_capture": "20060715153605",
+      "sha256": "db68de407ac56c0c0d5a7d2554876bd2ffb0fef026a46e696ab5024a2324e097",
+      "bytes": 4571,
+      "kind": "html",
+      "attempted_at": "2026-10-17T19:08:11.411934+00:00",
+      "raw_path": "recovery/raw/db68de407ac56c0c0d5a7d2554876bd2ffb0fef026a46e696ab5024a2324e097.html"
+    },
+    {
+      "url": "http://bluescholars.com:80/links.htm",
+      "requested_capture": "20040812114250",
+      "actual_capture": "20040812114250",
+      "sha256": "cdf1afb237536a7734f9955fc6f530051d904304377908cef15adcaf836fa215",
+      "bytes": 5436,
+      "kind": "html",
+      "attempted_at": "2026-10-17T19:08:13.807545+00:00",
+      "raw_path": "recovery/raw/cdf1afb237536a7734f9955fc6f530051d904304377908cef15adcaf836fa215.html"
+    },
+    {
+      "url": "http://bluescholars.com:80/media.htm",
+      "requested_capture": "20050204141011",
+      "actual_capture": "20050204141011",
+      "sha256": "8db38132cf9adb11b77c515df36c8f412e23a6527382fc23c9abc45bfa7eb2c1",
+      "bytes": 9769,
+      "kind": "html",
+      "attempted_at": "2026-10-17T19:08:16.902202+00:00",
+      "raw_path": "recovery/raw/8db38132cf9adb11b77c515df36c8f412e23a6527382fc23c9abc45bfa7eb2c1.html"
+    },
+    {
+      "url": "http://bluescholars.com:80/merch.htm",
+      "requested_capture": "20040407114320",
+      "actual_capture": "20040407114320",
+      "sha256": "9f851b4cc325d4b08266cb018a918c6cf3b933689413aa1d719737dbb4b1f296",
+      "bytes": 10754,
+      "kind": "html",
+      "attempted_at": "2026-10-17T19:08:20.870173+00:00",
+      "raw_path": "recovery/raw/9f851b4cc325d4b08266cb018a918c6cf3b933689413aa1d719737dbb4b1f296.html"
+    },
+    {
+      "url": "http://bluescholars.com:80/misc.htm",
+      "requested_capture": "20210529010817",
+      "actual_capture": "20040407114716",
+      "sha256": "ad5afd9fe6bc5bd4ac137b7c8eee4f15fc419ba4bc35357acbf5208631f4d66c",
+      "bytes": 4253,
+      "kind": "html",
+      "attempted_at": "2026-10-17T19:08:22.163636+00:00",
+      "raw_path": "recovery/raw/ad5afd9fe6bc5bd4ac137b7c8eee4f15fc419ba4bc35357acbf5208631f4d66c.html"
+    },
+    {
+      "url": "http://bluescholars.com:80/news.html",
+      "requested_capture": "20070129105220",
+      "actual_capture": "20070129105220",
+      "sha256": "318255e3167276a232dca8b1707d1ac11e0619f21a707388735e0d2422c0d354",
+      "bytes": 3967,
+      "kind": "html",
+      "attempted_at": "2026-10-17T19:08:27.764903+00:00",
+      "raw_path": "recovery/raw/318255e3167276a232dca8b1707d1ac11e0619f21a707388735e0d2422c0d354.html"
+    },
+    {
+      "url": "http://bluescholars.com:80/press.htm",
+      "requested_capture": "20050204141011",
+      "actual_capture": "20050204141732",
+      "sha256": "eda2f275062283c765c4c2743bb93ef442761e1a646669e70bfb206c462cd055",
+      "bytes": 16948,
+      "kind": "html",
+      "attempted_at": "2026-10-17T19:08:29.074415+00:00",
+      "raw_path": "recovery/raw/eda2f275062283c765c4c2743bb93ef442761e1a646669e70bfb206c462cd055.html"
+    },
+    {
+      "url": "http://bluescholars.com:80/shows.htm",
+      "requested_capture": "20060524212234",
+      "actual_capture": "20060524212234",
+      "sha256": "786e1d9ccac884d65388df9b1082be814f1197b7951303da84c25bdcd26c6d2d",
+      "bytes": 9408,
+      "kind": "html",
+      "attempted_at": "2026-10-17T19:08:34.601607+00:00",
+      "raw_path": "recovery/raw/786e1d9ccac884d65388df9b1082be814f1197b7951303da84c25bdcd26c6d2d.html"
+    },
+    {
+      "url": "http://bluescholars.com:80/store.htm",
+      "requested_capture": "20060209161003",
+      "actual_capture": "20060209161003",
+      "sha256": "0c670a15654923ce0a76cf18b066d829a263d99f6016dbad61929c659b61a80f",
+      "bytes": 14927,
+      "kind": "html",
+      "attempted_at": "2026-10-17T19:08:36.042042+00:00",
+      "raw_path": "recovery/raw/0c670a15654923ce0a76cf18b066d829a263d99f6016dbad61929c659b61a80f.html"
+    },
+    {
+      "url": "http://bluescholars.com:80/store.html",
+      "requested_capture": "20070310221708",
+      "actual_capture": "20070310221708",
+      "sha256": "034754d7035949357ba95a651d5fc81eecfd5ac446c0a23466d5812cea50f103",
+      "bytes": 11177,
+      "kind": "html",
+      "attempted_at": "2026-10-17T19:10:23.109657+00:00",
+      "raw_path": "recovery/raw/034754d7035949357ba95a651d5fc81eecfd5ac446c0a23466d5812cea50f103.html"
+    },
+    {
+      "url": "http://bluescholars.com:80/the-sound/",
+      "requested_capture": "20210529010817",
+      "actual_capture": "20231104011653",
+      "sha256": "d1a6f085899eb182638fe0c025287f4bf129ef88e62564aadeba849daee8f847",
+      "bytes": 46766,
+      "kind": "html",
+      "attempted_at": "2026-10-17T19:10:24.521929+00:00",
+      "raw_path": "recovery/raw/d1a6f085899eb182638fe0c025287f4bf129ef88e62564aadeba849daee8f847.html"
+    },
+    {
+      "url": "http://bluescholars.com:80/tour-dates",
+      "requested_capture": "20120626173523",
+      "actual_capture": "20120626173523",
+      "sha256": "99f9dbb4f2a4e3ce15c2dba0389a9f5fcced70283df21bfd600d103c657e1834",
+      "bytes": 5568,
+      "kind": "html",
+      "attempted_at": "2026-10-17T19:10:30.169245+00:00",
+      "raw_path": "recovery/raw/99f9dbb4f2a4e3ce15c2dba0389a9f5fcced70283df21bfd600d103c657e1834.html"
+    },
+    {
+      "url": "http://shop.bluescholars.com/password",
+      "requested_capture": "20210529010817",
+      "actual_capture": "20131214235923",
+      "sha256": "d9d44cfd872699dbd92e5d476a22632cac4dc80c40cf3a651fc91d26aa38b5ec",
+      "bytes": 4068,
+      "kind": "html",
+      "attempted_at": "2026-10-17T19:10:32.479811+00:00",
+      "raw_path": "recovery/raw/d9d44cfd872699dbd92e5d476a22632cac4dc80c40cf3a651fc91d26aa38b5ec.html"
+    },
+    {
+      "url": "http://www.bluescholars.com/index.htm",
+      "requested_capture": "20210529010817",
+      "actual_capture": "20060715153605",
+      "sha256": "db68de407ac56c0c0d5a7d2554876bd2ffb0fef026a46e696ab5024a2324e097",
+      "bytes": 4571,
+      "kind": "html",
+      "attempted_at": "2026-10-17T19:11:21.134754+00:00",
+      "raw_path": "recovery/raw/db68de407ac56c0c0d5a7d2554876bd2ffb0fef026a46e696ab5024a2324e097.html"
+    },
+    {
+      "url": "http://www.bluescholars.com/media.htm",
+      "requested_capture": "20060218165210",
+      "actual_capture": "20060118095918",
+      "sha256": "8db38132cf9adb11b77c515df36c8f412e23a6527382fc23c9abc45bfa7eb2c1",
+      "bytes": 9769,
+      "kind": "html",
+      "attempted_at": "2026-10-17T19:10:44.743687+00:00",
+      "raw_path": "recovery/raw/8db38132cf9adb11b77c515df36c8f412e23a6527382fc23c9abc45bfa7eb2c1.html"
+    },
+    {
+      "url": "http://www.bluescholars.com/merch.htm",
+      "requested_capture": "20210529010817",
+      "actual_capture": "20040407114320",
+      "sha256": "9f851b4cc325d4b08266cb018a918c6cf3b933689413aa1d719737dbb4b1f296",
+      "bytes": 10754,
+      "kind": "html",
+      "attempted_at": "2026-10-17T19:11:23.031194+00:00",
+      "raw_path": "recovery/raw/9f851b4cc325d4b08266cb018a918c6cf3b933689413aa1d719737dbb4b1f296.html"
+    },
+    {
+      "url": "http://www.bluescholars.com/misc.htm",
+      "requested_capture": "20210529010817",
+      "actual_capture": "20040407114716",
+      "sha256": "ad5afd9fe6bc5bd4ac137b7c8eee4f15fc419ba4bc35357acbf5208631f4d66c",
+      "bytes": 4253,
+      "kind": "html",
+      "attempted_at": "2026-10-17T19:11:25.156457+00:00",
+      "raw_path": "recovery/raw/ad5afd9fe6bc5bd4ac137b7c8eee4f15fc419ba4bc35357acbf5208631f4d66c.html"
+    },
+    {
+      "url": "http://www.bluescholars.com/news.htm",
+      "requested_capture": "20060615033740",
+      "actual_capture": "20060615033740",
+      "sha256": "b62c80cb4dba96b504f339f6f7b64a085251db69856d6ba88001529cd211ac8c",
+      "bytes": 2891,
+      "kind": "html",
+      "attempted_at": "2026-10-17T19:09:03.896556+00:00",
+      "raw_path": "recovery/raw/b62c80cb4dba96b504f339f6f7b64a085251db69856d6ba88001529cd211ac8c.html"
+    },
+    {
+      "url": "http://www.bluescholars.com/news.html",
+      "requested_capture": "20070706113346",
+      "actual_capture": "20070706113346",
+      "sha256": "96324bced7f05815286cbd999eff8237f5f7c391a4c9c4bbe5fc17ed31488a24",
+      "bytes": 3986,
+      "kind": "html",
+      "attempted_at": "2026-10-17T19:10:51.832146+00:00",
+      "raw_path": "recovery/raw/96324bced7f05815286cbd999eff8237f5f7c391a4c9c4bbe5fc17ed31488a24.html"
+    },
+    {
+      "url": "http://www.bluescholars.com/press.htm",
+      "requested_capture": "20060218165210",
+      "actual_capture": "20060218165200",
+      "sha256": "eda2f275062283c765c4c2743bb93ef442761e1a646669e70bfb206c462cd055",
+      "bytes": 16948,
+      "kind": "html",
+      "attempted_at": "2026-10-17T19:10:55.173752+00:00",
+      "raw_path": "recovery/raw/eda2f275062283c765c4c2743bb93ef442761e1a646669e70bfb206c462cd055.html"
+    },
+    {
+      "url": "http://www.bluescholars.com/shows.htm",
+      "requested_capture": "20060524212234",
+      "actual_capture": "20060524212234",
+      "sha256": "786e1d9ccac884d65388df9b1082be814f1197b7951303da84c25bdcd26c6d2d",
+      "bytes": 9408,
+      "kind": "html",
+      "attempted_at": "2026-10-17T19:11:00.558687+00:00",
+      "raw_path": "recovery/raw/786e1d9ccac884d65388df9b1082be814f1197b7951303da84c25bdcd26c6d2d.html"
+    },
+    {
+      "url": "http://www.bluescholars.com/store.htm",
+      "requested_capture": "20210529010817",
+      "actual_capture": "20210506110758",
+      "sha256": "1f2dcdc57190b5ea3cb5b2a546981eefca32a52eb4958e832fb1eb355a59d04a",
+      "bytes": 35162,
+      "kind": "html",
+      "attempted_at": "2026-10-17T19:11:01.933448+00:00",
+      "raw_path": "recovery/raw/1f2dcdc57190b5ea3cb5b2a546981eefca32a52eb4958e832fb1eb355a59d04a.html"
+    },
+    {
+      "url": "http://www.bluescholars.com:80/store/",
+      "requested_capture": "20120325162652",
+      "actual_capture": "20120325162652",
+      "sha256": "6e0f48836491f9d535faff620e42b25a15c8e497ad1d6c37a37c8faa120c5966",
+      "bytes": 14989,
+      "kind": "html",
+      "attempted_at": "2026-10-17T19:11:11.181364+00:00",
+      "raw_path": "recovery/raw/6e0f48836491f9d535faff620e42b25a15c8e497ad1d6c37a37c8faa120c5966.html"
+    },
+    {
+      "url": "https://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/19/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/623-05142015/1371067617126/site.css",
+      "requested_capture": "20210529010817",
+      "actual_capture": "20210504132653",
+      "sha256": "9f3db4d5d1c07e8c8908fce7cb595487d1eb7c8e94fde276a904769f58dea4a2",
+      "bytes": 463280,
+      "kind": "css",
+      "attempted_at": "2026-10-17T19:11:06.554630+00:00",
+      "raw_path": "recovery/raw/9f3db4d5d1c07e8c8908fce7cb595487d1eb7c8e94fde276a904769f58dea4a2.css"
+    },
+    {
+      "url": "https://www.bluescholars.com/bio.html",
+      "requested_capture": "20231120030625",
+      "actual_capture": "20231120031626",
+      "sha256": "dd6fd65c7ab0500265183df4c11cfda656d3ec2ce6807c95c444a8506987acaf",
+      "bytes": 97101,
+      "kind": "html",
+      "attempted_at": "2026-10-17T19:11:14.252864+00:00",
+      "raw_path": "recovery/raw/dd6fd65c7ab0500265183df4c11cfda656d3ec2ce6807c95c444a8506987acaf.html"
+    }
+  ],
+  "new_resource_urls": 67,
+  "new_index_rows": 1338,
+  "new_unique_raw_files": 12,
+  "new_unique_raw_bytes": 292111,
+  "before": {
+    "resource_urls": 11259,
+    "statuses": {
+      "queued": 5168,
+      "recovered": 3974,
+      "needs_review": 72,
+      "failed": 2045,
+      "excluded": 0
+    },
+    "indexed_capture_records": 24651,
+    "unique_downloaded_files": 2330,
+    "downloaded_bytes": 147961668,
+    "failed_attempts": 9624
+  },
+  "after": {
+    "resource_urls": 11326,
+    "statuses": {
+      "queued": 5148,
+      "recovered": 4004,
+      "needs_review": 74,
+      "failed": 2100,
+      "excluded": 0
+    },
+    "indexed_capture_records": 25989,
+    "index_complete": true,
+    "unique_downloaded_files": 2342,
+    "downloaded_bytes": 148253779,
+    "failed_attempts": 9809,
+    "generated_at": "2026-10-17T19:13:29.033025+00:00"
+  },
+  "candidate_rebuilds": {
+    "root": {
+      "recovered_pages": 985,
+      "placeholder_pages": 2185,
+      "local_source_assets": 1055,
+      "check_ok": true,
+      "errors": 0
+    },
+    "project_subpath": {
+      "base_path": "/bluescholars/",
+      "recovered_pages": 985,
+      "placeholder_pages": 2185,
+      "local_source_assets": 1055,
+      "check_ok": true,
+      "errors": 0
+    }
+  },
+  "changed_rendered_routes": [
+    "/2007/events.html",
+    "/2007/index.htm/",
+    "/2007/merch.htm/",
+    "/2007/misc.htm/",
+    "/2007/shows.htm/",
+    "/2007/store_gear.htm/",
+    "/2007/store_misc.htm/",
+    "/2007/store_music.htm/",
+    "/2013/events.html",
+    "/2013/store_gear.htm/",
+    "/2013/store_misc.htm/",
+    "/2013/store_music.htm/",
+    "/2013/Guestbook/guestbook.html",
+    "/2013/blog/bambudepistola-california-youre-next/",
+    "/2013/cinecontest/",
+    "/2013/events.htm/",
+    "/2013/media.htm/",
+    "/2013/press.htm/",
+    "/2013/store.htm/",
+    "/archive-status/",
+    "/archive-status/report.json"
+  ],
+  "pages_deployment": {
+    "commit": "3cbf1906ba30091a0e808aac21bee839ab0fcae4",
+    "workflow_run": 39061790395,
+    "workflow_conclusion": "success",
+    "url": "https://keithah.github.io/bluescholars/"
+  },
+  "remote_automatic_assets": 0,
+  "note": "Thirty-one HTML and one CSS response validated. One dated 2021 Squarespace stylesheet body was recovered; its digest is recorded here, but this retry did not increase the counted local asset total. Two responses remain in needs_review and are not included as confirmed rendered captures. New index data adds both recovered pages and unresolved linked routes; candidate remains unreviewed."
+}

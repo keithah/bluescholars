@@ -1,62 +1,62 @@
 {
-  "updated_at": "2026-10-17T04:40:02+00:00",
-  "source_checkpoint_run": "38992255338 (artifact merged); local recovery/checkpoint counts above supersede the prior run-only snapshot.",
+  "updated_at": "2026-10-17T06:30:00.208998+00:00",
+  "source_checkpoint_run": "local resumable checkpoint after 2026-10-17 2013 continuation; prior workflow merges documented below.",
   "capture_index": {
-    "indexed_capture_records": 22636,
+    "indexed_capture_records": 23238,
     "complete": true,
     "scope": "Completed Bluescholars domain CDX plus targeted Squarespace CSS/font/image prefix indexes; local checkpoint count includes all merged captures."
   },
   "resource_inventory": {
-    "resource_urls": 10094,
+    "resource_urls": 10951,
     "statuses": {
-      "queued": 5272,
-      "recovered": 3321,
+      "queued": 5687,
+      "recovered": 3727,
       "needs_review": 64,
-      "failed": 1437,
+      "failed": 1473,
       "excluded": 0
-    }
+    },
+    "indexed_capture_records": 23238,
+    "index_complete": true
   },
   "validated_local_files": {
-    "unique_sha256_files": 2095,
-    "bytes": 112816864,
-    "candidate_local_source_assets": 750
+    "unique_sha256_files": 2238,
+    "bytes": 137024767,
+    "candidate_local_source_assets": 934
   },
   "candidate": {
-    "recovered_pages": 955,
-    "placeholder_pages": 2352,
-    "derived_livejournal_views": 4,
+    "recovered_pages": 976,
+    "placeholder_pages": 2181,
+    "derived_pages": 4,
+    "local_source_assets": 934,
+    "recovered_pages_by_edition": {
+      "2007": 36,
+      "2009": 500,
+      "2013": 432
+    },
+    "issue_counts": {
+      "invalid_source": 9,
+      "missing_asset": 7504,
+      "font_not_packaged": 111,
+      "linked_asset_not_recovered": 338,
+      "external_media_link_only": 145
+    },
     "publish_approved": false,
     "visual_fidelity_verified": false,
-    "local_source_assets": 750,
-    "project_subpath_check": {
-      "base_path": "/bluescholars/",
-      "ok": true,
-      "errors": 0
-    },
     "root_check": {
       "ok": true,
       "errors": 0
     },
-    "live_preview_commit": "efad4d3e2a2fefefcb78b7d29761d474857d86cd",
-    "base_path": "/bluescholars/",
-    "issue_counts": {
-      "invalid_source": 9,
-      "missing_asset": 5724,
-      "font_not_packaged": 22,
-      "linked_asset_not_recovered": 295,
-      "external_media_link_only": 145
+    "project_subpath_check": {
+      "ok": true,
+      "errors": 0
     },
-    "pages_build_run": "38990662133",
-    "pages_build_status": "success",
-    "pages_url": "https://keithah.github.io/bluescholars/",
-    "font_binaries_in_public_output": false,
-    "browser_review": "Agent inspected 2007, 2009 SXSW, 2013 homepage and a newly captured 2009 photo post. The main 2009 photo is unavailable; missing share-icon gaps are compact. No screenshot file saved."
+    "remote_automatic_resources": 0
   },
   "known_missing_dependencies": {
-    "images_or_other_embedded_assets": 5352,
-    "linked_assets_not_recovered": 319,
+    "images_or_other_embedded_assets": 7504,
+    "linked_assets_not_recovered": 338,
     "external_media_link_only": 145,
-    "fonts_not_packaged": 27,
+    "fonts_not_packaged": 111,
     "invalid_source_records": 9
   },
   "checks": {
@@ -77,7 +77,7 @@
     "A 2025 LiveJournal modern-interface capture and a 2023 post variant remain needs_review and are not mixed into the old-layout /lj/ edition.",
     "2009 PHOTOS: TONE image l_bf6ff3f3d208456f9cd4c58a4b8dd822.jpg: exact URL CDX returned zero rows; an individually requested 2009-08-14 response returned 404. The source image remains a named gap."
   ],
-  "interpretation": "Queued and failed resource records describe attempted discovery state, not a claim that the archive has no material. Alternate captures still require individual compatibility review.",
+  "interpretation": "Queued and failed resource records describe attempted discovery state, not a claim that the archive has no material. Alternate captures still require individual compatibility review. The latest build is an unreviewed candidate preview.",
   "targeted_image_index": {
     "archive": "Internet Archive Wayback",
     "query": "exact source-linked image URLs from expanded inventory",
@@ -190,18 +190,18 @@
     },
     "modern_cdn_image_alias_rows": 0
   },
-  "resource_urls": 9092,
-  "indexed_capture_records": 21517,
+  "resource_urls": 10951,
+  "indexed_capture_records": 23238,
   "statuses": {
-    "queued": 4804,
-    "recovered": 3045,
-    "needs_review": 50,
-    "failed": 1193,
+    "queued": 5687,
+    "recovered": 3727,
+    "needs_review": 64,
+    "failed": 1473,
     "excluded": 0
   },
-  "unique_downloaded_files": 1983,
-  "downloaded_bytes": 110018036,
-  "failed_attempts": 6416,
+  "unique_downloaded_files": 2238,
+  "downloaded_bytes": 137024767,
+  "failed_attempts": 7261,
   "index_complete": true,
   "active_recovery_run": null,
   "local_checkpoint_after_recovery_sweep": {
@@ -384,5 +384,178 @@
       "attempt_result": "HTTP 404",
       "interpretation": "The original article photo remains missing; no other-era photograph was substituted."
     }
-  ]
+  ],
+  "latest_local_checkpoint": {
+    "description": "October 17 continuation focused on 2007/2013 source recovery, 2009 content and candidate verification.",
+    "recovery": {
+      "updated_at": "2026-10-17T06:30:00.208998+00:00",
+      "resource_urls": 10951,
+      "statuses": {
+        "queued": 5687,
+        "recovered": 3727,
+        "needs_review": 64,
+        "failed": 1473,
+        "excluded": 0
+      },
+      "indexed_capture_records": 23238,
+      "unique_downloaded_files": 2238,
+      "downloaded_bytes": 137024767,
+      "failed_attempts": 7261,
+      "index_complete": true
+    },
+    "capture_batches": {
+      "2007": {
+        "indexed_urls": 390,
+        "previously_recovered_urls": 389,
+        "newly_recovered": 1,
+        "remaining_urls": 0,
+        "new_capture": "20070726234145",
+        "new_file": "store_tshirt.jpg",
+        "sha256": "fe0883788688725d0818af115cf3d6f48fa248472f49387af68c0a5ff4b2f7d1"
+      },
+      "2007_navigation_pages": {
+        "requested": 6,
+        "validated": 6,
+        "captures": [
+          "20060623005536",
+          "20060623005645",
+          "20060510051835",
+          "20060615033740",
+          "20060623005601",
+          "20060623005632"
+        ]
+      },
+      "2007_linked_images": {
+        "validated": 14,
+        "unavailable_exact_dependencies": 7
+      },
+      "2009_targeted_articles": {
+        "attempted": 18,
+        "recovered": 18
+      },
+      "2009_linked_images": {
+        "attempted": 13,
+        "recovered": 12,
+        "invalid": 1
+      },
+      "2013_squarespace_prefix_images": {
+        "attempted": 45,
+        "recovered": 45
+      },
+      "2013_era_batch": {
+        "attempted": 50,
+        "recovered": 39,
+        "kind": "CSS",
+        "failed_validation": 11,
+        "indexed_urls": 1014,
+        "remaining_urls": 392
+      },
+      "2013_continuation": {
+        "selected_limit": 50,
+        "saved_valid_responses": 27,
+        "status": "interrupted while awaiting next archive response; report saved after 25 attempts",
+        "new_material": "18 image dependencies and additional dated Squarespace CSS variants; in-era dates verified before preservation",
+        "latest_saved_css_capture": "20150819120551",
+        "attempted_before_interruption": 25,
+        "recovered_css_captures": 9,
+        "recorded_failures": 16,
+        "remaining_urls_at_last_checkpoint": 218,
+        "report": "recovery/era-2013-report.json",
+        "latest_successful_capture": "20150628012721"
+      }
+    },
+    "candidate": {
+      "recovered_pages": 976,
+      "placeholder_pages": 2181,
+      "derived_pages": 4,
+      "local_source_assets": 934,
+      "recovered_pages_by_edition": {
+        "2007": 36,
+        "2009": 500,
+        "2013": 432
+      },
+      "issue_counts": {
+        "invalid_source": 9,
+        "missing_asset": 7504,
+        "font_not_packaged": 111,
+        "linked_asset_not_recovered": 338,
+        "external_media_link_only": 145
+      },
+      "publish_approved": false,
+      "visual_fidelity_verified": false,
+      "root_check": {
+        "ok": true,
+        "errors": 0
+      },
+      "project_subpath_check": {
+        "ok": true,
+        "errors": 0
+      },
+      "remote_automatic_resources": 0
+    },
+    "verification": {
+      "tests": "153 passed",
+      "compileall": "passed",
+      "shell_syntax": "passed",
+      "actionlint": "passed",
+      "git_diff_check": "passed",
+      "root_build_check": "passed (zero errors)",
+      "project_subpath_build_check": "passed (zero errors)",
+      "remote_automatic_requests": 0,
+      "browser": "Agent compared local 2013 page with exact May 2021 Wayback capture at 1265x712, and inspected local 2007 and hub; four screenshots saved. Mobile widths unavailable; no human approval claimed."
+    },
+    "screenshots": {
+      "reference": {
+        "path": "docs/recovery-report/screenshots/reference.jpg",
+        "sha256": "85b1db3bb441001e9249c8b2d584e2555650ef8331230a14b7d875695665bb48",
+        "dimensions": "1265x712"
+      },
+      "2007": {
+        "path": "docs/recovery-report/screenshots/2007.jpg",
+        "sha256": "88298d916f0467708af5d2f4268475dacc5083e38cb2336ba466fa4c244aabe1",
+        "dimensions": "1265x712"
+      },
+      "2013": {
+        "path": "docs/recovery-report/screenshots/2013.jpg",
+        "sha256": "7768870e01bcfceaf982e687860be6617bf02db49c49eb4889386ae998e7a8e3",
+        "dimensions": "1265x712"
+      },
+      "homepage": {
+        "path": "docs/recovery-report/screenshots/homepage.jpg",
+        "sha256": "c4a87a2a412d2101aa311277b1dac2f0132d2e352a0692653669a336a124dd14",
+        "dimensions": "1265x712"
+      }
+    },
+    "resume": "Resume from recovery/state.json, recovery/raw/ and recovery/index/. Retry 2013 article URLs only when a new capture timestamp or archive lead is identified; no response from a failed request is an absence finding."
+  },
+  "browser_visual_review": {
+    "reference_capture": "https://web.archive.org/web/20210529010817/http://bluescholars.com/",
+    "viewport": "1265x712",
+    "agent_reviewed": true,
+    "human_review_claimed": false,
+    "screenshots": {
+      "reference": {
+        "path": "docs/recovery-report/screenshots/reference.jpg",
+        "sha256": "85b1db3bb441001e9249c8b2d584e2555650ef8331230a14b7d875695665bb48",
+        "dimensions": "1265x712"
+      },
+      "2007": {
+        "path": "docs/recovery-report/screenshots/2007.jpg",
+        "sha256": "88298d916f0467708af5d2f4268475dacc5083e38cb2336ba466fa4c244aabe1",
+        "dimensions": "1265x712"
+      },
+      "2013": {
+        "path": "docs/recovery-report/screenshots/2013.jpg",
+        "sha256": "7768870e01bcfceaf982e687860be6617bf02db49c49eb4889386ae998e7a8e3",
+        "dimensions": "1265x712"
+      },
+      "homepage": {
+        "path": "docs/recovery-report/screenshots/homepage.jpg",
+        "sha256": "c4a87a2a412d2101aa311277b1dac2f0132d2e352a0692653669a336a124dd14",
+        "dimensions": "1265x712"
+      }
+    },
+    "comparison": "The recovered 2013 logo, navigation and photo position/scale/crop align with the reference after accounting for the Wayback toolbar and local notice. See VISUAL_REVIEW.md.",
+    "responsive_limit": "No 1440, 768 or 390 px capture because viewport resizing was unavailable."
+  }
 }

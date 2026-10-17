@@ -5,6 +5,8 @@ import re
 from urllib.parse import urljoin, urlsplit, urlunsplit, unquote, parse_qs, quote
 
 TARGET = '20210529010817'
+SQUARESPACE_START = '20130921000000'
+LEGACY_EDITION_END = '20130920235959'
 HOME = 'http://bluescholars.com/'
 PAGINATION = {'1362122742000': '/blog/page/2/', '1358016466000': '/blog/page/3/'}
 REPLAY = re.compile(r'^(?:https?://web\.archive\.org)?/web/(\d{1,14})(?:[a-z]+_)?/(.*)$', re.I)
@@ -57,6 +59,29 @@ def identity(url: str) -> str:
     if is_site(url):
         return urlunsplit(('http','bluescholars.com',p.path.rstrip('/') or '/',p.query,''))
     return url
+
+def historical_route_prefix(url: str, fallback: str = '', capture: str = '') -> str:
+    """Keep dated WordPress and Squarespace blog links in their own editions."""
+    parts=urlsplit(url)
+    if parts.hostname=='02cd02a.netsolhost.com':return '/2009'
+    segments=parts.path.strip('/').split('/')
+    if parts.path.startswith('/blog/') and capture and capture<SQUARESPACE_START:
+        return '/2009'
+    if len(segments)>1 and segments[0]=='blog' and segments[1].isdigit() and len(segments[1])==4:
+        year=int(segments[1])
+        if year<=2012:return '/2009'
+        if year>=2013:
+            return '/2009' if capture and capture<SQUARESPACE_START else '/2013'
+    return fallback
+
+def route_capture_hint(record: dict) -> str:
+    """Choose the latest indexed, reference-era capture when no body was saved."""
+    actual=record.get('actual_capture','')
+    if actual:return actual
+    captures=set(record.get('hints',[]))
+    captures.update(c.get('timestamp','') for c in record.get('captures',[])
+                    if str(c.get('statuscode')) in ('200','301','302','303','307','308'))
+    return max((value for value in captures if value and value<=TARGET),default='')
 
 def kind_for(url: str, mime: str = '') -> str:
     path=urlsplit(url).path.lower()

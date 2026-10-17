@@ -1,0 +1,29 @@
+{
+  "era": "2007",
+  "date_start": "20070101000000",
+  "date_end": "20081231235959",
+  "eligible_urls": 1,
+  "indexed_urls": 390,
+  "already_recovered_urls": 389,
+  "remaining_urls": 0,
+  "selected_urls": 1,
+  "batch_limit": 50,
+  "attempted": 1,
+  "recovered": 1,
+  "failures": [],
+  "captures": [
+    {
+      "url": "http://www.bluescholars.com:80/images/store_tshirt.jpg",
+      "source_key": "http://www.bluescholars.com:80/images/store_tshirt.jpg@@wayback:20070726234145:fe0883788688",
+      "requested_capture": "20070726234145",
+      "actual_capture": "20070726234145",
+      "status": "recovered",
+      "sha256": "fe0883788688725d0818af115cf3d6f48fa248472f49387af68c0a5ff4b2f7d1",
+      "bytes": 7361,
+      "kind": "image",
+      "attempted_captures": [
+        "20070726234145"
+      ]
+    }
+  ]
+}

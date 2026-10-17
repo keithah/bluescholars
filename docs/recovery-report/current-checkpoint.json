@@ -1,35 +1,64 @@
 {
   "browser_visual_review": {
-    "candidate_limitation": "unreviewed candidate lacks main Squarespace styling and hero image; it is not the reviewed release build",
-    "edition": "/2013/",
+    "reference_capture": "https://web.archive.org/web/20210529010817/http://bluescholars.com/",
+    "viewport": "1265×712 browser screenshot; reference and local candidate were captured at the same viewport.",
+    "agent_reviewed": true,
     "human_review_claimed": false,
-    "reference": "https://web.archive.org/web/20210529010817/http://bluescholars.com/",
-    "result": "reviewed-source logo, left navigation, main image scale and crop visually align with reference after accounting for Wayback toolbar and local restoration notice",
-    "viewport": "desktop, approximately 1680×800"
+    "comparison": "After accounting for the Internet Archive toolbar and local historical-restoration notice, the 2013 Squarespace-era candidate matches the reference logo size and left offset, navigation placement, main-image left/top position, width and crop. The May 2021 photograph is the same locally recovered hero.",
+    "2007": "The independent edition renders its original split image-map artwork with the original July 2007 show listings and no fabricated sections.",
+    "hub": "Three dated edition cards are visible; LiveJournal and recovery status remain secondary links.",
+    "screenshots": {
+      "reference": {
+        "path": "docs/recovery-report/screenshots/reference.jpg",
+        "sha256": "85b1db3bb441001e9249c8b2d584e2555650ef8331230a14b7d875695665bb48",
+        "dimensions": "1265x712"
+      },
+      "2007": {
+        "path": "docs/recovery-report/screenshots/2007.jpg",
+        "sha256": "88298d916f0467708af5d2f4268475dacc5083e38cb2336ba466fa4c244aabe1",
+        "dimensions": "1265x712"
+      },
+      "2013": {
+        "path": "docs/recovery-report/screenshots/2013.jpg",
+        "sha256": "7768870e01bcfceaf982e687860be6617bf02db49c49eb4889386ae998e7a8e3",
+        "dimensions": "1265x712"
+      },
+      "homepage": {
+        "path": "docs/recovery-report/screenshots/homepage.jpg",
+        "sha256": "c4a87a2a412d2101aa311277b1dac2f0132d2e352a0692653669a336a124dd14",
+        "dimensions": "1265x712"
+      }
+    },
+    "responsive_limit": "The connected browser exposed a fixed viewport; 1440px, 768px and 390px screenshots were not available in this run. This is not a mobile visual-review pass."
   },
   "candidate_build": {
-    "base_path": "/bluescholars/",
-    "recovered_pages": 924,
-    "placeholder_pages": 1851,
+    "recovered_pages": 976,
+    "placeholder_pages": 2181,
     "derived_pages": 4,
-    "local_source_assets": 737,
+    "local_source_assets": 934,
+    "recovered_pages_by_edition": {
+      "2007": 36,
+      "2009": 500,
+      "2013": 432
+    },
     "issue_counts": {
       "invalid_source": 9,
-      "missing_asset": 5781,
-      "font_not_packaged": 20,
-      "linked_asset_not_recovered": 295,
+      "missing_asset": 7504,
+      "font_not_packaged": 111,
+      "linked_asset_not_recovered": 338,
       "external_media_link_only": 145
     },
-    "visual_fidelity_verified": false,
     "publish_approved": false,
-    "issues_by_type": {
-      "invalid_source": 9,
-      "missing_asset": 5724,
-      "font_not_packaged": 22,
-      "linked_asset_not_recovered": 295,
-      "external_media_link_only": 145
+    "visual_fidelity_verified": false,
+    "root_check": {
+      "ok": true,
+      "errors": 0
     },
-    "font_binary_distribution": "excluded; font-face rules removed and family names retained for system fallback"
+    "project_subpath_check": {
+      "ok": true,
+      "errors": 0
+    },
+    "remote_automatic_resources": 0
   },
   "candidate_checks": {
     "root": {
@@ -47,20 +76,20 @@
     }
   },
   "checkpoint": {
-    "resource_urls": 9092,
+    "updated_at": "2026-10-17T06:30:00.208998+00:00",
+    "resource_urls": 10951,
     "statuses": {
-      "queued": 4804,
-      "recovered": 3045,
-      "needs_review": 50,
-      "failed": 1193,
+      "queued": 5687,
+      "recovered": 3727,
+      "needs_review": 64,
+      "failed": 1473,
       "excluded": 0
     },
-    "indexed_capture_records": 21517,
-    "index_complete": true,
-    "unique_downloaded_files": 1983,
-    "downloaded_bytes": 110018036,
-    "failed_attempts": 6416,
-    "updated_at": "2026-10-17T01:17:05.406389+00:00"
+    "indexed_capture_records": 23238,
+    "unique_downloaded_files": 2238,
+    "downloaded_bytes": 137024767,
+    "failed_attempts": 7261,
+    "index_complete": true
   },
   "latest_import": {
     "run_id": "38975520061",
@@ -124,17 +153,14 @@
     "unique_raw_files": 97,
     "visual_reviewed": false
   },
-  "updated_at": "2026-10-17T01:26:02+00:00",
+  "updated_at": "2026-10-17T06:15:26.021817+00:00",
   "tests": {
     "command": ".venv311/bin/python -m pytest -q",
-    "result": "125 passed",
+    "result": "153 passed",
     "compileall": "passed",
     "git_diff_check": "passed",
-    "code_ci_run": "38985439462",
-    "code_ci_result": "success",
-    "documentation_ci_run": "38985667700",
-    "documentation_ci_result": "success",
-    "latest_documentation_commit": "ac6e73e"
+    "shell_syntax": "passed",
+    "actionlint": "passed"
   },
   "livejournal_archive": {
     "route": "/lj/",
@@ -473,18 +499,19 @@
     "modern_cdn_alias_rows": 0
   },
   "recovery_state": {
-    "resource_urls": 9092,
-    "indexed_capture_records": 21514,
+    "updated_at": "2026-10-17T06:30:00.208998+00:00",
+    "resource_urls": 10951,
     "statuses": {
-      "queued": 4804,
-      "recovered": 3045,
-      "needs_review": 50,
-      "failed": 1193,
+      "queued": 5687,
+      "recovered": 3727,
+      "needs_review": 64,
+      "failed": 1473,
       "excluded": 0
     },
-    "unique_downloaded_files": 1983,
-    "downloaded_bytes": 110018036,
-    "failed_attempts": 6416,
+    "indexed_capture_records": 23238,
+    "unique_downloaded_files": 2238,
+    "downloaded_bytes": 137024767,
+    "failed_attempts": 7261,
     "index_complete": true
   },
   "squarespace_additional_listings": {
@@ -599,5 +626,148 @@
       "screenshot_file_saved": false,
       "human_review_claimed": false
     }
+  },
+  "latest_continuation": {
+    "description": "October 17 continuation focused on 2007/2013 source recovery, 2009 content and candidate verification.",
+    "recovery": {
+      "updated_at": "2026-10-17T06:30:00.208998+00:00",
+      "resource_urls": 10951,
+      "statuses": {
+        "queued": 5687,
+        "recovered": 3727,
+        "needs_review": 64,
+        "failed": 1473,
+        "excluded": 0
+      },
+      "indexed_capture_records": 23238,
+      "unique_downloaded_files": 2238,
+      "downloaded_bytes": 137024767,
+      "failed_attempts": 7261,
+      "index_complete": true
+    },
+    "capture_batches": {
+      "2007": {
+        "indexed_urls": 390,
+        "previously_recovered_urls": 389,
+        "newly_recovered": 1,
+        "remaining_urls": 0,
+        "new_capture": "20070726234145",
+        "new_file": "store_tshirt.jpg",
+        "sha256": "fe0883788688725d0818af115cf3d6f48fa248472f49387af68c0a5ff4b2f7d1"
+      },
+      "2007_navigation_pages": {
+        "requested": 6,
+        "validated": 6,
+        "captures": [
+          "20060623005536",
+          "20060623005645",
+          "20060510051835",
+          "20060615033740",
+          "20060623005601",
+          "20060623005632"
+        ]
+      },
+      "2007_linked_images": {
+        "validated": 14,
+        "unavailable_exact_dependencies": 7
+      },
+      "2009_targeted_articles": {
+        "attempted": 18,
+        "recovered": 18
+      },
+      "2009_linked_images": {
+        "attempted": 13,
+        "recovered": 12,
+        "invalid": 1
+      },
+      "2013_squarespace_prefix_images": {
+        "attempted": 45,
+        "recovered": 45
+      },
+      "2013_era_batch": {
+        "attempted": 50,
+        "recovered": 39,
+        "kind": "CSS",
+        "failed_validation": 11,
+        "indexed_urls": 1014,
+        "remaining_urls": 392
+      },
+      "2013_continuation": {
+        "selected_limit": 50,
+        "saved_valid_responses": 27,
+        "status": "interrupted while awaiting next archive response; report saved after 25 attempts",
+        "new_material": "18 image dependencies and additional dated Squarespace CSS variants; in-era dates verified before preservation",
+        "latest_saved_css_capture": "20150819120551",
+        "attempted_before_interruption": 25,
+        "recovered_css_captures": 9,
+        "recorded_failures": 16,
+        "remaining_urls_at_last_checkpoint": 218,
+        "report": "recovery/era-2013-report.json",
+        "latest_successful_capture": "20150628012721"
+      }
+    },
+    "candidate": {
+      "recovered_pages": 976,
+      "placeholder_pages": 2181,
+      "derived_pages": 4,
+      "local_source_assets": 934,
+      "recovered_pages_by_edition": {
+        "2007": 36,
+        "2009": 500,
+        "2013": 432
+      },
+      "issue_counts": {
+        "invalid_source": 9,
+        "missing_asset": 7504,
+        "font_not_packaged": 111,
+        "linked_asset_not_recovered": 338,
+        "external_media_link_only": 145
+      },
+      "publish_approved": false,
+      "visual_fidelity_verified": false,
+      "root_check": {
+        "ok": true,
+        "errors": 0
+      },
+      "project_subpath_check": {
+        "ok": true,
+        "errors": 0
+      },
+      "remote_automatic_resources": 0
+    },
+    "verification": {
+      "tests": "153 passed",
+      "compileall": "passed",
+      "shell_syntax": "passed",
+      "actionlint": "passed",
+      "git_diff_check": "passed",
+      "root_build_check": "passed (zero errors)",
+      "project_subpath_build_check": "passed (zero errors)",
+      "remote_automatic_requests": 0,
+      "browser": "Agent compared local 2013 page with exact May 2021 Wayback capture at 1265x712, and inspected local 2007 and hub; four screenshots saved. Mobile widths unavailable; no human approval claimed."
+    },
+    "screenshots": {
+      "reference": {
+        "path": "docs/recovery-report/screenshots/reference.jpg",
+        "sha256": "85b1db3bb441001e9249c8b2d584e2555650ef8331230a14b7d875695665bb48",
+        "dimensions": "1265x712"
+      },
+      "2007": {
+        "path": "docs/recovery-report/screenshots/2007.jpg",
+        "sha256": "88298d916f0467708af5d2f4268475dacc5083e38cb2336ba466fa4c244aabe1",
+        "dimensions": "1265x712"
+      },
+      "2013": {
+        "path": "docs/recovery-report/screenshots/2013.jpg",
+        "sha256": "7768870e01bcfceaf982e687860be6617bf02db49c49eb4889386ae998e7a8e3",
+        "dimensions": "1265x712"
+      },
+      "homepage": {
+        "path": "docs/recovery-report/screenshots/homepage.jpg",
+        "sha256": "c4a87a2a412d2101aa311277b1dac2f0132d2e352a0692653669a336a124dd14",
+        "dimensions": "1265x712"
+      }
+    },
+    "resume": "Resume from recovery/state.json, recovery/raw/ and recovery/index/. Retry 2013 article URLs only when a new capture timestamp or archive lead is identified; no response from a failed request is an absence finding."
   }
 }

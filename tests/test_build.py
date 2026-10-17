@@ -4,10 +4,10 @@ from pathlib import Path
 import pytest
 from bs4 import BeautifulSoup
 from restore.render import render_html,render_css
-from restore.build import build,promote
+from restore.build import build,promote,documented_asset_aliases
 from restore.check import check
 from restore.state import State,write_json
-from restore.urls import HOME,TARGET,route
+from restore.urls import HOME,TARGET,route,historical_route_prefix,route_capture_hint
 
 RES={
  HOME+'site.css':{'kind':'css','local_path':'/assets/site.css'},
@@ -120,6 +120,104 @@ def test_html_asset_reuses_identical_source_path_over_other_scheme():
     assert BeautifulSoup(text,'html.parser').img['src']=='/assets/photo.jpg'
     assert not issues
 
+def test_squarespace_page_routes_old_wordpress_links_to_2009_edition():
+    source='http://bluescholars.com/blog/2018/squarespace-post/'
+    old='http://bluescholars.com/blog/2011/01/word-count/'
+    text,_=render_html('<html><body><a href="'+old+'">Word Count</a></body></html>',
+                       source,{},'/bluescholars','/2013')
+    link=BeautifulSoup(text,'html.parser').find('a',string='Word Count')
+    assert link['href']=='/bluescholars/2009/blog/2011/01/word-count/'
+
+def test_source_documented_older_squarespace_asset_can_fill_exact_later_reference(tmp_path):
+    fixture_root(tmp_path);s=State(tmp_path)
+    later='https://images.squarespace-cdn.com/content/v1/site/photo.jpg'
+    source='http://static1.squarespace.com/static/site/photo.jpg'
+    add_raw(s,HOME,'html',('<html><body><img src="'+later+'" alt="Blue Scholars"></body></html>').encode())
+    image=b'\xff\xd8\xffhistorical photo'
+    add_raw(s,source,'image',image)
+    source_record=s.data['resources'][source]
+    write_json(tmp_path/'source/asset-aliases.json',{'version':1,'aliases':[{
+        'url':later,'source_url':source,'actual_capture':source_record['actual_capture'],
+        'sha256':source_record['sha256'],'referrer':HOME+'/holler/',
+        'decision':'Same Squarespace asset family and exact source filename; earlier compatible capture.'
+    }]})
+
+    report=build(tmp_path,tmp_path/'_candidate','/bluescholars',candidate=True)
+
+    page=BeautifulSoup((tmp_path/'_candidate/2013/index.html').read_text(),'html.parser')
+    image_tag=page.find('img',alt='Blue Scholars')
+    assert image_tag and image_tag['src'].startswith('/bluescholars/assets/')
+    assert not any(issue.get('url')==later for issue in report['issues'])
+    local=tmp_path/'_candidate'/image_tag['src'].removeprefix('/bluescholars/')
+    assert local.read_bytes()==image
+
+def test_documented_asset_alias_requires_matching_capture_and_hash(tmp_path):
+    fixture_root(tmp_path);s=State(tmp_path)
+    later='https://images.squarespace-cdn.com/content/v1/site/photo.jpg'
+    source='http://static1.squarespace.com/static/site/photo.jpg'
+    add_raw(s,HOME,'html',('<html><body><img src="'+later+'" alt="Blue Scholars"></body></html>').encode())
+    add_raw(s,source,'image',b'\xff\xd8\xffhistorical photo')
+    source_record=s.data['resources'][source]
+    write_json(tmp_path/'source/asset-aliases.json',{'version':1,'aliases':[{
+        'url':later,'source_url':source,'actual_capture':source_record['actual_capture'],
+        'sha256':'0'*64,'referrer':HOME+'/holler/','decision':'Bad hash must not resolve.'
+    }]})
+
+    report=build(tmp_path,tmp_path/'_candidate','/bluescholars',candidate=True)
+
+    page=BeautifulSoup((tmp_path/'_candidate/2013/index.html').read_text(),'html.parser')
+    assert page.find('span',class_='archive-missing-image')
+    assert any(issue.get('type')=='missing_asset' and issue.get('url')==later for issue in report['issues'])
+
+def test_documented_alias_matches_older_capture_variant(tmp_path):
+    source='http://static1.squarespace.com/static/site/photo.jpg'
+    target='https://images.squarespace-cdn.com/content/v1/site/photo.jpg'
+    body=b'\xff\xd8\xffolder variant'
+    digest=hashlib.sha256(body).hexdigest()
+    write_json(tmp_path/'source/asset-aliases.json',{'version':1,'aliases':[{
+        'url':target,'source_url':source,'actual_capture':'20160214224810',
+        'sha256':digest,'decision':'Exact older image variant.'
+    }]})
+    variants={
+        source+'@@wayback:20210529010000':{'_source_url':source,'kind':'image',
+            'actual_capture':'20210529010000','sha256':'f'*64,'local_path':'/new.jpg'},
+        source+'@@wayback:20160214224810':{'_source_url':source,'kind':'image',
+            'actual_capture':'20160214224810','sha256':digest,'local_path':'/old.jpg',
+            'raw_path':'recovery/raw/'+digest+'.jpg'}
+    }
+
+    aliases,issues=documented_asset_aliases(tmp_path,variants)
+
+    assert digest in Path(aliases[target]['local_path']).name
+    assert not issues
+
+def test_early_2013_wordpress_links_use_the_legacy_edition():
+    url='http://bluescholars.com/blog/2013/01/early-post/'
+    assert historical_route_prefix(url,'/2013','20130101000000')=='/2009'
+    assert historical_route_prefix(url,'/2013','20130922000000')=='/2013'
+
+def test_early_2013_route_uses_latest_capture_hint_when_body_is_missing():
+    url='http://bluescholars.com/blog/2013/01/early-post/'
+    old={'captures':[{'timestamp':'20130101000000','statuscode':'200'}]}
+    later={'captures':[{'timestamp':'20130101000000','statuscode':'200'},
+                       {'timestamp':'20160611091915','statuscode':'200'}]}
+    assert historical_route_prefix(url,'/2013',route_capture_hint(old))=='/2009'
+    assert historical_route_prefix(url,'/2013',route_capture_hint(later))=='/2013'
+    undated='http://bluescholars.com/blog/update-cinemetropolis-advance-digital-download/'
+    assert historical_route_prefix(undated,'/2013','20110302034042')=='/2009'
+
+def test_invalid_asset_alias_file_reports_clear_error(tmp_path):
+    (tmp_path/'source').mkdir()
+    (tmp_path/'source/asset-aliases.json').write_text('{')
+    with pytest.raises(ValueError,match='Invalid source/asset-aliases.json'):
+        documented_asset_aliases(tmp_path,{})
+
+def test_non_object_asset_alias_is_reported_without_aborting(tmp_path):
+    (tmp_path/'source').mkdir()
+    write_json(tmp_path/'source/asset-aliases.json',{'version':1,'aliases':[None]})
+    aliases,issues=documented_asset_aliases(tmp_path,{})
+    assert not aliases and issues[0]['type']=='compatibility_alias_unavailable'
+
 def test_javascript_encoded_control_characters_removed():
     text,_=render_html('<html><body><a href="java&#10;script:alert(1)">x</a><img src="x" onload="bad()"></body></html>',HOME,{},'')
     assert 'javascript:' not in text and 'onload=' not in text
@@ -188,6 +286,28 @@ def test_legacy_alias_host_pages_with_explicit_html_kind_are_selected(tmp_path):
     assert report['recovered_pages']==2
     assert 'SXSW recovery' in (tmp_path/'_candidate/2009/blog/2009/03/sxsw-2009-where-well-be/index.html').read_text()
     assert 'Word Count recovery' in (tmp_path/'_candidate/2009/blog/2011/01/the-hip-hop-word-count-blue-scholars-approved/index.html').read_text()
+
+def test_late_capture_from_legacy_wordpress_host_stays_in_2009_edition(tmp_path):
+    fixture_root(tmp_path);s=State(tmp_path)
+    url='http://02cd02a.netsolhost.com/blog/releases/oof-ep/'
+    add_raw(s,url,'html',b'<html><body><h1>OOF EP</h1></body></html>')
+    s.data['resources'][url]['actual_capture']='20160304042651';s.save()
+
+    build(tmp_path,tmp_path/'_candidate','/bluescholars',candidate=True)
+
+    assert (tmp_path/'_candidate/2009/blog/releases/oof-ep/index.html').is_file()
+    assert not (tmp_path/'_candidate/2013/blog/releases/oof-ep/index.html').exists()
+
+def test_squarespace_edition_starts_at_the_first_located_2013_capture(tmp_path):
+    fixture_root(tmp_path);s=State(tmp_path)
+    url='http://bluescholars.com/blog/page/3/'
+    add_raw(s,url,'html',b'<html><body><h1>2013 listing</h1></body></html>')
+    s.data['resources'][url]['actual_capture']='20130921000000';s.save()
+
+    build(tmp_path,tmp_path/'_candidate','/bluescholars',candidate=True)
+
+    assert (tmp_path/'_candidate/2013/blog/page/3/index.html').is_file()
+    assert not (tmp_path/'_candidate/2009/blog/page/3/index.html').exists()
 
 
 def test_legacy_post_images_and_theme_css_are_local_in_candidate(tmp_path):
@@ -493,9 +613,11 @@ def test_unrecovered_edition_links_get_gap_pages_or_honest_cross_edition_bridges
     s.save()
     report=build(tmp_path,tmp_path/'_candidate','',candidate=True)
     tourdates=tmp_path/'_candidate/2009/blog/tourdates/index.html'
-    attachment_alias=tmp_path/'_candidate/2013/archive-query'/route(attachment).split('/')[-2]/'index.html'
+    source_page=BeautifulSoup((tmp_path/'_candidate/2013/blog/linked-post/index.html').read_text(),'html.parser')
+    recovered_attachment=tmp_path/'_candidate/2009/archive-query'/route(attachment).split('/')[-2]/'index.html'
     assert 'not recovered' in tourdates.read_text().lower()
-    assert '/2009/archive-query/' in attachment_alias.read_text()
+    assert source_page.find('a',string='Attachment')['href'].startswith('/2009/archive-query/')
+    assert '2010 attachment capture' in recovered_attachment.read_text()
     assert report['placeholder_pages'] >= 1
     assert check(tmp_path/'_candidate','')==[]
 

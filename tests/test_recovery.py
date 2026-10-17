@@ -313,9 +313,11 @@ def test_capture_era_selects_latest_valid_record_and_resumes(tmp_path):
     client=Client(lambda u:Payload(VALID,'https://web.archive.org/web/20070724082915id_/'+HOME,200,{}))
     report=capture_era(state,client,'2007',max_files=10)
     assert report['eligible_urls']==1 and report['recovered']==1
+    assert report['indexed_urls']==1 and report['remaining_urls']==0
     assert state.data['resources'][HOME+'@@wayback:20070724082915:'+__import__('hashlib').sha256(VALID).hexdigest()[:12]]['status']=='recovered'
     again=capture_era(state,client,'2007',max_files=10)
     assert again['attempted']==0
+    assert again['already_recovered_urls']==1 and again['remaining_urls']==0
 
 def test_capture_era_falls_back_when_newest_archive_body_is_a_provider_error(tmp_path):
     state=State(tmp_path);record=state.add(HOME,'html','seed',TARGET)
@@ -331,6 +333,20 @@ def test_capture_era_falls_back_when_newest_archive_body_is_a_provider_error(tmp
     assert report['recovered']==1
     assert report['captures'][0]['actual_capture']==older
     assert len(report['captures'][0]['attempted_captures'])==2
+
+def test_capture_era_does_not_count_redirected_capture_outside_era(tmp_path):
+    state=State(tmp_path);record=state.add(HOME,'html','seed',TARGET)
+    timestamp='20070724082915'
+    record['captures']=[{'timestamp':timestamp,'statuscode':'200'}]
+    state.save()
+    redirected='https://web.archive.org/web/20140101000000id_/'+HOME
+    client=Client(lambda u:Payload(VALID,redirected,200,{}))
+
+    report=capture_era(state,client,'2007',max_files=10)
+
+    assert report['recovered']==1
+    assert report['captures'][0]['actual_capture']=='20140101000000'
+    assert report['remaining_urls']==1
 
 def test_download_failure_is_not_missing_forever(tmp_path):
     state=State(tmp_path);state.add(HOME,'html','seed',TARGET)

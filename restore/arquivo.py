@@ -9,7 +9,7 @@ import requests
 from .archive import validate_payload
 from .discover import discover_html
 from .state import State,write_json
-from .urls import original_url,identity,in_domain,kind_for
+from .urls import original_url,identity,in_domain,kind_for,SQUARESPACE_START,LEGACY_EDITION_END
 
 API='https://arquivo.pt/textsearch'
 CHECKPOINT='recovery/arquivo-state.json'
@@ -116,8 +116,8 @@ def _era(timestamp:str)->str|None:
     if not timestamp.isdigit():return None
     stamp=timestamp.ljust(14,'0')
     if '20070101000000'<=stamp<='20081231235959':return '2007'
-    if '20090101000000'<=stamp<='20130920235959':return '2009'
-    if '20130921000000'<=stamp<='20230930235959':return '2013'
+    if '20090101000000'<=stamp<=LEGACY_EDITION_END:return '2009'
+    if SQUARESPACE_START<=stamp<='20230930235959':return '2013'
     return None
 
 def _latest_per_era(rows:list[dict])->list[dict]:

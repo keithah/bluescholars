@@ -12,7 +12,7 @@ from .discover import discover_html
 from .render import render_html,render_css,resource_aliases,NAV
 from .svg import sanitize_svg
 from .state import State,write_json
-from .urls import HOME,TARGET,identity,is_site,route,asset_route,base_path,livejournal_route,original_url
+from .urls import HOME,TARGET,SQUARESPACE_START,identity,is_site,route,asset_route,base_path,livejournal_route,original_url,historical_route_prefix,route_capture_hint
 
 CORE=[('/', 'Homepage'),('/blog/','Blog'),('/shows/','Shows'),('/video/','Video'),('/shop/','Shop'),('/holler/','Holler')]
 FALLBACK_UI='''.archive-restoration-notice,.archive-gap-page {font:16px/1.6 system-ui,sans-serif}
@@ -75,12 +75,13 @@ def edition_prefix(url: str, record: dict) -> str:
     path=urlsplit(url).path
     segments=path.strip('/').split('/')
     capture=record.get('actual_capture') or TARGET
+    if urlsplit(url).hostname=='02cd02a.netsolhost.com':return '/2009'
     if path.rstrip('/')=='/artistedition' or capture<'20090101000000':
         return '/2007'
     if (len(segments)>1 and segments[0]=='blog' and segments[1].isdigit()
             and len(segments[1])==4 and int(segments[1])<=2012):
         return '/2009'
-    if capture<'20140101000000':
+    if capture<SQUARESPACE_START:
         return '/2009'
     return '/2013'
 
@@ -96,6 +97,43 @@ def eligible_site_page_capture(url: str, record: dict, min_reference_capture: st
     if record.get('edition_exclusion',{}).get('exclude_from_site'):
         return False
     return capture>=min_reference_capture or edition_prefix(url,record) in ('/2007','/2009')
+
+def documented_asset_aliases(root: Path,usable_variants: dict) -> tuple[dict,list]:
+    """Resolve narrowly documented historical asset substitutions by provenance."""
+    path=Path(root)/'source/asset-aliases.json'
+    if not path.exists():return {},[]
+    try:document=json.loads(path.read_text(encoding='utf-8'))
+    except ValueError as exc:raise ValueError('Invalid source/asset-aliases.json') from exc
+    if document.get('version')!=1 or not isinstance(document.get('aliases'),list):
+        raise ValueError('Unsupported source/asset-aliases.json schema')
+    aliases={};issues=[]
+    for item in document['aliases']:
+        if not isinstance(item,dict):
+            issues.append({'type':'compatibility_alias_unavailable','url':'','source_url':'',
+                           'reason':'Alias entry is not an object.'})
+            continue
+        target=item.get('url','');source=item.get('source_url','')
+        record=next((variant for variant in usable_variants.values()
+                     if variant.get('_source_url')==source
+                     and variant.get('kind')=='image'
+                     and variant.get('sha256')==item.get('sha256')
+                     and variant.get('actual_capture')==item.get('actual_capture')),None)
+        valid=(bool(target and source and item.get('decision')) and record is not None
+               and record.get('kind')=='image' and record.get('sha256')==item.get('sha256')
+               and record.get('actual_capture')==item.get('actual_capture')
+               and bool(record.get('local_path')))
+        if not valid:
+            issues.append({'type':'compatibility_alias_unavailable','url':target,
+                           'source_url':source,'reason':'The documented capture/hash is not present as a validated local image.'})
+            continue
+        record=dict(record)
+        local=record.get('local_path','')
+        if not local or record['sha256'] not in Path(local).name:
+            record['local_path']='/assets/'+record['sha256']+Path(record['raw_path']).suffix
+        if identity(target) in aliases:
+            raise ValueError(f'Duplicate documented asset alias: {target}')
+        aliases[identity(target)]=record
+    return aliases,issues
 
 def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bool=False) -> dict:
     root=Path(root).resolve();output=Path(output).resolve();base=base_path(base)
@@ -138,7 +176,7 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
                 usable[url]=variant
     # The default edition follows the Squarespace capture era. Older platform
     # pages remain in the recovery/source catalog and are built separately.
-    min_reference_capture='20140101000000'
+    min_reference_capture=SQUARESPACE_START
     selected_page_ids={
         identity(r['_source_url']) for url,r in usable_variants.items()
         if r['kind']=='html' and eligible_site_page_capture(r['_source_url'],r,min_reference_capture)
@@ -151,6 +189,12 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
     record_by_identity={}
     for key,value in records.items():
         record_by_identity.setdefault(identity(value.get('url',key)),key)
+    usable_variant_by_identity={}
+    for variant in usable_variants.values():
+        key=identity(variant['_source_url'])
+        previous=usable_variant_by_identity.get(key)
+        if previous is None or variant.get('actual_capture','')>previous.get('actual_capture',''):
+            usable_variant_by_identity[key]=variant
     linked_html_routes=[];linked_lj_routes=[]
     for source_key,r in list(usable_variants.items()):
         url=r['_source_url']
@@ -163,7 +207,12 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
                     if lj_target and lj_target.startswith('/lj/posts/'):
                         linked_lj_routes.append(discovered['url'])
                     elif not urlsplit(discovered['url']).hostname=='bluescholars.livejournal.com':
-                        linked_html_routes.append((source_prefix,discovered['url']))
+                        destination_id=identity(discovered['url'])
+                        destination_record=usable_variant_by_identity.get(destination_id)
+                        discovered_record=destination_record or records.get(discovered['url'],{})
+                        linked_html_routes.append((historical_route_prefix(
+                            discovered['url'],source_prefix,route_capture_hint(discovered_record)),
+                            discovered['url']))
                 discovered.update(status='queued',referrers=[referrer] if referrer else [],edition_prefixes=[source_prefix])
                 target_id=identity(ref['url'])
                 existing_key=record_by_identity.get(target_id)
@@ -230,6 +279,11 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
         if is_site(original):render_resources.setdefault(original,r)
     render_resources.update(usable)
     aliases=resource_aliases(render_resources)
+    compatibility_aliases,alias_issues=documented_asset_aliases(root,usable_variants)
+    for key,record in compatibility_aliases.items():
+        if key not in aliases or not aliases[key].get('local_path'):
+            aliases[key]=record
+    issues.extend(alias_issues)
     pages={}
     for source_key,r in records.items():
         source_url=r.get('url',source_key)
@@ -287,6 +341,13 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
                 destination.write_bytes(sanitize_svg(raw[source_key]))
             else:
                 destination.write_bytes(raw[source_key])
+    for r in {record['_source_key']:record for record in compatibility_aliases.values()}.values():
+        destination=output/r['local_path'].lstrip('/')
+        if destination.exists():continue
+        destination.parent.mkdir(parents=True,exist_ok=True)
+        source_key=r['_source_key']
+        if destination.suffix=='.svg':destination.write_bytes(sanitize_svg(raw[source_key]))
+        else:destination.write_bytes(raw[source_key])
     recovered=0;placeholders=0;page_report=[]
     for page,r in sorted(pages.items()):
         url=r['url']

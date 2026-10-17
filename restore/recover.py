@@ -6,7 +6,7 @@ from urllib.parse import urlencode,urlsplit
 from .archive import parse_cdx,validate_payload,capture_candidates
 from .discover import discover_html,discover_css
 from .state import State,write_json
-from .urls import TARGET,kind_for,original_url,capture_from,in_domain
+from .urls import TARGET,SQUARESPACE_START,LEGACY_EDITION_END,kind_for,original_url,capture_from,in_domain
 
 CDX='https://web.archive.org/cdx/search/cdx?'
 FIELDS='timestamp,original,mimetype,statuscode,digest'
@@ -283,16 +283,21 @@ def capture_variant(state:State,client,url:str,timestamp:str,kind_override:str|N
             'status':record['status'],'sha256':digest,'bytes':len(response.body),'kind':kind}
 
 ERA_BOUNDS={'2007':('20070101000000','20081231235959'),
-            '2009':('20090101000000','20130920235959'),
-            '2013':('20130921000000','20230930235959')}
+            '2009':('20090101000000',LEGACY_EDITION_END),
+            '2013':(SQUARESPACE_START,'20230930235959')}
 
 def capture_era(state:State,client,era:str,max_files:int=2000)->dict:
     """Capture the latest successful Wayback response per URL in one site era."""
     if era not in ERA_BOUNDS:raise ValueError('Era must be 2007, 2009, or 2013')
-    start,end=ERA_BOUNDS[era];selected=[]
-    existing_success={(r.get('url'),r.get('source_requested_capture')) for r in state.data['resources'].values()
-                       if r.get('source_requested_capture') and r.get('raw_path')
-                       and r.get('status') in ('recovered','needs_review')}
+    start,end=ERA_BOUNDS[era];selected=[];indexed_candidates={};already_recovered=set()
+    successful={}
+    for record in state.data['resources'].values():
+        actual=record.get('actual_capture')
+        if (actual and record.get('raw_path')
+                and record.get('status') in ('recovered','needs_review')):
+            successful.setdefault(record.get('url'),set()).add(actual)
+    def has_successful_capture(url):
+        return any(start<=actual<=end for actual in successful.get(url,()))
     for key,record in state.data['resources'].items():
         url=record.get('url',key)
         if record.get('kind') not in ('html','css','image'):continue
@@ -300,11 +305,18 @@ def capture_era(state:State,client,era:str,max_files:int=2000)->dict:
                     if c.get('statuscode')=='200' and start<=c.get('timestamp','')<=end]
         if not candidates:continue
         candidates=sorted(set(candidates),reverse=True)
-        if any((url,timestamp) in existing_success for timestamp in candidates):continue
+        indexed_candidates.setdefault(url,set()).update(candidates)
+        if has_successful_capture(url):
+            already_recovered.add(url);continue
         selected.append((url,candidates))
     selected=sorted(selected,key=lambda item:(item[1][0],item[0]))[:max_files]
     report={'era':era,'date_start':start,'date_end':end,'eligible_urls':len(set(url for url,_ in selected)),
+            'indexed_urls':len(indexed_candidates),'already_recovered_urls':len(already_recovered),
+            'remaining_urls':None,'selected_urls':len(selected),'batch_limit':max_files,
             'attempted':0,'recovered':0,'failures':[],'captures':[]}
+    def remaining_count():
+        return sum(1 for url,candidates in indexed_candidates.items()
+                   if not has_successful_capture(url))
     for url,candidates in selected:
         report['attempted']+=1
         attempted=[];result=None
@@ -314,14 +326,19 @@ def capture_era(state:State,client,era:str,max_files:int=2000)->dict:
                 result=capture_variant(state,client,url,timestamp)
                 result['attempted_captures']=list(attempted)
                 report['recovered']+=1;report['captures'].append(result)
+                actual=result.get('actual_capture')
+                if actual:successful.setdefault(url,set()).add(actual)
                 break
             except Exception as exc:
                 last_error=f'{type(exc).__name__}: {exc}'
         if result is None:
             report['failures'].append({'url':url,'timestamps':attempted,'error':last_error})
         if report['attempted']%25==0:
-            state.save();write_json(state.root/f'recovery/era-{era}-report.json',report)
-    state.save();write_json(state.root/f'recovery/era-{era}-report.json',report)
+            state.save();report['remaining_urls']=remaining_count()
+            write_json(state.root/f'recovery/era-{era}-report.json',report)
+    state.save()
+    report['remaining_urls']=remaining_count()
+    write_json(state.root/f'recovery/era-{era}-report.json',report)
     report['eligible_urls']=len(set(url for url,_ in selected))
     return report
 

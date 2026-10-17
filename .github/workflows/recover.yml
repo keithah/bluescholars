@@ -12,6 +12,11 @@ on:
         default: '20'
         required: true
         type: string
+      legacy_blog_host:
+        description: Confirmed historical blog host to index in addition to bluescholars.com
+        default: '02cd02a.netsolhost.com'
+        required: false
+        type: string
       resume_run:
         description: Optional prior recovery run ID to resume
         default: ''
@@ -46,6 +51,7 @@ jobs:
     env:
       MAX_FILES: ${{ inputs.max_files }}
       MAX_INDEX_PAGES: ${{ inputs.max_index_pages }}
+      LEGACY_BLOG_HOST: ${{ inputs.legacy_blog_host }}
       RESUME_RUN: ${{ inputs.resume_run }}
       RESUME_RUNS: ${{ inputs.resume_runs }}
       COMMONCRAWL_RECORDS: ${{ inputs.commoncrawl_records }}
@@ -63,6 +69,7 @@ jobs:
         run: |
           [[ "$MAX_FILES" =~ ^[0-9]+$ && "$MAX_INDEX_PAGES" =~ ^[0-9]+$ ]]
           (( MAX_FILES >= 1 && MAX_FILES <= 2000 && MAX_INDEX_PAGES >= 1 && MAX_INDEX_PAGES <= 200 ))
+          [[ -z "$LEGACY_BLOG_HOST" || "$LEGACY_BLOG_HOST" =~ ^[A-Za-z0-9.-]{1,253}$ ]]
           [[ -z "$RESUME_RUN" || "$RESUME_RUN" =~ ^[0-9]+$ ]]
           [[ -z "$RESUME_RUNS" || "$RESUME_RUNS" =~ ^[0-9]+(,[0-9]+)*$ ]]
           [[ -z "$RESUME_RUN" || -z "$RESUME_RUNS" ]]
@@ -83,6 +90,10 @@ jobs:
         id: index
         continue-on-error: true
         run: python -m restore index --max-pages "$MAX_INDEX_PAGES"
+      - name: Index the confirmed legacy WordPress host
+        if: env.LEGACY_BLOG_HOST != ''
+        continue-on-error: true
+        run: python -m restore index --url "$LEGACY_BLOG_HOST" --match domain --max-pages "$MAX_INDEX_PAGES"
       - name: Search source-linked external image URLs
         id: asset-index
         continue-on-error: true

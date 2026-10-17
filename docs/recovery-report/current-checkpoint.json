@@ -123,14 +123,17 @@
     "unique_raw_files": 97,
     "visual_reviewed": false
   },
-  "updated_at": "2026-10-17T00:15:00Z",
+  "updated_at": "2026-10-17T00:19:00Z",
   "tests": {
     "command": ".venv311/bin/python -m pytest -q",
     "result": "125 passed",
     "compileall": "passed",
     "git_diff_check": "passed",
-    "ci_run": "38985439462",
-    "ci_status": "in_progress at documentation update"
+    "code_ci_run": "38985439462",
+    "code_ci_result": "success",
+    "documentation_ci_run": "38985667700",
+    "documentation_ci_result": "success",
+    "latest_documentation_commit": "ac6e73e"
   },
   "livejournal_archive": {
     "route": "/lj/",

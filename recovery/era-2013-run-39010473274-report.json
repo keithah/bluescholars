@@ -1,0 +1,1414 @@
+{
+  "run_id": "39010473274",
+  "workflow_url": "https://github.com/keithah/bluescholars/actions/runs/39010473274",
+  "conclusion": "success",
+  "resumed_from_run": "38995680425",
+  "artifact_merge": "recovery/imported/39010473274/merge-report.json",
+  "merge_result": {
+    "artifact": "/private/tmp/bluescholars-run-39010473274",
+    "conflicting_files": [],
+    "copied_index_files": 0,
+    "copied_raw_files": 0,
+    "duplicate_files": 1990,
+    "imported_at": "2026-10-17T06:54:54Z",
+    "merged_records": 8908,
+    "new_resource_records": 0,
+    "new_variant_records": 0,
+    "resources_in_artifact": 9118,
+    "run_id": "39010473274"
+  },
+  "era_report": {
+    "already_recovered_urls": 461,
+    "attempted": 164,
+    "batch_limit": 2000,
+    "captures": [
+      {
+        "actual_capture": "20160306003310",
+        "attempted_captures": [
+          "20160306003310"
+        ],
+        "bytes": 1414,
+        "kind": "image",
+        "requested_capture": "20160306003310",
+        "sha256": "1973ccf11dcddecb38a30a73b8705eaf2ead0a7e09da88234f6457e2ee9ed645",
+        "source_key": "http://02cd02a.netsolhost.com/favicon.ico@@wayback:20160306003310:1973ccf11dcd",
+        "status": "recovered",
+        "url": "http://02cd02a.netsolhost.com/favicon.ico"
+      },
+      {
+        "actual_capture": "20180401041630",
+        "attempted_captures": [
+          "20180401041630"
+        ],
+        "bytes": 108035,
+        "kind": "image",
+        "requested_capture": "20180401041630",
+        "sha256": "e0b981c2f9b3e46fff9f4592a3844482262da1081fbdb8fc8f4a2e788261f209",
+        "source_key": "http://02cd02a.netsolhost.com/blog/wp-content/uploads/2009/08/img_9707-vi.jpg@@wayback:20180401041630:e0b981c2f9b3",
+        "status": "recovered",
+        "url": "http://02cd02a.netsolhost.com/blog/wp-content/uploads/2009/08/img_9707-vi.jpg"
+      },
+      {
+        "actual_capture": "20191030180251",
+        "attempted_captures": [
+          "20191030180251"
+        ],
+        "bytes": 59980,
+        "kind": "image",
+        "requested_capture": "20191030180251",
+        "sha256": "538edb62fab8f31fbdf55cd32f45c610c780962e3df05e9bc19015c32a86409c",
+        "source_key": "http://02cd02a.netsolhost.com/blog/wp-content/uploads/2010/02/malkin-eyes-21.jpg?w=1400@@wayback:20191030180251:538edb62fab8",
+        "status": "recovered",
+        "url": "http://02cd02a.netsolhost.com/blog/wp-content/uploads/2010/02/malkin-eyes-21.jpg?w=1400"
+      }
+    ],
+    "date_end": "20230930235959",
+    "date_start": "20130921000000",
+    "eligible_urls": 164,
+    "era": "2013",
+    "failures": [
+      {
+        "error": "ValueError: Expected a full HTML document",
+        "timestamps": [
+          "20131215002519",
+          "20131214235919",
+          "20131017101200"
+        ],
+        "url": "http://shop.bluescholars.com/robots.txt"
+      },
+      {
+        "error": "ValueError: Empty archive response",
+        "timestamps": [
+          "20131215002522"
+        ],
+        "url": "http://shop.bluescholars.com/favicon.ico"
+      },
+      {
+        "error": "ValueError: Expected a full HTML document",
+        "timestamps": [
+          "20140113082325",
+          "20131214235540",
+          "20131016071916",
+          "20130923094122"
+        ],
+        "url": "http://bluescholars.com/item/51b8c532e4b05e84d3878f00?format=750w"
+      },
+      {
+        "error": "ValueError: Expected a full HTML document",
+        "timestamps": [
+          "20140113082414",
+          "20131214235543",
+          "20131016072424",
+          "20130923093051"
+        ],
+        "url": "http://bluescholars.com/item/51b8c532e4b05e84d3878f00?format=500w"
+      },
+      {
+        "error": "ValueError: Expected image bytes; received HTML or unknown content",
+        "timestamps": [
+          "20141114134310",
+          "20131226181134"
+        ],
+        "url": "http://02cd02a.netsolhost.com/blog/wp-includes/wlwmanifest.xml"
+      },
+      {
+        "error": "ValueError: Expected a full HTML document",
+        "timestamps": [
+          "20160306003222",
+          "20141113165149",
+          "20131226173228"
+        ],
+        "url": "http://02cd02a.netsolhost.com/blog/xmlrpc.php?rsd"
+      },
+      {
+        "error": "ValueError: Expected a full HTML document",
+        "timestamps": [
+          "20160306003301",
+          "20141114092803"
+        ],
+        "url": "http://02cd02a.netsolhost.com/blog/xmlrpc.php"
+      },
+      {
+        "error": "ValueError: Expected image bytes; received HTML or unknown content",
+        "timestamps": [
+          "20160422020549",
+          "20160328053943",
+          "20160314124317",
+          "20160305182859",
+          "20160305182614",
+          "20160305182120",
+          "20160304042646",
+          "20160122174949",
+          "20160122144300",
+          "20150528104519",
+          "20141113220912",
+          "20141112213623",
+          "20140621054119",
+          "20131216184949",
+          "20131113200610",
+          "20131017051320"
+        ],
+        "url": "http://02cd02a.netsolhost.com/robots.txt"
+      },
+      {
+        "error": "ValueError: Expected a full HTML document",
+        "timestamps": [
+          "20180331043712"
+        ],
+        "url": "http://bluescholars.com/api/blog-like-count/522eb2f2e4b0f3d0e830c6d2,51b8c857e4b05bf73912a431,51b8c857e4b05bf73912a437,51b8c857e4b05bf73912a43d,51b8c857e4b05bf73912a443,51b8c857e4b05bf73912a449,51b8c857e4b05bf73912a44d,51b8c857e4b05bf73912a453,51b8c857e4b05bf73912a459,51b8c857e4b05bf73912a45f,51b8c857e4b05bf73912a465,51b8c857e4b05bf73912a468,51b8c857e4b05bf73912a46e,51b8c857e4b05bf73912a479,51b8c857e4b05bf73912a47f,51b8c857e4b05bf73912a485,51b8c857e4b05bf73912a489,51b8c857e4b05bf73912a48f,51b8c857e4b05bf73912a492,51b8c857e4b05bf73912a495"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717081742"
+        ],
+        "url": "http://bluescholars.com/blog/off-to-pullman"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717081745"
+        ],
+        "url": "http://bluescholars.com/blog/jordanloveskats-pre-show-green-room-chillin"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717081749"
+        ],
+        "url": "http://bluescholars.com/blog/brownouts-st-ssy-x-blue-scholars-tee"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717081753"
+        ],
+        "url": "http://bluescholars.com/blog/sabzi-on-wevegotthejazz"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717081756"
+        ],
+        "url": "http://bluescholars.com/blog/geo-in-hawaii-this-week"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717081800"
+        ],
+        "url": "http://bluescholars.com/blog/seijun-suzuki-shoot-part-2"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717081803"
+        ],
+        "url": "http://bluescholars.com/blog/blue-scholars-bell-hooks-unfinished"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717081806"
+        ],
+        "url": "http://bluescholars.com/blog/hpudatethenight-blue-scholars-returned-to"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717081813"
+        ],
+        "url": "http://bluescholars.com/blog/photos-by-todd-cooper-eugene-or-october"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717081817"
+        ],
+        "url": "http://bluescholars.com/blog/after-the-show-photo-by-aaron-yoshino-click"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717081820"
+        ],
+        "url": "http://bluescholars.com/blog/cinemetropolis-is-here-click-the-photo-get-it"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717081823"
+        ],
+        "url": "http://bluescholars.com/blog/blue-scholars-may-day-i-was-approached-by-the"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717081826"
+        ],
+        "url": "http://bluescholars.com/blog/geo-thats-one-of-the-things-about-seattle-thats"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717081829"
+        ],
+        "url": "http://bluescholars.com/blog/townfolk-new-tape-to-kick-off-the-month-new"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717081833"
+        ],
+        "url": "http://bluescholars.com/blog/prometheusbrown-brownouts-rappers-w-cameras"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717081836"
+        ],
+        "url": "http://bluescholars.com/blog/rudified-chee-geo-at-fresh-cafe-honolulu"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717081839"
+        ],
+        "url": "http://bluescholars.com/blog/iheartbluescholars-206ness-thesocialclub"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717081842"
+        ],
+        "url": "http://bluescholars.com/blog/interview-live-show-footage-from-ann-arbor-stop"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717081846"
+        ],
+        "url": "http://bluescholars.com/blog/jordanloveskats-haha-old-video-of-my-dude-sabzi"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717081849"
+        ],
+        "url": "http://bluescholars.com/blog/bluescholars-the-town-all-day-tour-hits-your"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717081852"
+        ],
+        "url": "http://bluescholars.com/blog/greg-nissen-blue-scholars-cinemetropolis-listening"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717081855"
+        ],
+        "url": "http://bluescholars.com/blog/thignat-untitled-on-flickr-check-more-photos"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717081858"
+        ],
+        "url": "http://bluescholars.com/blog/jordanloveskats-if-you-do-only-one-thing-today"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717081858"
+        ],
+        "url": "http://bluescholars.com:80/blog/jordanloveskats-if-you-do-only-one-thing-today"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717081902"
+        ],
+        "url": "http://bluescholars.com/blog/nujabeschangedmylife-blue-scholars-third-lp"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717081937"
+        ],
+        "url": "http://bluescholars.com/blog/brownouts-saba-michael-seattle-june-2011"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717082052"
+        ],
+        "url": "http://bluescholars.com/blog/prometheusbrown-bambudepistola-prometheus"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717082134"
+        ],
+        "url": "http://bluescholars.com/blog/yourgirlsbestfriend-from-bluescholars-com"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717082241"
+        ],
+        "url": "http://bluescholars.com/blog/brownouts-rainier-beach-station-seattle-sept"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717082242"
+        ],
+        "url": "http://bluescholars.com/blog/thignat-untitled-on-flickr-showbox"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717082304"
+        ],
+        "url": "http://bluescholars.com/blog/thebarmusic-prometheus-brown-bambu-the-bar"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717082313"
+        ],
+        "url": "http://bluescholars.com/blog/elleaybee-lumpia-on-lumpia-at-the-blue-scholars"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717082327"
+        ],
+        "url": "http://bluescholars.com/blog/bambudepistola-mustwatch-check-the-blue"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717082334"
+        ],
+        "url": "http://bluescholars.com/blog/stussy-recap-of-blue-scholars-in-store"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717082338"
+        ],
+        "url": "http://bluescholars.com/blog/hit-us-with-more-pics-of-your-swag-bs"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717082345"
+        ],
+        "url": "http://bluescholars.com/blog/brownouts-sabzi-cock-seattle-march-2011"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717082418"
+        ],
+        "url": "http://bluescholars.com/blog/jordanloveskats-guess-whos-gonna-be-on-tv"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717082426"
+        ],
+        "url": "http://bluescholars.com/blog/jordanloveskats-brownouts-st-ssy-x-blue"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717082439"
+        ],
+        "url": "http://bluescholars.com/blog/worldbysam-seattles-finest-sol-and-grynch"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717082609"
+        ],
+        "url": "http://bluescholars.com/blog/now-shipping-to-everybody-who-pledged-to-get-it"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717082640"
+        ],
+        "url": "http://bluescholars.com/blog/essahawaii-guess-whos-coming-oahu-are-you"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717082651"
+        ],
+        "url": "http://bluescholars.com/blog/bluescholars-townallday-tour-tickets-on-sale"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717082651"
+        ],
+        "url": "http://bluescholars.com:80/blog/bluescholars-townallday-tour-tickets-on-sale"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717082846"
+        ],
+        "url": "http://bluescholars.com/blog/brownouts-first-run-of-town-all-day-foam-hands"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717082951"
+        ],
+        "url": "http://bluescholars.com/blog/prometheusbrown-harryclean-shot-this-video"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717083130"
+        ],
+        "url": "http://bluescholars.com/blog/new-dates-added-to-fall-tour"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717083135"
+        ],
+        "url": "http://bluescholars.com/blog/wegoforth-brownouts-fox-theater-boulder"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717083151"
+        ],
+        "url": "http://bluescholars.com/blog/jean-quan-from-cal-activist-to-mayor-of-oakland"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717083358"
+        ],
+        "url": "http://bluescholars.com/blog/brownouts-st-ssy-seattle-seattle-june-2011"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717083426"
+        ],
+        "url": "http://bluescholars.com/blog/click-photo-to-download-blue-scholars-john"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717083426"
+        ],
+        "url": "http://bluescholars.com:80/blog/click-photo-to-download-blue-scholars-john"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717083444"
+        ],
+        "url": "http://bluescholars.com/blog/bambudepistola-portland-wonder-ballroom-the"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717083618"
+        ],
+        "url": "http://bluescholars.com/blog/gregoryniss-sabzi"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717083816"
+        ],
+        "url": "http://bluescholars.com/blog/urbanxjane-blue-scholars-geo-sabzi-3"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717083903"
+        ],
+        "url": "http://bluescholars.com/blog/brownouts-billboard-the-paramount-seattle"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717084231"
+        ],
+        "url": "http://bluescholars.com/blog/el-sabzi-illustration-by-sarahe-roman"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717084322"
+        ],
+        "url": "http://bluescholars.com/blog/prometheusbrown-click-the-photo-to-stream-dl"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717084408"
+        ],
+        "url": "http://bluescholars.com/blog/show-at-the-hawthorne-in-pdx-april-2010"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717084532"
+        ],
+        "url": "http://bluescholars.com/blog/thaswassup-blue-scholars-article-2004"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717084614"
+        ],
+        "url": "http://bluescholars.com/blog/macklemore-bambudepistola-isda-directed-by"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717084615"
+        ],
+        "url": "http://bluescholars.com/blog/upgradeyourvices-so-much-awesome-on-one-stage"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717084616"
+        ],
+        "url": "http://bluescholars.com/blog/we-are-playing-an-all-ages-show-in-olympia-on"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717084630"
+        ],
+        "url": "http://bluescholars.com/blog/m-de-in-heights-presents-winter-pigeons"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717084706"
+        ],
+        "url": "http://bluescholars.com/blog/hari-kondabolu-storms-the-pacific-northwest"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717084712"
+        ],
+        "url": "http://bluescholars.com/blog/prometheusbrown-i-wrote-an-op-ed-piece-on-al"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717084713"
+        ],
+        "url": "http://bluescholars.com/blog/prometheusbrown-doing-a-rare-solo-set-this"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717084800"
+        ],
+        "url": "http://bluescholars.com/blog/floatingvibes-sabzi-and-geo"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717084805"
+        ],
+        "url": "http://bluescholars.com/blog/tacoma-only-a-handful-of-tickets-left-get-em-now"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717084941"
+        ],
+        "url": "http://bluescholars.com/blog/prometheusbrown-look-i-beat-michelle-malkin-to"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717085033"
+        ],
+        "url": "http://bluescholars.com/blog/townallday-tourallday-w-brothers-from-another"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717085057"
+        ],
+        "url": "http://bluescholars.com/blog/blue-scholars-and-jon-jon-present-seijun-suzuki"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717085241"
+        ],
+        "url": "http://bluescholars.com/blog/http-www-sonicsarena-com-rmerialesphoto"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717085309"
+        ],
+        "url": "http://bluescholars.com/blog/tonight-in-nyc"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717085323"
+        ],
+        "url": "http://bluescholars.com/blog/stussy-shoutout-to-saba-from-blue-scholars-now"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717085443"
+        ],
+        "url": "http://bluescholars.com/blog/stussy-sabzi-of-blue-scholars-at-the-key-club"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717085637"
+        ],
+        "url": "http://bluescholars.com/blog/amorparati-as-promised-here-is-the-blue"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717085646"
+        ],
+        "url": "http://bluescholars.com/blog/aviloud-geo"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717085809"
+        ],
+        "url": "http://bluescholars.com/blog/thignat-blue-scholars-the-showbox-march-2010"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717085815"
+        ],
+        "url": "http://bluescholars.com/blog/thx-professor-griff-not-that-prof-griff-tho"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717085821"
+        ],
+        "url": "http://bluescholars.com/blog/bluescholars-anna-karina-is-distinct-for"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717085821"
+        ],
+        "url": "http://bluescholars.com:80/blog/bluescholars-anna-karina-is-distinct-for"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717085853"
+        ],
+        "url": "http://bluescholars.com/blog/prometheusbrown-bluescholars-bluescholars"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717085926"
+        ],
+        "url": "http://bluescholars.com/blog/fyeahnorthwestmusic-sabzi-in-coffee-and-snow"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717085944"
+        ],
+        "url": "http://bluescholars.com/blog/c-knowledge-cknow7-tour-manager"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717090006"
+        ],
+        "url": "http://bluescholars.com/blog/gregoryniss-rappers-with-cameras"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717090358"
+        ],
+        "url": "http://bluescholars.com/blog/new-unmixed-unmastered-track-anybody-wanna-master"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717090358"
+        ],
+        "url": "http://bluescholars.com:80/blog/new-unmixed-unmastered-track-anybody-wanna-master"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717090426"
+        ],
+        "url": "http://bluescholars.com/blog/iheartbluescholars-photo-credit-brendanms"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717090556"
+        ],
+        "url": "http://bluescholars.com/blog/were-going-back-to-hawaii-with-bambu-tickets"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717090625"
+        ],
+        "url": "http://bluescholars.com/blog/prometheusbrown-bluescholars-click-photo-for"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717090636"
+        ],
+        "url": "http://bluescholars.com/blog/thignat-rapping-with-bluescholars-tonight-at"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717090716"
+        ],
+        "url": "http://bluescholars.com/blog/robinpark-see-you-at-the-show-tonight-and-buy"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717090753"
+        ],
+        "url": "http://bluescholars.com/blog/pamjane-blue-scholars-slick-watts-directed"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717090946"
+        ],
+        "url": "http://bluescholars.com/blog/jonjonaye-screenshot-preview-here-is-a-quick"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717090954"
+        ],
+        "url": "http://bluescholars.com/blog/last-night-in-eugene"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717091007"
+        ],
+        "url": "http://bluescholars.com/blog/namnice-prometheusbrown-green-room-art-the"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717091135"
+        ],
+        "url": "http://bluescholars.com/blog/prometheusbrown-aighty-quick-snap-of"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717091157"
+        ],
+        "url": "http://bluescholars.com/blog/more-raps-from-geo-dropping-this-week-if-youre"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717091206"
+        ],
+        "url": "http://bluescholars.com/blog/mycitysfilthy-nxnw-remix-macklemore-ft"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717091218"
+        ],
+        "url": "http://bluescholars.com/blog/were-on-indian-tv"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717091313"
+        ],
+        "url": "http://bluescholars.com/events/2013/8/12/the-retreat"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717091357"
+        ],
+        "url": "http://bluescholars.com/blog/prometheusbrown-hawaii-july-6-prometheus"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717091443"
+        ],
+        "url": "http://bluescholars.com/blog/jeffbernat-blue-scholars-slick"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717091451"
+        ],
+        "url": "http://bluescholars.com/blog/gregoryniss-bluescholars-played-tonight-in-the"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717091527"
+        ],
+        "url": "http://bluescholars.com/blog/prometheusbrown-kendrew-call-me-now-call-me"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717091554"
+        ],
+        "url": "http://bluescholars.com/blog/brownouts-green-room-new-york-august-2011"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717091557"
+        ],
+        "url": "http://bluescholars.com/blog/bambudepistola-get-your-tickets-now-brrrat"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717091729"
+        ],
+        "url": "http://bluescholars.com/events/2013/4/15/event-one"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717091740"
+        ],
+        "url": "http://bluescholars.com/blog/bluescholars-new-unmixed-unmastered-track"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717091740"
+        ],
+        "url": "http://bluescholars.com:80/blog/bluescholars-new-unmixed-unmastered-track"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717091759"
+        ],
+        "url": "http://bluescholars.com/blog/photos-saturday-night-the-crocodile"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717091803"
+        ],
+        "url": "http://bluescholars.com/blog/the-town-all-day-tour-hits-your-town-nov-dec-2012"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717091843"
+        ],
+        "url": "http://bluescholars.com/blog/thignat-townfolk-at-santa-cruz-main-beach"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717091843"
+        ],
+        "url": "http://bluescholars.com:80/blog/thignat-townfolk-at-santa-cruz-main-beach"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717091908"
+        ],
+        "url": "http://bluescholars.com/blog/click-photo-for-that-info"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717091951"
+        ],
+        "url": "http://bluescholars.com/blog/sulihpoeht-nice-original-cd-packaging"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717091956"
+        ],
+        "url": "http://bluescholars.com/blog/jordanloveskats-shootin-footage-for-the-blue"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717092007"
+        ],
+        "url": "http://bluescholars.com/blog/iheartbluescholars-photo-credit-chase-jarvis"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190717092041"
+        ],
+        "url": "http://bluescholars.com/blog/thignat-prometheusbrown-taken-with-instagram"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190719224016"
+        ],
+        "url": "http://bluescholars.com/blog/prometheusbrown-books-off-bambus-new-album"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190719224023"
+        ],
+        "url": "http://bluescholars.com/blog/a-video-and-song-we-did-with-sound-transit"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190719224026"
+        ],
+        "url": "http://bluescholars.com/blog/?attachment_id=2764"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190719224031"
+        ],
+        "url": "http://bluescholars.com/flying-houses"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190719224036"
+        ],
+        "url": "http://bluescholars.com/blog/shutterslaps-taken-at-the-blue-scholars-bambu"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190719224043"
+        ],
+        "url": "http://bluescholars.com/blog/prometheusbrown-seattle-catch-the-bar"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190719224046"
+        ],
+        "url": "http://bluescholars.com/bio"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190719224049"
+        ],
+        "url": "http://bluescholars.com/blog/boulder-co"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190719224103"
+        ],
+        "url": "http://bluescholars.com/blog/jonjonaye-another-teaser-screenshot-from-the"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190719224120"
+        ],
+        "url": "http://bluescholars.com/events"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190719224250"
+        ],
+        "url": "http://bluescholars.com/blog/brownouts-green-room-vancouver-september-2011"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190719230733"
+        ],
+        "url": "http://bluescholars.com/blog/youh0esdown-got-pulled-up-on-stage-last-night"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190719230733"
+        ],
+        "url": "http://bluescholars.com:80/blog/youh0esdown-got-pulled-up-on-stage-last-night"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190719231220"
+        ],
+        "url": "http://bluescholars.com/blog/brownouts-bertha-somewhere-in-central-idaho"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190719231648"
+        ],
+        "url": "http://bluescholars.com/music"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190719232402"
+        ],
+        "url": "http://bluescholars.com/blog/shadle-park-hs-teacher-suspended-put-on-leave-for"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190719233049"
+        ],
+        "url": "http://bluescholars.com/blog/gregoryniss-geo-of-blue-scholars"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190719233054"
+        ],
+        "url": "http://bluescholars.com/index"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190719233205"
+        ],
+        "url": "http://bluescholars.com/blog/important-update-agitprop-opening-night-has-been"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190719233210"
+        ],
+        "url": "http://bluescholars.com/blog/interesting-ambition"
+      },
+      {
+        "error": "ValueError: Captured provider/archive error page, not site content",
+        "timestamps": [
+          "20190719234123"
+        ],
+        "url": "http://bluescholars.com/blog/brownouts-renton-ave-2-seattle-june-2011"
+      },
+      {
+        "error": "ValueError: Expected image bytes; received HTML or unknown content",
+        "timestamps": [
+          "20190721233729"
+        ],
+        "url": "http://www.bluescholars.com/images/splash_enter_on.gif"
+      },
+      {
+        "error": "ValueError: Expected image bytes; received HTML or unknown content",
+        "timestamps": [
+          "20190721234121"
+        ],
+        "url": "http://bluescholars.com/blog/wp-content/uploads/2010/03/DR2.gif"
+      },
+      {
+        "error": "ValueError: Expected image bytes; received HTML or unknown content",
+        "timestamps": [
+          "20190721234400"
+        ],
+        "url": "http://bluescholars.com/blog/wp-content/plugins/shadowbox-js/shadowbox/loading.gif"
+      },
+      {
+        "error": "ValueError: Expected image bytes; received HTML or unknown content",
+        "timestamps": [
+          "20190721235202"
+        ],
+        "url": "http://www.bluescholars.com/images/txt_archive.svg"
+      },
+      {
+        "error": "ValueError: Expected image bytes; received HTML or unknown content",
+        "timestamps": [
+          "20190721235202"
+        ],
+        "url": "http://www.bluescholars.com/images/txt_internet.svg"
+      },
+      {
+        "error": "ValueError: Expected a full HTML document",
+        "timestamps": [
+          "20200220154835",
+          "20191019105513",
+          "20190814091100",
+          "20181011220823",
+          "20171201161142",
+          "20170606105154",
+          "20160429071845",
+          "20160319232705",
+          "20160130142922",
+          "20150919055439",
+          "20140113082200",
+          "20130927192053"
+        ],
+        "url": "http://bluescholars.com/blog?format=RSS"
+      },
+      {
+        "error": "ValueError: Expected a full HTML document",
+        "timestamps": [
+          "20200220154835",
+          "20191019105513",
+          "20190814091100",
+          "20181011220823",
+          "20171201161142",
+          "20170606105154",
+          "20160429071845",
+          "20160319232705",
+          "20160130142922",
+          "20150919055439",
+          "20140113082200",
+          "20130927192053"
+        ],
+        "url": "http://bluescholars.com/blog?format=rss"
+      },
+      {
+        "error": "ValueError: Expected a full HTML document",
+        "timestamps": [
+          "20200220154835",
+          "20191019105513",
+          "20190814091100",
+          "20181011220823",
+          "20171201161142",
+          "20170606105154",
+          "20160429071845",
+          "20160319232705",
+          "20160130142922",
+          "20150919055439",
+          "20140113082200",
+          "20130927192053"
+        ],
+        "url": "http://bluescholars.com:80/blog?format=rss"
+      },
+      {
+        "error": "ValueError: Expected a full HTML document",
+        "timestamps": [
+          "20200221155853"
+        ],
+        "url": "http://bluescholars.com/api/template/GetTemplateSchema?componentType=widget&type=9"
+      },
+      {
+        "error": "ValueError: Expected a full HTML document",
+        "timestamps": [
+          "20201029222218",
+          "20200506230657",
+          "20190324032756",
+          "20180716211459",
+          "20180620133644",
+          "20180411093418",
+          "20170613130930",
+          "20160514083103",
+          "20160320021657",
+          "20160316105715",
+          "20160316093617",
+          "20160316091408",
+          "20160316080852",
+          "20160306234141",
+          "20160306022901",
+          "20160305005310",
+          "20160303205645",
+          "20160223132413",
+          "20160120005450",
+          "20151116111827",
+          "20150907204516",
+          "20150207134801",
+          "20140815081830",
+          "20140602211831",
+          "20140601170410",
+          "20140113023659",
+          "20131214134225"
+        ],
+        "url": "http://www.bluescholars.com/robots.txt"
+      },
+      {
+        "error": "ValueError: Expected a full HTML document",
+        "timestamps": [
+          "20230418192932"
+        ],
+        "url": "http://bluescholars.com/api/1/performance/settings"
+      },
+      {
+        "error": "ValueError: Expected a full HTML document",
+        "timestamps": [
+          "20230906132159",
+          "20230906093000",
+          "20230906092946",
+          "20200511210219",
+          "20200414161219",
+          "20191019105442",
+          "20190814091103",
+          "20190814091058",
+          "20190814091055",
+          "20190723145553",
+          "20190419135356",
+          "20190219052553",
+          "20181117031646",
+          "20181114123324",
+          "20181012095450",
+          "20180907173501",
+          "20180801061658",
+          "20180720062121",
+          "20180629021718",
+          "20180625092500",
+          "20180525091027",
+          "20180416132608",
+          "20171201161138",
+          "20171102190540",
+          "20171024232206",
+          "20171024230024",
+          "20171024221817",
+          "20171011225043",
+          "20170919180558",
+          "20170917204619",
+          "20170413061045",
+          "20170317205553",
+          "20170307002923",
+          "20170307002922",
+          "20170304064952",
+          "20170217030144",
+          "20170106121959",
+          "20161111044647",
+          "20161101140104",
+          "20160903193227",
+          "20160701235230",
+          "20160624002314",
+          "20160429071841",
+          "20160422020042",
+          "20160411200147",
+          "20160411175008",
+          "20160319230150",
+          "20160316105718",
+          "20160316091412",
+          "20160316072430",
+          "20160315174950",
+          "20160306223557",
+          "20160306030706",
+          "20160306022904",
+          "20160304221051",
+          "20160304082516",
+          "20160304070357",
+          "20160303205649",
+          "20160303205502",
+          "20160219155826",
+          "20160210143902",
+          "20160202222813",
+          "20160130142920",
+          "20160126012829",
+          "20160122045731",
+          "20160122042020",
+          "20160122000659",
+          "20160121160749",
+          "20160120075559",
+          "20160119072437",
+          "20160116024709",
+          "20160109103449",
+          "20151118120201",
+          "20151108053341",
+          "20151009223059",
+          "20150912084405",
+          "20150907205821",
+          "20150907205809",
+          "20150907204520",
+          "20150907021035",
+          "20150906234826",
+          "20150810175033",
+          "20150810162119",
+          "20150810154705",
+          "20150810145257",
+          "20150801022324",
+          "20150706195551",
+          "20150518084417",
+          "20150226201215",
+          "20150208223552",
+          "20150208203357",
+          "20150208202725",
+          "20150208194930",
+          "20150208183427",
+          "20141220154809",
+          "20141216222054",
+          "20140602211834",
+          "20140601170414",
+          "20140520043646",
+          "20140517211415",
+          "20140317235521",
+          "20140302084953",
+          "20140113082547",
+          "20140113082410",
+          "20140113082322",
+          "20140113082251",
+          "20140113082220",
+          "20140113082157",
+          "20140113023702",
+          "20140113023611",
+          "20131214235537",
+          "20131214234405",
+          "20131214134229",
+          "20131016061256",
+          "20131014150342",
+          "20131008233004",
+          "20131007103439",
+          "20131005091222",
+          "20131003014434",
+          "20131002052126",
+          "20130927113203",
+          "20130926210318",
+          "20130923093049",
+          "20130921192017",
+          "20130921054900"
+        ],
+        "url": "http://bluescholars.com/robots.txt"
+      }
+    ],
+    "indexed_urls": 625,
+    "recovered": 3,
+    "remaining_urls": 161,
+    "selected_urls": 164
+  },
+  "interpretation": "The three validated response bodies were already present in the local checkpoint, so this workflow added no net-new recovered bytes/resources. Its 2013+ URL history still includes legacy-host resources; the capture date boundary is applied to the requested capture timestamp. Candidate artifact was built from the older runner checkpoint and was not used to replace the newer local candidate."
+}

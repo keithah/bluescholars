@@ -10,6 +10,12 @@ The latest root and `/bluescholars/` candidate builds each contain 976 recovered
 
 The owner-requested preview was refreshed from this candidate. Pages build [39010340075](https://github.com/keithah/bluescholars/actions/runs/39010340075) succeeded for `gh-pages` commit `1885e30b42b23023bfa69650399e88b29c170a47`, a normal child of the previous branch tip. The Pages API reports `built`, HTTPS is enforced, and there is no custom domain. Live checks after the build returned 200 for `/bluescholars/`, all three edition roots, `/2013/blog/page/3/`, the Eugene article, `/lj/`, `/archive-status/`, and local CSS; an unknown route returned 404. This is an incomplete candidate preview, not a reviewed release.
 
+## Resumed 2013+ archive pass — October 17, 2026
+
+Recovery workflow [39010473274](https://github.com/keithah/bluescholars/actions/runs/39010473274) resumed from artifact `38995680425`, completed successfully, and saved recovery and candidate artifacts. The 2013+ capture report covered 625 indexed URLs (461 already had a valid capture); it attempted 164 remaining URLs, validated three responses, and recorded 161 failures, leaving 161 without a successful response. All three valid response bodies and source records were already present locally, so a conservative merge added zero resource records, zero raw files, and no conflicting files. The runner's candidate came from an older checkpoint and was not used to replace the newer local candidate.
+
+This run also exposed a boundary-validation hole in `capture-era`: a redirect outside the requested date range could be counted as an era success. Commit `1854171c` now retains such a response as `needs_review`, records the mismatch, and excludes it from the era's successful/remaining counts. The regression test covers a 2007 request redirected to 2014. The three captures in this runner report (2016, 2018, 2019) are within the configured 2013–2023 date window and are existing legacy-host image responses; the detailed report preserves their identities and hashes.
+
 ## Latest checkpoint — October 16, 2026
 
 The complete Wayback domain CDX index currently records 8,992 capture rows across 8,580 resource URLs. The local checkpoint contains 1,937 unique downloaded files (105,399,588 bytes): 2,624 recovered resources, 48 held for review, 1,018 failed, and 4,890 queued. Counts refer to resource URLs and saved files; they do not count every dated snapshot body.

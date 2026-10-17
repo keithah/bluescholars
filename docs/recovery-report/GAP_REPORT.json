@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T06:34:00Z",
+  "updated_at": "2026-10-17T06:54:54Z",
   "source_checkpoint_run": "local resumable checkpoint after 2026-10-17 2013 continuation; prior workflow merges documented below.",
   "capture_index": {
     "indexed_capture_records": 23238,
@@ -391,7 +391,7 @@
   "latest_local_checkpoint": {
     "description": "October 17 continuation focused on 2007/2013 source recovery, 2009 content and candidate verification.",
     "recovery": {
-      "updated_at": "2026-10-17T06:30:00.208998+00:00",
+      "updated_at": "2026-10-17T06:54:54Z",
       "resource_urls": 10951,
       "statuses": {
         "queued": 5687,
@@ -465,6 +465,21 @@
         "remaining_urls_at_last_checkpoint": 218,
         "report": "recovery/era-2013-report.json",
         "latest_successful_capture": "20150628012721"
+      },
+      "2013_github_runner_39010473274": {
+        "run_id": "39010473274",
+        "status": "completed successfully; artifact staged, inspected and merged",
+        "resumed_from": "38995680425",
+        "indexed_urls": 625,
+        "previously_recovered_urls": 461,
+        "attempted_urls": 164,
+        "validated_responses": 3,
+        "failed_or_invalid": 161,
+        "remaining_without_success": 161,
+        "net_new_resource_records": 0,
+        "net_new_raw_files": 0,
+        "merge_report": "recovery/imported/39010473274/merge-report.json",
+        "detailed_report": "recovery/era-2013-run-39010473274-report.json"
       }
     },
     "candidate": {

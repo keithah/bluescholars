@@ -492,5 +492,19 @@
       "edition_route": "/2009/blog/2010/06/music-geo-goes-back-to-uw/",
       "interpretation": "A contemporaneous forum links the exact official post and named audio collaborators. The post HTML was recovered from Wayback and is available in the preview; third-party download links are evidence leads, not recovered audio."
     }
-  ]
+  ],
+  "latest_targeted_image_index": {
+    "archive": "Internet Archive Wayback",
+    "query": "exact source-linked image URLs from expanded inventory",
+    "inventory_urls": 42,
+    "queried_urls": 42,
+    "indexed_capture_records": 0,
+    "failures": [
+      {
+        "url": "http://media.tumblr.com/86812e71c1fe259a78cef3d7cd7917e5/tumblr_inline_mkn0u4tvM51qz4rgp.jpg",
+        "error": "HTTPS connection refused from local environment; this URL has no verified result in this pass."
+      }
+    ],
+    "interpretation": "No new image captures were found in the successful exact-URL queries. The one failed request is unknown, not a confirmed no-capture result."
+  }
 }

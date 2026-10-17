@@ -123,7 +123,7 @@
     "unique_raw_files": 97,
     "visual_reviewed": false
   },
-  "updated_at": "2026-10-17T00:19:00Z",
+  "updated_at": "2026-10-17T00:20:00Z",
   "tests": {
     "command": ".venv311/bin/python -m pytest -q",
     "result": "125 passed",
@@ -402,5 +402,19 @@
     "note": "Owner-requested partial preview refresh; this is not a completed restoration or reviewed release.",
     "pages_deployment_run": "38976443204",
     "pages_deployment_result": "success"
+  },
+  "latest_targeted_image_index": {
+    "archive": "Internet Archive Wayback",
+    "query": "exact source-linked image URLs from expanded inventory",
+    "inventory_urls": 42,
+    "queried_urls": 42,
+    "indexed_capture_records": 0,
+    "failures": [
+      {
+        "url": "http://media.tumblr.com/86812e71c1fe259a78cef3d7cd7917e5/tumblr_inline_mkn0u4tvM51qz4rgp.jpg",
+        "error": "HTTPS connection refused from local environment; this URL has no verified result in this pass."
+      }
+    ],
+    "interpretation": "No new image captures were found in the successful exact-URL queries. The one failed request is unknown, not a confirmed no-capture result."
   }
 }

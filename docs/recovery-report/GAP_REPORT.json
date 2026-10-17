@@ -51,5 +51,19 @@
     "Vimeo clip 10370730 is referenced by a contemporaneous forum post; video bytes were not recovered.",
     "A 2025 LiveJournal modern-interface capture and a 2023 post variant remain needs_review and are not mixed into the old-layout /lj/ edition."
   ],
-  "interpretation": "Queued and failed resource records describe attempted discovery state, not a claim that the archive has no material. Alternate captures still require individual compatibility review."
+  "interpretation": "Queued and failed resource records describe attempted discovery state, not a claim that the archive has no material. Alternate captures still require individual compatibility review.",
+  "targeted_image_index": {
+    "archive": "Internet Archive Wayback",
+    "query": "exact source-linked image URLs from expanded inventory",
+    "inventory_urls": 42,
+    "queried_urls": 42,
+    "indexed_capture_records": 0,
+    "failures": [
+      {
+        "url": "http://media.tumblr.com/86812e71c1fe259a78cef3d7cd7917e5/tumblr_inline_mkn0u4tvM51qz4rgp.jpg",
+        "error": "HTTPS connection refused from local environment; this URL has no verified result in this pass."
+      }
+    ],
+    "interpretation": "No new image captures were found in the successful exact-URL queries. The one failed request is unknown, not a confirmed no-capture result."
+  }
 }

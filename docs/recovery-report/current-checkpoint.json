@@ -67,20 +67,20 @@
     }
   },
   "checkpoint": {
+    "downloaded_bytes": 147554864,
+    "failed_attempts": 7718,
+    "generated_at": "2026-10-17T16:29:40.381969+00:00",
+    "index_complete": true,
+    "indexed_capture_records": 23248,
     "resource_urls": 11145,
     "statuses": {
-      "queued": 5742,
-      "recovered": 3858,
+      "excluded": 0,
+      "failed": 1508,
       "needs_review": 72,
-      "failed": 1473,
-      "excluded": 0
+      "queued": 5705,
+      "recovered": 3860
     },
-    "indexed_capture_records": 23238,
-    "index_complete": true,
-    "unique_downloaded_files": 2299,
-    "downloaded_bytes": 147554864,
-    "failed_attempts": 7339,
-    "generated_at": "2026-10-17T16:13:10.221302+00:00"
+    "unique_downloaded_files": 2299
   },
   "latest_import": {
     "run_id": "38975520061",
@@ -144,7 +144,7 @@
     "unique_raw_files": 97,
     "visual_reviewed": false
   },
-  "updated_at": "2026-10-17T16:13:10.221302+00:00",
+  "updated_at": "2026-10-17T16:29:40.381969+00:00",
   "tests": {
     "command": ".venv311/bin/python -m pytest -q",
     "result": "153 passed",
@@ -192,33 +192,24 @@
     }
   },
   "pages_deployment": {
-    "mode": "public, unreviewed incomplete candidate preview; not an approved final restoration",
-    "url": "https://keithah.github.io/bluescholars/",
-    "source_branch": "gh-pages",
-    "source_path": "/",
-    "branch_commit": "1885e30b42b23023bfa69650399e88b29c170a47",
-    "parent_commit": "9f8fdbb6f6c3497a77215e2b0bc88ff48d80e907",
-    "pages_build_run": "39010340075",
-    "pages_build_status": "success",
+    "commit": "3c8f1ee3f1e4394856e7d34c80bb96d8a45492b5",
+    "workflow_run": 39049956291,
+    "workflow_conclusion": "success",
     "pages_api_status": "built",
     "https_enforced": true,
     "custom_domain": null,
-    "candidate_source": "local candidate build from checkpoint measured 2026-10-17T06:30:00Z",
     "verified_routes": {
-      "/": 200,
-      "/2007/": 200,
-      "/2009/": 200,
-      "/2013/": 200,
-      "/2013/blog/page/3/": 200,
-      "/2013/blog/2013/9/9/eugene-oregon-august-2013/": 200,
-      "/lj/": 200,
-      "/archive-status/": 200,
-      "/assets/archive-ui.css": 200,
-      "/not-a-route/": 404
+      "/bluescholars/": 200,
+      "/bluescholars/2007/": 200,
+      "/bluescholars/2009/": 200,
+      "/bluescholars/2009/blog/releases/oof-ep/": 200,
+      "/bluescholars/2013/": 200,
+      "/bluescholars/lj/": 200,
+      "/bluescholars/archive-status/": 200,
+      "/bluescholars/assets/archive-ui.css": 200
     },
-    "year_cards_visible": true,
-    "ordinary_rendering_remote_automatic_assets": 0,
-    "release_approved": false
+    "unknown_route_http": 404,
+    "classification": "incomplete, unreviewed candidate preview"
   },
   "active_wayback_batch": null,
   "resume_plan": {
@@ -586,17 +577,16 @@
   "published_preview": {
     "url": "https://keithah.github.io/bluescholars/",
     "branch": "gh-pages",
-    "commit": "2de1693b585bbd5ee4d669a3eb69d5260dfdc1b8",
-    "pages_build_run": "39048755889",
+    "commit": "3c8f1ee3f1e4394856e7d34c80bb96d8a45492b5",
+    "pages_build_run": "39049956291",
     "pages_status": "built",
     "https_enforced": true,
     "custom_domain": null,
-    "verified_at": "2026-10-17T16:18:00Z",
+    "verified_at": "2026-10-17T16:32:00Z",
     "checks": {
       "/bluescholars/": 200,
       "/bluescholars/2007/": 200,
       "/bluescholars/2009/": 200,
-      "/bluescholars/2009/blog/releases/": 200,
       "/bluescholars/2009/blog/releases/oof-ep/": 200,
       "/bluescholars/2013/": 200,
       "/bluescholars/lj/": 200,
@@ -790,7 +780,7 @@
     "filename": "bluescholars-restoration-2026-10-17.zip",
     "path": "/tmp/bluescholars-restoration-2026-10-17.zip",
     "contents": "candidate site, source, reports/screenshots, recovery state/index, and non-font raw sources",
-    "file_count": 7432,
+    "file_count": 7434,
     "integrity_test": "passed",
     "font_binaries_included": false,
     "development_caches_or_credentials_included": false,
@@ -813,5 +803,13 @@
     "validated_css_or_image_responses": 16,
     "new_unique_raw_files": 8,
     "new_unique_raw_bytes": 21472
+  },
+  "latest_broad_local_retry": {
+    "report": "recovery/broad-200-local-20261017-report.json",
+    "processed_urls": 200,
+    "newly_recovered_resources": 2,
+    "new_unique_raw_files": 0,
+    "new_unique_raw_bytes": 0,
+    "site_routes_changed": false
   }
 }

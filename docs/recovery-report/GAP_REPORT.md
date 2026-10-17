@@ -2,7 +2,7 @@
 
 **Updated:** October 17, 2026. This report distinguishes a checked limitation from a search still in progress. Network failures and unqueried URLs are not evidence that a resource is absent from every archive.
 
-## Current measured local checkpoint — October 17, 2026, after the 2013 and 2009 continuations
+## Current measured local checkpoint — October 17, 2026, after the 2013, 2009 and broad queue continuations
 
 The resumable Wayback checkpoint contains 11,145 resource URLs and 23,238 indexed capture rows: 3,858 resources recovered, 72 held for compatibility review, 1,473 failed attempts, and 5,742 queued. The raw directory contains 2,299 unique response files (147,554,864 bytes). These counts include page, stylesheet, image, and other resource URLs; they are not page counts.
 
@@ -154,7 +154,7 @@ The rebuilt candidate remains at 976 recovered pages, 2,181 placeholders, four d
 
 ## Portable recovery bundle
 
-The current portable bundle is `/tmp/bluescholars-restoration-2026-10-17.zip`. It includes the candidate output, source, reports, screenshots, recovery state/index, and non-font raw captures. ZIP integrity check passed for 7,432 files; The SHA-256 is stored in the adjacent `.sha256` sidecar and final task handoff. Font binaries and development caches/credentials are excluded.
+The current portable bundle is `/tmp/bluescholars-restoration-2026-10-17.zip`. It includes the candidate output, source, reports, screenshots, recovery state/index, and non-font raw captures. ZIP integrity check passed for 7,434 files; The SHA-256 is stored in the adjacent `.sha256` sidecar and final task handoff. Font binaries and development caches/credentials are excluded.
 
 ## Refreshed Pages candidate — October 17, 2026
 
@@ -167,3 +167,11 @@ A bounded local `capture-era --era 2009 --max-files 2000` pass used the newer 1,
 
 
 The 2009 continuation candidate is now served from [the Pages preview](https://keithah.github.io/bluescholars/) at `gh-pages` commit `2de1693b585bbd5ee4d669a3eb69d5260dfdc1b8`; Pages workflow [39048755889](https://github.com/keithah/bluescholars/actions/runs/39048755889) succeeded and the Pages API reports `built`. HTTPS is enforced, no custom domain is configured, and the hub, all edition roots, `/2009/blog/releases/`, `/2009/blog/releases/oof-ep/`, `/lj/`, archive status, and local CSS return HTTP 200; an unknown route returns 404.
+
+
+## Broad recovery retry — October 17, 2026
+
+A subsequent 200-URL retry validated two more WordPress HTML responses: `/blog/category/the-music/` (requested capture `20100226174323`, resolved `20100217180749`, 25,925 bytes) and `/blog/n30-a-personal-history-by-geo/` (requested `20210529010817`, resolved `20110312120411`, 16,881 bytes). Both SHA-256 payloads were already present in the raw directory, so this retry added no unique raw bytes and did not change rendered route counts. The root and `/bluescholars/` candidate rebuilds both passed. Failed and queued URLs remain retryable; exact attempts are in [the broad retry report](../../recovery/broad-200-local-20261017-report.json).
+
+
+The recovery-status page was refreshed at `gh-pages` commit `3c8f1ee3f1e4394856e7d34c80bb96d8a45492b5`; Pages workflow [39049956291](https://github.com/keithah/bluescholars/actions/runs/39049956291) succeeded. HTTPS is enforced, and live checks returned 200 for the hub, all edition roots, the newly recovered 2009 release route, `/lj/`, recovery status and local CSS; an unknown route returns 404. This remains an unreviewed candidate preview.

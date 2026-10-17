@@ -1,0 +1,83 @@
+{
+  "batch": "local broad recovery retry",
+  "started_at": "2026-10-17T16:19:00Z",
+  "finished_at": "2026-10-17T16:29:40.381969+00:00",
+  "command": ".venv311/bin/python -m restore recover --max-files 200 --retry-failed --delay 0.5 --timeout 25 --retries 1",
+  "processed_urls": 200,
+  "newly_recovered_resources": 2,
+  "newly_recovered_captures": [
+    {
+      "url": "http://02cd02a.netsolhost.com/blog/category/the-music/",
+      "requested_capture": "20100226174323",
+      "actual_capture": "20100217180749",
+      "sha256": "e5a753e753ecca3498ecf4f1c4d68289b4384a5a06a7277181a838e0dde15d3a",
+      "bytes": 25925,
+      "kind": "html",
+      "raw_path": "recovery/raw/e5a753e753ecca3498ecf4f1c4d68289b4384a5a06a7277181a838e0dde15d3a.html",
+      "duplicate_payload": true,
+      "attempted_at": "2026-10-17T16:20:25.967403+00:00"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com/blog/n30-a-personal-history-by-geo/",
+      "requested_capture": "20210529010817",
+      "actual_capture": "20110312120411",
+      "sha256": "5bdcc9c023290f189080208ba548b340c18463a9432f3024d220fc864a7a7053",
+      "bytes": 16881,
+      "kind": "html",
+      "raw_path": "recovery/raw/5bdcc9c023290f189080208ba548b340c18463a9432f3024d220fc864a7a7053.html",
+      "duplicate_payload": true,
+      "attempted_at": "2026-10-17T16:26:54.484546+00:00"
+    }
+  ],
+  "new_unique_raw_files": 0,
+  "new_unique_raw_bytes": 0,
+  "duplicate_hashes": "Both validated payloads matched bytes already preserved under the same SHA-256 paths.",
+  "before": {
+    "resource_urls": 11145,
+    "statuses": {
+      "queued": 5742,
+      "recovered": 3858,
+      "needs_review": 72,
+      "failed": 1473,
+      "excluded": 0
+    },
+    "indexed_capture_records": 23238,
+    "unique_downloaded_files": 2299,
+    "downloaded_bytes": 147533392,
+    "failed_attempts": 7339
+  },
+  "after": {
+    "downloaded_bytes": 147554864,
+    "failed_attempts": 7718,
+    "generated_at": "2026-10-17T16:29:40.381969+00:00",
+    "index_complete": true,
+    "indexed_capture_records": 23248,
+    "resource_urls": 11145,
+    "statuses": {
+      "excluded": 0,
+      "failed": 1508,
+      "needs_review": 72,
+      "queued": 5705,
+      "recovered": 3860
+    },
+    "unique_downloaded_files": 2299
+  },
+  "candidate_rebuilds": {
+    "root": {
+      "recovered_pages": 977,
+      "placeholder_pages": 2180,
+      "local_source_assets": 1055,
+      "check_ok": true,
+      "errors": 0
+    },
+    "project_subpath": {
+      "recovered_pages": 977,
+      "placeholder_pages": 2180,
+      "local_source_assets": 1055,
+      "check_ok": true,
+      "errors": 0
+    }
+  },
+  "site_routes_changed": false,
+  "note": "Failed or still queued URLs remain retryable; this batch is not evidence those URLs are absent from all archive snapshots."
+}

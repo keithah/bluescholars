@@ -333,8 +333,8 @@
       "branch": "gh-pages",
       "path": "/"
     },
-    "commit": "2de1693b585bbd5ee4d669a3eb69d5260dfdc1b8",
-    "workflow_run": 39048755889,
+    "commit": "3c8f1ee3f1e4394856e7d34c80bb96d8a45492b5",
+    "workflow_run": 39049956291,
     "workflow_conclusion": "success",
     "pages_api_status": "built",
     "classification": "owner-authorized unreviewed candidate preview; not a completed restoration release",
@@ -346,7 +346,6 @@
       "/bluescholars/",
       "/bluescholars/2007/",
       "/bluescholars/2009/",
-      "/bluescholars/2009/blog/releases/",
       "/bluescholars/2009/blog/releases/oof-ep/",
       "/bluescholars/2013/",
       "/bluescholars/lj/",
@@ -355,8 +354,8 @@
     ],
     "human_review_claimed": false,
     "release_approved": false,
-    "pages_workflow_url": "https://github.com/keithah/bluescholars/actions/runs/39048755889",
-    "candidate_source": "local candidate rebuilt after the 2009-era continuation; 1,055 source assets",
+    "pages_workflow_url": "https://github.com/keithah/bluescholars/actions/runs/39049956291",
+    "candidate_source": "local candidate rebuilt after broad recovery retry; recovery status page refreshed",
     "unknown_route_http": 404
   },
   "verification": {
@@ -388,7 +387,7 @@
     "filename": "bluescholars-restoration-2026-10-17.zip",
     "path": "/tmp/bluescholars-restoration-2026-10-17.zip",
     "contents": "candidate site, source, reports/screenshots, recovery state/index, and non-font raw sources",
-    "file_count": 7432,
+    "file_count": 7434,
     "integrity_test": "passed",
     "font_binaries_included": false,
     "development_caches_or_credentials_included": false,
@@ -405,22 +404,22 @@
     }
   ],
   "latest_local_checkpoint": {
-    "description": "Current local recovery checkpoint after 2013 and 2009-era continuations.",
+    "description": "Current local recovery checkpoint after 2013, 2009 and broad queue continuations.",
     "recovery": {
+      "downloaded_bytes": 147554864,
+      "failed_attempts": 7718,
+      "generated_at": "2026-10-17T16:29:40.381969+00:00",
+      "index_complete": true,
+      "indexed_capture_records": 23248,
       "resource_urls": 11145,
       "statuses": {
-        "queued": 5742,
-        "recovered": 3858,
+        "excluded": 0,
+        "failed": 1508,
         "needs_review": 72,
-        "failed": 1473,
-        "excluded": 0
+        "queued": 5705,
+        "recovered": 3860
       },
-      "indexed_capture_records": 23238,
-      "index_complete": true,
-      "unique_downloaded_files": 2299,
-      "downloaded_bytes": 147554864,
-      "failed_attempts": 7339,
-      "generated_at": "2026-10-17T16:13:10.221302+00:00"
+      "unique_downloaded_files": 2299
     },
     "capture_batches": {
       "2007": {
@@ -552,6 +551,37 @@
         "new_css_or_image_responses": 16,
         "new_unique_raw_files": 8,
         "new_unique_raw_bytes": 21472
+      },
+      "broad_200_local_20261017": {
+        "processed_urls": 200,
+        "newly_recovered_resources": 2,
+        "new_unique_raw_files": 0,
+        "new_unique_raw_bytes": 0,
+        "report": "recovery/broad-200-local-20261017-report.json",
+        "new_captures": [
+          {
+            "url": "http://02cd02a.netsolhost.com/blog/category/the-music/",
+            "requested_capture": "20100226174323",
+            "actual_capture": "20100217180749",
+            "sha256": "e5a753e753ecca3498ecf4f1c4d68289b4384a5a06a7277181a838e0dde15d3a",
+            "bytes": 25925,
+            "kind": "html",
+            "raw_path": "recovery/raw/e5a753e753ecca3498ecf4f1c4d68289b4384a5a06a7277181a838e0dde15d3a.html",
+            "duplicate_payload": true,
+            "attempted_at": "2026-10-17T16:20:25.967403+00:00"
+          },
+          {
+            "url": "http://02cd02a.netsolhost.com/blog/n30-a-personal-history-by-geo/",
+            "requested_capture": "20210529010817",
+            "actual_capture": "20110312120411",
+            "sha256": "5bdcc9c023290f189080208ba548b340c18463a9432f3024d220fc864a7a7053",
+            "bytes": 16881,
+            "kind": "html",
+            "raw_path": "recovery/raw/5bdcc9c023290f189080208ba548b340c18463a9432f3024d220fc864a7a7053.html",
+            "duplicate_payload": true,
+            "attempted_at": "2026-10-17T16:26:54.484546+00:00"
+          }
+        ]
       }
     },
     "candidate": {
@@ -697,18 +727,17 @@
     "url": "https://keithah.github.io/bluescholars/",
     "source_branch": "gh-pages",
     "source_path": "/",
-    "branch_commit": "2de1693b585bbd5ee4d669a3eb69d5260dfdc1b8",
-    "pages_build_run": "39048755889",
+    "branch_commit": "3c8f1ee3f1e4394856e7d34c80bb96d8a45492b5",
+    "pages_build_run": "39049956291",
     "pages_build_status": "success",
     "pages_api_status": "built",
     "https_enforced": true,
     "custom_domain": null,
-    "candidate_source": "local candidate rebuilt after the 2009-era continuation; 1,055 source assets",
+    "candidate_source": "local candidate rebuilt after broad recovery retry; status page refreshed",
     "verified_routes": {
       "/bluescholars/": 200,
       "/bluescholars/2007/": 200,
       "/bluescholars/2009/": 200,
-      "/bluescholars/2009/blog/releases/": 200,
       "/bluescholars/2009/blog/releases/oof-ep/": 200,
       "/bluescholars/2013/": 200,
       "/bluescholars/lj/": 200,
@@ -717,25 +746,25 @@
     },
     "unknown_route_status": 404,
     "ordinary_rendering_remote_automatic_assets": 0,
-    "release_approved": false
+    "release_approved": false,
+    "classification": "owner-authorized unreviewed candidate preview; not a completed restoration release"
   },
   "preview_deployment": {
     "mode": "public, unreviewed incomplete candidate preview; not an approved final restoration",
     "url": "https://keithah.github.io/bluescholars/",
     "source_branch": "gh-pages",
     "source_path": "/",
-    "branch_commit": "2de1693b585bbd5ee4d669a3eb69d5260dfdc1b8",
-    "pages_build_run": "39048755889",
+    "branch_commit": "3c8f1ee3f1e4394856e7d34c80bb96d8a45492b5",
+    "pages_build_run": "39049956291",
     "pages_build_status": "success",
     "pages_api_status": "built",
     "https_enforced": true,
     "custom_domain": null,
-    "candidate_source": "local candidate rebuilt after the 2009-era continuation; 1,055 source assets",
+    "candidate_source": "local candidate rebuilt after broad recovery retry; status page refreshed",
     "verified_routes": {
       "/bluescholars/": 200,
       "/bluescholars/2007/": 200,
       "/bluescholars/2009/": 200,
-      "/bluescholars/2009/blog/releases/": 200,
       "/bluescholars/2009/blog/releases/oof-ep/": 200,
       "/bluescholars/2013/": 200,
       "/bluescholars/lj/": 200,
@@ -744,6 +773,7 @@
     },
     "unknown_route_status": 404,
     "ordinary_rendering_remote_automatic_assets": 0,
-    "release_approved": false
+    "release_approved": false,
+    "classification": "owner-authorized unreviewed candidate preview; not a completed restoration release"
   }
 }

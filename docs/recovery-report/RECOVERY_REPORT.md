@@ -125,3 +125,6 @@ GitHub Pages build `38990662133` succeeded for `gh-pages` commit `efad4d3e2a2fef
 
 
 The October 17, 2026 local 2009 continuation attempted 98 eligible URLs from the newer checkpoint and validated 21 responses: five HTML, four CSS, and 12 images. One additional route now renders in the 2009 edition; eight unique raw files (21,472 bytes) were added, and the rebuilt candidate lists 1,055 local source assets; 77 URLs remain unresolved, mostly feeds and invalid replay responses. See `recovery/era-2009-local-20261017-report.json` for every timestamp, source URL, digest and failure. The candidate now has 501 recovered 2009 pages (977 recovered pages total), and both deployment-path offline checks pass.
+
+
+A later broad 200-URL retry validated two additional 2009-era HTML captures, both duplicate payload hashes already in the raw corpus: the `/blog/category/the-music/` capture resolved to `2010-02-17`, and `/blog/n30-a-personal-history-by-geo/` resolved to `2011-03-12`. It added no bytes or rendered routes. Root and project-subpath candidate checks still pass. See `recovery/broad-200-local-20261017-report.json`.

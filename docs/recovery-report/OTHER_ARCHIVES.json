@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17",
+  "updated_at": "2026-10-17T01:48:00Z",
   "scope": "Independent public web archives checked for Blue Scholars website captures, linked posts, and supporting material.",
   "results": {
     "Arquivo.pt": {
@@ -511,7 +511,7 @@
         }
       ],
       "acquisition_status": "No original response bytes acquired from these 16 routes in this pass. An initial capture invocation misclassified extensionless CDX text/html routes as images; a subsequent local Wayback connection was refused before retrying. These errors do not mean the captures are unavailable.",
-      "source_checkpoint": "The complete CDX response was not saved during the initial query. Workflow run 38991229745 is queued to repeat the legacy-host index with the corrected importer and preserve the complete response before acquisition.",
+      "source_checkpoint": "The first CDX response was not saved during the direct probe. Workflow 38985105267 completed its download and independent archive steps but was cancelled while building the candidate, before the artifact upload placed after that build. Dependent run 38991229745 failed to restore its unavailable artifact and acquired no new content. Workflow 334e9952 moved source/checkpoint preservation ahead of candidate generation. Run 38992255338 resumed from the last durable artifact (38975520061); its supplemental-host index step completed at 2026-10-17T01:47:33Z and its acquisition step is in progress. Full CDX index response and acquired HTML bytes are still pending this artifact.",
       "interpretation": "A distinct historical WordPress host yields additional CDX records beyond the current local URL-key inventory. Query evidence alone is not treated as recovered page content."
     }
   },

@@ -744,6 +744,13 @@ def test_checker_treats_image_map_areas_as_user_navigation(tmp_path):
     </map></body></html>''')
     assert check(tmp_path,'')==[]
 
+def test_generated_stylesheet_reveals_the_recovered_mobile_menu(tmp_path):
+    fixture_root(tmp_path)
+    build(tmp_path,tmp_path/'_site','/bluescholars')
+    css=(tmp_path/'_site/assets/archive-ui.css').read_text()
+    assert '.archive-menu-open #mobileNav' in css
+    assert 'height:auto!important' in css
+
 
 def test_checker_detects_broken_local_link_and_remote_image(tmp_path):
     (tmp_path/'index.html').write_text('<html><body><a href="/missing/">Missing</a><img src="https://x.example/a.png"></body></html>')

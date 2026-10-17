@@ -2,6 +2,8 @@
 .archive-restoration-notice{box-sizing:border-box;display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;padding:.65rem 1.2rem;border-bottom:1px solid #d8d8d8;background:#f6f6f3;color:#373737;font:12px/1.5 system-ui,sans-serif;position:relative;z-index:10}
 .archive-restoration-notice a{color:inherit;text-decoration:underline;text-underline-offset:3px}
 .archive-navigation{flex-shrink:0;text-align:right}.archive-navigation summary{cursor:pointer}.archive-navigation nav{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:12px;padding:10px 0;max-width:500px}
+.archive-menu-open #mobileNav{height:auto!important;overflow:visible!important}
+.archive-menu-open #mobileMenuLink a{cursor:pointer}
 .archive-gap-page{box-sizing:border-box;max-width:960px;margin:80px auto;padding:0 32px 64px;font:16px/1.65 system-ui,sans-serif;color:#292929}
 .archive-gap-page .archive-eyebrow{font-size:11px;letter-spacing:.18em;color:#666}.archive-gap-page h1{font-size:clamp(28px,5vw,48px);line-height:1.12;letter-spacing:-.035em;margin:32px 0}.archive-gap-page h2{font-size:22px;margin-top:36px}.archive-gap-page .archive-lead{font-size:20px;line-height:1.5}
 .archive-gap-page p{max-width:720px}.archive-gap-page a{color:#24567d;text-underline-offset:3px;overflow-wrap:anywhere}.archive-gap-page table{width:100%;border-collapse:collapse;margin:32px 0;font-size:14px}.archive-gap-page td,.archive-gap-page th{text-align:left;padding:14px 12px 14px 0;border-bottom:1px solid #ddd;overflow-wrap:anywhere}.archive-gap-page td:first-child{max-width:60vw}.archive-gap-page li{margin:10px 0;overflow-wrap:anywhere}

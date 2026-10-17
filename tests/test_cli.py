@@ -48,8 +48,11 @@ def test_recovery_workflow_never_deploys():
     assert 'if: always()' in text
     assert 'resume_run' in text and 'gh run download' in text
     assert 'recovery_dir="$RUNNER_TEMP/archive-recovery/$run_id"' in text
-    assert '--dir "$recovery_dir"' in text
+    assert '--name archive-recovery --dir "$final_dir"' in text
+    assert '--name archive-recovery-indexed --dir "$indexed_dir"' in text
     assert 'merge-recovery' in text
+    assert text.index('name: Preserve archive index before acquisition') < text.index('name: Download and discover dependencies')
+    assert text.index('name: Preserve recovery checkpoint and source bytes') < text.index('name: Build a candidate for inspection')
 
 def test_deploy_requires_manual_confirmation_and_release_gate():
     text=(ROOT/'.github/workflows/pages.yml').read_text()

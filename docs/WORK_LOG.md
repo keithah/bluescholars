@@ -1,5 +1,11 @@
 # Restoration work log
 
+## 2026-10-17 navigation repair
+
+- Recovered interactive behavior exposed by review: the legacy 2007 image maps contain labels and coordinates but no surviving `href` attributes, and the sanitizer was also dropping image-map links. Matched the labels to captured same-era page routes and restored links without changing their geometry. These inferred targets are specific to the 2007 edition.
+- The Squarespace mobile `Menu` anchor has no destination and depended on removed platform JavaScript. Added an accessible button role, touch/click and keyboard activation, expanded-state reporting, and a local style rule that reveals the archived `#mobileNav` content.
+- Regression tests cover image-map routes and menu semantics; `PYTHONPATH=. .venv311/bin/python -m pytest -q` passed (155 tests). Code was pushed as `84ba2220`. The repository CI is queued; candidate rebuild, browser interaction verification, and Pages refresh are pending completion of the active recovery batch.
+
 ## 2026-10-16 archive-wide continuation
 
 - Merged completed recovery run `38873762766` into the local checkpoint with no conflicts. The aggregate checkpoint now has 8,348 resource URLs, 8,904 indexed capture records, 1,872 unique local raw files (99,127,968 bytes), and a complete domain CDX index. At that checkpoint 5,843 URLs remained queued; status reflects distinct URLs, not individual capture variants.

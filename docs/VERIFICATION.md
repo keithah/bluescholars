@@ -113,3 +113,5 @@ The candidate was rebuilt locally from the merged checkpoint through run `389608
 - Live checks: 200 for `/`, `/2007/`, `/2009/`, `/2013/`, `/lj/`, `/archive-status/`, the SXSW and Word Count legacy articles, `/2013/blog/page/3/`, the recovered 2013 stylesheet, hero JPEG and original 2007 GIF; 404 for a missing route. Project-prefix assets and links load from GitHub Pages.
 - The deployed 2013 page was visually inspected in the browser with its recovered styles, ribbon logo and front-page image. The 2007 and 2009 pages were inspected against the local project-prefix build. No screenshot file was saved. This is an agent-performed visual inspection; no human approval is claimed.
 - The preview is not the release build. Remaining gaps and the full local checkpoint counts are in `docs/recovery-report/GAP_REPORT.json`; both review flags remain false.
+
+- The final documentation-only `main` commit `451caccb671c4b819d9792bb070fd52e11fb2a6e` passed validation run [39002061515](https://github.com/keithah/bluescholars/actions/runs/39002061515), including unit tests and root/project-subpath builds.

@@ -333,8 +333,8 @@
       "branch": "gh-pages",
       "path": "/"
     },
-    "commit": "52616d2690af246d2400565476e1c70a30575ac2",
-    "workflow_run": 39054150559,
+    "commit": "86c07b03e96731a3a919cf6ce80bf773eab1ae60",
+    "workflow_run": 39055039056,
     "workflow_conclusion": "success",
     "pages_api_status": "built",
     "classification": "owner-authorized unreviewed candidate preview; not a completed restoration release",
@@ -346,18 +346,19 @@
       "/bluescholars/",
       "/bluescholars/2007/",
       "/bluescholars/2009/",
+      "/bluescholars/2009/blog/seattle-100-portrait-of-a-city-by-chase-jarvis/",
+      "/bluescholars/2009/blog/video-blue-scholars-coffee-and-snow-2-dir-zia-mohajerjasbi/",
+      "/bluescholars/2009/blog/the-hip-hop-word-count-blue-scholars-approved/kmba-rap-lyric-cntr/",
+      "/bluescholars/2009/archive-query/1bb0edbe250fdccd1ad5/",
       "/bluescholars/2013/",
-      "/bluescholars/2009/blog/news-eyes-ears-and-tweets-on-seattle-police/",
-      "/bluescholars/2009/blog/the-cinemetropolis-listening-party-part-1/c5d8d0c/",
-      "/bluescholars/2009/blog/video-portland-the-last-time-we-were-here/",
       "/bluescholars/lj/",
       "/bluescholars/archive-status/",
       "/bluescholars/assets/archive-ui.css"
     ],
     "human_review_claimed": false,
     "release_approved": false,
-    "pages_workflow_url": "https://github.com/keithah/bluescholars/actions/runs/39054150559",
-    "candidate_source": "local build after fifth broad recovery retry; 2009 post and photo-entry content refreshed",
+    "pages_workflow_url": "https://github.com/keithah/bluescholars/actions/runs/39055039056",
+    "candidate_source": "local build after sixth broad retry; twelve 2009 archive-query routes refreshed",
     "unknown_route_http": 404
   },
   "verification": {
@@ -389,7 +390,7 @@
     "filename": "bluescholars-restoration-2026-10-17.zip",
     "path": "/tmp/bluescholars-restoration-2026-10-17.zip",
     "contents": "candidate site, source, reports/screenshots, recovery state/index, and non-font raw sources",
-    "file_count": 7456,
+    "file_count": 7462,
     "integrity_test": "passed",
     "font_binaries_included": false,
     "development_caches_or_credentials_included": false,
@@ -406,22 +407,22 @@
     }
   ],
   "latest_local_checkpoint": {
-    "description": "Current local checkpoint after five bounded broad recovery retries.",
+    "description": "Current local checkpoint after six bounded broad recovery retries.",
     "recovery": {
-      "resource_urls": 11150,
+      "resource_urls": 11162,
       "statuses": {
-        "queued": 5386,
-        "recovered": 3900,
+        "queued": 5346,
+        "recovered": 3909,
         "needs_review": 72,
-        "failed": 1792,
+        "failed": 1835,
         "excluded": 0
       },
-      "indexed_capture_records": 23279,
+      "indexed_capture_records": 23284,
       "index_complete": true,
-      "unique_downloaded_files": 2301,
-      "downloaded_bytes": 147591597,
-      "failed_attempts": 8486,
-      "generated_at": "2026-10-17T17:31:24.906254+00:00"
+      "unique_downloaded_files": 2302,
+      "downloaded_bytes": 147617390,
+      "failed_attempts": 8637,
+      "generated_at": "2026-10-17T17:43:44.074419+00:00"
     },
     "capture_batches": {
       "2007": {
@@ -636,6 +637,19 @@
           "/2009/blog/the-cinemetropolis-listening-party-part-1/"
         ],
         "report": "recovery/broad-200-local-20261017-05-report.json"
+      },
+      "broad_200_local_20261017_6": {
+        "processed_urls": 200,
+        "validated_responses": 9,
+        "validated_kind_counts": {
+          "html": 9
+        },
+        "new_resource_urls": 12,
+        "new_index_rows": 5,
+        "new_unique_raw_files": 1,
+        "new_unique_raw_bytes": 25793,
+        "changed_rendered_routes": 12,
+        "report": "recovery/broad-200-local-20261017-06-report.json"
       }
     },
     "candidate": {
@@ -781,21 +795,22 @@
     "url": "https://keithah.github.io/bluescholars/",
     "source_branch": "gh-pages",
     "source_path": "/",
-    "branch_commit": "52616d2690af246d2400565476e1c70a30575ac2",
-    "pages_build_run": "39054150559",
+    "branch_commit": "86c07b03e96731a3a919cf6ce80bf773eab1ae60",
+    "pages_build_run": "39055039056",
     "pages_build_status": "success",
     "pages_api_status": "built",
     "https_enforced": true,
     "custom_domain": null,
-    "candidate_source": "local build after fifth broad recovery retry; 2009 post and photo-entry content refreshed",
+    "candidate_source": "local build after sixth broad retry; twelve 2009 archive-query routes refreshed",
     "verified_routes": {
       "/bluescholars/": 200,
       "/bluescholars/2007/": 200,
       "/bluescholars/2009/": 200,
+      "/bluescholars/2009/blog/seattle-100-portrait-of-a-city-by-chase-jarvis/": 200,
+      "/bluescholars/2009/blog/video-blue-scholars-coffee-and-snow-2-dir-zia-mohajerjasbi/": 200,
+      "/bluescholars/2009/blog/the-hip-hop-word-count-blue-scholars-approved/kmba-rap-lyric-cntr/": 200,
+      "/bluescholars/2009/archive-query/1bb0edbe250fdccd1ad5/": 200,
       "/bluescholars/2013/": 200,
-      "/bluescholars/2009/blog/news-eyes-ears-and-tweets-on-seattle-police/": 200,
-      "/bluescholars/2009/blog/the-cinemetropolis-listening-party-part-1/c5d8d0c/": 200,
-      "/bluescholars/2009/blog/video-portland-the-last-time-we-were-here/": 200,
       "/bluescholars/lj/": 200,
       "/bluescholars/archive-status/": 200,
       "/bluescholars/assets/archive-ui.css": 200
@@ -803,28 +818,30 @@
     "unknown_route_status": 404,
     "ordinary_rendering_remote_automatic_assets": 0,
     "release_approved": false,
-    "classification": "owner-authorized unreviewed candidate preview; not a completed restoration release"
+    "classification": "owner-authorized unreviewed candidate preview; not a completed restoration release",
+    "ordinary_rendering_remote_automatic_resources": 0
   },
   "preview_deployment": {
     "mode": "public, unreviewed incomplete candidate preview; not an approved final restoration",
     "url": "https://keithah.github.io/bluescholars/",
     "source_branch": "gh-pages",
     "source_path": "/",
-    "branch_commit": "52616d2690af246d2400565476e1c70a30575ac2",
-    "pages_build_run": "39054150559",
+    "branch_commit": "86c07b03e96731a3a919cf6ce80bf773eab1ae60",
+    "pages_build_run": "39055039056",
     "pages_build_status": "success",
     "pages_api_status": "built",
     "https_enforced": true,
     "custom_domain": null,
-    "candidate_source": "local build after fifth broad recovery retry; 2009 post and photo-entry content refreshed",
+    "candidate_source": "local build after sixth broad retry; twelve 2009 archive-query routes refreshed",
     "verified_routes": {
       "/bluescholars/": 200,
       "/bluescholars/2007/": 200,
       "/bluescholars/2009/": 200,
+      "/bluescholars/2009/blog/seattle-100-portrait-of-a-city-by-chase-jarvis/": 200,
+      "/bluescholars/2009/blog/video-blue-scholars-coffee-and-snow-2-dir-zia-mohajerjasbi/": 200,
+      "/bluescholars/2009/blog/the-hip-hop-word-count-blue-scholars-approved/kmba-rap-lyric-cntr/": 200,
+      "/bluescholars/2009/archive-query/1bb0edbe250fdccd1ad5/": 200,
       "/bluescholars/2013/": 200,
-      "/bluescholars/2009/blog/news-eyes-ears-and-tweets-on-seattle-police/": 200,
-      "/bluescholars/2009/blog/the-cinemetropolis-listening-party-part-1/c5d8d0c/": 200,
-      "/bluescholars/2009/blog/video-portland-the-last-time-we-were-here/": 200,
       "/bluescholars/lj/": 200,
       "/bluescholars/archive-status/": 200,
       "/bluescholars/assets/archive-ui.css": 200
@@ -832,6 +849,7 @@
     "unknown_route_status": 404,
     "ordinary_rendering_remote_automatic_assets": 0,
     "release_approved": false,
-    "classification": "owner-authorized unreviewed candidate preview; not a completed restoration release"
+    "classification": "owner-authorized unreviewed candidate preview; not a completed restoration release",
+    "ordinary_rendering_remote_automatic_resources": 0
   }
 }

@@ -1,0 +1,168 @@
+{
+  "batch": "sixth local broad recovery retry",
+  "started_at": "2026-10-17T17:29:00Z",
+  "finished_at": "2026-10-17T17:43:44.074419+00:00",
+  "command": ".venv311/bin/python -m restore recover --max-files 200 --retry-failed --delay 0.5 --timeout 25 --retries 1",
+  "processed_urls": 200,
+  "validated_responses": 9,
+  "validated_kind_counts": {
+    "html": 9
+  },
+  "captures": [
+    {
+      "url": "http://02cd02a.netsolhost.com/blog/seattle-100-portrait-of-a-city-by-chase-jarvis/",
+      "kind": "html",
+      "requested_capture": "20110314051431",
+      "actual_capture": "20110314051431",
+      "bytes": 10673,
+      "sha256": "e6ad9ee7edfc4a2e7a64b5998e4a06f7827e9ed54541ff9881512cedbfaf13e3",
+      "raw_path": "recovery/raw/e6ad9ee7edfc4a2e7a64b5998e4a06f7827e9ed54541ff9881512cedbfaf13e3.html",
+      "attempted_at": "2026-10-17T17:34:13.404383+00:00"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com/blog/video-blue-scholars-coffee-and-snow-2-dir-zia-mohajerjasbi/",
+      "kind": "html",
+      "requested_capture": "20110312221705",
+      "actual_capture": "20110312221705",
+      "bytes": 11965,
+      "sha256": "a5bf116e5876fce47b4a2fe73bdfe9ed8e9b8a30f003e3013f0b67ca74227a99",
+      "raw_path": "recovery/raw/a5bf116e5876fce47b4a2fe73bdfe9ed8e9b8a30f003e3013f0b67ca74227a99.html",
+      "attempted_at": "2026-10-17T17:37:05.734614+00:00"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com:80/blog/2010/02/video-behind-the-scenes-bambugeo-slow-down-video-shoot",
+      "kind": "html",
+      "requested_capture": "20100219043758",
+      "actual_capture": "20100219043758",
+      "bytes": 25793,
+      "sha256": "3606cb2619dfd9012f6adffd090e173415a004aae0e9852b0ecd4d59e0310157",
+      "raw_path": "recovery/raw/3606cb2619dfd9012f6adffd090e173415a004aae0e9852b0ecd4d59e0310157.html",
+      "attempted_at": "2026-10-17T17:37:40.077617+00:00"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com/blog/2009/12/krs-one-buckshot-feat-talib-kweli-and-geo-oh-really-remix/",
+      "kind": "html",
+      "requested_capture": "20100219124154",
+      "actual_capture": "20100217181622",
+      "bytes": 30525,
+      "sha256": "6f5ca5fd143f4360d4bfdede2dd1205f99c40a0aeef01a21cd7750393c7e2791",
+      "raw_path": "recovery/raw/6f5ca5fd143f4360d4bfdede2dd1205f99c40a0aeef01a21cd7750393c7e2791.html",
+      "attempted_at": "2026-10-17T17:37:43.065180+00:00"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com/blog/the-hip-hop-word-count-blue-scholars-approved/kmba-rap-lyric-cntr/",
+      "kind": "html",
+      "requested_capture": "20210529010817",
+      "actual_capture": "20110316144354",
+      "bytes": 8067,
+      "sha256": "29ebd5d6b06b75c491b121de845af830c2f15a1458ce69f28580b061959f4632",
+      "raw_path": "recovery/raw/29ebd5d6b06b75c491b121de845af830c2f15a1458ce69f28580b061959f4632.html",
+      "attempted_at": "2026-10-17T17:37:46.720967+00:00"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com:80/blog/2010/02/video-behind-the-scenes-bambugeo-slow-down-video-shoot/",
+      "kind": "html",
+      "requested_capture": "20210529010817",
+      "actual_capture": "20100330043334",
+      "bytes": 25426,
+      "sha256": "ca634b05dcd3fbb37004e5a32d64926f4a88b50f5a6125865593e7d08b5c3db0",
+      "raw_path": "recovery/raw/ca634b05dcd3fbb37004e5a32d64926f4a88b50f5a6125865593e7d08b5c3db0.html",
+      "attempted_at": "2026-10-17T17:37:49.108324+00:00"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com/blog/2010/02/new-shows-the-showbox-presents-blue-scholars-double-feature/",
+      "kind": "html",
+      "requested_capture": "20110312094517",
+      "actual_capture": "20100709062339",
+      "bytes": 33339,
+      "sha256": "59290194a9f211e52b8c265035752e97849230bcced75cceb8239b401664e6da",
+      "raw_path": "recovery/raw/59290194a9f211e52b8c265035752e97849230bcced75cceb8239b401664e6da.html",
+      "attempted_at": "2026-10-17T17:38:22.862096+00:00"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com:80/blog/the-hip-hop-word-count-blue-scholars-approved/kmba-rap-lyric-cntr",
+      "kind": "html",
+      "requested_capture": "20210529010817",
+      "actual_capture": "20110316144354",
+      "bytes": 8067,
+      "sha256": "29ebd5d6b06b75c491b121de845af830c2f15a1458ce69f28580b061959f4632",
+      "raw_path": "recovery/raw/29ebd5d6b06b75c491b121de845af830c2f15a1458ce69f28580b061959f4632.html",
+      "attempted_at": "2026-10-17T17:38:30.967733+00:00"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com/blog/2009/12/photos-blue-scholars-at-macklemoreryan-lewis-vs-release-show/",
+      "kind": "html",
+      "requested_capture": "20210529010817",
+      "actual_capture": "20100220045606",
+      "bytes": 25511,
+      "sha256": "d65c072992db686c7cff356034bcf47973546750edcc931e4da927adf4e2b5bd",
+      "raw_path": "recovery/raw/d65c072992db686c7cff356034bcf47973546750edcc931e4da927adf4e2b5bd.html",
+      "attempted_at": "2026-10-17T17:38:32.632070+00:00"
+    }
+  ],
+  "new_resource_urls": 12,
+  "new_index_rows": 5,
+  "new_unique_raw_files": 1,
+  "new_unique_raw_bytes": 25793,
+  "before": {
+    "resource_urls": 11150,
+    "statuses": {
+      "queued": 5386,
+      "recovered": 3900,
+      "needs_review": 72,
+      "failed": 1792,
+      "excluded": 0
+    },
+    "indexed_capture_records": 23279,
+    "unique_downloaded_files": 2301,
+    "downloaded_bytes": 147591597,
+    "failed_attempts": 8486
+  },
+  "after": {
+    "resource_urls": 11162,
+    "statuses": {
+      "queued": 5346,
+      "recovered": 3909,
+      "needs_review": 72,
+      "failed": 1835,
+      "excluded": 0
+    },
+    "indexed_capture_records": 23284,
+    "index_complete": true,
+    "unique_downloaded_files": 2302,
+    "downloaded_bytes": 147617390,
+    "failed_attempts": 8637,
+    "generated_at": "2026-10-17T17:43:44.074419+00:00"
+  },
+  "candidate_rebuilds": {
+    "root": {
+      "recovered_pages": 977,
+      "placeholder_pages": 2180,
+      "local_source_assets": 1055,
+      "check_ok": true,
+      "errors": 0
+    },
+    "project_subpath": {
+      "recovered_pages": 977,
+      "placeholder_pages": 2180,
+      "local_source_assets": 1055,
+      "check_ok": true,
+      "errors": 0
+    }
+  },
+  "changed_rendered_routes": [
+    "/2009/archive-query/1bb0edbe250fdccd1ad5/",
+    "/2009/archive-query/263c9a6426d157ab55f8/",
+    "/2009/archive-query/27169f240f32f7c5f4e6/",
+    "/2009/archive-query/3886207bb5024b522ba5/",
+    "/2009/archive-query/404cc1538c91debef391/",
+    "/2009/archive-query/7c749b8c9010166800c5/",
+    "/2009/archive-query/9304b05094d81a6477df/",
+    "/2009/archive-query/94b0d348ad2ba52cab15/",
+    "/2009/archive-query/ae61494f1e56d26ddfe3/",
+    "/2009/archive-query/d54a9999ee061cf0fb78/",
+    "/2009/archive-query/e366b507658be73f02b8/",
+    "/2009/archive-query/ec523c1a8c82726a3d2e/"
+  ],
+  "note": "Validated HTML responses are preserved with both requested and resolved capture times. Recovered pages also exposed 12 new URL records. Both build variants passed, and changed 2009 archive-query routes are now included in the Pages preview."
+}

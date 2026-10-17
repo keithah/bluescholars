@@ -4,7 +4,7 @@
 
 ## Current measured local checkpoint — October 17, 2026, after the 2013, 2009 and broad queue continuations
 
-The resumable Wayback checkpoint contains 11,150 resource URLs and 23,279 indexed capture rows: 3,900 resources recovered, 72 held for compatibility review, 1,792 failed attempts, and 5,386 queued. The raw directory contains 2,301 unique response files (147,591,597 bytes). These counts include page, stylesheet, image, and other resource URLs; they are not page counts.
+The resumable Wayback checkpoint contains 11,162 resource URLs and 23,284 indexed capture rows: 3,909 resources recovered, 72 held for compatibility review, 1,835 failed attempts, and 5,346 queued. The raw directory contains 2,302 unique response files (147,617,390 bytes). These counts include page, stylesheet, image, and other resource URLs; they are not page counts.
 
 The latest root and `/bluescholars/` candidate builds each contain 977 recovered pages, 2,180 placeholders, four derived LiveJournal reading views, and 1,055 local source assets. Build findings include 8,286 unavailable embedded assets, 338 linked assets not recovered, 145 external media links without local recordings, 183 font resources omitted under the no-font-binary policy, and nine invalid source records. Both offline link/resource checks pass with zero errors, and the generated candidate was scanned for remote automatic resources. This remains an unreviewed preview; publication flags remain false.
 
@@ -154,7 +154,7 @@ The rebuilt candidate remains at 976 recovered pages, 2,181 placeholders, four d
 
 ## Portable recovery bundle
 
-The current portable bundle is `/tmp/bluescholars-restoration-2026-10-17.zip`. It includes the candidate output, source, reports, screenshots, recovery state/index, and non-font raw captures. ZIP integrity check passed for 7,456 files; The SHA-256 is stored in the adjacent `.sha256` sidecar and final task handoff. Font binaries and development caches/credentials are excluded.
+The current portable bundle is `/tmp/bluescholars-restoration-2026-10-17.zip`. It includes the candidate output, source, reports, screenshots, recovery state/index, and non-font raw captures. ZIP integrity check passed for 7,462 files; The SHA-256 is stored in the adjacent `.sha256` sidecar and final task handoff. Font binaries and development caches/credentials are excluded.
 
 ## Refreshed Pages candidate — October 17, 2026
 
@@ -196,3 +196,11 @@ Two further 200-URL retries validated 21 WordPress HTML responses. The fourth ad
 
 
 The latest preview is at `gh-pages` commit `52616d2690af246d2400565476e1c70a30575ac2`; Pages workflow [39054150559](https://github.com/keithah/bluescholars/actions/runs/39054150559) succeeded and the Pages API reports `built`. The hub, all edition roots, the recovered Seattle police and Cinemetropolis entries, the Portland video post, `/lj/`, archive status, and local CSS return HTTP 200; an unknown route returns 404. HTTPS remains enforced, with no custom domain. This is still an unreviewed candidate.
+
+
+## Sixth broad recovery retry — October 17, 2026
+
+A 200-URL pass validated nine dated HTML responses, including “Seattle 100,” “Coffee and Snow 2,” the Bambu/Geo video-shoot post, a Showbox listing, and a lyric-counter view. The recovered pages exposed 12 new URL records and five additional index rows; one unique 25,793-byte response was added. Both local builds pass. Twelve 2009 archive-query outputs were refreshed with the newly available source bodies and are live. See [the sixth retry report](../../recovery/broad-200-local-20261017-06-report.json) for URL, timestamp and digest provenance.
+
+
+The live preview is `gh-pages` commit `86c07b03e96731a3a919cf6ce80bf773eab1ae60`; Pages workflow [39055039056](https://github.com/keithah/bluescholars/actions/runs/39055039056) succeeded and Pages reports `built`. Live checks returned 200 for the hub, edition roots, Seattle 100, Coffee and Snow 2, the lyric-counter entry, a 2009 archive-query route, `/lj/`, status, and local CSS; a missing route returns 404. HTTPS is enforced; no custom domain exists. This remains an unreviewed candidate.

@@ -137,3 +137,6 @@ The third broad retry validated ten additional WordPress HTML capture responses 
 
 
 The fourth broad retry validated ten HTML responses, adding the Seattle 100 post and one unique 26,243-byte capture. The fifth validated eleven HTML responses, including the Seattle police coverage entry and five Cinemetropolis listening-party photo entries; it added one URL and 13 index rows. These results updated existing 2009 routes without increasing the candidate’s route count. Both roots pass offline checks. The reports `recovery/broad-200-local-20261017-04-report.json` and `recovery/broad-200-local-20261017-05-report.json` preserve all dates, URLs, sizes, and hashes.
+
+
+The sixth broad retry validated nine 2009-era HTML responses and added 12 newly discovered URLs, five CDX rows, and one unique 25,793-byte payload. Twelve archive-query outputs were refreshed with source-backed material; the site still has 977 recovered page routes. Root and project-subpath checks pass. The capture-by-capture report is `recovery/broad-200-local-20261017-06-report.json`.

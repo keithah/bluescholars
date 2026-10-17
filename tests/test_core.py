@@ -1,6 +1,6 @@
 import json
 import pytest
-from restore.urls import original_url, route, kind_for, is_site, base_path, asset_route
+from restore.urls import original_url, route, kind_for, is_site, identity, base_path, asset_route
 from restore.discover import discover_html, discover_css
 from restore.state import State
 
@@ -26,6 +26,8 @@ def test_non_http_and_credentials_rejected(bad):
 
 def test_crawl_scope():
     assert is_site('https://www.bluescholars.com/blog')
+    assert is_site('http://02cd02a.netsolhost.com:80/blog/2009/03/sxsw-2009-where-well-be/')
+    assert identity('http://02cd02a.netsolhost.com:80/blog/x/') == identity(HOME+'blog/x/')
     assert not is_site('https://bluescholars.com.evil.example/blog')
     assert not is_site('https://youtube.com/x')
 

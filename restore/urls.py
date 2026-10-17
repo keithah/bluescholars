@@ -38,14 +38,18 @@ def capture_from(url: str) -> str | None:
     return match.group(1) if match else None
 
 def is_site(url: str) -> bool:
-    return urlsplit(url).hostname in ('bluescholars.com','www.bluescholars.com')
+    # The 2009 WordPress installation was also archived on its confirmed
+    # NetSolHost origin. Treat its pages as the same edition while retaining
+    # the original host on each capture record for provenance.
+    return urlsplit(url).hostname in ('bluescholars.com','www.bluescholars.com',
+                                     '02cd02a.netsolhost.com')
 
 def in_domain(url: str) -> bool:
     host=urlsplit(url).hostname or ''
     return host=='bluescholars.com' or host.endswith('.bluescholars.com')
 
 def identity(url: str) -> str:
-    """Unify main-site HTTP/HTTPS and www without discarding query parameters."""
+    """Unify the official site and its confirmed old host without queries lost."""
     url=original_url(url)
     if not url:
         return ''

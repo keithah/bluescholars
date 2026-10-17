@@ -328,6 +328,7 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
     mappings={offset:base+'/2013'+path for offset,path in PAGINATION.items() if '/2013'+path in pages}
     script='''"use strict"; (() => {\n const mapping = MAPPING;\n const params = new URLSearchParams(location.search);\n const offset = params.get("offset");\n if (location.pathname.replace(/\\/$/, "") === BLOG && [...params].length === 1 && offset && mapping[offset]) {\n  location.replace(mapping[offset] + location.hash);\n }\n if (typeof document !== "undefined") {\n const menu = document.querySelector("#mobileMenuLink a[aria-controls='mobileNav']");\n const mobileNav = document.getElementById("mobileNav");\n if (menu && mobileNav) {\n  const setOpen = open => { document.body.classList.toggle("archive-menu-open", open); menu.setAttribute("aria-expanded", String(open)); };\n  menu.addEventListener("click", event => { event.preventDefault(); setOpen(menu.getAttribute("aria-expanded") !== "true"); });\n  menu.addEventListener("keydown", event => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); menu.click(); } });\n  mobileNav.addEventListener("click", event => { if (event.target.closest("a")) setOpen(false); });\n }\n }\n})();\n'''.replace('MAPPING',json.dumps(mappings)).replace('BLOG',json.dumps(base+'/2013/blog'))
     (output/'assets/legacy.js').write_text(script)
+    script_href=base+'/assets/legacy.js?v='+hashlib.sha256(script.encode()).hexdigest()[:16]
     for url,r in usable.items():
         if r['kind'] not in ('css','image'): continue
         destination=output/r['local_path'].lstrip('/')
@@ -376,7 +377,7 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
                     body+='</ol>'
             body+='<p><a class="archive-source-link" href="https://web.archive.org/web/'+TARGET+'/'+html.escape(url,quote=True)+'">Inspect the archived source</a></p>'
             text=page_shell(label,body)
-        rendered,found=render_html(text,r.get('final_original',url),render_resources,base,r.get('edition_prefix',''),aliases,ui_href)
+        rendered,found=render_html(text,r.get('final_original',url),render_resources,base,r.get('edition_prefix',''),aliases,ui_href,script_href)
         issues.extend(found);_write_page(output,page,rendered)
         page_report.append({'path':page,'source':r.get('source_url',url),'canonical_url':url,
                             'source_archive':r.get('source_archive'),'status':status,
@@ -390,14 +391,14 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
         index=page_shell('Recovered 2009 WordPress posts',
                          '<p>This local index lists surviving dated WordPress captures. It is a recovery index, not an archived original listing.</p>'
                          '<ul>'+links+'</ul>')
-        index,_=render_html(index,HOME,render_resources,base,aliases=aliases,ui_stylesheet=ui_href)
+        index,_=render_html(index,HOME,render_resources,base,aliases=aliases,ui_stylesheet=ui_href,ui_script=script_href)
         _write_page(output,'/2009/blog/',index)
     lj_page_report=[]
     for key,r in lj_pages:
         local=lj_route_by_key[key]
         text=raw[key].decode('utf-8',errors='replace')
         rendered,found=render_html(text,r.get('final_original',r['_source_url']),
-                                   render_resources,base,'/lj',aliases,ui_href)
+                                   render_resources,base,'/lj',aliases,ui_href,script_href)
         issues.extend(found)
         _write_page(output,local,rendered)
         lj_page_report.append({'path':local,'source':r['_source_url'],
@@ -501,7 +502,7 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
                     styles='<link rel="stylesheet" href="'+html.escape(href,quote=True)+'">'
                     break
             derived=derived.replace('</head>','<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="'+ui_href+'">'+styles+'</head>')
-            rendered,found=render_html(derived,root_record.get('final_original',root_url),render_resources,base,'/lj',ui_stylesheet=ui_href)
+            rendered,found=render_html(derived,root_record.get('final_original',root_url),render_resources,base,'/lj',ui_stylesheet=ui_href,ui_script=script_href)
             issues.extend(found);_write_page(output,target_path,rendered)
             page_report.append({'path':target_path,'source':target_url,'canonical_url':target_url,
                                 'source_archive':root_record.get('source_archive'),
@@ -532,7 +533,7 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
             else:
                 body+='<p>No page bytes for this edition have been recovered yet. Its original appearance and blog content remain a documented gap.</p>'
             edition_text=page_shell(label,body)
-            edition_text,_=render_html(edition_text,HOME,render_resources,base,aliases=aliases,ui_stylesheet=ui_href)
+            edition_text,_=render_html(edition_text,HOME,render_resources,base,aliases=aliases,ui_stylesheet=ui_href,ui_script=script_href)
             _write_page(output,prefix+'/',edition_text)
     gateway='<p class="archive-home-intro">Choose a preserved website generation. Each edition is built from its own dated source material; gaps remain marked.</p><nav class="edition-grid" aria-label="Preserved website generations">'
     editions=(('/2007/','2007','Independent site'),
@@ -564,10 +565,10 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
         stats+='<ul>'+''.join('<li>'+html.escape(i['type'].replace('_',' ')+': '+str(i.get('url',i.get('source',''))))+'</li>' for i in issues)+'</ul>'
     else: stats+='<p>No dependency findings in the generated content. This does not imply missing source files were recovered.</p>'
     # Diagnostic links enter the same single base-path rewrite as original links.
-    status_text,_=render_html(page_shell('Recovery status',stats),HOME,render_resources,base,aliases=aliases,ui_stylesheet=ui_href)
+    status_text,_=render_html(page_shell('Recovery status',stats),HOME,render_resources,base,aliases=aliases,ui_stylesheet=ui_href,ui_script=script_href)
     _write_page(output,'/archive-status/',status_text)
     write_json(output/'archive-status/report.json',report)
-    missing,_=render_html(page_shell('Page not recovered','<p>This historical page is not included in this restoration.</p><p><a href="/archive-status/">View the recovery inventory</a></p>'),HOME,render_resources,base,aliases=aliases,ui_stylesheet=ui_href)
+    missing,_=render_html(page_shell('Page not recovered','<p>This historical page is not included in this restoration.</p><p><a href="/archive-status/">View the recovery inventory</a></p>'),HOME,render_resources,base,aliases=aliases,ui_stylesheet=ui_href,ui_script=script_href)
     (output/'404.html').write_text(missing)
     (output/'.nojekyll').touch()
     return report

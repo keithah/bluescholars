@@ -751,6 +751,13 @@ def test_generated_stylesheet_reveals_the_recovered_mobile_menu(tmp_path):
     assert '.archive-menu-open #mobileNav' in css
     assert 'height:auto!important' in css
 
+def test_generated_pages_cache_bust_the_local_behavior_script(tmp_path):
+    fixture_root(tmp_path)
+    build(tmp_path,tmp_path/'_site','/bluescholars')
+    page=BeautifulSoup((tmp_path/'_site/2013/index.html').read_text(),'html.parser')
+    script=page.find('script',src=True)
+    assert script and script['src'].startswith('/bluescholars/assets/legacy.js?v=')
+
 
 def test_checker_detects_broken_local_link_and_remote_image(tmp_path):
     (tmp_path/'index.html').write_text('<html><body><a href="/missing/">Missing</a><img src="https://x.example/a.png"></body></html>')

@@ -153,7 +153,7 @@ def _media_href(value,url):
             return 'https://www.youtube.com/watch?v='+video_id
     return u
 
-def render_html(text: str,url: str,resources: dict,base: str,route_prefix='',aliases=None,ui_stylesheet=None) -> tuple[str,list]:
+def render_html(text: str,url: str,resources: dict,base: str,route_prefix='',aliases=None,ui_stylesheet=None,ui_script=None) -> tuple[str,list]:
     base=base_path(base);issues=[];resolver=Resolver(resources,base,issues,route_prefix,aliases)
     soup=BeautifulSoup(text,'html.parser')
     if soup.html is None:
@@ -361,7 +361,7 @@ def render_html(text: str,url: str,resources: dict,base: str,route_prefix='',ali
         soup.head.append(soup.new_tag('meta',attrs={'name':'viewport','content':'width=device-width, initial-scale=1'}))
     soup.head.append(soup.new_tag('meta',attrs={'http-equiv':'Content-Security-Policy','content':CSP}))
     soup.head.append(soup.new_tag('link',rel='stylesheet',href=ui_stylesheet or base+'/assets/archive-ui.css'))
-    soup.head.append(soup.new_tag('script',src=base+'/assets/legacy.js',defer='defer'))
+    soup.head.append(soup.new_tag('script',src=ui_script or base+'/assets/legacy.js',defer='defer'))
     aside=soup.new_tag('aside',attrs={'class':'archive-restoration-notice'})
     anchor=soup.new_tag('a',href=base+'/archive-status/')
     anchor.string='Historical restoration • recovery status';aside.append(anchor)

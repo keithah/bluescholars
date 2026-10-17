@@ -84,6 +84,19 @@ def edition_prefix(url: str, record: dict) -> str:
         return '/2009'
     return '/2013'
 
+def eligible_site_page_capture(url: str, record: dict, min_reference_capture: str) -> bool:
+    """Exclude the compromised intervening root capture from the 2007 edition.
+
+    The 2008 root response is a keyword-injection page with the original site
+    reduced to a single unarchived image. Keep its bytes in recovery, but use
+    the last intact 2007 image-map homepage for the edition's root.
+    """
+    path=urlsplit(url).path or '/'
+    capture=record.get('actual_capture','')
+    if record.get('edition_exclusion',{}).get('exclude_from_site'):
+        return False
+    return capture>=min_reference_capture or edition_prefix(url,record) in ('/2007','/2009')
+
 def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bool=False) -> dict:
     root=Path(root).resolve();output=Path(output).resolve();base=base_path(base)
     if output.parent!=root or output.name not in ('_site','_candidate'):
@@ -109,7 +122,9 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
     usable={};usable_variants={};raw={};issues=[]
     for source_key,r in records.items():
         url=r.get('url',source_key)
-        if r.get('raw_path') and r.get('status')=='recovered' and r['kind'] in ('html','css','image'):
+        eligible_status=(r.get('status')=='recovered' or
+                         (candidate and r.get('status')=='needs_review' and bool(r.get('compatibility_review'))))
+        if r.get('raw_path') and eligible_status and r['kind'] in ('html','css','image'):
             try:
                 raw[source_key]=read_record(root,r,candidate)
             except (OSError,ValueError) as exc:
@@ -126,9 +141,8 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
     min_reference_capture='20140101000000'
     selected_page_ids={
         identity(r['_source_url']) for url,r in usable_variants.items()
-        if r['kind']=='html' and (
-            r.get('actual_capture','')>=min_reference_capture or edition_prefix(r['_source_url'],r) in ('/2007','/2009')
-        )
+        if r['kind']=='html' and eligible_site_page_capture(r['_source_url'],r,min_reference_capture)
+        or r['kind']=='html' and urlsplit(r['_source_url']).hostname=='02cd02a.netsolhost.com'
     }
     selected_page_ids.update(identity(r.get('final_original','')) for r in usable_variants.values()
                               if r['kind']=='html' and r.get('final_original'))
@@ -201,6 +215,15 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
         host=urlsplit(url).hostname or ''
         if r['kind']=='image' and (host.endswith('livejournal.com') or host.endswith('masslinemedia.com')):
             r['local_path']='/lj/assets/'+r['sha256']+Path(r['raw_path']).suffix
+    # Keep dated WordPress source URLs resolvable even when the same original
+    # URL was indexed/recovered as a capture variant. The common resolver uses
+    # the canonical mapping for references inside old posts.
+    for key,r in usable_variants.items():
+        if r['kind'] in ('css','image'):
+            canonical=r['_source_url']
+            selected=usable.get(canonical)
+            if selected and selected.get('local_path'):
+                r['local_path']=selected['local_path']
     render_resources={}
     for key,r in records.items():
         original=r.get('url',key)
@@ -218,7 +241,10 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
         )
         capture=r.get('actual_capture','')
         selected_capture=bool(r.get('raw_path') and r.get('status')=='recovered'
-                              and (capture>=min_reference_capture or edition_prefix(url,r) in ('/2007','/2009')))
+                              and (eligible_site_page_capture(source_url,r,min_reference_capture)
+                                   or urlsplit(source_url).hostname=='02cd02a.netsolhost.com'))
+        if identity(url) in explicit_page_ids and r.get('raw_path') and not selected_capture:
+            continue
         if identity(url) not in explicit_page_ids and not selected_capture and not sourced_by_selected_page:
             continue
         try:

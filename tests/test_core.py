@@ -28,6 +28,13 @@ def test_crawl_scope():
     assert is_site('https://www.bluescholars.com/blog')
     assert is_site('http://02cd02a.netsolhost.com:80/blog/2009/03/sxsw-2009-where-well-be/')
     assert identity('http://02cd02a.netsolhost.com:80/blog/x/') == identity(HOME+'blog/x/')
+
+def test_legacy_wordpress_extensionless_urls_are_html_not_images():
+    from restore.urls import kind_for
+    assert kind_for('http://02cd02a.netsolhost.com/blog/2009/03/sxsw-2009-where-well-be/')=='html'
+    assert kind_for('http://02cd02a.netsolhost.com/blog/2011/01/post/?replytocom=1')=='html'
+    assert kind_for('http://02cd02a.netsolhost.com/blog/wp-content/uploads/photo.jpg')=='image'
+    assert kind_for('http://02cd02a.netsolhost.com/blog/wp-content/themes/site/style.css')=='css'
     assert not is_site('https://bluescholars.com.evil.example/blog')
     assert not is_site('https://youtube.com/x')
 

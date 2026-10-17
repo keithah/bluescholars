@@ -60,6 +60,13 @@ def identity(url: str) -> str:
 
 def kind_for(url: str, mime: str = '') -> str:
     path=urlsplit(url).path.lower()
+    host=urlsplit(url).hostname or ''
+    # The old WordPress server's extensionless permalinks were repeatedly
+    # mistaken for images when discovered from links without their MIME type.
+    if host=='02cd02a.netsolhost.com' and (path in ('','/blog','/blog/') or
+            path.startswith('/blog/') and not path.startswith('/blog/wp-') and
+            not any(path.endswith(ext) for ext in ('.css','.js','.png','.jpg','.jpeg','.gif','.svg','.ico','.pdf','.mp3','.mp4'))):
+        return 'html'
     ext='.'+path.rsplit('.',1)[-1] if '.' in path.rsplit('/',1)[-1] else ''
     if ext in FONT_EXT or mime.startswith('font/'):
         return 'font'
@@ -71,7 +78,7 @@ def kind_for(url: str, mime: str = '') -> str:
         return 'image'
     if ext in {'.mp3','.mp4','.m4a','.wav','.ogg','.webm','.mov','.pdf','.zip','.swf'}:
         return 'unsupported'
-    if urlsplit(url).hostname=='bluescholars.livejournal.com' and (path in ('','/','/profile') or path.endswith('.html')):
+    if host=='bluescholars.livejournal.com' and (path in ('','/','/profile') or path.endswith('.html')):
         return 'html'
     if 'html' in mime or in_domain(url):
         return 'html'

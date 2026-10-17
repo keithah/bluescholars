@@ -183,6 +183,14 @@ def test_index_accepts_an_explicit_non_target_alias_domain(tmp_path):
     assert state.data['resources'][alias]['kind']=='html'
     assert foreign not in state.data['resources']
 
+def test_checkpoint_reclassifies_unfetched_legacy_wordpress_permalink(tmp_path):
+    state=State(tmp_path)
+    url='http://02cd02a.netsolhost.com/blog/2009/03/sxsw-2009-where-well-be/'
+    state.add(url,'image','legacy CDX inventory')
+    state.save()
+
+    assert State(tmp_path).data['resources'][url]['kind']=='html'
+
 def test_seed_asset_index_queries_exact_observed_urls(tmp_path):
     (tmp_path/'recovery/seeds').mkdir(parents=True)
     first='https://images.squarespace-cdn.com/content/v1/site/front-page.jpg'

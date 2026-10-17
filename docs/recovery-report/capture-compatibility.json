@@ -31,9 +31,27 @@
       "original_url": "http://bluescholars.com:80/blog/update-cinemetropolis-advance-digital-download-out-now-official-release-date-june-14/",
       "sha256": "584a3828d3b5afc1f420f46404ef1bb8a8b0d573191c675718ac6870bcb6c3ce",
       "decision": "Earliest retrieved /blog/ capture reviewed against July 2011: same article and old WordPress template, with 7 visible comments; retained as dated alternate, while July is the default /blog/ page."
+    },
+    {
+      "timestamp": "20210529010844",
+      "original_url": "https://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/22/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/623-05142015/1371067617126/site.css",
+      "sha256": "0a684d1b1875824a3110258e78b3db0ad52f5fe1bf84cdc7459643bfac5f2207",
+      "decision": "Exact primary stylesheet URL referenced by the May 29, 2021 homepage. Captured 27 seconds later in the same crawl and rendered locally; browser inspection confirms the historic Squarespace header, left navigation and hero layout. Resource-specific Codex review; overall publication approval remains false."
+    },
+    {
+      "timestamp": "20210529010844",
+      "original_url": "https://static1.squarespace.com/static/51b8c20be4b0f1f8c9dcdf4c/t/51b8c532e4b05e84d3878f00/1529343237932/?format=750w",
+      "sha256": "4b9e19f80b25ac3289fe141a70d93f0e03c2bf0f1029b4c555e8ef484a472aac",
+      "decision": "Original ribbon-logo asset from the same May 29, 2021 crawl (27 seconds after the homepage); exact local copy used by the captured 2013-era site."
+    },
+    {
+      "timestamp": "20210529010844",
+      "original_url": "https://images.squarespace-cdn.com/content/v1/51b8c20be4b0f1f8c9dcdf4c/1371078164544-2RKW5D1QDQ5IXSVM5B2N/ke17ZwdGBToddI8pDm48kIZpWXENTEukrBXe6_rB7blZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIF2CO6JwS3nXJTgmvDX6VE5p5CmEHphUtvFe0ff6hcA8KMshLAGzx4R3EDFOm1kBS/front-page.jpg",
+      "sha256": "6734fe5e5beb59c5f277933d56c6d9234ec779dbd0e7ea28d12d23c53fb443e6",
+      "decision": "Original front-page hero photo, captured 27 seconds after the May 29, 2021 homepage in the same crawl. Local copy used; inspected in the candidate browser."
     }
   ],
-  "method": "Compared local capture timestamp, original URL, SHA-256, title, article text, visible comment count, image references, and navigation labels. The raw source bytes were not modified.",
+  "method": "Compared local capture timestamp, original URL, SHA-256, title, article text, visible comment count, image references, and navigation labels. The raw source bytes were not modified. October 17 entries additionally record exact homepage-linked Squarespace assets and the separate resource-specific compatibility review.",
   "comparison_result": {
     "normalization": "BeautifulSoup text extraction from .single-post, whitespace collapsed; source bytes remain untouched",
     "capture_text_lengths": {

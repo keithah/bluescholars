@@ -160,6 +160,62 @@ def test_legacy_wordpress_origin_page_uses_the_2009_site_route(tmp_path):
     assert 'Recovered entry.' in page.read_text()
 
 
+def test_legacy_alias_host_pages_with_explicit_html_kind_are_selected(tmp_path):
+    fixture_root(tmp_path);s=State(tmp_path)
+    host='http://02cd02a.netsolhost.com'
+    routes=(
+        ('/blog/2009/03/sxsw-2009-where-well-be/','SXSW recovery'),
+        ('/blog/2011/01/the-hip-hop-word-count-blue-scholars-approved/','Word Count recovery'),
+    )
+    for path,title in routes:
+        add_raw(s,host+path,'html',f'<html><body><h1>{title}</h1></body></html>'.encode())
+
+    report=build(tmp_path,tmp_path/'_candidate','/bluescholars',candidate=True)
+
+    assert report['recovered_pages']==2
+    assert 'SXSW recovery' in (tmp_path/'_candidate/2009/blog/2009/03/sxsw-2009-where-well-be/index.html').read_text()
+    assert 'Word Count recovery' in (tmp_path/'_candidate/2009/blog/2011/01/the-hip-hop-word-count-blue-scholars-approved/index.html').read_text()
+
+
+def test_legacy_post_images_and_theme_css_are_local_in_candidate(tmp_path):
+    fixture_root(tmp_path);s=State(tmp_path)
+    post='http://02cd02a.netsolhost.com/blog/2011/01/word-count/'
+    css='http://02cd02a.netsolhost.com/blog/wp-content/themes/modernpaper-10/style.css'
+    image='http://www.bluescholars.com/blog/wp-content/themes/modernpaper-10/images/header.gif'
+    add_raw(s,post,'html',('<html><head><link rel="stylesheet" href="'+css+'"></head>'
+        '<body><img src="'+image+'" alt="WordPress header"></body></html>').encode())
+    add_raw(s,css,'css',b'body{background:#fff}')
+    add_raw(s,image,'image',b'GIF89a' + b'fixture')
+
+    build(tmp_path,tmp_path/'_candidate','/bluescholars',candidate=True)
+
+    page=BeautifulSoup((tmp_path/'_candidate/2009/blog/2011/01/word-count/index.html').read_text(),'html.parser')
+    assert page.find('link',rel='stylesheet',href=lambda h:h and h.startswith('/bluescholars/assets/'))
+    assert page.find('img',src=lambda h:h and h.startswith('/bluescholars/assets/'))
+    local_image=page.find('img')['src'].removeprefix('/bluescholars/')
+    assert (tmp_path/'_candidate'/local_image).read_bytes().startswith(b'GIF89a')
+
+
+def test_2007_edition_uses_clean_2007_homepage_not_later_damaged_capture(tmp_path):
+    fixture_root(tmp_path);s=State(tmp_path)
+    add_raw(s,HOME,'html',b'<html><body><h1>July 2007 home</h1></body></html>')
+    clean=s.data['resources'][HOME]
+    clean['actual_capture']='20070724082915'
+    dated=dict(clean,url=HOME,actual_capture='20080817084306',
+        raw_path='recovery/raw/damaged.html',sha256=hashlib.sha256(b'<html><body><h1>Injected SEO links</h1></body></html>').hexdigest())
+    dated['edition_exclusion']={'exclude_from_site':True,'reason':'Compromised by injected SEO-link content.'}
+    damaged=b'<html><body><h1>Injected SEO links</h1></body></html>'
+    (tmp_path/'recovery/raw/damaged.html').write_bytes(damaged)
+    s.data['resources'][HOME+'@@wayback:20080817084306:'+dated['sha256'][:12]]=dated
+    s.save()
+
+    build(tmp_path,tmp_path/'_candidate','',candidate=True)
+
+    page=(tmp_path/'_candidate/2007/index.html').read_text()
+    assert 'July 2007 home' in page
+    assert 'Injected SEO links' not in page
+
+
 def test_source_promotion_does_not_copy_font_binaries(tmp_path):
     fixture_root(tmp_path);s=State(tmp_path)
     font='https://static.example/universal/fonts/ui.woff'
@@ -218,6 +274,27 @@ def test_candidate_excludes_after_reference_without_approval(tmp_path):
     s.data['resources'][HOME]['status']='needs_review';s.save()
     assert build(tmp_path,tmp_path/'_candidate','',candidate=True)['recovered_pages']==0
     assert promote(tmp_path,reviewed=True)['promoted']==0
+
+
+def test_candidate_includes_only_resource_compatibility_reviewed_later_assets(tmp_path):
+    fixture_root(tmp_path);s=State(tmp_path)
+    image='https://images.example/hero.jpg'
+    add_raw(s,HOME,'html',f'<html><body><img src="{image}" alt="Reference hero"></body></html>'.encode())
+    add_raw(s,image,'image',b'\xff\xd8\xff\xe0reviewed-later-image')
+    later=s.data['resources'][image]
+    later.update(status='needs_review',actual_capture='20210529010844',
+        compatibility_review={'actor':'Codex agent','reason':'Same-crawl image dependency.'})
+    unapproved='https://images.example/unreviewed.jpg'
+    add_raw(s,unapproved,'image',b'\xff\xd8\xff\xe0unreviewed-image')
+    s.data['resources'][unapproved].update(status='needs_review',actual_capture='20210530000000')
+    s.save()
+
+    report=build(tmp_path,tmp_path/'_candidate','',candidate=True)
+
+    page=BeautifulSoup((tmp_path/'_candidate/2013/index.html').read_text(),'html.parser')
+    assert page.find('img',src=lambda value:value and value.startswith('/assets/'))
+    assert report['local_source_assets']==1
+    assert not any(path.name.endswith('unreviewed-image.jpg') for path in (tmp_path/'_candidate/assets').iterdir())
 
 def test_candidate_reports_stale_provider_error_as_a_gap(tmp_path):
     fixture_root(tmp_path);s=State(tmp_path)

@@ -4,7 +4,7 @@ import json
 import os
 from pathlib import Path
 from urllib.parse import urlsplit
-from .urls import original_url,TARGET,HOME
+from .urls import original_url,TARGET,HOME,kind_for
 
 def write_json(path: Path,data) -> None:
     path.parent.mkdir(parents=True,exist_ok=True)
@@ -23,6 +23,15 @@ class State:
             'index_complete':False,'index':{},'resources':{},'errors':[]}
         if self.data.get('version')!=1:
             raise ValueError('Unsupported checkpoint version')
+        # Earlier index passes inferred extensionless NetSolHost permalinks as
+        # images. Correct only unfetched legacy-host records; validated bytes
+        # and all other host classifications stay untouched.
+        for key,record in self.data['resources'].items():
+            url=record.get('url',key)
+            if (urlsplit(url).hostname=='02cd02a.netsolhost.com'
+                    and not record.get('raw_path')
+                    and record.get('status') in ('queued','failed')):
+                record['kind']=kind_for(url,record.get('content_type',''))
 
     def add(self,url: str,kind: str,referrer: str='',capture: str='') -> dict | None:
         url=original_url(url)

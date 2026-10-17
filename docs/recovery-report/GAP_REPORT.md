@@ -94,3 +94,12 @@ The source manifest contains 237 records and 236 blog-entry observations. Beyond
 ## Public preview refresh — October 17, 2026
 
 GitHub Pages build `38990662133` succeeded for `gh-pages` commit `efad4d3e2a2fefefcb78b7d29761d474857d86cd`. The verified URL is [https://keithah.github.io/bluescholars/](https://keithah.github.io/bluescholars/). HTTPS checks returned 200 for the homepage, `/2007/`, `/2009/`, a newly inventoried 2013 article, and `/2013/blog/page/3/`; an unknown route and the withheld WOFF URL return 404. The browser showed the edition cards and the recovered post content with no console errors. This is an unreviewed candidate preview; `source/review.json` remains false. The browser screenshot was captured for agent inspection but not saved as a local image file.
+
+
+## Current local checkpoint — October 17, 2026 (post-merge and candidate rebuild)
+
+The merged local recovery state now contains 10,093 resource URLs and 22,579 indexed capture rows (domain index marked complete), 3,310 recovered resources, 64 held for review, 1,311 failures, and 5,408 queued URLs. There are 2,095 unique verified raw files totaling 112,816,864 bytes. The last bounded local download pass recovered/validated captures already represented by the imported artifact; it did not create a new GitHub run.
+
+The candidate build now has 955 recovered pages, 2,357 placeholders, four derived LiveJournal views and 750 local source assets. Both root and `/bluescholars/` checks pass with zero local-link errors and zero automatically loaded remote resources. Current build findings: 5,352 missing embedded assets, 319 linked-but-unrecovered assets, 145 external media links, 27 unbundled font references and nine invalid/provider-error source records. These are outstanding source gaps, not claims of recovered material.
+
+The 2007 edition uses the latest intact captured homepage (`20070724082915`) and its seven original panels; the compromised 2008 root remains excluded from display. The 2009 tree now includes the legacy-host SXSW 2009 article and 2011 Word Count article with captured text/comments. The `/2013/` reference homepage uses its same-crawl Squarespace stylesheet, ribbon logo and front-page photo; its layout was inspected in a local browser. Exact hashes, capture times and compatibility decisions are listed in `capture-compatibility.json` and `OTHER_ARCHIVES.json`. The screenshot output was inspected in the browser tool but not saved to a file. Publication and visual-review flags remain false.

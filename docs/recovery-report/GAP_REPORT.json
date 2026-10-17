@@ -1,33 +1,33 @@
 {
-  "updated_at": "2026-10-17T01:26:02+00:00",
-  "source_checkpoint_run": "38975520061",
+  "updated_at": "2026-10-17T04:13:14+00:00",
+  "source_checkpoint_run": "38992255338 (artifact merged); local recovery/checkpoint counts above supersede the prior run-only snapshot.",
   "capture_index": {
-    "indexed_capture_records": 21517,
+    "indexed_capture_records": 22579,
     "complete": true,
-    "scope": "completed Bluescholars domain CDX plus targeted Squarespace CSS/font/image prefix indexes"
+    "scope": "Completed Bluescholars domain CDX plus targeted Squarespace CSS/font/image prefix indexes; local checkpoint count includes all merged captures."
   },
   "resource_inventory": {
-    "resource_urls": 9092,
+    "resource_urls": 10093,
     "statuses": {
-      "queued": 4804,
-      "recovered": 3045,
-      "needs_review": 50,
-      "failed": 1193,
+      "queued": 5408,
+      "recovered": 3310,
+      "needs_review": 64,
+      "failed": 1311,
       "excluded": 0
     }
   },
   "validated_local_files": {
-    "unique_sha256_files": 1983,
-    "bytes": 110018036,
-    "candidate_local_source_assets": 737
+    "unique_sha256_files": 2095,
+    "bytes": 112816864,
+    "candidate_local_source_assets": 750
   },
   "candidate": {
-    "recovered_pages": 924,
-    "placeholder_pages": 1851,
+    "recovered_pages": 955,
+    "placeholder_pages": 2357,
     "derived_livejournal_views": 4,
     "publish_approved": false,
     "visual_fidelity_verified": false,
-    "local_source_assets": 737,
+    "local_source_assets": 750,
     "project_subpath_check": {
       "base_path": "/bluescholars/",
       "ok": true,
@@ -49,13 +49,14 @@
     "pages_build_run": "38990662133",
     "pages_build_status": "success",
     "pages_url": "https://keithah.github.io/bluescholars/",
-    "font_binaries_in_public_output": false
+    "font_binaries_in_public_output": false,
+    "browser_review": "Agent-performed local visual inspection of 2007 homepage, 2009 SXSW article and 2013 Squarespace homepage; screenshots were displayed in the browser tool but no screenshot files were saved."
   },
   "known_missing_dependencies": {
-    "images_or_other_embedded_assets": 5724,
-    "linked_assets_not_recovered": 295,
+    "images_or_other_embedded_assets": 5352,
+    "linked_assets_not_recovered": 319,
     "external_media_link_only": 145,
-    "fonts_not_packaged": 22,
+    "fonts_not_packaged": 27,
     "invalid_source_records": 9
   },
   "checks": {
@@ -201,5 +202,51 @@
   "downloaded_bytes": 110018036,
   "failed_attempts": 6416,
   "index_complete": true,
-  "active_recovery_run": "38985105267"
+  "active_recovery_run": null,
+  "local_checkpoint_after_recovery_sweep": {
+    "origin": "Locally merged recovery checkpoint; no new GitHub run ID (latest run artifact was already imported).",
+    "resource_urls": 10093,
+    "indexed_capture_records": 22579,
+    "index_complete": true,
+    "statuses": {
+      "queued": 5408,
+      "recovered": 3310,
+      "needs_review": 64,
+      "failed": 1311,
+      "excluded": 0
+    },
+    "unique_downloaded_files": 2095,
+    "downloaded_bytes": 112816864,
+    "failed_attempts": 7022
+  },
+  "local_editions_recovered": [
+    {
+      "edition": "2007 legacy homepage",
+      "path": "/2007/",
+      "capture": "20070724082915",
+      "sha256": "f158f3dca3d133cf561b024a21a289635db2675ca22d1d1d0b6865eb5b8b1f28",
+      "notes": "Latest intact 2007 homepage; seven original GIF panels, actual show text, and two locally recovered linked flyers. Later 2008 root capture is preserved but excluded as keyword-injected/compromised."
+    },
+    {
+      "edition": "2009 WordPress",
+      "path": "/2009/blog/2009/03/sxsw-2009-where-well-be/",
+      "capture": "20100312073016",
+      "sha256": "c9c66c4e0135f097b6e1016490596c43ea04c0e288685207ab1ee8754412069d",
+      "notes": "Legacy-host WordPress article, body and four comments; original CSS, theme graphics and exact front-page photo are packaged locally."
+    },
+    {
+      "edition": "2009 WordPress",
+      "path": "/2009/blog/2011/01/the-hip-hop-word-count-blue-scholars-approved/",
+      "capture": "20110302034042",
+      "sha256": "75c3611ebfc23f9b806d947e7a130bf3446693626bb7666261dc4495a08e8e7b",
+      "notes": "Recovered article and comments; one article-specific figure remains unavailable."
+    },
+    {
+      "edition": "Squarespace-era homepage",
+      "path": "/2013/",
+      "capture": "20210529010817",
+      "sha256": "18c5bcc0e9866c3129854f786782ba95b58e9747a4a672626ffccb34ce3bc75b",
+      "notes": "Reference HTML with exact same-crawl CSS/logo/hero assets; candidate browser shows historic styling and locally served media."
+    }
+  ]
 }

@@ -570,7 +570,7 @@ Preserve other outbound links—ticketing, social accounts, photographer credits
 | --- | --- |
 | `REPORT.md` | This complete source-location and recovery report. |
 | `REPORT.html` | Locally readable/printable HTML version; no external runtime assets. |
-| `recovery-manifest.json` | All 120 records, evidence states, original/replay/raw/index URLs, and 60 blog-listing observations. |
+| `recovery-manifest.json` | All 155 records, evidence states, original/replay/raw/index URLs, and 60 blog-listing observations. |
 | `recovery-manifest.csv` | Flat URL inventory for sorting and handing to another worker. |
 | `blog-entry-checklist.csv` | Sixty listing entries with source and permalink evidence. |
 | `recovery-seeds-expanded.json` | Compatible page/image seed data for the supplied recovery project; not a downloaded-site catalog. |
@@ -657,4 +657,11 @@ The unreviewed candidate contains 449 recovered pages, 4 derived pages, 765 plac
 
 Four exact CSS parts from the 2016 Squarespace template are now individually recovered and rendered locally (P35–P38; 581,080 bytes). They support the source-linked older `/2013/blog/page/3/` capture. This does not supply the May 2021 homepage stylesheet, Squarespace icon fonts, or its unrecovered images. The candidate preview is live at [keithah.github.io/bluescholars](https://keithah.github.io/bluescholars/) and has been checked for `/bluescholars/` hosting. It is still a partial, unreviewed preview. See `GAP_REPORT.md` and `RECOVERY_REPORT.md` for current status.
 
-A further exact source-linked WOFF capture was recovered: the Squarespace UI font from 20130926135509, 9,068 bytes, valid WOFF signature, SHA-256 `b980267ac2254ef534bfe32055489ed677d461077b37f2ee62bf7b5fc4f7362f` (P39). Wayback lists 57 successful binary rows for the exact font URL with a stable digest; the selected capture predates and matches the unchanged URL referenced by the June 2016 CSS. The renderer now retains font-face declarations only when it can localize a valid font file. The social icon font remains missing.
+A further exact source-linked WOFF capture was recovered: the Squarespace UI font from 20130926135509, 9,068 bytes, valid WOFF signature, SHA-256 `b980267ac2254ef534bfe32055489ed677d461077b37f2ee62bf7b5fc4f7362f` (P39). Wayback lists 57 successful binary rows for the exact font URL with a stable digest; the selected capture predates and matches the unchanged URL referenced by the June 2016 CSS. The source response is retained in local recovery provenance, but candidate output omits font binaries under the no-redistribution policy; its CSS keeps the declared family for system fallback. The social icon font remains missing.
+
+The later inventory pass recovered additional Squarespace lists and tag/author archives (B61–B236), adding 79 previously unlisted internal post routes across those passes. Page-two variants from 2015–2020 were inspected individually and have the same normalized 20-entry text; a differing 2023 listing remains held for review. See RECOVERY_REPORT.md and GAP_REPORT.md for current evidence.
+
+
+## Current recovery continuation — October 17, 2026
+
+The initial audit above is retained as a dated handoff. Current provenance is 237 records, with 149 page captures and 236 blog-entry observations. A separate pass over recovered Squarespace tag and author archives added 36 captured listing pages, 136 source-linked observations, 61 distinct routes, and 46 previously unlisted article pages whose body captures were already recovered. These are archive observations, not a claim that the site's lifetime post catalog is complete. The active counts and limitations are refreshed in [GAP_REPORT.md](GAP_REPORT.md) and [RECOVERY_REPORT.md](RECOVERY_REPORT.md).

@@ -8,33 +8,38 @@
     "viewport": "desktop, approximately 1680×800"
   },
   "candidate_build": {
+    "base_path": "/bluescholars/",
     "recovered_pages": 924,
     "placeholder_pages": 1851,
     "derived_pages": 4,
-    "local_source_assets": 738,
-    "base_path": "/bluescholars/",
-    "candidate_source": "local merged checkpoint plus recovered linked Squarespace CSS and WOFF, built for /bluescholars/",
-    "issues_by_type": {
-      "missing_asset": 4110,
+    "local_source_assets": 737,
+    "issue_counts": {
+      "invalid_source": 9,
+      "missing_asset": 5781,
+      "font_not_packaged": 20,
       "linked_asset_not_recovered": 295,
-      "external_media_link_only": 145,
-      "font_not_packaged": 17,
-      "invalid_source": 9
+      "external_media_link_only": 145
     },
     "visual_fidelity_verified": false,
     "publish_approved": false,
-    "note": "Partial unreviewed preview; no visual or publication approval recorded."
+    "issues_by_type": {
+      "invalid_source": 9,
+      "missing_asset": 5724,
+      "font_not_packaged": 22,
+      "linked_asset_not_recovered": 295,
+      "external_media_link_only": 145
+    },
+    "font_binary_distribution": "excluded; font-face rules removed and family names retained for system fallback"
   },
   "candidate_checks": {
     "root": {
       "ok": true,
-      "errors": [],
-      "source_checkpoint": "merged recovery candidate plus locally restored Squarespace CSS/WOFF; checked 2026-10-17"
+      "errors": []
     },
     "project_subpath": {
+      "base_path": "/bluescholars/",
       "ok": true,
-      "errors": [],
-      "source_checkpoint": "merged recovery candidate plus locally restored Squarespace CSS/WOFF; checked 2026-10-17"
+      "errors": []
     },
     "remote_automatic_resources": {
       "root": 0,
@@ -42,20 +47,20 @@
     }
   },
   "checkpoint": {
-    "resource_urls": 8952,
+    "resource_urls": 9092,
     "statuses": {
-      "queued": 4677,
-      "recovered": 3032,
+      "queued": 4804,
+      "recovered": 3045,
       "needs_review": 50,
       "failed": 1193,
       "excluded": 0
     },
-    "indexed_capture_records": 9271,
+    "indexed_capture_records": 21517,
     "index_complete": true,
-    "unique_downloaded_files": 1972,
-    "downloaded_bytes": 108454143,
+    "unique_downloaded_files": 1983,
+    "downloaded_bytes": 110018036,
     "failed_attempts": 6416,
-    "local_updated_at": "2026-10-17T00:10:09Z"
+    "updated_at": "2026-10-17T01:17:05.406389+00:00"
   },
   "latest_import": {
     "run_id": "38975520061",
@@ -71,17 +76,12 @@
     "outcome": "Wayback acquisition hit the 90-minute cap; candidate build and artifact upload succeeded."
   },
   "latest_wayback_batch": {
-    "run_id": "38975520061",
-    "url": "https://github.com/keithah/bluescholars/actions/runs/38975520061",
-    "status": "completed_cancelled_after_timeout",
-    "resume_run": "38972843891",
-    "max_files": 2000,
-    "copied_raw_files": 3,
-    "copied_index_files": 86,
-    "new_resource_records": 81,
-    "new_variant_records": 33,
-    "conflicts": 0,
-    "artifact_upload": "success"
+    "run_id": "38985105267",
+    "url": "https://github.com/keithah/bluescholars/actions/runs/38985105267",
+    "status": "in_progress",
+    "resume_run": "38975520061",
+    "last_observed_at": "2026-10-17T01:10:17Z",
+    "note": "Long-running bounded dependency recovery; no completed artifact has been merged from this run."
   },
   "older_edition_browser_observations": {
     "2007": "recovered homepage capture dated 2008-12-18 and August 2007 guestbook page; most linked routes remain placeholders; no full visual review recorded.",
@@ -124,7 +124,7 @@
     "unique_raw_files": 97,
     "visual_reviewed": false
   },
-  "updated_at": "2026-10-17T01:04:30Z",
+  "updated_at": "2026-10-17T01:22:36.451634+00:00",
   "tests": {
     "command": ".venv311/bin/python -m pytest -q",
     "result": "125 passed",
@@ -422,13 +422,8 @@
   "squarespace_older_listing": {
     "source_capture": "20160611143343",
     "source_page": "https://web.archive.org/web/20160611143343/http://bluescholars.com/blog?offset=1358016466000",
-    "raw_file": "recovery/raw/8dc84128b2368456b9bbe1f8d107acbee3a2f89e8511353ea1bbaff323f27fda.html",
-    "bytes": 124320,
-    "sha256": "8dc84128b2368456b9bbe1f8d107acbee3a2f89e8511353ea1bbaff323f27fda",
     "observed_entries": 20,
-    "inventory_range": "B41-B60",
-    "requested_2019_capture": "provider error",
-    "article_bodies_inferred_recovered": false
+    "inventory_range": "B41-B60"
   },
   "squarespace_post_route_cdx": {
     "report": "post-route-cdx-2026-10-17.json",
@@ -478,18 +473,105 @@
     "modern_cdn_alias_rows": 0
   },
   "recovery_state": {
-    "resource_urls": 9083,
-    "indexed_capture_records": 21506,
+    "resource_urls": 9092,
+    "indexed_capture_records": 21514,
     "statuses": {
-      "queued": 4802,
-      "recovered": 3038,
+      "queued": 4804,
+      "recovered": 3045,
       "needs_review": 50,
       "failed": 1193,
       "excluded": 0
     },
-    "unique_downloaded_files": 1978,
-    "downloaded_bytes": 109441718,
+    "unique_downloaded_files": 1983,
+    "downloaded_bytes": 110018036,
     "failed_attempts": 6416,
     "index_complete": true
+  },
+  "squarespace_additional_listings": {
+    "captures": [
+      {
+        "id": "P40",
+        "timestamp": "20160611091915",
+        "url": "http://bluescholars.com/blog?offset=1362034994000&reversePaginate=true",
+        "sha256": "03ed16a5317f025296c4e8797260c2b608497f7aaf050bf2d88050fdb5bd99cf",
+        "bytes": 112368
+      },
+      {
+        "id": "P41",
+        "timestamp": "20160529163313",
+        "url": "http://bluescholars.com/blog?offset=1362034994000&author=51b3c159e4b0de8ae9a69517",
+        "sha256": "eb44795bbb0a771debd9e4c9d4f9396a03648b33896db627c647fc2026fcab5f",
+        "bytes": 115304
+      }
+    ],
+    "inventory_range": "B61-B100",
+    "observations": 40,
+    "distinct_internal_post_routes": 37,
+    "new_internal_routes_added_to_manifest": 33,
+    "all_internal_post_bodies_independently_recovered": true,
+    "page_two_variants": {
+      "dates": [
+        "20151205110730",
+        "20160320050335",
+        "20160323194328",
+        "20190420040144",
+        "20190825220233",
+        "20191017200401",
+        "20200220154840",
+        "20230927103524"
+      ],
+      "normalized_entry_sets_identical_through_2020": true,
+      "2023_variant_held_for_review": true
+    }
+  },
+  "squarespace_tag_author_inventory": {
+    "observed_listing_entry_rows": 236,
+    "observed_distinct_internal_post_routes": 104,
+    "earlier_general_listing_observations": 100,
+    "new_tag_author_listing_captures": 36,
+    "new_tag_author_entry_observations": 136,
+    "distinct_routes_in_new_tag_author_listings": 61,
+    "new_post_routes_added_from_tag_author_listings": 46,
+    "new_post_body_bytes_already_recovered": 46,
+    "source_manifest_page_records": 149,
+    "source_manifest_total_records": 237,
+    "source_capture_timestamps": [
+      "20190420033356",
+      "20160611114321",
+      "20160611141246",
+      "20160611105407",
+      "20160611071912",
+      "20160611134337",
+      "20160529150507",
+      "20160611141246",
+      "20160529144823",
+      "20160611132211",
+      "20190419234845",
+      "20160529184152",
+      "20160529204857",
+      "20160529174529",
+      "20190420041247",
+      "20190420025259",
+      "20160611073554",
+      "20160611103756",
+      "20160611143338",
+      "20160611092538",
+      "20160611090817",
+      "20160611141250",
+      "20160611103208",
+      "20160611134341",
+      "20160611072024",
+      "20160611135033",
+      "20160611132219",
+      "20160611083905",
+      "20160529214254",
+      "20160611135033",
+      "20160611141257",
+      "20160611132206",
+      "20160611085325",
+      "20160611085325",
+      "20160611083006",
+      "20190420025910"
+    ]
   }
 }

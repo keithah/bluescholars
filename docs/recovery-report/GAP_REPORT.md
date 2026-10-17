@@ -1,6 +1,6 @@
 # Recovery gap report
 
-**Updated:** October 16, 2026. This report distinguishes a checked limitation from a search still in progress. Network failures and unqueried URLs are not evidence that a resource is absent from every archive.
+**Updated:** October 17, 2026. This report distinguishes a checked limitation from a search still in progress. Network failures and unqueried URLs are not evidence that a resource is absent from every archive.
 
 ## Latest checkpoint — October 16, 2026
 
@@ -49,13 +49,13 @@ The journal is available separately at `/lj/`: eight recovered HTML capture rout
 
 ## Checkpoint refresh — October 16, 2026
 
-The current local candidate has 924 recovered pages, 1,851 placeholders, four derived LiveJournal views, and 738 locally recovered assets (including four Squarespace CSS files and the platform UI WOFF). Root and `/bluescholars/` offline checks pass with zero errors and no remote automatic resource dependencies. Current measured gaps are 4,110 embedded assets, 295 linked assets, 145 external media links, 17 unbundled fonts, and nine invalid source records. A current broad Wayback continuation is run `38975520061`; independent Common Crawl run `38972843891` recovered 27 of 28 attempted WARC responses. The reports remain explicit about unverified routes and missing binaries; no placeholder content is presented as an original page.
+The current local candidate has 924 recovered pages, 1,851 placeholders, four derived LiveJournal views, and 737 locally recovered assets (including four Squarespace CSS files and the platform UI WOFF). Root and `/bluescholars/` offline checks pass with zero errors and no remote automatic resource dependencies. Current measured gaps are 4,110 embedded assets, 295 linked assets, 145 external media links, 17 unbundled fonts, and nine invalid source records. A current broad Wayback continuation is run `38975520061`; independent Common Crawl run `38972843891` recovered 27 of 28 attempted WARC responses. The reports remain explicit about unverified routes and missing binaries; no placeholder content is presented as an original page.
 
 A targeted 2010 post check confirmed the original `/blog/2010/03/new-music-paul-valery/` HTML survives from a December 3, 2010 Wayback capture. Its 2023 alternate has identical extracted article text and remains separately held in `needs_review`; the primary stays the 2010 body. The post's `PaulValery1.jpg` image remains missing (the saved 2023 CDX row is status 403; earlier exact replays failed). Third-party leads and the Vimeo clip identifier are recorded in [OTHER_ARCHIVES.md](OTHER_ARCHIVES.md) and are not used to invent or replace the image/video.
 
-## Current measured checkpoint — October 17, 2026
+## Checkpoint snapshot before listing inventory expansion — October 17, 2026
 
-See machine-readable [`GAP_REPORT.json`](GAP_REPORT.json). The merged checkpoint has 9,083 resource URLs and 21,506 indexed capture rows. Recovery state: 3,038 recovered resources, 50 held for review, 1,193 failed attempts, and 4,802 still queued. There are 1,978 unique raw files (109,441,718 bytes). The local candidate has 924 recovered pages, 1,851 placeholders, four derived LJ views, and 738 local source assets.
+See machine-readable [`GAP_REPORT.json`](GAP_REPORT.json). The merged checkpoint has 9,083 resource URLs and 21,506 indexed capture rows. Recovery state: 3,038 recovered resources, 50 held for review, 1,193 failed attempts, and 4,802 still queued. There are 1,978 unique raw files (109,441,718 bytes). The local candidate has 924 recovered pages, 1,851 placeholders, four derived LJ views, and 737 local source assets.
 
 Latest candidate findings are 4,110 missing embedded assets, 295 linked assets not recovered, 145 external media links without local media, 17 unbundled fonts, and nine invalid source records. Root and `/bluescholars/` checks each pass with zero broken local targets or remote automatic-resource errors; a passing checker does not reduce these recovery gaps. The public site remains an unreviewed preview with both release flags false. Wayback run 38985105267 is active, resuming from 38975520061; the previous run reached the 90-minute acquisition cap but its artifact merged without conflicts.
 
@@ -65,12 +65,28 @@ An older Squarespace listing was also retrieved from the June 11, 2016 capture a
 
 An exact Wayback CDX pass for the 18 post routes linked by the 2016 listing returned one 200 HTML row for every route. Eleven rows match the capture already used. Seven routes have a distinct 2019 row (about 824–836 bytes); individual replay attempts showed three captured provider-error pages and four transport failures, so the latter remain unknown rather than classified as missing. The per-route CDX rows and attempt outcomes are in [post-route-cdx-2026-10-17.json](post-route-cdx-2026-10-17.json).
 
-Four source-linked Squarespace CSS parts from the 2016 template were retrieved individually and are now packaged locally: P35-P38, captures 20160624015144, 20160624020908, 20160624014732, and 20160624015113 (581,080 bytes total). Their styles load from local paths in the GitHub Pages project-prefix build. The Squarespace UI WOFF font was subsequently recovered from an exact 2013 capture and is served locally; the social icon font still has only HTML-landed Wayback responses. Twenty image IDs observed on the older listing were tested across two dates (40 replay attempts); none yielded a valid image payload, so those photos remain gaps.
+Four source-linked Squarespace CSS parts from the 2016 template were retrieved individually and are now packaged locally: P35-P38, captures 20160624015144, 20160624020908, 20160624014732, and 20160624015113 (581,080 bytes total). Their styles load from local paths in the GitHub Pages project-prefix build. The Squarespace UI WOFF font was subsequently recovered from an exact 2013 capture and is retained in local recovery provenance; the current candidate omits font binaries under the no-redistribution policy; the social icon font still has only HTML-landed Wayback responses. Twenty image IDs observed on the older listing were tested across two dates (40 replay attempts); none yielded a valid image payload, so those photos remain gaps.
 
-The 2016 stylesheet also references `squarespace-ui-font.woff`. The exact HTTPS URL has 57 Wayback `application/octet-stream` 200 rows with stable digest `BVAWN6UNBT4AATQKQJGQTFGUJ62IR3VN`; capture `20130926135509` yielded a valid 9,068-byte WOFF (P39, SHA-256 `b980267ac2254ef534bfe32055489ed677d461077b37f2ee62bf7b5fc4f7362f`) and now renders locally. The social icon WOFF remains unrecovered.
+The 2016 stylesheet also references `squarespace-ui-font.woff`. The exact HTTPS URL has 57 Wayback `application/octet-stream` 200 rows with stable digest `BVAWN6UNBT4AATQKQJGQTFGUJ62IR3VN`; capture `20130926135509` yielded a valid 9,068-byte WOFF (P39, SHA-256 `b980267ac2254ef534bfe32055489ed677d461077b37f2ee62bf7b5fc4f7362f`). The raw response stays in the ignored recovery checkpoint; public output omits it and uses CSS system fallbacks. The social icon WOFF remains unrecovered.
 
 
-The exact Squarespace UI WOFF font is now recovered from `20130926135509` (9,068 bytes; stable CDX digest `BVAWN6UNBT4AATQKQJGQTFGUJ62IR3VN`) and served locally. Four linked CSS parts are also local. The separate social-icon font remains missing.
+The exact Squarespace UI WOFF font is recovered from `20130926135509` (9,068 bytes; stable CDX digest `BVAWN6UNBT4AATQKQJGQTFGUJ62IR3VN`) and preserved in local recovery provenance; public output omits the binary under the no-font-binary redistribution policy. Four linked CSS parts are also local. The separate social-icon font remains missing.
 
 A complete Squarespace site-ID CDX prefix query returned 372 rows across 715 related URLs; 357 rows were new to the local index, but none match the 20 image IDs from the recovered June 2016 listing. A tighter prefix query for the first image ID returned zero rows. The 20 exact image URLs were also tried at two archived dates (40 replay attempts), with no valid bytes. These specific photos remain unacquired; the broader related image URLs stay indexed for further matching.
  A second prefix query against the modern `images.squarespace-cdn.com` URL form for the first target image ID also returned zero rows.
+
+
+## Additional Squarespace listing captures — October 17, 2026
+
+Two individually inspected listing pages were recovered: the reverse-pagination capture `20160611091915` (20 observations, September–February 2013) and author-filtered capture `20160529163313` (20 observations, February–January 2013). They add B61–B100. Across both, 37 distinct internal post routes are linked; all 37 have independently recovered page bytes, including 33 routes newly added to the source manifest. Three entries link to third-party pages and are not represented as Blue Scholars captures.
+
+The page-two URL history was also inspected individually: eight CDX rows across slash/no-slash spellings and captures from 2015 through 2023. Seven captures through 2020 have the same normalized 20-entry article-text signature; the 2023 capture contains a different entry set and remains held as a later alternative. The default candidate continues to use the 2020 capture. Raw variants, hashes, sizes, and exact CDX URLs are recorded under P07 `capture_variants` and Q58–Q61.
+
+
+## Current measured checkpoint — October 17, 2026 (after listing inventory and font-policy update)
+
+The complete local Wayback index has 21,517 capture rows across 9,092 resource URLs. The checkpoint contains 1,983 unique raw files (110,018,036 bytes): 3,045 recovered resources, 50 held for review, 1,193 failed, and 4,804 queued. Capture availability and downloaded response bodies are separate counts.
+
+The candidate has 924 recovered pages, 4 derived LJ views, 1851 placeholders, and 737 local source assets. Root and `/bluescholars/` offline checks both pass with zero errors and zero remote automatic resources. Current findings include 5,724 missing embedded assets, 295 linked assets not recovered, 145 external media links, 22 font resources not bundled, and 9 invalid source records. All recovered font binaries are withheld from public output; CSS declarations fall back to system fonts.
+
+The source manifest contains 237 records and 236 blog-entry observations. Beyond the five general lists (B01–B100), 36 recovered tag/author listing captures yielded 136 additional observations and 46 newly inventoried post bodies, each backed by its own recovered response. See the manifest and checklist for timestamps, hashes, and source URLs. The public site is an unreviewed preview; both review flags remain false. Wayback continuation `38985105267` was still in progress at the last status check.

@@ -1,6 +1,6 @@
 # Blue Scholars historical recovery report
 
-**Updated:** October 16, 2026. **Scope:** separate copies of the 2007, 2009/WordPress, and Squarespace-era sites, with the May 29, 2021 homepage as the Squarespace visual reference.
+**Updated:** October 17, 2026. **Scope:** separate copies of the 2007, 2009/WordPress, and Squarespace-era sites, with the May 29, 2021 homepage as the Squarespace visual reference.
 
 ## Evidence collected
 
@@ -93,6 +93,22 @@ An older Squarespace listing was also retrieved from the June 11, 2016 capture a
 
 An exact Wayback CDX pass for the 18 post routes linked by the 2016 listing returned one 200 HTML row for every route. Eleven rows match the capture already used. Seven routes have a distinct 2019 row (about 824–836 bytes); individual replay attempts showed three captured provider-error pages and four transport failures, so the latter remain unknown rather than classified as missing. The per-route CDX rows and attempt outcomes are in [post-route-cdx-2026-10-17.json](post-route-cdx-2026-10-17.json).
 
-Four source-linked Squarespace CSS parts from the 2016 template were retrieved individually and are now packaged locally: P35-P38, captures 20160624015144, 20160624020908, 20160624014732, and 20160624015113 (581,080 bytes total). Their styles load from local paths in the GitHub Pages project-prefix build. The Squarespace UI WOFF font was subsequently recovered from an exact 2013 capture and is served locally; the social icon font still has only HTML-landed Wayback responses. Twenty image IDs observed on the older listing were tested across two dates (40 replay attempts); none yielded a valid image payload, so those photos remain gaps.
+Four source-linked Squarespace CSS parts from the 2016 template were retrieved individually and are now packaged locally: P35-P38, captures 20160624015144, 20160624020908, 20160624014732, and 20160624015113 (581,080 bytes total). Their styles load from local paths in the GitHub Pages project-prefix build. The Squarespace UI WOFF font was subsequently recovered from an exact 2013 capture and is retained in local recovery provenance; the current candidate omits font binaries under the no-redistribution policy; the social icon font still has only HTML-landed Wayback responses. Twenty image IDs observed on the older listing were tested across two dates (40 replay attempts); none yielded a valid image payload, so those photos remain gaps.
 
-The 2016 stylesheet also references `squarespace-ui-font.woff`. The exact HTTPS URL has 57 Wayback `application/octet-stream` 200 rows with stable digest `BVAWN6UNBT4AATQKQJGQTFGUJ62IR3VN`; capture `20130926135509` yielded a valid 9,068-byte WOFF (P39, SHA-256 `b980267ac2254ef534bfe32055489ed677d461077b37f2ee62bf7b5fc4f7362f`) and now renders locally. The social icon WOFF remains unrecovered.
+The 2016 stylesheet also references `squarespace-ui-font.woff`. The exact HTTPS URL has 57 Wayback `application/octet-stream` 200 rows with stable digest `BVAWN6UNBT4AATQKQJGQTFGUJ62IR3VN`; capture `20130926135509` yielded a valid 9,068-byte WOFF (P39, SHA-256 `b980267ac2254ef534bfe32055489ed677d461077b37f2ee62bf7b5fc4f7362f`). The raw response stays in the ignored recovery checkpoint; public output omits it and uses CSS system fallbacks. The social icon WOFF remains unrecovered.
+
+
+## Additional Squarespace listing captures — October 17, 2026
+
+Two individually inspected listing pages were recovered: the reverse-pagination capture `20160611091915` (20 observations, September–February 2013) and author-filtered capture `20160529163313` (20 observations, February–January 2013). They add B61–B100. Across both, 37 distinct internal post routes are linked; all 37 have independently recovered page bytes, including 33 routes newly added to the source manifest. Three entries link to third-party pages and are not represented as Blue Scholars captures.
+
+The page-two URL history was also inspected individually: eight CDX rows across slash/no-slash spellings and captures from 2015 through 2023. Seven captures through 2020 have the same normalized 20-entry article-text signature; the 2023 capture contains a different entry set and remains held as a later alternative. The default candidate continues to use the 2020 capture. Raw variants, hashes, sizes, and exact CDX URLs are recorded under P07 `capture_variants` and Q58–Q61.
+
+
+## Current measured checkpoint — October 17, 2026 (after listing inventory and font-policy update)
+
+The complete local Wayback index has 21,517 capture rows across 9,092 resource URLs. The checkpoint contains 1,983 unique raw files (110,018,036 bytes): 3,045 recovered resources, 50 held for review, 1,193 failed, and 4,804 queued. Capture availability and downloaded response bodies are separate counts.
+
+The candidate has 924 recovered pages, 4 derived LJ views, 1851 placeholders, and 737 local source assets. Root and `/bluescholars/` offline checks both pass with zero errors and zero remote automatic resources. Current findings include 5,724 missing embedded assets, 295 linked assets not recovered, 145 external media links, 22 font resources not bundled, and 9 invalid source records. All recovered font binaries are withheld from public output; CSS declarations fall back to system fonts.
+
+The source manifest contains 237 records and 236 blog-entry observations. Beyond the five general lists (B01–B100), 36 recovered tag/author listing captures yielded 136 additional observations and 46 newly inventoried post bodies, each backed by its own recovered response. See the manifest and checklist for timestamps, hashes, and source URLs. The public site is an unreviewed preview; both review flags remain false. Wayback continuation `38985105267` was still in progress at the last status check.

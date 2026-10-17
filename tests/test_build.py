@@ -130,7 +130,7 @@ def add_raw(state,url,kind,body):
     r.update(status='recovered',sha256=sha,raw_path=path,actual_capture=TARGET,bytes=len(body))
     state.save()
 
-def test_candidate_publishes_recovered_font_and_localizes_font_face(tmp_path):
+def test_candidate_keeps_font_provenance_without_redistributing_font_binary(tmp_path):
     fixture_root(tmp_path);s=State(tmp_path)
     css='https://static.example/site.css'
     font='https://static.example/universal/fonts/ui.woff'
@@ -138,11 +138,25 @@ def test_candidate_publishes_recovered_font_and_localizes_font_face(tmp_path):
     add_raw(s,css,'css',b"@font-face{font-family:ui;src:url('/universal/fonts/ui.woff') format('woff')}body{font-family:ui}")
     add_raw(s,font,'font',b'wOFF\x00\x01fixture')
     report=build(tmp_path,tmp_path/'_candidate','/bluescholars',candidate=True)
-    assert report['local_source_assets']>=2
+    assert report['local_source_assets']==1
+    assert any(issue['type']=='font_not_packaged' for issue in report['issues'])
     output=(tmp_path/'_candidate/assets'/ (hashlib.sha256(b'wOFF\x00\x01fixture').hexdigest()+'.woff'))
-    assert output.read_bytes()==b'wOFF\x00\x01fixture'
+    assert not output.exists()
     css_path=tmp_path/'_candidate/assets'/ (hashlib.sha256(css.encode()).hexdigest()[:24]+'.css')
-    assert '@font-face' in css_path.read_text() and '/bluescholars/assets/'+hashlib.sha256(b'wOFF\x00\x01fixture').hexdigest()+'.woff' in css_path.read_text()
+    rendered=css_path.read_text()
+    assert '@font-face' not in rendered and '.woff' not in rendered
+    assert 'font-family:ui' in rendered
+
+
+def test_source_promotion_does_not_copy_font_binaries(tmp_path):
+    fixture_root(tmp_path);s=State(tmp_path)
+    font='https://static.example/universal/fonts/ui.woff'
+    add_raw(s,HOME,'html',b'<html><body>Home</body></html>')
+    add_raw(s,font,'font',b'wOFF\x00\x01fixture')
+    result=promote(tmp_path,reviewed=True)
+    assert result['promoted']==1
+    assert not list((tmp_path/'source/raw').glob('*.woff'))
+    assert json.loads((tmp_path/'source/catalog.json').read_text())['resources'][font].get('raw_path') is None
 
 
 def test_empty_preview_honest_and_links_valid(tmp_path):

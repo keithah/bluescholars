@@ -1,25 +1,25 @@
 {
-  "updated_at": "2026-10-17T01:04:30Z",
+  "updated_at": "2026-10-17T01:22:36.451634+00:00",
   "source_checkpoint_run": "38975520061",
   "capture_index": {
-    "indexed_capture_records": 21506,
+    "indexed_capture_records": 21517,
     "complete": true,
-    "scope": "completed bluescholars.com domain CDX inventory plus targeted Squarespace font/image-prefix indexes; rows are not downloaded files"
+    "scope": "completed Bluescholars domain CDX plus targeted Squarespace CSS/font/image prefix indexes"
   },
   "resource_inventory": {
-    "resource_urls": 9083,
+    "resource_urls": 9092,
     "statuses": {
-      "queued": 4802,
-      "recovered": 3038,
+      "queued": 4804,
+      "recovered": 3045,
       "needs_review": 50,
       "failed": 1193,
       "excluded": 0
     }
   },
   "validated_local_files": {
-    "unique_sha256_files": 1978,
-    "bytes": 109441718,
-    "candidate_local_source_assets": 738
+    "unique_sha256_files": 1983,
+    "bytes": 110018036,
+    "candidate_local_source_assets": 737
   },
   "candidate": {
     "recovered_pages": 924,
@@ -27,7 +27,7 @@
     "derived_livejournal_views": 4,
     "publish_approved": false,
     "visual_fidelity_verified": false,
-    "local_source_assets": 738,
+    "local_source_assets": 737,
     "project_subpath_check": {
       "base_path": "/bluescholars/",
       "ok": true,
@@ -37,13 +37,21 @@
       "ok": true,
       "errors": 0
     },
-    "live_preview_commit": "c7bd4bdeaf8ccc256e35d212069a56218c855dfd"
+    "live_preview_commit": "c7bd4bdeaf8ccc256e35d212069a56218c855dfd",
+    "base_path": "/bluescholars/",
+    "issue_counts": {
+      "invalid_source": 9,
+      "missing_asset": 5724,
+      "font_not_packaged": 22,
+      "linked_asset_not_recovered": 295,
+      "external_media_link_only": 145
+    }
   },
   "known_missing_dependencies": {
-    "images_or_other_embedded_assets": 4110,
+    "images_or_other_embedded_assets": 5724,
     "linked_assets_not_recovered": 295,
     "external_media_link_only": 145,
-    "fonts_not_packaged": 17,
+    "fonts_not_packaged": 22,
     "invalid_source_records": 9
   },
   "checks": {
@@ -80,16 +88,65 @@
     "source_report": "asset-index-2026-10-17.json"
   },
   "squarespace_listing_coverage": {
-    "observed_listing_entries": 60,
+    "observed_listing_entries": 236,
     "listing_captures": [
       "20201109000819",
       "20200220154840",
-      "20160611143343"
+      "20160611143343",
+      "20160611091915",
+      "20160529163313",
+      "20190420033356",
+      "20160611114321",
+      "20160611141246",
+      "20160611105407",
+      "20160611071912",
+      "20160611134337",
+      "20160529150507",
+      "20160611141246",
+      "20160529144823",
+      "20160611132211",
+      "20190419234845",
+      "20160529184152",
+      "20160529204857",
+      "20160529174529",
+      "20190420041247",
+      "20190420025259",
+      "20160611073554",
+      "20160611103756",
+      "20160611143338",
+      "20160611092538",
+      "20160611090817",
+      "20160611141250",
+      "20160611103208",
+      "20160611134341",
+      "20160611072024",
+      "20160611135033",
+      "20160611132219",
+      "20160611083905",
+      "20160529214254",
+      "20160611135033",
+      "20160611141257",
+      "20160611132206",
+      "20160611085325",
+      "20160611085325",
+      "20160611083006",
+      "20190420025910"
     ],
-    "newly_added_entries": 20,
-    "new_entries_ids": "B41-B60",
-    "older_listing_raw_sha256": "8dc84128b2368456b9bbe1f8d107acbee3a2f89e8511353ea1bbaff323f27fda",
-    "post_bodies": "Not implied by listing observations; inventory/recovery statuses remain independent."
+    "newly_added_entries": 40,
+    "new_entries_ids": "B61-B100",
+    "distinct_internal_post_routes_in_new_listings": 37,
+    "new_internal_routes_added_to_manifest": 33,
+    "all_internal_post_bodies_independently_recovered": true,
+    "2023_alternate_page_two_review": "Different 20-entry listing content; retained needs_review_after_reference_capture.",
+    "listing_observation_rows": 236,
+    "distinct_internal_post_routes": 104,
+    "additional_tag_author_listing_captures": 36,
+    "additional_tag_author_observations": 136,
+    "distinct_internal_routes_in_additional_tag_author_listings": 61,
+    "new_post_routes_added_to_manifest": 46,
+    "new_post_bodies_independently_recovered": 46,
+    "all_internal_post_bodies_in_added_records_recovered": true,
+    "index_method": "Offline extraction from individually recovered HTML responses already in the completed local Wayback domain index; per-source capture timestamp, local path, length, SHA-256, and raw replay URL are stored in the manifest."
   },
   "squarespace_css_recovery": {
     "captured_parts": 4,
@@ -110,10 +167,12 @@
     "icon_fonts": "Squarespace UI WOFF is recovered; social icon WOFF URL only has HTML-landed captures and is still missing.",
     "page_images": "20 distinct IDs observed in older listing; tested exact original URLs at two capture dates (40 attempts) and no valid image payload was recovered.",
     "squarespace_ui_font": {
-      "status": "recovered",
+      "status": "captured_for_provenance_only",
       "timestamp": "20130926135509",
       "sha256": "b980267ac2254ef534bfe32055489ed677d461077b37f2ee62bf7b5fc4f7362f",
-      "bytes": 9068
+      "bytes": 9068,
+      "distribution_status": "excluded_by_no_font_binary_redistribution_policy",
+      "site_rendering": "@font-face omitted; original family name falls back to system CSS font stack"
     },
     "image_prefix_query": {
       "rows": 372,
@@ -125,17 +184,18 @@
     },
     "modern_cdn_image_alias_rows": 0
   },
-  "resource_urls": 9083,
-  "indexed_capture_records": 21506,
+  "resource_urls": 9092,
+  "indexed_capture_records": 21517,
   "statuses": {
-    "queued": 4802,
-    "recovered": 3038,
+    "queued": 4804,
+    "recovered": 3045,
     "needs_review": 50,
     "failed": 1193,
     "excluded": 0
   },
-  "unique_downloaded_files": 1978,
-  "downloaded_bytes": 109441718,
+  "unique_downloaded_files": 1983,
+  "downloaded_bytes": 110018036,
   "failed_attempts": 6416,
-  "index_complete": true
+  "index_complete": true,
+  "active_recovery_run": "38985105267"
 }

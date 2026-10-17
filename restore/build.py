@@ -17,6 +17,8 @@ from .urls import HOME,TARGET,SQUARESPACE_START,identity,is_site,route,asset_rou
 CORE=[('/', 'Homepage'),('/blog/','Blog'),('/shows/','Shows'),('/video/','Video'),('/shop/','Shop'),('/holler/','Holler')]
 FALLBACK_UI='''.archive-restoration-notice,.archive-gap-page {font:16px/1.6 system-ui,sans-serif}
 .archive-restoration-notice{padding:12px;border-bottom:1px solid #ddd}.archive-navigation a{margin-right:16px}
+.archive-menu-open #mobileNav{height:auto!important;overflow:visible!important}
+.archive-menu-open #mobileMenuLink a{cursor:pointer}
 .archive-gap-page{max-width:900px;margin:60px auto;padding:0 24px}.archive-missing-image{display:block;padding:30px;border:1px dashed #999}
 .archive-gap-page a{overflow-wrap:anywhere}.archive-gap-page table{width:100%;border-collapse:collapse}.archive-gap-page td,.archive-gap-page th{padding:12px;text-align:left;border-bottom:1px solid #ddd}'''
 
@@ -324,7 +326,7 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
     # Generated, fixed destinations only. Unknown offsets stay visible rather than guessed.
     from .urls import PAGINATION
     mappings={offset:base+'/2013'+path for offset,path in PAGINATION.items() if '/2013'+path in pages}
-    script='''"use strict"; (() => {\n const mapping = MAPPING;\n const params = new URLSearchParams(location.search);\n const offset = params.get("offset");\n if (location.pathname.replace(/\\/$/, "") === BLOG && [...params].length === 1 && offset && mapping[offset]) {\n  location.replace(mapping[offset] + location.hash);\n }\n})();\n'''.replace('MAPPING',json.dumps(mappings)).replace('BLOG',json.dumps(base+'/2013/blog'))
+    script='''"use strict"; (() => {\n const mapping = MAPPING;\n const params = new URLSearchParams(location.search);\n const offset = params.get("offset");\n if (location.pathname.replace(/\\/$/, "") === BLOG && [...params].length === 1 && offset && mapping[offset]) {\n  location.replace(mapping[offset] + location.hash);\n }\n if (typeof document !== "undefined") {\n const menu = document.querySelector("#mobileMenuLink a[aria-controls='mobileNav']");\n const mobileNav = document.getElementById("mobileNav");\n if (menu && mobileNav) {\n  const setOpen = open => { document.body.classList.toggle("archive-menu-open", open); menu.setAttribute("aria-expanded", String(open)); };\n  menu.addEventListener("click", event => { event.preventDefault(); setOpen(menu.getAttribute("aria-expanded") !== "true"); });\n  menu.addEventListener("keydown", event => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); menu.click(); } });\n  mobileNav.addEventListener("click", event => { if (event.target.closest("a")) setOpen(false); });\n }\n }\n})();\n'''.replace('MAPPING',json.dumps(mappings)).replace('BLOG',json.dumps(base+'/2013/blog'))
     (output/'assets/legacy.js').write_text(script)
     for url,r in usable.items():
         if r['kind'] not in ('css','image'): continue

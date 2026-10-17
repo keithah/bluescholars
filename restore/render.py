@@ -161,6 +161,37 @@ def render_html(text: str,url: str,resources: dict,base: str,route_prefix='',ali
         soup.html.insert(0,soup.new_tag('head'))
     if soup.body is None:
         soup.html.append(soup.new_tag('body'))
+    # The late-2000s navigation artwork uses image maps whose AREA elements
+    # lost their hrefs in the surviving source. The alt labels and matching
+    # dated pages provide destination names; preserve the original geometry.
+    if resolver.route_prefix.startswith('/2007'):
+        destinations={
+            'news':'news.html','bio':'bio.html','shows':'shows.html',
+            'media.htmll':'media.html','press.htmll':'press.html',
+            'contact.htmll':'contact.html','store.htmll':'store.html',
+            'forum.htmll':'forum.htm','journal.htmll':'journal.html',
+        }
+        for area in soup.find_all('area'):
+            label=' '.join(area.get('alt','').lower().split())
+            if not area.get('href') and area.find_parent('map') and label in destinations:
+                area['href']='http://bluescholars.com/'+destinations[label]
+            if area.get('href'):
+                target=resolver.link(area['href'],url)
+                if target:
+                    area['href']=target
+                    area['tabindex']='0'
+                    if not area.get('aria-label'):
+                        area['aria-label']=area.get('alt') or 'Historical image-map link'
+                else:
+                    area.attrs.pop('href',None)
+    # Squarespace's mobile menu is an anchor with no href; its behavior came
+    # from platform JavaScript, which is intentionally not retained.
+    mobile_menu=soup.select_one('#mobileMenuLink a')
+    if mobile_menu and soup.find(id='mobileNav'):
+        mobile_menu['role']='button'
+        mobile_menu['tabindex']='0'
+        mobile_menu['aria-controls']='mobileNav'
+        mobile_menu['aria-expanded']='false'
     # Squarespace commonly stores an iframe as escaped data-html instead of live markup.
     # Parse only that inert embed fragment; never execute the associated platform code.
     def embed_fragments(value):
@@ -312,7 +343,7 @@ def render_html(text: str,url: str,resources: dict,base: str,route_prefix='',ali
             node['style']=_declarations(node['style'],resolver,url)
         # No stray fetching attributes on unknown elements, including inline SVG.
         if node.name not in ('img',) and node.get('src'): node.attrs.pop('src',None)
-        if node.name not in ('a','link') and node.get('href'): node.attrs.pop('href',None)
+        if node.name not in ('a','area','link') and node.get('href'): node.attrs.pop('href',None)
         node.attrs.pop('srcset',None)
     for svg in list(soup.find_all('svg')):
         # Inline vectors can carry active/external content; retain safe geometry only.

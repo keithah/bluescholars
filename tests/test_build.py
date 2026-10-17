@@ -75,6 +75,29 @@ def test_html_localizes_preserves_layout_and_removes_tracking():
     assert '/bluescholars/assets/bg.png' in text
     assert 'Content-Security-Policy' in text
 
+def test_2007_image_map_labels_get_local_navigation_targets():
+    source='''<html><body><map name="Map2">
+      <area alt="news" coords="78,158,120,176" shape="rect">
+      <area alt="bio" coords="129,159,155,177" shape="rect">
+      <area alt="shows" coords="164,160,209,176" shape="rect">
+      <area alt="media.htmll" coords="217,160,258,177" shape="rect">
+    </map></body></html>'''
+    text,_=render_html(source,'http://bluescholars.com/lyrics.html',{},'', '/2007')
+    areas=BeautifulSoup(text,'html.parser').find_all('area')
+    assert [area['href'] for area in areas]==[
+        '/2007/news.html','/2007/bio.html','/2007/shows.html','/2007/media.html']
+    assert all(area.get('tabindex')=='0' for area in areas)
+
+def test_squarespace_mobile_menu_control_is_keyboard_and_touch_operable():
+    source='''<html><body><div id="mobileNav"><nav><a href="/blog">BLOG</a></nav></div>
+      <nav id="mobileMenuLink"><ul><li><a>Menu</a></li></ul></nav></body></html>'''
+    text,_=render_html(source,HOME,{},'','/2013')
+    menu=BeautifulSoup(text,'html.parser').select_one('#mobileMenuLink a')
+    assert menu['role']=='button'
+    assert menu['tabindex']=='0'
+    assert menu['aria-controls']=='mobileNav'
+    assert menu['aria-expanded']=='false'
+
 def test_css_rewrites_dependencies_and_keeps_only_recovered_fonts():
     mapping=dict(RES)
     mapping['https://cdn.example/base.css']={'kind':'css','local_path':'/assets/base.css'}

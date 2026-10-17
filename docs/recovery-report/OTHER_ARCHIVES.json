@@ -414,6 +414,105 @@
         "complete": false,
         "note": "A paginated exact history with many HTTP 200 rows; not acquired or used because it is ad-platform CSS, not the journal theme."
       }
+    },
+    "Wayback legacy WordPress origin": {
+      "archive": "Internet Archive Wayback CDX",
+      "query": {
+        "url": "02cd02a.netsolhost.com",
+        "matchType": "domain",
+        "output": "json",
+        "fields": [
+          "timestamp",
+          "original",
+          "statuscode",
+          "mimetype",
+          "digest",
+          "length"
+        ],
+        "filters": [
+          "statuscode:200",
+          "collapse=urlkey"
+        ],
+        "limit": 10000,
+        "executed_at": "2026-10-17T01:27Z"
+      },
+      "observed_rows": 206,
+      "html_rows": 145,
+      "html_capture_years": {
+        "2009": 8,
+        "2010": 48,
+        "2011": 88,
+        "2013": 1
+      },
+      "new_unkeyed_paths_observed": [
+        {
+          "timestamp": "20100312073016",
+          "path": "/blog/2009/03/sxsw-2009-where-well-be/"
+        },
+        {
+          "timestamp": "20110302034042",
+          "path": "/blog/2011/01/the-hip-hop-word-count-blue-scholars-approved/"
+        },
+        {
+          "timestamp": "20110312131606",
+          "path": "/blog/bayani-redux-dropping-september-1/"
+        },
+        {
+          "timestamp": "20090814173713",
+          "path": "/blog/bio/bluescholarscom-a-retrospective/"
+        },
+        {
+          "timestamp": "20110312131557",
+          "path": "/blog/bluescholarscom-a-retrospective/"
+        },
+        {
+          "timestamp": "20110314022321",
+          "path": "/blog/happy-halloween/"
+        },
+        {
+          "timestamp": "20110318125526",
+          "path": "/blog/mlk-day-mon-117-workshop-end-police-violence-deportation-and-suvelliance-now/tumblr_ldx6vgxw691qaeev7o1_1280/"
+        },
+        {
+          "timestamp": "20110314032403",
+          "path": "/blog/news-we-have-a-winner/"
+        },
+        {
+          "timestamp": "20110312104634",
+          "path": "/blog/page/65/"
+        },
+        {
+          "timestamp": "20110402090025",
+          "path": "/blog/the-cinemetropolis-listening-party-part-1/3a475c6/"
+        },
+        {
+          "timestamp": "20110402090304",
+          "path": "/blog/the-cinemetropolis-listening-party-part-1/c5d8d0c/"
+        },
+        {
+          "timestamp": "20110402090309",
+          "path": "/blog/the-cinemetropolis-listening-party-part-1/e8c3acb/"
+        },
+        {
+          "timestamp": "20110402090030",
+          "path": "/blog/the-cinemetropolis-listening-party-part-1/eaba022/"
+        },
+        {
+          "timestamp": "20110402090313",
+          "path": "/blog/the-cinemetropolis-listening-party-part-1/ee5ce53/"
+        },
+        {
+          "timestamp": "20110402090035",
+          "path": "/blog/the-cinemetropolis-listening-party-part-1/fd685f4-1/"
+        },
+        {
+          "timestamp": "20110312094649",
+          "path": "/blog/the-hip-hop-word-count-blue-scholars-approved/kmba-rap-lyric-cntr/"
+        }
+      ],
+      "acquisition_status": "No original response bytes acquired from these 16 routes in this pass. An initial capture invocation misclassified extensionless CDX text/html routes as images; a subsequent local Wayback connection was refused before retrying. These errors do not mean the captures are unavailable.",
+      "source_checkpoint": "The complete CDX response was not saved during the initial query. Workflow run 38991229745 is queued to repeat the legacy-host index with the corrected importer and preserve the complete response before acquisition.",
+      "interpretation": "A distinct historical WordPress host yields additional CDX records beyond the current local URL-key inventory. Query evidence alone is not treated as recovered page content."
     }
   },
   "limitations": [

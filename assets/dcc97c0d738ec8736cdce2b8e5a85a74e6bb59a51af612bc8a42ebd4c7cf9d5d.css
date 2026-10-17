@@ -107,7 +107,7 @@ td {vertical-align: top;}
 .sqs-form-pre-submit-topic-content{border:1px solid #333;-moz-border-radius:4px;border-radius:4px;}
 .sqs-form-pre-submit-topic-content .topic-control-bar{background:#333;height:40px;}
 .sqs-form-pre-submit-topic-content .topic-control-bar .topic-drag-handle-wrapper{float:left;width:7%;height:100%;cursor:move;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
-.sqs-form-pre-submit-topic-content .topic-control-bar .topic-drag-handle-wrapper .topic-drag-handle{background-image:url("/bluescholars/assets/33861c21edf64747e25303a4b90963b1edc351293f5a8fdd9b9874c8b3d6ec34.png");background-repeat:no-repeat;background-position:center center;height:16px;width:16px;margin:12px auto 0;opacity:.3;}
+.sqs-form-pre-submit-topic-content .topic-control-bar .topic-drag-handle-wrapper .topic-drag-handle{background-image:url("/assets/33861c21edf64747e25303a4b90963b1edc351293f5a8fdd9b9874c8b3d6ec34.png");background-repeat:no-repeat;background-position:center center;height:16px;width:16px;margin:12px auto 0;opacity:.3;}
 .sqs-form-pre-submit-topic-content .topic-control-bar .topic-title{float:left;width:66%;height:100%;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;padding:7px 0;}
 .sqs-form-pre-submit-topic-content .topic-control-bar .topic-title .sqs-dialog-field.sqs-text.name-topicTitle input{font-size:12px;padding:6px;margin:0;background-color:transparent;-webkit-transition:background-color .2s ease-out;-moz-transition:background-color .2s ease-out;-o-transition:background-color .2s ease-out;transition:background-color .2s ease-out;color:#eaeaea;border:none;-moz-border-radius:2px;border-radius:2px;text-overflow:ellipsis;}
 .sqs-form-pre-submit-topic-content .topic-control-bar .topic-title .sqs-dialog-field.sqs-text.name-topicTitle input:hover{background-color:#444;}
@@ -134,7 +134,7 @@ td {vertical-align: top;}
 .sqs-form-pre-submit-topic-content .topic-children .topic-child-controls .topic-child-control-wrapper .topic-child-control:focus{outline:none;color:#111;-webkit-box-shadow:0 0 0 1px rgba(0, 0, 0, .1), 0 0 0 2px  #42b1ff;-moz-box-shadow:0 0 0 1px rgba(0, 0, 0, .1), 0 0 0 2px  #42b1ff;box-shadow:0 0 0 1px rgba(0, 0, 0, .1), 0 0 0 2px  #42b1ff;}
 .sqs-form-pre-submit-topic-content .topic-children .topic-sub-topics{padding:10px;}
 .sqs-form-pre-submit-topic-content .topic-children .topic-sub-topics .sqs-form-pre-submit-topic-content .topic-control-bar{height:30px;}
-.sqs-form-pre-submit-topic-content .topic-children .topic-sub-topics .sqs-form-pre-submit-topic-content .topic-control-bar .topic-drag-handle{margin-top:7px;background-image:url("/bluescholars/assets/9732ce22cb96b1bee115588fc5fa76ff38cd9f213840d5c30d5a16830567dbe4.png");}
+.sqs-form-pre-submit-topic-content .topic-children .topic-sub-topics .sqs-form-pre-submit-topic-content .topic-control-bar .topic-drag-handle{margin-top:7px;background-image:url("/assets/9732ce22cb96b1bee115588fc5fa76ff38cd9f213840d5c30d5a16830567dbe4.png");}
 .sqs-form-pre-submit-topic-content .topic-children .topic-sub-topics .sqs-form-pre-submit-topic-content .topic-control-bar .topic-title{padding:4px 0;}
 .sqs-form-pre-submit-topic-content .topic-children .topic-sub-topics .sqs-form-pre-submit-topic-content .topic-control-bar .topic-title input{font-size:11px;padding:4px;}
 .sqs-form-pre-submit-topic-content .topic-children .topic-sub-topics .sqs-form-pre-submit-topic-content .topic-control-bar .edit-topic{font-size:8px;margin-top:9px;}
@@ -754,9 +754,9 @@ body.sqs-lightbox-open{position:static !important;overflow-y:hidden;}
 .text-align-right {text-align: right;}
 .columns-1 [class*=sqs-col-] {width: 100% !important;}
 .sqs-block .state-message,
-.sqs-state-message {-moz-border-radius: 3px;border-radius: 3px;padding: 14px 12px 14px 40px;font-size: 13px;line-height: 20px;color: #fff;background: #222 url("/bluescholars/assets/cd2eb8553959017981ff10db26f4ae8d4fd2afa87fd3ae71b01a23e1ec3cdd25.png") 14px 16px no-repeat;}
+.sqs-state-message {-moz-border-radius: 3px;border-radius: 3px;padding: 14px 12px 14px 40px;font-size: 13px;line-height: 20px;color: #fff;background: #222 url("/assets/cd2eb8553959017981ff10db26f4ae8d4fd2afa87fd3ae71b01a23e1ec3cdd25.png") 14px 16px no-repeat;}
 .sqs-block .state-message.warning,
-.sqs-state-message.warning {background: #222 url("/bluescholars/assets/ca0fb12539dc6ef1e229afe896b6de4a15b3a71a91a9b94e083e4a22c6a00bb9.png") 14px 15px no-repeat;}
+.sqs-state-message.warning {background: #222 url("/assets/ca0fb12539dc6ef1e229afe896b6de4a15b3a71a91a9b94e083e4a22c6a00bb9.png") 14px 15px no-repeat;}
 .sqs-block .state-message.information,
 .sqs-state-message.information {background: #222;padding: 30px 20px;text-align: center;color: #999;font-size: 11px;}
 .sqs-block .state-message .title,
@@ -1450,7 +1450,7 @@ body.sqs-lightbox-open{position:static !important;overflow-y:hidden;}
 .video-block .intrinsic .embed-block-provider-SoundCloud iframe,
 .embed-block .sqs-block-content .intrinsic .embed-block-provider-SoundCloud iframe,
 .video-block .sqs-block-content .intrinsic .embed-block-provider-SoundCloud iframe {width: 100%;}
-.sqs-search-ui-button-wrapper .title {opacity: .7;-webkit-transition: opacity .2s ease-out;-moz-transition: opacity .2s ease-out;-o-transition: opacity .2s ease-out;transition: opacity .2s ease-out;border: 1px solid #aaa;padding: 12px 12px 12px 45px;background: url("/bluescholars/assets/922a90a66533a90f16c1ecf8adc85dffb39b11dbb9f7c4cbe13347358610f799.png") no-repeat 15px 50%;max-width: 240px;min-height: 20px;line-height: 20px;display: block;cursor: pointer;}
+.sqs-search-ui-button-wrapper .title {opacity: .7;-webkit-transition: opacity .2s ease-out;-moz-transition: opacity .2s ease-out;-o-transition: opacity .2s ease-out;transition: opacity .2s ease-out;border: 1px solid #aaa;padding: 12px 12px 12px 45px;background: url("/assets/922a90a66533a90f16c1ecf8adc85dffb39b11dbb9f7c4cbe13347358610f799.png") no-repeat 15px 50%;max-width: 240px;min-height: 20px;line-height: 20px;display: block;cursor: pointer;}
 .sqs-search-ui-button-wrapper .title:hover {opacity: 1;}
 .twitter-block .tweet-list {list-style-type: none;margin: 0 0 2.2em 0;padding: 0;}
 .twitter-block .tweet {margin: 0 0 2.2em 0;}

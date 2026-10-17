@@ -1,0 +1,76 @@
+{
+  "batch": "ninth local broad recovery retry",
+  "started_at": "2026-10-17T18:07:15Z",
+  "finished_at": "2026-10-17T18:20:36.233357+00:00",
+  "command": ".venv311/bin/python -m restore recover --max-files 200 --retry-failed --delay 0.5 --timeout 25 --retries 1",
+  "processed_urls": 200,
+  "validated_responses": 1,
+  "validated_kind_counts": {
+    "html": 1
+  },
+  "captures": [
+    {
+      "url": "http://bluescholars.com:80/blog/now-available-limited-edition-cinemetropolis-2-lp-vinyl-release-date-announcement/attachment/1",
+      "kind": "html",
+      "requested_capture": "20110402031641",
+      "actual_capture": "20110402031641",
+      "bytes": 8745,
+      "sha256": "d1fc0dd1db3568a47c35af18ee986e0ed894a2f78b7210f2c6a59223fae20b3a",
+      "raw_path": "recovery/raw/d1fc0dd1db3568a47c35af18ee986e0ed894a2f78b7210f2c6a59223fae20b3a.html",
+      "attempted_at": "2026-10-17T18:13:33.259450+00:00"
+    }
+  ],
+  "new_resource_urls": 0,
+  "new_index_rows": 3,
+  "new_unique_raw_files": 1,
+  "new_unique_raw_bytes": 8745,
+  "before": {
+    "resource_urls": 11194,
+    "statuses": {
+      "queued": 5304,
+      "recovered": 3921,
+      "needs_review": 72,
+      "failed": 1897,
+      "excluded": 0
+    },
+    "indexed_capture_records": 23303,
+    "unique_downloaded_files": 2305,
+    "downloaded_bytes": 147695894,
+    "failed_attempts": 8916
+  },
+  "after": {
+    "resource_urls": 11194,
+    "statuses": {
+      "queued": 5265,
+      "recovered": 3922,
+      "needs_review": 72,
+      "failed": 1935,
+      "excluded": 0
+    },
+    "indexed_capture_records": 23306,
+    "index_complete": true,
+    "unique_downloaded_files": 2306,
+    "downloaded_bytes": 147704639,
+    "failed_attempts": 9048,
+    "generated_at": "2026-10-17T18:20:36.233357+00:00"
+  },
+  "candidate_rebuilds": {
+    "root": {
+      "recovered_pages": 977,
+      "placeholder_pages": 2179,
+      "local_source_assets": 1055,
+      "check_ok": true,
+      "errors": 0
+    },
+    "project_subpath": {
+      "base_path": "/bluescholars/",
+      "recovered_pages": 977,
+      "placeholder_pages": 2179,
+      "local_source_assets": 1055,
+      "check_ok": true,
+      "errors": 0
+    }
+  },
+  "changed_rendered_routes": [],
+  "note": "One newly downloaded alias URL for the Cinemetropolis LP attachment resolved to the same existing route and did not change candidate HTML. The capture bytes and URL provenance are retained; both root and project-subpath candidates pass offline checks."
+}

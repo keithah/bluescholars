@@ -1,0 +1,129 @@
+{
+  "batch": "eighth local broad recovery retry",
+  "started_at": "2026-10-17T17:53:00Z",
+  "finished_at": "2026-10-17T18:07:15.401587+00:00",
+  "command": ".venv311/bin/python -m restore recover --max-files 200 --retry-failed --delay 0.5 --timeout 25 --retries 1",
+  "processed_urls": 200,
+  "validated_responses": 4,
+  "validated_kind_counts": {
+    "html": 4
+  },
+  "captures": [
+    {
+      "url": "http://02cd02a.netsolhost.com/blog/2010/01/photo-kid-outside-of-viet-wah-who-had-no-clue-who-the-hell-i-am/",
+      "kind": "html",
+      "requested_capture": "20100226174320",
+      "actual_capture": "20100218031103",
+      "bytes": 29857,
+      "sha256": "2427ce42276fd2f8ac8323c3681990b4759a67e8742603774bb1bc5466a9bade",
+      "raw_path": "recovery/raw/2427ce42276fd2f8ac8323c3681990b4759a67e8742603774bb1bc5466a9bade.html",
+      "attempted_at": "2026-10-17T18:00:51.573091+00:00"
+    },
+    {
+      "url": "http://bluescholars.com/blog/update-cinemetropolis-advance-digital-download-out-now-official-release-date-june-14/print-2/",
+      "kind": "html",
+      "requested_capture": "20110520234313",
+      "actual_capture": "20110522063211",
+      "bytes": 9299,
+      "sha256": "ce8e9c8a004150d43074dbd495eeaa37eb8ac2f974fa0665304e3ef14044ea2c",
+      "raw_path": "recovery/raw/ce8e9c8a004150d43074dbd495eeaa37eb8ac2f974fa0665304e3ef14044ea2c.html",
+      "attempted_at": "2026-10-17T18:01:42.522696+00:00"
+    },
+    {
+      "url": "http://02cd02a.netsolhost.com/blog/2010/02/new-music-a-sade-redux-by-prometheus-brown-titled-michelle-malkin/comment-page-1/",
+      "kind": "html",
+      "requested_capture": "20100217191955",
+      "actual_capture": "20100217191955",
+      "bytes": 40624,
+      "sha256": "54eb6bf3c98ae68ea507bf575b4082f9acf98bc1271b72814379833e1d603db1",
+      "raw_path": "recovery/raw/54eb6bf3c98ae68ea507bf575b4082f9acf98bc1271b72814379833e1d603db1.html",
+      "attempted_at": "2026-10-17T18:02:10.052664+00:00"
+    },
+    {
+      "url": "http://bluescholars.com/blog/now-available-limited-edition-cinemetropolis-2-lp-vinyl-release-date-announcement/attachment/1/",
+      "kind": "html",
+      "requested_capture": "20110402184435",
+      "actual_capture": "20110402184435",
+      "bytes": 8745,
+      "sha256": "95f9160998b5b19b66d1f447e9be966ff99e0349ed6e5fc9d4b02cdca8cf6dcf",
+      "raw_path": "recovery/raw/95f9160998b5b19b66d1f447e9be966ff99e0349ed6e5fc9d4b02cdca8cf6dcf.html",
+      "attempted_at": "2026-10-17T18:02:12.424948+00:00"
+    }
+  ],
+  "new_resource_urls": 21,
+  "new_index_rows": 6,
+  "new_unique_raw_files": 0,
+  "new_unique_raw_bytes": 0,
+  "before": {
+    "resource_urls": 11173,
+    "statuses": {
+      "queued": 5325,
+      "recovered": 3917,
+      "needs_review": 72,
+      "failed": 1859,
+      "excluded": 0
+    },
+    "indexed_capture_records": 23297,
+    "unique_downloaded_files": 2305,
+    "downloaded_bytes": 147695894,
+    "failed_attempts": 8798
+  },
+  "after": {
+    "resource_urls": 11194,
+    "statuses": {
+      "queued": 5304,
+      "recovered": 3921,
+      "needs_review": 72,
+      "failed": 1897,
+      "excluded": 0
+    },
+    "indexed_capture_records": 23303,
+    "index_complete": true,
+    "unique_downloaded_files": 2305,
+    "downloaded_bytes": 147695894,
+    "failed_attempts": 8916,
+    "generated_at": "2026-10-17T18:07:15.401587+00:00"
+  },
+  "candidate_rebuilds": {
+    "root": {
+      "recovered_pages": 977,
+      "placeholder_pages": 2179,
+      "local_source_assets": 1055,
+      "check_ok": true,
+      "errors": 0
+    },
+    "project_subpath": {
+      "recovered_pages": 977,
+      "placeholder_pages": 2179,
+      "local_source_assets": 1055,
+      "check_ok": true,
+      "errors": 0
+    }
+  },
+  "changed_rendered_routes": [
+    "/2009/blog/now-available-limited-edition-cinemetropolis-2-lp-vinyl-release-date-announcement/attachment/1/",
+    "/2009/blog/update-cinemetropolis-advance-digital-download-out-now-official-release-date-june-14/print-2/",
+    "/2009/archive-query/062db2d5099245042973/",
+    "/2009/archive-query/08786e1088faa3f9fd59/",
+    "/2009/archive-query/088a07892aaccb853cfc/",
+    "/2009/archive-query/107e870374c2167bf603/",
+    "/2009/archive-query/27a39a4c9415dfda3f36/",
+    "/2009/archive-query/2b32205a56b9816a6fab/",
+    "/2009/archive-query/314bfe933c7f489094b0/",
+    "/2009/archive-query/63a4b3d260c4efd0fb95/",
+    "/2009/archive-query/69bae1986015ff614d18/",
+    "/2009/archive-query/78ce8617f7ffdff89539/",
+    "/2009/archive-query/7903c6037d65f321889d/",
+    "/2009/archive-query/7de23ac4d1241c9f0755/",
+    "/2009/archive-query/b8812779d5797ef48b78/",
+    "/2009/archive-query/ba112759fc3bcfbdb02b/",
+    "/2009/archive-query/c63e2e2b8d3c56d6ca6b/",
+    "/2009/archive-query/cc69e52c2d3e0b85b6d1/",
+    "/2009/archive-query/dc89e0275172401d7a18/",
+    "/2009/archive-query/dde489879e43422e463f/",
+    "/2009/archive-query/e010b26a55a52d7958a9/",
+    "/2009/archive-query/e764fdd06b8fcfb3f838/",
+    "/2009/archive-query/f9f9b7f6d290955a6947/"
+  ],
+  "note": "Four validated HTML captures include multiple dates for the Sade remix and MLK workshop entries. All hashes were already in the corpus. The newly recovered Cinemetropolis attachment was moved into the 2009 edition; both candidate base paths pass."
+}

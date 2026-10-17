@@ -4,7 +4,7 @@
 
 ## Current measured local checkpoint — October 17, 2026, after the 2013, 2009 and broad queue continuations
 
-The resumable Wayback checkpoint contains 11,162 resource URLs and 23,284 indexed capture rows: 3,909 resources recovered, 72 held for compatibility review, 1,835 failed attempts, and 5,346 queued. The raw directory contains 2,302 unique response files (147,617,390 bytes). These counts include page, stylesheet, image, and other resource URLs; they are not page counts.
+The resumable Wayback checkpoint contains 11,194 resource URLs and 23,303 indexed capture rows: 3,921 resources recovered, 72 held for compatibility review, 1,897 failed attempts, and 5,304 queued. The raw directory contains 2,305 unique response files (147,695,894 bytes). These counts include page, stylesheet, image, and other resource URLs; they are not page counts.
 
 The latest root and `/bluescholars/` candidate builds each contain 977 recovered pages, 2,180 placeholders, four derived LiveJournal reading views, and 1,055 local source assets. Build findings include 8,286 unavailable embedded assets, 338 linked assets not recovered, 145 external media links without local recordings, 183 font resources omitted under the no-font-binary policy, and nine invalid source records. Both offline link/resource checks pass with zero errors, and the generated candidate was scanned for remote automatic resources. This remains an unreviewed preview; publication flags remain false.
 
@@ -154,7 +154,7 @@ The rebuilt candidate remains at 976 recovered pages, 2,181 placeholders, four d
 
 ## Portable recovery bundle
 
-The current portable bundle is `/tmp/bluescholars-restoration-2026-10-17.zip`. It includes the candidate output, source, reports, screenshots, recovery state/index, and non-font raw captures. ZIP integrity check passed for 7,462 files; The SHA-256 is stored in the adjacent `.sha256` sidecar and final task handoff. Font binaries and development caches/credentials are excluded.
+The current portable bundle is `/tmp/bluescholars-restoration-2026-10-17.zip`. It includes the candidate output, source, reports, screenshots, recovery state/index, and non-font raw captures. ZIP integrity check passed for 7,476 files; The SHA-256 is stored in the adjacent `.sha256` sidecar and final task handoff. Font binaries and development caches/credentials are excluded.
 
 ## Refreshed Pages candidate — October 17, 2026
 
@@ -204,3 +204,14 @@ A 200-URL pass validated nine dated HTML responses, including “Seattle 100,”
 
 
 The live preview is `gh-pages` commit `86c07b03e96731a3a919cf6ce80bf773eab1ae60`; Pages workflow [39055039056](https://github.com/keithah/bluescholars/actions/runs/39055039056) succeeded and Pages reports `built`. Live checks returned 200 for the hub, edition roots, Seattle 100, Coffee and Snow 2, the lyric-counter entry, a 2009 archive-query route, `/lj/`, status, and local CSS; a missing route returns 404. HTTPS is enforced; no custom domain exists. This remains an unreviewed candidate.
+
+
+## Eighth broad recovery retry — October 17, 2026
+
+A further 200 URLs yielded four validated HTML captures, including dated variants of the Sade remix and MLK workshop entries and two Cinemetropolis-related routes. This added 21 discovered URLs and six CDX rows; all capture hashes were already in the raw corpus. The candidate now has 2,179 placeholders (down one), and 21 archive-query pages plus two source pages changed. The Cinemetropolis LP attachment is mapped in the 2009 edition. Both deployment paths pass. Full provenance is in [the eighth retry report](../../recovery/broad-200-local-20261017-08-report.json).
+
+
+The latest Pages commit is `3dd2369a78cffbd608fbb12036643850459815a6`; workflow [39056728309](https://github.com/keithah/bluescholars/actions/runs/39056728309) succeeded. The hub, editions, attachment, print view, archive-query page, `/lj/`, status, and local CSS return 200; a nonexistent route returns 404. HTTPS is enforced and there is no custom domain. This is still an unreviewed candidate.
+
+
+The seventh broad retry processed 200 URLs, validated eight HTML responses, added 11 resource URLs and 13 index rows, and saved three previously unseen bodies totaling 78,504 bytes. It changed nine 2009 archive-query views. Per-capture provenance is preserved in `recovery/state.json`; the batch totals are recorded in [the seventh retry report](../../recovery/broad-200-local-20261017-07-report.json).

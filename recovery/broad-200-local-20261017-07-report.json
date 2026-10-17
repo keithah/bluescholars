@@ -1,0 +1,16 @@
+{
+  "batch": "seventh local broad recovery retry",
+  "command": ".venv311/bin/python -m restore recover --max-files 200 --retry-failed --delay 0.5 --timeout 25 --retries 1",
+  "processed_urls": 200,
+  "validated_responses": 8,
+  "validated_kind_counts": {
+    "html": 8
+  },
+  "new_resource_urls": 11,
+  "new_index_rows": 13,
+  "new_unique_raw_files": 3,
+  "new_unique_raw_bytes": 78504,
+  "changed_rendered_routes": 9,
+  "source_of_detailed_provenance": "recovery/state.json (per-URL capture records, attempted timestamps, source URLs, SHA-256 digests, and status); the batch summary was recovered from the active execution checkpoint.",
+  "note": "The retry added source-backed 2009 WordPress pages and refreshed nine archive-query views. This aggregate report records the recovered batch metrics; individual capture provenance remains in the resumable state file."
+}

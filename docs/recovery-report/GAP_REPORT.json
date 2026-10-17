@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T16:05:00Z",
+  "updated_at": "2026-10-17T18:20:36.233357+00:00",
   "source_checkpoint_run": "Local resumable checkpoint after the 2013 pass on 2026-10-17; GitHub Actions run 39044681280 is separately recorded because it resumed an older artifact.",
   "capture_index": {
     "indexed_capture_records": 23238,
@@ -25,7 +25,7 @@
   },
   "candidate": {
     "recovered_pages": 977,
-    "placeholder_pages": 2180,
+    "placeholder_pages": 2179,
     "derived_pages": 4,
     "local_source_assets": 1055,
     "publish_approved": false,
@@ -190,18 +190,18 @@
     },
     "modern_cdn_image_alias_rows": 0
   },
-  "resource_urls": 11118,
-  "indexed_capture_records": 23238,
+  "resource_urls": 11194,
+  "indexed_capture_records": 23306,
   "statuses": {
-    "queued": 5736,
-    "recovered": 3837,
+    "queued": 5265,
+    "recovered": 3922,
     "needs_review": 72,
-    "failed": 1473,
+    "failed": 1935,
     "excluded": 0
   },
-  "unique_downloaded_files": 2291,
-  "downloaded_bytes": 147533392,
-  "failed_attempts": 7339,
+  "unique_downloaded_files": 2306,
+  "downloaded_bytes": 147704639,
+  "failed_attempts": 9048,
   "index_complete": true,
   "active_recovery_run": null,
   "local_checkpoint_after_recovery_sweep": {
@@ -333,8 +333,8 @@
       "branch": "gh-pages",
       "path": "/"
     },
-    "commit": "86c07b03e96731a3a919cf6ce80bf773eab1ae60",
-    "workflow_run": 39055039056,
+    "commit": "3dd2369a78cffbd608fbb12036643850459815a6",
+    "workflow_run": 39056728309,
     "workflow_conclusion": "success",
     "pages_api_status": "built",
     "classification": "owner-authorized unreviewed candidate preview; not a completed restoration release",
@@ -346,10 +346,9 @@
       "/bluescholars/",
       "/bluescholars/2007/",
       "/bluescholars/2009/",
-      "/bluescholars/2009/blog/seattle-100-portrait-of-a-city-by-chase-jarvis/",
-      "/bluescholars/2009/blog/video-blue-scholars-coffee-and-snow-2-dir-zia-mohajerjasbi/",
-      "/bluescholars/2009/blog/the-hip-hop-word-count-blue-scholars-approved/kmba-rap-lyric-cntr/",
-      "/bluescholars/2009/archive-query/1bb0edbe250fdccd1ad5/",
+      "/bluescholars/2009/blog/now-available-limited-edition-cinemetropolis-2-lp-vinyl-release-date-announcement/attachment/1/",
+      "/bluescholars/2009/blog/update-cinemetropolis-advance-digital-download-out-now-official-release-date-june-14/print-2/",
+      "/bluescholars/2009/archive-query/062db2d5099245042973/",
       "/bluescholars/2013/",
       "/bluescholars/lj/",
       "/bluescholars/archive-status/",
@@ -357,8 +356,8 @@
     ],
     "human_review_claimed": false,
     "release_approved": false,
-    "pages_workflow_url": "https://github.com/keithah/bluescholars/actions/runs/39055039056",
-    "candidate_source": "local build after sixth broad retry; twelve 2009 archive-query routes refreshed",
+    "pages_workflow_url": "https://github.com/keithah/bluescholars/actions/runs/39056728309",
+    "candidate_source": "local build after eighth broad retry; Cinemetropolis pages now mapped into 2009 edition",
     "unknown_route_http": 404
   },
   "verification": {
@@ -390,7 +389,7 @@
     "filename": "bluescholars-restoration-2026-10-17.zip",
     "path": "/tmp/bluescholars-restoration-2026-10-17.zip",
     "contents": "candidate site, source, reports/screenshots, recovery state/index, and non-font raw sources",
-    "file_count": 7462,
+    "file_count": 7476,
     "integrity_test": "passed",
     "font_binaries_included": false,
     "development_caches_or_credentials_included": false,
@@ -407,320 +406,23 @@
     }
   ],
   "latest_local_checkpoint": {
-    "description": "Current local checkpoint after six bounded broad recovery retries.",
+    "description": "Current local checkpoint after nine bounded broad recovery retries.",
     "recovery": {
-      "resource_urls": 11162,
+      "resource_urls": 11194,
       "statuses": {
-        "queued": 5346,
-        "recovered": 3909,
+        "queued": 5265,
+        "recovered": 3922,
         "needs_review": 72,
-        "failed": 1835,
+        "failed": 1935,
         "excluded": 0
       },
-      "indexed_capture_records": 23284,
+      "indexed_capture_records": 23306,
       "index_complete": true,
-      "unique_downloaded_files": 2302,
-      "downloaded_bytes": 147617390,
-      "failed_attempts": 8637,
-      "generated_at": "2026-10-17T17:43:44.074419+00:00"
-    },
-    "capture_batches": {
-      "2007": {
-        "indexed_urls": 390,
-        "previously_recovered_urls": 389,
-        "newly_recovered": 1,
-        "remaining_urls": 0,
-        "new_capture": "20070726234145",
-        "new_file": "store_tshirt.jpg",
-        "sha256": "fe0883788688725d0818af115cf3d6f48fa248472f49387af68c0a5ff4b2f7d1"
-      },
-      "2007_navigation_pages": {
-        "requested": 6,
-        "validated": 6,
-        "captures": [
-          "20060623005536",
-          "20060623005645",
-          "20060510051835",
-          "20060615033740",
-          "20060623005601",
-          "20060623005632"
-        ]
-      },
-      "2007_linked_images": {
-        "validated": 14,
-        "unavailable_exact_dependencies": 7
-      },
-      "2009_targeted_articles": {
-        "attempted": 18,
-        "recovered": 18
-      },
-      "2009_linked_images": {
-        "attempted": 13,
-        "recovered": 12,
-        "invalid": 1
-      },
-      "2013_squarespace_prefix_images": {
-        "attempted": 45,
-        "recovered": 45
-      },
-      "2013_era_batch": {
-        "attempted": 50,
-        "recovered": 39,
-        "kind": "CSS",
-        "failed_validation": 11,
-        "indexed_urls": 1014,
-        "remaining_urls": 392
-      },
-      "2013_continuation": {
-        "selected_limit": 50,
-        "saved_valid_responses": 27,
-        "status": "interrupted while awaiting next archive response; report saved after 25 attempts",
-        "new_material": "18 image dependencies and additional dated Squarespace CSS variants; in-era dates verified before preservation",
-        "latest_saved_css_capture": "20150819120551",
-        "attempted_before_interruption": 25,
-        "recovered_css_captures": 9,
-        "recorded_failures": 16,
-        "remaining_urls_at_last_checkpoint": 218,
-        "report": "recovery/era-2013-report.json",
-        "latest_successful_capture": "20150628012721"
-      },
-      "2013_github_runner_39010473274": {
-        "run_id": "39010473274",
-        "status": "completed successfully; artifact staged, inspected and merged",
-        "resumed_from": "38995680425",
-        "indexed_urls": 625,
-        "previously_recovered_urls": 461,
-        "attempted_urls": 164,
-        "validated_responses": 3,
-        "failed_or_invalid": 161,
-        "remaining_without_success": 161,
-        "net_new_resource_records": 0,
-        "net_new_raw_files": 0,
-        "merge_report": "recovery/imported/39010473274/merge-report.json",
-        "detailed_report": "recovery/era-2013-run-39010473274-report.json"
-      },
-      "2013_local_20261017": {
-        "origin": "Current local checkpoint (1,014 indexed URLs); not the older 625-URL GitHub Actions snapshot.",
-        "eligible_urls": 201,
-        "already_recovered_before_batch": 813,
-        "selected_urls": 201,
-        "attempted": 201,
-        "validated_responses": 118,
-        "validated_kind_counts": {
-          "css": 118
-        },
-        "remaining_urls": 83,
-        "failures": 83,
-        "date_start": "20130921000000",
-        "date_end": "20230930235959",
-        "report": "recovery/era-2013-local-20261017-report.json",
-        "indexed_urls": 1014,
-        "validated_status_counts": {
-          "recovered": 110,
-          "needs_review": 8
-        }
-      },
-      "2013_github_runner_39044681280": {
-        "run_id": "39044681280",
-        "url": "https://github.com/keithah/bluescholars/actions/runs/39044681280",
-        "status": "completed successfully; artifact imported without conflicts",
-        "checkpoint_resource_urls": 9118,
-        "indexed_2013_urls": 625,
-        "attempted": 161,
-        "validated_responses": 0,
-        "new_resource_records": 0,
-        "new_variant_records": 0,
-        "interpretation": "Resumed an older saved artifact than the local checkpoint; not a replacement for the local 1,014-URL continuation."
-      },
-      "2009_local_20261017": {
-        "origin": "Current local checkpoint with 1,056 indexed 2009-era URLs.",
-        "eligible_urls": 98,
-        "already_recovered_before_batch": 958,
-        "selected_urls": 98,
-        "attempted": 98,
-        "validated_responses": 21,
-        "validated_kind_counts": {
-          "html": 5,
-          "css": 4,
-          "image": 12
-        },
-        "remaining_urls": 77,
-        "failures": 77,
-        "date_start": "20090101000000",
-        "date_end": "20130920235959",
-        "report": "recovery/era-2009-local-20261017-report.json",
-        "new_pages": 1,
-        "capture_note": "The report classifies response kinds from archive validation; raw source bytes and each capture/hash remain in the report.",
-        "new_css_or_image_responses": 16,
-        "new_unique_raw_files": 8,
-        "new_unique_raw_bytes": 21472
-      },
-      "broad_200_local_20261017": {
-        "processed_urls": 200,
-        "newly_recovered_resources": 2,
-        "new_unique_raw_files": 0,
-        "new_unique_raw_bytes": 0,
-        "report": "recovery/broad-200-local-20261017-report.json",
-        "new_captures": [
-          {
-            "url": "http://02cd02a.netsolhost.com/blog/category/the-music/",
-            "requested_capture": "20100226174323",
-            "actual_capture": "20100217180749",
-            "sha256": "e5a753e753ecca3498ecf4f1c4d68289b4384a5a06a7277181a838e0dde15d3a",
-            "bytes": 25925,
-            "kind": "html",
-            "raw_path": "recovery/raw/e5a753e753ecca3498ecf4f1c4d68289b4384a5a06a7277181a838e0dde15d3a.html",
-            "duplicate_payload": true,
-            "attempted_at": "2026-10-17T16:20:25.967403+00:00"
-          },
-          {
-            "url": "http://02cd02a.netsolhost.com/blog/n30-a-personal-history-by-geo/",
-            "requested_capture": "20210529010817",
-            "actual_capture": "20110312120411",
-            "sha256": "5bdcc9c023290f189080208ba548b340c18463a9432f3024d220fc864a7a7053",
-            "bytes": 16881,
-            "kind": "html",
-            "raw_path": "recovery/raw/5bdcc9c023290f189080208ba548b340c18463a9432f3024d220fc864a7a7053.html",
-            "duplicate_payload": true,
-            "attempted_at": "2026-10-17T16:26:54.484546+00:00"
-          }
-        ]
-      },
-      "broad_200_local_20261017_second": {
-        "processed_urls": 200,
-        "validated_responses": 9,
-        "new_resource_urls": 2,
-        "new_index_rows": 8,
-        "new_unique_raw_files": 1,
-        "new_unique_raw_bytes": 10490,
-        "rendered_route_counts_changed": false,
-        "report": "recovery/broad-200-local-20261017-second-report.json"
-      },
-      "broad_200_local_20261017_third": {
-        "processed_urls": 200,
-        "validated_responses": 10,
-        "new_resource_urls": 1,
-        "new_index_rows": 1,
-        "new_unique_raw_files": 0,
-        "new_unique_raw_bytes": 0,
-        "rendered_route_counts_changed": false,
-        "report": "recovery/broad-200-local-20261017-third-report.json"
-      },
-      "broad_200_local_20261017_4": {
-        "processed_urls": 200,
-        "validated_responses": 21,
-        "validated_kind_counts": {
-          "html": 21
-        },
-        "new_resource_urls": 1,
-        "new_index_rows": 9,
-        "new_unique_raw_files": 1,
-        "new_unique_raw_bytes": 26243,
-        "changed_rendered_routes": [
-          "/2009/blog/video-portland-the-last-time-we-were-here/",
-          "/2013/archive-query/4553c0d3b819c77c651f/"
-        ],
-        "report": "recovery/broad-200-local-20261017-04-report.json"
-      },
-      "broad_200_local_20261017_5": {
-        "processed_urls": 200,
-        "validated_responses": 11,
-        "validated_kind_counts": {
-          "html": 11
-        },
-        "new_resource_urls": 1,
-        "new_index_rows": 13,
-        "new_unique_raw_files": 0,
-        "new_unique_raw_bytes": 0,
-        "changed_rendered_routes": [
-          "/2009/blog/news-eyes-ears-and-tweets-on-seattle-police/",
-          "/2009/blog/the-cinemetropolis-listening-party-part-1/"
-        ],
-        "report": "recovery/broad-200-local-20261017-05-report.json"
-      },
-      "broad_200_local_20261017_6": {
-        "processed_urls": 200,
-        "validated_responses": 9,
-        "validated_kind_counts": {
-          "html": 9
-        },
-        "new_resource_urls": 12,
-        "new_index_rows": 5,
-        "new_unique_raw_files": 1,
-        "new_unique_raw_bytes": 25793,
-        "changed_rendered_routes": 12,
-        "report": "recovery/broad-200-local-20261017-06-report.json"
-      }
-    },
-    "candidate": {
-      "recovered_pages": 976,
-      "placeholder_pages": 2181,
-      "derived_pages": 4,
-      "local_source_assets": 1044,
-      "publish_approved": false,
-      "visual_fidelity_verified": false,
-      "recovered_pages_by_edition": {
-        "2007": 36,
-        "2009": 500,
-        "2013": 432
-      },
-      "issue_counts": {
-        "invalid_source": 9,
-        "missing_asset": 8293,
-        "font_not_packaged": 183,
-        "linked_asset_not_recovered": 338,
-        "external_media_link_only": 145
-      },
-      "root_check": {
-        "ok": true,
-        "errors": 0
-      },
-      "project_subpath_check": {
-        "ok": true,
-        "errors": 0
-      },
-      "remote_automatic_resources": 0
-    },
-    "verification": {
-      "tests": "153 passed (2026-10-17; no code changes in this recovery pass)",
-      "compileall": "passed",
-      "shell_syntax": "passed",
-      "actionlint": "passed",
-      "git_diff_check": "passed",
-      "root_build_check": {
-        "ok": true,
-        "errors": 0
-      },
-      "project_subpath_build_check": {
-        "ok": true,
-        "errors": 0
-      },
-      "remote_automatic_requests": 0,
-      "browser": "Agent compared local 2013 page with exact May 2021 Wayback capture at 1265x712, and inspected local 2007 and hub; four screenshots saved. Mobile widths unavailable; no human approval claimed."
-    },
-    "screenshots": {
-      "reference": {
-        "path": "docs/recovery-report/screenshots/reference.jpg",
-        "sha256": "85b1db3bb441001e9249c8b2d584e2555650ef8331230a14b7d875695665bb48",
-        "dimensions": "1265x712"
-      },
-      "2007": {
-        "path": "docs/recovery-report/screenshots/2007.jpg",
-        "sha256": "88298d916f0467708af5d2f4268475dacc5083e38cb2336ba466fa4c244aabe1",
-        "dimensions": "1265x712"
-      },
-      "2013": {
-        "path": "docs/recovery-report/screenshots/2013.jpg",
-        "sha256": "7768870e01bcfceaf982e687860be6617bf02db49c49eb4889386ae998e7a8e3",
-        "dimensions": "1265x712"
-      },
-      "homepage": {
-        "path": "docs/recovery-report/screenshots/homepage.jpg",
-        "sha256": "c4a87a2a412d2101aa311277b1dac2f0132d2e352a0692653669a336a124dd14",
-        "dimensions": "1265x712"
-      }
-    },
-    "resume": "Run .venv311/bin/python -m restore capture-era --era 2013 --max-files 2000 from the preserved local recovery/state.json; retry the 83 unresolved URLs, then rebuild and check root and /bluescholars/ outputs."
+      "unique_downloaded_files": 2306,
+      "downloaded_bytes": 147704639,
+      "failed_attempts": 9048,
+      "generated_at": "2026-10-17T18:20:36.233357+00:00"
+    }
   },
   "browser_visual_review": {
     "reference_capture": "https://web.archive.org/web/20210529010817/http://bluescholars.com/",
@@ -795,21 +497,20 @@
     "url": "https://keithah.github.io/bluescholars/",
     "source_branch": "gh-pages",
     "source_path": "/",
-    "branch_commit": "86c07b03e96731a3a919cf6ce80bf773eab1ae60",
-    "pages_build_run": "39055039056",
+    "branch_commit": "3dd2369a78cffbd608fbb12036643850459815a6",
+    "pages_build_run": "39056728309",
     "pages_build_status": "success",
     "pages_api_status": "built",
     "https_enforced": true,
     "custom_domain": null,
-    "candidate_source": "local build after sixth broad retry; twelve 2009 archive-query routes refreshed",
+    "candidate_source": "local build after eighth broad retry; Cinemetropolis pages mapped into 2009 edition",
     "verified_routes": {
       "/bluescholars/": 200,
       "/bluescholars/2007/": 200,
       "/bluescholars/2009/": 200,
-      "/bluescholars/2009/blog/seattle-100-portrait-of-a-city-by-chase-jarvis/": 200,
-      "/bluescholars/2009/blog/video-blue-scholars-coffee-and-snow-2-dir-zia-mohajerjasbi/": 200,
-      "/bluescholars/2009/blog/the-hip-hop-word-count-blue-scholars-approved/kmba-rap-lyric-cntr/": 200,
-      "/bluescholars/2009/archive-query/1bb0edbe250fdccd1ad5/": 200,
+      "/bluescholars/2009/blog/now-available-limited-edition-cinemetropolis-2-lp-vinyl-release-date-announcement/attachment/1/": 200,
+      "/bluescholars/2009/blog/update-cinemetropolis-advance-digital-download-out-now-official-release-date-june-14/print-2/": 200,
+      "/bluescholars/2009/archive-query/062db2d5099245042973/": 200,
       "/bluescholars/2013/": 200,
       "/bluescholars/lj/": 200,
       "/bluescholars/archive-status/": 200,
@@ -826,21 +527,20 @@
     "url": "https://keithah.github.io/bluescholars/",
     "source_branch": "gh-pages",
     "source_path": "/",
-    "branch_commit": "86c07b03e96731a3a919cf6ce80bf773eab1ae60",
-    "pages_build_run": "39055039056",
+    "branch_commit": "3dd2369a78cffbd608fbb12036643850459815a6",
+    "pages_build_run": "39056728309",
     "pages_build_status": "success",
     "pages_api_status": "built",
     "https_enforced": true,
     "custom_domain": null,
-    "candidate_source": "local build after sixth broad retry; twelve 2009 archive-query routes refreshed",
+    "candidate_source": "local build after eighth broad retry; Cinemetropolis pages mapped into 2009 edition",
     "verified_routes": {
       "/bluescholars/": 200,
       "/bluescholars/2007/": 200,
       "/bluescholars/2009/": 200,
-      "/bluescholars/2009/blog/seattle-100-portrait-of-a-city-by-chase-jarvis/": 200,
-      "/bluescholars/2009/blog/video-blue-scholars-coffee-and-snow-2-dir-zia-mohajerjasbi/": 200,
-      "/bluescholars/2009/blog/the-hip-hop-word-count-blue-scholars-approved/kmba-rap-lyric-cntr/": 200,
-      "/bluescholars/2009/archive-query/1bb0edbe250fdccd1ad5/": 200,
+      "/bluescholars/2009/blog/now-available-limited-edition-cinemetropolis-2-lp-vinyl-release-date-announcement/attachment/1/": 200,
+      "/bluescholars/2009/blog/update-cinemetropolis-advance-digital-download-out-now-official-release-date-june-14/print-2/": 200,
+      "/bluescholars/2009/archive-query/062db2d5099245042973/": 200,
       "/bluescholars/2013/": 200,
       "/bluescholars/lj/": 200,
       "/bluescholars/archive-status/": 200,
@@ -851,5 +551,25 @@
     "release_approved": false,
     "classification": "owner-authorized unreviewed candidate preview; not a completed restoration release",
     "ordinary_rendering_remote_automatic_resources": 0
+  },
+  "latest_seventh_broad_retry": {
+    "report": "recovery/broad-200-local-20261017-07-report.json",
+    "processed_urls": 200,
+    "validated_responses": 8,
+    "new_resource_urls": 11,
+    "new_index_rows": 13,
+    "new_unique_raw_files": 3,
+    "new_unique_raw_bytes": 78504,
+    "changed_rendered_routes": 9
+  },
+  "latest_ninth_broad_retry": {
+    "report": "recovery/broad-200-local-20261017-09-report.json",
+    "processed_urls": 200,
+    "validated_responses": 1,
+    "new_resource_urls": 0,
+    "new_index_rows": 3,
+    "new_unique_raw_files": 1,
+    "new_unique_raw_bytes": 8745,
+    "changed_rendered_routes": 0
   }
 }

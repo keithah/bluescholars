@@ -140,3 +140,9 @@ The fourth broad retry validated ten HTML responses, adding the Seattle 100 post
 
 
 The sixth broad retry validated nine 2009-era HTML responses and added 12 newly discovered URLs, five CDX rows, and one unique 25,793-byte payload. Twelve archive-query outputs were refreshed with source-backed material; the site still has 977 recovered page routes. Root and project-subpath checks pass. The capture-by-capture report is `recovery/broad-200-local-20261017-06-report.json`.
+
+
+The eighth broad retry validated four HTML bodies while adding 21 URLs and six CDX rows. The captures are dated variants of the Sade remix, MLK workshop and Cinemetropolis routes; no unique raw files were added. It reduced placeholders to 2,179 and moved the LP attachment page into the 2009 edition. Root and project-prefix checks pass; see `recovery/broad-200-local-20261017-08-report.json`.
+
+
+The seventh broad retry processed 200 URLs, validated eight HTML responses, added 11 resource URLs and 13 index rows, and saved three previously unseen bodies totaling 78,504 bytes. It changed nine 2009 archive-query views. Per-capture provenance is preserved in `recovery/state.json`; the batch totals are recorded in [the seventh retry report](../../recovery/broad-200-local-20261017-07-report.json).

@@ -33,7 +33,7 @@
   },
   "candidate_build": {
     "recovered_pages": 977,
-    "placeholder_pages": 2180,
+    "placeholder_pages": 2179,
     "derived_pages": 4,
     "local_source_assets": 1055,
     "recovered_pages_by_edition": {
@@ -54,12 +54,14 @@
   "candidate_checks": {
     "root": {
       "ok": true,
-      "errors": []
+      "errors": [],
+      "remote_automatic_resources": 0
     },
     "project_subpath": {
       "base_path": "/bluescholars/",
       "ok": true,
-      "errors": []
+      "errors": [],
+      "remote_automatic_resources": 0
     },
     "remote_automatic_resources": {
       "root": 0,
@@ -67,20 +69,20 @@
     }
   },
   "checkpoint": {
-    "resource_urls": 11162,
+    "resource_urls": 11194,
     "statuses": {
-      "queued": 5346,
-      "recovered": 3909,
+      "queued": 5265,
+      "recovered": 3922,
       "needs_review": 72,
-      "failed": 1835,
+      "failed": 1935,
       "excluded": 0
     },
-    "indexed_capture_records": 23284,
+    "indexed_capture_records": 23306,
     "index_complete": true,
-    "unique_downloaded_files": 2302,
-    "downloaded_bytes": 147617390,
-    "failed_attempts": 8637,
-    "generated_at": "2026-10-17T17:43:44.074419+00:00"
+    "unique_downloaded_files": 2306,
+    "downloaded_bytes": 147704639,
+    "failed_attempts": 9048,
+    "generated_at": "2026-10-17T18:20:36.233357+00:00"
   },
   "latest_import": {
     "run_id": "38975520061",
@@ -144,7 +146,7 @@
     "unique_raw_files": 97,
     "visual_reviewed": false
   },
-  "updated_at": "2026-10-17T17:43:44.074419+00:00",
+  "updated_at": "2026-10-17T18:20:36.233357+00:00",
   "tests": {
     "command": ".venv311/bin/python -m pytest -q",
     "result": "153 passed",
@@ -577,20 +579,19 @@
   "published_preview": {
     "url": "https://keithah.github.io/bluescholars/",
     "branch": "gh-pages",
-    "commit": "86c07b03e96731a3a919cf6ce80bf773eab1ae60",
-    "pages_build_run": "39055039056",
+    "commit": "3dd2369a78cffbd608fbb12036643850459815a6",
+    "pages_build_run": "39056728309",
     "pages_status": "built",
     "https_enforced": true,
     "custom_domain": null,
-    "verified_at": "2026-10-17T17:42:00Z",
+    "verified_at": "2026-10-17T18:05:00Z",
     "checks": {
       "/bluescholars/": 200,
       "/bluescholars/2007/": 200,
       "/bluescholars/2009/": 200,
-      "/bluescholars/2009/blog/seattle-100-portrait-of-a-city-by-chase-jarvis/": 200,
-      "/bluescholars/2009/blog/video-blue-scholars-coffee-and-snow-2-dir-zia-mohajerjasbi/": 200,
-      "/bluescholars/2009/blog/the-hip-hop-word-count-blue-scholars-approved/kmba-rap-lyric-cntr/": 200,
-      "/bluescholars/2009/archive-query/1bb0edbe250fdccd1ad5/": 200,
+      "/bluescholars/2009/blog/now-available-limited-edition-cinemetropolis-2-lp-vinyl-release-date-announcement/attachment/1/": 200,
+      "/bluescholars/2009/blog/update-cinemetropolis-advance-digital-download-out-now-official-release-date-june-14/print-2/": 200,
+      "/bluescholars/2009/archive-query/062db2d5099245042973/": 200,
       "/bluescholars/2013/": 200,
       "/bluescholars/lj/": 200,
       "/bluescholars/archive-status/": 200,
@@ -783,7 +784,7 @@
     "filename": "bluescholars-restoration-2026-10-17.zip",
     "path": "/tmp/bluescholars-restoration-2026-10-17.zip",
     "contents": "candidate site, source, reports/screenshots, recovery state/index, and non-font raw sources",
-    "file_count": 7462,
+    "file_count": 7476,
     "integrity_test": "passed",
     "font_binaries_included": false,
     "development_caches_or_credentials_included": false,
@@ -862,5 +863,35 @@
     "new_unique_raw_files": 1,
     "new_unique_raw_bytes": 25793,
     "changed_rendered_routes": 12
+  },
+  "latest_eighth_broad_retry": {
+    "report": "recovery/broad-200-local-20261017-08-report.json",
+    "processed_urls": 200,
+    "validated_responses": 4,
+    "new_resource_urls": 21,
+    "new_index_rows": 6,
+    "new_unique_raw_files": 0,
+    "new_unique_raw_bytes": 0,
+    "changed_rendered_routes": 23
+  },
+  "latest_seventh_broad_retry": {
+    "report": "recovery/broad-200-local-20261017-07-report.json",
+    "processed_urls": 200,
+    "validated_responses": 8,
+    "new_resource_urls": 11,
+    "new_index_rows": 13,
+    "new_unique_raw_files": 3,
+    "new_unique_raw_bytes": 78504,
+    "changed_rendered_routes": 9
+  },
+  "latest_ninth_broad_retry": {
+    "report": "recovery/broad-200-local-20261017-09-report.json",
+    "processed_urls": 200,
+    "validated_responses": 1,
+    "new_resource_urls": 0,
+    "new_index_rows": 3,
+    "new_unique_raw_files": 1,
+    "new_unique_raw_bytes": 8745,
+    "changed_rendered_routes": 0
   }
 }

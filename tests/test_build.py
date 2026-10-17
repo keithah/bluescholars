@@ -77,6 +77,14 @@ def test_css_rewrites_dependencies_and_removes_fonts():
     assert 'behavior' not in text
     assert 'url(missing.png)' not in text and issues
 
+def test_css_renderers_can_reuse_a_precomputed_resource_alias_index(monkeypatch):
+    import restore.render as renderer
+    aliases=renderer.resource_aliases(RES)
+    monkeypatch.setattr(renderer,'identity',lambda _url: (_ for _ in ()).throw(AssertionError('alias index rebuilt')))
+    first,_=renderer.render_css('.a{color:red}',HOME+'a.css',RES,'',aliases=aliases)
+    second,_=renderer.render_css('.b{color:blue}',HOME+'b.css',RES,'',aliases=aliases)
+    assert 'color:red' in first and 'color:blue' in second
+
 def test_html_srcset_fallback_to_recovered_asset():
     text,_=render_html('<html><body><img srcset="https://cdn.example/photo.jpg 2x"></body></html>',HOME,RES,'')
     assert BeautifulSoup(text,'html.parser').img['src']=='/assets/photo.jpg'

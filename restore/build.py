@@ -9,7 +9,7 @@ from urllib.parse import unquote,urlsplit
 from bs4 import BeautifulSoup
 from .archive import validate_payload
 from .discover import discover_html
-from .render import render_html,render_css,NAV
+from .render import render_html,render_css,resource_aliases,NAV
 from .svg import sanitize_svg
 from .state import State,write_json
 from .urls import HOME,TARGET,identity,is_site,route,asset_route,base_path,livejournal_route,original_url
@@ -206,6 +206,7 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
         original=r.get('url',key)
         if is_site(original):render_resources.setdefault(original,r)
     render_resources.update(usable)
+    aliases=resource_aliases(render_resources)
     pages={}
     for source_key,r in records.items():
         source_url=r.get('url',source_key)
@@ -248,7 +249,7 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
         destination=output/r['local_path'].lstrip('/')
         if r['kind']=='css':
             source_key=r.get('_source_key',url)
-            text,found=render_css(raw[source_key].decode('utf-8',errors='replace'),r.get('final_original',url),render_resources,base)
+            text,found=render_css(raw[source_key].decode('utf-8',errors='replace'),r.get('final_original',url),render_resources,base,aliases)
             destination.parent.mkdir(parents=True,exist_ok=True)
             destination.write_text(text);issues.extend(found)
         else:
@@ -284,7 +285,7 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
                     body+='</ol>'
             body+='<p><a class="archive-source-link" href="https://web.archive.org/web/'+TARGET+'/'+html.escape(url,quote=True)+'">Inspect the archived source</a></p>'
             text=page_shell(label,body)
-        rendered,found=render_html(text,r.get('final_original',url),render_resources,base,r.get('edition_prefix',''))
+        rendered,found=render_html(text,r.get('final_original',url),render_resources,base,r.get('edition_prefix',''),aliases)
         issues.extend(found);_write_page(output,page,rendered)
         page_report.append({'path':page,'source':r.get('source_url',url),'canonical_url':url,
                             'source_archive':r.get('source_archive'),'status':status,
@@ -298,14 +299,14 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
         index=page_shell('Recovered 2009 WordPress posts',
                          '<p>This local index lists surviving dated WordPress captures. It is a recovery index, not an archived original listing.</p>'
                          '<ul>'+links+'</ul>')
-        index,_=render_html(index,HOME,render_resources,base)
+        index,_=render_html(index,HOME,render_resources,base,aliases=aliases)
         _write_page(output,'/2009/blog/',index)
     lj_page_report=[]
     for key,r in lj_pages:
         local=lj_route_by_key[key]
         text=raw[key].decode('utf-8',errors='replace')
         rendered,found=render_html(text,r.get('final_original',r['_source_url']),
-                                   render_resources,base,'/lj')
+                                   render_resources,base,'/lj',aliases)
         issues.extend(found)
         _write_page(output,local,rendered)
         lj_page_report.append({'path':local,'source':r['_source_url'],
@@ -440,7 +441,7 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
             else:
                 body+='<p>No page bytes for this edition have been recovered yet. Its original appearance and blog content remain a documented gap.</p>'
             edition_text=page_shell(label,body)
-            edition_text,_=render_html(edition_text,HOME,render_resources,base)
+            edition_text,_=render_html(edition_text,HOME,render_resources,base,aliases=aliases)
             _write_page(output,prefix+'/',edition_text)
     gateway='<p class="archive-home-intro">Choose a preserved website generation. Each edition is built from its own dated source material; gaps remain marked.</p><nav class="edition-grid" aria-label="Preserved website generations">'
     editions=(('/2007/','2007','Independent site'),
@@ -472,10 +473,10 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
         stats+='<ul>'+''.join('<li>'+html.escape(i['type'].replace('_',' ')+': '+str(i.get('url',i.get('source',''))))+'</li>' for i in issues)+'</ul>'
     else: stats+='<p>No dependency findings in the generated content. This does not imply missing source files were recovered.</p>'
     # Diagnostic links enter the same single base-path rewrite as original links.
-    status_text,_=render_html(page_shell('Recovery status',stats),HOME,render_resources,base)
+    status_text,_=render_html(page_shell('Recovery status',stats),HOME,render_resources,base,aliases=aliases)
     _write_page(output,'/archive-status/',status_text)
     write_json(output/'archive-status/report.json',report)
-    missing,_=render_html(page_shell('Page not recovered','<p>This historical page is not included in this restoration.</p><p><a href="/archive-status/">View the recovery inventory</a></p>'),HOME,render_resources,base)
+    missing,_=render_html(page_shell('Page not recovered','<p>This historical page is not included in this restoration.</p><p><a href="/archive-status/">View the recovery inventory</a></p>'),HOME,render_resources,base,aliases=aliases)
     (output/'404.html').write_text(missing)
     (output/'.nojekyll').touch()
     return report

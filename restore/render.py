@@ -11,10 +11,11 @@ NAV=[('BLOG','/blog/'),('SHOWS','/shows/'),('VIDEO','/video/'),('SHOP','/shop/')
 CSP="default-src 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; font-src 'none'; connect-src 'none'; frame-src 'none'; media-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"
 
 class Resolver:
-    def __init__(self,resources,base,issues,route_prefix=''):
+    def __init__(self,resources,base,issues,route_prefix='',aliases=None):
         self.resources=resources;self.base=base_path(base);self.issues=issues
         self.route_prefix=route_prefix.rstrip('/')
-        self.aliases={identity(u):r for u,r in resources.items()}
+        self.aliases=aliases if aliases is not None else resource_aliases(resources)
+
     def _record(self,url):
         record=self.resources.get(url) or self.aliases.get(identity(url),{})
         if record.get('local_path'):
@@ -60,6 +61,10 @@ class Resolver:
                 return self.base+'/archive-status/'
         else: target=u
         return target+('#'+fragment if fragment else '')
+
+def resource_aliases(resources):
+    """Build the normalized URL index shared by every render in one build."""
+    return {identity(u):r for u,r in resources.items()}
 
 def _tokens(tokens,resolver,url):
     result=[]
@@ -120,8 +125,8 @@ def _rules(text,resolver,url):
             result.append(_tokens(rule.prelude,resolver,url)+'{'+_declarations(tinycss2.serialize(rule.content),resolver,url)+'}')
     return '\n'.join(result)
 
-def render_css(text: str,url: str,resources: dict,base: str) -> tuple[str,list]:
-    issues=[];resolver=Resolver(resources,base,issues)
+def render_css(text: str,url: str,resources: dict,base: str,aliases=None) -> tuple[str,list]:
+    issues=[];resolver=Resolver(resources,base,issues,aliases=aliases)
     return _rules(text,resolver,url),issues
 
 def _media_href(value,url):
@@ -134,8 +139,8 @@ def _media_href(value,url):
             return 'https://www.youtube.com/watch?v='+video_id
     return u
 
-def render_html(text: str,url: str,resources: dict,base: str,route_prefix='') -> tuple[str,list]:
-    base=base_path(base);issues=[];resolver=Resolver(resources,base,issues,route_prefix)
+def render_html(text: str,url: str,resources: dict,base: str,route_prefix='',aliases=None) -> tuple[str,list]:
+    base=base_path(base);issues=[];resolver=Resolver(resources,base,issues,route_prefix,aliases)
     soup=BeautifulSoup(text,'html.parser')
     if soup.html is None:
         wrapper=BeautifulSoup('<!doctype html><html><head></head><body></body></html>','html.parser')

@@ -32,18 +32,18 @@
     "responsive_limit": "The connected browser exposed a fixed viewport; 1440px, 768px and 390px screenshots were not available in this run. This is not a mobile visual-review pass."
   },
   "candidate_build": {
-    "recovered_pages": 976,
-    "placeholder_pages": 2181,
+    "recovered_pages": 977,
+    "placeholder_pages": 2180,
     "derived_pages": 4,
-    "local_source_assets": 1044,
+    "local_source_assets": 1055,
     "recovered_pages_by_edition": {
       "2007": 36,
-      "2009": 500,
+      "2009": 501,
       "2013": 432
     },
     "issue_counts": {
       "invalid_source": 9,
-      "missing_asset": 8293,
+      "missing_asset": 8286,
       "font_not_packaged": 183,
       "linked_asset_not_recovered": 338,
       "external_media_link_only": 145
@@ -67,20 +67,20 @@
     }
   },
   "checkpoint": {
-    "updated_at": "2026-10-17T16:00:55.426785+00:00",
-    "resource_urls": 11118,
+    "resource_urls": 11145,
     "statuses": {
-      "queued": 5736,
-      "recovered": 3837,
+      "queued": 5742,
+      "recovered": 3858,
       "needs_review": 72,
       "failed": 1473,
       "excluded": 0
     },
     "indexed_capture_records": 23238,
-    "unique_downloaded_files": 2291,
-    "downloaded_bytes": 147533392,
+    "index_complete": true,
+    "unique_downloaded_files": 2299,
+    "downloaded_bytes": 147554864,
     "failed_attempts": 7339,
-    "index_complete": true
+    "generated_at": "2026-10-17T16:13:10.221302+00:00"
   },
   "latest_import": {
     "run_id": "38975520061",
@@ -144,7 +144,7 @@
     "unique_raw_files": 97,
     "visual_reviewed": false
   },
-  "updated_at": "2026-10-17T16:00:55.426785+00:00",
+  "updated_at": "2026-10-17T16:13:10.221302+00:00",
   "tests": {
     "command": ".venv311/bin/python -m pytest -q",
     "result": "153 passed",
@@ -586,26 +586,26 @@
   "published_preview": {
     "url": "https://keithah.github.io/bluescholars/",
     "branch": "gh-pages",
-    "commit": "257bb3e13abce73695f0b368bf67df8b2c819db5",
-    "pages_build_run": "39048094563",
+    "commit": "2de1693b585bbd5ee4d669a3eb69d5260dfdc1b8",
+    "pages_build_run": "39048755889",
     "pages_status": "built",
     "https_enforced": true,
     "custom_domain": null,
-    "verified_at": "2026-10-17T16:10:00Z",
+    "verified_at": "2026-10-17T16:18:00Z",
     "checks": {
       "/bluescholars/": 200,
       "/bluescholars/2007/": 200,
       "/bluescholars/2009/": 200,
+      "/bluescholars/2009/blog/releases/": 200,
+      "/bluescholars/2009/blog/releases/oof-ep/": 200,
       "/bluescholars/2013/": 200,
       "/bluescholars/lj/": 200,
+      "/bluescholars/archive-status/": 200,
       "/bluescholars/assets/archive-ui.css": 200
     },
+    "unknown_route_http": 404,
     "homepage_year_links_verified": true,
-    "candidate_assets": "1,044 local source assets; zero remote automatic resources in ordinary rendering",
-    "browser": {
-      "previous_visual_inspection_retained": true,
-      "human_review_claimed": false
-    },
+    "candidate_assets": "1,055 local source assets; zero remote automatic resources in ordinary rendering",
     "classification": "owner-authorized incomplete candidate preview; not a reviewed release",
     "publish_approved": false,
     "visual_reviewed": false
@@ -787,12 +787,31 @@
     "merge_report": "recovery/imported/39044681280/merge-report.json"
   },
   "portable_archive": {
+    "filename": "bluescholars-restoration-2026-10-17.zip",
     "path": "/tmp/bluescholars-restoration-2026-10-17.zip",
-    "file_count": 7416,
-    "uncompressed_bytes": 356786794,
-    "compressed_bytes": 148047078,
-    "sha256": "62c95e5c8e4ab3018eb9c8bd88ca01e8e7d83759938e9376aa90f7f0b7b248ac",
+    "contents": "candidate site, source, reports/screenshots, recovery state/index, and non-font raw sources",
+    "file_count": 7432,
     "integrity_test": "passed",
-    "font_binaries_included": false
+    "font_binaries_included": false,
+    "development_caches_or_credentials_included": false,
+    "checksum_note": "See adjacent .sha256 sidecar and final task handoff; checksum is kept outside the ZIP."
+  },
+  "latest_2009_local_capture_pass": {
+    "report": "recovery/era-2009-local-20261017-report.json",
+    "eligible_urls": 98,
+    "attempted": 98,
+    "validated_responses": 21,
+    "validated_kind_counts": {
+      "html": 5,
+      "css": 4,
+      "image": 12
+    },
+    "remaining_urls": 77,
+    "date_start": "20090101000000",
+    "date_end": "20130920235959",
+    "newly_rendered_pages": 1,
+    "validated_css_or_image_responses": 16,
+    "new_unique_raw_files": 8,
+    "new_unique_raw_bytes": 21472
   }
 }

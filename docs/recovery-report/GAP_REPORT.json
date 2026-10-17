@@ -24,20 +24,20 @@
     "candidate_local_source_assets": 1044
   },
   "candidate": {
-    "recovered_pages": 976,
-    "placeholder_pages": 2181,
+    "recovered_pages": 977,
+    "placeholder_pages": 2180,
     "derived_pages": 4,
-    "local_source_assets": 1044,
+    "local_source_assets": 1055,
     "publish_approved": false,
     "visual_fidelity_verified": false,
     "recovered_pages_by_edition": {
       "2007": 36,
-      "2009": 500,
+      "2009": 501,
       "2013": 432
     },
     "issue_counts": {
       "invalid_source": 9,
-      "missing_asset": 8293,
+      "missing_asset": 8286,
       "font_not_packaged": 183,
       "linked_asset_not_recovered": 338,
       "external_media_link_only": 145
@@ -333,8 +333,8 @@
       "branch": "gh-pages",
       "path": "/"
     },
-    "commit": "257bb3e13abce73695f0b368bf67df8b2c819db5",
-    "workflow_run": 39048094563,
+    "commit": "2de1693b585bbd5ee4d669a3eb69d5260dfdc1b8",
+    "workflow_run": 39048755889,
     "workflow_conclusion": "success",
     "pages_api_status": "built",
     "classification": "owner-authorized unreviewed candidate preview; not a completed restoration release",
@@ -346,13 +346,18 @@
       "/bluescholars/",
       "/bluescholars/2007/",
       "/bluescholars/2009/",
+      "/bluescholars/2009/blog/releases/",
+      "/bluescholars/2009/blog/releases/oof-ep/",
       "/bluescholars/2013/",
       "/bluescholars/lj/",
+      "/bluescholars/archive-status/",
       "/bluescholars/assets/archive-ui.css"
     ],
     "human_review_claimed": false,
     "release_approved": false,
-    "pages_workflow_url": "https://github.com/keithah/bluescholars/actions/runs/39048094563"
+    "pages_workflow_url": "https://github.com/keithah/bluescholars/actions/runs/39048755889",
+    "candidate_source": "local candidate rebuilt after the 2009-era continuation; 1,055 source assets",
+    "unknown_route_http": 404
   },
   "verification": {
     "tests": "141 passed",
@@ -382,14 +387,12 @@
   "portable_archive": {
     "filename": "bluescholars-restoration-2026-10-17.zip",
     "path": "/tmp/bluescholars-restoration-2026-10-17.zip",
-    "contents": "candidate site, tracked and untracked source, reports/screenshots, recovery state/index, and non-font raw sources",
-    "file_count": 7416,
-    "uncompressed_bytes": 356786794,
-    "compressed_bytes": 148047078,
-    "sha256": "62c95e5c8e4ab3018eb9c8bd88ca01e8e7d83759938e9376aa90f7f0b7b248ac",
+    "contents": "candidate site, source, reports/screenshots, recovery state/index, and non-font raw sources",
+    "file_count": 7432,
     "integrity_test": "passed",
     "font_binaries_included": false,
-    "development_caches_or_credentials_included": false
+    "development_caches_or_credentials_included": false,
+    "checksum_note": "See adjacent .sha256 sidecar and final task handoff; checksum is kept outside the ZIP."
   },
   "unavailable_assets_verified": [
     {
@@ -402,22 +405,22 @@
     }
   ],
   "latest_local_checkpoint": {
-    "description": "Current local recovery checkpoint after 118 validated 2013-era stylesheet captures.",
+    "description": "Current local recovery checkpoint after 2013 and 2009-era continuations.",
     "recovery": {
-      "resource_urls": 11118,
+      "resource_urls": 11145,
       "statuses": {
-        "queued": 5736,
-        "recovered": 3837,
+        "queued": 5742,
+        "recovered": 3858,
         "needs_review": 72,
         "failed": 1473,
         "excluded": 0
       },
       "indexed_capture_records": 23238,
-      "unique_downloaded_files": 2291,
-      "downloaded_bytes": 147533392,
-      "failed_attempts": 7339,
       "index_complete": true,
-      "updated_at": "2026-10-17T16:00:55.426785+00:00"
+      "unique_downloaded_files": 2299,
+      "downloaded_bytes": 147554864,
+      "failed_attempts": 7339,
+      "generated_at": "2026-10-17T16:13:10.221302+00:00"
     },
     "capture_batches": {
       "2007": {
@@ -526,6 +529,29 @@
         "new_resource_records": 0,
         "new_variant_records": 0,
         "interpretation": "Resumed an older saved artifact than the local checkpoint; not a replacement for the local 1,014-URL continuation."
+      },
+      "2009_local_20261017": {
+        "origin": "Current local checkpoint with 1,056 indexed 2009-era URLs.",
+        "eligible_urls": 98,
+        "already_recovered_before_batch": 958,
+        "selected_urls": 98,
+        "attempted": 98,
+        "validated_responses": 21,
+        "validated_kind_counts": {
+          "html": 5,
+          "css": 4,
+          "image": 12
+        },
+        "remaining_urls": 77,
+        "failures": 77,
+        "date_start": "20090101000000",
+        "date_end": "20130920235959",
+        "report": "recovery/era-2009-local-20261017-report.json",
+        "new_pages": 1,
+        "capture_note": "The report classifies response kinds from archive validation; raw source bytes and each capture/hash remain in the report.",
+        "new_css_or_image_responses": 16,
+        "new_unique_raw_files": 8,
+        "new_unique_raw_bytes": 21472
       }
     },
     "candidate": {
@@ -665,5 +691,59 @@
     "failed_attempts": 7339,
     "index_complete": true,
     "updated_at": "2026-10-17T16:00:55.426785+00:00"
+  },
+  "pages_deployment": {
+    "mode": "public, unreviewed incomplete candidate preview; not an approved final restoration",
+    "url": "https://keithah.github.io/bluescholars/",
+    "source_branch": "gh-pages",
+    "source_path": "/",
+    "branch_commit": "2de1693b585bbd5ee4d669a3eb69d5260dfdc1b8",
+    "pages_build_run": "39048755889",
+    "pages_build_status": "success",
+    "pages_api_status": "built",
+    "https_enforced": true,
+    "custom_domain": null,
+    "candidate_source": "local candidate rebuilt after the 2009-era continuation; 1,055 source assets",
+    "verified_routes": {
+      "/bluescholars/": 200,
+      "/bluescholars/2007/": 200,
+      "/bluescholars/2009/": 200,
+      "/bluescholars/2009/blog/releases/": 200,
+      "/bluescholars/2009/blog/releases/oof-ep/": 200,
+      "/bluescholars/2013/": 200,
+      "/bluescholars/lj/": 200,
+      "/bluescholars/archive-status/": 200,
+      "/bluescholars/assets/archive-ui.css": 200
+    },
+    "unknown_route_status": 404,
+    "ordinary_rendering_remote_automatic_assets": 0,
+    "release_approved": false
+  },
+  "preview_deployment": {
+    "mode": "public, unreviewed incomplete candidate preview; not an approved final restoration",
+    "url": "https://keithah.github.io/bluescholars/",
+    "source_branch": "gh-pages",
+    "source_path": "/",
+    "branch_commit": "2de1693b585bbd5ee4d669a3eb69d5260dfdc1b8",
+    "pages_build_run": "39048755889",
+    "pages_build_status": "success",
+    "pages_api_status": "built",
+    "https_enforced": true,
+    "custom_domain": null,
+    "candidate_source": "local candidate rebuilt after the 2009-era continuation; 1,055 source assets",
+    "verified_routes": {
+      "/bluescholars/": 200,
+      "/bluescholars/2007/": 200,
+      "/bluescholars/2009/": 200,
+      "/bluescholars/2009/blog/releases/": 200,
+      "/bluescholars/2009/blog/releases/oof-ep/": 200,
+      "/bluescholars/2013/": 200,
+      "/bluescholars/lj/": 200,
+      "/bluescholars/archive-status/": 200,
+      "/bluescholars/assets/archive-ui.css": 200
+    },
+    "unknown_route_status": 404,
+    "ordinary_rendering_remote_automatic_assets": 0,
+    "release_approved": false
   }
 }

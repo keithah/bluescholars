@@ -155,3 +155,7 @@ The rebuilt candidate remains at 976 recovered pages, 2,181 placeholders, four d
 ## Portable recovery bundle
 
 The current portable bundle is `/tmp/bluescholars-restoration-2026-10-17.zip`. It includes the candidate output, source, reports, screenshots, recovery state/index, and non-font raw captures. ZIP integrity check passed for 7,416 files (356,786,794 uncompressed bytes); SHA-256: `62c95e5c8e4ab3018eb9c8bd88ca01e8e7d83759938e9376aa90f7f0b7b248ac`. Font binaries and development caches/credentials are excluded.
+
+## Refreshed Pages candidate — October 17, 2026
+
+The newer local candidate is now served from [the Pages preview](https://keithah.github.io/bluescholars/) at `gh-pages` commit `257bb3e13abce73695f0b368bf67df8b2c819db5`; Pages workflow [39048094563](https://github.com/keithah/bluescholars/actions/runs/39048094563) succeeded and the Pages API reports `built`. HTTPS is enforced and no custom domain is configured. Live HTTP checks returned 200 for the hub, `/2007/`, `/2009/`, `/2013/`, `/lj/`, and the local stylesheet. This is still an incomplete, unreviewed candidate. The `main` validation workflow [39048074891](https://github.com/keithah/bluescholars/actions/runs/39048074891) passed its tests and root and project-subpath deployment checks.

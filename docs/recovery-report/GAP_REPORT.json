@@ -333,15 +333,26 @@
       "branch": "gh-pages",
       "path": "/"
     },
-    "commit": "f192c6bb67ba9b29f6071d85e39a92cca0f6bee7",
-    "workflow_run": 39001990053,
+    "commit": "257bb3e13abce73695f0b368bf67df8b2c819db5",
+    "workflow_run": 39048094563,
     "workflow_conclusion": "success",
     "pages_api_status": "built",
     "classification": "owner-authorized unreviewed candidate preview; not a completed restoration release",
     "source_review_flags": {
       "publish_approved": false,
       "visual_reviewed": false
-    }
+    },
+    "verified_routes_http_200": [
+      "/bluescholars/",
+      "/bluescholars/2007/",
+      "/bluescholars/2009/",
+      "/bluescholars/2013/",
+      "/bluescholars/lj/",
+      "/bluescholars/assets/archive-ui.css"
+    ],
+    "human_review_claimed": false,
+    "release_approved": false,
+    "pages_workflow_url": "https://github.com/keithah/bluescholars/actions/runs/39048094563"
   },
   "verification": {
     "tests": "141 passed",

@@ -586,30 +586,29 @@
   "published_preview": {
     "url": "https://keithah.github.io/bluescholars/",
     "branch": "gh-pages",
-    "commit": "1885e30b42b23023bfa69650399e88b29c170a47",
-    "pages_build_run": "39010340075",
+    "commit": "257bb3e13abce73695f0b368bf67df8b2c819db5",
+    "pages_build_run": "39048094563",
     "pages_status": "built",
     "https_enforced": true,
-    "verified_at": "2026-10-17T06:34:00Z",
+    "custom_domain": null,
+    "verified_at": "2026-10-17T16:10:00Z",
     "checks": {
-      "homepage_http": 200,
-      "2007_http": 200,
-      "2009_http": 200,
-      "2013_http": 200,
-      "pagination_http": 200,
-      "eugene_article_http": 200,
-      "lj_http": 200,
-      "archive_status_http": 200,
-      "local_css_http": 200,
-      "missing_route_http": 404
+      "/bluescholars/": 200,
+      "/bluescholars/2007/": 200,
+      "/bluescholars/2009/": 200,
+      "/bluescholars/2013/": 200,
+      "/bluescholars/lj/": 200,
+      "/bluescholars/assets/archive-ui.css": 200
     },
     "homepage_year_links_verified": true,
+    "candidate_assets": "1,044 local source assets; zero remote automatic resources in ordinary rendering",
     "browser": {
-      "gateway_accessibility_tree_verified": true,
-      "2007_original_artwork_and_show_content_inspected": true,
-      "2013_logo_nav_and_hero_inspected": true,
+      "previous_visual_inspection_retained": true,
       "human_review_claimed": false
-    }
+    },
+    "classification": "owner-authorized incomplete candidate preview; not a reviewed release",
+    "publish_approved": false,
+    "visual_reviewed": false
   },
   "latest_continuation": {
     "description": "October 17 continuation focused on 2007/2013 source recovery, 2009 content and candidate verification.",

@@ -218,3 +218,15 @@ The seventh broad retry processed 200 URLs, validated eight HTML responses, adde
 
 
 A tenth broad retry validated 9 HTML capture responses from 200 URLs. It added seven resource URLs, 38 index rows, and three previously unseen raw bodies totaling 35,479 bytes. The new source updated the Jean Quan and Paramount photo entries and restored edition-specific bio/store pages; one recovered route was added overall, leaving 978 recovered pages and 2,176 placeholders. Both root and `/bluescholars/` checks pass. Capture timestamps, hashes and source URLs are in [the tenth retry report](../../recovery/broad-200-local-20261017-10-report.json).
+
+
+An eleventh broad retry validated 16 HTML captures from 200 URLs, adding 24 resource URLs, 83 index rows, and seven unique raw bodies totaling 54,644 bytes. Root and `/bluescholars/` candidate checks both pass; the build now contains 981 recovered pages and 2,176 placeholders. New material updates the 2007 static pages and 2013-era news/events/press pages. Some newly linked source pages resolve to 2004/2005 capture dates; those dates are preserved rather than relabeled as 2007. Capture-by-capture URLs and hashes are in [the eleventh retry report](../../recovery/broad-200-local-20261017-11-report.json).
+
+
+Eleventh-batch preview deployment: `gh-pages` commit `dac1edae56555ad01cede24424bcdcb0ab13328e` was built successfully by [Pages workflow 39059635467](https://github.com/keithah/bluescholars/actions/runs/39059635467). The public hub, new 2007 static pages, 2009 and 2013 archive-query views, edition roots, LJ, recovery status, and local CSS return HTTP 200; an unknown route returns 404. A scan of generated HTML and CSS found zero remote automatic assets. This remains an unreviewed candidate preview, with publication approval false.
+
+
+A twelfth broad retry validated 27 HTML responses and expanded the archive index by 1,224 rows, adding 34 URL records and 14 unique raw bodies totaling 166,906 bytes. The build remains at 981 recovered pages with 2,177 placeholders; both root and `/bluescholars/` checks pass. The refresh updates older static-page and 2013-era page variants and the status report, while several prior paths leave the route map. Exact source URLs, requested/resolved timestamps and digests are in [the twelfth retry report](../../recovery/broad-200-local-20261017-12-report.json).
+
+
+Twelfth-batch preview deployment: `gh-pages` commit `7fd81a7771522fceb61b3e6190e6d8e544f18b97` was built successfully by [Pages workflow 39060634246](https://github.com/keithah/bluescholars/actions/runs/39060634246). Live checks returned 200 for the refreshed 2007 pages, the 2013-era static routes, both generated archive-query destinations, LJ, archive status and local CSS; an unknown route returned 404. The Pages API reports `built`, HTTPS is enforced, and a scan of generated HTML/CSS found zero remote automatic asset references. The site remains an incomplete unreviewed candidate, not an approved final release.

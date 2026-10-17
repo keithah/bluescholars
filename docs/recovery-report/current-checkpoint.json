@@ -32,8 +32,8 @@
     "responsive_limit": "The connected browser exposed a fixed viewport; 1440px, 768px and 390px screenshots were not available in this run. This is not a mobile visual-review pass."
   },
   "candidate_build": {
-    "recovered_pages": 978,
-    "placeholder_pages": 2176,
+    "recovered_pages": 981,
+    "placeholder_pages": 2177,
     "derived_pages": 4,
     "local_source_assets": 1055,
     "recovered_pages_by_edition": {
@@ -65,20 +65,20 @@
     }
   },
   "checkpoint": {
-    "resource_urls": 11201,
+    "resource_urls": 11259,
     "statuses": {
-      "queued": 5200,
-      "recovered": 3931,
+      "queued": 5168,
+      "recovered": 3974,
       "needs_review": 72,
-      "failed": 1998,
+      "failed": 2045,
       "excluded": 0
     },
-    "indexed_capture_records": 23344,
+    "indexed_capture_records": 24651,
     "index_complete": true,
-    "unique_downloaded_files": 2309,
-    "downloaded_bytes": 147740118,
-    "failed_attempts": 9199,
-    "generated_at": "2026-10-17T18:28:42.122584+00:00"
+    "unique_downloaded_files": 2330,
+    "downloaded_bytes": 147961668,
+    "failed_attempts": 9624,
+    "generated_at": "2026-10-17T18:56:53.054045+00:00"
   },
   "latest_import": {
     "run_id": "38975520061",
@@ -142,7 +142,7 @@
     "unique_raw_files": 97,
     "visual_reviewed": false
   },
-  "updated_at": "2026-10-17T18:28:42.122584+00:00",
+  "updated_at": "2026-10-17T18:56:53.054045+00:00",
   "tests": {
     "command": ".venv311/bin/python -m pytest -q",
     "result": "153 passed",
@@ -190,23 +190,37 @@
     }
   },
   "pages_deployment": {
-    "commit": "dc3bd1921dc043534555e3d32536eceae58e8aee",
-    "workflow_run": 39052250053,
+    "commit": "7fd81a7771522fceb61b3e6190e6d8e544f18b97",
+    "workflow_run": 39060634246,
     "workflow_conclusion": "success",
     "pages_api_status": "built",
     "https_enforced": true,
     "custom_domain": null,
     "verified_routes": {
-      "/bluescholars/": 200,
-      "/bluescholars/2007/": 200,
-      "/bluescholars/2009/": 200,
-      "/bluescholars/2013/": 200,
-      "/bluescholars/2009/blog/2010/12/hari-kondabolu-storms-the-pacific-northwest/": 200,
-      "/bluescholars/lj/": 200,
-      "/bluescholars/archive-status/": 200,
-      "/bluescholars/assets/archive-ui.css": 200
+      "https://keithah.github.io/bluescholars/": 200,
+      "https://keithah.github.io/bluescholars/2007/": 200,
+      "https://keithah.github.io/bluescholars/2007/press.html": 200,
+      "https://keithah.github.io/bluescholars/2007/bio.html": 200,
+      "https://keithah.github.io/bluescholars/2007/lyrics.html": 200,
+      "https://keithah.github.io/bluescholars/2007/store.html": 200,
+      "https://keithah.github.io/bluescholars/2007/documents/bs_erf/": 200,
+      "https://keithah.github.io/bluescholars/2009/": 200,
+      "https://keithah.github.io/bluescholars/2009/page/7/www.harithecomic.com/": 200,
+      "https://keithah.github.io/bluescholars/2013/": 200,
+      "https://keithah.github.io/bluescholars/2013/media.htm/": 200,
+      "https://keithah.github.io/bluescholars/2013/contact.htm/": 200,
+      "https://keithah.github.io/bluescholars/2013/events.htm/": 200,
+      "https://keithah.github.io/bluescholars/2013/artistedition/": 200,
+      "https://keithah.github.io/bluescholars/2013/store.htm/": 200,
+      "https://keithah.github.io/bluescholars/2013/documents/bs_erf/": 200,
+      "https://keithah.github.io/bluescholars/2013/page/7/www.harithecomic.com/": 200,
+      "https://keithah.github.io/bluescholars/lj/": 200,
+      "https://keithah.github.io/bluescholars/archive-status/": 200,
+      "https://keithah.github.io/bluescholars/archive-status/report.json": 200,
+      "https://keithah.github.io/bluescholars/assets/archive-ui.css": 200
     },
     "unknown_route_http": 404,
+    "remote_automatic_assets": 0,
     "classification": "incomplete, unreviewed candidate preview"
   },
   "active_wayback_batch": null,
@@ -374,32 +388,43 @@
   },
   "preview_deployment": {
     "url": "https://keithah.github.io/bluescholars/",
+    "branch": "gh-pages",
+    "source_path": "/",
+    "commit": "7fd81a7771522fceb61b3e6190e6d8e544f18b97",
+    "pages_build_run": 39060634246,
+    "pages_build_status": "success",
     "pages_api_status": "built",
-    "pages_source": {
-      "branch": "gh-pages",
-      "path": "/"
+    "https_enforced": true,
+    "custom_domain": null,
+    "verified_routes": {
+      "/": 200,
+      "/2007/": 200,
+      "/2007/press.html": 200,
+      "/2007/bio.html": 200,
+      "/2007/lyrics.html": 200,
+      "/2007/store.html": 200,
+      "/2007/documents/bs_erf/": 200,
+      "/2009/": 200,
+      "/2009/page/7/www.harithecomic.com/": 200,
+      "/2013/": 200,
+      "/2013/media.htm/": 200,
+      "/2013/contact.htm/": 200,
+      "/2013/events.htm/": 200,
+      "/2013/artistedition/": 200,
+      "/2013/store.htm/": 200,
+      "/2013/documents/bs_erf/": 200,
+      "/2013/page/7/www.harithecomic.com/": 200,
+      "/lj/": 200,
+      "/archive-status/": 200,
+      "/archive-status/report.json": 200,
+      "/assets/archive-ui.css": 200
     },
-    "branch_commit": "903ee0acc230c42636ba2ebd28ea0b1f6f840028",
-    "parent_commit": "cc3ddeea338842c97ecbaa6970b591183faab384",
-    "fast_forward": true,
-    "candidate_files": 3383,
-    "candidate_bytes": 76770346,
-    "verified_http_200": [
-      "/bluescholars/",
-      "/2007/",
-      "/2009/",
-      "/2013/",
-      "/lj/",
-      "/archive-status/",
-      "/assets/archive-ui.css",
-      "/2009/blog/2010/03/new-music-paul-valery/"
-    ],
-    "unknown_route_status": 404,
-    "human_release_review": false,
+    "unknown_route_http": 404,
+    "remote_automatic_assets": 0,
+    "candidate_source": "local build after twelfth broad recovery batch",
+    "classification": "owner-authorized incomplete, unreviewed candidate preview; not a completed restoration release",
     "publish_approved": false,
-    "note": "Owner-requested partial preview refresh; this is not a completed restoration or reviewed release.",
-    "pages_deployment_run": "38976443204",
-    "pages_deployment_result": "success"
+    "visual_reviewed": false
   },
   "latest_targeted_image_index": {
     "archive": "Internet Archive Wayback",
@@ -899,5 +924,25 @@
     "new_unique_raw_files": 3,
     "new_unique_raw_bytes": 35479,
     "changed_rendered_routes": 7
+  },
+  "latest_eleventh_broad_retry": {
+    "report": "recovery/broad-200-local-20261017-11-report.json",
+    "processed_urls": 200,
+    "validated_responses": 16,
+    "new_resource_urls": 24,
+    "new_index_rows": 83,
+    "new_unique_raw_files": 7,
+    "new_unique_raw_bytes": 54644,
+    "changed_rendered_routes": 18
+  },
+  "latest_twelfth_broad_retry": {
+    "report": "recovery/broad-200-local-20261017-12-report.json",
+    "processed_urls": 200,
+    "validated_responses": 27,
+    "new_resource_urls": 34,
+    "new_index_rows": 1224,
+    "new_unique_raw_files": 14,
+    "new_unique_raw_bytes": 166906,
+    "changed_rendered_routes": 22
   }
 }

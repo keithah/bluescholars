@@ -324,12 +324,23 @@ def capture_era(state:State,client,era:str,max_files:int=2000)->dict:
             attempted.append(timestamp)
             try:
                 result=capture_variant(state,client,url,timestamp)
+                actual=result.get('actual_capture','')
+                if not start<=actual<=end:
+                    later=state.data['resources'].get(result.get('source_key'))
+                    if later:
+                        later['status']='needs_review'
+                        later['era_compatibility_exception']={
+                            'requested_era':era,'requested_capture':timestamp,
+                            'actual_capture':actual,
+                            'reason':'Wayback redirected outside the requested edition date range.'}
+                        state.save()
+                    raise ValueError(f'Resolved capture {actual or "unknown"} is outside the {era} era')
                 result['attempted_captures']=list(attempted)
                 report['recovered']+=1;report['captures'].append(result)
-                actual=result.get('actual_capture')
                 if actual:successful.setdefault(url,set()).add(actual)
                 break
             except Exception as exc:
+                result=None
                 last_error=f'{type(exc).__name__}: {exc}'
         if result is None:
             report['failures'].append({'url':url,'timestamps':attempted,'error':last_error})

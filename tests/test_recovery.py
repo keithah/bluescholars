@@ -344,9 +344,12 @@ def test_capture_era_does_not_count_redirected_capture_outside_era(tmp_path):
 
     report=capture_era(state,client,'2007',max_files=10)
 
-    assert report['recovered']==1
-    assert report['captures'][0]['actual_capture']=='20140101000000'
+    assert report['recovered']==0
+    assert report['captures']==[]
+    assert report['failures'][0]['error']=='ValueError: Resolved capture 20140101000000 is outside the 2007 era'
     assert report['remaining_urls']==1
+    later=next(r for key,r in state.data['resources'].items() if key!=HOME and r.get('actual_capture')=='20140101000000')
+    assert later['status']=='needs_review'
 
 def test_download_failure_is_not_missing_forever(tmp_path):
     state=State(tmp_path);state.add(HOME,'html','seed',TARGET)

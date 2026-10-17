@@ -147,6 +147,18 @@ def test_candidate_keeps_font_provenance_without_redistributing_font_binary(tmp_
     assert '@font-face' not in rendered and '.woff' not in rendered
     assert 'font-family:ui' in rendered
 
+def test_legacy_wordpress_origin_page_uses_the_2009_site_route(tmp_path):
+    fixture_root(tmp_path);s=State(tmp_path)
+    alias='http://02cd02a.netsolhost.com:80/blog/2009/03/sxsw-2009-where-well-be/'
+    add_raw(s,alias,'html',b'<html><body><h1>SXSW 2009</h1><p>Recovered entry.</p></body></html>')
+
+    report=build(tmp_path,tmp_path/'_candidate','/bluescholars',candidate=True)
+
+    assert report['recovered_pages']==1
+    page=tmp_path/'_candidate/2009/blog/2009/03/sxsw-2009-where-well-be/index.html'
+    assert page.is_file()
+    assert 'Recovered entry.' in page.read_text()
+
 
 def test_source_promotion_does_not_copy_font_binaries(tmp_path):
     fixture_root(tmp_path);s=State(tmp_path)

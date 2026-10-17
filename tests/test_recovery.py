@@ -161,6 +161,22 @@ def test_index_interruption_preserves_cursor(tmp_path):
     assert reloaded.data['index_complete']
     assert 'resumeKey=continue' in client.calls[0]
 
+def test_index_accepts_an_explicit_non_target_alias_domain(tmp_path):
+    alias='http://02cd02a.netsolhost.com:80/blog/2009/03/sxsw-2009-where-well-be/'
+    foreign='http://unrelated.example/blog/post/'
+    text=json.dumps([HEADER,
+        ['20100312073016',alias,'text/html','200','ALIAS'],
+        ['20100312073017',foreign,'text/html','200','OTHER']]).encode()
+    state=State(tmp_path)
+    client=Client(lambda u:Payload(text,u,200,{}))
+
+    result=index(state,client,max_pages=1,url='02cd02a.netsolhost.com',match='domain')
+
+    assert result['complete']
+    assert alias in state.data['resources']
+    assert state.data['resources'][alias]['kind']=='html'
+    assert foreign not in state.data['resources']
+
 def test_seed_asset_index_queries_exact_observed_urls(tmp_path):
     (tmp_path/'recovery/seeds').mkdir(parents=True)
     first='https://images.squarespace-cdn.com/content/v1/site/front-page.jpg'

@@ -30,7 +30,16 @@ def index(state: State,client,max_pages: int=20,url: str='bluescholars.com',matc
             path.parent.mkdir(parents=True,exist_ok=True);path.write_bytes(response.body)
             for row in rows:
                 original=original_url(row['original'])
-                if not original or (match=='domain' and not in_domain(original)): continue
+                if not original: continue
+                if match=='domain':
+                    query_host=urlsplit(url if '://' in url else 'http://'+url).hostname or ''
+                    original_host=urlsplit(original).hostname or ''
+                    # The primary query includes www.bluescholars.com as well
+                    # as the apex. Supplemental historical hosts are scoped to
+                    # the queried host and its subdomains, never unrelated CDX rows.
+                    allowed=(in_domain(original) if query_host in ('bluescholars.com','www.bluescholars.com')
+                             else original_host==query_host or original_host.endswith('.'+query_host))
+                    if not allowed: continue
                 r=state.add(original,kind_for(original,row['mimetype']),'CDX:'+key)
                 if row not in r['captures']: r['captures'].append(row)
                 # Exact CDX lookups can return a normalized HTTP/HTTPS spelling.

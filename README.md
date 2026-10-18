@@ -5,10 +5,10 @@ This repository is reconstructing three archived versions of **bluescholars.com*
 - `/2007/` — the older early design
 - `/2009/` — the WordPress-era site, whose captures continue through 2013
 - `/2013/` — the Squarespace design, first located in September 2013; the last intact homepage capture located so far is September 30, 2023
-- `/lj/` — a separate archive for the separately hosted Blue Scholars LiveJournal; it is not presented as another official website design
+- `/lj/` — the latest recovered LiveJournal front page (captured February 19, 2018) as its default view; `/lj/archive/` holds recovered posts and dated captures
 - `/prometheusbrown/` and `/sabzi/` — separate archives for the related artist sites, each with its own dated edition pages and source provenance
-- `/masslinemedia/` — separate 2006–2009 Mass Line Media homepage captures and a growing, locally rendered 2007 forum archive
-- `/myspace/` — date-preserving Blue Scholars MySpace profile snapshots and recovered linked images
+- `/masslinemedia/` — the latest intact original homepage (August 13, 2009) as its default view; `/masslinemedia/archive/` lists earlier homepages and pages, with the 2007 forum at `/masslinemedia/forum/`
+- `/myspace/` — the latest recovered profile capture (August 16, 2025) as its default view; `/myspace/captures/` lists all dated profile snapshots and recovered linked images
 
 The root page is an edition gateway. The visual baseline for the Squarespace edition is the May 29, 2021 homepage capture. Original source bytes, capture dates, hashes, and archive provenance are retained separately from the rendered output.
 

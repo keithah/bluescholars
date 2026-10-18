@@ -911,14 +911,39 @@ def build_massline_archive(root: Path, output: Path, base: str = "", candidate: 
     index_body = ('<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">'
                   '<title>Mass Line Media archive</title><style>body{max-width:980px;margin:3rem auto;padding:0 1.2rem;font:16px/1.55 system-ui;color:#202020}h1{font-size:clamp(2rem,7vw,4rem);line-height:1}li{margin:.55rem 0}small{color:#666}.archive-list{columns:2}@media(max-width:640px){.archive-list{columns:1}}.note{border-left:4px solid #3985ad;padding:.5rem 1rem;background:#f3f7f8}</style><body>'
                   '<p class="note">Historical restoration from Internet Archive captures. Page dates are shown individually; missing source material remains unfilled.</p>'
-                  '<h1>Mass Line Media</h1><p><a href="'+output_base+'/">Back to Blue Scholars archive</a></p>'
-                  '<ul><li><a href="'+output_base+'/masslinemedia/site/index.html">Open the latest authentic site homepage (2009)</a></li>'
+                  '<h1>Mass Line Media archive</h1><p><a href="'+output_base+'/">Back to Blue Scholars archive</a> · <a href="'+output_base+'/masslinemedia/">Open latest original homepage</a></p>'
+                  '<ul><li><a href="'+output_base+'/masslinemedia/site/home-2009.html">Open the latest authentic site homepage (2009)</a></li>'
                   '<li><a href="'+output_base+'/masslinemedia/forum/index.html">Browse the 2007 forum archive</a></li></ul>'
                   '<h2>Dated homepages from the original site era</h2><ul>'+variant_links+'</ul>'
                   '<h2>Other recovered page captures</h2><p><a href="'+output_base+'/masslinemedia/alternate-captures/">Browse '+str(len(recovered_resource_variants))+' separately dated page and asset variants</a></p>'
                   '<h2>Other captured site pages</h2><ul>'+''.join(link(i) for i in sorted(site_rows,key=lambda v:v["route"]))+'</ul>'
                   '</body></html>')
-    _write_output(output, "/masslinemedia/index.html", index_body)
+    _write_output(output, "/masslinemedia/archive/index.html", index_body)
+    if homepage_variants:
+        latest_variant = max(homepage_variants, key=lambda item: (item[0].get("timestamp", ""), item[0].get("year", "")))
+        latest_home_route = f"/masslinemedia/site/home-{latest_variant[0]['year']}.html"
+    elif output.joinpath("masslinemedia/site/index.html").is_file():
+        latest_home_route = "/masslinemedia/site/index.html"
+    else:
+        latest_home_route = ""
+    if latest_home_route:
+        latest_home = BeautifulSoup((output / latest_home_route.lstrip("/")).read_text(encoding="utf-8"), "html.parser")
+        if latest_home.body is None:
+            latest_home.append(latest_home.new_tag("body"))
+        archive_nav = latest_home.new_tag("nav", attrs={"class": "massline-archive-nav", "aria-label": "Mass Line archive navigation"})
+        for label, path in (("Blue Scholars archive", "/"), ("Dated Mass Line captures", "/masslinemedia/archive/"),
+                            ("2007 forum", "/masslinemedia/forum/")):
+            anchor = latest_home.new_tag("a", href=output_base + path)
+            anchor.string = label
+            archive_nav.append(anchor)
+        (latest_home.head or latest_home.html).append(latest_home.new_tag("style"))
+        nav_style = latest_home.find_all("style")[-1]
+        nav_style.string = ".massline-archive-nav{display:flex;flex-wrap:wrap;gap:.7rem 1.2rem;padding:.55rem 1rem;background:#eef3f5;font:13px/1.5 system-ui,sans-serif}.massline-archive-nav a{color:#24567d}"
+        note = latest_home.select_one(".massline-source-note")
+        (note or latest_home.body).insert_after(archive_nav) if note else latest_home.body.insert(0, archive_nav)
+        _write_output(output, "/masslinemedia/index.html", "<!doctype html>\n" + str(latest_home))
+    else:
+        _write_output(output, "/masslinemedia/index.html", index_body)
     forum_index = ('<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">'
                    '<title>Mass Line Forums archive</title><style>body{max-width:1100px;margin:3rem auto;padding:0 1.2rem;font:16px/1.55 system-ui;color:#202020}li{margin:.5rem 0}small{color:#666}.archive-list{columns:2}@media(max-width:640px){.archive-list{columns:1}}</style><body>'
                    '<p><a href="'+output_base+'/masslinemedia/index.html">Mass Line Media archive</a> · <a href="'+output_base+'/">Blue Scholars archive</a></p>'

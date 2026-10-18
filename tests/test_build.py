@@ -622,7 +622,7 @@ def test_livejournal_archive_is_a_separate_local_top_level_section(tmp_path):
     fixture_root(tmp_path);s=State(tmp_path)
     home='http://bluescholars.livejournal.com/'
     post=home+'16954.html'
-    add_raw(s,home,'html',b'<html><body><a href="/16954.html">friday mixdown</a></body></html>')
+    add_raw(s,home,'html',b'<html><head><title>Latest captured LiveJournal</title></head><body><h1>Latest journal snapshot</h1><a href="/16954.html">friday mixdown</a></body></html>')
     add_raw(s,post,'html',b'<html><head><title>bluescholars: friday mixdown</title></head><body><h1></h1><p>Captured post text.</p></body></html>')
     current=s.data['resources'].pop(post)
     older=dict(current);older['actual_capture']='20090125012333'
@@ -633,7 +633,10 @@ def test_livejournal_archive_is_a_separate_local_top_level_section(tmp_path):
     build(tmp_path,tmp_path/'_candidate','/bluescholars',candidate=True)
     root=BeautifulSoup((tmp_path/'_candidate/index.html').read_text(),'html.parser')
     assert root.select_one('a.lj-archive[href="/bluescholars/lj/"]')
-    index=BeautifulSoup((tmp_path/'_candidate/lj/index.html').read_text(),'html.parser')
+    index=BeautifulSoup((tmp_path/'_candidate/lj/archive/index.html').read_text(),'html.parser')
+    default=BeautifulSoup((tmp_path/'_candidate/lj/index.html').read_text(),'html.parser')
+    assert default.find('h1',string='Latest journal snapshot')
+    assert default.select_one('a[href="/bluescholars/lj/archive/"]')
     assert index.select_one('.recovered-journal-entries a[href="/bluescholars/lj/posts/16954.html"]').get_text(strip=True)=='friday mixdown'
     assert 'Earlier journal capture' not in index.get_text(' ',strip=True)
     assert index.select_one('.recovered-journal-entries a[href="/bluescholars/lj/posts/calendar"]') is None
@@ -712,7 +715,7 @@ def test_livejournal_comment_thread_captures_render_at_distinct_routes(tmp_path)
     second=(tmp_path/'_candidate/lj/comments/16015.html/50319/index.html').read_text()
     assert 'First preserved reply.' in first and 'Second preserved reply.' not in first
     assert 'Second preserved reply.' in second and 'First preserved reply.' not in second
-    index=BeautifulSoup((tmp_path/'_candidate/lj/index.html').read_text(),'html.parser')
+    index=BeautifulSoup((tmp_path/'_candidate/lj/archive/index.html').read_text(),'html.parser')
     assert len(index.select('.recovered-comment-threads a'))==2
     assert not index.select('.recovered-journal-entries a[href*="/comments/"]')
 
@@ -763,7 +766,7 @@ def test_livejournal_entry_content_is_reused_from_the_captured_front_page(tmp_pa
     assert 'This exact text survives in the captured front page.' in page
     assert 'derived_from_capture' in {r['status'] for r in report['pages']}
     assert report['derived_pages']==1
-    index=BeautifulSoup((tmp_path/'_candidate/lj/index.html').read_text(),'html.parser')
+    index=BeautifulSoup((tmp_path/'_candidate/lj/archive/index.html').read_text(),'html.parser')
     assert index.select_one('a[href="/lj/posts/16015.html"]')
     assert 'Recovered journal entries' in index.get_text(' ',strip=True)
 

@@ -321,7 +321,7 @@ def _sanitize(raw: str, stamp: str, assets: dict[str, str], base: str, source_ur
     soup.head.append(style)
     bar = soup.new_tag("div", attrs={"class": "preservation-bar"})
     strong = soup.new_tag("strong"); strong.string = "BLUE SCHOLARS · MYSPACE ARCHIVE"; bar.append(strong)
-    back = soup.new_tag("a", href=base + "/myspace/"); back.string = "All dated captures"; bar.append(back)
+    back = soup.new_tag("a", href=base + "/myspace/captures/"); back.string = "All dated captures"; bar.append(back)
     info = soup.new_tag("div", attrs={"class": "preservation-intro"})
     notice = soup.new_tag("p"); notice.string = f"Captured {stamp[:4]}-{stamp[4:6]}-{stamp[6:8]} · preserved source HTML, with available assets saved locally."; info.append(notice)
     gaps = soup.new_tag("p"); gaps.string = "Scripts and external automatic requests are disabled. Captured Flash files are available as downloads and are never embedded; gaps are identified in place."; info.append(gaps)
@@ -386,7 +386,24 @@ def build_myspace_archive(root: Path, output: Path, base: str = "") -> dict:
         body.append("<ul>" + "".join(f"<li>{html.escape(str(r.get('timestamp')))}: {html.escape(str(r.get('error', 'response not recovered')))}</li>" for r in gaps) + "</ul>")
     else: body.append("<p>All indexed page responses were recovered.</p>")
     body.append("<p>Original raw response bytes, dates, hashes, and capture URLs are retained in the recovery inventory. Some profile images and embedded music may not have captures.</p></main></body></html>")
-    _write(output / "myspace/index.html", "".join(body))
-    result = {"status": "built", "profile": "https://myspace.com/bluescholars", "indexed_page_captures": len(records), "recovered_pages": len(valid), "failed_pages": len(gaps), "capture_years": years, "local_assets": len(assets), "pages": rendered}
+    catalog = "".join(body)
+    latest = max(rendered, key=lambda page: (page["timestamp"], page["route"])) if rendered else None
+    if latest:
+        catalog_page = BeautifulSoup(catalog, "html.parser")
+        lead = catalog_page.select_one(".archive-lead")
+        latest_link = catalog_page.new_tag("a", href=base + "/myspace/")
+        latest_link.string = "Open the latest captured profile"
+        latest_note = catalog_page.new_tag("p")
+        latest_note.append(latest_link)
+        if lead:
+            lead.insert_after(latest_note)
+        catalog = str(catalog_page)
+    _write(output / "myspace/captures/index.html", catalog)
+    if latest:
+        latest_page = output / latest["route"].lstrip("/")
+        _write(output / "myspace/index.html", latest_page.read_text(encoding="utf-8"))
+    else:
+        _write(output / "myspace/index.html", catalog)
+    result = {"status": "built", "profile": "https://myspace.com/bluescholars", "indexed_page_captures": len(records), "recovered_pages": len(valid), "failed_pages": len(gaps), "capture_years": years, "local_assets": len(assets), "latest_capture": latest["timestamp"] if latest else None, "latest_route": latest["route"] if latest else None, "captures_index": "/myspace/captures/", "pages": rendered}
     (output / "myspace/report.json").write_text(json.dumps(result, indent=2) + "\n")
     return result

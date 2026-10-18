@@ -189,6 +189,8 @@ def test_myspace_build_preserves_dates_and_strips_remote_loads(tmp_path):
       <a href="https://www.myspace.com/bluescholars">Profile</a></body></html>'''
     raw = source / "raw/20070307131210-test.html"
     raw.write_text(html)
+    latest_raw = source / "raw/20250816191351-latest.html"
+    latest_raw.write_text('<!doctype html><html><head><title>Latest Blue Scholars profile</title></head><body><h1>Latest archive snapshot</h1><p>Recent profile-era content.</p></body></html>')
     asset = source / "assets/profile.jpg"
     asset.parent.mkdir()
     asset.write_bytes(b"\xff\xd8\xfflocal-image")
@@ -204,6 +206,9 @@ def test_myspace_build_preserves_dates_and_strips_remote_loads(tmp_path):
     (source / "index/acquisition.json").write_text(json.dumps({"records": [{
         "status": "recovered", "timestamp": "20070307131210", "actual_capture": "20070307131210",
         "raw_path": str(raw), "original": "http://myspace.com/bluescholars", "sha256": "abc"
+    }, {
+        "status": "recovered", "timestamp": "20250816191351", "actual_capture": "20250816191351",
+        "raw_path": str(latest_raw), "original": "https://myspace.com/bluescholars", "sha256": "def"
     }]}))
     result = build_myspace_archive(tmp_path, tmp_path / "_candidate", "/bluescholars")
     page = tmp_path / "_candidate/myspace/2007/20070307131210.html"
@@ -219,8 +224,13 @@ def test_myspace_build_preserves_dates_and_strips_remote_loads(tmp_path):
     assert "background: url(https://cdn.example/bg.jpg)" not in (tmp_path / "_candidate/myspace/assets/theme.css").read_text()
     assert "cdn.example" not in text
     assert "https://www.myspace.com/bluescholars" in text
-    assert (tmp_path / "_candidate/myspace/index.html").exists()
-    assert result["recovered_pages"] == 1
+    default = (tmp_path / "_candidate/myspace/index.html").read_text()
+    assert "Latest archive snapshot" in default
+    assert "2025" in default
+    assert 'href="/bluescholars/myspace/captures/"' in default
+    assert "MySpace profile captures" in (tmp_path / "_candidate/myspace/captures/index.html").read_text()
+    assert "20070307131210" in (tmp_path / "_candidate/myspace/captures/index.html").read_text()
+    assert result["recovered_pages"] == 2
 
 
 def test_real_archived_myspace_markup_with_detached_link_nodes_is_sanitized():

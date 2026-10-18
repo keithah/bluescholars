@@ -748,6 +748,41 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
             lj_index_page.main.append(heading);lj_index_page.main.append(thread_list)
         if lj_entries or lj_comment_threads:
             lj_index_path.write_text(str(lj_index_page),encoding='utf-8')
+    # Keep the descriptive index as a browseable archive, while making the
+    # latest recovered LiveJournal front page the default /lj/ destination.
+    if lj_index_path.is_file():
+        lj_archive_path=output/'lj/archive/index.html'
+        lj_archive_path.parent.mkdir(parents=True,exist_ok=True)
+        lj_archive_page=BeautifulSoup(lj_index_path.read_text(encoding='utf-8'),'html.parser')
+        latest_link=lj_archive_page.new_tag('a',href=base+'/lj/')
+        latest_link.string='Open the latest recovered journal front page'
+        latest_note=lj_archive_page.new_tag('p');latest_note.append(latest_link)
+        if lj_archive_page.main: lj_archive_page.main.insert(1,latest_note)
+        else: lj_archive_page.body.insert(0,latest_note)
+        lj_archive_path.write_text(str(lj_archive_page),encoding='utf-8')
+        latest_journal_path=output/'lj/journal/index.html'
+        if latest_journal_path.is_file():
+            latest_journal=BeautifulSoup(latest_journal_path.read_text(encoding='utf-8'),'html.parser')
+            archive_label='LIVEJOURNAL ARCHIVE'
+            for link in latest_journal.select('.archive-navigation a'):
+                if link.get_text(' ',strip=True).upper()==archive_label:
+                    link['href']=base+'/lj/archive/'
+            journal_root=newest_by_url.get(identity('http://bluescholars.livejournal.com/'))
+            stamp=(journal_root or {}).get('actual_capture','')
+            capture_date=(stamp[:4]+'-'+stamp[4:6]+'-'+stamp[6:8]) if len(stamp)>=8 else 'date unavailable'
+            capture_note=latest_journal.new_tag('aside',attrs={'class':'lj-current-capture'})
+            capture_note.string='Latest recovered journal front page · captured '+capture_date+' · '
+            archive_link=latest_journal.new_tag('a',href=base+'/lj/archive/')
+            archive_link.string='browse all saved posts and dated captures'
+            capture_note.append(archive_link)
+            latest_journal.head.append(latest_journal.new_tag('style'))
+            latest_journal.head.find_all('style')[-1].string=(
+                '.lj-current-capture{box-sizing:border-box;margin:0;padding:9px 14px;background:#eef3f5;'
+                'color:#364657;font:12px/1.5 system-ui,sans-serif}.lj-current-capture a{color:#24567d}')
+            notice=latest_journal.select_one('.archive-restoration-notice')
+            if notice: notice.insert_after(capture_note)
+            else: latest_journal.body.insert(0,capture_note)
+            lj_index_path.write_text(str(latest_journal),encoding='utf-8')
     # Each platform generation gets its own index. Unrecovered editions are
     # documented as gaps instead of being filled with invented historical copy.
     for prefix,label in (('/2007','2007 site'),('/2009','2009 WordPress site'),

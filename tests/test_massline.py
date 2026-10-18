@@ -173,8 +173,13 @@ def test_massline_builder_writes_local_pages_for_project_subpath(tmp_path):
     assert "Original post text" in topic
     assert "Later captured homepage" in homepage_2009
     index_html = (output / "masslinemedia/index.html").read_text(encoding="utf-8")
-    assert "home-2009.html" in index_html
-    assert 'href="/bluescholars/masslinemedia/forum/index.html"' in index_html
+    assert "Later captured homepage" in index_html
+    assert "2009-08-13" in index_html
+    assert 'href="/bluescholars/masslinemedia/archive/"' in index_html
+    assert 'href="/bluescholars/masslinemedia/forum/"' in index_html
+    archive_html = (output / "masslinemedia/archive/index.html").read_text(encoding="utf-8")
+    assert "home-2009.html" in archive_html
+    assert 'href="/bluescholars/masslinemedia/"' in archive_html
     forum_index_html = (output / "masslinemedia/forum/index.html").read_text(encoding="utf-8")
     assert 'href="/bluescholars/masslinemedia/forum/topic-10-page-0.html"' in forum_index_html
     assert "Older forum text" in earlier_topic_page

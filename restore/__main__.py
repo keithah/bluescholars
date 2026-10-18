@@ -10,7 +10,7 @@ from .arquivo import harvest as harvest_arquivo,harvest_domain as harvest_arquiv
 from .commoncrawl import harvest as harvest_commoncrawl,import_rows as import_commoncrawl_rows
 from .merge import merge_artifact
 from .check import check
-from .recover import index,recover,summary,now,capture_variant,capture_era,index_seed_assets
+from .recover import index,recover,summary,now,capture_variant,capture_era,index_seed_assets,index_feed_resources,recover_feed_resources
 from .state import State,write_json
 from .urls import base_path
 from .artist_sites import (index_artist_sites,recover_artist_sites,promote_artist_sites,
@@ -85,6 +85,14 @@ def main(argv=None) -> int:
     idx.add_argument('--max-pages',type=int,default=20)
     assets=commands.add_parser('index-assets',help='Index exact image URLs in the expanded source inventory')
     assets.add_argument('--max-assets',type=int,default=100);assets.add_argument('--max-pages',type=int,default=3)
+    feed_index=commands.add_parser('index-feeds',help='Exact-index pages and assets discovered inside saved WordPress feeds')
+    feed_index.add_argument('--max-urls',type=int,default=30);feed_index.add_argument('--max-pages',type=int,default=3)
+    feed_index.add_argument('--delay',type=float,default=1.2);feed_index.add_argument('--timeout',type=int,default=30)
+    feed_index.add_argument('--retries',type=int,default=2)
+    feed_index.add_argument('--retry-errors',action='store_true',help='Retry exact feed URLs whose previous CDX lookup failed')
+    feed_recover=commands.add_parser('recover-feeds',help='Recover dated WordPress feed-linked pages and images')
+    feed_recover.add_argument('--max-files',type=int,default=30);feed_recover.add_argument('--delay',type=float,default=1.2)
+    feed_recover.add_argument('--timeout',type=int,default=30);feed_recover.add_argument('--retries',type=int,default=2)
     rec=commands.add_parser('recover',help='Download original responses and discover dependencies')
     rec.add_argument('--max-files',type=int,default=150);rec.add_argument('--retry-failed',action='store_true')
     p=commands.add_parser('capture',help='Preserve an exact Wayback capture as a dated variant')
@@ -165,6 +173,22 @@ def main(argv=None) -> int:
             if args.max_assets<1 or args.max_pages<1:raise ValueError('Asset index limits must be positive')
             client=ArchiveClient()
             result=index_seed_assets(State(root),client,args.max_assets,args.max_pages)
+        elif args.command=='index-feeds':
+            if args.max_urls<1 or args.max_pages<1 or args.delay<0 or args.timeout<1 or args.retries<1:
+                raise ValueError('Invalid feed index limits')
+            s=State(root)
+            if not any(any(ref.startswith('feed:') for ref in r.get('referrers',[])) for r in s.data['resources'].values()):
+                s.seed()
+            client=ArchiveClient(delay=args.delay,timeout=args.timeout,retries=args.retries)
+            result=index_feed_resources(s,client,args.max_urls,args.max_pages,args.retry_errors)
+        elif args.command=='recover-feeds':
+            if args.max_files<1 or args.delay<0 or args.timeout<1 or args.retries<1:
+                raise ValueError('Invalid feed recovery limits')
+            s=State(root)
+            if not any(any(ref.startswith('feed:') for ref in r.get('referrers',[])) for r in s.data['resources'].values()):
+                s.seed()
+            client=ArchiveClient(delay=args.delay,timeout=args.timeout,retries=args.retries)
+            result=recover_feed_resources(s,client,args.max_files)
         elif args.command in ('index','recover','capture','capture-era'):
             if args.delay<0 or args.timeout<1 or args.retries<1: raise ValueError('Invalid network limits')
             client=ArchiveClient(delay=args.delay,timeout=args.timeout,retries=args.retries)

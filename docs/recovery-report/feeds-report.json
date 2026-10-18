@@ -1,0 +1,120 @@
+{
+  "generated_at": "2026-10-18T10:26:12.075029+00:00",
+  "archive": "Internet Archive Wayback",
+  "scope": "Source-linked feed pages, media, and resources linked from recovered feed-derived pages; this is not a claim that every domain capture was checked.",
+  "feed_snapshots": {
+    "count": 19,
+    "files": "recovery/captured-sources/2026-10-18/feeds/",
+    "manifest": "recovery/captured-sources/2026-10-18/feeds/index.json",
+    "preserved_bytes": 777483,
+    "distinct_article_urls_in_feed_index": 123,
+    "normalized_articles": 128,
+    "item_observations": 190,
+    "all_saved_items_have_full_content_encoded": true
+  },
+  "source_material": {
+    "source_manifest": "recovery/captured-sources/2026-10-18/manifest.json",
+    "manifest_records": 134,
+    "manifest_bytes": 4650536,
+    "feed_linked_records": 41,
+    "image_source_entries": 25,
+    "unique_image_bodies": 11,
+    "image_bytes": 1354887,
+    "new_dated_wordpress_html_responses_this_continuation": 75,
+    "new_store_asset_url_date_responses_this_continuation": 21,
+    "new_unique_store_image_bodies_this_continuation": 7,
+    "new_store_image_bytes_this_continuation": 807150,
+    "new_exact_wayback_html_page_responses_this_continuation": 60
+  },
+  "exact_url_indexing": {
+    "scope": "Feed-derived pages and their directly linked resources",
+    "related_resource_records": 1837,
+    "completed_exact_lookups": 1367,
+    "exact_lookups_with_capture_rows": 387,
+    "completed_lookups_with_no_capture_rows": 980,
+    "not_yet_completed_or_nonreplayable": 1,
+    "last_batch": {
+      "queried_urls": 43,
+      "indexed_capture_records": 0,
+      "image_urls": 0,
+      "page_urls": 43,
+      "deferred_errors": 1,
+      "failures": []
+    },
+    "last_pass_queried": 43,
+    "last_pass_zero_capture_urls": 43,
+    "last_pass_capture_rows": 0,
+    "capture_rows_returned_by_completed_exact_lookups": 766,
+    "noncompleted_error_checkpoints": 1,
+    "resources_skipped_by_indexer_because_capture_or_raw_response_already_exists": 469
+  },
+  "recovery": {
+    "last_batch": {
+      "pending_urls": 5,
+      "attempted": 5,
+      "recovered": 0,
+      "needs_review": 0,
+      "remaining_urls": 0
+    },
+    "last_batch_failures": [
+      {
+        "error": "ValueError: Expected a full HTML document",
+        "timestamp": "20110208171846",
+        "url": "http://02cd02a.netsolhost.com/blog/feed/"
+      },
+      {
+        "error": "ValueError: Expected a full HTML document",
+        "timestamp": "20101218165339",
+        "url": "http://bluescholars.com/blog/?feed=gigpress"
+      },
+      {
+        "error": "ValueError: Expected a full HTML document",
+        "timestamp": "20110718021632",
+        "url": "http://bluescholars.com/blog/feed/"
+      },
+      {
+        "error": "ValueError: Expected a full HTML document",
+        "timestamp": "20120729151905",
+        "url": "http://bluescholars.com/feed/"
+      },
+      {
+        "error": "ValueError: Expected image bytes; received HTML or unknown content",
+        "timestamp": "20110313072232",
+        "url": "http://02cd02a.netsolhost.com/cinemetropolis"
+      }
+    ],
+    "build_feed_recovered_pages": 12,
+    "base_build_recovered_pages": 1030,
+    "placeholder_pages": 2264,
+    "derived_pages": 1,
+    "local_source_assets": 1079
+  },
+  "live_resume_state": {
+    "resource_urls": 12397,
+    "indexed_capture_records": 26417,
+    "statuses": {
+      "queued": 5822,
+      "recovered": 4265,
+      "needs_review": 77,
+      "failed": 2233,
+      "excluded": 0
+    },
+    "unique_downloaded_files": 2394,
+    "downloaded_bytes": 156469114,
+    "failed_attempts": 10398,
+    "index_complete": true
+  },
+  "independent_archive_attempts": {
+    "common_crawl_targeted_image_check": "A targeted CC-MAIN-2009-2010 query returned HTTP 504; no additional image was recovered. Existing Common Crawl sweeps remain documented separately."
+  },
+  "provenance_rules": [
+    "Original XML snapshots retain byte counts and SHA-256 in the feed index.",
+    "Every captured page or image keeps its exact original URL, requested and resolved timestamp, response hash, and local source path in the source manifest.",
+    "Later captures are preserved as date variants; they do not overwrite earlier source bodies."
+  ],
+  "release_state": {
+    "visual_fidelity_verified": false,
+    "publish_approved": false,
+    "candidate_classification": "unreviewed recovery preview"
+  }
+}

@@ -65,4 +65,21 @@ class State:
         for asset in inventory.get('assets',[]):
             if asset.get('original_url'):
                 self.add(asset['original_url'],'image',asset.get('parent','seed'),asset.get('capture_request',TARGET))
+        # RSS bodies are preserved archival source material. Seed their
+        # original post URLs and the links/media visibly embedded in those
+        # bodies so the normal resumable CDX and recovery workflows can acquire
+        # exact captures without treating RSS text as original page HTML.
+        from .feeds import collect_feed_entries
+        from .discover import discover_html
+        for entry in collect_feed_entries(self.root).values():
+            feed_referrer='feed:'+entry['feed_capture']+':'+entry['feed_url']
+            article=self.add(entry['url'],'html',feed_referrer,entry['feed_capture'])
+            if article and not article.get('raw_path'):
+                article.setdefault('edition_prefixes',[])
+                if '/2009' not in article['edition_prefixes']:article['edition_prefixes'].append('/2009')
+            for ref in discover_html(entry['content'],entry['url']):
+                record=self.add(ref['url'],ref['kind'],feed_referrer+' -> '+entry['url'],entry['feed_capture'])
+                if record and ref['kind']=='html' and not record.get('raw_path'):
+                    record.setdefault('edition_prefixes',[])
+                    if '/2009' not in record['edition_prefixes']:record['edition_prefixes'].append('/2009')
         self.save()

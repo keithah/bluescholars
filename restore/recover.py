@@ -6,7 +6,7 @@ from urllib.parse import urlencode,urlsplit
 from .archive import parse_cdx,validate_payload,capture_candidates
 from .discover import discover_html,discover_css
 from .state import State,write_json
-from .urls import TARGET,SQUARESPACE_START,LEGACY_EDITION_END,kind_for,original_url,capture_from,in_domain
+from .urls import TARGET,SQUARESPACE_START,LEGACY_EDITION_END,kind_for,original_url,capture_from,in_domain,identity
 
 CDX='https://web.archive.org/cdx/search/cdx?'
 FIELDS='timestamp,original,mimetype,statuscode,digest'
@@ -76,6 +76,110 @@ def index_seed_assets(state:State,client,max_assets:int=100,max_pages:int=3)->di
         if checkpoint.get('last_error'):
             report['failures'].append({'url':url,'error':checkpoint['last_error']})
     state.save();write_json(state.root/'recovery/asset-index-report.json',report)
+    return report
+
+def index_feed_resources(state:State,client,max_urls:int=30,max_pages:int=3,retry_errors:bool=False)->dict:
+    """Exact-index new source-linked URLs discovered inside archived feed bodies."""
+    if max_urls<1 or max_pages<1:raise ValueError('Feed index limits must be positive')
+    pending=[];deferred_errors=0
+    feed_page_ids={identity(record.get('url','')) for record in state.data['resources'].values()
+                   if record.get('kind')=='html'
+                   and any(ref.startswith('feed:') for ref in record.get('referrers',[]))}
+    for record in state.data['resources'].values():
+        if record.get('kind') not in ('html','image','css'):
+            continue
+        refs=[ref for ref in record.get('referrers',[]) if ref]
+        discovered_from_feed=any(ref.startswith('feed:') for ref in refs)
+        linked_from_feed_page=any(not ref.startswith('CDX:') and identity(ref) in feed_page_ids for ref in refs)
+        if (not (discovered_from_feed or linked_from_feed_page) or record.get('captures')
+                or record.get('raw_path') or record.get('status')=='excluded'):
+            continue
+        exact=state.data['index'].get('exact:'+record['url'],{})
+        if exact.get('complete'):
+            continue
+        if exact.get('last_error') and not retry_errors:
+            deferred_errors+=1
+            continue
+        pending.append(record)
+    # Query-free post and gallery routes are more useful than WordPress's
+    # per-comment reply URLs. Then exact-index direct images/styles before
+    # query variants, which are usually duplicate comment-thread lookups.
+    def feed_priority(record):
+        parts=urlsplit(record['url'])
+        has_reply='replytocom=' in parts.query.lower() or 'replytocom=' in parts.path.lower()
+        kind_order={'html':0,'image':1,'css':2}
+        return (has_reply, bool(parts.query), kind_order.get(record['kind'],3), record['url'])
+    pending.sort(key=feed_priority)
+    selected=pending[:max_urls]
+    report={'archive':'Internet Archive Wayback','query_type':'exact source-linked feed URL',
+            'pending_urls':len(pending),'queried_urls':0,'indexed_capture_records':0,
+            'image_urls':0,'page_urls':0,'deferred_errors':deferred_errors,
+            'retry_errors':bool(retry_errors),'failures':[],'urls':[]}
+    for record in selected:
+        url=record['url']
+        before=sum(len(item.get('captures',[])) for item in state.data['resources'].values()
+                   if item.get('url')==url)
+        checkpoint=index(state,client,max_pages=max_pages,url=url,match='exact')
+        after=sum(len(item.get('captures',[])) for item in state.data['resources'].values()
+                  if item.get('url')==url)
+        report['queried_urls']+=1
+        report['indexed_capture_records']+=max(0,after-before)
+        report['image_urls' if record['kind']=='image' else 'page_urls']+=1
+        report['urls'].append({'url':url,'kind':record['kind'],'captures_added':max(0,after-before),
+                               'complete':bool(checkpoint.get('complete'))})
+        if checkpoint.get('last_error'):
+            report['failures'].append({'url':url,'error':checkpoint['last_error']})
+    write_json(state.root/'recovery/feed-index-report.json',report)
+    return report
+
+def recover_feed_resources(state:State,client,max_files:int=30)->dict:
+    """Recover indexed WordPress feed pages and media as dated variants."""
+    if max_files<1:raise ValueError('Feed recovery limit must be positive')
+    pending=[]
+    feed_page_ids={identity(record.get('url','')) for record in state.data['resources'].values()
+                   if record.get('kind')=='html'
+                   and any(ref.startswith('feed:') for ref in record.get('referrers',[]))}
+    for record in state.data['resources'].values():
+        if record.get('kind') not in ('html','css','image'):
+            continue
+        refs=[ref for ref in record.get('referrers',[]) if ref]
+        is_feed_source=any(ref.startswith('feed:') for ref in refs)
+        is_feed_page_asset=any(not ref.startswith('CDX:') and identity(ref) in feed_page_ids for ref in refs)
+        if not (is_feed_source or is_feed_page_asset):
+            continue
+        dates=sorted({capture.get('timestamp','') for capture in record.get('captures',[])
+                      if capture.get('statuscode')=='200'
+                      and capture.get('timestamp','')<=LEGACY_EDITION_END},reverse=True)
+        if not dates:
+            continue
+        existing_dates=[variant.get('actual_capture','') for variant in state.data['resources'].values()
+                        if variant.get('url')==record['url'] and variant.get('raw_path')
+                        and variant.get('status') in ('recovered','needs_review')
+                        and variant.get('actual_capture','')<=LEGACY_EDITION_END]
+        if existing_dates and dates[0]<=max(existing_dates):
+            continue
+        pending.append((record,dates[0]))
+    pending.sort(key=lambda item:(item[0]['kind']!='html',item[0]['url']))
+    selected=pending[:max_files]
+    report={'archive':'Internet Archive Wayback','edition':'2009 WordPress source frontier',
+            'pending_urls':len(pending),'attempted':0,'recovered':0,'needs_review':0,
+            'failures':[],'captures':[]}
+    for record,stamp in selected:
+        report['attempted']+=1
+        try:
+            result=capture_variant(state,client,record['url'],stamp,record['kind'])
+            variant=state.data['resources'][result['source_key']]
+            variant['referrers']=sorted(set(record.get('referrers',[])+['explicit-capture-request']))
+            variant['feed_source_urls']=sorted({ref.rsplit(' -> ',1)[1] for ref in record.get('referrers',[])
+                                                if ref.startswith('feed:') and ' -> ' in ref})
+            state.save()
+            report['recovered' if result['status']=='recovered' else 'needs_review']+=1
+            report['captures'].append(result)
+        except Exception as exc:
+            report['failures'].append({'url':record['url'],'timestamp':stamp,
+                                       'error':f'{type(exc).__name__}: {exc}'})
+    report['remaining_urls']=max(0,len(pending)-report['attempted'])
+    write_json(state.root/'recovery/feed-recovery-report.json',report)
     return report
 
 def suffix(body,kind):

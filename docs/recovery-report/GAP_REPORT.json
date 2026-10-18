@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18T08:51:42Z",
+  "updated_at": "2026-10-18T10:26:35.493937+00:00",
   "source_checkpoint_run": "Local resumable checkpoint after the 2013 pass on 2026-10-17; GitHub Actions run 39044681280 is separately recorded because it resumed an older artifact.",
   "capture_index": {
     "indexed_capture_records": 23238,
@@ -7,39 +7,40 @@
     "scope": "Completed Bluescholars domain CDX plus targeted Squarespace CSS/font/image prefix indexes; local checkpoint count includes all merged captures."
   },
   "resource_inventory": {
-    "resource_urls": 11915,
+    "resource_urls": 12397,
     "statuses": {
-      "queued": 5527,
-      "recovered": 4098,
-      "needs_review": 75,
-      "failed": 2215,
+      "queued": 5822,
+      "recovered": 4265,
+      "needs_review": 77,
+      "failed": 2233,
       "excluded": 0
     },
-    "indexed_capture_records": 26115,
+    "indexed_capture_records": 26417,
     "index_complete": true
   },
   "validated_local_files": {
-    "unique_sha256_files": 2390,
-    "bytes": 155282201,
-    "candidate_local_source_assets": 1055
+    "unique_sha256_files": 2394,
+    "bytes": 156469114,
+    "candidate_local_source_assets": 1079
   },
   "candidate": {
-    "recovered_pages": 1028,
-    "placeholder_pages": 2237,
+    "recovered_pages": 1030,
+    "feed_recovered_pages": 12,
+    "placeholder_pages": 2264,
     "derived_pages": 1,
-    "local_source_assets": 1055,
+    "local_source_assets": 1079,
     "publish_approved": false,
     "visual_fidelity_verified": false,
     "recovered_pages_by_edition": {
       "2007": 44,
-      "2009": 501,
+      "2009": 503,
       "2013": 433
     },
     "issue_counts": {
       "invalid_source": 9,
-      "missing_asset": 8940,
+      "missing_asset": 8982,
       "font_not_packaged": 183,
-      "linked_asset_not_recovered": 384,
+      "linked_asset_not_recovered": 393,
       "external_media_link_only": 150
     },
     "root_check": {
@@ -62,14 +63,15 @@
   "checks": {
     "root": {
       "ok": true,
-      "errors": [],
-      "remote_automatic_resources": 0
+      "errors": 0,
+      "output": "_site",
+      "base_path": ""
     },
     "project_subpath": {
-      "base_path": "/bluescholars/",
       "ok": true,
-      "errors": [],
-      "remote_automatic_resources": 0
+      "errors": 0,
+      "output": "_candidate",
+      "base_path": "/bluescholars"
     }
   },
   "notable_known_gaps": [
@@ -82,7 +84,7 @@
     "LiveJournal: several linked comment threads have local gap pages; the missing comment bodies remain unavailable in validated local captures.",
     "LiveJournal: platform CSS and many userpic/image URLs remain missing; the current local journal view is not a visual-fidelity reconstruction."
   ],
-  "interpretation": "The current resumable checkpoint includes 11,915 inventory URLs and 26,115 indexed capture rows. It contains 4,098 recovered resources, 2,215 failed and 5,527 queued. The rebuilt candidate has 1,028 recovered pages, 2,237 documented placeholders, 1,055 local source assets and one derived page. Root and /bluescholars/ offline checks pass; these checks do not establish human visual approval or source completeness.",
+  "interpretation": "The current resumable checkpoint includes 11,950 inventory URLs and 26,118 indexed capture rows. It contains 4,101 recovered resources, 2,233 failed and 5,540 queued. The rebuilt candidate has 1,028 recovered pages, 2,235 documented placeholders, 1,055 local source assets and one derived page. Root and /bluescholars/ offline checks pass; these checks do not establish human visual approval or source completeness.",
   "targeted_image_index": {
     "archive": "Internet Archive Wayback",
     "query": "exact source-linked image URLs from expanded inventory",
@@ -195,18 +197,18 @@
     },
     "modern_cdn_image_alias_rows": 0
   },
-  "resource_urls": 11915,
-  "indexed_capture_records": 26115,
+  "resource_urls": 11950,
+  "indexed_capture_records": 26118,
   "statuses": {
-    "queued": 5527,
-    "recovered": 4098,
-    "needs_review": 75,
-    "failed": 2215,
+    "queued": 5540,
+    "recovered": 4101,
+    "needs_review": 76,
+    "failed": 2233,
     "excluded": 0
   },
-  "unique_downloaded_files": 2390,
-  "downloaded_bytes": 155282201,
-  "failed_attempts": 10365,
+  "unique_downloaded_files": 2391,
+  "downloaded_bytes": 155955942,
+  "failed_attempts": 10398,
   "index_complete": true,
   "active_recovery_run": null,
   "local_checkpoint_after_recovery_sweep": {
@@ -413,22 +415,22 @@
     }
   ],
   "latest_local_checkpoint": {
-    "description": "Current local checkpoint after thirteen bounded broad recovery retries.",
+    "description": "Current local checkpoint after October 18 feed-linked Wayback recovery and exact-link sweep.",
     "recovery": {
-      "resource_urls": 11326,
+      "resource_urls": 12397,
       "statuses": {
-        "queued": 5148,
-        "recovered": 4004,
-        "needs_review": 74,
-        "failed": 2100,
+        "queued": 5822,
+        "recovered": 4265,
+        "needs_review": 77,
+        "failed": 2233,
         "excluded": 0
       },
-      "indexed_capture_records": 25989,
+      "indexed_capture_records": 26417,
       "index_complete": true,
-      "unique_downloaded_files": 2342,
-      "downloaded_bytes": 148253779,
-      "failed_attempts": 9809,
-      "generated_at": "2026-10-17T19:13:29.033025+00:00"
+      "unique_downloaded_files": 2394,
+      "downloaded_bytes": 156469114,
+      "failed_attempts": 10398,
+      "generated_at": "2026-10-18T10:26:35.472740+00:00"
     }
   },
   "browser_visual_review": {
@@ -488,20 +490,20 @@
     "visual_reviewed": false
   },
   "checkpoint": {
-    "resource_urls": 11915,
+    "resource_urls": 12397,
     "statuses": {
-      "queued": 5527,
-      "recovered": 4098,
-      "needs_review": 75,
-      "failed": 2215,
+      "queued": 5822,
+      "recovered": 4265,
+      "needs_review": 77,
+      "failed": 2233,
       "excluded": 0
     },
-    "indexed_capture_records": 26115,
+    "indexed_capture_records": 26417,
     "index_complete": true,
-    "unique_downloaded_files": 2390,
-    "downloaded_bytes": 155282201,
-    "failed_attempts": 10365,
-    "generated_at": "2026-10-18T08:19:50+00:00"
+    "unique_downloaded_files": 2394,
+    "downloaded_bytes": 156469114,
+    "failed_attempts": 10398,
+    "generated_at": "2026-10-18T10:26:35.472740+00:00"
   },
   "pages_deployment": {
     "url": "https://keithah.github.io/bluescholars/",
@@ -717,20 +719,20 @@
   },
   "october_18_continuation": {
     "resource_checkpoint": {
-      "resource_urls": 11915,
+      "resource_urls": 11950,
       "statuses": {
-        "queued": 5527,
-        "recovered": 4098,
-        "needs_review": 75,
-        "failed": 2215,
+        "queued": 5540,
+        "recovered": 4101,
+        "needs_review": 76,
+        "failed": 2233,
         "excluded": 0
       },
-      "indexed_capture_records": 26115,
+      "indexed_capture_records": 26118,
       "index_complete": true,
-      "unique_downloaded_files": 2390,
-      "downloaded_bytes": 155282201,
-      "failed_attempts": 10365,
-      "generated_at": "2026-10-18T08:19:50+00:00"
+      "unique_downloaded_files": 2391,
+      "downloaded_bytes": 155955942,
+      "failed_attempts": 10398,
+      "generated_at": "2026-10-18T09:04:54Z"
     },
     "myspace": {
       "new_capture_bearing_urls": 59,
@@ -783,6 +785,156 @@
       "placeholder_pages": 2237,
       "local_source_assets": 1055,
       "automatic_remote_resources": 0
+    }
+  },
+  "october_18_main_queue_followup": {
+    "batch_limit": 30,
+    "processed": 30,
+    "new_resource_urls": 35,
+    "new_index_rows": 3,
+    "new_recovered_pages": 3,
+    "new_needs_review": 1,
+    "new_failed_resources": 18,
+    "unique_raw_files_added": 1,
+    "unique_raw_bytes_added": 673741,
+    "held_later_livejournal_capture": {
+      "capture": "20250602154609",
+      "bytes": 673741,
+      "sha256": "f4dcca87e2fda828ef9e6a1bfd98d15a85878c6a43f89a3efebc02fb20098ca2",
+      "rendered": false
+    },
+    "new_2009_routes": [
+      "/2009/cine-release-party-special-guest-the-good-sin/",
+      "/2009/congratulations-to-geo-individual-arts-community-voice-award-winner/",
+      "/2009/we-got-signed-thanks-for-making-cinemetropolis-a-reality/"
+    ],
+    "source_manifest": "recovery/captured-sources/2026-10-18/manifest.json",
+    "candidate_checks": {
+      "root": "passed",
+      "project_subpath": "passed",
+      "recovered_pages": 1028,
+      "placeholders": 2235,
+      "errors": 0
+    }
+  },
+  "october_18_feed_recovery": {
+    "generated_at": "2026-10-18T10:26:12.075029+00:00",
+    "archive": "Internet Archive Wayback",
+    "scope": "Source-linked feed pages, media, and resources linked from recovered feed-derived pages; this is not a claim that every domain capture was checked.",
+    "feed_snapshots": {
+      "count": 19,
+      "files": "recovery/captured-sources/2026-10-18/feeds/",
+      "manifest": "recovery/captured-sources/2026-10-18/feeds/index.json",
+      "preserved_bytes": 777483,
+      "distinct_article_urls_in_feed_index": 123,
+      "normalized_articles": 128,
+      "item_observations": 190,
+      "all_saved_items_have_full_content_encoded": true
+    },
+    "source_material": {
+      "source_manifest": "recovery/captured-sources/2026-10-18/manifest.json",
+      "manifest_records": 134,
+      "manifest_bytes": 4650536,
+      "feed_linked_records": 41,
+      "image_source_entries": 25,
+      "unique_image_bodies": 11,
+      "image_bytes": 1354887,
+      "new_dated_wordpress_html_responses_this_continuation": 75,
+      "new_store_asset_url_date_responses_this_continuation": 21,
+      "new_unique_store_image_bodies_this_continuation": 7,
+      "new_store_image_bytes_this_continuation": 807150,
+      "new_exact_wayback_html_page_responses_this_continuation": 60
+    },
+    "exact_url_indexing": {
+      "scope": "Feed-derived pages and their directly linked resources",
+      "related_resource_records": 1837,
+      "completed_exact_lookups": 1367,
+      "exact_lookups_with_capture_rows": 387,
+      "completed_lookups_with_no_capture_rows": 980,
+      "not_yet_completed_or_nonreplayable": 1,
+      "last_batch": {
+        "queried_urls": 43,
+        "indexed_capture_records": 0,
+        "image_urls": 0,
+        "page_urls": 43,
+        "deferred_errors": 1,
+        "failures": []
+      },
+      "last_pass_queried": 43,
+      "last_pass_zero_capture_urls": 43,
+      "last_pass_capture_rows": 0,
+      "capture_rows_returned_by_completed_exact_lookups": 766,
+      "noncompleted_error_checkpoints": 1,
+      "resources_skipped_by_indexer_because_capture_or_raw_response_already_exists": 469
+    },
+    "recovery": {
+      "last_batch": {
+        "pending_urls": 5,
+        "attempted": 5,
+        "recovered": 0,
+        "needs_review": 0,
+        "remaining_urls": 0
+      },
+      "last_batch_failures": [
+        {
+          "error": "ValueError: Expected a full HTML document",
+          "timestamp": "20110208171846",
+          "url": "http://02cd02a.netsolhost.com/blog/feed/"
+        },
+        {
+          "error": "ValueError: Expected a full HTML document",
+          "timestamp": "20101218165339",
+          "url": "http://bluescholars.com/blog/?feed=gigpress"
+        },
+        {
+          "error": "ValueError: Expected a full HTML document",
+          "timestamp": "20110718021632",
+          "url": "http://bluescholars.com/blog/feed/"
+        },
+        {
+          "error": "ValueError: Expected a full HTML document",
+          "timestamp": "20120729151905",
+          "url": "http://bluescholars.com/feed/"
+        },
+        {
+          "error": "ValueError: Expected image bytes; received HTML or unknown content",
+          "timestamp": "20110313072232",
+          "url": "http://02cd02a.netsolhost.com/cinemetropolis"
+        }
+      ],
+      "build_feed_recovered_pages": 12,
+      "base_build_recovered_pages": 1030,
+      "placeholder_pages": 2264,
+      "derived_pages": 1,
+      "local_source_assets": 1079
+    },
+    "live_resume_state": {
+      "resource_urls": 12397,
+      "indexed_capture_records": 26417,
+      "statuses": {
+        "queued": 5822,
+        "recovered": 4265,
+        "needs_review": 77,
+        "failed": 2233,
+        "excluded": 0
+      },
+      "unique_downloaded_files": 2394,
+      "downloaded_bytes": 156469114,
+      "failed_attempts": 10398,
+      "index_complete": true
+    },
+    "independent_archive_attempts": {
+      "common_crawl_targeted_image_check": "A targeted CC-MAIN-2009-2010 query returned HTTP 504; no additional image was recovered. Existing Common Crawl sweeps remain documented separately."
+    },
+    "provenance_rules": [
+      "Original XML snapshots retain byte counts and SHA-256 in the feed index.",
+      "Every captured page or image keeps its exact original URL, requested and resolved timestamp, response hash, and local source path in the source manifest.",
+      "Later captures are preserved as date variants; they do not overwrite earlier source bodies."
+    ],
+    "release_state": {
+      "visual_fidelity_verified": false,
+      "publish_approved": false,
+      "candidate_classification": "unreviewed recovery preview"
     }
   }
 }

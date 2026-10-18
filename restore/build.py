@@ -16,6 +16,7 @@ from .urls import HOME,TARGET,SQUARESPACE_START,identity,is_site,route,asset_rou
 from .artist_sites import build_artist_sites
 from .massline import build_massline_archive
 from .myspace import build_myspace_archive
+from .feeds import collect_feed_entries
 
 CORE=[('/', 'Homepage'),('/blog/','Blog'),('/shows/','Shows'),('/video/','Video'),('/shop/','Shop'),('/holler/','Holler')]
 FALLBACK_UI='''.archive-restoration-notice,.archive-gap-page {font:16px/1.6 system-ui,sans-serif}
@@ -297,15 +298,21 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
         if key not in aliases or not aliases[key].get('local_path'):
             aliases[key]=record
     issues.extend(alias_issues)
+    feed_entries=collect_feed_entries(root)
+    feed_entry_ids={identity(entry['url']) for entry in feed_entries.values()}
     pages={}
     for source_key,r in records.items():
         source_url=r.get('url',source_key)
         if r['kind']!='html' or not is_site(source_url): continue
         url=r.get('final_original') if is_site(r.get('final_original','')) else source_url
-        sourced_by_selected_page=any(
-            not ref.startswith('CDX:') and identity(ref) in selected_page_ids
-            for ref in r.get('referrers',[]) if ref
-        )
+        def selected_referrer(ref):
+            if not ref or ref.startswith('CDX:'):
+                return False
+            if identity(ref) in selected_page_ids:
+                return True
+            return (ref.startswith('feed:') and ' -> ' in ref and
+                    identity(ref.rsplit(' -> ',1)[1]) in feed_entry_ids)
+        sourced_by_selected_page=any(selected_referrer(ref) for ref in r.get('referrers',[]) if ref)
         capture=r.get('actual_capture','')
         selected_capture=bool(r.get('raw_path') and r.get('status')=='recovered'
                               and (eligible_site_page_capture(source_url,r,min_reference_capture)
@@ -325,6 +332,18 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
                     pages[page]=dict(r,url=url,source_url=source_url,edition_prefix=prefix,_source_key=source_key)
         except ValueError:
             issues.append({'type':'unsafe_route','url':url});continue
+    # A saved WordPress feed can preserve an article body even when no original
+    # HTML response survives. Keep it visibly distinct and never replace a
+    # successfully recovered page capture with feed content.
+    for source_url,entry in feed_entries.items():
+        prefix=historical_route_prefix(source_url,'/2009',entry['feed_capture']) or '/2009'
+        page=prefix+route(source_url)
+        previous=pages.get(page)
+        if previous and previous.get('_source_key') in usable_variants:
+            continue
+        pages[page]={'url':source_url,'source_url':source_url,'edition_prefix':prefix,
+                     '_feed_entry':entry,'actual_capture':entry['feed_capture'],
+                     'source_archive':'Internet Archive Wayback'}
     if release:
         if '/2013/' not in pages or pages['/2013/'].get('_source_key') not in usable_variants or not any(r['kind']=='css' for r in usable.values()):
             raise ValueError('Publication review cannot substitute for missing homepage HTML/CSS')
@@ -362,11 +381,21 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
         source_key=r['_source_key']
         if destination.suffix=='.svg':destination.write_bytes(sanitize_svg(raw[source_key]))
         else:destination.write_bytes(raw[source_key])
-    recovered=0;placeholders=0;page_report=[]
+    recovered=0;placeholders=0;feed_recovered=0;page_report=[]
     for page,r in sorted(pages.items()):
         url=r['url']
         source_key=r.get('_source_key',url)
-        if source_key in usable_variants:
+        if r.get('_feed_entry'):
+            entry=r['_feed_entry']
+            title=entry.get('title') or urlsplit(url).path.strip('/').rsplit('/',1)[-1].replace('-',' ').title()
+            feed_source=entry['feed_replay_url']
+            content_label='Full article text' if entry['content_type']=='full' else 'Feed description; an excerpt'
+            banner=('<aside class="archive-feed-provenance"><strong>'+content_label+'</strong> captured in an archived WordPress feed on '
+                    +html.escape(entry['feed_capture'])+'. The original page HTML was not recovered. '
+                    '<a href="'+html.escape(feed_source,quote=True)+'">Inspect this feed capture</a>.</aside>')
+            text=page_shell(title,banner+'<article class="archive-feed-article">'+entry['content']+'</article>')
+            status='recovered_from_feed';feed_recovered+=1
+        elif source_key in usable_variants:
             text=raw[source_key].decode('utf-8',errors='replace');recovered+=1;status='recovered'
         else:
             placeholders+=1;status='not_recovered'
@@ -392,7 +421,11 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
         issues.extend(found);_write_page(output,page,rendered)
         page_report.append({'path':page,'source':r.get('source_url',url),'canonical_url':url,
                             'source_archive':r.get('source_archive'),'status':status,
-                            'actual_capture':r.get('actual_capture')})
+                            'actual_capture':r.get('actual_capture'),
+                            **({'feed_capture':r['_feed_entry']['feed_capture'],
+                                'feed_source':r['_feed_entry']['feed_path'],
+                                'feed_content_type':r['_feed_entry']['content_type']}
+                               if r.get('_feed_entry') else {})})
     legacy_posts=[p for p in page_report if p['path'].startswith('/2009/blog/')
                   and p['path']!='/2009/blog/' and p['status']=='recovered']
     if legacy_posts:
@@ -737,7 +770,8 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
     # Deduplicate identical findings without suppressing which page referenced a gap.
     issues=list({json.dumps(i,sort_keys=True):i for i in issues}.values())
     report={'mode':'unreviewed_candidate' if candidate else 'reviewed_source_build','base_path':base,
-            'recovered_pages':recovered,'placeholder_pages':placeholders,
+            'recovered_pages':recovered,'feed_recovered_pages':feed_recovered,
+            'placeholder_pages':placeholders,
             'derived_pages':sum(p['status']=='derived_from_capture' for p in page_report),
             'local_source_assets':sum(r['kind'] in ('css','image') for r in usable.values()),
             'visual_fidelity_verified':bool(review.get('visual_reviewed')) and not candidate,

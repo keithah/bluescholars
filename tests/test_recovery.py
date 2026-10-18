@@ -3,7 +3,7 @@ from pathlib import Path
 import pytest
 from restore.archive import parse_cdx, validate_payload, ArchiveClient, Payload, capture_candidates
 from restore import recover as recovery
-from restore.recover import index, recover, resource_priority, capture_variant,capture_era
+from restore.recover import index, recover, resource_priority, capture_variant,capture_era,index_feed_resources,recover_feed_resources
 from restore.state import State
 from restore.urls import HOME, TARGET
 
@@ -209,6 +209,74 @@ def test_seed_asset_index_queries_exact_observed_urls(tmp_path):
     assert result['queried_urls']==1 and result['indexed_capture_records']==1
     assert 'matchType=exact' in client.calls[0] and 'front-page.jpg' in client.calls[0]
     assert State(tmp_path).data['resources'][first]['captures'][0]['timestamp']=='20210529010844'
+
+def test_feed_index_prioritizes_page_links_that_can_reveal_original_images(tmp_path):
+    state=State(tmp_path)
+    image='https://cdn.example/feed-photo.jpg'
+    page='http://bluescholars.com/feed-linked-page/'
+    state.add(page,'html','feed:20100401000000:http://bluescholars.com/feed/')
+    state.add(image,'image','feed:20100401000000:http://bluescholars.com/feed/')
+    text=json.dumps([HEADER,['20100401000000',page,'text/html','200','PAGE']]).encode()
+    client=Client(lambda url:Payload(text,url,200,{}))
+
+    report=index_feed_resources(state,client,max_urls=1,max_pages=1)
+
+    assert report['pending_urls']==2 and report['queried_urls']==1
+    assert report['page_urls']==1 and report['indexed_capture_records']==1
+    assert 'feed-linked-page' in client.calls[0] and 'matchType=exact' in client.calls[0]
+    assert state.data['resources'][page]['captures'][0]['digest']=='PAGE'
+    assert (tmp_path/'recovery/feed-index-report.json').is_file()
+
+def test_feed_index_follows_assets_linked_from_recovered_feed_pages(tmp_path):
+    state=State(tmp_path)
+    article='http://bluescholars.com/blog/2010/04/feed-post/'
+    image='http://bluescholars.com/blog/wp-content/uploads/feed-photo.jpg'
+    source=state.add(article,'html','feed:20100401000000:http://bluescholars.com/blog/feed/')
+    source.update(status='recovered',raw_path='source/recovered-feed-post.html')
+    state.add(image,'image',article)
+    text=json.dumps([HEADER,['20120401000000',image,'image/jpeg','200','NESTED-PHOTO']]).encode()
+    client=Client(lambda url:Payload(text,url,200,{}))
+
+    report=index_feed_resources(state,client,max_urls=1,max_pages=1)
+
+    assert report['pending_urls']==1 and report['image_urls']==1
+    assert 'feed-photo.jpg' in client.calls[0]
+    assert state.data['resources'][image]['captures'][0]['digest']=='NESTED-PHOTO'
+
+def test_feed_recovery_selects_a_dated_pre_squarespace_page_capture(tmp_path):
+    state=State(tmp_path)
+    page='http://bluescholars.com/blog/2010/04/feed-linked-page/'
+    state.add(page,'html','feed:20100401000000:http://bluescholars.com/feed/')
+    state.data['resources'][page]['captures']=[{'timestamp':'20110401010203','statuscode':'200'}]
+    client=Client(lambda url:Payload(VALID,'https://web.archive.org/web/20110401010203id_/'+page,200,{'Content-Type':'text/html'}))
+
+    report=recover_feed_resources(state,client,max_files=1)
+
+    assert report['attempted']==1 and report['recovered']==1
+    assert report['captures'][0]['url']==page
+    variant=state.data['resources'][report['captures'][0]['source_key']]
+    assert variant['actual_capture']=='20110401010203'
+    assert variant['status']=='recovered'
+    assert (tmp_path/'recovery/feed-recovery-report.json').is_file()
+    before=len(client.calls)
+    resumed=recover_feed_resources(state,client,max_files=1)
+    assert resumed['pending_urls']==0 and resumed['attempted']==0
+    assert len(client.calls)==before
+
+def test_feed_recovery_adds_a_newer_2009_variant_without_replacing_existing_source(tmp_path):
+    state=State(tmp_path)
+    page='http://bluescholars.com/blog/2009/09/feed-post/'
+    record=state.add(page,'html','feed:20090901000000:http://bluescholars.com/blog/feed/')
+    record.update(status='recovered',raw_path='source/older.html',actual_capture='20090901000000',sha256='older')
+    record['captures']=[{'timestamp':'20100701010203','statuscode':'200'}]
+    client=Client(lambda url:Payload(VALID,'https://web.archive.org/web/20100701010203id_/'+page,200,{'Content-Type':'text/html'}))
+
+    report=recover_feed_resources(state,client,max_files=1)
+
+    assert report['attempted']==1 and report['recovered']==1
+    assert record['actual_capture']=='20090901000000'
+    variant=state.data['resources'][report['captures'][0]['source_key']]
+    assert variant['actual_capture']=='20100701010203'
 
 def test_recover_checkpoints_and_skips_success(tmp_path):
     state=State(tmp_path);state.add(HOME,'html','seed',TARGET)

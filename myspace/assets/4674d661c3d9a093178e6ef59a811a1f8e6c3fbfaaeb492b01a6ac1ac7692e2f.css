@@ -1,0 +1,40 @@
+	body div#header
+	{	height:auto;
+		margin-left:auto;
+		margin-right:auto;
+	}
+	#wrap
+	{
+		width:800px;
+	}
+	#header
+	{
+		height:125px;
+	    background-color:#003399;
+	}
+	
+	#headerlinks {float:left; padding-left:30px;}
+	#homelink{float:left; padding-bottom:3px;}
+  	#googlebar { text-align:center; }
+	
+	.googleLogo {margin:0px;padding:2px;}
+  	#googlebar { text-align:center; padding-top:2px;}
+	
+	#profilelinks { display:inline; padding-top:15px; font-size:11px; display:inline; }
+    #profileaction{font-size:11px; width:95px; }
+    #toprightlinks {padding:0px 0px 0px 3px 0px;float:right;} 
+    #logo {margin:0px;padding:0px;float:left;}
+	
+	#srch {display:inline;}
+    #q { display:inline;}
+    #q, #t, #profileselection {font-size:11px; font-family: Verdana, Arial, Helvetica, sans-serif;}
+	body div#topnav
+	{
+		margin-left:auto;
+		margin-right:auto;
+		
+	}	
+	#topnav
+	{	
+		background-color:#6698CB ;
+	}

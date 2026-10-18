@@ -76,18 +76,18 @@
   "checkpoint": {
     "resource_urls": 11915,
     "statuses": {
-      "queued": 5550,
-      "recovered": 4090,
+      "queued": 5527,
+      "recovered": 4098,
       "needs_review": 75,
-      "failed": 2200,
+      "failed": 2215,
       "excluded": 0
     },
     "indexed_capture_records": 26115,
     "index_complete": true,
-    "unique_downloaded_files": 2388,
-    "downloaded_bytes": 155227643,
-    "failed_attempts": 10288,
-    "generated_at": "2026-10-17T20:47:54.443065+00:00"
+    "unique_downloaded_files": 2390,
+    "downloaded_bytes": 155282201,
+    "failed_attempts": 10365,
+    "generated_at": "2026-10-18T08:19:54.106633+00:00"
   },
   "latest_import": {
     "run_id": "38975520061",
@@ -151,13 +151,13 @@
     "unique_raw_files": 97,
     "visual_reviewed": false
   },
-  "updated_at": "2026-10-17T20:50:14.144562+00:00",
+  "updated_at": "2026-10-18T08:19:50+00:00",
   "tests": {
     "command": "PYTHONPATH=. .venv311/bin/python -m pytest -q",
-    "result": "169 passed",
+    "result": "207 passed",
     "root_build_check": "passed (1,028 recovered pages; zero errors)",
     "project_subpath_build_check": "passed (1,028 recovered pages; zero errors)",
-    "git_diff_check": "passed",
+    "git_diff_check": "passed after report and asset updates",
     "human_review_claimed": false
   },
   "livejournal_archive": {
@@ -664,162 +664,40 @@
     "visual_reviewed": false
   },
   "latest_continuation": {
-    "description": "October 17 continuation focused on 2007/2013 source recovery, 2009 content and candidate verification.",
-    "recovery": {
-      "updated_at": "2026-10-17T06:54:54Z",
-      "resource_urls": 10951,
-      "statuses": {
-        "queued": 5687,
-        "recovered": 3727,
-        "needs_review": 64,
-        "failed": 1473,
-        "excluded": 0
-      },
-      "indexed_capture_records": 23238,
-      "unique_downloaded_files": 2238,
-      "downloaded_bytes": 137024767,
-      "failed_attempts": 7261,
-      "index_complete": true
+    "description": "2026-10-18 MySpace source retry and bounded main recovery queue continuation.",
+    "myspace_retry": {
+      "processed_exact_urls": 100,
+      "new_capture_bearing_image_media_urls": 31,
+      "asset_resources_recovered": 31,
+      "new_unique_asset_files": 20,
+      "capture_bearing_urls_total": 317,
+      "rate_limited_urls_remaining": 1180,
+      "urls_without_capture_rows": 64,
+      "unique_asset_files_total": 296,
+      "unique_asset_bytes": 18016932
     },
-    "capture_batches": {
-      "2007": {
-        "indexed_urls": 390,
-        "previously_recovered_urls": 389,
-        "newly_recovered": 1,
-        "remaining_urls": 0,
-        "new_capture": "20070726234145",
-        "new_file": "store_tshirt.jpg",
-        "sha256": "fe0883788688725d0818af115cf3d6f48fa248472f49387af68c0a5ff4b2f7d1"
+    "main_queue": {
+      "selected_limit": 200,
+      "checkpoint_delta_before_manual_stop": {
+        "recovered_resources": 8,
+        "failed_resources": 15,
+        "new_unique_raw_files": 2,
+        "new_unique_raw_bytes": 54558
       },
-      "2007_navigation_pages": {
-        "requested": 6,
-        "validated": 6,
-        "captures": [
-          "20060623005536",
-          "20060623005645",
-          "20060510051835",
-          "20060615033740",
-          "20060623005601",
-          "20060623005632"
-        ]
-      },
-      "2007_linked_images": {
-        "validated": 14,
-        "unavailable_exact_dependencies": 7
-      },
-      "2009_targeted_articles": {
-        "attempted": 18,
-        "recovered": 18
-      },
-      "2009_linked_images": {
-        "attempted": 13,
-        "recovered": 12,
-        "invalid": 1
-      },
-      "2013_squarespace_prefix_images": {
-        "attempted": 45,
-        "recovered": 45
-      },
-      "2013_era_batch": {
-        "attempted": 50,
-        "recovered": 39,
-        "kind": "CSS",
-        "failed_validation": 11,
-        "indexed_urls": 1014,
-        "remaining_urls": 392
-      },
-      "2013_continuation": {
-        "selected_limit": 50,
-        "saved_valid_responses": 27,
-        "status": "interrupted while awaiting next archive response; report saved after 25 attempts",
-        "new_material": "18 image dependencies and additional dated Squarespace CSS variants; in-era dates verified before preservation",
-        "latest_saved_css_capture": "20150819120551",
-        "attempted_before_interruption": 25,
-        "recovered_css_captures": 9,
-        "recorded_failures": 16,
-        "remaining_urls_at_last_checkpoint": 218,
-        "report": "recovery/era-2013-report.json",
-        "latest_successful_capture": "20150628012721"
-      },
-      "2013_github_runner_39010473274": {
-        "run_id": "39010473274",
-        "status": "completed successfully; artifact staged, inspected and merged",
-        "resumed_from": "38995680425",
-        "indexed_urls": 625,
-        "previously_recovered_urls": 461,
-        "attempted_urls": 164,
-        "validated_responses": 3,
-        "failed_or_invalid": 161,
-        "remaining_without_success": 161,
-        "net_new_resource_records": 0,
-        "net_new_raw_files": 0,
-        "merge_report": "recovery/imported/39010473274/merge-report.json",
-        "detailed_report": "recovery/era-2013-run-39010473274-report.json"
-      }
+      "stop_reason": "Responses were predominantly failures and long retries; state was saved atomically and run stopped before the configured limit.",
+      "resume_command": ".venv311/bin/python -m restore recover --max-files 100 --delay 0.8 --timeout 15 --retries 0"
     },
     "candidate": {
-      "recovered_pages": 976,
-      "placeholder_pages": 2181,
-      "derived_pages": 4,
-      "local_source_assets": 934,
-      "recovered_pages_by_edition": {
-        "2007": 36,
-        "2009": 500,
-        "2013": 432
-      },
-      "issue_counts": {
-        "invalid_source": 9,
-        "missing_asset": 7504,
-        "font_not_packaged": 111,
-        "linked_asset_not_recovered": 338,
-        "external_media_link_only": 145
-      },
-      "publish_approved": false,
-      "visual_fidelity_verified": false,
-      "root_check": {
-        "ok": true,
-        "errors": 0
-      },
-      "project_subpath_check": {
-        "ok": true,
-        "errors": 0
-      },
-      "remote_automatic_resources": 0
+      "root_check": "passed",
+      "project_subpath_check": "passed",
+      "recovered_pages": 1028,
+      "placeholder_pages": 2237,
+      "local_source_assets": 1055,
+      "automatic_remote_assets": 0
     },
-    "verification": {
-      "tests": "153 passed",
-      "compileall": "passed",
-      "shell_syntax": "passed",
-      "actionlint": "passed",
-      "git_diff_check": "passed",
-      "root_build_check": "passed (zero errors)",
-      "project_subpath_build_check": "passed (zero errors)",
-      "remote_automatic_requests": 0,
-      "browser": "Agent compared local 2013 page with exact May 2021 Wayback capture at 1265x712, and inspected local 2007 and hub; four screenshots saved. Mobile widths unavailable; no human approval claimed."
-    },
-    "screenshots": {
-      "reference": {
-        "path": "docs/recovery-report/screenshots/reference.jpg",
-        "sha256": "85b1db3bb441001e9249c8b2d584e2555650ef8331230a14b7d875695665bb48",
-        "dimensions": "1265x712"
-      },
-      "2007": {
-        "path": "docs/recovery-report/screenshots/2007.jpg",
-        "sha256": "88298d916f0467708af5d2f4268475dacc5083e38cb2336ba466fa4c244aabe1",
-        "dimensions": "1265x712"
-      },
-      "2013": {
-        "path": "docs/recovery-report/screenshots/2013.jpg",
-        "sha256": "7768870e01bcfceaf982e687860be6617bf02db49c49eb4889386ae998e7a8e3",
-        "dimensions": "1265x712"
-      },
-      "homepage": {
-        "path": "docs/recovery-report/screenshots/homepage.jpg",
-        "sha256": "c4a87a2a412d2101aa311277b1dac2f0132d2e352a0692653669a336a124dd14",
-        "dimensions": "1265x712"
-      }
-    },
-    "resume": "Resume from recovery/state.json, recovery/raw/ and recovery/index/. Retry 2013 article URLs only when a new capture timestamp or archive lead is identified; no response from a failed request is an absence finding."
+    "tests": "207 passed",
+    "visual_reviewed": false,
+    "publish_approved": false
   },
   "latest_2013_local_capture_pass": {
     "report": "recovery/era-2013-local-20261017-report.json",
@@ -1019,5 +897,163 @@
       }
     ],
     "interpretation": "Collection-query transport/service failures and WARC fetch failures are not evidence that a page was absent."
+  },
+  "october_17_continuation": {
+    "description": "October 17 continuation focused on 2007/2013 source recovery, 2009 content and candidate verification.",
+    "recovery": {
+      "updated_at": "2026-10-17T06:54:54Z",
+      "resource_urls": 10951,
+      "statuses": {
+        "queued": 5687,
+        "recovered": 3727,
+        "needs_review": 64,
+        "failed": 1473,
+        "excluded": 0
+      },
+      "indexed_capture_records": 23238,
+      "unique_downloaded_files": 2238,
+      "downloaded_bytes": 137024767,
+      "failed_attempts": 7261,
+      "index_complete": true
+    },
+    "capture_batches": {
+      "2007": {
+        "indexed_urls": 390,
+        "previously_recovered_urls": 389,
+        "newly_recovered": 1,
+        "remaining_urls": 0,
+        "new_capture": "20070726234145",
+        "new_file": "store_tshirt.jpg",
+        "sha256": "fe0883788688725d0818af115cf3d6f48fa248472f49387af68c0a5ff4b2f7d1"
+      },
+      "2007_navigation_pages": {
+        "requested": 6,
+        "validated": 6,
+        "captures": [
+          "20060623005536",
+          "20060623005645",
+          "20060510051835",
+          "20060615033740",
+          "20060623005601",
+          "20060623005632"
+        ]
+      },
+      "2007_linked_images": {
+        "validated": 14,
+        "unavailable_exact_dependencies": 7
+      },
+      "2009_targeted_articles": {
+        "attempted": 18,
+        "recovered": 18
+      },
+      "2009_linked_images": {
+        "attempted": 13,
+        "recovered": 12,
+        "invalid": 1
+      },
+      "2013_squarespace_prefix_images": {
+        "attempted": 45,
+        "recovered": 45
+      },
+      "2013_era_batch": {
+        "attempted": 50,
+        "recovered": 39,
+        "kind": "CSS",
+        "failed_validation": 11,
+        "indexed_urls": 1014,
+        "remaining_urls": 392
+      },
+      "2013_continuation": {
+        "selected_limit": 50,
+        "saved_valid_responses": 27,
+        "status": "interrupted while awaiting next archive response; report saved after 25 attempts",
+        "new_material": "18 image dependencies and additional dated Squarespace CSS variants; in-era dates verified before preservation",
+        "latest_saved_css_capture": "20150819120551",
+        "attempted_before_interruption": 25,
+        "recovered_css_captures": 9,
+        "recorded_failures": 16,
+        "remaining_urls_at_last_checkpoint": 218,
+        "report": "recovery/era-2013-report.json",
+        "latest_successful_capture": "20150628012721"
+      },
+      "2013_github_runner_39010473274": {
+        "run_id": "39010473274",
+        "status": "completed successfully; artifact staged, inspected and merged",
+        "resumed_from": "38995680425",
+        "indexed_urls": 625,
+        "previously_recovered_urls": 461,
+        "attempted_urls": 164,
+        "validated_responses": 3,
+        "failed_or_invalid": 161,
+        "remaining_without_success": 161,
+        "net_new_resource_records": 0,
+        "net_new_raw_files": 0,
+        "merge_report": "recovery/imported/39010473274/merge-report.json",
+        "detailed_report": "recovery/era-2013-run-39010473274-report.json"
+      }
+    },
+    "candidate": {
+      "recovered_pages": 976,
+      "placeholder_pages": 2181,
+      "derived_pages": 4,
+      "local_source_assets": 934,
+      "recovered_pages_by_edition": {
+        "2007": 36,
+        "2009": 500,
+        "2013": 432
+      },
+      "issue_counts": {
+        "invalid_source": 9,
+        "missing_asset": 7504,
+        "font_not_packaged": 111,
+        "linked_asset_not_recovered": 338,
+        "external_media_link_only": 145
+      },
+      "publish_approved": false,
+      "visual_fidelity_verified": false,
+      "root_check": {
+        "ok": true,
+        "errors": 0
+      },
+      "project_subpath_check": {
+        "ok": true,
+        "errors": 0
+      },
+      "remote_automatic_resources": 0
+    },
+    "verification": {
+      "tests": "153 passed",
+      "compileall": "passed",
+      "shell_syntax": "passed",
+      "actionlint": "passed",
+      "git_diff_check": "passed",
+      "root_build_check": "passed (zero errors)",
+      "project_subpath_build_check": "passed (zero errors)",
+      "remote_automatic_requests": 0,
+      "browser": "Agent compared local 2013 page with exact May 2021 Wayback capture at 1265x712, and inspected local 2007 and hub; four screenshots saved. Mobile widths unavailable; no human approval claimed."
+    },
+    "screenshots": {
+      "reference": {
+        "path": "docs/recovery-report/screenshots/reference.jpg",
+        "sha256": "85b1db3bb441001e9249c8b2d584e2555650ef8331230a14b7d875695665bb48",
+        "dimensions": "1265x712"
+      },
+      "2007": {
+        "path": "docs/recovery-report/screenshots/2007.jpg",
+        "sha256": "88298d916f0467708af5d2f4268475dacc5083e38cb2336ba466fa4c244aabe1",
+        "dimensions": "1265x712"
+      },
+      "2013": {
+        "path": "docs/recovery-report/screenshots/2013.jpg",
+        "sha256": "7768870e01bcfceaf982e687860be6617bf02db49c49eb4889386ae998e7a8e3",
+        "dimensions": "1265x712"
+      },
+      "homepage": {
+        "path": "docs/recovery-report/screenshots/homepage.jpg",
+        "sha256": "c4a87a2a412d2101aa311277b1dac2f0132d2e352a0692653669a336a124dd14",
+        "dimensions": "1265x712"
+      }
+    },
+    "resume": "Resume from recovery/state.json, recovery/raw/ and recovery/index/. Retry 2013 article URLs only when a new capture timestamp or archive lead is identified; no response from a failed request is an absence finding."
   }
 }

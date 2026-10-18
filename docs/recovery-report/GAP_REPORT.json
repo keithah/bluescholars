@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T20:50:14.144562+00:00",
+  "updated_at": "2026-10-18T08:19:50+00:00",
   "source_checkpoint_run": "Local resumable checkpoint after the 2013 pass on 2026-10-17; GitHub Actions run 39044681280 is separately recorded because it resumed an older artifact.",
   "capture_index": {
     "indexed_capture_records": 23238,
@@ -9,18 +9,18 @@
   "resource_inventory": {
     "resource_urls": 11915,
     "statuses": {
-      "queued": 5550,
-      "recovered": 4090,
+      "queued": 5527,
+      "recovered": 4098,
       "needs_review": 75,
-      "failed": 2200,
+      "failed": 2215,
       "excluded": 0
     },
     "indexed_capture_records": 26115,
     "index_complete": true
   },
   "validated_local_files": {
-    "unique_sha256_files": 2388,
-    "bytes": 155227643,
+    "unique_sha256_files": 2390,
+    "bytes": 155282201,
     "candidate_local_source_assets": 1055
   },
   "candidate": {
@@ -82,7 +82,7 @@
     "LiveJournal: several linked comment threads have local gap pages; the missing comment bodies remain unavailable in validated local captures.",
     "LiveJournal: platform CSS and many userpic/image URLs remain missing; the current local journal view is not a visual-fidelity reconstruction."
   ],
-  "interpretation": "The current resumable checkpoint includes 11,915 inventory URLs and 26,115 indexed capture rows. The rebuilt candidate has 1,028 recovered pages, 2,237 documented placeholders, 1,055 local source assets and one derived page. Root and /bluescholars/ offline checks pass; these checks do not establish human visual approval or source completeness.",
+  "interpretation": "The current resumable checkpoint includes 11,915 inventory URLs and 26,115 indexed capture rows. It contains 4,098 recovered resources, 2,215 failed and 5,527 queued. The rebuilt candidate has 1,028 recovered pages, 2,237 documented placeholders, 1,055 local source assets and one derived page. Root and /bluescholars/ offline checks pass; these checks do not establish human visual approval or source completeness.",
   "targeted_image_index": {
     "archive": "Internet Archive Wayback",
     "query": "exact source-linked image URLs from expanded inventory",
@@ -198,15 +198,15 @@
   "resource_urls": 11915,
   "indexed_capture_records": 26115,
   "statuses": {
-    "queued": 5550,
-    "recovered": 4090,
+    "queued": 5527,
+    "recovered": 4098,
     "needs_review": 75,
-    "failed": 2200,
+    "failed": 2215,
     "excluded": 0
   },
-  "unique_downloaded_files": 2388,
-  "downloaded_bytes": 155227643,
-  "failed_attempts": 10288,
+  "unique_downloaded_files": 2390,
+  "downloaded_bytes": 155282201,
+  "failed_attempts": 10365,
   "index_complete": true,
   "active_recovery_run": null,
   "local_checkpoint_after_recovery_sweep": {
@@ -490,18 +490,18 @@
   "checkpoint": {
     "resource_urls": 11915,
     "statuses": {
-      "queued": 5550,
-      "recovered": 4090,
+      "queued": 5527,
+      "recovered": 4098,
       "needs_review": 75,
-      "failed": 2200,
+      "failed": 2215,
       "excluded": 0
     },
     "indexed_capture_records": 26115,
     "index_complete": true,
-    "unique_downloaded_files": 2388,
-    "downloaded_bytes": 155227643,
-    "failed_attempts": 10288,
-    "generated_at": "2026-10-17T20:47:54.443065+00:00"
+    "unique_downloaded_files": 2390,
+    "downloaded_bytes": 155282201,
+    "failed_attempts": 10365,
+    "generated_at": "2026-10-18T08:19:50+00:00"
   },
   "pages_deployment": {
     "url": "https://keithah.github.io/bluescholars/",
@@ -714,5 +714,54 @@
       }
     ],
     "interpretation": "Collection-query transport/service failures and WARC fetch failures are not evidence that a page was absent."
+  },
+  "october_18_continuation": {
+    "resource_checkpoint": {
+      "resource_urls": 11915,
+      "statuses": {
+        "queued": 5527,
+        "recovered": 4098,
+        "needs_review": 75,
+        "failed": 2215,
+        "excluded": 0
+      },
+      "indexed_capture_records": 26115,
+      "index_complete": true,
+      "unique_downloaded_files": 2390,
+      "downloaded_bytes": 155282201,
+      "failed_attempts": 10365,
+      "generated_at": "2026-10-18T08:19:50+00:00"
+    },
+    "myspace": {
+      "new_capture_bearing_urls": 31,
+      "new_asset_source_records": 31,
+      "new_unique_files": 20,
+      "recovered_source_records_total": 314,
+      "unique_files_total": 296,
+      "bytes_total": 18016932,
+      "rate_limited_urls_remaining": 1180,
+      "urls_without_capture_rows": 64
+    },
+    "main_queue": {
+      "recovered_since_baseline": 8,
+      "failed_since_baseline": 15,
+      "unique_raw_files_added": 2,
+      "unique_raw_bytes_added": 54558,
+      "stopped_before_batch_limit": true
+    },
+    "checks": {
+      "tests": "207 passed",
+      "root": {
+        "ok": true,
+        "errors": []
+      },
+      "project_subpath": {
+        "ok": true,
+        "errors": []
+      },
+      "automatic_remote_asset_hosts": 0
+    },
+    "human_visual_reviewed": false,
+    "publish_approved": false
   }
 }

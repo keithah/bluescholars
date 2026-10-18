@@ -6,6 +6,8 @@ The page captures expose 1,561 unique image/media and stylesheet URLs: 1,428 ima
 
 Of the remaining image/media lookups, 1,131 are still rate-limited by Wayback (HTTP 429), and 84 indexed URLs have no capture row. The seven retries were deliberately bounded; recent batches yielded one capture in the latest 30-URL pass, so the remaining index is resumable rather than being hammered. Those states are not treated as proof the original media never existed. The indexes preserve each URL, referrer capture, query result, selected capture, source URL, content type, and SHA-256 where bytes were recovered. A future retry can target only rate-limited rows:
 
+A separate five-URL probe of Internet Archive’s Wayback Availability API returned no parseable JSON; a diagnostic repeat returned HTTP 429. It yielded no captures and does not show that those images are absent. Exact probe URLs, dates and outcomes are preserved in [`availability-probe.json`](../../recovery/myspace-blue-scholars/index/availability-probe.json).
+
 ```bash
 .venv311/bin/python -m restore myspace-assets-index --max-urls 100 --delay 2.0 --retry-errors
 .venv311/bin/python -m restore myspace-assets-recover --max-files 100 --delay 1.0

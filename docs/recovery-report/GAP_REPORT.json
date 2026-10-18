@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18T10:45:38Z",
+  "updated_at": "2026-10-18T10:49:18Z",
   "source_checkpoint_run": "Local resumable checkpoint after the 2013 pass on 2026-10-17; GitHub Actions run 39044681280 is separately recorded because it resumed an older artifact.",
   "capture_index": {
     "indexed_capture_records": 23238,
@@ -72,7 +72,8 @@
       "errors": 0,
       "output": "_candidate",
       "base_path": "/bluescholars"
-    }
+    },
+    "tests": "217 passed"
   },
   "notable_known_gaps": [
     "2010-03 Paul Valery attachment PaulValery1.jpg: exact Wayback row status 403; Arquivo.pt exact query returned zero rows.",
@@ -762,6 +763,12 @@
         "actual_capture": "20070616041026",
         "sha256": "a5a5585b7c11c45adb6f92f0f91e325acf9dc26c4e3c1c426cd1779ac6ed88ab",
         "bytes": 2563
+      },
+      "availability_api_probe": {
+        "urls_checked": 5,
+        "usable_results": 0,
+        "diagnostic_http_status": 429,
+        "captures_recovered": 0
       }
     },
     "main_queue": {

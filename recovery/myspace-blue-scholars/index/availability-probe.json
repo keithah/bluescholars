@@ -1,0 +1,42 @@
+{
+  "checked_at": "2026-10-18T10:49:07Z",
+  "endpoint": "https://archive.org/wayback/available",
+  "purpose": "Test whether a separate Wayback availability API can return captures for image URLs whose exact CDX lookups are rate-limited.",
+  "attempts": [
+    {
+      "url": "http://a180.ac-images.myspacecdn.com/images01/68/s_2730aacbb6e90eee69618b31932ed65b.jpg",
+      "timestamp": "20080810123300",
+      "result": "Non-JSON response; JSON parsing failed. No capture result was available."
+    },
+    {
+      "url": "http://a183.ac-images.myspacecdn.com/images01/81/s_d7a8a834bc6cd4a5ed1f7ee6cdb3308e.jpg",
+      "timestamp": "20081220132242",
+      "result": "Non-JSON response; JSON parsing failed. No capture result was available."
+    },
+    {
+      "url": "http://a184.ac-images.myspacecdn.com/images01/16/s_4fc5335f530f4a59564dd636e2931747.jpg",
+      "timestamp": "20080805041247",
+      "result": "Non-JSON response; JSON parsing failed. No capture result was available."
+    },
+    {
+      "url": "http://a184.ac-images.myspacecdn.com/images01/50/s_465cae432d3295f25840235191cb23c7.gif",
+      "timestamp": "20080813161850",
+      "result": "Non-JSON response; JSON parsing failed. No capture result was available."
+    },
+    {
+      "url": "http://a186.ac-images.myspacecdn.com/images01/2/s_55a0c4cedbc3c8f27d45adae5d721c69.jpg",
+      "timestamp": "20080904084101",
+      "result": "Non-JSON response; JSON parsing failed. No capture result was available."
+    }
+  ],
+  "diagnostic_repeat": {
+    "url": "http://a180.ac-images.myspacecdn.com/images01/68/s_2730aacbb6e90eee69618b31932ed65b.jpg",
+    "timestamp": "20070616040959",
+    "http_status": 429,
+    "content_type": "text/html; charset=utf-8",
+    "body_summary": "Archive responded with an HTML Too Many Requests message, not availability JSON.",
+    "note": "The diagnostic request used the explicitly supplied timestamp 20070616040959; it was only checking the endpoint response, not asserting a capture date for this 2008 image URL."
+  },
+  "captures_recovered": 0,
+  "interpretation": "This is an access/rate-limit failure, not evidence that the images lack archived captures."
+}

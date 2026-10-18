@@ -152,10 +152,10 @@
     "unique_raw_files": 97,
     "visual_reviewed": false
   },
-  "updated_at": "2026-10-18T10:43:13Z",
+  "updated_at": "2026-10-18T10:49:18Z",
   "tests": {
-    "command": "PYTHONPATH=. .venv311/bin/python -m pytest -q",
-    "result": "207 passed",
+    "command": ".venv311/bin/python -m pytest -q",
+    "result": "217 passed",
     "root_build_check": "passed (1,028 recovered pages; 2,235 placeholders; zero errors)",
     "project_subpath_build_check": "passed (1,028 recovered pages; 2,235 placeholders; zero errors)",
     "git_diff_check": "passed after last checkpoint",
@@ -730,6 +730,13 @@
         "visual_reviewed": false,
         "publish_approved": false,
         "generated_at": "2026-10-18T10:43:51Z"
+      },
+      "availability_api_probe": {
+        "urls_checked": 5,
+        "usable_results": 0,
+        "diagnostic_http_status": 429,
+        "captures_recovered": 0,
+        "report": "recovery/myspace-blue-scholars/index/availability-probe.json"
       }
     },
     "main_queue": {

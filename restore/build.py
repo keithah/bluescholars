@@ -157,6 +157,8 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
         records=json.loads(json.dumps(catalog['resources']))
     inventory_path=root/'recovery/seeds/inventory.json'
     inventory=json.loads(inventory_path.read_text()) if inventory_path.exists() else {'pages':[]}
+    feed_entries=collect_feed_entries(root)
+    feed_entry_ids={identity(entry['url']) for entry in feed_entries.values()}
     for path,label in CORE:
         records.setdefault(HOME.rstrip('/')+path,{'url':HOME.rstrip('/')+path,'kind':'html','status':'queued'})
     for r in inventory.get('pages',[]):
@@ -235,6 +237,19 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
                     existing.setdefault('edition_prefixes',[])
                     if source_prefix not in existing['edition_prefixes']:
                         existing['edition_prefixes'].append(source_prefix)
+    # Feed bodies are source material too. Their internal links should reach
+    # recovered pages where available, and honest local gap pages otherwise.
+    # The source catalog in a clean checkout does not contain the resumable
+    # discovery state, so collect these links directly from the preserved XML.
+    for source_url,entry in feed_entries.items():
+        source_prefix=historical_route_prefix(source_url,'/2009',entry['feed_capture']) or '/2009'
+        for discovered in discover_html(entry['content'],source_url):
+            linked_url=discovered.get('url','')
+            if discovered.get('kind')!='html' or not is_site(linked_url):
+                continue
+            prefix=historical_route_prefix(
+                linked_url,source_prefix,route_capture_hint(records.get(linked_url,{}))) or source_prefix
+            linked_html_routes.append((prefix,linked_url))
     # LiveJournal itself is outside the three official editions above, but its
     # own post captures can link to comment-thread URLs that need local gap pages.
     for key,r in lj_pages:
@@ -298,8 +313,6 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
         if key not in aliases or not aliases[key].get('local_path'):
             aliases[key]=record
     issues.extend(alias_issues)
-    feed_entries=collect_feed_entries(root)
-    feed_entry_ids={identity(entry['url']) for entry in feed_entries.values()}
     pages={}
     for source_key,r in records.items():
         source_url=r.get('url',source_key)
@@ -392,7 +405,7 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
             content_label='Full article text' if entry['content_type']=='full' else 'Feed description; an excerpt'
             banner=('<aside class="archive-feed-provenance"><strong>'+content_label+'</strong> captured in an archived WordPress feed on '
                     +html.escape(entry['feed_capture'])+'. The original page HTML was not recovered. '
-                    '<a href="'+html.escape(feed_source,quote=True)+'">Inspect this feed capture</a>.</aside>')
+                    '<a class="archive-source-link" href="'+html.escape(feed_source,quote=True)+'">Inspect this feed capture</a>.</aside>')
             text=page_shell(title,banner+'<article class="archive-feed-article">'+entry['content']+'</article>')
             status='recovered_from_feed';feed_recovered+=1
         elif source_key in usable_variants:

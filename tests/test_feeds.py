@@ -5,6 +5,7 @@ import pytest
 
 from restore.feeds import collect_feed_entries
 from restore.build import build
+from restore.check import check
 from restore.state import State, write_json
 from restore.urls import HOME, TARGET
 
@@ -81,7 +82,10 @@ def test_candidate_renders_feed_body_with_visible_provenance_and_no_remote_image
         assert resource.startswith(prefix)
         local = resource.removeprefix(base).lstrip("/").split("?", 1)[0]
         assert (tmp_path / "_candidate" / local).is_file()
-    assert soup.find("a", string="Inspect this feed capture")
+    feed_link = soup.find("a", string="Inspect this feed capture")
+    assert feed_link["href"].startswith(
+        "https://web.archive.org/web/20100413023239id_/http://bluescholars.com/blog/feed/"
+    )
     assert report["feed_recovered_pages"] == 1
     assert any(p["status"] == "recovered_from_feed" for p in report["pages"])
 
@@ -98,6 +102,30 @@ def test_collect_feed_entries_rejects_changed_saved_snapshot(tmp_path):
     }]})
     with pytest.raises(ValueError, match="manifest check"):
         collect_feed_entries(tmp_path)
+
+
+def test_source_build_creates_local_gap_pages_for_feed_links(tmp_path):
+    (tmp_path / "source").mkdir()
+    (tmp_path / "public").mkdir()
+    (tmp_path / "recovery/seeds").mkdir(parents=True)
+    write_json(tmp_path / "source/catalog.json", {"version": 1, "resources": {}})
+    write_json(tmp_path / "source/review.json", {"publish_approved": False, "visual_reviewed": False})
+    write_json(tmp_path / "recovery/seeds/inventory.json", {"pages": [], "assets": []})
+    (tmp_path / "public/archive-ui.css").write_text("", encoding="utf-8")
+    feed_dir = tmp_path / "recovery/captured-sources/2026-10-18/feeds"
+    feed_dir.mkdir(parents=True)
+    (feed_dir / "20100413023239-blog-feed.xml").write_text('''<rss xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel>
+      <item><title>Archived article</title><link>http://bluescholars.com/blog/2010/04/feed-post/</link>
+        <content:encoded><![CDATA[<p>Preserved feed body.</p>
+          <a href="http://bluescholars.com/blog/feed/">Subscribe</a>
+          <a href="http://bluescholars.com/blog/feed-post/photo-one/">Photo one</a>]]></content:encoded>
+      </item></channel></rss>''', encoding="utf-8")
+
+    build(tmp_path, tmp_path / "_site")
+
+    assert (tmp_path / "_site/2009/blog/feed/index.html").is_file()
+    assert (tmp_path / "_site/2009/blog/feed-post/photo-one/index.html").is_file()
+    assert check(tmp_path / "_site") == []
 
 
 def test_state_seed_adds_feed_referenced_media_to_resumable_inventory(tmp_path):

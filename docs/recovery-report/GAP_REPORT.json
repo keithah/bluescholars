@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18T10:26:35.493937+00:00",
+  "updated_at": "2026-10-18T10:45:38Z",
   "source_checkpoint_run": "Local resumable checkpoint after the 2013 pass on 2026-10-17; GitHub Actions run 39044681280 is separately recorded because it resumed an older artifact.",
   "capture_index": {
     "indexed_capture_records": 23238,
@@ -26,7 +26,7 @@
   "candidate": {
     "recovered_pages": 1030,
     "feed_recovered_pages": 12,
-    "placeholder_pages": 2264,
+    "placeholder_pages": 2265,
     "derived_pages": 1,
     "local_source_assets": 1079,
     "publish_approved": false,
@@ -80,7 +80,7 @@
     "A 2025 LiveJournal modern-interface capture and a 2023 post variant remain needs_review and are not mixed into the old-layout /lj/ edition.",
     "2009 PHOTOS: TONE image l_bf6ff3f3d208456f9cd4c58a4b8dd822.jpg: exact URL CDX returned zero rows; an individually requested 2009-08-14 response returned 404. The source image remains a named gap.",
     "LiveJournal: three Common Crawl WARC requests failed after retries (16015.html?thread=49295 at 20170423174431; 16460.html at 20171022044512 and 20180426051232); those failures do not prove absence.",
-    "LiveJournal: post 17615 (“EVENTFUL.COM contest”) survives only in a captured journal front page; posts 15781 and other linked entries lack validated full standalone responses in this sweep.",
+    "LiveJournal: post 17615 (\u201cEVENTFUL.COM contest\u201d) survives only in a captured journal front page; posts 15781 and other linked entries lack validated full standalone responses in this sweep.",
     "LiveJournal: several linked comment threads have local gap pages; the missing comment bodies remain unavailable in validated local captures.",
     "LiveJournal: platform CSS and many userpic/image URLs remain missing; the current local journal view is not a visual-fidelity reconstruction."
   ],
@@ -735,13 +735,13 @@
       "generated_at": "2026-10-18T09:04:54Z"
     },
     "myspace": {
-      "new_capture_bearing_urls": 59,
-      "new_asset_source_records": 59,
-      "new_unique_files": 37,
-      "recovered_source_records_total": 342,
-      "unique_files_total": 313,
-      "bytes_total": 18160237,
-      "rate_limited_urls_remaining": 1132,
+      "new_capture_bearing_urls": 60,
+      "new_asset_source_records": 60,
+      "new_unique_files": 38,
+      "recovered_source_records_total": 343,
+      "unique_files_total": 314,
+      "bytes_total": 18162800,
+      "rate_limited_urls_remaining": 1131,
       "urls_without_capture_rows": 84,
       "second_retry": {
         "attempted": 30,
@@ -749,8 +749,20 @@
         "recovered_assets": 13,
         "new_unique_files": 7
       },
-      "batches": 6,
-      "urls_retried": 250
+      "batches": 7,
+      "urls_retried": 280,
+      "seventh_retry": {
+        "attempted": 30,
+        "new_capture_bearing_urls": 1,
+        "recovered_assets": 1,
+        "new_unique_files": 1
+      },
+      "latest_asset": {
+        "url": "http://a18.ac-images.myspacecdn.com/01540/71/01/1540141017_s.jpg",
+        "actual_capture": "20070616041026",
+        "sha256": "a5a5585b7c11c45adb6f92f0f91e325acf9dc26c4e3c1c426cd1779ac6ed88ab",
+        "bytes": 2563
+      }
     },
     "main_queue": {
       "recovered_since_baseline": 8,
@@ -904,7 +916,7 @@
       ],
       "build_feed_recovered_pages": 12,
       "base_build_recovered_pages": 1030,
-      "placeholder_pages": 2264,
+      "placeholder_pages": 2265,
       "derived_pages": 1,
       "local_source_assets": 1079
     },

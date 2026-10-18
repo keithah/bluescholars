@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-18T08:51:42Z",
+  "generated_at": "2026-10-18T10:43:13Z",
   "profile": "https://myspace.com/bluescholars",
   "capture_index": {
     "query_variants": [
@@ -59,15 +59,15 @@
     "stylesheet_urls": 133,
     "cdx_urls_indexed": 1561,
     "unqueried_urls": 0,
-    "image_media_urls_with_capture_rows": 212,
+    "image_media_urls_with_capture_rows": 213,
     "stylesheet_urls_with_capture_rows": 133,
-    "rate_limited_or_index_errors": 1132,
+    "rate_limited_or_index_errors": 1131,
     "image_media_urls_without_capture_rows": 84,
-    "downloaded_valid_assets": 342,
-    "downloaded_valid_images": 209,
+    "downloaded_valid_assets": 343,
+    "downloaded_valid_images": 210,
     "downloaded_valid_stylesheets": 133,
-    "downloaded_unique_files": 313,
-    "downloaded_bytes": 18160237,
+    "downloaded_unique_files": 314,
+    "downloaded_bytes": 18162800,
     "rejected_payloads": [
       {
         "url": "http://lads.myspacecdn.com/videos/MSMusicPlayer.swf",
@@ -83,22 +83,31 @@
       }
     ],
     "index_errors_by_prefix": {
-      "Wayback CDX HTTP 429; retry later": 705,
+      "Wayback CDX HTTP 429; retry later": 704,
       "429 Client Error": 427
     },
     "latest_retry": {
-      "batches": 6,
-      "urls_retried": 250,
-      "new_capture_urls": 59,
-      "new_asset_records_recovered": 59,
-      "new_unique_files": 37,
-      "capture_bearing_urls_total": 345,
-      "rate_limited_urls_remaining": 1132,
+      "batches": 7,
+      "urls_retried": 280,
+      "new_capture_urls": 60,
+      "new_asset_records_recovered": 60,
+      "new_unique_files": 38,
+      "capture_bearing_urls_total": 346,
+      "rate_limited_urls_remaining": 1131,
       "indexed_without_capture": 84,
-      "unique_asset_files_total": 313,
-      "unique_asset_bytes": 18160237
+      "unique_asset_files_total": 314,
+      "unique_asset_bytes": 18162800
     }
   },
   "human_visual_reviewed": false,
-  "release_approved": false
+  "release_approved": false,
+  "latest_addition": {
+    "source_page_capture": "20070616040959",
+    "source_url": "http://a18.ac-images.myspacecdn.com/01540/71/01/1540141017_s.jpg",
+    "requested_capture": "20070616041026",
+    "actual_capture": "20070616041026",
+    "sha256": "a5a5585b7c11c45adb6f92f0f91e325acf9dc26c4e3c1c426cd1779ac6ed88ab",
+    "bytes": 2563,
+    "local_source": "recovery/myspace-blue-scholars/assets/a5a5585b7c11c45adb6f92f0f91e325acf9dc26c4e3c1c426cd1779ac6ed88ab.jpg"
+  }
 }

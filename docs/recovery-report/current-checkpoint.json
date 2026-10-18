@@ -1,7 +1,7 @@
 {
   "browser_visual_review": {
     "reference_capture": "https://web.archive.org/web/20210529010817/http://bluescholars.com/",
-    "viewport": "1265×712 browser screenshot; reference and local candidate were captured at the same viewport.",
+    "viewport": "1265\u00d7712 browser screenshot; reference and local candidate were captured at the same viewport.",
     "agent_reviewed": true,
     "human_review_claimed": false,
     "comparison": "After accounting for the Internet Archive toolbar and local historical-restoration notice, the 2013 Squarespace-era candidate matches the reference logo size and left offset, navigation placement, main-image left/top position, width and crop. The May 2021 photograph is the same locally recovered hero.",
@@ -34,7 +34,7 @@
   "candidate_build": {
     "recovered_pages": 1030,
     "feed_recovered_pages": 12,
-    "placeholder_pages": 2264,
+    "placeholder_pages": 2265,
     "derived_pages": 1,
     "local_source_assets": 1079,
     "publish_approved": false,
@@ -152,7 +152,7 @@
     "unique_raw_files": 97,
     "visual_reviewed": false
   },
-  "updated_at": "2026-10-18T10:26:35.496002+00:00",
+  "updated_at": "2026-10-18T10:43:13Z",
   "tests": {
     "command": "PYTHONPATH=. .venv311/bin/python -m pytest -q",
     "result": "207 passed",
@@ -667,15 +667,15 @@
   "latest_continuation": {
     "description": "2026-10-18 MySpace source retry and bounded main recovery queue continuation.",
     "myspace_retry": {
-      "processed_exact_urls": 250,
-      "new_capture_bearing_image_media_urls": 59,
-      "asset_resources_recovered": 59,
-      "new_unique_asset_files": 37,
-      "capture_bearing_urls_total": 345,
-      "rate_limited_urls_remaining": 1132,
+      "processed_exact_urls": 280,
+      "new_capture_bearing_image_media_urls": 60,
+      "asset_resources_recovered": 60,
+      "new_unique_asset_files": 38,
+      "capture_bearing_urls_total": 346,
+      "rate_limited_urls_remaining": 1131,
       "urls_without_capture_rows": 84,
-      "unique_asset_files_total": 313,
-      "unique_asset_bytes": 18160237,
+      "unique_asset_files_total": 314,
+      "unique_asset_bytes": 18162800,
       "second_retry": {
         "processed_exact_urls": 30,
         "new_capture_bearing_urls": 13,
@@ -702,6 +702,11 @@
           "attempted": 30,
           "new_captures": 1,
           "new_files": 1
+        },
+        {
+          "attempted": 30,
+          "new_captures": 1,
+          "new_files": 1
         }
       ],
       "build_after_media_final": {
@@ -711,6 +716,20 @@
         "placeholder_pages": 2237,
         "local_source_assets": 1055,
         "automatic_remote_resources": 0
+      },
+      "post_seventh_retry_build": {
+        "root": "passed",
+        "project_subpath": "passed",
+        "recovered_pages": 1030,
+        "feed_recovered_pages": 12,
+        "placeholder_pages": 2265,
+        "local_source_assets": 1079,
+        "myspace_local_assets": 343,
+        "myspace_recovered_pages": 89,
+        "automatic_remote_resources": 0,
+        "visual_reviewed": false,
+        "publish_approved": false,
+        "generated_at": "2026-10-18T10:43:51Z"
       }
     },
     "main_queue": {
@@ -1215,7 +1234,7 @@
       ],
       "build_feed_recovered_pages": 12,
       "base_build_recovered_pages": 1030,
-      "placeholder_pages": 2264,
+      "placeholder_pages": 2265,
       "derived_pages": 1,
       "local_source_assets": 1079
     },

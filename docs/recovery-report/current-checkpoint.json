@@ -125,7 +125,21 @@
     "library_of_congress": "Direct catalog API lookup timed out; no absence conclusion.",
     "memento_time_travel": "Prior web-reader request inaccessible.",
     "livejournal": "Separate /lj/ archive has eight recovered HTML capture routes from a complete host CDX index (226 rows/115 URLs), four article reading views derived from exact entry blocks in the October 2011 index capture (not standalone responses), 20 local photos, custom CSS local, platform CSS unavailable, one missing image, plus two modern-interface captures held in needs_review.",
-    "wayback_2013": "Run 38960845000 attempted 171 per-URL captures dated 2013-09-21 through 2023-09-30; 11 valid responses recovered, mostly 2016 Squarespace HTML. Remaining selection includes feeds, APIs, invalid/error replay responses, or unavailable bodies; see artifact era-2013-report.json."
+    "wayback_2013": "Run 38960845000 attempted 171 per-URL captures dated 2013-09-21 through 2023-09-30; 11 valid responses recovered, mostly 2016 Squarespace HTML. Remaining selection includes feeds, APIs, invalid/error replay responses, or unavailable bodies; see artifact era-2013-report.json.",
+    "myspace_streaming_media": {
+      "report": "recovery/myspace-blue-scholars/index/streaming-media.json",
+      "source_profile_capture": "20140828132352",
+      "audio_stream_urls": 26,
+      "audio_bodies_recovered": 0,
+      "featured_video": "Carnage: Five Minutes to the Stage",
+      "hls_master_manifests_recovered": 13,
+      "variant_manifests_found": 0,
+      "video_segments_found": 0,
+      "wayback_audio_host_wildcard": "no successful rows",
+      "commoncrawl_audio_sample": "no rows in three collections; one timeout",
+      "commoncrawl_2014_host_query": "no rows",
+      "status": "Track metadata and dated master manifests are preserved; audio bodies and playable video remain unavailable."
+    }
   },
   "pages_enabled": true,
   "reviewed_source_build": {

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-18T10:49:18Z",
+  "generated_at": "2026-10-18T11:30:46Z",
   "profile": "https://myspace.com/bluescholars",
   "capture_index": {
     "query_variants": [
@@ -63,20 +63,12 @@
     "stylesheet_urls_with_capture_rows": 133,
     "rate_limited_or_index_errors": 1131,
     "image_media_urls_without_capture_rows": 84,
-    "downloaded_valid_assets": 343,
+    "downloaded_valid_assets": 345,
     "downloaded_valid_images": 210,
     "downloaded_valid_stylesheets": 133,
-    "downloaded_unique_files": 314,
-    "downloaded_bytes": 18162800,
+    "downloaded_unique_files": 316,
+    "downloaded_bytes": 18763409,
     "rejected_payloads": [
-      {
-        "url": "http://lads.myspacecdn.com/videos/MSMusicPlayer.swf",
-        "error": "ValueError: Expected image bytes; received HTML or unknown content"
-      },
-      {
-        "url": "http://lads.myspacecdn.com/videos/Main.swf",
-        "error": "ValueError: Expected image bytes; received HTML or unknown content"
-      },
       {
         "url": "http://www.masslinemedia.com/images/myspacebg.gif",
         "error": "ValueError: Expected image bytes; received HTML or unknown content"
@@ -97,7 +89,16 @@
       "indexed_without_capture": 84,
       "unique_asset_files_total": 314,
       "unique_asset_bytes": 18162800
-    }
+    },
+    "downloaded_valid_flash_files": 2,
+    "latest_recheck": {
+      "additional_exact_cdx_queries": 9,
+      "new_capture_urls": 0,
+      "rate_limited_urls_remaining": 1131,
+      "indexed_without_capture": 84,
+      "result": "The rotated retry queue progressed through nine URLs without a new capture or a new HTTP 429; the cooldown-bound index remains resumable."
+    },
+    "downloaded_source_response_bytes": 18839614
   },
   "human_visual_reviewed": false,
   "release_approved": false,
@@ -118,5 +119,63 @@
     "diagnostic_http_status": 429,
     "captures_recovered": 0,
     "interpretation": "Rate-limit failure; no conclusion about capture existence."
+  },
+  "latest_media_additions": [
+    {
+      "source_url": "http://lads.myspacecdn.com/videos/MSMusicPlayer.swf",
+      "capture": "20101201003249",
+      "bytes": 252440,
+      "sha256": "19ca2a64b8a38dde04206fb6e5fdd86209895d003785d6226d703840f452e984",
+      "local_source": "recovery/myspace-blue-scholars/assets/19ca2a64b8a38dde04206fb6e5fdd86209895d003785d6226d703840f452e984.swf",
+      "local_download": "/myspace/assets/19ca2a64b8a38dde04206fb6e5fdd86209895d003785d6226d703840f452e984.swf",
+      "execution": "Not embedded; available only as a local download."
+    },
+    {
+      "source_url": "http://lads.myspacecdn.com/videos/Main.swf",
+      "capture": "20100714174304",
+      "bytes": 348169,
+      "sha256": "246239be946810158860e5ff32cc9a98fcefddec246130770bc636eb069de15a",
+      "local_source": "recovery/myspace-blue-scholars/assets/246239be946810158860e5ff32cc9a98fcefddec246130770bc636eb069de15a.swf",
+      "local_download": "/myspace/assets/246239be946810158860e5ff32cc9a98fcefddec246130770bc636eb069de15a.swf",
+      "execution": "Not embedded; available only as a local download."
+    }
+  ],
+  "flash_download_pages": [
+    "20090818145020",
+    "20090913135744",
+    "20091026233956",
+    "20100204094516",
+    "20100714190909",
+    "20101203040806",
+    "20101227191414"
+  ],
+  "background_image_variant_probe": {
+    "query_url": "http://masslinemedia.com/images/myspacebg.gif",
+    "status": 200,
+    "resolved_original": "http://www.masslinemedia.com/images/myspacebg.gif",
+    "capture": "20141130021830",
+    "mimetype": "text/html",
+    "indexed_bytes": 575,
+    "new_image_capture": false,
+    "interpretation": "The non-www hostname resolves to the same archived HTML error body; no usable GIF bytes or alternate capture were found."
+  },
+  "streaming_media_archive": {
+    "report": "recovery/myspace-blue-scholars/index/streaming-media.json",
+    "audio_stream_urls": 26,
+    "track_metadata_preserved": true,
+    "audio_bodies_recovered": 0,
+    "profile_video_urls": 1,
+    "featured_video_title": "Carnage: Five Minutes to the Stage",
+    "source_profile_capture": "20140828132352",
+    "hls_master_manifest_captures": 13,
+    "hls_master_manifests_recovered": 13,
+    "unique_manifest_files": 13,
+    "manifest_bytes": 16147,
+    "variant_manifest_captures": 0,
+    "media_segment_captures": 0,
+    "playable_video_recovered": false,
+    "interpretation": "Thirteen dated HLS master manifests were recovered, but their variant playlists and video segments were not indexed; they do not make the clip playable. Wayback host wildcards found no audio stream bodies; Common Crawl exact checks found no rows in three sample collections and timed out in one.",
+    "commoncrawl_host_wildcard_checked": "CC-MAIN-2014-52; no captures found for fms.ec-music.myspacecdn.com",
+    "commoncrawl_hls_master_exact_checked": "CC-MAIN-2014-52; no captures found for the source HLS master URL"
   }
 }

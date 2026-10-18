@@ -127,6 +127,11 @@ def validate_payload(body: bytes,kind: str) -> None:
         if not body.startswith((b'wOFF',b'wOF2',b'OTTO',b'\x00\x01\x00\x00')):
             raise ValueError('Expected a valid font signature; received HTML or unknown content')
         return
+    if kind=='flash':
+        # Keep legacy Flash files only as inert downloads; never embed or execute them.
+        if not body.startswith((b'FWS',b'CWS',b'ZWS')) or len(body) < 8:
+            raise ValueError('Expected a valid Flash SWF signature; received HTML or unknown content')
+        return
     if kind in ('script','unsupported'):
         raise ValueError(f'{kind} files are excluded from recovery output')
     if kind=='image':

@@ -23,6 +23,19 @@ def _write(path: Path, text: str) -> None:
     path.write_text(text, encoding="utf-8")
 
 
+def _after_retry_cursor(items: list[dict], cursor: dict | None) -> list[dict]:
+    """Rotate a deterministic asset queue so repeated CDX failures make progress."""
+    if not items or not cursor:
+        return items
+    key = (cursor.get("kind", "image") != "css", cursor.get("url", ""))
+    split = next((i + 1 for i, item in enumerate(items)
+                  if (item["kind"] != "css", item["url"]) == key), None)
+    if split is None:
+        split = next((i for i, item in enumerate(items)
+                      if (item["kind"] != "css", item["url"]) > key), 0)
+    return items[split:] + items[:split]
+
+
 def index_myspace_assets(root: Path, max_urls: int = 100, delay: float = 1.0, retry_errors: bool = False) -> dict:
     """Index exact MySpace/CDN asset histories, checkpointing every result."""
     root = Path(root)
@@ -35,10 +48,14 @@ def index_myspace_assets(root: Path, max_urls: int = 100, delay: float = 1.0, re
         if not url.startswith(("http://", "https://")):
             return
         host = (urlsplit(url).hostname or "").lower()
-        local_profile_image = host in {"myspace.com", "www.myspace.com"} and urlsplit(url).path.startswith("/common/images/")
-        if local_profile_image or any(part in host for part in ("myspacecdn.com", "myspace-", "masslinemedia.com")):
+        parsed = urlsplit(url)
+        local_profile_image = host in {"myspace.com", "www.myspace.com"} and parsed.path.startswith("/common/images/")
+        local_flash = host in {"myspace.com", "www.myspace.com"} and parsed.path.lower().endswith(".swf")
+        if local_profile_image or local_flash or any(part in host for part in ("myspacecdn.com", "myspace-", "masslinemedia.com")):
+            if urlsplit(url).path.lower().endswith(".swf"):
+                kind = "flash"
             linked.setdefault(url, set()).add(stamp)
-            if kind == "css" or url not in kinds:
+            if kind in {"css", "flash"} or url not in kinds:
                 kinds[url] = kind
 
     for record in acquisition.get("records", []):
@@ -46,7 +63,7 @@ def index_myspace_assets(root: Path, max_urls: int = 100, delay: float = 1.0, re
             continue
         raw = (root / record["raw_path"]).read_text(encoding="utf-8", errors="replace")
         soup = BeautifulSoup(raw, "html.parser")
-        original = record.get("original", "http://myspace.com/bluescholars")
+        original = record.get("original") or "http://myspace.com/bluescholars"
         stamp = record.get("timestamp", "")
         for link in soup.find_all("link", href=True):
             if any(str(rel).lower() == "stylesheet" for rel in link.get("rel", [])):
@@ -64,6 +81,10 @@ def index_myspace_assets(root: Path, max_urls: int = 100, delay: float = 1.0, re
                     continue
                 url = urljoin(original, value)
                 add(url, stamp, "image")
+        for node in soup.find_all("param", attrs={"name": re.compile(r"^movie$", re.I)}, value=True):
+            value = str(node.get("value", "")).strip()
+            if value:
+                add(urljoin(original, value), stamp, "flash" if urlsplit(value).path.lower().endswith(".swf") else "image")
     _write(archive / "index/linked-assets.json", json.dumps({
         "unique_source_linked_media_urls": len(linked),
         "records": [{"url": url, "kind": kinds.get(url, "image"), "source_captures": sorted(dates)} for url, dates in sorted(linked.items())]
@@ -71,16 +92,24 @@ def index_myspace_assets(root: Path, max_urls: int = 100, delay: float = 1.0, re
     path = archive / "index/cdx-assets.json"
     saved = json.loads(path.read_text()) if path.exists() else {"records": []}
     rows = {r["url"]: r for r in saved.get("records", [])}
+    cursor = saved.get("retry_cursor")
     session = requests.Session()
     session.headers["User-Agent"] = "BlueScholarsRestoration/0.1 (historical preservation; paced requests)"
     attempted = 0
+    queue = []
     for url, dates in sorted(linked.items(), key=lambda item: (kinds.get(item[0], "image") != "css", item[0])):
         old = rows.get(url)
+        if old:
+            old["kind"] = kinds.get(url, old.get("kind", "image"))
+            old["source_pages"] = sorted(dates)
         if old and (old.get("captures") or not retry_errors):
             continue
-        if attempted >= max_urls:
-            break
-        record = {"url": url, "kind": kinds.get(url, "image"), "source_pages": sorted(dates)}
+        queue.append({"url": url, "kind": kinds.get(url, "image"), "source_pages": sorted(dates)})
+    if retry_errors:
+        queue = _after_retry_cursor(queue, cursor)
+    for pending in queue[:max(0, max_urls)]:
+        url = pending["url"]
+        record = pending
         try:
             response = session.get("https://web.archive.org/cdx/search/cdx", params={
                 "url": url, "output": "json", "filter": "statuscode:200",
@@ -96,15 +125,16 @@ def index_myspace_assets(root: Path, max_urls: int = 100, delay: float = 1.0, re
             record["index_error"] = f"{type(exc).__name__}: {exc}"
         rows[url] = record
         attempted += 1
+        cursor = {"kind": record["kind"], "url": url}
         if attempted % 10 == 0 or record.get("index_error", "").startswith("Wayback CDX HTTP 429"):
-            _write(path, json.dumps({"queried": len(rows), "inventory_total": len(linked), "records": [rows[k] for k in sorted(rows)]}, indent=2) + "\n")
+            _write(path, json.dumps({"queried": len(rows), "inventory_total": len(linked), "retry_cursor": cursor, "records": [rows[k] for k in sorted(rows)]}, indent=2) + "\n")
         if record.get("index_error", "").startswith("Wayback CDX HTTP 429"):
             break
         time.sleep(max(delay, 0))
     result = {"inventory_total": len(linked), "indexed_urls": len(rows),
               "indexed_with_captures": sum(bool(r.get("captures")) for r in rows.values()),
               "index_errors": sum(bool(r.get("index_error")) for r in rows.values()), "attempted_this_run": attempted}
-    _write(path, json.dumps({"queried": len(rows), "inventory_total": len(linked), "records": [rows[k] for k in sorted(rows)]}, indent=2) + "\n")
+    _write(path, json.dumps({"queried": len(rows), "inventory_total": len(linked), "retry_cursor": cursor, "records": [rows[k] for k in sorted(rows)]}, indent=2) + "\n")
     return result
 
 
@@ -126,7 +156,7 @@ def recover_myspace_assets(root: Path, max_files: int = 100, delay: float = 0.7,
         old = records.get(item["url"])
         if old and old.get("status") == "recovered" and (root / old["raw_path"]).is_file():
             continue
-        if old and not retry_failed:
+        if old and not retry_failed and old.get("kind", item.get("kind", "image")) == item.get("kind", "image"):
             continue
         if attempted >= max_files:
             break
@@ -138,7 +168,7 @@ def recover_myspace_assets(root: Path, max_files: int = 100, delay: float = 0.7,
             response = client.get(f"https://web.archive.org/web/{capture['timestamp']}id_/{capture['original']}")
             validate_payload(response.body, kind)
             digest = hashlib.sha256(response.body).hexdigest()
-            suffix = ".css" if kind == "css" else ".jpg" if response.body.startswith(b"\xff\xd8") else ".png" if response.body.startswith(b"\x89PNG") else ".gif" if response.body.startswith((b"GIF87a", b"GIF89a")) else ".webp"
+            suffix = ".css" if kind == "css" else ".swf" if kind == "flash" else ".jpg" if response.body.startswith(b"\xff\xd8") else ".png" if response.body.startswith(b"\x89PNG") else ".gif" if response.body.startswith((b"GIF87a", b"GIF89a")) else ".webp"
             name = digest + suffix
             raw_path = archive / "assets" / name
             raw_path.parent.mkdir(parents=True, exist_ok=True)
@@ -160,6 +190,7 @@ def recover_myspace_assets(root: Path, max_files: int = 100, delay: float = 0.7,
 
 
 def _sanitize(raw: str, stamp: str, assets: dict[str, str], base: str, source_url: str = "") -> str:
+    source_url = source_url or "http://myspace.com/bluescholars"
     soup = BeautifulSoup(raw, "html.parser")
     if soup.html is None:
         soup = BeautifulSoup("<!doctype html><html><head></head><body></body></html>", "html.parser")
@@ -188,8 +219,37 @@ def _sanitize(raw: str, stamp: str, assets: dict[str, str], base: str, source_ur
         return re.sub(r"url\(\s*(['\"]?)(.*?)\1\s*\)", replace, css, flags=re.I)
 
     for tag in list(soup.find_all(["script", "iframe", "object", "embed", "video", "audio", "form", "base"])):
+        if tag.attrs is None or tag.parent is None:
+            continue
         if tag.name == "script" or tag.name == "base":
             tag.decompose()
+        elif tag.name in {"object", "embed"}:
+            candidates = [tag, *tag.find_all(["object", "embed"])]
+            media = None
+            for node in candidates:
+                references = [node.get("data"), node.get("src")]
+                if node.name == "object":
+                    movie = node.find("param", attrs={"name": re.compile(r"^movie$", re.I)}, value=True)
+                    references.append(movie.get("value", "") if movie else "")
+                for reference in references:
+                    if not reference:
+                        continue
+                    resolved = urljoin(source_url, reference)
+                    local = assets.get(resolved)
+                    if local and urlsplit(resolved).path.lower().endswith(".swf"):
+                        media = (resolved, local)
+                        break
+                if media:
+                    break
+            if media:
+                media_url, local = media
+                link = soup.new_tag("a", href=base + local, attrs={"class": "media-download", "download": ""})
+                link.string = "Archived Flash media (download; not embedded)"
+                tag.replace_with(link)
+            else:
+                notice = soup.new_tag("p", attrs={"class": "media-gap"})
+                notice.string = "Embedded MySpace media was not captured for offline playback."
+                tag.replace_with(notice)
         else:
             notice = soup.new_tag("p", attrs={"class": "media-gap"})
             notice.string = "Embedded MySpace media was not captured for offline playback."
@@ -244,7 +304,7 @@ def _sanitize(raw: str, stamp: str, assets: dict[str, str], base: str, source_ur
             tag.attrs.pop("href", None)
         elif value.startswith("//"):
             tag["href"] = "https:" + value
-        elif not scheme and not value.startswith("#") and source_url:
+        elif not scheme and not value.startswith("#") and source_url and "media-download" not in tag.get("class", []):
             tag["href"] = urljoin(source_url, value)
         elif value.startswith("http://") and "myspace.com" in (urlsplit(value).hostname or ""):
             tag["rel"] = ["noreferrer"]
@@ -255,7 +315,7 @@ def _sanitize(raw: str, stamp: str, assets: dict[str, str], base: str, source_ur
       .preservation-bar{box-sizing:border-box;display:flex;justify-content:space-between;gap:1rem;padding:12px 18px;background:#14283c;color:#fff;font:14px/1.4 system-ui,sans-serif}
       .preservation-bar a{color:#d9edff}.preservation-bar strong{letter-spacing:.04em}
       .preservation-intro{box-sizing:border-box;max-width:1100px;margin:18px auto;padding:0 18px;color:#364657;font:14px/1.5 system-ui,sans-serif}
-      .preservation-intro p{margin:.35em 0}.image-gap,.media-gap{display:inline-block;box-sizing:border-box;margin:4px;padding:10px;border:1px dashed #888;background:#f5f5f5;color:#555;font:12px/1.4 system-ui,sans-serif}
+      .preservation-intro p{margin:.35em 0}.image-gap,.media-gap{display:inline-block;box-sizing:border-box;margin:4px;padding:10px;border:1px dashed #888;background:#f5f5f5;color:#555;font:12px/1.4 system-ui,sans-serif}.media-download{display:inline-block;margin:4px;padding:10px;border:1px solid #7993a9;background:#f3f8fc;color:#174d70;font:12px/1.4 system-ui,sans-serif}
       @media(max-width:650px){.preservation-bar{font-size:12px;flex-wrap:wrap}.preservation-intro{font-size:12px}}
     """
     soup.head.append(style)
@@ -264,7 +324,7 @@ def _sanitize(raw: str, stamp: str, assets: dict[str, str], base: str, source_ur
     back = soup.new_tag("a", href=base + "/myspace/"); back.string = "All dated captures"; bar.append(back)
     info = soup.new_tag("div", attrs={"class": "preservation-intro"})
     notice = soup.new_tag("p"); notice.string = f"Captured {stamp[:4]}-{stamp[4:6]}-{stamp[6:8]} · preserved source HTML, with available assets saved locally."; info.append(notice)
-    gaps = soup.new_tag("p"); gaps.string = "Scripts, external automatic requests, and uncaptured player media are disabled. Gaps are identified in place."; info.append(gaps)
+    gaps = soup.new_tag("p"); gaps.string = "Scripts and external automatic requests are disabled. Captured Flash files are available as downloads and are never embedded; gaps are identified in place."; info.append(gaps)
     soup.body.insert(0, info); soup.body.insert(0, bar)
     return "<!doctype html>\n" + str(soup)
 
@@ -307,7 +367,8 @@ def build_myspace_archive(root: Path, output: Path, base: str = "") -> dict:
                 suffix += 1
             route = f"/myspace/{stamp[:4]}/{slug}-{suffix}.html"
         used_routes.add(route)
-        _write(output / route.lstrip("/"), _sanitize(raw, stamp, assets, base, record.get("original", "")))
+        _write(output / route.lstrip("/"), _sanitize(raw, stamp, assets, base,
+                record.get("original") or "http://myspace.com/bluescholars"))
         title = BeautifulSoup(raw, "html.parser").title
         rendered.append({"timestamp": stamp, "route": route, "title": title.get_text(" ", strip=True) if title else "Blue Scholars MySpace profile", "source": record.get("source_url", ""), "sha256": record.get("sha256", "")})
     years = sorted({p["timestamp"][:4] for p in rendered})

@@ -2228,7 +2228,7 @@
     },
     {
       "url": "http://lads.myspacecdn.com/videos/MSMusicPlayer.swf",
-      "kind": "image",
+      "kind": "flash",
       "source_pages": [
         "20101203040806",
         "20101227191414"
@@ -2242,12 +2242,17 @@
         "digest": "AFEDZCQ7EBRP75ISBRZ3ZIQS6TXX2D3V",
         "length": "251528"
       },
-      "status": "failed",
-      "error": "ValueError: Expected image bytes; received HTML or unknown content"
+      "status": "recovered",
+      "actual_capture": "20101201003249",
+      "raw_path": "recovery/myspace-blue-scholars/assets/19ca2a64b8a38dde04206fb6e5fdd86209895d003785d6226d703840f452e984.swf",
+      "local_path": "/myspace/assets/19ca2a64b8a38dde04206fb6e5fdd86209895d003785d6226d703840f452e984.swf",
+      "sha256": "19ca2a64b8a38dde04206fb6e5fdd86209895d003785d6226d703840f452e984",
+      "bytes": 252440,
+      "content_type": "application/x-shockwave-flash"
     },
     {
       "url": "http://lads.myspacecdn.com/videos/Main.swf",
-      "kind": "image",
+      "kind": "flash",
       "source_pages": [
         "20090818145020",
         "20090913135744",
@@ -2264,8 +2269,13 @@
         "digest": "7DO4AMXYLYQ4BAAZBW3NTQGNUFF6MEM6",
         "length": "346770"
       },
-      "status": "failed",
-      "error": "ValueError: Expected image bytes; received HTML or unknown content"
+      "status": "recovered",
+      "actual_capture": "20100714174304",
+      "raw_path": "recovery/myspace-blue-scholars/assets/246239be946810158860e5ff32cc9a98fcefddec246130770bc636eb069de15a.swf",
+      "local_path": "/myspace/assets/246239be946810158860e5ff32cc9a98fcefddec246130770bc636eb069de15a.swf",
+      "sha256": "246239be946810158860e5ff32cc9a98fcefddec246130770bc636eb069de15a",
+      "bytes": 348169,
+      "content_type": "application/x-shockwave-flash"
     },
     {
       "url": "http://myspace-116.vo.llnwd.net/01116/61/13/1116163116_s.gif",

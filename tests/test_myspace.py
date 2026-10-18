@@ -1,7 +1,176 @@
 import json
 from pathlib import Path
 
-from restore.myspace import _sanitize, build_myspace_archive
+from restore.archive import validate_payload
+from restore.myspace import index_myspace_assets, recover_myspace_assets, _sanitize, build_myspace_archive
+
+
+def test_rate_limited_myspace_retry_continues_after_saved_cursor(tmp_path, monkeypatch):
+    archive = tmp_path / "recovery/myspace-blue-scholars"
+    (archive / "index").mkdir(parents=True)
+    (archive / "raw").mkdir()
+    raw = archive / "raw/profile.html"
+    raw.write_text('''<html><head><link rel="stylesheet" href="https://x.myspacecdn.com/a.css"></head>
+      <body><img src="https://x.myspacecdn.com/a.jpg"><img src="https://x.myspacecdn.com/b.jpg">
+      <img src="https://x.myspacecdn.com/c.jpg"></body></html>''')
+    (archive / "index/acquisition.json").write_text(json.dumps({"records": [{
+        "status": "recovered", "raw_path": str(raw.relative_to(tmp_path)),
+        "original": "https://myspace.com/bluescholars", "timestamp": "20130623052030"
+    }]}))
+    urls = [
+        ("https://x.myspacecdn.com/a.css", "css"),
+        ("https://x.myspacecdn.com/a.jpg", "image"),
+        ("https://x.myspacecdn.com/b.jpg", "image"),
+        ("https://x.myspacecdn.com/c.jpg", "image"),
+    ]
+    (archive / "index/cdx-assets.json").write_text(json.dumps({
+        "records": [{"url": url, "kind": kind, "source_pages": ["20130623052030"],
+                     "index_error": "Wayback CDX HTTP 429"} for url, kind in urls],
+        "retry_cursor": {"kind": "image", "url": "https://x.myspacecdn.com/b.jpg"}
+    }))
+
+    class Response:
+        status_code = 200
+
+        def __init__(self, url):
+            self.url = url
+
+        def raise_for_status(self):
+            return None
+
+        def json(self):
+            return [["timestamp", "original", "statuscode", "mimetype", "digest", "length"],
+                    ["20130623052030", self.url, "200", "image/jpeg", "digest", "100"]]
+
+    class Session:
+        def __init__(self):
+            self.headers = {}
+            self.requested = []
+
+        def get(self, endpoint, params, timeout):
+            self.requested.append(params["url"])
+            return Response(params["url"])
+
+    session = Session()
+    monkeypatch.setattr("restore.myspace.requests.Session", lambda: session)
+
+    report = index_myspace_assets(tmp_path, max_urls=2, delay=0, retry_errors=True)
+
+    assert session.requested == ["https://x.myspacecdn.com/c.jpg", "https://x.myspacecdn.com/a.css"]
+    assert report["attempted_this_run"] == 2
+    saved = json.loads((archive / "index/cdx-assets.json").read_text())
+    assert saved["retry_cursor"] == {"kind": "css", "url": "https://x.myspacecdn.com/a.css"}
+
+
+def test_myspace_retry_queue_does_not_slice_negative_limits(tmp_path, monkeypatch):
+    archive = tmp_path / "recovery/myspace-blue-scholars"
+    (archive / "index").mkdir(parents=True)
+    (archive / "raw").mkdir()
+    raw = archive / "raw/profile.html"
+    raw.write_text('<img src="https://x.myspacecdn.com/a.jpg"><img src="https://x.myspacecdn.com/b.jpg">')
+    (archive / "index/acquisition.json").write_text(json.dumps({"records": [{
+        "status": "recovered", "raw_path": str(raw.relative_to(tmp_path)),
+        "original": "https://myspace.com/bluescholars", "timestamp": "20130623052030"
+    }]}))
+    urls = ["https://x.myspacecdn.com/a.jpg", "https://x.myspacecdn.com/b.jpg"]
+    (archive / "index/cdx-assets.json").write_text(json.dumps({"records": [
+        {"url": url, "kind": "image", "source_pages": ["20130623052030"], "index_error": "HTTP 429"}
+        for url in urls
+    ]}))
+
+    class Session:
+        headers = {}
+        def __init__(self): self.requested = []
+        def get(self, endpoint, params, timeout):
+            self.requested.append(params["url"])
+            raise AssertionError("nonpositive limit must not start a request")
+
+    session = Session()
+    monkeypatch.setattr("restore.myspace.requests.Session", lambda: session)
+    report = index_myspace_assets(tmp_path, max_urls=-1, delay=0, retry_errors=True)
+    assert report["attempted_this_run"] == 0
+    assert session.requested == []
+
+
+def test_myspace_movie_param_is_indexed_as_flash(tmp_path, monkeypatch):
+    archive = tmp_path / "recovery/myspace-blue-scholars"
+    (archive / "index").mkdir(parents=True)
+    (archive / "raw").mkdir()
+    raw = archive / "raw/profile.html"
+    raw.write_text('<object><param name="movie" value="/videos/Main.swf"></object>')
+    (archive / "index/acquisition.json").write_text(json.dumps({"records": [{
+        "status": "recovered", "raw_path": str(raw.relative_to(tmp_path)), "original": "",
+        "timestamp": "20130623052030"
+    }]}))
+
+    class Response:
+        status_code = 200
+        def raise_for_status(self): pass
+        def json(self):
+            return [["timestamp", "original", "statuscode", "mimetype", "digest", "length"],
+                    ["20130623052030", "http://myspace.com/videos/Main.swf", "200",
+                     "application/x-shockwave-flash", "digest", "100"]]
+
+    class Session:
+        def __init__(self): self.headers = {}; self.urls = []
+        def get(self, _endpoint, params, timeout):
+            self.urls.append(params["url"])
+            return Response()
+
+    session = Session()
+    monkeypatch.setattr("restore.myspace.requests.Session", lambda: session)
+    index_myspace_assets(tmp_path, max_urls=1, delay=0)
+    expected = "http://myspace.com/videos/Main.swf"
+    assert session.urls == [expected]
+    linked = json.loads((archive / "index/linked-assets.json").read_text())
+    assert any(r["url"] == expected and r["kind"] == "flash" for r in linked["records"])
+
+
+def test_myspace_flash_is_preserved_as_downloadable_inert_media(tmp_path):
+    raw = b"CWS\x09\x10\x00\x00\x00preserved flash bytes"
+    validate_payload(raw, "flash")
+    import pytest
+    with pytest.raises(ValueError, match="Flash"):
+        validate_payload(b"<html>not a SWF file</html>", "flash")
+
+    page = _sanitize('''<html><head></head><body>
+      <object data="https://cdn.example/missing.swf"><param name="movie" value="/videos/Main.swf"></object>
+      <embed src="https://cdn.example/Main.swf"></body></html>''', "20130623",
+      {"http://myspace.com/videos/Main.swf": "/myspace/assets/main.swf",
+       "https://cdn.example/Main.swf": "/myspace/assets/main.swf"}, "/bluescholars",
+      "")
+    assert page.count('href="/bluescholars/myspace/assets/main.swf"') == 2
+    assert 'download=""' in page
+    assert "<object" not in page and "<embed" not in page
+
+
+def test_recover_retries_failed_myspace_asset_when_indexed_kind_changes(tmp_path, monkeypatch):
+    archive = tmp_path / "recovery/myspace-blue-scholars"
+    (archive / "index").mkdir(parents=True)
+    (archive / "index/cdx-assets.json").write_text(json.dumps({"records": [{
+        "url": "http://cdn.example/player.swf", "kind": "flash", "source_pages": ["20101203040806"],
+        "captures": [{"timestamp": "20101201003249", "original": "http://cdn.example/player.swf"}]
+    }]}))
+    (archive / "index/assets.json").write_text(json.dumps({"assets": [{
+        "url": "http://cdn.example/player.swf", "kind": "image", "status": "failed",
+        "error": "Expected image bytes"
+    }]}))
+
+    class Payload:
+        body = b"CWS\x09\x10\x00\x00\x00preserved flash bytes"
+        url = "https://web.archive.org/web/20101201003249id_/http://cdn.example/player.swf"
+        headers = {"Content-Type": "application/x-shockwave-flash"}
+
+    class Client:
+        def __init__(self, **_kwargs): pass
+        def get(self, _url): return Payload()
+
+    monkeypatch.setattr("restore.myspace.ArchiveClient", Client)
+    report = recover_myspace_assets(tmp_path, max_files=1, delay=0, retry_failed=False)
+    saved = json.loads((archive / "index/assets.json").read_text())["assets"][0]
+    assert report["recovered"] == 1
+    assert saved["kind"] == "flash" and saved["status"] == "recovered"
+    assert (tmp_path / saved["raw_path"]).read_bytes() == Payload.body
 
 
 def test_myspace_build_preserves_dates_and_strips_remote_loads(tmp_path):

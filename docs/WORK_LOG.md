@@ -330,3 +330,6 @@
 - Resume MySpace lookups with `.venv311/bin/python -m restore myspace-assets-index --max-urls 100 --delay 2.0 --retry-errors`, then recover/check with `myspace-assets-recover`. Resume broad page/assets acquisition with `.venv311/bin/python -m restore recover --max-files 100 --delay 0.8 --timeout 15 --retries 0`; keep bounded batches to avoid spending time on repeated long timeouts.
 
 - Mass Line external-image follow-up: queried 31 of the 481 queued image URLs; 30 returned no capture rows and one query entered the archive cooldown. The remaining queue is 450, with 93 total confirmed no-capture URLs, one retryable query error, and no additional media downloaded. Report and per-URL provenance now record the attempts; wait until the recorded cooldown expires before continuing. The separate Mass Line capture remains at 56 downloaded external images and no offsite media files.
+
+
+- After the first recorded cooldown, queried a second 31-URL Mass Line image sample: 30 had no capture rows and one query entered cooldown. The remaining inventory is 420 queued, 123 confirmed without captures, and one recorded index failure; no new images or media were recovered. Per-URL timestamps and query URLs are saved. The next resumable retry can begin after `2026-10-18T08:30:00.400984Z`.

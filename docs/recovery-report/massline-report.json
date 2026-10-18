@@ -101,15 +101,23 @@
     "indexed": 0,
     "capture_records_found": 58,
     "invalid_capture": 2,
-    "no_captures": 93,
+    "no_captures": 123,
     "index_failed": 1,
     "download_failed": 0,
-    "queued": 450,
+    "queued": 420,
     "recovered": 56,
     "images": 56,
     "media": 0,
     "bytes": 3532768,
-    "cooldown_until": "2026-10-18T08:28:13.775889+00:00"
+    "cooldown_until": "2026-10-18T08:30:00.400984+00:00",
+    "last_index_batch": {
+      "attempted": 31,
+      "newly_confirmed_no_captures": 30,
+      "newly_indexed_capture_urls": 0,
+      "retryable_query_failure": 1,
+      "queued_after_batch": 420,
+      "cooldown_until": "2026-10-18T08:30:00.400984+00:00"
+    }
   },
   "resources": {
     "html": 1221,

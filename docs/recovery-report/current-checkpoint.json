@@ -666,15 +666,21 @@
   "latest_continuation": {
     "description": "2026-10-18 MySpace source retry and bounded main recovery queue continuation.",
     "myspace_retry": {
-      "processed_exact_urls": 100,
-      "new_capture_bearing_image_media_urls": 31,
-      "asset_resources_recovered": 31,
-      "new_unique_asset_files": 20,
-      "capture_bearing_urls_total": 317,
-      "rate_limited_urls_remaining": 1180,
-      "urls_without_capture_rows": 64,
-      "unique_asset_files_total": 296,
-      "unique_asset_bytes": 18016932
+      "processed_exact_urls": 130,
+      "new_capture_bearing_image_media_urls": 44,
+      "asset_resources_recovered": 44,
+      "new_unique_asset_files": 27,
+      "capture_bearing_urls_total": 330,
+      "rate_limited_urls_remaining": 1159,
+      "urls_without_capture_rows": 72,
+      "unique_asset_files_total": 303,
+      "unique_asset_bytes": 18037975,
+      "second_retry": {
+        "processed_exact_urls": 30,
+        "new_capture_bearing_urls": 13,
+        "assets_recovered": 13,
+        "new_unique_files": 7
+      }
     },
     "main_queue": {
       "selected_limit": 200,

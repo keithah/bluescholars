@@ -333,3 +333,6 @@
 
 
 - After the first recorded cooldown, queried a second 31-URL Mass Line image sample: 30 had no capture rows and one query entered cooldown. The remaining inventory is 420 queued, 123 confirmed without captures, and one recorded index failure; no new images or media were recovered. Per-URL timestamps and query URLs are saved. The next resumable retry can begin after `2026-10-18T08:30:00.400984Z`.
+
+
+- A second cooled-down MySpace CDX retry checked 30 additional URLs and found 13 capture rows. All 13 assets were downloaded and SHA-256 verified; seven are new unique files. Cumulative MySpace recovery is now 330 capture-bearing URLs, 327 valid source resources (194 images/media plus 133 stylesheets), 303 unique files totaling 18,037,975 bytes. The remaining exact URL index has 1,159 rate-limited entries and 72 without captures. Root and `/bluescholars/` candidates were rebuilt after this recovery and both offline checks returned zero errors (1,028 pages, 2,237 placeholders, 1,055 local assets); 207 tests passed previously on the unchanged code, and this asset delta is covered by both full candidate build checks.

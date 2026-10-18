@@ -59,15 +59,15 @@
     "stylesheet_urls": 133,
     "cdx_urls_indexed": 1561,
     "unqueried_urls": 0,
-    "image_media_urls_with_capture_rows": 184,
+    "image_media_urls_with_capture_rows": 197,
     "stylesheet_urls_with_capture_rows": 133,
-    "rate_limited_or_index_errors": 1180,
-    "image_media_urls_without_capture_rows": 64,
-    "downloaded_valid_assets": 314,
-    "downloaded_valid_images": 181,
+    "rate_limited_or_index_errors": 1159,
+    "image_media_urls_without_capture_rows": 72,
+    "downloaded_valid_assets": 327,
+    "downloaded_valid_images": 194,
     "downloaded_valid_stylesheets": 133,
-    "downloaded_unique_files": 296,
-    "downloaded_bytes": 18016932,
+    "downloaded_unique_files": 303,
+    "downloaded_bytes": 18037975,
     "rejected_payloads": [
       {
         "url": "http://lads.myspacecdn.com/videos/MSMusicPlayer.swf",
@@ -83,14 +83,19 @@
       }
     ],
     "index_errors_by_prefix": {
-      "Wayback CDX HTTP 429; retry later": 735,
-      "429 Client Error": 445
+      "Wayback CDX HTTP 429; retry later": 723,
+      "429 Client Error": 436
     },
     "latest_retry": {
-      "added_capture_urls": 31,
-      "still_rate_limited": 1180,
-      "indexed_without_capture": 64,
-      "assets_recovered_this_run": 31
+      "batch_attempted": 30,
+      "new_capture_urls": 13,
+      "new_asset_records_recovered": 13,
+      "new_unique_files": 7,
+      "capture_bearing_urls_total": 330,
+      "rate_limited_urls_remaining": 1159,
+      "indexed_without_capture": 72,
+      "unique_asset_files_total": 303,
+      "unique_asset_bytes": 18037975
     }
   },
   "human_visual_reviewed": false,

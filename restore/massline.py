@@ -776,6 +776,202 @@ def _variant_route(url: str, timestamp: str, kind: str) -> str:
     return str(path.with_name(path.stem + "--capture-" + timestamp + suffix))
 
 
+def _forum_value(url: str, key: str) -> str:
+    return (parse_qs(urlsplit(url).query.replace(";", "&")).get(key) or [""])[0]
+
+
+def _forum_identifier(url: str, key: str) -> tuple[str, int | None, int | None] | None:
+    value = _forum_value(url, key)
+    if key == "board":
+        match = re.fullmatch(r"(\d+)(?:\.(\d+))?", value)
+        return (match.group(1), int(match.group(2) or 0), None) if match else None
+    match = re.fullmatch(r"(\d+)(?:\.(\d+)|\.msg(\d+))?", value)
+    if not match:
+        return None
+    return match.group(1), int(match.group(2) or 0), int(match.group(3)) if match.group(3) else None
+
+
+def _forum_date(timestamp: str) -> str:
+    return f"{timestamp[:4]}-{timestamp[4:6]}-{timestamp[6:8]}" if len(timestamp) >= 8 and timestamp[:8].isdigit() else "date unknown"
+
+
+def _forum_topic_order(item: dict) -> tuple[int, int, int, str]:
+    parsed = _forum_identifier(item.get("url", ""), "topic")
+    if not parsed:
+        return (9, 0, 0, item.get("route", ""))
+    _, offset, message = parsed
+    # Put the topic's first page before later pages and individual message views.
+    timestamp = item.get("timestamp", "")
+    latest_first = -int(timestamp) if timestamp.isdigit() else 0
+    return (2 if message else 1 if offset else 0, offset, latest_first, item.get("route", ""))
+
+
+def _forum_index_pages(output: Path, output_base: str, board_rows: list[dict], topic_rows: list[dict],
+                       board_bodies: dict[str, bytes],
+                       variants: list[tuple[dict, bytes, str]]) -> dict:
+    """Build a small board directory from observed SMF pages and link their captured topics."""
+    board_groups: dict[str, dict] = {}
+    topic_groups: dict[str, list[dict]] = {}
+    for item in topic_rows:
+        parsed = _forum_identifier(item.get("url", ""), "topic")
+        if parsed:
+            topic_groups.setdefault(parsed[0], []).append(item)
+
+    for item in board_rows:
+        parsed = _forum_identifier(item.get("url", ""), "board")
+        if not parsed:
+            continue
+        board_id, offset, _ = parsed
+        group = board_groups.setdefault(board_id, {"id": board_id, "title_counts": Counter(), "pages": [], "topics": {}, "topic_sources": {}})
+        title = item.get("title", "").strip()
+        if title and not re.fullmatch(r"(?:mass line )?forum(?:s)?(?: archive)?", title, re.I):
+            group["title_counts"][title] += 1
+        group["pages"].append({**item, "offset": offset})
+
+        source = board_bodies.get(item.get("url", ""), b"").decode("utf-8", errors="replace")
+        soup = BeautifulSoup(source, "html.parser")
+        for anchor in soup.find_all("a", href=True):
+            original = urljoin(item["url"], anchor["href"])
+            parsed_topic = _forum_identifier(original, "topic")
+            if not parsed_topic:
+                continue
+            topic_id, _, _ = parsed_topic
+            canonical_topic = _canonical(original)
+            if urlsplit(canonical_topic).hostname not in {"masslinemedia.com", "www.masslinemedia.com"}:
+                continue
+            query = parse_qs(urlsplit(canonical_topic).query.replace(";", "&"))
+            if "action" in query or "prev_next" in query:
+                continue
+            label = " ".join(anchor.get_text(" ", strip=True).split())
+            if not label or len(label) > 240:
+                continue
+            candidates = group["topics"].setdefault(topic_id, Counter())
+            candidates[label] += 1
+            group["topic_sources"].setdefault(topic_id, []).append({"url": canonical_topic, "timestamp": item.get("timestamp", "")})
+
+    # Recover older source captures for board pages from the separately stored variants.
+    for variant, body, route in variants:
+        if variant.get("kind") != "html":
+            continue
+        canonical = variant.get("canonical_url") or _canonical(variant.get("source_url", ""))
+        parsed = _forum_identifier(canonical, "board")
+        if not parsed:
+            continue
+        board_id, offset, _ = parsed
+        group = board_groups.setdefault(board_id, {"id": board_id, "title_counts": Counter(), "pages": [], "topics": {}, "topic_sources": {}})
+        soup = BeautifulSoup(body, "html.parser")
+        title = soup.title.get_text(" ", strip=True) if soup.title else ""
+        if title and not re.fullmatch(r"(?:mass line )?forum(?:s)?(?: archive)?", title, re.I):
+            group["title_counts"][title] += 1
+        group["pages"].append({"url": canonical, "route": route, "timestamp": variant.get("timestamp", ""),
+                               "title": title, "offset": offset})
+        for anchor in soup.find_all("a", href=True):
+            original = urljoin(canonical, anchor["href"])
+            parsed_topic = _forum_identifier(original, "topic")
+            if not parsed_topic:
+                continue
+            topic_id, _, _ = parsed_topic
+            canonical_topic = _canonical(original)
+            if urlsplit(canonical_topic).hostname not in {"masslinemedia.com", "www.masslinemedia.com"}:
+                continue
+            query = parse_qs(urlsplit(canonical_topic).query.replace(";", "&"))
+            if "action" in query or "prev_next" in query:
+                continue
+            label = " ".join(anchor.get_text(" ", strip=True).split())
+            if label and len(label) <= 240:
+                group["topics"].setdefault(topic_id, Counter())[label] += 1
+                group["topic_sources"].setdefault(topic_id, []).append({"url": canonical_topic, "timestamp": variant.get("timestamp", "")})
+
+    topic_to_board: dict[str, str] = {}
+    for board_id, group in board_groups.items():
+        for topic_id in group["topics"]:
+            topic_to_board.setdefault(topic_id, board_id)
+
+    def href(path: str) -> str:
+        return html.escape(output_base + path, quote=True)
+
+    board_links = []
+    for board_id, group in sorted(board_groups.items(), key=lambda item: int(item[0])):
+        title = group["title_counts"].most_common(1)[0][0] if group["title_counts"] else f"Board {board_id} (title not recovered)"
+        topic_count = len(group["topics"])
+        page_count = len({page["route"] for page in group["pages"]})
+        board_links.append(
+            f'<li><a data-board-id="{board_id}" href="{href(f"/masslinemedia/forum/board-{board_id}.html")}">{html.escape(title)}</a>'
+            f'<small>{topic_count} topic titles from captured listings · {page_count} saved board views</small></li>')
+        pages = sorted(group["pages"], key=lambda page: (page["offset"], page.get("timestamp", ""), page["route"]))
+        topic_links = []
+        for topic_id, labels in sorted(group["topics"].items(), key=lambda item: int(item[0])):
+            title_from_listing = labels.most_common(1)[0][0]
+            ordered_candidates = sorted(topic_groups.get(topic_id, []), key=_forum_topic_order)
+            candidates_by_route = {}
+            for candidate in ordered_candidates:
+                candidates_by_route.setdefault(candidate["route"], candidate)
+            candidates = list(candidates_by_route.values())
+            if candidates:
+                primary = candidates[0]
+                target = href(primary["route"])
+                locality = f'{len({c["route"] for c in candidates})} locally saved view(s)'
+            else:
+                observed_sources = sorted(group["topic_sources"].get(topic_id, []), key=lambda source: source.get("timestamp", ""))
+                observed_source = observed_sources[-1] if observed_sources else {}
+                source_url = observed_source.get("url") or _canonical(f"http://masslinemedia.com/smf/index.php?topic={topic_id}.0")
+                timestamp = observed_source.get("timestamp", "")
+                target = html.escape(f'https://web.archive.org/web/{timestamp}/{source_url}', quote=True) if timestamp else "#missing-source"
+                locality = "full topic page not recovered locally · opens the source archive"
+            extra_views = ""
+            if len(candidates) > 1:
+                view_links = []
+                for view in candidates[1:]:
+                    _, offset, message = _forum_identifier(view["url"], "topic") or ("", 0, None)
+                    label = f"message {message}" if message else f"offset {offset}"
+                    view_links.append(
+                        f'<li><a href="{href(view["route"])}" title="{html.escape(view["url"], quote=True)}">'
+                        f'{html.escape(label)} · {_forum_date(view.get("timestamp", ""))}</a></li>')
+                extra_views = (f'<details><summary>Other captured views ({len(view_links)})</summary>'
+                               '<ul class="thread-views">' + "".join(view_links) + '</ul></details>')
+            topic_links.append(
+                f'<li><a href="{target}">{html.escape(title_from_listing)}</a>'
+                f'<small>Topic {topic_id} · {html.escape(locality)}</small>{extra_views}</li>')
+        page_links = []
+        for page in pages:
+            page_links.append(
+                f'<li><a href="{href(page["route"])}">Listing offset {page["offset"]}</a>'
+                f'<small>{html.escape(_forum_date(page.get("timestamp", "")))}</small></li>')
+        board_html = (
+            '<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">'
+            f'<title>{html.escape(title)} · Mass Line Forums</title>'
+            '<style>body{max-width:1100px;margin:3rem auto;padding:0 1.2rem;font:16px/1.55 system-ui;color:#202020}a{color:#24567d}li{margin:.7rem 0}small{display:block;color:#666}.board-list{columns:2}.thread-views{margin:.3rem 0;padding-left:1.4rem}.thread-views li{margin:.2rem 0}@media(max-width:640px){.board-list{columns:1}}.note{border-left:4px solid #3985ad;padding:.5rem 1rem;background:#f3f7f8}</style><body>'
+            f'<p><a href="{href("/masslinemedia/forum/index.html")}">Forum directory</a> · <a href="{href("/masslinemedia/")}">Mass Line Media</a> · <a href="{href("/")}">Blue Scholars archive</a></p>'
+            f'<h1>{html.escape(title)}</h1><p class="note">Topic titles below were transcribed from captured board listings. Locally saved thread views open here; missing threads link to their dated Internet Archive replay.</p>'
+            f'<h2>Topics observed in saved listings ({topic_count})</h2><ul class="board-list">'+''.join(topic_links)+'</ul>'
+            f'<h2>Dated board listings ({page_count})</h2><ul>'+''.join(page_links)+'</ul></body></html>')
+        _write_output(output, f"/masslinemedia/forum/board-{board_id}.html", board_html)
+
+    all_topic_rows = []
+    for topic_id, candidates in sorted(topic_groups.items(), key=lambda item: int(item[0])):
+        title = next((g["topics"][topic_id].most_common(1)[0][0] for g in board_groups.values()
+                      if topic_id in g["topics"] and g["topics"][topic_id]), None)
+        title = title or sorted(candidates, key=_forum_topic_order)[0].get("title") or f"Topic {topic_id} (title not recovered)"
+        if topic_id in topic_to_board:
+            continue
+        primary = sorted(candidates, key=_forum_topic_order)[0]
+        all_topic_rows.append(f'<li><a href="{href(primary["route"])}">{html.escape(title)}</a><small>Topic {topic_id} · {len({c["route"] for c in candidates})} locally saved view(s)</small></li>')
+
+    forum_index = (
+        '<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">'
+        '<title>Mass Line Forums archive</title><style>body{max-width:1100px;margin:3rem auto;padding:0 1.2rem;font:16px/1.55 system-ui;color:#202020}li{margin:.7rem 0}a{color:#24567d}small{display:block;color:#666}.board-list{columns:2}@media(max-width:640px){.board-list{columns:1}}</style><body>'
+        f'<p><a href="{href("/masslinemedia/")}">Mass Line Media archive</a> · <a href="{href("/")}">Blue Scholars archive</a></p>'
+        '<h1>Mass Line Forums</h1>'
+        f'<p>{len(board_groups)} captured boards · {len(topic_groups)} topic IDs have locally captured pages. Each board page groups its recovered topic listings, dated board snapshots, and any captured thread views.</p>'
+        f'<h2>Boards</h2><ul class="board-list">'+''.join(board_links)+'</ul>'
+        + (f'<h2>Other locally captured threads</h2><ul>{"".join(all_topic_rows)}</ul>' if all_topic_rows else '')
+        + '</body></html>')
+    _write_output(output, "/masslinemedia/forum/index.html", forum_index)
+    return {"boards": len(board_groups), "topic_ids": len(topic_groups),
+            "board_listing_pages": sum(len(group["pages"]) for group in board_groups.values()),
+            "unassigned_topic_ids": len(all_topic_rows)}
+
+
 def build_massline_archive(root: Path, output: Path, base: str = "", candidate: bool = False) -> dict:
     """Build a browseable offline copy from recovered candidate or reviewed bytes."""
     root, output = Path(root), Path(output)
@@ -944,14 +1140,7 @@ def build_massline_archive(root: Path, output: Path, base: str = "", candidate: 
         _write_output(output, "/masslinemedia/index.html", "<!doctype html>\n" + str(latest_home))
     else:
         _write_output(output, "/masslinemedia/index.html", index_body)
-    forum_index = ('<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">'
-                   '<title>Mass Line Forums archive</title><style>body{max-width:1100px;margin:3rem auto;padding:0 1.2rem;font:16px/1.55 system-ui;color:#202020}li{margin:.5rem 0}small{color:#666}.archive-list{columns:2}@media(max-width:640px){.archive-list{columns:1}}</style><body>'
-                   '<p><a href="'+output_base+'/masslinemedia/index.html">Mass Line Media archive</a> · <a href="'+output_base+'/">Blue Scholars archive</a></p>'
-                   '<h1>Mass Line Forums</h1><p>Captured forum pages, arranged from the source board and topic URLs. Each link opens an archived page saved locally.</p>'
-                   '<h2>Boards</h2><ul>'+''.join(link(i) for i in sorted(board_rows,key=lambda v:v["route"]))+'</ul>'
-                   '<h2>Topic and message views</h2><p>'+str(len(topic_rows))+' captured forum URLs</p><ul class="archive-list">'+''.join(link(i) for i in sorted(topic_rows,key=lambda v:v["route"]))+'</ul>'
-                   '</body></html>')
-    _write_output(output, "/masslinemedia/forum/index.html", forum_index)
+    forum_directory = _forum_index_pages(output, output_base, board_rows, topic_rows, body_by_url, recovered_resource_variants)
     alternate_pages = [
         (variant, body, route) for variant, body, route in recovered_resource_variants
         if variant.get("kind") == "html"
@@ -971,7 +1160,9 @@ def build_massline_archive(root: Path, output: Path, base: str = "", candidate: 
     index_path = root / "recovery/massline/index.json"
     inventory = json.loads(index_path.read_text(encoding="utf-8"))["report"].get("inventory", {}) if index_path.exists() else {}
     report = {"status": "built", "candidate": candidate, "recovered_pages": len(html_records) + len(homepage_variants),
-              "site_pages": len(site_rows), "forum_topics": len(topic_rows), "forum_boards": len(board_rows),
+              "site_pages": len(site_rows), "forum_topics": forum_directory["topic_ids"], "forum_boards": forum_directory["boards"],
+              "forum_board_listing_pages": forum_directory["board_listing_pages"],
+              "forum_unassigned_topic_ids": forum_directory["unassigned_topic_ids"],
               "homepage_variants": len(homepage_variants),
               "alternate_resources": len(recovered_resource_variants),
               "alternate_html_pages": len(alternate_pages),

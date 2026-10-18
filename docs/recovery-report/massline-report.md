@@ -18,8 +18,8 @@ This is a separate historical source collection for `masslinemedia.com`; its for
 
 ## Recovery status
 
-- Saved: **1,544** indexed resources plus **5** homepage versions (1221 HTML pages, 313 images, 6 stylesheets, 4 media files; 82,094,304 bytes).
-- Unavailable or invalid responses: **0**; pending indexed resources: **3,688**. Current crawl complete: **false**.
+- Saved: **1,744** indexed resources plus **5** homepage versions (1421 HTML pages, 313 images, 6 stylesheets, 4 media files; 90,846,223 bytes).
+- Unavailable or invalid responses: **0**; pending indexed resources: **3,488**. Current crawl complete: **false**.
 - Captured images and styles are mapped locally. Scripts are never run; forms and embedded players are disabled in the static copy. Explicit source links may open the source archive when an item is not stored locally.
 - External assets referenced by recovered pages: **602** exact URLs discovered; **170** have Wayback capture records (0 indexed and awaiting download, 156 recovered); **431** returned no capture, **14** had only non-image/error payloads, **1** index queries and **0** payloads are retryable failures, and **0** remain queued. Locally captured: **156** (156 images, 0 media files; 9,246,018 bytes).
 - Independent archives: Common Crawl `CC-MAIN-2009-2010` supplied a separately preserved July 4, 2009 homepage; Arquivo.pt returned no forum captures and its two site records replay as HTML fallback pages. Detailed queries and raw observations are under `recovery/massline/external/`.

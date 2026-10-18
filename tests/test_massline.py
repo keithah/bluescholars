@@ -5,7 +5,7 @@ from pathlib import Path
 from restore.massline import (build_massline_archive, massline_route, massline_summary,
                               rewrite_massline_css, sanitize_massline_html,
                               select_massline_homepage_versions, merge_massline_capture_rows,
-                              select_latest_massline_rows, _priority)
+                              select_latest_massline_rows, _priority, _forum_index_pages, _forum_topic_order)
 
 
 def test_massline_routes_distinguish_forum_threads_and_pages():
@@ -187,6 +187,92 @@ def test_massline_builder_writes_local_pages_for_project_subpath(tmp_path):
     assert (output / "masslinemedia/index.html").is_file()
     assert (output / "masslinemedia/forum/index.html").is_file()
     assert not (output / "masslinemedia/site/blocked.jpg").exists()
+
+
+def test_massline_forum_index_groups_board_captures_and_lists_real_topics(tmp_path):
+    root = tmp_path / "project"
+    output = tmp_path / "output"
+    raw_root = root / "source/massline/raw"
+    raw_root.mkdir(parents=True)
+    pages = {
+        "http://masslinemedia.com/smf/index.php?board=2.0": (
+            "20071015190000",
+            b'<html><head><title>The Dialogue</title></head><body><a href="?topic=10.0">Dialogue roll call</a></body></html>',
+        ),
+        "http://masslinemedia.com/smf/index.php?board=2.20": (
+            "20071015191000",
+            b'<html><head><title>The Dialogue</title></head><body><a href="?topic=11.0">General discussion</a></body></html>',
+        ),
+        "http://masslinemedia.com/smf/index.php?topic=10.0": (
+            "20071015192000",
+            b'<html><head><title>Dialogue roll call</title></head><body><p>Captured thread one.</p></body></html>',
+        ),
+        "http://masslinemedia.com/smf/index.php?topic=10.15": (
+            "20071015192500",
+            b'<html><head><title>Dialogue roll call, continued</title></head><body><p>Captured second page.</p></body></html>',
+        ),
+        "http://masslinemedia.com/smf/index.php?topic=11.0": (
+            "20071015193000",
+            b'<html><head><title>General discussion</title></head><body><p>Captured thread two.</p></body></html>',
+        ),
+    }
+    resources = {}
+    for url, (timestamp, body) in pages.items():
+        digest = hashlib.sha256(body).hexdigest()
+        raw_path = Path("source/massline/raw") / f"{digest}.html"
+        (root / raw_path).write_bytes(body)
+        resources[url] = {
+            "kind": "html", "timestamp": timestamp, "raw_path": raw_path.as_posix(),
+            "sha256": digest, "mimetype": "text/html",
+        }
+    (root / "source").mkdir(exist_ok=True)
+    (root / "source/massline.json").write_text(json.dumps({"resources": resources}), encoding="utf-8")
+
+    report = build_massline_archive(root, output, "/bluescholars", candidate=False)
+    forum = (output / "masslinemedia/forum/index.html").read_text(encoding="utf-8")
+    board_path = output / "masslinemedia/forum/board-2.html"
+
+    assert report["forum_boards"] == 1
+    assert forum.count('data-board-id="2"') == 1
+    assert 'href="/bluescholars/masslinemedia/forum/board-2.html"' in forum
+    assert board_path.is_file()
+    board = board_path.read_text(encoding="utf-8")
+    assert "Dialogue roll call" in board
+    assert "General discussion" in board
+    assert 'href="/bluescholars/masslinemedia/forum/topic-10-page-0.html"' in board
+    assert 'offset 15 · 2007-10-15' in board
+    assert '<summary>Other captured views' in board
+    assert 'href="/bluescholars/masslinemedia/forum/topic-11-page-0.html"' in board
+    assert 'href="/bluescholars/masslinemedia/forum/board-2-page-20.html"' in board
+
+
+def test_massline_forum_directory_parses_each_saved_board_listing_once(tmp_path, monkeypatch):
+    from restore import massline
+
+    body = b'<html><body><a href="?topic=90.0">Unrecovered first topic</a><a href="?topic=91.0">Unrecovered second topic</a></body></html>'
+    parsed_inputs = []
+    parser = massline.BeautifulSoup
+
+    def tracked_parser(markup, *args, **kwargs):
+        if markup == body.decode("utf-8"):
+            parsed_inputs.append(markup)
+        return parser(markup, *args, **kwargs)
+
+    monkeypatch.setattr(massline, "BeautifulSoup", tracked_parser)
+    _forum_index_pages(
+        tmp_path, "", [{"url": "http://masslinemedia.com/smf/?board=1.0", "route": "/masslinemedia/forum/board-1-page-0.html",
+                        "title": "Mass Line Artist Discussion", "timestamp": "20071014000000"}],
+        [], {"http://masslinemedia.com/smf/?board=1.0": body}, [],
+    )
+
+    assert parsed_inputs == [body.decode("utf-8")]
+
+
+def test_massline_forum_topic_pages_prefer_latest_capture_at_same_offset():
+    older = {"url": "http://masslinemedia.com/smf/?topic=10.0", "route": "/old.html", "timestamp": "20071015120000"}
+    newer = {"url": "http://masslinemedia.com/smf/?topic=10.0", "route": "/new.html", "timestamp": "20071015130000"}
+
+    assert sorted([older, newer], key=_forum_topic_order)[0] is newer
 
 
 def test_massline_images_and_audio_are_prioritized_before_forum_pages():

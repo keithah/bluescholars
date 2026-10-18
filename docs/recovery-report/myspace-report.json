@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-18T11:30:46Z",
+  "generated_at": "2026-10-18T22:54:21Z",
   "profile": "https://myspace.com/bluescholars",
   "capture_index": {
     "query_variants": [
@@ -61,8 +61,8 @@
     "unqueried_urls": 0,
     "image_media_urls_with_capture_rows": 213,
     "stylesheet_urls_with_capture_rows": 133,
-    "rate_limited_or_index_errors": 1131,
-    "image_media_urls_without_capture_rows": 84,
+    "rate_limited_or_index_errors": 1126,
+    "image_media_urls_without_capture_rows": 89,
     "downloaded_valid_assets": 345,
     "downloaded_valid_images": 210,
     "downloaded_valid_stylesheets": 133,
@@ -75,8 +75,8 @@
       }
     ],
     "index_errors_by_prefix": {
-      "Wayback CDX HTTP 429; retry later": 704,
-      "429 Client Error": 427
+      "Wayback CDX HTTP 429; retry later": 700,
+      "429 Client Error": 426
     },
     "latest_retry": {
       "batches": 7,
@@ -92,11 +92,12 @@
     },
     "downloaded_valid_flash_files": 2,
     "latest_recheck": {
-      "additional_exact_cdx_queries": 9,
+      "additional_exact_cdx_queries": 34,
+      "last_rotated_batch_urls": 25,
       "new_capture_urls": 0,
-      "rate_limited_urls_remaining": 1131,
-      "indexed_without_capture": 84,
-      "result": "The rotated retry queue progressed through nine URLs without a new capture or a new HTTP 429; the cooldown-bound index remains resumable."
+      "rate_limited_urls_remaining": 1126,
+      "indexed_without_capture": 89,
+      "result": "After the prior nine rotated requests, another bounded 25-URL retry batch found no new captures. The query checkpoint now has 1,126 rate-limited URLs and 89 successful no-capture results; retry remains resumable."
     },
     "downloaded_source_response_bytes": 18839614
   },

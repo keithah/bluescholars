@@ -1,0 +1,766 @@
+{
+  "generated_at": "2026-10-17T23:53:16.858202+00:00",
+  "source": "Common Crawl CDX Index API",
+  "scope": "13 representative indexes; full host wildcard; 200 responses only",
+  "results": [
+    {
+      "index": "CC-MAIN-2008-2009",
+      "status": 503,
+      "query_url": "https://index.commoncrawl.org/CC-MAIN-2008-2009-index?url=masslinemedia.com%2F%2A&output=json&filter=status%3A200",
+      "row_count": 0,
+      "rows": [],
+      "response_bytes": 197,
+      "error": null
+    },
+    {
+      "index": "CC-MAIN-2009-2010",
+      "status": 200,
+      "query_url": "https://index.commoncrawl.org/CC-MAIN-2009-2010-index?url=masslinemedia.com%2F%2A&output=json&filter=status%3A200",
+      "row_count": 41,
+      "rows": [
+        {
+          "urlkey": "com,masslinemedia)/",
+          "timestamp": "20090704090847",
+          "status": "200",
+          "url": "http://www.masslinemedia.com/",
+          "filename": "crawl-002/2009/09/17/39/1253232135163_39.arc.gz",
+          "length": "3939",
+          "mime": "text/html",
+          "offset": "59735017",
+          "digest": "VO7E5N7YHGQRR4HVH5JIVZPWZ4UY2YVS"
+        },
+        {
+          "urlkey": "com,masslinemedia)/",
+          "timestamp": "20100209001403",
+          "status": "200",
+          "url": "http://masslinemedia.com/",
+          "filename": "crawl-002/2010/02/16/35/1266350159358_35.arc.gz",
+          "length": "276",
+          "mime": "text/html",
+          "offset": "72512983",
+          "digest": "LUDTY4JUDSNMZBC37VR562R53TN67OMX"
+        },
+        {
+          "urlkey": "com,masslinemedia)/",
+          "timestamp": "20100209001420",
+          "status": "200",
+          "url": "http://www.masslinemedia.com/",
+          "filename": "crawl-002/2010/02/16/35/1266350159358_35.arc.gz",
+          "length": "280",
+          "mime": "text/html",
+          "offset": "72523290",
+          "digest": "LUDTY4JUDSNMZBC37VR562R53TN67OMX"
+        },
+        {
+          "urlkey": "com,masslinemedia)/?404=y",
+          "timestamp": "20100903082938",
+          "status": "200",
+          "url": "http://masslinemedia.com/?404=Y",
+          "filename": "crawl-002/2010/09/24/40/1285396452433_40.arc.gz",
+          "length": "3056",
+          "mime": "text/html",
+          "offset": "63326116",
+          "digest": "CS32XXAOWGCSYYKCLKIGAXIZCC324VMU"
+        },
+        {
+          "urlkey": "com,masslinemedia)/artists/bluescholars.html",
+          "timestamp": "20090704085813",
+          "status": "200",
+          "url": "http://masslinemedia.com/artists/bluescholars.html",
+          "filename": "crawl-002/2009/09/17/17/1253232217152_17.arc.gz",
+          "length": "3127",
+          "mime": "text/html",
+          "offset": "4764542",
+          "digest": "ZSJZIMFH2352FHEAYDPYLIW3O3VZOP7U"
+        },
+        {
+          "urlkey": "com,masslinemedia)/artists/commonmarket.html",
+          "timestamp": "20090704085929",
+          "status": "200",
+          "url": "http://masslinemedia.com/artists/commonmarket.html",
+          "filename": "crawl-002/2009/09/17/17/1253232239389_17.arc.gz",
+          "length": "3047",
+          "mime": "text/html",
+          "offset": "860044",
+          "digest": "3TOPVX7LMBHXNZ2NBTZBRTMP5QQUZN72"
+        },
+        {
+          "urlkey": "com,masslinemedia)/artists/gabrielteodros.html",
+          "timestamp": "20100209001435",
+          "status": "200",
+          "url": "http://masslinemedia.com/artists/gabrielteodros.html",
+          "filename": "crawl-002/2010/02/16/35/1266350159358_35.arc.gz",
+          "length": "2608",
+          "mime": "text/html",
+          "offset": "72513259",
+          "digest": "4S6NVEQBHTGWHTWSRNUQCFKFYAXQJPDT"
+        },
+        {
+          "urlkey": "com,masslinemedia)/artists/index.html",
+          "timestamp": "20100311085755",
+          "status": "200",
+          "url": "http://masslinemedia.com/artists/index.html",
+          "filename": "crawl-002/2010/04/02/35/1270222196754_35.arc.gz",
+          "length": "1379",
+          "mime": "text/html",
+          "offset": "65070899",
+          "digest": "G66UXJ7VESJWPACTK74CWUGFNYE22LFQ"
+        },
+        {
+          "urlkey": "com,masslinemedia)/captcha/index.php?d=masslinemedia.com",
+          "timestamp": "20100907141928",
+          "status": "200",
+          "url": "http://masslinemedia.com/captcha/index.php?d=masslinemedia.com",
+          "filename": "crawl-002/2010/09/25/23/1285399821269_23.arc.gz",
+          "length": "507",
+          "mime": "text/html",
+          "offset": "420329",
+          "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ"
+        },
+        {
+          "urlkey": "com,masslinemedia)/commonmarket",
+          "timestamp": "20090704091040",
+          "status": "200",
+          "url": "http://masslinemedia.com/commonmarket/",
+          "filename": "crawl-002/2009/09/17/39/1253232193797_39.arc.gz",
+          "length": "1069",
+          "mime": "text/html",
+          "offset": "59963702",
+          "digest": "M66ILKNEPN6EI2TNSF5IUCWHATVXR4GR"
+        },
+        {
+          "urlkey": "com,masslinemedia)/commonmarket/bio.html",
+          "timestamp": "20090704090104",
+          "status": "200",
+          "url": "http://masslinemedia.com/commonmarket/bio.html",
+          "filename": "crawl-002/2009/09/17/45/1253232059217_45.arc.gz",
+          "length": "3356",
+          "mime": "text/html",
+          "offset": "93759682",
+          "digest": "6TJY53UG7CK4MBAK2MIT2UG3ZE35VLJQ"
+        },
+        {
+          "urlkey": "com,masslinemedia)/commonmarket/bio_ra.html",
+          "timestamp": "20100312032332",
+          "status": "200",
+          "url": "http://masslinemedia.com/commonmarket/bio_ra.html",
+          "filename": "crawl-002/2010/04/02/35/1270220375208_35.arc.gz",
+          "length": "3621",
+          "mime": "text/html",
+          "offset": "49832264",
+          "digest": "ZRNJJAJDUFPWIFNBS4SEFUHQGLUSEEJB"
+        },
+        {
+          "urlkey": "com,masslinemedia)/commonmarket/bio_sabzi.html",
+          "timestamp": "20100311085700",
+          "status": "200",
+          "url": "http://masslinemedia.com/commonmarket/bio_sabzi.html",
+          "filename": "crawl-002/2010/04/02/35/1270222196754_35.arc.gz",
+          "length": "2159",
+          "mime": "text/html",
+          "offset": "65072278",
+          "digest": "QZ4WVQQYDMCTOYWWAREHPBYT3ZT47JNN"
+        },
+        {
+          "urlkey": "com,masslinemedia)/commonmarket/cm_linernotes.html",
+          "timestamp": "20100312032320",
+          "status": "200",
+          "url": "http://masslinemedia.com/commonmarket/cm_linernotes.html",
+          "filename": "crawl-002/2010/04/02/35/1270220375208_35.arc.gz",
+          "length": "9857",
+          "mime": "text/html",
+          "offset": "49835885",
+          "digest": "76SDYYL2CLZM62JHG2CFM354RZEWQFL2"
+        },
+        {
+          "urlkey": "com,masslinemedia)/commonmarket/contact.html",
+          "timestamp": "20100311085750",
+          "status": "200",
+          "url": "http://masslinemedia.com/commonmarket/contact.html",
+          "filename": "crawl-002/2010/04/02/35/1270222196754_35.arc.gz",
+          "length": "2088",
+          "mime": "text/html",
+          "offset": "65074437",
+          "digest": "TXVREXPR5VUVE66XY6JQ3QNWFI6PN25A"
+        },
+        {
+          "urlkey": "com,masslinemedia)/commonmarket/events.html",
+          "timestamp": "20100312032156",
+          "status": "200",
+          "url": "http://masslinemedia.com/commonmarket/events.html",
+          "filename": "crawl-002/2010/04/02/35/1270220375208_35.arc.gz",
+          "length": "2221",
+          "mime": "text/html",
+          "offset": "49845742",
+          "digest": "4B7Q5UCFXEIFP3LTYDTOTNR77IK7GXP5"
+        },
+        {
+          "urlkey": "com,masslinemedia)/commonmarket/links.html",
+          "timestamp": "20100312142948",
+          "status": "200",
+          "url": "http://masslinemedia.com/commonmarket/links.html",
+          "filename": "crawl-002/2010/04/02/35/1270220375208_35.arc.gz",
+          "length": "2327",
+          "mime": "text/html",
+          "offset": "49847963",
+          "digest": "LOFLEMO2XXOHQ6WM5RZ6IQIEHTSHTXBE"
+        },
+        {
+          "urlkey": "com,masslinemedia)/commonmarket/lyrics/01.html",
+          "timestamp": "20090704085742",
+          "status": "200",
+          "url": "http://masslinemedia.com/commonmarket/lyrics/01.html",
+          "filename": "crawl-002/2009/09/17/17/1253232192688_17.arc.gz",
+          "length": "3382",
+          "mime": "text/html",
+          "offset": "69791862",
+          "digest": "QNV77DFBUPHKZZJV3EYCYSPY4UN7EHRR"
+        },
+        {
+          "urlkey": "com,masslinemedia)/commonmarket/lyrics/02.html",
+          "timestamp": "20090704085658",
+          "status": "200",
+          "url": "http://masslinemedia.com/commonmarket/lyrics/02.html",
+          "filename": "crawl-002/2009/09/17/17/1253232169558_17.arc.gz",
+          "length": "3504",
+          "mime": "text/html",
+          "offset": "87828973",
+          "digest": "44NZCUFTYSW6PZXLUNVR7QPAU2HINDTB"
+        },
+        {
+          "urlkey": "com,masslinemedia)/commonmarket/lyrics/03.html",
+          "timestamp": "20090704090639",
+          "status": "200",
+          "url": "http://masslinemedia.com/commonmarket/lyrics/03.html",
+          "filename": "crawl-002/2009/09/17/39/1253232087984_39.arc.gz",
+          "length": "4100",
+          "mime": "text/html",
+          "offset": "96752333",
+          "digest": "4UT5KFHJGYA5COTFG52CXV6RTUGO4NK2"
+        },
+        {
+          "urlkey": "com,masslinemedia)/commonmarket/lyrics/04.html",
+          "timestamp": "20090704085522",
+          "status": "200",
+          "url": "http://masslinemedia.com/commonmarket/lyrics/04.html",
+          "filename": "crawl-002/2009/09/17/7/1253231770588_7.arc.gz",
+          "length": "3998",
+          "mime": "text/html",
+          "offset": "95750076",
+          "digest": "HXZV4HD3ERED7U4MVEJR5DWB3QOPQZQQ"
+        },
+        {
+          "urlkey": "com,masslinemedia)/commonmarket/lyrics/05.html",
+          "timestamp": "20090704090740",
+          "status": "200",
+          "url": "http://masslinemedia.com/commonmarket/lyrics/05.html",
+          "filename": "crawl-002/2009/09/17/39/1253232112036_39.arc.gz",
+          "length": "4333",
+          "mime": "text/html",
+          "offset": "72526808",
+          "digest": "N4XLE5QG6S6X3TNUO2QFYA57W5LXR6BF"
+        },
+        {
+          "urlkey": "com,masslinemedia)/commonmarket/lyrics/06.html",
+          "timestamp": "20090704090806",
+          "status": "200",
+          "url": "http://masslinemedia.com/commonmarket/lyrics/06.html",
+          "filename": "crawl-002/2009/09/17/39/1253232112036_39.arc.gz",
+          "length": "3710",
+          "mime": "text/html",
+          "offset": "72630805",
+          "digest": "EXTPXPSSIURO5OO7IU4T5OQCVFMI4RJI"
+        },
+        {
+          "urlkey": "com,masslinemedia)/commonmarket/lyrics/07.html",
+          "timestamp": "20090704085440",
+          "status": "200",
+          "url": "http://masslinemedia.com/commonmarket/lyrics/07.html",
+          "filename": "crawl-002/2009/09/17/7/1253231770588_7.arc.gz",
+          "length": "3655",
+          "mime": "text/html",
+          "offset": "53610822",
+          "digest": "XFPEKS6NB4BFUDGU63GENGX2MWE55XXR"
+        },
+        {
+          "urlkey": "com,masslinemedia)/commonmarket/lyrics/08.html",
+          "timestamp": "20090704085856",
+          "status": "200",
+          "url": "http://masslinemedia.com/commonmarket/lyrics/08.html",
+          "filename": "crawl-002/2009/09/17/17/1253232217152_17.arc.gz",
+          "length": "4599",
+          "mime": "text/html",
+          "offset": "54698998",
+          "digest": "WIE4FIEPJ73ZY6JEOY567LMXZERBVJYX"
+        },
+        {
+          "urlkey": "com,masslinemedia)/commonmarket/lyrics/09.html",
+          "timestamp": "20100311085726",
+          "status": "200",
+          "url": "http://masslinemedia.com/commonmarket/lyrics/09.html",
+          "filename": "crawl-002/2010/04/02/35/1270222196754_35.arc.gz",
+          "length": "2184",
+          "mime": "text/html",
+          "offset": "65076525",
+          "digest": "76ZTGVVPFTXSJPRDJOUENWL7VKEWE3JH"
+        },
+        {
+          "urlkey": "com,masslinemedia)/commonmarket/lyrics/10.html",
+          "timestamp": "20090704090000",
+          "status": "200",
+          "url": "http://masslinemedia.com/commonmarket/lyrics/10.html",
+          "filename": "crawl-002/2009/09/17/17/1253232239389_17.arc.gz",
+          "length": "3605",
+          "mime": "text/html",
+          "offset": "51227444",
+          "digest": "UK53IHOF4NTBVARIXEGA3VYBFHJKTF3N"
+        },
+        {
+          "urlkey": "com,masslinemedia)/commonmarket/lyrics/11.html",
+          "timestamp": "20090704091436",
+          "status": "200",
+          "url": "http://masslinemedia.com/commonmarket/lyrics/11.html",
+          "filename": "crawl-002/2009/09/17/35/1253232640144_35.arc.gz",
+          "length": "3317",
+          "mime": "text/html",
+          "offset": "7479769",
+          "digest": "BWJJBYJNFTBIYFMF4X4YKHAMKABMSDU5"
+        },
+        {
+          "urlkey": "com,masslinemedia)/commonmarket/lyrics/12.html",
+          "timestamp": "20090704091352",
+          "status": "200",
+          "url": "http://masslinemedia.com/commonmarket/lyrics/12.html",
+          "filename": "crawl-002/2009/09/17/35/1253232611366_35.arc.gz",
+          "length": "3834",
+          "mime": "text/html",
+          "offset": "82140467",
+          "digest": "GP6ZOWIOUEO5WMGUHHSVU526ZDWO7U56"
+        },
+        {
+          "urlkey": "com,masslinemedia)/commonmarket/lyrics/13.html",
+          "timestamp": "20090704090038",
+          "status": "200",
+          "url": "http://masslinemedia.com/commonmarket/lyrics/13.html",
+          "filename": "crawl-002/2009/09/17/17/1253232262356_17.arc.gz",
+          "length": "3474",
+          "mime": "text/html",
+          "offset": "56994737",
+          "digest": "BFOVPTBHTQG76XKTGGZVH2G463PKB6AA"
+        },
+        {
+          "urlkey": "com,masslinemedia)/commonmarket/lyrics/14.html",
+          "timestamp": "20090704091133",
+          "status": "200",
+          "url": "http://masslinemedia.com/commonmarket/lyrics/14.html",
+          "filename": "crawl-002/2009/09/17/39/1253232193797_39.arc.gz",
+          "length": "3770",
+          "mime": "text/html",
+          "offset": "92030516",
+          "digest": "OQJOD3KWLD3SCWODP4XSUOZTM5FIKPAO"
+        },
+        {
+          "urlkey": "com,masslinemedia)/commonmarket/music.html",
+          "timestamp": "20090704091250",
+          "status": "200",
+          "url": "http://masslinemedia.com/commonmarket/music.html",
+          "filename": "crawl-002/2009/09/17/35/1253232611366_35.arc.gz",
+          "length": "2350",
+          "mime": "text/html",
+          "offset": "7498736",
+          "digest": "PTQ5GUEMBPEU7KOUC4ELPUBKQMOH2LQ2"
+        },
+        {
+          "urlkey": "com,masslinemedia)/robots.txt",
+          "timestamp": "20100903082937",
+          "status": "200",
+          "url": "http://masslinemedia.com/robots.txt",
+          "filename": "crawl-002/2010/09/24/40/1285396452433_40.arc.gz",
+          "length": "413",
+          "mime": "text/html",
+          "offset": "63325703",
+          "digest": "YYQ4UIWHCMQX2E5PCISMHPAQZ4J4P4HD"
+        },
+        {
+          "urlkey": "com,masslinemedia)/smf",
+          "timestamp": "20090704090529",
+          "status": "200",
+          "url": "http://masslinemedia.com/smf/",
+          "filename": "crawl-002/2009/09/17/45/1253232123957_45.arc.gz",
+          "length": "2536",
+          "mime": "text/html",
+          "offset": "17532693",
+          "digest": "2MW5TYT4DJLDGGIIYZGEZVYLFNBKUBQG"
+        },
+        {
+          "urlkey": "com,masslinemedia)/smf",
+          "timestamp": "20100311085711",
+          "status": "200",
+          "url": "http://masslinemedia.com/smf/",
+          "filename": "crawl-002/2010/04/02/35/1270222196754_35.arc.gz",
+          "length": "2421",
+          "mime": "text/html",
+          "offset": "65078709",
+          "digest": "THDJFFDHI2YPUO6GRPS3GA7GW4VDTZPI"
+        },
+        {
+          "urlkey": "com,masslinemedia)/smf/index.php",
+          "timestamp": "20090704090927",
+          "status": "200",
+          "url": "http://masslinemedia.com/smf/index.php",
+          "filename": "crawl-002/2009/09/17/39/1253232156151_39.arc.gz",
+          "length": "2539",
+          "mime": "text/html",
+          "offset": "18147618",
+          "digest": "6QSQLN35CQLEG2U2MZIYL2L36GTQOBLZ"
+        },
+        {
+          "urlkey": "com,masslinemedia)/smf/index.php",
+          "timestamp": "20100209001425",
+          "status": "200",
+          "url": "http://masslinemedia.com/smf/index.php",
+          "filename": "crawl-002/2010/02/16/35/1266350159358_35.arc.gz",
+          "length": "2424",
+          "mime": "text/html",
+          "offset": "72515867",
+          "digest": "RYDZVBZSZHQFP7YPYEVO4H3OEFRGWCO3"
+        },
+        {
+          "urlkey": "com,masslinemedia)/smf/index.php",
+          "timestamp": "20100311085731",
+          "status": "200",
+          "url": "http://masslinemedia.com/smf/index.php",
+          "filename": "crawl-002/2010/04/02/35/1270222196754_35.arc.gz",
+          "length": "2424",
+          "mime": "text/html",
+          "offset": "65083745",
+          "digest": "T2A3FO33QGUH2LZ7TDOHKVJAKM6BMZ33"
+        },
+        {
+          "urlkey": "com,masslinemedia)/smf/index.php?topic=1446.0",
+          "timestamp": "20100209001430",
+          "status": "200",
+          "url": "http://masslinemedia.com/smf/index.php?topic=1446.0",
+          "filename": "crawl-002/2010/02/16/35/1266350159358_35.arc.gz",
+          "length": "2477",
+          "mime": "text/html",
+          "offset": "72518291",
+          "digest": "OIDY3UXWQDG2DEYU6BUQJ2VZK5N4S7AE"
+        },
+        {
+          "urlkey": "com,masslinemedia)/smf/index.php?topic=657.0",
+          "timestamp": "20100209001408",
+          "status": "200",
+          "url": "http://masslinemedia.com/smf/index.php?topic=657.0",
+          "filename": "crawl-002/2010/02/16/35/1266350159358_35.arc.gz",
+          "length": "2522",
+          "mime": "text/html",
+          "offset": "72520768",
+          "digest": "TV4B65X2FUENPHGL2OOI4TV77XMLUJGO"
+        },
+        {
+          "urlkey": "com,masslinemedia)/smf/themes/default/script.js",
+          "timestamp": "20100311085656",
+          "status": "200",
+          "url": "http://masslinemedia.com/smf/Themes/default/script.js",
+          "filename": "crawl-002/2010/04/02/35/1270222196754_35.arc.gz",
+          "length": "2615",
+          "mime": "application/x-javascript",
+          "offset": "65081130",
+          "digest": "BE5GWLAWV3V5IE5TGK54TFJOSXBMIMG5"
+        }
+      ],
+      "response_bytes": 13539,
+      "error": null
+    },
+    {
+      "index": "CC-MAIN-2012",
+      "status": 200,
+      "query_url": "https://index.commoncrawl.org/CC-MAIN-2012-index?url=masslinemedia.com%2F%2A&output=json&filter=status%3A200",
+      "row_count": 16,
+      "rows": [
+        {
+          "urlkey": "com,masslinemedia)/",
+          "timestamp": "20120128091205",
+          "status": "200",
+          "url": "http://www.masslinemedia.com/",
+          "filename": "parse-output/segment/1346823846039/1346871718043_1367.arc.gz",
+          "length": "3660",
+          "mime": "text/html",
+          "offset": "75711488",
+          "digest": "7HM36MVGTH4PZQMVI5OM2ADF67EHB7AX",
+          "inspection": {
+            "warc_body_bytes": 10970,
+            "title": "Dokumente für Sie moderiert",
+            "classification": "unrelated German jewelry site, not Mass Line Media",
+            "sample_text": "Hauptmenü; Startseite; Schmuck Idee; Materialien kombinieren; Einladungskarten; Trauringe; Schmuckankauf",
+            "included_in_restoration": false
+          }
+        },
+        {
+          "urlkey": "com,masslinemedia)/",
+          "timestamp": "20120204155541",
+          "status": "200",
+          "url": "http://www.masslinemedia.com/",
+          "filename": "parse-output/segment/1346823846150/1346835951688_3319.arc.gz",
+          "length": "3762",
+          "mime": "text/html",
+          "offset": "57653018",
+          "digest": "CSYVL3UEZJHQ6H37ZDNSA5V2T6U7VREY"
+        },
+        {
+          "urlkey": "com,masslinemedia)/",
+          "timestamp": "20120517145031",
+          "status": "200",
+          "url": "http://www.masslinemedia.com/",
+          "filename": "parse-output/segment/1350433107000/1350480660531_21.arc.gz",
+          "length": "4237",
+          "mime": "text/html",
+          "offset": "44544575",
+          "digest": "OE6NSCDVEHH4KCCSJ42QQZEFQVCUL3KO"
+        },
+        {
+          "urlkey": "com,masslinemedia)/agb.html",
+          "timestamp": "20120222214442",
+          "status": "200",
+          "url": "http://www.masslinemedia.com/agb.html",
+          "filename": "parse-output/segment/1346981172264/1347017381232_826.arc.gz",
+          "length": "2139",
+          "mime": "text/html",
+          "offset": "8023581",
+          "digest": "INVB2BWZTY3LY2KWSB3R2KJYUQFZY5YH"
+        },
+        {
+          "urlkey": "com,masslinemedia)/einladungskarten.html",
+          "timestamp": "20120222214913",
+          "status": "200",
+          "url": "http://www.masslinemedia.com/einladungskarten.html",
+          "filename": "parse-output/segment/1346981172264/1347017370447_853.arc.gz",
+          "length": "3581",
+          "mime": "text/html",
+          "offset": "84125034",
+          "digest": "H5M62LMDYCT6XL6C24K6XGOYA2CRSHIL"
+        },
+        {
+          "urlkey": "com,masslinemedia)/feed/atom.html",
+          "timestamp": "20120222214644",
+          "status": "200",
+          "url": "http://www.masslinemedia.com/feed/atom.html",
+          "filename": "parse-output/segment/1346981172264/1347017790019_852.arc.gz",
+          "length": "3154",
+          "mime": "application/atom+xml",
+          "offset": "31569454",
+          "digest": "OST76EDQ43LQAE2CPQUGJCAEJI5TLTIQ"
+        },
+        {
+          "urlkey": "com,masslinemedia)/feed/atom.html",
+          "timestamp": "20120517145312",
+          "status": "200",
+          "url": "http://www.masslinemedia.com/feed/atom.html",
+          "filename": "parse-output/segment/1346876860467/1346894328256_882.arc.gz",
+          "length": "3891",
+          "mime": "application/atom+xml",
+          "offset": "20818615",
+          "digest": "G2L2KMYJYRKIR56T6S3XO3KIGVLIDZ33"
+        },
+        {
+          "urlkey": "com,masslinemedia)/feed/rss.html",
+          "timestamp": "20120222214619",
+          "status": "200",
+          "url": "http://www.masslinemedia.com/feed/rss.html",
+          "filename": "parse-output/segment/1346981172264/1347018678116_4427.arc.gz",
+          "length": "2945",
+          "mime": "application/rss+xml",
+          "offset": "53178685",
+          "digest": "QIFLSY7ZWOWLUGODDQEMYKJ6RQKLW4HR"
+        },
+        {
+          "urlkey": "com,masslinemedia)/feed/rss.html",
+          "timestamp": "20120517145342",
+          "status": "200",
+          "url": "http://www.masslinemedia.com/feed/rss.html",
+          "filename": "parse-output/segment/1346876860467/1346895779626_882.arc.gz",
+          "length": "3640",
+          "mime": "application/rss+xml",
+          "offset": "3866930",
+          "digest": "JJK3LQ64XKJ6HR6NSFCMFC5SLPNE2TCE"
+        },
+        {
+          "urlkey": "com,masslinemedia)/impressum.html",
+          "timestamp": "20120222214758",
+          "status": "200",
+          "url": "http://www.masslinemedia.com/impressum.html",
+          "filename": "parse-output/segment/1346981172264/1347017790019_852.arc.gz",
+          "length": "2063",
+          "mime": "text/html",
+          "offset": "2443615",
+          "digest": "EKQJA3PXIFGCLC7NUROIP6H3LRLMHFB6"
+        },
+        {
+          "urlkey": "com,masslinemedia)/page-2.html",
+          "timestamp": "20120517145628",
+          "status": "200",
+          "url": "http://www.masslinemedia.com/Page-2.html",
+          "filename": "parse-output/segment/1346876860467/1346900845745_5770.arc.gz",
+          "length": "3849",
+          "mime": "text/html",
+          "offset": "62678861",
+          "digest": "VLMD5JNUO72YBNDMAXG5I4U7OQ7B4MYI"
+        },
+        {
+          "urlkey": "com,masslinemedia)/ringe.html",
+          "timestamp": "20120222214535",
+          "status": "200",
+          "url": "http://www.masslinemedia.com/ringe.html",
+          "filename": "parse-output/segment/1346981172264/1347017388874_827.arc.gz",
+          "length": "3568",
+          "mime": "text/html",
+          "offset": "10360985",
+          "digest": "BQOIZ77ZFOVQWH444CTFLK6A7TQQI2Y2"
+        },
+        {
+          "urlkey": "com,masslinemedia)/schmuck-online.html",
+          "timestamp": "20120222214827",
+          "status": "200",
+          "url": "http://www.masslinemedia.com/schmuck-online.html",
+          "filename": "parse-output/segment/1346981172264/1347018155421_852.arc.gz",
+          "length": "3182",
+          "mime": "text/html",
+          "offset": "27971102",
+          "digest": "3DXJNE2XLS3EWM7UR3JAPKR3QD3ZZ6IU"
+        },
+        {
+          "urlkey": "com,masslinemedia)/schmuck-outfit.html",
+          "timestamp": "20120222214852",
+          "status": "200",
+          "url": "http://www.masslinemedia.com/schmuck-outfit.html",
+          "filename": "parse-output/segment/1346981172264/1347017680661_853.arc.gz",
+          "length": "3490",
+          "mime": "text/html",
+          "offset": "44697293",
+          "digest": "PSQZCAEDIMIG3KANWR2JSH66WEQMRPN3"
+        },
+        {
+          "urlkey": "com,masslinemedia)/schmuck.html",
+          "timestamp": "20120222214556",
+          "status": "200",
+          "url": "http://www.masslinemedia.com/schmuck.html",
+          "filename": "parse-output/segment/1350433107097/1350515777069_263.arc.gz",
+          "length": "3233",
+          "mime": "text/html",
+          "offset": "21457149",
+          "digest": "HVNFC2IX75DDB5ZYLZERZKG4P7N7ANRD"
+        },
+        {
+          "urlkey": "com,masslinemedia)/site-map",
+          "timestamp": "20120222214511",
+          "status": "200",
+          "url": "http://www.masslinemedia.com/site-map/",
+          "filename": "parse-output/segment/1346981172264/1347017661779_826.arc.gz",
+          "length": "2213",
+          "mime": "text/html",
+          "offset": "4138907",
+          "digest": "J4P7MBAMTQBZ52V32PQ66AZHACPUSWBA"
+        }
+      ],
+      "response_bytes": 5258,
+      "error": null
+    },
+    {
+      "index": "CC-MAIN-2013-20",
+      "status": 503,
+      "query_url": "https://index.commoncrawl.org/CC-MAIN-2013-20-index?url=masslinemedia.com%2F%2A&output=json&filter=status%3A200",
+      "row_count": 0,
+      "rows": [],
+      "response_bytes": 197,
+      "error": null
+    },
+    {
+      "index": "CC-MAIN-2013-48",
+      "status": 503,
+      "query_url": "https://index.commoncrawl.org/CC-MAIN-2013-48-index?url=masslinemedia.com%2F%2A&output=json&filter=status%3A200",
+      "row_count": 0,
+      "rows": [],
+      "response_bytes": 197,
+      "error": null
+    },
+    {
+      "index": "CC-MAIN-2014-52",
+      "status": 503,
+      "query_url": "https://index.commoncrawl.org/CC-MAIN-2014-52-index?url=masslinemedia.com%2F%2A&output=json&filter=status%3A200",
+      "row_count": 0,
+      "rows": [],
+      "response_bytes": 197,
+      "error": null,
+      "retry_attempts": [
+        {
+          "result": "connection refused when retrying index query and direct data retrieval was not attempted",
+          "included_in_restoration": false
+        }
+      ]
+    },
+    {
+      "index": "CC-MAIN-2015-06",
+      "status": 503,
+      "query_url": "https://index.commoncrawl.org/CC-MAIN-2015-06-index?url=masslinemedia.com%2F%2A&output=json&filter=status%3A200",
+      "row_count": 0,
+      "rows": [],
+      "response_bytes": 197,
+      "error": null
+    },
+    {
+      "index": "CC-MAIN-2016-50",
+      "status": 503,
+      "query_url": "https://index.commoncrawl.org/CC-MAIN-2016-50-index?url=masslinemedia.com%2F%2A&output=json&filter=status%3A200",
+      "row_count": 0,
+      "rows": [],
+      "response_bytes": 197,
+      "error": null
+    },
+    {
+      "index": "CC-MAIN-2017-51",
+      "status": null,
+      "query_url": "https://index.commoncrawl.org/CC-MAIN-2017-51-index",
+      "row_count": 0,
+      "rows": [],
+      "response_bytes": 0,
+      "error": "ReadTimeout: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Read timed out. (read timeout=20)"
+    },
+    {
+      "index": "CC-MAIN-2019-51",
+      "status": null,
+      "query_url": "https://index.commoncrawl.org/CC-MAIN-2019-51-index",
+      "row_count": 0,
+      "rows": [],
+      "response_bytes": 0,
+      "error": "ReadTimeout: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Read timed out. (read timeout=20)"
+    },
+    {
+      "index": "CC-MAIN-2021-21",
+      "status": null,
+      "query_url": "https://index.commoncrawl.org/CC-MAIN-2021-21-index",
+      "row_count": 0,
+      "rows": [],
+      "response_bytes": 0,
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2021-21-index?url=masslinemedia.com%2F%2A&output=json&filter=status%3A200 (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2024-51",
+      "status": null,
+      "query_url": "https://index.commoncrawl.org/CC-MAIN-2024-51-index",
+      "row_count": 0,
+      "rows": [],
+      "response_bytes": 0,
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2024-51-index?url=masslinemedia.com%2F%2A&output=json&filter=status%3A200 (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2026-39",
+      "status": null,
+      "query_url": "https://index.commoncrawl.org/CC-MAIN-2026-39-index",
+      "row_count": 0,
+      "rows": [],
+      "response_bytes": 0,
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2026-39-index?url=masslinemedia.com%2F%2A&output=json&filter=status%3A200 (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    }
+  ]
+}

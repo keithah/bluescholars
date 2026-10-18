@@ -15,6 +15,7 @@ from .state import State,write_json
 from .urls import HOME,TARGET,SQUARESPACE_START,identity,is_site,route,asset_route,base_path,livejournal_route,original_url,historical_route_prefix,route_capture_hint
 from .artist_sites import build_artist_sites
 from .massline import build_massline_archive
+from .myspace import build_myspace_archive
 
 CORE=[('/', 'Homepage'),('/blog/','Blog'),('/shows/','Shows'),('/video/','Video'),('/shop/','Shop'),('/holler/','Holler')]
 FALLBACK_UI='''.archive-restoration-notice,.archive-gap-page {font:16px/1.6 system-ui,sans-serif}
@@ -724,7 +725,9 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
         gateway+='<a class="edition edition-card" href="'+base+prefix+'"><span class="edition-year">'+year+'</span><span class="edition-era">'+html.escape(era)+'</span><span class="edition-action">Explore this edition <span aria-hidden="true">↗</span></span></a>'
     satellite_report=build_artist_sites(root,output,base,candidate)
     massline_report=build_massline_archive(root,output,base,candidate)
+    myspace_report=build_myspace_archive(root,output,base)
     gateway+='</nav><h2>Related artist archives</h2><nav class="archive-home-links" aria-label="Related artist archives"><a href="'+base+'/prometheusbrown/">Prometheus Brown site editions <span aria-hidden="true">↗</span></a><a href="'+base+'/sabzi/">Sabzi site editions <span aria-hidden="true">↗</span></a></nav>'
+    gateway+='<nav class="archive-home-links" aria-label="Social profile archives"><a href="'+base+'/myspace/">Blue Scholars MySpace profile captures <span aria-hidden="true">↗</span></a></nav>'
     if massline_report.get('status')=='built':
         gateway+='<nav class="archive-home-links" aria-label="Related music community archive"><a href="'+base+'/masslinemedia/">Mass Line Media and 2007 forum archive <span aria-hidden="true">↗</span></a></nav>'
     gateway+='<nav class="archive-home-links" aria-label="Other archive resources"><a class="lj-archive" href="'+base+'/lj/">LiveJournal posts <span aria-hidden="true">↗</span></a><a class="recovery-status" href="'+base+'/archive-status/">Recovery status and source gaps <span aria-hidden="true">↗</span></a></nav>'
@@ -740,6 +743,7 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
             'visual_fidelity_verified':bool(review.get('visual_reviewed')) and not candidate,
             'publish_approved':bool(review.get('publish_approved')) and not candidate,
             'pages':page_report,'issues':issues,'reference_capture':TARGET,'artist_sites':satellite_report,
+            'myspace':myspace_report,
             'massline':massline_report,
             'note':'A successful build is not proof of source completeness or visual fidelity.'}
     stats=f'<p class="archive-lead">{recovered} recovered pages · {placeholders} recovery placeholders</p>'

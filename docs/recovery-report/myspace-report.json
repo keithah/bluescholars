@@ -1,0 +1,91 @@
+{
+  "generated_at": "2026-10-18T01:09:52.455972+00:00",
+  "profile": "https://myspace.com/bluescholars",
+  "capture_index": {
+    "query_variants": [
+      "http://myspace.com/bluescholars",
+      "http://www.myspace.com/bluescholars",
+      "https://myspace.com/bluescholars",
+      "https://www.myspace.com/bluescholars"
+    ],
+    "unique_success_rows": 91,
+    "recovered_html_responses": 89,
+    "failed_html_responses": 2,
+    "distinct_capture_years": [
+      "2007",
+      "2008",
+      "2009",
+      "2010",
+      "2011",
+      "2012",
+      "2013",
+      "2014",
+      "2015",
+      "2016",
+      "2017",
+      "2018",
+      "2020",
+      "2021",
+      "2022",
+      "2023",
+      "2024",
+      "2025"
+    ],
+    "raw_bytes": 12872299,
+    "failed": [
+      {
+        "timestamp": "20080707050101",
+        "original": "http://www.myspace.com/bluescholars",
+        "digest": "IPP5AZKQZ7ECZOKDLQ4Z7IT5S7Y4ZE7M",
+        "bytes_indexed": "18930",
+        "source_url": "https://web.archive.org/web/20080707050101id_/http://www.myspace.com/bluescholars",
+        "status": "failed",
+        "error": "ContentDecodingError: ('Received response with content-encoding: gzip, but failed to decode it.', error('Error -3 while decompressing data: incorrect header check'))"
+      },
+      {
+        "timestamp": "20080724054056",
+        "original": "http://myspace.com/bluescholars",
+        "digest": "Z64KYKMVDJXFWV4OBYKF4J3MTHR3W44Q",
+        "bytes_indexed": "20133",
+        "source_url": "https://web.archive.org/web/20080724054056id_/http://myspace.com/bluescholars",
+        "status": "failed",
+        "error": "ContentDecodingError: ('Received response with content-encoding: gzip, but failed to decode it.', error('Error -3 while decompressing data: incorrect header check'))"
+      }
+    ]
+  },
+  "linked_assets": {
+    "unique_embedded_urls": 1561,
+    "images_and_media_urls": 1428,
+    "stylesheet_urls": 133,
+    "cdx_urls_indexed": 1561,
+    "unqueried_urls": 0,
+    "image_media_urls_with_capture_rows": 153,
+    "stylesheet_urls_with_capture_rows": 133,
+    "rate_limited_or_index_errors": 1220,
+    "image_media_urls_without_capture_rows": 55,
+    "downloaded_valid_assets": 283,
+    "downloaded_valid_images": 150,
+    "downloaded_valid_stylesheets": 133,
+    "downloaded_bytes": 17878175,
+    "rejected_payloads": [
+      {
+        "url": "http://lads.myspacecdn.com/videos/MSMusicPlayer.swf",
+        "error": "ValueError: Expected image bytes; received HTML or unknown content"
+      },
+      {
+        "url": "http://lads.myspacecdn.com/videos/Main.swf",
+        "error": "ValueError: Expected image bytes; received HTML or unknown content"
+      },
+      {
+        "url": "http://www.masslinemedia.com/images/myspacebg.gif",
+        "error": "ValueError: Expected image bytes; received HTML or unknown content"
+      }
+    ],
+    "index_errors_by_prefix": {
+      "Wayback CDX HTTP 429; retry later": 750,
+      "429 Client Error": 470
+    }
+  },
+  "human_visual_reviewed": false,
+  "release_approved": false
+}

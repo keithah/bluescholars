@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-10-17T22:55:04.681880+00:00",
+  "generated_at": "2026-10-17T23:38:25.528099+00:00",
   "index_rows": 7121,
   "urlkey_rows": 5356,
   "eligible_rows": 5207,
-  "recovered": 1144,
+  "recovered": 1544,
   "homepage_variants": 4,
   "failed": 0,
   "skipped": [],
   "alternate_source_versions_preserved": 52,
-  "remaining": 4088,
+  "remaining": 3688,
   "complete": false,
-  "batch_attempted": 250,
+  "batch_attempted": 400,
   "source_period_end": "2009-08-31",
   "resume": "python -m restore massline-recover --max-files 250 --delay 0.4",
   "coverage_note": "The uncollapsed status-200 CDX query is checkpointed and complete for this domain pattern (7,121 capture events). This exhausts the returned query, not other archives, blocked responses, or unqueried subdomains.",
@@ -96,13 +96,28 @@
     ],
     "errors": []
   },
-  "resources": {
-    "html": 1124,
-    "css": 6,
-    "images": 14,
+  "external_assets": {
+    "discovered": 602,
+    "indexed": 0,
+    "capture_records_found": 58,
+    "invalid_capture": 2,
+    "no_captures": 63,
+    "index_failed": 0,
+    "download_failed": 0,
+    "queued": 481,
+    "recovered": 56,
+    "images": 56,
     "media": 0,
-    "homepage_versions": 4,
-    "bytes": 43460325
+    "bytes": 3532768,
+    "cooldown_until": null
+  },
+  "resources": {
+    "html": 1221,
+    "css": 6,
+    "images": 313,
+    "media": 4,
+    "homepage_versions": 5,
+    "bytes": 82094304
   },
   "failures": []
 }

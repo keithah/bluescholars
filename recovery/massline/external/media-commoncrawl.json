@@ -1,0 +1,510 @@
+{
+  "provider": "Common Crawl CDX",
+  "generated_at": "2026-10-18T00:00:54Z",
+  "results": [
+    {
+      "index": "CC-MAIN-2009-2010",
+      "url": "http://masslinemedia.com/mp3/Grynch%20%26%20Sabzi%20-%20The%20Life%20I%20Chose.mp3",
+      "http_status": 404,
+      "rows": [],
+      "error": null
+    },
+    {
+      "index": "CC-MAIN-2009-2010",
+      "url": "http://masslinemedia.com/public_html/?test/OWR_FBI_Harasses_FilAm_Activist_1005_sarahedits.mp3",
+      "http_status": 504,
+      "rows": [],
+      "error": null
+    },
+    {
+      "index": "CC-MAIN-2009-2010",
+      "url": "https://www.masslinemedia.com/audio/Cause/02%20More%20Than%20Music.mp3",
+      "http_status": 504,
+      "rows": [],
+      "error": null
+    },
+    {
+      "index": "CC-MAIN-2009-2010",
+      "url": "https://www.masslinemedia.com/audio/Common%20Market/2005_CMLP/12.mp3",
+      "http_status": 404,
+      "rows": [],
+      "error": null
+    },
+    {
+      "index": "CC-MAIN-2009-2010",
+      "url": "https://www.masslinemedia.com/audio/Cause/06%20Click%20Clack.mp3",
+      "http_status": 404,
+      "rows": [],
+      "error": null
+    },
+    {
+      "index": "CC-MAIN-2009-2010",
+      "url": "https://www.masslinemedia.com/audio/Common%20Market/2005_CMLP/11.mp3",
+      "http_status": 404,
+      "rows": [],
+      "error": null
+    },
+    {
+      "index": "CC-MAIN-2012",
+      "url": "http://masslinemedia.com/mp3/Grynch%20%26%20Sabzi%20-%20The%20Life%20I%20Chose.mp3",
+      "http_status": 504,
+      "rows": [],
+      "error": null
+    },
+    {
+      "index": "CC-MAIN-2012",
+      "url": "http://masslinemedia.com/public_html/?test/OWR_FBI_Harasses_FilAm_Activist_1005_sarahedits.mp3",
+      "http_status": 504,
+      "rows": [],
+      "error": null
+    },
+    {
+      "index": "CC-MAIN-2012",
+      "url": "https://www.masslinemedia.com/audio/Cause/02%20More%20Than%20Music.mp3",
+      "http_status": 504,
+      "rows": [],
+      "error": null
+    },
+    {
+      "index": "CC-MAIN-2012",
+      "url": "https://www.masslinemedia.com/audio/Common%20Market/2005_CMLP/12.mp3",
+      "http_status": 504,
+      "rows": [],
+      "error": null
+    },
+    {
+      "index": "CC-MAIN-2012",
+      "url": "https://www.masslinemedia.com/audio/Cause/06%20Click%20Clack.mp3",
+      "http_status": 404,
+      "rows": [],
+      "error": null
+    },
+    {
+      "index": "CC-MAIN-2012",
+      "url": "https://www.masslinemedia.com/audio/Common%20Market/2005_CMLP/11.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ReadTimeout: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Read timed out. (read timeout=20)"
+    },
+    {
+      "index": "CC-MAIN-2013-48",
+      "url": "http://masslinemedia.com/mp3/Grynch%20%26%20Sabzi%20-%20The%20Life%20I%20Chose.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2013-48-index?url=http%3A%2F%2Fmasslinemedia.com%2Fmp3%2FGrynch%2520%2526%2520Sabzi%2520-%2520The%2520Life%2520I%2520Chose.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2013-48",
+      "url": "http://masslinemedia.com/public_html/?test/OWR_FBI_Harasses_FilAm_Activist_1005_sarahedits.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2013-48-index?url=http%3A%2F%2Fmasslinemedia.com%2Fpublic_html%2F%3Ftest%2FOWR_FBI_Harasses_FilAm_Activist_1005_sarahedits.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2013-48",
+      "url": "https://www.masslinemedia.com/audio/Cause/02%20More%20Than%20Music.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2013-48-index?url=https%3A%2F%2Fwww.masslinemedia.com%2Faudio%2FCause%2F02%2520More%2520Than%2520Music.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2013-48",
+      "url": "https://www.masslinemedia.com/audio/Common%20Market/2005_CMLP/12.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2013-48-index?url=https%3A%2F%2Fwww.masslinemedia.com%2Faudio%2FCommon%2520Market%2F2005_CMLP%2F12.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2013-48",
+      "url": "https://www.masslinemedia.com/audio/Cause/06%20Click%20Clack.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2013-48-index?url=https%3A%2F%2Fwww.masslinemedia.com%2Faudio%2FCause%2F06%2520Click%2520Clack.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2013-48",
+      "url": "https://www.masslinemedia.com/audio/Common%20Market/2005_CMLP/11.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2013-48-index?url=https%3A%2F%2Fwww.masslinemedia.com%2Faudio%2FCommon%2520Market%2F2005_CMLP%2F11.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2014-52",
+      "url": "http://masslinemedia.com/mp3/Grynch%20%26%20Sabzi%20-%20The%20Life%20I%20Chose.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2014-52-index?url=http%3A%2F%2Fmasslinemedia.com%2Fmp3%2FGrynch%2520%2526%2520Sabzi%2520-%2520The%2520Life%2520I%2520Chose.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2014-52",
+      "url": "http://masslinemedia.com/public_html/?test/OWR_FBI_Harasses_FilAm_Activist_1005_sarahedits.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2014-52-index?url=http%3A%2F%2Fmasslinemedia.com%2Fpublic_html%2F%3Ftest%2FOWR_FBI_Harasses_FilAm_Activist_1005_sarahedits.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2014-52",
+      "url": "https://www.masslinemedia.com/audio/Cause/02%20More%20Than%20Music.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2014-52-index?url=https%3A%2F%2Fwww.masslinemedia.com%2Faudio%2FCause%2F02%2520More%2520Than%2520Music.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2014-52",
+      "url": "https://www.masslinemedia.com/audio/Common%20Market/2005_CMLP/12.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2014-52-index?url=https%3A%2F%2Fwww.masslinemedia.com%2Faudio%2FCommon%2520Market%2F2005_CMLP%2F12.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2014-52",
+      "url": "https://www.masslinemedia.com/audio/Cause/06%20Click%20Clack.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2014-52-index?url=https%3A%2F%2Fwww.masslinemedia.com%2Faudio%2FCause%2F06%2520Click%2520Clack.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2014-52",
+      "url": "https://www.masslinemedia.com/audio/Common%20Market/2005_CMLP/11.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2014-52-index?url=https%3A%2F%2Fwww.masslinemedia.com%2Faudio%2FCommon%2520Market%2F2005_CMLP%2F11.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2016-50",
+      "url": "http://masslinemedia.com/mp3/Grynch%20%26%20Sabzi%20-%20The%20Life%20I%20Chose.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2016-50-index?url=http%3A%2F%2Fmasslinemedia.com%2Fmp3%2FGrynch%2520%2526%2520Sabzi%2520-%2520The%2520Life%2520I%2520Chose.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2016-50",
+      "url": "http://masslinemedia.com/public_html/?test/OWR_FBI_Harasses_FilAm_Activist_1005_sarahedits.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2016-50-index?url=http%3A%2F%2Fmasslinemedia.com%2Fpublic_html%2F%3Ftest%2FOWR_FBI_Harasses_FilAm_Activist_1005_sarahedits.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2016-50",
+      "url": "https://www.masslinemedia.com/audio/Cause/02%20More%20Than%20Music.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2016-50-index?url=https%3A%2F%2Fwww.masslinemedia.com%2Faudio%2FCause%2F02%2520More%2520Than%2520Music.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2016-50",
+      "url": "https://www.masslinemedia.com/audio/Common%20Market/2005_CMLP/12.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2016-50-index?url=https%3A%2F%2Fwww.masslinemedia.com%2Faudio%2FCommon%2520Market%2F2005_CMLP%2F12.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2016-50",
+      "url": "https://www.masslinemedia.com/audio/Cause/06%20Click%20Clack.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2016-50-index?url=https%3A%2F%2Fwww.masslinemedia.com%2Faudio%2FCause%2F06%2520Click%2520Clack.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2016-50",
+      "url": "https://www.masslinemedia.com/audio/Common%20Market/2005_CMLP/11.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2016-50-index?url=https%3A%2F%2Fwww.masslinemedia.com%2Faudio%2FCommon%2520Market%2F2005_CMLP%2F11.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2018-51",
+      "url": "http://masslinemedia.com/mp3/Grynch%20%26%20Sabzi%20-%20The%20Life%20I%20Chose.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2018-51-index?url=http%3A%2F%2Fmasslinemedia.com%2Fmp3%2FGrynch%2520%2526%2520Sabzi%2520-%2520The%2520Life%2520I%2520Chose.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2018-51",
+      "url": "http://masslinemedia.com/public_html/?test/OWR_FBI_Harasses_FilAm_Activist_1005_sarahedits.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2018-51-index?url=http%3A%2F%2Fmasslinemedia.com%2Fpublic_html%2F%3Ftest%2FOWR_FBI_Harasses_FilAm_Activist_1005_sarahedits.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2018-51",
+      "url": "https://www.masslinemedia.com/audio/Cause/02%20More%20Than%20Music.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2018-51-index?url=https%3A%2F%2Fwww.masslinemedia.com%2Faudio%2FCause%2F02%2520More%2520Than%2520Music.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2018-51",
+      "url": "https://www.masslinemedia.com/audio/Common%20Market/2005_CMLP/12.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2018-51-index?url=https%3A%2F%2Fwww.masslinemedia.com%2Faudio%2FCommon%2520Market%2F2005_CMLP%2F12.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2018-51",
+      "url": "https://www.masslinemedia.com/audio/Cause/06%20Click%20Clack.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2018-51-index?url=https%3A%2F%2Fwww.masslinemedia.com%2Faudio%2FCause%2F06%2520Click%2520Clack.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2018-51",
+      "url": "https://www.masslinemedia.com/audio/Common%20Market/2005_CMLP/11.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2018-51-index?url=https%3A%2F%2Fwww.masslinemedia.com%2Faudio%2FCommon%2520Market%2F2005_CMLP%2F11.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2020-50",
+      "url": "http://masslinemedia.com/mp3/Grynch%20%26%20Sabzi%20-%20The%20Life%20I%20Chose.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2020-50-index?url=http%3A%2F%2Fmasslinemedia.com%2Fmp3%2FGrynch%2520%2526%2520Sabzi%2520-%2520The%2520Life%2520I%2520Chose.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2020-50",
+      "url": "http://masslinemedia.com/public_html/?test/OWR_FBI_Harasses_FilAm_Activist_1005_sarahedits.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2020-50-index?url=http%3A%2F%2Fmasslinemedia.com%2Fpublic_html%2F%3Ftest%2FOWR_FBI_Harasses_FilAm_Activist_1005_sarahedits.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2020-50",
+      "url": "https://www.masslinemedia.com/audio/Cause/02%20More%20Than%20Music.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2020-50-index?url=https%3A%2F%2Fwww.masslinemedia.com%2Faudio%2FCause%2F02%2520More%2520Than%2520Music.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2020-50",
+      "url": "https://www.masslinemedia.com/audio/Common%20Market/2005_CMLP/12.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2020-50-index?url=https%3A%2F%2Fwww.masslinemedia.com%2Faudio%2FCommon%2520Market%2F2005_CMLP%2F12.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2020-50",
+      "url": "https://www.masslinemedia.com/audio/Cause/06%20Click%20Clack.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2020-50-index?url=https%3A%2F%2Fwww.masslinemedia.com%2Faudio%2FCause%2F06%2520Click%2520Clack.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2020-50",
+      "url": "https://www.masslinemedia.com/audio/Common%20Market/2005_CMLP/11.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2020-50-index?url=https%3A%2F%2Fwww.masslinemedia.com%2Faudio%2FCommon%2520Market%2F2005_CMLP%2F11.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2021-49",
+      "url": "http://masslinemedia.com/mp3/Grynch%20%26%20Sabzi%20-%20The%20Life%20I%20Chose.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2021-49-index?url=http%3A%2F%2Fmasslinemedia.com%2Fmp3%2FGrynch%2520%2526%2520Sabzi%2520-%2520The%2520Life%2520I%2520Chose.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2021-49",
+      "url": "http://masslinemedia.com/public_html/?test/OWR_FBI_Harasses_FilAm_Activist_1005_sarahedits.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2021-49-index?url=http%3A%2F%2Fmasslinemedia.com%2Fpublic_html%2F%3Ftest%2FOWR_FBI_Harasses_FilAm_Activist_1005_sarahedits.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2021-49",
+      "url": "https://www.masslinemedia.com/audio/Cause/02%20More%20Than%20Music.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2021-49-index?url=https%3A%2F%2Fwww.masslinemedia.com%2Faudio%2FCause%2F02%2520More%2520Than%2520Music.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2021-49",
+      "url": "https://www.masslinemedia.com/audio/Common%20Market/2005_CMLP/12.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2021-49-index?url=https%3A%2F%2Fwww.masslinemedia.com%2Faudio%2FCommon%2520Market%2F2005_CMLP%2F12.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2021-49",
+      "url": "https://www.masslinemedia.com/audio/Cause/06%20Click%20Clack.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2021-49-index?url=https%3A%2F%2Fwww.masslinemedia.com%2Faudio%2FCause%2F06%2520Click%2520Clack.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2021-49",
+      "url": "https://www.masslinemedia.com/audio/Common%20Market/2005_CMLP/11.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2021-49-index?url=https%3A%2F%2Fwww.masslinemedia.com%2Faudio%2FCommon%2520Market%2F2005_CMLP%2F11.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2022-49",
+      "url": "http://masslinemedia.com/mp3/Grynch%20%26%20Sabzi%20-%20The%20Life%20I%20Chose.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2022-49-index?url=http%3A%2F%2Fmasslinemedia.com%2Fmp3%2FGrynch%2520%2526%2520Sabzi%2520-%2520The%2520Life%2520I%2520Chose.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2022-49",
+      "url": "http://masslinemedia.com/public_html/?test/OWR_FBI_Harasses_FilAm_Activist_1005_sarahedits.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2022-49-index?url=http%3A%2F%2Fmasslinemedia.com%2Fpublic_html%2F%3Ftest%2FOWR_FBI_Harasses_FilAm_Activist_1005_sarahedits.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2022-49",
+      "url": "https://www.masslinemedia.com/audio/Cause/02%20More%20Than%20Music.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2022-49-index?url=https%3A%2F%2Fwww.masslinemedia.com%2Faudio%2FCause%2F02%2520More%2520Than%2520Music.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2022-49",
+      "url": "https://www.masslinemedia.com/audio/Common%20Market/2005_CMLP/12.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2022-49-index?url=https%3A%2F%2Fwww.masslinemedia.com%2Faudio%2FCommon%2520Market%2F2005_CMLP%2F12.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2022-49",
+      "url": "https://www.masslinemedia.com/audio/Cause/06%20Click%20Clack.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2022-49-index?url=https%3A%2F%2Fwww.masslinemedia.com%2Faudio%2FCause%2F06%2520Click%2520Clack.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2022-49",
+      "url": "https://www.masslinemedia.com/audio/Common%20Market/2005_CMLP/11.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2022-49-index?url=https%3A%2F%2Fwww.masslinemedia.com%2Faudio%2FCommon%2520Market%2F2005_CMLP%2F11.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2023-50",
+      "url": "http://masslinemedia.com/mp3/Grynch%20%26%20Sabzi%20-%20The%20Life%20I%20Chose.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2023-50-index?url=http%3A%2F%2Fmasslinemedia.com%2Fmp3%2FGrynch%2520%2526%2520Sabzi%2520-%2520The%2520Life%2520I%2520Chose.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2023-50",
+      "url": "http://masslinemedia.com/public_html/?test/OWR_FBI_Harasses_FilAm_Activist_1005_sarahedits.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2023-50-index?url=http%3A%2F%2Fmasslinemedia.com%2Fpublic_html%2F%3Ftest%2FOWR_FBI_Harasses_FilAm_Activist_1005_sarahedits.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2023-50",
+      "url": "https://www.masslinemedia.com/audio/Cause/02%20More%20Than%20Music.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2023-50-index?url=https%3A%2F%2Fwww.masslinemedia.com%2Faudio%2FCause%2F02%2520More%2520Than%2520Music.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2023-50",
+      "url": "https://www.masslinemedia.com/audio/Common%20Market/2005_CMLP/12.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2023-50-index?url=https%3A%2F%2Fwww.masslinemedia.com%2Faudio%2FCommon%2520Market%2F2005_CMLP%2F12.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2023-50",
+      "url": "https://www.masslinemedia.com/audio/Cause/06%20Click%20Clack.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2023-50-index?url=https%3A%2F%2Fwww.masslinemedia.com%2Faudio%2FCause%2F06%2520Click%2520Clack.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2023-50",
+      "url": "https://www.masslinemedia.com/audio/Common%20Market/2005_CMLP/11.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2023-50-index?url=https%3A%2F%2Fwww.masslinemedia.com%2Faudio%2FCommon%2520Market%2F2005_CMLP%2F11.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2024-51",
+      "url": "http://masslinemedia.com/mp3/Grynch%20%26%20Sabzi%20-%20The%20Life%20I%20Chose.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2024-51-index?url=http%3A%2F%2Fmasslinemedia.com%2Fmp3%2FGrynch%2520%2526%2520Sabzi%2520-%2520The%2520Life%2520I%2520Chose.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2024-51",
+      "url": "http://masslinemedia.com/public_html/?test/OWR_FBI_Harasses_FilAm_Activist_1005_sarahedits.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2024-51-index?url=http%3A%2F%2Fmasslinemedia.com%2Fpublic_html%2F%3Ftest%2FOWR_FBI_Harasses_FilAm_Activist_1005_sarahedits.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2024-51",
+      "url": "https://www.masslinemedia.com/audio/Cause/02%20More%20Than%20Music.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2024-51-index?url=https%3A%2F%2Fwww.masslinemedia.com%2Faudio%2FCause%2F02%2520More%2520Than%2520Music.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2024-51",
+      "url": "https://www.masslinemedia.com/audio/Common%20Market/2005_CMLP/12.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2024-51-index?url=https%3A%2F%2Fwww.masslinemedia.com%2Faudio%2FCommon%2520Market%2F2005_CMLP%2F12.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2024-51",
+      "url": "https://www.masslinemedia.com/audio/Cause/06%20Click%20Clack.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2024-51-index?url=https%3A%2F%2Fwww.masslinemedia.com%2Faudio%2FCause%2F06%2520Click%2520Clack.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2024-51",
+      "url": "https://www.masslinemedia.com/audio/Common%20Market/2005_CMLP/11.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2024-51-index?url=https%3A%2F%2Fwww.masslinemedia.com%2Faudio%2FCommon%2520Market%2F2005_CMLP%2F11.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2025-51",
+      "url": "http://masslinemedia.com/mp3/Grynch%20%26%20Sabzi%20-%20The%20Life%20I%20Chose.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2025-51-index?url=http%3A%2F%2Fmasslinemedia.com%2Fmp3%2FGrynch%2520%2526%2520Sabzi%2520-%2520The%2520Life%2520I%2520Chose.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2025-51",
+      "url": "http://masslinemedia.com/public_html/?test/OWR_FBI_Harasses_FilAm_Activist_1005_sarahedits.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2025-51-index?url=http%3A%2F%2Fmasslinemedia.com%2Fpublic_html%2F%3Ftest%2FOWR_FBI_Harasses_FilAm_Activist_1005_sarahedits.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2025-51",
+      "url": "https://www.masslinemedia.com/audio/Cause/02%20More%20Than%20Music.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2025-51-index?url=https%3A%2F%2Fwww.masslinemedia.com%2Faudio%2FCause%2F02%2520More%2520Than%2520Music.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2025-51",
+      "url": "https://www.masslinemedia.com/audio/Common%20Market/2005_CMLP/12.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2025-51-index?url=https%3A%2F%2Fwww.masslinemedia.com%2Faudio%2FCommon%2520Market%2F2005_CMLP%2F12.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2025-51",
+      "url": "https://www.masslinemedia.com/audio/Cause/06%20Click%20Clack.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2025-51-index?url=https%3A%2F%2Fwww.masslinemedia.com%2Faudio%2FCause%2F06%2520Click%2520Clack.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "index": "CC-MAIN-2025-51",
+      "url": "https://www.masslinemedia.com/audio/Common%20Market/2005_CMLP/11.mp3",
+      "http_status": null,
+      "rows": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2025-51-index?url=https%3A%2F%2Fwww.masslinemedia.com%2Faudio%2FCommon%2520Market%2F2005_CMLP%2F11.mp3&output=json (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    }
+  ]
+}

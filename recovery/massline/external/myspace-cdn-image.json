@@ -1,0 +1,66 @@
+{
+  "url": "http://c4.ac-images.myspacecdn.com/images02/21/l_7ea9f10cbdbc443b84801c46856bca3b.jpg",
+  "kind": "image",
+  "references": [
+    {
+      "page": "http://www.masslinemedia.com/",
+      "timestamp": "20090704090847",
+      "tag": "img"
+    }
+  ],
+  "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fc4.ac-images.myspacecdn.com%2Fimages02%2F21%2Fl_7ea9f10cbdbc443b84801c46856bca3b.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+  "index_http_status": 200,
+  "indexed_at": "2026-10-17T23:42:43.294832+00:00",
+  "captures": [
+    {
+      "timestamp": "20110718184754",
+      "original": "http://c4.ac-images.myspacecdn.com/images02/21/l_7ea9f10cbdbc443b84801c46856bca3b.jpg",
+      "mimetype": "image/jpeg",
+      "statuscode": "200",
+      "digest": "Y3JGOQHKTVUKEV26AH6QOSJ6RSFWMIXJ",
+      "length": "100055"
+    },
+    {
+      "timestamp": "20120815205937",
+      "original": "http://c4.ac-images.myspacecdn.com/images02/21/l_7ea9f10cbdbc443b84801c46856bca3b.jpg",
+      "mimetype": "image/png",
+      "statuscode": "200",
+      "digest": "GSBT4HK7NF76TAAOHM667C6JYADYKRRG",
+      "length": "1657"
+    },
+    {
+      "timestamp": "20160130145145",
+      "original": "http://c4.ac-images.myspacecdn.com/images02/21/l_7ea9f10cbdbc443b84801c46856bca3b.jpg",
+      "mimetype": "image/png",
+      "statuscode": "200",
+      "digest": "GSBT4HK7NF76TAAOHM667C6JYADYKRRG",
+      "length": "1701"
+    }
+  ],
+  "selected_capture": "20110718184754",
+  "status": "recovered",
+  "raw_path": "recovery/massline/external/raw/7c7f6e4b57435843978def4da714219e36b65332303f89dbf2302e0df075537f.jpg",
+  "sha256": "7c7f6e4b57435843978def4da714219e36b65332303f89dbf2302e0df075537f",
+  "bytes": 99797,
+  "content_type": "image/jpeg",
+  "dimensions": [
+    400,
+    1025
+  ],
+  "alternate_capture_assessments": [
+    {
+      "timestamp": "20120815205937",
+      "mimetype": "image/png",
+      "cdx_length": "1657",
+      "status": "excluded_placeholder",
+      "visual_inspection": "90x90 flat gray placeholder image; not the original referenced artwork"
+    },
+    {
+      "timestamp": "20160130145145",
+      "mimetype": "image/png",
+      "cdx_length": "1701",
+      "status": "excluded_placeholder",
+      "visual_inspection": "90x90 flat gray placeholder image; not the original referenced artwork"
+    }
+  ]
+}

@@ -182,3 +182,166 @@ def test_massline_builder_writes_local_pages_for_project_subpath(tmp_path):
     assert (output / "masslinemedia/index.html").is_file()
     assert (output / "masslinemedia/forum/index.html").is_file()
     assert not (output / "masslinemedia/site/blocked.jpg").exists()
+
+
+def test_massline_images_and_audio_are_prioritized_before_forum_pages():
+    image = {"original": "http://masslinemedia.com/news/photo.jpg", "mimetype": "image/jpeg", "timestamp": "2007"}
+    audio = {"original": "http://masslinemedia.com/mp3/track.mp3", "mimetype": "audio/mpeg", "timestamp": "2007"}
+    forum_topic = {"original": "http://masslinemedia.com/smf/index.php?topic=10.0", "mimetype": "text/html", "timestamp": "2007"}
+
+    assert _priority(image) < _priority(forum_topic)
+    assert _priority(audio) < _priority(forum_topic)
+
+
+def test_massline_capture_note_can_point_to_the_actual_archive_provider():
+    html, _ = sanitize_massline_html(
+        "<html><head></head><body><p>Original page</p></body></html>",
+        "http://masslinemedia.com/", {}, "20090704090847", source_link="https://index.commoncrawl.org/record",
+        source_label="view Common Crawl record")
+
+    assert 'href="https://index.commoncrawl.org/record"' in html
+    assert "view Common Crawl record" in html
+
+
+def test_massline_audio_links_with_unescaped_spaces_map_to_local_captured_media():
+    html, _ = sanitize_massline_html(
+        '<html><body><a href="http://masslinemedia.com/mp3/01 Inkwell (Crashed-Cop-Car Remix).mp3">FREE WEEKLY MP3</a>'
+        '<a href="http://masslinemedia.com/mp3/Grynch & Sabzi - The Life I Chose.mp3">Grynch &amp; Sabzi</a></body></html>',
+        "http://masslinemedia.com/", {
+            "http://masslinemedia.com/mp3/01%20Inkwell%20(Crashed-Cop-Car%20Remix).mp3": "/masslinemedia/assets/inkwell.mp3",
+            "http://masslinemedia.com/mp3/Grynch%20%26%20Sabzi%20-%20The%20Life%20I%20Chose.mp3": "/masslinemedia/assets/grynch.mp3"
+        }, "20061231081225")
+
+    assert 'href="/masslinemedia/assets/inkwell.mp3"' in html
+    assert 'href="/masslinemedia/assets/grynch.mp3"' in html
+    assert "web.archive.org/web/20061231081225/http://masslinemedia.com/mp3/" not in html
+
+
+def test_youtube_embeds_keep_an_external_link_and_use_a_local_archived_thumbnail():
+    video_id = "mSO8IhJG0KM"
+    source = f'<html><body><object><param name="movie" value="http://www.youtube.com/v/{video_id}"><embed src="http://www.youtube.com/v/{video_id}"></object></body></html>'
+    html, gaps = sanitize_massline_html(source, "http://masslinemedia.com/", {
+        f"https://i.ytimg.com/vi/{video_id}/hqdefault.jpg": "/masslinemedia/assets/video.jpg"
+    }, "20061011104325", "/bluescholars")
+
+    assert f'href="https://www.youtube.com/watch?v={video_id}"' in html
+    assert f'href="https://web.archive.org/web/20061011104325/http://youtube.com/watch?v={video_id}"' not in html
+    assert 'src="/bluescholars/masslinemedia/assets/video.jpg"' in html
+    assert "Archived embedded media is unavailable for offline playback" in html
+    assert gaps == [f"http://youtube.com/v/{video_id}"]
+
+
+def test_external_asset_discovery_keeps_referrer_and_ignores_same_site_urls(tmp_path):
+    from restore.massline_external import discover_external_assets
+
+    raw = tmp_path / "recovery/massline/raw/page.html"
+    raw.parent.mkdir(parents=True)
+    body = b'''<html><body>
+      <img src="http://i10.photobucket.com/albums/test/photo.jpg">
+      <a href="https://media.example.test/audio/show.mp3">recording</a>
+      <img src="/smf/Themes/default/images/logo.gif">
+    </body></html>'''
+    raw.write_bytes(body)
+    manifest = {"resources": {"http://masslinemedia.com/smf/?topic=4.0": {
+        "kind": "html", "timestamp": "20071014161030", "raw_path": "recovery/massline/raw/page.html",
+        "sha256": __import__("hashlib").sha256(body).hexdigest()}}}
+    (tmp_path / "recovery/massline/manifest.json").write_text(__import__("json").dumps(manifest))
+
+    found = discover_external_assets(tmp_path)
+
+    assert {item["url"] for item in found} == {
+        "http://i10.photobucket.com/albums/test/photo.jpg",
+        "https://media.example.test/audio/show.mp3"}
+    photo = next(item for item in found if item["kind"] == "image")
+    assert photo["references"] == [{"page": "http://masslinemedia.com/smf/?topic=4.0", "timestamp": "20071014161030", "tag": "img"}]
+
+
+def test_external_capture_selection_prefers_nearest_capture_and_keeps_preceding_tie():
+    from restore.massline_external import select_external_capture
+
+    item = {"references": [{"timestamp": "20071014000000"}], "captures": [
+        {"timestamp": "20071013000000", "statuscode": "200"},
+        {"timestamp": "20071015000000", "statuscode": "200"},
+        {"timestamp": "20071014000001", "statuscode": "404"}]}
+
+    assert select_external_capture(item)["timestamp"] == "20071013000000"
+
+
+def test_massline_builder_rewrites_discovered_external_images_to_local_bytes(tmp_path):
+    import json
+    from restore.massline import build_massline_archive
+
+    root = tmp_path / "project"
+    output = tmp_path / "output"
+    raw = root / "recovery/massline/raw/page.html"
+    external = root / "recovery/massline/external/raw/photo.gif"
+    raw.parent.mkdir(parents=True)
+    external.parent.mkdir(parents=True)
+    html_body = b'<html><head></head><body><img src="http://photos.example.test/post/photo.gif"></body></html>'
+    image_body = b"GIF89a\x01\x00\x01\x00\x80\x00\x00\x00\x00\x00\xff\xff\xff!\xf9\x04\x01\x00\x00\x00\x00,\x00\x00\x00\x00\x01\x00\x01\x00\x00\x02\x02D\x01\x00;"
+    raw.write_bytes(html_body)
+    external.write_bytes(image_body)
+    manifest = {"resources": {"http://masslinemedia.com/": {
+        "kind": "html", "timestamp": "20071014161030", "raw_path": "recovery/massline/raw/page.html",
+        "sha256": hashlib.sha256(html_body).hexdigest()}},
+        "external_resources": {"http://photos.example.test/post/photo.gif": {
+            "kind": "image", "timestamp": "20071014000000", "raw_path": "recovery/massline/external/raw/photo.gif",
+            "sha256": hashlib.sha256(image_body).hexdigest()}}}
+    path = root / "recovery/massline/manifest.json"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(manifest))
+
+    report = build_massline_archive(root, output, candidate=True)
+    rendered = (output / "masslinemedia/site/index.html").read_text()
+
+    assert report["local_assets"] == 1
+    assert "photos.example.test" not in rendered
+    assert "/masslinemedia/assets/" in rendered
+
+
+def test_external_media_payload_requires_a_real_media_signature():
+    from restore.massline_external import _validate_media
+
+    _validate_media(b"ID3\\x03\\x00\\x00\\x00\\x00\\x00\\x00")
+    import pytest
+    with pytest.raises(ValueError, match="Expected audio/video media bytes"):
+        _validate_media(b"<!doctype html><title>Wayback challenge</title>")
+
+
+def test_external_asset_index_prioritizes_images_referenced_by_more_pages():
+    from restore.massline_external import external_asset_priority
+
+    popular = {"url": "https://cdn.example.test/popular.jpg", "kind": "image", "references": [{"page": str(i)} for i in range(10)]}
+    rare = {"url": "https://cdn.example.test/rare.jpg", "kind": "image", "references": [{"page": "one"}]}
+
+    assert external_asset_priority(popular) < external_asset_priority(rare)
+
+
+def test_external_cdx_retry_after_is_parsed_and_has_a_safe_default():
+    from datetime import datetime, timezone
+    from restore.massline_external import retry_after_deadline
+
+    now = datetime(2026, 10, 17, 23, 0, tzinfo=timezone.utc)
+    assert retry_after_deadline("17", now).startswith("2026-10-17T23:00:17")
+    assert retry_after_deadline(None, now).startswith("2026-10-17T23:01:00")
+
+
+def test_external_capture_selection_skips_a_capture_that_failed_payload_validation():
+    from restore.massline_external import select_external_capture
+
+    item = {"references": [{"timestamp": "20071014000000"}],
+            "failed_capture_timestamps": ["20071013000000"],
+            "captures": [
+                {"timestamp": "20071013000000", "statuscode": "200"},
+                {"timestamp": "20071012000000", "statuscode": "200"}]}
+
+    assert select_external_capture(item)["timestamp"] == "20071012000000"
+
+
+def test_external_image_capture_selection_rejects_cdx_html_responses():
+    from restore.massline_external import select_external_capture
+
+    item = {"kind": "image", "references": [{"timestamp": "20071014000000"}],
+            "captures": [{"timestamp": "20071013000000", "statuscode": "200", "mimetype": "text/html"}]}
+
+    assert select_external_capture(item) is None

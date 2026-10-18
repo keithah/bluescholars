@@ -1,2 +1,4 @@
 # Archive response bodies are provenance records; preserve each downloaded byte.
-recovery/massline/raw/** -text
+recovery/massline/raw/** -text whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,-tab-in-indent
+recovery/myspace-blue-scholars/raw/** -text whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,-tab-in-indent
+recovery/myspace-blue-scholars/assets/** -text whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,-tab-in-indent

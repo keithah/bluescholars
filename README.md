@@ -8,6 +8,7 @@ This repository is reconstructing three archived versions of **bluescholars.com*
 - `/lj/` — a separate archive for the separately hosted Blue Scholars LiveJournal; it is not presented as another official website design
 - `/prometheusbrown/` and `/sabzi/` — separate archives for the related artist sites, each with its own dated edition pages and source provenance
 - `/masslinemedia/` — separate 2006–2009 Mass Line Media homepage captures and a growing, locally rendered 2007 forum archive
+- `/myspace/` — date-preserving Blue Scholars MySpace profile snapshots and recovered linked images
 
 The root page is an edition gateway. The visual baseline for the Squarespace edition is the May 29, 2021 homepage capture. Original source bytes, capture dates, hashes, and archive provenance are retained separately from the rendered output.
 
@@ -21,7 +22,9 @@ The artist-site expansion has indexed 1,580 Wayback rows for `prometheusbrown.co
 
 See the per-capture [artist-site recovery report](docs/recovery-report/artist-sites-report.md) for the acquisition counts, source dates and current gaps.
 
-The Mass Line Media addition is a separate archive area. Its collapsed Wayback inventory contains 5,356 URL records, including 4,817 `/smf/` paths and nine observed forum boards; a separate uncollapsed query is complete at 7,121 capture events. Exact root-history queries found 213 distinct homepage captures, and authentic snapshots from 2006, 2007, 2008 and 2009 are kept separately. The last substantial original homepage capture located is August 13, 2009; later samples show the domain was replaced by parked, unrelated or verification pages. Forum recovery is in progress and resumes from its manifest. See the [Mass Line Media recovery report](docs/recovery-report/massline-report.md) for live counts, provenance and gaps.
+The Mass Line Media addition is a separate archive area. Its collapsed Wayback inventory contains 5,356 URL records, including 4,817 `/smf/` paths and nine observed forum boards; a separate uncollapsed query is complete at 7,121 capture events. Authentic snapshots from 2006, 2007, 2008, August 2009 and a separately sourced July 2009 Common Crawl capture are kept as dated editions. The latest substantial original homepage capture located is August 13, 2009; later samples show the domain was replaced by parked, unrelated or verification pages. The candidate includes 313 domain images, four validated MP3s, 56 validated offsite images, and one archived thumbnail tied to a 2006 video embed. Three other video thumbnails are missing. Six other MP3-looking archive URLs return HTML/redirect/error responses rather than audio. Of 602 external image URLs, 481 remain queued. See the [Mass Line recovery report](docs/recovery-report/massline-report.md) and [other-archive search log](docs/recovery-report/massline-other-archives.md) for provenance, counts and resume commands.
+
+The Blue Scholars MySpace profile has its own archive gallery. Its exact-profile Wayback query returned 91 successful HTML capture records across 2007–2025; 89 page responses validated locally and two dates remain unrecovered. All 1,561 source-linked image/media and stylesheet URLs have been indexed: 286 had archived captures, and 283 resources (133 CSS files and 150 images) were downloaded and validated, totaling 17.9 MB. Three Flash/image endpoints were rejected as non-image payloads; 1,220 URL checks were rate-limited and 55 checked images had no capture row. These gaps are preserved in the report. See the [MySpace recovery report](docs/recovery-report/myspace-report.md) and `recovery/myspace-blue-scholars/` for dated source bytes, checksums and resumable indexes.
 
 ## Preview and tests
 

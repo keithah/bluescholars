@@ -1,0 +1,265 @@
+﻿
+/* global settings 
+---------------------------------------------------------- */
+
+/* table fix
+---------------------------------------------------------- */
+table#headerTable td{padding:0;}
+table#headerTable{border:none; border-collapse:collapse;}
+
+#wrap{width:800px;}
+a { outline: none; }
+.left { float: left; }
+#topnav .right { float: right; }
+.inline { display: inline; }
+.clearfix:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
+.clearfix { display: block; }
+.clearfix { .display: inline-block; }
+* html .clearfix { height: 1%; }
+div#header ul { list-style-image:none; list-style-position:outside; list-style-type:none; margin: 0; padding: 0; }
+div#header * {font-size: 11px;}
+/* global page styles
+---------------------------------------------------------- */
+.global { margin: 10px 0; }
+.globalLeaderboard { padding-top: 10px; }
+.globalWidth { width: 960px; }
+.profile { margin: 5px 0 4px 0; }
+div#header.profileWidth, .profileWidth { width: 800px; }
+
+/* header
+---------------------------------------------------------- */
+div#headerWrap { text-align:center; }
+div#header {text-align:left; margin: 0 auto; padding: 0; height: auto; background-color:Transparent;}
+div#leaderboard { text-align: center; }
+div#googlebar {background: url('../../img/header/bkg_msbar.png') 0 bottom repeat-x; border: 0; padding: 0 14px; }
+
+
+/* ms logo
+---------------------------------------------------------- */
+div#logo 
+{
+	width:138px; overflow:hidden; 
+	display: inline; float: left; margin-top: 0;
+    padding: 9px 0 0;
+}
+h1.mslogo { margin: 0; padding: 0; background:transparent none repeat scroll 0% 50%; }
+h1.mslogo a { display: block; margin: 0; padding: 0; text-indent: -10000em !important; }
+h1.mslogo a { background: 0 0 no-repeat; border: 0; height: 24px; width: 138px; }
+div#logo.splash { padding: 9px 0; margin-top:7px;}
+div#logo.splash h1.mslogo a {height: 30px; width: 171px; }
+
+/* user
+---------------------------------------------------------- */
+div#user { background: url('../../img/header/rail_msbar.png') 0 center no-repeat; display: inline; float: left; height: 32px; margin-left: 11px; margin-top:15px;}
+
+/* user thumbnail */
+div#thumb { display: inline; float: left; height: 32px; margin: 0 5px 0 10px; overflow: hidden; }
+div#thumb a img { border: 1px solid #fff; display: block; vertical-align: middle; }
+div#thumb a:hover img { border: 1px solid #c5e9fd; }
+
+/* user status */
+div#status { color: #fff; display: inline; float: left;  line-height: 14px; padding: 2px 0; }
+div#status strong { color: #c5e9fd; }
+div#status a { color: #c5e9fd; text-decoration: underline; }
+div#status a:hover { color: #fff; text-decoration: none; }
+div#status img { display: inline-block; vertical-align: top; }
+
+/* user shortcuts
+---------------------------------------------------------- */
+div#shortcuts 
+{
+	width: 155px;
+	overflow:hidden; 
+	background: url('../../img/header/rail_msbar.png') 0px -6px no-repeat; 
+	display: inline !important; 
+	float: left; 
+	height: 30px !important; 
+	margin:	 11px 0px 0px 5px !important; 
+	padding: 0 0 0 7px !important; 
+    vertical-align: middle;
+}
+	
+div#shortcuts div { margin: 0;text-align:left; }
+div#shortcuts select { width:133px; color: #666; font: 11px Verdana, Arial, Helvetica, sans-serif; /*height:20px;*/ margin: 0; }
+
+
+/*---------------------------- NAVIGATION START ----------------------------*/
+
+#topnav
+{
+    height: 29px !important;
+    background:  url('../../img/header/bkg_menubar.png') 0 0 repeat-x !important;
+    z-index:200 !important;
+    padding:0 !important;
+    margin:0 !important;
+    overflow:hidden;
+}
+#headerWrap #header #topnav { _background: none !important; }  /* IE6 only */
+
+/*---------------------------- TOP LEVEL START ----------------------------*/
+
+#topnav ul
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+	display:block;
+}
+#topnav *
+{
+	color:#fff;
+}
+#topnav ul#leftNav
+{
+    float: left;
+}           
+#topnav ul#rightNav
+{
+    float: right;
+}			       
+#topnav ul li
+{
+    padding: 0;
+    margin: 0;
+    float: left;
+}            
+#topnav ul li a
+{
+    padding: 0 10px;
+    height: 29px;
+    line-height: 29px;
+    text-decoration: none;
+    display: block;
+	float:left;
+}
+#topnav ul li span.profileliteoff, #topnav ul li span.profileliteon
+{
+    padding: 0 10px;
+    height: 29px;
+    line-height: 29px;
+    text-decoration: none;
+    display: block;
+	float:left;
+}
+
+
+#topnav ul li a small{font-size:8px;}       
+#topnav ul li a:hover
+{
+    background-color: #1548ae;
+    color: #eee;
+}   
+#topnav ul li a.open small{color: #003399;}       
+
+#topnav ul li a.open
+{
+    background: #fff;
+    color: #003399;
+}
+#topnav ul li a.open:hover
+{
+    background: #d9eafb;
+    color: #036;
+}
+#topnav ul li table.rail
+{
+	border:none !important;
+	border-collapse:collapse !important;
+	width:1px !important;
+	height:29px !important;
+	margin:0 !important;
+	float:left;
+}
+#topnav ul li table.rail td.rail
+{
+	padding:0px !important;
+	width:1px !important;
+	height:29px !important;
+}
+#topnav ul li table.rail td.rail img
+{
+	width:1px !important;
+	height:1px !important;
+	border:none;
+}
+/*---------------------------- TOP LEVEL END ----------------------------*/
+
+/*---------------------------- DROP DOWNS START ----------------------------*/ 
+#subnav *
+{
+    text-transform: none !important;
+    color: #003399 !important;
+    text-decoration: none !important;
+}        
+#subnav ul
+{
+    position: absolute;
+    left: -10000px;
+    padding: 0;
+    margin: 0;
+    border: 1px #cfcfcf solid;
+    border-top: none;
+    background: #fff;
+	list-style:none;
+	display:block;
+	float:left;
+	z-index:10005 !important;
+	min-width:140px;
+}            
+#subnav  ul  li
+{
+    padding: 0;
+    margin: 0;
+    height: 22px;
+    line-height: 22px;
+    border-bottom: 1px #fff solid;
+	display:block;
+	float:left;
+	clear:both;
+}            
+#subnav  ul  li.divider
+{
+    border-bottom-color: #cfcfcf;
+}			
+#subnav  ul li.last
+{
+    border-bottom: none;
+}            
+#subnav ul li a
+{
+    padding: 0 5px 0 9px;
+    height: 22px;
+    line-height: 22px;
+    text-decoration: none;
+    display: block;
+	float:left;
+	white-space:nowrap;
+}           
+#subnav ul li a:hover
+{
+    background: none #d9eafb;
+    color: #036;
+}
+#framer{border:none;display:none;position:absolute;}                  
+
+/*---------------------------- DROP DOWNS START ----------------------------*/ 
+
+/*----------------------------- NAVIGATION END -----------------------------*/
+
+/* music_topnav
+---------------------------------------------------------- */
+div#music_topnav {width: 950px;}
+
+/*AVOID HIDING*/
+#header *{visibility:visible !important;}
+#header input{display:inline !important;}
+#header table{width:100% !important;}
+#header table table{width:1px !important;}
+#header table div#srchMenuList{display:none !important;}
+#header table div#srchMenuList.open{display:block !important;}
+#header TABLE DIV#srchMenuListBox_Header{display: none !important;}
+#header TABLE DIV#srchMenuListBox_Header.open{display: block !important;}
+div#searchContainer_Header{ margin-top: 5px !important;width:450px !important;}
+
+/*Hack for Games Popup Centering in IE*/
+.popup_box2 { _left: 33% }

@@ -33,7 +33,12 @@ def _canonical(url: str, base: str = "") -> str:
         host = host[4:]
     port = parts.port
     netloc = host + ((":" + str(port)) if port and port not in (80, 443) else "")
-    return urlunsplit(("http", netloc, parts.path or "/", parts.query, ""))
+    # CDX keys use percent-escaped paths, while historical HTML often stores
+    # filenames with literal spaces. Canonicalize both spellings so local
+    # media/image links resolve to the bytes recovered for that URL.
+    path = quote(parts.path or "/", safe="/%:@!$'()*+,;=-._~")
+    query = quote(parts.query, safe="/?%:@!$&'()*+,;=-._~")
+    return urlunsplit(("http", netloc, path, query, ""))
 
 
 def _forum_target(query: str) -> str | None:
@@ -312,13 +317,12 @@ def _priority(row: dict) -> tuple[int, str, str]:
     query = parts.query.lower()
     if path in ("/", "/index.html") or "/artists/" in path or "/commonmarket/" in path:
         band = 0
-    elif row.get("mimetype", "").startswith("text/css"):
+    elif _kind(row) in ("image", "media") or row.get("mimetype", "").startswith("text/css"):
+        # Capture visible site assets before the very large SMF page queue.
         band = 1
     elif path.startswith("/smf/") and ("board=" in query or "topic=" in query):
         band = 2
     elif path.startswith("/smf/"):
-        band = 3
-    elif row.get("mimetype", "").startswith("image/"):
         band = 3
     else:
         band = 4
@@ -488,7 +492,26 @@ def _write_massline_report(root: Path, report: dict, manifest: dict) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     index_path = root / "recovery/massline/index.json"
     index_report = json.loads(index_path.read_text(encoding="utf-8"))["report"] if index_path.exists() else {}
-    payload = {**report, "index": index_report, "resources": {
+    external_index_path = root / "recovery/massline/external/assets.json"
+    external_index = json.loads(external_index_path.read_text(encoding="utf-8")) if external_index_path.exists() else {"assets": []}
+    external_assets = external_index.get("assets", [])
+    external_resources = manifest.get("external_resources", {})
+    external_summary = {
+        "discovered": len(external_assets),
+        "indexed": sum(item.get("status") == "indexed" for item in external_assets),
+        "capture_records_found": sum(item.get("status") in ("indexed", "recovered", "download_failed", "no_valid_capture") for item in external_assets),
+        "invalid_capture": sum(item.get("status") == "no_valid_capture" for item in external_assets),
+        "no_captures": sum(item.get("status") == "no_captures" for item in external_assets),
+        "index_failed": sum(item.get("status") == "index_failed" for item in external_assets),
+        "download_failed": sum(item.get("status") == "download_failed" for item in external_assets),
+        "queued": sum(item.get("status") == "queued" for item in external_assets),
+        "recovered": len(external_resources),
+        "images": sum(item.get("kind") == "image" for item in external_resources.values()),
+        "media": sum(item.get("kind") == "media" for item in external_resources.values()),
+        "bytes": sum(int(item.get("bytes", 0)) for item in external_resources.values()),
+        "cooldown_until": external_index.get("cooldown_until"),
+    }
+    payload = {**report, "index": index_report, "external_assets": external_summary, "resources": {
         "html": sum(r.get("kind") == "html" for r in manifest["resources"].values()),
         "css": sum(r.get("kind") == "css" for r in manifest["resources"].values()),
         "images": sum(r.get("kind") == "image" for r in manifest["resources"].values()),
@@ -502,7 +525,7 @@ def _write_massline_report(root: Path, report: dict, manifest: dict) -> None:
     lines = [
         "# Mass Line Media archive recovery",
         "",
-        "This is a separate historical source collection for `masslinemedia.com`; its forum is preserved as its own browsable area. Captured pages retain source URLs, exact Wayback timestamps, byte counts, and SHA-256 hashes. Recovered raw bytes are kept under `recovery/massline/raw/`.",
+        "This is a separate historical source collection for `masslinemedia.com`; its forum is preserved as its own browsable area. Captured pages retain source URLs, exact archive timestamps, byte counts, and SHA-256 hashes. Wayback raw bytes are under `recovery/massline/raw/`; linked offsite assets are under `recovery/massline/external/raw/`.",
         "",
         "## Archive evidence",
         "",
@@ -524,8 +547,10 @@ def _write_massline_report(root: Path, report: dict, manifest: dict) -> None:
         "",
         f"- Saved: **{report.get('recovered', 0):,}** indexed resources plus **{resources.get('homepage_versions', 0)}** homepage versions ({resources.get('html', 0)} HTML pages, {resources.get('images', 0)} images, {resources.get('css', 0)} stylesheets, {resources.get('media', 0)} media files; {resources.get('bytes', 0):,} bytes).",
         f"- Unavailable or invalid responses: **{report.get('failed', 0)}**; pending indexed resources: **{report.get('remaining', 0):,}**. Current crawl complete: **{str(bool(report.get('complete'))).lower()}**.",
-        "- Captured images and styles are mapped locally. Scripts are never run; forms and embedded players are disabled in the static copy. Explicit source links may open the Wayback replay when a page or asset is not stored locally.",
-        "- The candidate is not promoted into the reviewed source catalog and is not a release or human review. No Pages deployment was made as part of this recovery step.",
+        "- Captured images and styles are mapped locally. Scripts are never run; forms and embedded players are disabled in the static copy. Explicit source links may open the source archive when an item is not stored locally.",
+        f"- External assets referenced by recovered pages: **{external_summary['discovered']:,}** exact URLs discovered; **{external_summary['capture_records_found']:,}** have Wayback capture records ({external_summary['indexed']:,} indexed and awaiting download, {external_summary['recovered']:,} recovered); **{external_summary['no_captures']:,}** returned no capture, **{external_summary['invalid_capture']:,}** had only non-image/error payloads, **{external_summary['index_failed']:,}** index queries and **{external_summary['download_failed']:,}** payloads are retryable failures, and **{external_summary['queued']:,}** remain queued. Locally captured: **{external_summary['recovered']:,}** ({external_summary['images']} images, {external_summary['media']} media files; {external_summary['bytes']:,} bytes).",
+        "- Independent archives: Common Crawl `CC-MAIN-2009-2010` supplied a separately preserved July 4, 2009 homepage; Arquivo.pt returned no forum captures and its two site records replay as HTML fallback pages. Detailed queries and raw observations are under `recovery/massline/external/`.",
+        "- The raw media files are archival source material; archive availability is not a redistribution license. The candidate is not promoted into the reviewed source catalog and is not a release or human review. No Pages deployment was made as part of this recovery step.",
         "",
         "## Resume",
         "",
@@ -533,6 +558,8 @@ def _write_massline_report(root: Path, report: dict, manifest: dict) -> None:
         "python -m restore massline-index",
         "python -m restore massline-history --max-pages 1",
         "python -m restore massline-recover --max-files 250 --delay 0.4",
+        "python -m restore massline-external-index --max-assets 50 --delay 2.0",
+        "python -m restore massline-external-recover --max-files 40 --delay 0.6",
         "python -m restore build --candidate --base-path /bluescholars",
         "python -m restore check --candidate --base-path /bluescholars",
         "```",
@@ -545,7 +572,38 @@ def _write_massline_report(root: Path, report: dict, manifest: dict) -> None:
 
 def _local_target(value: str, base_url: str, mapping: dict[str, str]) -> str | None:
     canonical = _canonical(value, base_url)
-    return mapping.get(canonical) if canonical else None
+    if not canonical:
+        return None
+    local = mapping.get(canonical)
+    if local:
+        return local
+    # The older source inventory often stores HTTP URLs while later external
+    # asset indexes preserve HTTPS. The same archived path should resolve in
+    # either spelling without making the browser fetch the remote original.
+    if canonical.startswith("http://"):
+        return mapping.get("https://" + canonical[len("http://"):])
+    return None
+
+
+def _youtube_video_id(node) -> str | None:
+    candidates = [node.get("src", ""), node.get("data", "")]
+    candidates.extend(child.get("value", "") for child in node.find_all("param"))
+    candidates.extend(child.get("src", "") for child in node.find_all(["iframe", "embed", "source"]))
+    for value in candidates:
+        try:
+            parts = urlsplit(value)
+        except ValueError:
+            continue
+        host = (parts.hostname or "").lower()
+        if host not in {"youtube.com", "www.youtube.com", "m.youtube.com"}:
+            continue
+        match = re.search(r"/(?:v|embed)/([A-Za-z0-9_-]{11})(?:/|$)", parts.path)
+        if match:
+            return match.group(1)
+        video_id = parse_qs(parts.query).get("v", [""])[0]
+        if re.fullmatch(r"[A-Za-z0-9_-]{11}", video_id):
+            return video_id
+    return None
 
 
 def rewrite_massline_css(source: str, source_url: str, mapping: dict[str, str], base: str = "") -> str:
@@ -564,7 +622,8 @@ def rewrite_massline_css(source: str, source_url: str, mapping: dict[str, str], 
     return css
 
 
-def sanitize_massline_html(source: str, source_url: str, mapping: dict[str, str], capture: str = "", base: str = "") -> tuple[str, list[str]]:
+def sanitize_massline_html(source: str, source_url: str, mapping: dict[str, str], capture: str = "", base: str = "",
+                           source_link: str | None = None, source_label: str = "view source replay") -> tuple[str, list[str]]:
     """Keep captured text and layout while removing executable and remote behavior."""
     soup = BeautifulSoup(source, "html.parser")
     if soup.html is None:
@@ -578,12 +637,33 @@ def sanitize_massline_html(source: str, source_url: str, mapping: dict[str, str]
         soup.html.append(soup.new_tag("body"))
     gaps: list[str] = []
     for node in list(soup.find_all(["script", "base", "iframe", "object", "embed", "video", "audio"])):
+        if not any(parent is soup for parent in node.parents):
+            continue
         if node.name in ("iframe", "object", "embed", "video", "audio"):
             target = node.get("src") or node.get("data") or ""
+            video_id = _youtube_video_id(node)
+            if not target and node.name == "object":
+                param = node.find("param", attrs={"name": re.compile("^movie$", re.I)})
+                target = param.get("value", "") if param else ""
+            if not target and video_id:
+                target = f"https://www.youtube.com/watch?v={video_id}"
             if target:
                 gaps.append(_canonical(target, source_url))
             note = soup.new_tag("p", attrs={"class": "massline-embed-gap"})
-            note.string = "Archived embedded media is unavailable for offline playback."
+            note.append("Archived embedded media is unavailable for offline playback.")
+            if video_id:
+                anchor = soup.new_tag("a", href=f"https://www.youtube.com/watch?v={video_id}",
+                                      rel=["noopener", "noreferrer"], attrs={"class": "massline-external-playback"})
+                thumb = _local_target(f"https://i.ytimg.com/vi/{video_id}/hqdefault.jpg", source_url, mapping)
+                if thumb:
+                    image = soup.new_tag("img", src=base.rstrip("/") + thumb,
+                                         alt=f"Archived thumbnail for video {video_id}",
+                                         attrs={"class": "massline-local-asset"})
+                    anchor.append(image)
+                    anchor.append(soup.new_tag("br"))
+                anchor.append(f"Open video {video_id} on YouTube (external playback)")
+                note.append(" ")
+                note.append(anchor)
             node.replace_with(note)
         else:
             node.decompose()
@@ -606,6 +686,9 @@ def sanitize_massline_html(source: str, source_url: str, mapping: dict[str, str]
             elif attr.lower() == "src" and node.name not in ("img", "source"):
                 node.attrs.pop(attr, None)
         if node.name in ("a", "area") and node.get("href"):
+            if "massline-external-playback" in node.get("class", []):
+                node["rel"] = ["noopener", "noreferrer"]
+                continue
             original = node.get("href", "")
             local = _local_target(original, source_url, mapping)
             if local:
@@ -636,6 +719,8 @@ def sanitize_massline_html(source: str, source_url: str, mapping: dict[str, str]
             for attr in ("src", "poster"):
                 if not node.get(attr):
                     continue
+                if attr == "src" and "massline-local-asset" in node.get("class", []):
+                    continue
                 local = _local_target(node[attr], source_url, mapping)
                 if local:
                     node[attr] = base.rstrip("/") + local
@@ -663,8 +748,9 @@ def sanitize_massline_html(source: str, source_url: str, mapping: dict[str, str]
     if capture.isdigit():
         note = soup.new_tag("aside", attrs={"class": "massline-source-note"})
         note.string = f"Historical capture · {capture[:4]}-{capture[4:6]}-{capture[6:8]} · "
-        link = soup.new_tag("a", href=f"https://web.archive.org/web/{capture}/{source_url}", rel="noopener noreferrer")
-        link.string = "view source replay"
+        link = soup.new_tag("a", href=source_link or f"https://web.archive.org/web/{capture}/{source_url}",
+                            rel="noopener noreferrer")
+        link.string = source_label
         note.append(link)
         soup.body.insert(0, note)
     return "<!doctype html>\n" + str(soup), gaps
@@ -697,12 +783,14 @@ def build_massline_archive(root: Path, output: Path, base: str = "", candidate: 
     if not manifest_path.exists():
         return {"status": "not_in_source_catalog", "recovered_pages": 0, "forum_topics": 0}
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-    resources = manifest.get("resources", {})
+    resources = {**manifest.get("resources", {}), **manifest.get("external_resources", {})}
     mapping: dict[str, str] = {}
     body_by_url: dict[str, bytes] = {}
     for canonical, record in resources.items():
         raw = (root / record["raw_path"]).resolve()
-        allowed = [(root / "recovery/massline/raw").resolve(), (root / "source/massline/raw").resolve()]
+        allowed = [(root / "recovery/massline/raw").resolve(),
+                   (root / "recovery/massline/external/raw").resolve(),
+                   (root / "source/massline/raw").resolve()]
         if not any(raw.is_relative_to(parent) for parent in allowed) or not raw.is_file():
             continue
         body = raw.read_bytes()
@@ -718,7 +806,9 @@ def build_massline_archive(root: Path, output: Path, base: str = "", candidate: 
     recovered_resource_variants = []
     for variant in manifest.get("resource_variants", []):
         raw = (root / variant.get("raw_path", "missing")).resolve()
-        allowed = [(root / "recovery/massline/raw").resolve(), (root / "source/massline/raw").resolve()]
+        allowed = [(root / "recovery/massline/raw").resolve(),
+                   (root / "recovery/massline/external/raw").resolve(),
+                   (root / "source/massline/raw").resolve()]
         if not any(raw.is_relative_to(parent) for parent in allowed) or not raw.is_file():
             continue
         body = raw.read_bytes()
@@ -735,7 +825,9 @@ def build_massline_archive(root: Path, output: Path, base: str = "", candidate: 
         if variant.get("status") != "recovered":
             continue
         raw = (root / variant["raw_path"]).resolve()
-        allowed = [(root / "recovery/massline/raw").resolve(), (root / "source/massline/raw").resolve()]
+        allowed = [(root / "recovery/massline/raw").resolve(),
+                   (root / "recovery/massline/external/raw").resolve(),
+                   (root / "source/massline/raw").resolve()]
         if not any(raw.is_relative_to(parent) for parent in allowed) or not raw.is_file():
             continue
         body = raw.read_bytes()
@@ -770,7 +862,8 @@ def build_massline_archive(root: Path, output: Path, base: str = "", candidate: 
         if variant.get("kind") == "html":
             canonical = variant.get("canonical_url") or _canonical(variant.get("source_url", ""))
             rendered, gaps = sanitize_massline_html(body.decode("utf-8", errors="replace"), canonical, mapping,
-                                                      variant.get("timestamp", ""), base)
+                                                      variant.get("timestamp", ""), base,
+                                                      variant.get("source"), variant.get("source_label", "view source replay"))
             page_gaps.extend({"page": canonical, "url": gap} for gap in gaps if gap)
             _write_output(output, route, rendered)
         elif variant.get("kind") == "image":
@@ -785,7 +878,8 @@ def build_massline_archive(root: Path, output: Path, base: str = "", candidate: 
             _write_output(output, route, body)
     for variant, body in homepage_variants:
         rendered, gaps = sanitize_massline_html(body.decode("utf-8", errors="replace"), variant["canonical_url"], mapping,
-                                                  variant.get("timestamp", ""), base)
+                                                  variant.get("timestamp", ""), base,
+                                                  variant.get("source"), variant.get("source_label", "view source replay"))
         page_gaps.extend({"page": variant["canonical_url"], "url": gap} for gap in gaps if gap)
         _write_output(output, f"/masslinemedia/site/home-{variant['year']}.html", rendered)
     html_records = [(url, item) for url, item in resources.items() if item.get("kind") == "html" and url in routes]

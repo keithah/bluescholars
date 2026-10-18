@@ -16,6 +16,8 @@ from .urls import base_path
 from .artist_sites import (index_artist_sites,recover_artist_sites,promote_artist_sites,
                            review_artist_capture)
 from .massline import index_massline,index_massline_history,recover_massline
+from .massline_external import index_external_assets,recover_external_assets
+from .myspace import index_myspace_assets,recover_myspace_assets
 
 def serve(directory: Path,base: str,port: int):
     from http.server import ThreadingHTTPServer,SimpleHTTPRequestHandler
@@ -64,10 +66,18 @@ def main(argv=None) -> int:
     p=commands.add_parser('artist-promote',help='Promote inspected artist-site sources; later captures need individual compatibility notes')
     p.add_argument('--reviewed',action='store_true')
     commands.add_parser('massline-index',help='Validate and summarize the saved masslinemedia.com Wayback CDX inventory')
+    p=commands.add_parser('myspace-assets-index',help='Index exact Wayback histories for MySpace-linked images, with resumable checkpoints')
+    p.add_argument('--max-urls',type=int,default=100);p.add_argument('--delay',type=float,default=1.0);p.add_argument('--retry-errors',action='store_true')
+    p=commands.add_parser('myspace-assets-recover',help='Fetch and validate indexed MySpace profile image captures')
+    p.add_argument('--max-files',type=int,default=100);p.add_argument('--delay',type=float,default=0.7);p.add_argument('--retry-failed',action='store_true')
     p=commands.add_parser('massline-history',help='Page and checkpoint uncollapsed Mass Line Wayback capture history')
     p.add_argument('--max-pages',type=int,default=1);p.add_argument('--delay',type=float,default=0.8);p.add_argument('--timeout',type=int,default=60)
     p=commands.add_parser('massline-recover',help='Resumably recover Mass Line Media pages, forum threads, and local assets')
     p.add_argument('--max-files',type=int,default=250);p.add_argument('--delay',type=float,default=0.6);p.add_argument('--retry-failed',action='store_true')
+    p=commands.add_parser('massline-external-index',help='Index exact external image/media URLs linked from recovered Mass Line pages')
+    p.add_argument('--max-assets',type=int,default=50);p.add_argument('--delay',type=float,default=0.8);p.add_argument('--timeout',type=int,default=45);p.add_argument('--refresh-discovery',action='store_true')
+    p=commands.add_parser('massline-external-recover',help='Recover indexed external Mass Line images/media from Wayback')
+    p.add_argument('--max-files',type=int,default=40);p.add_argument('--delay',type=float,default=0.6);p.add_argument('--retry-failed',action='store_true')
     p=commands.add_parser('merge-recovery',help='Safely merge a downloaded recovery artifact from a staging directory')
     p.add_argument('--artifact',type=Path,required=True);p.add_argument('--run-id',required=True)
     idx=commands.add_parser('index',help='Enumerate captures and persist the continuation cursor')
@@ -128,6 +138,12 @@ def main(argv=None) -> int:
         elif args.command=='artist-promote':
             result=promote_artist_sites(root,args.reviewed)
         elif args.command=='massline-index':result=index_massline(root)
+        elif args.command=='myspace-assets-index':
+            if args.max_urls<1 or args.delay<0:raise ValueError('Invalid MySpace asset-index limits')
+            result=index_myspace_assets(root,args.max_urls,args.delay,args.retry_errors)
+        elif args.command=='myspace-assets-recover':
+            if args.max_files<1 or args.delay<0:raise ValueError('Invalid MySpace asset-recovery limits')
+            result=recover_myspace_assets(root,args.max_files,args.delay,args.retry_failed)
         elif args.command=='massline-history':
             result=index_massline_history(root,args.max_pages,args.delay,args.timeout)
             print(json.dumps(result,indent=2));return 2 if result.get('errors') else 0
@@ -135,6 +151,15 @@ def main(argv=None) -> int:
             if args.max_files<1 or args.delay<0:raise ValueError('Invalid Massline recovery limits')
             result=recover_massline(root,args.max_files,args.delay,args.retry_failed,
                 progress=lambda p:print(json.dumps({'stage':'massline-recover','progress':p}),file=sys.stderr,flush=True))
+        elif args.command=='massline-external-index':
+            if args.max_assets<1 or args.delay<0 or args.timeout<1:raise ValueError('Invalid external asset index limits')
+            result=index_external_assets(root,args.max_assets,args.delay,args.timeout,
+                progress=lambda p:print(json.dumps({'stage':'massline-external-index','progress':p}),file=sys.stderr,flush=True),
+                refresh_discovery=args.refresh_discovery)
+        elif args.command=='massline-external-recover':
+            if args.max_files<1 or args.delay<0:raise ValueError('Invalid external asset recovery limits')
+            result=recover_external_assets(root,args.max_files,args.delay,args.retry_failed,
+                progress=lambda p:print(json.dumps({'stage':'massline-external-recover','progress':p}),file=sys.stderr,flush=True))
         elif args.command=='merge-recovery': result=merge_artifact(root,args.artifact,args.run_id)
         elif args.command=='index-assets':
             if args.max_assets<1 or args.max_pages<1:raise ValueError('Asset index limits must be positive')

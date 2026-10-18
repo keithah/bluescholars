@@ -1,0 +1,53 @@
+{
+  "generated_at": "2026-10-17T23:36:34.680446+00:00",
+  "source": "Arquivo.pt Wayback/CDX",
+  "results": [
+    {
+      "query": "apex",
+      "url": "https://arquivo.pt/wayback/cdx?url=masslinemedia.com/*&output=json&filter=status:200",
+      "status": 200,
+      "response_bytes": 810,
+      "raw_response": "{\"urlkey\": \"com,masslinemedia)/news/newspics/101.jpg\", \"timestamp\": \"20141204141803\", \"url\": \"http://masslinemedia.com/news/newspics/101.jpg\", \"mime\": \"text/html\", \"status\": \"200\", \"digest\": \"AMACO2QO36BW4WSJO7ZPKYI45ATJPS6Q\", \"length\": \"1438\", \"offset\": \"94973150\", \"filename\": \"IAH-20141204135009-53176-p12.arquivo.pt.arc.gz\", \"collection\": \"EAWP6\", \"source\": \"cdx_folder:EAWP6.cdxj\", \"source-coll\": \"cdx_folder\"}\n{\"urlkey\": \"com,masslinemedia)/robots.txt\", \"timestamp\": \"20141204141749\", \"url\": \"http://masslinemedia.com/robots.txt\", \"mime\": \"text/html\", \"status\": \"200\", \"digest\": \"AMACO2QO36BW4WSJO7ZPKYI45ATJPS6Q\", \"length\": \"1430\", \"offset\": \"76854228\", \"filename\": \"IAH-20141204140003-53201-p12.arquivo.pt.arc.gz\", \"collection\": \"EAWP6\", \"source\": \"cdx_folder:EAWP6.cdxj\", \"source-coll\": \"cdx_folder\"}\n"
+    },
+    {
+      "query": "www",
+      "url": "https://arquivo.pt/wayback/cdx?url=www.masslinemedia.com/*&output=json&filter=status:200",
+      "status": 200,
+      "response_bytes": 810,
+      "raw_response": "{\"urlkey\": \"com,masslinemedia)/news/newspics/101.jpg\", \"timestamp\": \"20141204141803\", \"url\": \"http://masslinemedia.com/news/newspics/101.jpg\", \"mime\": \"text/html\", \"status\": \"200\", \"digest\": \"AMACO2QO36BW4WSJO7ZPKYI45ATJPS6Q\", \"length\": \"1438\", \"offset\": \"94973150\", \"filename\": \"IAH-20141204135009-53176-p12.arquivo.pt.arc.gz\", \"collection\": \"EAWP6\", \"source\": \"cdx_folder:EAWP6.cdxj\", \"source-coll\": \"cdx_folder\"}\n{\"urlkey\": \"com,masslinemedia)/robots.txt\", \"timestamp\": \"20141204141749\", \"url\": \"http://masslinemedia.com/robots.txt\", \"mime\": \"text/html\", \"status\": \"200\", \"digest\": \"AMACO2QO36BW4WSJO7ZPKYI45ATJPS6Q\", \"length\": \"1430\", \"offset\": \"76854228\", \"filename\": \"IAH-20141204140003-53201-p12.arquivo.pt.arc.gz\", \"collection\": \"EAWP6\", \"source\": \"cdx_folder:EAWP6.cdxj\", \"source-coll\": \"cdx_folder\"}\n"
+    },
+    {
+      "query": "forum-apex",
+      "url": "https://arquivo.pt/wayback/cdx?url=masslinemedia.com/smf/*&output=json&filter=status:200",
+      "status": 200,
+      "response_bytes": 0,
+      "raw_response": ""
+    },
+    {
+      "query": "forum-www",
+      "url": "https://arquivo.pt/wayback/cdx?url=www.masslinemedia.com/smf/*&output=json&filter=status:200",
+      "status": 200,
+      "response_bytes": 0,
+      "raw_response": ""
+    },
+    {
+      "query": "exact-2014-newspic-101",
+      "url": "https://arquivo.pt/wayback/cdx?url=http%3A%2F%2Fmasslinemedia.com%2Fnews%2Fnewspics%2F101.jpg&output=json&filter=status:200",
+      "status": 200,
+      "response_bytes": 416,
+      "raw_response": "{\"urlkey\": \"com,masslinemedia)/news/newspics/101.jpg\", \"timestamp\": \"20141204141803\", \"url\": \"http://masslinemedia.com/news/newspics/101.jpg\", \"mime\": \"text/html\", \"status\": \"200\", \"digest\": \"AMACO2QO36BW4WSJO7ZPKYI45ATJPS6Q\", \"length\": \"1438\", \"offset\": \"94973150\", \"filename\": \"IAH-20141204135009-53176-p12.arquivo.pt.arc.gz\", \"collection\": \"EAWP6\", \"source\": \"cdx_folder:EAWP6.cdxj\", \"source-coll\": \"cdx_folder\"}\n"
+    }
+  ],
+  "replay_checks": [
+    {
+      "timestamp": "20141204141803",
+      "url": "http://masslinemedia.com/news/newspics/101.jpg",
+      "result": "replay returned HTML archive fallback page, not image bytes (HTTP 200, text/html, 3032 bytes)"
+    },
+    {
+      "timestamp": "20141204141749",
+      "url": "http://masslinemedia.com/robots.txt",
+      "result": "replay returned same HTML archive fallback page, not robots.txt (HTTP 200, text/html, 3032 bytes)"
+    }
+  ]
+}

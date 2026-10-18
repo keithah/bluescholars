@@ -697,7 +697,17 @@
     },
     "tests": "207 passed",
     "visual_reviewed": false,
-    "publish_approved": false
+    "publish_approved": false,
+    "github_ci": {
+      "run_id": "39111193409",
+      "url": "https://github.com/keithah/bluescholars/actions/runs/39111193409",
+      "conclusion": "success",
+      "checks": [
+        "pytest",
+        "root deployment build/check",
+        "project-subpath deployment build/check"
+      ]
+    }
   },
   "latest_2013_local_capture_pass": {
     "report": "recovery/era-2013-local-20261017-report.json",

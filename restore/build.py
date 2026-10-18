@@ -772,11 +772,19 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
     satellite_report=build_artist_sites(root,output,base,candidate)
     massline_report=build_massline_archive(root,output,base,candidate)
     myspace_report=build_myspace_archive(root,output,base)
-    gateway+='</nav><h2>Related artist archives</h2><nav class="archive-home-links" aria-label="Related artist archives"><a href="'+base+'/prometheusbrown/">Prometheus Brown site editions <span aria-hidden="true">↗</span></a><a href="'+base+'/sabzi/">Sabzi site editions <span aria-hidden="true">↗</span></a></nav>'
-    gateway+='<nav class="archive-home-links" aria-label="Social profile archives"><a href="'+base+'/myspace/">Blue Scholars MySpace profile captures <span aria-hidden="true">↗</span></a></nav>'
+    gateway+='</nav><h2 class="archive-sites-heading">More recovered sites</h2><p class="archive-sites-intro">Explore the artists, community, and social pages connected to Blue Scholars.</p><nav class="archive-site-grid" aria-label="Other recovered sites">'
+    related_sites=[
+        ('/prometheusbrown/','Prometheus Brown','Artist site editions'),
+        ('/sabzi/','Sabzi','Artist site editions'),
+        ('/myspace/','Blue Scholars on MySpace','Dated profile captures'),
+    ]
     if massline_report.get('status')=='built':
-        gateway+='<nav class="archive-home-links" aria-label="Related music community archive"><a href="'+base+'/masslinemedia/">Mass Line Media and 2007 forum archive <span aria-hidden="true">↗</span></a></nav>'
-    gateway+='<nav class="archive-home-links" aria-label="Other archive resources"><a class="lj-archive" href="'+base+'/lj/">LiveJournal posts <span aria-hidden="true">↗</span></a><a class="recovery-status" href="'+base+'/archive-status/">Recovery status and source gaps <span aria-hidden="true">↗</span></a></nav>'
+        related_sites.append(('/masslinemedia/','Mass Line Media','Music community and forum archive'))
+    related_sites.append(('/lj/','Blue Scholars LiveJournal','Recovered journal posts'))
+    for path,title,detail in related_sites:
+        extra=' lj-archive' if path=='/lj/' else ''
+        gateway+='<a class="archive-site-card'+extra+'" href="'+base+path+'"><span class="archive-site-title">'+html.escape(title)+'</span><span class="archive-site-detail">'+html.escape(detail)+'</span><span class="edition-action">Browse archive <span aria-hidden="true">↗</span></span></a>'
+    gateway+='</nav><nav class="archive-home-links" aria-label="Archive information"><a class="recovery-status" href="'+base+'/archive-status/">Recovery status and source gaps <span aria-hidden="true">↗</span></a></nav>'
     hub=page_shell('Blue Scholars archive',gateway).replace('<main class="archive-gap-page">','<main class="archive-gap-page archive-home">')
     hub=hub.replace('</head>','<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="'+ui_href+'"></head>')
     _write_page(output,'/',hub)

@@ -25,6 +25,18 @@
 .archive-home-links{display:flex;flex-wrap:wrap;gap:24px;margin-top:30px}
 .archive-home-links a{color:#3b566b;text-decoration:underline;text-underline-offset:4px;font-size:14px}
 .archive-home-links a span{padding-left:3px}
+.archive-home .archive-sites-heading{margin:62px 0 8px;font-size:clamp(24px,3vw,32px);letter-spacing:-.035em}
+.archive-sites-intro{margin:0;color:#596168;font-size:16px;line-height:1.55}
+.archive-site-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:24px 0 8px}
+.archive-site-card{box-sizing:border-box;min-height:160px;display:flex;flex-direction:column;gap:8px;padding:20px;border:1px solid #d7dce0;border-radius:8px;background:#fff;color:#25282b;text-decoration:none;box-shadow:0 3px 12px rgba(23,43,58,.045);transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease}
+.archive-site-card:hover{transform:translateY(-2px);border-color:#8aa7bb;box-shadow:0 10px 22px rgba(23,43,58,.1)}
+.archive-site-title{font-size:19px;line-height:1.25;font-weight:700;color:#24567d}
+.archive-site-detail{font-size:14px;line-height:1.4;color:#5a6167}
+.archive-site-card .edition-action{margin-top:auto;padding-top:12px;font-size:13px}
+.archive-site-card.lj-archive{border-left:3px solid #7494aa}
+.archive-site-card:focus-visible{outline:3px solid #28628b;outline-offset:4px}
 @media(max-width:760px){.archive-home{margin-top:54px;padding:0 22px 48px}.archive-home .archive-eyebrow{margin-bottom:32px}.edition-grid{grid-template-columns:1fr;gap:12px;margin:30px 0 18px}.edition-card{min-height:158px;padding:20px}.edition-year{font-size:40px}.archive-home-links{gap:16px;margin-top:26px}}
-@media(prefers-reduced-motion:reduce){.edition-card{transition:none}.edition-card:hover{transform:none}}
+@media(max-width:760px){.archive-site-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.archive-site-card{min-height:148px;padding:16px}.archive-home .archive-sites-heading{margin-top:48px}}
+@media(max-width:480px){.archive-site-grid{grid-template-columns:1fr}.archive-site-card{min-height:132px}}
+@media(prefers-reduced-motion:reduce){.edition-card,.archive-site-card{transition:none}.edition-card:hover,.archive-site-card:hover{transform:none}}
 @media(max-width:600px){.archive-gap-page{margin-top:40px;padding-left:20px;padding-right:20px}.archive-restoration-notice{padding:10px 12px;font-size:11px}.archive-navigation nav{max-width:170px}.archive-gap-page .archive-lead{font-size:18px}}

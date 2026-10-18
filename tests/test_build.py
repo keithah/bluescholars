@@ -571,6 +571,7 @@ def test_legacy_article_navigation_has_a_local_edition_index(tmp_path):
 
 def test_root_is_a_gateway_to_separate_historical_editions(tmp_path):
     fixture_root(tmp_path);s=State(tmp_path)
+    write_json(tmp_path/'source/massline.json',{'resources':{}})
     add_raw(s,HOME,'html',b'<html><head><title>BLUE SCHOLARS</title></head><body><h1>Original Squarespace homepage</h1></body></html>')
     s.data['resources'][HOME]['actual_capture']='20210529010817';s.save()
     promote(tmp_path,reviewed=True)
@@ -584,6 +585,10 @@ def test_root_is_a_gateway_to_separate_historical_editions(tmp_path):
         'Independent site','WordPress site','Squarespace site · first located in 2013']
     assert all(card.select_one('.edition-action') for card in cards)
     assert root.select_one('a.lj-archive[href="/lj/"]')
+    assert {a.get('href') for a in root.select('.archive-site-card')} == {
+        '/prometheusbrown/', '/sabzi/', '/myspace/', '/masslinemedia/', '/lj/'
+    }
+    assert all(card.select_one('.edition-action') for card in root.select('.archive-site-card'))
     assert root.select_one('a.recovery-status')
     assert 'Original Squarespace homepage' in (tmp_path/'_site/2013/index.html').read_text()
     assert all((tmp_path/'_site'/year/'index.html').is_file() for year in ('2007','2009','2013'))

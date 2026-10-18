@@ -181,7 +181,9 @@ def test_massline_builder_writes_local_pages_for_project_subpath(tmp_path):
     assert "home-2009.html" in archive_html
     assert 'href="/bluescholars/masslinemedia/"' in archive_html
     forum_index_html = (output / "masslinemedia/forum/index.html").read_text(encoding="utf-8")
-    assert 'href="/bluescholars/masslinemedia/forum/topic-10-page-0.html"' in forum_index_html
+    assert 'href="/bluescholars/masslinemedia/forum/topic-10.html"' in forum_index_html
+    discussion = (output / "masslinemedia/forum/topic-10.html").read_text(encoding="utf-8")
+    assert 'href="/bluescholars/masslinemedia/forum/topic-10-page-0.html"' in discussion
     assert "Older forum text" in earlier_topic_page
     assert "Earlier topic capture" in (output / "masslinemedia/alternate-captures/index.html").read_text(encoding="utf-8")
     assert (output / "masslinemedia/index.html").is_file()
@@ -215,6 +217,10 @@ def test_massline_forum_index_groups_board_captures_and_lists_real_topics(tmp_pa
             "20071015193000",
             b'<html><head><title>General discussion</title></head><body><p>Captured thread two.</p></body></html>',
         ),
+        "http://masslinemedia.com/smf/index.php?topic=10.msg101": (
+            "20071015194000",
+            b'<html><head><title>Dialogue roll call</title></head><body><p>Captured individual message.</p></body></html>',
+        ),
     }
     resources = {}
     for url, (timestamp, body) in pages.items():
@@ -239,10 +245,20 @@ def test_massline_forum_index_groups_board_captures_and_lists_real_topics(tmp_pa
     board = board_path.read_text(encoding="utf-8")
     assert "Dialogue roll call" in board
     assert "General discussion" in board
-    assert 'href="/bluescholars/masslinemedia/forum/topic-10-page-0.html"' in board
+    assert 'href="/bluescholars/masslinemedia/forum/topic-10.html"' in board
     assert 'offset 15 · 2007-10-15' in board
     assert '<summary>Other captured views' in board
-    assert 'href="/bluescholars/masslinemedia/forum/topic-11-page-0.html"' in board
+    assert 'href="/bluescholars/masslinemedia/forum/topic-11.html"' in board
+    assert 'href="/bluescholars/masslinemedia/forum/topic-10.html"' in board
+    topic_index = (output / "masslinemedia/forum/topic-10.html").read_text(encoding="utf-8")
+    assert "Captured thread one." not in topic_index
+    assert "Saved discussion views" in topic_index
+    assert "Captured second page" not in topic_index
+    assert 'href="/bluescholars/masslinemedia/forum/topic-10-page-15.html"' in topic_index
+    assert 'href="/bluescholars/masslinemedia/forum/topic-10-message-101.html"' in topic_index
+    assert "Message 101" in topic_index
+    assert "Capture 20071015192000" in topic_index
+    assert "2007-10-15" in topic_index
     assert 'href="/bluescholars/masslinemedia/forum/board-2-page-20.html"' in board
 
 

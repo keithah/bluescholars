@@ -890,6 +890,47 @@ def _forum_index_pages(output: Path, output_base: str, board_rows: list[dict], t
     def href(path: str) -> str:
         return html.escape(output_base + path, quote=True)
 
+    def topic_title(topic_id: str, candidates: list[dict]) -> str:
+        for group in board_groups.values():
+            labels = group["topics"].get(topic_id)
+            if labels:
+                return labels.most_common(1)[0][0]
+        return sorted(candidates, key=_forum_topic_order)[0].get("title") or f"Topic {topic_id} (title not recovered)"
+
+    topic_links_by_board: dict[str, dict[str, str]] = {}
+    for topic_id, items in sorted(topic_groups.items(), key=lambda item: int(item[0])):
+        by_route = {}
+        for item in sorted(items, key=_forum_topic_order):
+            by_route.setdefault(item["route"], item)
+        views = list(by_route.values())
+        title = topic_title(topic_id, views)
+        view_links = []
+        def view_order(item: dict) -> tuple[int, int, int, int]:
+            parsed = _forum_identifier(item.get("url", ""), "topic") or ("0", 0, None)
+            topic_number, offset, message = parsed
+            return int(topic_number), 0 if message is None else 1, offset or 0, message if message is not None else -1
+
+        for view in sorted(views, key=view_order):
+            _, offset, message = _forum_identifier(view.get("url", ""), "topic") or ("", 0, None)
+            label = f"Message {message}" if message is not None else f"Page offset {offset or 0}"
+            view_links.append(
+                f'<li><a href="{href(view["route"])}">{html.escape(label)}</a>'
+                f'<small>Capture {html.escape(view.get("timestamp", "date unknown"))} · {_forum_date(view.get("timestamp", ""))}</small></li>')
+        landing = (
+            '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">'
+            f'<title>{html.escape(title)} · Mass Line Forums</title>'
+            '<style>body{max-width:980px;margin:2rem auto;padding:0 1rem;font:14px/1.5 Arial,Helvetica,sans-serif;color:#222;background:#e8edf2}a{color:#16466b}header,.panel{background:#fff;border:1px solid #9aa8b5;margin:1rem 0}header{padding:.7rem 1rem;background:#264a66;color:#fff}header a{color:#fff}.crumbs{font-size:12px}.panel h2{font-size:15px;margin:0;padding:.55rem .8rem;background:#dce6ed;border-bottom:1px solid #9aa8b5}.panel ul{list-style:none;padding:0;margin:0}.panel li{padding:.55rem .8rem;border-bottom:1px solid #e1e5e8}.panel li:last-child{border:0}small{display:block;color:#5d6870}.note{padding:.7rem .9rem;background:#f4f7f9;margin:0}</style></head><body>'
+            f'<p class="crumbs"><a href="{href("/masslinemedia/forum/index.html")}">Forum index</a> › Discussion {html.escape(topic_id)}</p>'
+            f'<header><h1>{html.escape(title)}</h1><div>Mass Line Forums · captured discussion</div></header>'
+            '<section class="panel"><h2>Saved discussion views</h2>'
+            '<p class="note">Each link opens an original, dated forum capture. Missing posts and uncaptured pages are not reconstructed.</p>'
+            '<ul>' + ''.join(view_links) + '</ul></section>'
+            f'<p><a href="{href("/masslinemedia/forum/index.html")}">Return to all boards and discussions</a></p></body></html>')
+        _write_output(output, f"/masslinemedia/forum/topic-{topic_id}.html", landing)
+        for board_id, group in board_groups.items():
+            if topic_id in group["topics"]:
+                topic_links_by_board.setdefault(board_id, {})[topic_id] = href(f"/masslinemedia/forum/topic-{topic_id}.html")
+
     board_links = []
     for board_id, group in sorted(board_groups.items(), key=lambda item: int(item[0])):
         title = group["title_counts"].most_common(1)[0][0] if group["title_counts"] else f"Board {board_id} (title not recovered)"
@@ -908,8 +949,7 @@ def _forum_index_pages(output: Path, output_base: str, board_rows: list[dict], t
                 candidates_by_route.setdefault(candidate["route"], candidate)
             candidates = list(candidates_by_route.values())
             if candidates:
-                primary = candidates[0]
-                target = href(primary["route"])
+                target = href(f"/masslinemedia/forum/topic-{topic_id}.html")
                 locality = f'{len({c["route"] for c in candidates})} locally saved view(s)'
             else:
                 observed_sources = sorted(group["topic_sources"].get(topic_id, []), key=lambda source: source.get("timestamp", ""))
@@ -930,7 +970,7 @@ def _forum_index_pages(output: Path, output_base: str, board_rows: list[dict], t
                 extra_views = (f'<details><summary>Other captured views ({len(view_links)})</summary>'
                                '<ul class="thread-views">' + "".join(view_links) + '</ul></details>')
             topic_links.append(
-                f'<li><a href="{target}">{html.escape(title_from_listing)}</a>'
+                f'<li><a href="{topic_links_by_board.get(board_id, {}).get(topic_id, target)}">{html.escape(title_from_listing)}</a>'
                 f'<small>Topic {topic_id} · {html.escape(locality)}</small>{extra_views}</li>')
         page_links = []
         for page in pages:
@@ -949,25 +989,22 @@ def _forum_index_pages(output: Path, output_base: str, board_rows: list[dict], t
 
     all_topic_rows = []
     for topic_id, candidates in sorted(topic_groups.items(), key=lambda item: int(item[0])):
-        title = next((g["topics"][topic_id].most_common(1)[0][0] for g in board_groups.values()
-                      if topic_id in g["topics"] and g["topics"][topic_id]), None)
-        title = title or sorted(candidates, key=_forum_topic_order)[0].get("title") or f"Topic {topic_id} (title not recovered)"
+        title = topic_title(topic_id, candidates)
         if topic_id in topic_to_board:
             continue
-        primary = sorted(candidates, key=_forum_topic_order)[0]
-        all_topic_rows.append(f'<li><a href="{href(primary["route"])}">{html.escape(title)}</a><small>Topic {topic_id} · {len({c["route"] for c in candidates})} locally saved view(s)</small></li>')
+        all_topic_rows.append(f'<li><a href="{href(f"/masslinemedia/forum/topic-{topic_id}.html")}">{html.escape(title)}</a><small>Topic {topic_id} · {len({c["route"] for c in candidates})} locally saved view(s)</small></li>')
 
     forum_index = (
         '<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">'
         '<title>Mass Line Forums archive</title><style>body{max-width:1100px;margin:3rem auto;padding:0 1.2rem;font:16px/1.55 system-ui;color:#202020}li{margin:.7rem 0}a{color:#24567d}small{display:block;color:#666}.board-list{columns:2}@media(max-width:640px){.board-list{columns:1}}</style><body>'
         f'<p><a href="{href("/masslinemedia/")}">Mass Line Media archive</a> · <a href="{href("/")}">Blue Scholars archive</a></p>'
         '<h1>Mass Line Forums</h1>'
-        f'<p>{len(board_groups)} captured boards · {len(topic_groups)} topic IDs have locally captured pages. Each board page groups its recovered topic listings, dated board snapshots, and any captured thread views.</p>'
+        f'<p>{len(board_groups)} captured boards · {len(topic_groups)} discussions have locally saved views. Board listings preserve captured topic titles; each discussion page collects its dated local captures.</p>'
         f'<h2>Boards</h2><ul class="board-list">'+''.join(board_links)+'</ul>'
         + (f'<h2>Other locally captured threads</h2><ul>{"".join(all_topic_rows)}</ul>' if all_topic_rows else '')
         + '</body></html>')
     _write_output(output, "/masslinemedia/forum/index.html", forum_index)
-    return {"boards": len(board_groups), "topic_ids": len(topic_groups),
+    return {"boards": len(board_groups), "topic_ids": len(topic_groups), "topic_landing_pages": len(topic_groups),
             "board_listing_pages": sum(len(group["pages"]) for group in board_groups.values()),
             "unassigned_topic_ids": len(all_topic_rows)}
 

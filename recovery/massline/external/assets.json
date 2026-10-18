@@ -1,7 +1,7 @@
 {
   "version": 1,
   "provider": "Internet Archive Wayback CDX",
-  "generated_at": "2026-10-18T08:29:00.400998+00:00",
+  "generated_at": "2026-10-18T11:49:00.320500+00:00",
   "discovery_count": 602,
   "assets": [
     {
@@ -7765,10 +7765,10 @@
         }
       ],
       "captures": [],
-      "status": "index_failed",
+      "status": "no_captures",
       "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fi10.photobucket.com%2Falbums%2Fa139%2Fdefyantx07%2FIMG_0616.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
-      "index_error": "Wayback CDX HTTP 429; query paused to respect archive rate limit",
-      "indexed_at": "2026-10-18T08:29:00.400936+00:00"
+      "indexed_at": "2026-10-18T11:48:15.062626+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://i10.photobucket.com/albums/a139/defyantx07/IMG_0617.jpg",
@@ -7796,7 +7796,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fi10.photobucket.com%2Falbums%2Fa139%2Fdefyantx07%2FIMG_0617.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-18T11:48:16.215719+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://i10.photobucket.com/albums/a139/defyantx07/IMG_0618.jpg",
@@ -7824,7 +7827,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fi10.photobucket.com%2Falbums%2Fa139%2Fdefyantx07%2FIMG_0618.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-18T11:48:17.362396+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://i10.photobucket.com/albums/a139/defyantx07/IMG_0619.jpg",
@@ -7852,7 +7858,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fi10.photobucket.com%2Falbums%2Fa139%2Fdefyantx07%2FIMG_0619.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-18T11:48:18.429783+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://i10.photobucket.com/albums/a139/defyantx07/IMG_0620.jpg",
@@ -7880,7 +7889,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fi10.photobucket.com%2Falbums%2Fa139%2Fdefyantx07%2FIMG_0620.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-18T11:48:19.411125+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://i10.photobucket.com/albums/a139/defyantx07/comi1-1.jpg",
@@ -14190,7 +14202,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fi29.photobucket.com%2Falbums%2Fc271%2FSCIONtificrecords%2FJVD%2Fgrafiti.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-18T11:48:20.530823+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://i29.photobucket.com/albums/c271/SCIONtificrecords/Live%20shows/450bumbershoot_ar_41708_commonmarke.jpg",
@@ -14322,7 +14337,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fi29.photobucket.com%2Falbums%2Fc271%2FSCIONtificrecords%2FOctober2007AudioasisPoster.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-18T11:48:21.532516+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://i29.photobucket.com/albums/c271/SCIONtificrecords/Pilgrimage/DSCF0446.jpg",
@@ -17848,8 +17866,20 @@
           "tag": "img"
         }
       ],
-      "captures": [],
-      "status": "queued"
+      "captures": [
+        {
+          "timestamp": "20200930025830",
+          "original": "http://i43.photobucket.com/albums/e381/chevthedreamer1/crop.jpg",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "E7T3LROI3VAE5NUR5GNYRCU4HKJBSFU7",
+          "length": "2403"
+        }
+      ],
+      "status": "no_valid_capture",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fi43.photobucket.com%2Falbums%2Fe381%2Fchevthedreamer1%2Fcrop.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-18T11:48:22.700412+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://i44.photobucket.com/albums/f25/concious1/boombox.jpg",
@@ -18128,7 +18158,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fi47.photobucket.com%2Falbums%2Ff172%2Figotseatacfunk%2FNxNW.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-18T11:48:24.180653+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://i47.photobucket.com/albums/f172/igotseatacfunk/drawing006.jpg",
@@ -19769,7 +19802,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fi6.photobucket.com%2Falbums%2Fy240%2FWillWrk4Boost%2FDSC04472.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-18T11:48:25.361025+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://i63.photobucket.com/albums/h127/bigbabyborn/675248.jpg",
@@ -20154,7 +20190,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fi63.photobucket.com%2Falbums%2Fh153%2Fjohnconcrete%2Fbenefitflyer.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-18T11:48:26.502231+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://i66.photobucket.com/albums/h279/chrisg_98028/ShaolinStyle-Controller.jpg",
@@ -22244,7 +22283,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fimg.photobucket.com%2Falbums%2Fv204%2Fhooli%2Fseattle001.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-18T11:48:27.979720+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://img.photobucket.com/albums/v30/kreeton/kristeniconmassline_3.jpg",
@@ -22396,8 +22438,20 @@
           "tag": "img"
         }
       ],
-      "captures": [],
-      "status": "queued"
+      "captures": [
+        {
+          "timestamp": "20230703081216",
+          "original": "https://img.photobucket.com/albums/v316/pboy87/blueschoolfront.jpg",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "E7T3LROI3VAE5NUR5GNYRCU4HKJBSFU7",
+          "length": "2435"
+        }
+      ],
+      "status": "no_valid_capture",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fimg.photobucket.com%2Falbums%2Fv316%2Fpboy87%2Fblueschoolfront.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-18T11:48:29.718880+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://img.photobucket.com/albums/v316/pboy87/citylinefront.jpg",
@@ -22425,7 +22479,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fimg.photobucket.com%2Falbums%2Fv316%2Fpboy87%2Fcitylinefront.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-18T11:48:30.732221+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://img.photobucket.com/albums/v316/pboy87/mahalfront.jpg",
@@ -22452,8 +22509,20 @@
           "tag": "img"
         }
       ],
-      "captures": [],
-      "status": "queued"
+      "captures": [
+        {
+          "timestamp": "20230703081215",
+          "original": "https://img.photobucket.com/albums/v316/pboy87/mahalfront.jpg",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "E7T3LROI3VAE5NUR5GNYRCU4HKJBSFU7",
+          "length": "2433"
+        }
+      ],
+      "status": "no_valid_capture",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fimg.photobucket.com%2Falbums%2Fv316%2Fpboy87%2Fmahalfront.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-18T11:48:31.807415+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://img.photobucket.com/albums/v316/pboy87/nbynwfront.jpg",
@@ -22480,8 +22549,20 @@
           "tag": "img"
         }
       ],
-      "captures": [],
-      "status": "queued"
+      "captures": [
+        {
+          "timestamp": "20230703081218",
+          "original": "https://img.photobucket.com/albums/v316/pboy87/nbynwfront.jpg",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "E7T3LROI3VAE5NUR5GNYRCU4HKJBSFU7",
+          "length": "2434"
+        }
+      ],
+      "status": "no_valid_capture",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fimg.photobucket.com%2Falbums%2Fv316%2Fpboy87%2Fnbynwfront.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-18T11:48:32.817670+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://img.photobucket.com/albums/v409/Arimaru/avr.jpg",
@@ -24003,7 +24084,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fimg222.imageshack.us%2Fimg222%2F1885%2Flolau9.png&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-18T11:48:34.106547+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://img222.imageshack.us/img222/8031/chinatown3mq0.jpg",
@@ -24461,7 +24545,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fimg295.imageshack.us%2Fimg295%2F5631%2Fthatsracistop1.gif&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-18T11:48:35.185038+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://img337.imageshack.us/img337/2853/bluescholarsap7.jpg",
@@ -24502,7 +24589,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fimg338.imageshack.us%2Fimg338%2F872%2Funtitledqt7.png&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-18T11:48:36.229627+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://img339.imageshack.us/img339/3185/sc004ecc5cac3.jpg",
@@ -26282,7 +26372,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fimg412.imageshack.us%2Fimg412%2F5660%2Fforumiconsr7.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-18T11:48:37.715890+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://img413.imageshack.us/img413/3719/6286je6.jpg",
@@ -27642,8 +27735,33 @@
           "tag": "img"
         }
       ],
-      "captures": [],
-      "status": "queued"
+      "captures": [
+        {
+          "timestamp": "20060806144113",
+          "original": "http://marcos.kirsch.com.mx:80/blogimages/slap.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "ERACM3JQEZRDIJQ4HWNBN5W2MRHAO4VT",
+          "length": "49818"
+        },
+        {
+          "timestamp": "20070705203819",
+          "original": "http://marcos.kirsch.com.mx/blogimages/slap.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "ERACM3JQEZRDIJQ4HWNBN5W2MRHAO4VT",
+          "length": "49802"
+        }
+      ],
+      "status": "recovered",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fmarcos.kirsch.com.mx%2Fblogimages%2Fslap.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-18T11:48:38.825120+00:00",
+      "index_http_status": 200,
+      "selected_capture": "20070705203819",
+      "raw_path": "recovery/massline/external/raw/e6c9f6e3e68d3e9d23d53b0b314acd17a7de899c11eb1cbadc07667da7c47dcc.jpg",
+      "sha256": "e6c9f6e3e68d3e9d23d53b0b314acd17a7de899c11eb1cbadc07667da7c47dcc",
+      "bytes": 49382,
+      "content_type": "image/jpeg"
     },
     {
       "url": "http://media.collegepublisher.com/media/paper851/stills/436b0317382f7-44-2.jpg",
@@ -30748,7 +30866,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fphotos-a.ak.facebook.com%2Fphotos-ak-sf2p%2Fv15%2F119%2F101%2F43101227%2Fn43101227_30011052_6208.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-18T11:48:39.987350+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://photos-a.ak.facebook.com/photos-ak-sf2p/v15/119/101/43101227/n43101227_30011056_6351.jpg",
@@ -30776,7 +30897,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fphotos-a.ak.facebook.com%2Fphotos-ak-sf2p%2Fv15%2F119%2F101%2F43101227%2Fn43101227_30011056_6351.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-18T11:48:41.138300+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://photos-a.ak.facebook.com/photos-ak-sf2p/v15/119/101/43101227/n43101227_30011068_7177.jpg",
@@ -30804,7 +30928,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fphotos-a.ak.facebook.com%2Fphotos-ak-sf2p%2Fv15%2F119%2F101%2F43101227%2Fn43101227_30011068_7177.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-18T11:48:42.432021+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://photos-a.ak.facebook.com/photos-ak-sf2p/v76/149/123/799815323/n799815323_661580_8301.jpg",
@@ -30917,7 +31044,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fphotos-b.ak.facebook.com%2Fphotos-ak-sf2p%2Fv15%2F119%2F101%2F43101227%2Fn43101227_30011053_6244.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-18T11:48:43.438510+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://photos-c.ak.facebook.com/photos-ak-sf2p/v134/119/101/43101227/n43101227_30467086_9210.jpg",
@@ -30958,7 +31088,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fphotos-c.ak.facebook.com%2Fphotos-ak-sf2p%2Fv15%2F119%2F101%2F43101227%2Fn43101227_30011058_6540.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-18T11:48:45.350079+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://photos-d.ak.facebook.com/photos-ak-sf2p/v134/119/101/43101227/n43101227_30467135_6002.jpg",
@@ -31012,7 +31145,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fphotos-d.ak.facebook.com%2Fphotos-ak-sf2p%2Fv15%2F119%2F101%2F43101227%2Fn43101227_30011051_6147.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-18T11:48:46.429708+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://photos-d.ak.facebook.com/photos-ak-sf2p/v15/119/101/43101227/n43101227_30011071_7323.jpg",
@@ -31040,7 +31176,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fphotos-d.ak.facebook.com%2Fphotos-ak-sf2p%2Fv15%2F119%2F101%2F43101227%2Fn43101227_30011071_7323.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-18T11:48:47.671167+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://photos-d.ak.facebook.com/photos-ak-sf2p/v57/119/101/43101227/n43101227_30221511_2732.jpg",
@@ -34444,8 +34583,81 @@
           "tag": "img"
         }
       ],
-      "captures": [],
-      "status": "queued"
+      "captures": [
+        {
+          "timestamp": "20030704030326",
+          "original": "http://www.ccs.neu.edu:80/home/woj/pics/burned.gif",
+          "mimetype": "image/gif",
+          "statuscode": "200",
+          "digest": "SUCAWBXW4M2NKI7CVYL6ZQV2T5USDIJZ",
+          "length": "120873"
+        },
+        {
+          "timestamp": "20060928234739",
+          "original": "http://www.ccs.neu.edu/home/woj/pics/burned.gif",
+          "mimetype": "image/gif",
+          "statuscode": "200",
+          "digest": "SUCAWBXW4M2NKI7CVYL6ZQV2T5USDIJZ",
+          "length": "120869"
+        },
+        {
+          "timestamp": "20061006042633",
+          "original": "http://www.ccs.neu.edu/home/woj/pics/burned.gif",
+          "mimetype": "image/gif",
+          "statuscode": "200",
+          "digest": "SUCAWBXW4M2NKI7CVYL6ZQV2T5USDIJZ",
+          "length": "120876"
+        },
+        {
+          "timestamp": "20061014054858",
+          "original": "http://www.ccs.neu.edu/home/woj/pics/burned.gif",
+          "mimetype": "image/gif",
+          "statuscode": "200",
+          "digest": "SUCAWBXW4M2NKI7CVYL6ZQV2T5USDIJZ",
+          "length": "120872"
+        },
+        {
+          "timestamp": "20061220064543",
+          "original": "http://www.ccs.neu.edu/home/woj/pics/burned.gif",
+          "mimetype": "image/gif",
+          "statuscode": "200",
+          "digest": "SUCAWBXW4M2NKI7CVYL6ZQV2T5USDIJZ",
+          "length": "120877"
+        },
+        {
+          "timestamp": "20070106074003",
+          "original": "http://www.ccs.neu.edu:80/home/woj/pics/burned.gif",
+          "mimetype": "image/gif",
+          "statuscode": "200",
+          "digest": "SUCAWBXW4M2NKI7CVYL6ZQV2T5USDIJZ",
+          "length": "120888"
+        },
+        {
+          "timestamp": "20110422162434",
+          "original": "http://www.ccs.neu.edu/home/woj/pics/burned.gif",
+          "mimetype": "image/gif",
+          "statuscode": "200",
+          "digest": "SUCAWBXW4M2NKI7CVYL6ZQV2T5USDIJZ",
+          "length": "121096"
+        },
+        {
+          "timestamp": "20110422162652",
+          "original": "http://www.ccs.neu.edu/home/woj/pics/burned.gif",
+          "mimetype": "image/gif",
+          "statuscode": "200",
+          "digest": "SUCAWBXW4M2NKI7CVYL6ZQV2T5USDIJZ",
+          "length": "121094"
+        }
+      ],
+      "status": "recovered",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fwww.ccs.neu.edu%2Fhome%2Fwoj%2Fpics%2Fburned.gif&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-18T11:48:48.680133+00:00",
+      "index_http_status": 200,
+      "selected_capture": "20070106074003",
+      "raw_path": "recovery/massline/external/raw/b899e82fc7b22c267bfe89a5891e445970970a1838afaf3bfa14420fa589c4d9.gif",
+      "sha256": "b899e82fc7b22c267bfe89a5891e445970970a1838afaf3bfa14420fa589c4d9",
+      "bytes": 120663,
+      "content_type": "image/gif"
     },
     {
       "url": "http://www.cinepad.com/images/dtrt1.jpg",
@@ -35141,8 +35353,217 @@
           "tag": "img"
         }
       ],
-      "captures": [],
-      "status": "queued"
+      "captures": [
+        {
+          "timestamp": "20060115205713",
+          "original": "http://www.globaldarkness.com:80/articles/images/grandmasterfl2.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "LTOELHG75P7DXY5HHDL4HTOTB3DLSKDF",
+          "length": "12067"
+        },
+        {
+          "timestamp": "20060512080815",
+          "original": "http://www.globaldarkness.com:80/articles/images/grandmasterfl2.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "LTOELHG75P7DXY5HHDL4HTOTB3DLSKDF",
+          "length": "12067"
+        },
+        {
+          "timestamp": "20060719094150",
+          "original": "http://www.globaldarkness.com:80/articles/images/grandmasterfl2.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "LTOELHG75P7DXY5HHDL4HTOTB3DLSKDF",
+          "length": "12066"
+        },
+        {
+          "timestamp": "20060719192942",
+          "original": "http://www.globaldarkness.com:80/articles/images/grandmasterfl2.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "LTOELHG75P7DXY5HHDL4HTOTB3DLSKDF",
+          "length": "12067"
+        },
+        {
+          "timestamp": "20070108023343",
+          "original": "http://www.globaldarkness.com:80/articles/images/grandmasterfl2.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "LTOELHG75P7DXY5HHDL4HTOTB3DLSKDF",
+          "length": "12069"
+        },
+        {
+          "timestamp": "20071009212501",
+          "original": "http://www.globaldarkness.com/articles/images/grandmasterfl2.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "LTOELHG75P7DXY5HHDL4HTOTB3DLSKDF",
+          "length": "12071"
+        },
+        {
+          "timestamp": "20090705074027",
+          "original": "http://www.globaldarkness.com/articles/images/grandmasterfl2.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "LTOELHG75P7DXY5HHDL4HTOTB3DLSKDF",
+          "length": "12072"
+        },
+        {
+          "timestamp": "20110516082401",
+          "original": "http://www.globaldarkness.com/articles/images/grandmasterfl2.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "LTOELHG75P7DXY5HHDL4HTOTB3DLSKDF",
+          "length": "12289"
+        },
+        {
+          "timestamp": "20110613231531",
+          "original": "http://www.globaldarkness.com/articles/images/grandmasterfl2.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "LTOELHG75P7DXY5HHDL4HTOTB3DLSKDF",
+          "length": "12291"
+        },
+        {
+          "timestamp": "20110722220954",
+          "original": "http://www.globaldarkness.com/articles/images/grandmasterfl2.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "LTOELHG75P7DXY5HHDL4HTOTB3DLSKDF",
+          "length": "12290"
+        },
+        {
+          "timestamp": "20110809185845",
+          "original": "http://www.globaldarkness.com/articles/images/grandmasterfl2.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "LTOELHG75P7DXY5HHDL4HTOTB3DLSKDF",
+          "length": "12293"
+        },
+        {
+          "timestamp": "20110922061711",
+          "original": "http://www.globaldarkness.com/articles/images/grandmasterfl2.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "LTOELHG75P7DXY5HHDL4HTOTB3DLSKDF",
+          "length": "12291"
+        },
+        {
+          "timestamp": "20110927074946",
+          "original": "http://www.globaldarkness.com/articles/images/grandmasterfl2.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "LTOELHG75P7DXY5HHDL4HTOTB3DLSKDF",
+          "length": "12291"
+        },
+        {
+          "timestamp": "20120205160112",
+          "original": "http://www.globaldarkness.com/articles/images/grandmasterfl2.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "LTOELHG75P7DXY5HHDL4HTOTB3DLSKDF",
+          "length": "12291"
+        },
+        {
+          "timestamp": "20130525062945",
+          "original": "http://www.globaldarkness.com/articles/images/grandmasterfl2.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "LTOELHG75P7DXY5HHDL4HTOTB3DLSKDF",
+          "length": "12276"
+        },
+        {
+          "timestamp": "20150825231553",
+          "original": "http://www.globaldarkness.com/articles/images/grandmasterfl2.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "LTOELHG75P7DXY5HHDL4HTOTB3DLSKDF",
+          "length": "12278"
+        },
+        {
+          "timestamp": "20160306100426",
+          "original": "http://www.globaldarkness.com/articles/images/grandmasterfl2.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "LTOELHG75P7DXY5HHDL4HTOTB3DLSKDF",
+          "length": "12275"
+        },
+        {
+          "timestamp": "20170516075654",
+          "original": "http://www.globaldarkness.com/articles/images/grandmasterfl2.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "LTOELHG75P7DXY5HHDL4HTOTB3DLSKDF",
+          "length": "12472"
+        },
+        {
+          "timestamp": "20190218181758",
+          "original": "http://www.globaldarkness.com/articles/images/grandmasterfl2.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "LTOELHG75P7DXY5HHDL4HTOTB3DLSKDF",
+          "length": "12485"
+        },
+        {
+          "timestamp": "20190903155803",
+          "original": "http://www.globaldarkness.com/articles/images/grandmasterfl2.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "LTOELHG75P7DXY5HHDL4HTOTB3DLSKDF",
+          "length": "12465"
+        },
+        {
+          "timestamp": "20201026221525",
+          "original": "http://www.globaldarkness.com/articles/images/grandmasterfl2.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "LTOELHG75P7DXY5HHDL4HTOTB3DLSKDF",
+          "length": "12086"
+        },
+        {
+          "timestamp": "20210126045831",
+          "original": "http://www.globaldarkness.com/articles/images/grandmasterfl2.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "LTOELHG75P7DXY5HHDL4HTOTB3DLSKDF",
+          "length": "12098"
+        },
+        {
+          "timestamp": "20240206004638",
+          "original": "https://www.globaldarkness.com/articles/images/grandmasterfl2.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "LTOELHG75P7DXY5HHDL4HTOTB3DLSKDF",
+          "length": "12274"
+        },
+        {
+          "timestamp": "20240329142955",
+          "original": "https://www.globaldarkness.com/articles/images/grandmasterfl2.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "LTOELHG75P7DXY5HHDL4HTOTB3DLSKDF",
+          "length": "12462"
+        },
+        {
+          "timestamp": "20241209153527",
+          "original": "https://www.globaldarkness.com/articles/images/grandmasterfl2.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "LTOELHG75P7DXY5HHDL4HTOTB3DLSKDF",
+          "length": "12433"
+        }
+      ],
+      "status": "recovered",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fwww.globaldarkness.com%2Farticles%2Fimages%2Fgrandmasterfl2.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-18T11:48:49.936923+00:00",
+      "index_http_status": 200,
+      "selected_capture": "20071009212501",
+      "raw_path": "recovery/massline/external/raw/336ddeb293c42561899b3331763c3abf4b09dbbb5a328f0b185d8dded2406c76.jpg",
+      "sha256": "336ddeb293c42561899b3331763c3abf4b09dbbb5a328f0b185d8dded2406c76",
+      "bytes": 11750,
+      "content_type": "image/jpeg"
     },
     {
       "url": "http://www.goodstuff.de/blog/wp-content/uploads/2007/02/nike-sb-mid-milli-3.jpg",
@@ -37375,7 +37796,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "index_failed",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fwww.soundincolor.com%2Fblu%2FSIC014-cover-400x400.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "index_error": "Wayback CDX HTTP 429; query paused to respect archive rate limit",
+      "indexed_at": "2026-10-18T11:48:50.796976+00:00"
     },
     {
       "url": "http://www.spin.com/bumbershoot06/images/2006/09/060903_comonmrk_main.jpg",
@@ -40285,7 +40709,6 @@
     }
   ],
   "errors": [],
-  "cooldown_until": "2026-10-18T08:30:00.400984+00:00",
   "last_index_batch": {
     "started_after_previous_cooldown": true,
     "attempted": 31,
@@ -40294,5 +40717,6 @@
     "retryable_query_failure": 1,
     "queued_after_batch": 420,
     "cooldown_until": "2026-10-18T08:30:00.400984+00:00"
-  }
+  },
+  "cooldown_until": "2026-10-18T11:49:50.797021+00:00"
 }

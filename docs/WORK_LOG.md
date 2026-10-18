@@ -336,3 +336,9 @@
 
 
 - A second cooled-down MySpace CDX retry checked 30 additional URLs and found 13 capture rows. All 13 assets were downloaded and SHA-256 verified; seven are new unique files. Cumulative MySpace recovery is now 330 capture-bearing URLs, 327 valid source resources (194 images/media plus 133 stylesheets), 303 unique files totaling 18,037,975 bytes. The remaining exact URL index has 1,159 rate-limited entries and 72 without captures. Root and `/bluescholars/` candidates were rebuilt after this recovery and both offline checks returned zero errors (1,028 pages, 2,237 placeholders, 1,055 local assets); 207 tests passed previously on the unchanged code, and this asset delta is covered by both full candidate build checks.
+
+
+- Four additional MySpace CDX batches (30 URLs each) found 15 new captures; all 15 images were retrieved and SHA-256 verified, adding ten unique files. In total, six bounded retry batches checked 250 previously rate-limited URLs and produced 59 captures, 59 valid resource records and 37 new unique files. The profile archive now has 345 capture-bearing asset URLs, 342 valid assets, 313 files (18,160,237 bytes), 1,132 rate-limited lookups and 84 URLs with no capture row. Recent yields are down to one to five per 30-query batch; further retries remain possible but should be paced.
+
+
+- Rebuilt the candidate after all six MySpace retries. Root and `/bluescholars/` builds each report 1,028 recovered pages, 2,237 placeholders and 1,055 local source assets; both offline checkers report `{\"ok\":true,\"errors\":[]}`. The checkers include remote automatic resource validation; both checks remain clean. Full local suite: 207 passed. MySpace index now records 345 capture-bearing URLs, 1,132 rate-limited URLs and 84 URLs with no captured rows; 342 valid resources (209 image/media, 133 CSS) reside in 313 unique files totaling 18,160,237 bytes.

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18T08:19:50+00:00",
+  "updated_at": "2026-10-18T08:51:42Z",
   "source_checkpoint_run": "Local resumable checkpoint after the 2013 pass on 2026-10-17; GitHub Actions run 39044681280 is separately recorded because it resumed an older artifact.",
   "capture_index": {
     "indexed_capture_records": 23238,
@@ -733,20 +733,22 @@
       "generated_at": "2026-10-18T08:19:50+00:00"
     },
     "myspace": {
-      "new_capture_bearing_urls": 44,
-      "new_asset_source_records": 44,
-      "new_unique_files": 27,
-      "recovered_source_records_total": 327,
-      "unique_files_total": 303,
-      "bytes_total": 18037975,
-      "rate_limited_urls_remaining": 1159,
-      "urls_without_capture_rows": 72,
+      "new_capture_bearing_urls": 59,
+      "new_asset_source_records": 59,
+      "new_unique_files": 37,
+      "recovered_source_records_total": 342,
+      "unique_files_total": 313,
+      "bytes_total": 18160237,
+      "rate_limited_urls_remaining": 1132,
+      "urls_without_capture_rows": 84,
       "second_retry": {
         "attempted": 30,
         "new_capture_bearing_urls": 13,
         "recovered_assets": 13,
         "new_unique_files": 7
-      }
+      },
+      "batches": 6,
+      "urls_retried": 250
     },
     "main_queue": {
       "recovered_since_baseline": 8,
@@ -773,6 +775,14 @@
       "run_id": "39111193409",
       "url": "https://github.com/keithah/bluescholars/actions/runs/39111193409",
       "conclusion": "success"
+    },
+    "candidate_after_myspace_retries": {
+      "root_build_check": "passed",
+      "project_subpath_build_check": "passed",
+      "recovered_pages": 1028,
+      "placeholder_pages": 2237,
+      "local_source_assets": 1055,
+      "automatic_remote_resources": 0
     }
   }
 }

@@ -151,7 +151,7 @@
     "unique_raw_files": 97,
     "visual_reviewed": false
   },
-  "updated_at": "2026-10-18T08:19:50+00:00",
+  "updated_at": "2026-10-18T08:51:42Z",
   "tests": {
     "command": "PYTHONPATH=. .venv311/bin/python -m pytest -q",
     "result": "207 passed",
@@ -666,20 +666,50 @@
   "latest_continuation": {
     "description": "2026-10-18 MySpace source retry and bounded main recovery queue continuation.",
     "myspace_retry": {
-      "processed_exact_urls": 130,
-      "new_capture_bearing_image_media_urls": 44,
-      "asset_resources_recovered": 44,
-      "new_unique_asset_files": 27,
-      "capture_bearing_urls_total": 330,
-      "rate_limited_urls_remaining": 1159,
-      "urls_without_capture_rows": 72,
-      "unique_asset_files_total": 303,
-      "unique_asset_bytes": 18037975,
+      "processed_exact_urls": 250,
+      "new_capture_bearing_image_media_urls": 59,
+      "asset_resources_recovered": 59,
+      "new_unique_asset_files": 37,
+      "capture_bearing_urls_total": 345,
+      "rate_limited_urls_remaining": 1132,
+      "urls_without_capture_rows": 84,
+      "unique_asset_files_total": 313,
+      "unique_asset_bytes": 18160237,
       "second_retry": {
         "processed_exact_urls": 30,
         "new_capture_bearing_urls": 13,
         "assets_recovered": 13,
         "new_unique_files": 7
+      },
+      "last_batches": [
+        {
+          "attempted": 30,
+          "new_captures": 7,
+          "new_files": 5
+        },
+        {
+          "attempted": 30,
+          "new_captures": 5,
+          "new_files": 2
+        },
+        {
+          "attempted": 30,
+          "new_captures": 2,
+          "new_files": 2
+        },
+        {
+          "attempted": 30,
+          "new_captures": 1,
+          "new_files": 1
+        }
+      ],
+      "build_after_media_final": {
+        "root_build_check": "passed",
+        "project_subpath_build_check": "passed",
+        "recovered_pages": 1028,
+        "placeholder_pages": 2237,
+        "local_source_assets": 1055,
+        "automatic_remote_resources": 0
       }
     },
     "main_queue": {

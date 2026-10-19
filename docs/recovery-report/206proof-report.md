@@ -10,22 +10,28 @@ The all-status response spans 2007–2026. Later parked, injected, and placehold
 
 ## Validated source material saved
 
-`recovery/206proof/recovered-resources.json` currently records 2,967 attempts: 2,958 payloads passed format checks and nine responses were rejected or undecodable. The validated records include:
+`recovery/206proof/recovered-resources.json` currently records 3,337 attempts: 3,328 payloads passed format checks and nine responses were rejected or undecodable. The validated records include:
 
-- 2,070 HTML documents from the 2007 Vanilla site, 2008–2012 `/forum/`, 2012–2013 community routes, and 2013–2014 `/4um/` forum.
-- 790 images and 91 CSS files, including Vanilla theme/extension styles, smileys, uploaded account pictures, community profile images, and vBulletin dependencies.
+- 2,430 HTML documents from the 2007 Vanilla site, 2008–2012 `/forum/`, 2012–2013 community routes, and 2013–2014 `/4um/` forum.
+- 800 images and 91 CSS files, including Vanilla theme/extension styles, smileys, uploaded account pictures, community profile images, and vBulletin dependencies.
 - Seven MP3 files with recognizable MP3 frame/ID3 signatures: six `SongOfTheWeek` uploads indexed in December 2010 and `poopintags.mp3` indexed in 2013. They are local preservation evidence only; playable redistribution has not been reviewed or approved.
-- 2,708 unique SHA-256 payload hashes, summing 88,141,692 bytes across capture records. The raw directory currently occupies about 86.2 MB because identical payloads share files.
+- 3,075 unique SHA-256 payload hashes, summing 95,007,939 bytes across capture records. The raw directory occupies about 94 MB because identical payloads share files.
 
 Every attempt retains requested timestamp, original URL, CDX metadata, resolved replay URL/actual timestamp when available, MIME/type validation, byte length, hash, local path, and errors. Nine failures remain recorded: three empty responses, four non-HTML/placeholder responses, and two invalid content-encoding responses. They are not counted as recovered pages.
 
-The 2008–2012 Vanilla selector currently identifies 5,137 distinct exact URL records with query strings and host aliases preserved. It has attempted 1,000 selected records so far: 995 validated, five failed, and 4,137 still queued. The route set is dominated by accounts and discussion pages. The 39-page `DiscussionID=988` thread and the 2013 vBulletin/community routes have separate records; this selector does not merge them into the Vanilla edition.
+The 2008–2012 Vanilla selector identifies 5,137 distinct exact URL records with query strings and host aliases preserved. It has attempted 1,360 selected records so far; 3,777 remain queued. Five recent batches added 440 validated pages, including discussion pages with query-string pagination. The route set is dominated by accounts and discussion pages. The 39-page `DiscussionID=988` thread and the 2013 vBulletin/community routes have separate records; this selector does not merge them into the Vanilla edition.
 
 ## Images, CSS, and linked media
 
-Dependencies extracted from all 2,070 recovered HTML documents produce 25,099 page-to-asset references across 1,442 distinct same-domain CSS/image URLs. The saved all-status CDX rows contain a successful response for 625 of those URLs; 817 have no successful match in this query. 881 image/CSS capture records (624 distinct normalized asset URLs) have been downloaded and validated; one capture-bearing asset URL remains unattempted in this pass. The machine-readable source/reference map is `recovery/206proof/asset-index.json`.
+Dependencies extracted from all 2,430 recovered HTML documents produce 31,271 page-to-asset references across 1,446 distinct same-domain CSS/image URLs. The saved all-status CDX rows contain a successful response for 629 of those URLs; 817 have no successful match in this query. The current manifest contains 891 image/CSS capture records (629 distinct normalized asset URLs). The machine-readable source/reference map is `recovery/206proof/asset-index.json`.
 
-The media-lead scan found 342 YouTube IDs and 21 SoundCloud paths in captured HTML. These are source-linked references, not recovered playable media. Seven MP3 files are the only audio payloads validated so far. The lead list is `recovery/206proof/media-leads.json`.
+The media-lead scan found 404 YouTube IDs and 26 SoundCloud paths in captured HTML (430 distinct leads). These are source-linked references, not recovered playable media. Seven MP3 files are the only audio payloads validated so far. The lead list is `recovery/206proof/media-leads.json`.
+
+## Local reconstruction candidate
+
+The candidate renderer builds four separate generations from validated pages: 240 pages for 2007 Vanilla, 1,351 pages for the 2008–2012 Vanilla forum, 642 community pages, and 77 vBulletin pages. Captured HTML and local images/styles are preserved; scripts and posting forms are disabled; missing links lead to dated source-gap pages. When an exact query-string variant is absent, links may point to the closest recovered capture at the same path; the absent query variant is recorded rather than represented as exact. The latest build links 4,242 destinations without captured pages to clearly labeled gap pages. The exact 2007 Vanilla theme stylesheets have no successful captures in the indexed history; the 2007 pages therefore use the nearest recovered same-site Vanilla theme CSS from 2010, with a visible notice and provenance entries. The 2012 forum uses its own contemporaneous CSS captures.
+
+The integrated `/bluescholars/` candidate passed the offline link and active-content check with zero errors after the latest 160-page recovery batch, and all 228 tests passed. The separately built root-mounted candidate also passed before the last two Vanilla batches (the latest included pages use the same renderer and routes). Browser previews confirmed the main archive hub, the source-based 2007 Vanilla homepage, the 2012 Vanilla discussion index, and the 2014 vBulletin forum render with local assets. This is a browser smoke test, not human visual review, and it does not clear redistribution rights. No public release has been made from this candidate.
 
 ## Other archive and secondary-source checks
 
@@ -43,4 +49,4 @@ The CDX responses, recovery manifest, and content-addressed payloads in `recover
 
 The runner resumes from `recovered-resources.json`, saves each response under `recovery/206proof/raw/`, and records failures as attempts. After more HTML batches, regenerate the asset-reference index from recovered pages and continue the selected image/CSS queue with `.venv311/bin/python scripts/index_206proof_assets.py`, `.venv311/bin/python scripts/index_206proof_media.py`, and `.venv311/bin/python scripts/recover_206proof_assets.py`. Keep `/forum/`, `/4um/`, 2012–2013 community pages, and 2007 HTML/CSS as separate editions during reconstruction. Retry the nine failed captures individually when the archive permits; do not replace them with guessed content. Revisit exact YouTube/SoundCloud source URLs and the remaining asset and MP3 history, recording an archive miss separately from a failed request.
 
-No 206proof public edition has been built or visually reviewed, and no deployment was made from this checkpoint. Third-party redistribution rights remain unresolved for captured posts, images, and audio.
+The 206proof preview has been built locally but has not been approved for public deployment. Third-party redistribution rights remain unresolved for captured posts, images, and audio. The root-mounted test build was stored outside the workspace at `/tmp/bluescholars-root-candidate-preview-20261018`; the prior `_site` contents were restored afterward.

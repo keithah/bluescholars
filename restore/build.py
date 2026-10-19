@@ -17,6 +17,7 @@ from .artist_sites import build_artist_sites
 from .massline import build_massline_archive
 from .myspace import build_myspace_archive
 from .feeds import collect_feed_entries
+from .proof206 import build_206proof_archive
 
 CORE=[('/', 'Homepage'),('/blog/','Blog'),('/shows/','Shows'),('/video/','Video'),('/shop/','Shop'),('/holler/','Holler')]
 FALLBACK_UI='''.archive-restoration-notice,.archive-gap-page {font:16px/1.6 system-ui,sans-serif}
@@ -807,6 +808,7 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
     satellite_report=build_artist_sites(root,output,base,candidate)
     massline_report=build_massline_archive(root,output,base,candidate)
     myspace_report=build_myspace_archive(root,output,base)
+    proof206_report=build_206proof_archive(root,output,base,candidate)
     gateway+='</nav><h2 class="archive-sites-heading">More recovered sites</h2><p class="archive-sites-intro">Explore the artists, community, and social pages connected to Blue Scholars.</p><nav class="archive-site-grid" aria-label="Other recovered sites">'
     related_sites=[
         ('/prometheusbrown/','Prometheus Brown','Artist site editions'),
@@ -815,6 +817,8 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
     ]
     if massline_report.get('status')=='built':
         related_sites.append(('/masslinemedia/','Mass Line Media','Music community and forum archive'))
+    if proof206_report.get('status')=='built':
+        related_sites.append(('/206proof/','206Proof forums','Separate historical forum generations'))
     related_sites.append(('/lj/','Blue Scholars LiveJournal','Recovered journal posts'))
     for path,title,detail in related_sites:
         extra=' lj-archive' if path=='/lj/' else ''
@@ -835,6 +839,7 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
             'pages':page_report,'issues':issues,'reference_capture':TARGET,'artist_sites':satellite_report,
             'myspace':myspace_report,
             'massline':massline_report,
+            '206proof':proof206_report,
             'note':'A successful build is not proof of source completeness or visual fidelity.'}
     stats=f'<p class="archive-lead">{recovered} recovered pages · {placeholders} recovery placeholders</p>'
     stats+='<p>The build is offline. It does not use Wayback or Squarespace to display its content. Original typography and layout still require visual review; the diagnostic styling is not the historical site design.</p>'

@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+		<title>Print Page - Hidmo Eritrean Cuisine</title>
+		<style type="text/css"><!--
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			*, a:link, a:visited, a:hover, a:active
+			{
+				color: black !important;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			.code
+			{
+				font-size: x-small;
+				font-family: monospace;
+				border: 1px solid #000000;
+				margin: 1px;
+				padding: 1px;
+			}
+			.quote
+			{
+				font-size: x-small;
+				border: 1px solid #000000;
+				margin: 1px;
+				padding: 1px;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		--></style>
+	</head>
+	<body bgcolor="#ffffff" text="#000000">
+		<h1 class="largetext">MASSLINE</h1>
+		<h2 class="normaltext">MASS LINE FORUMS => The Opium Den => Topic started by: rahwita on December 05, 2006, 04:28:06 am</h2>
+
+		<table width="90%" cellpadding="0" cellspacing="0" border="0">
+			<tr>
+				<td>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Hidmo Eritrean Cuisine</b><br />
+					Post by: <b>rahwita</b> on <b>December 05, 2006, 04:28:06 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">The Best Kept Secret in the Central District:&nbsp; HIDMO ERITREAN CUISINE<br />named &quot;Best Venue for Live African Music&quot; in Seattle Weekly&#039;s Best of Seattle 2006.&nbsp; <br /><br />HIDMO Eritrean Cuisine<br />2000 S. Jackson St.<br />206-329-1534 or 206-303-8536<br /> <br />HIDMO is a great Eritrean/East African restaurant offering delicious food in huge portions at reasonable prices and a full bar - OPEN LATE EVERY DAY.&nbsp; <br /><br />Stop by anytime for a meal, a drink or come join us every Friday and Sunday for live African music!&nbsp; Fun music in a &quot;house-party&quot; atmosphere where the performers let their hair down and try out new things. <br /> <br />Fridays 9:30pm to closing<br />Sunday 8-10 pm<br />FREE (donations welcome) <br /><br /></div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Hidmo Eritrean Cuisine</b><br />
+					Post by: <b>Kirb.s</b> on <b>December 05, 2006, 07:31:40 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">NO BIAS HERE: THE FOOD IS THE SHIET.&nbsp; FOR REALLS YOU HAVE TO TRY IT.. I SWEAR IVE BEEN THERE 4 OR 5 TIMES THIS WEEK HAHAHAHAH<br /><br /><br />oh and the show is about to be amazing too! :)</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Hidmo Eritrean Cuisine</b><br />
+					Post by: <b>Seaweed</b> on <b>December 09, 2006, 12:56:41 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">Had plenty of North African food, but never East... I am curious to say the least. Too bad I live in Cali.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Hidmo Eritrean Cuisine</b><br />
+					Post by: <b>rahwita</b> on <b>December 09, 2006, 12:22:06 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: Seaweed on December 09, 2006, 12:56:41 am</div><div class="quote">Had plenty of North African food, but never East... I am curious to say the least. Too bad I live in Cali.<br /></div><br /><br />yeah we deliver... but not that far.&nbsp; maybe next time yer in Seattle tho.&nbsp;  ;)</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Hidmo Eritrean Cuisine</b><br />
+					Post by: <b>olaf</b> on <b>December 09, 2006, 04:59:57 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">many veg options?</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Hidmo Eritrean Cuisine</b><br />
+					Post by: <b>M</b> on <b>December 09, 2006, 07:29:07 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">Maddi and I will come one day after ballet next week - if you guys can cook her up a cheese sammich or something lol - she is HELLA picky..</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Hidmo Eritrean Cuisine</b><br />
+					Post by: <b>Seaweed</b> on <b>December 10, 2006, 01:05:18 am</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: M on December 09, 2006, 07:29:07 pm</div><div class="quote">Maddi and I will come one day after ballet next week - if you guys can cook her up a cheese sammich or something lol - she is HELLA picky..<br /></div><br /><br />Damn M, gotta make your kids eat their veggies. You could always pull the Calvin &amp; Hobbes approach and tell her the veggies are shrunken heads... on second thought, that might not work.&nbsp; ;D<br /><div class="quoteheader">Quote from: rahwita on December 09, 2006, 12:22:06 pm</div><div class="quote"><div class="quoteheader">Quote from: Seaweed on December 09, 2006, 12:56:41 am</div><div class="quote">Had plenty of North African food, but never East... I am curious to say the least. Too bad I live in Cali.<br /></div><br /><br />yeah we deliver... but not that far.&nbsp; maybe next time yer in Seattle tho.&nbsp;  ;)<br /></div><br /><br />Always Next Day Air...</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Hidmo Eritrean Cuisine</b><br />
+					Post by: <b>rahwita</b> on <b>December 10, 2006, 10:41:17 am</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: olaf on December 09, 2006, 04:59:57 pm</div><div class="quote">many veg options?<br /></div><br /><br />indeed - our veggie combo is the hit!&nbsp; six different vege selections on injera bread and includes a house salad.&nbsp; wash it down with some shahee (spiced tea) or mango nectar and you&#039;re good to go - entire meal will feed two ppl for around 10 bucks - can&#039;t beat that.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Hidmo Eritrean Cuisine</b><br />
+					Post by: <b>rahwita</b> on <b>December 10, 2006, 10:46:51 am</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: M on December 09, 2006, 07:29:07 pm</div><div class="quote">Maddi and I will come one day after ballet next week - if you guys can cook her up a cheese sammich or something lol - she is HELLA picky..<br /></div><br /><br />we have an off menu, menu that includes chicken nuggets and fried potatoes (i can&#039;t even call them french fries cuz their hella thick)...or i can have them cook her some steak and eggs or something.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Hidmo Eritrean Cuisine</b><br />
+					Post by: <b>M</b> on <b>December 10, 2006, 12:04:08 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">hahaha your sweet - well the girl has become a self proclaimed vegetarian so you will have to hold the meat - but she will DIG on those eggs!</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Hidmo Eritrean Cuisine</b><br />
+					Post by: <b>Seaweed</b> on <b>December 10, 2006, 12:21:19 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">Mmmm, mmm, aborted chicken fetus.... speaking of which, I am going to go make an omlette! Damn that sounds good!!<br /><br />*Runs to kitchen*</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Hidmo Eritrean Cuisine</b><br />
+					Post by: <b>KRS ONE.TWO.</b> on <b>December 10, 2006, 01:45:37 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">i cant believe you havent got me up on this kirbs </div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Hidmo Eritrean Cuisine</b><br />
+					Post by: <b>ice8916</b> on <b>December 10, 2006, 02:01:10 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: OneTwo on December 10, 2006, 01:45:37 pm</div><div class="quote">i cant believe you havent got me up on this kirbs <br /></div><br /><br />it because she doesnt like your shoes....</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Hidmo Eritrean Cuisine</b><br />
+					Post by: <b>KRS ONE.TWO.</b> on <b>December 10, 2006, 02:19:34 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">she told me she liked them just yesterday&nbsp; though</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Hidmo Eritrean Cuisine</b><br />
+					Post by: <b>ice8916</b> on <b>December 10, 2006, 03:17:23 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: OneTwo on December 10, 2006, 02:19:34 pm</div><div class="quote">she told me she liked them just yesterday&nbsp; though<br /></div><br /><br />she was lying....</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Hidmo Eritrean Cuisine</b><br />
+					Post by: <b>Kirb.s</b> on <b>December 11, 2006, 02:44:10 am</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: Chris on December 10, 2006, 03:17:23 pm</div><div class="quote"><div class="quoteheader">Quote from: OneTwo on December 10, 2006, 02:19:34 pm</div><div class="quote">she told me she liked them just yesterday  though<br /></div><br /><br />she was lying....<br /></div><br /><br />First off .. chris hella funny man. hahahahahahhahahaahahaha and I did tell him I liked his shoes.. but i wasnt lying! his shoes were fresh<br /><br />Yo Angel, Now you know.. lol :)&nbsp; </div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Hidmo Eritrean Cuisine</b><br />
+					Post by: <b>KRS ONE.TWO.</b> on <b>December 11, 2006, 11:12:03 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">i went to the eritrean last night its hella fresh ......plus they got the latest east african music live......... its off the chain ...oh and that vegetarian dish with that bread stuff....is real good .......if i had two more hands id give it four thumbs up </div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Hidmo Eritrean Cuisine</b><br />
+					Post by: <b>Seaweed</b> on <b>December 11, 2006, 11:15:59 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">See, I gotta get me some of that. Look I found a way to do it!<br /><br />http://www.fedex.com/us/services/us/sameday.html?link=4</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Hidmo Eritrean Cuisine</b><br />
+					Post by: <b>rahwita</b> on <b>December 14, 2006, 02:58:17 am</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: Seaweed on December 11, 2006, 11:15:59 am</div><div class="quote">See, I gotta get me some of that. Look I found a way to do it!<br /><br />http://www.fedex.com/us/services/us/sameday.html?link=4<br /></div><br /><br />wow i could put a vege combo in the mail tomoro morning and you can be moshing on it by dinner (maybe even lunch)... what they won&#039;t think of next!</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Hidmo Eritrean Cuisine</b><br />
+					Post by: <b>Seaweed</b> on <b>December 14, 2006, 11:31:44 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">There is a local burrito joint in town that my friends and I absolutely love. So much so that when my bro moved to Michigan he had me next day a burrito for him. He has done this 3 times so far. Sure they get frozen along they way.... but it is so worth it.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Hidmo Eritrean Cuisine</b><br />
+					Post by: <b>Kirb.s</b> on <b>December 14, 2006, 02:08:30 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: OneTwo on December 11, 2006, 11:12:03 am</div><div class="quote">i went to the eritrean last night its hella fresh ......plus they got the latest east african music live......... its off the chain ...oh and that vegetarian dish with that bread stuff....is real good .......if i had two more hands id give it four thumbs up <br /></div><br /><br />bread stuff? its called injera my friend.&nbsp; Learn it. live it. love it. and hten fuckin eat it.<br /><br />haha</div>
+					<br /><br />
+					<div align="center" class="smalltext">
+		<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;">MASSLINE | Powered by <a href="http://www.simplemachines.org/" title="Simple Machines Forum" target="_blank">SMF 1.0.10</a>.<br />
+&copy; 2005, <a href="http://www.simplemachines.org/about/copyright.php" title="Free Forum Software" target="_blank">Simple Machines LLC</a>. All Rights Reserved.
+		</span></div>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

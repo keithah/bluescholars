@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+		<title>Print Page - Sexual innuendo on children's television...</title>
+		<style type="text/css"><!--
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			*, a:link, a:visited, a:hover, a:active
+			{
+				color: black !important;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			.code
+			{
+				font-size: x-small;
+				font-family: monospace;
+				border: 1px solid #000000;
+				margin: 1px;
+				padding: 1px;
+			}
+			.quote
+			{
+				font-size: x-small;
+				border: 1px solid #000000;
+				margin: 1px;
+				padding: 1px;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		--></style>
+	</head>
+	<body bgcolor="#ffffff" text="#000000">
+		<h1 class="largetext">MASSLINE</h1>
+		<h2 class="normaltext">MASS LINE FORUMS => The Opium Den => Topic started by: Jawn on September 11, 2007, 09:15:17 am</h2>
+
+		<table width="90%" cellpadding="0" cellspacing="0" border="0">
+			<tr>
+				<td>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Sexual innuendo on children's television...</b><br />
+					Post by: <b>Jawn</b> on <b>September 11, 2007, 09:15:17 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">ALjJbaQcBY4&amp;NR=1<br /><br />And you wonder why the British are so perverted.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Sexual innuendo on children's television...</b><br />
+					Post by: <b>shawn stone</b> on <b>September 11, 2007, 11:25:52 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">ive never wondered that, monty python did. not me..<br /><br />but now im wondering why you like this...</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Sexual innuendo on children's television...</b><br />
+					Post by: <b>Jawn</b> on <b>September 11, 2007, 12:47:06 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: shawn stone on September 11, 2007, 11:25:52 am</div><div class="quote">but now im wondering why you like this...<br /></div><br /><br />Uh... it&#039;s funny?</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Sexual innuendo on children's television...</b><br />
+					Post by: <b>thrilla in tukwila</b> on <b>September 11, 2007, 01:54:40 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">i never thought the British were perverted...<br /><br /><br /><br />the fact that you looked this video up is awkward.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Sexual innuendo on children's television...</b><br />
+					Post by: <b>Jawn</b> on <b>September 11, 2007, 07:27:28 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">Relax, I found it while looking up Family Guy clips on YouTube. Try to enjoy a little bathroom humor every now and then.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Sexual innuendo on children's television...</b><br />
+					Post by: <b>KaPayapaan_Mapili</b> on <b>September 17, 2007, 12:36:37 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">this is grippa old.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Sexual innuendo on children's television...</b><br />
+					Post by: <b>Eric Evans</b> on <b>September 18, 2007, 07:41:25 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">that has to be from a sketch comedy show or something</div>
+					<br /><br />
+					<div align="center" class="smalltext">
+		<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;">MASSLINE | Powered by <a href="http://www.simplemachines.org/" title="Simple Machines Forum" target="_blank">SMF 1.0.10</a>.<br />
+&copy; 2005, <a href="http://www.simplemachines.org/about/copyright.php" title="Free Forum Software" target="_blank">Simple Machines LLC</a>. All Rights Reserved.
+		</span></div>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

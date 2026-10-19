@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+		<title>Print Page - Blue Scholars on KIRO 7's &quot;InColor&quot; this Sunday</title>
+		<style type="text/css"><!--
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			*, a:link, a:visited, a:hover, a:active
+			{
+				color: black !important;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			.code
+			{
+				font-size: x-small;
+				font-family: monospace;
+				border: 1px solid #000000;
+				margin: 1px;
+				padding: 1px;
+			}
+			.quote
+			{
+				font-size: x-small;
+				border: 1px solid #000000;
+				margin: 1px;
+				padding: 1px;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		--></style>
+	</head>
+	<body bgcolor="#ffffff" text="#000000">
+		<h1 class="largetext">MASSLINE</h1>
+		<h2 class="normaltext">MASS LINE FORUMS => Mass Line Artist Discussion => Topic started by: MASSLINE on October 05, 2007, 11:58:42 am</h2>
+
+		<table width="90%" cellpadding="0" cellspacing="0" border="0">
+			<tr>
+				<td>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Blue Scholars on KIRO 7's &quot;InColor&quot; this Sunday</b><br />
+					Post by: <b>MASSLINE</b> on <b>October 05, 2007, 11:58:42 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">FOR FURTHER INFORMATION: <br />Maria Lamarca Anderson, Community Relations Manager <br />206.728.2375/mlanderson@kirotv.com <br />FALL &quot;InColor&quot; FEATURES SOCIAL JUSTICE AND RACIAL INJUSTICE<br />Sunday, October 7, 5:30 p.m. on KIRO 7<br /><br />SEATTLE—<br /><br />KIRO 7’s InColor, airing Sunday, October 7, at 5:30 p.m., begins with an in-depth look at this alleged case of racial profiling brewing in the town of Pacific, Wash. <br /><br />The story features Francisco Espinoza, whose traffic stop in August was one of the catalysts for a rally protesting the town’s treatment of immigrants. Although it was discovered he was a legal citizen, Espinoza served 24 days in immigration jail. His Hispanic friends, fearing the same fate, have stopped visiting him. <br /><br />The incident has thrust Pacific’s mayor reluctantly into the spotlight and led to a review of how it treats immigrants in its town. In his research for the story, KIRO 7’s Gary Horcher discovered there is no standard policy in Washington state for treatment of immigrants and raises the question, &quot;What should we be doing?&quot; <br /><br />InColor continues with KIRO 7’s Essex Porter looking back on the history of El Centro de la Raza on the eve of its 35th anniversary. It is a story of survival with roots in the little village where founder and executive director Roberto Maestas was born. <br /><br />&quot;You grow up in a little tiny village in a box canyon with coyotes and rattlesnakes and cliffs … it’s a different world,&quot; says Maestas. &quot;You have to take chances, you have to watch your step everyday, you have to start working when you can walk.&quot; <br /><br />Maestas walked into history when he became involved in the civil rights cause in the 1960s. The next decade he established El Centro de la Raza, which today advocates for not only the Chicano/Latino community but also for civil rights for all people. <br /><br /><b>Advocacy continues as a theme with a story by KIRO 7’s Monique Ming Laven about Blue Scholars, a hip hop duo that promotes social consciousness rather than perpetuating the reputation that this genre is all about hate and violence. Its latest track, Back Home, demands a withdrawal from Iraq by highlighting the sacrifices military families make. <br /><br />The Blue Scholars are unique in another way. While much of Seattle’s burgeoning hip hop scene consists of African American artists, MC Geologic is Filipino American and DJ Sabzi is Iranian American. The blending of their experiences infuses their music with a primarily immigrant perspective. Their newest CD is titled Bayani, a word fusing Farsi and Tagalog that translates to &quot;voice of the people.&quot; </b><br /><br />InColor is an Emmy-award winning quarterly magazine program that examines diversity in the Pacific Northwest, the issues it raises and its impact on all <br /><br /></div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Blue Scholars on KIRO 7's &quot;InColor&quot; this Sunday</b><br />
+					Post by: <b>daps</b> on <b>October 05, 2007, 12:21:52 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">(http://farm2.static.flickr.com/1231/1445762290_1b95b4d81b_o.jpg)</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Blue Scholars on KIRO 7's &quot;InColor&quot; this Sunday</b><br />
+					Post by: <b>Thig Natural</b> on <b>October 05, 2007, 12:43:21 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">Had I known about this, I would&#039;ve tried to tag along wit Geo and Saba cuz I love me some Monique Ming Laven :-*</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Blue Scholars on KIRO 7's &quot;InColor&quot; this Sunday</b><br />
+					Post by: <b>daps</b> on <b>October 05, 2007, 12:56:59 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: Thig Natural on October 05, 2007, 12:43:21 pm</div><div class="quote">Had I known about this, I would&#039;ve tried to tag along wit Geo and Saba cuz I love me some Monique Ming Laven :-*<br /></div><br /><br />damn it didn&#039;t take long before somebody said it! haha</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Blue Scholars on KIRO 7's &quot;InColor&quot; this Sunday</b><br />
+					Post by: <b>awe-dry</b> on <b>October 05, 2007, 05:42:49 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">hapa women stand up...<br /><br />does nobody else find the name &quot;InColor&quot; at least slightly amusing?</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Blue Scholars on KIRO 7's &quot;InColor&quot; this Sunday</b><br />
+					Post by: <b>virtuousvandal</b> on <b>October 07, 2007, 08:27:19 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">what I find interesting is the combination of &quot;heroes of the people&quot; and &quot;The Word&quot; to make &quot;voice of the people&quot;<br />I never thought of it like that before<br />reminds me of the combination of &quot;scholar&quot; and &quot;blue collar&quot;</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Blue Scholars on KIRO 7's &quot;InColor&quot; this Sunday</b><br />
+					Post by: <b>Jawn</b> on <b>October 07, 2007, 10:26:40 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">Good look, fam. My dad finally saw what you guys look like aside from the Long March EP cover.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Blue Scholars on KIRO 7's &quot;InColor&quot; this Sunday</b><br />
+					Post by: <b>Thig Natural</b> on <b>October 10, 2007, 02:17:34 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">I just came in here to say I want Monique Ming Laven to have my babies....thats all.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Blue Scholars on KIRO 7's &quot;InColor&quot; this Sunday</b><br />
+					Post by: <b>j.xavier</b> on <b>October 10, 2007, 11:09:26 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: Thig Natural on October 10, 2007, 02:17:34 pm</div><div class="quote">I just came in here to say I want Monique Ming Laven to have my babies....thats all.<br /></div><br /><br />I wait anxiously for the M.M.L. tribute track.</div>
+					<br /><br />
+					<div align="center" class="smalltext">
+		<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;">MASSLINE | Powered by <a href="http://www.simplemachines.org/" title="Simple Machines Forum" target="_blank">SMF 1.0.10</a>.<br />
+&copy; 2005, <a href="http://www.simplemachines.org/about/copyright.php" title="Free Forum Software" target="_blank">Simple Machines LLC</a>. All Rights Reserved.
+		</span></div>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

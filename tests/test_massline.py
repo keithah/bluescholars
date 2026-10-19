@@ -6,7 +6,7 @@ from restore.massline import (build_massline_archive, massline_route, massline_s
                               rewrite_massline_css, sanitize_massline_html,
                               select_massline_homepage_versions, merge_massline_capture_rows,
                               select_latest_massline_rows, _priority, _forum_index_pages, _forum_topic_order,
-                              _massline_asset_route)
+                              _massline_asset_route, recover_massline_capture_variants)
 
 
 def test_massline_routes_distinguish_forum_threads_and_pages():
@@ -25,6 +25,14 @@ def test_massline_routes_map_boards_and_legacy_home():
     assert massline_route("http://www.masslinemedia.com:80/") == "/masslinemedia/site/index.html"
     assert massline_route("http://masslinemedia.com/index.html") != "/masslinemedia/site/index.html"
     assert massline_route("http://masslinemedia.com/smf/?action=;board=2.0") != massline_route("http://masslinemedia.com/smf/?board=2.0")
+
+
+def test_massline_routes_dotted_directory_listing_as_index_separate_from_file():
+    listing = massline_route("http://masslinemedia.com/lib/class.upload/")
+    file = massline_route("http://masslinemedia.com/lib/class.upload")
+
+    assert listing == "/masslinemedia/site/lib/class.upload/index.html"
+    assert file != listing
 
 
 def test_massline_forum_root_maps_to_its_top_level_archive():
@@ -254,8 +262,20 @@ def test_massline_forum_index_groups_board_captures_and_lists_real_topics(tmp_pa
             "kind": "html", "timestamp": timestamp, "raw_path": raw_path.as_posix(),
             "sha256": digest, "mimetype": "text/html",
         }
+    older_topic_body = b'<html><head><title>Dialogue roll call, first snapshot</title></head><body><p>Earlier topic capture.</p></body></html>'
+    older_topic_digest = hashlib.sha256(older_topic_body).hexdigest()
+    older_topic_path = Path("source/massline/raw") / f"{older_topic_digest}.html"
+    (root / older_topic_path).write_bytes(older_topic_body)
+    older_topic_variant = {
+        "canonical_url": "http://masslinemedia.com/smf/index.php?topic=10.0",
+        "source_url": "http://masslinemedia.com/smf/index.php?topic=10.0",
+        "timestamp": "20071001151055", "kind": "html", "mimetype": "text/html",
+        "status": "recovered", "raw_path": older_topic_path.as_posix(),
+        "sha256": older_topic_digest, "bytes": len(older_topic_body),
+        "source": "https://web.archive.org/web/20071001151055id_/http://masslinemedia.com/smf/index.php?topic=10.0",
+    }
     (root / "source").mkdir(exist_ok=True)
-    (root / "source/massline.json").write_text(json.dumps({"resources": resources}), encoding="utf-8")
+    (root / "source/massline.json").write_text(json.dumps({"resources": resources, "resource_variants": [older_topic_variant]}), encoding="utf-8")
 
     report = build_massline_archive(root, output, "/bluescholars", candidate=False)
     forum = (output / "massline-forums/index.html").read_text(encoding="utf-8")
@@ -282,6 +302,8 @@ def test_massline_forum_index_groups_board_captures_and_lists_real_topics(tmp_pa
     assert "Message 101" in topic_index
     assert "Capture 20071015192000" in topic_index
     assert "2007-10-15" in topic_index
+    assert 'href="/bluescholars/massline-forums/topic-10-page-0--capture-20071001151055.html"' in topic_index
+    assert "Capture 20071001151055" in topic_index
     assert 'href="/bluescholars/massline-forums/board-2-page-20.html"' in board
 
 
@@ -475,3 +497,60 @@ def test_external_image_capture_selection_rejects_cdx_html_responses():
             "captures": [{"timestamp": "20071013000000", "statuscode": "200", "mimetype": "text/html"}]}
 
     assert select_external_capture(item) is None
+
+
+def test_massline_forum_alternate_capture_recovery_resumes_and_reuses_known_digest(tmp_path, monkeypatch):
+    import base64
+    from types import SimpleNamespace
+    from restore import massline
+
+    url = "http://masslinemedia.com/smf/index.php?topic=10.0"
+    baseline = b'<!doctype html><html><head><title>Latest</title></head><body>Latest saved thread.</body></html>'
+    earlier = b'<!doctype html><html><head><title>Earlier</title></head><body>Earlier saved thread.</body></html>'
+
+    def cdx_digest(body):
+        return base64.b32encode(hashlib.sha1(body).digest()).decode().rstrip("=")
+
+    raw = Path("recovery/massline/raw") / (hashlib.sha256(baseline).hexdigest() + ".php")
+    (tmp_path / raw).parent.mkdir(parents=True)
+    (tmp_path / raw).write_bytes(baseline)
+    manifest = {"version": 1, "resources": {url: {
+        "source_url": url, "canonical_url": url, "timestamp": "20071002100000",
+        "kind": "html", "mimetype": "text/html", "status": "recovered",
+        "raw_path": raw.as_posix(), "sha256": hashlib.sha256(baseline).hexdigest(),
+        "bytes": len(baseline),
+    }}, "resource_variants": [], "variant_failures": []}
+    manifest_path = tmp_path / "recovery/massline/manifest.json"
+    manifest_path.write_text(json.dumps(manifest))
+    rows = [
+        {"timestamp": "20071001100000", "original": url, "mimetype": "text/html", "statuscode": "200",
+         "digest": cdx_digest(earlier), "length": str(len(earlier))},
+        {"timestamp": "20071002100000", "original": url, "mimetype": "text/html", "statuscode": "200",
+         "digest": cdx_digest(baseline), "length": str(len(baseline))},
+        {"timestamp": "20071003100000", "original": url, "mimetype": "text/html", "statuscode": "200",
+         "digest": cdx_digest(baseline), "length": str(len(baseline))},
+    ]
+    (tmp_path / "recovery/massline/all-captures.json").write_text(json.dumps({"rows": rows, "complete": True}))
+    calls = []
+
+    class FakeArchiveClient:
+        def __init__(self, **kwargs):
+            pass
+
+        def get(self, source):
+            calls.append(source)
+            return SimpleNamespace(body=earlier, url=source, headers={"Content-Type": "text/html"})
+
+    monkeypatch.setattr(massline, "ArchiveClient", FakeArchiveClient)
+    report = recover_massline_capture_variants(tmp_path, max_files=10, delay=0)
+
+    assert report["complete"] is True
+    assert report["already_recovered"] == 1
+    assert report["previously_failed"] == 0
+    assert report["processed"] == 2
+    assert report["downloaded"] == 1
+    assert report["reused_by_digest"] == 1
+    assert len(calls) == 1
+    recovered = json.loads(manifest_path.read_text())
+    assert [r["timestamp"] for r in recovered["resource_variants"]] == ["20071001100000", "20071003100000"]
+    assert recovered["resource_variants"][1]["raw_path"] == raw.as_posix()

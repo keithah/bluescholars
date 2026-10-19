@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+		<title>Print Page - Jena 6 Case Brings Out Activism Among Hip Hop Stars</title>
+		<style type="text/css"><!--
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			*, a:link, a:visited, a:hover, a:active
+			{
+				color: black !important;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			.code
+			{
+				font-size: x-small;
+				font-family: monospace;
+				border: 1px solid #000000;
+				margin: 1px;
+				padding: 1px;
+			}
+			.quote
+			{
+				font-size: x-small;
+				border: 1px solid #000000;
+				margin: 1px;
+				padding: 1px;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		--></style>
+	</head>
+	<body bgcolor="#ffffff" text="#000000">
+		<h1 class="largetext">MASSLINE</h1>
+		<h2 class="normaltext">MASS LINE FORUMS => By Any Means => Topic started by: Matt Jay on October 04, 2007, 09:29:47 pm</h2>
+
+		<table width="90%" cellpadding="0" cellspacing="0" border="0">
+			<tr>
+				<td>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Jena 6 Case Brings Out Activism Among Hip Hop Stars</b><br />
+					Post by: <b>Matt Jay</b> on <b>October 04, 2007, 09:29:47 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">NEW YORK - When the latest call for a protest over Jena Six came, it wasn&#039;t led by Al Sharpton or Jesse Jackson, but rapper-actor Mos Def.<br /> <br />Mos Def sent out a viral video urging students to walk out of classrooms nationwide this week in protest of the prosecution of six black teens — initially charged with attempted murder — in the beating a white classmate in Jena, La.<br /><br />And Mos Def is not the only member of the hip-hop community speaking out in this racially charged case. When Mos Def — known as a politically and socially conscious rapper — traveled to Jena for a march on the town last month, as he spoke to the media, legendary UGK rapper Bun B was at his side. Hip-hop soul singer Lyfe Jennings was also in attendance, and rappers like Ice Cube and T.I. have lent support, moral and financial, for the protests.<br /><br />&quot;I don&#039;t know what motivated the prosecutors to do what they did but what&#039;s definitely evident to anybody who looks at the case is that he placed a bigger (punishment) upon the black man than he did upon anybody else was involved,&quot; Jennings said.<br /><br />Perhaps it&#039;s because they mirror the faces of rap — young black males — that it has resonated with the hip-hop community. Or maybe it reflects a growing political awareness in a genre that&#039;s been criticized for glorifying negativity. But it is clear that the Jena Six case has struck a chord.<br /><br />&quot;Right now with the situation going on with Jena Six, I got to pay my respects to them. When I was in high school there was a lot of fighting going on; I ain&#039;t never really seen nobody get the type of punishment they got, where the dude is trying to throw the book at them,&quot; says 17-year-old rapper Soulja Boy, who has the No. 1 song in the country with &quot;Crank Dat (Soulja Boy).&quot;<br /><br />&quot;I feel like that&#039;s not right, so I gotta send my respects out to those young dudes, and I hope everything go well with them and their families.&quot;<br /><br />The teens, known as the Jena Six, were charged with attempted second-degree murder for allegedly beating a white student bloody and unconscious following months of mounting racial tensions after three white students hung nooses from a tree on school grounds. The charges have since been reduced for four of them. The sixth was booked as a juvenile on sealed charges.<br /><br />One student, Mychal Bell, was convicted on a reduced charge of aggravated second-degree battery by an all-white jury and faced up to 22 years in prison. An appeals court later threw out the conviction, saying he was 16 at the time and should not have been tried as an adult on that charge. He stayed in jail for months while the case worked its way through the legal system. He was freed on bail last month.<br /><br />The case has garnered national attention and drawn protests from thousands, including civil rights activists such as Jesse Jackson. David Bowie donated to the teens&#039; defense fund, and rocker John Mellencamp has even written a song about it.<br /><br />But the voices of protest were particularly strong among the hip-hop set. While hip-hop had been a voice of social activism in its earlier days, with groups like Public Enemy leading the charge, in recent years, its leading stars have been more identified with championing materialism and violence than making political or social statements.<br /><br />But the hip-hop community has been more vocal about the Jena Six case, from its stars to its blogs, which have posted frequent updates about the teens&#039; fate.<br /><br />The always outspoken Mississippi rapper David Banner wasn&#039;t at last month&#039;s protest — instead, he went on a radio tour to promote his album so he could let listeners know about the case.<br /><br />&quot;I thought it would have been more powerful for me to get on the radio and talk about it, and drive people there and let people know what&#039;s going on than actually being there,&quot; said Banner. &quot;We wanna be there to show face, but if you&#039;re actually more powerful at the capacity that you are, then you should do what you do.&quot;<br /><br />Banner says he became involved because &quot;it&#039;s so close to home.<br /><br />&quot;No. 2, there&#039;s a Jena Six that goes on in Mississippi every month — or every two months,&quot; he continued. &quot;See that&#039;s the thing. America has a tendency to try to make things — single out things — as if this is a one-time occurrence. ... We have to stop acting like stuff don&#039;t exist.&quot;<br /><br />Bakari Kitwana, an author whose books include &quot;The Hip-Hop Generation&quot; and &quot;Why White Kids Love Hip-Hop,&quot; says the rap community has gotten more politically active in recent years, especially after Hurricane Katrina.<br /><br />&quot;What&#039;s different about this moment in terms of hip-hop and political activism is that ... we&#039;re to the point where grass roots activists and hip-hop artists are talking with each other about political change,&quot; said Kitwana.<br /><br />The walkout that Mos Def endorsed was planned and executed as a collaborative effort among artists Talib Kweli, M1 of Dead Prez, Common and the activist groups the Malcolm X Grassroots Movement, Sankofa Community Empowerment, Change the Game and the National Hip Hop Political Convention.<br /><br />&quot;We will continue with these acts of civil protest until Mychal Bell&#039;s freedom, not only — but safety, is secured,&quot; Mos Def had said in a video last month publicizing the walkout.<br /><br />Still, many of hip-hop&#039;s most famous names have still not lent their voices to the protest, and Kitwana said a larger examination of unequal treatment by the criminal justice system might better serve all involved.<br /><br />&quot;If 50 Cent came out on that question — `Why are we targeting Black and Latino communities for more policing than the other communities?&#039; — that would be profound,&#039;&quot; said Kitwana.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Jena 6 Case Brings Out Activism Among Hip Hop Stars</b><br />
+					Post by: <b>shawn stone</b> on <b>October 04, 2007, 09:36:02 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">wheres vanilla ice when you need him<br /><br />(http://www.burningman.com/environment/blog/wp-content/uploads/2007/06/vanilla_ice.jpg)</div>
+					<br /><br />
+					<div align="center" class="smalltext">
+		<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;">MASSLINE | Powered by <a href="http://www.simplemachines.org/" title="Simple Machines Forum" target="_blank">SMF 1.0.10</a>.<br />
+&copy; 2005, <a href="http://www.simplemachines.org/about/copyright.php" title="Free Forum Software" target="_blank">Simple Machines LLC</a>. All Rights Reserved.
+		</span></div>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

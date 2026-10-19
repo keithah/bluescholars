@@ -4,6 +4,8 @@ from __future__ import annotations
 from collections import Counter
 from datetime import datetime, timezone
 from hashlib import sha256
+import base64
+import hashlib
 import html
 import json
 import re
@@ -98,7 +100,10 @@ def massline_route(url: str) -> str:
             suffix = f"{stem}-{tag}.{ext}"
         else:
             suffix = f"{suffix.rstrip('/')}-{tag}.html"
-    if not Path(suffix).suffix:
+    # A trailing slash denotes a directory even when the directory name has a dot.
+    if parts.path.endswith("/"):
+        suffix = suffix.rstrip("/") + "/index.html"
+    elif not Path(suffix).suffix:
         suffix += "/index.html"
     if parts.path.startswith("/smf/"):
         return FORUM_PREFIX + suffix.removeprefix("smf/")
@@ -492,6 +497,109 @@ def recover_massline(root: Path, max_files: int = 250, delay: float = 0.6, retry
     return report
 
 
+def recover_massline_capture_variants(root: Path, max_files: int = 250, delay: float = 0.4, retry_failed: bool = False, progress=None) -> dict:
+    """Preserve every distinct dated forum capture, reusing byte-identical payloads."""
+    root = Path(root)
+    history = json.loads((root / HISTORY_PATH).read_text(encoding="utf-8"))
+    manifest_path = root / "recovery/massline/manifest.json"
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    resources = manifest.setdefault("resources", {})
+    variants = manifest.setdefault("resource_variants", [])
+    failures = manifest.setdefault("variant_failures", [])
+    indexed = {}
+    for row in history.get("rows", []):
+        url = row.get("original", "")
+        if not urlsplit(url).path.lower().startswith("/smf/") or row.get("statuscode") != "200":
+            continue
+        kind = _kind(row)
+        if kind == "script":
+            continue
+        canonical = _canonical(url)
+        if canonical:
+            indexed.setdefault((canonical, row.get("timestamp")), row)
+    existing = {}
+    for item in [*resources.values(), *variants]:
+        key = (item.get("canonical_url"), item.get("timestamp"))
+        if key[0] and key[1] and item.get("status") == "recovered":
+            existing[key] = item
+    failed_keys = {(f.get("canonical_url"), f.get("timestamp")) for f in failures}
+    previously_recovered = sum(key in existing for key in indexed)
+    previously_failed = sum(key in failed_keys for key in indexed)
+    known_digests = {}
+    for item in existing.values():
+        raw = root / item.get("raw_path", "")
+        if raw.is_file():
+            body = raw.read_bytes()
+            cdx_digest = base64.b32encode(hashlib.sha1(body).digest()).decode("ascii").rstrip("=")
+            known_digests[cdx_digest] = item
+    pending = [(key, row) for key, row in sorted(indexed.items(), key=lambda pair: pair[0][1])
+               if key not in existing and (retry_failed or key not in failed_keys)]
+    attempted = downloaded = reused = failed = 0
+    session = requests.Session()
+    session.headers["User-Agent"] = "BlueScholarsRestoration/0.1 (historical preservation; paced requests)"
+    client = ArchiveClient(session=session, delay=delay, retries=3, timeout=40, max_bytes=32_000_000)
+    for (canonical, timestamp), row in pending:
+        if attempted >= max_files:
+            break
+        attempted += 1
+        kind = _kind(row)
+        source = f"https://web.archive.org/web/{timestamp}id_/{row['original']}"
+        record = {"source_url": row["original"], "canonical_url": canonical, "timestamp": timestamp,
+                  "mimetype": row.get("mimetype", ""), "kind": kind, "cdx_length": row.get("length", ""),
+                  "source": source, "status": "recovered"}
+        known = known_digests.get(row.get("digest")) if row.get("digest") else None
+        try:
+            if known:
+                record.update({k: known[k] for k in ("raw_path", "sha256", "bytes", "content_type") if k in known})
+                record["reused_digest_from"] = known.get("timestamp")
+                reused += 1
+            else:
+                payload = client.get(source)
+                if kind in ("html", "css", "image"):
+                    validate_payload(payload.body, kind)
+                elif not payload.body or len(payload.body) < 300:
+                    raise ValueError("Captured response is empty or implausibly short")
+                if kind == "html":
+                    text = payload.body.decode("utf-8", errors="replace").lower()
+                    if any(term in text[:8000] for term in ("casino bonus", "viagra", "cialis", "domain is for sale")):
+                        raise ValueError("Captured page is spam or a parked-domain response")
+                digest = sha256(payload.body).hexdigest()
+                raw_path = Path("recovery/massline/raw") / (digest + _extension(row, kind))
+                target = root / raw_path
+                target.parent.mkdir(parents=True, exist_ok=True)
+                if not target.exists():
+                    target.write_bytes(payload.body)
+                record.update({"raw_path": raw_path.as_posix(), "sha256": digest, "bytes": len(payload.body),
+                               "content_type": payload.headers.get("Content-Type", ""), "actual_url": payload.url})
+                downloaded += 1
+                if row.get("digest"):
+                    known_digests[row["digest"]] = record
+            variants.append(record)
+            existing[(canonical, timestamp)] = record
+        except Exception as exc:
+            failed += 1
+            failures.append({**record, "status": "failed", "error": f"{type(exc).__name__}: {exc}"})
+        manifest["resource_variants"] = variants
+        manifest["variant_failures"] = failures
+        _write_massline_manifest(manifest_path, manifest)
+        if progress and (attempted % 25 == 0 or attempted >= max_files):
+            progress({"attempted": attempted, "downloaded": downloaded, "reused_by_digest": reused,
+                      "failures": failed, "source_url": row["original"]})
+        if delay > 0 and attempted < min(max_files, len(pending)):
+            time.sleep(delay)
+    report = {"discovered": len(indexed),
+              "already_recovered": previously_recovered,
+              "previously_failed": previously_failed,
+              "processed": attempted, "downloaded": downloaded, "reused_by_digest": reused,
+              "failed_this_batch": failed, "failed": len(failures),
+              "remaining": max(0, len(pending) - attempted),
+              "complete": attempted >= len(pending), "resume": "python -m restore massline-variants --max-files 250 --delay 0.4"}
+    manifest["capture_variant_report"] = report
+    _write_massline_manifest(manifest_path, manifest)
+    _write_massline_report(root, manifest.get("report", {}), manifest)
+    return report
+
+
 def _write_massline_manifest(path: Path, manifest: dict) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
@@ -528,7 +636,10 @@ def _write_massline_report(root: Path, report: dict, manifest: dict) -> None:
         "media": sum(r.get("kind") == "media" for r in manifest["resources"].values()),
         "homepage_versions": sum(v.get("status") == "recovered" for v in manifest.get("homepage_variants", [])),
         "bytes": sum(int(r.get("bytes", 0)) for r in manifest["resources"].values()),
-    }, "failures": manifest.get("failures", []), "skipped": manifest.get("skipped", [])}
+    }, "failures": manifest.get("failures", []), "skipped": manifest.get("skipped", []),
+        "capture_variants": manifest.get("capture_variant_report", {}),
+        "forum_capture_variants_saved": len(manifest.get("resource_variants", [])),
+        "forum_variant_failures": manifest.get("variant_failures", [])}
     path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     inventory = index_report.get("inventory", {})
     resources = payload["resources"]
@@ -557,6 +668,8 @@ def _write_massline_report(root: Path, report: dict, manifest: dict) -> None:
         "",
         f"- Saved: **{report.get('recovered', 0):,}** indexed resources plus **{resources.get('homepage_versions', 0)}** homepage versions ({resources.get('html', 0)} HTML pages, {resources.get('images', 0)} images, {resources.get('css', 0)} stylesheets, {resources.get('media', 0)} media files; {resources.get('bytes', 0):,} bytes).",
         f"- Unavailable or invalid responses: **{report.get('failed', 0)}**; pending indexed resources: **{report.get('remaining', 0):,}**. Current crawl complete: **{str(bool(report.get('complete'))).lower()}**.",
+        f"- Separately dated forum captures: **{len(manifest.get('resource_variants', [])):,}** alternate source versions are stored beside the selected-era pages. The all-capture event list is in `recovery/massline/all-captures.json`; resume this broader pass with `python -m restore massline-variants --max-files 250 --delay 0.4`.",
+        f"- The full dated forum pass accounted for **{manifest.get('capture_variant_report', {}).get('discovered', 0):,}** distinct URL/date records; **{manifest.get('capture_variant_report', {}).get('failed', 0):,}** replays were invalid or unavailable (most fail full-HTML validation). These responses remain recorded with their exact capture dates and source URLs in the manifest; a representative 2007 replay returned the forum database's `max_questions` error.",
         "- Captured images and styles are mapped locally. Scripts are never run; forms and embedded players are disabled in the static copy. Explicit source links may open the source archive when an item is not stored locally.",
         f"- External assets referenced by recovered pages: **{external_summary['discovered']:,}** exact URLs discovered; **{external_summary['capture_records_found']:,}** have Wayback capture records ({external_summary['indexed']:,} indexed and awaiting download, {external_summary['recovered']:,} recovered); **{external_summary['no_captures']:,}** returned no capture, **{external_summary['invalid_capture']:,}** had only non-image/error payloads, **{external_summary['index_failed']:,}** index queries and **{external_summary['download_failed']:,}** payloads are retryable failures, and **{external_summary['queued']:,}** remain queued. Locally captured: **{external_summary['recovered']:,}** ({external_summary['images']} images, {external_summary['media']} media files; {external_summary['bytes']:,} bytes).",
         "- Independent archives: Common Crawl `CC-MAIN-2009-2010` supplied a separately preserved July 4, 2009 homepage; Arquivo.pt returned no forum captures and its two site records replay as HTML fallback pages. Detailed queries and raw observations are under `recovery/massline/external/`.",
@@ -568,6 +681,7 @@ def _write_massline_report(root: Path, report: dict, manifest: dict) -> None:
         "python -m restore massline-index",
         "python -m restore massline-history --max-pages 1",
         "python -m restore massline-recover --max-files 250 --delay 0.4",
+        "python -m restore massline-variants --max-files 250 --delay 0.4",
         "python -m restore massline-external-index --max-assets 50 --delay 2.0",
         "python -m restore massline-external-recover --max-files 40 --delay 0.6",
         "python -m restore build --candidate --base-path /bluescholars",
@@ -889,6 +1003,15 @@ def _forum_index_pages(output: Path, output_base: str, board_rows: list[dict], t
         if variant.get("kind") != "html":
             continue
         canonical = variant.get("canonical_url") or _canonical(variant.get("source_url", ""))
+        parsed_topic = _forum_identifier(canonical, "topic")
+        if parsed_topic:
+            topic_id, _, _ = parsed_topic
+            soup = BeautifulSoup(body, "html.parser")
+            title = soup.title.get_text(" ", strip=True) if soup.title else ""
+            topic_groups.setdefault(topic_id, []).append({
+                "url": canonical, "route": route, "timestamp": variant.get("timestamp", ""),
+                "title": title,
+            })
         parsed = _forum_identifier(canonical, "board")
         if not parsed:
             continue

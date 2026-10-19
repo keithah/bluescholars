@@ -1,0 +1,302 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+		<title>Print Page - Photo Thread!</title>
+		<style type="text/css"><!--
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			*, a:link, a:visited, a:hover, a:active
+			{
+				color: black !important;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			.code
+			{
+				font-size: x-small;
+				font-family: monospace;
+				border: 1px solid #000000;
+				margin: 1px;
+				padding: 1px;
+			}
+			.quote
+			{
+				font-size: x-small;
+				border: 1px solid #000000;
+				margin: 1px;
+				padding: 1px;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		--></style>
+	</head>
+	<body bgcolor="#ffffff" text="#000000">
+		<h1 class="largetext">MASSLINE</h1>
+		<h2 class="normaltext">MASS LINE FORUMS => The Opium Den => Topic started by: Matt Jay on September 24, 2007, 10:15:22 pm</h2>
+
+		<table width="90%" cellpadding="0" cellspacing="0" border="0">
+			<tr>
+				<td>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Photo Thread!</b><br />
+					Post by: <b>Matt Jay</b> on <b>September 24, 2007, 10:15:22 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">Thought it might be fun to have a thread for photos you&#039;ve taken...doesn&#039;t have to be all artsy serious photography, just kinda random photos from your weekend or whatever you happen to be snappin. I know I never leave the house without my camera, so I&#039;m always taking random photos.<br /><br />I&#039;ll start with some from this past week!<br /><br />Shooting:<br /><br />(http://photos-227.ll.facebook.com/photos-ll-sf2p/v134/119/101/43101227/n43101227_30463476_8285.jpg)<br /><br />(http://photos-227.ll.facebook.com/photos-ll-sf2p/v134/119/101/43101227/n43101227_30463478_8801.jpg)<br /><br />(http://photos-227.ll.facebook.com/photos-ll-sf2p/v134/119/101/43101227/n43101227_30463479_9055.jpg)<br /><br />(http://photos-c.ak.facebook.com/photos-ak-sf2p/v134/119/101/43101227/n43101227_30467086_9210.jpg)<br /><br />Backstage @ the Tokyo Music Festival &#039;07 in Central Park:<br /><br />(http://photos-d.ak.facebook.com/photos-ak-sf2p/v134/119/101/43101227/n43101227_30467139_6244.jpg)<br /><br />(http://photos-a.ak.facebook.com/photos-ak-sf2p/v134/119/101/43101227/n43101227_30467120_2067.jpg)<br /><br />^^^the one and only Nigo<br /><br />(http://photos-b.ak.facebook.com/photos-ak-sctm/v129/9/57/11508579/n11508579_33666017_578.jpg)<br /><br />^^^Teriyaki Boyz<br /><br />(http://photos-b.ak.facebook.com/photos-ak-sf2p/v134/119/101/43101227/n43101227_30467133_5477.jpg)<br /><br />^^^Pharoahe Monch<br /><br />(http://photos-b.ak.facebook.com/photos-ak-sctm/v129/9/57/11508579/n11508579_33666009_8015.jpg)<br /><br />(http://photos-d.ak.facebook.com/photos-ak-sf2p/v134/119/101/43101227/n43101227_30467135_6002.jpg)<br /><br />Me and Wise of the Teriyaki Boyz <br /><br />Just post whatever!</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Photo Thread!</b><br />
+					Post by: <b>Jawn</b> on <b>September 24, 2007, 10:43:23 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">Some photos I&#039;ve taken over the past year, including a recent trip to the Oregon coast:<br /><br />(http://a648.ac-images.myspacecdn.com/images01/16/l_2c2c0d7dc87cabaceb87d7d688a6cecf.jpg)<br /><br />(http://a328.ac-images.myspacecdn.com/images01/37/l_2cae973b30f217c67194b926a4911a57.jpg)<br /><br />(http://a749.ac-images.myspacecdn.com/images01/121/l_71e2f34073d5c8150223e5aaf34611e4.jpg)<br /><br />(http://a28.ac-images.myspacecdn.com/images01/69/l_cbb41d985b66bb3ddc1421319966d0a3.jpg)<br /><br />(http://a59.ac-images.myspacecdn.com/images01/107/l_3c3a76b36818872261a29df4e9362ba2.jpg)<br /><br />(http://a309.ac-images.myspacecdn.com/images01/85/l_a31e9ec1c38dff139b38b6d6791eb0e4.jpg)<br /><br />(http://a24.ac-images.myspacecdn.com/images01/81/l_5cf4f0b346c8b040db8022da48fbb2bf.jpg)<br /><br />He led a long and prosperous life, but sadly it ended there on that beach...</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Photo Thread!</b><br />
+					Post by: <b>virtuousvandal</b> on <b>September 24, 2007, 11:51:29 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">pictures from my weekend; though I didn&#039;t take them:<br /><br />(http://i160.photobucket.com/albums/t186/Virtuousvandal/childrens%20retreat/n680955099_508129_6846.jpg)<br />(http://i160.photobucket.com/albums/t186/Virtuousvandal/childrens%20retreat/n680955099_508130_7126.jpg)<br />(http://i160.photobucket.com/albums/t186/Virtuousvandal/childrens%20retreat/n680955099_508131_7381.jpg)<br />(http://i160.photobucket.com/albums/t186/Virtuousvandal/childrens%20retreat/n680955099_508132_7648.jpg)<br />(http://i160.photobucket.com/albums/t186/Virtuousvandal/childrens%20retreat/n680955099_508133_7900.jpg)<br />(http://i160.photobucket.com/albums/t186/Virtuousvandal/childrens%20retreat/n680955099_508138_9446.jpg)<br />(http://i160.photobucket.com/albums/t186/Virtuousvandal/childrens%20retreat/n680955099_508147_2424.jpg)<br />(http://i160.photobucket.com/albums/t186/Virtuousvandal/childrens%20retreat/n680955099_508157_5801.jpg)<br />(http://i160.photobucket.com/albums/t186/Virtuousvandal/childrens%20retreat/n680955099_508161_6922.jpg)<br />(http://i160.photobucket.com/albums/t186/Virtuousvandal/childrens%20retreat/n680955099_508168_8957.jpg)<br />(http://i160.photobucket.com/albums/t186/Virtuousvandal/childrens%20retreat/n680955099_508169_9232.jpg)<br />(http://i160.photobucket.com/albums/t186/Virtuousvandal/childrens%20retreat/n680955099_508170_9507.jpg)<br />(http://i160.photobucket.com/albums/t186/Virtuousvandal/childrens%20retreat/n680955099_508177_2092.jpg)<br />(http://i160.photobucket.com/albums/t186/Virtuousvandal/childrens%20retreat/n680955099_508186_7537.jpg)<br />(http://i160.photobucket.com/albums/t186/Virtuousvandal/childrens%20retreat/n680955099_508198_1176.jpg)<br />(http://i160.photobucket.com/albums/t186/Virtuousvandal/childrens%20retreat/n680955099_508220_8435.jpg)<br />(http://i160.photobucket.com/albums/t186/Virtuousvandal/childrens%20retreat/n680955099_508242_4758.jpg)<br />(http://i160.photobucket.com/albums/t186/Virtuousvandal/childrens%20retreat/n680955099_508243_5046.jpg)<br />(http://i160.photobucket.com/albums/t186/Virtuousvandal/childrens%20retreat/n680955099_508245_5599.jpg)<br />Baha&#039;i childrens retreat</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Photo Thread!</b><br />
+					Post by: <b>Matt Jay</b> on <b>September 25, 2007, 12:07:49 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">^^^^ Ah that looks like it was a fun time!</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Photo Thread!</b><br />
+					Post by: <b>virtuousvandal</b> on <b>September 25, 2007, 12:25:26 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">it was awesome!<br />probably the highlight of my year in fact</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Photo Thread!</b><br />
+					Post by: <b>KaPayapaan_Mapili</b> on <b>September 25, 2007, 12:27:43 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">Not From my Weekend Just Random Shots....<br /><br />(http://i145.photobucket.com/albums/r206/shanemapili/neverforget.jpg)<br />Washington D.C. 2005 - Lincoln Memorial<br />R.I.P. Travis Jordan Britt <br /><br />(http://i145.photobucket.com/albums/r206/shanemapili/Copy_of_DSC03238dsf.jpg)<br />San Francisco 2006 - Base @ Coit Tower<br /><br />(http://i145.photobucket.com/albums/r206/shanemapili/Image239.jpg)<br />(http://i145.photobucket.com/albums/r206/shanemapili/Image171.jpg)<br />^Story of my life^<br />(http://i145.photobucket.com/albums/r206/shanemapili/DSC04489.jpg)<br />^this is how summer started<br />(http://i145.photobucket.com/albums/r206/shanemapili/Image180.jpg)<br />Some couple in the right spot @ the George.^<br />(http://i145.photobucket.com/albums/r206/shanemapili/Image149.jpg)<br />^its a work out<br /><br />From the weekend...<br /><br />(http://i145.photobucket.com/albums/r206/shanemapili/Shanespics050.jpg)<br />Never <s>Sleep </s> oops pass out on your friends couch with your shoes on.<br /></div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Photo Thread!</b><br />
+					Post by: <b>Matt Jay</b> on <b>September 25, 2007, 12:54:23 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">^^^^ Oh man yall are viscious lol. I used to doodle little hearts and stuff on my friends faces when they fell asleep and stuff like that, but yall painted a mural.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Photo Thread!</b><br />
+					Post by: <b>Jawn</b> on <b>September 25, 2007, 06:29:45 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">More shots of my lovely neighborhood and its environs:<br /><br />(http://img217.imageshack.us/img217/4790/amazonbuilding2kx9.jpg)<br /><br />(http://img511.imageshack.us/img511/1046/chinatown2jt2.jpg)<br /><br />(http://img222.imageshack.us/img222/8031/chinatown3mq0.jpg)</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Photo Thread!</b><br />
+					Post by: <b>daps</b> on <b>September 25, 2007, 07:59:46 am</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: KaPayapaan_Mapili on September 25, 2007, 12:27:43 am</div><div class="quote">(http://i145.photobucket.com/albums/r206/shanemapili/neverforget.jpg)<br /><br /></div><br /><br />nice. me and geo will be performing <i>right there</i> this friday night&nbsp; :)</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Photo Thread!</b><br />
+					Post by: <b>KaPayapaan_Mapili</b> on <b>September 25, 2007, 10:04:40 am</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: daps on September 25, 2007, 07:59:46 am</div><div class="quote"><div class="quoteheader">Quote from: KaPayapaan_Mapili on September 25, 2007, 12:27:43 am</div><div class="quote">(http://i145.photobucket.com/albums/r206/shanemapili/neverforget.jpg)<br /><br /></div><br /><br />nice. me and geo will be performing <i>right there</i> this friday night&nbsp; :)<br /></div><br /><br />Are you cereal? What event?</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Photo Thread!</b><br />
+					Post by: <b>daps</b> on <b>September 25, 2007, 10:38:29 am</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: KaPayapaan_Mapili on September 25, 2007, 10:04:40 am</div><div class="quote">Are you cereal? What event?<br /></div><br /><br />http://troopsoutnow.org/rocktherulers.html</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Photo Thread!</b><br />
+					Post by: <b>daps</b> on <b>September 25, 2007, 11:01:04 am</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: daps on September 25, 2007, 10:38:29 am</div><div class="quote"><div class="quoteheader">Quote from: KaPayapaan_Mapili on September 25, 2007, 10:04:40 am</div><div class="quote">Are you cereal? What event?<br /></div><br /><br />http://troopsoutnow.org/rocktherulers.html<br /></div><br /><br />more specifically:<br /><br />(http://a778.ac-images.myspacecdn.com/images01/67/l_26b35340044bcc7e07c740f887d006f1.jpg)</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Photo Thread!</b><br />
+					Post by: <b>shawn stone</b> on <b>September 25, 2007, 11:40:43 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">(http://i118.photobucket.com/albums/o112/shawnstonemusic/behappyamanda.jpg)<br /><br />(http://i118.photobucket.com/albums/o112/shawnstonemusic/stonerecords.jpg)<br /><br />not taken by me, by my freind andrew. he put the text there too, i had no part of that.<br /><br />(http://i118.photobucket.com/albums/o112/shawnstonemusic/Fallen.jpg)<br /><br />this is taken by my same homie andrew, with a geo lyric under it<br /><br /><br /></div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Photo Thread!</b><br />
+					Post by: <b>erik?</b> on <b>September 25, 2007, 12:46:52 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">(http://i155.photobucket.com/albums/s302/bright-side_24/PICT0266.jpg)<br />(http://i155.photobucket.com/albums/s302/bright-side_24/PICT0251.jpg)</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Photo Thread!</b><br />
+					Post by: <b>virtuousvandal</b> on <b>September 25, 2007, 04:23:26 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: shawn stone on September 25, 2007, 11:40:43 am</div><div class="quote">(http://i118.photobucket.com/albums/o112/shawnstonemusic/Fallen.jpg)<br /><br />this is taken by my same homie andrew, with a geo lyric under it<br /><br /><br /><br /></div><br /><br />is that what it actually says in Arabic?<br />cuz that would be kickass</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Photo Thread!</b><br />
+					Post by: <b>Matt Jay</b> on <b>September 25, 2007, 05:20:09 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">Erik that sepia shot of Seattle is niiiice.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Photo Thread!</b><br />
+					Post by: <b>Jawn</b> on <b>September 25, 2007, 06:31:13 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: shawn stone on September 25, 2007, 11:40:43 am</div><div class="quote">(http://i118.photobucket.com/albums/o112/shawnstonemusic/stonerecords.jpg)<br /></div><br /><br />HOLY SHIT, IT&#039;S BIGFOOT!!!<br /><br />Sorry, I couldn&#039;t help myself. Hey, why didn&#039;t you call me last weekend, Stone? I thought we wanted to go jammin&#039; on the production tip.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Photo Thread!</b><br />
+					Post by: <b>erik?</b> on <b>September 25, 2007, 08:10:51 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">thanks brotha....ive got a shitload more, i climb to the top of my work and take pics of downtown lake washington, and everything else around its SUPER fun.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Photo Thread!</b><br />
+					Post by: <b>shawn stone</b> on <b>September 25, 2007, 10:33:09 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">sorry jawn, them drugs for gettin&#039; my wisdom teeth really set me back.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Photo Thread!</b><br />
+					Post by: <b>Jawn</b> on <b>September 25, 2007, 10:37:13 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">No problem. How about this saturday then?</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Photo Thread!</b><br />
+					Post by: <b>phatlip</b> on <b>September 26, 2007, 04:46:56 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">(http://farm2.static.flickr.com/1055/1441812612_55debd0f8f.jpg)<br /><br />Taken the first night of Autumn. The leaves are changing colors, hooray!</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Photo Thread!</b><br />
+					Post by: <b>daps</b> on <b>September 26, 2007, 04:57:30 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">(http://farm2.static.flickr.com/1407/1445221892_00e76701be.jpg)<br /><br />taken just a couple hours ago at pike place market.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Photo Thread!</b><br />
+					Post by: <b>Matt Jay</b> on <b>September 26, 2007, 07:42:10 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">Phatlip thats gorgeous. <br /><br />Daps, nice composition .<br /></div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Photo Thread!</b><br />
+					Post by: <b>nam</b> on <b>September 26, 2007, 09:08:26 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">(http://i71.photobucket.com/albums/i138/Drew206/IMAGE_022.jpg)<br /><br />(http://i71.photobucket.com/albums/i138/Drew206/DSC00237.jpg)<br /><br />(http://i71.photobucket.com/albums/i138/Drew206/DSC00184.jpg)<br /><br />(http://i71.photobucket.com/albums/i138/Drew206/DSC00200.jpg)<br /><br />(http://i71.photobucket.com/albums/i138/Drew206/CopyofIMAGE_049.jpg)<br /><br />(http://i71.photobucket.com/albums/i138/Drew206/DSC00133.jpg)</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Photo Thread!</b><br />
+					Post by: <b>shawn stone</b> on <b>September 26, 2007, 09:52:52 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">everytime i see that safe way pic, i always read it as &#039;We Deliver Blue Scholars&#039;</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Photo Thread!</b><br />
+					Post by: <b>daps</b> on <b>September 27, 2007, 01:17:26 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">i read it as &quot;Blue Scholars service animals&quot;</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Photo Thread!</b><br />
+					Post by: <b>sergio</b> on <b>September 27, 2007, 04:29:50 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">what are camera?<br /><br />just kidding. ive been fuxing with polaroids a lot lately.<br /><br />(http://img468.imageshack.us/img468/1006/a2nn4.jpgp)<br />(http://img513.imageshack.us/img513/3576/63508174jv5.jpg)<br />(http://img213.imageshack.us/img213/5328/61871870yk1.jpg)<br />(http://img228.imageshack.us/img228/6792/69898390uy1.jpg)</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Photo Thread!</b><br />
+					Post by: <b>phatlip</b> on <b>September 27, 2007, 04:50:44 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: Matt Jay on September 26, 2007, 07:42:10 pm</div><div class="quote">Phatlip thats gorgeous. <br /><br />Daps, nice composition .<br /><br /></div><br /><br />Thanks!</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Photo Thread!</b><br />
+					Post by: <b>Matt Jay</b> on <b>September 27, 2007, 05:31:48 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">Sergio nice polaroids! What camera are you using for those? I just got an old school SX70 that I&#039;m eager to go out on the town with...</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Photo Thread!</b><br />
+					Post by: <b>igotseatacfunk</b> on <b>September 27, 2007, 08:49:35 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">(http://i47.photobucket.com/albums/f172/igotseatacfunk/stuff133.jpg)<br />(http://i47.photobucket.com/albums/f172/igotseatacfunk/marleseafairwaterfront097.jpg)<br />(http://i47.photobucket.com/albums/f172/igotseatacfunk/marleseafairwaterfront004.jpg)</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Photo Thread!</b><br />
+					Post by: <b>sergio</b> on <b>September 27, 2007, 09:17:17 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">any of the square stuff is my sx-70 with 600 film, and the peelapart is a 220 land camera using 667, 690 or 672 film. <br /><br />if you&#039;re using the sx-70, know that the time-zero film that its made for isnt manufactured anymore except in the netherlands so its $$$$$. 600 film, the more common kind, is a few stops faster than timezero so you need to modify the sx-70 to use it. you can pop off the ring over the electronic eye and remove the neutral density filter and put the ring back on which is really easy, but be sure to set the knob all the way to darken when shooting. that should only make it like 0.1+EV.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Photo Thread!</b><br />
+					Post by: <b>Matt Jay</b> on <b>September 27, 2007, 10:02:48 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">Ahh. Thanks Sergio.<br /><br />Some Tokyo street photography I did a couple years ago:<br /><br />(http://photos-d.ak.facebook.com/photos-ak-sf2p/v15/119/101/43101227/n43101227_30011051_6147.jpg)<br /><br />(http://photos-a.ak.facebook.com/photos-ak-sf2p/v15/119/101/43101227/n43101227_30011052_6208.jpg)<br /><br />(http://photos-b.ak.facebook.com/photos-ak-sf2p/v15/119/101/43101227/n43101227_30011053_6244.jpg)<br /><br />(http://photos-a.ak.facebook.com/photos-ak-sf2p/v15/119/101/43101227/n43101227_30011056_6351.jpg)<br /><br />(http://photos-c.ak.facebook.com/photos-ak-sf2p/v15/119/101/43101227/n43101227_30011058_6540.jpg)<br /><br />(http://photos-a.ak.facebook.com/photos-ak-sf2p/v15/119/101/43101227/n43101227_30011068_7177.jpg)<br /><br />(http://photos-d.ak.facebook.com/photos-ak-sf2p/v15/119/101/43101227/n43101227_30011071_7323.jpg)</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Photo Thread!</b><br />
+					Post by: <b>sergio</b> on <b>September 27, 2007, 10:17:57 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">some of those are DOAP</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Photo Thread!</b><br />
+					Post by: <b>virtuousvandal</b> on <b>September 27, 2007, 11:26:03 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: sergio on September 27, 2007, 10:17:57 pm</div><div class="quote">some of those are DOAP<br /></div><br /><br />that first one is incredibly dope<br /><br /></div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Photo Thread!</b><br />
+					Post by: <b>M</b> on <b>September 28, 2007, 09:22:51 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">NICE Matt! My fav is the 3rd one down - of the city.<br /><br />Most of you have seen this on my myspace or as my avatar - but here is the larger version - a pic i found of my brother after he died....not sure who took it, or where it is - but it really spoke to me...<br /><br />(http://i29.photobucket.com/albums/c271/SCIONtificrecords/JVD/grafiti.jpg)</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Photo Thread!</b><br />
+					Post by: <b>KaPayapaan_Mapili</b> on <b>September 28, 2007, 09:46:07 am</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: namski on September 26, 2007, 09:08:26 pm</div><div class="quote">(http://i71.photobucket.com/albums/i138/Drew206/IMAGE_022.jpg)<br /></div><br /><br />Yo nam they took this down lol I was so surprised cause it looked like it belonged there. </div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Photo Thread!</b><br />
+					Post by: <b>igotseatacfunk</b> on <b>October 03, 2007, 08:08:14 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">(http://i47.photobucket.com/albums/f172/igotseatacfunk/NxNW.jpg)</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Photo Thread!</b><br />
+					Post by: <b>M</b> on <b>October 04, 2007, 09:39:58 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">thats fresh Matt!&nbsp; This was the photo you told me about!?<br /><br />NICE!</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Photo Thread!</b><br />
+					Post by: <b>igotseatacfunk</b> on <b>October 04, 2007, 09:49:35 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: M on October 04, 2007, 09:39:58 am</div><div class="quote">thats fresh Matt!  This was the photo you told me about!?<br /><br />NICE!<br /></div><br /><br />Yah, it&#039;s in like the middle of the woods right outside of Lincoln City, Or.</div>
+					<br /><br />
+					<div align="center" class="smalltext">
+		<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;">MASSLINE | Powered by <a href="http://www.simplemachines.org/" title="Simple Machines Forum" target="_blank">SMF 1.0.10</a>.<br />
+&copy; 2005, <a href="http://www.simplemachines.org/about/copyright.php" title="Free Forum Software" target="_blank">Simple Machines LLC</a>. All Rights Reserved.
+		</span></div>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

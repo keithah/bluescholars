@@ -15,7 +15,7 @@ from .state import State,write_json
 from .urls import base_path
 from .artist_sites import (index_artist_sites,recover_artist_sites,promote_artist_sites,
                            review_artist_capture)
-from .massline import index_massline,index_massline_history,recover_massline
+from .massline import index_massline,index_massline_history,recover_massline,recover_massline_capture_variants
 from .massline_external import index_external_assets,recover_external_assets
 from .myspace import index_myspace_assets,recover_myspace_assets
 
@@ -74,6 +74,8 @@ def main(argv=None) -> int:
     p.add_argument('--max-pages',type=int,default=1);p.add_argument('--delay',type=float,default=0.8);p.add_argument('--timeout',type=int,default=60)
     p=commands.add_parser('massline-recover',help='Resumably recover Mass Line Media pages, forum threads, and local assets')
     p.add_argument('--max-files',type=int,default=250);p.add_argument('--delay',type=float,default=0.6);p.add_argument('--retry-failed',action='store_true')
+    p=commands.add_parser('massline-variants',help='Preserve every dated Mass Line forum capture, including later editions')
+    p.add_argument('--max-files',type=int,default=250);p.add_argument('--delay',type=float,default=0.4);p.add_argument('--retry-failed',action='store_true')
     p=commands.add_parser('massline-external-index',help='Index exact external image/media URLs linked from recovered Mass Line pages')
     p.add_argument('--max-assets',type=int,default=50);p.add_argument('--delay',type=float,default=0.8);p.add_argument('--timeout',type=int,default=45);p.add_argument('--refresh-discovery',action='store_true')
     p=commands.add_parser('massline-external-recover',help='Recover indexed external Mass Line images/media from Wayback')
@@ -159,6 +161,10 @@ def main(argv=None) -> int:
             if args.max_files<1 or args.delay<0:raise ValueError('Invalid Massline recovery limits')
             result=recover_massline(root,args.max_files,args.delay,args.retry_failed,
                 progress=lambda p:print(json.dumps({'stage':'massline-recover','progress':p}),file=sys.stderr,flush=True))
+        elif args.command=='massline-variants':
+            if args.max_files<1 or args.delay<0:raise ValueError('Invalid Massline variant-recovery limits')
+            result=recover_massline_capture_variants(root,args.max_files,args.delay,args.retry_failed,
+                progress=lambda p:print(json.dumps({'stage':'massline-variants','progress':p}),file=sys.stderr,flush=True))
         elif args.command=='massline-external-index':
             if args.max_assets<1 or args.delay<0 or args.timeout<1:raise ValueError('Invalid external asset index limits')
             result=index_external_assets(root,args.max_assets,args.delay,args.timeout,

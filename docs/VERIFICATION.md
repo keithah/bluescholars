@@ -1,5 +1,13 @@
 # Verification record — October 16, 2026
 
+## Expanded Mass Line forum recovery — October 19, 2026
+
+- `.venv311/bin/python -m pytest -q`: **234 passed**. The dotted-directory route regression failed before the fix and passes afterward.
+- The selected-era Mass Line recovery is complete for its indexed queue: 4,742 validated resources, five homepage variants, 473 invalid/unavailable responses, zero pending. The all-capture event query contains 7,121 rows; all 5,276 distinct forum URL/date records are accounted for, with 1,215 separately stored alternate source versions and 496 invalid/unavailable variant responses.
+- Mass Line renderer report: 4,418 generated pages, nine boards, 565 topics with local saved views, 277 dated board listings, 1,193 alternate HTML pages, 5,901 compatibility redirects and 569 local Mass Line assets. The preview build is approximately 518 MB.
+- The `/bluescholars/` candidate and separate domain-root candidate both pass `restore check` with `{ "ok": true, "errors": [] }`. Automatic assets are local. The source index for offsite assets has 1,531 URLs: 246 recovered images, 577 no-capture results, 23 unusable responses, two retryable index failures and 683 queued URLs. No external media file is recovered.
+- The Pages preview is an unreviewed candidate; no human visual review or screenshot is claimed, and release approval flags remain false. The expanded preview deployment is recorded below when its Pages action completes.
+
 ## Mass Line forum archive split — October 19, 2026
 
 - The SMF forum is now a standalone top-level archive at `/massline-forums/`, separate from the Mass Line Media site restoration at `/masslinemedia/`. The main gateway has separate cards, and the dated Mass Line homepage links to the forum archive.

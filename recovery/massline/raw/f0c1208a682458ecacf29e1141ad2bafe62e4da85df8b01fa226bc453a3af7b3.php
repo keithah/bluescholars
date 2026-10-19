@@ -1,0 +1,500 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+		<title>Print Page - Honestly...</title>
+		<style type="text/css"><!--
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			*, a:link, a:visited, a:hover, a:active
+			{
+				color: black !important;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			.code
+			{
+				font-size: x-small;
+				font-family: monospace;
+				border: 1px solid #000000;
+				margin: 1px;
+				padding: 1px;
+			}
+			.quote
+			{
+				font-size: x-small;
+				border: 1px solid #000000;
+				margin: 1px;
+				padding: 1px;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		--></style>
+	</head>
+	<body bgcolor="#ffffff" text="#000000">
+		<h1 class="largetext">MASSLINE</h1>
+		<h2 class="normaltext">MASS LINE FORUMS => The Opium Den => Topic started by: daps on September 20, 2007, 10:21:13 pm</h2>
+
+		<table width="90%" cellpadding="0" cellspacing="0" border="0">
+			<tr>
+				<td>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Honestly...</b><br />
+					Post by: <b>daps</b> on <b>September 20, 2007, 10:21:13 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">(http://i166.photobucket.com/albums/u114/8103collection/Picture90.png)<br /><br />...this shit is getting too out of control.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>Jawn</b> on <b>September 20, 2007, 11:50:56 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">I disagree.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>seance</b> on <b>September 21, 2007, 02:08:08 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">hahahahahh a</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>thrilla in tukwila</b> on <b>September 21, 2007, 03:21:30 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">whoa...wtf. yea, that&#039;s just ridiculous<br /><div class="quoteheader">Quote from: Jawn on September 20, 2007, 11:50:56 pm</div><div class="quote">I disagree.<br /></div><br /><br />wow...you gotta be fucking kidding.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>igotseatacfunk</b> on <b>September 21, 2007, 06:17:34 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">That&#039;s like some emo boogaloo shit...</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>Matt Jay</b> on <b>September 21, 2007, 07:40:57 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">Try living in NYC.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>OriginalBoks</b> on <b>September 21, 2007, 08:54:20 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">fay-king thuh phunk</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>negoshagator</b> on <b>September 21, 2007, 10:32:14 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">A-Rife Or Supreme</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>daps</b> on <b>September 21, 2007, 11:43:15 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">Exhibit 2:<br /><br />(http://farm2.static.flickr.com/1088/1387663946_62a3e3fb4a.jpg)</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>Jawn</b> on <b>September 21, 2007, 12:29:17 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">Holy shit, dude even brought the hi-top fade back. <br /><br />Now I just want to see cartoons like Transformers and Teenage Mutant Ninja Turtles back on day time television, and rappers sounding more like RUN DMC. Then we&#039;ll go to the movies to watch campy Hollywood flicks about Hip Hop that attempt to appeal to the new youth culture, after which we&#039;ll head over to the night club to do the &quot;boogaloo&quot;. Ladies, wear your tightest spandex and your biggest hoop earrings!<br /><br />Oh, and maybe we&#039;ll elect a new Ronald Reagan as president too. ;)</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>Matt Jay</b> on <b>September 21, 2007, 04:16:53 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: daps on September 21, 2007, 11:43:15 am</div><div class="quote">Exhibit 2:<br /><br />(http://farm2.static.flickr.com/1088/1387663946_62a3e3fb4a.jpg)<br /></div><br /><br />Wait thats the same dude lol.<br /><br />He must be in that crew...what do they call themselves? Many-a-people out here in NY are dressing like that now, but theres that one crew who claims they started it. Errrrr.......re-started it.....</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>Matt Jay</b> on <b>September 21, 2007, 04:18:00 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">BTW: Zeebra pants = unforgivable</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>daps</b> on <b>September 21, 2007, 04:27:15 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">the only thing i give props to is the dude who brought the bdk high-top fade back.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>phatlip</b> on <b>September 21, 2007, 04:55:03 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">two whites then two blacks</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>shawn stone</b> on <b>September 21, 2007, 08:38:52 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">double stuffed oreo? with a fortune cookin on the side?</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>daps</b> on <b>September 22, 2007, 09:34:51 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">(http://www.karmaloop.com/Vendor/SOUKB/zoom/brownteddysf07zoom1.JPG)</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>Matt Jay</b> on <b>September 22, 2007, 11:18:38 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">AH AH AH AHHAHAHAAHAHAHAHA!!!<br /><br />oh my god<br /><div class="quoteheader">Quote from: daps on September 20, 2007, 10:21:13 pm</div><div class="quote">(http://i166.photobucket.com/albums/u114/8103collection/Picture90.png)<br /></div><br /><br />I SAW THE DUDE ON THE LEFT TODAY!!!<br /><br />HAHAHAHAHA I SAW him at the Tokyo Music Festival in Central Park......HE WAS IN THE SAME OUTFIT AHHAHAHAHA<br /><br />OMG I could not stop laughing<br /><br />I was looking around for Daps to share the moment with</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>daps</b> on <b>September 23, 2007, 11:05:34 am</b>
+					<hr />
+					<div style="margin: 0 5ex;"> that&#039;s amazing. and you didn&#039;t get a pic with him???<br /><br />dude needs to be grabbed by the shoulders and shook really hard til he gets it.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>KaPayapaan_Mapili</b> on <b>September 23, 2007, 02:35:34 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: daps on September 22, 2007, 09:34:51 pm</div><div class="quote">(http://www.karmaloop.com/Vendor/SOUKB/zoom/brownteddysf07zoom1.JPG)<br /></div><br /><br />Last night i had a dream i had this hoodie.&nbsp; ???</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>nam</b> on <b>September 23, 2007, 10:20:13 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">apparently they are hunting in the Forest Moon of Endor for new clothing designs now.&nbsp; :o<br /><br /><br /><br />the new trend for the winter...Ewok skin.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>Jawn</b> on <b>September 23, 2007, 10:24:25 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">Yeah, I don&#039;t even like that &quot;bear&quot; look. Animal skins? Not my thing. I&#039;ll stick to bright colors, thank you.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>Matt Jay</b> on <b>September 23, 2007, 10:29:31 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">At least it looks sufficently warm lol.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>nam</b> on <b>September 23, 2007, 10:37:10 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: Matt Jay on September 23, 2007, 10:29:31 pm</div><div class="quote">At least it looks sufficently warm lol.<br /></div><br /><br /><br />its reversable too.....i would wear it inside out, and never go back. lol</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>Matt Jay</b> on <b>September 23, 2007, 11:17:35 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: daps on September 22, 2007, 09:34:51 pm</div><div class="quote">(http://www.karmaloop.com/Vendor/SOUKB/zoom/brownteddysf07zoom1.JPG)<br /></div><br /><br />(http://hiphop.popcrunch.com/wp-content/uploads/2007/05/15143262_l.jpg)</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>daps</b> on <b>September 24, 2007, 01:57:24 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">(http://farm2.static.flickr.com/1061/1410069795_327b7a35b1.jpg)</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>Jawn</b> on <b>September 24, 2007, 01:59:08 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">Gyeah!</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>phatlip</b> on <b>September 24, 2007, 02:13:51 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">Matt Jay - Was the dood with two whites or two blacks this time</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>daps</b> on <b>September 24, 2007, 03:38:38 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">*puts hand over &#039;that&#039;s racist&#039; buzzer...waits patiently*</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>phatlip</b> on <b>September 24, 2007, 03:47:37 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">hahaha<br /><br /><br /><br /><br />oh yeah, i have candid photos of you at hidmos</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>daps</b> on <b>September 24, 2007, 03:56:30 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: phatlip on September 24, 2007, 03:47:37 pm</div><div class="quote">hahaha<br /><br /><br /><br /><br />oh yeah, i have candid photos of you at hidmos<br /></div><br /><br />oooh...email em to me?</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>phatlip</b> on <b>September 24, 2007, 04:20:24 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: daps on September 24, 2007, 03:56:30 pm</div><div class="quote"><div class="quoteheader">Quote from: phatlip on September 24, 2007, 03:47:37 pm</div><div class="quote">hahaha<br /><br /><br /><br /><br />oh yeah, i have candid photos of you at hidmos<br /></div><br /><br />oooh...email em to me?<br /></div><br /><br />sure, sure. when i get the chance at home, will do.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>Matt Jay</b> on <b>September 24, 2007, 06:19:17 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: phatlip on September 24, 2007, 02:13:51 pm</div><div class="quote">Matt Jay - Was the dood with two whites or two blacks this time<br /></div><br /><br />He was by himself lookin lonely actually LOL.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>Jawn</b> on <b>September 27, 2007, 01:36:53 am</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: daps on September 24, 2007, 01:57:24 pm</div><div class="quote">(http://farm2.static.flickr.com/1061/1410069795_327b7a35b1.jpg)<br /></div><br /><br />(http://a156.ac-images.myspacecdn.com/images01/107/l_649d809810522c468b4de2fdc9a79343.jpg)<br /><br />(http://i152.photobucket.com/albums/s174/1gina1_photo/GiGi.jpg)<br /><br />(http://a479.ac-images.myspacecdn.com/images01/109/l_cfa345a11fc8ac07c4bf2237c7dd1d56.jpg)<br /><br />(http://a841.ac-images.myspacecdn.com/images01/28/l_2df2deb60f21ace7c077d236f47b2f10.jpg)<br /><br />(http://farm2.static.flickr.com/1135/1414648292_93ebaeb5ff_o.jpg)<br /><br /><br /><br />(http://a781.ac-images.myspacecdn.com/images01/96/l_501b3923a925804e961f02eda8b5c374.gif)<br /><br />(http://a588.ac-images.myspacecdn.com/images01/117/l_77e63026b16cdae81c86771b1541411b.gif)<br /><br />(http://a666.ac-images.myspacecdn.com/images01/78/l_e6db2c88804a14877b25acdfb757c171.gif)<br /><br />I don&#039;t understand how anyone could not like this. Why keep your world so drab and dull, anyway? Grey, black, white, etc., just doesn&#039;t cut it anymore. If you want to grab somebody&#039;s eye, COLORIZE YOUR MESSAGE.<br /><br />Sure, the aforementioned foolio takes his neon a little too far, but at least he&#039;s re-inventing himself. I can&#039;t knock him.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>olaf</b> on <b>September 27, 2007, 09:10:48 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">really, I might get your point if people actually wore fliers and gif images. but last time I checked...<br /><br />And also, if neon is so great, the colors should speak for themselves. The colors are loud enough that they don&#039;t need you speaking for them, I think. And while I love MIA, her website is seizure inducing.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>negoshagator</b> on <b>September 27, 2007, 11:40:55 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">cats is really burning the SupremeNYC &#039;05-06 catalogue to death. Its getting cold, lets be relevant instead of 2 years behind schedule.<br /><br />(http://orangecow.org/pythonet/pics/connie.jpg)</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>Matt Jay</b> on <b>September 27, 2007, 12:12:18 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">^^^Whos that?<br /><br />SNAP YO FINGERS!!!!</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>phatlip</b> on <b>September 27, 2007, 04:49:14 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">show us your colorful wardrobe, jawn! and i mean not pictures of them, but on you!</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>Jawn</b> on <b>September 27, 2007, 05:25:50 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">Holler at me if you&#039;re going to Seattle Central; I&#039;m the most colorful kid on campus.<br /><br />Seriously, I receive 3-4 complements a day about these hoodies, so I don&#039;t know what you guys are talking about.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>phatlip</b> on <b>September 27, 2007, 05:55:26 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">No, show pictures</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>nam</b> on <b>September 27, 2007, 06:09:57 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">lol. i would never send any pictures of myself to Daps. that is a big no no.<br /><br /><br /><br /><br />hey phatlip, we still need to do our photoshoot.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>phatlip</b> on <b>September 27, 2007, 06:17:50 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: namski on September 27, 2007, 06:09:57 pm</div><div class="quote">lol. send any pictures of myself to Daps. that is a big no no.<br /><br /><br /><br /><br />hey phatlip, we still need to do our photoshoot.<br /></div><br /><br />yes, we needa get on that.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>Jawn</b> on <b>September 27, 2007, 06:34:17 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">If you want a photo of me, you&#039;ll need to hunt me down like bigfoot. Check my albums on MySpace, and you won&#039;t find a single real picture, only drawings. I&#039;m THAT elusive.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>phatlip</b> on <b>September 27, 2007, 06:40:53 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: Jawn on September 27, 2007, 06:34:17 pm</div><div class="quote">If you want a photo of me, you&#039;ll need to hunt me down like bigfoot. Check my albums on MySpace, and you won&#039;t find a single real picture, only drawings. I&#039;m THAT elusive.<br /></div><br /><br />why? is you fug? hehe</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>Jawn</b> on <b>September 27, 2007, 06:44:03 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">Bigfoot strolled through Seward Park one summer afternoon and chatted a bit with the Anakbayan folks. I don&#039;t think you were there. ;)</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>thrilla in tukwila</b> on <b>September 27, 2007, 06:49:49 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">i dont think you were either.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>Jawn</b> on <b>September 27, 2007, 06:53:27 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: thrilla in tukwila on September 27, 2007, 06:49:49 pm</div><div class="quote">i dont think you were either.<br /></div><br /><br />Shows what you know.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>thrilla in tukwila</b> on <b>September 27, 2007, 06:54:36 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">pshh...there&#039;s no real proof that Big Foot exists.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>daps</b> on <b>September 27, 2007, 08:17:13 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">*shakes head at the direction of this post* </div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>daps</b> on <b>September 27, 2007, 08:21:00 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: Jawn on September 27, 2007, 05:25:50 pm</div><div class="quote"> I&#039;m the most colorful kid on campus.<br /></div><br /><br />8v9yUVgrmPY</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>igotseatacfunk</b> on <b>September 27, 2007, 08:29:39 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">Hahaha, Sweet Irony.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>daps</b> on <b>September 27, 2007, 09:20:20 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">Now<i> this</i> is more like it:<br /><br />(http://bp0.blogger.com/__IHOmkP3bcg/RmhIMuoU2RI/AAAAAAAAAXE/e2y9KMQO-E0/s400/fakeshoes.jpg)</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>Jawn</b> on <b>September 27, 2007, 09:26:41 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">Ah, here&#039;s an interesting subtopic. I&#039;ve seriously considered writing an essay on the inherent contradiction between authenticity and affordability.<br /><br />Today on the bus ride home from college I chatted with this girl who really admired my all-over print hoodie. She told me how she abhorred how much brands like Artful Dodger and Stussy cost, arguing that these companies sell hoodies as expensive as some less popular brands sell their winter coats. <br /><br />I reminded her that seventy bucks pales when compared to the half a grand some streetware aficionados spend on Bape and Ice Cream Clothing. She mentioned the much cheaper knock offs, to which I replied I&#039;d never wear counterfeit clothing. She agreed, saying how since she &quot;keeps it real&quot; with everything else she does, she couldn&#039;t imagine wearing fake clothes either.<br /><br />I think we&#039;re off to a decent friendship. :)</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>Jawn</b> on <b>September 27, 2007, 09:48:49 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">Exhibit A, the latest to hit the streets:<br /><br />(http://farm1.static.flickr.com/124/421529983_caaf8af73d_o.jpg)<br /><br />All over print all over prints!</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>thrilla in tukwila</b> on <b>September 27, 2007, 09:49:33 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: Jawn on September 27, 2007, 09:26:41 pm</div><div class="quote">I&#039;ve seriously considered writing an essay on the inherent contradiction between authenticity and affordability.<br /></div><br /><br />what the fuck for?<br /><div class="quoteheader">Quote from: Jawn on September 27, 2007, 09:26:41 pm</div><div class="quote">I think we&#039;re off to a decent friendship. :)<br /></div><br /><br />did you bone her?<br /><div class="quoteheader">Quote from: phatlip on September 27, 2007, 06:40:53 pm</div><div class="quote">why? is you fug? hehe<br /></div><br /><br />HAHAHAHAHA<br /><br /></div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>igotseatacfunk</b> on <b>September 27, 2007, 09:50:21 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">I was gonna say something semi-serious until i saw that picture.... <br /><br />and I feel like i&#039;m stalking daps in the boards....</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>igotseatacfunk</b> on <b>September 27, 2007, 09:51:13 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: thrilla in tukwila on September 27, 2007, 09:49:33 pm</div><div class="quote"><div class="quoteheader">Quote from: Jawn on September 27, 2007, 09:26:41 pm</div><div class="quote">I&#039;ve seriously considered writing an essay on the inherent contradiction between authenticity and affordability.<br /></div><br /><br />what the fuck for?<br /><div class="quoteheader">Quote from: Jawn on September 27, 2007, 09:26:41 pm</div><div class="quote">I think we&#039;re off to a decent friendship. :)<br /></div><br /><br />did you bone her?<br /><div class="quoteheader">Quote from: phatlip on September 27, 2007, 06:40:53 pm</div><div class="quote">why? is you fug? hehe<br /></div><br /><br />HAHAHAHAHA<br /><br /><br /></div><br /><br />wow.... have you got better things to do?<br /></div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>nam</b> on <b>September 27, 2007, 09:51:37 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: igotseatacfunk on September 27, 2007, 09:50:21 pm</div><div class="quote">I was gonna say something semi-serious until i saw that picture.... <br /><br />and I feel like i&#039;m stalking daps in the boards....<br /></div><br /><br />stalking daps is fun!</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>igotseatacfunk</b> on <b>September 27, 2007, 09:52:36 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: namski on September 27, 2007, 09:51:37 pm</div><div class="quote"><div class="quoteheader">Quote from: igotseatacfunk on September 27, 2007, 09:50:21 pm</div><div class="quote">I was gonna say something semi-serious until i saw that picture.... <br /><br />and I feel like i&#039;m stalking daps in the boards....<br /></div><br /><br />stalking daps is fun!<br /></div><br /><br />We should go into business selling daps stalking accesories to each other.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>daps</b> on <b>September 27, 2007, 09:52:44 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><b>All-over Prince. Post over.</b><br />(http://tbn0.google.com/images?q=tbn:FrnzcR_gMBXJPM:http://www.ottres.ca/tmach/globalbir/06jun/jun07prince.jpg)(http://tbn0.google.com/images?q=tbn:FrnzcR_gMBXJPM:http://www.ottres.ca/tmach/globalbir/06jun/jun07prince.jpg)(http://tbn0.google.com/images?q=tbn:FrnzcR_gMBXJPM:http://www.ottres.ca/tmach/globalbir/06jun/jun07prince.jpg)(http://tbn0.google.com/images?q=tbn:FrnzcR_gMBXJPM:http://www.ottres.ca/tmach/globalbir/06jun/jun07prince.jpg)(http://tbn0.google.com/images?q=tbn:FrnzcR_gMBXJPM:http://www.ottres.ca/tmach/globalbir/06jun/jun07prince.jpg)(http://tbn0.google.com/images?q=tbn:FrnzcR_gMBXJPM:http://www.ottres.ca/tmach/globalbir/06jun/jun07prince.jpg)(http://tbn0.google.com/images?q=tbn:FrnzcR_gMBXJPM:http://www.ottres.ca/tmach/globalbir/06jun/jun07prince.jpg)(http://tbn0.google.com/images?q=tbn:FrnzcR_gMBXJPM:http://www.ottres.ca/tmach/globalbir/06jun/jun07prince.jpg)(http://tbn0.google.com/images?q=tbn:FrnzcR_gMBXJPM:http://www.ottres.ca/tmach/globalbir/06jun/jun07prince.jpg)(http://tbn0.google.com/images?q=tbn:FrnzcR_gMBXJPM:http://www.ottres.ca/tmach/globalbir/06jun/jun07prince.jpg)(http://tbn0.google.com/images?q=tbn:FrnzcR_gMBXJPM:http://www.ottres.ca/tmach/globalbir/06jun/jun07prince.jpg)(http://tbn0.google.com/images?q=tbn:FrnzcR_gMBXJPM:http://www.ottres.ca/tmach/globalbir/06jun/jun07prince.jpg)</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>Jawn</b> on <b>September 27, 2007, 09:53:39 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: thrilla in tukwila on September 27, 2007, 09:49:33 pm</div><div class="quote">what the fuck for?<br /></div><br /><br />So that all the uber hip fashionistas and streetwear snobs wasting their time on Hypebeast.com can salivate over my KnOwLeDgE.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>nam</b> on <b>September 27, 2007, 09:53:54 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">man...i need to step up my New Era game though...cuz Daps got that shit on lock.<br /><br />watch your back, homie.<br /><br /><br /><span style="font-size: 24pt;">DIPSET.</span></div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>igotseatacfunk</b> on <b>September 27, 2007, 09:55:09 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">Prince has a filthy 5-&#039;clock shadow</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>daps</b> on <b>September 27, 2007, 09:56:39 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">u talkin bout his 5-o&#039;clock shadow or mine?<br /><br />don&#039;t worry, nam, i already got the dipset new era hat. i just don&#039;t rock it.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>Jawn</b> on <b>September 27, 2007, 09:57:25 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">I&#039;ve seen some utterly hilarious all over prints that I couldn&#039;t even defend. I mean, come on, a HELLO KITTY hoodie?? I&#039;ve witnessed a guy wear it.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>nam</b> on <b>September 27, 2007, 10:00:36 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: igotseatacfunk on September 27, 2007, 09:52:36 pm</div><div class="quote">We should go into business selling daps stalking accesories to each other.<br /></div><br /><br />i&#039;ll trade you my grappling hook, if you have a GPS system.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>igotseatacfunk</b> on <b>September 27, 2007, 10:08:21 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: namski on September 27, 2007, 10:00:36 pm</div><div class="quote"><div class="quoteheader">Quote from: igotseatacfunk on September 27, 2007, 09:52:36 pm</div><div class="quote">We should go into business selling daps stalking accesories to each other.<br /></div><br /><br />i&#039;ll trade you my grappling hook, if you have a GPS system.<br /></div><br /><br />It just so happens i have an extra, Plus i have tracking devices in all of his hats. So his position is clearly maked with a big D</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>daps</b> on <b>September 27, 2007, 10:16:18 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: igotseatacfunk on September 27, 2007, 10:08:21 pm</div><div class="quote">clearly marked with a big D<br /></div><br /><br />that&#039;s what she said</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>nam</b> on <b>September 27, 2007, 10:26:42 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: daps on September 27, 2007, 10:16:18 pm</div><div class="quote">that&#039;s what she said<br /></div><br /><br />that&#039;s what she said.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>Jawn</b> on <b>September 27, 2007, 10:29:14 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: namski on September 27, 2007, 10:26:42 pm</div><div class="quote"><div class="quoteheader">Quote from: daps on September 27, 2007, 10:16:18 pm</div><div class="quote">that&#039;s what she said<br /></div><br /><br />that&#039;s what she said.<br /></div><br /><br />(http://www.ripete.com/covers/2279-200.jpg)</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>igotseatacfunk</b> on <b>September 28, 2007, 07:21:40 am</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: Jawn on September 27, 2007, 10:29:14 pm</div><div class="quote"><div class="quoteheader">Quote from: namski on September 27, 2007, 10:26:42 pm</div><div class="quote"><div class="quoteheader">Quote from: daps on September 27, 2007, 10:16:18 pm</div><div class="quote">that&#039;s what she said<br /></div><br /><br />that&#039;s what she said.<br /></div><br /><br />(http://www.ripete.com/covers/2279-200.jpg)<br /></div><br /><br />(http://www.snorgtees.com/images/ThatsWhatSheSaid_Fullpic_6.jpg)</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>phatlip</b> on <b>September 28, 2007, 03:32:27 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">hoodie print all over print hoodie! that&#039;s cool.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Honestly...</b><br />
+					Post by: <b>HAUNT</b> on <b>October 01, 2007, 11:53:59 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">(http://www.clownsforevents.com/images/clown1.jpg)<br /><br />Seriously, this is where this fad is/has gone.</div>
+					<br /><br />
+					<div align="center" class="smalltext">
+		<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;">MASSLINE | Powered by <a href="http://www.simplemachines.org/" title="Simple Machines Forum" target="_blank">SMF 1.0.10</a>.<br />
+&copy; 2005, <a href="http://www.simplemachines.org/about/copyright.php" title="Free Forum Software" target="_blank">Simple Machines LLC</a>. All Rights Reserved.
+		</span></div>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

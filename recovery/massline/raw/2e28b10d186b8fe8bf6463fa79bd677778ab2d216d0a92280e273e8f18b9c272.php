@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+		<title>Print Page - dipset! aye! byrd gang</title>
+		<style type="text/css"><!--
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			*, a:link, a:visited, a:hover, a:active
+			{
+				color: black !important;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			.code
+			{
+				font-size: x-small;
+				font-family: monospace;
+				border: 1px solid #000000;
+				margin: 1px;
+				padding: 1px;
+			}
+			.quote
+			{
+				font-size: x-small;
+				border: 1px solid #000000;
+				margin: 1px;
+				padding: 1px;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		--></style>
+	</head>
+	<body bgcolor="#ffffff" text="#000000">
+		<h1 class="largetext">MASSLINE</h1>
+		<h2 class="normaltext">MASS LINE FORUMS => The Opium Den => Topic started by: CoupDeGrace on December 14, 2006, 12:54:13 pm</h2>
+
+		<table width="90%" cellpadding="0" cellspacing="0" border="0">
+			<tr>
+				<td>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>dipset! aye! byrd gang</b><br />
+					Post by: <b>CoupDeGrace</b> on <b>December 14, 2006, 12:54:13 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">(http://i74.photobucket.com/albums/i244/Silverman101/BANDANA2.jpg)<br /><br />(http://img68.exs.cx/img68/6783/jesusset37nl.jpg)<br /><br />(http://img67.exs.cx/img67/7712/dipset8nc.jpg)<br /><br />(http://xa8.xanga.com/eeba55e208d3756498097/b37868057.jpg)<br /><br />(http://www.massappealmag.com/img/page/gallery/jim%20jones1.jpg)<br /><br />(http://www.comcast.net/data/br/2006/12/14/br-61488.jpg)<br /><br />(http://xdf.xanga.com/744a10160743549486309/b33252386.jpg)<br /><br />(http://i71.photobucket.com/albums/i121/the_jiggy_bifta/dipset.jpg)<br /><br />(http://www.hhv.de/images/cover5/50315.jpg)<br /><br />(http://www.macminute.com/images/db/podbrixkeynote2.jpg)<br /><br />(http://images18.fotki.com/v287/photos/2/200886/2113639/purplereign-vi.gif)<br /><br />(http://img142.imageshack.us/img142/1567/mhm8us.png)<br /><br />(http://myspace-676.vo.llnwd.net/00633/67/69/633159676_m.jpg)<br /><br />(http://img443.imageshack.us/img443/8634/shitisdisgustin3yi2ue.jpg)<br /><br /><br /><br /></div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: dipset! aye! byrd gang</b><br />
+					Post by: <b>JustBeism</b> on <b>December 14, 2006, 01:48:23 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">Hahah, yup.. that pretty much sums up dipset on the internet. Supposedly they run Harlem.. well, the ones in the group that have actually held a gun before i.e. the ones that don&#039;t rap.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: dipset! aye! byrd gang</b><br />
+					Post by: <b>gatsby</b> on <b>December 14, 2006, 03:28:16 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">(http://img216.imageshack.us/img216/5674/jones2me8.jpg)<br />(http://img248.imageshack.us/img248/4162/jonesha0.jpg)<br />(http://img222.imageshack.us/img222/9096/jones3xw9.jpg)<br />(http://img224.imageshack.us/img224/4417/jones4au5.jpg)<br /><span style="font-family: Verdana;"><span style="font-size: 30pt;">BAAALLLLIN!</span></span></div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: dipset! aye! byrd gang</b><br />
+					Post by: <b>CoupDeGrace</b> on <b>December 14, 2006, 03:47:08 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><span style="font-size: 20pt;">I WEAR A MEAN DARK PAIR OF SHADES!.... BAWWWWWWWWWWWWWWLIN!!!!!</span><br /><br /><div class="quoteheader">Quote from: JustBeasy on December 14, 2006, 01:48:23 pm</div><div class="quote">Hahah, yup.. that pretty much sums up dipset on the internet. Supposedly they run Harlem.. well, the ones in the group that have actually held a gun before i.e. the ones that don&#039;t rap.<br /></div><br /><br />you seen the video of lil cease talkin mess about dipset and then showin the video of jim gettin cracked at a rucker game and cam runnin off lmao... all his homies in the studio watchin the video and they are crackin up, slow motion replayin that shit... just dyin... <br /><br />had me rollin just because of that. lmao<br /><br />its on youtube. http://youtube.com/watch?v=CG3D6dOIkjs</div>
+					<br /><br />
+					<div align="center" class="smalltext">
+		<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;">MASSLINE | Powered by <a href="http://www.simplemachines.org/" title="Simple Machines Forum" target="_blank">SMF 1.0.10</a>.<br />
+&copy; 2005, <a href="http://www.simplemachines.org/about/copyright.php" title="Free Forum Software" target="_blank">Simple Machines LLC</a>. All Rights Reserved.
+		</span></div>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

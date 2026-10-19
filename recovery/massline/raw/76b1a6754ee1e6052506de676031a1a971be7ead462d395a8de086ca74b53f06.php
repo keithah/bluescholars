@@ -1,0 +1,356 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+		<title>Print Page - HAPPY BIRTHDAY GEOLOGIC!</title>
+		<style type="text/css"><!--
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			*, a:link, a:visited, a:hover, a:active
+			{
+				color: black !important;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			.code
+			{
+				font-size: x-small;
+				font-family: monospace;
+				border: 1px solid #000000;
+				margin: 1px;
+				padding: 1px;
+			}
+			.quote
+			{
+				font-size: x-small;
+				border: 1px solid #000000;
+				margin: 1px;
+				padding: 1px;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		--></style>
+	</head>
+	<body bgcolor="#ffffff" text="#000000">
+		<h1 class="largetext">MASSLINE</h1>
+		<h2 class="normaltext">MASS LINE FORUMS => Mass Line Artist Discussion => Topic started by: daps on February 19, 2007, 10:31:25 am</h2>
+
+		<table width="90%" cellpadding="0" cellspacing="0" border="0">
+			<tr>
+				<td>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>daps</b> on <b>February 19, 2007, 10:31:25 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">Peace fam -- show Geo some bday love here. What&#039;s your favorite show/memory of Geo? Any favorite lines? Post &#039;em up like Rik Smits in the paint.<br /><br />For me, going to Victoria last year for a Blue Scholars show was dope. As for lines, I heard the &quot;malnourished and underfed line&quot; way back during isangmahal days&nbsp; ;)</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>JustBeism</b> on <b>February 19, 2007, 10:36:55 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">Happy bornday, Geo.<br /><br />I think my favorite moment actually is when I caught him at the old Firehouse in Bellevue waay back in the day. I think he was working with the Bay Root dudes and he dropped a line that I still remember and really liked back then, it went something like &#039;the difference between an mc and a rapper is like triangles to pyramids - dimensions. I think the way he worded it sounded less like a thesis, but yeah, always remembered that, good imagery.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>CHEV</b> on <b>February 19, 2007, 10:42:23 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">happy b day gorgey.<br /><br />my favorite show memory of geo was at the dope emorium. he was smokin hot.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>KRS ONE.TWO.</b> on <b>February 19, 2007, 10:46:11 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">happy birthday... holmes </div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>Matt Jay</b> on <b>February 19, 2007, 11:58:53 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">Happy birthday Geo...you&#039;re a big inspiration.<br /><br />My favorite memory is every time I listen to any BS track...I get just as excited and inspired as the very first time...</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>Meiotch</b> on <b>February 19, 2007, 12:13:07 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">Happy Birthday Geo.....like dude said above, you are a huge inspiration and surely deserve props for putting the struggle of youself and others before anything else in your music<br /><br />my favorite Geo/BS moment will be when I can finally make the trip to Seattle from the east coast and catch you guys for a weekend of shows (been to Seattle once before I was up on the whole MassLine roster, cant believe i saw D12 at the showbox when groups like Blue Scholars, Common Market, Ab Creole, and Native Guns play up there....if I could only rewind the time haha)<br /><br />much love from NY....we&#039;re waiting on that Pro Brown mixtape and the new Bayani record!!</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>nam</b> on <b>February 19, 2007, 01:08:17 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">Happy Born Day Geo. <br /><br /><br />my favorite line/memory?<br /><br />when Geo was spittin lines from Sagaba back in the IsangMahal days...back when he was gurthy.&nbsp; ;)</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>sergio</b> on <b>February 19, 2007, 01:18:10 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">happy bday</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>Jawn</b> on <b>February 19, 2007, 01:53:13 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">I loved the FASA jam some months back. I felt like the only fan really &quot;rocking out&quot; to Geo&#039;s set that evening. Everyone else just sat there like they&#039;d never gone to a rap concert before.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>sabzi</b> on <b>February 19, 2007, 02:10:42 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">my favorite memory of geo is when a grip of us were at denny&#039;s late one night a few years back and somebody in our group almost fought some dood that we thought was hitting on our friend&#039;s wife.&nbsp; it was hilarious later because after that dood backed down hella hard he was like &quot;bro don&#039;t even trip!&nbsp; i&#039;m gay!&quot;<br /><br />it was amusing.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>CoupDeGrace</b> on <b>February 19, 2007, 02:20:50 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">happy birthday geo!<br /><br />serve the pancit, and lets grub fam<br /><br /></div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>virtuousvandal</b> on <b>February 19, 2007, 02:51:21 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">Happy Birthday dude!<br />aside from when I first listened to a burned copy of the original LP and absolutely loved every track, I only have two memories; the Re-release in June 2005, and meeting him briefly after at a BBQ after Sabzi and I carried speakers from and strung an extension cord out of his house across some trees over the road to the park. HAHAHA!<br />Dopest BBQ ever!</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>daps</b> on <b>February 19, 2007, 04:35:50 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: sabzi on February 19, 2007, 02:10:42 pm</div><div class="quote">my favorite memory of geo is when a grip of us were at denny&#039;s late one night a few years back and somebody in our group almost fought some dood that we thought was hitting on our friend&#039;s wife.&nbsp; it was hilarious later because after that dood backed down hella hard he was like &quot;bro don&#039;t even trip!&nbsp; i&#039;m gay!&quot;<br /><br />it was amusing.<br /></div><br /><br />i remember that vividly. the guy was an ex-coworker of mine, too. what an idiot. </div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>allahu aight</b> on <b>February 19, 2007, 05:57:51 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">first song i heard was inkwell (just like everyone else). i was most pleased<br /><br />happy day</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>teacha</b> on <b>February 19, 2007, 06:47:16 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">First off, Happy Birthday G!<br /><br />Since I am a newbie fan to BS, my favorite memory doesn&#039;t go back as far as most of the others.  Last year I went to see Mos Def at the Beats, Chords, and Comedy tour at UW.  I wasn&#039;t aware of all the acts that were going to open for Mos, but I was torn from my seat when this kick ass duo came out and ripped the stage.  They were just &quot;one dj and one emcee, that&#039;s it&quot; but that was enough to rock my world.  A fan was born.<br /><br />My absolute favorite line is ... &quot;You got time to take a shit, you got time to read a book.&quot;  As a reading teacher, that makes me laugh so hard because I know someday I will hear some lame ass excuse from one of my students about not having enough time to read their homework.  I know I will bust out with that line.  If I get fired for saying that to a student then my next career will be as roadie for BS.  <br /><br />Thank you for bringing a MESSAGE back to hip hop.  Thank you for sharing your music with the fans.  Thank you for being a lyricist, not just a rapper.  Thank you for joining Sabzi and creating music that moves the people.  Thank you.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>Jawn</b> on <b>February 19, 2007, 06:49:49 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: dawson on February 19, 2007, 05:57:51 pm</div><div class="quote">first song i heard was inkwell (just like everyone else).<br /></div><br /><br />I actually heard &quot;Blink&quot; first.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>igotseatacfunk</b> on <b>February 19, 2007, 08:36:58 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: Jawn on February 19, 2007, 06:49:49 pm</div><div class="quote"><div class="quoteheader">Quote from: dawson on February 19, 2007, 05:57:51 pm</div><div class="quote">first song i heard was inkwell (just like everyone else).<br /></div><br /><br />I actually heard &quot;Blink&quot; first.<br /></div><br /><br />I remember outside of FASA Jam, when I got there like an hour or so early... and I recall a semi-awkward conversation with him and Jawn.<br /><br />But then if you meet me in person, I generally don&#039;t speak up too much, until i get a feel for my surroundings.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>Jawn</b> on <b>February 19, 2007, 08:50:08 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">Semi-awkward? I felt pretty good about that pre-show chat. I always try to holler at Geo before a jam.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>ToddSykes</b> on <b>February 19, 2007, 09:11:01 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">happy birthday geo</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>erik?</b> on <b>February 19, 2007, 09:24:34 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: Jawn on February 19, 2007, 08:50:08 pm</div><div class="quote">Semi-awkward? I felt pretty good about that pre-show chat. I always try to holler at Geo before a jam.<br /></div>&nbsp;  haha<br /><br /><br />happy birthday geo</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>MTK</b> on <b>February 19, 2007, 09:32:43 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">How about when I heard proletariat blues and he basically described my life?&nbsp; That was almost creepy haha.&nbsp; Everything damn near to a T</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>igotseatacfunk</b> on <b>February 19, 2007, 09:34:09 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: MTK on February 19, 2007, 09:32:43 pm</div><div class="quote">How about when I heard proletariat blues and he basically described my life?  That was almost creepy haha.  Everything damn near to a T<br /></div><br /><br />haha same here... minus amazon.com phenom.&nbsp; and all the thing about rhymes.&nbsp; </div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>Kirb.s</b> on <b>February 19, 2007, 10:02:26 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">hmmmmm... i think one of my favorites is the hidmo conversation during the Good Medicine meeting... real talk and I highly enjoyed everything that was said and the people there.&nbsp; <br /><br /><br />Happy birthday Bro, and sorry you are hella sick!!!&nbsp; <br /><br />AND HAPPY BIRTHDAY CHERA.&nbsp; i heard the story about that and its amazing.&nbsp; <br /><br />thanks for letting the homies use the house to get tatt&#039;ed up.&nbsp; </div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>isRAel</b> on <b>February 20, 2007, 01:57:40 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">my favorite geo memories took place in a $40 motel room in eugene.&nbsp;  and that&#039;s all you get.&nbsp; <br /><br /> happy born-day, cousin -- i got mad love and respect for you.&nbsp;  it&#039;s good to be in your company.&nbsp;  it&#039;s more than just a hobby or past time...&nbsp;  thasswhassup.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>Taybot</b> on <b>February 20, 2007, 08:19:11 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">Happy b-day!<br /><br />My favorite memory was:<br /><br /> like 2 years ago at the ESC Conference (Ethnic Student Center Conference for WWU).  My dude and I were rapping to beats and nobody was paying attention to us.  Then Geo (who had just rocked a show a few hours ago) comes running in like, &quot;I&#039;m an MC and when I hear people freestyling I gotta step in the cypher.&quot;  So then we&#039;re kicking flows together and we got a little crowd listening to us. </div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>j-tyme</b> on <b>February 20, 2007, 09:00:28 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">Happy Birthday Geo.  <br /><br />My favorite memory of Geo was took a place about 8 years ago.  It turns out I know a couple of his cousins in San Diego.  They came up to kick it one weekend and then they said they wanted to visit their Auntie in Bremerton and that her cousin was gonna meet us on the ferry…and on walks Geo.  We only knew each other by face.  We ended up going to his house and I even broke bread with his family that night.  A few months/years later, I see him perform and think to myself, “Hey, I know that guy.”<br /><br />Funny how small the world is and how things can come full circle....<br /><br />Thanks for the dinner that night in Bremerton homie.<br /></div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>Heather</b> on <b>February 20, 2007, 11:00:27 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">Happy Birthday Geo.&nbsp; <br /><br />At the post-Massline-show BBQ at RA &amp; M&#039;s house Geo brought some extra veggie patties to share and that was much appreciated by this Veggie.&nbsp; Best performance memory was during the BS set at Bumbershoot....Sagaba got me a little misty-eyed that night.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>shawn stone</b> on <b>February 20, 2007, 03:01:17 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">hope you got mad presents...lol<br /><br />happy birfday geo.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>olaf</b> on <b>February 20, 2007, 03:17:08 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">This is by far not my favorite geo memory, but it stands out for some reason. When we were at that anti-patriarchy ed and norma called on you, calling you george. don&#039;t know why, but I thought it was hilarious! I mean, it&#039;s your name and all, but I think it was the first time I ever heard anyone actually say it!<br /><br />Happy birthday George. And enjoy the CDs. And get better damn it, your adoring fans await!</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>Blind Sage</b> on <b>February 20, 2007, 04:00:25 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">Last year when the Scholars came through for the Rainy Dawg birthday bash, Geo and I were talkin&#039; and he was like &quot;it wouldn&#039;t be a UW show without you here&quot;, but I graduate in the spring, and I&#039;m afraid that means the Scholars will refuse to do a show at UW ever again, and that would be a shame.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>igotseatacfunk</b> on <b>February 20, 2007, 10:59:19 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: Blind Sage on February 20, 2007, 04:00:25 pm</div><div class="quote">Last year when the Scholars came through for the Rainy Dawg birthday bash, Geo and I were talkin&#039; and he was like &quot;it wouldn&#039;t be a UW show without you here&quot;, but I graduate in the spring, and I&#039;m afraid that means the Scholars will refuse to do a show at UW ever again, and that would be a shame.<br /></div><br />hahaha it would be a shame!!! stay in college!!</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>Geo</b> on <b>February 22, 2007, 06:07:48 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">Wow. Thanks for the birthday blessings yall. I&#039;m reinvigorated. <br /><br />GET YOUR FLU SHOTS<br /><br />Daps - Pro Brown still owes you a birfday performance<br />Just.Be - !!! Always wondered if anybody remembered the shows I rocked with Reydub.&nbsp; You weren&#039;t a part of that crowd that went nuts for Nonparielyx and left when they were done were you haha<br />Flo Chi Minh - we&#039;ll always have NWAAT<br />MTK - from the supermarket to the cubicle, the plantation changes form but not essence<br />CoupDeGrace - see you in the 503 in march brotha<br />taybot - thanks for letting us chill at that afterparty. we were locked out of our cabins - but that&#039;s another story<br />Kirbs - once i defeat this virus i&#039;ll be back at 20th &amp; jackson having more classic conversations wit you. thank you again<br />Virtuousvandal - the 300 foot extension cord bbq. classic!<br />j-tizzle - small world like that bro. i&#039;ll always remember that day too. you know - i haven&#039;t seen my cousins since!<br />RA - respect is mutual cousin. next tour, you get bed and i&#039;ll take the floor. <br />Shyteacha - your work inspires me, too<br />EbbTide - I&#039;ll be there solo mid-march. See you then?<br />Blind Sage - Dont trip - you graduate, I&#039;ll return for those final 5 credits. Then you rock a show, and I&#039;ll attend.<br />Jawn - I&#039;m always awkward before a show. And during and after.<br />Olaf - That&#039;s the first time somebody not from Bremerton and not a Wing Luke Asian Museum staff member called me that in years.<br />VBL - I&#039;m thinkin bout going back veggie again<br />Saba - somebody wanted to get something straight. Somebody knew homie was gay and not hitting on somebody&#039;s lady. But talking about somebody&#039;s wife&#039;s bachelorette party in front of somebody&#039;s face is not wassup!<br />Shawn Stone - not too many presents but the presence of good folks was all i need. that and Nam&#039;s Borat shirt.<br />chev - thanks for counterbalancing the anonymous heckling from the back at that show homie!<br />Central America, sergio, todd - Thanks homies</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>virtuousvandal</b> on <b>February 22, 2007, 07:48:34 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: Geo on February 22, 2007, 06:07:48 pm</div><div class="quote">Wow. Thanks for the birthday blessings yall. I&#039;m reinvigorated. <br /><br />GET YOUR FLU SHOTS<br /><br />Daps - Pro Brown still owes you a birfday performance<br />Just.Be - !!! Always wondered if anybody remembered the shows I rocked with Reydub.&nbsp; You weren&#039;t a part of that crowd that went nuts for Nonparielyx and left when they were done were you haha<br />Flo Chi Minh - we&#039;ll always have NWAAT<br />MTK - from the supermarket to the cubicle, the plantation changes form but not essence<br />CoupDeGrace - see you in the 503 in march brotha<br />taybot - thanks for letting us chill at that afterparty. we were locked out of our cabins - but that&#039;s another story<br />Kirbs - once i defeat this virus i&#039;ll be back at 20th &amp; jackson having more classic conversations wit you. thank you again<br />Virtuousvandal - the 300 foot extension cord bbq. classic!<br />j-tizzle - small world like that bro. i&#039;ll always remember that day too. you know - i haven&#039;t seen my cousins since!<br />RA - respect is mutual cousin. next tour, you get bed and i&#039;ll take the floor. <br />Shyteacha - your work inspires me, too<br />EbbTide - I&#039;ll be there solo mid-march. See you then?<br />Blind Sage - Dont trip - you graduate, I&#039;ll return for those final 5 credits. Then you rock a show, and I&#039;ll attend.<br />Jawn - I&#039;m always awkward before a show. And during and after.<br />Olaf - That&#039;s the first time somebody not from Bremerton and not a Wing Luke Asian Museum staff member called me that in years.<br />VBL - I&#039;m thinkin bout going back veggie again<br />Saba - somebody wanted to get something straight. Somebody knew homie was gay and not hitting on somebody&#039;s lady. But talking about somebody&#039;s wife&#039;s bachelorette party in front of somebody&#039;s face is not wassup!<br />Shawn Stone - not too many presents but the presence of good folks was all i need. that and Nam&#039;s Borat shirt.<br />chev - thanks for counterbalancing the anonymous heckling from the back at that show homie!<br />Central America, sergio, todd - Thanks homies<br /></div><br /><br />Damn!<br />talk about Master of Ceremonies<br />responding to every last one takes dedication</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>Blind Sage</b> on <b>February 22, 2007, 07:53:17 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: Geo on February 22, 2007, 06:07:48 pm</div><div class="quote">Blind Sage - Dont trip - you graduate, I&#039;ll return for those final 5 credits. Then you rock a show, and I&#039;ll attend.<br /><br /></div><br /><br />Or I could drop out 5 credits short, and we could start a new crew called 5 Credits Left (5CL) and <i>only</i> do shows at UW.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>igotseatacfunk</b> on <b>February 23, 2007, 01:39:00 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">if geo doesn&#039;t attend i&#039;ll filll in for him, i don&#039;t rhyme but ill try my damndest</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>Jawn</b> on <b>February 23, 2007, 07:56:21 am</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: igotseatacfunk on February 23, 2007, 01:39:00 am</div><div class="quote">if geo doesn&#039;t attend i&#039;ll filll in for him, i don&#039;t rhyme but ill try my damndest<br /></div><br /><br />Or you could breakdance.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>bub1992</b> on <b>March 07, 2007, 04:11:28 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: Jawn on February 19, 2007, 06:49:49 pm</div><div class="quote"><div class="quoteheader">Quote from: dawson on February 19, 2007, 05:57:51 pm</div><div class="quote">first song i heard was inkwell (just like everyone else).<br /></div><br /><br />I actually heard &quot;Blink&quot; first.<br /></div><br /><br />Same same. Still the best song they have. Best memory though was Bumbershoot &#039;05 in exhibition hall. show was dope. missed 07. but anyway Happy Belated Bday geo</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>virtuousvandal</b> on <b>March 07, 2007, 09:03:52 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: bub1992 on March 07, 2007, 04:11:28 pm</div><div class="quote"><div class="quoteheader">Quote from: Jawn on February 19, 2007, 06:49:49 pm</div><div class="quote"><div class="quoteheader">Quote from: dawson on February 19, 2007, 05:57:51 pm</div><div class="quote">first song i heard was inkwell (just like everyone else).<br /></div><br /><br />I actually heard &quot;Blink&quot; first.<br /></div><br /><br />Same same. Still the best song they have. Best memory though was Bumbershoot &#039;05 in exhibition hall. show was dope. missed 07. but anyway Happy Belated Bday geo<br /></div><br /><br />I think the best one they have up to date is Commencement Day; that, wounded eyes, The Long March, The Ave and Motion/Movement are my favorites</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>allahu aight</b> on <b>March 11, 2007, 11:59:07 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">i think burnt offering might be the coolest song ever.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>virtuousvandal</b> on <b>March 12, 2007, 12:43:09 am</b>
+					<hr />
+					<div style="margin: 0 5ex;">definitely dope! that was the first one I ever heard. that&#039;s what made me really want to cop the album. it was so different from any Hip Hop I had ever heard before. a totally new flavor for me</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>bub1992</b> on <b>March 27, 2007, 08:48:55 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: virtuousvandal on March 07, 2007, 09:03:52 pm</div><div class="quote"><div class="quoteheader">Quote from: bub1992 on March 07, 2007, 04:11:28 pm</div><div class="quote"><div class="quoteheader">Quote from: Jawn on February 19, 2007, 06:49:49 pm</div><div class="quote"><div class="quoteheader">Quote from: dawson on February 19, 2007, 05:57:51 pm</div><div class="quote">first song i heard was inkwell (just like everyone else).<br /></div><br /><br />I actually heard &quot;Blink&quot; first.<br /></div><br /><br />Same same. Still the best song they have. Best memory though was Bumbershoot &#039;05 in exhibition hall. show was dope. missed 07. but anyway Happy Belated Bday geo<br /></div><br /><br />I think the best one they have up to date is Commencement Day; that, wounded eyes, The Long March, The Ave and Motion/Movement are my favorites<br /></div><br /><br /><br />100% agree</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>CoupDeGrace</b> on <b>March 27, 2007, 10:39:04 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">sagaba and life and debt is that shit you can blaze to</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>werdna3523</b> on <b>March 28, 2007, 02:46:10 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: CDG on March 27, 2007, 10:39:04 pm</div><div class="quote">sagaba and life and debt is that shit you can blaze to<br /></div><br /><br />yea, the first scholars track i heard was the sagaba remix. what caught my attention was the line where geo goes, &quot;She told me what her name means in Ilocano&quot; or somethin like that. </div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>maharlika</b> on <b>March 29, 2007, 12:25:31 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: werdna3523 on March 28, 2007, 02:46:10 pm</div><div class="quote"><div class="quoteheader">Quote from: CDG on March 27, 2007, 10:39:04 pm</div><div class="quote">sagaba and life and debt is that shit you can blaze to<br /></div><br /><br />yea, the first scholars track i heard was the sagaba remix. what caught my attention was the line where geo goes, &quot;She told me what her name means in Ilocano&quot; or somethin like that. <br /></div><br />word.&nbsp; are you illokano?</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>Look everyone! I can stick my foot in my Mouth(matician)</b> on <b>March 29, 2007, 12:41:25 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">waaaaay late, but...<br /><br />Happy Birpday Geo.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>CoupDeGrace</b> on <b>March 29, 2007, 01:29:32 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader">Quote from: maharlika on March 29, 2007, 12:25:31 pm</div><div class="quote"><div class="quoteheader">Quote from: werdna3523 on March 28, 2007, 02:46:10 pm</div><div class="quote"><div class="quoteheader">Quote from: CDG on March 27, 2007, 10:39:04 pm</div><div class="quote">sagaba and life and debt is that shit you can blaze to<br /></div><br /><br />yea, the first scholars track i heard was the sagaba remix. what caught my attention was the line where geo goes, &quot;She told me what her name means in Ilocano&quot; or somethin like that. <br /></div><br />word.  are you illokano?<br /></div><br /><br />i am.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>shawn stone</b> on <b>March 29, 2007, 02:50:14 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">Obsidius Rhyme, is another sick variation ive heard of that name. you probably havent heard it, cuz i came up with it...and its dope..your opinion is not needed.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: HAPPY BIRTHDAY GEOLOGIC!</b><br />
+					Post by: <b>Jimmi Stone</b> on <b>March 29, 2007, 08:25:19 pm</b>
+					<hr />
+					<div style="margin: 0 5ex;">a little late...<br />but happy birthday geo.</div>
+					<br /><br />
+					<div align="center" class="smalltext">
+		<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;">MASSLINE | Powered by <a href="http://www.simplemachines.org/" title="Simple Machines Forum" target="_blank">SMF 1.0.10</a>.<br />
+&copy; 2005, <a href="http://www.simplemachines.org/about/copyright.php" title="Free Forum Software" target="_blank">Simple Machines LLC</a>. All Rights Reserved.
+		</span></div>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

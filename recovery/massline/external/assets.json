@@ -1,7 +1,7 @@
 {
   "version": 1,
   "provider": "Internet Archive Wayback CDX",
-  "generated_at": "2026-10-19T21:48:47.258718+00:00",
+  "generated_at": "2026-10-19T22:00:57.480393+00:00",
   "discovery_count": 1531,
   "assets": [
     {
@@ -51150,11 +51150,25 @@
           "tag": "img"
         }
       ],
-      "captures": [],
-      "status": "index_failed",
+      "captures": [
+        {
+          "timestamp": "20161124144622",
+          "original": "http://farm2.static.flickr.com/1223/1487442354_a3ab674336.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "A5X3TIIX5TUXNYTMZKNH6HFACXTSTRPH",
+          "length": "73906"
+        }
+      ],
+      "status": "recovered",
       "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Ffarm2.static.flickr.com%2F1223%2F1487442354_a3ab674336.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
-      "index_error": "Wayback CDX HTTP 429; query paused to respect archive rate limit",
-      "indexed_at": "2026-10-19T21:48:14.404144+00:00"
+      "indexed_at": "2026-10-19T21:59:18.953295+00:00",
+      "index_http_status": 200,
+      "selected_capture": "20161124144622",
+      "raw_path": "recovery/massline/external/raw/c42de9a8f307e7f17b2a1ffc1271ed344fbb6bdf3ff90536bcb73c3322e98d64.jpg",
+      "sha256": "c42de9a8f307e7f17b2a1ffc1271ed344fbb6bdf3ff90536bcb73c3322e98d64",
+      "bytes": 73427,
+      "content_type": "image/jpeg"
     },
     {
       "url": "http://farm2.static.flickr.com/1223/869447584_6f40b9af0f_s.jpg",
@@ -53789,8 +53803,25 @@
           "tag": "img"
         }
       ],
-      "captures": [],
-      "status": "queued"
+      "captures": [
+        {
+          "timestamp": "20161123213158",
+          "original": "http://farm2.static.flickr.com/1232/613799739_fae2801778_o.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "3Z2ZCVAHYE5DZXYCYN4I4DKDDRS7YNFL",
+          "length": "48811"
+        }
+      ],
+      "status": "recovered",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Ffarm2.static.flickr.com%2F1232%2F613799739_fae2801778_o.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:59:20.117394+00:00",
+      "index_http_status": 200,
+      "selected_capture": "20161123213158",
+      "raw_path": "recovery/massline/external/raw/bb96552487317c4babd70cedeacb9f75882a6104b56b1274c4b164f6523dfe84.jpg",
+      "sha256": "bb96552487317c4babd70cedeacb9f75882a6104b56b1274c4b164f6523dfe84",
+      "bytes": 48558,
+      "content_type": "image/jpeg"
     },
     {
       "url": "http://farm2.static.flickr.com/1234/960591357_d9a5f23420.jpg",
@@ -53838,8 +53869,25 @@
           "tag": "img"
         }
       ],
-      "captures": [],
-      "status": "queued"
+      "captures": [
+        {
+          "timestamp": "20161124144622",
+          "original": "http://farm2.static.flickr.com/1237/1487442858_000b25c78f.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "KQDZ7LF3Y54QUDJKSGFYTMORHPJWQFWY",
+          "length": "59673"
+        }
+      ],
+      "status": "recovered",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Ffarm2.static.flickr.com%2F1237%2F1487442858_000b25c78f.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:59:21.317676+00:00",
+      "index_http_status": 200,
+      "selected_capture": "20161124144622",
+      "raw_path": "recovery/massline/external/raw/5444807a3ddb8915abf15e1d74f4f4c12a3e63d1c7c8446d3469feeb80b568c3.jpg",
+      "sha256": "5444807a3ddb8915abf15e1d74f4f4c12a3e63d1c7c8446d3469feeb80b568c3",
+      "bytes": 58778,
+      "content_type": "image/jpeg"
     },
     {
       "url": "http://farm2.static.flickr.com/1245/652947222_5bfb61d33b_o.jpg",
@@ -53852,7 +53900,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Ffarm2.static.flickr.com%2F1245%2F652947222_5bfb61d33b_o.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:59:22.486887+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://farm2.static.flickr.com/1311/1487443256_45436fe579.jpg",
@@ -53864,8 +53915,25 @@
           "tag": "img"
         }
       ],
-      "captures": [],
-      "status": "queued"
+      "captures": [
+        {
+          "timestamp": "20161124144622",
+          "original": "http://farm2.static.flickr.com/1311/1487443256_45436fe579.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "7WJQYBEOUYX4DCJONLCXRO7TYMP55MWB",
+          "length": "92570"
+        }
+      ],
+      "status": "recovered",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Ffarm2.static.flickr.com%2F1311%2F1487443256_45436fe579.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:59:26.628093+00:00",
+      "index_http_status": 200,
+      "selected_capture": "20161124144622",
+      "raw_path": "recovery/massline/external/raw/d7c0b8d00ddd1a5256421b640700b363184cf8b718c0dff5b171b672174a816c.jpg",
+      "sha256": "d7c0b8d00ddd1a5256421b640700b363184cf8b718c0dff5b171b672174a816c",
+      "bytes": 92242,
+      "content_type": "image/jpeg"
     },
     {
       "url": "http://farm2.static.flickr.com/1314/1073641852_10c532251a_o.jpg",
@@ -53878,7 +53946,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Ffarm2.static.flickr.com%2F1314%2F1073641852_10c532251a_o.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:59:27.742552+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://farm2.static.flickr.com/1342/532411119_e3e53a1cb8.jpg",
@@ -53891,7 +53962,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Ffarm2.static.flickr.com%2F1342%2F532411119_e3e53a1cb8.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:59:32.844183+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://farm2.static.flickr.com/1376/1486585459_85a9d8d7e7.jpg",
@@ -53903,8 +53977,25 @@
           "tag": "img"
         }
       ],
-      "captures": [],
-      "status": "queued"
+      "captures": [
+        {
+          "timestamp": "20161124144619",
+          "original": "http://farm2.static.flickr.com/1376/1486585459_85a9d8d7e7.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "MWB2AKYCLVSBZSAO72NF5F6S3YSZHADS",
+          "length": "93772"
+        }
+      ],
+      "status": "recovered",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Ffarm2.static.flickr.com%2F1376%2F1486585459_85a9d8d7e7.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:59:34.170806+00:00",
+      "index_http_status": 200,
+      "selected_capture": "20161124144619",
+      "raw_path": "recovery/massline/external/raw/17c254190f2b560c20f885b6b53d1c40cf233a5c4f816ea06683890033a3f9e6.jpg",
+      "sha256": "17c254190f2b560c20f885b6b53d1c40cf233a5c4f816ea06683890033a3f9e6",
+      "bytes": 92850,
+      "content_type": "image/jpeg"
     },
     {
       "url": "http://farm2.static.flickr.com/1385/538877262_191a526f28.jpg?v=0",
@@ -53917,7 +54008,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Ffarm2.static.flickr.com%2F1385%2F538877262_191a526f28.jpg%3Fv%3D0&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:59:35.389799+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://farm2.static.flickr.com/1397/1307152245_518dc09c38.jpg",
@@ -54203,7 +54297,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Ffarm3.static.flickr.com%2F2013%2F1798968453_58c83c1139.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:59:38.970065+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://farm3.static.flickr.com/2035/1739928051_d43f78ba6f_o.jpg",
@@ -54216,7 +54313,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Ffarm3.static.flickr.com%2F2035%2F1739928051_d43f78ba6f_o.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:59:40.124545+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://farm3.static.flickr.com/2047/2097675996_05c33d1574_m.jpg",
@@ -54284,8 +54384,25 @@
           "tag": "img"
         }
       ],
-      "captures": [],
-      "status": "queued"
+      "captures": [
+        {
+          "timestamp": "20161124144810",
+          "original": "http://farm3.static.flickr.com/2058/1805264984_e75c4727de_o.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "OSIG3AVRTB2DIMWE7ZTVHYB2TZJBQGLF",
+          "length": "85662"
+        }
+      ],
+      "status": "recovered",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Ffarm3.static.flickr.com%2F2058%2F1805264984_e75c4727de_o.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:59:43.417808+00:00",
+      "index_http_status": 200,
+      "selected_capture": "20161124144810",
+      "raw_path": "recovery/massline/external/raw/c9b20be3fd41585a65dce9b20b3baf60623d3c39a0989a1c03c02c93e3371720.jpg",
+      "sha256": "c9b20be3fd41585a65dce9b20b3baf60623d3c39a0989a1c03c02c93e3371720",
+      "bytes": 85037,
+      "content_type": "image/jpeg"
     },
     {
       "url": "http://farm3.static.flickr.com/2142/1799809410_4437f9db94.jpg",
@@ -54298,7 +54415,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Ffarm3.static.flickr.com%2F2142%2F1799809410_4437f9db94.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:59:44.528732+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://farm3.static.flickr.com/2156/1804416331_87b9b92d82_o.jpg",
@@ -54310,8 +54430,25 @@
           "tag": "img"
         }
       ],
-      "captures": [],
-      "status": "queued"
+      "captures": [
+        {
+          "timestamp": "20161124144810",
+          "original": "http://farm3.static.flickr.com/2156/1804416331_87b9b92d82_o.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "AZLQFIF3RT24UUEJPSEP7JTN6DGUSAFM",
+          "length": "242098"
+        }
+      ],
+      "status": "recovered",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Ffarm3.static.flickr.com%2F2156%2F1804416331_87b9b92d82_o.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:59:45.674954+00:00",
+      "index_http_status": 200,
+      "selected_capture": "20161124144810",
+      "raw_path": "recovery/massline/external/raw/fbf5b7436350678f9cd889e1d3e61f6cdbd9fd6f5b3bf760f7cb5b8ecada6600.jpg",
+      "sha256": "fbf5b7436350678f9cd889e1d3e61f6cdbd9fd6f5b3bf760f7cb5b8ecada6600",
+      "bytes": 266302,
+      "content_type": "image/jpeg"
     },
     {
       "url": "http://farm3.static.flickr.com/2194/1761658609_a05ba641f1_o.jpg",
@@ -54324,7 +54461,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Ffarm3.static.flickr.com%2F2194%2F1761658609_a05ba641f1_o.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:59:48.083419+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://farm3.static.flickr.com/2194/2441632282_f1b186b2c3.jpg",
@@ -54336,8 +54476,25 @@
           "tag": "img"
         }
       ],
-      "captures": [],
-      "status": "queued"
+      "captures": [
+        {
+          "timestamp": "20161123212748",
+          "original": "http://farm3.static.flickr.com/2194/2441632282_f1b186b2c3.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "A3LL7UY5PI2FECLXVVIFUY7PY3A7HFAN",
+          "length": "229806"
+        }
+      ],
+      "status": "recovered",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Ffarm3.static.flickr.com%2F2194%2F2441632282_f1b186b2c3.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:59:49.235753+00:00",
+      "index_http_status": 200,
+      "selected_capture": "20161123212748",
+      "raw_path": "recovery/massline/external/raw/f09f00710ee5695c6dac275e85ce8972eab5679382eae303d995749fe7258b28.jpg",
+      "sha256": "f09f00710ee5695c6dac275e85ce8972eab5679382eae303d995749fe7258b28",
+      "bytes": 228842,
+      "content_type": "image/jpeg"
     },
     {
       "url": "http://farm3.static.flickr.com/2215/1885010567_d55135b85d.jpg",
@@ -54349,8 +54506,25 @@
           "tag": "img"
         }
       ],
-      "captures": [],
-      "status": "queued"
+      "captures": [
+        {
+          "timestamp": "20161124144811",
+          "original": "http://farm3.static.flickr.com/2215/1885010567_d55135b85d.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "VPKBKWWBRYVFZVB4BVR32JWJMO2MS64R",
+          "length": "204600"
+        }
+      ],
+      "status": "recovered",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Ffarm3.static.flickr.com%2F2215%2F1885010567_d55135b85d.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:59:50.463556+00:00",
+      "index_http_status": 200,
+      "selected_capture": "20161124144811",
+      "raw_path": "recovery/massline/external/raw/3fb3d8b3dfde0e05e03d34c65ba63103cced3fc01c0aa2b34c0035aff00aedb6.jpg",
+      "sha256": "3fb3d8b3dfde0e05e03d34c65ba63103cced3fc01c0aa2b34c0035aff00aedb6",
+      "bytes": 203658,
+      "content_type": "image/jpeg"
     },
     {
       "url": "http://farm3.static.flickr.com/2266/2101381612_5015c6b386_o.jpg",
@@ -54362,8 +54536,25 @@
           "tag": "img"
         }
       ],
-      "captures": [],
-      "status": "queued"
+      "captures": [
+        {
+          "timestamp": "20161123214509",
+          "original": "http://farm3.static.flickr.com/2266/2101381612_5015c6b386_o.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "2DUQQ2VRSFLUUKEV3MNIZZKHIDTDDY3Q",
+          "length": "122588"
+        }
+      ],
+      "status": "recovered",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Ffarm3.static.flickr.com%2F2266%2F2101381612_5015c6b386_o.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:59:51.905959+00:00",
+      "index_http_status": 200,
+      "selected_capture": "20161123214509",
+      "raw_path": "recovery/massline/external/raw/5ac23353b0576dc4a8525474cc11ada514c44216bbc2b17b797bb7ab7a86cd35.jpg",
+      "sha256": "5ac23353b0576dc4a8525474cc11ada514c44216bbc2b17b797bb7ab7a86cd35",
+      "bytes": 121690,
+      "content_type": "image/jpeg"
     },
     {
       "url": "http://farm3.static.flickr.com/2299/1804430465_00a9998835_o.jpg",
@@ -54375,8 +54566,25 @@
           "tag": "img"
         }
       ],
-      "captures": [],
-      "status": "queued"
+      "captures": [
+        {
+          "timestamp": "20161124144810",
+          "original": "http://farm3.static.flickr.com/2299/1804430465_00a9998835_o.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "3SJSGUHZD5USZBNFKS4YIOI67TV52V53",
+          "length": "132384"
+        }
+      ],
+      "status": "recovered",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Ffarm3.static.flickr.com%2F2299%2F1804430465_00a9998835_o.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:59:53.187738+00:00",
+      "index_http_status": 200,
+      "selected_capture": "20161124144810",
+      "raw_path": "recovery/massline/external/raw/a298411269b6be8c5a26004b264c7ad72a1a826066c378883e10739420e3a080.jpg",
+      "sha256": "a298411269b6be8c5a26004b264c7ad72a1a826066c378883e10739420e3a080",
+      "bytes": 131735,
+      "content_type": "image/jpeg"
     },
     {
       "url": "http://farm3.static.flickr.com/2302/2088028642_894ce2f8f1.jpg",
@@ -54424,7 +54632,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Ffarm3.static.flickr.com%2F2353%2F1798967257_a95dbf8122.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:59:57.148178+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://farm3.static.flickr.com/2413/1798967487_3120d3a856.jpg",
@@ -54437,7 +54648,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Ffarm3.static.flickr.com%2F2413%2F1798967487_3120d3a856.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T22:00:00.253048+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://farm4.static.flickr.com/3003/2694743696_dbfe50c670.jpg?v=0",
@@ -54449,8 +54663,25 @@
           "tag": "img"
         }
       ],
-      "captures": [],
-      "status": "queued"
+      "captures": [
+        {
+          "timestamp": "20141130023923",
+          "original": "http://farm4.static.flickr.com/3003/2694743696_dbfe50c670.jpg?v=0",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "E2WYY4ZPYOQXD2HHPHVOS3N2LYU6XHHZ",
+          "length": "136076"
+        }
+      ],
+      "status": "recovered",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Ffarm4.static.flickr.com%2F3003%2F2694743696_dbfe50c670.jpg%3Fv%3D0&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T22:00:01.464568+00:00",
+      "index_http_status": 200,
+      "selected_capture": "20141130023923",
+      "raw_path": "recovery/massline/external/raw/1ca568b07dcbe48965654ed6a0426c45af6415254fa2f9e14717463bf7a4fe9a.jpg",
+      "sha256": "1ca568b07dcbe48965654ed6a0426c45af6415254fa2f9e14717463bf7a4fe9a",
+      "bytes": 135336,
+      "content_type": "image/jpeg"
     },
     {
       "url": "http://farm4.static.flickr.com/3059/2312303191_9ea7b11f59_m.jpg",
@@ -54498,8 +54729,25 @@
           "tag": "img"
         }
       ],
-      "captures": [],
-      "status": "queued"
+      "captures": [
+        {
+          "timestamp": "20161124144844",
+          "original": "http://farm4.static.flickr.com/3220/2298279833_4e20d0bcde_m.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "RM2GUSGUKKZRMANUTVV4UY2AXSVAAMHH",
+          "length": "19750"
+        }
+      ],
+      "status": "recovered",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Ffarm4.static.flickr.com%2F3220%2F2298279833_4e20d0bcde_m.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T22:00:02.817516+00:00",
+      "index_http_status": 200,
+      "selected_capture": "20161124144844",
+      "raw_path": "recovery/massline/external/raw/66cc2abed9477f6505b49431cdb68c42ab9fe99278b5f419dadc4e021c4b6953.jpg",
+      "sha256": "66cc2abed9477f6505b49431cdb68c42ab9fe99278b5f419dadc4e021c4b6953",
+      "bytes": 19286,
+      "content_type": "image/jpeg"
     },
     {
       "url": "http://farm4.static.flickr.com/3356/3429726483_c902cdec1f_b.jpg",
@@ -54512,7 +54760,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Ffarm4.static.flickr.com%2F3356%2F3429726483_c902cdec1f_b.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T22:00:03.945929+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://files.myopera.com/Eddie_Lopez/blog/The_More_You_Know.jpg",
@@ -54869,8 +55120,57 @@
           "tag": "img"
         }
       ],
-      "captures": [],
-      "status": "queued"
+      "captures": [
+        {
+          "timestamp": "20070706230331",
+          "original": "http://granitegrok.com/pix/bush_segway_fall.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "NCCIEJJZ7YR5D62ADOCLX3VWWUGQOBA7",
+          "length": "44686"
+        },
+        {
+          "timestamp": "20100922023049",
+          "original": "http://granitegrok.com/pix/bush_segway_fall.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "NCCIEJJZ7YR5D62ADOCLX3VWWUGQOBA7",
+          "length": "44727"
+        },
+        {
+          "timestamp": "20101103155617",
+          "original": "http://granitegrok.com/pix/bush_segway_fall.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "NCCIEJJZ7YR5D62ADOCLX3VWWUGQOBA7",
+          "length": "44728"
+        },
+        {
+          "timestamp": "20111220084902",
+          "original": "http://granitegrok.com/pix/bush_segway_fall.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "NCCIEJJZ7YR5D62ADOCLX3VWWUGQOBA7",
+          "length": "44750"
+        },
+        {
+          "timestamp": "20160118062202",
+          "original": "http://granitegrok.com/pix/bush_segway_fall.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "NCCIEJJZ7YR5D62ADOCLX3VWWUGQOBA7",
+          "length": "44714"
+        }
+      ],
+      "status": "recovered",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fgranitegrok.com%2Fpix%2Fbush_segway_fall.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T22:00:09.474710+00:00",
+      "index_http_status": 200,
+      "selected_capture": "20070706230331",
+      "raw_path": "recovery/massline/external/raw/36024b0bf63640e91884362d9cf9aefa0d3b0f78b09d0d85a14d265aabd18f2b.jpg",
+      "sha256": "36024b0bf63640e91884362d9cf9aefa0d3b0f78b09d0d85a14d265aabd18f2b",
+      "bytes": 56060,
+      "content_type": "image/jpeg"
     },
     {
       "url": "http://graphics8.nytimes.com/images/2007/05/20/sports/20lacrosse.1.600.jpg",
@@ -54882,8 +55182,25 @@
           "tag": "img"
         }
       ],
-      "captures": [],
-      "status": "queued"
+      "captures": [
+        {
+          "timestamp": "20100726223459",
+          "original": "http://graphics8.nytimes.com/images/2007/05/20/sports/20lacrosse.1.600.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "7C2UO26JMEAZBD6CMW5ZNXGRORYH47X5",
+          "length": "85876"
+        }
+      ],
+      "status": "recovered",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fgraphics8.nytimes.com%2Fimages%2F2007%2F05%2F20%2Fsports%2F20lacrosse.1.600.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T22:00:10.627743+00:00",
+      "index_http_status": 200,
+      "selected_capture": "20100726223459",
+      "raw_path": "recovery/massline/external/raw/4b1adfd9162305b6daaa836e2a6f6eae27a9167363239d4c442ef113e606a56d.jpg",
+      "sha256": "4b1adfd9162305b6daaa836e2a6f6eae27a9167363239d4c442ef113e606a56d",
+      "bytes": 85672,
+      "content_type": "image/jpeg"
     },
     {
       "url": "http://green-ginger.net/blog/archives/images/furies.jpg",
@@ -54911,8 +55228,25 @@
           "tag": "img"
         }
       ],
-      "captures": [],
-      "status": "queued"
+      "captures": [
+        {
+          "timestamp": "20071014052210",
+          "original": "http://green-street.net/green-street/Images/dna_lounge/blue_scholars/11699-geologic.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "JV3NIFAN4PTIHSBKGFJB3NBHRRI3PCIE",
+          "length": "100096"
+        }
+      ],
+      "status": "recovered",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fgreen-street.net%2Fgreen-street%2FImages%2Fdna_lounge%2Fblue_scholars%2F11699-geologic.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T22:00:12.071447+00:00",
+      "index_http_status": 200,
+      "selected_capture": "20071014052210",
+      "raw_path": "recovery/massline/external/raw/82c5510036737570632b3126cdf85931939962f83813438df6ed6be0b81c1613.jpg",
+      "sha256": "82c5510036737570632b3126cdf85931939962f83813438df6ed6be0b81c1613",
+      "bytes": 99964,
+      "content_type": "image/jpeg"
     },
     {
       "url": "http://green-street.net/green-street/Images/dna_lounge/blue_scholars/11707-blue_scholars.jpg",
@@ -54924,8 +55258,25 @@
           "tag": "img"
         }
       ],
-      "captures": [],
-      "status": "queued"
+      "captures": [
+        {
+          "timestamp": "20071014052228",
+          "original": "http://green-street.net/green-street/Images/dna_lounge/blue_scholars/11707-blue_scholars.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "42QOSVFBTVMQ4D5SIOVQ4XF6GYHDI7AP",
+          "length": "92895"
+        }
+      ],
+      "status": "recovered",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fgreen-street.net%2Fgreen-street%2FImages%2Fdna_lounge%2Fblue_scholars%2F11707-blue_scholars.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T22:00:13.734895+00:00",
+      "index_http_status": 200,
+      "selected_capture": "20071014052228",
+      "raw_path": "recovery/massline/external/raw/7768d115676255aab6523b26df9c2cad4342c597988343adfd28b6101eb20619.jpg",
+      "sha256": "7768d115676255aab6523b26df9c2cad4342c597988343adfd28b6101eb20619",
+      "bytes": 92980,
+      "content_type": "image/jpeg"
     },
     {
       "url": "http://h1.ripway.com/Dallas/-Dallas-/The_More_You_Know2.jpg",
@@ -54937,8 +55288,132 @@
           "tag": "img"
         }
       ],
-      "captures": [],
-      "status": "queued"
+      "captures": [
+        {
+          "timestamp": "20130314150504",
+          "original": "http://h1.ripway.com/Dallas/-Dallas-/The_More_You_Know2.jpg",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "H3UEUW5AEJE2VS3244ABHNX4LD2SSU7K",
+          "length": "1125"
+        },
+        {
+          "timestamp": "20180711175643",
+          "original": "http://h1.ripway.com/Dallas/-Dallas-/The_More_You_Know2.jpg",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "SNFKZSDWC4BRFDCNHHGKFCW7F53II6HU",
+          "length": "2360"
+        },
+        {
+          "timestamp": "20190609085124",
+          "original": "http://h1.ripway.com/Dallas/-Dallas-/The_More_You_Know2.jpg",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "G7OZEFQMJKGWFPG54TPLQSI6IK74OIC2",
+          "length": "2372"
+        },
+        {
+          "timestamp": "20210303001245",
+          "original": "http://h1.ripway.com/Dallas/-Dallas-/The_More_You_Know2.jpg",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "7D2I2HSTDC67LMDADZS5TUNTFFTTHTKK",
+          "length": "2384"
+        },
+        {
+          "timestamp": "20210510231601",
+          "original": "http://h1.ripway.com/Dallas/-Dallas-/The_More_You_Know2.jpg",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "3JMVGWWLXCSGU2IXQSD6EFJG4OT75LZD",
+          "length": "2390"
+        },
+        {
+          "timestamp": "20210520033327",
+          "original": "http://h1.ripway.com/Dallas/-Dallas-/The_More_You_Know2.jpg",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "3JMVGWWLXCSGU2IXQSD6EFJG4OT75LZD",
+          "length": "2390"
+        },
+        {
+          "timestamp": "20210707122322",
+          "original": "http://h1.ripway.com/Dallas/-Dallas-/The_More_You_Know2.jpg",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "PY2HNC27YRKXXDW74JYVL4DDL54US3EN",
+          "length": "2381"
+        },
+        {
+          "timestamp": "20211119041027",
+          "original": "http://h1.ripway.com/Dallas/-Dallas-/The_More_You_Know2.jpg",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "HLA5EKX7QEWKW4RSZFOY4XGI7PAVZTKB",
+          "length": "1916"
+        },
+        {
+          "timestamp": "20230502055046",
+          "original": "http://h1.ripway.com/Dallas/-Dallas-/The_More_You_Know2.jpg",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "NWUPK5JZC5LT6MUF5U4IC7K2SFJFAVGJ",
+          "length": "1475"
+        },
+        {
+          "timestamp": "20230505060402",
+          "original": "http://h1.ripway.com/Dallas/-Dallas-/The_More_You_Know2.jpg",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "26PZUY5IINDDRQ6Z5UMT3VCHKVZKQ6PH",
+          "length": "1475"
+        },
+        {
+          "timestamp": "20230516042449",
+          "original": "http://h1.ripway.com/Dallas/-Dallas-/The_More_You_Know2.jpg",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "BLVPNBAQ43KDFBVGKY6FGGAUJQQ2U4ZW",
+          "length": "1464"
+        },
+        {
+          "timestamp": "20231003171232",
+          "original": "http://h1.ripway.com/Dallas/-Dallas-/The_More_You_Know2.jpg",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "6642HVUDUYMBYX5QKUOYV6ZGIOD7J3BK",
+          "length": "1502"
+        },
+        {
+          "timestamp": "20240604033953",
+          "original": "http://h1.ripway.com/Dallas/-Dallas-/The_More_You_Know2.jpg",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "33CJK5HY653JD5HWZW6QJ6ZUX6EK4LBP",
+          "length": "1463"
+        },
+        {
+          "timestamp": "20240620231607",
+          "original": "http://h1.ripway.com/Dallas/-Dallas-/The_More_You_Know2.jpg",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "N3A6RCUFITVRC4E5ISYYQDGKY66X2ZOI",
+          "length": "1467"
+        },
+        {
+          "timestamp": "20241011071356",
+          "original": "http://h1.ripway.com/Dallas/-Dallas-/The_More_You_Know2.jpg",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "TEUCBY2EXSWWZ7ODCYZB7LSP7LMESLVH",
+          "length": "1457"
+        }
+      ],
+      "status": "no_valid_capture",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fh1.ripway.com%2FDallas%2F-Dallas-%2FThe_More_You_Know2.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T22:00:15.169949+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://handson.provocateuse.com/images/photos/l_l_cool_j_01.jpg",
@@ -55183,8 +55658,41 @@
           "tag": "img"
         }
       ],
-      "captures": [],
-      "status": "queued"
+      "captures": [
+        {
+          "timestamp": "20060427163622",
+          "original": "http://homepage.ntlworld.com:80/verismo/crying_child.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "4ELOWEJYPJDX7HDR7I5GIHED27S6IHJV",
+          "length": "9842"
+        },
+        {
+          "timestamp": "20061222142335",
+          "original": "http://homepage.ntlworld.com:80/verismo/crying_child.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "4ELOWEJYPJDX7HDR7I5GIHED27S6IHJV",
+          "length": "9840"
+        },
+        {
+          "timestamp": "20141028142030",
+          "original": "http://homepage.ntlworld.com/verismo/crying_child.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "4ELOWEJYPJDX7HDR7I5GIHED27S6IHJV",
+          "length": "10221"
+        }
+      ],
+      "status": "recovered",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fhomepage.ntlworld.com%2Fverismo%2Fcrying_child.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T22:00:16.822881+00:00",
+      "index_http_status": 200,
+      "selected_capture": "20061222142335",
+      "raw_path": "recovery/massline/external/raw/faf3e71571f7d2a617f305c160d8e888b3f2e01f25b6b8fd43a7619ab9c81faa.jpg",
+      "sha256": "faf3e71571f7d2a617f305c160d8e888b3f2e01f25b6b8fd43a7619ab9c81faa",
+      "bytes": 9528,
+      "content_type": "image/jpeg"
     },
     {
       "url": "http://i.i.com.com/cnwk.1d/i/ne/p/2004/NeoMecha2_500x667.jpg",
@@ -55448,8 +55956,89 @@
           "tag": "img"
         }
       ],
-      "captures": [],
-      "status": "queued"
+      "captures": [
+        {
+          "timestamp": "20070310021843",
+          "original": "http://i.realone.com:80/assets/rn/img/2/4/9/4/12614942-12614946-slarge.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "UI4SD3MCGQPHDBY6NC76WZ6ACENRWM4K",
+          "length": "90677"
+        },
+        {
+          "timestamp": "20070419075256",
+          "original": "http://i.realone.com:80/assets/rn/img/2/4/9/4/12614942-12614946-slarge.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "UI4SD3MCGQPHDBY6NC76WZ6ACENRWM4K",
+          "length": "90675"
+        },
+        {
+          "timestamp": "20071023041435",
+          "original": "http://i.realone.com/assets/rn/img/2/4/9/4/12614942-12614946-slarge.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "UI4SD3MCGQPHDBY6NC76WZ6ACENRWM4K",
+          "length": "90655"
+        },
+        {
+          "timestamp": "20071028050248",
+          "original": "http://i.realone.com/assets/rn/img/2/4/9/4/12614942-12614946-slarge.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "UI4SD3MCGQPHDBY6NC76WZ6ACENRWM4K",
+          "length": "90658"
+        },
+        {
+          "timestamp": "20080307042343",
+          "original": "http://i.realone.com/assets/rn/img/2/4/9/4/12614942-12614946-slarge.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "UI4SD3MCGQPHDBY6NC76WZ6ACENRWM4K",
+          "length": "90658"
+        },
+        {
+          "timestamp": "20080518022306",
+          "original": "http://i.realone.com/assets/rn/img/2/4/9/4/12614942-12614946-slarge.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "UI4SD3MCGQPHDBY6NC76WZ6ACENRWM4K",
+          "length": "90659"
+        },
+        {
+          "timestamp": "20081204092625",
+          "original": "http://i.realone.com/assets/rn/img/2/4/9/4/12614942-12614946-slarge.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "UI4SD3MCGQPHDBY6NC76WZ6ACENRWM4K",
+          "length": "90656"
+        },
+        {
+          "timestamp": "20100715153828",
+          "original": "http://i.realone.com/assets/rn/img/2/4/9/4/12614942-12614946-slarge.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "UI4SD3MCGQPHDBY6NC76WZ6ACENRWM4K",
+          "length": "90852"
+        },
+        {
+          "timestamp": "20141126133719",
+          "original": "http://i.realone.com/assets/rn/img/2/4/9/4/12614942-12614946-slarge.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "UI4SD3MCGQPHDBY6NC76WZ6ACENRWM4K",
+          "length": "90653"
+        }
+      ],
+      "status": "recovered",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fi.realone.com%2Fassets%2Frn%2Fimg%2F2%2F4%2F9%2F4%2F12614942-12614946-slarge.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T22:00:18.075464+00:00",
+      "index_http_status": 200,
+      "selected_capture": "20081204092625",
+      "raw_path": "recovery/massline/external/raw/f8d94dd21d427ec7c4209a130a927a806b3ae5c0a0e38a24be2a2e269e923bf8.jpg",
+      "sha256": "f8d94dd21d427ec7c4209a130a927a806b3ae5c0a0e38a24be2a2e269e923bf8",
+      "bytes": 91095,
+      "content_type": "image/jpeg"
     },
     {
       "url": "http://i.walmart.com/i/p/00/72/43/87/39/0072438739272_500X500.jpg",
@@ -55609,7 +56198,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fi10.photobucket.com%2Falbums%2Fa127%2Fantigrl117%2Fsebastian.gif&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T22:00:20.219677+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://i10.photobucket.com/albums/a139/defyantx07/IMG_0559.jpg",
@@ -58261,7 +58853,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fi108.photobucket.com%2Falbums%2Fn29%2FOneSevenNine%2Fshow4x6-back22.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T22:00:21.528585+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://i108.photobucket.com/albums/n29/OneSevenNine/show4x6-front2.jpg",
@@ -58274,7 +58869,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fi108.photobucket.com%2Falbums%2Fn29%2FOneSevenNine%2Fshow4x6-front2.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T22:00:22.792218+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://i108.photobucket.com/albums/n32/xdysfunqtionalx/COMA.jpg",
@@ -59804,7 +60402,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "index_failed",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fi118.photobucket.com%2Falbums%2Fo112%2Fshawnstonemusic%2Fgay-parade-20.4.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "index_error": "Wayback CDX HTTP 429; query paused to respect archive rate limit",
+      "indexed_at": "2026-10-19T22:00:23.742868+00:00"
     },
     {
       "url": "http://i118.photobucket.com/albums/o112/shawnstonemusic/sig.jpg",
@@ -197105,5 +197706,5 @@
     "queued_after_batch": 420,
     "cooldown_until": "2026-10-18T08:30:00.400984+00:00"
   },
-  "cooldown_until": "2026-10-19T21:49:14.404221+00:00"
+  "cooldown_until": "2026-10-19T22:01:23.742945+00:00"
 }

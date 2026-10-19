@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "scope": "206proof.com/* Internet Archive CDX query and selected exact replay captures",
+  "status": "partial_source_checkpoint_no_public_site_build",
+  "retrieved_utc": "2026-10-19T03:21:33Z",
+  "capture_index": {
+    "all_status": {
+      "url": "206proof.com/*",
+      "limit": 20000,
+      "rows": 19874,
+      "resume_key": null,
+      "complete_for_returned_query": true,
+      "response_sha256": "fb60e8f43ca495d6dbd91cba371c9620a47a12b0efe90575130caa2d81c5e355"
+    },
+    "http_200": {
+      "url": "206proof.com/*",
+      "limit": 20000,
+      "rows": 17910,
+      "resume_key": null,
+      "complete_for_returned_query": true,
+      "response_sha256": "762b45912e9786ce3ac140a531731231f20cc0e5484d224bc271d26b835d0b02"
+    }
+  },
+  "recovery": {
+    "attempted_capture_records": 2967,
+    "validated_payload_records": 2958,
+    "failed_or_rejected_records": 9,
+    "by_kind_result": {
+      "html:recovered": 2070,
+      "html:failed": 9,
+      "css:recovered": 91,
+      "image:recovered": 790,
+      "audio:recovered": 7
+    },
+    "unique_sha256_payloads": 2708,
+    "sum_payload_bytes": 88141692,
+    "raw_directory_bytes": 86151873
+  },
+  "vanilla_2008_2012": {
+    "selector": "latest status-200 text/html capture per exact original URL; query strings and www aliases preserved",
+    "selected_exact_urls": 5137,
+    "attempted_selected": 1000,
+    "validated_selected": 995,
+    "failed_selected": 5,
+    "queued_selected": 4137
+  },
+  "assets": {
+    "source_pages_scanned": 2070,
+    "distinct_referenced_urls": 1442,
+    "page_asset_references": 25099,
+    "urls_with_successful_cdx_capture": 625,
+    "urls_without_successful_cdx_capture": 817,
+    "validated_capture_records": 881,
+    "validated_distinct_normalized_urls": 624,
+    "capture_bearing_urls_not_yet_attempted": 1
+  },
+  "media": {
+    "youtube_ids": 342,
+    "soundcloud_paths": 21,
+    "validated_mp3_capture_records": 7,
+    "redistribution_review": "not completed"
+  },
+  "failed_attempts": [
+    {
+      "requested_capture": "20071027175426",
+      "original": "http://www.206proof.com:80/openads/www/delivery/ck.php?ct=1&n=a18e2f42&cb=INSERT_RANDOM_NUMBER_HERE",
+      "mimetype": "text/html",
+      "statuscode": "200",
+      "cdx_digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+      "indexed_length": 421,
+      "kind": "html",
+      "attempted_utc": "2026-10-19T03:25:09.869289+00:00",
+      "result": "failed",
+      "error": "ValueError: Empty archive response"
+    },
+    {
+      "requested_capture": "20130826120251",
+      "original": "http://206proof.com:80/4um/clientscript/yui/history/assets/blank.html",
+      "mimetype": "text/html",
+      "statuscode": "200",
+      "cdx_digest": "VXEDWGPHSNERWHDOUD6YWRWNT4ZOLEX4",
+      "indexed_length": 281,
+      "kind": "html",
+      "archive_era_rank": 0,
+      "attempted_utc": "2026-10-19T03:27:50.978381+00:00",
+      "result": "failed",
+      "error": "ValueError: Expected a full HTML document"
+    },
+    {
+      "requested_capture": "20131014081525",
+      "original": "http://206proof.com/",
+      "mimetype": "text/html",
+      "statuscode": "200",
+      "cdx_digest": "OZ4SHFSPW6FB7DY7TDV4P2NXHKR57LTM",
+      "indexed_length": 487,
+      "kind": "html",
+      "archive_era_rank": 2,
+      "attempted_utc": "2026-10-19T03:29:48.714377+00:00",
+      "result": "failed",
+      "error": "ValueError: Expected a full HTML document"
+    },
+    {
+      "requested_capture": "20131207170511",
+      "original": "http://www.206proof.com/",
+      "mimetype": "text/html",
+      "statuscode": "200",
+      "cdx_digest": "OZ4SHFSPW6FB7DY7TDV4P2NXHKR57LTM",
+      "indexed_length": 483,
+      "kind": "html",
+      "archive_era_rank": 2,
+      "attempted_utc": "2026-10-19T03:29:51.607506+00:00",
+      "result": "failed",
+      "error": "ValueError: Expected a full HTML document"
+    },
+    {
+      "requested_capture": "20101228200420",
+      "original": "http://www.206proof.com/forum/%22http://majoritywhip.bandcamp.com%22",
+      "mimetype": "text/html",
+      "statuscode": "200",
+      "cdx_digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+      "indexed_length": 523,
+      "kind": "html",
+      "archive_era": "Vanilla forum, latest indexed capture 2008-2012",
+      "attempted_utc": "2026-10-19T03:56:12.107038+00:00",
+      "result": "failed",
+      "error": "ValueError: Empty archive response"
+    },
+    {
+      "requested_capture": "20101228200345",
+      "original": "http://www.206proof.com/forum/KRUEONITUNES.BLOGSPOT.COM",
+      "mimetype": "text/html",
+      "statuscode": "200",
+      "cdx_digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+      "indexed_length": 520,
+      "kind": "html",
+      "archive_era": "Vanilla forum, latest indexed capture 2008-2012",
+      "attempted_utc": "2026-10-19T03:57:08.911605+00:00",
+      "result": "failed",
+      "error": "ValueError: Empty archive response"
+    },
+    {
+      "requested_capture": "20101228115323",
+      "original": "http://www.206proof.com/forum/WWW.MEDIAFIRE.COM/KRUE",
+      "mimetype": "text/html",
+      "statuscode": "200",
+      "cdx_digest": "L4XNRRGWXWKNIAJFQOC6D2OULYFIDDTC",
+      "indexed_length": 416,
+      "kind": "html",
+      "archive_era": "Vanilla forum, latest indexed capture 2008-2012",
+      "attempted_utc": "2026-10-19T03:57:10.032327+00:00",
+      "result": "failed",
+      "error": "ValueError: Expected a full HTML document"
+    },
+    {
+      "requested_capture": "20080820062615",
+      "original": "http://www.206proof.com/forum/account.php",
+      "mimetype": "text/html",
+      "statuscode": "200",
+      "cdx_digest": "DAI4VZZ67E63ZTMVQ27CN253SXWVHIXJ",
+      "indexed_length": 6731,
+      "kind": "html",
+      "archive_era": "Vanilla forum, latest indexed capture 2008-2012",
+      "attempted_utc": "2026-10-19T04:13:35.183346+00:00",
+      "result": "failed",
+      "error": "ContentDecodingError: ('Received response with content-encoding: gzip, but failed to decode it.', error('Error -3 while decompressing data: incorrect header check'))"
+    },
+    {
+      "requested_capture": "20080724175903",
+      "original": "http://www.206proof.com/forum/ads.html",
+      "mimetype": "text/html",
+      "statuscode": "200",
+      "cdx_digest": "IKE5YFLPAGE7NPSJFOIAVNEBZTLESIXW",
+      "indexed_length": 1876,
+      "kind": "html",
+      "archive_era": "Vanilla forum, latest indexed capture 2008-2012",
+      "attempted_utc": "2026-10-19T04:14:05.423262+00:00",
+      "result": "failed",
+      "error": "ContentDecodingError: ('Received response with content-encoding: gzip, but failed to decode it.', error('Error -3 while decompressing data: incorrect header check'))"
+    }
+  ],
+  "known_gaps": [
+    "Only the exact 206proof.com/* CDX query has been exhausted; no assertion is made for unqueried alternate domains or external hosts.",
+    "The current selector still has unattempted 2008\u20132012 Vanilla routes; queue count is recorded above.",
+    "Referenced assets without successful CDX rows are not proven absent from the archive.",
+    "External YouTube and SoundCloud references are not recovered playable media.",
+    "No independent Common Crawl body or original forum page from Arquivo.pt has been recovered.",
+    "Failed replay attempts remain individually listed for retry.",
+    "No static 206proof edition, browser visual review, compatibility review, or deployment has been completed.",
+    "Rights review remains outstanding for public redistribution of posts, imagery, and audio."
+  ]
+}

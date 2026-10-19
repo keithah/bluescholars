@@ -1,0 +1,313 @@
+/* Normal, standard links. */
+a:link, a:visited
+{
+	color: #727272;
+	text-decoration: none;
+}
+a:hover
+{
+	color: #323232;
+	text-decoration: underline;
+}
+
+/* Navigation links - for the link tree. */
+.nav
+{
+        font-size: 10px;
+}
+.nav:link, .nav:visited
+{
+	color: #000000;
+	text-decoration: none;
+}
+a.nav:hover
+{
+	color: #cc3333;
+	text-decoration: underline;
+}
+
+/* Tables should show empty cells. */
+table
+{
+	empty-cells: show;
+}
+
+/* By default (td, body..) use Tahoma in black. */
+body, td, th
+{
+	color: #000000;
+	font-size: 11px;
+	font-family: Verdana, sans-serif;
+}
+
+/* The main body of the entire forum. */
+body
+{
+	background-color: #EEEEEE;
+	margin: 0px;
+	padding: 0px;
+}
+
+/* Input boxes - just a bit smaller than normal so they align well. */
+input, textarea, button
+{
+	background-color: white;
+        font-size: 8pt;
+	color: #000000;
+	font-family: tahoma, sans-serif;
+}
+
+/* All input elements that are checkboxes or radio buttons. */
+input.check
+{
+	background-color: #F0F0F0;
+}
+
+/* Selects are a bit smaller, because it makes them look even better 8). */
+select
+{
+	font-size: 8pt;
+	font-weight: normal;
+	color: #000000;
+	font-family: tahoma, sans-serif;
+}
+
+/* Standard horizontal rule.. ([hr], etc.) */
+hr, .hrcolor
+{
+	height: 1px;
+	border: 0;
+	color: #666666;
+	background-color: #666666;
+}
+
+/* A quote, perhaps from another post. */
+.quote
+{
+	color: #000000;
+	background-color: #C3B8D0;
+	border: 1px solid #000000;
+	margin: 1px;
+	padding: 1px;
+	font-size: x-small;
+	line-height: 1.4em;
+}
+
+/* A code block - maybe even PHP ;). */
+.code
+{
+	color: #000000;
+	background-color: #cccccc;
+	font-family: "courier new", "times new roman", monospace;
+	font-size: x-small;
+	line-height: 1.3em;
+	/* Put a nice border around it. */
+	border: 1px solid #000000;
+	margin: 1px auto 1px auto;
+	padding: 1px;
+	width: 99%;
+	/* Don't wrap its contents, and show scrollbars. */
+	white-space: nowrap;
+	overflow: auto;
+	/* Stop after about 24 lines, and just show a scrollbar. */
+	max-height: 24em;
+}
+
+/* The "Quote:" and "Code:" header parts... */
+.quoteheader, .codeheader
+{
+	color: #000000;
+	text-decoration: none;
+	font-style: normal;
+	font-weight: bold;
+	font-size: x-small;
+	line-height: 1.2em;
+}
+
+/* Generally, those [?] icons.  This makes your cursor a help icon. */
+.help
+{
+	cursor: help;
+}
+
+/* /me uses this a lot. (emote, try typing /me in a post.) */
+.meaction
+{
+	color: red;
+}
+
+/* The main post box - this makes it as wide as possible. */
+.editor
+{
+	width: 96%;
+}
+
+/* Highlighted text - such as search results. */
+.highlight
+{
+	background-color: yellow;
+	font-weight: bold;
+	color: black;
+}
+
+/* Alternating backgrounds for posts, and several other sections of the forum. */
+.windowbg
+{
+	color: #000000;
+	background-color: #F0F0F0;
+}
+.windowbg2
+{
+	color: #000000;
+	background-color: #F5F5F5;
+}
+
+/* These are used primarily for titles, but also for headers (the row that says what everything in the table is.) */
+.titlebg, tr.titlebg th, tr.titlebg td, .titlebg a:link, .titlebg a:visited
+{
+	color: white;
+	font-weight: bold;
+	background-color: #333300;
+}
+.titlebg a:hover
+{
+	color: #dfdfdf;
+}
+
+.catbg, .catbg2
+{
+	font-weight: bold;
+	background-color: #EEEEEE;
+	color: #000000;
+}
+
+/* This is used for tables that have a grid/border background color (such as the topic listing.) */
+.bordercolor
+{
+	background-color: #333300;
+}
+
+/* This is used on tables that should just have a border around them. */
+.tborder
+{
+	border: 1px solid #333300;
+	background-color: #FFFFFF;
+	padding: 0px;
+}
+
+/* Default font sizes: small (8pt), normal (10pt), and large (14pt). */
+.smalltext
+{
+	font-size: 10px;
+	font-family: tahoma, sans-serif;
+}
+.normaltext
+{
+	font-size: 11px;
+}
+.largetext
+{
+	font-size: 14px;
+}
+
+/* This is the main area of the forum, the part that's gray. */
+#bodyarea
+{
+	background-color: #D4D4D4;
+}
+
+/* Posts and personal messages displayed throughout the forum. */
+.post, .personalmessage
+{
+	width: 100%;
+	overflow: auto;
+	line-height: 1.3em;
+}
+
+/* All the signatures used in the forum.  If your forum users use Mozilla, Opera, or Safari, you might add max-height here ;). */
+.signature
+{
+	width: 100%;
+	overflow: auto;
+	padding-bottom: 3px;
+	line-height: 1.3em;
+}
+
+/* ###!!!CSS CODE ADDED FOR SAF!!!### */
+
+/* The main table of the entire forum. */
+
+.maintable
+{
+	background-color: white;
+	margin: 0px;
+       	padding: 0px 0px 0px 0px;
+	border: #333300;
+	border-style: solid;
+	border-left-width: 1px;
+        border-top-width: 0px;
+        border-right-width: 1px;
+        border-bottom-width: 0px;
+}
+
+/* The main table of the entire forum. */
+
+.bodytd
+{
+       	padding: 0px 8px 0px 8px;
+       	text-align: left;
+}
+
+/* The header part of the forum. */
+
+.header
+{
+        background-image: url('/massline-forums/assets/e2f4d2eda45302bb9ea0.gif');
+        background-color: #333300;
+        background-repeat: no-repeat;
+        background-position: right;
+        padding: 0px 8px 0px 8px;
+        width: 760px;
+        height: 90px;
+        text-align: left;
+        font-family: Verdana, Arial, sans-serif;
+        font-size: 24px;
+        color: white;
+        font-weight: 550;
+}
+
+/* The header part of the forum. */
+
+.headerdown
+{
+        background-color: #F5F5F5;
+        padding: 4px 0px 4px 8px;
+        border: #333300;
+	border-style: solid;
+	border-left-width: 0px;
+        border-top-width: 1px;
+        border-right-width: 0px;
+        border-bottom-width: 1px;
+        font-size: 10px;
+}
+
+/* The footer part of the forum. */
+
+.footer
+{
+        background-color: #333300;
+        width: 100%;
+        border: #333300;
+	border-style: solid;
+	border-left-width: 0px;
+        border-top-width: 1px;
+        border-right-width: 0px;
+        border-bottom-width: 0px;
+}
+
+/* We use this to adjust the color of the copyright. */
+
+.copyright, .copyright a:link, .copyright a:visited, .copyright a:hover
+{
+        color: #FBFBFB;
+}

@@ -132,7 +132,7 @@ on March 22-24 to testify against the Armed Forces of the Philippines
 and president Gloria Macapagal-Arroyo's puppet regime. You can read the
 full text of the press release here. <br><br>Thanks to all the folks
 we had the pleasure of performing with - there's an undeniable,
-underrated stream of Brown talent up and down the coast: <strong>Jern Eye</strong> (of Lunar Heights crew), <strong>Denizen Kane</strong>, <strong>The Committee</strong>, <strong>Foundation Funkollective</strong>, <strong>DJ Kuttin Kandi</strong>, <strong>Dannu &amp; Key Kool (of the Visionaries)</strong>, and<strong> Zandi de Jesus</strong>. The momentum is building. I can feel something on the verge. <br><br>This is what daps1 and I rolled to, maybe about four or five times:<br><br><img alt="Archived image unavailable" border="1"><strong><br>
+underrated stream of Brown talent up and down the coast: <strong>Jern Eye</strong> (of Lunar Heights crew), <strong>Denizen Kane</strong>, <strong>The Committee</strong>, <strong>Foundation Funkollective</strong>, <strong>DJ Kuttin Kandi</strong>, <strong>Dannu &amp; Key Kool (of the Visionaries)</strong>, and<strong> Zandi de Jesus</strong>. The momentum is building. I can feel something on the verge. <br><br>This is what daps1 and I rolled to, maybe about four or five times:<br><br><img alt="" border="1" src="/bluescholars/masslinemedia/assets/197a7af8cef915f208aa.jpg"><strong><br>
 Native Guns' <em>Stray Bullets Vol. 2</em></br></strong>: mixtape of the year so far. And not just because I dropped a verse on two tracks: "Agitation Propaganda" (over the <strong>Jake One</strong>-produced
 "Rock Ko Kane" beat) and a remix of "Said It." SB2 is the truth! Peep
 this crazy cameo lineup: Nump, Roscoe Umali, Ise Lyfe, The Pacifics,

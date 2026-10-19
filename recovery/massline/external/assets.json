@@ -1,7 +1,7 @@
 {
   "version": 1,
   "provider": "Internet Archive Wayback CDX",
-  "generated_at": "2026-10-19T21:12:40.406139+00:00",
+  "generated_at": "2026-10-19T21:27:15.029707+00:00",
   "discovery_count": 1531,
   "assets": [
     {
@@ -92790,10 +92790,10 @@
         }
       ],
       "captures": [],
-      "status": "index_failed",
+      "status": "no_captures",
       "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fi29.photobucket.com%2Falbums%2Fc271%2FSCIONtificrecords%2Fimpala.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
-      "index_error": "Wayback CDX HTTP 429; query paused to respect archive rate limit",
-      "indexed_at": "2026-10-19T21:12:36.850434+00:00"
+      "indexed_at": "2026-10-19T21:26:32.366466+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://i29.photobucket.com/albums/c271/SCIONtificrecords/nam1.jpg",
@@ -92840,7 +92840,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fi29.photobucket.com%2Falbums%2Fc271%2FSCIONtificrecords%2Fsaleen.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:26:33.475325+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://i29.photobucket.com/albums/c271/SCIONtificrecords/sara.jpg",
@@ -92955,7 +92958,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fi29.photobucket.com%2Falbums%2Fc271%2FSCIONtificrecords%2Fted.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:26:34.593919+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://i29.photobucket.com/albums/c271/SCIONtificrecords/togo.gif",
@@ -97419,7 +97425,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fi43.photobucket.com%2Falbums%2Fe381%2Fchevthedreamer1%2FLarry.gif&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:26:35.810478+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://i43.photobucket.com/albums/e381/chevthedreamer1/carrot_top3.jpg",
@@ -97508,7 +97517,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fi43.photobucket.com%2Falbums%2Fe381%2Fchevthedreamer1%2Fkirby_alt_5.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:26:37.371262+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://i43.photobucket.com/albums/e381/chevthedreamer1/newCOVER100dpi.jpg",
@@ -97539,7 +97551,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fi43.photobucket.com%2Falbums%2Fe381%2Fchevthedreamer1%2Fp-steaks.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:26:38.409401+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://i43.photobucket.com/albums/e381/chevthedreamer1/sideburns.jpg",
@@ -97557,7 +97572,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fi43.photobucket.com%2Falbums%2Fe381%2Fchevthedreamer1%2Fsideburns.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:26:40.651059+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://i43.photobucket.com/albums/e381/chevthedreamer1/stoned.gif",
@@ -97575,7 +97593,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fi43.photobucket.com%2Falbums%2Fe381%2Fchevthedreamer1%2Fstoned.gif&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:26:41.739968+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://i44.photobucket.com/albums/f25/concious1/boombox.jpg",
@@ -98381,7 +98402,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fi47.photobucket.com%2Falbums%2Ff172%2Figotseatacfunk%2Fdrawing004.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:26:43.027616+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://i47.photobucket.com/albums/f172/igotseatacfunk/drawing006.jpg",
@@ -100809,7 +100833,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fi47.photobucket.com%2Falbums%2Ff172%2Figotseatacfunk%2Fdrawing008.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:26:44.470610+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://i47.photobucket.com/albums/f172/igotseatacfunk/drawing010.jpg",
@@ -100827,7 +100854,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fi47.photobucket.com%2Falbums%2Ff172%2Figotseatacfunk%2Fdrawing010.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:26:45.506943+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://i47.photobucket.com/albums/f172/igotseatacfunk/drawing011.jpg",
@@ -100845,7 +100875,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fi47.photobucket.com%2Falbums%2Ff172%2Figotseatacfunk%2Fdrawing011.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:26:46.568182+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://i47.photobucket.com/albums/f172/igotseatacfunk/marleseafairwaterfront004.jpg",
@@ -101506,7 +101539,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fi5.photobucket.com%2Falbums%2Fy200%2Fesnse%2F116051332.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:26:47.784588+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://i5.photobucket.com/albums/y200/esnse/268664116_bcaaa19d09.jpg",
@@ -101524,7 +101560,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fi5.photobucket.com%2Falbums%2Fy200%2Fesnse%2F268664116_bcaaa19d09.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:26:49.028996+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://i5.photobucket.com/albums/y200/esnse/271587577_56d2c05bb5.jpg",
@@ -101542,7 +101581,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fi5.photobucket.com%2Falbums%2Fy200%2Fesnse%2F271587577_56d2c05bb5.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:26:50.100678+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://i5.photobucket.com/albums/y200/esnse/289066852_b07f9bfaf6_m.jpg",
@@ -101560,7 +101602,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fi5.photobucket.com%2Falbums%2Fy200%2Fesnse%2F289066852_b07f9bfaf6_m.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:26:51.155660+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://i5.photobucket.com/albums/y200/esnse/8ht3.jpg",
@@ -101578,7 +101623,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fi5.photobucket.com%2Falbums%2Fy200%2Fesnse%2F8ht3.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:26:52.366717+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://i5.photobucket.com/albums/y200/esnse/FWD105_Street_Spy_100206.jpg",
@@ -101596,7 +101644,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fi5.photobucket.com%2Falbums%2Fy200%2Fesnse%2FFWD105_Street_Spy_100206.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:26:53.582656+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://i5.photobucket.com/albums/y200/esnse/big.jpg",
@@ -101614,7 +101665,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fi5.photobucket.com%2Falbums%2Fy200%2Fesnse%2Fbig.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:26:54.664057+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://i5.photobucket.com/albums/y200/esnse/cde771dbb5.jpg",
@@ -101632,7 +101686,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fi5.photobucket.com%2Falbums%2Fy200%2Fesnse%2Fcde771dbb5.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:26:55.740193+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://i5.photobucket.com/albums/y200/esnse/print1.jpg",
@@ -101967,8 +102024,257 @@
           "tag": "img"
         }
       ],
-      "captures": [],
-      "status": "queued"
+      "captures": [
+        {
+          "timestamp": "20080218052324",
+          "original": "http://i6.photobucket.com/albums/y215/cortneyhead/johnny5isalive.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "QC6GNMA3YIZ63BYVDAFFZBKRCAYVTDV6",
+          "length": "20404"
+        },
+        {
+          "timestamp": "20080218052324",
+          "original": "http://i6.photobucket.com/albums/y215/cortneyhead/johnny5isalive.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "QC6GNMA3YIZ63BYVDAFFZBKRCAYVTDV6",
+          "length": "20603"
+        },
+        {
+          "timestamp": "20090217044506",
+          "original": "http://i6.photobucket.com/albums/y215/cortneyhead/johnny5isalive.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "QC6GNMA3YIZ63BYVDAFFZBKRCAYVTDV6",
+          "length": "20398"
+        },
+        {
+          "timestamp": "20090902195549",
+          "original": "http://i6.photobucket.com/albums/y215/cortneyhead/johnny5isalive.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "YMR4ZOSHNWFS377PJ3LCQITQS6FX7AN6",
+          "length": "19896"
+        },
+        {
+          "timestamp": "20090914220137",
+          "original": "http://i6.photobucket.com/albums/y215/cortneyhead/johnny5isalive.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "YMR4ZOSHNWFS377PJ3LCQITQS6FX7AN6",
+          "length": "19701"
+        },
+        {
+          "timestamp": "20091003225322",
+          "original": "http://i6.photobucket.com/albums/y215/cortneyhead/johnny5isalive.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "YMR4ZOSHNWFS377PJ3LCQITQS6FX7AN6",
+          "length": "19702"
+        },
+        {
+          "timestamp": "20091023055755",
+          "original": "http://i6.photobucket.com/albums/y215/cortneyhead/johnny5isalive.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "YMR4ZOSHNWFS377PJ3LCQITQS6FX7AN6",
+          "length": "19693"
+        },
+        {
+          "timestamp": "20091026105901",
+          "original": "http://i6.photobucket.com/albums/y215/cortneyhead/johnny5isalive.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "YMR4ZOSHNWFS377PJ3LCQITQS6FX7AN6",
+          "length": "19893"
+        },
+        {
+          "timestamp": "20091028012217",
+          "original": "http://i6.photobucket.com/albums/y215/cortneyhead/johnny5isalive.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "YMR4ZOSHNWFS377PJ3LCQITQS6FX7AN6",
+          "length": "19887"
+        },
+        {
+          "timestamp": "20120427031355",
+          "original": "http://i6.photobucket.com/albums/y215/cortneyhead/johnny5isalive.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "YMR4ZOSHNWFS377PJ3LCQITQS6FX7AN6",
+          "length": "20012"
+        },
+        {
+          "timestamp": "20130619025718",
+          "original": "http://i6.photobucket.com/albums/y215/cortneyhead/johnny5isalive.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "YMR4ZOSHNWFS377PJ3LCQITQS6FX7AN6",
+          "length": "20102"
+        },
+        {
+          "timestamp": "20160126172220",
+          "original": "http://i6.photobucket.com/albums/y215/cortneyhead/johnny5isalive.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "YMR4ZOSHNWFS377PJ3LCQITQS6FX7AN6",
+          "length": "19930"
+        },
+        {
+          "timestamp": "20171205095300",
+          "original": "http://i6.photobucket.com/albums/y215/cortneyhead/johnny5isalive.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "YMR4ZOSHNWFS377PJ3LCQITQS6FX7AN6",
+          "length": "20140"
+        },
+        {
+          "timestamp": "20171212090100",
+          "original": "http://i6.photobucket.com/albums/y215/cortneyhead/johnny5isalive.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "YMR4ZOSHNWFS377PJ3LCQITQS6FX7AN6",
+          "length": "20132"
+        },
+        {
+          "timestamp": "20171213170802",
+          "original": "http://i6.photobucket.com/albums/y215/cortneyhead/johnny5isalive.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "YMR4ZOSHNWFS377PJ3LCQITQS6FX7AN6",
+          "length": "20133"
+        },
+        {
+          "timestamp": "20201213233059",
+          "original": "http://i6.photobucket.com/albums/y215/cortneyhead/johnny5isalive.jpg",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "E7T3LROI3VAE5NUR5GNYRCU4HKJBSFU7",
+          "length": "2486"
+        },
+        {
+          "timestamp": "20210313020233",
+          "original": "http://i6.photobucket.com/albums/y215/cortneyhead/johnny5isalive.jpg",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "E7T3LROI3VAE5NUR5GNYRCU4HKJBSFU7",
+          "length": "2479"
+        },
+        {
+          "timestamp": "20210322114438",
+          "original": "https://i6.photobucket.com/albums/y215/cortneyhead/johnny5isalive.jpg",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "E7T3LROI3VAE5NUR5GNYRCU4HKJBSFU7",
+          "length": "2477"
+        },
+        {
+          "timestamp": "20210329212405",
+          "original": "https://i6.photobucket.com/albums/y215/cortneyhead/johnny5isalive.jpg",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "E7T3LROI3VAE5NUR5GNYRCU4HKJBSFU7",
+          "length": "2477"
+        },
+        {
+          "timestamp": "20210413190752",
+          "original": "http://i6.photobucket.com/albums/y215/cortneyhead/johnny5isalive.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "MYJHISWY52OUX57TZPDC4RYTF653ONDC",
+          "length": "21792"
+        },
+        {
+          "timestamp": "20210515154807",
+          "original": "https://i6.photobucket.com/albums/y215/cortneyhead/johnny5isalive.jpg",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "E7T3LROI3VAE5NUR5GNYRCU4HKJBSFU7",
+          "length": "2304"
+        },
+        {
+          "timestamp": "20230426113328",
+          "original": "https://i6.photobucket.com/albums/y215/cortneyhead/johnny5isalive.jpg",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "E7T3LROI3VAE5NUR5GNYRCU4HKJBSFU7",
+          "length": "2514"
+        },
+        {
+          "timestamp": "20230506111925",
+          "original": "https://i6.photobucket.com/albums/y215/cortneyhead/johnny5isalive.jpg",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "E7T3LROI3VAE5NUR5GNYRCU4HKJBSFU7",
+          "length": "2511"
+        },
+        {
+          "timestamp": "20230508172526",
+          "original": "https://i6.photobucket.com/albums/y215/cortneyhead/johnny5isalive.jpg",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "E7T3LROI3VAE5NUR5GNYRCU4HKJBSFU7",
+          "length": "2503"
+        },
+        {
+          "timestamp": "20240918085435",
+          "original": "https://i6.photobucket.com/albums/y215/cortneyhead/johnny5isalive.jpg",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "E7T3LROI3VAE5NUR5GNYRCU4HKJBSFU7",
+          "length": "2431"
+        },
+        {
+          "timestamp": "20250325084618",
+          "original": "https://i6.photobucket.com/albums/y215/cortneyhead/johnny5isalive.jpg",
+          "mimetype": "image/jpeg",
+          "statuscode": "200",
+          "digest": "NFANP73RRKOT4EJN5EMMB2R5JQG7YQV4",
+          "length": "21058"
+        },
+        {
+          "timestamp": "20260212131818",
+          "original": "https://i6.photobucket.com/albums/y215/cortneyhead/johnny5isalive.jpg",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "YQTLEG4WELXZSC5KIQ26M7BOX3ZHFNER",
+          "length": "1766"
+        },
+        {
+          "timestamp": "20260411133209",
+          "original": "https://i6.photobucket.com/albums/y215/cortneyhead/johnny5isalive.jpg",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "YQTLEG4WELXZSC5KIQ26M7BOX3ZHFNER",
+          "length": "1771"
+        },
+        {
+          "timestamp": "20260528164130",
+          "original": "https://i6.photobucket.com/albums/y215/cortneyhead/johnny5isalive.jpg",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "YQTLEG4WELXZSC5KIQ26M7BOX3ZHFNER",
+          "length": "1773"
+        },
+        {
+          "timestamp": "20261012034316",
+          "original": "https://i6.photobucket.com/albums/y215/cortneyhead/johnny5isalive.jpg",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "YQTLEG4WELXZSC5KIQ26M7BOX3ZHFNER",
+          "length": "1768"
+        }
+      ],
+      "status": "recovered",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fi6.photobucket.com%2Falbums%2Fy215%2Fcortneyhead%2Fjohnny5isalive.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:26:56.795773+00:00",
+      "index_http_status": 200,
+      "selected_capture": "20080218052324",
+      "raw_path": "recovery/massline/external/raw/d964cf2c6abaa159b1654b0a289446da853e094244aa180ec11d410f113b272e.jpg",
+      "sha256": "d964cf2c6abaa159b1654b0a289446da853e094244aa180ec11d410f113b272e",
+      "bytes": 21055,
+      "content_type": "image/jpeg"
     },
     {
       "url": "http://i6.photobucket.com/albums/y224/kromey/Mattjay/12290623117gg.jpg",
@@ -105123,7 +105429,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fi63.photobucket.com%2Falbums%2Fh127%2Fbigbabyborn%2FIMG_1599.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:27:00.346965+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://i63.photobucket.com/albums/h127/bigbabyborn/IMG_1602.jpg",
@@ -105141,7 +105450,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fi63.photobucket.com%2Falbums%2Fh127%2Fbigbabyborn%2FIMG_1602.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:27:01.393505+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://i63.photobucket.com/albums/h127/bigbabyborn/IMG_1608.jpg",
@@ -105159,7 +105471,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fi63.photobucket.com%2Falbums%2Fh127%2Fbigbabyborn%2FIMG_1608.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:27:02.912466+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://i63.photobucket.com/albums/h127/bigbabyborn/IMG_1610.jpg",
@@ -105177,7 +105492,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fi63.photobucket.com%2Falbums%2Fh127%2Fbigbabyborn%2FIMG_1610.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:27:03.944803+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://i63.photobucket.com/albums/h127/bigbabyborn/IMG_1619.jpg",
@@ -105195,7 +105513,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fi63.photobucket.com%2Falbums%2Fh127%2Fbigbabyborn%2FIMG_1619.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:27:05.165120+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://i63.photobucket.com/albums/h127/bigbabyborn/IMG_1629.jpg",
@@ -105213,7 +105534,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fi63.photobucket.com%2Falbums%2Fh127%2Fbigbabyborn%2FIMG_1629.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:27:06.171966+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://i63.photobucket.com/albums/h127/bigbabyborn/IMG_1633.jpg",
@@ -105231,7 +105555,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fi63.photobucket.com%2Falbums%2Fh127%2Fbigbabyborn%2FIMG_1633.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:27:08.417416+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://i63.photobucket.com/albums/h127/bigbabyborn/IMG_1637.jpg",
@@ -105249,7 +105576,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fi63.photobucket.com%2Falbums%2Fh127%2Fbigbabyborn%2FIMG_1637.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:27:09.499732+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://i63.photobucket.com/albums/h127/bigbabyborn/IMG_1644.jpg",
@@ -105267,7 +105597,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "no_captures",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fi63.photobucket.com%2Falbums%2Fh127%2Fbigbabyborn%2FIMG_1644.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "indexed_at": "2026-10-19T21:27:10.496607+00:00",
+      "index_http_status": 200
     },
     {
       "url": "http://i63.photobucket.com/albums/h127/bigbabyborn/IMG_1654.jpg",
@@ -105285,7 +105618,10 @@
         }
       ],
       "captures": [],
-      "status": "queued"
+      "status": "index_failed",
+      "index_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fi63.photobucket.com%2Falbums%2Fh127%2Fbigbabyborn%2FIMG_1654.jpg&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest%2Clength",
+      "index_error": "Wayback CDX HTTP 429; query paused to respect archive rate limit",
+      "indexed_at": "2026-10-19T21:27:11.447146+00:00"
     },
     {
       "url": "http://i63.photobucket.com/albums/h127/bigbabyborn/IMG_1657.jpg",
@@ -192072,5 +192408,5 @@
     "queued_after_batch": 420,
     "cooldown_until": "2026-10-18T08:30:00.400984+00:00"
   },
-  "cooldown_until": "2026-10-19T21:13:36.850466+00:00"
+  "cooldown_until": "2026-10-19T21:28:11.447207+00:00"
 }

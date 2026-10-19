@@ -6,7 +6,16 @@ from restore.massline import (build_massline_archive, massline_route, massline_s
                               rewrite_massline_css, sanitize_massline_html,
                               select_massline_homepage_versions, merge_massline_capture_rows,
                               select_latest_massline_rows, _priority, _forum_index_pages, _forum_topic_order,
-                              _massline_asset_route, recover_massline_capture_variants)
+                              _massline_asset_route, recover_massline_capture_variants,
+                              _write_massline_report)
+
+
+def test_massline_report_does_not_claim_pages_was_not_deployed(tmp_path):
+    _write_massline_report(tmp_path, {}, {"resources": {}})
+
+    report = (tmp_path / "docs/recovery-report/massline-report.md").read_text()
+    assert "No Pages deployment was made" not in report
+    assert "Pages preview status is recorded in `docs/VERIFICATION.md`" in report
 
 
 def test_massline_routes_distinguish_forum_threads_and_pages():

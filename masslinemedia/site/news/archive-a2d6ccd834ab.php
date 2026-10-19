@@ -1,0 +1,309 @@
+<!doctype html>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<title>MASS LINE MEDIA</title>
+
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<style type="text/css">
+
+<!--
+.body1, .body1q {  line-height: 16px; }
+
+.search_field {width: 295px; font-family: Verdana, Helvetica, sans-serif; font-size: 10px}
+
+.edit_field {width: 150px; font-family: Verdana, Helvetica, sans-serif; font-size: 10px}
+
+.ta_field { height: 150px; width: 400px; font-family: Verdana, Helvetica, sans-serif; font-size: 10px}
+
+
+
+.edit_field, .ta_field, .search_field {
+
+	border-left-color:#000000;
+
+	border-top-color:#000000;
+
+	border-right-color:#000000;
+
+	border-bottom-color:#000000;
+
+	color: #333333;
+
+	border: 1 solid; }
+
+
+
+A:link{color:#333300; font-family:verdana;text-decoration:none; font-weight:bold} 
+
+A:visited{color:#333300; font-family:verdana;text-decoration:none; font-weight:bold};
+
+A:hover{color:#FF3300} 
+.style64 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color: #333300;
+}
+.style65 {
+	color: #333300;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.style66 {font-size: 11px}
+.style69 {font-size: 1.5px}
+.style71 {font-size: 11px; color: #333300; }
+.style72 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #333300;
+}
+.style73 {
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #333300;
+}
+-->
+
+</style>
+</head>
+<body leftmargin="0" topmargin="0"><aside class="massline-source-note">Historical capture · 2009-03-15 · <a href="https://web.archive.org/web/20090315005607/http://masslinemedia.com/news/archive.php?from=115" rel="noopener noreferrer">view source replay</a></aside>
+<!-- <div align="center"> -->
+<table border="0" cellpadding="0" cellspacing="0" width="901">
+<tr>
+<td bgcolor="#333300" height="12"> </td>
+</tr>
+<tr>
+<td><img height="68" src="/bluescholars/masslinemedia/assets/a85fad7bf534154697d6.gif" width="901"/></td>
+</tr>
+<tr>
+<td><img border="0" height="31" src="/bluescholars/masslinemedia/assets/074dc67a31c4d8ebfec5.gif" usemap="#Map" width="901"/></td>
+</tr>
+<tr>
+<td><table border="0" cellpadding="0" cellspacing="0" width="901">
+<tr>
+<td align="center" valign="top" width="211"><div align="left"><br/>
+<br/>
+<img height="29" src="/bluescholars/masslinemedia/assets/c83005c4091ebaa0b50c.gif" width="103"/> <br/>
+<img border="0" height="236" src="/bluescholars/masslinemedia/assets/21cf21af763b178cd697.jpg" usemap="#Map2" width="211"/><br/>
+<img border="0" height="240" src="/bluescholars/masslinemedia/assets/2318e978080a8133a7ef.jpg" usemap="#Map3" width="211"/> <img border="0" height="236" src="/bluescholars/masslinemedia/assets/ba9fc8897223d24e1d4b.jpg" usemap="#Map4" width="211"/><br/>
+<img border="0" height="236" src="/bluescholars/masslinemedia/assets/7b93984c0904e52b40b4.jpg" usemap="#Map5" width="211"/> <br/>
+<br/>
+</div></td>
+<td valign="top" width="10"><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/></td>
+<td align="center" valign="top" width="480"><div align="center">
+<table border="0" cellpadding="0" cellspacing="0" width="480">
+<tr>
+<td colspan="3" height="0">
+<img alt="Archived image unavailable" height="233" vspace="0" width="480"/></td>
+</tr>
+<tr bgcolor="#333300">
+<td colspan="3" height="12"> </td>
+</tr>
+<tr>
+<td width="25"> </td>
+<td align="left" valign="top" width="430">
+<p align="left" class="body1"><span class="body1 style73"> <h2>News archive</h2><strong><font color="#333300" face="Verdana, Arial, Helvetica, sans-serif" size="2">2007-08-03 | Friday</font></strong><br/><br/>day one in <strong>NYC</strong> was aiiiight.  we took a redeye out of Seattle wednesday night and barely slept, so after waiting 3 hours in vain at JFK for the <strong>CDJ</strong> of ours that Delta Airlines lost, we took a cab to meet my cousin Omid in the Financial District in Manhattan, just 3 blocks from the Ground Zero site.
+<br><br>
+wrote a blog, watched some episodes of <strong>Flight of the Conchords</strong> on On Demand, took a nap.
+<br><br>
+<div align="center"><img alt="" src="/bluescholars/masslinemedia/assets/1bf713617fb77eccf6a4.jpg"><br>
+(Mulch, Geologic)
+<br/></br></img></div><br>
+woke up around 2ish, grabbed some food at the deli at the corner of Gold and Fulton and followed the music we heard coming from the pier.  turned out, it was a free show by the lovely <strong>Jean Norris</strong>.  anybody kno who that is?<br><br>
+<div align="center"><img alt="" src="/bluescholars/masslinemedia/assets/aa07a1099eba8c395179.jpg">
+<br/></img></div><br>
+Jean Norris was one half of the classic R&amp;B soul duo from the early 90's, <strong>Zhane</strong>.  Pronounced, Jah-nay, they supplied middle schoolers like me with some of the filthiest dance cuts including <strong>"Groove Thang</strong>" and <strong>"Hey Mr. DJ</strong>. " girls that like Common and Kangol hats loves them some Zhane.<br><br>
+<div align="left"><img alt="" src="/bluescholars/masslinemedia/assets/55e8ea3fa86e79872285.jpg">
+you can see how incredibly excited we are to be there.<br/></img></div><br>
+after that, we went to explore the Lower East Side in hopes of finding the apartment of<strong> Jermaine </strong>and <strong>Brett</strong> of the Flight Of The Conchords.  we think we found it, but we're not sure.  we're gonna go back in the daytime again and get a flick.<br><br>then, it was on the way back to <strong>Frank's Chop Shop</strong> to visit the homie <strong>Todd</strong>.  Todd was the dood that laced me with the <strong>Seattle Legends New Era</strong> last time i was in NYC.<br> <div style="text-align: center"><img alt="" src="/bluescholars/masslinemedia/assets/2d5c9c35612fdb18c608.jpg"/></div>
+<br><br>
+we had to look out and drop him off some of the new <strong>Bayani Bandanas</strong> at least... besides, <strong>Daps</strong> and <strong>Khalil</strong> wanted some Frank151 New Era collab caps that were unavailable in the SEA.
+<br><br>
+<img alt="" src="/bluescholars/masslinemedia/assets/a46b3b700dfe475833d0.jpg">
+<div style="text-align: center"><img alt="" src="/bluescholars/masslinemedia/assets/cacf630048139e2f73cc.jpg"/></div>
+<br>unfortunately, the caps they wanted weren't in stock at the Chop Shop either.  i think Todd almost laughed at me when i asked if he still had some of the designs in stock.  i guess i'm just not that hip.  we copped Daps the Frank joint with the "F."<br> <div style="text-align: center"><img alt="" src="/bluescholars/masslinemedia/assets/bae7a73388c506dd148a.jpg"/></div>
+we closed our afternoon with another red eye.<br><br/>
+after the Chop Shop, we met up with the homie Hollis (one half of Canary Sing; from SF by way of SEA) who's out here for 5 weeks for a program with Humanity in Action.  the four of us watched The Simpsons Movie.  it was funny.<br/> <img alt="" src="/bluescholars/masslinemedia/assets/1886a199115547b6ebb3.jpg">
+<br/><br/>
+i expect tomorrow to be much better.  i'll be meeting with <strong>Hari Kondabolu</strong> in <strong>Jackson Heights</strong> to compare the dosa at a few different shops in the neighborhood.
+
+<br/><br/>Saba<p></p><br/><hr align="center" noshade="" size="1" width="400"/><br/><strong><font color="#333300" face="Verdana, Arial, Helvetica, sans-serif" size="2">2007-08-02 | Thursday</font></strong><br/><br/>geo and i are back in <strong>NYC</strong> once again to do the meets, the greets, the rhymes, and the beats.  currently staying with my cousin <strong>Omid</strong> of <strong><a class="massline-external-gap" href="https://web.archive.org/web/20090315005607/http://masslinemedia.com/news/www.myspace.com/dimodesign" rel="noopener noreferrer">DimoDesign</a> </strong>(shouts to his royal <strong>Mulch</strong>ness)in a building in Manhattan.  apparently JustBlaze lives just above his apartment. whoohoo hip hop trivia.<br><br>my cuz takes pictures of models all day for a living, so hopefully we'll be able to bring his camera along on our NY adventures to share with the townmates once again the lifestyles of the broke and still not famous as they stomp around the east coast.<br><br>oh and be shure to check out the <strong>FREE DOWNLOADS</strong> in the upper right corner of the screen.  we're back on our music game and we'll be giving you free cuts from MassLine artists as well as friends of ours every week.  guaranteed.  keep an eye out for a <strong>Grynch/Geo</strong> collabo, some exclusive <strong>Common Market</strong> joints, and some preview cuts from our new friends, the <strong>Townfolk</strong>.<br/><br/>Saba<p></p><br/><hr align="center" noshade="" size="1" width="400"/><br/><strong><font color="#333300" face="Verdana, Arial, Helvetica, sans-serif" size="2">2007-08-01 | Wednesday</font></strong><br/><br/>It is far from my intentions to write an overly intellectualized or
+snooty sounding academic perspective on this interview, so I'll try to
+keep this short and simple.<br>
+<br>
+There are a lot of folks who come up to us who say "Hey MassLiners, I
+really like your music because it isn't about some gangsta gangsta
+booty shakin bitch ho bling bling crap."  Sure, part of me appreciates
+this comment because, in a sense it is true, we don't like to promote
+destructive behavior.  I have a mom, I have a sister, I have comrades
+in struggle that are females; I don't want, especially as a male, to
+engage in or promote activity that is oppressive to my
+brethren/sistren.  But at the same time, when I hear these comments,
+another part of me feels that whoever says this is missing the point. 
+I certainly hope folks don't write off the valuable music and message
+that other artists are putting out simply because of the image they
+project or the language they use.  Remember, all music is political.<br>
+<br>
+It's a shame that right now in hip-hop music, the promotion of one idea
+or image seems to necessitate an implied rejection of all other ideas
+and images.  Or even more so, how an artist's acceptance by a certain
+group of listeners seems to imply that artist's necessary rejection of
+other demographics.  <br/>
+<br/>
+I believe that this is the framework folks are operating with when they
+pay us sideways compliments: "Their music is positive, so they'll
+appreciate it if I hate on some thug shit."<br/>
+<br/>
+That is, so-called "thug shit."  I challenge anybody to listen through a <strong>Blue Scholars</strong> or <strong>Common Market</strong>
+record and find one line that pretentiously addresses rappers who
+project a different image.  I adjure them to find a single lyric that
+puts them down.  We've never gone out of our way to insult any artist
+who works hard to feed their family simply because their style is
+different from ours.<br/>
+<br/>
+I personally don't think of our music as "conscious," but apparently
+that's the marketing angle it's picked up.  That said, so-called
+"conscious" music should not exclude some of the greats in the rap game
+now.  MCs that I personally enjoy, that most people seem to think don't
+count as conscious, include <strong>Lil Wayne</strong>, <strong>E-40</strong>, and <strong>TI</strong>. 
+All of these doods, at one point or another, have addressed very
+legitimate social issues in their music.  Or maybe I should say, "these
+mahfuccas have talked about some real shit."<br/>
+<br/>
+Again, this isn't intended to be another pretentious academic analysis
+of rap music.  Pieces like that are very condescending and imply that,
+without an authority to translate a given rapper's lyrics into "plain
+english," it would have no place in civilized discussion.<br/>
+<br/>
+I say that some of the music these rappers put out is filthy because I <em>personally relate</em>
+to the content.  Yes, some of it is party music, some of it I like
+because I've been conditioned to like it, some if it is plain crap, and
+yes, some of it is talkin about some real shit.<br/>
+<br/>
+I'm sure I've probably said too much.  Besides that, I'm not really the
+best writer which is why I stick to the beats.  All this yapping is
+really to introduce this recorded interview of <strong>Pimp C</strong>.  Midway
+thru the recording he touches on some points from a perspective that
+is, what I feel, very similar to where Blue Scholars comes from.  Maybe
+just in a different style.<br/>
+<br/>
+
+click <a class="massline-external-gap" href="https://web.archive.org/web/20090315005607/http://zshare.net/audio/2833955bb6adc1/" rel="noopener noreferrer">here</a>.<br/><br/>or go to <span class="body1 style73">http://www.zshare.net/audio/2833955bb6adc1/</span><br/><br/>
+The majority of rap/hip-hop fans like sound bites like this because
+they get excited and starry-eyed whenever a rapper acts hella tough; or
+they love to follow beef like some of these bloggers and journalists
+out here.  The folks that do this are only those who haven't lived real
+life and experienced the serious, sometimes lethal repercussions that
+talk like this can bring.  If I have criticism for anybody, it's these
+types of tourists.  <br/>
+<br/>
+I say "thas wassup" to what Pimp C says because I am also an artist in
+the public eye that tries to make real music.  Furthermore, I am also
+an artist that has had to carefully watch the media folks that try to
+get us to say negative things about our friends and I'm also an artist
+that has had to cut fake people out of my life and business in order to
+protect my friends and family.<br/>
+<br/>
+Looks like I failed at keeping it short and simple.  Oh well.  Now all
+the fools need to get off the booboo!  And word, I wear that same
+cologne too.<br/>
+<br/>
+Saba<p></p><br/><hr align="center" noshade="" size="1" width="400"/><br/><strong><font color="#333300" face="Verdana, Arial, Helvetica, sans-serif" size="2">2007-08-01 | Wednesday</font></strong><br/><br/><img align="left" alt="" height="81" src="/bluescholars/masslinemedia/assets/de8565412c616a2ebd68.jpg" title="undefined" width="150"><div><br/></div><div style="text-align: center"><span class="Apple-style-span" style="font-weight: bold">Sabzi for Dunnies:</span></div><div style="text-align: center"><span class="Apple-style-span" style="font-weight: bold">Dawn (instrumental)</span></div><div style="text-align: center"><br/></div><div style="text-align: center"><br/></div><div style="text-align: center"><br/></div><div style="text-align: left"><br/></div><div style="text-align: left"><br/></div><div style="text-align: left">If you slept around the time <strong>Bayani</strong> dropped (ah say what, you haven't copped the album yet?) -- there was an interweb-only release/EP/radio advance/whateveryouwannacallits for the first single, <em><strong>Back Home</strong></em>. Tugging on the coattails of this first single is the 3-minute instrumental called <em><strong>Dawn</strong></em>. According to <strong>Sabzi</strong>, this didn't make it onto the album because there was no space on the album for this little diddy (no sean puffy) to play in. I'm diggin' the melodies and summer-type feel to it. And so, you long marcher you, enjoy <em><strong>Dawn</strong></em>. Maybe even put it on a burned mix CD if your partner is named Dawn. Or be really corny and play it when the sun is coming up and you're getting ready for your morning jog. Or be really productive and bump it while you're washing dishes (i'll let you figure that one out).</div><div style="text-align: left"><br/></div><div style="text-align: left"><strong><a class="massline-external-gap" href="https://web.archive.org/web/20090315005607/http://zshare.net/audio/2934897ecfb5fb" rel="noopener noreferrer">Sabzi - Dawn (instrumental)</a></strong></div><div style="text-align: left"><br/></div><div style="text-align: left">Peace</div><div style="text-align: left">daps</div><p></p><br/><hr align="center" noshade="" size="1" width="400"/><br/><strong><font color="#333300" face="Verdana, Arial, Helvetica, sans-serif" size="2">2007-07-31 | Tuesday</font></strong><br/><br/>Photographer Ryan Lewis, who has done a couple of shoots with Blue Scholars among other local groups is having a photo show tomorrow from 6-8 PM at this new cafe called Souped Up on Greenlake (7900 E Greenlake
+Dr N). They will be catering free gourmet food/coffee.  DJ'ing by Ryan, Budo, and Grieves.
+There will be pictures up of Geo, Neezie Pleaze, Dyme Def, Bean One and
+all sorts of other people/stuff. Art will be for sale (framed) as well. Support!<p></p><br/><hr align="center" noshade="" size="1" width="400"/><br/><center><div class="pagenumbers"><a href="/bluescholars/masslinemedia/site/news/archive-1dbf17b25e1a.php">[&lt;&lt;]</a> <a href="/bluescholars/masslinemedia/site/news/archive-ff41e4b899bf.php">[1]</a> <a href="/bluescholars/masslinemedia/site/news/archive-f09e4ab70de0.php">[2]</a> <a href="/bluescholars/masslinemedia/site/news/archive-13fd6b501db4.php">[3]</a> <a href="/bluescholars/masslinemedia/site/news/archive-a6d8d32ad781.php">[4]</a> <a href="/bluescholars/masslinemedia/site/news/archive-d45f54b0cbc4.php">[5]</a> <a href="/bluescholars/masslinemedia/site/news/archive-0bfc403792bc.php">[6]</a> <a href="/bluescholars/masslinemedia/site/news/archive-fd78b8847920.php">[7]</a> <a href="/bluescholars/masslinemedia/site/news/archive-cd30dd4ecbb4.php">[8]</a> <a href="/bluescholars/masslinemedia/site/news/archive-3f0473af164e.php">[9]</a> <a href="/bluescholars/masslinemedia/site/news/archive-328a9b624d92.php">[10]</a> <a href="/bluescholars/masslinemedia/site/news/archive-3c1fe8996261.php">[11]</a> <a href="/bluescholars/masslinemedia/site/news/archive-86e16e039033.php">[12]</a> <a href="/bluescholars/masslinemedia/site/news/archive-7e9b30d94f52.php">[13]</a> <a href="/bluescholars/masslinemedia/site/news/archive-a4c814fd9062.php">[14]</a> <a href="/bluescholars/masslinemedia/site/news/archive-9413aa1ebf0f.php">[15]</a> <a href="/bluescholars/masslinemedia/site/news/archive-c3d2d6995e50.php">[16]</a> <a href="/bluescholars/masslinemedia/site/news/archive-9d70a3c73aca.php">[17]</a> <a href="/bluescholars/masslinemedia/site/news/archive-f6fd84ec4403.php">[18]</a> <a href="/bluescholars/masslinemedia/site/news/archive-aeb25bb8527b.php">[19]</a> <a href="/bluescholars/masslinemedia/site/news/archive-b69d705746cb.php">[20]</a> <a href="/bluescholars/masslinemedia/site/news/archive-a5db3a75cdf8.php">[21]</a> <a href="/bluescholars/masslinemedia/site/news/archive-7369bee5daae.php">[22]</a> <a href="/bluescholars/masslinemedia/site/news/archive-1dbf17b25e1a.php">[23]</a> [24] <a href="/bluescholars/masslinemedia/site/news/archive-9f0a15e79a97.php">[25]</a> <a href="/bluescholars/masslinemedia/site/news/archive-aa9c2a812be3.php">[26]</a> <a href="/bluescholars/masslinemedia/site/news/archive-b0173dec9c53.php">[27]</a> <a href="/bluescholars/masslinemedia/site/news/archive-86b898eb4b5c.php">[28]</a> <a href="/bluescholars/masslinemedia/site/news/archive-f7f9da7f8f55.php">[29]</a> <a href="/bluescholars/masslinemedia/site/news/archive-586a37a4a91f.php">[30]</a> <a href="/bluescholars/masslinemedia/site/news/archive-96063bb0e6e6.php">[31]</a> <a href="/bluescholars/masslinemedia/site/news/archive-ae1aaaa342fb.php">[32]</a> <a href="/bluescholars/masslinemedia/site/news/archive-2977b680a4aa.php">[33]</a> <a href="/bluescholars/masslinemedia/site/news/archive-1af3829b83b3.php">[34]</a> <a href="/bluescholars/masslinemedia/site/news/archive-a348817aa4f8.php">[35]</a> <a href="/bluescholars/masslinemedia/site/news/archive-07e37251c3d1.php">[36]</a> <a href="/bluescholars/masslinemedia/site/news/archive-91a11bf8b6fc.php">[37]</a> <a href="/bluescholars/masslinemedia/site/news/archive-d71e150e4045.php">[38]</a> <a href="/bluescholars/masslinemedia/site/news/archive-0a3f6084c1f9.php">[39]</a> <a href="/bluescholars/masslinemedia/site/news/archive-f103b614281f.php">[40]</a> <a href="/bluescholars/masslinemedia/site/news/archive-80555a41f490.php">[41]</a> <a href="/bluescholars/masslinemedia/site/news/archive-b9d0c0fa332b.php">[42]</a> <a href="/bluescholars/masslinemedia/site/news/archive-f410280b6a12.php">[43]</a> <a href="/bluescholars/masslinemedia/site/news/archive-18fe87920e97.php">[44]</a> <a href="/bluescholars/masslinemedia/site/news/archive-e30eb998aad9.php">[45]</a> <a href="/bluescholars/masslinemedia/site/news/archive-3cc92afd9411.php">[46]</a> <a href="/bluescholars/masslinemedia/site/news/archive-b6ec7a44ebf8.php">[47]</a> <a href="/bluescholars/masslinemedia/site/news/archive-3678dcc58b9e.php">[48]</a> <a href="/bluescholars/masslinemedia/site/news/archive-4e11ab08baf7.php">[49]</a> <a href="/bluescholars/masslinemedia/site/news/archive-c85b8eeabe7f.php">[50]</a> <a href="/bluescholars/masslinemedia/site/news/archive-bf9a1eb28f67.php">[51]</a> <a href="/bluescholars/masslinemedia/site/news/archive-c70b6df770a7.php">[52]</a> <a href="/bluescholars/masslinemedia/site/news/archive-614e9005b7af.php">[53]</a> <a href="/bluescholars/masslinemedia/site/news/archive-b6f35646d585.php">[54]</a> <a href="/bluescholars/masslinemedia/site/news/archive-a8bd5dc9e78f.php">[55]</a> <a href="/bluescholars/masslinemedia/site/news/archive-42bc361f5e19.php">[56]</a> <a href="/bluescholars/masslinemedia/site/news/archive-fc7663da60a7.php">[57]</a> <a href="/bluescholars/masslinemedia/site/news/archive-67c973a1d298.php">[58]</a> <a href="/bluescholars/masslinemedia/site/news/archive-922acc50941d.php">[59]</a> <a href="/bluescholars/masslinemedia/site/news/archive-9f0a15e79a97.php">[&gt;&gt;]</a> </div></center></img></br></br></br></br></br></br></br></br></img></br></br></br></img></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></span></p>
+</td>
+<td width="25"> </td>
+</tr>
+</table>
+</div></td>
+<td align="left" valign="top" width="25"><img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/> <br/>
+</td>
+<td align="center" valign="top" width="175"><div align="left">
+<p class="style66"><br/>
+<span class="body1 style65"><strong><br/>
+<font color="#333300" face="Verdana, Arial, Helvetica, sans-serif" size="1">SUBSCRIBE TO THE<br/>
+                  MASS LINE NEWSLETTER</font></strong></span>
+<input name="recipient" type="hidden" value="info@masslinemedia.com"/>
+<input name="subject" type="hidden" value="mailing list"/>
+<input name="email" size="20" style="font-size: 9pt; color: #3F3F3F; font-family: Veranda, sans serif" type="text"/>
+<input id="Submit" name="Submit" type="submit" value="Join"/>
+<input name="env_report" type="hidden" value="REMOTE_ADDR,HTTP_USER_AGENT"/>
+<input name="redirect" type="hidden" value="http://www.masslinemedia.com/thanks.html"/>
+</p>
+<p class="style66"> <br/>
+<br/>
+<img height="24" src="/bluescholars/masslinemedia/assets/25dd499fcc77820f31ce.gif" width="175"/><font color="#333300" face="Verdana, Arial, Helvetica, sans-serif" size="1.5"><br/>
+<br/>
+<br/>
+</font>
+</p>
+<p><font face="Verdana, Arial, Helvetica, sans-serif" size="1.5"><br/>
+</font> </p>
+</div></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td bgcolor="#333300" height="20"> </td>
+</tr>
+</table>
+<map name="Map">
+<area coords="497,7,571,26" href="/bluescholars/masslinemedia/site/calendar.php" shape="rect"/>
+<area coords="247,8,288,25" href="/bluescholars/masslinemedia/site/index.html" shape="rect"/>
+<area coords="320,8,377,26" href="/bluescholars/masslinemedia/site/artists/index.html" shape="rect"/>
+<area coords="407,8,462,26" href="/bluescholars/massline-forums/index.html" shape="rect"/>
+</map>
+<map name="Map2">
+<area class="massline-external-gap" coords="21,49,181,209" href="https://web.archive.org/web/20090315005607/http://rs351.securehostserver.com/~rascionc/osCommerce/catalog/index.php?cPath=21" rel="noopener noreferrer" shape="rect"/>
+</map>
+<map name="Map3">
+<area class="massline-external-gap" coords="19,45,184,210" href="https://web.archive.org/web/20090315005607/http://rs351.securehostserver.com/~rascionc/osCommerce/catalog/index.php?cPath=21" rel="noopener noreferrer" shape="rect"/>
+</map>
+<map name="Map4">
+<area class="massline-external-gap" coords="20,48,181,210" href="https://web.archive.org/web/20090315005607/http://bluescholars.com/store.html" rel="noopener noreferrer" shape="rect"/>
+</map>
+<map name="Map5">
+<area class="massline-external-gap" coords="20,47,180,210" href="https://web.archive.org/web/20090315005607/http://bluescholars.com/store.html" rel="noopener noreferrer" shape="rect"/>
+</map>
+<!-- </div> -->
+</body>
+</html>

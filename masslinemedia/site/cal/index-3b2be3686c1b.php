@@ -1,0 +1,85 @@
+<!doctype html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>MASS LINE MEDIA</title>
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<style type="text/css">
+
+<!--
+
+
+
+.body1, .body1q {  line-height: 16px; }
+
+.search_field {width: 295px; font-family: Verdana, Helvetica, sans-serif; font-size: 10px}
+
+.edit_field {width: 150px; font-family: Verdana, Helvetica, sans-serif; font-size: 10px}
+
+.ta_field { height: 150px; width: 400px; font-family: Verdana, Helvetica, sans-serif; font-size: 10px}
+
+
+
+.edit_field, .ta_field, .search_field {
+
+	border-left-color:#000000;
+
+	border-top-color:#000000;
+
+	border-right-color:#000000;
+
+	border-bottom-color:#000000;
+
+	color: #333333;
+
+	border: 1 solid; }
+
+
+
+A:link{color:#333300; font-family:verdana;text-decoration:none} 
+
+A:visited{color:#333300; font-family:verdana;text-decoration:none};
+
+A:hover{color:#FF3300} 
+.style64 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color: #333300;
+}
+.style65 {
+	color: #333300;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.style66 {font-size: 11px}
+.style69 {font-size: 1.5px}
+.style71 {font-size: 11px; color: #333300; }
+.style72 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #333300;
+}
+.style73 {
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #333300;
+}
+
+-->
+
+</style>
+<link href="/bluescholars/masslinemedia/assets/6e638391bab8a95a0d6f.css" rel="stylesheet" type="text/css"/>
+</head>
+<body topmargin="0"><aside class="massline-source-note">Historical capture · 2007-03-20 · <a href="https://web.archive.org/web/20070320092511/http://masslinemedia.com/cal/index.php?month=4&amp;year=2007&amp;PHPSESSID=5d0837ce406d0ee09492681fec60d4b4" rel="noopener noreferrer">view source replay</a></aside>
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td><a href="/bluescholars/masslinemedia/site/cal/index-c9e8ad1c21c1.php">
+<img border="0" src="/bluescholars/masslinemedia/assets/c15747d69d3d3fda9f2c.gif"/></a> <a href="/bluescholars/masslinemedia/site/cal/index-761335186f43.php"><img border="0" src="/bluescholars/masslinemedia/assets/9f97942b41d33d404570.gif"/></a> <span class="date_header"> 
+                          April                           
+                          2007                          </span> </td>
+<!-- form tags must be outside of <td> tags -->
+<p class="massline-form-gap">Historical posting form disabled in this preservation copy.</p>
+</tr>
+<tr>
+<td bgcolor="#000000" colspan="2">User 'massline_mysql' has exceeded the 'max_questions' resource (current value: 50000)</td></tr></table></body></html>

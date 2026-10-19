@@ -1,0 +1,307 @@
+<!doctype html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>MASS LINE MEDIA</title>
+
+
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<style type="text/css">
+
+<!--
+
+
+
+.body1, .body1q {  line-height: 16px; }
+
+.search_field {width: 295px; font-family: Verdana, Helvetica, sans-serif; font-size: 10px}
+
+.edit_field {width: 150px; font-family: Verdana, Helvetica, sans-serif; font-size: 10px}
+
+.ta_field { height: 150px; width: 400px; font-family: Verdana, Helvetica, sans-serif; font-size: 10px}
+
+
+
+.edit_field, .ta_field, .search_field {
+
+	border-left-color:#000000;
+
+	border-top-color:#000000;
+
+	border-right-color:#000000;
+
+	border-bottom-color:#000000;
+
+	color: #333333;
+
+	border: 1 solid; }
+
+
+
+A:link{color:#333300; font-family:verdana;text-decoration:none} 
+
+A:visited{color:#333300; font-family:verdana;text-decoration:none};
+
+A:hover{color:#FF3300} 
+.style64 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color: #333300;
+}
+.style65 {
+	color: #333300;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.style66 {font-size: 11px}
+.style69 {font-size: 1.5px}
+.style71 {font-size: 11px; color: #333300; }
+.style72 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #333300;
+}
+.style73 {
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #333300;
+}
+
+-->
+
+</style>
+<link href="/bluescholars/masslinemedia/assets/6e638391bab8a95a0d6f.css" rel="stylesheet" type="text/css"/>
+</head>
+<body><aside class="massline-source-note">Historical capture · 2006-11-11 · <a href="https://web.archive.org/web/20061111043750/http://masslinemedia.com/cal/index.php?PHPSESSID=b47a0beb4ed8bacf7a48674f29b74aa9" rel="noopener noreferrer">view source replay</a></aside>
+<div align="center">
+<table border="0" cellpadding="0" cellspacing="0" width="901">
+<tr>
+<td bgcolor="#333300" height="12"> </td>
+</tr>
+<tr>
+<td><img height="68" src="/bluescholars/masslinemedia/assets/a85fad7bf534154697d6.gif" width="901"/></td>
+</tr>
+<tr>
+<td><img border="0" height="31" src="/bluescholars/masslinemedia/assets/821924228afd6a9a080b.gif" usemap="#Map" width="901"/></td>
+</tr>
+<tr>
+<td><table border="0" cellpadding="0" cellspacing="0" width="901">
+<tr>
+<td align="center" valign="top" width="211"><div align="left"><br/>
+<br/>
+<img height="29" src="/bluescholars/masslinemedia/assets/c83005c4091ebaa0b50c.gif" width="103"/> <br/>
+<img border="0" height="236" src="/bluescholars/masslinemedia/assets/21cf21af763b178cd697.jpg" usemap="#Map2" width="211"/><br/>
+<img border="0" height="240" src="/bluescholars/masslinemedia/assets/2318e978080a8133a7ef.jpg" usemap="#Map3" width="211"/> <img border="0" height="236" src="/bluescholars/masslinemedia/assets/ba9fc8897223d24e1d4b.jpg" usemap="#Map4" width="211"/><br/>
+<img border="0" height="236" src="/bluescholars/masslinemedia/assets/7b93984c0904e52b40b4.jpg" usemap="#Map5" width="211"/> <br/>
+<br/>
+</div></td>
+<td valign="top" width="10"><img height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/></td>
+<td align="center" valign="top" width="480"><div align="center">
+<table border="0" cellpadding="0" cellspacing="0" width="480">
+<tr>
+<td colspan="3" height="233"><img alt="Archived image unavailable" height="233" width="480"/></td>
+</tr>
+<tr bgcolor="#333300">
+<td colspan="3" height="12"> </td>
+</tr>
+<tr>
+<td width="25"> </td>
+<td align="left" valign="top" width="430"><p align="left" class="body1"><br/>
+<br/>
+<br/>
+<!-- begin calendar -->
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td><a class="massline-external-gap" href="https://web.archive.org/web/20061111043750/http://masslinemedia.com/cal/index.php?month=10&amp;year=2006&amp;PHPSESSID=984271fe099662a6f4153344b5f1381f" rel="noopener noreferrer">
+<img border="0" src="/bluescholars/masslinemedia/assets/c15747d69d3d3fda9f2c.gif"/></a> <a class="massline-external-gap" href="https://web.archive.org/web/20061111043750/http://masslinemedia.com/cal/index.php?month=12&amp;year=2006&amp;PHPSESSID=984271fe099662a6f4153344b5f1381f" rel="noopener noreferrer"><img border="0" src="/bluescholars/masslinemedia/assets/9f97942b41d33d404570.gif"/></a> <span class="date_header"> 
+                          November                           
+                          2006                          </span> </td>
+<!-- form tags must be outside of <td> tags -->
+<p class="massline-form-gap">Historical posting form disabled in this preservation copy.</p>
+</tr>
+<tr>
+<td bgcolor="#000000" colspan="2"><table border="0" cellpadding="1" cellspacing="1">
+<tr>
+<td class="column_header"> Sun</td>
+<td class="column_header"> Mon</td>
+<td class="column_header"> Tue</td>
+<td class="column_header"> Wed</td>
+<td class="column_header"> Thur</td>
+<td class="column_header"> Fri</td>
+<td class="column_header"> Sat</td>
+</tr>
+<tr>
+<td class="empty_day_cell" valign="top"> </td>
+<td class="empty_day_cell" valign="top"> </td>
+<td class="empty_day_cell" valign="top"> </td>
+<td class="day_cell" valign="top"><span class="day_number">1</span><br/></td>
+<td class="day_cell" valign="top"><span class="day_number">2</span><br/></td>
+<td class="day_cell" valign="top"><span class="day_number">3</span><br/></td>
+<td class="day_cell" valign="top"><span class="day_number">4</span><br/></td>
+</tr>
+<tr>
+<td class="day_cell" valign="top"><span class="day_number">5</span><br/></td>
+<td class="day_cell" valign="top"><span class="day_number">6</span><br/></td>
+<td class="day_cell" valign="top"><span class="day_number">7</span><br/></td>
+<td class="today_cell" valign="top"><span class="day_number">8</span><br/></td>
+<td class="day_cell" valign="top"><span class="day_number">9</span><br/></td>
+<td class="day_cell" valign="top"><span class="day_number">10</span><br/><span class="title_txt">-Chop Suey 8pm</span><br/></td>
+<td class="day_cell" valign="top"><span class="day_number">11</span><br/></td>
+</tr>
+<tr>
+<td class="day_cell" valign="top"><span class="day_number">12</span><br/></td>
+<td class="day_cell" valign="top"><span class="day_number">13</span><br/></td>
+<td class="day_cell" valign="top"><span class="day_number">14</span><br/></td>
+<td class="day_cell" valign="top"><span class="day_number">15</span><br/></td>
+<td class="day_cell" valign="top"><span class="day_number">16</span><br/></td>
+<td class="day_cell" valign="top"><span class="day_number">17</span><br/></td>
+<td class="day_cell" valign="top"><span class="day_number">18</span><br/></td>
+</tr>
+<tr>
+<td class="day_cell" valign="top"><span class="day_number">19</span><br/></td>
+<td class="day_cell" valign="top"><span class="day_number">20</span><br/></td>
+<td class="day_cell" valign="top"><span class="day_number">21</span><br/></td>
+<td class="day_cell" valign="top"><span class="day_number">22</span><br/><span class="title_txt">-The Showbox</span><br/></td>
+<td class="day_cell" valign="top"><span class="day_number">23</span><br/></td>
+<td class="day_cell" valign="top"><span class="day_number">24</span><br/><span class="title_txt">-Doug Fir Lounge</span><br/></td>
+<td class="day_cell" valign="top"><span class="day_number">25</span><br/></td>
+</tr>
+<tr>
+<td class="day_cell" valign="top"><span class="day_number">26</span><br/></td>
+<td class="day_cell" valign="top"><span class="day_number">27</span><br/></td>
+<td class="day_cell" valign="top"><span class="day_number">28</span><br/></td>
+<td class="day_cell" valign="top"><span class="day_number">29</span><br/></td>
+<td class="day_cell" valign="top"><span class="day_number">30</span><br/></td>
+<td class="empty_day_cell" valign="top"> </td>
+<td class="empty_day_cell" valign="top"> </td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align="center" colspan="2"><br/><br/><span class="footprint">[
+Login ]</span> </td>
+</tr>
+</table></p></td>
+<td width="25"> </td>
+</tr>
+</table>
+</div></td>
+<td align="left" valign="top" width="25"><img height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/> <br/>
+</td>
+<td align="center" valign="top" width="175"><div align="left">
+<p class="style66"><br/>
+<span class="body1 style65"><strong><br/>
+<font color="#333300" face="Verdana, Arial, Helvetica, sans-serif" size="1">SUBSCRIBE TO THE<br/>
+                MASS LINE NEWSLETTER</font></strong></span>
+<input name="recipient" type="hidden" value="info@masslinemedia.com">
+<input name="subject" type="hidden" value="mailing list"/>
+<input name="email" size="20" style="font-size: 9pt; color: #3F3F3F; font-family: Veranda, sans serif" type="text"/>
+<input id="Submit" name="Submit" type="submit" value="Join"/>
+<input name="env_report" type="hidden" value="REMOTE_ADDR,HTTP_USER_AGENT"/>
+<input name="redirect" type="hidden" value="http://www.masslinemedia.com/thanks.html"/>
+</input></p>
+<p class="style66"> <br/>
+<br/>
+<img height="24" src="/bluescholars/masslinemedia/assets/25dd499fcc77820f31ce.gif" width="175"/><font color="#333300" face="Verdana, Arial, Helvetica, sans-serif" size="1.5"><br/>
+<strong><br/>
+                FRIDAY<br/>
+                NOVEMBER 10, 2006</strong><br/>
+                SEATTLE, WA<br/>
+                Common Market<br/>
+                Gabriel Teodros<br/>
+                D Black<br/>
+                Silent Lambs Project<br/>
+                DJ Vitamin D<br/>
+                @ Chop Suey | 8pm <br/>
+<br/>
+<strong>WEDNESDAY<br/>
+                NOVEMBER 22, 2006</strong><br/>
+                SEATTLE, WA<br/>
+                Blue Scholars<br/>
+                Choklate <br/>
+                One Self <br/>
+                and Special Guests TBA<br/>
+                @ The Showbox<br/>
+                all-ages | bar w/ ID<br/>
+                $12 advance tickets <br/>
+                onsale now <br/>
+                @ Ticketswest.com <br/>
+<br/>
+<strong>FRIDAY<br/>
+                NOVEMBER 24, 2006</strong><br/>
+                PORTLAND, OR<br/>
+                MassLine Records Presents<br/>
+                Blue Scholars<br/>
+                Common Market<br/>
+                Gabriel Teodros<br/>
+                DJ daps1 <br/>
+                @ Doug Fir Lounge | 9pm<br/>
+                $10 - 21+ </font></p>
+<p><font face="Verdana, Arial, Helvetica, sans-serif" size="1.5"><br/>
+</font> </p>
+</div></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td bgcolor="#333300" height="20"> </td>
+</tr>
+</table>
+<map name="Map">
+<area class="massline-external-gap" coords="247,8,288,25" href="https://web.archive.org/web/20061111043750/http://masslinemedia.com/index.html?PHPSESSID=984271fe099662a6f4153344b5f1381f" rel="noopener noreferrer" shape="rect"/>
+<area class="massline-external-gap" coords="320,8,377,26" href="https://web.archive.org/web/20061111043750/http://masslinemedia.com/artists/index.html?PHPSESSID=984271fe099662a6f4153344b5f1381f" rel="noopener noreferrer" shape="rect"/>
+<area coords="407,8,462,26" href="/bluescholars/massline-forums/index.html" shape="rect"/>
+</map>
+<map name="Map2">
+<area coords="21,49,181,209" href="/bluescholars/masslinemedia/site/index.html" shape="rect"/>
+</map>
+<map name="Map3">
+<area coords="19,45,184,210" href="/bluescholars/masslinemedia/site/index.html" shape="rect"/>
+</map>
+<map name="Map4">
+<area class="massline-external-gap" coords="20,48,181,210" href="https://web.archive.org/web/20061111043750/http://bluescholars.com/store.html" rel="noopener noreferrer" shape="rect"/>
+</map>
+<map name="Map5">
+<area class="massline-external-gap" coords="20,47,180,210" href="https://web.archive.org/web/20061111043750/http://bluescholars.com/store.html" rel="noopener noreferrer" shape="rect"/>
+</map>
+</div>
+</body>
+</html>

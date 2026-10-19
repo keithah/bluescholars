@@ -1,0 +1,309 @@
+<!doctype html>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<title>MASS LINE MEDIA</title>
+
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<style type="text/css">
+
+<!--
+.body1, .body1q {  line-height: 16px; }
+
+.search_field {width: 295px; font-family: Verdana, Helvetica, sans-serif; font-size: 10px}
+
+.edit_field {width: 150px; font-family: Verdana, Helvetica, sans-serif; font-size: 10px}
+
+.ta_field { height: 150px; width: 400px; font-family: Verdana, Helvetica, sans-serif; font-size: 10px}
+
+
+
+.edit_field, .ta_field, .search_field {
+
+	border-left-color:#000000;
+
+	border-top-color:#000000;
+
+	border-right-color:#000000;
+
+	border-bottom-color:#000000;
+
+	color: #333333;
+
+	border: 1 solid; }
+
+
+
+A:link{color:#333300; font-family:verdana;text-decoration:none; font-weight:bold} 
+
+A:visited{color:#333300; font-family:verdana;text-decoration:none; font-weight:bold};
+
+A:hover{color:#FF3300} 
+.style64 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color: #333300;
+}
+.style65 {
+	color: #333300;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.style66 {font-size: 11px}
+.style69 {font-size: 1.5px}
+.style71 {font-size: 11px; color: #333300; }
+.style72 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #333300;
+}
+.style73 {
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #333300;
+}
+-->
+
+</style>
+</head>
+<body leftmargin="0" topmargin="0"><aside class="massline-source-note">Historical capture · 2007-11-13 · <a href="https://web.archive.org/web/20071113013415/http://masslinemedia.com/news/archive.php?from=0" rel="noopener noreferrer">view source replay</a></aside>
+<!-- <div align="center"> -->
+<table border="0" cellpadding="0" cellspacing="0" width="901">
+<tr>
+<td bgcolor="#333300" height="12"> </td>
+</tr>
+<tr>
+<td><img height="68" src="/bluescholars/masslinemedia/assets/a85fad7bf534154697d6.gif" width="901"/></td>
+</tr>
+<tr>
+<td><img border="0" height="31" src="/bluescholars/masslinemedia/assets/074dc67a31c4d8ebfec5.gif" usemap="#Map" width="901"/></td>
+</tr>
+<tr>
+<td><table border="0" cellpadding="0" cellspacing="0" width="901">
+<tr>
+<td align="center" valign="top" width="211"><div align="left"><br/>
+<br/>
+<img height="29" src="/bluescholars/masslinemedia/assets/c83005c4091ebaa0b50c.gif" width="103"/> <br/>
+<img border="0" height="236" src="/bluescholars/masslinemedia/assets/21cf21af763b178cd697.jpg" usemap="#Map2" width="211"/><br/>
+<img border="0" height="240" src="/bluescholars/masslinemedia/assets/2318e978080a8133a7ef.jpg" usemap="#Map3" width="211"/> <img border="0" height="236" src="/bluescholars/masslinemedia/assets/ba9fc8897223d24e1d4b.jpg" usemap="#Map4" width="211"/><br/>
+<img border="0" height="236" src="/bluescholars/masslinemedia/assets/7b93984c0904e52b40b4.jpg" usemap="#Map5" width="211"/> <br/>
+<br/>
+</div></td>
+<td valign="top" width="10"><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/></td>
+<td align="center" valign="top" width="480"><div align="center">
+<table border="0" cellpadding="0" cellspacing="0" width="480">
+<tr>
+<td colspan="3" height="0">
+<img height="233" src="/bluescholars/masslinemedia/assets/8b3afb3598882b51ad1e.jpg" vspace="0" width="480"/></td>
+</tr>
+<tr bgcolor="#333300">
+<td colspan="3" height="12"> </td>
+</tr>
+<tr>
+<td width="25"> </td>
+<td align="left" valign="top" width="430">
+<p align="left" class="body1"><span class="body1 style73"> <h2>News archive</h2><strong><font color="#333300" face="Verdana, Arial, Helvetica, sans-serif" size="2">2007-11-08 | Thursday</font></strong><br/><br/><img alt="Archived image unavailable" height="375" width="500"><br><br>Shout out to The Smoking Section for the <strong><a class="massline-external-gap" href="https://web.archive.org/web/20071113013415/http://smokingsection.rawkus.com/TSS/?p=2289" rel="noopener noreferrer">review</a></strong> of last week's Red Bull Big Tune battle! Congrats to Sabzi for takin' home the crown.....<br><br>Peace<br>daps1<br><br><p></p><br/><hr align="center" noshade="" size="1" width="400"/><br/><strong><font color="#333300" face="Verdana, Arial, Helvetica, sans-serif" size="2">2007-11-06 | Tuesday</font></strong><br/><br/><font size="2">i'm in San Francisco getting ready for these shows with Nefasha Ayer... check it out! -- gtzi http://www.myspace.com/nefashaayer<br><br>The Red Poppy Art House Presents:<br><br>NEFASHA AYER: Excerpts from the Space of In-between<br>Two nights! Friday, November 9th and Saturday, November 10th<br><br>Drawing
+inspiration from jazz, blues and traditional Ethiopian melodies and
+rhythms, Nefasha Ayer (loosely translated from Amharic as “the wind
+that travels”) is an in-progress body of music exploring the most
+essential qualities shared among individuals worldwide whose identity
+no longer fits within the boundaries of one country, culture or
+tradition. Through its tones and colors, poetic texts and
+trans-cultural melodic scores, Nefasha Ayer joins the continents of
+Africa, South Asia and America to produce a uniquely San Franciscan
+music, born from present-day realities of life at the crossroads.<br><br>This
+weekend’s shows feature in-progress selections from Nefasha Ayer, with
+Ethiopian-born vocalist and Art House Director Meklit Hadero, Art House
+Founder/Director and guitarist Todd T. Brown, Carnatic saxophonist
+Prasant Radhakrishnan (of VidyA), award-winning poet Michael Warr,
+Ethiopian MC Gabriel Teodros (of Abyssinian Creole), bassist/flautist
+Eliyahu Sills (of Qadim), and percussionist Mohini Rustagi (of Ambika).
+On Friday night, we'll be joined by bassist Miles Jay (formerly of
+Yousou N'Dour).<br><br>In April, the Red Poppy Art House received a
+grant from the San Francisco Foundation and the Fund for Artists
+commissioning this work.<br><br><br>For more information: www.redpoppyarthouse.org/concerts<br><br>$15 suggested donation. Friday and Saturday: Doors open at 7:30 pm. Show at 8:00 pm.<br><br>Red Poppy Art House<br>2698 Folsom St @ 23rd<br>San Francisco, CA 94110<br>www.redpoppyarthouse.org</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></font><p></p><br/><hr align="center" noshade="" size="1" width="400"/><br/><strong><font color="#333300" face="Verdana, Arial, Helvetica, sans-serif" size="2">2007-11-05 | Monday</font></strong><br/><br/><div align="center"><strong><u><span style="font-size: larger">FCC Hearing on Media Ownership this Friday!!</span> </u></strong><br/></div><br><br>
+<ul><li class="MsoNormal"><strong><span style="font-size: 10pt; font-family: Arial">The FCC is getting ready to give Big Media
+     corporations even more control over what we see and hear.</span></strong><span style="font-size: 10pt; font-family: Arial"> </span></li><li class="MsoNormal"><span style="font-size: 10pt; font-family: Arial">The FCC's final <a class="massline-external-gap" href="https://web.archive.org/web/20071113013415/http://reclaimthemedia.org/legislation_and_regulation/fcc_announces_final_media_owne=5565" rel="noopener noreferrer" target="_blank"><strong>official public hearing</strong></a><strong> </strong>will be <strong>Friday
+     Nov 9, at <a class="massline-external-gap" href="https://web.archive.org/web/20071113013415/http://townhallseattle.org/" rel="noopener noreferrer" target="_blank">Town
+     Hall Seattle</a>. </strong></span></li><li class="MsoNormal"><strong><span style="font-size: 10pt; font-family: Arial">This is the big one</span></strong><span style="font-size: 10pt; font-family: Arial"> - <strong>We can stop the FCC in
+     its tracks</strong> by showing up in force this Friday and speaking out for
+     diverse and locally accountable media.<strong> </strong></span></li><li class="MsoNormal"><strong><span style="font-size: 10pt; font-family: Arial"><a class="massline-external-gap" href="https://web.archive.org/web/20071113013415/http://reclaimthemedia.org/" rel="noopener noreferrer" target="_blank">Reclaim the Media</a> is running workshops</span></strong><span style="font-size: 10pt; font-family: Arial"> all week for folks who want to
+     testify. </span></li></ul>
+<p class="MsoNormal"><strong><span style="font-size: 10pt; font-family: Arial">What's
+happening and what's at stake?<br>
+<br>
+</br></br></span></strong><span style="font-size: 10pt; font-family: Arial">The FCC is about to
+rewrite the federal media ownership rules to give more power to Big Media
+companies like Clear Channel and Murdoch's News Corp. FCC Chairman Kevin Martin
+even wants <strong>to allow a single company to combine local newspaper, TV and
+radio stations under one roof - and under single editorial control. 
+<!--
+D(["mb","\u003c/b\>These changes would further\ndevastate\non-air diversity, quality journalism, local news and culture --and our\nability to hold media accountable to community values. \u003cbr\>\n\u003cbr\>\n\u003cb\>But this week, we have a rare chance to fight back.\u003c/b\> The FCC is\nholding the last of just six public hearings nationwide on the issue at\n\u003cb\>Seattle&#39;s Town Hall this Friday, Nov. 9, from 4pm to 11pm. \u003c/b\>This\nwill be our only chance to weigh in on proposals that would allow giant\nmedia companies to grow even more concentrated. \u003cbr\>\n\u003cbr\>\n\u003cb\>What can I do? \u003c/b\>\u003c/font\>\n\u003cdl\>\u003cdd\>\u003cfont face\u003d\"Arial, Helvetica\" size\u003d\"3\"\>\u003cb\>1. Plan to attend the\nhearing. \u003c/b\>We need to send the FCC - and\nCongress - a powerful message that the Northwest wants less corporate\nmedia consolidation, not more.\u003cb\> \u003c/b\>\u003c/font\>\u003c/dd\>\u003cdd\>\u003cfont face\u003d\"Arial, Helvetica\" size\u003d\"3\"\>\u003cb\>&nbsp; \u003c/b\>\u003c/font\>\u003c/dd\>\u003cdd\>\u003cfont face\u003d\"Arial, Helvetica\" size\u003d\"3\"\>\u003cb\>2. Testify. \u003c/b\>It&#39;s a\npublic hearing - anyone can sign up to get on\nthe mic and give their 2-minute prepared testimony. \u003c/font\>\u003c/dd\>\u003cdd\>\u003cfont face\u003d\"Arial, Helvetica\" size\u003d\"3\"\>&nbsp;\u003cb\> \u003c/b\>\u003c/font\>\u003c/dd\>\u003cdd\>\u003cfont face\u003d\"Arial, Helvetica\" size\u003d\"3\"\>\u003cb\>3. Sharpen your\ntestimony\u003c/b\> or just find out more at a \u003cb\>pre-hearing workshop:\u003c/b\> \u003c/font\>\u003c/dd\>\u003c/dl\>\n\u003cul\>\u003cfont face\u003d\"Arial, Helvetica\" size\u003d\"3\"\>\n  \u003cli\>Tues, Nov 6, 7:30pm at \u003ca href\u003d\"http://www.hidmo.com/\" target\u003d\"_blank\" onclick\u003d\"return top.js.OpenExtLink(window,event,this)\"\>Hidmo\u003c/a\>\u003ca href\u003d\"http://www.hidmo.com/\" target\u003d\"_blank\" onclick\u003d\"return top.js.OpenExtLink(window,event,this)\"\>\n\n\nRestaurant\u003c/a\> (20th and Jackson, Seattle; 14/48 bus) \u003c/li\>\n  \u003cli\>Tues, Nov 6, 7:30pm at \u003ca href\u003d\"http://www.seattle.gov/parks/park_detail.asp?ID\u003d243\" target\u003d\"_blank\" onclick\u003d\"return top.js.OpenExtLink(window,event,this)\"\>Golden\nGardens Park Bathhouse\u003c/a\> (8499 Seaview Place, Seattle); \u003c/li\>\n  \u003cli\>Weds. Nov 7, 7pm at \u003ca href\u003d\"http://www.nhwa.org/contactus/location.php?location\u003d19\" target\u003d\"_blank\" onclick\u003d\"return top.js.OpenExtLink(window,event,this)\"\>Lee\nHouse at NewHolly\u003c/a\> (7315 39th Ave S., Seattle) ",1]
+);
+
+//-->
+</strong>These changes would further devastate on-air diversity, quality
+journalism, local news and culture --and our ability to hold media accountable
+to community values. <br/>
+<br/>
+<strong>But this week, we have a rare chance to fight back.</strong> The FCC is holding
+the last of just six public hearings nationwide on the issue at <strong>Seattle</strong><strong>'s Town
+Hall this Friday, Nov. 9, from 4pm to 11pm. </strong>This will be our only chance to
+weigh in on proposals that would allow giant media companies to grow even more
+concentrated. <br/>
+<br/>
+<strong>What can I do? </strong></span><span style="font-size: 10pt"></span></p>
+<p class="MsoNormal" style="margin-left: 0.5in"><strong><span style="font-size: 10pt; font-family: Arial">1. Plan to attend the hearing. </span></strong><span style="font-size: 10pt; font-family: Arial">We need to send the FCC - and
+Congress - a powerful message that the Northwest wants less corporate media consolidation,
+not more.</span><strong><span style="font-size: 10pt; font-family: Arial">  </span></strong><span style="font-size: 10pt"></span></p>
+<p class="MsoNormal" style="margin-left: 0.5in"><strong><span style="font-size: 10pt; font-family: Arial">2. Testify. </span></strong><span style="font-size: 10pt; font-family: Arial">It's a public hearing - anyone can sign up to get on the mic
+and give their 2-minute prepared testimony. <strong> </strong></span><span style="font-size: 10pt"></span></p>
+<p class="MsoNormal" style="margin-left: 0.5in"><strong><span style="font-size: 10pt; font-family: Arial">3. Sharpen your testimony</span></strong><span style="font-size: 10pt; font-family: Arial"> or just find out more at a <strong>pre-hearing workshop:</strong>
+</span><span style="font-size: 10pt"></span></p>
+<ul><li class="MsoNormal"><span style="font-size: 10pt; font-family: Arial">Tues, Nov 6, 7:30pm at <a class="massline-external-gap" href="https://web.archive.org/web/20071113013415/http://hidmo.com/" rel="noopener noreferrer" target="_blank">Hidmo</a><a class="massline-external-gap" href="https://web.archive.org/web/20071113013415/http://hidmo.com/" rel="noopener noreferrer" target="_blank">
+     Restaurant</a> (20th and Jackson, Seattle; 14/48 bus) </span></li><li class="MsoNormal"><span style="font-size: 10pt; font-family: Arial">Tues, Nov 6, 7:30pm at <a class="massline-external-gap" href="https://web.archive.org/web/20071113013415/http://seattle.gov/parks/park_detail.asp?ID=243" rel="noopener noreferrer" target="_blank">Golden
+     Gardens Park Bathhouse</a> (8499
+       Seaview Place, Seattle);
+     </span></li><li class="MsoNormal"><span style="font-size: 10pt; font-family: Arial">Weds. Nov 7, 7pm at <a class="massline-external-gap" href="https://web.archive.org/web/20071113013415/http://nhwa.org/contactus/location.php?location=19" rel="noopener noreferrer" target="_blank">Lee House at NewHolly</a> (7315 39th Ave S., Seattle)
+     
+<!--
+D(["mb","\u003c/li\>\n  \u003cli\>Thurs. Nov 8, 7:30pm at \u003ca href\u003d\"http://www.cityofseattle.net/parks/centers/langston.htm\" target\u003d\"_blank\" onclick\u003d\"return top.js.OpenExtLink(window,event,this)\"\>Langston\u003c/a\>\u003ca href\u003d\"http://www.cityofseattle.net/parks/centers/langston.htm\" target\u003d\"_blank\" onclick\u003d\"return top.js.OpenExtLink(window,event,this)\"\>\n\n Hughes\nPerforming Arts Center\u003c/a\> (17th and Jackson, Seattle;&nbsp; 14/48 bus) \u003c/li\>\n  \u003c/font\>\u003c/ul\>\n\u003cdl\>\u003cfont face\u003d\"Arial, Helvetica\" size\u003d\"3\"\>\u003cb\>\u003cdd\>4. Tell your networks,\nfriends, family and co-workers.\u003c/dd\>\n  \u003c/b\> The\nFCC leadership doesn&#39;t care about hearing our voices -- so its up to us\nto demand their attention. We need to overwhelm the FCC with authentic\npublic voices that care about local culture, local politics, diverse\nviews and voices.\u003cb\> \u003c/b\>They gave us just five business days&#39; notice,\nso we have very little time to get organized. \u003cb\>Spread the word! \u003cbr\>\n  \u003cbr\>\n  \u003cdd\>5. Stay informed.\u003c/dd\>\n  \u003c/b\> This issue isn&#39;t going away after this\nweek. We don&#39;t just want to stop the bad rule changes. We want more\nmedia in the hands of people of color and women; more local news and\nlocal music on the air, and a range of voices that&#39;s as diverse as\nAmerica.&nbsp; Visit \u003ca href\u003d\"http://www.reclaimthemedia.org/\" target\u003d\"_blank\" onclick\u003d\"return top.js.OpenExtLink(window,event,this)\"\>reclaimthemedia\u003c/a\>.\u003ca href\u003d\"http://www.reclaimthemedia.org/\" target\u003d\"_blank\" onclick\u003d\"return top.js.OpenExtLink(window,event,this)\"\>\n\norg\u003c/a\> or \u003ca href\u003d\"http://www.stopbigmedia.com/\" target\u003d\"_blank\" onclick\u003d\"return top.js.OpenExtLink(window,event,this)\"\>stopbigmedia\u003c/a\>.\u003ca href\u003d\"http://www.stopbigmedia.com/\" target\u003d\"_blank\" onclick\u003d\"return top.js.OpenExtLink(window,event,this)\"\>\n\ncom\u003c/a\> for more information. \u003c/font\>\u003c/dl\>\n\u003cfont face\u003d\"Arial, Helvetica\" size\u003d\"3\"\>\u003cb\>Get more information and\nspread it around: \u003c/b\>\n\u003c/font\>\n\u003cdl\>\u003cdd\>\u003cfont face\u003d\"Arial, Helvetica\" size\u003d\"3\"\>\u003ca href\u003d\"http://www.reclaimthemedia.org/files/workshops-handbill.pdf\" target\u003d\"_blank\" onclick\u003d\"return top.js.OpenExtLink(window,event,this)\"\>Seattle\nFCC Hearing flyer",1]
+);
+
+//-->
+</span></li><li class="MsoNormal"><span style="font-size: 10pt; font-family: Arial">Thurs. Nov 8, 7:30pm at <a class="massline-external-gap" href="https://web.archive.org/web/20071113013415/http://cityofseattle.net/parks/centers/langston.htm" rel="noopener noreferrer" target="_blank">Langston</a><a class="massline-external-gap" href="https://web.archive.org/web/20071113013415/http://cityofseattle.net/parks/centers/langston.htm" rel="noopener noreferrer" target="_blank"> Hughes Performing Arts Center</a> (17th and Jackson, Seattle; 
+     14/48 bus) </span></li></ul>
+<p class="MsoNormal" style="margin-left: 0.5in"><strong><span style="font-size: 10pt; font-family: Arial">4. Tell your networks, friends, family and co-workers.</span></strong></p>
+<p class="MsoNormal" style="margin-bottom: 12pt"><span style="font-size: 10pt; font-family: Arial">The FCC leadership doesn't care about hearing our voices --
+so its up to us to demand their attention. We need to overwhelm the FCC with
+authentic public voices that care about local culture, local politics, diverse
+views and voices.<strong> </strong>They gave us just five business days' notice, so we
+have very little time to get organized. <strong>Spread the word! </strong></span></p>
+<p class="MsoNormal" style="margin-left: 0.5in"><strong><span style="font-size: 10pt; font-family: Arial">5. Stay informed.</span></strong></p>
+<p class="MsoNormal"><span style="font-size: 10pt; font-family: Arial">This issue
+isn't going away after this week. We don't just want to stop the bad rule
+changes. We want more media in the hands of people of color and women; more
+local news and local music on the air, and a range of voices that's as diverse
+as America. 
+Visit <a class="massline-external-gap" href="https://web.archive.org/web/20071113013415/http://reclaimthemedia.org/" rel="noopener noreferrer" target="_blank">reclaimthemedia</a>.<a class="massline-external-gap" href="https://web.archive.org/web/20071113013415/http://reclaimthemedia.org/" rel="noopener noreferrer" target="_blank"> org</a> or <a class="massline-external-gap" href="https://web.archive.org/web/20071113013415/http://stopbigmedia.com/" rel="noopener noreferrer" target="_blank">stopbigmedia</a>.<a class="massline-external-gap" href="https://web.archive.org/web/20071113013415/http://stopbigmedia.com/" rel="noopener noreferrer" target="_blank"> com</a> for more
+information. <strong>Get more information and spread it around: </strong></span><span style="font-size: 10pt"></span></p>
+<p class="MsoNormal" style="margin-left: 0.5in"><span style="font-size: 10pt; font-family: Arial"><a class="massline-external-gap" href="https://web.archive.org/web/20071113013415/http://reclaimthemedia.org/files/workshops-handbill.pdf" rel="noopener noreferrer" target="_blank">Seattle FCC Hearing flyer
+<!--
+D(["mb","\u003c/a\> (pdf) \u003c/font\>\u003c/dd\>\u003cdd\>\u003cfont face\u003d\"Arial, Helvetica\" size\u003d\"3\"\>\u003ca href\u003d\"http://www.reclaimthemedia.org/files/BiggerMediaBadIdea_0.pdf\" target\u003d\"_blank\" onclick\u003d\"return top.js.OpenExtLink(window,event,this)\"\>\n\nBigger\nMedia, Bad Idea\u003c/a\>&nbsp; (pdf) \u003c/font\>\u003c/dd\>\u003cdd\>\u003cfont face\u003d\"Arial, Helvetica\" size\u003d\"3\"\>\u003ca href\u003d\"http://www.reclaimthemedia.org/files/NotaPartisanIssue_0.pdf\" target\u003d\"_blank\" onclick\u003d\"return top.js.OpenExtLink(window,event,this)\"\>\n\nMedia\nControl is Not a Partisan Issue\u003c/a\> (pdf) \u003c/font\>\u003c/dd\>\u003cdd\>\u003cfont face\u003d\"Arial, Helvetica\" size\u003d\"3\"\>\u003ca href\u003d\"http://www.reclaimthemedia.org/legislation_and_regulation/fcc_info\" target\u003d\"_blank\" onclick\u003d\"return top.js.OpenExtLink(window,event,this)\"\>\n\nLinks\nto still more info\u003c/a\> \u003c/font\>\u003c/dd\>\u003c/dl\>\n\u003cfont face\u003d\"Arial, Helvetica\" size\u003d\"3\"\>\u003cb\>\u003ca href\u003d\"mailto:susan@reclaimthemedia.org\" target\u003d\"_blank\" onclick\u003d\"return top.js.OpenExtLink(window,event,this)\"\>Want to volunteer \u003c/a\>\u003c/b\>on\nthe day or the hearing, or help distribute flyers this week? Contact \u003ca href\u003d\"mailto:susan@reclaimthemedia.org\" target\u003d\"_blank\" onclick\u003d\"return top.js.OpenExtLink(window,event,this)\"\>susan at reclaimthemedia.\u003c/a\>\u003ca href\u003d\"mailto:susan@reclaimthemedia.org\" target\u003d\"_blank\" onclick\u003d\"return top.js.OpenExtLink(window,event,this)\"\>\n\norg\u003c/a\>.\u003cbr\>\n\u003cbr\>\n\u003cb\>\u003ca href\u003d\"http://www.reclaimthemedia.org/support_rtm\" target\u003d\"_blank\" onclick\u003d\"return top.js.OpenExtLink(window,event,this)\"\>Your\ncontributions\u003c/a\>\u003c/b\> help Reclaim the Media continue organizing for\nmedia justice and media democracy!\u003c/font\>\n\n\n\u003cbr clear\u003d\"all\"\>\u003cbr\>\u003cbr\>\u003cbr\>-- \u003cbr\>206 Zulu - Universal Zulu Nation Seattle\u003cbr\>\u003ca href\u003d\"http://www.206Zulu.com\" target\u003d\"_blank\" onclick\u003d\"return top.js.OpenExtLink(window,event,this)\"\>www.206Zulu.com\u003c/a\>\u003cbr\>\u003ca href\u003d\"http://www.ZuluNation.com\" target\u003d\"_blank\" onclick\u003d\"return top.js.OpenExtLink(window,event,this)\"\>\nwww.ZuluNation.com\u003c/a\>\u003cbr\>\u003cbr\>Zulu Radio KBCS 91.3\n FM\u003cbr\>Saturdays 10pm-12am\u003cbr\>Live stream - \u003ca href\u003d\"http://www.KBCS.fm\" target\u003d\"_blank\" onclick\u003d\"return top.js.OpenExtLink(window,event,this)\"\>www.KBCS.fm\u003c/a\>\u003cbr\>",1]
+);
+
+//-->
+</a> (pdf) </span><span style="font-size: 10pt"></span></p>
+<p class="MsoNormal" style="margin-left: 0.5in"><span style="font-size: 10pt; font-family: Arial"><a class="massline-external-gap" href="https://web.archive.org/web/20071113013415/http://reclaimthemedia.org/files/BiggerMediaBadIdea_0.pdf" rel="noopener noreferrer" target="_blank">Bigger Media, Bad Idea</a>  (pdf) </span><span style="font-size: 10pt"></span></p>
+<p class="MsoNormal" style="margin-left: 0.5in"><span style="font-size: 10pt; font-family: Arial"><a class="massline-external-gap" href="https://web.archive.org/web/20071113013415/http://reclaimthemedia.org/files/NotaPartisanIssue_0.pdf" rel="noopener noreferrer" target="_blank">Media Control is Not a Partisan Issue</a> (pdf) </span><span style="font-size: 10pt"></span></p>
+<p class="MsoNormal" style="margin-left: 0.5in"><span style="font-size: 10pt; font-family: Arial"><a class="massline-external-gap" href="https://web.archive.org/web/20071113013415/http://reclaimthemedia.org/legislation_and_regulation/fcc_info" rel="noopener noreferrer" target="_blank">Links to still more info</a> </span><span style="font-size: 10pt"></span></p>
+<p class="MsoNormal"><strong><span style="font-size: 10pt; font-family: Arial">Want to volunteer </span></strong><span style="font-size: 10pt; font-family: Arial">on the day or the hearing, or help
+distribute flyers this week? Contact susan at reclaimthemedia. org.<br/>
+<br/>
+<strong><a class="massline-external-gap" href="https://web.archive.org/web/20071113013415/http://reclaimthemedia.org/support_rtm" rel="noopener noreferrer" target="_blank">Your
+contributions</a></strong> help Reclaim the Media continue organizing for media
+justice and media democracy!</span><span style="font-size: 10pt"></span></p>
+<p></p><br/><hr align="center" noshade="" size="1" width="400"/><br/><strong><font color="#333300" face="Verdana, Arial, Helvetica, sans-serif" size="2">2007-11-03 | Saturday</font></strong><br/><br/>Tickets for The Program are on sale now. Check out our partners like Crossfader.com who will be featuring videos of MCs and Producers involved in The Program,  Synchronicitylive.com who will be webcasting all 5 nights live, 90.3 KEXP who will feature groups from The Program on the week of the festival, and The Stranger who will be doing some great coverage of NW hip hop. Get tickets now, we expect all nights to sell out.<p></p><br/><hr align="center" noshade="" size="1" width="400"/><br/><strong><font color="#333300" face="Verdana, Arial, Helvetica, sans-serif" size="2">2007-11-03 | Saturday</font></strong><br/><br/>Hello Friends,<br><br>I just found some pictures from a trip to <strong>Los Angeles</strong> a few months back and I thought they may be of some interest to the Massline community.<br><br>LA
+is a city full of celebrities and you never really know who you might
+meet. For example, I was just strolling around Hollywood one day when I
+bumped into: <a class="massline-external-gap" href="https://web.archive.org/web/20071113013415/http://channel102.net/show.php?show=79" rel="noopener noreferrer" target="_blank"><strong>DR. MIRACLES</strong></a>.<br><br><img alt="Archived image unavailable"><img alt=""><br><br>For those of you not familiar with Dr. Miracles, he is the star of the former Channel 102 show “Dr. Miracles.” And guess what??<br/>
+<br/><img alt="Archived image unavailable"><br/><strong>Oh Snap! He reps the Massline!<br/><br/></strong><em>WARNING:Dr.Miracles
+if not for everyone. The show is what we call a “guilty pleasure.” A
+very funny, guilty pleasure. Massline is not endorsing Dr.Miracles.
+Dr.Miracles is endorsing Massline.</em><br/><br/>On a completely unrelated note, I also bumped into actor/comedian/Blue Scholars fan <strong><a class="massline-external-gap" href="https://web.archive.org/web/20071113013415/http://randallparkplace.com/" rel="noopener noreferrer" target="_blank">RANDALL PARK</a></strong>.<br/><br/><img alt=""><img alt="Archived image unavailable"><br/><br/>The homie Randall is one of the stars of <strong>MTV’s <em>Wildin’ Out</em></strong> and was known as “Randruff” in the LA area hip-hop group <a class="massline-external-gap" href="https://web.archive.org/web/20071113013415/http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=2579951" rel="noopener noreferrer" target="_blank"><strong>ILL AGAIN</strong></a>. <br/><br/>Alright everybody, I must leave you know. "Cheers."<br/><br/>-Hari<p></p><br/><hr align="center" noshade="" size="1" width="400"/><br/><center><div class="pagenumbers">[&lt;&lt;] [1] <a href="/bluescholars/masslinemedia/site/news/archive-f09e4ab70de0.php">[2]</a> <a href="/bluescholars/masslinemedia/site/news/archive-13fd6b501db4.php">[3]</a> <a href="/bluescholars/masslinemedia/site/news/archive-a6d8d32ad781.php">[4]</a> <a href="/bluescholars/masslinemedia/site/news/archive-d45f54b0cbc4.php">[5]</a> <a href="/bluescholars/masslinemedia/site/news/archive-0bfc403792bc.php">[6]</a> <a href="/bluescholars/masslinemedia/site/news/archive-fd78b8847920.php">[7]</a> <a href="/bluescholars/masslinemedia/site/news/archive-cd30dd4ecbb4.php">[8]</a> <a href="/bluescholars/masslinemedia/site/news/archive-3f0473af164e.php">[9]</a> <a href="/bluescholars/masslinemedia/site/news/archive-328a9b624d92.php">[10]</a> <a href="/bluescholars/masslinemedia/site/news/archive-3c1fe8996261.php">[11]</a> <a href="/bluescholars/masslinemedia/site/news/archive-86e16e039033.php">[12]</a> <a href="/bluescholars/masslinemedia/site/news/archive-7e9b30d94f52.php">[13]</a> <a href="/bluescholars/masslinemedia/site/news/archive-a4c814fd9062.php">[14]</a> <a href="/bluescholars/masslinemedia/site/news/archive-9413aa1ebf0f.php">[15]</a> <a href="/bluescholars/masslinemedia/site/news/archive-c3d2d6995e50.php">[16]</a> <a href="/bluescholars/masslinemedia/site/news/archive-9d70a3c73aca.php">[17]</a> <a href="/bluescholars/masslinemedia/site/news/archive-f6fd84ec4403.php">[18]</a> <a href="/bluescholars/masslinemedia/site/news/archive-aeb25bb8527b.php">[19]</a> <a href="/bluescholars/masslinemedia/site/news/archive-b69d705746cb.php">[20]</a> <a href="/bluescholars/masslinemedia/site/news/archive-a5db3a75cdf8.php">[21]</a> <a href="/bluescholars/masslinemedia/site/news/archive-7369bee5daae.php">[22]</a> <a href="/bluescholars/masslinemedia/site/news/archive-1dbf17b25e1a.php">[23]</a> <a href="/bluescholars/masslinemedia/site/news/archive-a2d6ccd834ab.php">[24]</a> <a href="/bluescholars/masslinemedia/site/news/archive-9f0a15e79a97.php">[25]</a> <a href="/bluescholars/masslinemedia/site/news/archive-aa9c2a812be3.php">[26]</a> <a href="/bluescholars/masslinemedia/site/news/archive-b0173dec9c53.php">[27]</a> <a href="/bluescholars/masslinemedia/site/news/archive-86b898eb4b5c.php">[28]</a> <a href="/bluescholars/masslinemedia/site/news/archive-f7f9da7f8f55.php">[29]</a> <a href="/bluescholars/masslinemedia/site/news/archive-586a37a4a91f.php">[30]</a> <a href="/bluescholars/masslinemedia/site/news/archive-96063bb0e6e6.php">[31]</a> <a href="/bluescholars/masslinemedia/site/news/archive-ae1aaaa342fb.php">[32]</a> <a href="/bluescholars/masslinemedia/site/news/archive-2977b680a4aa.php">[33]</a> <a href="/bluescholars/masslinemedia/site/news/archive-1af3829b83b3.php">[34]</a> <a href="/bluescholars/masslinemedia/site/news/archive-a348817aa4f8.php">[35]</a> <a href="/bluescholars/masslinemedia/site/news/archive-07e37251c3d1.php">[36]</a> <a href="/bluescholars/masslinemedia/site/news/archive-91a11bf8b6fc.php">[37]</a> <a href="/bluescholars/masslinemedia/site/news/archive-d71e150e4045.php">[38]</a> <a href="/bluescholars/masslinemedia/site/news/archive-0a3f6084c1f9.php">[39]</a> <a href="/bluescholars/masslinemedia/site/news/archive-f103b614281f.php">[40]</a> <a href="/bluescholars/masslinemedia/site/news/archive-80555a41f490.php">[41]</a> <a href="/bluescholars/masslinemedia/site/news/archive-b9d0c0fa332b.php">[42]</a> <a href="/bluescholars/masslinemedia/site/news/archive-f410280b6a12.php">[43]</a> <a href="/bluescholars/masslinemedia/site/news/archive-18fe87920e97.php">[44]</a> <a href="/bluescholars/masslinemedia/site/news/archive-e30eb998aad9.php">[45]</a> <a href="/bluescholars/masslinemedia/site/news/archive-3cc92afd9411.php">[46]</a> <a href="/bluescholars/masslinemedia/site/news/archive-b6ec7a44ebf8.php">[47]</a> <a href="/bluescholars/masslinemedia/site/news/archive-3678dcc58b9e.php">[48]</a> <a href="/bluescholars/masslinemedia/site/news/archive-4e11ab08baf7.php">[49]</a> <a href="/bluescholars/masslinemedia/site/news/archive-f09e4ab70de0.php">[&gt;&gt;]</a> </div></center></img></img></img></br></br></img></img></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></img></span></p>
+</td>
+<td width="25"> </td>
+</tr>
+</table>
+</div></td>
+<td align="left" valign="top" width="25"><img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/> <br/>
+</td>
+<td align="center" valign="top" width="175"><div align="left">
+<p class="style66"><br/>
+<span class="body1 style65"><strong><br/>
+<font color="#333300" face="Verdana, Arial, Helvetica, sans-serif" size="1">SUBSCRIBE TO THE<br/>
+                  MASS LINE NEWSLETTER</font></strong></span>
+<input name="recipient" type="hidden" value="info@masslinemedia.com"/>
+<input name="subject" type="hidden" value="mailing list"/>
+<input name="email" size="20" style="font-size: 9pt; color: #3F3F3F; font-family: Veranda, sans serif" type="text"/>
+<input id="Submit" name="Submit" type="submit" value="Join"/>
+<input name="env_report" type="hidden" value="REMOTE_ADDR,HTTP_USER_AGENT"/>
+<input name="redirect" type="hidden" value="http://www.masslinemedia.com/thanks.html"/>
+</p>
+<p class="style66"> <br/>
+<br/>
+<img height="24" src="/bluescholars/masslinemedia/assets/25dd499fcc77820f31ce.gif" width="175"/><font color="#333300" face="Verdana, Arial, Helvetica, sans-serif" size="1.5"><br/>
+<br/>
+<strong>TUESDAY<br/>NOVEMBER 13,2007</strong><br/>Blue Scholars opening for Psalm One<br>Picador<br>330 E. Washington St.<br>Iowa City, IA 52240<br>all ages $8<br><br/><br/><strong>WEDNESDAY<br/>NOVEMBER 14,2007</strong><br/>Blue Scholars opening for Psalm One<br>The Annex<br>1206 Regent Street<br>Madison, WI 53715<br>18+<br>$8 advance / $10 at the door<br/><br/><strong>WEDNESDAY<br/>NOVEMBER 14,2007</strong><br/>Common Market<br>november 14th<br>9pm in 'the cave' <br>the basement of the student union<br>PLU :: Tacoma, WA<br>Free :: All Ages<br/><br/><strong>THURSDAY<br/>NOVEMBER 15,2007</strong><br/>Blue Scholars opening for Psalm One<br>Nutty's<br>3400 W 49th St<br>Sioux Falls, SD 58501<br>18+  Tickets: $8<br>Doors: 9pm<br/><br/><strong>FRIDAY<br/>NOVEMBER 16,2007</strong><br/>Blue Scholars opening for Psalm One<br>Vaudeville Mews<br>212 4th St<br>Des Moines, IA 50309<br>all ages <br>Tickets: $7<br><br/><br/>
+<br/>
+</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></font>
+</p>
+<p><font face="Verdana, Arial, Helvetica, sans-serif" size="1.5"><br/>
+</font> </p>
+</div></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td bgcolor="#333300" height="20"> </td>
+</tr>
+</table>
+<map name="Map">
+<area coords="497,7,571,26" href="/bluescholars/masslinemedia/site/calendar.php" shape="rect"/>
+<area coords="247,8,288,25" href="/bluescholars/masslinemedia/site/index.html" shape="rect"/>
+<area coords="320,8,377,26" href="/bluescholars/masslinemedia/site/artists/index.html" shape="rect"/>
+<area coords="407,8,462,26" href="/bluescholars/massline-forums/index.html" shape="rect"/>
+</map>
+<map name="Map2">
+<area class="massline-external-gap" coords="21,49,181,209" href="https://web.archive.org/web/20071113013415/http://rs351.securehostserver.com/~rascionc/osCommerce/catalog/index.php?cPath=21" rel="noopener noreferrer" shape="rect"/>
+</map>
+<map name="Map3">
+<area class="massline-external-gap" coords="19,45,184,210" href="https://web.archive.org/web/20071113013415/http://rs351.securehostserver.com/~rascionc/osCommerce/catalog/index.php?cPath=21" rel="noopener noreferrer" shape="rect"/>
+</map>
+<map name="Map4">
+<area class="massline-external-gap" coords="20,48,181,210" href="https://web.archive.org/web/20071113013415/http://bluescholars.com/store.html" rel="noopener noreferrer" shape="rect"/>
+</map>
+<map name="Map5">
+<area class="massline-external-gap" coords="20,47,180,210" href="https://web.archive.org/web/20071113013415/http://bluescholars.com/store.html" rel="noopener noreferrer" shape="rect"/>
+</map>
+<!-- </div> -->
+</body>
+</html>

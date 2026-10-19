@@ -1,0 +1,203 @@
+<!doctype html>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<title>MASS LINE MEDIA</title>
+
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<style type="text/css">
+
+<!--
+.body1, .body1q {  line-height: 16px; }
+
+.search_field {width: 295px; font-family: Verdana, Helvetica, sans-serif; font-size: 10px}
+
+.edit_field {width: 150px; font-family: Verdana, Helvetica, sans-serif; font-size: 10px}
+
+.ta_field { height: 150px; width: 400px; font-family: Verdana, Helvetica, sans-serif; font-size: 10px}
+
+
+
+.edit_field, .ta_field, .search_field {
+
+	border-left-color:#000000;
+
+	border-top-color:#000000;
+
+	border-right-color:#000000;
+
+	border-bottom-color:#000000;
+
+	color: #333333;
+
+	border: 1 solid; }
+
+
+
+A:link{color:#333300; font-family:verdana;text-decoration:none; font-weight:bold} 
+
+A:visited{color:#333300; font-family:verdana;text-decoration:none; font-weight:bold};
+
+A:hover{color:#FF3300} 
+.style64 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color: #333300;
+}
+.style65 {
+	color: #333300;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.style66 {font-size: 11px}
+.style69 {font-size: 1.5px}
+.style71 {font-size: 11px; color: #333300; }
+.style72 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #333300;
+}
+.style73 {
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #333300;
+}
+-->
+
+</style>
+</head>
+<body leftmargin="0" topmargin="0"><aside class="massline-source-note">Historical capture · 2009-03-15 · <a href="https://web.archive.org/web/20090315005933/http://masslinemedia.com/news/archive.php?from=30" rel="noopener noreferrer">view source replay</a></aside>
+<!-- <div align="center"> -->
+<table border="0" cellpadding="0" cellspacing="0" width="901">
+<tr>
+<td bgcolor="#333300" height="12"> </td>
+</tr>
+<tr>
+<td><img height="68" src="/bluescholars/masslinemedia/assets/a85fad7bf534154697d6.gif" width="901"/></td>
+</tr>
+<tr>
+<td><img border="0" height="31" src="/bluescholars/masslinemedia/assets/074dc67a31c4d8ebfec5.gif" usemap="#Map" width="901"/></td>
+</tr>
+<tr>
+<td><table border="0" cellpadding="0" cellspacing="0" width="901">
+<tr>
+<td align="center" valign="top" width="211"><div align="left"><br/>
+<br/>
+<img height="29" src="/bluescholars/masslinemedia/assets/c83005c4091ebaa0b50c.gif" width="103"/> <br/>
+<img border="0" height="236" src="/bluescholars/masslinemedia/assets/21cf21af763b178cd697.jpg" usemap="#Map2" width="211"/><br/>
+<img border="0" height="240" src="/bluescholars/masslinemedia/assets/2318e978080a8133a7ef.jpg" usemap="#Map3" width="211"/> <img border="0" height="236" src="/bluescholars/masslinemedia/assets/ba9fc8897223d24e1d4b.jpg" usemap="#Map4" width="211"/><br/>
+<img border="0" height="236" src="/bluescholars/masslinemedia/assets/7b93984c0904e52b40b4.jpg" usemap="#Map5" width="211"/> <br/>
+<br/>
+</div></td>
+<td valign="top" width="10"><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/6cfb333c0a5853ff6583.gif" width="10"/></td>
+<td align="center" valign="top" width="480"><div align="center">
+<table border="0" cellpadding="0" cellspacing="0" width="480">
+<tr>
+<td colspan="3" height="0">
+<img alt="Archived image unavailable" height="233" vspace="0" width="480"/></td>
+</tr>
+<tr bgcolor="#333300">
+<td colspan="3" height="12"> </td>
+</tr>
+<tr>
+<td width="25"> </td>
+<td align="left" valign="top" width="430">
+<p align="left" class="body1"><span class="body1 style73"> <h2>News archive</h2><strong><font color="#333300" face="Verdana, Arial, Helvetica, sans-serif" size="2">2008-01-26 | Saturday</font></strong><br/><br/><img alt="Archived image unavailable" height="240" title="undefined" width="240"><div><br/></div><div style="text-align: left">Check out this 801 song mixtape by Chris Read, covering hip hop from 1979-2007!</div><div style="text-align: left"><br/></div><div style="text-align: left"><span class="Apple-style-span" style="color: #551a8b; text-decoration: underline">http://musicofsubstance.com/html/mp3-downloads.htm</span></div><div style="text-align: left"><br/></div><div style="text-align: left">Don't forget to download the long-ass tracklisting...</div><div style="text-align: left"><br/></div><div style="text-align: left">Peace</div><div style="text-align: left">daps1</div><div style="text-align: left"><br/></div><div style="text-align: left">p.s. Shouts to everyone who held it down at "Hip Hop Period" at Hidmo. Check out the forums for more info. </div><div style="text-align: left"><span class="Apple-style-span" style="color: #551a8b"><br/></span></div><p></p><br/><hr align="center" noshade="" size="1" width="400"/><br/><strong><font color="#333300" face="Verdana, Arial, Helvetica, sans-serif" size="2">2008-01-16 | Wednesday</font></strong><br/><br/><span style="font-weight: bold">Calcutta </span>is called "Cal" by the youth who live here, but i call it "the Cut."  i think it's a better nickname. and further, it gives more meaning to the phrase "chillin in the Cut." <br><br>this evening i went to a pool hall in <span style="font-weight: bold">the Cut</span>.  i had run into a couple college students at a coffee shop earlier in the day who were talking about this great place to shoot pool.  the conversation had started when i asked them what the <span style="font-weight: bold">jav(w)ans</span> of <span style="font-weight: bold">Kolkata</span> do.<br><br>first he said, "weed. weed's pretty popular.  all the college kids do it."<br>i said "oh really?  i don't smoke, but the city i'm from is known for its weed."<br>he said "yea ours is pretty good.  10 rupees a bag and it only takes you 3 or 4 joints to get high."<br><br>so yea, that was pretty amusing.  at least to me.  they didn't understand why i laughed. hard. i changed the subject.  that's when he told me about <span style="font-weight: bold">Pool Academy</span> near <span style="font-weight: bold">Vivikanandi Park</span>.<br><br>later that night, after walking through about 2 km of this<br><br><img alt="Archived image unavailable"><br><img alt="Archived image unavailable"><br><br>my friend and i arrived at Pool Academy.<br><br><img alt="Archived image unavailable"><br><br>the picture on the door almost prevented me from going in<br><br><img alt="Archived image unavailable"><br><br>but i gritted my teeth and pushed onward.  inside we saw the majesty that was Pool Academy.<br/><br/><img alt="Archived image unavailable"><br/><br/>2 pool tables and a handful of youth that were clearly "Pool Warriors."  a city of 14 million people can do no less!  Pool Academy!  there was a very specific set of rules that were framed in glass. it was important that we followed them.  <br/><br/><img alt="Archived image unavailable"><br/><br/>the brief piece at the bottom thwarted my intentions of hustling these warriors.<br/><br/><img alt="Archived image unavailable"><br/><br/>our kindly Uncle racked up for us.<br/><br/><img alt="Archived image unavailable"><br/><br/>and the game was on!  i lost.  <br/><br/>why? because i was too busy thinking about all the photos i had taken of stuff that i thought was interesting.  here are a couple for your viewing pleasure.<br/><br/>i was happy to see this at the airport in <span style="font-weight: bold">Bangkok</span> (oh yea, i was in Bangkok for a minute)<br/><br/><img alt="Archived image unavailable"><br/><img alt="Archived image unavailable"><br/><br/>note the detailed accuracy in the graphic.  i told my friend that different Muslim communities in America have been petitioning to get prayer rooms placed in airports, but i have yet to see one myself.  that'd be the day.  it'd make a bunch of us happy, and a number of other people angry and scared.  either way, i'd finally have a comfortable place to pray when we travel.<br/><br/>there was an arcade at the top floor of a snooty mall in Calcutta.  this was one of their games.<br/><br/><img alt="Archived image unavailable"><br/><img alt="Archived image unavailable"><br/><br/>i didn't play it, but i assure you it looked very irritating.<br/><br/>hmm...<br/><img alt="Archived image unavailable"><br/><br/>i wonder if Seattle would benefit from guidance like this.<br/><br/><img alt="Archived image unavailable"><br/><br/>on Park Street...<br/><br/><img alt="Archived image unavailable"><br/><br/>gross!<br/><br/>i also found this rather disturbing.<br/><br/><img alt="Archived image unavailable"><br/><img alt="Archived image unavailable"><br/><br/>for a toy store geared towards kids 2-8, those are some pretty beastly looking guns.  and i don't even know what a "bluster" is.<br/><br/><img alt="Archived image unavailable"><br/><img alt="Archived image unavailable"><br/><br/>haha.. <span style="font-weight: bold">"fruit and <span style="font-style: italic; text-decoration: underline">nut</span>."</span> the photos in these ads seem to be a little too sexual for dessert... or are they?  soft-core ice cream.  the guy on this tshirt isn't much better<br/><br/><img alt="Archived image unavailable"><br/><br/>oh, and if you read the last blog, you'll remember what i said about developing world textile dumping?<br/><br/><img alt="Archived image unavailable"><br/><br/>i'm not sure what's funnier: the idea that Uncle likely doesn't know
+what the writing on his shirt means, or that maybe he colored the "K"
+in black to censor it.<br/>
+<br/>saba<p></p><br/><hr align="center" noshade="" size="1" width="400"/><br/><strong><font color="#333300" face="Verdana, Arial, Helvetica, sans-serif" size="2">2008-01-10 | Thursday</font></strong><br/><br/><span class="Apple-style-span" style="font-weight: bold">Gabriel Teodros, Bambu, Sleep of Oldominion and Orbitron</span> (and, of course, special guests) will be rockin <span class="Apple-style-span" style="font-weight: bold">Neumo's</span> hard tonight (Thu, Jan. 10). <div><br/></div><div>But let me highlight one dude on tonight's lineup who got big things in the making for '08. And his name is <span class="Apple-style-span" style="font-weight: bold">Khingz</span>. Nearing the completion of his upcoming album <span class="Apple-style-span" style="font-style: italic"><span class="Apple-style-span" style="font-weight: bold">From Slaveships to Spaceships</span></span> (one of the filthiest album titles in the history of ever), my dude just dropped the <span class="Apple-style-span" style="font-weight: bold"><span class="Apple-style-span" style="font-style: italic">Bigger Than Jeezuz</span></span> mixtape (mixed by DJ Daps1), which you can pick up at tonight's show. Here's a track called "Right Now" featuring <span class="Apple-style-span" style="font-weight: bold">Chev</span> (killed it!) and GT: </div><div><br/></div><div><p class="massline-embed-gap">Archived embedded media is unavailable for offline playback.</p></div><p></p><br/><hr align="center" noshade="" size="1" width="400"/><br/><strong><font color="#333300" face="Verdana, Arial, Helvetica, sans-serif" size="2">2008-01-04 | Friday</font></strong><br/><br/>2007 was a big year for us.  <span style="font-weight: bold">MassLine</span> tour jumped off, <span style="font-weight: bold">Bayani</span> dropped, travelled hella, <span style="font-weight: bold">RA </span>and i finished the <span style="font-weight: bold">new Common Market record</span>, a bunch of other stuff happened, then more stuff happened after that, and then we finished out the year with 5 days at <span style="font-weight: bold">Neumo's</span> for <span style="font-weight: bold">The Program.</span><br><br>most working folk in the West, if they are fortunate enough to make a living with just one job, get their weekends, some sick days, and a few holidays off.  not quite the case for griots such as yours truly.  like <span style="font-weight: bold">Geo</span> said, "what you're doin as a hobby, we do it for food."  i think the last real break i took from work was almost 3 years ago in '05 before <span style="font-weight: bold">The Long March</span> came out.<br><br>anyway, long story made slightly less long, i decided to go back to my roots.  that's why i'm writing this blog from <span style="font-weight: bold">Bangalore, Karnataka, India</span>.  but Saba, roots?  India? explain!<br><br>i'm <span style="font-weight: bold">Parsi</span>, you didn't know? SIKE.  (that's for the 6 people that would get that joke and think it's funny, and fans of <span style="font-weight: bold">Queen</span>.)<br/><br/>i'd like to go to <span style="font-weight: bold">Iran</span>, but currently as a <span style="font-weight: bold">Baha'i</span> holding a US Passport and assumed Iranian citizenship, it isn't the best environment.  hmm, how close can i get... Iran is in between two other countries, <span style="font-weight: bold">Iraq</span> and <span style="font-weight: bold">Pakistan</span>.  as tempting as it would be to visit folks in Pakistan, or maybe join the resistance in <span style="font-weight: bold">Baghdad</span>, i have fam in Seattle that expect me to be let back into the US next month and i can't really let them down.  so, i decided to visit a friend of mine in India to see what he's up to.<br/><br/>residing in <span style="font-weight: bold">Calcutta</span>, my friend (let's call him, um, <span style="font-weight: bold">"Paul"</span>) is currently working with local NGOs and Microsoft to develop a radical new form of community based schooling involving <span style="font-weight: bold">DVDs</span>, <span style="font-weight: bold">centralized curriculum digitization</span>, and the <span style="font-weight: bold">local postal service</span>.  over a cup of <span style="font-weight: bold">Assam</span> he broke down the simplified version for me in only 2 hours.  one of the working titles is <span style="font-weight: bold">"the educational YouTube for rural and urban poor youth."</span>  mmm, sounds interesting.  i always enjoy engaging fam and friends in their community work, particularly outside Seattle, to see if there's anything i can learn and take back to implement into what we got goin on in the Town.  but we'll get to that later...<br/><br/>we'll be headed to Calcutta in a few days, but until then, it's Bangalore baby.  at a 3000 ft elevation, the air here is crisp, warm... it almost feels like summer in Seattle, but with significantly less white people.<br/><br/>my trip to get here was also interesting.<br/><br/>my itinerary was <span style="font-weight: bold">Tel Aviv --&gt; Kiev --&gt; Delhi --&gt; Banglore</span>.  i'd rather not get into the first two because one involved getting hella grilled for my last name, being ordered to remove my outer garments for a search, and sitting in a hospital like cubicle for 30 minutes while security went through all my photos and personal belongings... but somehow, remained notably more polite than TSA.<br/><br/>this will officially be my second <span style="font-weight: bold">iPhone foto jurnelle</span>.<br/><br/><img alt="Archived image unavailable"><br/><br/>this is the only entertaining photo from <span style="font-weight: bold">Tel Aviv's Ben Gurion Airport</span>.  well, entertaining to me.  i think i have a mild dyslexia, cuz everytime i saw this i thought it said "love a bitch."  30 Shekels says <span style="font-weight: bold">Snoop Dogg </span>doesn't bank there.<br/><br/>(PS, that joke is very offensive.  i'm sorry)<br/><br/>maybe it was cuz i hadn't slept for 24 hours, but it appeared that the Kiev waiting room didn't have much to offer either, besides this ad in the men's room. <br/><br/><img alt="Archived image unavailable"><br/><br/>usually, "before &amp; after" shots also include the subject's change in attitude.  the old man really appreciates his new mop, but it appears that the young dood on the upper right thought he was just as much of a player when he was bald.<br/><br/>the flight from Kiev to Delhi was about the same as Seattle to NYC.  long enough to be irritating, but short enough that people don't take you seriously when you complain about how long it was.  when i got thru customs in Delhi to begin enjoying my 7 hour layover, the first thing i saw was this.<br/><br/><img alt="Archived image unavailable"><br/><br/>the picture isn't that great, so you can't appreciate how many people were there holding signs for clients and family, and how grimy the airport was... at least when i was there.  they appeared to be remodeling it.<br/><br/>next, i went straight to the <span style="font-weight: bold">Nescafe </span>stand and got myself a coffee.  <br/><br/><img alt="Archived image unavailable"><br/><br/>it cost <span style="font-weight: bold">Rs. 10 (ten Rupees)</span>, which is about <span style="font-weight: bold">25 cents</span>.  what a ripoff!<br/><br/>i had to find a bus to take me to the domestic-flights section of the <span style="font-weight: bold">Indira Gandhi International Airport</span>.  after dodging about 6 different guys who claimed to be the bus driver and pointing at an old Datsun minivan saying "this is the bus," i realized i still looked like a foreigner.  i needed change my clothes so i could convince people that i was from northern <span style="font-weight: bold">Punjab</span>.  even then, it only works about 10% of the time, but it's fun anyway.<br/> <br/>eventually i found a real bus with a real driver who took about 34 of us on a 25 minute bus ride to the other side of the airport where they have the domestic flights.  <br/><br/><img alt="Archived image unavailable"><br/><br/>on the back of the bus i met a young guy whose shirt said, in big white trapstar-style block lettering, <span style="font-weight: bold">"YOU LOOK LIKE MY NEXT EX GIRLFRIEND."</span>  i shook my head in disgust at how America pawns off its <span style="font-weight: bold">shitty Hot Topic novelty clothing</span> to the developing world.  <br/><br/>for those who don't know, a lot of companies that can't pawn off their textile commodities to the American public end up trying to recoup their losses by dumping their remaining stock in overseas markets.  this happens frequently.  this is why "western fashion" in a lot of countries below the equator is so corny.  you'll be walking around a village and see "new" old <span style="font-weight: bold">NO FEAR</span> tees, or shirts that say <span style="font-weight: bold">"YOU'RE JUST JEALOUS BECAUSE THE VOICES IN MY HEAD DON'T TALK TO YOU"</span> or <span style="font-weight: bold">"SUCK IT,"</span> or <span style="font-weight: bold">championship tees for the losing team</span> because the NBA merchandising company did two different prints before the game like <span style="font-weight: bold">"Seattle SuperSonics 1996."  </span>honestly, there's a better joke in there, but i'm waiting for Geo or <span style="font-weight: bold">Hari </span>to write it.<br/><br/>at least, i thought all this this until i talked to the young man wearing the shirt.  turns out his name was <span style="font-weight: bold">Daniel</span>, a <span style="font-weight: bold">South Asian American from Queens</span> on his first trip to India.  <span style="font-weight: bold">Daps1</span> then jumped out the bushes, read the previous paragraph, and said <span style="font-weight: bold">"that's racist!"</span><br/><br/><img alt="Archived image unavailable"><br/><br/>when we got to the domestic side of the airport, i discovered it was considerably nicer than the international side.  i assumed this was intentional.  you know, give the shit end of the stick to the colonizer like they did to you for so many years.  kudos, India.  kudos.<br/><br/>i looked around for some food.  first thing i found was this<br/><br/><img alt="Archived image unavailable"><br/><br/>what you can't see are the employees watching <span style="font-weight: bold">Yo! MTV Raps</span> on the side of the stand.  the last time i had Chinese food in India was a couple years ago... like <span style="font-weight: bold">Tim Armstrong in '91</span>, it was absolutely rancid.  (badum, chssh!)  <br/><br/>not feelin that.  so i hit up the cafeteria for a snack.  the server recommended a dish, the name of which i can't remember.  i'm pretty sure it was spelled with an "H" following another consonant.<br/><br/><img alt="Archived image unavailable"><br/><br/>this was a dollar.  what a ripoff!<br/><br/>still, it wasn't hard to give a 20% tip to the kind gentleman that brought me my meal.  what was hard was seeing his boss come take it from him as i was leaving.<br/><br/>then, in my sleep deprived delirium, i spent the rest of my layover wandering the airport and taking pictures of stuff that made me laugh.<br/><br/><img alt="Archived image unavailable"><br/><br/>this is a <span style="font-weight: bold">cellphone charging station</span> with about 12 different plugs for various phone models.  not that funny.  what was funny was seeing all these people come up to use it and being unable to find one that matched their phone.  damn free markets!<br/><br/><img alt="Archived image unavailable"><br/><br/>this ad sounds like they don't want the whiskey.  like, "yea Johnnie. keep walking, asshole.  get the fuck outta here."<br/><br/><img alt="Archived image unavailable"><br/><br/>oh good, now i can use the toilet.  but wait a minute...<br/><br/><img alt="Archived image unavailable"><br/><br/>there's no toilet, no sink... just a dood sleeping on a table.  holy shit, it really is a <span style="font-weight: bold">"rest" room</span>.  <br/><br/><img alt="Archived image unavailable"><br/><br/>since when was "coffee" a verb?<br/><br/><img alt="Archived image unavailable"><br/><br/>the squares aren't allowed to travel with these guys.  the staff is also a bunch of pretentious brand-blockers with 300 pairs of Nikes. <br/><br/><img alt="Archived image unavailable"><br/><br/>ha! "Easons Greeting" what the hell does that mean? oh wait... nevermind.<br/><br/><img alt="Archived image unavailable"><br/><br/>here's me taking a picture of myself in the bathroom mirror.  not that funny.  however, i find it amusing that now there's a guy in India who no idea that there's a photo of him taking a piss at a urinal on the internet.  muahahaha.<br/><br/><span style="font-weight: bold">TO BE CONTINUED.</span><p></p><br/><hr align="center" noshade="" size="1" width="400"/><br/><strong><font color="#333300" face="Verdana, Arial, Helvetica, sans-serif" size="2">2007-12-28 | Friday</font></strong><br/><br/><div align="center"><img align="middle" alt="" height="70" src="/bluescholars/masslinemedia/assets/18e767b726ae9bdbef2a.gif" width="172"><br><br>Check out <strong><a class="massline-external-gap" href="https://web.archive.org/web/20090315005933/http://amiestreet.com/today" rel="noopener noreferrer" target="_blank">www.amiestreet.com</a></strong> where <em>Bayani</em> is named one of the best albums of 2007!<br><br/></br></br></br></img></div><p></p><br/><hr align="center" noshade="" size="1" width="400"/><br/><center><div class="pagenumbers"><a href="/bluescholars/masslinemedia/site/news/archive-0bfc403792bc.php">[&lt;&lt;]</a> <a href="/bluescholars/masslinemedia/site/news/archive-ff41e4b899bf.php">[1]</a> <a href="/bluescholars/masslinemedia/site/news/archive-f09e4ab70de0.php">[2]</a> <a href="/bluescholars/masslinemedia/site/news/archive-13fd6b501db4.php">[3]</a> <a href="/bluescholars/masslinemedia/site/news/archive-a6d8d32ad781.php">[4]</a> <a href="/bluescholars/masslinemedia/site/news/archive-d45f54b0cbc4.php">[5]</a> <a href="/bluescholars/masslinemedia/site/news/archive-0bfc403792bc.php">[6]</a> [7] <a href="/bluescholars/masslinemedia/site/news/archive-cd30dd4ecbb4.php">[8]</a> <a href="/bluescholars/masslinemedia/site/news/archive-3f0473af164e.php">[9]</a> <a href="/bluescholars/masslinemedia/site/news/archive-328a9b624d92.php">[10]</a> <a href="/bluescholars/masslinemedia/site/news/archive-3c1fe8996261.php">[11]</a> <a href="/bluescholars/masslinemedia/site/news/archive-86e16e039033.php">[12]</a> <a href="/bluescholars/masslinemedia/site/news/archive-7e9b30d94f52.php">[13]</a> <a href="/bluescholars/masslinemedia/site/news/archive-a4c814fd9062.php">[14]</a> <a href="/bluescholars/masslinemedia/site/news/archive-9413aa1ebf0f.php">[15]</a> <a href="/bluescholars/masslinemedia/site/news/archive-c3d2d6995e50.php">[16]</a> <a href="/bluescholars/masslinemedia/site/news/archive-9d70a3c73aca.php">[17]</a> <a href="/bluescholars/masslinemedia/site/news/archive-f6fd84ec4403.php">[18]</a> <a href="/bluescholars/masslinemedia/site/news/archive-aeb25bb8527b.php">[19]</a> <a href="/bluescholars/masslinemedia/site/news/archive-b69d705746cb.php">[20]</a> <a href="/bluescholars/masslinemedia/site/news/archive-a5db3a75cdf8.php">[21]</a> <a href="/bluescholars/masslinemedia/site/news/archive-7369bee5daae.php">[22]</a> <a href="/bluescholars/masslinemedia/site/news/archive-1dbf17b25e1a.php">[23]</a> <a href="/bluescholars/masslinemedia/site/news/archive-a2d6ccd834ab.php">[24]</a> <a href="/bluescholars/masslinemedia/site/news/archive-9f0a15e79a97.php">[25]</a> <a href="/bluescholars/masslinemedia/site/news/archive-aa9c2a812be3.php">[26]</a> <a href="/bluescholars/masslinemedia/site/news/archive-b0173dec9c53.php">[27]</a> <a href="/bluescholars/masslinemedia/site/news/archive-86b898eb4b5c.php">[28]</a> <a href="/bluescholars/masslinemedia/site/news/archive-f7f9da7f8f55.php">[29]</a> <a href="/bluescholars/masslinemedia/site/news/archive-586a37a4a91f.php">[30]</a> <a href="/bluescholars/masslinemedia/site/news/archive-96063bb0e6e6.php">[31]</a> <a href="/bluescholars/masslinemedia/site/news/archive-ae1aaaa342fb.php">[32]</a> <a href="/bluescholars/masslinemedia/site/news/archive-2977b680a4aa.php">[33]</a> <a href="/bluescholars/masslinemedia/site/news/archive-1af3829b83b3.php">[34]</a> <a href="/bluescholars/masslinemedia/site/news/archive-a348817aa4f8.php">[35]</a> <a href="/bluescholars/masslinemedia/site/news/archive-07e37251c3d1.php">[36]</a> <a href="/bluescholars/masslinemedia/site/news/archive-91a11bf8b6fc.php">[37]</a> <a href="/bluescholars/masslinemedia/site/news/archive-d71e150e4045.php">[38]</a> <a href="/bluescholars/masslinemedia/site/news/archive-0a3f6084c1f9.php">[39]</a> <a href="/bluescholars/masslinemedia/site/news/archive-f103b614281f.php">[40]</a> <a href="/bluescholars/masslinemedia/site/news/archive-80555a41f490.php">[41]</a> <a href="/bluescholars/masslinemedia/site/news/archive-b9d0c0fa332b.php">[42]</a> <a href="/bluescholars/masslinemedia/site/news/archive-f410280b6a12.php">[43]</a> <a href="/bluescholars/masslinemedia/site/news/archive-18fe87920e97.php">[44]</a> <a href="/bluescholars/masslinemedia/site/news/archive-e30eb998aad9.php">[45]</a> <a href="/bluescholars/masslinemedia/site/news/archive-3cc92afd9411.php">[46]</a> <a href="/bluescholars/masslinemedia/site/news/archive-b6ec7a44ebf8.php">[47]</a> <a href="/bluescholars/masslinemedia/site/news/archive-3678dcc58b9e.php">[48]</a> <a href="/bluescholars/masslinemedia/site/news/archive-4e11ab08baf7.php">[49]</a> <a href="/bluescholars/masslinemedia/site/news/archive-c85b8eeabe7f.php">[50]</a> <a href="/bluescholars/masslinemedia/site/news/archive-bf9a1eb28f67.php">[51]</a> <a href="/bluescholars/masslinemedia/site/news/archive-c70b6df770a7.php">[52]</a> <a href="/bluescholars/masslinemedia/site/news/archive-614e9005b7af.php">[53]</a> <a href="/bluescholars/masslinemedia/site/news/archive-b6f35646d585.php">[54]</a> <a href="/bluescholars/masslinemedia/site/news/archive-a8bd5dc9e78f.php">[55]</a> <a href="/bluescholars/masslinemedia/site/news/archive-42bc361f5e19.php">[56]</a> <a href="/bluescholars/masslinemedia/site/news/archive-fc7663da60a7.php">[57]</a> <a href="/bluescholars/masslinemedia/site/news/archive-67c973a1d298.php">[58]</a> <a href="/bluescholars/masslinemedia/site/news/archive-922acc50941d.php">[59]</a> <a href="/bluescholars/masslinemedia/site/news/archive-cd30dd4ecbb4.php">[&gt;&gt;]</a> </div></center></img></img></img></img></img></img></img></img></img></img></img></img></img></img></img></img></br></br></br></br></br></br></img></img></img></img></img></img></img></img></img></img></img></img></img></img></img></img></img></br></br></img></br></br></br></br></img></br></br></br></br></img></br></img></br></br></br></br></br></br></br></br></br></br></br></br></img></span></p>
+</td>
+<td width="25"> </td>
+</tr>
+</table>
+</div></td>
+<td align="left" valign="top" width="25"><img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/><br/>
+<img alt="" height="214" src="/bluescholars/masslinemedia/assets/69400dc5efd2717e61ee.gif" width="14"/> <br/>
+</td>
+<td align="center" valign="top" width="175"><div align="left">
+<p class="style66"><br/>
+<span class="body1 style65"><strong><br/>
+<font color="#333300" face="Verdana, Arial, Helvetica, sans-serif" size="1">SUBSCRIBE TO THE<br/>
+                  MASS LINE NEWSLETTER</font></strong></span>
+<input name="recipient" type="hidden" value="info@masslinemedia.com"/>
+<input name="subject" type="hidden" value="mailing list"/>
+<input name="email" size="20" style="font-size: 9pt; color: #3F3F3F; font-family: Veranda, sans serif" type="text"/>
+<input id="Submit" name="Submit" type="submit" value="Join"/>
+<input name="env_report" type="hidden" value="REMOTE_ADDR,HTTP_USER_AGENT"/>
+<input name="redirect" type="hidden" value="http://www.masslinemedia.com/thanks.html"/>
+</p>
+<p class="style66"> <br/>
+<br/>
+<img height="24" src="/bluescholars/masslinemedia/assets/25dd499fcc77820f31ce.gif" width="175"/><font color="#333300" face="Verdana, Arial, Helvetica, sans-serif" size="1.5"><br/>
+<br/>
+<br/>
+</font>
+</p>
+<p><font face="Verdana, Arial, Helvetica, sans-serif" size="1.5"><br/>
+</font> </p>
+</div></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td bgcolor="#333300" height="20"> </td>
+</tr>
+</table>
+<map name="Map">
+<area coords="497,7,571,26" href="/bluescholars/masslinemedia/site/calendar.php" shape="rect"/>
+<area coords="247,8,288,25" href="/bluescholars/masslinemedia/site/index.html" shape="rect"/>
+<area coords="320,8,377,26" href="/bluescholars/masslinemedia/site/artists/index.html" shape="rect"/>
+<area coords="407,8,462,26" href="/bluescholars/massline-forums/index.html" shape="rect"/>
+</map>
+<map name="Map2">
+<area class="massline-external-gap" coords="21,49,181,209" href="https://web.archive.org/web/20090315005933/http://rs351.securehostserver.com/~rascionc/osCommerce/catalog/index.php?cPath=21" rel="noopener noreferrer" shape="rect"/>
+</map>
+<map name="Map3">
+<area class="massline-external-gap" coords="19,45,184,210" href="https://web.archive.org/web/20090315005933/http://rs351.securehostserver.com/~rascionc/osCommerce/catalog/index.php?cPath=21" rel="noopener noreferrer" shape="rect"/>
+</map>
+<map name="Map4">
+<area class="massline-external-gap" coords="20,48,181,210" href="https://web.archive.org/web/20090315005933/http://bluescholars.com/store.html" rel="noopener noreferrer" shape="rect"/>
+</map>
+<map name="Map5">
+<area class="massline-external-gap" coords="20,47,180,210" href="https://web.archive.org/web/20090315005933/http://bluescholars.com/store.html" rel="noopener noreferrer" shape="rect"/>
+</map>
+<!-- </div> -->
+</body>
+</html>

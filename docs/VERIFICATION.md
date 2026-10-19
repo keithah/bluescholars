@@ -6,7 +6,9 @@
 - The forum directory includes 9 captured boards and 239 topic IDs with locally saved views. Source captures and SMF assets are emitted under the forum directory. The former `/masslinemedia/forum/` paths have 1,638 generated same-site compatibility redirects.
 - `.venv311/bin/pytest -q` — **232 passed**. `git diff --check` passed for source changes. Candidate build/check at `/bluescholars/` passed; root-path candidate build/check also passed with `{ "ok": true, "errors": [] }`. The root output was built separately; the previously saved `_site/` directory was restored without changes.
 - Generated candidate inspection confirmed the gateway’s `/massline-forums/` link, board listing paths, and legacy redirects. No screenshot or human visual review was performed. This remains an unreviewed preview; no source review flags were changed.
-- Local execution completed only. No commit, push, or Pages redeployment has yet occurred.
+- Source commit `6ccfb3c7` (`Separate Mass Line forum archive at top level`) was pushed to `main`. The Pages preview is a separate fast-forward snapshot: final `gh-pages` commit `47872571` follows `761870c9`; GitHub Pages deployment [39303399989](https://github.com/keithah/bluescholars/actions/runs/39303399989) completed successfully and the Pages API reports `built`.
+- Live HTTPS checks returned 200 for `/bluescholars/`, the new forum directory, board 1, topic 66, the Mass Line homepage, and both the legacy forum root and topic redirect pages. The page links and redirect targets include the `/bluescholars/` project prefix. The gateway card and board link resolve to the standalone forum area.
+- No screenshot or human visual review was performed; this remains an unreviewed candidate preview. `source/review.json` and reviewed-release gates were not changed.
 
 ## Mass Line forum archive split — October 19, 2026
 

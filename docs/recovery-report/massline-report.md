@@ -1,6 +1,6 @@
 # Mass Line Media archive recovery
 
-This is a separate historical source collection for `masslinemedia.com`; its forum is preserved as its own browsable area. Captured pages retain source URLs, exact archive timestamps, byte counts, and SHA-256 hashes. Wayback raw bytes are under `recovery/massline/raw/`; linked offsite assets are under `recovery/massline/external/raw/`.
+This is a separate historical source collection for `masslinemedia.com`. The original Mass Line pages and the SMF forum are now published in distinct areas: `/masslinemedia/` and `/massline-forums/`. Captured pages retain source URLs, exact archive timestamps, byte counts, and SHA-256 hashes. Wayback raw bytes are under `recovery/massline/raw/`; linked offsite assets are under `recovery/massline/external/raw/`.
 
 ## Archive evidence
 
@@ -23,6 +23,7 @@ This is a separate historical source collection for `masslinemedia.com`; its for
 - Captured images and styles are mapped locally. Scripts are never run; forms and embedded players are disabled in the static copy. Explicit source links may open the source archive when an item is not stored locally.
 - External assets referenced by recovered pages: **602** exact URLs discovered; **170** have Wayback capture records (0 indexed and awaiting download, 156 recovered); **431** returned no capture, **14** had only non-image/error payloads, **1** index queries and **0** payloads are retryable failures, and **0** remain queued. Locally captured: **156** (156 images, 0 media files; 9,246,018 bytes).
 - Forum browsing: nine captured boards are grouped by their source titles. Each of the 239 locally captured topic IDs has a landing page listing its saved page-offset and individual-message snapshots by exact Wayback timestamp; each entry opens the preserved SMF capture. This is a navigation aid over the recovered source pages, not a reconstruction of uncaptured posts.
+- The forum landing page is `/massline-forums/`; recovered forum HTML and SMF assets are stored below that top-level directory. The Mass Line Media homepage and dated site pages link to the separate archive. Legacy `/masslinemedia/forum/` URLs are retained as local redirects to corresponding new forum paths (1,638 generated aliases). The main gateway also links to each archive separately. Root and `/bluescholars/` candidates pass the offline local-link and automatic-resource checker.
 - Independent archives: Common Crawl `CC-MAIN-2009-2010` supplied a separately preserved July 4, 2009 homepage; Arquivo.pt returned no forum captures and its two site records replay as HTML fallback pages. Detailed queries and raw observations are under `recovery/massline/external/`.
 - The raw media files are archival source material; archive availability is not a redistribution license. The candidate is not promoted into the reviewed source catalog and is not a release or human review. No Pages deployment was made as part of this recovery step.
 
@@ -38,4 +39,4 @@ python -m restore build --candidate --base-path /bluescholars
 python -m restore check --candidate --base-path /bluescholars
 ```
 
-The uncollapsed event inventory is saved in `recovery/massline/all-captures.json`; do not describe the collapsed URL count as every capture event. The current page builder chooses the latest captured URL response on or before August 31, 2009 and stores superseded downloaded versions separately.
+The uncollapsed event inventory is saved in `recovery/massline/all-captures.json`; do not describe the collapsed URL count as every capture event. The current page builder chooses the latest captured URL response on or before August 31, 2009 and stores superseded downloaded versions separately. To check both hosting layouts, run the build and checker once at `/`, then repeat with `--base-path /bluescholars`. The project-prefix output is `_candidate/`; the root-path build was checked in a separate temporary output so the pre-existing `_site/` remains preserved.

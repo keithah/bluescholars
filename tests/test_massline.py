@@ -5,7 +5,8 @@ from pathlib import Path
 from restore.massline import (build_massline_archive, massline_route, massline_summary,
                               rewrite_massline_css, sanitize_massline_html,
                               select_massline_homepage_versions, merge_massline_capture_rows,
-                              select_latest_massline_rows, _priority, _forum_index_pages, _forum_topic_order)
+                              select_latest_massline_rows, _priority, _forum_index_pages, _forum_topic_order,
+                              _massline_asset_route)
 
 
 def test_massline_routes_distinguish_forum_threads_and_pages():
@@ -13,17 +14,28 @@ def test_massline_routes_distinguish_forum_threads_and_pages():
     later = massline_route("http://masslinemedia.com/smf/index.php?topic=10.15")
     message = massline_route("http://masslinemedia.com/smf/index.php?topic=10.msg101")
 
-    assert first == "/masslinemedia/forum/topic-10-page-0.html"
-    assert later == "/masslinemedia/forum/topic-10-page-15.html"
-    assert message == "/masslinemedia/forum/topic-10-message-101.html"
+    assert first == "/massline-forums/topic-10-page-0.html"
+    assert later == "/massline-forums/topic-10-page-15.html"
+    assert message == "/massline-forums/topic-10-message-101.html"
     assert len({first, later, message}) == 3
 
 
 def test_massline_routes_map_boards_and_legacy_home():
-    assert massline_route("http://masslinemedia.com/smf/?board=2.0") == "/masslinemedia/forum/board-2-page-0.html"
+    assert massline_route("http://masslinemedia.com/smf/?board=2.0") == "/massline-forums/board-2-page-0.html"
     assert massline_route("http://www.masslinemedia.com:80/") == "/masslinemedia/site/index.html"
     assert massline_route("http://masslinemedia.com/index.html") != "/masslinemedia/site/index.html"
     assert massline_route("http://masslinemedia.com/smf/?action=;board=2.0") != massline_route("http://masslinemedia.com/smf/?board=2.0")
+
+
+def test_massline_forum_root_maps_to_its_top_level_archive():
+    assert massline_route("http://masslinemedia.com/smf/") == "/massline-forums/index.html"
+
+
+def test_massline_assets_are_kept_with_their_site_or_forum_archive():
+    assert _massline_asset_route("http://masslinemedia.com/smf/Themes/default/style.css", "css").startswith(
+        "/massline-forums/assets/")
+    assert _massline_asset_route("http://masslinemedia.com/images/logo.gif", "image").startswith(
+        "/masslinemedia/assets/")
 
 
 def test_massline_summary_reports_board_and_thread_inventory():
@@ -91,14 +103,14 @@ def test_massline_sanitizer_localizes_known_pages_and_disables_forms():
       <img src="/missing.jpg" href="store.html">
       <form action="/smf/index.php"><button>post</button></form></body></html>'''
     mapping = {
-        "http://masslinemedia.com/smf/index.php?topic=10.0": "/masslinemedia/forum/topic-10-page-0.html",
-        "http://masslinemedia.com/smf/index.php?board=1.0": "/masslinemedia/forum/board-1-page-0.html",
+        "http://masslinemedia.com/smf/index.php?topic=10.0": "/massline-forums/topic-10-page-0.html",
+        "http://masslinemedia.com/smf/index.php?board=1.0": "/massline-forums/board-1-page-0.html",
         "http://masslinemedia.com/smf/Themes/theme/logo.gif": "/masslinemedia/assets/logo.gif",
     }
 
     html, gaps = sanitize_massline_html(source, "http://masslinemedia.com/smf/", mapping, "20071019151055")
-    assert 'href="/masslinemedia/forum/topic-10-page-0.html"' in html
-    assert 'href="/masslinemedia/forum/board-1-page-0.html"' in html
+    assert 'href="/massline-forums/topic-10-page-0.html"' in html
+    assert 'href="/massline-forums/board-1-page-0.html"' in html
     assert 'href="store.html"' not in html
     assert 'src="/masslinemedia/assets/logo.gif"' in html
     assert "<script" not in html.lower()
@@ -163,12 +175,12 @@ def test_massline_builder_writes_local_pages_for_project_subpath(tmp_path):
 
     report = build_massline_archive(root, output, "/bluescholars", candidate=False)
     home = (output / "masslinemedia/site/index.html").read_text(encoding="utf-8")
-    topic = (output / "masslinemedia/forum/topic-10-page-0.html").read_text(encoding="utf-8")
+    topic = (output / "massline-forums/topic-10-page-0.html").read_text(encoding="utf-8")
     homepage_2009 = (output / "masslinemedia/site/home-2009.html").read_text(encoding="utf-8")
-    earlier_topic_page = (output / "masslinemedia/forum/topic-10-page-0--capture-20071001151055.html").read_text(encoding="utf-8")
+    earlier_topic_page = (output / "massline-forums/topic-10-page-0--capture-20071001151055.html").read_text(encoding="utf-8")
     assert report["status"] == "built"
     assert report["homepage_variants"] == 1
-    assert "href=\"/bluescholars/masslinemedia/forum/topic-10-page-0.html\"" in home
+    assert "href=\"/bluescholars/massline-forums/topic-10-page-0.html\"" in home
     assert "src=\"/bluescholars/masslinemedia/assets/" in home
     assert "Original post text" in topic
     assert "Later captured homepage" in homepage_2009
@@ -176,19 +188,30 @@ def test_massline_builder_writes_local_pages_for_project_subpath(tmp_path):
     assert "Later captured homepage" in index_html
     assert "2009-08-13" in index_html
     assert 'href="/bluescholars/masslinemedia/archive/"' in index_html
-    assert 'href="/bluescholars/masslinemedia/forum/"' in index_html
+    assert 'href="/bluescholars/massline-forums/"' in index_html
     archive_html = (output / "masslinemedia/archive/index.html").read_text(encoding="utf-8")
     assert "home-2009.html" in archive_html
     assert 'href="/bluescholars/masslinemedia/"' in archive_html
-    forum_index_html = (output / "masslinemedia/forum/index.html").read_text(encoding="utf-8")
-    assert 'href="/bluescholars/masslinemedia/forum/topic-10.html"' in forum_index_html
-    discussion = (output / "masslinemedia/forum/topic-10.html").read_text(encoding="utf-8")
-    assert 'href="/bluescholars/masslinemedia/forum/topic-10-page-0.html"' in discussion
+    forum_index_html = (output / "massline-forums/index.html").read_text(encoding="utf-8")
+    assert 'href="/bluescholars/massline-forums/topic-10.html"' in forum_index_html
+    discussion = (output / "massline-forums/topic-10.html").read_text(encoding="utf-8")
+    assert 'href="/bluescholars/massline-forums/topic-10-page-0.html"' in discussion
     assert "Older forum text" in earlier_topic_page
     assert "Earlier topic capture" in (output / "masslinemedia/alternate-captures/index.html").read_text(encoding="utf-8")
     assert (output / "masslinemedia/index.html").is_file()
-    assert (output / "masslinemedia/forum/index.html").is_file()
+    assert (output / "massline-forums/index.html").is_file()
+    legacy_forum = (output / "masslinemedia/forum/index.html").read_text(encoding="utf-8")
+    assert 'http-equiv="refresh"' in legacy_forum
+    assert 'url=/bluescholars/massline-forums/index.html' in legacy_forum
+    legacy_topic = (output / "masslinemedia/forum/topic-10-page-0.html").read_text(encoding="utf-8")
+    assert 'url=/bluescholars/massline-forums/topic-10-page-0.html' in legacy_topic
     assert not (output / "masslinemedia/site/blocked.jpg").exists()
+
+    root_output = root / "root-output"
+    build_massline_archive(root, root_output, "", candidate=False)
+    root_forum = (root_output / "massline-forums/index.html").read_text(encoding="utf-8")
+    assert 'href="/massline-forums/topic-10.html"' in root_forum
+    assert 'url=/massline-forums/index.html' in (root_output / "masslinemedia/forum/index.html").read_text(encoding="utf-8")
 
 
 def test_massline_forum_index_groups_board_captures_and_lists_real_topics(tmp_path):
@@ -235,31 +258,31 @@ def test_massline_forum_index_groups_board_captures_and_lists_real_topics(tmp_pa
     (root / "source/massline.json").write_text(json.dumps({"resources": resources}), encoding="utf-8")
 
     report = build_massline_archive(root, output, "/bluescholars", candidate=False)
-    forum = (output / "masslinemedia/forum/index.html").read_text(encoding="utf-8")
-    board_path = output / "masslinemedia/forum/board-2.html"
+    forum = (output / "massline-forums/index.html").read_text(encoding="utf-8")
+    board_path = output / "massline-forums/board-2.html"
 
     assert report["forum_boards"] == 1
     assert forum.count('data-board-id="2"') == 1
-    assert 'href="/bluescholars/masslinemedia/forum/board-2.html"' in forum
+    assert 'href="/bluescholars/massline-forums/board-2.html"' in forum
     assert board_path.is_file()
     board = board_path.read_text(encoding="utf-8")
     assert "Dialogue roll call" in board
     assert "General discussion" in board
-    assert 'href="/bluescholars/masslinemedia/forum/topic-10.html"' in board
+    assert 'href="/bluescholars/massline-forums/topic-10.html"' in board
     assert 'offset 15 · 2007-10-15' in board
     assert '<summary>Other captured views' in board
-    assert 'href="/bluescholars/masslinemedia/forum/topic-11.html"' in board
-    assert 'href="/bluescholars/masslinemedia/forum/topic-10.html"' in board
-    topic_index = (output / "masslinemedia/forum/topic-10.html").read_text(encoding="utf-8")
+    assert 'href="/bluescholars/massline-forums/topic-11.html"' in board
+    assert 'href="/bluescholars/massline-forums/topic-10.html"' in board
+    topic_index = (output / "massline-forums/topic-10.html").read_text(encoding="utf-8")
     assert "Captured thread one." not in topic_index
     assert "Saved discussion views" in topic_index
     assert "Captured second page" not in topic_index
-    assert 'href="/bluescholars/masslinemedia/forum/topic-10-page-15.html"' in topic_index
-    assert 'href="/bluescholars/masslinemedia/forum/topic-10-message-101.html"' in topic_index
+    assert 'href="/bluescholars/massline-forums/topic-10-page-15.html"' in topic_index
+    assert 'href="/bluescholars/massline-forums/topic-10-message-101.html"' in topic_index
     assert "Message 101" in topic_index
     assert "Capture 20071015192000" in topic_index
     assert "2007-10-15" in topic_index
-    assert 'href="/bluescholars/masslinemedia/forum/board-2-page-20.html"' in board
+    assert 'href="/bluescholars/massline-forums/board-2-page-20.html"' in board
 
 
 def test_massline_forum_directory_parses_each_saved_board_listing_once(tmp_path, monkeypatch):
@@ -276,7 +299,7 @@ def test_massline_forum_directory_parses_each_saved_board_listing_once(tmp_path,
 
     monkeypatch.setattr(massline, "BeautifulSoup", tracked_parser)
     _forum_index_pages(
-        tmp_path, "", [{"url": "http://masslinemedia.com/smf/?board=1.0", "route": "/masslinemedia/forum/board-1-page-0.html",
+        tmp_path, "", [{"url": "http://masslinemedia.com/smf/?board=1.0", "route": "/massline-forums/board-1-page-0.html",
                         "title": "Mass Line Artist Discussion", "timestamp": "20071014000000"}],
         [], {"http://masslinemedia.com/smf/?board=1.0": body}, [],
     )

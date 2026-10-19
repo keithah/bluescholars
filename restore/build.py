@@ -816,7 +816,8 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
         ('/myspace/','Blue Scholars on MySpace','Dated profile captures'),
     ]
     if massline_report.get('status')=='built':
-        related_sites.append(('/masslinemedia/','Mass Line Media','Music community and forum archive'))
+        related_sites.append(('/masslinemedia/','Mass Line Media','Original site editions and captures'))
+        related_sites.append(('/massline-forums/','Mass Line Forums','Separate SMF forum archive'))
     if proof206_report.get('status')=='built':
         related_sites.append(('/206proof/','206Proof forums','Separate historical forum generations'))
     related_sites.append(('/lj/','Blue Scholars LiveJournal','Recovered journal posts'))

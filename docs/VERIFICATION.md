@@ -1,5 +1,21 @@
 # Verification record — October 16, 2026
 
+## Mass Line forum archive split — October 19, 2026
+
+- The SMF forum is now a standalone top-level archive at `/massline-forums/`, separate from the Mass Line Media site restoration at `/masslinemedia/`. The main gateway has separate cards, and the dated Mass Line homepage links to the forum archive.
+- The forum directory includes 9 captured boards and 239 topic IDs with locally saved views. Source captures and SMF assets are emitted under the forum directory. The former `/masslinemedia/forum/` paths have 1,638 generated same-site compatibility redirects.
+- `.venv311/bin/pytest -q` — **232 passed**. `git diff --check` passed for source changes. Candidate build/check at `/bluescholars/` passed; root-path candidate build/check also passed with `{ "ok": true, "errors": [] }`. The root output was built separately; the previously saved `_site/` directory was restored without changes.
+- Generated candidate inspection confirmed the gateway’s `/massline-forums/` link, board listing paths, and legacy redirects. No screenshot or human visual review was performed. This remains an unreviewed preview; no source review flags were changed.
+- Local execution completed only. No commit, push, or Pages redeployment has yet occurred.
+
+## Mass Line forum archive split — October 19, 2026
+
+- The SMF forum is now a standalone top-level archive at `/massline-forums/`, separate from the Mass Line Media site restoration at `/masslinemedia/`. The main gateway has separate cards, and the dated Mass Line homepage links to the forum archive.
+- The forum directory includes 9 captured boards and 239 topic IDs with locally saved views. Source captures and SMF assets are emitted under the forum directory. The former `/masslinemedia/forum/` paths have 1,638 generated same-site compatibility redirects.
+- `.venv311/bin/pytest -q` — **232 passed**. `git diff --check` passed for source changes. Candidate build/check at `/bluescholars/` passed; root-path candidate build/check also passed with `{ "ok": true, "errors": [] }`. The root output was built separately; the previously saved `_site/` directory was restored without changes.
+- Generated candidate inspection confirmed the gateway’s `/massline-forums/` link, board listing paths, and legacy redirects. No screenshot or human visual review was performed. This remains an unreviewed preview; no source review flags were changed.
+- Local execution completed only. No commit, push, or Pages redeployment has yet occurred.
+
 ## Artist-site editions — October 17, 2026
 
 - `PYTHONPATH=. .venv311/bin/python -m pytest -q` — **181 passed**. `compileall -q restore tests` passed. `git diff --check` passed for code/docs/reports with byte-preserved `recovery/artist-sites/raw/` payloads excluded; their original CRLF whitespace remains intact.

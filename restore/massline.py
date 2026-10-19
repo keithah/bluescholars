@@ -21,6 +21,8 @@ from .urls import original_url
 CDX_PATH = Path("recovery/massline-cdx.json")
 HISTORY_PATH = Path("recovery/massline/all-captures.json")
 CDX_ENDPOINT = "https://web.archive.org/cdx/search/cdx"
+FORUM_PREFIX = "/massline-forums/"
+LEGACY_FORUM_PREFIX = "/masslinemedia/forum/"
 
 
 def _canonical(url: str, base: str = "") -> str:
@@ -50,12 +52,12 @@ def _forum_target(query: str) -> str | None:
     if match:
         topic_id, offset, message = match.groups()
         if message:
-            return f"/masslinemedia/forum/topic-{topic_id}-message-{message}.html"
-        return f"/masslinemedia/forum/topic-{topic_id}-page-{offset or '0'}.html"
+            return f"/massline-forums/topic-{topic_id}-message-{message}.html"
+        return f"/massline-forums/topic-{topic_id}-page-{offset or '0'}.html"
     match = re.fullmatch(r"(\d+)(?:\.(\d+))?", board)
     if match:
         board_id, offset = match.groups()
-        return f"/masslinemedia/forum/board-{board_id}-page-{offset or '0'}.html"
+        return f"/massline-forums/board-{board_id}-page-{offset or '0'}.html"
     return None
 
 
@@ -77,8 +79,10 @@ def massline_route(url: str) -> str:
                 stem, suffix = forum_path.rsplit(".", 1)
                 return f"{stem}-{tag}.{suffix}"
             return forum_path
+        if not parts.query:
+            return FORUM_PREFIX + "index.html"
         tag = sha256(canonical.encode()).hexdigest()[:12]
-        return f"/masslinemedia/forum/capture-{tag}.html"
+        return f"{FORUM_PREFIX}capture-{tag}.html"
     if parts.path in ("", "/") and not parts.query:
         return "/masslinemedia/site/index.html"
     source_path = unquote(parts.path).lstrip("/") or "index.html"
@@ -97,8 +101,14 @@ def massline_route(url: str) -> str:
     if not Path(suffix).suffix:
         suffix += "/index.html"
     if parts.path.startswith("/smf/"):
-        return "/masslinemedia/forum/" + suffix.removeprefix("smf/")
+        return FORUM_PREFIX + suffix.removeprefix("smf/")
     return "/masslinemedia/site/" + suffix
+
+
+def _massline_asset_route(url: str, kind: str) -> str:
+    parts = urlsplit(_canonical(url))
+    prefix = FORUM_PREFIX + "assets/" if parts.path.startswith("/smf/") else "/masslinemedia/assets/"
+    return prefix + sha256(_canonical(url).encode()).hexdigest()[:20] + _extension({"original": url}, kind)
 
 
 def massline_summary(rows: list[dict]) -> dict:
@@ -766,11 +776,36 @@ def _write_output(output: Path, route: str, body: bytes | str) -> None:
     target.write_bytes(body if isinstance(body, bytes) else body.encode("utf-8"))
 
 
+def _write_forum_redirect(output: Path, base: str, route: str, target_route: str) -> None:
+    target = html.escape(base.rstrip("/") + target_route, quote=True)
+    body = ("<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">"
+            f"<meta http-equiv=\"refresh\" content=\"0; url={target}\"><title>Mass Line Forums moved</title></head><body>"
+            f"<p>This forum archive has moved. <a href=\"{target}\">Open Mass Line Forums</a>.</p></body></html>")
+    _write_output(output, route, body)
+
+
+def _write_legacy_forum_redirects(output: Path, base: str, forum_routes: list[str],
+                                  board_ids: set[str], topic_ids: set[str]) -> int:
+    aliases = {LEGACY_FORUM_PREFIX + "index.html": FORUM_PREFIX + "index.html"}
+    for route in forum_routes:
+        if route.startswith(FORUM_PREFIX) and route.lower().endswith((".html", ".htm")):
+            aliases[LEGACY_FORUM_PREFIX + route[len(FORUM_PREFIX):]] = route
+    for board_id in board_ids:
+        route = f"{FORUM_PREFIX}board-{board_id}.html"
+        aliases[LEGACY_FORUM_PREFIX + f"board-{board_id}.html"] = route
+    for topic_id in topic_ids:
+        route = f"{FORUM_PREFIX}topic-{topic_id}.html"
+        aliases[LEGACY_FORUM_PREFIX + f"topic-{topic_id}.html"] = route
+    for old_route, new_route in aliases.items():
+        _write_forum_redirect(output, base, old_route, new_route)
+    return len(aliases)
+
+
 def _variant_route(url: str, timestamp: str, kind: str) -> str:
     if kind == "html":
         route = massline_route(url)
     else:
-        route = f"/masslinemedia/assets/{sha256(url.encode()).hexdigest()[:20]}{_extension({'original': url}, kind)}"
+        route = _massline_asset_route(url, kind)
     path = Path(route)
     suffix = path.suffix or ".html"
     return str(path.with_name(path.stem + "--capture-" + timestamp + suffix))
@@ -920,16 +955,16 @@ def _forum_index_pages(output: Path, output_base: str, board_rows: list[dict], t
             '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">'
             f'<title>{html.escape(title)} · Mass Line Forums</title>'
             '<style>body{max-width:980px;margin:2rem auto;padding:0 1rem;font:14px/1.5 Arial,Helvetica,sans-serif;color:#222;background:#e8edf2}a{color:#16466b}header,.panel{background:#fff;border:1px solid #9aa8b5;margin:1rem 0}header{padding:.7rem 1rem;background:#264a66;color:#fff}header a{color:#fff}.crumbs{font-size:12px}.panel h2{font-size:15px;margin:0;padding:.55rem .8rem;background:#dce6ed;border-bottom:1px solid #9aa8b5}.panel ul{list-style:none;padding:0;margin:0}.panel li{padding:.55rem .8rem;border-bottom:1px solid #e1e5e8}.panel li:last-child{border:0}small{display:block;color:#5d6870}.note{padding:.7rem .9rem;background:#f4f7f9;margin:0}</style></head><body>'
-            f'<p class="crumbs"><a href="{href("/masslinemedia/forum/index.html")}">Forum index</a> › Discussion {html.escape(topic_id)}</p>'
+            f'<p class="crumbs"><a href="{href("/massline-forums/index.html")}">Forum index</a> › Discussion {html.escape(topic_id)}</p>'
             f'<header><h1>{html.escape(title)}</h1><div>Mass Line Forums · captured discussion</div></header>'
             '<section class="panel"><h2>Saved discussion views</h2>'
             '<p class="note">Each link opens an original, dated forum capture. Missing posts and uncaptured pages are not reconstructed.</p>'
             '<ul>' + ''.join(view_links) + '</ul></section>'
-            f'<p><a href="{href("/masslinemedia/forum/index.html")}">Return to all boards and discussions</a></p></body></html>')
-        _write_output(output, f"/masslinemedia/forum/topic-{topic_id}.html", landing)
+            f'<p><a href="{href("/massline-forums/index.html")}">Return to all boards and discussions</a></p></body></html>')
+        _write_output(output, f"/massline-forums/topic-{topic_id}.html", landing)
         for board_id, group in board_groups.items():
             if topic_id in group["topics"]:
-                topic_links_by_board.setdefault(board_id, {})[topic_id] = href(f"/masslinemedia/forum/topic-{topic_id}.html")
+                topic_links_by_board.setdefault(board_id, {})[topic_id] = href(f"/massline-forums/topic-{topic_id}.html")
 
     board_links = []
     for board_id, group in sorted(board_groups.items(), key=lambda item: int(item[0])):
@@ -937,7 +972,7 @@ def _forum_index_pages(output: Path, output_base: str, board_rows: list[dict], t
         topic_count = len(group["topics"])
         page_count = len({page["route"] for page in group["pages"]})
         board_links.append(
-            f'<li><a data-board-id="{board_id}" href="{href(f"/masslinemedia/forum/board-{board_id}.html")}">{html.escape(title)}</a>'
+            f'<li><a data-board-id="{board_id}" href="{href(f"/massline-forums/board-{board_id}.html")}">{html.escape(title)}</a>'
             f'<small>{topic_count} topic titles from captured listings · {page_count} saved board views</small></li>')
         pages = sorted(group["pages"], key=lambda page: (page["offset"], page.get("timestamp", ""), page["route"]))
         topic_links = []
@@ -949,7 +984,7 @@ def _forum_index_pages(output: Path, output_base: str, board_rows: list[dict], t
                 candidates_by_route.setdefault(candidate["route"], candidate)
             candidates = list(candidates_by_route.values())
             if candidates:
-                target = href(f"/masslinemedia/forum/topic-{topic_id}.html")
+                target = href(f"/massline-forums/topic-{topic_id}.html")
                 locality = f'{len({c["route"] for c in candidates})} locally saved view(s)'
             else:
                 observed_sources = sorted(group["topic_sources"].get(topic_id, []), key=lambda source: source.get("timestamp", ""))
@@ -981,18 +1016,18 @@ def _forum_index_pages(output: Path, output_base: str, board_rows: list[dict], t
             '<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">'
             f'<title>{html.escape(title)} · Mass Line Forums</title>'
             '<style>body{max-width:1100px;margin:3rem auto;padding:0 1.2rem;font:16px/1.55 system-ui;color:#202020}a{color:#24567d}li{margin:.7rem 0}small{display:block;color:#666}.board-list{columns:2}.thread-views{margin:.3rem 0;padding-left:1.4rem}.thread-views li{margin:.2rem 0}@media(max-width:640px){.board-list{columns:1}}.note{border-left:4px solid #3985ad;padding:.5rem 1rem;background:#f3f7f8}</style><body>'
-            f'<p><a href="{href("/masslinemedia/forum/index.html")}">Forum directory</a> · <a href="{href("/masslinemedia/")}">Mass Line Media</a> · <a href="{href("/")}">Blue Scholars archive</a></p>'
+            f'<p><a href="{href("/massline-forums/index.html")}">Forum directory</a> · <a href="{href("/masslinemedia/")}">Mass Line Media</a> · <a href="{href("/")}">Blue Scholars archive</a></p>'
             f'<h1>{html.escape(title)}</h1><p class="note">Topic titles below were transcribed from captured board listings. Locally saved thread views open here; missing threads link to their dated Internet Archive replay.</p>'
             f'<h2>Topics observed in saved listings ({topic_count})</h2><ul class="board-list">'+''.join(topic_links)+'</ul>'
             f'<h2>Dated board listings ({page_count})</h2><ul>'+''.join(page_links)+'</ul></body></html>')
-        _write_output(output, f"/masslinemedia/forum/board-{board_id}.html", board_html)
+        _write_output(output, f"/massline-forums/board-{board_id}.html", board_html)
 
     all_topic_rows = []
     for topic_id, candidates in sorted(topic_groups.items(), key=lambda item: int(item[0])):
         title = topic_title(topic_id, candidates)
         if topic_id in topic_to_board:
             continue
-        all_topic_rows.append(f'<li><a href="{href(f"/masslinemedia/forum/topic-{topic_id}.html")}">{html.escape(title)}</a><small>Topic {topic_id} · {len({c["route"] for c in candidates})} locally saved view(s)</small></li>')
+        all_topic_rows.append(f'<li><a href="{href(f"/massline-forums/topic-{topic_id}.html")}">{html.escape(title)}</a><small>Topic {topic_id} · {len({c["route"] for c in candidates})} locally saved view(s)</small></li>')
 
     forum_index = (
         '<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">'
@@ -1003,7 +1038,7 @@ def _forum_index_pages(output: Path, output_base: str, board_rows: list[dict], t
         f'<h2>Boards</h2><ul class="board-list">'+''.join(board_links)+'</ul>'
         + (f'<h2>Other locally captured threads</h2><ul>{"".join(all_topic_rows)}</ul>' if all_topic_rows else '')
         + '</body></html>')
-    _write_output(output, "/masslinemedia/forum/index.html", forum_index)
+    _write_output(output, "/massline-forums/index.html", forum_index)
     return {"boards": len(board_groups), "topic_ids": len(topic_groups), "topic_landing_pages": len(topic_groups),
             "board_listing_pages": sum(len(group["pages"]) for group in board_groups.values()),
             "unassigned_topic_ids": len(all_topic_rows)}
@@ -1033,7 +1068,7 @@ def build_massline_archive(root: Path, output: Path, base: str = "", candidate: 
                 Path(urlsplit(canonical).path).suffix.lower() in {".gif", ".jpg", ".jpeg", ".png", ".webp", ".bmp", ".ico"}):
             # Preserve HTML challenges at image URLs only as raw evidence, never as displayed images.
             continue
-        route = massline_route(canonical) if record.get("kind") == "html" else f"/masslinemedia/assets/{sha256(canonical.encode()).hexdigest()[:20]}{_extension({'original': canonical}, record.get('kind', 'text'))}"
+        route = massline_route(canonical) if record.get("kind") == "html" else _massline_asset_route(canonical, record.get("kind", "text"))
         mapping[canonical] = route
         body_by_url[canonical] = body
     recovered_resource_variants = []
@@ -1146,7 +1181,7 @@ def build_massline_archive(root: Path, output: Path, base: str = "", candidate: 
                   '<p class="note">Historical restoration from Internet Archive captures. Page dates are shown individually; missing source material remains unfilled.</p>'
                   '<h1>Mass Line Media archive</h1><p><a href="'+output_base+'/">Back to Blue Scholars archive</a> · <a href="'+output_base+'/masslinemedia/">Open latest original homepage</a></p>'
                   '<ul><li><a href="'+output_base+'/masslinemedia/site/home-2009.html">Open the latest authentic site homepage (2009)</a></li>'
-                  '<li><a href="'+output_base+'/masslinemedia/forum/index.html">Browse the 2007 forum archive</a></li></ul>'
+                  '<li><a href="'+output_base+'/massline-forums/index.html">Browse the 2007 forum archive</a></li></ul>'
                   '<h2>Dated homepages from the original site era</h2><ul>'+variant_links+'</ul>'
                   '<h2>Other recovered page captures</h2><p><a href="'+output_base+'/masslinemedia/alternate-captures/">Browse '+str(len(recovered_resource_variants))+' separately dated page and asset variants</a></p>'
                   '<h2>Other captured site pages</h2><ul>'+''.join(link(i) for i in sorted(site_rows,key=lambda v:v["route"]))+'</ul>'
@@ -1165,7 +1200,7 @@ def build_massline_archive(root: Path, output: Path, base: str = "", candidate: 
             latest_home.append(latest_home.new_tag("body"))
         archive_nav = latest_home.new_tag("nav", attrs={"class": "massline-archive-nav", "aria-label": "Mass Line archive navigation"})
         for label, path in (("Blue Scholars archive", "/"), ("Dated Mass Line captures", "/masslinemedia/archive/"),
-                            ("2007 forum", "/masslinemedia/forum/")):
+                            ("2007 forum", "/massline-forums/")):
             anchor = latest_home.new_tag("a", href=output_base + path)
             anchor.string = label
             archive_nav.append(anchor)
@@ -1190,6 +1225,12 @@ def build_massline_archive(root: Path, output: Path, base: str = "", candidate: 
                                for variant, body, route in sorted(alternate_pages, key=lambda item: (item[0].get("timestamp", ""), item[0].get("source_url", ""))))+
                        '</ul></body></html>')
     _write_output(output, "/masslinemedia/alternate-captures/index.html", alternate_index)
+    legacy_forum_redirects = _write_legacy_forum_redirects(
+        output, output_base,
+        [*mapping.values(), *(route for _, _, route in recovered_resource_variants)],
+        {parsed[0] for row in board_rows if (parsed := _forum_identifier(row["url"], "board"))},
+        {parsed[0] for row in topic_rows if (parsed := _forum_identifier(row["url"], "topic"))},
+    )
     unique_gaps = {}
     for item in page_gaps:
         entry = unique_gaps.setdefault(item["url"], {"url": item["url"], "referenced_by": 0})
@@ -1200,6 +1241,8 @@ def build_massline_archive(root: Path, output: Path, base: str = "", candidate: 
               "site_pages": len(site_rows), "forum_topics": forum_directory["topic_ids"], "forum_boards": forum_directory["boards"],
               "forum_board_listing_pages": forum_directory["board_listing_pages"],
               "forum_unassigned_topic_ids": forum_directory["unassigned_topic_ids"],
+              "forum_root": FORUM_PREFIX,
+              "legacy_forum_redirects": legacy_forum_redirects,
               "homepage_variants": len(homepage_variants),
               "alternate_resources": len(recovered_resource_variants),
               "alternate_html_pages": len(alternate_pages),

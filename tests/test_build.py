@@ -586,7 +586,7 @@ def test_root_is_a_gateway_to_separate_historical_editions(tmp_path):
     assert all(card.select_one('.edition-action') for card in cards)
     assert root.select_one('a.lj-archive[href="/lj/"]')
     assert {a.get('href') for a in root.select('.archive-site-card')} == {
-        '/prometheusbrown/', '/sabzi/', '/myspace/', '/masslinemedia/', '/lj/'
+        '/prometheusbrown/', '/sabzi/', '/myspace/', '/masslinemedia/', '/massline-forums/', '/lj/'
     }
     assert all(card.select_one('.edition-action') for card in root.select('.archive-site-card'))
     assert root.select_one('a.recovery-status')

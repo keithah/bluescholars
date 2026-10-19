@@ -1,5 +1,6 @@
 """Offline validation of navigation and automatic resource dependencies."""
 from __future__ import annotations
+import re
 from pathlib import Path
 from urllib.parse import urljoin,urlsplit,unquote
 from bs4 import BeautifulSoup
@@ -47,7 +48,14 @@ def check(output: Path,base: str='') -> list[str]:
             if any(k.lower().startswith('on') for k in node.attrs): errors.append(f'{source}: active inline handler')
             if node.name=='form': errors.append(f'{source}: active historical form')
             if node.name=='script' and not node.get('src'): errors.append(f'{source}: inline script')
-            if node.name=='meta' and str(node.get('http-equiv','')).lower()=='refresh': errors.append(f'{source}: automatic refresh')
+            if node.name=='meta' and str(node.get('http-equiv','')).lower()=='refresh':
+                match=re.fullmatch(r"\s*0(?:\.0+)?\s*;\s*url\s*=\s*(?:\"([^\"]*)\"|'([^']*)'|([^\s;]+))\s*",
+                                   str(node.get('content','')),re.I)
+                target=next((value for value in match.groups() if value is not None),"") if match else ""
+                if not target or target.startswith(('#','data:')):
+                    errors.append(f'{source}: unsafe or malformed automatic refresh')
+                else:
+                    verify(target,source,True)
             for attr in ('src','poster','srcset','background'):
                 if node.get(attr):
                     if attr=='srcset':

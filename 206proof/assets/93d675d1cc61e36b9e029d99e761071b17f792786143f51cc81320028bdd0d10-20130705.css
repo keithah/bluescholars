@@ -1,0 +1,156 @@
+html {overflow-y: scroll;}
+#Frame {margin:0 auto;background-color:#f2f2f2;min-height:600px;}
+#Body{background-color:#333333;}
+body {background-color:#efefef;text-align:left;font-size:100%;font-family: Helvetica,Arial,sans-serif;}
+#Head h1 a span {color: #666;font-size: 35px;margin-left:10px;text-shadow: 0 1px 0.5px #000;font-weight:bold;letter-spacing: 0.03em;font-family: "Impact", sans-serif;}
+#Head h1 a span:hover {color:#D0441B
+	;}
+#Head .inner img {width:44px;height:44px;display:inline;display: block;position: absolute;top: 26px;}
+#Body {width:980px;}
+#Head {background-color: #232323;border-bottom: 1px solid #151515;display: block;position: relative;padding: 0;}
+#topBar {height: 4px;width: 100%;background-color:#212121;border-bottom:1px solid #4f4f4f;}
+#Foot #bottomBar {height: 4px;width: 100%;background-color:#000;border-bottom:1px solid #4f4f4f;border-top:1px solid #444444;position:absolute;top:-30px;}
+body #Head .inner h1 {border: 0 none;display: inline-block;padding: 10px 10px 4px 0;margin-top:20px;height:60px;margin-left:40px;}
+body #Head .inner {width:980px;margin: 0 auto;}
+body #Head .sShow {float:right;margin-right:10px;margin-top:40px;padding:6px 12px;background: -moz-linear-gradient(#D0441B, #BB3415) repeat scroll 0 0 #AF4009;background: -webkit-linear-gradient(#D0441B, #BB3415) repeat scroll 0 0 #AF4009;background: -o-linear-gradient(#D0441B, #BB3415) repeat scroll 0 0 #AF4009;background-color:#d0441b;border-bottom: 1px solid #4D0000;text-decoration: none;height:22px;line-height:22px;vertical-align:middle;}
+body #Head .sShow a {color: #FFFFFF;}
+body #Head .sShow:hover {background: -moz-linear-gradient(#008ACD, #006AB7) repeat scroll 0 0 #1A8FC9;background: -webkit-linear-gradient(#008ACD, #006AB7) repeat scroll 0 0 #1A8FC9;background: -o-linear-gradient(#008ACD, #006AB7) repeat scroll 0 0 #1A8FC9;border-bottom: 1px solid #001F74;background-color:#008acd;color: #FFFFFF;text-decoration: none;box-shadow: 0 1px 2px rgba(0, 0, 0, 1);-o-box-shadow: 0 1px 2px rgba(0, 0, 0, 1);-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 1);-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 1);}
+#Menu {display: inline-block;margin-right: 280px;margin-top: 3px;vertical-align: bottom;}
+.Menu {height:40px;}
+#Menu a {padding:4px 7px;font-size:13px;}
+.menuBg {background-color: #333333;border-bottom: 1px solid #444444;border-top: 1px solid #383838;box-shadow: 0 2px 0 0 #262626, 0 -1px 0 0 #171717;-o-box-shadow: 0 2px 0 0 #262626, 0 -1px 0 0 #171717;-moz-box-shadow: 0 2px 0 0 #262626, 0 -1px 0 0 #171717;-webkit-box-shadow: 0 2px 0 0 #262626, 0 -1px 0 0 #171717;display: block;margin-bottom: 1px;position: relative;z-index: 3100;}
+#Menu a:hover {background: -moz-linear-gradient(#D0441B, #BB3415) repeat scroll 0 0 #AF4009;background: -webkit-linear-gradient(#D0441B, #BB3415) repeat scroll 0 0 #AF4009;background: -o-linear-gradient(#D0441B, #BB3415) repeat scroll 0 0 #AF4009;border-bottom: 1px solid #4D0000;color: #FFFFFF;text-decoration: none;}
+#Menu li {font-weight:normal;}
+body #Head form {border-radius: 25px 25px 25px 25px;height: 33px;position: relative;box-shadow: 2px 2px 1px #212121 inset;-o-box-shadow: 2px 2px 1px #212121 inset;-moz-box-shadow: 2px 2px 1px #212121 inset;-webkit-box-shadow: 2px 2px 1px #212121 inset;}
+body #Head form input.InputBox {border-radius: 0 0 0 0;height: 22px;left: 10px;padding: 2px;position: absolute;text-align: left;top: 5px;width: 180px;background-color:#666666;color:#cccccc;}
+body #Head form input.Button {background: url("data:,");background-position:0px 0px;width:23px;height:23px;border-radius: 0 0 0 0;display: inline-block;left: 221px;margin: 0;overflow: hidden;padding: 23px 0 0;position: absolute;top: 5px;}
+body #Head form input.Button:hover {background: url("data:,");background-position:0px -23px;}
+#Head form {background: none repeat scroll 0 0 #666666;float: right;margin: 15px 0 0;padding: 0;width: 250px;}
+input.Button {box-shadow:none;}
+#Head .Search, #Head #Search {bottom: 3px;}
+div.Popup h1, div.Popup h2 {background: none repeat scroll 0 0 #232323;border-bottom: 1px solid #151515;}
+#Foot {background-color: #333333;border-bottom: 1px solid #444444;border-top: 1px solid #383838;box-shadow: 0 2px 0 0 #262626, 0 -1px 0 0 #171717;-o-box-shadow: 0 2px 0 0 #262626, 0 -1px 0 0 #171717;-moz-box-shadow: 0 2px 0 0 #262626, 0 -1px 0 0 #171717;-webkit-box-shadow: 0 2px 0 0 #262626, 0 -1px 0 0 #171717;color: #8F887C;padding:0;height:220px;position:relative;overflow:hidden;}
+#Foot div {width:980px;padding:4px 0;}
+.footmain {width:980px;height:140px;position:relative;}
+.footleft {float:left;width:199px !important;height:140px;position:absolute;left:0px;top:0px;margin:0 !important;border-right:1px solid #444444;}
+.footright {float:left;position:absolute;top:0px;left:200px;height:140px !important;margin:0 !important;width:260px !important;border-left:1px solid #212121;border-right:1px solid #444444;}
+.footfarright {float:left;position:absolute;top:0px;left:460px;height:140px !important;border-left:1px solid #212121;margin: 0!important;width:500px !important;}
+.footleft h3 {font-size:18px;color:#f2f2f2;font-family:"Helvetica Neue",sans-serif;text-shadow:1px 1px 1px #212121;}
+.footright h3 {font-size:18px;color:#f2f2f2;font-family:"Helvetica Neue",sans-serif;margin-left:10px;text-shadow:1px 1px 1px #212121;}
+.footfarright h3 {font-size:18px;color:#f2f2f2;font-family:"Helvetica Neue",sans-serif;margin-left:10px;text-shadow:1px 1px 1px #212121;}
+.footleft ul {margin-top:10px;margin-left:12px;}
+.footleft ul li a{color:#8F887C;font-size:13px;line-height:15px;-moz-transition: all 0.2s linear 0s;-webkit-transition: all 0.2s linear 0s;-o-transition: all 0.2s linear 0s;}
+.footleft ul li a:hover{color:#008acd !important;text-decoration:none;}
+#footlist li {list-style-type: circle;}
+.Foot {background-color:#f2f2f2;background:#f2f2f2;border-bottom: 1px solid #dedede;}
+#Status {background-color:#f2f2f2;background:#f2f2f2;}
+.socials {display: block;list-style: none outside none;margin-top: 10px;width: 260px;}
+.socials > li {display: block;float: left;margin-left: 10px;opacity:0.4;filter:alpha(opacity=40);}
+.socials > li:hover {opacity:1;filter:alpha(opacity=100);-moz-transition: all 0.2s linear 0s;-webkit-transition: all 0.2s linear 0s;-o-transition: all 0.2s linear 0s;}
+.socials > li img {width: 48px;}
+body.Entry li.Buttons input.Button, .SignInPopup li.Buttons input.Button {margin: 10px 0;background: -moz-linear-gradient(#D0441B, #BB3415) repeat scroll 0 0 #AF4009;background: -webkit-linear-gradient(#D0441B, #BB3415) repeat scroll 0 0 #AF4009;background: -o-linear-gradient(#D0441B, #BB3415) repeat scroll 0 0 #AF4009;border-bottom: 1px solid #4D0000;color:#fff;text-shadow:none;border:none;border-radius:0;}
+body.Entry li.Buttons input.Button:hover, .SignInPopup li.Buttons input.Button:hover {background: -moz-linear-gradient(#008ACD, #006AB7) repeat scroll 0 0 #1A8FC9;background: -webkit-linear-gradient(#008ACD, #006AB7) repeat scroll 0 0 #1A8FC9;background: -o-linear-gradient(#008ACD, #006AB7) repeat scroll 0 0 #1A8FC9;}
+a.Close {color:#d0441b;}
+a.Close:hover {color:#008acd;}
+a {color:#d0441b;}
+a:hover {color:#008acd;}
+body.Entry #Content {width: 760px;}
+.left {float: left;width: 320px;}
+.right {float: left;margin-left: 20px;width: 320px;}
+#dashboard_entry_register #Frame #Body {background-color:#f2f2f2;height:380px;}
+#dashboard_entry_register #Frame #Body #Content .Box {background:#f2f2f2;height:340px;box-shadow:none;border-radius:none;}
+#dashboard_entry_signin #Content {background:#f2f2f2;}
+body.Entry #Content h1 {color:#008ACD;}
+.tweet_slider {overflow:hidden !important;position:relative;margin:10px 0;padding:0;}
+.tweet_slider h4 {text-align:left;margin:10px 0;padding:0
+;}
+.tweet_slider ul {list-style:none;margin:0;padding:0;position:relative;}
+.tweet_slider ul li {margin:0;margin-top:-26px;float:left;position:relative;left:0;}
+a.nextButton {display:none;}
+.controls {line-height:24px;height: 24px;}
+a.prevButton {display:none;}
+.tweet_slider ul li div, .tweet_slider ul li div span {width:auto;text-align:left;margin:0 auto;}
+.tweet_slider ul li img {padding-right:2px
+
+;}
+#DiscussionForm form {background-color: #fff;border: 1px solid #ededed;border-radius: 0px;margin: 0;padding: 20px;}
+#vanilla_post_discussion #DiscussionForm .Button {background: -moz-linear-gradient(#D0441B, #BB3415) repeat scroll 0 0 #AF4009;background: -webkit-linear-gradient(#D0441B, #BB3415) repeat scroll 0 0 #AF4009;background: -o-linear-gradient(#D0441B, #BB3415) repeat scroll 0 0 #AF4009;border-bottom: 1px solid #4D0000;color:#fff;text-shadow:none;border:none;border-radius:0;}
+#vanilla_post_discussion #DiscussionForm .Button:hover {background: -moz-linear-gradient(#008ACD, #006AB7) repeat scroll 0 0 #1A8FC9;background: -webkit-linear-gradient(#008ACD, #006AB7) repeat scroll 0 0 #1A8FC9;background: -o-linear-gradient(#008ACD, #006AB7) repeat scroll 0 0 #1A8FC9;}
+.MessageForm, .Tabs, .Headings {background: none repeat scroll 0 0 #f2f2f2;border-bottom: 1px solid #dedede;display: block;margin: 0;padding: 5px 8px;position: relative;}
+.Mine {background: none repeat scroll 0 0 #f2f2f2;}
+.MessageList .Item {border-bottom: 1px solid #dedede;padding: 10px 10px 4px;}
+.Item .Author img {background: none repeat scroll 0 0 #ffffff;-moz-transform: rotate(-15deg);-webkit-transform: rotate(-15deg);-o-transform: rotate(-15deg);border-color: #cccccc #cccccc #666666 #666666;border-style: solid;border-width: 1px 1px 1px;box-shadow: -5px 5px 5px rgba(182, 182, 182, 0.75);-o-box-shadow: -5px 5px 5px rgba(182, 182, 182, 0.75);-moz-box-shadow: -5px 5px 5px rgba(182, 182, 182, 0.75);-webkit-box-shadow: -5px 5px 5px rgba(182, 182, 182, 0.75);padding: 4px 4px 10px;vertical-align: middle;float: left;height: 40px;margin: 0 10px 0 0;overflow: hidden;width: 40px;}
+.TabLink, .TabLink:link, .TabLink:active, .TabLink:visited {background: -moz-linear-gradient(#D0441B, #BB3415) repeat scroll 0 0 #AF4009;background: -webkit-linear-gradient(#D0441B, #BB3415) repeat scroll 0 0 #AF4009;background: -o-linear-gradient(#D0441B, #BB3415) repeat scroll 0 0 #AF4009;border-bottom: 1px solid #4D0000;color:#fff;display: inline;font-weight: bold;line-height: 2.6;margin: 0;padding: 5px 10px;text-decoration: none;white-space: nowrap;text-shadow:none;border:none;border-radius:0;background-color:#d0441b;}
+.TabLink:hover {background: -moz-linear-gradient(#008ACD, #006AB7) repeat scroll 0 0 #1A8FC9;background: -webkit-linear-gradient(#008ACD, #006AB7) repeat scroll 0 0 #1A8FC9;background: -o-linear-gradient(#008ACD, #006AB7) repeat scroll 0 0 #1A8FC9;background-color:#008ACD;}
+.Active .TabLink {background: none repeat scroll 0 0 #FFFFFF;color: #474747;}
+.Author a {color:#212121;}
+.Author a:hover {color:#008ACD;}
+.Buttons .Button, #dashboard_activity_index .Activity .Button, #dashboard_profile_activity .Buttons .Button, dashboard_activity_index .Activity .Buttons .Button, #dashboard_profile_activity .Button{background: -moz-linear-gradient(#D0441B, #BB3415) repeat scroll 0 0 #AF4009;background: -webkit-linear-gradient(#D0441B, #BB3415) repeat scroll 0 0 #AF4009;background: -o-linear-gradient(#D0441B, #BB3415) repeat scroll 0 0 #AF4009;border-bottom: 1px solid #4D0000;color:#fff;border-radius: 0;border:none;box-shadow: none;cursor: pointer;font-size: 14px;margin: 0;padding: 4px;text-shadow: none;white-space: nowrap;}
+.Buttons .Button:hover, #dashboard_activity_index .Activity .Button:hover, #dashboard_profile_activity .Button:hover{background: -moz-linear-gradient(#008ACD, #006AB7) repeat scroll 0 0 #1A8FC9;background: -webkit-linear-gradient(#008ACD, #006AB7) repeat scroll 0 0 #1A8FC9;background: -o-linear-gradient(#008ACD, #006AB7) repeat scroll 0 0 #1A8FC9;border:none;box-shadow:none;color:#fff;}
+.Tabs li a span {background: none repeat scroll 0 0 #333333;border-radius: 10px;color: #fff;font-weight:100%;font-weight:bold;}
+.Preview {background: none repeat scroll 0 0 #666666;margin: 4px 0 8px;padding: 1px 8px;text-align: left;color:#fff;-moz-transition: all 0.2s linear 0s;-webkit-transition: all 0.2s linear 0s;-o-transition: all 0.2s linear 0s;}
+body.Profile #Panel {float: left;width: 230px;}
+#Panel .Photo {width:230px;height:120px;background-color:#f2f2f2;}
+#Panel .Photo img {background: none repeat scroll 0 0 #ffffff;-moz-transform: rotate(-15deg);-webkit-transform: rotate(-15deg);-o-transform: rotate(-15deg);border-color: #cccccc #cccccc #666666 #666666;border-style: solid;border-width: 1px 1px 1px;box-shadow: -5px 5px 5px rgba(182, 182, 182, 0.75);-o-box-shadow: -5px 5px 5px rgba(182, 182, 182, 0.75);-moz-box-shadow: -5px 5px 5px rgba(182, 182, 182, 0.75);-webkit-box-shadow: -5px 5px 5px rgba(182, 182, 182, 0.75);padding: 4px 4px 10px;vertical-align: middle;float: left;height: 100px;margin: 0 10px 10px 60px;overflow: hidden;width: 100px;}
+.DataList .Item {border-color: -moz-use-text-color -moz-use-text-color #dedede;}
+.PanelInfo li {background: none repeat scroll 0 0 #f2f2f2;background-color:#f2f2f2;border-bottom: 0 none;}
+body.Profile .PanelInfo {border-bottom: 0 none;}
+.PanelInfo {border-bottom: 0 none;border-top: 0 none;}
+body.Profile #Panel {border-right:1px solid #dedede;}
+.Count {background: none repeat scroll 0 0 #333333;border-radius: 0px;color: #FFFFFF;font-size: 80%;font-weight: normal;padding: 1px 0.8ex;}
+a.BigButton {background: -moz-linear-gradient(#D0441B, #BB3415) repeat scroll 0 0 #AF4009;background: -webkit-linear-gradient(#D0441B, #BB3415) repeat scroll 0 0 #AF4009;background: -o-linear-gradient(#D0441B, #BB3415) repeat scroll 0 0 #AF4009;border:none;color:#332F2C;border-radius: 0;box-shadow: none;cursor: pointer;display: block;font-size: 15px;font-weight: bold;margin: 0 0 10px;padding: 8px 0;text-align: center;text-shadow: none;}
+a.BigButton:hover {background-color: #006AB7
+	border:none;box-shadow: none;color: #332F2C;}
+a.BigButton:focus {background: none repeat scroll 0 0 #333333;box-shadow: none;}
+.MainForm a.Button, .MainForm .Button {background:none;background-color:#D0441B;}
+.MainForm a.Button:hover, .MainForm .Button:hover {background:none;background-color:#D0441B;}
+#Panel .Box h4 {background-color: #332F2C;color: #FFFFFF;font-size: 100%;font-weight: normal;line-height: normal;padding: 10px 15px;}
+#Panel .Box .PanelInfo li.Active {background-color: #e0dfda;}
+#Panel .Box .PanelInfo li.Depth2 {padding-left: 25px;}
+#Panel .Box .PanelInfo li.Depth3 {padding-left: 35px;}
+#Panel .Box .PanelInfo li.Depth4 {padding-left: 45px;}
+#Panel .GuestBox {padding-bottom: 15px;border: 1px solid #ededed;}
+#Panel .GuestBox p {padding: 0 15px;}
+#Panel {width: 250px;padding-right: 0px;padding-top: 30px;position: relative;}
+#dashboard_profile_index #Panel, #dashboard_profile_activity #Panel, #dashboard_profile_discussions #Panel, #dashboard_profile_comments #Panel{width: 23.4%;padding-right: 3%;}
+#Panel .Box {-moz-border-radius: 0;-webkit-border-radius: 0;-o-border-radius: 0;border-radius: 0;-moz-box-shadow: 0 0 0 transparent;-webkit-box-shadow: 0 0 0 transparent;-o-box-shadow: 0 0 0 transparent;box-shadow: 0 0 0 transparent;background-color: #fafafa;padding: 0;margin-bottom: 30px;}
+#Panel .Box p {}
+#Panel .Box a {color: #332f2c;}
+#Panel .Box a:hover {color: #D0441B;}
+#Panel .Box a.Button {color: #332F2C;}
+#Panel .Box h4 {background-color: #332f2c;color: #fff;font-weight: normal;padding: 10px 15px;line-height: normal;font-size: 100%;}
+#Panel .Box h4 a {color: #fff;}
+#Panel .Box .PanelInfo {border-bottom: 1px solid #ededed;border-top: none;}
+#Panel .Box .PanelInfo li {font-size: 87.5%;background: transparent;border-top: 1px solid #ededed;border-left: 1px solid #ededed;border-right: 1px solid #ededed;border-bottom: none;padding: 8px 15px 8px;line-height: normal;font-weight: normal;vertical-align: bottom;}
+#Panel .Box .PanelInfo li:hover {background-color:#f2f2f2;}
+#Panel .Box .PanelInfo li strong {line-height: normal;}
+#Panel .Box .PanelInfo li .Meta {margin-top: 7px;}
+#Panel .Box .PanelInfo li span.Count {display: inline-block;border: none;background-color: #D0441B;padding: 2px 5px;text-align: center;min-width: 25px;-moz-border-radius: 3px;-webkit-border-radius: 3px;-o-border-radius: 3px;border-radius: 3px;font-size: 68.75%;vertical-align: text-top;margin-top: -3px;color:#fff;}
+.Activities .Excerpt a, .Activities .Meta a {color: #D0441B;}
+.Activities .Excerpt a:hover, .Activities .Meta a:hover {color: #008ACD;}
+.Box dl dt {margin-left:10px;}
+.ac_over strong {background: none repeat scroll 0 0 #D0441B;font-weight: bold;}
+.ac_over {background: none repeat scroll 0 0 #232323;color: #FFFFFF;padding:2px 4px;}
+#MessageForm {background: none repeat scroll 0 0 #f2f2f2;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;margin: 1px 0 0;padding: 4px 8px 8px;}
+.MessageForm .Tabs .NoTab a, .Button, a.Button, a.Button:active, a.Button:visited {background: -moz-linear-gradient(#D0441B, #BB3415) repeat scroll 0 0 #AF4009;background: -webkit-linear-gradient(#D0441B, #BB3415) repeat scroll 0 0 #AF4009;background: -o-linear-gradient(#D0441B, #BB3415) repeat scroll 0 0 #AF4009;border: medium none;box-shadow: none;color: #FFFFFF;font-family: Helvetica,Arial,sans-serif;font-size: 87.5%;font-weight: normal;padding: 4px 10px;text-shadow: none;border-radius:0;}
+.MessageForm .Tabs .NoTab a:hover, .Button:hover, a.Button:hover, a.Button:active:hover, a.Button:visited:hover {background: -moz-linear-gradient(#008ACD, #006AB7) repeat scroll 0 0 #1A8FC9;background: -webkit-linear-gradient(#008ACD, #006AB7) repeat scroll 0 0 #1A8FC9;background: -o-linear-gradient(#008ACD, #006AB7) repeat scroll 0 0 #1A8FC9;border: medium none;box-shadow: none;color: #FFFFFF;text-shadow: 0 0 0 transparent;}
+#dashboard_entry_emailconfirm #Body ,#dashboard_entry_emailconfirmrequest #Body{background-color:#f2f2f2;}
+#ConversationForm form {background: none repeat scroll 0 0 #f2f2f2;border-radius: 0px;margin: 0;padding: 20px;text-align: right;}
+#Menu a span, #Menu li.Active a span, #Menu li.Highlight a:hover span {background: none repeat scroll 0 0 #D0441B;color: #fff;font-size: 12px;font-weight: bold;line-height: 12px;padding: 0 2px;text-shadow: none;}
+li.token-input-token {background-color: #D0441B;border: none;border-radius: 0px;color: #fff;font-size: 12px;}
+li.token-input-token:hover {background-color: #008ACD;}
+li.token-input-token span {color: #fff;}
+li.token-input-token span:hover {color: #000;}
+.Preview .Message, .Preview .Message p, .MessageList .Message, .MessageList .Message p {margin: 8px 0;padding-top:8px;}
+.P {margin:10px;}
+.Tabs .SubTab {background: none repeat scroll 0 0 #f2f2f2;border-radius: 0px;}
+.SubTab a {color: #333333;font-weight: bold;font-size: 22px;}
+ul.Discussions li.Item.NillaBlog {border: none;border-radius: 0px;box-shadow: none;-moz-box-shadow: none;-webkit-box-shadow: none;-o-box-shadow: none;margin: 14px 0 25px;padding: 8px 0;border-bottom: 1px solid #DEDEDE;}
+.NillaBlog.Mine {background: none repeat scroll 0 0 #fff;}
+ul.MessageList li.Item.FirstComment.NillaBlog {border-radius:0px;border-color: -moz-use-text-color #dedede #dedede;border-top-left-radius: 0px;border-top-right-radius: 0px;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;}
+div.Tabs.HeadingTabs.FirstPage {border-top-left-radius: 0px;border-top-right-radius: 0px;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;border-color: #dedede #dedede -moz-use-text-color;}
+.NillaBlog .RSS img {-moz-transform: none;border: 0 none;box-shadow: none;height: 14px;margin-right: 4px;padding: 0;width: 14px;}
+.MetaItem {margin-left:10px;}
+ul.Discussions li img {float: left;height: 40px;width: 40px;-moz-transform: rotate(-15deg);-webkit-transform: rotate(-15deg);-o-transform: rotate(-15deg);border-color: #cccccc #cccccc #666666 #666666;padding: 4px;border-style: solid;border-width: 1px 1px 1px;box-shadow: -5px 5px 5px rgba(182, 182, 182, 0.75);-o-box-shadow: -5px 5px 5px rgba(182, 182, 182, 0.75);-moz-box-shadow: -5px 5px 5px rgba(182, 182, 182, 0.75);-webkit-box-shadow: -5px 5px 5px rgba(182, 182, 182, 0.75);background: none repeat scroll 0 0 #ffffff;}
+.PhotoGridSmall img {height: 24px;margin: 1px;vertical-align: text-bottom;width: 24px;-moz-transform: rotate(-15deg);-webkit-transform: rotate(-15deg);-o-transform: rotate(-15deg);border-color: #cccccc #cccccc #666666 #666666;padding: 4px;border-style: solid;border-width: 1px 1px 1px;box-shadow: -5px 5px 5px rgba(182, 182, 182, 0.75);-o-box-shadow: -5px 5px 5px rgba(182, 182, 182, 0.75);-moz-box-shadow: -5px 5px 5px rgba(182, 182, 182, 0.75);-webkit-box-shadow: -5px 5px 5px rgba(182, 182, 182, 0.75);background: none repeat scroll 0 0 #ffffff;}
+.PhotoGridSmall {line-height: 1;margin: 8px -1px;}

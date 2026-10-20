@@ -484,3 +484,10 @@
 - Fixed asset queue identity so resource kind is part of deduplication: a failed HTML response no longer blocks recovery of an image representation at the same URL/date. Its regression test passes; the full suite passes 236 tests.
 - Rebuilt the integrated candidate: 240 2007 pages, 2,739 Vanilla pages, 642 community pages, 77 vBulletin pages, 668 local assets, and 4,289 source gaps. The latest `/bluescholars/` checker passes with zero errors. Root-mode candidate check was completed on the preceding source checkpoint; CI run 39364294754 passed tests and root/project-subpath release checks.
 - Browser smoke inspection opened the archive hub, the Vanilla index and 2007 Seaclipse topic, and the July 2013 community homepage; its local stylesheets and images returned HTTP 200. This is not a human review; the new preview is still undeployed.
+
+## 2026-10-20 — recover another 160 forum pages and account images
+
+- Recovered all 160 selected Vanilla pages in this batch, primarily account/profile captures. The selector is now 2,980 attempted of 5,137, with 2,157 unattempted.
+- These pages exposed 39 additional same-domain CSS/image URLs. The resumable asset fetcher saved 54 validated capture payloads, largely original account pictures. The updated indexes cover 4,019 HTML pages, 53,383 asset references, 1,554 URLs (657 with successful CDX rows, 897 without), and 965 external-media leads.
+- The manifest now records 5,132 attempts (5,089 validated, 43 failed), 4,597 unique hashes, and 127,461,412 bytes. The candidate contains 240 2007 pages, 2,779 Vanilla pages, 642 community pages, 77 vBulletin pages, 671 local assets, and 4,290 linked source gaps.
+- The refreshed `/bluescholars/` candidate check passed with zero errors. Browser smoke inspection of a recovered account page returned the local profile GIF, era-specific CSS, and surrounding JPEG/PNG images with HTTP 200. This remains smoke inspection, not a human visual review.

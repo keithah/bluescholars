@@ -1,0 +1,60 @@
+{
+  "checked_utc": "2026-10-20",
+  "purpose": "Retry exact Common Crawl CDX lookups after the initial bounded requests returned gateway errors.",
+  "queries": [
+    {
+      "collection": "CC-MAIN-2013-48",
+      "url": "http://www.206proof.com/",
+      "query_status": 200,
+      "rows": [
+        {
+          "timestamp": "20131205101508",
+          "url": "http://www.206proof.com/",
+          "mime": "text/html",
+          "status": "200",
+          "digest": "OZ4SHFSPW6FB7DY7TDV4P2NXHKR57LTM",
+          "length": "611",
+          "offset": "205483082",
+          "filename": "crawl-data/CC-MAIN-2013-48/segments/1386163043499/warc/CC-MAIN-20131204131723-00008-ip-10-33-133-15.ec2.internal.warc.gz",
+          "replay_result": "failed full HTML validation: Expected a full HTML document"
+        },
+        {
+          "timestamp": "20131207150348",
+          "url": "http://206proof.com/",
+          "mime": "text/html",
+          "status": "200",
+          "digest": "OZ4SHFSPW6FB7DY7TDV4P2NXHKR57LTM",
+          "length": "610",
+          "offset": "303542",
+          "filename": "crawl-data/CC-MAIN-2013-48/segments/1386163054867/warc/CC-MAIN-20131204131734-00091-ip-10-33-133-15.ec2.internal.warc.gz",
+          "replay_result": "failed full HTML validation: Expected a full HTML document"
+        }
+      ]
+    },
+    {
+      "collection": "CC-MAIN-2013-48",
+      "url": "http://www.206proof.com/forum/",
+      "query_status": 404,
+      "result": "No Captures found"
+    },
+    {
+      "collection": "CC-MAIN-2013-48",
+      "url": "http://www.206proof.com/forum/comments.php?DiscussionID=988&page=1",
+      "query_status": 504,
+      "result": "Gateway Time-out"
+    },
+    {
+      "collection": "CC-MAIN-2012",
+      "url": "http://www.206proof.com/forum/comments.php?DiscussionID=988&page=1",
+      "query_status": 404,
+      "result": "No Captures found"
+    },
+    {
+      "collection": "CC-MAIN-2009-2010",
+      "url": "http://www.206proof.com/forum/comments.php?DiscussionID=988&page=1",
+      "query_status": 504,
+      "result": "Gateway Time-out"
+    }
+  ],
+  "note": "These independently indexed rows are not usable historical site content: both root WARC bodies fail full HTML validation, the 2013 forum root and 2012 thread have no Common Crawl row, and two other thread queries remain unresolved gateway errors. No Common Crawl pages were added to the reconstruction."
+}

@@ -46,7 +46,7 @@ def test_build_preserves_separate_206proof_editions_and_localizes_captured_conte
     pages = [
         ("http://206proof.com/", "20071012230232", '<!doctype html><html><head><title>206Proof home</title><link rel="stylesheet" href="/themes/206Proof/styles/default/vanilla.css"></head><body><h1>206Proof</h1><a href="/forum/">Forum</a></body></html>'),
         ("http://www.206proof.com/forum/", "20120305080527", '<!doctype html><html><head><title>206Proof Forum</title><link rel="stylesheet" href="/forum/themes/206Proof/styles/default/vanilla.css"></head><body><h1>General</h1><a href="/forum/comments.php?DiscussionID=9">A recovered topic</a><a href="/forum/comments.php?DiscussionID=10">Uncaptured variant</a><a href="/forum/missing.php">Missing topic</a><form action="/forum/post.php"><button>Post</button></form><img src="/forum/uploads/avatar.jpg"><script src="http://tracker.test/ad.js"></script></body></html>'),
-        ("http://206proof.com/forum/comments.php?DiscussionID=9", "20120305090000", '<!doctype html><html><head><title>A recovered topic</title></head><body><h1>A recovered topic</h1><a href="/forum/">Back to discussions</a><a href="hthttp://www.mediafire.com/download.php?ynzyhyt2jum">HERE</a></body></html>'),
+        ("http://206proof.com/forum/comments.php?DiscussionID=9", "20120305090000", '<!doctype html><html><head><title>A recovered topic</title></head><body><h1>A recovered topic</h1><a href="/forum/">Back to discussions</a><a href="hthttp://www.mediafire.com/download.php?ynzyhyt2jum">HERE</a><a href="hhttp://www.youtube.com/watch?v=bad-prefix">Video</a></body></html>'),
         ("http://206proof.com/4um/", "20130824231448", '<!doctype html><html><head><title>Seattle Message Board</title></head><body><h1>vBulletin edition</h1></body></html>'),
     ]
     assets = [
@@ -108,3 +108,5 @@ def test_build_preserves_separate_206proof_editions_and_localizes_captured_conte
     assert 'data-original-href="hthttp://www.mediafire.com/download.php?ynzyhyt2jum"' in topic_html
     assert 'aria-disabled="true"' in topic_html
     assert ' <a href="hthttp://www.mediafire.com' not in topic_html
+    assert 'data-original-href="hhttp://www.youtube.com/watch?v=bad-prefix"' in topic_html
+    assert ' <a href="hhttp://www.youtube.com' not in topic_html

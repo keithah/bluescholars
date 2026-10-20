@@ -306,9 +306,9 @@ def _localize_html(text: str, original: str, timestamp: str, edition: str,
             anchor.attrs.pop("href", None)
             continue
         # Preserve malformed source URLs as provenance without exposing them as
-        # clickable links. This exact duplicated-prefix typo occurs in the
-        # captured 206proof discussion and is not safe to silently repair.
-        if lower.startswith("hthttp://"):
+        # clickable links. Duplicated-prefix typos occur in captured 206proof
+        # discussions and are not safe to silently repair.
+        if lower.startswith(("hthttp://", "hhttp://")):
             anchor["data-original-href"] = value
             anchor["aria-disabled"] = "true"
             anchor["title"] = "Malformed URL in archived source; link disabled"

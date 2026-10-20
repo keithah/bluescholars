@@ -305,6 +305,16 @@ def _localize_html(text: str, original: str, timestamp: str, edition: str,
         if lower.startswith(("javascript:", "data:", "denied:")):
             anchor.attrs.pop("href", None)
             continue
+        # Preserve malformed source URLs as provenance without exposing them as
+        # clickable links. This exact duplicated-prefix typo occurs in the
+        # captured 206proof discussion and is not safe to silently repair.
+        if lower.startswith("hthttp://"):
+            anchor["data-original-href"] = value
+            anchor["aria-disabled"] = "true"
+            anchor["title"] = "Malformed URL in archived source; link disabled"
+            anchor.attrs.pop("href", None)
+            issues.append({"type": "malformed_external_link", "source": original, "url": value})
+            continue
         absolute = _join_url(original, value)
         if not absolute:
             anchor.attrs.pop("href", None)

@@ -1,4 +1,4 @@
-from restore.recovery_206proof import select_latest_vanilla
+from restore.recovery_206proof import resource_identity, select_latest_vanilla
 from restore.proof206 import build_206proof_archive
 
 
@@ -26,6 +26,12 @@ def test_select_latest_vanilla_keeps_host_alias_as_distinct_source_identity():
         {"timestamp": "20120301000000", "original": "http://www.206proof.com/forum/", "statuscode": "200", "mimetype": "text/html"},
     ]
     assert len(select_latest_vanilla(rows)) == 2
+
+
+def test_asset_capture_identity_keeps_same_url_and_date_separate_by_resource_type():
+    failed_html = {"requested_capture": "20120305172220", "original": "http://206proof.com/forum/uploads/nl.jpg", "kind": "html"}
+    image = {**failed_html, "kind": "image"}
+    assert resource_identity(failed_html) != resource_identity(image)
 
 
 def test_build_preserves_separate_206proof_editions_and_localizes_captured_content(tmp_path):

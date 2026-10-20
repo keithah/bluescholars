@@ -4,6 +4,13 @@ from __future__ import annotations
 from urllib.parse import urlsplit
 
 
+def resource_identity(row: dict) -> tuple[str, str, str]:
+    """Identify a recovered representation without conflating MIME roles."""
+    return (str(row.get("requested_capture", "")),
+            str(row.get("original", "")),
+            str(row.get("kind", "")))
+
+
 def select_latest_vanilla(rows: list[dict]) -> list[dict]:
     """Select the latest valid Vanilla HTML capture per exact URL through 2012.
 

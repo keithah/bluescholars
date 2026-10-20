@@ -3,6 +3,7 @@ from pathlib import Path
 from urllib.parse import urlsplit,unquote
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from restore.archive import ArchiveClient,validate_payload
+from restore.recovery_206proof import resource_identity
 from restore.urls import capture_from
 root=Path('recovery/206proof'); data=json.loads((root/'asset-index.json').read_text());
 def canon(u):
@@ -16,7 +17,7 @@ for item in data['assets']:
  g['references']+=item['references'];g['captures']+=item['captures'];g['source_urls'].append(item['url'])
 for g in groups.values():
  unique={ (r['timestamp'],r['original'],r.get('digest')):r for r in g['captures'] };g['captures']=list(unique.values())
-manifest_path=root/'recovered-resources.json';m=json.loads(manifest_path.read_text());seen={(r.get('requested_capture'),r.get('original')) for r in m['resources']}
+manifest_path=root/'recovered-resources.json';m=json.loads(manifest_path.read_text());seen={resource_identity(r) for r in m['resources']}
 queue=[]
 for g in groups.values():
  for ref in g['references']:
@@ -25,7 +26,7 @@ for g in groups.values():
   # Choose the indexed valid payload closest to the referring page capture.
   def score(r):return (abs(int(r['timestamp'][:8])-int(ts[:8])),0 if r['timestamp']<=ts else 1,r['timestamp'])
   row=min(g['captures'],key=score)
-  key=(row['timestamp'],row['original'])
+  key=(row['timestamp'],row['original'],g['kind'])
   if key in seen:continue
   queue.append((row,g,ref));seen.add(key)
 # one best dependency variant per requested source capture; bounded batch supports retries/resume.

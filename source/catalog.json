@@ -338169,8 +338169,64 @@
       "source_archive": "Internet Archive Wayback"
     },
     "http://bluescholars.com:80/images/menu_press_off.gif": {
-      "attempts": [],
+      "actual_capture": "20040813213957",
+      "attempts": [
+        {
+          "at": "2026-10-21T22:17:21.513358+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20210529010817id_/http://bluescholars.com:80/images/menu_press_off.gif (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://bluescholars.com:80/images/menu_press_off.gif",
+          "requested_capture": "20210529010817",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-21T22:17:24.810867+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20060209161003id_/http://bluescholars.com:80/images/menu_press_off.gif (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20060209161003id_/http://bluescholars.com:80/images/menu_press_off.gif",
+          "requested_capture": "20060209161003",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-21T22:17:26.882170+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20050211045624id_/http://bluescholars.com:80/images/menu_press_off.gif (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20050211045624id_/http://bluescholars.com:80/images/menu_press_off.gif",
+          "requested_capture": "20050211045624",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-21T22:21:49.776049+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20050211045528id_/http://bluescholars.com:80/images/menu_press_off.gif (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20050211045528id_/http://bluescholars.com:80/images/menu_press_off.gif",
+          "requested_capture": "20050211045528",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-21T22:21:51.781434+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20050204153007id_/http://bluescholars.com:80/images/menu_press_off.gif (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20050204153007id_/http://bluescholars.com:80/images/menu_press_off.gif",
+          "requested_capture": "20050204153007",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-21T22:21:53.804262+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20050204141011id_/http://bluescholars.com:80/images/menu_press_off.gif (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20050204141011id_/http://bluescholars.com:80/images/menu_press_off.gif",
+          "requested_capture": "20050204141011",
+          "result": "failed"
+        },
+        {
+          "actual_capture": "20040813213957",
+          "at": "2026-10-21T22:26:58.311816+00:00",
+          "request_url": "https://web.archive.org/web/20041210033928id_/http://bluescholars.com:80/images/menu_press_off.gif",
+          "requested_capture": "20041210033928",
+          "result": "downloaded",
+          "sha256": "ce44b35d76c9c955153a640ffd88bcae9d2a3b0fd719eb3c00a93116ed6c3069"
+        }
+      ],
+      "bytes": 2185,
       "captures": [],
+      "content_type": "image/gif",
+      "final_original": "http://www.bluescholars.com/images/menu_press_off.gif",
+      "final_url": "https://web.archive.org/web/20040813213957id_/http://www.bluescholars.com/images/menu_press_off.gif",
       "hints": [
         "20050204153007",
         "20040812114250",
@@ -338182,6 +338238,8 @@
         "20050211045624"
       ],
       "kind": "image",
+      "raw_path": "source/raw/ce44b35d76c9c955153a640ffd88bcae9d2a3b0fd719eb3c00a93116ed6c3069.gif",
+      "reason": "Untried capture dates or exact-URL index pages remain",
       "referrers": [
         "http://bluescholars.com:80/bio.htm",
         "http://bluescholars.com:80/links.htm",
@@ -338192,8 +338250,12 @@
         "http://bluescholars.com:80/events_2004.htm",
         "http://bluescholars.com:80/events_2005.htm"
       ],
-      "status": "queued",
-      "url": "http://bluescholars.com:80/images/menu_press_off.gif"
+      "retrieved_at": "2026-10-21T22:27:00.544609+00:00",
+      "sha256": "ce44b35d76c9c955153a640ffd88bcae9d2a3b0fd719eb3c00a93116ed6c3069",
+      "status": "recovered",
+      "url": "http://bluescholars.com:80/images/menu_press_off.gif",
+      "source_reviewed": true,
+      "source_archive": "Internet Archive Wayback"
     },
     "http://bluescholars.com:80/images/menu_spacer.gif": {
       "actual_capture": "20040814010038",

@@ -186,3 +186,9 @@ The third and fourth batches returned 37 additional exact image URL records. The
 A fifth 50-resource batch resolved 17 archived image URLs and added one distinct 161,789-byte JPEG. The image is linked by the captured August 25, 2008 Blue Scholars blog post “Denver, Day 1”; its original host was The Stranger. I hash-verified and visually inspected the file, recorded its 2011-07-17 Wayback timestamp and blog referrer, and marked the record `needs_review`. It remains in the ignored local recovery cache and is excluded from public source files pending permission verification under `RIGHTS.md`.
 
 Checkpoint totals: 13,053 resource URLs; 185,723 indexed captures; 5,429 recovered; 301 needs review; 4,405 queued; 2,914 failed; four excluded; 2,820 unique downloaded files (175,138,930 bytes); 13,673 failed attempts.
+
+## October 21, 2026 — early 2004 navigation art
+
+The sixth 50-resource batch recovered a new 2,185-byte `menu_press_off.gif` from an August 13, 2004 capture. The “PRESS” navigation state is linked from the early Bio, Links, Media, Store, and 2002–2005 Events pages. Its original GIF bytes and provenance are now included as a reviewed source asset, keeping the 2004 material distinct from later edition styling.
+
+Checkpoint totals: 13,053 resource URLs; 185,738 indexed captures; 5,449 recovered; 301 needs review; 4,373 queued; 2,926 failed; four excluded; 2,821 unique files (175,141,115 bytes); 13,733 failed attempts.

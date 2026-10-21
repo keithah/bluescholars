@@ -251,8 +251,8 @@
   "pages_deployment": {
     "url": "https://keithah.github.io/bluescholars/",
     "source_branch": "gh-pages",
-    "commit": "723a51bd0498882318e533c1d0ec0f7db36a7bc4",
-    "workflow_run": "https://github.com/keithah/bluescholars/actions/runs/39635266996",
+    "commit": "4e93cf2ed6f633330c53affe1c49e5d3281e21c4",
+    "workflow_run": "https://github.com/keithah/bluescholars/actions/runs/39640105830",
     "workflow_conclusion": "success",
     "api_status": "built",
     "routes_checked": [
@@ -261,8 +261,9 @@
       "/bluescholars/2009/",
       "/bluescholars/2013/",
       "/bluescholars/2007/store.html",
+      "/bluescholars/2007/media_gallery.html",
       "/bluescholars/community-media/",
-      "/bluescholars/assets/6c6ebfc0b962a086e050f866ad3a37a43eb2c99fedd5e9c9ca438b8807575d5e.jpg",
+      "/bluescholars/assets/5647cfa20cac92a80349b56b924ce179df9936b3fc415e44a83cbccdff999895.jpg",
       "/bluescholars/archive-status/"
     ],
     "all_routes_http_status": 200,
@@ -435,26 +436,27 @@
   "preview_deployment": {
     "url": "https://keithah.github.io/bluescholars/",
     "branch": "gh-pages",
-    "commit": "723a51bd0498882318e533c1d0ec0f7db36a7bc4",
-    "main_commit": "6e867ab95",
-    "workflow_run": "https://github.com/keithah/bluescholars/actions/runs/39635266996",
+    "commit": "4e93cf2ed6f633330c53affe1c49e5d3281e21c4",
+    "main_commit": "89d89378e",
+    "workflow_run": "https://github.com/keithah/bluescholars/actions/runs/39640105830",
     "workflow_conclusion": "success",
     "pages_api_status": "built",
     "https_enforced": true,
     "custom_domain": null,
-    "verified_at": "2026-10-21T16:31:01Z",
+    "verified_at": "2026-10-21T17:03:33Z",
     "verified_routes": {
       "/bluescholars/": 200,
       "/bluescholars/2007/": 200,
       "/bluescholars/2009/": 200,
       "/bluescholars/2013/": 200,
       "/bluescholars/2007/store.html": 200,
+      "/bluescholars/2007/media_gallery.html": 200,
       "/bluescholars/community-media/": 200,
-      "/bluescholars/assets/6c6ebfc0b962a086e050f866ad3a37a43eb2c99fedd5e9c9ca438b8807575d5e.jpg": 200,
+      "/bluescholars/assets/5647cfa20cac92a80349b56b924ce179df9936b3fc415e44a83cbccdff999895.jpg": 200,
       "/bluescholars/archive-status/": 200
     },
     "unknown_route_http": 404,
-    "local_asset_test": "Recovered 2007 poster image returns HTTP 200; candidate root and subpath offline checks each report zero errors.",
+    "local_asset_test": "Newly added archived thumbnail, 2007 store/media pages, and supplemental gallery return HTTP 200; root and subpath offline checks each report zero errors.",
     "classification": "incomplete, unreviewed recovery preview; formal publication and human visual review remain false"
   },
   "latest_targeted_image_index": {
@@ -625,22 +627,23 @@
   "published_preview": {
     "url": "https://keithah.github.io/bluescholars/",
     "branch": "gh-pages",
-    "commit": "723a51bd0498882318e533c1d0ec0f7db36a7bc4",
-    "main_commit": "6e867ab95",
-    "pages_build_run": "39635266996",
+    "commit": "4e93cf2ed6f633330c53affe1c49e5d3281e21c4",
+    "main_commit": "89d89378e",
+    "pages_build_run": "39640105830",
     "pages_build_status": "success",
     "pages_api_status": "built",
     "https_enforced": true,
     "custom_domain": null,
-    "verified_at": "2026-10-21T16:31:01Z",
+    "verified_at": "2026-10-21T17:03:33Z",
     "verified_routes": {
       "/bluescholars/": 200,
       "/bluescholars/2007/": 200,
       "/bluescholars/2009/": 200,
       "/bluescholars/2013/": 200,
       "/bluescholars/2007/store.html": 200,
+      "/bluescholars/2007/media_gallery.html": 200,
       "/bluescholars/community-media/": 200,
-      "/bluescholars/assets/6c6ebfc0b962a086e050f866ad3a37a43eb2c99fedd5e9c9ca438b8807575d5e.jpg": 200,
+      "/bluescholars/assets/5647cfa20cac92a80349b56b924ce179df9936b3fc415e44a83cbccdff999895.jpg": 200,
       "/bluescholars/archive-status/": 200
     },
     "unknown_route_http": 404,
@@ -1448,7 +1451,7 @@
     "result": "blocked by design",
     "reason": "Publication requires source, visual and publish review approval; source/publication approval remains false after owner permission was recorded."
   },
-  "generated_at": "2026-10-21T17:01:17Z",
+  "generated_at": "2026-10-21T17:03:33Z",
   "twitter_archive": {
     "profile": "https://twitter.com/prometheusbrown",
     "archive": "Internet Archive Wayback Machine",
@@ -1543,7 +1546,7 @@
     "human_visual_review": false,
     "tests": "267 passed"
   },
-  "preview_deployment_pending": true,
+  "preview_deployment_pending": false,
   "latest_commoncrawl_retry": {
     "run_at": "2026-10-21T10:37:42Z",
     "archive": "Common Crawl",

@@ -738,6 +738,23 @@
         "results": "Ten exact missing-image URLs returned no mementos in MemGator. Nine returned HTTP 404 immediately; the 2008/12 bluescholars_jan2nd.jpg URL first timed out after 45 seconds, then returned HTTP 404 on retry.",
         "interpretation": "No image bytes were acquired. This is exact-URL coverage only for the listed aggregator; the images are not proven absent from other archives."
       }
+    },
+    "Common Crawl bounded retry 2026-10-21 late": {
+      "workflow": "restore commoncrawl --max-records 30 --workers 8",
+      "scope": "Bounded retry of historical Common Crawl collections for the bluescholars.com domain.",
+      "attempted": true,
+      "completed": false,
+      "collection_list_head": "HTTP 200",
+      "direct_collection_probe": {
+        "collection": "CC-MAIN-2023-50",
+        "result": "connection failed"
+      },
+      "batch_state": "Interrupted after index requests stalled; no report or recovery-state changes were written.",
+      "per_index_results": "unknown; do not interpret as no captures",
+      "new_source_bytes": 0,
+      "limitations": [
+        "Network transport to index.commoncrawl.org failed for API requests despite a successful lightweight HEAD check."
+      ]
     }
   },
   "limitations": [

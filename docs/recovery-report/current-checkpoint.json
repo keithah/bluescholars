@@ -1660,9 +1660,9 @@
       "bluescholars.livejournal.com — 2015-04-19",
       "Blue Scholars MySpace — 2012-12-02, 2014-01-11, 2015-03-23"
     ],
-    "acquisition": "No body bytes acquired. Five representative replays returned a 429 challenge after redirect to archive.li.",
+    "acquisition": "No body bytes acquired. Five representative replays returned a 429 challenge after redirect to archive.li. Ten high-value missing-image URLs returned no mementos; one was retried successfully after timeout.",
     "report": "recovery/memgator-report.json",
-    "interpretation": "Archive discovery only; the returned leads are not yet preserved locally. Other listed archives either returned no memento for these exact URLs or had unresolved service failures."
+    "interpretation": "Archive discovery only; returned page leads are not preserved locally. Other listed archives either returned no memento for exact URLs or had unresolved service failures."
   },
   "latest_commoncrawl_connection_retry": {
     "checked_on": "2026-10-21",

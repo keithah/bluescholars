@@ -185,5 +185,22 @@
       "http://archive.md/20150419142647/http://bluescholars.livejournal.com/"
     ],
     "result": "All five exact archive.md snapshot-page URLs returned HTTP 404 (no memento) from the same MemGator TimeMap API. This only records the aggregator result for these exact URLs; it does not establish absence from other archives."
+  },
+  "missing_image_asset_probes": {
+    "queried": 10,
+    "urls": [
+      "http://bluescholars.com/images/splah001.jpg",
+      "http://www.bluescholars.com/images/splah001.jpg",
+      "http://bluescholars.com/blog/wp-content/uploads/2010/03/PaulValery1.jpg",
+      "http://bluescholars.com/blog/wp-content/uploads/2009/12/HI808.jpg",
+      "http://bluescholars.com/blog/wp-content/uploads/2009/12/Geo1.Small-500x333.jpg",
+      "http://02cd02a.netsolhost.com/blog/wp-content/uploads/2009/07/l_bf6ff3f3d208456f9cd4c58a4b8dd822.jpg",
+      "http://masslinemedia.com/news/newspics/213.jpg",
+      "http://c2.ac-images.myspacecdn.com/images02/16/l_97215f22c1d94de2bf93965fda4f8e15.jpg",
+      "http://prometheusbrown.com/bluescholars/wp-content/uploads/2009/10/Picture-4-450x264.png",
+      "http://prometheusbrown.com/bluescholars/wp-content/uploads/2008/12/bluescholars_jan2nd.jpg"
+    ],
+    "results": "Ten exact missing-image URLs returned no mementos in MemGator. Nine returned HTTP 404 immediately; the 2008/12 bluescholars_jan2nd.jpg URL first timed out after 45 seconds, then returned HTTP 404 on retry.",
+    "interpretation": "No image bytes were acquired. This is exact-URL coverage only for the listed aggregator; the images are not proven absent from other archives."
   }
 }

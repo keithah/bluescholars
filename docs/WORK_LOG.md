@@ -650,3 +650,4 @@
 
 
 - Third and fourth 50-resource slices completed. The third resolved 17 image URLs, all already covered by source-reviewed SHA-256 payloads. The fourth resolved 20 more URLs; 19 also matched reviewed sources, while one new 183-byte 2006 homepage divider GIF (`line_cross_med.gif`) was hash-verified, visually inspected, and added to the source catalog. Across these later slices, 58 URL records were resolved and one unique payload was added. Current checkpoint: 13,053 resource URLs; 185,686 indexed captures; 5,412 recovered; 301 needs review; 4,435 queued; 2,901 failed; four excluded; 2,819 unique files totaling 174,977,141 bytes; 13,605 failed attempts.
+- Promoted 37 exact-URL source records from the third and fourth slices into the catalog, retaining their independent timestamps and Wayback archive URLs while pointing duplicate bodies at the already verified content-addressed files. This preserves capture provenance without copying identical bytes again.

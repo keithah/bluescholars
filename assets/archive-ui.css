@@ -26,6 +26,10 @@
 .archive-home-links{display:flex;flex-wrap:wrap;gap:24px;margin-top:30px}
 .archive-home-links a{color:#3b566b;text-decoration:underline;text-underline-offset:4px;font-size:14px}
 .archive-home-links a span{padding-left:3px}
+.community-media-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:24px;margin:32px 0}
+.community-media-item{margin:0}.community-media-item img{display:block;width:auto;max-width:100%;max-height:75vh;object-fit:contain;background:#e9edf0}
+.community-media-item figcaption{padding:12px 0;color:#465563;font-size:14px;line-height:1.55}.community-media-item figcaption p{margin:.5em 0}
+.community-media-item a{color:#285c83}
 .archive-home .archive-sites-heading{margin:62px 0 8px;font-size:clamp(24px,3vw,32px);letter-spacing:-.035em}
 .archive-sites-intro{margin:0;color:#596168;font-size:16px;line-height:1.55}
 .archive-site-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:24px 0 8px}

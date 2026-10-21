@@ -124,8 +124,8 @@ body:not(.image-block-stack-dynamic-font-sizing) .sqs-block-image .design-layout
 .sqs-block-image .processing .progress-container{background:#ccc;top:15px;}
 .sqs-block-image .processing-failed{background:#ccc;text-align:center;position:relative;height:100%;}
 .sqs-block-image .sqs-empty .sqs-image-content{padding-bottom:75%;background:rgba(62,62,62,.06);}
-.sqs-block-image .sqs-empty .sqs-image-content:empty::before{content:"";width:64px;height:56px;position:absolute;top:50%;left:50%;margin-top:-28px;margin-left:-32px;background:url("data:,") no-repeat center;}
-@media (-webkit-min-device-pixel-ratio:2),(min-resolution:1.5dppx){.sqs-block-image .sqs-empty .sqs-image-content:empty::before{background-image:url("data:,");background-size:64px;}}
+.sqs-block-image .sqs-empty .sqs-image-content:empty::before{content:"";width:64px;height:56px;position:absolute;top:50%;left:50%;margin-top:-28px;margin-left:-32px;background:url("/bluescholars/assets/6df4b94b66951d33fde92d2b3a8b804c45d7d56323e74f2483cafe80fe6e9c60.png") no-repeat center;}
+@media (-webkit-min-device-pixel-ratio:2),(min-resolution:1.5dppx){.sqs-block-image .sqs-empty .sqs-image-content:empty::before{background-image:url("/bluescholars/assets/27bb906955dcb8993e1d3e336edb91d11b5df508564adad93a912a26a1d258e7.png");background-size:64px;}}
 .sqs-block-image.vsize-1 .image-block-wrapper{height:34px;}
 .sqs-block-image.vsize-2 .image-block-wrapper{height:68px;}
 .sqs-block-image.vsize-3 .image-block-wrapper{height:102px;}
@@ -402,7 +402,7 @@ div.sqs-block-opentable-v2 .squarespace-opentable-new-age-wrapper.opentable-bloc
 .form-wrapper .form-button-wrapper--align-right{text-align:right;}
 .form-wrapper input[type=submit]{display:inline-block;width:auto;height:auto;padding:1em 2.5em;color:#fff;background-color:#272727;border-width:0;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:12px;line-height:1em;font-weight:normal;font-style:normal;text-transform:uppercase;letter-spacing:0px;text-align:center;text-decoration:none;cursor:pointer;outline:none;-webkit-appearance:none;-moz-appearance:none;appearance:none;font-size:14px;text-transform:none;}
 .form-wrapper .form-submission-text{margin-top:20px;}
-.form-wrapper .field-error{color:#fff;background:#cc3b3b url("data:,") no-repeat 9px 50%;padding:5px 15px 3px 25px;font-size:13px;-moz-border-radius:2px;border-radius:2px;margin:12px 0;line-height:23px;display:inline-block;}
+.form-wrapper .field-error{color:#fff;background:#cc3b3b url("/bluescholars/assets/cd52c4d783635c13d274f980f0347aa3c88bc11c26c602dad6c9fc5a2816a0ad.png") no-repeat 9px 50%;padding:5px 15px 3px 25px;font-size:13px;-moz-border-radius:2px;border-radius:2px;margin:12px 0;line-height:23px;display:inline-block;}
 .form-wrapper .field .field-error{margin-bottom:.5em;}
 .form-wrapper .submitting .field-list{opacity:.7;}
 .form-wrapper .hidden,.form-wrapper.hidden{display:none;}
@@ -493,7 +493,7 @@ html.sqs-modal-lightbox-open,html.sqs-modal-lightbox-open body{overflow:hidden;}
 .button-style-outline .sqs-block-tourdates .tour-button{margin-left:2px;}
 .social-summary-block .state-message.synchronizing{background-image:none;padding-left:15px;}
 .social-summary-block .state-message.synchronizing .sync-text{float:left;margin-left:10px;}
-.social-summary-block .state-message.synchronizing .spinner{float:left;background:transparent url("data:,") center center no-repeat;height:19px;width:19px;-webkit-animation-duration:2s;-moz-animation-duration:2s;-o-animation-duration:2s;animation-duration:2s;-webkit-animation-iteration-count:infinite;-moz-animation-iteration-count:infinite;-o-animation-iteration-count:infinite;animation-iteration-count:infinite;-webkit-animation-name:spin-frames;-moz-animation-name:spin-frames;-o-animation-name:spin-frames;animation-name:spin-frames;}
+.social-summary-block .state-message.synchronizing .spinner{float:left;background:transparent url("/bluescholars/assets/5dd52dcc457a0b59ae4c76b65a46c43d3653e333060fb57bf72bbdf97de89d6b.png") center center no-repeat;height:19px;width:19px;-webkit-animation-duration:2s;-moz-animation-duration:2s;-o-animation-duration:2s;animation-duration:2s;-webkit-animation-iteration-count:infinite;-moz-animation-iteration-count:infinite;-o-animation-iteration-count:infinite;animation-iteration-count:infinite;-webkit-animation-name:spin-frames;-moz-animation-name:spin-frames;-o-animation-name:spin-frames;animation-name:spin-frames;}
 .sqs-block-spacer .sqs-block-content{visibility:hidden;}
 h1[data-rte-preserve-empty]:empty::before,h2[data-rte-preserve-empty]:empty::before,h3[data-rte-preserve-empty]:empty::before,h4[data-rte-preserve-empty]:empty::before,h5[data-rte-preserve-empty]:empty::before,h6[data-rte-preserve-empty]:empty::before,p[data-rte-preserve-empty]:empty::before{content:"";display:inline-block;}
 ol[data-rte-list] li{counter-increment:rte-list;}
@@ -824,14 +824,14 @@ nav ul,nav ol{margin:0;}
 .gallery-control-style-text .gallery-controls .spacer{display:inline;}
 .gallery-control-style-text .gallery-controls .grid-icon{cursor:pointer;background:none;width:auto;height:auto;text-indent:0;}
 .gallery-controls{color:#aaa;line-height:4px;}
-.gallery-controls .arrow-icon{cursor:pointer;background:url("data:,") no-repeat center left;width:13px;height:10px;display:inline-block;text-indent:-9999px;}
-.gallery-controls .arrow-icon.next-slide{background:url("data:,") no-repeat center right;}
+.gallery-controls .arrow-icon{cursor:pointer;background:url("/bluescholars/assets/359368c291085c4c71b2eadda9f0bed6fbe644abf32449e55a6df759f1d9c98b.png") no-repeat center left;width:13px;height:10px;display:inline-block;text-indent:-9999px;}
+.gallery-controls .arrow-icon.next-slide{background:url("/bluescholars/assets/7e63c1b3d1688e2873a315858e7827227224c56b6060ac82538281686edfb4b5.png") no-repeat center right;}
 .gallery-controls .spacer{display:none;}
 .gallery-controls .slide-count{display:inline;font-style:italic;margin-left:10px;font-size:12px;}
-.gallery-controls .grid-icon{cursor:pointer;display:inline-block;background:url("data:,") no-repeat center center;width:12px;height:10px;text-indent:-9999px;}
-.icons-light .gallery-controls .arrow-icon,.gallery-icons-light .gallery-controls .arrow-icon{background-image:url("data:,");}
-.icons-light .gallery-controls .arrow-icon.next-slide,.gallery-icons-light .gallery-controls .arrow-icon.next-slide{background-image:url("data:,");}
-.icons-light .gallery-controls .grid-icon,.gallery-icons-light .gallery-controls .grid-icon{background-image:url("data:,");}
+.gallery-controls .grid-icon{cursor:pointer;display:inline-block;background:url("/bluescholars/assets/7013edaa41bfa433e1c8f4eacf332ee0418556352937713e7c5dcacb2effd366.png") no-repeat center center;width:12px;height:10px;text-indent:-9999px;}
+.icons-light .gallery-controls .arrow-icon,.gallery-icons-light .gallery-controls .arrow-icon{background-image:url("/bluescholars/assets/d95b3bc5f5e5b99cfe20a6f9c576f4a2643b25a63c96732e12a420549056c683.png");}
+.icons-light .gallery-controls .arrow-icon.next-slide,.gallery-icons-light .gallery-controls .arrow-icon.next-slide{background-image:url("/bluescholars/assets/67bd3615c7eafa4216e1edb5f4a0547ef6f10aa680a6fdde5d5666623850e85f.png");}
+.icons-light .gallery-controls .grid-icon,.gallery-icons-light .gallery-controls .grid-icon{background-image:url("/bluescholars/assets/b36cfb3e1c47381f0e869167ab488e3476f591143264e72e2eb12c6b88b2202c.png");}
 .grid-visible .gallery-controls .arrow-icon,.grid-visible .gallery-controls .slide-count,.grid-visible .gallery-controls .grid-icon{display:none;}
 #categoryNav{overflow:hidden;display:none;width:auto;margin:0 auto 34px;text-align:left;}
 #categoryNav ul,#categoryNav li{display:inline-block;float:none;}

@@ -205,8 +205,8 @@ body.native-currency-code-rub .sqs-money-native:after{content:" р.";}
 @media screen and (max-width:432px){.mobile-hidden{display:none;}}
 @media screen and (max-width:432px){.subDesktop-hidden{display:none;}}
 @media screen and (min-width:433px){.desktop-hidden{display:none;}}
-.sqs-system-error{color:#3e3e3e !important;background:transparent url("data:,") center center no-repeat;background-position:12px 12px;}
-@media (-webkit-min-device-pixel-ratio:2),(-webkit-min-device-pixel-ratio:1.5),(min-resolution:1.5dppx){.sqs-system-error{background-image:url("data:,");background-size:44px;}}
+.sqs-system-error{color:#3e3e3e !important;background:transparent url("/bluescholars/assets/b709a4b47768d2a15152bd6f69a4a7c7768ec19537188c5f999c693f8e22249c.png") center center no-repeat;background-position:12px 12px;}
+@media (-webkit-min-device-pixel-ratio:2),(-webkit-min-device-pixel-ratio:1.5),(min-resolution:1.5dppx){.sqs-system-error{background-image:url("/bluescholars/assets/ba2cb1879206e3b94683b4ef18a0db806286dbfa47efc3b199f14e3050526494.png");background-size:44px;}}
 .sqs-system-error input{cursor:pointer;outline:none;background:#3e3e3e;padding:11px;text-align:center;transition:background-color .1s ease-in-out,opacity .1s ease-in-out;line-height:22px;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none;font-family:inherit;-webkit-appearance:none;-moz-appearance:none;appearance:none;}
 .sqs-system-error input,.sqs-system-error input>*{color:#fff !important;-webkit-appearance:none;border:0;text-transform:uppercase;outline:none;letter-spacing:.5px;font-size:11px;font-weight:500;}
 .sqs-system-error input:hover{background-color:#000;box-shadow:none;}

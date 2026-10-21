@@ -58,10 +58,10 @@ to{-moz-transform:rotate(360deg);-moz-animation-timing-function:linear;}}
 .sqs-lightbox-signup-spinner{position:fixed !important;left:50% !important;margin-top:-150px !important;margin-left:-150px !important;width:300px !important;height:300px !important;}
 .squarespace-signup-text{font-family:"proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;color:#fff;width:300px;text-align:center;padding-top:15px;line-height:21px;font-size:15px;padding-bottom:100px;}
 .squarespace-signup-text .join-thank-you{font-weight:bold;padding-bottom:20px;}
-.squarespace-signup-spinner{background:transparent url("data:,") center center no-repeat;width:300px !important;height:220px !important;-webkit-animation-duration:2s;-moz-animation-duration:2s;-o-animation-duration:2s;animation-duration:2s;-webkit-animation-iteration-count:infinite;-moz-animation-iteration-count:infinite;-o-animation-iteration-count:infinite;animation-iteration-count:infinite;-webkit-animation-name:spin-frames;-moz-animation-name:spin-frames;-o-animation-name:spin-frames;animation-name:spin-frames;}
+.squarespace-signup-spinner{background:transparent url("/bluescholars/assets/3ba4c55a93eb879e5f0a6ce28d6636c123134340757e1a895176bfdc01652ab7.png") center center no-repeat;width:300px !important;height:220px !important;-webkit-animation-duration:2s;-moz-animation-duration:2s;-o-animation-duration:2s;animation-duration:2s;-webkit-animation-iteration-count:infinite;-moz-animation-iteration-count:infinite;-o-animation-iteration-count:infinite;animation-iteration-count:infinite;-webkit-animation-name:spin-frames;-moz-animation-name:spin-frames;-o-animation-name:spin-frames;animation-name:spin-frames;}
 .squarespace-signup-spinner.stopped{-webkit-animation-name:stopped;-moz-animation-name:stopped;-o-animation-name:stopped;animation-name:stopped;}
 .sqs-lightbox.light .squarespace-signup-text{font:12px / 22px "Gotham SSm A","Gotham SSm B","Gotham SSm","Proxima Nova","Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif !important;background-color:transparent !important;letter-spacing:0 !important;display:block !important;float:none !important;color:#000 !important;height:auto !important;width:auto !important;margin:0 !important;padding:0 !important;text-transform:none !important;color:#3e3e3e;}
-.sqs-lightbox.light .squarespace-signup-spinner{background:transparent url("data:,") center center no-repeat;}
+.sqs-lightbox.light .squarespace-signup-spinner{background:transparent url("/bluescholars/assets/28f408ef34a3fc85523549102011053f1d27d0f8ab7550027eb109cf8e29193e.png") center center no-repeat;}
 .sqs-g{letter-spacing:-.31em;text-rendering:optimizespeed;}
 .opera-only :-o-prefocus,.sqs-g{word-spacing:-.43em;}
 .yui3-u,.sqs-u{display:inline-block;zoom:1;letter-spacing:normal;word-spacing:normal;vertical-align:top;text-rendering:auto;}
@@ -138,8 +138,8 @@ body.native-currency-code-pln .sqs-money-native:after{content:" zł";}
 body.native-currency-code-ils .sqs-money-native:before{content:"₪ ";}
 body.native-currency-code-php .sqs-money-native:before{content:"Php";}
 body.native-currency-code-rub .sqs-money-native:after{content:" р.";}
-.sqs-system-error{color:#3e3e3e !important;background:transparent url("data:,") center center no-repeat;background-position:12px 12px;}
-@media (-webkit-min-device-pixel-ratio:2),(min-resolution:1.5dppx){.sqs-system-error{background-image:url("data:,");background-size:44px;}}
+.sqs-system-error{color:#3e3e3e !important;background:transparent url("/bluescholars/assets/b709a4b47768d2a15152bd6f69a4a7c7768ec19537188c5f999c693f8e22249c.png") center center no-repeat;background-position:12px 12px;}
+@media (-webkit-min-device-pixel-ratio:2),(min-resolution:1.5dppx){.sqs-system-error{background-image:url("/bluescholars/assets/ba2cb1879206e3b94683b4ef18a0db806286dbfa47efc3b199f14e3050526494.png");background-size:44px;}}
 .sqs-system-error input{cursor:pointer;outline:none;background:#3e3e3e;padding:11px;text-align:center;-webkit-transition:background-color .1s ease-in-out,opacity .1s ease-in-out;transition:background-color .1s ease-in-out,opacity .1s ease-in-out;line-height:22px;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none;font-family:inherit;-webkit-appearance:none;-moz-appearance:none;appearance:none;}
 .sqs-system-error input,.sqs-system-error input>*{color:#fff !important;-webkit-appearance:none;border:0;text-transform:uppercase;outline:none;font-size:11px;font-weight:500;}
 .sqs-system-error input:hover{background-color:#000;box-shadow:none;}
@@ -159,8 +159,8 @@ body.native-currency-code-rub .sqs-money-native:after{content:" р.";}
 .sqs-video-wrapper .sqs-video-overlay{display:block;position:absolute;top:0;left:0;width:100%;height:100%;background-size:cover;color:#000;background-position:center center;background-repeat:no-repeat;}
 .sqs-video-wrapper .sqs-video-overlay .sqs-video-opaque{position:absolute;bottom:0;width:100%;height:100%;background:#000;opacity:0;}
 .sqs-video-wrapper .sqs-video-overlay.no-thumb .sqs-video-opaque{opacity:1;}
-.sqs-video-wrapper .sqs-video-overlay .sqs-video-icon{position:absolute;top:50%;left:50%;background:transparent url("data:,") center center no-repeat;height:48px;width:48px;margin-left:-24px;margin-top:-24px;cursor:pointer;}
-@media (-webkit-min-device-pixel-ratio:2),(min-resolution:1.5dppx){.sqs-video-wrapper .sqs-video-overlay .sqs-video-icon{background-image:url("data:,");background-size:33px;}}
+.sqs-video-wrapper .sqs-video-overlay .sqs-video-icon{position:absolute;top:50%;left:50%;background:transparent url("/bluescholars/assets/c8e214c8a689800e4083b385274bb0dc12ced5d3e08ec4c4e93da64a56b671a3.png") center center no-repeat;height:48px;width:48px;margin-left:-24px;margin-top:-24px;cursor:pointer;}
+@media (-webkit-min-device-pixel-ratio:2),(min-resolution:1.5dppx){.sqs-video-wrapper .sqs-video-overlay .sqs-video-icon{background-image:url("/bluescholars/assets/91b16760ef63b3f07e88e28fa4e0dd4a56013e7d43754a2a65e8fe7f78ff7ac3.png");background-size:33px;}}
 html.blogapp .sqs-video-wrapper .sqs-video-overlay .sqs-video-icon{background-image:url("data:,");height:80px;width:80px;margin-left:-40px;margin-top:-40px;opacity:.75;}
 @media only screen and (-webkit-min-device-pixel-ratio:2),only screen and (min-resolution:192dpi){html.blogapp .sqs-video-wrapper .sqs-video-overlay .sqs-video-icon{background-image:url("data:,");background-size:80px;}}
 .sqs-video-wrapper.video-invalid{position:static !important;height:48px !important;}

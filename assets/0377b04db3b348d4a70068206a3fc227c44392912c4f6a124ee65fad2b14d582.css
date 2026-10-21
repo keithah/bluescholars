@@ -1,7 +1,7 @@
 .captcha-container.rendered{margin-bottom:24px;width:304px;}
 .captcha-container.rendered.align-center{margin-left:auto;margin-right:auto;}
 .captcha-container.rendered.align-right{margin-left:auto;}
-.sqs-async-form-content .field-error{border-radius:2px;background:#cc3b3b url("data:,") no-repeat 9px 50%;color:#fff;display:inline-block;font-size:13px;line-height:23px;margin:12px 0;padding:5px 15px 3px 25px;}
+.sqs-async-form-content .field-error{border-radius:2px;background:#cc3b3b url("/bluescholars/assets/cd52c4d783635c13d274f980f0347aa3c88bc11c26c602dad6c9fc5a2816a0ad.png") no-repeat 9px 50%;color:#fff;display:inline-block;font-size:13px;line-height:23px;margin:12px 0;padding:5px 15px 3px 25px;}
 .sqs-async-form-content .form-wrapper .form-submission-text:focus:not([data-focus-visible-added]),.sqs-async-form-content .form-wrapper .form-submission-html:focus:not([data-focus-visible-added]),.sqs-async-form-content .form-wrapper .field-error:focus:not([data-focus-visible-added]){outline:none;}
 .sqs-async-form-content .form-wrapper .field-list{line-height:normal;}
 .sqs-async-form-content .form-wrapper .field-list fieldset,.sqs-async-form-content .form-wrapper .field-list legend{margin:0;padding:0;border:0;}
@@ -78,11 +78,11 @@
 .sqs-pill-shopping-cart .subtotal{border:none;padding:0;display:inline-block;position:absolute;right:25px;top:14px;}
 .sqs-pill-shopping-cart .subtotal .price{font-size:15px;font-weight:bold;max-width:100px;float:right;letter-spacing:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:22px;}
 .sqs-pill-shopping-cart-content.dark{box-shadow:0 0 0 1px rgba(0,0,0,.085), 0 1px 0 0 rgba(0,0,0,.15);border:1px solid rgba(255,255,255,.05);color:#ddd;background-color:#111;background-image:linear-gradient(#1e1e1e,#040404);}
-.sqs-pill-shopping-cart-content.dark .icon{background:transparent url("data:,") center center no-repeat;}
-@media (-webkit-min-device-pixel-ratio:2),(-webkit-min-device-pixel-ratio:1.5),(min-resolution:1.5dppx){.sqs-pill-shopping-cart-content.dark .icon{background-image:url("data:,");background-size:16px;}}
+.sqs-pill-shopping-cart-content.dark .icon{background:transparent url("/bluescholars/assets/80aaa276275997c0ec2296cde87ffdc62dd7a2faf65ab29072a852ec7a78deae.png") center center no-repeat;}
+@media (-webkit-min-device-pixel-ratio:2),(-webkit-min-device-pixel-ratio:1.5),(min-resolution:1.5dppx){.sqs-pill-shopping-cart-content.dark .icon{background-image:url("/bluescholars/assets/d093542cefae85b6e0d0fdf2b2e7ffddbb04d6230727f25afcf11bf53939a227.png");background-size:16px;}}
 .sqs-pill-shopping-cart-content.dark:hover{color:#fff;}
 .sqs-pill-shopping-cart-content.light{box-shadow:0 1px 1px 0 rgba(0,0,0,0.3);border:none;color:#666;background-color:#eee;background-image:linear-gradient(#fbfbfb,#e1e1e1);}
-.sqs-pill-shopping-cart-content.light .icon{background:url("data:,");}
+.sqs-pill-shopping-cart-content.light .icon{background:url("/bluescholars/assets/99faea9d7a4daa30c3c9169aed38e5b741e3619581b2946cd66767e39e8f98ef.png");}
 .sqs-pill-shopping-cart-content.light:hover{color:#333;}
 @media only screen and (max-width:700px){.absolute-cart-box{position:fixed;bottom:0;left:0;top:auto;}
 .sqs-pill-shopping-cart{position:fixed;bottom:0;left:0;top:auto;width:100%;}

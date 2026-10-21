@@ -50,7 +50,7 @@
 .form-wrapper .form-button-wrapper--align-right{text-align:right;}
 .form-wrapper input[type=submit]{display:inline-block;width:auto;height:auto;padding:1em 2.5em;color:#fff;background-color:#272727;border-width:0;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:12px;line-height:1em;font-weight:normal;font-style:normal;text-transform:uppercase;letter-spacing:0px;text-align:center;text-decoration:none;cursor:pointer;outline:none;-webkit-appearance:none;-moz-appearance:none;appearance:none;font-size:14px;text-transform:none;}
 .form-wrapper .form-submission-text{margin-top:20px;}
-.form-wrapper .field-error{color:#fff;background:#cc3b3b url("data:,") no-repeat 9px 50%;padding:5px 15px 3px 25px;font-size:13px;border-radius:2px;margin:12px 0;line-height:23px;display:inline-block;}
+.form-wrapper .field-error{color:#fff;background:#cc3b3b url("/bluescholars/assets/cd52c4d783635c13d274f980f0347aa3c88bc11c26c602dad6c9fc5a2816a0ad.png") no-repeat 9px 50%;padding:5px 15px 3px 25px;font-size:13px;border-radius:2px;margin:12px 0;line-height:23px;display:inline-block;}
 .form-wrapper .field .field-error{margin-bottom:.5em;}
 .form-wrapper .submitting .field-list{opacity:.7;}
 .form-wrapper .hidden,.form-wrapper.hidden{display:none;}
@@ -114,7 +114,7 @@ html.sqs-modal-lightbox-open,html.sqs-modal-lightbox-open body{overflow:hidden;}
 #sqs-standard-checkout .sqs-checkout-form-section fieldset .sqs-async-form-content .time .field label{margin-top:0px;}
 #sqs-standard-checkout .sqs-checkout-form-section fieldset .sqs-async-form-content .time .field.ampm{width:4.5em;}
 #sqs-standard-checkout .sqs-checkout-form-section fieldset .sqs-async-form-content .website .field-element{padding-left:6ex;}
-#sqs-standard-checkout .sqs-checkout-form-section fieldset .error-summary,#sqs-standard-checkout .sqs-checkout-form-section fieldset .form-field-error,#sqs-standard-checkout .sqs-checkout-form-section fieldset .header-error{color:#fff;background:#a00 url("data:,") no-repeat 7px 7px;padding:5px 8px 5px 28px;font-size:11px;border-radius:2px;line-height:19px;}
+#sqs-standard-checkout .sqs-checkout-form-section fieldset .error-summary,#sqs-standard-checkout .sqs-checkout-form-section fieldset .form-field-error,#sqs-standard-checkout .sqs-checkout-form-section fieldset .header-error{color:#fff;background:#a00 url("/bluescholars/assets/3d14e74d6913244fb2a85dfd1b20415a7331251af798c0239b5ddd96953029f5.png") no-repeat 7px 7px;padding:5px 8px 5px 28px;font-size:11px;border-radius:2px;line-height:19px;}
 #sqs-standard-checkout .sqs-checkout-form-section fieldset .error-summary{margin-bottom:30px;}
 #sqs-standard-checkout .sqs-checkout-form-section fieldset .form-field-error,#sqs-standard-checkout .sqs-checkout-form-section fieldset .header-error{margin-bottom:5px;}
 #sqs-standard-checkout .sqs-checkout-form-section fieldset .btn-container{padding-top:30px;clear:both;}
@@ -147,7 +147,7 @@ html.sqs-modal-lightbox-open,html.sqs-modal-lightbox-open body{overflow:hidden;}
 .sqs-checkout-form-section.sqs-checkout-form-custom-form fieldset .error-summary{margin-top:-25px;}
 .sqs-checkout-form-section.sqs-checkout-form-custom-form fieldset .field .prefix{bottom:8px;}
 .sqs-google-places-autocomplete-mixin .google-required-elements{padding:5px;min-height:0px;}
-.sqs-google-places-autocomplete-mixin .google-required-elements .powered-by-google{background:url("data:,") 5px center no-repeat;width:100%;height:24px;}
+.sqs-google-places-autocomplete-mixin .google-required-elements .powered-by-google{background:url("/bluescholars/assets/533cb39f7dad385e4b124588f494e5a8d192f26ff49360d0a38c635a369c852f.png") 5px center no-repeat;width:100%;height:24px;}
 .sqs-google-places-autocomplete-mixin .google-required-elements .google-attributions{display:none;}
 .sqs-google-places-autocomplete-mixin .google-ac-address,.sqs-google-places-autocomplete-mixin .google-ac-trailing{display:inline-block;}
 .sqs-google-places-autocomplete-mixin .google-ac-address{margin-right:.25em;}
@@ -290,11 +290,11 @@ html.sqs-modal-lightbox-open,html.sqs-modal-lightbox-open body{overflow:hidden;}
 .sqs-pill-shopping-cart .subtotal{border:none;padding:0;display:inline-block;position:absolute;right:25px;top:14px;}
 .sqs-pill-shopping-cart .subtotal .price{font-size:15px;font-weight:bold;max-width:100px;float:right;letter-spacing:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:22px;}
 .sqs-pill-shopping-cart-content.dark{box-shadow:0 0 0 1px rgba(0,0,0,.085), 0 1px 0 0 rgba(0,0,0,.15);border:1px solid rgba(255,255,255,.05);color:#ddd;background-color:#111;background-image:-o-linear-gradient(#1e1e1e,#040404);background-image:-moz-linear-gradient(#1e1e1e,#040404);background-image:-ms-linear-gradient(#1e1e1e,#040404);background-image:-webkit-linear-gradient(#1e1e1e,#040404);background-image:linear-gradient(#1e1e1e,#040404);}
-.sqs-pill-shopping-cart-content.dark .icon{background:transparent url("data:,") center center no-repeat;}
-@media (-webkit-min-device-pixel-ratio:2),(min-resolution:1.5dppx){.sqs-pill-shopping-cart-content.dark .icon{background-image:url("data:,");background-size:16px;}}
+.sqs-pill-shopping-cart-content.dark .icon{background:transparent url("/bluescholars/assets/80aaa276275997c0ec2296cde87ffdc62dd7a2faf65ab29072a852ec7a78deae.png") center center no-repeat;}
+@media (-webkit-min-device-pixel-ratio:2),(min-resolution:1.5dppx){.sqs-pill-shopping-cart-content.dark .icon{background-image:url("/bluescholars/assets/d093542cefae85b6e0d0fdf2b2e7ffddbb04d6230727f25afcf11bf53939a227.png");background-size:16px;}}
 .sqs-pill-shopping-cart-content.dark:hover{color:#fff;}
 .sqs-pill-shopping-cart-content.light{box-shadow:0 1px 1px 0 rgba(0,0,0,0.3);border:none;color:#666;background-color:#eee;background-image:-o-linear-gradient(#fbfbfb,#e1e1e1);background-image:-moz-linear-gradient(#fbfbfb,#e1e1e1);background-image:-ms-linear-gradient(#fbfbfb,#e1e1e1);background-image:-webkit-linear-gradient(#fbfbfb,#e1e1e1);background-image:linear-gradient(#fbfbfb,#e1e1e1);}
-.sqs-pill-shopping-cart-content.light .icon{background:url("data:,");}
+.sqs-pill-shopping-cart-content.light .icon{background:url("/bluescholars/assets/99faea9d7a4daa30c3c9169aed38e5b741e3619581b2946cd66767e39e8f98ef.png");}
 .sqs-pill-shopping-cart-content.light:hover{color:#333;}
 @media only screen and (max-width:700px){.absolute-cart-box{position:fixed;bottom:0;left:0;top:auto;}
 .sqs-pill-shopping-cart{position:fixed;bottom:0;left:0;top:auto;width:100%;}

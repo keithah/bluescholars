@@ -135,8 +135,8 @@
 .text-align-right{text-align:right;}
 .columns-1 [class*=sqs-col-]{width:100% !important;}
 .sqs-block .state-message,.sqs-state-message{font:400 normal 12px / 22px "Gotham SSm A","Gotham SSm B","Proxima Nova","Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:normal;padding:19px;padding-left:60px;color:#3e3e3e;position:relative;background-color:rgba(128,128,128,.15000000000000002);}
-.sqs-block .state-message:after,.sqs-state-message:after{content:" ";position:absolute;top:0;left:0;height:60px;width:60px;background:transparent url("data:,") no-repeat center;}
-@media (-webkit-min-device-pixel-ratio:2),(min-resolution:1.5dppx){.sqs-block .state-message:after,.sqs-state-message:after{background-image:url("data:,");background-size:22px;}}
+.sqs-block .state-message:after,.sqs-state-message:after{content:" ";position:absolute;top:0;left:0;height:60px;width:60px;background:transparent url("/bluescholars/assets/a93c4c81b16dc6dd989522dcf7333b105ead0e00de53fba509e7f3027c3a6ed3.png") no-repeat center;}
+@media (-webkit-min-device-pixel-ratio:2),(min-resolution:1.5dppx){.sqs-block .state-message:after,.sqs-state-message:after{background-image:url("/bluescholars/assets/ed4ae13d517520349e6270ce4ccdfe13e5727e7038fac8a035515bfe0fc04615.png");background-size:22px;}}
 .sqs-block .state-message.information,.sqs-state-message.information{background:#222;padding:30px 20px;text-align:center;color:#999;font-size:11px;}
 .sqs-block .state-message .title,.sqs-state-message .title{padding-bottom:8px;font-size:14px;}
 html.cameron .sqs-block .state-message .title,html.cameron .sqs-state-message .title{color:#eee;}
@@ -188,7 +188,7 @@ body.sqs-dragging .sqs-layout .sqs-content-overlay{display:block !important;}
 .sqs-block[class*=float-right]{float:right;margin-left:17px;}
 .sqs-block[class*=float-right]+.sqs-block[class*=float-right]{clear:right;}
 .sqs-remove-button{position:absolute !important;border-radius:100px;background:#111 url("data:,") center center no-repeat;background-size:7px;cursor:pointer;}
-body.sqs-index .sqs-remove-button{background:#111 url("data:,") center center no-repeat;}
+body.sqs-index .sqs-remove-button{background:#111 url("/bluescholars/assets/2cc44eb1d1ff900a9de42646d2d6aeb57553a6f4f97c95397d45e349ac0442f2.png") center center no-repeat;}
 .sqs-block-error{padding-top:12px;padding-bottom:12px;}
 .sqs-block-error .sqs-block-content{border:1px solid #ddd;background:#eee;color:#333;}
 html.blogapp .sqs-block-error{padding-top:17px;padding-bottom:17px;}
@@ -640,8 +640,8 @@ body:not(.event-thumbnails):not(.event-date-label) .eventlist-column-info{margin
 .sqs-gallery-block-grid.sqs-gallery-block-meta-only-title .margin-wrapper .image-slide-title{display:block;text-align:center;font-size:14px;margin-top:.5em;width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 .sqs-block .sqs-gallery-thumbnails .sqs-video-thumbnail{position:relative;}
 .sqs-block .sqs-gallery-thumbnails .sqs-video-thumbnail img{height:100%;}
-.sqs-block .sqs-gallery-thumbnails .sqs-video-thumbnail .sqs-video-thumbnail-icon{opacity:1;position:absolute;top:50%;left:50%;background-image:url("data:,");background-position:center center;height:24px;width:24px;margin-left:-12px;margin-top:-12px;}
-.sqs-block .sqs-gallery-thumbnails .sqs-video-thumbnail.no-image .sqs-video-thumbnail-inner{background-image:url("data:,");background-position:center center;background-repeat:no-repeat;}
+.sqs-block .sqs-gallery-thumbnails .sqs-video-thumbnail .sqs-video-thumbnail-icon{opacity:1;position:absolute;top:50%;left:50%;background-image:url("/bluescholars/assets/101762e3384a74f5e093c8bc0edabb94d8f75a075479b1409e9329f63b139864.png");background-position:center center;height:24px;width:24px;margin-left:-12px;margin-top:-12px;}
+.sqs-block .sqs-gallery-thumbnails .sqs-video-thumbnail.no-image .sqs-video-thumbnail-inner{background-image:url("/bluescholars/assets/101762e3384a74f5e093c8bc0edabb94d8f75a075479b1409e9329f63b139864.png");background-position:center center;background-repeat:no-repeat;}
 .sqs-block .sqs-gallery-thumbnails .sqs-video-thumbnail:not(.no-image).loading .sqs-video-thumbnail-icon{opacity:0;}
 .sqs-block .sqs-gallery-thumbnails .sqs-video-thumbnail .sqs-video-thumbnail-inner{height:100%;background:#000;}
 .sqs-block .sqs-gallery-thumbnails .sqs-gallery-design-strip-slide{opacity:.5;}

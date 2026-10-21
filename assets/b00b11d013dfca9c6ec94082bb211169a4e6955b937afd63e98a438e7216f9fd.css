@@ -56,7 +56,7 @@ to{-moz-transform:rotate(360deg);-moz-animation-timing-function:linear;}}
 .sqs-lightbox-signup-spinner{position:fixed !important;left:50% !important;margin-top:-150px !important;margin-left:-150px !important;width:300px !important;height:300px !important;}
 .squarespace-signup-text{font-family:"proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;color:#fff;width:300px;text-align:center;padding-top:15px;line-height:21px;font-size:15px;padding-bottom:100px;}
 .squarespace-signup-text .join-thank-you{font-weight:bold;padding-bottom:20px;}
-.squarespace-signup-spinner{background:transparent url("data:,") center center no-repeat;width:300px !important;height:220px !important;-webkit-animation-duration:2s;-moz-animation-duration:2s;-o-animation-duration:2s;animation-duration:2s;-webkit-animation-iteration-count:infinite;-moz-animation-iteration-count:infinite;-o-animation-iteration-count:infinite;animation-iteration-count:infinite;-webkit-animation-name:spin-frames;-moz-animation-name:spin-frames;-o-animation-name:spin-frames;animation-name:spin-frames;}
+.squarespace-signup-spinner{background:transparent url("/bluescholars/assets/3ba4c55a93eb879e5f0a6ce28d6636c123134340757e1a895176bfdc01652ab7.png") center center no-repeat;width:300px !important;height:220px !important;-webkit-animation-duration:2s;-moz-animation-duration:2s;-o-animation-duration:2s;animation-duration:2s;-webkit-animation-iteration-count:infinite;-moz-animation-iteration-count:infinite;-o-animation-iteration-count:infinite;animation-iteration-count:infinite;-webkit-animation-name:spin-frames;-moz-animation-name:spin-frames;-o-animation-name:spin-frames;animation-name:spin-frames;}
 .squarespace-signup-spinner.stopped{-webkit-animation-name:stopped;-moz-animation-name:stopped;-o-animation-name:stopped;animation-name:stopped;}
 .sqs-g{letter-spacing:-.31em;text-rendering:optimizespeed;}
 .opera-only :-o-prefocus,.sqs-g{word-spacing:-.43em;}
@@ -112,8 +112,8 @@ to{-moz-transform:rotate(360deg);-moz-animation-timing-function:linear;}}
 .sqs-aclist-list,.yui3-aclist-list{list-style:none;margin:0;overflow:hidden;padding:0;}
 .sqs-aclist-item,.yui3-aclist-item{cursor:pointer;list-style:none;padding:2px 5px;}
 .sqs-aclist-item-active,.yui3-aclist-item-active{outline:#afafaf dotted thin;}
-html.squarespace-damask .sqs-system-error{color:#3e3e3e !important;background:transparent url("data:,") center center no-repeat;background-position:12px 12px;}
-@media (-webkit-min-device-pixel-ratio:2),(min-resolution:1.5dppx){html.squarespace-damask .sqs-system-error{background-image:url("data:,");background-size:44px;}}
+html.squarespace-damask .sqs-system-error{color:#3e3e3e !important;background:transparent url("/bluescholars/assets/b709a4b47768d2a15152bd6f69a4a7c7768ec19537188c5f999c693f8e22249c.png") center center no-repeat;background-position:12px 12px;}
+@media (-webkit-min-device-pixel-ratio:2),(min-resolution:1.5dppx){html.squarespace-damask .sqs-system-error{background-image:url("/bluescholars/assets/ba2cb1879206e3b94683b4ef18a0db806286dbfa47efc3b199f14e3050526494.png");background-size:44px;}}
 html.squarespace-damask .sqs-system-error input{cursor:pointer;outline:none;background:#3e3e3e;padding:11px;text-align:center;-webkit-transition:background-color .1s ease-in-out;transition:background-color .1s ease-in-out;line-height:22px;}
 html.squarespace-damask .sqs-system-error input,html.squarespace-damask .sqs-system-error input>*{color:#fff !important;-webkit-appearance:none;border:0;text-transform:uppercase;outline:none;font-size:11px;font-weight:500;}
 html.squarespace-damask .sqs-system-error input:hover{background-color:#000;box-shadow:none;}
@@ -159,11 +159,11 @@ html.squarespace-damask .sqs-form-pre-submit-topic-content .editor-wrapper{paddi
 html.squarespace-damask .sqs-form-pre-submit-topic-content .sqs-dialog-field:first-child{margin-top:0;}
 html.squarespace-damask .sqs-form-pre-submit-topic-content .sqs-dialog-field:last-child{margin-bottom:0;}
 html.squarespace-damask .sqs-form-pre-submit-topic-content .edit-topic{position:absolute;right:38.5px;background:rgba(0,0,0,.1);top:11px;width:44px;text-align:center;cursor:pointer;text-transform:uppercase;font-size:9px;font-weight:500;}
-html.squarespace-damask .sqs-form-pre-submit-topic-content .remove-topic{position:absolute;right:0;top:0;height:44px;width:44px;text-indent:-9000px;overflow:hidden;background:transparent url("data:,") center center no-repeat;cursor:pointer;}
-@media (-webkit-min-device-pixel-ratio:2),(min-resolution:1.5dppx){html.squarespace-damask .sqs-form-pre-submit-topic-content .remove-topic{background-image:url("data:,");background-size:9px 11px;}}
-html.squarespace-damask .sqs-form-pre-submit-topic-content .remove-topic:hover{background:transparent url("data:,") center center no-repeat;}
-@media (-webkit-min-device-pixel-ratio:2),(min-resolution:1.5dppx){html.squarespace-damask .sqs-form-pre-submit-topic-content .remove-topic:hover{background-image:url("data:,");background-size:9px 11px;}}
-html.squarespace-damask .sqs-form-pre-submit-topic-content .topic-drag-handle{position:absolute;left:0;top:0;height:44px;width:22px;background:transparent url("data:,") center center no-repeat;opacity:.2;cursor:ns-resize;}
+html.squarespace-damask .sqs-form-pre-submit-topic-content .remove-topic{position:absolute;right:0;top:0;height:44px;width:44px;text-indent:-9000px;overflow:hidden;background:transparent url("/bluescholars/assets/ad80e81ff22e72b75078211e31d253ba106f2b7b9ea47458701a3128a8c38438.png") center center no-repeat;cursor:pointer;}
+@media (-webkit-min-device-pixel-ratio:2),(min-resolution:1.5dppx){html.squarespace-damask .sqs-form-pre-submit-topic-content .remove-topic{background-image:url("/bluescholars/assets/d0a5f679698e5756f987fbf02a1f1bc4339b5a74b48875dfd96b79a360d88180.png");background-size:9px 11px;}}
+html.squarespace-damask .sqs-form-pre-submit-topic-content .remove-topic:hover{background:transparent url("/bluescholars/assets/ace98c266accd35a3f7fb78946d7728313325d8a7e420acc19c297331a8db8e5.png") center center no-repeat;}
+@media (-webkit-min-device-pixel-ratio:2),(min-resolution:1.5dppx){html.squarespace-damask .sqs-form-pre-submit-topic-content .remove-topic:hover{background-image:url("/bluescholars/assets/7f2a30bd1fe8b4cc2c622bd38552d4452327f65a810c9eb6b96937b731ea39d2.png");background-size:9px 11px;}}
+html.squarespace-damask .sqs-form-pre-submit-topic-content .topic-drag-handle{position:absolute;left:0;top:0;height:44px;width:22px;background:transparent url("/bluescholars/assets/0799c48b8ff6fe81fb06d10c768682c6b70450d9de0d66fbb39b430f8c4503c8.png") center center no-repeat;opacity:.2;cursor:ns-resize;}
 html.squarespace-damask .sqs-form-pre-submit-topic-content.editing-mode-empty .topic-children .topic-child-controls{display:block;}
 html.squarespace-damask .sqs-form-pre-submit-topic-content.editing-mode-sub-topics .topic-children .topic-sub-topics{display:block;}
 html.squarespace-damask .sqs-form-pre-submit-topic-content.editing-mode-content .topic-children .topic-content{display:block;}
@@ -188,7 +188,7 @@ html.squarespace-cameron .sqs-form-pre-submit-topic{margin-bottom:2px;background
 html.squarespace-cameron .sqs-form-pre-submit-topic-content{border:1px solid #333;border-radius:4px;}
 html.squarespace-cameron .sqs-form-pre-submit-topic-content .topic-control-bar{background:#333;height:40px;}
 html.squarespace-cameron .sqs-form-pre-submit-topic-content .topic-control-bar .topic-drag-handle-wrapper{float:left;width:7%;height:100%;cursor:move;box-sizing:border-box;}
-html.squarespace-cameron .sqs-form-pre-submit-topic-content .topic-control-bar .topic-drag-handle-wrapper .topic-drag-handle{background-image:url("data:,");background-repeat:no-repeat;background-position:center center;height:16px;width:16px;margin:12px auto 0;opacity:.3;}
+html.squarespace-cameron .sqs-form-pre-submit-topic-content .topic-control-bar .topic-drag-handle-wrapper .topic-drag-handle{background-image:url("/bluescholars/assets/33861c21edf64747e25303a4b90963b1edc351293f5a8fdd9b9874c8b3d6ec34.png");background-repeat:no-repeat;background-position:center center;height:16px;width:16px;margin:12px auto 0;opacity:.3;}
 html.squarespace-cameron .sqs-form-pre-submit-topic-content .topic-control-bar .topic-title{float:left;width:66%;height:100%;box-sizing:border-box;padding:7px 0;}
 html.squarespace-cameron .sqs-form-pre-submit-topic-content .topic-control-bar .topic-title .sqs-dialog-field.sqs-text.name-topicTitle input{font-size:12px;padding:6px 25px 6px 6px;margin:0;background-color:transparent;-webkit-transition:background-color .2s ease-out;transition:background-color .2s ease-out;color:#eaeaea;border:none;border-radius:2px;text-overflow:ellipsis;}
 html.squarespace-cameron .sqs-form-pre-submit-topic-content .topic-control-bar .topic-title .sqs-dialog-field.sqs-text.name-topicTitle input:hover{background-color:#444;}
@@ -213,7 +213,7 @@ html.squarespace-cameron .sqs-form-pre-submit-topic-content .topic-children .top
 html.squarespace-cameron .sqs-form-pre-submit-topic-content .topic-children .topic-child-controls .topic-child-control-wrapper .topic-child-control a{color:#222;}
 html.squarespace-cameron .sqs-form-pre-submit-topic-content .topic-children .topic-child-controls .topic-child-control-wrapper .topic-child-control:focus{outline:none;color:#111;box-shadow:0 0 0 1px rgba(0,0,0,.1),0 0 0 2px #42b1ff;}
 html.squarespace-cameron .sqs-form-pre-submit-topic-content .topic-children .topic-sub-topics .sqs-form-pre-submit-topic-content .topic-control-bar{height:30px;}
-html.squarespace-cameron .sqs-form-pre-submit-topic-content .topic-children .topic-sub-topics .sqs-form-pre-submit-topic-content .topic-control-bar .topic-drag-handle{margin-top:7px;background-image:url("data:,");}
+html.squarespace-cameron .sqs-form-pre-submit-topic-content .topic-children .topic-sub-topics .sqs-form-pre-submit-topic-content .topic-control-bar .topic-drag-handle{margin-top:7px;background-image:url("/bluescholars/assets/9732ce22cb96b1bee115588fc5fa76ff38cd9f213840d5c30d5a16830567dbe4.png");}
 html.squarespace-cameron .sqs-form-pre-submit-topic-content .topic-children .topic-sub-topics .sqs-form-pre-submit-topic-content .topic-control-bar .topic-title{padding:4px 0;}
 html.squarespace-cameron .sqs-form-pre-submit-topic-content .topic-children .topic-sub-topics .sqs-form-pre-submit-topic-content .topic-control-bar .topic-title input{font-size:11px;padding:4px;}
 html.squarespace-cameron .sqs-form-pre-submit-topic-content .topic-children .topic-sub-topics .sqs-form-pre-submit-topic-content .topic-control-bar .edit-topic{font-size:8px;margin-top:9px;}
@@ -363,20 +363,20 @@ html.squarespace-damask .sqs-action-overlay>div.edit-image,html.squarespace-dama
 html.squarespace-damask .sqs-action-overlay>div.edit.loading{background:none;}
 html.squarespace-damask .sqs-action-overlay>div.image-info{background:transparent url("data:,") center center no-repeat;}
 @media (-webkit-min-device-pixel-ratio:2),(min-resolution:1.5dppx){html.squarespace-damask .sqs-action-overlay>div.image-info{background-image:url("data:,");background-size:16px;}}
-html.squarespace-damask .sqs-action-overlay>div.remove,html.squarespace-damask .sqs-action-overlay>div.remove-image{background:transparent url("data:,") center center no-repeat;cursor:pointer;}
-@media (-webkit-min-device-pixel-ratio:2),(min-resolution:1.5dppx){html.squarespace-damask .sqs-action-overlay>div.remove,html.squarespace-damask .sqs-action-overlay>div.remove-image{background-image:url("data:,");background-size:9px 11px;}}
-html.squarespace-damask .sqs-action-overlay>div.remove:hover,html.squarespace-damask .sqs-action-overlay>div.remove-image:hover{background:transparent url("data:,") center center no-repeat;}
-@media (-webkit-min-device-pixel-ratio:2),(min-resolution:1.5dppx){html.squarespace-damask .sqs-action-overlay>div.remove:hover,html.squarespace-damask .sqs-action-overlay>div.remove-image:hover{background-image:url("data:,");background-size:9px 11px;}}
+html.squarespace-damask .sqs-action-overlay>div.remove,html.squarespace-damask .sqs-action-overlay>div.remove-image{background:transparent url("/bluescholars/assets/2c659225f0927e6b828a474bac2d291ff932b05bdb949db9de004bcb3130dc8c.png") center center no-repeat;cursor:pointer;}
+@media (-webkit-min-device-pixel-ratio:2),(min-resolution:1.5dppx){html.squarespace-damask .sqs-action-overlay>div.remove,html.squarespace-damask .sqs-action-overlay>div.remove-image{background-image:url("/bluescholars/assets/79fcc834a3af12f7db601bf955c933931279db0390f7aa725d060a19cab11646.png");background-size:9px 11px;}}
+html.squarespace-damask .sqs-action-overlay>div.remove:hover,html.squarespace-damask .sqs-action-overlay>div.remove-image:hover{background:transparent url("/bluescholars/assets/ace98c266accd35a3f7fb78946d7728313325d8a7e420acc19c297331a8db8e5.png") center center no-repeat;}
+@media (-webkit-min-device-pixel-ratio:2),(min-resolution:1.5dppx){html.squarespace-damask .sqs-action-overlay>div.remove:hover,html.squarespace-damask .sqs-action-overlay>div.remove-image:hover{background-image:url("/bluescholars/assets/7f2a30bd1fe8b4cc2c622bd38552d4452327f65a810c9eb6b96937b731ea39d2.png");background-size:9px 11px;}}
 html.squarespace-damask .sqs-action-overlay>div.video-info{background:transparent url("data:,") center center no-repeat;}
 @media (-webkit-min-device-pixel-ratio:2),(min-resolution:1.5dppx){html.squarespace-damask .sqs-action-overlay>div.video-info{background-image:url("data:,");background-size:16px;}}
-html.squarespace-damask .sqs-action-overlay>div.getty{background:transparent url("data:,") center center no-repeat;}
-@media (-webkit-min-device-pixel-ratio:2),(min-resolution:1.5dppx){html.squarespace-damask .sqs-action-overlay>div.getty{background-image:url("data:,");background-size:16px;}}
-html.squarespace-damask .sqs-action-overlay>div.buy{background:transparent url("data:,") center center no-repeat;}
-@media (-webkit-min-device-pixel-ratio:2),(min-resolution:1.5dppx){html.squarespace-damask .sqs-action-overlay>div.buy{background-image:url("data:,");background-size:16px;}}
-html.squarespace-damask .sqs-action-overlay>div.remove-video{background:transparent url("data:,") center center no-repeat;cursor:pointer;}
-@media (-webkit-min-device-pixel-ratio:2),(min-resolution:1.5dppx){html.squarespace-damask .sqs-action-overlay>div.remove-video{background-image:url("data:,");background-size:9px 11px;}}
-html.squarespace-damask .sqs-action-overlay>div.remove-video:hover{background:transparent url("data:,") center center no-repeat;}
-@media (-webkit-min-device-pixel-ratio:2),(min-resolution:1.5dppx){html.squarespace-damask .sqs-action-overlay>div.remove-video:hover{background-image:url("data:,");background-size:9px 11px;}}
+html.squarespace-damask .sqs-action-overlay>div.getty{background:transparent url("/bluescholars/assets/299509eb1233b87e1965a273eede209d9e04d393eff2812a80eeb0dbc430718b.png") center center no-repeat;}
+@media (-webkit-min-device-pixel-ratio:2),(min-resolution:1.5dppx){html.squarespace-damask .sqs-action-overlay>div.getty{background-image:url("/bluescholars/assets/6530213db066fc0e5dd15f17cbfc7c7169fe4f855e3695e5bb10ec919807b1ff.png");background-size:16px;}}
+html.squarespace-damask .sqs-action-overlay>div.buy{background:transparent url("/bluescholars/assets/80aaa276275997c0ec2296cde87ffdc62dd7a2faf65ab29072a852ec7a78deae.png") center center no-repeat;}
+@media (-webkit-min-device-pixel-ratio:2),(min-resolution:1.5dppx){html.squarespace-damask .sqs-action-overlay>div.buy{background-image:url("/bluescholars/assets/d093542cefae85b6e0d0fdf2b2e7ffddbb04d6230727f25afcf11bf53939a227.png");background-size:16px;}}
+html.squarespace-damask .sqs-action-overlay>div.remove-video{background:transparent url("/bluescholars/assets/2c659225f0927e6b828a474bac2d291ff932b05bdb949db9de004bcb3130dc8c.png") center center no-repeat;cursor:pointer;}
+@media (-webkit-min-device-pixel-ratio:2),(min-resolution:1.5dppx){html.squarespace-damask .sqs-action-overlay>div.remove-video{background-image:url("/bluescholars/assets/79fcc834a3af12f7db601bf955c933931279db0390f7aa725d060a19cab11646.png");background-size:9px 11px;}}
+html.squarespace-damask .sqs-action-overlay>div.remove-video:hover{background:transparent url("/bluescholars/assets/ace98c266accd35a3f7fb78946d7728313325d8a7e420acc19c297331a8db8e5.png") center center no-repeat;}
+@media (-webkit-min-device-pixel-ratio:2),(min-resolution:1.5dppx){html.squarespace-damask .sqs-action-overlay>div.remove-video:hover{background-image:url("/bluescholars/assets/7f2a30bd1fe8b4cc2c622bd38552d4452327f65a810c9eb6b96937b731ea39d2.png");background-size:9px 11px;}}
 html.squarespace-damask .sqs-action-overlay>div.loading{background:none;position:relative;opacity:1;}
 html.squarespace-damask .sqs-action-overlay>div.loading .sqs-spin.default{position:relative;top:50%;left:50%;-webkit-transform:translatex(-50%) translatey(-50%);-moz-transform:translatex(-50%) translatey(-50%);-ms-transform:translatex(-50%) translatey(-50%);transform:translatex(-50%) translatey(-50%);}
 html.squarespace-damask .sqs-action-overlay-container:hover .sqs-action-overlay{opacity:1;}

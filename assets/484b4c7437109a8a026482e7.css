@@ -70,7 +70,7 @@ IMG#mood_image_preview{max-width:60px;max-height:60px;}
 .appwidget-sitemessages .b-message-system A:active,.appwidget-sitemessages .b-message-system A:hover,.appwidget-sitemessages .b-message-system A:link,.appwidget-sitemessages .b-message-system A:visited{border:0!important;text-decoration:underline;color:#124787!important;}
 .appwidget-sitemessages .b-message-system .ljuser A:link,.appwidget-sitemessages .b-message-system .ljuser A:visited{text-decoration:none;}
 .appwidget-sitemessages .b-message-system .ljuser A:active,.appwidget-sitemessages .b-message-system .ljuser A:hover{text-decoration:underline;}
-.appwidget-sitemessages .b-message-system I.close{position:absolute;top:8px;right:8px;width:12px;height:12px;cursor:pointer;background:url("data:,") no-repeat;font-size:0;}
+.appwidget-sitemessages .b-message-system I.close{position:absolute;top:8px;right:8px;width:12px;height:12px;cursor:pointer;background:url("/bluescholars/lj/assets/30364d402b1c7afac1f40f368dbfd64080c5bc7491c46c12a7963613d2a5c90b.gif") no-repeat;font-size:0;}
 #lj_controlstrip .appwidget-sitemessages{top:44px;z-index:9999;}
 #content-wrapper .appwidget-sitemessages{position:static;margin-top:20px;}
 #content-wrapper .appwidget-sitemessages .b-message-system{margin:0 0 10px;}
@@ -81,7 +81,7 @@ IMG#mood_image_preview{max-width:60px;max-height:60px;}
 .b-message-mobile-theme{top:0;}
 .mobile-msg #navigation{top:30px;}
 .mobile-msg #content{top:140px!important;}
-.b-message-mobile-close{display:block;position:absolute;right:10px;top:50%;width:50px;height:36px;margin-top:-18px;background:url("data:,") 50% 50% no-repeat;cursor:pointer;}
+.b-message-mobile-close{display:block;position:absolute;right:10px;top:50%;width:50px;height:36px;margin-top:-18px;background:url("/bluescholars/lj/assets/0c9425c7304b86a0d703a07968049e76e099069d7f1c23b0d33bc4ed881eab01.png") 50% 50% no-repeat;cursor:pointer;}
 .placeholder{color:#A9A9A9;}
 .placeholder-wrapper{position:relative;display:inline-block;}
 .placeholder-label{position:absolute;display:none;margin:0;padding:0 5px;cursor:text;line-height:1.8em;font-size:90%;color:#A9A9A9;}
@@ -98,7 +98,7 @@ DIV.lj_ippu_app .ljappippu_share_buttons INPUT.submit{float:right;margin-top:5px
 DIV.lj_ippu_app .ljappippu_confirm_buttons .ljappippu_confirm_ok,DIV.lj_ippu_app .ljappippu_confirm_buttons .ljappippu_payment_ok{float:right;}
 DIV.lj_ippu_app .ljappippu_confirm_buttons .i-bubble,DIV.lj_ippu_app .ljappippu_share_buttons .i-bubble{line-height:16px;}
 DIV.lj_ippu_app .i-qotd-nav{float:right;margin-top:5px;line-height:11px;font-size:11px;}
-DIV.lj_ippu_app .i-qotd-nav-first,DIV.lj_ippu_app .i-qotd-nav-last,DIV.lj_ippu_app .i-qotd-nav-next,DIV.lj_ippu_app .i-qotd-nav-prev{display:inline-block;overflow:hidden;width:16px;height:16px;padding:0;cursor:pointer;background-image:url("data:,");background-repeat:no-repeat;vertical-align:-4px;font:0/0 serif;}
+DIV.lj_ippu_app .i-qotd-nav-first,DIV.lj_ippu_app .i-qotd-nav-last,DIV.lj_ippu_app .i-qotd-nav-next,DIV.lj_ippu_app .i-qotd-nav-prev{display:inline-block;overflow:hidden;width:16px;height:16px;padding:0;cursor:pointer;background-image:url("/bluescholars/lj/assets/7880f6e3eecdace486f2f78c53533bac52f9dd77b6d0ed186a30d12320dd9f13.gif");background-repeat:no-repeat;vertical-align:-4px;font:0/0 serif;}
 DIV.lj_ippu_app .i-qotd-nav-first{margin:0 5px 0 0;background-position:0 -32px;}
 DIV.lj_ippu_app .i-qotd-nav-first-dis{cursor:default;background-position:0 -48px;}
 DIV.lj_ippu_app .i-qotd-nav-last{margin:0 0 0 5px;background-position:-16px -32px;}
@@ -185,7 +185,7 @@ BODY:not(.s-schemius) .b-popup A:active,BODY:not(.s-schemius) .b-popup A:focus,B
 .b-popup-messagebox .b-popup-footer{background:#ECF6FF;text-align:center;}
 .ljcmtmanage{position:absolute;z-index:3;display:block;visibility:hidden;width:250px;text-align:left;}
 .b-popup-ctrlcomm,.b-popup-delcomm{max-width:380px;}
-.b-icon-scapital{float:left;width:16px;height:16px;margin:0 2px 0 0;background-image:url("data:,");background-position:0 50%;background-repeat:no-repeat;}
+.b-icon-scapital{float:left;width:16px;height:16px;margin:0 2px 0 0;background-image:url("/bluescholars/lj/assets/b05ab34e97074fa8b018b1475b9fc1dd7f2bd8fc2a2a5ad5b214bedda8cd9ff6.png");background-position:0 50%;background-repeat:no-repeat;}
 .b-icon-scapital-first{background-position:-17px 50%;}
 .b-loginpopup{display:none;margin:0;padding:0;}
 .b-loginpopup-items{margin:0 0 0 -5px;padding:0;list-style:none;}
@@ -205,7 +205,7 @@ HTML.html-android BODY.p-openpopup .b-popup:not(.b-popup-contextual) .b-popup-in
 HTML.html-android BODY.p-openpopup .b-bubble-calendar.b-popup:not(.b-popup-contextual) .b-popup-inner,HTML.html-android BODY.p-openpopup .b-bubble-filter.b-popup:not(.b-popup-contextual) .b-popup-inner{padding:40px;}
 HTML.html-android BODY.p-openpopup .b-popup-noclosecontrol:not(.b-popup-contextual) .i-popup-close{display:block;}
 HTML.html-android BODY.p-openpopup .b-popup:not(.b-popup-contextual) .i-popup-arr{display:none;}
-HTML.html-android BODY.p-openpopup .b-popup:not(.b-popup-contextual) .i-popup-close{display:block;position:absolute;top:12px;right:12px;width:30px;height:30px;background-image:url("data:,");background-position:-62px 6px;background-repeat:no-repeat;cursor:pointer;font:0/0 a;}}
+HTML.html-android BODY.p-openpopup .b-popup:not(.b-popup-contextual) .i-popup-close{display:block;position:absolute;top:12px;right:12px;width:30px;height:30px;background-image:url("/bluescholars/lj/assets/e3ec6f5f8a01ceaaafd7de19f41d88013fe2d4c02a88c94b04899a775a72d358.svg");background-position:-62px 6px;background-repeat:no-repeat;cursor:pointer;font:0/0 a;}}
 @media all and (max-width:650px){HTML.html-android BODY.p-openpopup .b-popup:not(.b-popup-contextual) .b-popup-outer{max-width:none;}
 HTML BODY.p-openpopup:not(.p-ljtour){overflow:hidden;position:relative;}
 .p-openpopup:not(.p-ljtour) .b-fader,HTML BODY.p-openpopup .b-popup:not(.b-popup-contextual){position:fixed;top:0!important;right:0!important;bottom:0!important;left:0!important;padding:0;}
@@ -215,7 +215,7 @@ HTML BODY.p-openpopup .b-popup:not(.b-popup-contextual) .b-popup-outer{margin:15
 HTML BODY.p-openpopup .b-popup:not(.b-popup-contextual) .b-popup-inner{margin:0;padding:30px;}
 HTML BODY.p-openpopup .b-popup-noclosecontrol:not(.b-popup-contextual) .i-popup-close{display:block;}
 HTML BODY.p-openpopup .b-popup:not(.b-popup-contextual) .i-popup-arr{display:none;}
-HTML BODY.p-openpopup .b-popup:not(.b-popup-contextual) .i-popup-close{display:block;position:absolute;top:12px;right:12px;width:30px;height:30px;background-image:url("data:,");background-position:-62px 6px;background-repeat:no-repeat;cursor:pointer;font:0/0 a;}}
+HTML BODY.p-openpopup .b-popup:not(.b-popup-contextual) .i-popup-close{display:block;position:absolute;top:12px;right:12px;width:30px;height:30px;background-image:url("/bluescholars/lj/assets/e3ec6f5f8a01ceaaafd7de19f41d88013fe2d4c02a88c94b04899a775a72d358.svg");background-position:-62px 6px;background-repeat:no-repeat;cursor:pointer;font:0/0 a;}}
 @media all and (max-width:480px){.b-popup-manage-notes .b-flatbutton{width:100%;margin:10px 0 0!important;}
 .b-popup-manage-notes .b-flatbutton:first-child{margin-top:0;}}
 @media all and (max-width:400px){HTML BODY.p-openpopup .b-popup:not(.b-popup-contextual) .i-popup-close{width:15px;height:15px;background-position:-31px 2px;background-size:170px 34px;}}
@@ -245,7 +245,7 @@ HTML BODY .b-helplink:active,HTML BODY .b-helplink:hover{border:0!important;text
 .b-msgsystem-error{margin:0 0 10px;padding:0;color:#787878;display:none;}
 .b-msgsystem-errorbox-errors,.b-msgsystem-errorbox-errors .b-msgsystem-error-server,.b-msgsystem-errorbox-show .b-msgsystem-error-ajax{display:block;}
 .b-msgsystem-warningbox{display:none;overflow:hidden;margin-bottom:2em;padding:10px;background-color:#FFFFD5;}
-.b-msgsystem-warningbox .b-warningbox-icon{float:left;clear:both;overflow:hidden;width:55px;height:58px;margin-right:30px;background:url("data:,") no-repeat;text-indent:-9999px;}
+.b-msgsystem-warningbox .b-warningbox-icon{float:left;clear:both;overflow:hidden;width:55px;height:58px;margin-right:30px;background:url("/bluescholars/lj/assets/9e25f885f9f907ef6c88333d61c8b048e6cf6f44c87438bdab2ac066c74d9096.png") no-repeat;text-indent:-9999px;}
 .b-msgsystem-warningbox-age-14 .b-warningbox-icon{background-position:0 0;}
 .b-msgsystem-warningbox-age-18 .b-warningbox-icon{background-position:0 -57px;}
 .b-msgsystem-warningbox-head{margin:0 0 5px;padding:0;font-weight:700;font-size:1em;color:#000;}
@@ -268,11 +268,11 @@ HTML BODY .b-helplink:active,HTML BODY .b-helplink:hover{border:0!important;text
 .b-ljbutton-delete{background-color:#970000;background-image:-webkit-linear-gradient(top,#DA0000 0,#970000 100%);background-image:linear-gradient(to bottom,#DA0000 0,#970000 100%);}
 .b-flatbutton,.rkassa{display:inline-block;border:0;text-align:center;text-decoration:none;text-transform:uppercase;}
 .b-flatbutton{position:relative;margin:0;padding:15px 20px;border-radius:3px;font:14px/1 ProximaNovaSemibold,Tahoma,Arial,sans-serif;font:.875rem/1 ProximaNovaSemibold,Tahoma,Arial,sans-serif;cursor:pointer;}
-.b-flatbutton-icon{overflow:hidden;display:inline-block;width:16px;height:16px;margin:0;padding:0;vertical-align:-3px;background:url("data:,") no-repeat;font:0/0 a;cursor:pointer;}
+.b-flatbutton-icon{overflow:hidden;display:inline-block;width:16px;height:16px;margin:0;padding:0;vertical-align:-3px;background:url("/bluescholars/lj/assets/0e05fa892ccfb560dc5fc46b286897463dc5961180a1c51fb0d47caad10291d6.svg") no-repeat;font:0/0 a;cursor:pointer;}
 .b-flatbutton-shine:before,.b-flatbutton-shining:before{content:"";width:200%;height:200%;position:absolute;}
 .ljcut-link-scissors,.meta-music-object{vertical-align:middle;}
-.lt-ie9 .b-flatbutton-icon{background-image:url("data:,");}
-.b-flatbutton-icon,doesnotexist:-o-prefocus{background-image:url("data:,");}
+.lt-ie9 .b-flatbutton-icon{background-image:url("/bluescholars/lj/assets/5ab00931387db1a14a851a48e03d18b009077ee2e7ba2918abaf83309c4f79a7.png");}
+.b-flatbutton-icon,doesnotexist:-o-prefocus{background-image:url("/bluescholars/lj/assets/5ab00931387db1a14a851a48e03d18b009077ee2e7ba2918abaf83309c4f79a7.png");}
 .b-flatbutton-title{margin:0;}
 .b-flatbutton-simple{padding:10px 15px;}
 .b-flatbutton[disabled]{opacity:.5;pointer-events:none;}
@@ -431,10 +431,10 @@ HTML BODY .i-ljuser-userhead{width:16px!important;height:16px!important;margin:0
 .b-flatrepost-name{display:inline-block!important;height:19px;margin:0!important;padding:6px 12px 0 13px!important;border:0!important;border-radius:20px!important;background:#00A2D9!important;color:#FFF!important;cursor:pointer;}
 .b-flatrepost-name:hover{background:#27BFF9!important;color:#FFF!important;}
 .lj-like--v4 .b-flatrepost-name{position:relative;height:34px;padding:0 2px 0 32px!important;color:#475559;}
-.lj-like--v4 .b-flatrepost-name:before{content:"";position:absolute;top:0;left:0;display:block;width:34px;height:34px;background:url("data:,") -1px -1px no-repeat!important;}
+.lj-like--v4 .b-flatrepost-name:before{content:"";position:absolute;top:0;left:0;display:block;width:34px;height:34px;background:url("/bluescholars/lj/assets/89403e9a4efdfbae425e917eb1d916967c3f3920adbc8432cd76cde10ac9134c.svg") -1px -1px no-repeat!important;}
 .lj-like--v4 .b-flatrepost:hover .b-flatrepost-name:before{background-position:-37px -1px!important;}
-.lt-ie9 .lj-like--v4 .b-flatrepost-name:before{background-image:url("data:,")!important;}
-.lj-like--v4 .b-flatrepost-name:before,doesnotexist:-o-prefocus{background-image:url("data:,")!important;}
+.lt-ie9 .lj-like--v4 .b-flatrepost-name:before{background-image:url("/bluescholars/lj/assets/8564ce557dbe3a2acb0a824c41d9ef7672646168922b6411b4653c11b1f13d98.png")!important;}
+.lj-like--v4 .b-flatrepost-name:before,doesnotexist:-o-prefocus{background-image:url("/bluescholars/lj/assets/8564ce557dbe3a2acb0a824c41d9ef7672646168922b6411b4653c11b1f13d98.png")!important;}
 .lt-ie9 .b-flatrepost-name{position:relative;z-index:-1;}
 .lt-ie9 .lj-like--v4 .b-flatrepost-name{z-index:1;}
 HTML#js BODY .b-flatrepost-name:link,HTML#js BODY .b-flatrepost-name:visited{border:0!important;text-decoration:none!important;background:#00A2D9!important;color:#FFF!important;}
@@ -511,12 +511,12 @@ HTML#js BODY .lj-like--v4 .b-flatsocial-stumbleupon:hover{border-color:#EB4924!i
 HTML#js BODY .lj-like--v4 .b-flatsocial-share:hover{border-color:#007399!important;background-color:#007399!important;}
 HTML#js BODY .lj-like--v4 .b-flatsocial-openid:hover{border-color:#F69320!important;background-color:#F69320!important;}
 HTML#js BODY .lj-like--v4 .b-flatsocial-pocket:hover{border-color:#EE4256!important;background-color:#EE4256!important;}
-.b-flatsocial-name{width:25px!important;height:25px!important;border:0;font:0/0 a;text-shadow:none;color:transparent;background:url("data:,") no-repeat;cursor:pointer;}
-.lj-like--v4 .b-flatsocial-name{width:34px!important;height:34px!important;background:url("data:,") no-repeat;}
-.lt-ie9 .b-flatsocial-name{background-image:url("data:,");}
-.lt-ie9 .lj-like--v4 .b-flatsocial-name{background-image:url("data:,");}
-.b-flatsocial-name,doesnotexist:-o-prefocus{background-image:url("data:,");}
-.lj-like--v4 .b-flatsocial-name,doesnotexist:-o-prefocus{background-image:url("data:,");}
+.b-flatsocial-name{width:25px!important;height:25px!important;border:0;font:0/0 a;text-shadow:none;color:transparent;background:url("/bluescholars/lj/assets/67ae3cc11a44adb3a8e11d2141c3a227d05675b490836429895326b79638757c.svg") no-repeat;cursor:pointer;}
+.lj-like--v4 .b-flatsocial-name{width:34px!important;height:34px!important;background:url("/bluescholars/lj/assets/89403e9a4efdfbae425e917eb1d916967c3f3920adbc8432cd76cde10ac9134c.svg") no-repeat;}
+.lt-ie9 .b-flatsocial-name{background-image:url("/bluescholars/lj/assets/460193ebb1ad70c1883ebea877a45d0ed150622215d52ae2a85d0e6b7f369818.png");}
+.lt-ie9 .lj-like--v4 .b-flatsocial-name{background-image:url("/bluescholars/lj/assets/8564ce557dbe3a2acb0a824c41d9ef7672646168922b6411b4653c11b1f13d98.png");}
+.b-flatsocial-name,doesnotexist:-o-prefocus{background-image:url("/bluescholars/lj/assets/460193ebb1ad70c1883ebea877a45d0ed150622215d52ae2a85d0e6b7f369818.png");}
+.lj-like--v4 .b-flatsocial-name,doesnotexist:-o-prefocus{background-image:url("/bluescholars/lj/assets/8564ce557dbe3a2acb0a824c41d9ef7672646168922b6411b4653c11b1f13d98.png");}
 .b-flatsocial-counter{position:relative;height:14px;margin:0 0 0 9px;padding:4px 5px 0;border:1px solid #CED6D9;border-radius:3px;background:#FFF;color:#475559;}
 .b-flatsocial-counter:after,.b-flatsocial-counter:before{content:" ";position:absolute;top:50%;right:100%;width:0;height:0;border:solid transparent;pointer-events:none;}
 .b-flatsocial-counter:after{border-color:rgba(255,255,255,0);border-right-color:#FFF;border-width:5px;margin-top:-5px;}
@@ -906,10 +906,10 @@ DIV.columns-2-r300 .columns-2-left{float:left;width:405px;margin-right:15px;}
 DIV.columns-2-r300 .columns-2-right{float:left;width:300px;}
 DIV.ad-sidebar,DIV.right-sidebar{float:right;width:300px;}
 .appwidget{position:relative;margin-bottom:15px;}
-.appwidget .more-link{position:absolute;top:6px;right:7px;padding-left:10px;background:url("data:,") 0 60% no-repeat;text-decoration:none;text-transform:lowercase;font-size:11px;color:#114577!important;}
+.appwidget .more-link{position:absolute;top:6px;right:7px;padding-left:10px;background:url("/bluescholars/lj/assets/f13bc3550c5b3366d1539c185b213f7aea0612106a7fa0806a58dde637b786bb.gif") 0 60% no-repeat;text-decoration:none;text-transform:lowercase;font-size:11px;color:#114577!important;}
 .appwidget .more-link:hover{text-decoration:underline;}
 .upgrade-account{padding-right:18px;background:url("data:,") right 50% no-repeat;}
-.arrow-link,.more-link{padding-left:12px;background:url("data:,") 0 50% no-repeat;}
+.arrow-link,.more-link{padding-left:12px;background:url("/bluescholars/lj/assets/058636b1e0b0b47e1881c516e51bf47b670b6dc7ddc7bd7eb3680a28f96871da.gif") 0 50% no-repeat;}
 .standout-background,DIV.right-sidebar{background-color:#C5DFF9;}
 .message{margin-bottom:15px;border:5px solid #EEE;}
 .message blockquote{margin:0;padding:15px;border:1px solid #AAA;}
@@ -919,9 +919,9 @@ H2.solid-blue,H2.solid-neutral{margin:0 0 8px;padding:5px 8px;font-size:14px;fon
 H2.solid-neutral{background:url("/bluescholars/lj/assets/a9103030d2edc1b2702288ad7905c11c9da46e5fa187199813c3312afaedd333.gif") no-repeat #EDEDED;}
 H2.solid-blue{position:relative;background:url("/bluescholars/lj/assets/a9103030d2edc1b2702288ad7905c11c9da46e5fa187199813c3312afaedd333.gif") no-repeat #D7E7F7;}
 .solid-neutral{background:#EDEDED;}
-.lj_progresscontainer{width:400px;height:25px;margin:1em;background:url("data:,");}
+.lj_progresscontainer{width:400px;height:25px;margin:1em;background:url("/bluescholars/lj/assets/48afc1c57765e4e895b8ac9a02a4bea1146bc5d77e9069055eadf8fa626bacb2.gif");}
 .lj_progressoverlay{background:url("/bluescholars/lj/assets/feace17e30ce071fa1306f558c3aac5c0eda2509fa3cce50c450908ff4e043ab.gif");}
-.lj_progressindefinite{background-image:url("data:,");}
+.lj_progressindefinite{background-image:url("/bluescholars/lj/assets/945a8493e1d8c49ac70ec0abe91ee9c4c3e22822e599cd5b58928c903babd9db.gif");}
 .helper{font-size:.8em;color:#666;}
 .b-btn{overflow:visible;padding:10px 25px;border:1px solid #518593;border-radius:5px;cursor:pointer;background-color:#6ED1FF;background-image:-webkit-linear-gradient(top,#6ED1FF 0,#1BB5FD 3%,#158FC8 100%);background-image:linear-gradient(to bottom,#6ED1FF 0,#1BB5FD 3%,#158FC8 100%);text-transform:uppercase;text-shadow:1px 1px 1px #0B6294;font-weight:700;font-size:14px;color:#FFF;}
 .b-btn-disabled{border-color:silver;background-color:#EAEAEA;background-image:-webkit-linear-gradient(top,#EAEAEA 0,#CFCFCF 3%,#C5C5C5 100%);background-image:linear-gradient(to bottom,#EAEAEA 0,#CFCFCF 3%,#C5C5C5 100%);text-shadow:1px 1px 1px #999;}
@@ -937,7 +937,7 @@ H2.solid-blue{position:relative;background:url("/bluescholars/lj/assets/a9103030
 .ljhidden{top:0;display:block;width:0;height:0;margin:0;padding:0;border:0;opacity:0;filter:alpha(opacity=0);line-height:0;font-size:.1px;}
 .super{vertical-align:super;font-size:.7em;}
 .notice{color:red;}
-.warning-background{background-image:url("data:,");}
+.warning-background{background-image:url("/bluescholars/lj/assets/aa80726863e4a8eb3234f13af1ea70aed8467d176f4c12aa46128b51c0321819.gif");}
 .st-disabled{position:relative;}
 .b-blocker{position:absolute;top:0;left:0;display:none;width:100%;height:100%;}
 .st-disabled .b-blocker{display:block;}
@@ -956,7 +956,7 @@ SUP.i-new{position:relative;bottom:.5em;padding:0 1px;vertical-align:middle;font
 .b-pending-users LI SPAN{position:relative;float:left;margin:0;}
 .b-pending-users LI SPAN I.i-pending-users-delim{position:relative;z-index:-1;}
 .b-pending-users LI.hover SPAN,.b-pending-users LI:hover SPAN{margin:-3px -18px -4px -8px;padding:2px 17px 3px 7px;border:1px solid #CCC;border-radius:5px;background:#F5F5F5;}
-.b-pending-users LI.hover SPAN .i-pending-close,.b-pending-users LI:hover SPAN .i-pending-close{position:absolute;top:50%;right:6px;display:block;width:6px;height:7px;margin:-3px 0 0;padding:0;cursor:pointer;background:url("data:,") no-repeat;}
+.b-pending-users LI.hover SPAN .i-pending-close,.b-pending-users LI:hover SPAN .i-pending-close{position:absolute;top:50%;right:6px;display:block;width:6px;height:7px;margin:-3px 0 0;padding:0;cursor:pointer;background:url("/bluescholars/lj/assets/779775cac157b73b97598dc974c3f3a57e0fb9794a567cf0bccf386c549365ba.gif") no-repeat;}
 .b-pending-reason{clear:both;width:99%;margin:0 0 1em;}
 .i-pending-reject{float:right;margin:.5em 0 0;}
 .placeholder{color:#A9A9A9;}
@@ -977,10 +977,10 @@ SUP.i-new{position:relative;bottom:.5em;padding:0 1px;vertical-align:middle;font
 .b-massaction-checkall INPUT{margin:0;}
 .b-massaction .b-ljbutton{position:static;margin-left:1.5em;}
 .b-massaction-problems{background-color:#FFEFEF;background-image:-webkit-linear-gradient(top,#FFF6F6 0,#FFEFEF 100%);background-image:linear-gradient(to bottom,#FFF6F6 0,#FFEFEF 100%);}
-.b-massaction-errors{display:none;margin:0;padding:10px 0 10px 30px;background:url("data:,") 0 6px no-repeat;color:#CB1427;}
+.b-massaction-errors{display:none;margin:0;padding:10px 0 10px 30px;background:url("/bluescholars/lj/assets/129b32ad621c2af0842ec8aa01f359d732d39db90ad7d257b33d994e1de3ee53.png") 0 6px no-repeat;color:#CB1427;}
 .b-massaction-error{margin:0;padding:0;}
 .b-massaction-problems .b-massaction-errors{display:block;}
-.b-massaction-preloader{position:absolute;right:26px;bottom:13px;display:none;width:30px;height:30px;margin:0;padding:0;background:url("data:,") no-repeat;font:0/0 serif;}
+.b-massaction-preloader{position:absolute;right:26px;bottom:13px;display:none;width:30px;height:30px;margin:0;padding:0;background:url("/bluescholars/lj/assets/f3c8259fca25b1fa5ba5c73721dd0529b0457ecd4ce87f0403c3eb667b141183.gif") no-repeat;font:0/0 serif;}
 .b-massaction-processing .b-massaction-preloader{display:block;}
 .b-massaction-fixed .b-massaction-preloader,.ljtimes-disabled .b-massaction-fixed .b-massaction-preloader,.ljtimes-minimized .b-massaction-fixed .b-massaction-preloader{position:fixed;}
 @media screen and (max-width:1300px),(max-width:1280px) and (max-height:800px){.g-sensor .b-massaction-fixed,.mobile-msg .b-massaction-fixed{position:relative;bottom:auto;width:auto;}}
@@ -1017,7 +1017,7 @@ SUP.i-new{position:relative;bottom:.5em;padding:0 1px;vertical-align:middle;font
 .b-dropover{position:relative;top:0;left:0;z-index:2;margin:-15px;padding:34px 14px 14px;border:1px solid #C0C2C8;border-bottom-right-radius:9px;border-bottom-left-radius:9px;background-color:#FAFAFA;background-image:-webkit-linear-gradient(top,#FAFCFE 0,#E2E3E7 25%,#FAFAFA 100%);background-image:linear-gradient(to bottom,#FAFCFE 0,#E2E3E7 25%,#FAFAFA 100%);box-shadow:0 10px 15px rgba(53,99,161,.8);list-style:none;}
 #js .b-dropover{position:absolute;display:none;}
 #js .b-dropover-open .b-dropover{display:block;}
-.b-dropover-close{position:absolute;top:1px;right:10px;z-index:5;display:none;width:16px;height:16px;margin:0;padding:0;cursor:pointer;background:url("data:,") no-repeat;font:0/0 serif;}
+.b-dropover-close{position:absolute;top:1px;right:10px;z-index:5;display:none;width:16px;height:16px;margin:0;padding:0;cursor:pointer;background:url("/bluescholars/lj/assets/434136c77d0909e8abd5dede67bcf5c29e30f115b1a5efe0bdf3644defdfc4a1.png") no-repeat;font:0/0 serif;}
 .b-panel,.b-steps,.b-steps-step{position:relative;}
 .b-dropover-close:hover{background-position:0 -16px;}
 .b-dropover-show .b-dropover-close{display:block;}
@@ -1042,11 +1042,11 @@ SUP.i-new{position:relative;bottom:.5em;padding:0 1px;vertical-align:middle;font
 .userslist-table TD{padding:3px 10px;}
 .emailverify{position:relative;margin:0;padding:8px;border:1px solid #FC3;background:#FFD;text-align:center;}
 .emailverify-message{margin:0;}
-.emailverify-close{position:absolute;top:50%;right:8px;z-index:2;width:16px;height:16px;margin:-8px 0 0;padding:0;background:url("data:,") no-repeat;font:0/0 serif;cursor:pointer;}
+.emailverify-close{position:absolute;top:50%;right:8px;z-index:2;width:16px;height:16px;margin:-8px 0 0;padding:0;background:url("/bluescholars/lj/assets/434136c77d0909e8abd5dede67bcf5c29e30f115b1a5efe0bdf3644defdfc4a1.png") no-repeat;font:0/0 serif;cursor:pointer;}
 .emailverify-close:hover{background-position:0 -16px;}
 .s-switchv3{margin:0;padding:0 20px 0 0;font-size:13px;text-align:right;background:#0D425A;color:#FFF;}
 .logged-in.p-home .s-switchv3{padding-right:120px;}
-.s-switchv3 .s-switchv3-switch{display:inline-block;padding:15px 34px 15px 0;background:url("data:,") 100% 45% no-repeat;}
+.s-switchv3 .s-switchv3-switch{display:inline-block;padding:15px 34px 15px 0;background:url("/bluescholars/lj/assets/a154525c9a71c848b9e5003b18c84bca7f6ed819520b3ea18e3eed9060dbb399.png") 100% 45% no-repeat;}
 .s-switchv3 .s-switchv3-switch:link,.s-switchv3 .s-switchv3-switch:visited{border:0;text-decoration:underline;color:#FFF;}
 .s-switchv3 .s-switchv3-switch:active,.s-switchv3 .s-switchv3-switch:hover{border:0;text-decoration:none;color:#FFF;}
 @media all and (max-width:880px){.s-switchv3{padding:0 0 0 20px;text-align:left;}}
@@ -1113,7 +1113,7 @@ table.edged{border:2px solid #c5dff9;}
 .standout span.container{padding:8px 7px!important;display:inline-block;}
 .errorbar,.warningbar{color:#000;font:12px Verdana,Arial,Sans-Serif;background-repeat:repeat-x;padding:8px;width:auto;text-align:left;margin:auto auto 5px;}
 .errorbar{background-color:#FEE;border:1px solid #F99;background-image:url("/bluescholars/lj/assets/c9b1b7cdc1713e51c4e1f69d64bbeebac26575f65297d71d7c5c9d4286ec9a51.gif");}
-.warningbar{background-color:#FFD;border:1px solid #FC3;background-image:url("data:,");}
+.warningbar{background-color:#FFD;border:1px solid #FC3;background-image:url("/bluescholars/lj/assets/aa80726863e4a8eb3234f13af1ea70aed8467d176f4c12aa46128b51c0321819.gif");}
 .talk-comment{margin-top:1em;margin-bottom:0;}
 .formitemName,.formnumber{font-weight:700;margin-top:1.8em;}
 .talk-comment-head{overflow:hidden;padding:1px 0;}
@@ -1172,7 +1172,7 @@ UL.likes-list LI{padding:0;margin:0 0 5px;}
 #Userpic{z-index:101;}
 #defaultpic{background-color:transparent;background-position:center center;background-repeat:no-repeat;}
 #Userpic img{display:block;vertical-align:middle;border:0;}
-#NoUserpic{background-image:url("data:,");background-repeat:repeat-y;height:100%;margin:0;padding:0;vertical-align:baseline;}
+#NoUserpic{background-image:url("/bluescholars/lj/assets/def248f5ebfbae641d61100f82d54216f623ab8e15756ab92e2452dea89d55be.png");background-repeat:repeat-y;height:100%;margin:0;padding:0;vertical-align:baseline;}
 #NoUserpic a span{display:table-cell;position:relative;font-size:.8em;color:#036;cursor:pointer;margin:0;padding:0;vertical-align:middle;text-align:center;}
 .b-nouserpic,.b-userpic-wrap-empty .b-userpic{display:none;}
 .b-userpic-wrap-empty .b-nouserpic{display:block;}
@@ -1205,13 +1205,13 @@ UL.likes-list LI{padding:0;margin:0 0 5px;}
 .b-navmenu-rootlink:active,.b-navmenu-rootlink:hover{background:#CBE4FD;text-decoration:none;color:#114577;}
 .b-navmenu-submenu{position:absolute;top:27px;left:0;z-index:200;display:none;width:15em;padding:0;list-style:none;color:#114577;}
 .b-navmenu-submenu LI.disabled{background-color:#CBE4FD;}
-.b-navmenu-submenu LI.disabled,.b-navmenu-submenu LI.disabled A:hover{background-image:url("data:,");background-position:95% 50%;background-repeat:no-repeat;}
+.b-navmenu-submenu LI.disabled,.b-navmenu-submenu LI.disabled A:hover{background-image:url("/bluescholars/lj/assets/13db5720e6e28fdae25713879a935313afc6bb31f1e0d01fcd63d15f4f0affea.gif");background-position:95% 50%;background-repeat:no-repeat;}
 .b-navmenu-item-active .b-navmenu-submenu,.b-navmenu-item:hover .b-navmenu-submenu{display:block;}
 .b-navmenu-item-active .b-navmenu-rootlink:link,.b-navmenu-item-active .b-navmenu-rootlink:visited,.b-navmenu-item:hover .b-navmenu-rootlink:link,.b-navmenu-item:hover .b-navmenu-rootlink:visited{background:#CBE4FD;text-decoration:none;color:#114577;}
 .b-navmenu-submenu LI A,.b-navmenu-submenu LI A:visited{padding:5px 0 5px 5px;font-weight:700;font-size:.95em;text-decoration:none;color:#036;}
 .b-navmenu-submenu LI.disabled A{color:#999;}
 .b-navmenu-submenu LI A:hover{background:#3E5A8B!important;font-weight:700!important;color:#FFF!important;}
-.b-navmenu-submenu LI.disabled A:hover{background:url("data:,") 95% 50% no-repeat #3E5A8B!important;color:#000;}
+.b-navmenu-submenu LI.disabled A:hover{background:url("/bluescholars/lj/assets/13db5720e6e28fdae25713879a935313afc6bb31f1e0d01fcd63d15f4f0affea.gif") 95% 50% no-repeat #3E5A8B!important;color:#000;}
 .b-navmenu-submenu A,.b-navmenu-submenu A:visited{display:block;text-decoration:underline;line-height:1.4em;font-weight:400!important;color:#036;}
 .b-navbar-search{position:absolute;right:0;top:0;width:auto;margin:2px 15px 0 0;padding:3px 0 0 2px;line-height:17px;text-align:right;}
 .b-navbar-search INPUT,.b-navbar-search SELECT{margin-right:0;font:400 11px Arial,Helvetica,sans-serif;}
@@ -1236,7 +1236,7 @@ UL.likes-list LI{padding:0;margin:0 0 5px;}
 #footer-links a:hover{text-decoration:underline;}
 #footer-links P.more_lj{font-size:11px;font-weight:700;text-align:left;padding:1px 0 0;margin:0;}
 #footer-copyright{font-size:11px;text-align:center;margin-top:5px;padding-bottom:25px;}
-#navigation{background:url("data:,") 100% 0 no-repeat #061C43;}
+#navigation{background:url("/bluescholars/lj/assets/73abf86238e10285f24473da1ba6a90ff49f90a1e185ef5272026822e44528b3.jpg") 100% 0 no-repeat #061C43;}
 #NavBar{background:0 0;}
 #Userpic{background:0 0!important;}
 #welcome,#welcome A{color:#E9F4FF!important;}
@@ -1253,7 +1253,7 @@ UL.likes-list LI{padding:0;margin:0 0 5px;}
 DL.b-reskining-about,DL.b-reskining-about DT{margin:0;padding:0;position:absolute;right:0;}
 DL.b-reskining-about{display:none;top:0;z-index:2000;}
 .mobile-msg DL.b-reskining-about{top:30px;}
-DL.b-reskining-about DT{top:0;width:32px;height:29px;background:url("data:,") no-repeat;}
+DL.b-reskining-about DT{top:0;width:32px;height:29px;background:url("/bluescholars/lj/assets/2af04ca7324aed31e5bf29f3d9a0d67fc833eccc568399e085c2f6e24c99ae5a.png") no-repeat;}
 DL.b-reskining-about DD{display:none;position:absolute;right:0;top:0;z-index:2001;padding:5px 20px 8px!important;background:#102446;white-space:nowrap;-moz-border-radius-bottomleft:6px;-webkit-border-bottom-left-radius:6px;border-radius-bottomleft:6px;color:#FFF;}
 DL.b-reskining-about DD A:active,DL.b-reskining-about DD A:hover,DL.b-reskining-about DD A:link,DL.b-reskining-about DD A:visited{text-decoration:underline;color:#FFF;}
 DL.b-reskining-about:hover DD{display:block;}
@@ -1302,10 +1302,10 @@ H3.h-adv-box A:hover{text-decoration:underline!important;}
 .appwidget-ratingtop10 .content b,.rate-posts .s-list-desc .ljuser B,UL.opt-menu LI STRONG{font-weight:700;}
 .appwidget-ratingtop10 .mod-bl,.appwidget-ratingtop10 .mod-br{background:0 0!important;}
 #lz-side .appwidget-ratingtop10 H2,.homepage-loggedin .appwidget-ratingtop10 H2{margin:0 0 8px;padding:5px 8px;background:url("/bluescholars/lj/assets/a9103030d2edc1b2702288ad7905c11c9da46e5fa187199813c3312afaedd333.gif") no-repeat #C7E0F6;}
-#lz-side .appwidget-ratingtop10 H2 SPAN,.homepage-loggedin .appwidget-ratingtop10 H2 SPAN{padding:0 0 0 20px;background:url("data:,") 0 50% no-repeat;border:none;color:#222;}
+#lz-side .appwidget-ratingtop10 H2 SPAN,.homepage-loggedin .appwidget-ratingtop10 H2 SPAN{padding:0 0 0 20px;background:url("/bluescholars/lj/assets/2426d5e7bda79a095bc747223cbf77580a3f5282ca7ca1ad08e38d63ae834257.gif") 0 50% no-repeat;border:none;color:#222;}
 .appwidget-ratingtop10 .content{padding:0;border-left:none;}
 .homepage-loggedout .appwidget-ratingtop10 .content{padding:0;}
-.appwidget-ratingtop10 .more:link,.appwidget-ratingtop10 .more:visited,.l-ratings-cols .more:link,.l-ratings-cols .more:visited,.w-statistics .more:link,.w-statistics .more:visited{padding:0 0 0 10px;background:url("data:,") 0 60% no-repeat;text-decoration:none;font-size:11px;color:#114577!important;}
+.appwidget-ratingtop10 .more:link,.appwidget-ratingtop10 .more:visited,.l-ratings-cols .more:link,.l-ratings-cols .more:visited,.w-statistics .more:link,.w-statistics .more:visited{padding:0 0 0 10px;background:url("/bluescholars/lj/assets/f13bc3550c5b3366d1539c185b213f7aea0612106a7fa0806a58dde637b786bb.gif") 0 60% no-repeat;text-decoration:none;font-size:11px;color:#114577!important;}
 .appwidget-ratingtop10 .more:hover,.l-ratings-cols .more:hover,.w-statistics .more:hover{text-decoration:underline;color:#114577!important;}
 .w-statistics UL.opt-menu{font-size:1em;}
 .w-statistics UL.opt-menu LI A:link,.w-statistics UL.opt-menu LI A:visited{border:0;text-decoration:none;font-size:11px;color:#114577;}
@@ -1346,7 +1346,7 @@ UL.opt-menu LI STRONG{padding:0;background:0 0;color:#000;}
 #Login table td{vertical-align:top;text-align:left;font-size:1em;}
 #Login table .desc,#Login table label{font-size:.9em;vertical-align:middle;text-align:right;}
 .logged-out .b-navmenu{margin-left:27px;}
-#navigation{background:url("data:,") no-repeat #061C43;}
+#navigation{background:url("/bluescholars/lj/assets/19cc531b1e9ee1c66204b2aa9672271c7dfa5bb3a283cffe573ff0a2f65bf6c2.jpg") no-repeat #061C43;}
 #NavBar{background:0 0;}
 #Logo{width:83px;left:0;top:0;}
 .statistics H2{clear:left;margin:0 0 .8em;padding:5px 8px;font-family:Arial;font-size:14px;font-weight:700;background:url("/bluescholars/lj/assets/a9103030d2edc1b2702288ad7905c11c9da46e5fa187199813c3312afaedd333.gif") no-repeat #C7E0F6;color:#222;}

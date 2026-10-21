@@ -38,6 +38,19 @@ def test_legacy_wordpress_extensionless_urls_are_html_not_images():
     assert not is_site('https://bluescholars.com.evil.example/blog')
     assert not is_site('https://youtube.com/x')
 
+def test_livejournal_reply_variants_do_not_starve_post_recovery():
+    from restore.recover import resource_priority
+    post={'url':'https://bluescholars.livejournal.com/16015.html','kind':'html'}
+    reply={'url':'https://bluescholars.livejournal.com/16015.html?replyto=49551','kind':'html'}
+    assert resource_priority(post)[0] < resource_priority(reply)[0]
+
+def test_legacy_article_assets_are_recovered_before_unlinked_old_posts():
+    from restore.recover import resource_priority
+    image={'url':'https://cdn.example/2008-tour-photo.jpg','kind':'image',
+           'referrers':['http://bluescholars.com/blog/2008/07/freshly-dipped-tour/']}
+    old_post={'url':'http://bluescholars.com/blog/2009/03/untried-post/','kind':'html'}
+    assert resource_priority(image)[0] < resource_priority(old_post)[0]
+
 def test_explicit_pagination():
     assert route(HOME+'blog?offset=1362122742000') == '/blog/page/2/'
     assert route(HOME+'blog?offset=1358016466000') == '/blog/page/3/'

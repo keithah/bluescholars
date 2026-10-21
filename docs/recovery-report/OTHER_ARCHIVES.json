@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T02:48:00Z",
+  "updated_at": "2026-10-21",
   "scope": "Independent public web archives checked for Blue Scholars website captures, linked posts, and supporting material.",
   "results": {
     "Arquivo.pt": {
@@ -669,5 +669,88 @@
     ],
     "interpretation": "No new image captures were found in the successful exact-URL queries. The one failed request is unknown, not a confirmed no-capture result.",
     "source_report": "asset-index-2026-10-17.json"
+  },
+  "independent_media_reuse": {
+    "status": "partial_download; supplemental_gallery_generated_with_attribution",
+    "category_url": "https://commons.wikimedia.org/wiki/Category:Blue_Scholars",
+    "category_file_count": 20,
+    "locally_preserved_count": 6,
+    "not_yet_downloaded": 14,
+    "aggregate_local_bytes": 5483209,
+    "local_page": "/community-media/",
+    "items": [
+      {
+        "title": "Blue Scholars-DJ Sabzi-SasquatchFestival06",
+        "commons_url": "https://commons.wikimedia.org/wiki/File:Blue_Scholars-DJ_Sabzi-SasquatchFestival06.JPG",
+        "date": "2006-05-28",
+        "author": "Tammy Lo from Brooklyn, NY",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "source_path": "source/community-media/sasquatch-2006.jpg",
+        "bytes": 243762,
+        "sha256": "40894269f4af34e2d98ca34667813fbf452277feffa93c1ace825357547adaf8"
+      },
+      {
+        "title": "Blue Scholars-Geologic-SasquatchFestival06",
+        "commons_url": "https://commons.wikimedia.org/wiki/File:Blue_Scholars-Geologic-SasquatchFestival06.JPG",
+        "date": "2006-05-28",
+        "author": "Tammy Lo from Brooklyn, NY",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "source_path": "source/community-media/commons-9eb625f5b389ef0f.jpg",
+        "bytes": 261817,
+        "sha256": "9eb625f5b389ef0fd50d847b816630e01806bae2e4646ae933cbae0d85366dd7"
+      },
+      {
+        "title": "Blue-scholars-geologic-and-djsabzi-sasquatchfestival06",
+        "commons_url": "https://commons.wikimedia.org/wiki/File:Blue-scholars-geologic-and-djsabzi-sasquatchfestival06.jpg",
+        "date": "2007-10-26",
+        "author": "Ranger",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "source_path": "source/community-media/commons-7d04924a5d757679.jpg",
+        "bytes": 338800,
+        "sha256": "7d04924a5d7576791d70d85cd1258926fb8e42bcf39bce05f8ab1f601cc54ed0"
+      },
+      {
+        "title": "Blue Scholars 01",
+        "commons_url": "https://commons.wikimedia.org/wiki/File:Blue_Scholars_01.jpg",
+        "date": "2008-10-29",
+        "author": "Joe Mabel",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "source_path": "source/community-media/commons-15762b741ad716f7.jpg",
+        "bytes": 1384255,
+        "sha256": "15762b741ad716f7f5b13b30df603b03e3558039238730bc403664dabea8d6ae"
+      },
+      {
+        "title": "Blue Scholars 01A",
+        "commons_url": "https://commons.wikimedia.org/wiki/File:Blue_Scholars_01A.jpg",
+        "date": "2008-10-29",
+        "author": "Joe Mabel",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "source_path": "source/community-media/commons-39dea31d987805e9.jpg",
+        "bytes": 1677824,
+        "sha256": "39dea31d987805e9cd41610c90d184178f123c3d08378632bdb11492a3286baa"
+      },
+      {
+        "title": "Blue Scholars 02",
+        "commons_url": "https://commons.wikimedia.org/wiki/File:Blue_Scholars_02.jpg",
+        "date": "2008-10-29",
+        "author": "Joe Mabel",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "source_path": "source/community-media/commons-6aa00f7f561fdb6a.jpg",
+        "bytes": 1576751,
+        "sha256": "6aa00f7f561fdb6ae3b89c8714267e168d8ecaed8c006a3795633734510507aa"
+      }
+    ],
+    "last_download_error": {
+      "http_status": 429,
+      "retry_after_seconds": 600,
+      "observation_time": "2026-10-21T15:11:17Z"
+    },
+    "interpretation": "Each listed item is an independently licensed supplemental image, not an asset captured from bluescholars.com. Every item page shows its own attribution and license; no image bytes were modified."
   }
 }

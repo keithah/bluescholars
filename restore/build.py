@@ -103,6 +103,49 @@ def promote(root: Path,reviewed: bool=False,allow_later: bool=False) -> dict:
 def page_shell(title: str,body: str) -> str:
     return '<!doctype html><html lang="en"><head><meta charset="utf-8"><title>'+html.escape(title)+' — Blue Scholars restoration</title></head><body><main class="archive-gap-page"><p class="archive-eyebrow">BLUE SCHOLARS / RESTORATION WORKSPACE</p><h1>'+html.escape(title)+'</h1>'+body+'</main></body></html>'
 
+def build_community_media(root:Path,output:Path,base:str,render_resources:dict,aliases:dict,ui_href:str,script_href:str)->int:
+    catalog_path=root/'source/community-media.json'
+    if not catalog_path.exists():return 0
+    catalog=json.loads(catalog_path.read_text())
+    figures=[]
+    media_root=(root/'source/community-media').resolve()
+    for item in catalog.get('items',[]):
+        source=(root/item['path']).resolve()
+        if not source.is_relative_to(media_root):raise ValueError('Community-media source escapes its collection')
+        body=source.read_bytes()
+        if hashlib.sha256(body).hexdigest()!=item['sha256']:
+            raise ValueError('Community-media source hash mismatch: '+str(item.get('title','')))
+        if not body.startswith(b'\xff\xd8\xff'):
+            raise ValueError('Community-media image is not a validated JPEG: '+str(item.get('title','')))
+        filename='community-media-'+item['sha256'][:16]+'.jpg'
+        relative='assets/'+filename
+        destination=output/relative
+        destination.parent.mkdir(parents=True,exist_ok=True);destination.write_bytes(body)
+        render_resources[item['asset_url']]={'url':item['asset_url'],'kind':'image','local_path':'/'+relative}
+        image_url=html.escape(item['asset_url'],quote=True)
+        title=html.escape(item['title'])
+        alt=html.escape(item['description'],quote=True)
+        commons_url=html.escape(item['commons_url'],quote=True)
+        license_url=html.escape(item['license_url'],quote=True)
+        source_url=item.get('source_url','')
+        source_link=(f'<a href="{html.escape(source_url,quote=True)}">'
+                     f'{html.escape(item.get("source_label","Original source record"))}</a> · '
+                     if source_url else '')
+        credit=(f'<p>{html.escape(item["author"])} · {html.escape(item["date"])}. '
+                f'{source_link}<a href="{commons_url}">Wikimedia Commons file record</a>.</p>'
+                f'<p>Licensed under <a href="{license_url}">{html.escape(item["license"])}</a>. '
+                'Image reproduced unchanged.</p>')
+        figures.append(f'<figure class="community-media-item"><img src="{image_url}" alt="{alt}" loading="lazy">'
+                       f'<figcaption><strong>{title}</strong>{credit}</figcaption></figure>')
+    if not figures:return 0
+    body=('<p>This image was found in a separately licensed public collection. It is supplemental context, '
+          'not an asset recovered from a Blue Scholars website capture.</p>'
+          '<div class="community-media-grid">'+''.join(figures)+'</div>')
+    text=page_shell('Supplemental community media',body)
+    text,_=render_html(text,HOME,render_resources,base,aliases=aliases,ui_stylesheet=ui_href,ui_script=script_href)
+    _write_page(output,'/community-media/',text)
+    return len(figures)
+
 def _write_page(output: Path,path: str,text: str):
     relative=unquote(path.lstrip('/'))
     destination=output/relative if relative.lower().endswith('.html') else output/relative/'index.html'
@@ -849,6 +892,7 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
     myspace_report=build_myspace_archive(root,output,base)
     proof206_report=build_206proof_archive(root,output,base,candidate)
     twitter_report=build_twitter_archive(root,output,base)
+    community_media_items=build_community_media(root,output,base,render_resources,aliases,ui_href,script_href)
     gateway+='</nav><h2 class="archive-sites-heading">More recovered sites</h2><p class="archive-sites-intro">Explore the artists, community, and social pages connected to Blue Scholars.</p><nav class="archive-site-grid" aria-label="Other recovered sites">'
     related_sites=[
         ('/prometheusbrown/','Prometheus Brown','Artist site editions'),
@@ -865,7 +909,10 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
     for path,title,detail in related_sites:
         extra=' lj-archive' if path=='/lj/' else ''
         gateway+='<a class="archive-site-card'+extra+'" href="'+base+path+'"><span class="archive-site-title">'+html.escape(title)+'</span><span class="archive-site-detail">'+html.escape(detail)+'</span><span class="edition-action">Browse archive <span aria-hidden="true">↗</span></span></a>'
-    gateway+='</nav><nav class="archive-home-links" aria-label="Archive information"><a class="recovery-status" href="'+base+'/archive-status/">Recovery status and source gaps <span aria-hidden="true">↗</span></a></nav>'
+    gateway+='</nav><nav class="archive-home-links" aria-label="Archive information">'
+    if community_media_items:
+        gateway+='<a href="'+base+'/community-media/">Supplemental community media <span aria-hidden="true">↗</span></a>'
+    gateway+='<a class="recovery-status" href="'+base+'/archive-status/">Recovery status and source gaps <span aria-hidden="true">↗</span></a></nav>'
     hub=page_shell('Blue Scholars archive',gateway).replace('<main class="archive-gap-page">','<main class="archive-gap-page archive-home">')
     hub=hub.replace('</head>','<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="'+ui_href+'"></head>')
     _write_page(output,'/',hub)
@@ -880,6 +927,7 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
             'publish_approved':bool(review.get('publish_approved')) and not candidate,
             'pages':page_report,'issues':issues,'reference_capture':TARGET,'artist_sites':satellite_report,
             'myspace':myspace_report,'twitter':twitter_report,
+            'community_media_items':community_media_items,
             'massline':massline_report,
             '206proof':proof206_report,
             'note':'A successful build is not proof of source completeness or visual fidelity.'}

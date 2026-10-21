@@ -208,6 +208,11 @@ def resource_priority(record: dict) -> tuple[int,int]:
     query_keys={part.split('=',1)[0].lower() for part in parts.query.split('&') if part}
     own_host=parts.hostname in ('bluescholars.com','www.bluescholars.com')
     refs=record.get('referrers',[])
+    if parts.hostname=='bluescholars.livejournal.com' and 'replyto' in query_keys:
+        # Wayback commonly indexes individual comment-reply variants without
+        # storing their HTML. Defer those repeated 404s until real pages and
+        # their assets have had a recovery attempt.
+        return 9,len(url)
     livejournal_css=(parts.hostname in ('l-stat.livejournal.net','l-stat.livejournal.com')
                      and record['kind']=='css')
     linked_livejournal_image=(record['kind']=='image'
@@ -219,6 +224,14 @@ def resource_priority(record: dict) -> tuple[int,int]:
         and any(urlsplit(ref).hostname=='bluescholars.livejournal.com'
                 for ref in refs if ref and not ref.startswith('CDX:')))
     if livejournal_css or linked_livejournal_image:
+        return 1,len(url)
+    linked_historical_page=any(
+        bool((ref_parts:=urlsplit(ref)).path.strip('/'))
+        and ((ref_host:=ref_parts.hostname or '')=='bluescholars.com'
+             or ref_host.endswith('.bluescholars.com')
+             or ref_host=='02cd02a.netsolhost.com')
+        for ref in refs if ref and not ref.startswith('CDX:'))
+    if record['kind'] in ('css','image') and linked_historical_page:
         return 1,len(url)
     if linked_livejournal_proxy:
         # Preserve the exact source-linked URLs, but try article bodies and

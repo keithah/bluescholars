@@ -492,6 +492,37 @@ def test_empty_preview_honest_and_links_valid(tmp_path):
     assert check(tmp_path/'_site','/bluescholars')==[]
     assert 'not recovered' in (tmp_path/'_site/2013/index.html').read_text().lower()
 
+def test_candidate_includes_independently_licensed_community_photo_with_credit(tmp_path):
+    fixture_root(tmp_path);s=State(tmp_path)
+    media=tmp_path/'source/community-media'
+    media.mkdir(parents=True)
+    (media/'sasquatch-2006.jpg').write_bytes(b'\xff\xd8\xfffixture')
+    (tmp_path/'source/community-media.json').write_text(json.dumps({'items':[{
+        'title':'Blue Scholars @ Sasquatch 06',
+        'description':'DJ Sabzi performing at Sasquatch Festival.',
+        'date':'2006-05-28', 'author':'Tammy Lo',
+        'source_url':'https://www.flickr.com/photos/13595617@N00/156759087/',
+        'commons_url':'https://commons.wikimedia.org/wiki/File:Blue_Scholars-DJ_Sabzi-SasquatchFestival06.JPG',
+        'asset_url':'https://upload.wikimedia.org/wikipedia/commons/5/57/Blue_Scholars-DJ_Sabzi-SasquatchFestival06.JPG',
+        'license':'CC BY 2.0', 'license_url':'https://creativecommons.org/licenses/by/2.0/',
+        'path':'source/community-media/sasquatch-2006.jpg',
+        'sha256':hashlib.sha256(b'\xff\xd8\xfffixture').hexdigest()
+    }]}))
+    report=build(tmp_path,tmp_path/'_candidate','',candidate=True)
+    page=(tmp_path/'_candidate/community-media/index.html').read_text()
+    home=(tmp_path/'_candidate/index.html').read_text()
+    assert 'DJ Sabzi' in page and 'Tammy Lo' in page and 'CC BY 2.0' in page
+    assert 'creativecommons.org/licenses/by/2.0/' in page
+    published=next((tmp_path/'_candidate/assets').glob('community-media-*.jpg'))
+    assert published.read_bytes().startswith(b'\xff\xd8\xff')
+    assert '/community-media/' in home
+    assert report['community_media_items']==1
+    assert check(tmp_path/'_candidate','')==[]
+    build(tmp_path,tmp_path/'_candidate','/bluescholars',candidate=True)
+    assert check(tmp_path/'_candidate','/bluescholars')==[]
+    mounted=(tmp_path/'_candidate/community-media/index.html').read_text()
+    assert '/bluescholars/assets/community-media-' in mounted
+
 def test_release_refuses_empty_site(tmp_path):
     fixture_root(tmp_path)
     with pytest.raises(ValueError,match='review'):build(tmp_path,tmp_path/'_site','',release=True)

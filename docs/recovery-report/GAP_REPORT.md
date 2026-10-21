@@ -3,6 +3,15 @@
 **Updated:** October 21, 2026. This report distinguishes a checked limitation from a search still in progress. Network failures and unqueried URLs are not evidence that a resource is absent from every archive.
 
 
+
+## Latest refreshed preview — October 21, 2026 (2005–2007 artwork follow-up)
+
+A further bounded Wayback batch processed 75 queued URLs and recovered 32 resource responses. It added two unique payloads (3,521 bytes); remaining successes were alternate hosts or capture URLs resolving to already saved content. The recovered early-site material includes menu/navigation and event graphics, press/contact/biography art, Geologic and Sabzi bio images, 2007 splash panels, backgrounds, and a MySpace link badge. Exact capture dates and response hashes remain in the resumable inventory.
+
+The updated checkpoint contains **13,051 resource URLs**, **185,517 indexed capture rows**, 5,287 recovered resources, 296 awaiting review, 4,639 queued, 2,825 failed, and 4 excluded. It has 2,800 unique local response files (174,618,405 bytes). The candidate contains 1,108 recovered pages, 2,173 placeholders, 1,638 local source assets and 6 separately licensed Commons images. The refreshed root and `/bluescholars/` offline checks both pass with zero errors; the test suite passes **267 tests**.
+
+The latest checked candidate is being prepared for the existing unreviewed Pages preview. Visual-fidelity verification and publication approval remain false. Outstanding image gaps and failed archive requests remain documented; the failed count is not evidence that no other archive copy exists.
+
 ## Latest refreshed preview — October 21, 2026
 
 The current resumable Wayback checkpoint contains **13,050 resource URLs** and **185,481 indexed capture rows**: 5,238 recovered, 294 awaiting review, 4,717 queued, 2,797 failed, and 4 excluded. The local recovery cache has 2,796 unique files totaling 174,480,698 bytes. The latest 75-item retry recovered 11 resources, including a 2020-era shop capture; the generated candidate now has 1,108 recovered pages, 12 feed pages, 2,176 explicit placeholders, one derived page, and 1,613 local source assets. Edition counts are 57 (2007), 503 (2009), and 440 (2013), with 108 LiveJournal pages.
@@ -11,7 +20,7 @@ Measured gaps include 6,606 unavailable embedded assets, 396 linked assets not r
 
 The refreshed preview is deployed at [https://keithah.github.io/bluescholars/](https://keithah.github.io/bluescholars/) from [`gh-pages` commit `b3a4af7`](https://github.com/keithah/bluescholars/commit/b3a4af7b77b9ea73d62f8817fcb48c59c28a7701). [Pages build 39585431523](https://github.com/keithah/bluescholars/actions/runs/39585431523) succeeded and the Pages API reports `built`. Thirteen sampled routes returned HTTP 200, including the three editions, the recovered 2020 product page, the linked 2009 article, LiveJournal and its newly captured replies, Twitter, Massline forums, and local CSS; a deliberately nonexistent route returned 404. This is an incomplete, unreviewed recovery preview. Human visual review and formal publication approval remain false.
 
-An independent-media search also found a 33-photo 2009 Flickr album with individual images marked All Rights Reserved and a 2006 Sasquatch Festival photo on Wikimedia Commons explicitly labeled CC BY 2.0. They are documented separately from captured website material; the Flickr set is not redistributed, and the Commons photo is not yet part of the candidate. See [independent archive findings](OTHER_ARCHIVES.md).
+An independent-media search also found a 33-photo 2009 Flickr album with individual images marked All Rights Reserved and a 20-file Wikimedia Commons category for Blue Scholars. Six Commons images with individual CC BY 2.0 or CC BY-SA 3.0 licenses are included in a separate supplemental gallery; the Flickr album is not redistributed, and the Commons images are not presented as original-site assets. See [independent archive findings](OTHER_ARCHIVES.md).
 
 The October 21 follow-up also queried 16 Common Crawl collections; all index connections were refused and no records could be queried or recovered. This is a network-service limitation for this pass, not a finding that the site or its media are absent from Common Crawl.
 

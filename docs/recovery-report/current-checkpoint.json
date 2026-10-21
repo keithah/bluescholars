@@ -34,36 +34,26 @@
   "candidate_build": {
     "recovered_pages": 1108,
     "feed_recovered_pages": 12,
-    "placeholder_pages": 2176,
+    "placeholder_pages": 2173,
     "derived_pages": 1,
-    "local_source_assets": 1613,
-    "visual_fidelity_verified": false,
-    "publish_approved": false,
+    "local_source_assets": 1638,
+    "community_media_items": 6,
     "recovered_pages_by_edition": {
       "2007": 57,
       "2009": 503,
       "2013": 440
     },
-    "livejournal_recovered_pages": 108,
     "issue_counts": {
-      "missing_asset": 6606,
+      "missing_asset": 6597,
       "font_not_packaged": 197,
       "linked_asset_not_recovered": 396,
       "external_media_link_only": 199
     },
-    "remote_automatic_resources": 0,
+    "visual_fidelity_verified": false,
     "visual_reviewed": false,
-    "built_for_checkpoint": "2026-10-21T10:10:47.982165+00:00",
+    "publish_approved": false,
     "latest_batch_in_build": true,
-    "twitter_archive": {
-      "account_takeover_captures": 1,
-      "captures": 34,
-      "platform_error_captures": 3,
-      "recovered_assets": 675,
-      "recovered_capture_pages": 34,
-      "status": "built",
-      "unique_asset_payloads": 357
-    }
+    "base_path": "/bluescholars"
   },
   "candidate_checks": {
     "root": {
@@ -71,7 +61,7 @@
       "errors": 0,
       "output": "_candidate",
       "base_path": "",
-      "checkpoint": "2026-10-21T10:10:47.982165+00:00",
+      "checkpoint": "2026-10-21T15:55:24Z",
       "current_content_batch_built": true
     },
     "project_subpath": {
@@ -79,25 +69,25 @@
       "errors": 0,
       "output": "_candidate",
       "base_path": "/bluescholars",
-      "checkpoint": "2026-10-21T10:10:47.982165+00:00",
+      "checkpoint": "2026-10-21T15:55:24Z",
       "current_content_batch_built": true
     }
   },
   "checkpoint": {
-    "downloaded_bytes": 174480698,
-    "failed_attempts": 12714,
-    "generated_at": "2026-10-21T10:10:47.982165+00:00",
-    "index_complete": true,
-    "indexed_capture_records": 185481,
-    "resource_urls": 13050,
+    "resource_urls": 13051,
+    "indexed_capture_records": 185517,
     "statuses": {
-      "excluded": 4,
-      "failed": 2797,
-      "needs_review": 294,
-      "queued": 4717,
-      "recovered": 5238
+      "queued": 4639,
+      "recovered": 5287,
+      "needs_review": 296,
+      "failed": 2825,
+      "excluded": 4
     },
-    "unique_downloaded_files": 2796
+    "unique_downloaded_files": 2800,
+    "downloaded_bytes": 174618405,
+    "failed_attempts": 13127,
+    "index_complete": true,
+    "generated_at": "2026-10-21T15:55:25.664450+00:00"
   },
   "latest_import": {
     "run_id": "38975520061",
@@ -175,16 +165,11 @@
     "unique_raw_files": 97,
     "visual_reviewed": false
   },
-  "updated_at": "2026-10-21T10:37:42Z",
+  "updated_at": "2026-10-21",
   "tests": {
     "command": ".venv311/bin/python -m pytest -q",
-    "result": "259 passed",
-    "compileall": "passed",
-    "shell_syntax": "passed",
-    "actionlint": "passed",
-    "git_diff_check": "passed after final report/package sync",
-    "human_review_claimed": false,
-    "agent_visual_review_recorded": true
+    "result": "267 passed",
+    "verified_at": "2026-10-21T15:55:24Z"
   },
   "livejournal_archive": {
     "route": "/lj/",
@@ -1328,37 +1313,46 @@
     "pushed": false,
     "deployed": false
   },
-  "resource_urls": 13050,
-  "indexed_capture_records": 185481,
+  "resource_urls": 13051,
+  "indexed_capture_records": 185517,
   "statuses": {
-    "excluded": 4,
-    "failed": 2797,
-    "needs_review": 294,
-    "queued": 4717,
-    "recovered": 5238
+    "queued": 4639,
+    "recovered": 5287,
+    "needs_review": 296,
+    "failed": 2825,
+    "excluded": 4
   },
-  "unique_downloaded_files": 2796,
-  "downloaded_bytes": 174480698,
-  "failed_attempts": 12714,
+  "unique_downloaded_files": 2800,
+  "downloaded_bytes": 174618405,
+  "failed_attempts": 13127,
   "index_complete": true,
   "latest_local_recovery_batch": {
-    "generated_at": "2026-10-21T10:10:47.982165+00:00",
+    "generated_at": "2026-10-21T15:55:24Z",
     "attempt_limit": 75,
     "processed": 75,
-    "resource_urls": 13050,
-    "indexed_capture_records": 185481,
+    "resource_urls": 13051,
+    "indexed_capture_records": 185517,
     "statuses": {
-      "excluded": 4,
-      "failed": 2797,
-      "needs_review": 294,
-      "queued": 4717,
-      "recovered": 5238
+      "queued": 4639,
+      "recovered": 5287,
+      "needs_review": 296,
+      "failed": 2825,
+      "excluded": 4
     },
-    "unique_downloaded_files": 2796,
-    "downloaded_bytes": 174480698,
-    "failed_attempts": 12714,
+    "unique_downloaded_files": 2800,
+    "downloaded_bytes": 174618405,
+    "failed_attempts": 13127,
+    "new_downloaded_resource_attempts": 32,
+    "unique_files_added": 2,
+    "downloaded_bytes_added": 3521,
+    "newly_recovered_assets": [
+      "2005–2007 Blue Scholars menu, navigation, event, press, contact and biography graphics",
+      "Geologic and Sabzi biography images",
+      "2007 splash panels and page backgrounds",
+      "MySpace link graphic"
+    ],
     "candidate_updated": true,
-    "note": "A bounded Wayback retry recovered 11 resources, including a product/shop capture; one prior placeholder now maps to a recovered 2009 article. A separate 42-URL exact image index produced no captures after a CDX connection refusal. A 75-item direct Squarespace-origin asset attempt recovered 0 and failed 75; 52 remain eligible. Promoted source data is redacted; publication approval remains false."
+    "note": "A bounded 75-resource Wayback batch recovered 32 resource attempts; URL aliases included duplicate payloads. Candidate rebuilt after promotion."
   },
   "livejournal_2025_css_and_image_followup": {
     "dated_at": "2026-10-20T18:43:27Z",
@@ -1496,7 +1490,7 @@
     "result": "blocked by design",
     "reason": "Publication requires source, visual and publish review approval; source/publication approval remains false after owner permission was recorded."
   },
-  "generated_at": "2026-10-20T22:19:32.919576+00:00",
+  "generated_at": "2026-10-21T15:55:24Z",
   "twitter_archive": {
     "profile": "https://twitter.com/prometheusbrown",
     "archive": "Internet Archive Wayback Machine",
@@ -1571,13 +1565,14 @@
     "reason": "The 30-minute hosted run completed its root build/check then was canceled while the project-prefix build/check continued. Both corresponding local build/check pairs pass."
   },
   "latest_candidate_build_after_promotion": {
-    "mode": "reviewed_source_build",
+    "mode": "candidate",
     "base_path": "/bluescholars",
-    "recovered_pages": 1065,
+    "recovered_pages": 1108,
     "feed_recovered_pages": 12,
-    "placeholder_pages": 2170,
+    "placeholder_pages": 2173,
     "derived_pages": 1,
-    "local_source_assets": 1584,
+    "local_source_assets": 1638,
+    "community_media_items": 6,
     "root_check": {
       "ok": true,
       "errors": []
@@ -1587,9 +1582,10 @@
       "errors": []
     },
     "publish_approved": false,
-    "human_visual_review": false
+    "human_visual_review": false,
+    "tests": "267 passed"
   },
-  "preview_deployment_pending": false,
+  "preview_deployment_pending": true,
   "latest_commoncrawl_retry": {
     "run_at": "2026-10-21T10:37:42Z",
     "archive": "Common Crawl",

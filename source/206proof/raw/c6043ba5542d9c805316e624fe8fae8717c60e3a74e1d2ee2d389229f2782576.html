@@ -1,0 +1,1496 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-ca">
+   <head>
+   
+   
+   
+      <title>206Proof - Forum - Search</title>
+      <link rel="shortcut icon" href="/forum/themes/206Proof/styles/default/favicon.ico" />
+            <link rel="stylesheet" type="text/css" href="/forum/themes/206Proof/styles/default/vanilla.css" media="screen" />
+            <link rel="stylesheet" type="text/css" href="/forum/themes/206Proof/styles/default/vanilla.print.css" media="print" />
+            <link rel="stylesheet" type="text/css" href="/forum/extensions/Nugget/nugget.css" />
+            <link rel="stylesheet" type="text/css" href="/forum/extensions/SidepanelImageLink/style.css" />
+            <link rel="stylesheet" type="text/css" href="/forum/extensions/Signatures/style.css" />
+            <link rel="stylesheet" type="text/css" href="/forum/extensions/ModTools/style.css" />
+            <link rel="stylesheet" type="text/css" href="/forum/extensions/GuestSignIn/style.css" />
+            <script type="text/javascript" src="/forum/js/global.js"></script>
+            <script type="text/javascript" src="/forum/js/vanilla.js"></script>
+            <script type="text/javascript" src="/forum/js/ajax.js"></script>
+            <script type="text/javascript" src="/forum/js/ac.js"></script>
+            <script type="text/javascript" src="/forum/extensions/JQuery/jquery-1.1.3.1.pack.js"></script>
+            <script type="text/javascript" src="/forum/extensions/ModTools/function.js"></script><style>
+		.ProfileTitle.WithIcon .ProfileIcon { width: 60px; height: 60px; }
+		#AccountProfile .Picture { width: 280px; height: 280px; }
+		#Comments .CommentHeader { line-height: 60px; }
+		#Comments .CommentHeader li div.CommentIcon { padding: 60px 0px 60px 60px; }
+		li.User.Name .UserIcon { padding: 60px 0px 60px 60px !important; }
+		li.User.Name.WithIcon { line-height: 60px; }
+	</style>
+<!--[if lte IE 7]><link rel="stylesheet" href="http://www.206proof.com/forum/themes/206Proof/styles/default/ie.css" type="text/css" media="screen" charset="utf-8"><![endif]-->
+<script type="text/javascript" src="http://www.206proof.com/forum/js/menu.js"></script></head>
+   <body id="SearchPage"  onload="Focus('txtKeywords');"><!--[if lt IE 7]><script src="http://www.206proof.com/ie7/ie7-standard-p.js" type="text/javascript"></script><![endif]--><b></b>
+		<div id="top">
+		<div id="top-content-wrapper">
+			<ul id="topnav">
+ 			   <li><a href="http://www.206proof.com/forum/" class="menuhead">206Proof</a>
+      			  <ul class="proof-dropdown">
+        		    <li><a href="http://www.206proof.com/shop/">Shop</a></li>
+           			<li><a href="http://www.206proof.com/advertise/">Advertise</a></li>
+        		    <li><a href="http://www.206proof.com/about/">About &amp; FAQ</a></li>
+       			 </ul>
+       		   </li>
+   			   <li><a href="http://www.raindrophustla.com">RaindropHustla</a></li>
+   			   <li><a href="http://www.reigncity.com" class="menuhead">ReignCity</a>
+      			  <ul class="reign-dropdown">
+           			<li><a href="http://www.reigncity.com/calendar/">Calendar</a></li>
+           			<li><a href="http://www.reigncity.com/news/">News &amp; Reviews</a></li>
+            		<li><a href="http://www.reigncity.com/about/">About &amp; Contact</a></li>
+        		  </ul>
+   			    </li>
+			</ul>
+		</div>
+		</div>
+
+<div id="Header"><div id="Session">Not signed in (<a href="/forum/people.php?ReturnUrl=http://www.206proof.com/forum/search.php?PostBackAction=Search&amp;Keywords=Zeus%3A&amp;Type=Comments&amp;btnSubmit=Search">Sign In</a> or <a href="http://www.206proof.com/forum/people.php?PostBackAction=ApplyForm">Register</a>)</div><a name="pgtop"></a>
+			<h1>
+				206Proof - Forum
+			</h1>
+			
+			<ul><li><a href="index.php" >Discussions</a></li><li><a href="categories.php" >Categories</a></li><li class="TabOn"><a href="search.php" >Search</a></li></ul>
+   </div><div id="Body"><div id="Panel"><div id="GuestSignIn">
+      <h2>Sign In</h2>
+      <p></p>
+   <fieldset><form id="frmSignIn" method="post" action="http://www.206proof.com/forum/people.php">
+     <input name="PostBackAction" value="SignIn" type="hidden">
+     <input name="ReturnUrl" value="http://www.206proof.com/forum/search.php?PostBackAction=Search&amp;Keywords=Zeus%3A&amp;Type=Comments&amp;btnSubmit=Search" type="hidden">
+     <ul>
+      <li><label for="txtUsername">Username</label>
+      <input id="txtUsername" name="Username" value="" class="text" maxlength="20" type="text">
+     </li>
+     <li><label for="txtPassword">Password</label>
+      <input id="txtPassword" name="Password" value="" class="text" type="password">
+     </li>
+     </ul>
+     <input name="btnSignIn" id="btnSignIn" value="Sign In" class="Button" type="image" src="http://www.206proof.com/forum/themes/206Proof/styles/default/signin.gif">
+   </form></fieldset>
+  </div><ul><li><h2>Menu</h2><ul><li>
+
+
+
+<a href="http://www.206proof.com/shop/">206Proof Merchandise</a>
+
+
+
+</li>
+
+
+
+<li>
+
+
+
+<a href="http://www.206proof.com/forum/faq.php">Frequently Asked Questions</a>
+
+
+
+</li>
+
+
+
+
+
+
+
+<li>
+
+
+
+<a href="http://www.206proof.com/forum/about.php">About 206Proof</a>
+
+
+
+</li>
+
+
+
+
+
+
+
+<li>
+
+
+
+<a href="http://en.wikipedia.org/wiki/Bbcode">BBCode Reference</a>
+
+
+
+</li>
+
+
+
+
+
+
+
+<li>
+
+
+
+<a href="http://www.gimp.org/">Free Image Editor (GIMP)</a>
+
+
+
+</li></ul></li></ul>
+      <ul id="Banner">
+      	 <li><h2>Advertisements</h2></li>
+         <li class="BannerImage"><a href="http://www.myspace.com/allcitychop"><img src="extensions/SidepanelImageLink/acc.jpg" class="center"/></a></li>
+      </ul><ul><li><ul><a href="http://www.206proof.com/advertise/">Local Artists Advertise Free</a></ul></li></ul><p id="AboutVanilla"><a href="http://getvanilla.com">Vanilla 1.1.4</a> is a product of <a href="http://lussumo.com">Lussumo</a>. More Information: <a href="http://lussumo.com/docs">Documentation</a>, <a href="http://lussumo.com/community">Community Support</a>.</p></div>
+<div id="Content"><div id="Form" class="Account Search">
+	<fieldset id="SearchSimpleFields">
+		<legend>Search</legend>
+		<a href="./" onclick="ShowAdvancedSearch(); return false;" class="SearchSwitch">Advanced</a><form id="SearchSimple" method="get" action="http://www.206proof.com/forum/search.php"><div><input type="hidden" name="PostBackAction" value="Search" />
+				</div><ul>
+				<li id="MainSearchInput">
+					<label for="txtKeywords">SearchTerms</label>
+					<input id="txtKeywords" type="text" name="Keywords" value="Zeus:" class="SearchInput" />
+				</li>
+				<li id="SimpleSearchRadios">Search:<input type="radio" name="Type"  id="Radio_Topics" value="Topics" class="SearchRadio" />
+			<label for="Radio_Topics" class="Radio">Topics</label>
+			<input type="radio" name="Type"  id="Radio_Comments" value="Comments" checked="checked" class="SearchRadio" />
+			<label for="Radio_Comments" class="Radio">Comments</label>
+			<input type="radio" name="Type"  id="Radio_Users" value="Users" class="SearchRadio" />
+			<label for="Radio_Users" class="Radio">Users</label>
+			</li>
+				<li>
+					<input type="submit" name="btnSubmit" value="Search" class="Button SearchButton" />
+				</li>
+			</ul>
+		</form>
+	</fieldset><fieldset id="SearchDiscussionFields">
+		<legend>Discussion topic search</legend>
+		<a href="./" onclick="ShowSimpleSearch(); return false;" class="SearchSwitch">Simple</a><form id="SearchDiscussions" method="get" action="http://www.206proof.com/forum/search.php"><div><input type="hidden" name="PostBackAction" value="Search" />
+				<input type="hidden" name="Type" value="Discussions" />
+				<input type="hidden" name="Advanced" value="1" />
+				</div><ul>
+				<li>
+					<label for="txtDiscussionKeywords">Find discussion topics containing</label>
+					<input id="txtDiscussionKeywords" type="text" name="Keywords" value="" class="SearchInput AdvancedSearchInput" />
+				</li><li>
+						<label for="ddDiscussionCategories">in the category</label><select name="Categories" class="SearchSelect"  id="ddDiscussionCategories">
+		<option value=""  selected="selected">All categories</option>
+			<option value="General" >General</option>
+			<option value="Shows" >Shows</option>
+			<option value="Suggestions" >Suggestions</option>
+			<option value="Technical" >Technical</option>
+			</select>
+		
+					</li><li>
+					<label for="DiscussionAuthUsername">where the author was</label>
+					<input id="DiscussionAuthUsername" name="AuthUsername" type="text" value="" class="SearchInput AdvancedUserInput" />
+					<script type="text/javascript">
+						var DiscussionAutoComplete = new AutoComplete("DiscussionAuthUsername", false);
+						DiscussionAutoComplete.TableID = "DiscussionAutoCompleteResults";
+						DiscussionAutoComplete.KeywordSourceUrl = "/forum/ajax/getusers.php?Search=";
+					</script>
+				</li>
+				<li>
+					<input type="submit" name="btnSubmit" value="Search" class="Button SearchButton" />
+				</li>
+			</ul>
+		</form>
+	</fieldset><fieldset id="SearchCommentFields">
+		<legend>Discussion comment search</legend><form id="SearchComments" method="get" action="http://www.206proof.com/forum/search.php"><div><input type="hidden" name="PostBackAction" value="Search" />
+				<input type="hidden" name="Advanced" value="1" />
+				<input type="hidden" name="Type" value="Comments" />
+				</div><ul>
+				<li>
+					<label for="txtCommentKeywords">Find comments containing</label>
+					<input id="txtCommentKeywords" type="text" name="Keywords" value="" class="SearchInput AdvancedSearchInput" />
+				</li><li>
+						<label for="ddCommentCategories">in the category</label><select name="Categories" class="SearchSelect"  id="ddCommentCategories">
+		<option value=""  selected="selected">All categories</option>
+			<option value="General" >General</option>
+			<option value="Shows" >Shows</option>
+			<option value="Suggestions" >Suggestions</option>
+			<option value="Technical" >Technical</option>
+			</select>
+		
+					</li><li>
+					<label for="CommentAuthUsername">where the author was</label>
+					<input id="CommentAuthUsername" name="AuthUsername" type="text" value="Zeus" class="SearchInput AdvancedUserInput" />
+					<script type="text/javascript">
+						var CommentAutoComplete = new AutoComplete("CommentAuthUsername", false);
+						CommentAutoComplete.TableID = "CommentAutoCompleteResults";
+						CommentAutoComplete.KeywordSourceUrl = "/forum/ajax/getusers.php?Search=";
+					</script>
+				</li>
+				<li>
+					<input type="submit" name="btnSubmit" value="Search" class="Button SearchButton" />
+				</li>
+			</ul>
+		</form>
+	</fieldset><fieldset id="SearchUserFields">
+		<legend>User account search</legend><form id="SearchUsers" method="get" action="http://www.206proof.com/forum/search.php"><div><input type="hidden" name="PostBackAction" value="Search" />
+				<input type="hidden" name="Advanced" value="1" />
+				<input type="hidden" name="Type" value="Users" />
+				</div><ul>
+				<li>
+					<label for="txtUserKeywords">Find user accounts containing</label>
+					<input id="txtUserKeywords" type="text" name="Keywords" value="" class="SearchInput AdvancedSearchInput" />
+				</li>
+				<li>
+					<label for="ddRoles">in the role</label>
+					<select name="Roles" class="SearchSelect"  id="ddRoles">
+		<option value=""  selected="selected">All roles</option>
+			<option value="Probation (New Discussions)" >Probation (New Discussions)</option>
+			<option value="Global Admin" >Global Admin</option>
+			<option value="Probation (Posting)" >Probation (Posting)</option>
+			<option value="Moderator" >Moderator</option>
+			<option value="Banned" >Banned</option>
+			<option value="Member" >Member</option>
+			<option value="Administrator" >Administrator</option>
+			</select>
+		
+				</li>
+				<li>
+					<label for="ddOrder">sort results by</label>
+					<select name="UserOrder" class="SearchSelect"  id="ddOrder">
+		<option value=""  selected="selected">Username</option>
+			<option value="Date" >Date last active</option>
+			</select>
+		
+				</li>
+				<li>
+					<input type="submit" name="btnSubmit" value="Search" class="Button SearchButton" />
+				</li>
+			</ul>
+		</form>
+	</fieldset>
+</div><div class="ContentInfo Top">
+	<h1>Comments</h1>
+	<div class="PageInfo">
+		<p>Results 1 to 50 for <strong>nothing</strong></p>
+		<div class="PageList">Previous  <a href="http://www.206proof.com/forum/search.php?page=2&amp;PostBackAction=Search&amp;Keywords=Zeus%3A&amp;Type=Comments&amp;btnSubmit=Search">Next</a> </div>
+	</div>
+</div>
+<div id="ContentBody">
+	<ol id="CommentResults"><li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=11513">KUDDIE FRESH IS A REGISTERED SEX OFFENDER</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=11513&amp;Focus=272788#Comment_272788">We do not make it a policy to regulate what content people choose to post on 206proof.com. However, due to the inflammatory nature of this thread and its comments, it has been sunk.</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 16th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=10606">Brand New Proof Shop!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=10606&amp;Focus=257886#Comment_257886">Currently the store is powered by amazon.com.  If your product is carried by Amazon please send us a link to the product page and we will add it as promptly as possible.  For the free download links please post in this thread with Album OR Song Title, Artist Name, &amp; URL for download.</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Oct 1st 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=10606">Brand New Proof Shop!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=10606&amp;Focus=255060#Comment_255060">Here at the Proof we thought it'd be cool to have a central location for finding/purchasing NW hip hop. We will also be keeping a list of links to as much of the free material as we can so you don't have to search through pages and pages of blog posts. Go here: ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Sep 7th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=8621">New &quot;Event at a Glance&quot; feature for ReignCity.com</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=8621&amp;Focus=218056#Comment_218056">O-zone... great minds think alike.</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Apr 12th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=8621">New &quot;Event at a Glance&quot; feature for ReignCity.com</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=8621&amp;Focus=217524#Comment_217524">All the information is on the homepage of the website.  http://www.reigncity.com</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Apr 10th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=8621">New &quot;Event at a Glance&quot; feature for ReignCity.com</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=8621&amp;Focus=217503#Comment_217503">[img]http://www.reigncity.com/uploads/promo/tooltip-example.jpg[/img]  [url=http://www.reigncity.com/calendar/]Check it out[/url] Proof. Just roll over any event on the calendar page to get more details.</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Apr 10th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=7398">Ripynt - &quot;Contribute A Verse&quot; - Song Of The Week 1/27</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=7398&amp;Focus=192695#Comment_192695">Sorry about the stream, it looks as though it's a problem with the file that was submitted.  You should be able to go [url=http://www.206proof.com/forum/uploads/SongOfTheWeek/contribute.mp3]here[/url] and listen to it clean. (Disregard the player, just click the link)</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Jan 29th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=7010">We&#039;re Back! And we brought some friends!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=7010&amp;Focus=182787#Comment_182787">[quote][cite] blind sage:[/cite]Can somebody explain the new, weird response comment thing, where there's a box with a response comment in a slight grey tone, but no name?  Is this a glitch?  Am I the only one seeing it?  Maybe it's just every other comment appears this way.[/quote]  Thanks for the ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Jan 9th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=7010">We&#039;re Back! And we brought some friends!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=7010&amp;Focus=182658#Comment_182658">:invsibl:</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Jan 9th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=7010">We&#039;re Back! And we brought some friends!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=7010&amp;Focus=182655#Comment_182655">Hey Proof,  We'd like to reintroduce you to RaindropHustla, the o.g. Seattle Rap Blog.  And ReignCity, the newest addition to the family.  ReignCity is an event calendar, news and culture source for this area, run like a greased wheel by the amazing folks at Obese Productions.  Hit them up, get ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Jan 8th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=6340">Announcement</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=6340&amp;Focus=162847#Comment_162847">The trolling from this morning has been taken care of.  [i]Rules of thumb[/i] 1. [b]Ignore them[/b] 2. [b]Look before you click.[/b] If you have identified someone as a troll, don't click on any of their threads. They will usually have racial or other offensive language in the thread title, and ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 5th 2008
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=6337">DONT LOOK AT THE PROOF THREADS IF YOURE AT WORK, THEY&#039;VE BEEN TROLLED WITH SOME FUCKED UP SHIT</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=6337&amp;Focus=162844#Comment_162844">The trolling from this morning has been taken care of.    [i]Rules of thumb[/i] 1. [b]Ignore them[/b] 2. [b]Look before you click.[/b] If you have identified someone as a troll, don't click on any of their threads. They will usually have racial or other offensive language in the thread title, and ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 5th 2008
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=5820">Attn: SOTW Dudes</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=5820&amp;Focus=149936#Comment_149936">Song of the Week will be back next Monday, we apologize for the inconvenience but we are currently working on some major additions to this site.  [img]http://mcgonnigle.files.wordpress.com/2007/02/lightning.jpg[/img]</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Nov 7th 2008
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=4704">206 Proof Advertising!!!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=4704&amp;Focus=119354#Comment_119354">Removed.  Email were going to junk most likely.</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Sep 19th 2008
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=3844">SOYGNH - 206Proof Official Birthday Party - Free Chicken</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=3844&amp;Focus=96772#Comment_96772">Starts at 7. Apologies for the delay. Baby showers and such.</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Jul 27th 2008
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=3844">SOYGNH - 206Proof Official Birthday Party - Free Chicken</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=3844&amp;Focus=94421#Comment_94421">Props to the entire community that participates on this board and those that lurk.  We have been growing and will be launching some major updates and additions in the coming months.  Details to follow.  In the mean time, we are celebrating the 1 year anniversary/birthday of the official launch of ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Jul 21st 2008
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=3128">Dreama on probation</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=3128&amp;Focus=81783#Comment_81783">Due to the continued spam from a single individual, we have removed all posting privileges from the following usernames (Dreama aliases):  Dreama Sensea Ess  We will be adding to this list whenever we identify a new alias.  As with before this is a temporary arrangement.  If you do not spam this ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Jun 8th 2008
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=3189">Images in Signatures...</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=3189&amp;Focus=76855#Comment_76855">Its okay Fridge,  I had removed his/her [img] tags before and whispered him/her (I guess they didn't notice).  Hopefully this thread will be seen.</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			May 28th 2008
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=3189">Images in Signatures...</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=3189&amp;Focus=76850#Comment_76850">We do not allow images or video as signatures, please keep your signature to text and links. Thanks.</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			May 28th 2008
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=3142">Dreama&#039;s Thread</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=3142&amp;Focus=75827#Comment_75827">This is your thread.  It is not sunk, you may promote here.  Please confine all off-topic or new topic comments to this thread.   DO NOT SPAM THE BOARD LIKE THAT AGAIN     Your posting ability will be revoked</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			May 22nd 2008
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=3128">Dreama on probation</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=3128&amp;Focus=75311#Comment_75311">Sinking means that you can still post on a thread, but the the thread doesn't return to the top of the list.  Essentially it sinks down the list as new threads move to the top.</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			May 21st 2008
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=3128">Dreama on probation</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=3128&amp;Focus=75262#Comment_75262">Due to technical issues, we will not be consolidating Dreama's previous threads, we will be sinking them.</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			May 21st 2008
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=3128">Dreama on probation</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=3128&amp;Focus=75149#Comment_75149">It is against our every instinct to ban a user. And it is only with overwhelming support that we would ever consider this.  However, we will not allow one individual to compromise the functioning of this board.  Due to a considerable volume of  legitimate complaints concerning spam thread starting, ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			May 21st 2008
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=3116">THE OFFICIAL PETITION TO DELETE ALL THREADS STARTED BY DREAMA AND BAN HER IP ADDRESS</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=3116&amp;Focus=75052#Comment_75052">Currently, sinking discussions is a site wide feature (not user based) — meaning, if you sink a discussion, it is sunk for everyone</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			May 21st 2008
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=3036">Advertisments...</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=3036&amp;Focus=73311#Comment_73311">Sorry, your emails we're being sent to spam, its in rotation now. Please whisper these types of discussions to me in the future.</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			May 15th 2008
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=2732">.</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=2732&amp;Focus=65015#Comment_65015">I will add that there are a lot of useless features that tend to bog forums down, we prefer to keep The Proof light and agile and only add stuff that either, helps usability, or we (as a community) really badly want.</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=2">Suggestions</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Apr 21st 2008
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=2732">.</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=2732&amp;Focus=65014#Comment_65014">We've been working very hard gearing up for some major additions to the 206Proof site as a whole.  If there is enough support for adding this particular feature, we can add it with the rest of the updates that are coming.  I don't have an exact date for the updates as yet but I can tell you it will ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=2">Suggestions</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Apr 21st 2008
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=2296">253 Proof?</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=2296&amp;Focus=55698#Comment_55698">[quote][cite] 253hiphop:[/cite]Zeus will agree that working and getting vanilla to where you want it is no easy task. [/quote] Nah, not for the God.  :soygnh:</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Mar 16th 2008
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=2296">253 Proof?</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=2296&amp;Focus=55582#Comment_55582">This site was designed from scratch, but built upon an open source message board framework.  Essentially how it functions behind the scenes.</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Mar 15th 2008
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=2296">253 Proof?</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=2296&amp;Focus=55437#Comment_55437">Looks like they beat us to the google map plugin. :bigsmile:  That + much, much more are coming with the next updates to the Proof  :devil:</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Mar 14th 2008
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=2079">Know Choice - &quot;Finally&quot; - Song of the Week 2/25</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=2079&amp;Focus=50078#Comment_50078">[i]From Myspace:[/i] Versatile lyricist, natural performer, nasty freestyle, talented producer, honest poet, music engineer and graphics designer. Northwest native Jason Chen, better known as Know Choice, is what one could describe as an all around great artist. Writing rhymes since the age of 12, ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Feb 25th 2008
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=2049">How do you delete a account</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=2049&amp;Focus=49499#Comment_49499">[size=18]DJNPHARED BANNED FOR LIFE![/size]</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=4">Technical</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Feb 22nd 2008
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=2049">How do you delete a account</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=2049&amp;Focus=49456#Comment_49456">Due to the nature of the forum software/databases 206Proof is built on, we cannot allow deletion of users.  It would leave gaps and create problems in our database.  Feel free to just create a new account and not use the old one.</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=4">Technical</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Feb 22nd 2008
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=1905">Paul Rivers Bailey - &quot;Guardianship&quot; - Song of the Week  2/11/08</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=1905&amp;Focus=46585#Comment_46585">[i]From myspace:[/i] Paul Rivers Bailey is a soul, R&amp;B, and Hip Hop artist From Santa fe N.M. by way of Queens New York. &quot;The music Bailey creates is soulful, restless and ready for audiences well beyond the Santa Fe music scene. With an impending tour and a clear and undeterred focus, ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Feb 11th 2008
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=1428">**edited**</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=1428&amp;Focus=36245#Comment_36245">BANNED!!!!! lol.</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 30th 2007
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=1428">**edited**</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=1428&amp;Focus=36239#Comment_36239">Please do not change your post titles to a single  &quot;.&quot;  For some reason it was causing some weird software bug.  This is probably an isolated incident but for good measure please refrain from doing so in the future.  I have edited this post title, the owner of this post may change it ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 30th 2007
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=1425">Happy Holidays - Song of the Week back 12/31/07</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=1425&amp;Focus=34851#Comment_34851">We hope everybody is having a good holiday season, and hopefully most got some time off from work.  We will be resuming SOTW on the 31st of December.  Artists who would like to submit songs, DJs/Producers who want to submit remixes please send them to ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 26th 2007
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=1392">206Proof Shop Now Open</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=1392&amp;Focus=33930#Comment_33930">206Proof shirts available now.  More to come.   Go to [url=http://www.206proof.com/shop/]www.206proof.com/shop/[/url]  :latepass:</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 20th 2007
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=1290">Big Will f/ J Folks - &quot;Aint Got No Time&quot; - Song of the Week 12/10/07</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=1290&amp;Focus=31283#Comment_31283">[i]From Myspace:[/i] [img]http://cdbaby.name/b/i/bigwillsounds.jpg[/img] [b]Big Will f/ J Folks[/b] [i]Aint Got No Time[/i] [url=http://www.206proof.com/forum/uploads/SongOfTheWeek/aint_got_no_time.mp3][/url]  Check out more at ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 11th 2007
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=1223">T-Love &quot;Cant Runaway&quot; - Song of the Week 12/3/07</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=1223&amp;Focus=29506#Comment_29506">[i]From Myspace on &quot;Can't Runaway&quot;[/i]   I happened to hear a beat that DJ Rocphella was workin on while I was at his crib. It blew me away and we built the rest of the beat together. This song represents the struggle for an artist to make his way in this industry. We dealt with our ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 5th 2007
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=1083">Cancer Rising - Song of the Week 11/19/07</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=1083&amp;Focus=25853#Comment_25853">[i]From Bio:[/i] CANCER RISING’S spank-new self-titled EP represents a total reboot- going back to their own Southend Seattle roots- and the dusty, dirty roots of their rock-mindful boom-bap. The raw sound (handled by Tiles, Mr. Hill (Grayskul/Kool Keith/Aesop Rock), and djblesOne- official DJ ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Nov 19th 2007
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=1001">Down for Maintenance Nov. 19th</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=1001&amp;Focus=23548#Comment_23548">The board will be down for maintenance on Monday, November 19th.  We should be only down for a couple of hours in the morning.  We apologize for the inconvenience but it is important to keep our software clean and up to date.</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Nov 11th 2007
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=953">Notion - Song of the Week 11/5/07</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=953&amp;Focus=22287#Comment_22287">[i]From Notion's Myspace[/i] I guess it would be wrong if i didn't tell you all that this is the very best, most complete, EP project I've ever heard. Notion was apart of a really dope duo with Ill Comoditty called the Reflects and they dropped some classic underground jams that spoke on the ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Nov 6th 2007
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=864">Prooficons &amp; A New Look for Fall/Winter</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=864&amp;Focus=20646#Comment_20646">Since these seem to be the hit, heres the new line of Prooficons, more to come.  Just don't expect this fast of turnaround on everything! :bigsmile:  :dre: :jazzy: :kanye: :quest: :quik: :storch: :timbo:</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Oct 30th 2007
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=864">Prooficons &amp; A New Look for Fall/Winter</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=864&amp;Focus=20541#Comment_20541">We're on it.</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Oct 30th 2007
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=864">Prooficons &amp; A New Look for Fall/Winter</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=864&amp;Focus=20190#Comment_20190">Ask and you shall receive.  Some of you will have to delete your browser cache to see all of the added options.   Barfly, thanks for your hard work (although we had to make  some of them smaller, for page load reasons, hope you don't mind).  We would like everyone (who wants to) to make suggestions ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Oct 29th 2007
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=864">Prooficons &amp; A New Look for Fall/Winter</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=864&amp;Focus=20079#Comment_20079">AH HA!!  You 206Proofians are clever.</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Oct 29th 2007
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=864">Prooficons &amp; A New Look for Fall/Winter</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=864&amp;Focus=20075#Comment_20075">Whats good Proof?  We've just added Prooficons, which are basically like smilies you've seen on other message boards customized to suit the good people here at 206Proof.  To use the Prooficons, in the Leave a Comment panel simply click the plus sign to see your options, select 206Proof from the ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Oct 29th 2007
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=735">206Proof TShirts Coming Soon...</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=735&amp;Focus=16239#Comment_16239">[img]http://www.206proof.com/uploads/Images/206proof_ts.jpg[/img]</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Oct 17th 2007
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=672">Server Issues - We want to apologize</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=672&amp;Focus=14834#Comment_14834">LOL@ YOU NOT HEEDING MY LIGHTNINGBOLTS  [img]http://www.moonraker.com.au/techni/lightning.jpg[/img]</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=4">Technical</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=2">Zeus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Oct 11th 2007
+		</li>
+	</ul>
+</li>
+</ol>
+</div><div class="ContentInfo Bottom">
+		<div class="PageInfo">
+			<p>Results 1 to 50 for <strong>nothing</strong></p>
+			<div class="PageList">Previous  <a href="http://www.206proof.com/forum/search.php?page=2&amp;PostBackAction=Search&amp;Keywords=Zeus%3A&amp;Type=Comments&amp;btnSubmit=Search">Next</a> </div>
+		</div>
+		<a href="http://www.206proof.com/forum/search.php?PostBackAction=Search&amp;Keywords=Zeus%3A&amp;Type=Comments&amp;btnSubmit=Search#pgtop">Top of Page</a>
+	</div></div>
+<div id="pgbottom" name="pgbottom"><p>&copy; 2007 <a href="http://www.206Proof.com">206Proof</a>. Powered by  <a href="http://www.getvanilla.com">Vanilla</a>.</p>
+</div>
+            <script type="text/javascript" src="http://www.google-analytics.com/urchin.js"></script>
+            <script type="text/javascript">
+            // <![CDATA[
+            _uacct="UA-2210503-1";
+            urchinTracker();
+            // ]]>
+            </script>
+</body>
+</html>

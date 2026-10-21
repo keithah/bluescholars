@@ -1,0 +1,1496 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-ca">
+   <head>
+   
+   
+   
+      <title>206Proof - Forum - Search</title>
+      <link rel="shortcut icon" href="/forum/themes/206Proof/styles/default/favicon.ico" />
+            <link rel="stylesheet" type="text/css" href="/forum/themes/206Proof/styles/default/vanilla.css" media="screen" />
+            <link rel="stylesheet" type="text/css" href="/forum/themes/206Proof/styles/default/vanilla.print.css" media="print" />
+            <link rel="stylesheet" type="text/css" href="/forum/extensions/Nugget/nugget.css" />
+            <link rel="stylesheet" type="text/css" href="/forum/extensions/SidepanelImageLink/style.css" />
+            <link rel="stylesheet" type="text/css" href="/forum/extensions/Signatures/style.css" />
+            <link rel="stylesheet" type="text/css" href="/forum/extensions/ModTools/style.css" />
+            <link rel="stylesheet" type="text/css" href="/forum/extensions/GuestSignIn/style.css" />
+            <script type="text/javascript" src="/forum/js/global.js"></script>
+            <script type="text/javascript" src="/forum/js/vanilla.js"></script>
+            <script type="text/javascript" src="/forum/js/ajax.js"></script>
+            <script type="text/javascript" src="/forum/js/ac.js"></script>
+            <script type="text/javascript" src="/forum/extensions/JQuery/jquery-1.1.3.1.pack.js"></script>
+            <script type="text/javascript" src="/forum/extensions/ModTools/function.js"></script><style>
+		.ProfileTitle.WithIcon .ProfileIcon { width: 60px; height: 60px; }
+		#AccountProfile .Picture { width: 280px; height: 280px; }
+		#Comments .CommentHeader { line-height: 60px; }
+		#Comments .CommentHeader li div.CommentIcon { padding: 60px 0px 60px 60px; }
+		li.User.Name .UserIcon { padding: 60px 0px 60px 60px !important; }
+		li.User.Name.WithIcon { line-height: 60px; }
+	</style>
+<!--[if lte IE 7]><link rel="stylesheet" href="http://www.206proof.com/forum/themes/206Proof/styles/default/ie.css" type="text/css" media="screen" charset="utf-8"><![endif]-->
+<script type="text/javascript" src="http://www.206proof.com/forum/js/menu.js"></script></head>
+   <body id="SearchPage"  onload="Focus('txtKeywords');"><!--[if lt IE 7]><script src="http://www.206proof.com/ie7/ie7-standard-p.js" type="text/javascript"></script><![endif]--><b></b>
+		<div id="top">
+		<div id="top-content-wrapper">
+			<ul id="topnav">
+ 			   <li><a href="http://www.206proof.com/forum/" class="menuhead">206Proof</a>
+      			  <ul class="proof-dropdown">
+        		    <li><a href="http://www.206proof.com/shop/">Shop</a></li>
+           			<li><a href="http://www.206proof.com/advertise/">Advertise</a></li>
+        		    <li><a href="http://www.206proof.com/about/">About &amp; FAQ</a></li>
+       			 </ul>
+       		   </li>
+   			   <li><a href="http://www.raindrophustla.com">RaindropHustla</a></li>
+   			   <li><a href="http://www.reigncity.com" class="menuhead">ReignCity</a>
+      			  <ul class="reign-dropdown">
+           			<li><a href="http://www.reigncity.com/calendar/">Calendar</a></li>
+           			<li><a href="http://www.reigncity.com/news/">News &amp; Reviews</a></li>
+            		<li><a href="http://www.reigncity.com/about/">About &amp; Contact</a></li>
+        		  </ul>
+   			    </li>
+			</ul>
+		</div>
+		</div>
+
+<div id="Header"><div id="Session">Not signed in (<a href="/forum/people.php?ReturnUrl=http://www.206proof.com/forum/search.php?PostBackAction=Search&amp;Keywords=gatsworth%3A&amp;Type=Comments&amp;btnSubmit=Search">Sign In</a> or <a href="http://www.206proof.com/forum/people.php?PostBackAction=ApplyForm">Register</a>)</div><a name="pgtop"></a>
+			<h1>
+				206Proof - Forum
+			</h1>
+			
+			<ul><li><a href="index.php" >Discussions</a></li><li><a href="categories.php" >Categories</a></li><li class="TabOn"><a href="search.php" >Search</a></li></ul>
+   </div><div id="Body"><div id="Panel"><div id="GuestSignIn">
+      <h2>Sign In</h2>
+      <p></p>
+   <fieldset><form id="frmSignIn" method="post" action="http://www.206proof.com/forum/people.php">
+     <input name="PostBackAction" value="SignIn" type="hidden">
+     <input name="ReturnUrl" value="http://www.206proof.com/forum/search.php?PostBackAction=Search&amp;Keywords=gatsworth%3A&amp;Type=Comments&amp;btnSubmit=Search" type="hidden">
+     <ul>
+      <li><label for="txtUsername">Username</label>
+      <input id="txtUsername" name="Username" value="" class="text" maxlength="20" type="text">
+     </li>
+     <li><label for="txtPassword">Password</label>
+      <input id="txtPassword" name="Password" value="" class="text" type="password">
+     </li>
+     </ul>
+     <input name="btnSignIn" id="btnSignIn" value="Sign In" class="Button" type="image" src="http://www.206proof.com/forum/themes/206Proof/styles/default/signin.gif">
+   </form></fieldset>
+  </div><ul><li><h2>Menu</h2><ul><li>
+
+
+
+<a href="http://www.206proof.com/shop/">206Proof Merchandise</a>
+
+
+
+</li>
+
+
+
+<li>
+
+
+
+<a href="http://www.206proof.com/forum/faq.php">Frequently Asked Questions</a>
+
+
+
+</li>
+
+
+
+
+
+
+
+<li>
+
+
+
+<a href="http://www.206proof.com/forum/about.php">About 206Proof</a>
+
+
+
+</li>
+
+
+
+
+
+
+
+<li>
+
+
+
+<a href="http://en.wikipedia.org/wiki/Bbcode">BBCode Reference</a>
+
+
+
+</li>
+
+
+
+
+
+
+
+<li>
+
+
+
+<a href="http://www.gimp.org/">Free Image Editor (GIMP)</a>
+
+
+
+</li></ul></li></ul>
+      <ul id="Banner">
+      	 <li><h2>Advertisements</h2></li>
+         <li class="BannerImage"><a href="http://www.triplecrownkings.com"><img src="extensions/SidepanelImageLink/triple.jpg" class="center"/></a></li>
+      </ul><ul><li><ul><a href="http://www.206proof.com/advertise/">Local Artists Advertise Free</a></ul></li></ul><p id="AboutVanilla"><a href="http://getvanilla.com">Vanilla 1.1.4</a> is a product of <a href="http://lussumo.com">Lussumo</a>. More Information: <a href="http://lussumo.com/docs">Documentation</a>, <a href="http://lussumo.com/community">Community Support</a>.</p></div>
+<div id="Content"><div id="Form" class="Account Search">
+	<fieldset id="SearchSimpleFields">
+		<legend>Search</legend>
+		<a href="./" onclick="ShowAdvancedSearch(); return false;" class="SearchSwitch">Advanced</a><form id="SearchSimple" method="get" action="http://www.206proof.com/forum/search.php"><div><input type="hidden" name="PostBackAction" value="Search" />
+				</div><ul>
+				<li id="MainSearchInput">
+					<label for="txtKeywords">SearchTerms</label>
+					<input id="txtKeywords" type="text" name="Keywords" value="gatsworth:" class="SearchInput" />
+				</li>
+				<li id="SimpleSearchRadios">Search:<input type="radio" name="Type"  id="Radio_Topics" value="Topics" class="SearchRadio" />
+			<label for="Radio_Topics" class="Radio">Topics</label>
+			<input type="radio" name="Type"  id="Radio_Comments" value="Comments" checked="checked" class="SearchRadio" />
+			<label for="Radio_Comments" class="Radio">Comments</label>
+			<input type="radio" name="Type"  id="Radio_Users" value="Users" class="SearchRadio" />
+			<label for="Radio_Users" class="Radio">Users</label>
+			</li>
+				<li>
+					<input type="submit" name="btnSubmit" value="Search" class="Button SearchButton" />
+				</li>
+			</ul>
+		</form>
+	</fieldset><fieldset id="SearchDiscussionFields">
+		<legend>Discussion topic search</legend>
+		<a href="./" onclick="ShowSimpleSearch(); return false;" class="SearchSwitch">Simple</a><form id="SearchDiscussions" method="get" action="http://www.206proof.com/forum/search.php"><div><input type="hidden" name="PostBackAction" value="Search" />
+				<input type="hidden" name="Type" value="Discussions" />
+				<input type="hidden" name="Advanced" value="1" />
+				</div><ul>
+				<li>
+					<label for="txtDiscussionKeywords">Find discussion topics containing</label>
+					<input id="txtDiscussionKeywords" type="text" name="Keywords" value="" class="SearchInput AdvancedSearchInput" />
+				</li><li>
+						<label for="ddDiscussionCategories">in the category</label><select name="Categories" class="SearchSelect"  id="ddDiscussionCategories">
+		<option value=""  selected="selected">All categories</option>
+			<option value="General" >General</option>
+			<option value="Shows" >Shows</option>
+			<option value="Suggestions" >Suggestions</option>
+			<option value="Technical" >Technical</option>
+			</select>
+		
+					</li><li>
+					<label for="DiscussionAuthUsername">where the author was</label>
+					<input id="DiscussionAuthUsername" name="AuthUsername" type="text" value="" class="SearchInput AdvancedUserInput" />
+					<script type="text/javascript">
+						var DiscussionAutoComplete = new AutoComplete("DiscussionAuthUsername", false);
+						DiscussionAutoComplete.TableID = "DiscussionAutoCompleteResults";
+						DiscussionAutoComplete.KeywordSourceUrl = "/forum/ajax/getusers.php?Search=";
+					</script>
+				</li>
+				<li>
+					<input type="submit" name="btnSubmit" value="Search" class="Button SearchButton" />
+				</li>
+			</ul>
+		</form>
+	</fieldset><fieldset id="SearchCommentFields">
+		<legend>Discussion comment search</legend><form id="SearchComments" method="get" action="http://www.206proof.com/forum/search.php"><div><input type="hidden" name="PostBackAction" value="Search" />
+				<input type="hidden" name="Advanced" value="1" />
+				<input type="hidden" name="Type" value="Comments" />
+				</div><ul>
+				<li>
+					<label for="txtCommentKeywords">Find comments containing</label>
+					<input id="txtCommentKeywords" type="text" name="Keywords" value="" class="SearchInput AdvancedSearchInput" />
+				</li><li>
+						<label for="ddCommentCategories">in the category</label><select name="Categories" class="SearchSelect"  id="ddCommentCategories">
+		<option value=""  selected="selected">All categories</option>
+			<option value="General" >General</option>
+			<option value="Shows" >Shows</option>
+			<option value="Suggestions" >Suggestions</option>
+			<option value="Technical" >Technical</option>
+			</select>
+		
+					</li><li>
+					<label for="CommentAuthUsername">where the author was</label>
+					<input id="CommentAuthUsername" name="AuthUsername" type="text" value="gatsworth" class="SearchInput AdvancedUserInput" />
+					<script type="text/javascript">
+						var CommentAutoComplete = new AutoComplete("CommentAuthUsername", false);
+						CommentAutoComplete.TableID = "CommentAutoCompleteResults";
+						CommentAutoComplete.KeywordSourceUrl = "/forum/ajax/getusers.php?Search=";
+					</script>
+				</li>
+				<li>
+					<input type="submit" name="btnSubmit" value="Search" class="Button SearchButton" />
+				</li>
+			</ul>
+		</form>
+	</fieldset><fieldset id="SearchUserFields">
+		<legend>User account search</legend><form id="SearchUsers" method="get" action="http://www.206proof.com/forum/search.php"><div><input type="hidden" name="PostBackAction" value="Search" />
+				<input type="hidden" name="Advanced" value="1" />
+				<input type="hidden" name="Type" value="Users" />
+				</div><ul>
+				<li>
+					<label for="txtUserKeywords">Find user accounts containing</label>
+					<input id="txtUserKeywords" type="text" name="Keywords" value="" class="SearchInput AdvancedSearchInput" />
+				</li>
+				<li>
+					<label for="ddRoles">in the role</label>
+					<select name="Roles" class="SearchSelect"  id="ddRoles">
+		<option value=""  selected="selected">All roles</option>
+			<option value="Probation (New Discussions)" >Probation (New Discussions)</option>
+			<option value="Global Admin" >Global Admin</option>
+			<option value="Probation (Posting)" >Probation (Posting)</option>
+			<option value="Moderator" >Moderator</option>
+			<option value="Banned" >Banned</option>
+			<option value="Member" >Member</option>
+			<option value="Administrator" >Administrator</option>
+			</select>
+		
+				</li>
+				<li>
+					<label for="ddOrder">sort results by</label>
+					<select name="UserOrder" class="SearchSelect"  id="ddOrder">
+		<option value=""  selected="selected">Username</option>
+			<option value="Date" >Date last active</option>
+			</select>
+		
+				</li>
+				<li>
+					<input type="submit" name="btnSubmit" value="Search" class="Button SearchButton" />
+				</li>
+			</ul>
+		</form>
+	</fieldset>
+</div><div class="ContentInfo Top">
+	<h1>Comments</h1>
+	<div class="PageInfo">
+		<p>Results 1 to 50 for <strong>nothing</strong></p>
+		<div class="PageList">Previous  <a href="http://www.206proof.com/forum/search.php?page=2&amp;PostBackAction=Search&amp;Keywords=gatsworth%3A&amp;Type=Comments&amp;btnSubmit=Search">Next</a> </div>
+	</div>
+</div>
+<div id="ContentBody">
+	<ol id="CommentResults"><li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14868">Medical Marijuana Dispensaries in Seattle (Metro Puget Sound area)?</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14868&amp;Focus=316112#Comment_316112">check it:  http://www.thestranger.com/seattle/our-growing-industry/Content?oid=5963533  http://www.thestranger.com/binary/48a7/CityLead-570.jpg</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			18 hours ago
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14944">LaRue Going away party Feb. 19th Chop Suey - all ages</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14944&amp;Focus=316105#Comment_316105">where goin rue?</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			20 hours ago
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14946">The alphabet homie</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14946&amp;Focus=316104#Comment_316104">:cry:</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			20 hours ago
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14940">Macklemore / Ryan Lewis - Pizza Party For The Fans</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14940&amp;Focus=316095#Comment_316095">re: Suge  http://www.youtube.com/watch?v=ktdMztNbJ5U</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			22 hours ago
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14943">Speed Of Light - Malice &amp; Mario Sweet (The Physics)</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14943&amp;Focus=316093#Comment_316093">i love this song</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			22 hours ago
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14938">Christmas Beat</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14938&amp;Focus=316092#Comment_316092">:burn:</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			22 hours ago
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14935">Merry Christmas 206 Proof</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14935&amp;Focus=316044#Comment_316044">also: merry xmas</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			3 days ago
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14935">Merry Christmas 206 Proof</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14935&amp;Focus=316043#Comment_316043">you got a 5-head bro</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			3 days ago
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14933">SIC ILL &amp; FACTOR IN MIAMI (DAY26/CASH MONEY/SLIP-N-SLIDE/BENZINO) &quot;Good Read &amp; Pics!&quot;</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14933&amp;Focus=316037#Comment_316037">thats the southeast but that sounds like hella fun/work  good shit</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			4 days ago
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14923">Weekly Volcano Tacoma Hip-Hop 2010 year in review...</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14923&amp;Focus=316020#Comment_316020">which rapper-written tacoma rap-up will you choose? YOU DECIDE!  hey rockwell, im glad yr writing and putting on for yr city</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			4 days ago
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14926">THE GREATEST RAINDROP HUSTLA ARTICLE OF 2010</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14926&amp;Focus=316008#Comment_316008">[quote][cite] boomboxmassacre:[/cite]#Scourged[/quote] [img]http://i.annihil.us/u/prod/marvel//universe3zx/images/thumb/6/60/Scourge.jpg/406px-Scourge.jpg[/img]</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			4 days ago
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14917">Ghost riding: its not for everybody</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14917&amp;Focus=316006#Comment_316006">Best KING 5 piece ever. They shoulda snagged the Emmy for that one</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			4 days ago
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14921">Macklemore &amp; Ryan Lewis - &quot;My Oh My!&quot; (Dave Niehaus Tribute)</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14921&amp;Focus=315965#Comment_315965">i think is one of their best</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			5 days ago
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14329">An alternative to &quot;Pay to Play&quot;</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14329&amp;Focus=315957#Comment_315957">seen some hubbub about the pay to play practices @ el corazon, reminded me of this thread. any progress?</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			5 days ago
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14918">so who came to the &#039;For The Love of Music&#039; comp release last night?</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14918&amp;Focus=315955#Comment_315955">a good time was had, and over 8K raised for the Rainier Vista Boys &amp; Girls Club.  http://a3.twimg.com/profile_images/1196023867/fortheluvweb.jpg  here's flicks:  http://www.flickr.com/photos/iloveyourband/sets/72157625525816049/with/5282985483/</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			5 days ago
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14908">If Seattle gets hit with a nuclear bomb, this nigga did it! lmao</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14908&amp;Focus=315924#Comment_315924">microbes</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			6 days ago
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14838">TYPE is in the next VERN FONK commercial!!!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14838&amp;Focus=315904#Comment_315904">[quote][cite] Type:[/cite]Thanks man. Sorry for the drunk text, Harsh was spinning Mash Hall at the Jet and I was digging it.[/quote] HAHA i just found that.   no.</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			6 days ago
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14908">If Seattle gets hit with a nuclear bomb, this nigga did it! lmao</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14908&amp;Focus=315903#Comment_315903">let's take a look back into the mists of time http://www.206proof.com/forum/comments.php?DiscussionID=236</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			6 days ago
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14838">TYPE is in the next VERN FONK commercial!!!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14838&amp;Focus=315890#Comment_315890">congrats dude</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			6 days ago
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14908">If Seattle gets hit with a nuclear bomb, this nigga did it! lmao</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14908&amp;Focus=315889#Comment_315889">[quote][cite] t-baby206:[/cite]&quot;come to the town&quot;[/quote] THE BEST</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			6 days ago
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14911">OFFICIALS VINTAGE - 30% OFF TIL 2O11</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14911&amp;Focus=315856#Comment_315856">finish yr gift shopping here:  http://www.youtube.com/watch?v=HpuETtRJsvE  3602 Palatine in Fremont</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			7 days ago
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14898">***2010 Top 10 NW Hip Hop Videos***</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14898&amp;Focus=315841#Comment_315841">for what its worth, a very black, very raw act from seattle is getting lots of national love (#3 album of the year on Gorilla Vs Bear for one-they called him &quot;the anti-Kanye&quot;- and it didnt even come out this year) and will get a shitload in months to come ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			7 days ago
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14908">If Seattle gets hit with a nuclear bomb, this nigga did it! lmao</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14908&amp;Focus=315836#Comment_315836">i have to :latepass: t-baby on this just to seem cool lol. i been crackin up off these all week. and there's HELLA</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			7 days ago
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14898">***2010 Top 10 NW Hip Hop Videos***</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14898&amp;Focus=315825#Comment_315825">http://img835.imageshack.us/img835/2332/zack.gif</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			7 days ago
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14908">If Seattle gets hit with a nuclear bomb, this nigga did it! lmao</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14908&amp;Focus=315819#Comment_315819">LOL</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			7 days ago
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14901">Any good recommendation for graphic designers out there?</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14901&amp;Focus=315787#Comment_315787">[quote][cite] Radjaw:[/cite]holler[/quote] Radjaw's having a sale! hit him up.</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 19th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14898">***2010 Top 10 NW Hip Hop Videos***</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14898&amp;Focus=315786#Comment_315786">Ripynt shouldnt have even been on the Seattle Weekly cover in the first place, now his video is up there...this is BULLSHIT</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 19th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14898">***2010 Top 10 NW Hip Hop Videos***</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14898&amp;Focus=315711#Comment_315711">it was indeed</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 16th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14900">YOUR REGRETS OF 2010</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14900&amp;Focus=315709#Comment_315709">[quote][cite] jgreene:[/cite]I regret watching Jay Electronica at Bumbershoot.[/quote] i'll take it!</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 16th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14900">YOUR REGRETS OF 2010</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14900&amp;Focus=315698#Comment_315698">write em here. i reserve the right to use what you write in the column i'm supposed to turn in tomorrow afternoon  I'll start.  I regret missing about a dozen awesome shows because i didn't have the energy to not be entirely left alone/talked to that night. Wah, right? I also regret being on ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 16th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14898">***2010 Top 10 NW Hip Hop Videos***</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14898&amp;Focus=315697#Comment_315697">ima go ahead and guess this is what Chev expected  but yeah, I would have included Avatar's Fear Nobody  probably Mac Wayne's Smoother Than Some Woodgrain Too  see now i have to go and make my own   maybe i should bite some of what Feldman writes for once</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 16th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14896">LIFE &amp; TIMES OF A MEDIOCRE BAND</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14896&amp;Focus=315655#Comment_315655">http://www.thestranger.com/seattle/the-life-and-times-of-a-mediocre-band/Content?oid=5858315  http://www.thestranger.com/binary/586d/Vignette-570.jpg</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 15th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14893">JusMoni</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14893&amp;Focus=315644#Comment_315644">[quote][cite] chev:[/cite]moni is the oldest 17 ive ever met[/quote] for real</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 15th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14859">Wiki Leaks</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14859&amp;Focus=315626#Comment_315626">http://www.grist.org/article/food-2010-12-10-leaked-documents-show-epa-allowed-bee-toxic-pesticide- http://images.nymag.com/movies/reviews/michaelclayton071008_560.jpg</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 14th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14859">Wiki Leaks</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14859&amp;Focus=315605#Comment_315605">via justo  http://www.huffingtonpost.com/michael-moore/why-im-posting-bail-money_b_796319.html</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 14th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14879">WHAT MONSTER SEATTLE GANGSTA RAP COLLAB WOULD YOU LOVE TO SEE?</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14879&amp;Focus=315573#Comment_315573">you aint from ATL, sometimes you rep seattle so why your trippin?</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 13th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14877">TACOMA RAP IN 2010</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14877&amp;Focus=315572#Comment_315572">at my last count i forgot about D.O.G., Rockwell, J.Bre, Marcus D and Justis. but like i said[quote][cite] Element of S.F.:[/cite]This is far from definitive, of course[/quote]</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 13th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14879">WHAT MONSTER SEATTLE GANGSTA RAP COLLAB WOULD YOU LOVE TO SEE?</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14879&amp;Focus=315562#Comment_315562">do you know fatal? did you ask him to get on yr album? lol</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 13th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14879">WHAT MONSTER SEATTLE GANGSTA RAP COLLAB WOULD YOU LOVE TO SEE?</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14879&amp;Focus=315546#Comment_315546">what if this dude lemon drop is from tacoma? haha</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 12th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14879">WHAT MONSTER SEATTLE GANGSTA RAP COLLAB WOULD YOU LOVE TO SEE?</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14879&amp;Focus=315533#Comment_315533">[quote][cite] t-baby206:[/cite]Lol this coming from someone named &quot;lemon drop&quot; smh. How about a super mix with 151 avatar soprano gangst nutt anonimous certified second family p washington no clue and fatal. lol I'm trippin I know.[/quote]  good list. i'd make that soprano leezy</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 12th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14877">TACOMA RAP IN 2010</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14877&amp;Focus=315474#Comment_315474">No doubt Josh. And thanks Roy.</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 10th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14877">TACOMA RAP IN 2010</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14877&amp;Focus=315467#Comment_315467">thanks man.</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 10th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14866">Top 5 Performance Do&#039;s and Don&#039;ts</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14866&amp;Focus=315466#Comment_315466">[quote][cite] Ricky Pharoemones:[/cite]how about Be good, don't blow.[/quote] how about you should show this, instead of telling it?</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 10th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14877">TACOMA RAP IN 2010</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14877&amp;Focus=315459#Comment_315459">http://www.youtube.com/watch?v=dAMNuz4ugJU&amp;feature=player_embedded#!</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 10th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14877">TACOMA RAP IN 2010</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14877&amp;Focus=315458#Comment_315458">thats right. keep it up. and no doubt man, it was overdue.</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 10th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14877">TACOMA RAP IN 2010</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14877&amp;Focus=315455#Comment_315455">damn i knew i was gonna forget somebody. you dropped something this year?</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 10th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14877">TACOMA RAP IN 2010</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14877&amp;Focus=315452#Comment_315452">hahaha. when do i get my 253 pass, guise??</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 10th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14877">TACOMA RAP IN 2010</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14877&amp;Focus=315448#Comment_315448">a little look back i did: http://lineout.thestranger.com/lineout/archives/2010/12/10/tacomas-2010-in-hiphop</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 10th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14875">Victor Shade in Amazon&#039;s Top 10 hip hop songs of 2010 list</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14875&amp;Focus=315443#Comment_315443">why do you have Promo's copy?</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 10th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14866">Top 5 Performance Do&#039;s and Don&#039;ts</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14866&amp;Focus=315413#Comment_315413">[quote][cite] Roy Boy:[/cite]show don't tell[/quote] is more important than 99% of the other rules said so far</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 9th 2010
+		</li>
+	</ul>
+</li>
+</ol>
+</div><div class="ContentInfo Bottom">
+		<div class="PageInfo">
+			<p>Results 1 to 50 for <strong>nothing</strong></p>
+			<div class="PageList">Previous  <a href="http://www.206proof.com/forum/search.php?page=2&amp;PostBackAction=Search&amp;Keywords=gatsworth%3A&amp;Type=Comments&amp;btnSubmit=Search">Next</a> </div>
+		</div>
+		<a href="http://www.206proof.com/forum/search.php?PostBackAction=Search&amp;Keywords=gatsworth%3A&amp;Type=Comments&amp;btnSubmit=Search#pgtop">Top of Page</a>
+	</div></div>
+<div id="pgbottom" name="pgbottom"><p>&copy; 2007 <a href="http://www.206Proof.com">206Proof</a>. Powered by  <a href="http://www.getvanilla.com">Vanilla</a>.</p>
+</div>
+            <script type="text/javascript" src="http://www.google-analytics.com/urchin.js"></script>
+            <script type="text/javascript">
+            // <![CDATA[
+            _uacct="UA-2210503-1";
+            urchinTracker();
+            // ]]>
+            </script>
+</body>
+</html>

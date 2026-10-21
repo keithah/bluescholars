@@ -159,6 +159,59 @@ def massline_summary(rows: list[dict]) -> dict:
     }
 
 
+def promote_massline(root: Path, reviewed: bool = False) -> dict:
+    """Create a reviewed release manifest after verifying every included capture."""
+    if not reviewed:
+        raise ValueError("Mass Line source review is required: pass --reviewed after inspection")
+    root = Path(root).resolve()
+    recovery_path = root / "recovery/massline/manifest.json"
+    if not recovery_path.is_file():
+        raise ValueError("Run Mass Line recovery before promoting its sources")
+    manifest = json.loads(recovery_path.read_text(encoding="utf-8"))
+    allowed = [(root / "recovery/massline/raw").resolve(),
+               (root / "recovery/massline/external/raw").resolve()]
+    verified = 0
+
+    def verify(record: dict) -> dict:
+        nonlocal verified
+        if record.get("kind") not in ("html", "css", "image", "media") or not record.get("raw_path"):
+            return record
+        path = (root / record["raw_path"]).resolve()
+        if not any(path.is_relative_to(parent) for parent in allowed):
+            raise ValueError(f"Mass Line source path escapes the recovery store: {record.get('source_url')}")
+        body = path.read_bytes()
+        if sha256(body).hexdigest() != record.get("sha256"):
+            raise ValueError(f"Mass Line source hash mismatch: {record.get('source_url')}")
+        validate_payload(body, record["kind"])
+        promoted = dict(record)
+        promoted["source_reviewed"] = True
+        verified += 1
+        return promoted
+
+    for collection in ("resources", "external_resources"):
+        manifest[collection] = {url: verify(record) for url, record in manifest.get(collection, {}).items()
+                                if isinstance(record, dict) and record.get("raw_path")}
+    for collection in ("homepage_variants", "resource_variants"):
+        manifest[collection] = [verify(record) for record in manifest.get(collection, [])
+                                if isinstance(record, dict) and record.get("raw_path")]
+    if not manifest.get("resources"):
+        raise ValueError("No hash-verified Mass Line pages are available to promote")
+    manifest["source_review"] = {
+        "actor": "Codex agent", "reviewed_at": datetime.now(timezone.utc).isoformat(),
+        "verified_resources": verified,
+        "note": "Captured source bytes are hash-verified; unavailable records remain in the recovery report.",
+    }
+    destination = root / "source/massline.json"
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    destination.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
+    (root / "source/review.json").write_text(json.dumps({
+        "publish_approved": False, "visual_reviewed": False,
+        "note": "Mass Line source collection changed; review the generated site before publishing.",
+    }, indent=2) + "\n", encoding="utf-8")
+    return {"promoted": verified, "manifest": destination.relative_to(root).as_posix(),
+            "source_reviewed": True}
+
+
 def select_massline_homepage_versions(rows: list[dict]) -> list[dict]:
     """Choose each year's latest substantial homepage capture from the genuine 2006–09 site era."""
     eligible = [r for r in rows if r.get("mimetype") == "text/html"

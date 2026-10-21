@@ -320,8 +320,8 @@ def render_html(text: str,url: str,resources: dict,base: str,route_prefix='',ali
             span.string='Image not recovered'+(' — '+alt if alt else '')
             img.replace_with(span)
     for form in list(soup.find_all('form')):
-        form.name='div';form.attrs={'class':'archive-historical-form'}
-        notice=soup.new_tag('p',attrs={'class':'archive-notice'})
+        form.name='div';form.attrs={'class':'archive-historical-form','aria-disabled':'true'}
+        notice=soup.new_tag('span',attrs={'class':'archive-sr-only'})
         notice.string='Historical form — submissions are disabled.';form.insert(0,notice)
     for control in soup.find_all(['input','button','select','textarea']):
         control['disabled']='disabled'

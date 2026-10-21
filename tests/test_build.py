@@ -76,6 +76,14 @@ def test_html_localizes_preserves_layout_and_removes_tracking():
     assert '/bluescholars/assets/bg.png' in text
     assert 'Content-Security-Policy' in text
 
+def test_disabled_form_notice_avoids_colliding_with_historical_site_css():
+    rendered,_=render_html('<html><head><style>.archive-notice{position:fixed;top:0;right:0}</style></head><body><form action="/submit"><input name="email"><button>Send</button></form></body></html>',HOME,RES,'')
+    soup=BeautifulSoup(rendered,'html.parser')
+    notice=soup.select_one('.archive-historical-form .archive-sr-only')
+    assert notice and notice.get_text(strip=True)=='Historical form — submissions are disabled.'
+    assert soup.select_one('.archive-historical-form[aria-disabled="true"]')
+    assert not soup.select('.archive-historical-form .archive-notice')
+
 def test_2007_image_map_labels_get_local_navigation_targets():
     source='''<html><body><map name="Map2">
       <area alt="news" coords="78,158,120,176" shape="rect">
@@ -246,10 +254,45 @@ def test_documented_alias_matches_older_capture_variant(tmp_path):
     assert digest in Path(aliases[target]['local_path']).name
     assert not issues
 
+def test_documented_site_stylesheet_alias_localizes_a_missing_variant(tmp_path):
+    fixture_root(tmp_path);state=State(tmp_path)
+    target='http://static1.squarespace.com/static/sitecss/site/7/template/site.css?&filterFeatures=false'
+    source='http://static1.squarespace.com/static/sitecss/site/8/template/site.css?&filterFeatures=false'
+    css=b'body{background:#fafafa url(http://static1.squarespace.com/static/bg.png)}.mobileNav{display:none}'
+    page_url=HOME+'video'
+    add_raw(state,page_url,'html',('<html><head><link rel="stylesheet" href="'+target+'"></head>'
+                                   '<body><main>Recovered page</main></body></html>').encode())
+    add_raw(state,source,'css',css)
+    source_record=state.data['resources'][source]
+    source_record['actual_capture']='20230627004401';state.save()
+    write_json(tmp_path/'source/asset-aliases.json',{'version':1,'aliases':[{
+        'url':target,'source_url':source,'actual_capture':'20230627004401',
+        'sha256':source_record['sha256'],'referrer':page_url,
+        'decision':'Same immutable Squarespace site/template IDs; identical recovered stylesheet body.'
+    }]})
+
+    build(tmp_path,tmp_path/'_candidate','/bluescholars',candidate=True)
+
+    page=BeautifulSoup((tmp_path/'_candidate/2013/video/index.html').read_text(),'html.parser')
+    stylesheet=next((link for link in page.find_all('link',rel='stylesheet')
+                     if link.get('href','').startswith('/bluescholars/assets/')
+                     and 'archive-ui.css' not in link['href']),None)
+    assert stylesheet
+    local=tmp_path/'_candidate'/stylesheet['href'].split('?',1)[0].removeprefix('/bluescholars/')
+    text=local.read_text()
+    assert 'background:#fafafa' in text
+    assert 'static1.squarespace.com' not in text
+
 def test_early_2013_wordpress_links_use_the_legacy_edition():
     url='http://bluescholars.com/blog/2013/01/early-post/'
     assert historical_route_prefix(url,'/2013','20130101000000')=='/2009'
     assert historical_route_prefix(url,'/2013','20130922000000')=='/2013'
+
+def test_root_level_legacy_permalink_uses_edition_from_capture_date():
+    url='http://bluescholars.com/june-17-18-cinemetropolis-release-party-neumos-seattle/'
+    assert historical_route_prefix(url,'/2013','20120430110634')=='/2009'
+    assert historical_route_prefix(url,'/2009','20070724082915')=='/2007'
+    assert historical_route_prefix(url,'/2009','20150930100000')=='/2009'
 
 def test_early_2013_route_uses_latest_capture_hint_when_body_is_missing():
     url='http://bluescholars.com/blog/2013/01/early-post/'
@@ -586,9 +629,11 @@ def test_root_is_a_gateway_to_separate_historical_editions(tmp_path):
     assert all(card.select_one('.edition-action') for card in cards)
     assert root.select_one('a.lj-archive[href="/lj/"]')
     assert {a.get('href') for a in root.select('.archive-site-card')} == {
-        '/prometheusbrown/', '/sabzi/', '/myspace/', '/masslinemedia/', '/massline-forums/', '/lj/'
+        '/prometheusbrown/', '/sabzi/', '/myspace/', '/twitter-prometheusbrown/', '/masslinemedia/', '/massline-forums/', '/lj/'
     }
     assert all(card.select_one('.edition-action') for card in root.select('.archive-site-card'))
+    twitter=(tmp_path/'_site/twitter-prometheusbrown/index.html').read_text()
+    assert 'No archived profile captures' in twitter
     assert root.select_one('a.recovery-status')
     assert 'Original Squarespace homepage' in (tmp_path/'_site/2013/index.html').read_text()
     assert all((tmp_path/'_site'/year/'index.html').is_file() for year in ('2007','2009','2013'))
@@ -903,6 +948,23 @@ def test_promote_verifies_raw_hash(tmp_path):
     (tmp_path/record['raw_path']).write_bytes(b'<html><body>modified</body></html>')
     with pytest.raises(ValueError,match='hash'):promote(tmp_path,reviewed=True)
 
+def test_promotion_rejects_provider_error_payloads_but_keeps_other_sources(tmp_path):
+    fixture_root(tmp_path);s=State(tmp_path)
+    add_raw(s,HOME,'html',b'<html><head><title>Blue Scholars</title></head><body>Home</body></html>')
+    invalid='http://bluescholars.com/shop'
+    add_raw(s,invalid,'html',b'<html><head><title>Page Not Found</title></head><body>Page cannot be displayed by service provider</body></html>')
+
+    result=promote(tmp_path,reviewed=True)
+
+    assert result['promoted']==1
+    assert result['rejected_provider_errors']==1
+    state=State(tmp_path)
+    assert state.data['resources'][invalid]['status']=='failed'
+    assert 'provider/archive error' in state.data['resources'][invalid]['reason'].lower()
+    catalog=json.loads((tmp_path/'source/catalog.json').read_text())['resources']
+    assert catalog[invalid]['status']=='failed'
+    assert not catalog[invalid].get('raw_path')
+
 def test_diagnostic_source_link_stays_on_wayback(tmp_path):
     fixture_root(tmp_path)
     build(tmp_path,tmp_path/'_site','/bluescholars')
@@ -914,3 +976,50 @@ def test_css_import_media_whitespace_preserved():
     resources={'https://cdn.example/base.css':{'kind':'css','local_path':'/assets/base.css'}}
     text,_=render_css('@import "base.css" screen and (min-width: 600px);','https://cdn.example/site.css',resources,'')
     assert 'screen and' in text
+
+def test_promote_redacts_archived_google_maps_key_and_keeps_original_provenance(tmp_path):
+    fixture_root(tmp_path)
+    state=State(tmp_path)
+    key=b'AIza'+b'A'*35
+    body=b'<html><body><script>window.site={"googleMapsStaticApiKey":"'+key+b'"}</script><p>Archive page</p></body></html>'
+    add_raw(state,HOME,'html',body)
+    original=state.data['resources'][HOME]
+    (tmp_path/'source/review.json').write_text(json.dumps({
+        'redistribution_permission_confirmed':True,
+        'publish_approved':False,
+        'visual_reviewed':False,
+    }))
+
+    result=promote(tmp_path,reviewed=True)
+
+    catalog=json.loads((tmp_path/'source/catalog.json').read_text())['resources']
+    saved=catalog[HOME]
+    public_source=(tmp_path/saved['raw_path']).read_bytes()
+    assert result['redacted_payloads']==1
+    assert key not in public_source
+    assert b'Archive page' in public_source
+    assert saved['raw_path'].startswith('source/redacted/')
+    assert saved['sha256']==hashlib.sha256(public_source).hexdigest()
+    assert saved['original_sha256']==original['sha256']
+    assert saved['source_redaction']['field']=='googleMapsStaticApiKey'
+    assert (tmp_path/original['raw_path']).read_bytes()==body
+    review=json.loads((tmp_path/'source/review.json').read_text())
+    assert review['redistribution_permission_confirmed'] is True
+    assert review['publish_approved'] is False
+
+def test_promote_redacts_stripe_publishable_key_from_archived_source(tmp_path):
+    fixture_root(tmp_path)
+    state=State(tmp_path)
+    key=b'pk_live_'+b'A'*24
+    body=b'<html><script>payment={"publishableApiKey":"'+key+b'"}</script><p>Archive page</p></html>'
+    add_raw(state,HOME,'html',body)
+
+    result=promote(tmp_path,reviewed=True)
+
+    saved=json.loads((tmp_path/'source/catalog.json').read_text())['resources'][HOME]
+    public_source=(tmp_path/saved['raw_path']).read_bytes()
+    assert result['redacted_payloads']==1
+    assert key not in public_source
+    assert b'[redacted-publishable-key]' in public_source
+    assert saved['source_redaction']['count']==1
+    assert (tmp_path/state.data['resources'][HOME]['raw_path']).read_bytes()==body

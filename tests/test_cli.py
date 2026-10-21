@@ -1,4 +1,5 @@
 import json
+import hashlib
 import subprocess
 import sys
 from pathlib import Path
@@ -14,6 +15,7 @@ def run(*args):
 def test_cli_help():
     r=run('--help')
     assert r.returncode==0 and 'recover' in r.stdout and 'promote' in r.stdout
+    assert 'recover-origin-images' in r.stdout
 
 def test_seed_build_check_cli(tmp_path):
     (tmp_path/'recovery/seeds').mkdir(parents=True)
@@ -27,6 +29,81 @@ def test_seed_build_check_cli(tmp_path):
 def test_publish_approval_not_implicit(tmp_path):
     r=run('--root',tmp_path,'approve')
     assert r.returncode!=0
+    assert not (tmp_path/'source/review.json').exists()
+
+def test_agent_visual_review_can_be_recorded_without_publish_approval(tmp_path):
+    from restore.state import write_json
+    (tmp_path/'_site').mkdir()
+    (tmp_path/'_site/index.html').write_text('<!doctype html><title>Archive</title>')
+    evidence=tmp_path/'docs/recovery-report/VISUAL_REVIEW.md'
+    evidence.parent.mkdir(parents=True)
+    evidence.write_text('Agent-performed inspection with saved comparison screenshots.')
+    write_json(tmp_path/'source/review.json',{'visual_reviewed':False,'publish_approved':False})
+
+    result=run('--root',tmp_path,'visual-review','--visual-reviewed')
+
+    assert result.returncode==0,result.stderr
+    review=json.loads((tmp_path/'source/review.json').read_text())
+    assert review['visual_reviewed'] is True
+    assert review['visual_reviewed_by']=='Codex agent'
+    assert review['visual_review_evidence']=='docs/recovery-report/VISUAL_REVIEW.md'
+    assert review['publish_approved'] is False
+    assert review['human_visual_reviewed'] is False
+
+def test_agent_visual_review_requires_built_site_and_evidence(tmp_path):
+    result=run('--root',tmp_path,'visual-review','--visual-reviewed')
+    assert result.returncode!=0 and 'build' in result.stderr.lower()
+    (tmp_path/'_site').mkdir()
+    (tmp_path/'_site/index.html').write_text('<!doctype html>')
+    result=run('--root',tmp_path,'visual-review','--visual-reviewed')
+    assert result.returncode!=0 and 'evidence' in result.stderr.lower()
+    assert not (tmp_path/'source/review.json').exists()
+
+def test_approval_records_agent_review_and_user_authorization_truthfully(tmp_path):
+    from restore.state import write_json
+    from restore.urls import HOME,TARGET
+    page=b'<html><head><title>Blue Scholars</title><link rel="stylesheet" href="/site.css"></head><body>Recovered</body></html>'
+    css=b'body{color:#222}'
+    (tmp_path/'source/raw').mkdir(parents=True)
+    (tmp_path/'source/raw/home.html').write_bytes(page)
+    (tmp_path/'source/raw/site.css').write_bytes(css)
+    write_json(tmp_path/'source/catalog.json',{'version':1,'resources':{
+        HOME:{'url':HOME,'kind':'html','status':'recovered','raw_path':'source/raw/home.html',
+              'sha256':hashlib.sha256(page).hexdigest(),'actual_capture':TARGET,'source_reviewed':True},
+        HOME+'site.css':{'url':HOME+'site.css','kind':'css','status':'recovered','raw_path':'source/raw/site.css',
+                         'sha256':hashlib.sha256(css).hexdigest(),'actual_capture':TARGET,'source_reviewed':True}}})
+
+    evidence=tmp_path/'docs/recovery-report/VISUAL_REVIEW.md'
+    evidence.parent.mkdir(parents=True)
+    evidence.write_text('Agent-performed browser review with saved screenshots.')
+    result=run('--root',tmp_path,'approve','--visual-reviewed','--publish-approved')
+
+    assert result.returncode==0,result.stderr
+    review=json.loads((tmp_path/'source/review.json').read_text())
+    assert review['visual_reviewed'] is True and review['publish_approved'] is True
+    assert review['visual_reviewed_by']=='Codex agent'
+    assert review['visual_review_evidence']=='docs/recovery-report/VISUAL_REVIEW.md'
+    assert review['publish_authorization']=='Conditional publication authorization in CODEX_PROMPT.md'
+    assert 'owner' not in review['note'].lower()
+
+
+def test_approval_requires_existing_in_project_evidence(tmp_path):
+    from restore.state import write_json
+    from restore.urls import HOME,TARGET
+    page=b'<html><head><title>Blue Scholars</title><link rel="stylesheet" href="/site.css"></head><body>Recovered</body></html>'
+    css=b'body{color:#222}'
+    (tmp_path/'source/raw').mkdir(parents=True)
+    (tmp_path/'source/raw/home.html').write_bytes(page)
+    (tmp_path/'source/raw/site.css').write_bytes(css)
+    write_json(tmp_path/'source/catalog.json',{'version':1,'resources':{
+        HOME:{'url':HOME,'kind':'html','status':'recovered','raw_path':'source/raw/home.html',
+              'sha256':hashlib.sha256(page).hexdigest(),'actual_capture':TARGET,'source_reviewed':True},
+        HOME+'site.css':{'url':HOME+'site.css','kind':'css','status':'recovered','raw_path':'source/raw/site.css',
+                         'sha256':hashlib.sha256(css).hexdigest(),'actual_capture':TARGET,'source_reviewed':True}}})
+
+    result=run('--root',tmp_path,'approve','--visual-reviewed','--publish-approved')
+
+    assert result.returncode!=0 and 'evidence' in result.stderr.lower()
     assert not (tmp_path/'source/review.json').exists()
 
 def test_later_capture_review_is_resource_specific(tmp_path):

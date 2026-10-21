@@ -18,6 +18,8 @@ from .massline import build_massline_archive
 from .myspace import build_myspace_archive
 from .feeds import collect_feed_entries
 from .proof206 import build_206proof_archive
+from .twitter import build_twitter_archive
+from .redact import redact_public_credentials
 
 CORE=[('/', 'Homepage'),('/blog/','Blog'),('/shows/','Shows'),('/video/','Video'),('/shop/','Shop'),('/holler/','Holler')]
 FALLBACK_UI='''.archive-restoration-notice,.archive-gap-page {font:16px/1.6 system-ui,sans-serif}
@@ -29,7 +31,7 @@ FALLBACK_UI='''.archive-restoration-notice,.archive-gap-page {font:16px/1.6 syst
 
 def read_record(root: Path,r: dict,allow_recovery: bool) -> bytes:
     path=(root/r['raw_path']).resolve()
-    allowed=[(root/'source/raw').resolve()]
+    allowed=[(root/'source/raw').resolve(),(root/'source/redacted').resolve()]
     if allow_recovery: allowed.append((root/'recovery/raw').resolve())
     if not any(path.is_relative_to(prefix) for prefix in allowed):
         raise ValueError('Raw source path escapes the approved source directories')
@@ -46,27 +48,56 @@ def promote(root: Path,reviewed: bool=False,allow_later: bool=False) -> dict:
     root=Path(root);state=State(root)
     catalog_path=root/'source/catalog.json'
     catalog=json.loads(catalog_path.read_text()) if catalog_path.exists() else {'version':1,'resources':{}}
-    staged=[]
+    staged=[];rejected_provider_errors=[]
     # Verify all selected files before modifying the approved collection.
     for url,r in state.data['resources'].items():
         eligible=r['status']=='recovered' or (
             r['status']=='needs_review' and bool(r.get('compatibility_review'))
         )
         if eligible and r.get('raw_path') and r['kind'] in ('html','css','image'):
-            staged.append((url,r,read_record(root,r,True)))
+            try:
+                body=read_record(root,r,True)
+            except ValueError as exc:
+                if str(exc)!='Captured provider/archive error page, not site content':raise
+                r.update(status='failed',
+                         reason='Payload validation rejected this archived provider/archive error page; other indexed captures remain eligible for retry.',
+                         payload_validation_error=str(exc))
+                rejected_provider_errors.append(url)
+                if url not in catalog['resources']:
+                    catalog['resources'][url]={k:v for k,v in r.items() if k not in ('raw_path','sha256')}
+                continue
+            staged.append((url,r,body))
         elif url not in catalog['resources']:
             catalog['resources'][url]={k:v for k,v in r.items() if k not in ('raw_path','sha256')}
+    if rejected_provider_errors:state.save()
+    redacted_payloads=0
     for url,r,body in staged:
-        copied=dict(r);path='source/raw/'+Path(r['raw_path']).name
-        (root/path).parent.mkdir(parents=True,exist_ok=True);(root/path).write_bytes(body)
+        copied=dict(r)
+        public_body,redaction_count=redact_public_credentials(body)
+        if redaction_count:
+            redacted_payloads+=1
+            original_sha256=r['sha256']
+            digest=hashlib.sha256(public_body).hexdigest()
+            path=f'source/redacted/{digest}.html'
+            copied.update(sha256=digest,original_sha256=original_sha256,
+                          source_redaction={'field':'googleMapsStaticApiKey',
+                                            'count':redaction_count,
+                                            'reason':'Credential-shaped value omitted from public source copy.'})
+        else:
+            path='source/raw/'+Path(r['raw_path']).name
+        destination=root/path
+        destination.parent.mkdir(parents=True,exist_ok=True)
+        destination.write_bytes(public_body)
         copied.update(raw_path=path,source_reviewed=True,
                       later_capture_approved=bool(r.get('compatibility_review')),status='recovered')
         catalog['resources'][url]=copied
     if staged:
-        write_json(root/'source/review.json',{'publish_approved':False,'visual_reviewed':False,
+        review_path=root/'source/review.json'
+        existing=json.loads(review_path.read_text()) if review_path.exists() else {}
+        write_json(review_path,{**existing,'publish_approved':False,'visual_reviewed':False,
                    'note':'Source collection changed; review the generated site before publishing.'})
     write_json(catalog_path,catalog)
-    return {'promoted':len(staged),'publish_approved':False}
+    return {'promoted':len(staged),'redacted_payloads':redacted_payloads,'rejected_provider_errors':len(rejected_provider_errors),'publish_approved':False}
 
 def page_shell(title: str,body: str) -> str:
     return '<!doctype html><html lang="en"><head><meta charset="utf-8"><title>'+html.escape(title)+' — Blue Scholars restoration</title></head><body><main class="archive-gap-page"><p class="archive-eyebrow">BLUE SCHOLARS / RESTORATION WORKSPACE</p><h1>'+html.escape(title)+'</h1>'+body+'</main></body></html>'
@@ -122,21 +153,23 @@ def documented_asset_aliases(root: Path,usable_variants: dict) -> tuple[dict,lis
         target=item.get('url','');source=item.get('source_url','')
         record=next((variant for variant in usable_variants.values()
                      if variant.get('_source_url')==source
-                     and variant.get('kind')=='image'
+                     and variant.get('kind') in ('image','css')
                      and variant.get('sha256')==item.get('sha256')
                      and variant.get('actual_capture')==item.get('actual_capture')),None)
+        source_kind=record.get('kind') if record else None
         valid=(bool(target and source and item.get('decision')) and record is not None
-               and record.get('kind')=='image' and record.get('sha256')==item.get('sha256')
+               and source_kind in ('image','css') and record.get('sha256')==item.get('sha256')
                and record.get('actual_capture')==item.get('actual_capture')
                and bool(record.get('local_path')))
         if not valid:
             issues.append({'type':'compatibility_alias_unavailable','url':target,
-                           'source_url':source,'reason':'The documented capture/hash is not present as a validated local image.'})
+                           'source_url':source,'reason':'The documented capture/hash is not present as a validated local image or stylesheet.'})
             continue
         record=dict(record)
         local=record.get('local_path','')
         if not local or record['sha256'] not in Path(local).name:
-            record['local_path']='/assets/'+record['sha256']+Path(record['raw_path']).suffix
+            suffix='.css' if source_kind=='css' else Path(record['raw_path']).suffix
+            record['local_path']='/assets/'+record['sha256']+suffix
         if identity(target) in aliases:
             raise ValueError(f'Duplicate documented asset alias: {target}')
         aliases[identity(target)]=record
@@ -393,7 +426,12 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
         if destination.exists():continue
         destination.parent.mkdir(parents=True,exist_ok=True)
         source_key=r['_source_key']
-        if destination.suffix=='.svg':destination.write_bytes(sanitize_svg(raw[source_key]))
+        if r.get('kind')=='css':
+            text,found=render_css(raw[source_key].decode('utf-8',errors='replace'),
+                                  r.get('final_original',r.get('_source_url',source_key)),
+                                  render_resources,base,aliases)
+            destination.write_text(text);issues.extend(found)
+        elif destination.suffix=='.svg':destination.write_bytes(sanitize_svg(raw[source_key]))
         else:destination.write_bytes(raw[source_key])
     recovered=0;placeholders=0;feed_recovered=0;page_report=[]
     for page,r in sorted(pages.items()):
@@ -809,11 +847,13 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
     massline_report=build_massline_archive(root,output,base,candidate)
     myspace_report=build_myspace_archive(root,output,base)
     proof206_report=build_206proof_archive(root,output,base,candidate)
+    twitter_report=build_twitter_archive(root,output,base)
     gateway+='</nav><h2 class="archive-sites-heading">More recovered sites</h2><p class="archive-sites-intro">Explore the artists, community, and social pages connected to Blue Scholars.</p><nav class="archive-site-grid" aria-label="Other recovered sites">'
     related_sites=[
         ('/prometheusbrown/','Prometheus Brown','Artist site editions'),
         ('/sabzi/','Sabzi','Artist site editions'),
         ('/myspace/','Blue Scholars on MySpace','Dated profile captures'),
+        ('/twitter-prometheusbrown/','Prometheus Brown on Twitter','Dated profile and tweet captures'),
     ]
     if massline_report.get('status')=='built':
         related_sites.append(('/masslinemedia/','Mass Line Media','Original site editions and captures'))
@@ -838,7 +878,7 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
             'visual_fidelity_verified':bool(review.get('visual_reviewed')) and not candidate,
             'publish_approved':bool(review.get('publish_approved')) and not candidate,
             'pages':page_report,'issues':issues,'reference_capture':TARGET,'artist_sites':satellite_report,
-            'myspace':myspace_report,
+            'myspace':myspace_report,'twitter':twitter_report,
             'massline':massline_report,
             '206proof':proof206_report,
             'note':'A successful build is not proof of source completeness or visual fidelity.'}

@@ -1,0 +1,1496 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-ca">
+   <head>
+   
+   
+   
+      <title>206Proof - Forum - Search</title>
+      <link rel="shortcut icon" href="/forum/themes/206Proof/styles/default/favicon.ico" />
+            <link rel="stylesheet" type="text/css" href="/forum/themes/206Proof/styles/default/vanilla.css" media="screen" />
+            <link rel="stylesheet" type="text/css" href="/forum/themes/206Proof/styles/default/vanilla.print.css" media="print" />
+            <link rel="stylesheet" type="text/css" href="/forum/extensions/Nugget/nugget.css" />
+            <link rel="stylesheet" type="text/css" href="/forum/extensions/SidepanelImageLink/style.css" />
+            <link rel="stylesheet" type="text/css" href="/forum/extensions/Signatures/style.css" />
+            <link rel="stylesheet" type="text/css" href="/forum/extensions/ModTools/style.css" />
+            <link rel="stylesheet" type="text/css" href="/forum/extensions/GuestSignIn/style.css" />
+            <script type="text/javascript" src="/forum/js/global.js"></script>
+            <script type="text/javascript" src="/forum/js/vanilla.js"></script>
+            <script type="text/javascript" src="/forum/js/ajax.js"></script>
+            <script type="text/javascript" src="/forum/js/ac.js"></script>
+            <script type="text/javascript" src="/forum/extensions/JQuery/jquery-1.1.3.1.pack.js"></script>
+            <script type="text/javascript" src="/forum/extensions/ModTools/function.js"></script><style>
+		.ProfileTitle.WithIcon .ProfileIcon { width: 60px; height: 60px; }
+		#AccountProfile .Picture { width: 280px; height: 280px; }
+		#Comments .CommentHeader { line-height: 60px; }
+		#Comments .CommentHeader li div.CommentIcon { padding: 60px 0px 60px 60px; }
+		li.User.Name .UserIcon { padding: 60px 0px 60px 60px !important; }
+		li.User.Name.WithIcon { line-height: 60px; }
+	</style>
+<!--[if lte IE 7]><link rel="stylesheet" href="http://www.206proof.com/forum/themes/206Proof/styles/default/ie.css" type="text/css" media="screen" charset="utf-8"><![endif]-->
+<script type="text/javascript" src="http://www.206proof.com/forum/js/menu.js"></script></head>
+   <body id="SearchPage"  onload="Focus('txtKeywords');"><!--[if lt IE 7]><script src="http://www.206proof.com/ie7/ie7-standard-p.js" type="text/javascript"></script><![endif]--><b></b>
+		<div id="top">
+		<div id="top-content-wrapper">
+			<ul id="topnav">
+ 			   <li><a href="http://www.206proof.com/forum/" class="menuhead">206Proof</a>
+      			  <ul class="proof-dropdown">
+        		    <li><a href="http://www.206proof.com/shop/">Shop</a></li>
+           			<li><a href="http://www.206proof.com/advertise/">Advertise</a></li>
+        		    <li><a href="http://www.206proof.com/about/">About &amp; FAQ</a></li>
+       			 </ul>
+       		   </li>
+   			   <li><a href="http://www.raindrophustla.com">RaindropHustla</a></li>
+   			   <li><a href="http://www.reigncity.com" class="menuhead">ReignCity</a>
+      			  <ul class="reign-dropdown">
+           			<li><a href="http://www.reigncity.com/calendar/">Calendar</a></li>
+           			<li><a href="http://www.reigncity.com/news/">News &amp; Reviews</a></li>
+            		<li><a href="http://www.reigncity.com/about/">About &amp; Contact</a></li>
+        		  </ul>
+   			    </li>
+			</ul>
+		</div>
+		</div>
+
+<div id="Header"><div id="Session">Not signed in (<a href="/forum/people.php?ReturnUrl=http://www.206proof.com/forum/search.php?PostBackAction=Search&amp;Keywords=Rufus%3A&amp;Type=Comments&amp;btnSubmit=Search">Sign In</a> or <a href="http://www.206proof.com/forum/people.php?PostBackAction=ApplyForm">Register</a>)</div><a name="pgtop"></a>
+			<h1>
+				206Proof - Forum
+			</h1>
+			
+			<ul><li><a href="index.php" >Discussions</a></li><li><a href="categories.php" >Categories</a></li><li class="TabOn"><a href="search.php" >Search</a></li></ul>
+   </div><div id="Body"><div id="Panel"><div id="GuestSignIn">
+      <h2>Sign In</h2>
+      <p></p>
+   <fieldset><form id="frmSignIn" method="post" action="http://www.206proof.com/forum/people.php">
+     <input name="PostBackAction" value="SignIn" type="hidden">
+     <input name="ReturnUrl" value="http://www.206proof.com/forum/search.php?PostBackAction=Search&amp;Keywords=Rufus%3A&amp;Type=Comments&amp;btnSubmit=Search" type="hidden">
+     <ul>
+      <li><label for="txtUsername">Username</label>
+      <input id="txtUsername" name="Username" value="" class="text" maxlength="20" type="text">
+     </li>
+     <li><label for="txtPassword">Password</label>
+      <input id="txtPassword" name="Password" value="" class="text" type="password">
+     </li>
+     </ul>
+     <input name="btnSignIn" id="btnSignIn" value="Sign In" class="Button" type="image" src="http://www.206proof.com/forum/themes/206Proof/styles/default/signin.gif">
+   </form></fieldset>
+  </div><ul><li><h2>Menu</h2><ul><li>
+
+
+
+<a href="http://www.206proof.com/shop/">206Proof Merchandise</a>
+
+
+
+</li>
+
+
+
+<li>
+
+
+
+<a href="http://www.206proof.com/forum/faq.php">Frequently Asked Questions</a>
+
+
+
+</li>
+
+
+
+
+
+
+
+<li>
+
+
+
+<a href="http://www.206proof.com/forum/about.php">About 206Proof</a>
+
+
+
+</li>
+
+
+
+
+
+
+
+<li>
+
+
+
+<a href="http://en.wikipedia.org/wiki/Bbcode">BBCode Reference</a>
+
+
+
+</li>
+
+
+
+
+
+
+
+<li>
+
+
+
+<a href="http://www.gimp.org/">Free Image Editor (GIMP)</a>
+
+
+
+</li></ul></li></ul>
+      <ul id="Banner">
+      	 <li><h2>Advertisements</h2></li>
+         <li class="BannerImage"><a href="http://www.206proof.com/advertise/"><img src="extensions/SidepanelImageLink/local.gif" class="center"/></a></li>
+      </ul><ul><li><ul><a href="http://www.206proof.com/advertise/">Local Artists Advertise Free</a></ul></li></ul><p id="AboutVanilla"><a href="http://getvanilla.com">Vanilla 1.1.4</a> is a product of <a href="http://lussumo.com">Lussumo</a>. More Information: <a href="http://lussumo.com/docs">Documentation</a>, <a href="http://lussumo.com/community">Community Support</a>.</p></div>
+<div id="Content"><div id="Form" class="Account Search">
+	<fieldset id="SearchSimpleFields">
+		<legend>Search</legend>
+		<a href="./" onclick="ShowAdvancedSearch(); return false;" class="SearchSwitch">Advanced</a><form id="SearchSimple" method="get" action="http://www.206proof.com/forum/search.php"><div><input type="hidden" name="PostBackAction" value="Search" />
+				</div><ul>
+				<li id="MainSearchInput">
+					<label for="txtKeywords">SearchTerms</label>
+					<input id="txtKeywords" type="text" name="Keywords" value="Rufus:" class="SearchInput" />
+				</li>
+				<li id="SimpleSearchRadios">Search:<input type="radio" name="Type"  id="Radio_Topics" value="Topics" class="SearchRadio" />
+			<label for="Radio_Topics" class="Radio">Topics</label>
+			<input type="radio" name="Type"  id="Radio_Comments" value="Comments" checked="checked" class="SearchRadio" />
+			<label for="Radio_Comments" class="Radio">Comments</label>
+			<input type="radio" name="Type"  id="Radio_Users" value="Users" class="SearchRadio" />
+			<label for="Radio_Users" class="Radio">Users</label>
+			</li>
+				<li>
+					<input type="submit" name="btnSubmit" value="Search" class="Button SearchButton" />
+				</li>
+			</ul>
+		</form>
+	</fieldset><fieldset id="SearchDiscussionFields">
+		<legend>Discussion topic search</legend>
+		<a href="./" onclick="ShowSimpleSearch(); return false;" class="SearchSwitch">Simple</a><form id="SearchDiscussions" method="get" action="http://www.206proof.com/forum/search.php"><div><input type="hidden" name="PostBackAction" value="Search" />
+				<input type="hidden" name="Type" value="Discussions" />
+				<input type="hidden" name="Advanced" value="1" />
+				</div><ul>
+				<li>
+					<label for="txtDiscussionKeywords">Find discussion topics containing</label>
+					<input id="txtDiscussionKeywords" type="text" name="Keywords" value="" class="SearchInput AdvancedSearchInput" />
+				</li><li>
+						<label for="ddDiscussionCategories">in the category</label><select name="Categories" class="SearchSelect"  id="ddDiscussionCategories">
+		<option value=""  selected="selected">All categories</option>
+			<option value="General" >General</option>
+			<option value="Shows" >Shows</option>
+			<option value="Suggestions" >Suggestions</option>
+			<option value="Technical" >Technical</option>
+			</select>
+		
+					</li><li>
+					<label for="DiscussionAuthUsername">where the author was</label>
+					<input id="DiscussionAuthUsername" name="AuthUsername" type="text" value="" class="SearchInput AdvancedUserInput" />
+					<script type="text/javascript">
+						var DiscussionAutoComplete = new AutoComplete("DiscussionAuthUsername", false);
+						DiscussionAutoComplete.TableID = "DiscussionAutoCompleteResults";
+						DiscussionAutoComplete.KeywordSourceUrl = "/forum/ajax/getusers.php?Search=";
+					</script>
+				</li>
+				<li>
+					<input type="submit" name="btnSubmit" value="Search" class="Button SearchButton" />
+				</li>
+			</ul>
+		</form>
+	</fieldset><fieldset id="SearchCommentFields">
+		<legend>Discussion comment search</legend><form id="SearchComments" method="get" action="http://www.206proof.com/forum/search.php"><div><input type="hidden" name="PostBackAction" value="Search" />
+				<input type="hidden" name="Advanced" value="1" />
+				<input type="hidden" name="Type" value="Comments" />
+				</div><ul>
+				<li>
+					<label for="txtCommentKeywords">Find comments containing</label>
+					<input id="txtCommentKeywords" type="text" name="Keywords" value="" class="SearchInput AdvancedSearchInput" />
+				</li><li>
+						<label for="ddCommentCategories">in the category</label><select name="Categories" class="SearchSelect"  id="ddCommentCategories">
+		<option value=""  selected="selected">All categories</option>
+			<option value="General" >General</option>
+			<option value="Shows" >Shows</option>
+			<option value="Suggestions" >Suggestions</option>
+			<option value="Technical" >Technical</option>
+			</select>
+		
+					</li><li>
+					<label for="CommentAuthUsername">where the author was</label>
+					<input id="CommentAuthUsername" name="AuthUsername" type="text" value="Rufus" class="SearchInput AdvancedUserInput" />
+					<script type="text/javascript">
+						var CommentAutoComplete = new AutoComplete("CommentAuthUsername", false);
+						CommentAutoComplete.TableID = "CommentAutoCompleteResults";
+						CommentAutoComplete.KeywordSourceUrl = "/forum/ajax/getusers.php?Search=";
+					</script>
+				</li>
+				<li>
+					<input type="submit" name="btnSubmit" value="Search" class="Button SearchButton" />
+				</li>
+			</ul>
+		</form>
+	</fieldset><fieldset id="SearchUserFields">
+		<legend>User account search</legend><form id="SearchUsers" method="get" action="http://www.206proof.com/forum/search.php"><div><input type="hidden" name="PostBackAction" value="Search" />
+				<input type="hidden" name="Advanced" value="1" />
+				<input type="hidden" name="Type" value="Users" />
+				</div><ul>
+				<li>
+					<label for="txtUserKeywords">Find user accounts containing</label>
+					<input id="txtUserKeywords" type="text" name="Keywords" value="" class="SearchInput AdvancedSearchInput" />
+				</li>
+				<li>
+					<label for="ddRoles">in the role</label>
+					<select name="Roles" class="SearchSelect"  id="ddRoles">
+		<option value=""  selected="selected">All roles</option>
+			<option value="Probation (New Discussions)" >Probation (New Discussions)</option>
+			<option value="Global Admin" >Global Admin</option>
+			<option value="Probation (Posting)" >Probation (Posting)</option>
+			<option value="Moderator" >Moderator</option>
+			<option value="Banned" >Banned</option>
+			<option value="Member" >Member</option>
+			<option value="Administrator" >Administrator</option>
+			</select>
+		
+				</li>
+				<li>
+					<label for="ddOrder">sort results by</label>
+					<select name="UserOrder" class="SearchSelect"  id="ddOrder">
+		<option value=""  selected="selected">Username</option>
+			<option value="Date" >Date last active</option>
+			</select>
+		
+				</li>
+				<li>
+					<input type="submit" name="btnSubmit" value="Search" class="Button SearchButton" />
+				</li>
+			</ul>
+		</form>
+	</fieldset>
+</div><div class="ContentInfo Top">
+	<h1>Comments</h1>
+	<div class="PageInfo">
+		<p>Results 1 to 50 for <strong>nothing</strong></p>
+		<div class="PageList">Previous  <a href="http://www.206proof.com/forum/search.php?page=2&amp;PostBackAction=Search&amp;Keywords=Rufus%3A&amp;Type=Comments&amp;btnSubmit=Search">Next</a> </div>
+	</div>
+</div>
+<div id="ContentBody">
+	<ol id="CommentResults"><li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14889">THE GOOD SIN - &quot;NO DISS (HANDS UP)&quot; - SONG OF THE WEEK 12/14</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14889&amp;Focus=315628#Comment_315628">[img]http://4.bp.blogspot.com/_wJ8w9Z2Ek1I/TQPuoxVD7SI/AAAAAAAAA2I/D8GDi1kNqA0/s400/photo.JPG[/img] THE GOOD SIN - &quot;NO DISS (HANDS UP)&quot; F/ TH [url=http://www.206proof.com/forum/uploads/SongOfTheWeek/No_Diss_(Hands_Up)_f__TH.mp3][/url] prod. KARMATIC [url]http://thegoodsin.tumblr.com[/url]</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 14th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14852">YUK - &quot;YUK THE POLICE&quot; - SONG OF THE WEEK 12/6</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14852&amp;Focus=315240#Comment_315240">[img=http://www.yuktheworld.com/images/uploads/YukThePolice.jpg][/img] YUK - &quot;YUK THE POLICE&quot; f/ SPACEMAN &amp; XPERIENCE [url=http://www.206proof.com/forum/uploads/SongOfTheWeek/BeanOne_-_YukThePolice~F.SpaceMan-Xperience(MainMix)_.mp3][/url]  ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 6th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14776">SOL - &quot;FEED MY EGO&quot; - SONG OF THE WEEK 11/22</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14776&amp;Focus=314668#Comment_314668">[img=http://music.coeusclothing.com/wp-content/uploads/2010/11/solego2-1-1024x1024.png][/img] SOL - &quot;FEED MY EGO&quot; (prod. by GRUMPS) [url=http://www.206proof.com/forum/uploads/SongOfTheWeek/Feed_My_Ego_(prod._Grumps)_.mp3][/url]  get it @ [url]http://solsays.com[/url]</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Nov 22nd 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14647">LOGICS - &quot;STARS &amp; BEYOND&quot; - SONG OF THE WEEK 10/26</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14647&amp;Focus=313588#Comment_313588">[img=http://cdn.2dopeboyz.com/m.php/2010/10/20101022-ALUMNI.jpg][/img] LOGICS - &quot;STARS &amp; BEYOND&quot; F/ BRAINSTORM X EIGHTY4FLY [url=http://www.206proof.com/forum/uploads/SongOfTheWeek/Stars__Beyond_f._Brain__Eighty4_Fl_.mp3][/url][/quote]</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Oct 26th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14616">WUF TIX - &quot;NOBODY WANTS TO HEAR YOUR STUPID THEORIES&quot; - SONG OF THE WEEK 10/18</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14616&amp;Focus=313285#Comment_313285">[img]http://c2.ac-images.myspacecdn.com/images02/76/l_3662e0c1758b4cd4b4b428e70d0bfca5.jpg[/img] WUF TIX (TYPE X PEN POINTZ) - &quot;NOBODY WANTS TO HEAR YOUR STUPID THEORIES&quot; F/ JONNY OCTOBER [url=http://www.206proof.com/forum/uploads/SongOfTheWeek/nobody.mp3][/url]</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Oct 19th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14538">THE CUDDII K - &quot;PUT YOU ON&quot; - SONG OF THE WEEK 10/6</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14538&amp;Focus=312613#Comment_312613">[img]http://img214.imageshack.us/img214/6743/40195153404411341412147.jpg[/img] THE CUDDII K - &quot;PUT YOU ON&quot; [url=http://www.206proof.com/forum/uploads/SongOfTheWeek/Put_You_On.mp3][/url] http://twitter.com/THECUDDIIK</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Oct 6th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14454">JEWELS HUNTER - &quot;THE HUEMAN PAIN&quot; - SONG OF THE WEEK 9/22</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14454&amp;Focus=311979#Comment_311979">http://img718.imageshack.us/img718/9471/huemanpain2.jpg JEWELS HUNTER - &quot;THE HUEMAN PAIN&quot; http://www.206proof.com/forum/uploads/SongOfTheWeek/the-hueman-pain.mp3   &quot;This song is dedicated to my Father Wendell Hunter, Jr., Martin Luther King,  Jr., Malcolm X, John F. Kennedy, Bobby ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Sep 22nd 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14380">LUCK ONE - &quot;MORE&quot; - SONG OF THE WEEK 9/14</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14380&amp;Focus=311294#Comment_311294">http://img836.imageshack.us/img836/9058/luckone2.jpg  LUCK ONE - &quot;MORE&quot;  http://www.206proof.com/forum/uploads/SongOfTheWeek/more.mp3 produced by T MAK  http://luckoneconscious.com/</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Sep 14th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14341">D.BLACK &amp; B.BROWN - &quot;THE LIGHT&quot; X &quot;SHABBAT TABLE CLOTH&quot; - DOUBLE SONG OF THE WEEK 9/8</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14341&amp;Focus=310979#Comment_310979">http://bandcamp.com/files/30/78/3078582120-1.jpg &quot;THE LIGHT&quot; F/ GRYNCH &amp; SK http://www.206proof.com/forum/uploads/SongOfTheWeek/the_light.mp3 &quot;SHABBAT TABLE CLOTH&quot; http://www.206proof.com/forum/uploads/SongOfTheWeek/Shabbat.mp3 FROM THE BLACKEST BROWN EP ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Sep 9th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14260">AVATAR YOUNG BLAZE - &quot;DEAR BLOGGER&quot; - SONG OF THE WEEK 8/31</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14260&amp;Focus=310076#Comment_310076">http://img830.imageshack.us/img830/7048/87142916.jpg  AVATAR YOUNG BLAZE - &quot;DEAR BLOGGER&quot; http://www.206proof.com/forum/uploads/SongOfTheWeek/dear_blogger.mp3  off of RUSSIAN REVOLUTION *mastered by D-SANE</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Aug 31st 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14196">CANDIDT - &quot;CAN WE SMILE&quot; - SONG OF THE WEEK 8/25</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14196&amp;Focus=309413#Comment_309413">http://a1.twimg.com/profile_images/1101452949/CANDIDTCOVERPIC.jpg CANDIDT - &quot;CAN WE SMILE&quot; f/ XPERIENCE http://www.206proof.com/forum/uploads/SongOfTheWeek/13_CAN_WE_SMILE_feat._XPERIENCE_.mp3 http://www.myspace.com/candidt  SWEATSUIT &amp; CHURCHSHOES OUT NOW!</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Aug 25th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14127">IAME - &quot;VERY HIP HOP&quot; - SONG OF THE WEEK 8/17</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14127&amp;Focus=308458#Comment_308458">http://img185.imageshack.us/img185/9608/iame61691.jpg  IAME - &quot;VERY HIP HOP&quot; f/ REVA DEVITO http://www.206proof.com/forum/uploads/SongOfTheWeek/05_Very_Hip_Hop_feat._Reva_Devito__.mp3  off of LIGHTFIGHTER  http://www.myspace.com/iame</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Aug 17th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14076">LA - &quot;FAST LIFE&quot; - SONG OF THE WEEK 8/10</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14076&amp;Focus=307669#Comment_307669">http://c3.ac-images.myspacecdn.com/images02/126/l_323813fccdc7472292ea7f7509fdeb7e.jpg  LANGUAGE ARTS - &quot;FAST LIFE&quot; http://www.206proof.com/forum/uploads/SongOfTheWeek/10_Fast_Life.mp3  Single from La's debut solo effort &quot;Roll With The Winners&quot; out 8/17 produced entirely by Ray L</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Aug 10th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14012">TRUCKASAURAS - &quot;MEET YOUR REPLACEMENT&quot; - SONG OF THE WEEK 8/3</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14012&amp;Focus=307055#Comment_307055">http://img185.imageshack.us/img185/2951/meetyourreplacement222c.gif  TRUCKASAURAS - &quot;MEET YOUR REPLACEMENT&quot; f/ MASH HALL http://www.206proof.com/forum/uploads/SongOfTheWeek/mashtruck.mp3   http://www.youtube.com/watch?v=8_GRvcMPxKY&amp;feature=player_embedded  ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Aug 3rd 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=13941">BRAIN of DYME DEF - &quot;THANK YOU&quot; - SONG OF THE WEEK 7/26</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=13941&amp;Focus=306296#Comment_306296">http://img96.imageshack.us/img96/19/brainc.jpg  BRAIN of DYME DEF - &quot;THANK YOU&quot; (produced by KUDDIE FRESH) http://www.206proof.com/forum/uploads/SongOfTheWeek/Brain_Of_Dyme_Def_-_Thank_You(produced_By_Kuddie_Fresh).mp3  The Celestine Prophecy coming soon ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Jul 26th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=13907">PALE SOUL - &quot;TIL THE WHEELS FALL OFF&quot; - SONG OF THE WEEK 7/21</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=13907&amp;Focus=305816#Comment_305816">http://c1.ac-images.myspacecdn.com/images02/59/l_d0468dad500e4139b32cacf20c84308c.jpg  PALE SOUL - &quot;TIL THE WHEELS FALL OFF&quot; http://www.206proof.com/forum/uploads/SongOfTheWeek/Til_The_Wheels_Fall_Off_(Pale_Soul).mp3  http://www.headlockmuzak.com/</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Jul 21st 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=13823">J.PINDER - &quot;TOUGHER&quot; - SONG OF THE WEEK 7/13</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=13823&amp;Focus=305195#Comment_305195">http://www.raindrophustla.com/uploads/images/Tougher_Cover_FINAL.png  J.PINDER - &quot;TOUGHER&quot; (f/LUCK ONE x SAX G WHIZ x SPACEMAN)  http://www.206proof.com/forum/uploads/SongOfTheWeek/tougher.mp3  http://jpindermusic.com</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Jul 13th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=13767">SECOND FAMILY - &quot;MURDA MUZIK&quot; - SONG OF THE WEEK 7/6</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=13767&amp;Focus=304618#Comment_304618">http://img193.imageshack.us/img193/6798/secondfam.jpg  Second Family ft. Knuckles - Murda Muzik (Prod. By Terminill) http://www.206proof.com/forum/uploads/SongOfTheWeek/murda-muzik.mp3  http://www.myspace.com/secondfamily</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Jul 6th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=13710">MPACT - &quot;PEDAL 2 THE METAL&quot; - SONG OF THE WEEK 6/29</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=13710&amp;Focus=303894#Comment_303894">http://img684.imageshack.us/img684/3682/29858396857228821655558.jpg MPACT - &quot;Pedal 2 The Metal&quot; (prod. by Rising Son) http://www.206proof.com/forum/uploads/SongOfTheWeek/Pedal_To_The_medal.mp3  http://mpact.bandcamp.com</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Jun 29th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=13646">FATAL LUCCIAUNO - &quot;CRY FOR HELP&quot; - SONG OF THE WEEK 6/22</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=13646&amp;Focus=303161#Comment_303161">http://www.raindrophustla.com/uploads/images/fatal-4771_thumb.jpg Fatal Lucciauno - “Cry For Help” (prod. Jake One) http://www.206proof.com/forum/uploads/SongOfTheWeek/cryforhelp.mp3  http://fatallucciauno.bandcamp.com/releases</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Jun 22nd 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=13562">XPERIENCE - &quot;COCO JONES&quot; - SONG OF THE WEEK 6/14</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=13562&amp;Focus=302160#Comment_302160">http://www.bengalyucky.com/wp-content/uploads/2010/01/Driver-Seat.jpg  XPERIENCE - &quot;COCO JONES&quot;  http://www.206proof.com/forum/uploads/SongOfTheWeek/coco-jones.mp3  http://www.myspace.com/xperience88  http://c4.ac-images.myspacecdn.com/images02/151/l_8d6dde3f7f614bac812d5b73d04b1fdf.jpg</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Jun 14th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=13482">DURANGED PITT - &quot;REMINISCIN&#039;&quot; - SONG OF THE WEEK 6/7</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=13482&amp;Focus=301254#Comment_301254">http://img228.imageshack.us/img228/1226/32512120339051336230100.jpg  DURANGED PITT - &quot;REMINISCIN'&quot; F/ DUCE1 &amp; CYNDROME (produced by RC THA TRACKAHOLIQ) http://www.206proof.com/forum/uploads/SongOfTheWeek/Reminice_Mix_2.0_ste_.mp3  from  ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Jun 7th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=13430">MILITANT CHILD - &quot;ROC THE MIC&quot; - SONG OF THE WEEK 6/1</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=13430&amp;Focus=300519#Comment_300519">http://www.raindrophustla.com/uploads/images/mili_c_thumb.jpg  MILITANT CHILD - &quot;ROC THE MIC&quot; http://www.206proof.com/forum/uploads/SongOfTheWeek/roc-tha-mic.mp3  http://www.myspace.com/militantchild</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Jun 1st 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=13335">JFK - “ONE OF THESE KIDS” - SONG OF THE WEEK 5/20</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=13335&amp;Focus=299471#Comment_299471">http://www.raindrophustla.com/uploads/images/JFK_thumb.jpg JFK - “ONE OF THESE KIDS” (PRODUCED BY JAKE ONE)  http://www.206proof.com/forum/uploads/SongOfTheWeek/One_Of_These_Kids_(Prod._by_Jake_One)_.mp3  http://www.myspace.com/jfkakaninjaface</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			May 20th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=13269">QUARTER AFTER - &quot;Q&amp;A&quot; - SONG OF THE WEEK 5/11</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=13269&amp;Focus=298530#Comment_298530">http://img43.imageshack.us/img43/7894/99968775.jpg  QUARTER AFTER - &quot;Q&amp;A&quot; http://www.206proof.com/forum/uploads/SongOfTheWeek/QA.mp3 http://www.myspace.com/itsquarterafter</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			May 11th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=13197">PETTY P - &quot;I LOVE MY CITY&quot; - SONG OF THE WEEK 5/5</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=13197&amp;Focus=297603#Comment_297603">http://img12.imageshack.us/img12/4020/petty.jpg  PETTY P - &quot;I LOVE MY CITY&quot; (f/ ABIDYAH) http://www.206proof.com/forum/uploads/SongOfTheWeek/08_I_LUV_MY_CITYfeat.ABIDYAH_.mp3  http://i295.photobucket.com/albums/mm151/pettyp5150/pettyppromo.jpg</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			May 5th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=13121">BENT TWIG - &quot;SOMETHING&quot;- SONG OF THE WEEK 4/29</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=13121&amp;Focus=296583#Comment_296583">http://musicalpoets.com/images/frontcover.jpg BENT TWIG - &quot;SOMETHING&quot; (f/ GRYNCH &amp; RYANN CARTER) http://www.206proof.com/forum/uploads/SongOfTheWeek/something.mp3  http://musicalpoets.com</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Apr 29th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=13026">JACK THE RIPPER - &quot;DON&#039;T LOOK BACK&quot; - SONG OF THE WEEK 4/21</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=13026&amp;Focus=295409#Comment_295409">http://img9.imageshack.us/img9/6959/jtrg.jpg  JACK THE RIPPER - &quot;DON'T LOOK BACK&quot; (f/ SOL x PROMETHEUS BROWN x SCRIBES) http://www.206proof.com/forum/uploads/SongOfTheWeek/don't_look_back.mp3  from his upcoming album &quot;Don't Look Back&quot; http://myspace.com/jacktheripperbeats</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Apr 21st 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12945">THE LET GO - &quot;DREAMS OVER&quot; - SONG OF THE WEEK 3/14</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12945&amp;Focus=294154#Comment_294154">http://c3.ac-images.myspacecdn.com/images01/81/l_e1497481897310a52e3d4eb4d5cb34d6.jpg  THE LET GO - &quot;DREAM'S OVER&quot; http://www.206proof.com/forum/uploads/SongOfTheWeek/01_Dreams_Over.mp3  http://www.myspace.com/theletgocrew</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Apr 14th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12841">J.PINDER - &quot;GO FAR&quot; - SONG OF THE WEEK 4/7</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12841&amp;Focus=293176#Comment_293176">http://www.raindrophustla.com/uploads/images/23994_385825399259_252096629259_3714070_6174859_n_thumb.jpg J.PINDER - &quot;GO FAR&quot; http://www.206proof.com/forum/uploads/SongOfTheWeek/go-far.mp3  http://www.myspace.com/jpinder</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Apr 7th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12771">DICE - &quot;JOURNEY&quot; x &quot;PARANOID&quot;- DOUBLE SIDED SONG OF THE WEEK 3/31</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12771&amp;Focus=292325#Comment_292325">http://c1.ac-images.myspacecdn.com/images02/126/l_c07a40f21df84b44aa83695f8a7a91c0.jpg  DICE - &quot;JOURNEY&quot; F/ ELEMENT OF SECOND FAMILY http://www.206proof.com/forum/uploads/SongOfTheWeek/01_01_01_01_-_Journey_ft_Element_of.mp3  DICE - &quot;PARANOID&quot; F/ FATAL LUCCIAUNO &amp; MIC PHENOM ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Mar 31st 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12690">VICTOR SHADE - &quot;SOOTHSAYER&quot; X &quot;SWAY&quot; - DOUBLE SONG OF THE WEEK 3/24</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12690&amp;Focus=291670#Comment_291670">*Songs Of The Week have been replaced with the final mixed versions  Thank You</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Mar 25th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12690">VICTOR SHADE - &quot;SOOTHSAYER&quot; X &quot;SWAY&quot; - DOUBLE SONG OF THE WEEK 3/24</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12690&amp;Focus=291363#Comment_291363">http://i12.photobucket.com/albums/a236/jsl83/MEMBERSONLY-3-27-10web.jpg  &quot;SOOTHSAYER&quot; http://www.206proof.com/forum/uploads/SongOfTheWeek/10)_-_Soothsayer.mp3  &quot;SWAY&quot; http://www.206proof.com/forum/uploads/SongOfTheWeek/09)_-_Sway.mp3</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Mar 24th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12611">J. BRE - &quot;STREET SIGNS&quot; - SONG OF THE WEEK 3/17</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12611&amp;Focus=290521#Comment_290521">http://c4.ac-images.myspacecdn.com/images02/100/l_1ea4e331bef14d13811d68a04522202f.jpg J. BRE - &quot;STREET SIGNS&quot; http://www.206proof.com/forum/uploads/SongOfTheWeek/Street_Signs__final_.mp3  http://www.myspace.com/jbrehiphop</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Mar 17th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12531">STATE OF THE ARTIST - &quot;EXTRAHELLADOPE&quot; - SONG OF THE WEEK 3/09</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12531&amp;Focus=289486#Comment_289486">http://img171.imageshack.us/img171/4452/extrahelladope.jpg  STATE OF THE ARTIST - &quot;EXTRAHELLADOPE&quot; (f/ HELLADOPE &amp; JARV DEE) http://www.206proof.com/forum/uploads/SongOfTheWeek/01_Extrahelladope_ft._Helladope_x_Ja_.mp3  off of SOTA’s upcoming SeattleCaliFragalisticExtraHellaDopeness ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Mar 9th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12459">CHAMPAGNE CHAMPAGNE X THEESATISFACTION - &quot;BIRD LIVES!&quot; - SONG OF THE WEEK 3/2</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12459&amp;Focus=288341#Comment_288341">http://www.raindrophustla.com/uploads/images/satchamp1web_thumb.jpg CHAMPAGNE CHAMPAGNE X THEESATISFACTION - &quot;BIRD LIVES!&quot; http://www.206proof.com/forum/uploads/SongOfTheWeek/bird_lives.mp3  the b-side of this: http://i12.photobucket.com/albums/a236/jsl83/PAYPALMagnetic300px.jpg cop it ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Mar 2nd 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12384">RC THA TRACKAHOLIQ - &quot;IN THE CITY&quot; - SONG OF THE WEEK 2/23</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12384&amp;Focus=287319#Comment_287319">http://img691.imageshack.us/img691/4995/45187977.jpg  RC THA TRACKAHOLIQ - &quot;IN THE CITY&quot; (f/ GENERAL WOJACK) http://www.206proof.com/forum/uploads/SongOfTheWeek/in_the_city.mp3  from RC's Full Circle LP  http://i1016.photobucket.com/albums/af287/RCcidewayz/fullcircle88keysflyer.jpg</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Feb 23rd 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12316">ROCKWELL POWERS - &quot;ROCKWELL&quot; - SONG OF THE WEEK 2/16</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12316&amp;Focus=286275#Comment_286275">http://img525.imageshack.us/img525/6427/rockwellpromo.jpg http://www.206proof.com/forum/uploads/SongOfTheWeek/rockwell.mp3 &quot;Rockwell&quot; (prod. DJ Nphared)  http://www.myspace.com/rockwellpowers</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Feb 16th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12246">SPAID - &quot;CODE OF THE STREETS&quot; - SONG OF THE WEEK 2/09</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12246&amp;Focus=285147#Comment_285147">http://img504.imageshack.us/img504/481/page0001.jpg http://www.206proof.com/forum/uploads/SongOfTheWeek/code-of-the-streets.mp3 SPAID - &quot;CODE OF THE STREETS&quot; (prod. VITAMIN D) http://www.myspace.com/spaidinfullmusic</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Feb 9th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12184">BIG WILL - &quot;REAL DEAL REAL FACTS&quot; - SONG OF THE WEEK 2/3</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12184&amp;Focus=284210#Comment_284210">http://c2.ac-images.myspacecdn.com/images02/105/l_33b56414fb184579aef9c6954d17b13d.jpg  http://www.206proof.com/forum/uploads/SongOfTheWeek/realdeal-realfacts.mp3  BIG WILL - &quot;REAL DEAL REAL FACTS&quot;  off of Takeover Season Vol.1  http://www.myspace.com/bigwillkopnflip</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Feb 3rd 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12089">DOUGHKAIN - &quot;MEMORIES&quot; - SONG OF THE WEEK 1/26</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12089&amp;Focus=282430#Comment_282430">http://c3.ac-images.myspacecdn.com/images02/99/l_a85a4b82cf0946e7ad82174a6f9699fa.jpg  http://www.206proof.com/forum/uploads/SongOfTheWeek/memories.mp3  DOUGHKAIN - &quot;MEMORIES&quot; (prod. BoomBox Massacre)  http://www.myspace.com/dough253</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Jan 26th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12015">ILLEGITIMATE CHILDREN - &quot;JUST KIDDING&quot; - SONG OF THE WEEK 1/20</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12015&amp;Focus=281247#Comment_281247">http://c1.ac-images.myspacecdn.com/images01/126/l_0dd9741bd807495bb26ee6a33d9d79b0.jpg http://www.206proof.com/forum/uploads/SongOfTheWeek/kidding.mp3 ILLEGITIMATE CHILDREN - &quot;JUST KIDDING&quot; http://www.myspace.com/illegitimatechildren</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Jan 20th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=11884">GRAN RAPIDS - &quot;BISQUETS&quot; - SONG OF THE WEEK 1/12</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=11884&amp;Focus=279359#Comment_279359">http://c2.ac-images.myspacecdn.com/images02/110/l_e4202469bdb54956bff5468949ddc951.jpg  GRAN RAPIDS - &quot;BISQUETS&quot; http://www.206proof.com/forum/uploads/SongOfTheWeek/bisquets.mp3  http://www.myspace.com/granrapids</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Jan 12th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=11809">K.R.U.E. - &quot;SHE WANTS ME&quot; - SONG OF THE WEEK 1/6</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=11809&amp;Focus=277859#Comment_277859">http://c2.ac-images.myspacecdn.com/images01/93/l_237a8b268c07d04325c5eb6347446afd.jpg K.R.U.E. - &quot;SHE WANTS ME&quot; http://www.206proof.com/forum/uploads/SongOfTheWeek/she_wants_me.mp3 http://www.myspace.com/krue88</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Jan 6th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=11721">SK - &quot;TONIGHT&quot; - SONG OF THE WEEK 12/29</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=11721&amp;Focus=276157#Comment_276157">http://img259.imageshack.us/img259/778/img0199d.jpg http://www.206proof.com/forum/uploads/SongOfTheWeek/sk_space_tonight.mp3 SK - &quot;TONIGHT&quot; (f/ SPACEMAN)  produced by BRAINSTORM http://www.myspace.com/sktheprince</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 29th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=11633">DURANGED PITT - &quot;CHRIS CRINGLE&quot; - XMAS SONG OF THE WEEK 12/21</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=11633&amp;Focus=274182#Comment_274182">http://img56.imageshack.us/img56/941/durangedpittsu3.jpg DURANGED PITT - &quot;CHRIS CRINGLE&quot; http://www.206proof.com/forum/uploads/SongOfTheWeek/chiscringle.mp3 http://www.myspace.com/dptop5  HAPPY HOLIDAYS FROM 206 PROOF!</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 21st 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=11554">JOSH RIZEBERG-&quot;WACK TO THE FUTURE&quot; - SONG OF THE WEEK 12/15</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=11554&amp;Focus=272252#Comment_272252">http://c2.ac-images.myspacecdn.com/images02/73/l_78c93df35e15471eac0c66d7375a024d.jpg JOSH RIZEBERG-&quot;WACK TO THE FUTURE (f/SUNTONIO BANDANAZ)&quot; http://www.206proof.com/forum/uploads/SongOfTheWeek/wack.mp3 http://www.myspace.com/joshrizeberg</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 15th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=11486">STATE OF THE ARTIST - &quot;COMMON SENSES&quot; - SONG OF THE WEEK 12/9</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=11486&amp;Focus=270650#Comment_270650">http://a1.twimg.com/profile_images/498028478/29_.jpg &quot;Common Senses&quot; http://www.206proof.com/forum/uploads/SongOfTheWeek/common_sense.mp3 off of the Hank Moody EP http://www.sotaboys.com http://www.youtube.com/watch?v=Yix5gLL_3zA&amp;feature=player_embedded</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 9th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=11389">XPERIENCE - &quot;ON THE ROAD&quot; - SONG OF THE WEEK 12/1</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=11389&amp;Focus=268941#Comment_268941">http://b2.ac-images.myspacecdn.com/01476/26/03/1476313062_l.jpg &quot;On The Road&quot; (produced by Smoke) http://www.206proof.com/forum/uploads/SongOfTheWeek/on_the_road.mp3 off his upcoming album &quot;William the 8th&quot; http://www.myspace.com/xperience88</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 1st 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=11334">DARK TIME SUNSHINE - &quot;NATHANIEL&quot; - SONG OF THE WEEK 11/25</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=11334&amp;Focus=267030#Comment_267030">http://i238.photobucket.com/albums/ff274/rmwork/dts/header.jpg &quot;Nathaniel&quot; http://www.206proof.com/forum/uploads/SongOfTheWeek/nathaniel.mp3  off of Believeyoume  http://www.myspace.com/darktimesunshine</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=39">Rufus</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Nov 25th 2009
+		</li>
+	</ul>
+</li>
+</ol>
+</div><div class="ContentInfo Bottom">
+		<div class="PageInfo">
+			<p>Results 1 to 50 for <strong>nothing</strong></p>
+			<div class="PageList">Previous  <a href="http://www.206proof.com/forum/search.php?page=2&amp;PostBackAction=Search&amp;Keywords=Rufus%3A&amp;Type=Comments&amp;btnSubmit=Search">Next</a> </div>
+		</div>
+		<a href="http://www.206proof.com/forum/search.php?PostBackAction=Search&amp;Keywords=Rufus%3A&amp;Type=Comments&amp;btnSubmit=Search#pgtop">Top of Page</a>
+	</div></div>
+<div id="pgbottom" name="pgbottom"><p>&copy; 2007 <a href="http://www.206Proof.com">206Proof</a>. Powered by  <a href="http://www.getvanilla.com">Vanilla</a>.</p>
+</div>
+            <script type="text/javascript" src="http://www.google-analytics.com/urchin.js"></script>
+            <script type="text/javascript">
+            // <![CDATA[
+            _uacct="UA-2210503-1";
+            urchinTracker();
+            // ]]>
+            </script>
+</body>
+</html>

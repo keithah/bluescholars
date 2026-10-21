@@ -15,4 +15,6 @@ A separate five-URL probe of Internet Archive’s Wayback Availability API retur
 .venv311/bin/python -m restore check --candidate --base-path /bluescholars
 ```
 
+A separate live-CDN check is recorded in [myspace-linked-origin-assets-report.md](myspace-linked-origin-assets-report.md): it has attempted 109 exact source-linked image URLs, identified 18 generic camera placeholders, and found 1 locally renderable image URL (1 unique file). These responses are labeled as undated origin material, not Wayback captures.
+
 The 89 local snapshots preserve captured profile text, comments, inline styles and dated appearance, while scripts, forms and interactive players are disabled. The MySpace page gallery has not received human visual review; the broader restoration remains an unreviewed candidate and the Pages release gate remains closed.

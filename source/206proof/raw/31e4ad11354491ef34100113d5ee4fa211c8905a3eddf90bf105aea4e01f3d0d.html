@@ -1,0 +1,1496 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-ca">
+   <head>
+   
+   
+   
+      <title>206Proof - Forum - Search</title>
+      <link rel="shortcut icon" href="/forum/themes/206Proof/styles/default/favicon.ico" />
+            <link rel="stylesheet" type="text/css" href="/forum/themes/206Proof/styles/default/vanilla.css" media="screen" />
+            <link rel="stylesheet" type="text/css" href="/forum/themes/206Proof/styles/default/vanilla.print.css" media="print" />
+            <link rel="stylesheet" type="text/css" href="/forum/extensions/Nugget/nugget.css" />
+            <link rel="stylesheet" type="text/css" href="/forum/extensions/SidepanelImageLink/style.css" />
+            <link rel="stylesheet" type="text/css" href="/forum/extensions/Signatures/style.css" />
+            <link rel="stylesheet" type="text/css" href="/forum/extensions/ModTools/style.css" />
+            <link rel="stylesheet" type="text/css" href="/forum/extensions/GuestSignIn/style.css" />
+            <script type="text/javascript" src="/forum/js/global.js"></script>
+            <script type="text/javascript" src="/forum/js/vanilla.js"></script>
+            <script type="text/javascript" src="/forum/js/ajax.js"></script>
+            <script type="text/javascript" src="/forum/js/ac.js"></script>
+            <script type="text/javascript" src="/forum/extensions/JQuery/jquery-1.1.3.1.pack.js"></script>
+            <script type="text/javascript" src="/forum/extensions/ModTools/function.js"></script><style>
+		.ProfileTitle.WithIcon .ProfileIcon { width: 60px; height: 60px; }
+		#AccountProfile .Picture { width: 280px; height: 280px; }
+		#Comments .CommentHeader { line-height: 60px; }
+		#Comments .CommentHeader li div.CommentIcon { padding: 60px 0px 60px 60px; }
+		li.User.Name .UserIcon { padding: 60px 0px 60px 60px !important; }
+		li.User.Name.WithIcon { line-height: 60px; }
+	</style>
+<!--[if lte IE 7]><link rel="stylesheet" href="http://www.206proof.com/forum/themes/206Proof/styles/default/ie.css" type="text/css" media="screen" charset="utf-8"><![endif]-->
+<script type="text/javascript" src="http://www.206proof.com/forum/js/menu.js"></script></head>
+   <body id="SearchPage"  onload="Focus('txtKeywords');"><!--[if lt IE 7]><script src="http://www.206proof.com/ie7/ie7-standard-p.js" type="text/javascript"></script><![endif]--><b></b>
+		<div id="top">
+		<div id="top-content-wrapper">
+			<ul id="topnav">
+ 			   <li><a href="http://www.206proof.com/forum/" class="menuhead">206Proof</a>
+      			  <ul class="proof-dropdown">
+        		    <li><a href="http://www.206proof.com/shop/">Shop</a></li>
+           			<li><a href="http://www.206proof.com/advertise/">Advertise</a></li>
+        		    <li><a href="http://www.206proof.com/about/">About &amp; FAQ</a></li>
+       			 </ul>
+       		   </li>
+   			   <li><a href="http://www.raindrophustla.com">RaindropHustla</a></li>
+   			   <li><a href="http://www.reigncity.com" class="menuhead">ReignCity</a>
+      			  <ul class="reign-dropdown">
+           			<li><a href="http://www.reigncity.com/calendar/">Calendar</a></li>
+           			<li><a href="http://www.reigncity.com/news/">News &amp; Reviews</a></li>
+            		<li><a href="http://www.reigncity.com/about/">About &amp; Contact</a></li>
+        		  </ul>
+   			    </li>
+			</ul>
+		</div>
+		</div>
+
+<div id="Header"><div id="Session">Not signed in (<a href="/forum/people.php?ReturnUrl=http://www.206proof.com/forum/search.php?PostBackAction=Search&amp;Keywords=tope%3A&amp;Type=Comments&amp;btnSubmit=Search">Sign In</a> or <a href="http://www.206proof.com/forum/people.php?PostBackAction=ApplyForm">Register</a>)</div><a name="pgtop"></a>
+			<h1>
+				206Proof - Forum
+			</h1>
+			
+			<ul><li><a href="index.php" >Discussions</a></li><li><a href="categories.php" >Categories</a></li><li class="TabOn"><a href="search.php" >Search</a></li></ul>
+   </div><div id="Body"><div id="Panel"><div id="GuestSignIn">
+      <h2>Sign In</h2>
+      <p></p>
+   <fieldset><form id="frmSignIn" method="post" action="http://www.206proof.com/forum/people.php">
+     <input name="PostBackAction" value="SignIn" type="hidden">
+     <input name="ReturnUrl" value="http://www.206proof.com/forum/search.php?PostBackAction=Search&amp;Keywords=tope%3A&amp;Type=Comments&amp;btnSubmit=Search" type="hidden">
+     <ul>
+      <li><label for="txtUsername">Username</label>
+      <input id="txtUsername" name="Username" value="" class="text" maxlength="20" type="text">
+     </li>
+     <li><label for="txtPassword">Password</label>
+      <input id="txtPassword" name="Password" value="" class="text" type="password">
+     </li>
+     </ul>
+     <input name="btnSignIn" id="btnSignIn" value="Sign In" class="Button" type="image" src="http://www.206proof.com/forum/themes/206Proof/styles/default/signin.gif">
+   </form></fieldset>
+  </div><ul><li><h2>Menu</h2><ul><li>
+
+
+
+<a href="http://www.206proof.com/shop/">206Proof Merchandise</a>
+
+
+
+</li>
+
+
+
+<li>
+
+
+
+<a href="http://www.206proof.com/forum/faq.php">Frequently Asked Questions</a>
+
+
+
+</li>
+
+
+
+
+
+
+
+<li>
+
+
+
+<a href="http://www.206proof.com/forum/about.php">About 206Proof</a>
+
+
+
+</li>
+
+
+
+
+
+
+
+<li>
+
+
+
+<a href="http://en.wikipedia.org/wiki/Bbcode">BBCode Reference</a>
+
+
+
+</li>
+
+
+
+
+
+
+
+<li>
+
+
+
+<a href="http://www.gimp.org/">Free Image Editor (GIMP)</a>
+
+
+
+</li></ul></li></ul>
+      <ul id="Banner">
+      	 <li><h2>Advertisements</h2></li>
+         <li class="BannerImage"><a href="http://www.triplecrownkings.com"><img src="extensions/SidepanelImageLink/triple.jpg" class="center"/></a></li>
+      </ul><ul><li><ul><a href="http://www.206proof.com/advertise/">Local Artists Advertise Free</a></ul></li></ul><p id="AboutVanilla"><a href="http://getvanilla.com">Vanilla 1.1.4</a> is a product of <a href="http://lussumo.com">Lussumo</a>. More Information: <a href="http://lussumo.com/docs">Documentation</a>, <a href="http://lussumo.com/community">Community Support</a>.</p></div>
+<div id="Content"><div id="Form" class="Account Search">
+	<fieldset id="SearchSimpleFields">
+		<legend>Search</legend>
+		<a href="./" onclick="ShowAdvancedSearch(); return false;" class="SearchSwitch">Advanced</a><form id="SearchSimple" method="get" action="http://www.206proof.com/forum/search.php"><div><input type="hidden" name="PostBackAction" value="Search" />
+				</div><ul>
+				<li id="MainSearchInput">
+					<label for="txtKeywords">SearchTerms</label>
+					<input id="txtKeywords" type="text" name="Keywords" value="tope:" class="SearchInput" />
+				</li>
+				<li id="SimpleSearchRadios">Search:<input type="radio" name="Type"  id="Radio_Topics" value="Topics" class="SearchRadio" />
+			<label for="Radio_Topics" class="Radio">Topics</label>
+			<input type="radio" name="Type"  id="Radio_Comments" value="Comments" checked="checked" class="SearchRadio" />
+			<label for="Radio_Comments" class="Radio">Comments</label>
+			<input type="radio" name="Type"  id="Radio_Users" value="Users" class="SearchRadio" />
+			<label for="Radio_Users" class="Radio">Users</label>
+			</li>
+				<li>
+					<input type="submit" name="btnSubmit" value="Search" class="Button SearchButton" />
+				</li>
+			</ul>
+		</form>
+	</fieldset><fieldset id="SearchDiscussionFields">
+		<legend>Discussion topic search</legend>
+		<a href="./" onclick="ShowSimpleSearch(); return false;" class="SearchSwitch">Simple</a><form id="SearchDiscussions" method="get" action="http://www.206proof.com/forum/search.php"><div><input type="hidden" name="PostBackAction" value="Search" />
+				<input type="hidden" name="Type" value="Discussions" />
+				<input type="hidden" name="Advanced" value="1" />
+				</div><ul>
+				<li>
+					<label for="txtDiscussionKeywords">Find discussion topics containing</label>
+					<input id="txtDiscussionKeywords" type="text" name="Keywords" value="" class="SearchInput AdvancedSearchInput" />
+				</li><li>
+						<label for="ddDiscussionCategories">in the category</label><select name="Categories" class="SearchSelect"  id="ddDiscussionCategories">
+		<option value=""  selected="selected">All categories</option>
+			<option value="General" >General</option>
+			<option value="Shows" >Shows</option>
+			<option value="Suggestions" >Suggestions</option>
+			<option value="Technical" >Technical</option>
+			</select>
+		
+					</li><li>
+					<label for="DiscussionAuthUsername">where the author was</label>
+					<input id="DiscussionAuthUsername" name="AuthUsername" type="text" value="" class="SearchInput AdvancedUserInput" />
+					<script type="text/javascript">
+						var DiscussionAutoComplete = new AutoComplete("DiscussionAuthUsername", false);
+						DiscussionAutoComplete.TableID = "DiscussionAutoCompleteResults";
+						DiscussionAutoComplete.KeywordSourceUrl = "/forum/ajax/getusers.php?Search=";
+					</script>
+				</li>
+				<li>
+					<input type="submit" name="btnSubmit" value="Search" class="Button SearchButton" />
+				</li>
+			</ul>
+		</form>
+	</fieldset><fieldset id="SearchCommentFields">
+		<legend>Discussion comment search</legend><form id="SearchComments" method="get" action="http://www.206proof.com/forum/search.php"><div><input type="hidden" name="PostBackAction" value="Search" />
+				<input type="hidden" name="Advanced" value="1" />
+				<input type="hidden" name="Type" value="Comments" />
+				</div><ul>
+				<li>
+					<label for="txtCommentKeywords">Find comments containing</label>
+					<input id="txtCommentKeywords" type="text" name="Keywords" value="" class="SearchInput AdvancedSearchInput" />
+				</li><li>
+						<label for="ddCommentCategories">in the category</label><select name="Categories" class="SearchSelect"  id="ddCommentCategories">
+		<option value=""  selected="selected">All categories</option>
+			<option value="General" >General</option>
+			<option value="Shows" >Shows</option>
+			<option value="Suggestions" >Suggestions</option>
+			<option value="Technical" >Technical</option>
+			</select>
+		
+					</li><li>
+					<label for="CommentAuthUsername">where the author was</label>
+					<input id="CommentAuthUsername" name="AuthUsername" type="text" value="tope" class="SearchInput AdvancedUserInput" />
+					<script type="text/javascript">
+						var CommentAutoComplete = new AutoComplete("CommentAuthUsername", false);
+						CommentAutoComplete.TableID = "CommentAutoCompleteResults";
+						CommentAutoComplete.KeywordSourceUrl = "/forum/ajax/getusers.php?Search=";
+					</script>
+				</li>
+				<li>
+					<input type="submit" name="btnSubmit" value="Search" class="Button SearchButton" />
+				</li>
+			</ul>
+		</form>
+	</fieldset><fieldset id="SearchUserFields">
+		<legend>User account search</legend><form id="SearchUsers" method="get" action="http://www.206proof.com/forum/search.php"><div><input type="hidden" name="PostBackAction" value="Search" />
+				<input type="hidden" name="Advanced" value="1" />
+				<input type="hidden" name="Type" value="Users" />
+				</div><ul>
+				<li>
+					<label for="txtUserKeywords">Find user accounts containing</label>
+					<input id="txtUserKeywords" type="text" name="Keywords" value="" class="SearchInput AdvancedSearchInput" />
+				</li>
+				<li>
+					<label for="ddRoles">in the role</label>
+					<select name="Roles" class="SearchSelect"  id="ddRoles">
+		<option value=""  selected="selected">All roles</option>
+			<option value="Probation (New Discussions)" >Probation (New Discussions)</option>
+			<option value="Global Admin" >Global Admin</option>
+			<option value="Probation (Posting)" >Probation (Posting)</option>
+			<option value="Moderator" >Moderator</option>
+			<option value="Banned" >Banned</option>
+			<option value="Member" >Member</option>
+			<option value="Administrator" >Administrator</option>
+			</select>
+		
+				</li>
+				<li>
+					<label for="ddOrder">sort results by</label>
+					<select name="UserOrder" class="SearchSelect"  id="ddOrder">
+		<option value=""  selected="selected">Username</option>
+			<option value="Date" >Date last active</option>
+			</select>
+		
+				</li>
+				<li>
+					<input type="submit" name="btnSubmit" value="Search" class="Button SearchButton" />
+				</li>
+			</ul>
+		</form>
+	</fieldset>
+</div><div class="ContentInfo Top">
+	<h1>Comments</h1>
+	<div class="PageInfo">
+		<p>Results 1 to 50 for <strong>nothing</strong></p>
+		<div class="PageList">Previous  <a href="http://www.206proof.com/forum/search.php?page=2&amp;PostBackAction=Search&amp;Keywords=tope%3A&amp;Type=Comments&amp;btnSubmit=Search">Next</a> </div>
+	</div>
+</div>
+<div id="ContentBody">
+	<ol id="CommentResults"><li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14895">Living Proof &quot;Full Speed&quot; Release Party w/ Spaceman &amp; XP!!!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14895&amp;Focus=315652#Comment_315652">[IMG]http://i643.photobucket.com/albums/uu153/topelp/LPReleaseflyer.jpg[/IMG] Living Proof, the PRTLND based duo, comprised of Prem and Tope, is set to release their sophomore album Full Speed 1.4.2011. This album is the culmination of nearly three years of hard work and constant reformatting and ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 15th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14846">Hushd Puppies - &quot;Nothing At All&quot; (Official Music Video)</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14846&amp;Focus=315307#Comment_315307">dope! Catch the release party this Thursday @ High Dive w Living Proof, Hushd Puppies, Luck One, and more!  [IMG]http://i643.photobucket.com/albums/uu153/topelp/seattle.jpg[/IMG]</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 7th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14296">Officials Vintage Now Open: 36th &amp; Palatine in Fremont</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14296&amp;Focus=315136#Comment_315136">Rio is dat dude. Swooped my Coors Light vest last time I was in the town.</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 4th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14813">Avatar X Isabella Du Graf X Blast Off - Wishing On A Dream (Official Video)</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14813&amp;Focus=315061#Comment_315061">dope! Jon Jon is a beast, Avatar spits, and Isabella is fioone woo!</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 3rd 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14814">2010 WAS A HELLUVA YEAR FOR NORTHWEST HIPHOP!  HOLY SHYT!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14814&amp;Focus=315060#Comment_315060">[IMG]http://i643.photobucket.com/albums/uu153/topelp/l_b34af68b87bb485cac6e130f62f93e-1.jpg[/IMG]  http://tope.bandcamp.com/album/soul-music  [IMG]http://i643.photobucket.com/albums/uu153/topelp/txe-1.jpg[/IMG]  http://topeandepp.bandcamp.com/album/rain-in-cali-tour-ep</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 3rd 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14769">LEAK: Living Proof &quot;City&quot;</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14769&amp;Focus=314607#Comment_314607">[IMG]http://i643.photobucket.com/albums/uu153/topelp/coverforlayoutforreal-1.jpg[/IMG] Living Proof, the PRTLND based duo, comprised of Prem and Tope, is set to release their sophomore album Full Speed 1.4.2011. This album is the culmination of three years of hard work and constant reformatting and ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Nov 18th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=13989">TxE -- Rain In Cali EP Free DL ft Trox &amp; Illmaculate</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=13989&amp;Focus=306839#Comment_306839">Thought I would post up my new crew's EP..  http://topeandepp.bandcamp.com/  Having only being together for less than a year now, TxE (Tope, Epp, and in house producer G_Force) have wasted no time. They've already self-released their first EP, collaborated with industry heavyweights such as ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Jul 31st 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=13090">Tope - Soul Music Release Party w/ Luck One &amp; Cool Nutz!!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=13090&amp;Focus=296262#Comment_296262">Runaway Productions &amp; Tope Present: The Soul Music Release Party Feature Performances by TxE Living Proof Luck One Theory Hazit Serge Severe Trox (live beat set) Plus Guests Hosts Cool Nutz &amp; DJ Flip Flip  ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Apr 27th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12969">One More Act</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12969&amp;Focus=294675#Comment_294675">http://topeandepp.bandcamp.com/</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Apr 18th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12323">TOPE&#039;S SOUL MUSIC NOW AVAILABLE</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12323&amp;Focus=287099#Comment_287099">http://www.divshare.com/download/10548740-907</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Feb 22nd 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12323">TOPE&#039;S SOUL MUSIC NOW AVAILABLE</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12323&amp;Focus=287098#Comment_287098">***Free Download Yours ft Cool Nutz &amp; Illmaculate (Prod. by Tope) from Soul Music!!  If you have a blog and want to use this track please do!  http://www.easy-share.com/1909345018/05%20Yours%20ft%20Cool%20Nutz%20&amp;%20Illmaculate.mp3</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Feb 22nd 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12323">TOPE&#039;S SOUL MUSIC NOW AVAILABLE</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12323&amp;Focus=286400#Comment_286400">My self-produced solo debut album, SOUL MUSIC, is now available on CDBABY.com. Featuring Cool Nutz, Illmaculate, Living Proof, Epp, and Iame. All cuts by DJ Flip Flop.   http://www.cdbaby.com/cd/Tope  [IMG]http://i643.photobucket.com/albums/uu153/topelp/TOPE_cover-1.jpg[/IMG]  Tope has worked with ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Feb 17th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12151">WHICH PRODUCERS DO YOU FEEL ARE UNDERRATED/SLEPT ON?</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12151&amp;Focus=283715#Comment_283715">PRTLND Producers  Tony Ozier Dave Notti Trox Hi-Res Devonwho DaiN Sapient Theory Hazit G_Force  I'm sure I'm forgetting some people..</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Feb 2nd 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=6510">Official &quot;Check The New Beat&quot; Thread</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=6510&amp;Focus=270453#Comment_270453">5 new ones http://tope.bandcamp.com/album/tope-beats</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 8th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=10709">New Brother Ali album.</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=10709&amp;Focus=259959#Comment_259959">I don't know I just thought it was boring.. I mean it wasn't wack by any means but I just wish he would have stepped outside the box a little. To me, the dopest verses on the album came from Joell and Free.</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Oct 23rd 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=10709">New Brother Ali album.</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=10709&amp;Focus=259825#Comment_259825">*yawn*</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Oct 21st 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=10891">Please Don&#039;t Rap On These Until You Pay Me Volume One-Free Beat Tape</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=10891&amp;Focus=258547#Comment_258547">Mainly just wanted to give out a free beat tape of joints I had sitting around and I thought the title was kind of funny, but yeah the idea is to sell some beats (haha)..but if someone comes nice on them we can do work. You guys get the DL, or just clown?</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Oct 8th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=10891">Please Don&#039;t Rap On These Until You Pay Me Volume One-Free Beat Tape</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=10891&amp;Focus=258483#Comment_258483">Free Beat Tape/Instrumental Album produced entirely by Tope. All beats available for purchase. Contact: Topebeats@gmail.com [IMG]http://i643.photobucket.com/albums/uu153/topelp/tope2.jpg[/IMG]  http://www.mediafire.com/download.php?djjwxqlhzjz</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Oct 7th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=9680">FREE RAP</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=9680&amp;Focus=258381#Comment_258381">[IMG]http://i643.photobucket.com/albums/uu153/topelp/realrapcopy.jpg[/IMG]  http://www.mediafire.com/?dxw4mwtntqg</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Oct 6th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=10761">How It Feel from SOUL MUSIC (video)</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=10761&amp;Focus=257004#Comment_257004">&quot;How It Feel&quot; from my solo, self-produced, debut album SOUL MUSIC ft Cool Nutz, Illmaculate, Living Proof, Iame, &amp; Epp.  [url=http://www.youtube.com/watch?v=ObB_HystQvU=etc]How It Feel[/url]</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Sep 23rd 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=10515">FREE TOPE DOWNLOAD</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=10515&amp;Focus=253691#Comment_253691">[IMG]http://i643.photobucket.com/albums/uu153/topelp/realrapcopy.jpg[/IMG] http://www.mediafire.com/download.php?dxw4mwtntqg  'Real Rap Stories' produced by TOPE.  Whatuptho? My solo debut SOUL MUSIC is currently being mastered by Sapient and possibly looking for a new home. In the meantime I ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Aug 27th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=10457">Busdriver, Abstarct Rude, &amp; Tope In PDX!!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=10457&amp;Focus=252805#Comment_252805">[IMG]http://i643.photobucket.com/albums/uu153/topelp/tonyposter.jpg[/IMG]</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Aug 21st 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=10308">Mystik Journeymen at The Nectar This Tuesday Aug. 11th.</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=10308&amp;Focus=250568#Comment_250568">tomorrow night!! anyone coming out?</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Aug 10th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=10308">Mystik Journeymen at The Nectar This Tuesday Aug. 11th.</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=10308&amp;Focus=250021#Comment_250021">Underground Fo Life Tour featuring Mystik Journeymen, Tope, &amp; Kruse plus Dyslexic in Seattle Tuesday, August 11th at The Nectar.  [IMG]http://i643.photobucket.com/albums/uu153/topelp/MYSTIKJOURNEYMEN_090811_WEB.jpg[/IMG]</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Aug 7th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=10242">MYSTIK JOURNEYMEN (LIVING LEGENDS) W/ SMOKE / TOPE / AND MORE IN  OLYMPIA TONIGHT ONLY $5</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=10242&amp;Focus=249253#Comment_249253">YEAH! I'm going on a short NW Tour w. Mystik Journeymen. We'll be in Seattle Aug 11th @The Nectar...I'll post more info in the next day or two. It would dope to see some of the Proof out.</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=3">Shows</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Aug 3rd 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=10096">Big Tune Competitors</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=10096&amp;Focus=248121#Comment_248121">my dudes Dave Notti &amp; Trox are IN!!   Portland might make some waves this year, watch.</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Jul 28th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=9464">Kev Brown, Illmaculate, Tope, Dain, &amp; Dave Notti In Portland This Friday!!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=9464&amp;Focus=235758#Comment_235758">[quote][cite] joey t:[/cite]tope your from portland?[/quote]  lol yeah. hence the two people cheering for me @the soundwaves jumpoff last week..</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Jun 3rd 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=9464">Kev Brown, Illmaculate, Tope, Dain, &amp; Dave Notti In Portland This Friday!!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=9464&amp;Focus=235748#Comment_235748">From Portland's Willamette Week...  Kev Brown’s beat seasoning is fit for a couture stew. It’s thick, stuffed with unusual ingredients, and just when you think you’ve identified the secret sauce, he throws in an off-key guitar twang, stinging high hat or breathy flute, making you stop before ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Jun 3rd 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=9464">Kev Brown, Illmaculate, Tope, Dain, &amp; Dave Notti In Portland This Friday!!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=9464&amp;Focus=235497#Comment_235497">*KEV BROWN* apologies..Yeah this is in Portland @ The Rotture. Come through if your in the area.</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Jun 2nd 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=9464">Kev Brown, Illmaculate, Tope, Dain, &amp; Dave Notti In Portland This Friday!!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=9464&amp;Focus=235489#Comment_235489">[IMG]http://i100.photobucket.com/albums/m7/flowtope/l_b9cfe22935df4db899cbaf8b2c5d6555.jpg[/IMG]  Should be a dope show..3 young heads making a lot of noise in and around the NW, Kev Brown, and myself!!  Illmaculate- 2 Time World Rap Champ Dave Notti- MC/Producer. Recently won DJ KO x 2 Dope Boyz ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Jun 2nd 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=9061">UPDATE: SOUNDWAVES BEAT BATTLE 5/26</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=9061&amp;Focus=233580#Comment_233580">First off thanks for having me out, dope night..I was definitely that dude that had 1, maybe 2 people voting for me in the crowd + a lady accusing me of biting for the ew&amp;f flip in battle w/ el grande lol. I was just confused how I had two judges that voted for me and still lost..?</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			May 27th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=9061">UPDATE: SOUNDWAVES BEAT BATTLE 5/26</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=9061&amp;Focus=232934#Comment_232934">what time we need be up there?  twitter-- topelp if you want to see my updates..hollerage.</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			May 26th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=9061">UPDATE: SOUNDWAVES BEAT BATTLE 5/26</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=9061&amp;Focus=228551#Comment_228551">didn't realize this was on a tuesday..what are the chances of this cracking?</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			May 12th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=8469">ATTN Producers: SHW/Oldominion Remix Contet</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=8469&amp;Focus=219031#Comment_219031">[quote][cite] your package is on my desk, i swear![/quote]  pause.</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Apr 14th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=8657">DJ &amp; MC combos that kill the live show</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=8657&amp;Focus=218121#Comment_218121">I have to say...Blue Scholars.  Geo holds it down so solidly live. I guess Sabzi just kind of plays songs and dances hella funny, but I've always been impressed with how good they sound live.</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Apr 12th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=8651">LIST local northwest producers, thank you..</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=8651&amp;Focus=218085#Comment_218085">hi-res devon(who) me-mafucka!!  hi term.</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Apr 12th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=8634">Favorite Porn Star Actress...</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=8634&amp;Focus=218083#Comment_218083">ayalah sashu/naomi russell</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Apr 12th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=8584">PDX Heads!! Zion I, Illmaculate &amp; Only-One, Living Proof Tomorrow!!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=8584&amp;Focus=217076#Comment_217076">your ill.</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Apr 8th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=8590">just pop a ball in your mouth and you can go all night!!!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=8590&amp;Focus=217075#Comment_217075">pause</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Apr 8th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=8584">PDX Heads!! Zion I, Illmaculate &amp; Only-One, Living Proof Tomorrow!!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=8584&amp;Focus=217023#Comment_217023">thank you lol.</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Apr 8th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=8584">PDX Heads!! Zion I, Illmaculate &amp; Only-One, Living Proof Tomorrow!!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=8584&amp;Focus=217016#Comment_217016">take two.  </a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Apr 8th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=8584">PDX Heads!! Zion I, Illmaculate &amp; Only-One, Living Proof Tomorrow!!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=8584&amp;Focus=217015#Comment_217015">[IMG]http://i100.photobucket.com/albums/m7/flowtope/ZionICDRelease-1copyMS.jpg[/IMG]</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Apr 8th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=7576">Qualified Beat Battle w/ Exile @ Nectar 3.14.09</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=7576&amp;Focus=208828#Comment_208828">Big ups to Mack &amp; the whole qualified team, the event seemed like a huge success, thank you for haing me out. Peace to Ohmega, MTK, and Blastoff (among others) for bringing the HEAT!!</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Mar 15th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=7144">J Dilla&#039;s Unreleased &quot;Pay Jay&quot; LP</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=7144&amp;Focus=186746#Comment_186746">see comments/qoutes above.</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Jan 16th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=7144">J Dilla&#039;s Unreleased &quot;Pay Jay&quot; LP</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=7144&amp;Focus=186736#Comment_186736">lol..just in case you forgot.</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Jan 16th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=7144">J Dilla&#039;s Unreleased &quot;Pay Jay&quot; LP</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=7144&amp;Focus=186590#Comment_186590">goat</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Jan 15th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=7182">Living Proof &amp; Smoke in Olympia Next Thursday!!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=7182&amp;Focus=186588#Comment_186588">Thursday, January 22nd @ The Royal 311 N. Capitol Way. 21+ $5  Smoke Living Proof Dulok Shaman Lo Deck Junkyard Gang</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Jan 15th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=5286">Scarub of Living Legends and  Braille of PDX live@Nectar on Thursday, Nov. 6th!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=5286&amp;Focus=147999#Comment_147999">living proof just added to this as well, again, minor details.</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=3">Shows</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Nov 3rd 2008
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=5551">Producers Challenge pt.2 - flip THIS sample now!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=5551&amp;Focus=147181#Comment_147181">tiles killed it too</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Nov 2nd 2008
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=5551">Producers Challenge pt.2 - flip THIS sample now!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=5551&amp;Focus=147173#Comment_147173">http://www.zshare.net/audio/50805364e27c911c/  meat and potatoes version..you'll get the flic.  I think I like nphared version the best from what I've listened to.</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=344">tope</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Nov 2nd 2008
+		</li>
+	</ul>
+</li>
+</ol>
+</div><div class="ContentInfo Bottom">
+		<div class="PageInfo">
+			<p>Results 1 to 50 for <strong>nothing</strong></p>
+			<div class="PageList">Previous  <a href="http://www.206proof.com/forum/search.php?page=2&amp;PostBackAction=Search&amp;Keywords=tope%3A&amp;Type=Comments&amp;btnSubmit=Search">Next</a> </div>
+		</div>
+		<a href="http://www.206proof.com/forum/search.php?PostBackAction=Search&amp;Keywords=tope%3A&amp;Type=Comments&amp;btnSubmit=Search#pgtop">Top of Page</a>
+	</div></div>
+<div id="pgbottom" name="pgbottom"><p>&copy; 2007 <a href="http://www.206Proof.com">206Proof</a>. Powered by  <a href="http://www.getvanilla.com">Vanilla</a>.</p>
+</div>
+            <script type="text/javascript" src="http://www.google-analytics.com/urchin.js"></script>
+            <script type="text/javascript">
+            // <![CDATA[
+            _uacct="UA-2210503-1";
+            urchinTracker();
+            // ]]>
+            </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+.Account {width:45em!important;}
+.Account #NuggetListTable {margin:0; width:100%; border-collapse:collapse; font-size:1.1em;}
+#NuggetListTable td {padding:0.3em 0.5em;}
+#NuggetListTable thead th{color:#494949;font-weight:bold;text-align:left; padding:0em 0.5em 0.3em 0.5em;}
+#NuggetListTable select {width:100% !important;}
+#NuggetListTable tbody tr {padding:0.1em 0.5em; border-bottom:1px solid #FFEDAE;}
+#NuggetListTable td.region{padding: 0.5em 0.5em;font-weight:bold; border-top-width:0px;border-bottom:1px solid #e9d596; color:#455067; background-color:#F4F4C2;}
+#NuggetListTable tr.odd{background-color:#FFFFCC;border-bottom:1px solid #F2E4B9;}
+#NuggetListTable p {padding:0px!important; margin:0;font-size:0.4em;}
+#NuggetListTable .name {padding-left:1.25em; width:18em!important;}
+#NuggetListTable .PositionSelect {width:9em!important;}
+#NuggetListTable .WeightSelect {width:4em!important;}
+#Form ul li textarea#txtNuggetHTML {color: #000;font-family: Courier New; height:300px;}
+.NuggetList #txtNuggetDescription {width:99.5%!important;}
+
+
+/* Styles for the ur nuggets. This is where u will
+style all ur stuff.*/
+/*Above Banner*/
+.Nugget.CONTROL_POSITION_HEAD {}
+/*Below Banner*/
+.Nugget.CONTROL_POSITION_BANNER{}
+/*Above Content*/
+.Nugget.CONTROL_POSITION_PANEL{}
+/*Below Content*/
+.Nugget.CONTROL_POSITION_BODY_ITEM{}
+/*Menu*/
+.Nugget.CONTROL_POSITION_MENU{
+    width:30%;
+    height:40px;
+    margin:-50px 5px 10px 5px;
+    overflow:hidden;
+}
+/*Footer*/
+.Nugget.CONTROL_POSITION_FOOTER{
+    clear:both;
+}
+/*In Comment is styled by the default Vanilla.css You can overwrite that by using...*/
+.Nugget.CommentHeader{}
+.Nugget.CommentBody{}
+
+/*Below Panel and Panel is styled by the default Vanilla.css*/
+/*You can overwrite Below Panel using.... */
+.Nugget.Panel{}
+
+/* Styles for the Nugget Holders on Settings.php page
+no need to alter them as they are just for reference.*/
+.NuggetHolder {
+	display:block;
+	border:1px solid #DDDDDD;
+	line-height:1.5em;
+	padding:4px 0;
+        background:#F4F4C2 url(hash.gif) repeat scroll 0% 50%;
+        text-align:center;
+        font-size:1.5em;
+        color:#84733D;
+}
+.NuggetHolder.Panel {
+	margin:10px 0 5px 0 !important;
+	padding:5px 0 !important;
+        width:180px;
+}
+.NuggetHolder.Footer{
+    clear:both;
+}
+
+.NuggetHolder.Menu{
+    width:25%;
+    height:30px;
+    margin:-50px 5px 10px 5px;
+}

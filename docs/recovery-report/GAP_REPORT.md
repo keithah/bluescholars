@@ -262,3 +262,20 @@ A separate cooled-down MySpace retry checked 30 previously rate-limited image UR
 ## Mass Line external-image queue closure — October 18, 2026
 
 The exact-URL inventory of 602 offsite image references discovered in recovered Mass Line pages has now been processed to completion. Wayback returned 170 capture rows across those URLs; 156 source URLs yielded validated images, deduplicated to 152 local payloads (9,241,790 bytes). Another 431 URLs returned no successful capture row, 14 indexed responses were HTML or other invalid image payloads, and the last retry of `http://images.bcdb.com/pictures/fox/hammerman.jpg` returned HTTP 403. No audio or video body was recovered. The capture rows, original URLs, forum-page referrers, replay sources, and hashes remain in `recovery/massline/external/assets.json` and `recovery/massline/manifest.json`; the candidate was rebuilt and both root and `/bluescholars/` offline checks passed with zero errors. These are archive lookup outcomes, not proof that an image never existed elsewhere.
+
+## Prometheus Brown Twitter archive — October 20, 2026
+
+The exact Internet Archive CDX query for `twitter.com/prometheusbrown` lists 34 distinct status-200 capture digests from 2009 through 2024. All 34 raw HTML responses were downloaded and preserved with source timestamps, digests and local SHA-256 values. The archive has 30 profile-content captures, three JavaScript-only provider-error captures, and one November 2024 page classified as a later account takeover. Each has its own local dated page; the takeover is not represented as artist-authored material.
+
+Across 774 unique image/stylesheet-by-capture references, 675 validated resources are saved as 357 unique content-addressed payloads. A validator correction recovered 109 PNG files that an earlier case-mismatched signature test had incorrectly rejected. The remaining 99 resource requests return 404 and remain unresolved. Recovered Twitter pages use local linked files, with scripts and `srcset` remote fallbacks removed. The offline checker reports zero automatic remote dependencies and zero `/bluescholars/` route errors for the current candidate.
+
+The main site remains an unreviewed recovery candidate: 1,054 recovered pages, 12 feed pages, 2,223 explicitly marked placeholders, one derived page, and 1,568 main-site local assets, plus the separately counted Twitter captures and assets. Public release remains blocked by unresolved page/media gaps and the rights verification required by `RIGHTS.md`.
+
+
+## October 20, 2026 — rights confirmation and refreshed candidate checks
+
+The owner confirmed permission to publicly redistribute the archived original material in conversation. This owner attestation is recorded in `source/review.json`; it does not create a blanket license or transfer copyright. `publish_approved` remains false because source/publication review has not been completed. A release-mode build correctly refused to proceed without those approvals, so no push or deployment was made.
+
+A fresh bounded recovery batch processed 75 URLs and added six validated resource records and 6,000 indexed capture rows. The active index now contains 12,822 resource URLs and 165,338 capture rows; 4,981 resources are recovered (2,741 unique payloads, 171,623,580 bytes), 283 need review, 4,898 remain queued, and 2,656 are failed/retryable. The index is complete for its recorded query set, not a claim that every possible historical URL has been found.
+
+The rebuilt candidate contains 1,054 recovered pages including 12 feeds, 2,221 explicit placeholders, one derived page, and 1,568 main-site assets. It records 5,390 missing assets, 396 linked assets not recovered, 197 unbundled font references, and 156 external-media links. Twitter remains separately measured at 34 dated captures, 675/774 recovered linked asset/capture pairs, and 357 distinct payloads. Root-mounted and `/bluescholars/` offline checks both pass with zero errors and no automatic remote resources. These checks do not establish completeness or publication approval.

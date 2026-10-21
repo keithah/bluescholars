@@ -24,6 +24,22 @@
       "sha256": "964c0e8719eabe416091cb6c948a489659d5779c519aef88df4b5bc4d5cc86f8",
       "referrer": "http://bluescholars.com/shows/",
       "decision": "Resource-specific same-site substitution: the 2020 Shows capture links the images.squarespace-cdn.com asset under the same Squarespace site ID and exact EUGENE.jpg filename. The recovered 2016 static1.squarespace.com file is used as the earlier same-site photograph because the later CDN response is unavailable locally. This preserves the historical image reference without claiming it is a poster or approving other later resources."
+    },
+    {
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/7/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/623-05142015/1371067617126/site.css?&filterFeatures=false",
+      "source_url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/8/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/623-05142015/1371067617126/site.css?&filterFeatures=false",
+      "actual_capture": "20230627004401",
+      "sha256": "4b91af49447b73a4646a6e38c0332b08e7b2a6efbb6ead0590d121b2d3ffbb09",
+      "referrer": "http://bluescholars.com/shop",
+      "decision": "The exact /7 CSS URL has no successful exact capture. The missing shared stylesheet is supplied from the independently recovered /8 response for the same Squarespace site ID and identical template/build path. Its 478233-byte body has SHA-256 4b91af49447b73a4646a6e38c0332b08e7b2a6efbb6ead0590d121b2d3ffbb09. The exact /10 URL also has its own recovered response and resource-specific compatibility review, documented separately; it is not an alias source here. Reuse is limited to this missing stylesheet URL and does not approve unrelated later resources."
+    },
+    {
+      "url": "https://imgprx.livejournal.net/cecec9fe2ebfde9edf35af1e54bdd9d5ed98fbd4/qyHITtc-mye0R2MdMP8tBZaNBAWFYh2czJkkh7fhnaNyaRIHn2Iifbr7qzdEcL-UPbz6IJ5nkQ3_mvBeoqf_89dFqUy2MofxYr9-xJUDyt593SP_VdJOoWJ7W-gDA1W5jzyR-8mwB4T2Noy-WcSpa_DQVQeO6cROZ0Lf2PI5--s",
+      "source_url": "http://static.eventful.com/store/reporting/performers/stickers/spid/P0-001-000056407-5/sticker_400x433.png",
+      "actual_capture": "20210125004449",
+      "sha256": "8a711dbbdb9c19dea8f86b5b699019920a3ed99b371e819a9e96c492ce1d367f",
+      "referrer": "https://bluescholars.livejournal.com/@@wayback:20250602155501:337788e62127",
+      "decision": "Exact in-entry match: the 2025 LiveJournal capture wraps this image proxy in the Eventful contest link and the adjacent preserved copy-code textarea specifies the exact Eventful sticker URL and 400x433 dimensions. Wayback has successful 2014 and 2021 PNG records with the same CDX digest; the 2021 asset was downloaded, validated, and is 400x433. The proxy itself returns a 114-byte HTML lander / revisit, so this explicitly evidenced image is used as its local equivalent. No other LiveJournal image proxies are substituted."
     }
   ]
 }

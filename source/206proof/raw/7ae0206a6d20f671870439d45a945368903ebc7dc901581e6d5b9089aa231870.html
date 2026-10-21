@@ -1,0 +1,1496 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-ca">
+   <head>
+   
+   
+   
+      <title>206Proof - Forum - Search</title>
+      <link rel="shortcut icon" href="/forum/themes/206Proof/styles/default/favicon.ico" />
+            <link rel="stylesheet" type="text/css" href="/forum/themes/206Proof/styles/default/vanilla.css" media="screen" />
+            <link rel="stylesheet" type="text/css" href="/forum/themes/206Proof/styles/default/vanilla.print.css" media="print" />
+            <link rel="stylesheet" type="text/css" href="/forum/extensions/Nugget/nugget.css" />
+            <link rel="stylesheet" type="text/css" href="/forum/extensions/SidepanelImageLink/style.css" />
+            <link rel="stylesheet" type="text/css" href="/forum/extensions/Signatures/style.css" />
+            <link rel="stylesheet" type="text/css" href="/forum/extensions/ModTools/style.css" />
+            <link rel="stylesheet" type="text/css" href="/forum/extensions/GuestSignIn/style.css" />
+            <script type="text/javascript" src="/forum/js/global.js"></script>
+            <script type="text/javascript" src="/forum/js/vanilla.js"></script>
+            <script type="text/javascript" src="/forum/js/ajax.js"></script>
+            <script type="text/javascript" src="/forum/js/ac.js"></script>
+            <script type="text/javascript" src="/forum/extensions/JQuery/jquery-1.1.3.1.pack.js"></script>
+            <script type="text/javascript" src="/forum/extensions/ModTools/function.js"></script><style>
+		.ProfileTitle.WithIcon .ProfileIcon { width: 60px; height: 60px; }
+		#AccountProfile .Picture { width: 280px; height: 280px; }
+		#Comments .CommentHeader { line-height: 60px; }
+		#Comments .CommentHeader li div.CommentIcon { padding: 60px 0px 60px 60px; }
+		li.User.Name .UserIcon { padding: 60px 0px 60px 60px !important; }
+		li.User.Name.WithIcon { line-height: 60px; }
+	</style>
+<!--[if lte IE 7]><link rel="stylesheet" href="http://www.206proof.com/forum/themes/206Proof/styles/default/ie.css" type="text/css" media="screen" charset="utf-8"><![endif]-->
+<script type="text/javascript" src="http://www.206proof.com/forum/js/menu.js"></script></head>
+   <body id="SearchPage"  onload="Focus('txtKeywords');"><!--[if lt IE 7]><script src="http://www.206proof.com/ie7/ie7-standard-p.js" type="text/javascript"></script><![endif]--><b></b>
+		<div id="top">
+		<div id="top-content-wrapper">
+			<ul id="topnav">
+ 			   <li><a href="http://www.206proof.com/forum/" class="menuhead">206Proof</a>
+      			  <ul class="proof-dropdown">
+        		    <li><a href="http://www.206proof.com/shop/">Shop</a></li>
+           			<li><a href="http://www.206proof.com/advertise/">Advertise</a></li>
+        		    <li><a href="http://www.206proof.com/about/">About &amp; FAQ</a></li>
+       			 </ul>
+       		   </li>
+   			   <li><a href="http://www.raindrophustla.com">RaindropHustla</a></li>
+   			   <li><a href="http://www.reigncity.com" class="menuhead">ReignCity</a>
+      			  <ul class="reign-dropdown">
+           			<li><a href="http://www.reigncity.com/calendar/">Calendar</a></li>
+           			<li><a href="http://www.reigncity.com/news/">News &amp; Reviews</a></li>
+            		<li><a href="http://www.reigncity.com/about/">About &amp; Contact</a></li>
+        		  </ul>
+   			    </li>
+			</ul>
+		</div>
+		</div>
+
+<div id="Header"><div id="Session">Not signed in (<a href="/forum/people.php?ReturnUrl=http://www.206proof.com/forum/search.php?PostBackAction=Search&amp;Keywords=emnace%3A&amp;Type=Comments&amp;btnSubmit=Search">Sign In</a> or <a href="http://www.206proof.com/forum/people.php?PostBackAction=ApplyForm">Register</a>)</div><a name="pgtop"></a>
+			<h1>
+				206Proof - Forum
+			</h1>
+			
+			<ul><li><a href="index.php" >Discussions</a></li><li><a href="categories.php" >Categories</a></li><li class="TabOn"><a href="search.php" >Search</a></li></ul>
+   </div><div id="Body"><div id="Panel"><div id="GuestSignIn">
+      <h2>Sign In</h2>
+      <p></p>
+   <fieldset><form id="frmSignIn" method="post" action="http://www.206proof.com/forum/people.php">
+     <input name="PostBackAction" value="SignIn" type="hidden">
+     <input name="ReturnUrl" value="http://www.206proof.com/forum/search.php?PostBackAction=Search&amp;Keywords=emnace%3A&amp;Type=Comments&amp;btnSubmit=Search" type="hidden">
+     <ul>
+      <li><label for="txtUsername">Username</label>
+      <input id="txtUsername" name="Username" value="" class="text" maxlength="20" type="text">
+     </li>
+     <li><label for="txtPassword">Password</label>
+      <input id="txtPassword" name="Password" value="" class="text" type="password">
+     </li>
+     </ul>
+     <input name="btnSignIn" id="btnSignIn" value="Sign In" class="Button" type="image" src="http://www.206proof.com/forum/themes/206Proof/styles/default/signin.gif">
+   </form></fieldset>
+  </div><ul><li><h2>Menu</h2><ul><li>
+
+
+
+<a href="http://www.206proof.com/shop/">206Proof Merchandise</a>
+
+
+
+</li>
+
+
+
+<li>
+
+
+
+<a href="http://www.206proof.com/forum/faq.php">Frequently Asked Questions</a>
+
+
+
+</li>
+
+
+
+
+
+
+
+<li>
+
+
+
+<a href="http://www.206proof.com/forum/about.php">About 206Proof</a>
+
+
+
+</li>
+
+
+
+
+
+
+
+<li>
+
+
+
+<a href="http://en.wikipedia.org/wiki/Bbcode">BBCode Reference</a>
+
+
+
+</li>
+
+
+
+
+
+
+
+<li>
+
+
+
+<a href="http://www.gimp.org/">Free Image Editor (GIMP)</a>
+
+
+
+</li></ul></li></ul>
+      <ul id="Banner">
+      	 <li><h2>Advertisements</h2></li>
+         <li class="BannerImage"><a href="http://www.stateoftheartist.bandcamp.com"><img src="extensions/SidepanelImageLink/sota.jpg" class="center"/></a></li>
+      </ul><ul><li><ul><a href="http://www.206proof.com/advertise/">Local Artists Advertise Free</a></ul></li></ul><p id="AboutVanilla"><a href="http://getvanilla.com">Vanilla 1.1.4</a> is a product of <a href="http://lussumo.com">Lussumo</a>. More Information: <a href="http://lussumo.com/docs">Documentation</a>, <a href="http://lussumo.com/community">Community Support</a>.</p></div>
+<div id="Content"><div id="Form" class="Account Search">
+	<fieldset id="SearchSimpleFields">
+		<legend>Search</legend>
+		<a href="./" onclick="ShowAdvancedSearch(); return false;" class="SearchSwitch">Advanced</a><form id="SearchSimple" method="get" action="http://www.206proof.com/forum/search.php"><div><input type="hidden" name="PostBackAction" value="Search" />
+				</div><ul>
+				<li id="MainSearchInput">
+					<label for="txtKeywords">SearchTerms</label>
+					<input id="txtKeywords" type="text" name="Keywords" value="emnace:" class="SearchInput" />
+				</li>
+				<li id="SimpleSearchRadios">Search:<input type="radio" name="Type"  id="Radio_Topics" value="Topics" class="SearchRadio" />
+			<label for="Radio_Topics" class="Radio">Topics</label>
+			<input type="radio" name="Type"  id="Radio_Comments" value="Comments" checked="checked" class="SearchRadio" />
+			<label for="Radio_Comments" class="Radio">Comments</label>
+			<input type="radio" name="Type"  id="Radio_Users" value="Users" class="SearchRadio" />
+			<label for="Radio_Users" class="Radio">Users</label>
+			</li>
+				<li>
+					<input type="submit" name="btnSubmit" value="Search" class="Button SearchButton" />
+				</li>
+			</ul>
+		</form>
+	</fieldset><fieldset id="SearchDiscussionFields">
+		<legend>Discussion topic search</legend>
+		<a href="./" onclick="ShowSimpleSearch(); return false;" class="SearchSwitch">Simple</a><form id="SearchDiscussions" method="get" action="http://www.206proof.com/forum/search.php"><div><input type="hidden" name="PostBackAction" value="Search" />
+				<input type="hidden" name="Type" value="Discussions" />
+				<input type="hidden" name="Advanced" value="1" />
+				</div><ul>
+				<li>
+					<label for="txtDiscussionKeywords">Find discussion topics containing</label>
+					<input id="txtDiscussionKeywords" type="text" name="Keywords" value="" class="SearchInput AdvancedSearchInput" />
+				</li><li>
+						<label for="ddDiscussionCategories">in the category</label><select name="Categories" class="SearchSelect"  id="ddDiscussionCategories">
+		<option value=""  selected="selected">All categories</option>
+			<option value="General" >General</option>
+			<option value="Shows" >Shows</option>
+			<option value="Suggestions" >Suggestions</option>
+			<option value="Technical" >Technical</option>
+			</select>
+		
+					</li><li>
+					<label for="DiscussionAuthUsername">where the author was</label>
+					<input id="DiscussionAuthUsername" name="AuthUsername" type="text" value="" class="SearchInput AdvancedUserInput" />
+					<script type="text/javascript">
+						var DiscussionAutoComplete = new AutoComplete("DiscussionAuthUsername", false);
+						DiscussionAutoComplete.TableID = "DiscussionAutoCompleteResults";
+						DiscussionAutoComplete.KeywordSourceUrl = "/forum/ajax/getusers.php?Search=";
+					</script>
+				</li>
+				<li>
+					<input type="submit" name="btnSubmit" value="Search" class="Button SearchButton" />
+				</li>
+			</ul>
+		</form>
+	</fieldset><fieldset id="SearchCommentFields">
+		<legend>Discussion comment search</legend><form id="SearchComments" method="get" action="http://www.206proof.com/forum/search.php"><div><input type="hidden" name="PostBackAction" value="Search" />
+				<input type="hidden" name="Advanced" value="1" />
+				<input type="hidden" name="Type" value="Comments" />
+				</div><ul>
+				<li>
+					<label for="txtCommentKeywords">Find comments containing</label>
+					<input id="txtCommentKeywords" type="text" name="Keywords" value="" class="SearchInput AdvancedSearchInput" />
+				</li><li>
+						<label for="ddCommentCategories">in the category</label><select name="Categories" class="SearchSelect"  id="ddCommentCategories">
+		<option value=""  selected="selected">All categories</option>
+			<option value="General" >General</option>
+			<option value="Shows" >Shows</option>
+			<option value="Suggestions" >Suggestions</option>
+			<option value="Technical" >Technical</option>
+			</select>
+		
+					</li><li>
+					<label for="CommentAuthUsername">where the author was</label>
+					<input id="CommentAuthUsername" name="AuthUsername" type="text" value="emnace" class="SearchInput AdvancedUserInput" />
+					<script type="text/javascript">
+						var CommentAutoComplete = new AutoComplete("CommentAuthUsername", false);
+						CommentAutoComplete.TableID = "CommentAutoCompleteResults";
+						CommentAutoComplete.KeywordSourceUrl = "/forum/ajax/getusers.php?Search=";
+					</script>
+				</li>
+				<li>
+					<input type="submit" name="btnSubmit" value="Search" class="Button SearchButton" />
+				</li>
+			</ul>
+		</form>
+	</fieldset><fieldset id="SearchUserFields">
+		<legend>User account search</legend><form id="SearchUsers" method="get" action="http://www.206proof.com/forum/search.php"><div><input type="hidden" name="PostBackAction" value="Search" />
+				<input type="hidden" name="Advanced" value="1" />
+				<input type="hidden" name="Type" value="Users" />
+				</div><ul>
+				<li>
+					<label for="txtUserKeywords">Find user accounts containing</label>
+					<input id="txtUserKeywords" type="text" name="Keywords" value="" class="SearchInput AdvancedSearchInput" />
+				</li>
+				<li>
+					<label for="ddRoles">in the role</label>
+					<select name="Roles" class="SearchSelect"  id="ddRoles">
+		<option value=""  selected="selected">All roles</option>
+			<option value="Probation (New Discussions)" >Probation (New Discussions)</option>
+			<option value="Global Admin" >Global Admin</option>
+			<option value="Probation (Posting)" >Probation (Posting)</option>
+			<option value="Moderator" >Moderator</option>
+			<option value="Banned" >Banned</option>
+			<option value="Member" >Member</option>
+			<option value="Administrator" >Administrator</option>
+			</select>
+		
+				</li>
+				<li>
+					<label for="ddOrder">sort results by</label>
+					<select name="UserOrder" class="SearchSelect"  id="ddOrder">
+		<option value=""  selected="selected">Username</option>
+			<option value="Date" >Date last active</option>
+			</select>
+		
+				</li>
+				<li>
+					<input type="submit" name="btnSubmit" value="Search" class="Button SearchButton" />
+				</li>
+			</ul>
+		</form>
+	</fieldset>
+</div><div class="ContentInfo Top">
+	<h1>Comments</h1>
+	<div class="PageInfo">
+		<p>Results 1 to 50 for <strong>nothing</strong></p>
+		<div class="PageList">Previous  <a href="http://www.206proof.com/forum/search.php?page=2&amp;PostBackAction=Search&amp;Keywords=emnace%3A&amp;Type=Comments&amp;btnSubmit=Search">Next</a> </div>
+	</div>
+</div>
+<div id="ContentBody">
+	<ol id="CommentResults"><li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14793">Logics + Justis + Micah B + Don&#039;t Mind The Kid... Check it out!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14793&amp;Focus=314795#Comment_314795">http://www.youtube.com/watch?v=zjmlqqIq8RE&amp;feature=related http://www.youtube.com/watch?v=GTlYbEdBpIU&amp;feature=related http://www.youtube.com/watch?v=21k4VJ7UrHk&amp;feature=related http://www.youtube.com/watch?v=NlufiQ2ZGH0&amp;feature=related  www.emnace.com twitter.com/Emnace  Manifest Of ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Nov 26th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14784">Vids from Eqpt + Emnace Release Party Nov. 20th</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14784&amp;Focus=314730#Comment_314730">http://www.youtube.com/watch?v=NlufiQ2ZGH0&amp;feature=player_embedded http://www.youtube.com/watch?v=us1Is4GsYyE   Follow us twitter.com/Emnace www.emnace.com</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Nov 24th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14728">Eqpt X Emnace Collabo T-shirts Release Party at Eqpt Store</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14728&amp;Focus=314352#Comment_314352">[IMG]http://i444.photobucket.com/albums/qq167/emptyhouse23/eqptxemnace_flyer.jpg[/IMG]  Come check us out on Nov. 20th for the release party of the&quot; Seattle's Finest&quot; Eqpt X Emnace collabo t-shirts at EQPT store. There will be free food, free drinks, and good music. Don't miss out, it's ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Nov 12th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14672">Emnace Photshoot ---&gt; Seattle&#039;s Finest Eqpt X Emnace w/ Sudana Pa</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14672&amp;Focus=313936#Comment_313936">http://www.youtube.com/watch?v=F2v-1MtPW2U</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Nov 1st 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14638">NW Takeover!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14638&amp;Focus=313482#Comment_313482">[IMG]http://i444.photobucket.com/albums/qq167/emptyhouse23/8068b6de.jpg[/IMG] [IMG]http://i444.photobucket.com/albums/qq167/emptyhouse23/emnace3.jpg[/IMG]</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Oct 23rd 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14591">Cute Girls Workin Hard Lovin Emnace!!!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14591&amp;Focus=313369#Comment_313369">[quote][cite] can you smell it?:[/cite]winner winner... You get the reward for posting the most boring promo video ever.....[/quote]    make sure to send my trophy! thanks homie lol</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Oct 21st 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14628">DON&#039;T SLEEP ON THESE!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14628&amp;Focus=313368#Comment_313368">[IMG]http://i444.photobucket.com/albums/qq167/emptyhouse23/emnace_collage.jpg[/IMG]   EXCLUSIVELY AT:  SEATTLE: EQPT URBANITY 35TH NORTH SKATESHOP RECESS KICKS &amp; TEES IN-FRINGE OFFICIALS VINTAGE  YAKIMA: NEW YAK CITY  BELLINGHAM: THE WORD  WWW.EMNACE.COM TWITTER.COM/EMNACE  MANIFEST OF THE ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Oct 21st 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14591">Cute Girls Workin Hard Lovin Emnace!!!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14591&amp;Focus=313083#Comment_313083">http://www.youtube.com/watch?v=ZR3stZasJO0</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Oct 14th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14561">Bad Ass Chick with Guns</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14561&amp;Focus=312804#Comment_312804">[IMG]http://i444.photobucket.com/albums/qq167/emptyhouse23/char_emnace.jpg[/IMG]</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Oct 8th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14514">Fly Chick rockin&#039; Emnace sweater</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14514&amp;Focus=312416#Comment_312416">[IMG]http://i444.photobucket.com/albums/qq167/emptyhouse23/lay.jpg[/IMG]    www.emnace.com twitter.com/emnace</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Oct 1st 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14482">Locals Supporting Locals, Seattle stand up!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14482&amp;Focus=312191#Comment_312191">http://vimeo.com/15245328 Louis V sportin' the new Urban Legends crewneck  http://www.youtube.com/watch?v=h8IA_h_eC1k&amp;feature=player_embedded Spaceman got the Fresh Throwback tee  http://www.youtube.com/watch?v=lAjm4pss-fc&amp;feature=player_embedded Micah B reppin' the Stank crew and Fresh ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Sep 27th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14419">Urban Legends Crew</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14419&amp;Focus=311672#Comment_311672">http://www.youtube.com/watch?v=WEEgE6pPwLY</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Sep 17th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14372">Mike co-owner/designer of Emnace talks about the new release Urban Legends crewneck.</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14372&amp;Focus=311204#Comment_311204">http://www.youtube.com/watch?v=O5st73-v2V0&amp;feature=player_embedded   WWW.EMNACE.COM TWITTER.COM/EMNACE</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Sep 13th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14247">Stank crew</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14247&amp;Focus=309943#Comment_309943">http://www.youtube.com/watch?v=N45XH5ch_jU</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Aug 30th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14224">Ben J of New Boyz sportin&#039; EMNACE NEEKO beanie</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14224&amp;Focus=309752#Comment_309752">http://www.youtube.com/watch?v=dAu_pjjj6BY&amp;feature=player_embedded</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Aug 27th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14223">EMNACE on the Streets Vol. 1</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14223&amp;Focus=309751#Comment_309751">http://www.youtube.com/watch?v=McGLHrrKv1I  ---&gt; Get your Emnace gear now At EQPT, URBANITY, and 35TH NORTH SKATESHOP  &quot;MANIFEST OF THE FRESH&quot;</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Aug 27th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14086">EMNACE::FALL/HOLIDAY 2010::PREVIEW</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14086&amp;Focus=307948#Comment_307948">[IMG]http://i444.photobucket.com/albums/qq167/emptyhouse23/wildneeko_purple.jpg[/IMG] [IMG]http://i444.photobucket.com/albums/qq167/emptyhouse23/urbandlegendcrew.jpg[/IMG] [IMG]http://i444.photobucket.com/albums/qq167/emptyhouse23/neekocrew_black.jpg[/IMG] ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Aug 11th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=13812">New Emnace V-neck shirts for Summer &#039;10</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=13812&amp;Focus=305102#Comment_305102">[IMG]http://i444.photobucket.com/albums/qq167/emptyhouse23/neekovnecks_emnace.jpg[/IMG]  Available only at EQPT Store and URBANITY Shop  www.emnace.com</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Jul 12th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=13519">SEATTLE&#039;S FINEST</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=13519&amp;Focus=301657#Comment_301657">[IMG]http://i444.photobucket.com/albums/qq167/emptyhouse23/weemnace23.jpg[/IMG]</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Jun 9th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=13505">Straight outta Seattle!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=13505&amp;Focus=301508#Comment_301508">[IMG]http://i444.photobucket.com/albums/qq167/emptyhouse23/Emnace15-1.jpg[/IMG] [IMG]http://i444.photobucket.com/albums/qq167/emptyhouse23/Emnace27-1.jpg[/IMG] [IMG]http://i444.photobucket.com/albums/qq167/emptyhouse23/Emnace18-1.jpg[/IMG]   www.emnace.com  Available in stores:  EQPT Recess ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Jun 8th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=13014">9dm Vs Reverse Live Grind Time Official WSHH</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=13014&amp;Focus=295271#Comment_295271">[url=http://www.youtube.com/watch?v=aEyXqbwVtlM] GRINDTIME [/url]  WWW.EMNACE.COM WWW.YOUNGGHANGAS.BLOGSPOT.COM</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Apr 21st 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12986">GOT EMNACE???</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12986&amp;Focus=295031#Comment_295031">[IMG]http://i444.photobucket.com/albums/qq167/emptyhouse23/emnace10-1.jpg[/IMG]</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Apr 19th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12914">Freeway X Jake One Stimulus Package Release Party @ The Crocodile</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12914&amp;Focus=293821#Comment_293821">[IMG]http://i444.photobucket.com/albums/qq167/emptyhouse23/IMG_9700.jpg[/IMG] [IMG]http://i444.photobucket.com/albums/qq167/emptyhouse23/IMG_9613.jpg[/IMG] [IMG]http://i444.photobucket.com/albums/qq167/emptyhouse23/IMG_9706.jpg[/IMG] ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Apr 12th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=11430">Big Tune ATL: Battle Footage</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=11430&amp;Focus=289787#Comment_289787">good shittt bro!!!! keep makin' those bad ass beats!!!</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Mar 11th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12543">The NorthWest Collection by Emnace</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12543&amp;Focus=289608#Comment_289608">[IMG]http://i444.photobucket.com/albums/qq167/emptyhouse23/nwtakeover.jpg[/IMG] [IMG]http://i444.photobucket.com/albums/qq167/emptyhouse23/nwtakeoverred.jpg[/IMG] [IMG]http://i444.photobucket.com/albums/qq167/emptyhouse23/freshthrowbackkelly.jpg[/IMG]  Available only @ EQPT North &amp; South, ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Mar 10th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12401">Flix from Magic S.L.A.T.E Feb 2010</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12401&amp;Focus=287489#Comment_287489">[IMG]http://i444.photobucket.com/albums/qq167/emptyhouse23/bgnemnace.jpg[/IMG] [IMG]http://i444.photobucket.com/albums/qq167/emptyhouse23/paulwallnemnace.jpg[/IMG] [IMG]http://i444.photobucket.com/albums/qq167/emptyhouse23/magic1-1.jpg[/IMG] ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Feb 24th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12260">Marcus D &amp; Logics on Emnace-Dlist Ad(s)</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12260&amp;Focus=285300#Comment_285300">[IMG]http://i444.photobucket.com/albums/qq167/emptyhouse23/emnace_dlist_ad_03_2010-2.jpg[/IMG]</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Feb 10th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12196">Check out Urbanity Shop @ U-Village. Show some love!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12196&amp;Focus=284424#Comment_284424">COME CHECK OUT URBANITY IT'S A BRAND NEW URBAN BOUTIQUE THAT IS LOCATED AT 5101 25TH AVE NE SEATTLE, WA 98105. WE HAVE A TON OF GREAT BRANDS SUCHS AS: ROCKSMITH, EMNACE, CAUSAL INDUSTREES, SUPRA, SUPER SUNGLASSES, G-SHOCK, IMAGINARY FOUNDATION, IN4MATION, AMONGST FRIENDS, AND RVCA.</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Feb 4th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12196">Check out Urbanity Shop @ U-Village. Show some love!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12196&amp;Focus=284422#Comment_284422">[IMG]http://i444.photobucket.com/albums/qq167/emptyhouse23/urbanity.jpg[/IMG] [IMG]http://i444.photobucket.com/albums/qq167/emptyhouse23/urbanity2.jpg[/IMG] [IMG]http://i444.photobucket.com/albums/qq167/emptyhouse23/urbanity1.jpg[/IMG]</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Feb 4th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12179">URBANITY NEW CLOTHING SHOP BY UW</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12179&amp;Focus=284401#Comment_284401">let's go and cop some Emnace</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Feb 4th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12164">Support Your Locals!!! Let&#039;s Go Seattle!!!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12164&amp;Focus=283700#Comment_283700">[IMG]http://i444.photobucket.com/albums/qq167/emptyhouse23/emnace_flyer_v5_back.jpg[/IMG]</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Feb 2nd 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12086">Mistah Fab rockin&#039; Emnace!!! Seattle Stand Up!!!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12086&amp;Focus=282400#Comment_282400">[IMG]http://i444.photobucket.com/albums/qq167/emptyhouse23/mistahfabrocksemnace.jpg[/IMG]  http://wethewest.com/videos.html?task=videodirectlink&amp;id=1137&amp;sms_ss=twitter</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Jan 26th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=11817">New Releases Emnace &quot;Fresh Throwback&quot;</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=11817&amp;Focus=278225#Comment_278225">[IMG]http://i444.photobucket.com/albums/qq167/emptyhouse23/freshthrowbackgray.jpg[/IMG] [IMG]http://i444.photobucket.com/albums/qq167/emptyhouse23/freshthrowbackblacktee_emnace.jpg[/IMG]  tell me what you think????  Get yours now @ EQPT SOUTH, URBANITY STORE, AND 35TH NORTH SKATE SHOP</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Jan 7th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=11716">BATTER&#039;S UP</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=11716&amp;Focus=276083#Comment_276083">[IMG]http://i444.photobucket.com/albums/qq167/emptyhouse23/battersredcrew.jpg[/IMG] [IMG]http://i444.photobucket.com/albums/qq167/emptyhouse23/battersupcrewneck.jpg[/IMG] [IMG]http://i444.photobucket.com/albums/qq167/emptyhouse23/8429_1254784453295_1340073058_20708.jpg[/IMG] ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 29th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=11469">GET FRESH WITH EMNACE!!!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=11469&amp;Focus=270398#Comment_270398">-SHOP AT EMNACE.COM OR YOU CAN STOP BY AT EQPT STORE, 35TH NORTH SKATE SHOP, AND THECOOL TO COP THE NEW EMNACE CREWS &amp; TEES!!!! SUPPORT YOUR LOCALS...LET'S GO!</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 8th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=11469">GET FRESH WITH EMNACE!!!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=11469&amp;Focus=270394#Comment_270394">[IMG]http://i444.photobucket.com/albums/qq167/emptyhouse23/emnacedlistmagazineads.jpg[/IMG]</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 8th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=11214">Who watched the fight??? Pacman vs Cotto</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=11214&amp;Focus=263399#Comment_263399">U mean Filipino, not little Asian lol.</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Nov 15th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=11214">Who watched the fight??? Pacman vs Cotto</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=11214&amp;Focus=263393#Comment_263393">Pacman is gonna PAC'd 'em up! Filipino represent!</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Nov 15th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=11048">MARCUS D X EMNACE CLOTHING LIMITED EDITION TEE</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=11048&amp;Focus=261057#Comment_261057">thanks u guys.</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Nov 3rd 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=11048">MARCUS D X EMNACE CLOTHING LIMITED EDITION TEE</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=11048&amp;Focus=260421#Comment_260421">[IMG]http://i444.photobucket.com/albums/qq167/emptyhouse23/marcusdxemnace.jpg[/IMG] -FRESH OFF THE PRESS, MARCUS D X EMNACE LIMITED EDITION TEE JUST CAME IN EARLY TODAY. SHOW SOME LOVE AND SUPPORT, MARCUS D!!! HOLLA AT ME IF YOU WANT TO COP ONE  THIS JOINT IS NOT IN STORE YET!!!</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Oct 28th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=10892">Fresh off the Press, New gear from Emnace!!! Check it out.</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=10892&amp;Focus=258484#Comment_258484">Check out these new tees from EMNACE...Get yours now!!!  [IMG]http://i444.photobucket.com/albums/qq167/emptyhouse23/artofwar3.jpg[/IMG] Art Of War 3rd Edition tee [IMG]http://i444.photobucket.com/albums/qq167/emptyhouse23/marinertee.jpg[/IMG] Batter's Up tee  Available now @ EQPT in U-District and ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Oct 7th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=10790">dope clothes online?</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=10790&amp;Focus=257775#Comment_257775">check out www.emnace.com</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Sep 30th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=10716">MArquez Vs Mayweather, Who will win???</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=10716&amp;Focus=256385#Comment_256385">[quote][cite] Wizdom:[/cite]i bet you wish you could say pacquiao would win huh??  marquez by split[/quote]  i want may to win so he can fight pac then pac will knock him out lol</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Sep 18th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=10716">MArquez Vs Mayweather, Who will win???</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=10716&amp;Focus=256380#Comment_256380">I think Mayweather will win the unanimous decision.</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Sep 18th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=10715">Check out this video!!!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=10715&amp;Focus=256377#Comment_256377">New Boyz rockin Emnace &quot; Art Of War 2&quot; tee..  http://www.youtube.com/watch?v=T-hOdKavZws</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Sep 18th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=10502">New Boyz &quot;You&#039;re A Jerk&quot; @ King Cat Theatre Pics</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=10502&amp;Focus=253462#Comment_253462">[IMG]http://i444.photobucket.com/albums/qq167/emptyhouse23/nb5.jpg[/IMG] [IMG]http://i444.photobucket.com/albums/qq167/emptyhouse23/nb6.jpg[/IMG] New Boyz Ben J rockin' Emnace: United We Express tee yellow!!! available @ SUREEL, 35th North, ILLUSION Skate Shop, and The Cool. ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Aug 26th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=10435">Gorilla Zoe Pics from King Cat Theater Aug. 13, 2009</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=10435&amp;Focus=252492#Comment_252492">[IMG]http://i444.photobucket.com/albums/qq167/emptyhouse23/5496_1217158712675_1340073058_19474.jpg[/IMG] Gorilla Zoe got EMNACE! [IMG]http://i444.photobucket.com/albums/qq167/emptyhouse23/5496_1217160272714_1340073058_19474.jpg[/IMG] Logics and Gorilla Zoe</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Aug 19th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=9965">Pista Sa Nayon July 26, 2009 @ SEWARD PARK, Seattle</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=9965&amp;Focus=244396#Comment_244396">[IMG]http://i444.photobucket.com/albums/qq167/emptyhouse23/emnace_pista2009_web.jpg[/IMG]  Come check it out!!! Lots of food, entertainment, gorgeous girls and of course EMNACE will have a booth there once again including with The Cool . So DON'T MISS OUT fellas!!!   www.emnace.com</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Jul 13th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=9885">In-Stores now</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=9885&amp;Focus=243077#Comment_243077">EMNACE  [IMG]http://i444.photobucket.com/albums/qq167/emptyhouse23/emnaceinstores.jpg[/IMG]     Shop online @ www.emnace.com Add us www.twitter.com/emnace            www.myspace.com/emnace_clothing</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Jul 6th 2009
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=9836">R.O.O.T.S Ministry Presents: Seaquence  09 and KABA Modern</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=9836&amp;Focus=242632#Comment_242632">[IMG]http://i444.photobucket.com/albums/qq167/emptyhouse23/SEAQUENCE_POSTER_Small.jpg[/IMG]   This Friday July 3rd Join R.O.O.T.S. Ministry along with Kaba Modern as well as Seattle's Elite Dance Crew will be participating in a night of dance, music, and other fun stuff.  Emnace Clothing is one of ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=7275">emnace</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Jul 2nd 2009
+		</li>
+	</ul>
+</li>
+</ol>
+</div><div class="ContentInfo Bottom">
+		<div class="PageInfo">
+			<p>Results 1 to 50 for <strong>nothing</strong></p>
+			<div class="PageList">Previous  <a href="http://www.206proof.com/forum/search.php?page=2&amp;PostBackAction=Search&amp;Keywords=emnace%3A&amp;Type=Comments&amp;btnSubmit=Search">Next</a> </div>
+		</div>
+		<a href="http://www.206proof.com/forum/search.php?PostBackAction=Search&amp;Keywords=emnace%3A&amp;Type=Comments&amp;btnSubmit=Search#pgtop">Top of Page</a>
+	</div></div>
+<div id="pgbottom" name="pgbottom"><p>&copy; 2007 <a href="http://www.206Proof.com">206Proof</a>. Powered by  <a href="http://www.getvanilla.com">Vanilla</a>.</p>
+</div>
+            <script type="text/javascript" src="http://www.google-analytics.com/urchin.js"></script>
+            <script type="text/javascript">
+            // <![CDATA[
+            _uacct="UA-2210503-1";
+            urchinTracker();
+            // ]]>
+            </script>
+</body>
+</html>

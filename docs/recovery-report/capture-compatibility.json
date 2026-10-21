@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17",
+  "updated_at": "2026-10-20",
   "scope": "Individually compared alternate captures for a source-linked Blue Scholars WordPress post. Raw captures remain in recovery/raw and their immutable capture records remain in the recovery checkpoint.",
   "records": [
     {
@@ -76,6 +76,20 @@
       "source_capture": "20160624043815",
       "referrer": "http://bluescholars.com/shows/",
       "decision": "Resource-specific same-site substitution: the 2020 Shows capture links the images.squarespace-cdn.com asset under the same Squarespace site ID and exact EUGENE.jpg filename. The recovered 2016 static1.squarespace.com file is used as the earlier same-site photograph because the later CDN response is unavailable locally. This preserves the historical image reference without claiming it is a poster or approving other later resources."
+    },
+    {
+      "timestamp": "20230627004401",
+      "original_url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/7/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/623-05142015/1371067617126/site.css?&filterFeatures=false",
+      "source_url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/8/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/623-05142015/1371067617126/site.css?&filterFeatures=false",
+      "sha256": "4b91af49447b73a4646a6e38c0332b08e7b2a6efbb6ead0590d121b2d3ffbb09",
+      "decision": "Same Squarespace site ID 51b8c20be4b0f1f8c9dcdf4c and template/build identifiers 623-05142015/1371067617126. The archived page links this stylesheet at a different variant path, which has no successful exact capture. The recovered /8 variant was captured 2023-06-27 and its 478233-byte body has SHA-256 4b91af49447b73a4646a6e38c0332b08e7b2a6efbb6ead0590d121b2d3ffbb09; the recovered /10 variant has the same digest. Reuse is limited to the missing shared site stylesheet for this Squarespace page, with the 2021 May 29 homepage capture as its era reference; no unrelated later resources are approved."
+    },
+    {
+      "timestamp": "20230627004404",
+      "original_url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/10/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/623-05142015/1371067617126/site.css?&filterFeatures=false",
+      "source_url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/10/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/623-05142015/1371067617126/site.css?&filterFeatures=false",
+      "sha256": "4b91af49447b73a4646a6e38c0332b08e7b2a6efbb6ead0590d121b2d3ffbb09",
+      "decision": "Exact /10 stylesheet response independently recovered at 2023-06-27 00:44:04 UTC (three seconds after the matching /8 capture); the 478233-byte body has SHA-256 4b91af49447b73a4646a6e38c0332b08e7b2a6efbb6ead0590d121b2d3ffbb09 and the same Squarespace site ID and template/build identifiers. An individual resource-compatibility review is recorded on this URL in recovery/state.json; the local source remains this exact /10 response, not an alias to /8."
     }
   ],
   "method": "Compared local capture timestamp, original URL, SHA-256, title, article text, visible comment count, image references, and navigation labels. The raw source bytes were not modified. October 17 entries additionally record exact homepage-linked Squarespace assets and the separate resource-specific compatibility review. Resource-specific image substitutions from the same Squarespace site are recorded separately in source/asset-aliases.json and verified by capture timestamp and SHA-256 during every build.",

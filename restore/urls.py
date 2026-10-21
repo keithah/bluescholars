@@ -66,6 +66,10 @@ def historical_route_prefix(url: str, fallback: str = '', capture: str = '') -> 
     """Keep dated WordPress and Squarespace blog links in their own editions."""
     parts=urlsplit(url)
     if parts.hostname=='02cd02a.netsolhost.com':return '/2009'
+    # A few WordPress permalinks were exposed both beneath /blog/ and at the
+    # domain root. Route those aliases by the page's actual capture date too.
+    if capture and capture<'20090101000000':return '/2007'
+    if capture and capture<SQUARESPACE_START:return '/2009'
     segments=parts.path.strip('/').split('/')
     if parts.path.startswith('/blog/') and capture and capture<SQUARESPACE_START:
         return '/2009'

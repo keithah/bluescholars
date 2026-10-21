@@ -1,7 +1,7 @@
 {
   "browser_visual_review": {
     "reference_capture": "https://web.archive.org/web/20210529010817/http://bluescholars.com/",
-    "viewport": "1265\u00d7712 browser screenshot; reference and local candidate were captured at the same viewport.",
+    "viewport": "1265×712 browser screenshot; reference and local candidate were captured at the same viewport.",
     "agent_reviewed": true,
     "human_review_claimed": false,
     "comparison": "After accounting for the Internet Archive toolbar and local historical-restoration notice, the 2013 Squarespace-era candidate matches the reference logo size and left offset, navigation placement, main-image left/top position, width and crop. The May 2021 photograph is the same locally recovered hero.",
@@ -32,63 +32,72 @@
     "responsive_limit": "The connected browser exposed a fixed viewport; 1440px, 768px and 390px screenshots were not available in this run. This is not a mobile visual-review pass."
   },
   "candidate_build": {
-    "recovered_pages": 1030,
+    "recovered_pages": 1054,
     "feed_recovered_pages": 12,
-    "placeholder_pages": 2265,
+    "placeholder_pages": 2221,
     "derived_pages": 1,
-    "local_source_assets": 1079,
-    "publish_approved": false,
+    "local_source_assets": 1568,
     "visual_fidelity_verified": false,
+    "publish_approved": false,
     "recovered_pages_by_edition": {
-      "2007": 44,
+      "2007": 53,
       "2009": 503,
-      "2013": 433
+      "2013": 439
     },
+    "livejournal_recovered_pages": 56,
     "issue_counts": {
-      "invalid_source": 9,
-      "missing_asset": 8982,
-      "font_not_packaged": 183,
-      "linked_asset_not_recovered": 393,
-      "external_media_link_only": 150
+      "missing_asset": 5390,
+      "font_not_packaged": 197,
+      "linked_asset_not_recovered": 396,
+      "external_media_link_only": 156
     },
-    "root_check": {
-      "ok": true,
-      "errors": 0
-    },
-    "project_subpath_check": {
-      "ok": true,
-      "errors": 0
-    },
-    "remote_automatic_resources": 0
+    "remote_automatic_resources": 0,
+    "visual_reviewed": true,
+    "built_for_checkpoint": "2026-10-21T01:05:14.955601+00:00",
+    "latest_batch_in_build": true,
+    "twitter_archive": {
+      "status": "built",
+      "captures": 34,
+      "recovered_capture_pages": 34,
+      "account_takeover_captures": 1,
+      "platform_error_captures": 3,
+      "recovered_assets": 675,
+      "unique_asset_payloads": 357
+    }
   },
   "candidate_checks": {
     "root": {
       "ok": true,
-      "errors": [],
-      "remote_automatic_resources": 0
+      "errors": 0,
+      "output": "/tmp/bluescholars-root-check/_candidate",
+      "base_path": "",
+      "checkpoint": "2026-10-21T01:05:14.955601+00:00",
+      "current_content_batch_built": true
     },
     "project_subpath": {
-      "base_path": "/bluescholars/",
       "ok": true,
-      "errors": [],
-      "remote_automatic_resources": 0
+      "errors": 0,
+      "output": "_candidate",
+      "base_path": "/bluescholars",
+      "checkpoint": "2026-10-21T01:05:14.955601+00:00",
+      "current_content_batch_built": true
     }
   },
   "checkpoint": {
-    "resource_urls": 12397,
-    "statuses": {
-      "queued": 5822,
-      "recovered": 4265,
-      "needs_review": 77,
-      "failed": 2233,
-      "excluded": 0
-    },
-    "indexed_capture_records": 26417,
+    "downloaded_bytes": 171623580,
+    "failed_attempts": 12003,
+    "generated_at": "2026-10-21T01:05:14.955601+00:00",
     "index_complete": true,
-    "unique_downloaded_files": 2394,
-    "downloaded_bytes": 156469114,
-    "failed_attempts": 10398,
-    "generated_at": "2026-10-18T10:26:35.472740+00:00"
+    "indexed_capture_records": 165338,
+    "resource_urls": 12822,
+    "statuses": {
+      "excluded": 4,
+      "failed": 2656,
+      "needs_review": 283,
+      "queued": 4898,
+      "recovered": 4981
+    },
+    "unique_downloaded_files": 2741
   },
   "latest_import": {
     "run_id": "38975520061",
@@ -166,14 +175,16 @@
     "unique_raw_files": 97,
     "visual_reviewed": false
   },
-  "updated_at": "2026-10-18T10:49:18Z",
+  "updated_at": "2026-10-20T23:40:14.211607+00:00",
   "tests": {
     "command": ".venv311/bin/python -m pytest -q",
-    "result": "217 passed",
-    "root_build_check": "passed (1,028 recovered pages; 2,235 placeholders; zero errors)",
-    "project_subpath_build_check": "passed (1,028 recovered pages; 2,235 placeholders; zero errors)",
-    "git_diff_check": "passed after last checkpoint",
-    "human_review_claimed": false
+    "result": "259 passed",
+    "compileall": "passed",
+    "shell_syntax": "passed",
+    "actionlint": "passed",
+    "git_diff_check": "passed after final report/package sync",
+    "human_review_claimed": false,
+    "agent_visual_review_recorded": true
   },
   "livejournal_archive": {
     "route": "/lj/",
@@ -282,8 +293,8 @@
   "resume_plan": {
     "latest_completed_workflow": "39044681280",
     "workflow_url": "https://github.com/keithah/bluescholars/actions/runs/39044681280",
-    "current_authoritative_checkpoint": "local recovery/state.json and recovery/raw/ (ignored by Git; preserve or package before changing machines)",
-    "next_action": ".venv311/bin/python -m restore capture-era --era 2013 --max-files 2000",
+    "current_authoritative_checkpoint": "local recovery/state.json and recovery/raw/ (updated through 2026-10-20T21:22:50.768083+00:00)",
+    "next_action": ".venv311/bin/python -m restore recover --max-files 75 --delay 0.2 --timeout 8 --retries 1; rebuild/check root and /bluescholars/ candidates after a further substantial recovery batch",
     "expected_scope": "Retry the 83 unresolved 2013-era URLs from the current local checkpoint; then rebuild/check root and /bluescholars/ candidates.",
     "publish_approved": false,
     "visual_fidelity_verified": false
@@ -805,14 +816,15 @@
     "merge_report": "recovery/imported/39044681280/merge-report.json"
   },
   "portable_archive": {
-    "filename": "bluescholars-restoration-2026-10-17.zip",
-    "path": "/tmp/bluescholars-restoration-2026-10-17.zip",
-    "contents": "candidate site, source, reports/screenshots, recovery state/index, and non-font raw sources",
-    "file_count": 7476,
+    "filename": "bluescholars-restoration-2026-10-20.zip",
+    "path": "/tmp/bluescholars-restoration-2026-10-20.zip",
+    "contents": "root/project-path generated site, reviewed source catalog and payloads, full resumable recovery checkpoint and non-font raw payloads, tools, tests, reports, and screenshots",
+    "file_count": 68027,
     "integrity_test": "passed",
     "font_binaries_included": false,
     "development_caches_or_credentials_included": false,
-    "checksum_note": "See adjacent .sha256 sidecar and final task handoff; checksum is kept outside the ZIP."
+    "checksum_sidecar": "/tmp/bluescholars-restoration-2026-10-20.zip.sha256",
+    "checksum_note": "The adjacent SHA-256 sidecar is generated after final ZIP validation; the hash is kept outside the ZIP to avoid a self-referential checksum."
   },
   "latest_2009_local_capture_pass": {
     "report": "recovery/era-2009-local-20261017-report.json",
@@ -1291,21 +1303,250 @@
   "checks": {
     "root": {
       "ok": true,
-      "errors": 0,
-      "output": "_site",
-      "base_path": ""
+      "errors": [],
+      "output": "temporary hard-linked copy; base path /"
     },
     "project_subpath": {
       "ok": true,
-      "errors": 0,
-      "output": "_candidate",
-      "base_path": "/bluescholars"
+      "errors": [],
+      "output": "repository _site; base path /bluescholars"
     }
   },
   "release_state": {
-    "classification": "unreviewed recovery preview",
     "publish_approved": false,
-    "visual_fidelity_verified": false,
-    "deployment_after_this_candidate_build": false
+    "human_visual_reviewed": false,
+    "source_review_complete": false,
+    "rights_permission_verified": true,
+    "rights_confirmation": "Owner confirmed permission in conversation on 2026-10-20; recorded as an owner attestation in source/review.json.",
+    "blockers": [
+      "Source/publication review remains unapproved; release build is gated until that review is genuinely completed.",
+      "The candidate still documents 2,221 placeholder pages and thousands of missing assets/media references."
+    ],
+    "last_release_build_attempt": {
+      "command": ".venv311/bin/python -m restore build --release --base-path /bluescholars",
+      "result": "blocked by design",
+      "reason": "Publication requires source, visual and publish review approval."
+    },
+    "pushed": false,
+    "deployed": false
+  },
+  "resource_urls": 12819,
+  "indexed_capture_records": 159338,
+  "statuses": {
+    "excluded": 4,
+    "failed": 2634,
+    "needs_review": 283,
+    "queued": 4923,
+    "recovered": 4975
+  },
+  "unique_downloaded_files": 2741,
+  "downloaded_bytes": 171623580,
+  "failed_attempts": 11873,
+  "index_complete": true,
+  "latest_local_recovery_batch": {
+    "run_at": "2026-10-20T22:19:32.919576+00:00",
+    "command": ".venv311/bin/python -m restore recover --max-files 75 --delay 0.2 --timeout 8 --retries 1",
+    "result": {
+      "generated_at": "2026-10-20T22:19:32.919576+00:00",
+      "index_complete": true,
+      "indexed_capture_records": 159338,
+      "resource_urls": 12819,
+      "statuses": {
+        "excluded": 4,
+        "failed": 2634,
+        "needs_review": 283,
+        "queued": 4923,
+        "recovered": 4975
+      },
+      "unique_downloaded_files": 2741,
+      "downloaded_bytes": 171623580,
+      "failed_attempts": 11873
+    }
+  },
+  "livejournal_2025_css_and_image_followup": {
+    "dated_at": "2026-10-20T18:43:27Z",
+    "latest_front_page": "https://bluescholars.livejournal.com/@@wayback:20250602155501:337788e62127",
+    "latest_front_page_capture": "20250602155501",
+    "source_page_sha256": "337788e62127b5c1a4e8dd4acbd93f0b4a87de8ec6a69291259757996907ac27",
+    "linked_2025_stylesheets_reviewed_and_promoted": 4,
+    "additional_individually_reviewed_platform_assets_promoted": 7,
+    "source_collection_promoted_records_total": 4830,
+    "release_approval_flags": {
+      "visual_fidelity_verified": false,
+      "publish_approved": false
+    },
+    "exact_css_image_index": {
+      "queries": 66,
+      "indexed_capture_records": 27995,
+      "queries_with_resume_cursor": 66,
+      "failed_queries": 10,
+      "failure_types": {
+        "http_429": 6,
+        "connection_refused": 4
+      },
+      "report": "livejournal-2025-css-asset-index.json"
+    },
+    "page_photo_proxy_index": {
+      "exact_urls": 23,
+      "capture_records": 18,
+      "capture_mimetypes": {
+        "warc/revisit": 13,
+        "text/html": 5
+      },
+      "failed_or_incomplete_queries": 4,
+      "validated_downloads": 0,
+      "report": "livejournal-2025-image-proxy-index.json",
+      "linked_eventful_image_recovered": {
+        "source_url": "http://static.eventful.com/store/reporting/performers/stickers/spid/P0-001-000056407-5/sticker_400x433.png",
+        "proxy_url": "https://imgprx.livejournal.net/cecec9fe2ebfde9edf35af1e54bdd9d5ed98fbd4/qyHITtc-mye0R2MdMP8tBZaNBAWFYh2czJkkh7fhnaNyaRIHn2Iifbr7qzdEcL-UPbz6IJ5nkQ3_mvBeoqf_89dFqUy2MofxYr9-xJUDyt593SP_VdJOoWJ7W-gDA1W5jzyR-8mwB4T2Noy-WcSpa_DQVQeO6cROZ0Lf2PI5--s",
+        "capture": "20210125004449",
+        "sha256": "8a711dbbdb9c19dea8f86b5b699019920a3ed99b371e819a9e96c492ce1d367f",
+        "bytes": 57465,
+        "dimensions": "400x433",
+        "alternate_identical_capture": "20141130085328",
+        "evidence": "Adjacent original entry embeds an Eventful contest link and a copy-code textarea with the exact sticker URL and dimensions; both successful capture rows share the same CDX digest.",
+        "status": "captured and promoted as a reviewed local source; resource-specific alias is documented in source/asset-aliases.json",
+        "scope": "One exact image only; unrelated image-proxy URLs are not substituted."
+      }
+    },
+    "platform_css_images": {
+      "sha256s": [
+        "e3ec6f5f8a01ceaaafd7de19f41d88013fe2d4c02a88c94b04899a775a72d358",
+        "78cb12bdad05e5b15f8807717b08e16f36a5596cf2abd0d8f27db2a2c2e21627",
+        "0a25519ca5379afd41fde8abf065d8105da849fcb1babf5b96f91b4b406bf186",
+        "09416e85998ce2c89943da3aa3563633045a0135d33f8124818dda75075bfd73",
+        "8dc85e4e7c3cdf5be6cb7c7d406a77349bdddd1eca6e6082df1c79eaa1202273",
+        "7ccdb8af9d22492d8af4d5a0ef5706962f2a081ca32c97f63dc2c3885ada4d06",
+        "95e26026ce879da876810df5070ca0f17e8a5300da0814a2c1aac4aef8a7be65",
+        "18220bbba0e1f98301f2f248eff119179e41ac33bcc6544f8f5ec2165fdc88f2"
+      ],
+      "compatibility_decisions_individual": true,
+      "dates": {
+        "before_target_capture": 4,
+        "after_target_same_day": 4
+      }
+    },
+    "article_image_gap": {
+      "direct_origin_http_status": 403,
+      "archive_replay_response": "114-byte HTML lander",
+      "note": "No image-proxy URL yielded image bytes. One linked post image was recovered separately from the exact Eventful image URL printed in the same post’s preserved copy-code block; its one-item proxy alias is documented in source/asset-aliases.json."
+    },
+    "build_check_before_latest_source_promotions": {
+      "base_path": "/bluescholars",
+      "ok": true,
+      "errors": 0,
+      "artifact": "/tmp/bluescholars-lj-2025-project-check.json"
+    },
+    "test_suite_after_renderer_regression_fix": {
+      "command": ".venv311/bin/python -m pytest -q",
+      "passed": 256
+    },
+    "renderer_fix": "Disabled-form notices now use archive-disabled-form-notice, avoiding a collision with the captured LiveJournal theme .archive-notice selector. Regression was observed failing before the fix and passing after it.",
+    "current_recovery_status": {
+      "resource_urls": 12642,
+      "queued": 5350,
+      "recovered": 4810,
+      "needs_review": 96,
+      "failed": 2382,
+      "excluded": 4,
+      "indexed_capture_records": 77085,
+      "unique_downloaded_files": 2581,
+      "downloaded_bytes": 163119834,
+      "failed_attempts": 11052
+    },
+    "resume": "Retry incomplete exact URL indexes with .venv311/bin/python -m restore index --url \"<exact URL>\" --match exact --max-pages 1 --delay 1 --timeout 40 --retries 2; for indexed image payloads use their exact capture timestamps and validate response bytes before compatibility review."
+  },
+  "latest_local_verification": {
+    "full_suite": "262 passed (latest complete suite; targeted review tests re-run after rights metadata update)",
+    "targeted_review_tests": "7 passed",
+    "compileall": "passed",
+    "shell_syntax": "passed",
+    "diff_check": "passed",
+    "root_candidate_check": {
+      "ok": true,
+      "errors": 0
+    },
+    "project_subpath_candidate_check": {
+      "ok": true,
+      "errors": 0
+    },
+    "candidate_build": {
+      "recovered_pages": 1054,
+      "feed_recovered_pages": 12,
+      "placeholder_pages": 2221,
+      "local_source_assets": 1568,
+      "issues": {
+        "missing_asset": 5390,
+        "font_not_packaged": 197,
+        "linked_asset_not_recovered": 396,
+        "external_media_link_only": 156
+      }
+    },
+    "root_path": "Fresh isolated root-mounted build/check from the same checkpoint; zero errors."
+  },
+  "latest_visual_review_record": {
+    "dated_at": "2026-10-20",
+    "tests": "262 passed; targeted review metadata tests 7 passed",
+    "agent_visual_reviewed": true,
+    "human_visual_reviewed": false,
+    "publish_approved": false,
+    "rights_permission_confirmed": true,
+    "approval_record": "source/review.json",
+    "approval_note": "Owner permission is recorded separately from source/publication approval."
+  },
+  "release_guard": {
+    "command": ".venv311/bin/python -m restore build --release --base-path /bluescholars",
+    "result": "blocked by design",
+    "reason": "Publication requires source, visual and publish review approval; source/publication approval remains false after owner permission was recorded."
+  },
+  "generated_at": "2026-10-20T22:19:32.919576+00:00",
+  "twitter_archive": {
+    "profile": "https://twitter.com/prometheusbrown",
+    "archive": "Internet Archive Wayback Machine",
+    "index_url": "https://web.archive.org/cdx/search/cdx?url=twitter.com%2Fprometheusbrown&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&collapse=digest",
+    "inventory_count": 34,
+    "raw_captures_recovered": 34,
+    "classification_counts": {
+      "later_account_takeover": 1,
+      "platform_error": 3,
+      "profile_content": 30
+    },
+    "capture_html_bytes": 9947603,
+    "linked_asset_source_capture_pairs": 774,
+    "linked_assets_recovered": 675,
+    "linked_assets_failed": 99,
+    "linked_asset_unique_payloads": 357,
+    "linked_asset_unique_bytes": 20631030,
+    "rendered_capture_pages": 34,
+    "automatic_remote_dependencies": 0,
+    "source_manifest": "recovery/twitter-prometheusbrown/manifest.json",
+    "interpretation": "The November 2024 SQUATTING capture is retained but separated as a later account takeover. Three captures are JavaScript-only provider errors. The remaining 99 failed linked assets returned 404; this does not prove there are no alternate snapshots."
+  },
+  "twitter_asset_resume": {
+    "command": ".venv311/bin/python scripts/recover_twitter_assets.py --max-files 75 --delay 0.25 --timeout 30",
+    "retry_failed_command": ".venv311/bin/python scripts/recover_twitter_assets.py --max-files 75 --delay 0.25 --timeout 30 --retry-failed",
+    "remaining_failed_pairs": 99
+  },
+  "public_source_redactions": {
+    "unique_payloads": 735,
+    "catalog_references": 1095,
+    "credential_fields": [
+      "googleMapsStaticApiKey",
+      "Stripe publishable API keys"
+    ],
+    "originals": "Exact original payloads remain only in the ignored local recovery cache; they are excluded from Git and the portable package."
+  },
+  "source_candidate_verification": {
+    "build": "reviewed_source_build",
+    "base_path": "/bluescholars",
+    "recovered_pages": 1049,
+    "placeholder_pages": 2208,
+    "local_source_assets": 1505,
+    "offline_check": {
+      "ok": true,
+      "errors": []
+    },
+    "release_approval": false,
+    "human_visual_review": false
   }
 }

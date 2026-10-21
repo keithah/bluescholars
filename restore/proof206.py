@@ -8,6 +8,7 @@ import re
 import shutil
 from bisect import bisect_right
 from collections import defaultdict
+from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import unquote, urljoin, urlsplit
 
@@ -138,6 +139,57 @@ def _read_verified(root: Path, row: dict) -> bytes:
         raise ValueError(f"206proof hash mismatch for {row.get('original')}")
     validate_payload(body, row["kind"])
     return body
+
+
+def promote_206proof(root: Path, reviewed: bool = False) -> dict:
+    """Copy hash-verified 206Proof captures into the publishable source store."""
+    if not reviewed:
+        raise ValueError("206Proof source review is required: pass --reviewed after inspection")
+    root = Path(root).resolve()
+    recovery_path = root / "recovery/206proof/recovered-resources.json"
+    if not recovery_path.is_file():
+        raise ValueError("Run 206Proof recovery before promoting its sources")
+    resources = json.loads(recovery_path.read_text(encoding="utf-8")).get("resources", [])
+    raw_root = (root / "recovery/206proof/raw").resolve()
+    target_root = root / "source/206proof/raw"
+    promoted = []
+    for row in resources:
+        if (row.get("result") != "recovered" or row.get("kind") not in ("html", "css", "image")
+                or not row.get("raw_path")):
+            continue
+        source = (root / row["raw_path"]).resolve()
+        if not source.is_relative_to(raw_root):
+            raise ValueError(f"206Proof source path escapes the recovery store: {row.get('original')}")
+        body = _read_verified(root, row)
+        destination = target_root / source.name
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        if destination.is_file():
+            if hashlib.sha256(destination.read_bytes()).hexdigest() != row.get("sha256"):
+                raise ValueError(f"Existing 206Proof source conflicts with capture hash: {row.get('original')}")
+        else:
+            destination.write_bytes(body)
+        copied = dict(row)
+        copied.update(raw_path=destination.relative_to(root).as_posix(), source_reviewed=True)
+        promoted.append(copied)
+    if not promoted:
+        raise ValueError("No hash-verified 206Proof pages or assets are available to promote")
+    manifest_path = root / "source/206proof/recovered-resources.json"
+    manifest_path.parent.mkdir(parents=True, exist_ok=True)
+    manifest_path.write_text(json.dumps({
+        "version": 1,
+        "resources": promoted,
+        "source_review": {
+            "actor": "Codex agent", "reviewed_at": datetime.now(timezone.utc).isoformat(),
+            "verified_resources": len(promoted),
+            "note": "Only hash-verified recovered HTML, CSS and image captures are promoted; gaps stay documented in recovery reports.",
+        },
+    }, indent=2) + "\n", encoding="utf-8")
+    (root / "source/review.json").write_text(json.dumps({
+        "publish_approved": False, "visual_reviewed": False,
+        "note": "206Proof source collection changed; review the generated site before publishing.",
+    }, indent=2) + "\n", encoding="utf-8")
+    return {"promoted": len(promoted), "manifest": manifest_path.relative_to(root).as_posix(),
+            "source_reviewed": True}
 
 
 def _hub_page(base: str, page_counts: dict[str, int], missing: dict[str, int]) -> str:
@@ -348,11 +400,10 @@ def build_206proof_archive(root: Path, output: Path, base: str = "", candidate: 
     output = Path(output).resolve()
     if output.parent != root or output.name not in ("_candidate", "_site"):
         raise ValueError("Output must be the project's _candidate or _site directory")
-    if not candidate:
-        return {"status": "not_in_reviewed_sources", "editions": {}}
-    manifest_path = root / "recovery/206proof/recovered-resources.json"
+    manifest_path = (root / "recovery/206proof/recovered-resources.json" if candidate
+                     else root / "source/206proof/recovered-resources.json")
     if not manifest_path.exists():
-        return {"status": "not_available", "editions": {}}
+        return {"status": "not_in_reviewed_sources" if not candidate else "not_available", "editions": {}}
     resources = json.loads(manifest_path.read_text()).get("resources", [])
     pages = select_pages(resources)
     if not any(pages.values()):
@@ -526,13 +577,15 @@ def build_206proof_archive(root: Path, output: Path, base: str = "", candidate: 
     (output / "206proof/archive-note.css").write_text(NOTICE_CSS, encoding="utf-8")
     (output / "206proof/hub.css").write_text(HUB_CSS, encoding="utf-8")
     report = {
-        "status": "built", "candidate_only": True, "base_path": base,
+        "status": "built", "candidate_only": bool(candidate), "base_path": base,
         "editions": edition_reports,
         "unique_local_assets": len({r["sha256"] for r, _ in valid if r["kind"] in ("css", "image")}),
         "linked_gap_pages": len(missing_pages),
         "issues": list({json.dumps(i, sort_keys=True): i for i in issues}.values()),
         "remote_automatic_dependencies": [],
-        "note": "Captured pages and source-provenance dates are preserved by edition. This is a local candidate; public redistribution rights and visual review remain outstanding.",
+        "note": ("Captured pages and source-provenance dates are preserved by edition. This is a local candidate; source and publication review remain outstanding."
+                 if candidate else
+                 "Hash-verified reviewed captures and source-provenance dates are preserved by edition; unavailable pages remain documented as gaps."),
     }
     (output / "206proof/recovery-report.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     (output / ".nojekyll").touch()

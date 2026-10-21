@@ -1,0 +1,367 @@
+{
+  "source_page": "https://bluescholars.livejournal.com/@@wayback:20250602155501:337788e62127",
+  "page_capture": "20250602155501",
+  "source_linked_image_proxy_urls": 23,
+  "exact_queries": 23,
+  "capture_records": 18,
+  "capture_mimetypes": {
+    "warc/revisit": 13,
+    "text/html": 5
+  },
+  "successful_payloads_recovered": 0,
+  "failed_or_incomplete_queries": 4,
+  "note": "This report covers only image-proxy resources referenced by the latest recovered journal page and its matching captured custom stylesheet. CDX rows with mimetype warc/revisit are not payload recoveries. 2026-10-20 requests encountered Wayback connection refusals; each exact index checkpoint is retained in recovery/state.json for resumption.",
+  "failures": [
+    {
+      "url": "https://imgprx.livejournal.net/bc3b8eed1687fdac39424e39622bc4da8ff5f34a/qyHITtc-mye0R2MdMP8tBfrxwGSSLPabtQAbdTXqnLwpCpzRFyRjWYmhVrbFvUpdG79WoNH9rgXC-qe618_Z0Xw8mT5gcEYrarMPqADnGso",
+      "error": "HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /cdx/search/cdx?url=https%3A%2F%2Fimgprx.livejournal.net%2Fbc3b8eed1687fdac39424e39622bc4da8ff5f34a%2FqyHITtc-mye0R2MdMP8tBfrxwGSSLPabtQAbdTXqnLwpCpzRFyRjWYmhVrbFvUpdG79WoNH9rgXC-qe618_Z0Xw8mT5gcEYrarMPqADnGso&matchType=exact&output=json&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest&showResumeKey=true&limit=500 (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "url": "https://imgprx.livejournal.net/4f25b95c92044097147f11863974a0e17d8e2f12/qyHITtc-mye0R2MdMP8tBfrxwGSSLPabtQAbdTXqnLwpCpzRFyRjWYmhVrbFvUpdG79WoNH9rgXC-qe618_Z0WpPWZRFrAikIMJ79n_BXBc",
+      "error": "HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /cdx/search/cdx?url=https%3A%2F%2Fimgprx.livejournal.net%2F4f25b95c92044097147f11863974a0e17d8e2f12%2FqyHITtc-mye0R2MdMP8tBfrxwGSSLPabtQAbdTXqnLwpCpzRFyRjWYmhVrbFvUpdG79WoNH9rgXC-qe618_Z0WpPWZRFrAikIMJ79n_BXBc&matchType=exact&output=json&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest&showResumeKey=true&limit=500 (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "url": "https://imgprx.livejournal.net/159ae224a31d5f6ec192dbf4df47bde5ef40de90/qyHITtc-mye0R2MdMP8tBfrxwGSSLPabtQAbdTXqnLwpCpzRFyRjWYmhVrbFvUpdG79WoNH9rgXC-qe618_Z0XXmBedDV1sR12NWivQ89k0",
+      "error": "HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /cdx/search/cdx?url=https%3A%2F%2Fimgprx.livejournal.net%2F159ae224a31d5f6ec192dbf4df47bde5ef40de90%2FqyHITtc-mye0R2MdMP8tBfrxwGSSLPabtQAbdTXqnLwpCpzRFyRjWYmhVrbFvUpdG79WoNH9rgXC-qe618_Z0XXmBedDV1sR12NWivQ89k0&matchType=exact&output=json&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest&showResumeKey=true&limit=500 (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    {
+      "url": "https://imgprx.livejournal.net/dc77ede0000d88fb20526b02eddf073aeda734fa/eJKme4XdFlFurYbG7LErBNyTHJgdtL4lNetxb6QaDbht3qqfL0FuPWZ2ANKu81ClaZS5WXix93qXN7LxTbG8iuRNgUH6pAbTxXNDQ3nOhFc",
+      "error": "HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /cdx/search/cdx?url=https%3A%2F%2Fimgprx.livejournal.net%2Fdc77ede0000d88fb20526b02eddf073aeda734fa%2FeJKme4XdFlFurYbG7LErBNyTHJgdtL4lNetxb6QaDbht3qqfL0FuPWZ2ANKu81ClaZS5WXix93qXN7LxTbG8iuRNgUH6pAbTxXNDQ3nOhFc&matchType=exact&output=json&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest&showResumeKey=true&limit=500 (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    }
+  ],
+  "results": [
+    {
+      "url": "https://imgprx.livejournal.net/cecec9fe2ebfde9edf35af1e54bdd9d5ed98fbd4/qyHITtc-mye0R2MdMP8tBZaNBAWFYh2czJkkh7fhnaNyaRIHn2Iifbr7qzdEcL-UPbz6IJ5nkQ3_mvBeoqf_89dFqUy2MofxYr9-xJUDyt593SP_VdJOoWJ7W-gDA1W5jzyR-8mwB4T2Noy-WcSpa_DQVQeO6cROZ0Lf2PI5--s",
+      "index_complete": true,
+      "resume_key_present": false,
+      "index_error": null,
+      "capture_rows": [],
+      "payload_downloaded": false,
+      "resource_status": "queued"
+    },
+    {
+      "url": "https://imgprx.livejournal.net/7350b3a2d6c74db363d0fcfb0a4d6931748f5250/qyHITtc-mye0R2MdMP8tBfrxwGSSLPabtQAbdTXqnLwpCpzRFyRjWYmhVrbFvUpdiGWRXGggceaHWReWOInBYvdYxJCOTJZPu_BCQNu8foE",
+      "index_complete": true,
+      "resume_key_present": false,
+      "index_error": null,
+      "capture_rows": [
+        {
+          "timestamp": "20250602155626",
+          "mimetype": "warc/revisit",
+          "statuscode": "-",
+          "digest": "7HMQKXUYPBZDUEQGHND5JINF6WGD5MPJ"
+        }
+      ],
+      "payload_downloaded": false,
+      "resource_status": "queued"
+    },
+    {
+      "url": "https://imgprx.livejournal.net/6aa280b27b6f7e20735a7e568cdd775c4c252742/qyHITtc-mye0R2MdMP8tBfrxwGSSLPabtQAbdTXqnLwpCpzRFyRjWYmhVrbFvUpdiGWRXGggceaHWReWOInBYoSYnbOLVNX8XPYXLwonlzg",
+      "index_complete": true,
+      "resume_key_present": false,
+      "index_error": null,
+      "capture_rows": [
+        {
+          "timestamp": "20250602155550",
+          "mimetype": "warc/revisit",
+          "statuscode": "-",
+          "digest": "7HMQKXUYPBZDUEQGHND5JINF6WGD5MPJ"
+        }
+      ],
+      "payload_downloaded": false,
+      "resource_status": "queued"
+    },
+    {
+      "url": "https://imgprx.livejournal.net/2d7b795aa5cea000dc5f89544d2659dfc621b7b8/qyHITtc-mye0R2MdMP8tBfrxwGSSLPabtQAbdTXqnLwpCpzRFyRjWYmhVrbFvUpdXfRnqOvhZ6Xvxz_bJP7Lzplj_N8qDlWaeMIw2rSPrck",
+      "index_complete": true,
+      "resume_key_present": false,
+      "index_error": null,
+      "capture_rows": [
+        {
+          "timestamp": "20250602155539",
+          "mimetype": "warc/revisit",
+          "statuscode": "-",
+          "digest": "7HMQKXUYPBZDUEQGHND5JINF6WGD5MPJ"
+        }
+      ],
+      "payload_downloaded": false,
+      "resource_status": "queued"
+    },
+    {
+      "url": "https://imgprx.livejournal.net/3fc069218d7a7f2184fbdbf62df6949d3374632d/qyHITtc-mye0R2MdMP8tBfrxwGSSLPabtQAbdTXqnLwpCpzRFyRjWYmhVrbFvUpdiGWRXGggceaHWReWOInBYlB0Oi8194LrSeca8qoi0WA",
+      "index_complete": true,
+      "resume_key_present": false,
+      "index_error": null,
+      "capture_rows": [
+        {
+          "timestamp": "20250602155516",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "7HMQKXUYPBZDUEQGHND5JINF6WGD5MPJ"
+        }
+      ],
+      "payload_downloaded": false,
+      "resource_status": "queued"
+    },
+    {
+      "url": "https://imgprx.livejournal.net/aa885d0a4046aaff55d4eef676665a647fffd043/qyHITtc-mye0R2MdMP8tBfrxwGSSLPabtQAbdTXqnLwpCpzRFyRjWYmhVrbFvUpdiGWRXGggceaHWReWOInBYorow6xlTeF2Wo0XeF9_Cr4",
+      "index_complete": true,
+      "resume_key_present": false,
+      "index_error": null,
+      "capture_rows": [
+        {
+          "timestamp": "20250602155616",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "7HMQKXUYPBZDUEQGHND5JINF6WGD5MPJ"
+        }
+      ],
+      "payload_downloaded": false,
+      "resource_status": "queued"
+    },
+    {
+      "url": "https://imgprx.livejournal.net/790d0409c7e8b667acd714b6ea7d4c242dd5b3e7/qyHITtc-mye0R2MdMP8tBfrxwGSSLPabtQAbdTXqnLwpCpzRFyRjWYmhVrbFvUpdLOqLuv8tLnLIJ4mVfVtxpJtY6j7VegW60bEIEI4FMbI",
+      "index_complete": true,
+      "resume_key_present": false,
+      "index_error": null,
+      "capture_rows": [
+        {
+          "timestamp": "20250602155521",
+          "mimetype": "warc/revisit",
+          "statuscode": "-",
+          "digest": "7HMQKXUYPBZDUEQGHND5JINF6WGD5MPJ"
+        }
+      ],
+      "payload_downloaded": false,
+      "resource_status": "queued"
+    },
+    {
+      "url": "https://imgprx.livejournal.net/4b6eea8feaf3b6f7f20b79b0bc739857b5965898/qyHITtc-mye0R2MdMP8tBfrxwGSSLPabtQAbdTXqnLwpCpzRFyRjWYmhVrbFvUpdndqYeM4U7Fsd0XY5r8T7taognAXCW3gnZ7pNtmhKNog",
+      "index_complete": true,
+      "resume_key_present": false,
+      "index_error": null,
+      "capture_rows": [
+        {
+          "timestamp": "20250602155551",
+          "mimetype": "warc/revisit",
+          "statuscode": "-",
+          "digest": "7HMQKXUYPBZDUEQGHND5JINF6WGD5MPJ"
+        }
+      ],
+      "payload_downloaded": false,
+      "resource_status": "queued"
+    },
+    {
+      "url": "https://imgprx.livejournal.net/83dd2631b4ca640f4ecd1b578b0ba0932bfa5758/qyHITtc-mye0R2MdMP8tBfrxwGSSLPabtQAbdTXqnLwpCpzRFyRjWYmhVrbFvUpd3MjyW1ZaN9gYpkSx7dXb511Ethog52SID3DxIdSa5LI",
+      "index_complete": true,
+      "resume_key_present": false,
+      "index_error": null,
+      "capture_rows": [
+        {
+          "timestamp": "20250602155546",
+          "mimetype": "warc/revisit",
+          "statuscode": "-",
+          "digest": "7HMQKXUYPBZDUEQGHND5JINF6WGD5MPJ"
+        }
+      ],
+      "payload_downloaded": false,
+      "resource_status": "queued"
+    },
+    {
+      "url": "https://imgprx.livejournal.net/49552dbbbaa073a59b3352fa586f51b143dda3ed/qyHITtc-mye0R2MdMP8tBfrxwGSSLPabtQAbdTXqnLwpCpzRFyRjWYmhVrbFvUpdZbYpVE5dYoD61ICAlcBwQmZV5XbEsoer152udDdv8x0",
+      "index_complete": true,
+      "resume_key_present": false,
+      "index_error": null,
+      "capture_rows": [
+        {
+          "timestamp": "20250602155539",
+          "mimetype": "warc/revisit",
+          "statuscode": "-",
+          "digest": "7HMQKXUYPBZDUEQGHND5JINF6WGD5MPJ"
+        }
+      ],
+      "payload_downloaded": false,
+      "resource_status": "queued"
+    },
+    {
+      "url": "https://imgprx.livejournal.net/0d604dc67a1f814d703fb7223443b3b597df2612/qyHITtc-mye0R2MdMP8tBfrxwGSSLPabtQAbdTXqnLwpCpzRFyRjWYmhVrbFvUpdo_HPFcx-3ukLEWKeLhd4_92fuO3E-7m2PAvfYFTiYMY",
+      "index_complete": true,
+      "resume_key_present": false,
+      "index_error": null,
+      "capture_rows": [
+        {
+          "timestamp": "20250602155535",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "7HMQKXUYPBZDUEQGHND5JINF6WGD5MPJ"
+        }
+      ],
+      "payload_downloaded": false,
+      "resource_status": "queued"
+    },
+    {
+      "url": "https://imgprx.livejournal.net/480a2f060d59b86ac0b55947b1cbbffd5703a4e1/qyHITtc-mye0R2MdMP8tBfrxwGSSLPabtQAbdTXqnLwpCpzRFyRjWYmhVrbFvUpdrCUqp2iLYV767po4GnIv0BOQlQjb-zFArsCAfQa32o4",
+      "index_complete": true,
+      "resume_key_present": false,
+      "index_error": null,
+      "capture_rows": [
+        {
+          "timestamp": "20250602155609",
+          "mimetype": "warc/revisit",
+          "statuscode": "-",
+          "digest": "7HMQKXUYPBZDUEQGHND5JINF6WGD5MPJ"
+        }
+      ],
+      "payload_downloaded": false,
+      "resource_status": "queued"
+    },
+    {
+      "url": "https://imgprx.livejournal.net/81029a95de586dd009277694851cea29f32cd88b/qyHITtc-mye0R2MdMP8tBfrxwGSSLPabtQAbdTXqnLwpCpzRFyRjWYmhVrbFvUpdFSA7bj7pQZcczNoHwDcc5XtbMVmUU9xkQPQ09VYz6Z0",
+      "index_complete": true,
+      "resume_key_present": false,
+      "index_error": null,
+      "capture_rows": [
+        {
+          "timestamp": "20250602155548",
+          "mimetype": "warc/revisit",
+          "statuscode": "-",
+          "digest": "7HMQKXUYPBZDUEQGHND5JINF6WGD5MPJ"
+        }
+      ],
+      "payload_downloaded": false,
+      "resource_status": "queued"
+    },
+    {
+      "url": "https://imgprx.livejournal.net/1752bf77d607ead45d4d473ce1e5809ef5e5e75b/qyHITtc-mye0R2MdMP8tBfrxwGSSLPabtQAbdTXqnLwpCpzRFyRjWYmhVrbFvUpdR9o8kzIv3AE6_t_ACeC0-b2VMeucOtOQcu1jpBCe7PE",
+      "index_complete": true,
+      "resume_key_present": false,
+      "index_error": null,
+      "capture_rows": [
+        {
+          "timestamp": "20250602155518",
+          "mimetype": "warc/revisit",
+          "statuscode": "-",
+          "digest": "7HMQKXUYPBZDUEQGHND5JINF6WGD5MPJ"
+        }
+      ],
+      "payload_downloaded": false,
+      "resource_status": "queued"
+    },
+    {
+      "url": "https://imgprx.livejournal.net/0a8ec57c84f0f5e98596c749152a55155495c047/qyHITtc-mye0R2MdMP8tBfrxwGSSLPabtQAbdTXqnLwpCpzRFyRjWYmhVrbFvUpdh2E5cGttWOrHuHfFGfUzd0629lvcKKrGjQo081Imf3M",
+      "index_complete": true,
+      "resume_key_present": false,
+      "index_error": null,
+      "capture_rows": [
+        {
+          "timestamp": "20250602155547",
+          "mimetype": "warc/revisit",
+          "statuscode": "-",
+          "digest": "7HMQKXUYPBZDUEQGHND5JINF6WGD5MPJ"
+        }
+      ],
+      "payload_downloaded": false,
+      "resource_status": "queued"
+    },
+    {
+      "url": "https://imgprx.livejournal.net/c7db5aa1dc4a2d9b787d1136bd89e8b29a731562/qyHITtc-mye0R2MdMP8tBfrxwGSSLPabtQAbdTXqnLwpCpzRFyRjWYmhVrbFvUpdugFpQRPZXdAKP0RmdJUH_Rlk_JcLb8_ktPp6DsiJdpg",
+      "index_complete": true,
+      "resume_key_present": false,
+      "index_error": null,
+      "capture_rows": [
+        {
+          "timestamp": "20250602155516",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "7HMQKXUYPBZDUEQGHND5JINF6WGD5MPJ"
+        }
+      ],
+      "payload_downloaded": false,
+      "resource_status": "queued"
+    },
+    {
+      "url": "https://imgprx.livejournal.net/e7cc0902d4cbc76e84f159e4836823f788f1dccb/qyHITtc-mye0R2MdMP8tBWmy-BhWMYhtw3dDtJ1tFG4JYmfDC_UDkouIvZNLCyeNAiPuY7JYAa7JY6aZ3ikCmM0mWD1zsmjRZ-xXoOVaSxo",
+      "index_complete": true,
+      "resume_key_present": false,
+      "index_error": null,
+      "capture_rows": [
+        {
+          "timestamp": "20250602155832",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "7HMQKXUYPBZDUEQGHND5JINF6WGD5MPJ"
+        }
+      ],
+      "payload_downloaded": false,
+      "resource_status": "queued"
+    },
+    {
+      "url": "https://imgprx.livejournal.net/e8dad7c4dc0b5d9529a1cca149a106aa16920e3a/qyHITtc-mye0R2MdMP8tBfrxwGSSLPabtQAbdTXqnLwpCpzRFyRjWYmhVrbFvUpdVZNA7XcM1cAawh-yey2VLi4pTeC2m-7sAOwqUpwip7I",
+      "index_complete": true,
+      "resume_key_present": false,
+      "index_error": null,
+      "capture_rows": [
+        {
+          "timestamp": "20250602155519",
+          "mimetype": "warc/revisit",
+          "statuscode": "-",
+          "digest": "7HMQKXUYPBZDUEQGHND5JINF6WGD5MPJ"
+        }
+      ],
+      "payload_downloaded": false,
+      "resource_status": "queued"
+    },
+    {
+      "url": "https://imgprx.livejournal.net/5cf641e47bc747116f27dfff2bc38d812183b1bf/qyHITtc-mye0R2MdMP8tBfrxwGSSLPabtQAbdTXqnLwpCpzRFyRjWYmhVrbFvUpdG79WoNH9rgXC-qe618_Z0ajMcJLmhvwUsbArxnFsey4",
+      "index_complete": true,
+      "resume_key_present": false,
+      "index_error": null,
+      "capture_rows": [
+        {
+          "timestamp": "20250602155612",
+          "mimetype": "warc/revisit",
+          "statuscode": "-",
+          "digest": "7HMQKXUYPBZDUEQGHND5JINF6WGD5MPJ"
+        }
+      ],
+      "payload_downloaded": false,
+      "resource_status": "queued"
+    },
+    {
+      "url": "https://imgprx.livejournal.net/bc3b8eed1687fdac39424e39622bc4da8ff5f34a/qyHITtc-mye0R2MdMP8tBfrxwGSSLPabtQAbdTXqnLwpCpzRFyRjWYmhVrbFvUpdG79WoNH9rgXC-qe618_Z0Xw8mT5gcEYrarMPqADnGso",
+      "index_complete": false,
+      "resume_key_present": false,
+      "index_error": "HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /cdx/search/cdx?url=https%3A%2F%2Fimgprx.livejournal.net%2Fbc3b8eed1687fdac39424e39622bc4da8ff5f34a%2FqyHITtc-mye0R2MdMP8tBfrxwGSSLPabtQAbdTXqnLwpCpzRFyRjWYmhVrbFvUpdG79WoNH9rgXC-qe618_Z0Xw8mT5gcEYrarMPqADnGso&matchType=exact&output=json&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest&showResumeKey=true&limit=500 (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+      "capture_rows": [],
+      "payload_downloaded": false,
+      "resource_status": "queued"
+    },
+    {
+      "url": "https://imgprx.livejournal.net/4f25b95c92044097147f11863974a0e17d8e2f12/qyHITtc-mye0R2MdMP8tBfrxwGSSLPabtQAbdTXqnLwpCpzRFyRjWYmhVrbFvUpdG79WoNH9rgXC-qe618_Z0WpPWZRFrAikIMJ79n_BXBc",
+      "index_complete": false,
+      "resume_key_present": false,
+      "index_error": "HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /cdx/search/cdx?url=https%3A%2F%2Fimgprx.livejournal.net%2F4f25b95c92044097147f11863974a0e17d8e2f12%2FqyHITtc-mye0R2MdMP8tBfrxwGSSLPabtQAbdTXqnLwpCpzRFyRjWYmhVrbFvUpdG79WoNH9rgXC-qe618_Z0WpPWZRFrAikIMJ79n_BXBc&matchType=exact&output=json&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest&showResumeKey=true&limit=500 (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+      "capture_rows": [],
+      "payload_downloaded": false,
+      "resource_status": "queued"
+    },
+    {
+      "url": "https://imgprx.livejournal.net/159ae224a31d5f6ec192dbf4df47bde5ef40de90/qyHITtc-mye0R2MdMP8tBfrxwGSSLPabtQAbdTXqnLwpCpzRFyRjWYmhVrbFvUpdG79WoNH9rgXC-qe618_Z0XXmBedDV1sR12NWivQ89k0",
+      "index_complete": false,
+      "resume_key_present": false,
+      "index_error": "HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /cdx/search/cdx?url=https%3A%2F%2Fimgprx.livejournal.net%2F159ae224a31d5f6ec192dbf4df47bde5ef40de90%2FqyHITtc-mye0R2MdMP8tBfrxwGSSLPabtQAbdTXqnLwpCpzRFyRjWYmhVrbFvUpdG79WoNH9rgXC-qe618_Z0XXmBedDV1sR12NWivQ89k0&matchType=exact&output=json&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest&showResumeKey=true&limit=500 (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+      "capture_rows": [],
+      "payload_downloaded": false,
+      "resource_status": "queued"
+    },
+    {
+      "url": "https://imgprx.livejournal.net/dc77ede0000d88fb20526b02eddf073aeda734fa/eJKme4XdFlFurYbG7LErBNyTHJgdtL4lNetxb6QaDbht3qqfL0FuPWZ2ANKu81ClaZS5WXix93qXN7LxTbG8iuRNgUH6pAbTxXNDQ3nOhFc",
+      "index_complete": false,
+      "resume_key_present": false,
+      "index_error": "HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /cdx/search/cdx?url=https%3A%2F%2Fimgprx.livejournal.net%2Fdc77ede0000d88fb20526b02eddf073aeda734fa%2FeJKme4XdFlFurYbG7LErBNyTHJgdtL4lNetxb6QaDbht3qqfL0FuPWZ2ANKu81ClaZS5WXix93qXN7LxTbG8iuRNgUH6pAbTxXNDQ3nOhFc&matchType=exact&output=json&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest&showResumeKey=true&limit=500 (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+      "capture_rows": [],
+      "payload_downloaded": false,
+      "resource_status": "queued"
+    }
+  ]
+}

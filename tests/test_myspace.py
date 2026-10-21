@@ -2,7 +2,8 @@ import json
 from pathlib import Path
 
 from restore.archive import validate_payload
-from restore.myspace import index_myspace_assets, recover_myspace_assets, _sanitize, build_myspace_archive
+from restore.myspace import (index_myspace_assets, recover_myspace_assets, recover_myspace_origin_assets,
+                             MySpaceOriginClient, _sanitize, build_myspace_archive)
 
 
 def test_rate_limited_myspace_retry_continues_after_saved_cursor(tmp_path, monkeypatch):
@@ -231,6 +232,137 @@ def test_myspace_build_preserves_dates_and_strips_remote_loads(tmp_path):
     assert "MySpace profile captures" in (tmp_path / "_candidate/myspace/captures/index.html").read_text()
     assert "20070307131210" in (tmp_path / "_candidate/myspace/captures/index.html").read_text()
     assert result["recovered_pages"] == 2
+
+
+def test_myspace_direct_cdn_images_are_saved_with_linked_origin_provenance(tmp_path):
+    archive = tmp_path / "recovery/myspace-blue-scholars"
+    (archive / "index").mkdir(parents=True)
+    url = "https://content.myspacecdn.com/images03/32/profile/300x300.jpg"
+    (archive / "index/linked-assets.json").write_text(json.dumps({"records": [{
+        "url": url, "kind": "image", "source_captures": ["20250816191351"]
+    }]}))
+    (archive / "index/assets.json").write_text(json.dumps({"assets": []}))
+
+    class Payload:
+        def __init__(self):
+            self.body = b"\xff\xd8\xffmyspace-profile-photo"
+            self.url = url
+            self.status = 200
+            self.headers = {"Content-Type": "image/jpeg"}
+
+    class Client:
+        def __init__(self): self.urls = []
+        def get(self, source): self.urls.append(source); return Payload()
+
+    client = Client()
+    report = recover_myspace_origin_assets(tmp_path, max_files=1, delay=0, client=client)
+    saved = json.loads((archive / "index/origin-assets.json").read_text())["assets"][0]
+    raw = tmp_path / saved["raw_path"]
+
+    assert client.urls == [url]
+    assert report["recovered"] == 1
+    assert saved["source_type"] == "linked_origin_asset"
+    assert saved["source_url"] == url
+    assert saved["source_captures"] == ["20250816191351"]
+    assert "actual_capture" not in saved
+    assert raw.read_bytes() == b"\xff\xd8\xffmyspace-profile-photo"
+
+
+def test_myspace_direct_cdn_recovery_excludes_non_image_hosts_and_wayback_saved_assets(tmp_path):
+    archive = tmp_path / "recovery/myspace-blue-scholars"
+    (archive / "index").mkdir(parents=True)
+    url = "https://myspace-116.vo.llnwd.net/audio/song.mp3"
+    cached = "https://content.myspacecdn.com/images03/32/cached/300x300.jpg"
+    (archive / "index/linked-assets.json").write_text(json.dumps({"records": [
+        {"url": url, "kind": "image", "source_captures": ["20250816191351"]},
+        {"url": cached, "kind": "image", "source_captures": ["20250816191351"]},
+    ]}))
+    (archive / "index/assets.json").write_text(json.dumps({"assets": [{
+        "url": cached, "kind": "image", "status": "recovered", "raw_path": "recovery/myspace-blue-scholars/assets/cached.jpg"
+    }]}))
+    (tmp_path / "recovery/myspace-blue-scholars/assets").mkdir(parents=True)
+    (tmp_path / "recovery/myspace-blue-scholars/assets/cached.jpg").write_bytes(b"\xff\xd8\xffcached")
+
+    class Client:
+        def get(self, source): raise AssertionError(f"unapproved origin requested: {source}")
+
+    report = recover_myspace_origin_assets(tmp_path, max_files=5, delay=0, client=Client())
+    saved = json.loads((archive / "index/origin-assets.json").read_text())
+    assert report["attempted"] == 0
+    assert saved["assets"] == []
+
+
+def test_myspace_origin_client_restricts_hosts_and_preserves_legacy_http_transport():
+    client = MySpaceOriginClient(delay=0)
+    assert client.transport_url("http://a1.ec-images.myspacecdn.com/a.jpg") == "http://a1.ec-images.myspacecdn.com/a.jpg"
+    assert client.transport_url("https://content.myspacecdn.com/a.jpg") == "https://content.myspacecdn.com/a.jpg"
+    for url in ("https://notmyspacecdn.com/a.jpg", "https://myspacecdn.com/a.jpg",
+                "https://vo.llnwd.net/a.jpg", "file:///a.jpg", "https://content.myspacecdn.com:444/a.jpg"):
+        try:
+            client.transport_url(url)
+        except ValueError:
+            pass
+        else:
+            raise AssertionError(f"unsafe host accepted: {url}")
+
+
+def test_myspace_build_uses_direct_origin_images_locally(tmp_path):
+    source = tmp_path / "recovery/myspace-blue-scholars"
+    (source / "raw").mkdir(parents=True)
+    (source / "index").mkdir()
+    page = source / "raw/20250816191351-profile.html"
+    page.write_text('<html><head><title>Blue Scholars</title></head><body><img src="https://content.myspacecdn.com/images03/32/profile/300x300.jpg" alt="Blue Scholars"></body></html>')
+    photo = source / "assets/profile.jpg"
+    photo.parent.mkdir()
+    photo.write_bytes(b"\xff\xd8\xffprofile")
+    (source / "index/acquisition.json").write_text(json.dumps({"records": [{
+        "status": "recovered", "timestamp": "20250816191351", "actual_capture": "20250816191351",
+        "raw_path": str(page.relative_to(tmp_path)), "original": "https://myspace.com/bluescholars", "sha256": "source"
+    }]}))
+    (source / "index/assets.json").write_text(json.dumps({"assets": []}))
+    (source / "index/origin-assets.json").write_text(json.dumps({"assets": [{
+        "url": "https://content.myspacecdn.com/images03/32/profile/300x300.jpg",
+        "kind": "image", "source_type": "linked_origin_asset", "status": "recovered",
+        "local_path": "/myspace/assets/profile.jpg", "raw_path": str(photo.relative_to(tmp_path))
+    }]}))
+
+    build_myspace_archive(tmp_path, tmp_path / "_candidate", "/bluescholars")
+
+    built = tmp_path / "_candidate/myspace/2025/20250816191351.html"
+    assert '/bluescholars/myspace/assets/profile.jpg' in built.read_text()
+    assert (tmp_path / "_candidate/myspace/assets/profile.jpg").read_bytes() == photo.read_bytes()
+
+
+def test_myspace_build_prefers_wayback_asset_when_origin_has_same_url(tmp_path):
+    source = tmp_path / "recovery/myspace-blue-scholars"
+    (source / "raw").mkdir(parents=True)
+    (source / "index").mkdir()
+    url = "https://content.myspacecdn.com/images03/32/profile/300x300.jpg"
+    page = source / "raw/20250816191351-profile.html"
+    page.write_text(f'<html><body><img src="{url}"></body></html>')
+    wayback_photo = source / "assets/wayback.jpg"
+    wayback_photo.parent.mkdir()
+    wayback_photo.write_bytes(b"\xff\xd8\xffwayback-photo")
+    origin_photo = source / "assets/origin.jpg"
+    origin_photo.write_bytes(b"\xff\xd8\xfforigin-photo")
+    (source / "index/acquisition.json").write_text(json.dumps({"records": [{
+        "status": "recovered", "timestamp": "20250816191351", "actual_capture": "20250816191351",
+        "raw_path": str(page.relative_to(tmp_path)), "original": "https://myspace.com/bluescholars", "sha256": "page"
+    }]}))
+    (source / "index/assets.json").write_text(json.dumps({"assets": [{
+        "url": url, "kind": "image", "status": "recovered", "local_path": "/myspace/assets/wayback.jpg",
+        "raw_path": str(wayback_photo.relative_to(tmp_path))
+    }]}))
+    (source / "index/origin-assets.json").write_text(json.dumps({"assets": [{
+        "url": url, "kind": "image", "source_type": "linked_origin_asset", "status": "recovered",
+        "local_path": "/myspace/assets/origin.jpg", "raw_path": str(origin_photo.relative_to(tmp_path))
+    }]}))
+
+    build_myspace_archive(tmp_path, tmp_path / "_candidate", "/bluescholars")
+
+    built = tmp_path / "_candidate/myspace/2025/20250816191351.html"
+    assert "/bluescholars/myspace/assets/wayback.jpg" in built.read_text()
+    assert (tmp_path / "_candidate/myspace/assets/wayback.jpg").read_bytes() == wayback_photo.read_bytes()
 
 
 def test_real_archived_myspace_markup_with_detached_link_nodes_is_sanitized():

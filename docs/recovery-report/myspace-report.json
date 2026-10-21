@@ -178,5 +178,18 @@
     "interpretation": "Thirteen dated HLS master manifests were recovered, but their variant playlists and video segments were not indexed; they do not make the clip playable. Wayback host wildcards found no audio stream bodies; Common Crawl exact checks found no rows in three sample collections and timed out in one.",
     "commoncrawl_host_wildcard_checked": "CC-MAIN-2014-52; no captures found for fms.ec-music.myspacecdn.com",
     "commoncrawl_hls_master_exact_checked": "CC-MAIN-2014-52; no captures found for the source HLS master URL"
+  },
+  "linked_origin_assets": {
+    "source_type": "linked_origin_asset",
+    "attempted_urls": 109,
+    "statuses": {
+      "failed": 90,
+      "placeholder": 18,
+      "recovered": 1
+    },
+    "renderable_urls": 1,
+    "renderable_unique_files": 1,
+    "wayback_capture_timestamps_assigned": false,
+    "report": "myspace-linked-origin-assets-report.json"
   }
 }

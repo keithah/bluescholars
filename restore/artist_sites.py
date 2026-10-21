@@ -19,6 +19,7 @@ import requests
 
 from .archive import ArchiveClient, parse_cdx, validate_payload
 from .discover import discover_css
+from .redact import redact_public_credentials
 from .svg import sanitize_svg
 from .urls import capture_from, kind_for
 
@@ -744,7 +745,9 @@ def build_artist_sites(root: Path, output: Path, base: str = "", candidate: bool
             if not raw_path:
                 continue
             source = (root / raw_path).resolve()
-            if not source.is_relative_to((root / "recovery/artist-sites/raw").resolve()) and not source.is_relative_to((root / "source/artist-sites/raw").resolve()):
+            if not any(source.is_relative_to((root / prefix).resolve()) for prefix in (
+                "recovery/artist-sites/raw", "source/artist-sites/raw", "source/artist-sites/redacted"
+            )):
                 continue
             body = source.read_bytes()
             if hashlib.sha256(body).hexdigest() != record.get("sha256"):
@@ -873,13 +876,22 @@ def promote_artist_sites(root: Path, reviewed: bool = False) -> dict:
             if hashlib.sha256(body).hexdigest() != record.get("sha256"):
                 raise ValueError(f"Artist source hash mismatch: {url}")
             validate_payload(body, record["kind"])
-            relative = "source/artist-sites/raw/" + Path(record["raw_path"]).name
+            body, redaction_count = redact_public_credentials(body)
+            relative = (
+                f"source/artist-sites/redacted/{hashlib.sha256(body).hexdigest()}{Path(record['raw_path']).suffix}"
+                if redaction_count else "source/artist-sites/raw/" + Path(record["raw_path"]).name
+            )
             destination = root / relative
             destination.parent.mkdir(parents=True, exist_ok=True)
             if not destination.exists():
                 destination.write_bytes(body)
             copied = dict(record)
-            copied.update(raw_path=relative, source_reviewed=True, status="recovered")
+            copied.update(raw_path=relative, sha256=hashlib.sha256(body).hexdigest(),
+                          source_reviewed=True, status="recovered")
+            if redaction_count:
+                copied["original_sha256"] = record["sha256"]
+                copied["source_redaction"] = {"field": "credential-shaped API value", "count": redaction_count,
+                    "reason": "Credential-shaped value omitted from public source copy."}
             edition["resources"][url] = copied
             staged += 1
         approved["editions"][key] = edition

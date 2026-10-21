@@ -8,6 +8,7 @@ import re
 import shutil
 import time
 from collections import Counter
+from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urljoin, urlsplit
 
@@ -17,10 +18,146 @@ from .archive import ArchiveClient, validate_payload
 from .discover import discover_css
 from .urls import capture_from
 
+# These byte-identical MySpace CDN responses are the service's generic camera
+# sentinel, confirmed in the downloaded files rather than assumed from URL.
+MYSPACE_DEFAULT_IMAGE_SHA256 = {
+    "4ffc6d0caac69cc5c1c356443d7462797c189a212b73d3352b63176be56c9736",
+    "aa6a9245f78ce05eb4fc8cd99d4f3d0dafd72679431893777bb4d253f1f2cba9",
+}
+
+class MySpaceOriginClient:
+    """Fetch observed MySpace CDN images, with same-family redirects only."""
+
+    def __init__(self, session=None, delay: float = 0.5, timeout: int = 25,
+                 max_bytes: int = 15_000_000, sleep=time.sleep):
+        self.session = session or requests.Session()
+        self.session.headers.update({"User-Agent": "BlueScholarsRestoration/0.1 (linked MySpace image; paced request)"})
+        self.delay, self.timeout, self.max_bytes, self.sleep = max(0.0, float(delay)), timeout, max_bytes, sleep
+
+    @staticmethod
+    def transport_url(url: str) -> str:
+        parts = urlsplit(url)
+        host = (parts.hostname or "").lower()
+        if (parts.scheme not in ("http", "https") or not host.endswith(".myspacecdn.com")
+                or parts.username or parts.password or parts.port not in (None, 80, 443)):
+            raise ValueError("Refusing MySpace origin request outside the CDN image host family")
+        return parts.geturl()
+
+    def get(self, url: str):
+        for _ in range(6):
+            url = self.transport_url(url)
+            self.sleep(self.delay)
+            try:
+                response = self.session.get(url, timeout=self.timeout, allow_redirects=False, stream=True)
+            except requests.exceptions.SSLError:
+                # Older MySpace image clusters sometimes serve the exact same
+                # public image over HTTP but fail current TLS negotiation.
+                if urlsplit(url).scheme != "https":
+                    raise
+                url = urlsplit(url)._replace(scheme="http").geturl()
+                response = self.session.get(url, timeout=self.timeout, allow_redirects=False, stream=True)
+            if response.status_code in (301, 302, 303, 307, 308):
+                location = response.headers.get("Location", "")
+                response.close()
+                if not location:
+                    raise ValueError("MySpace CDN redirect has no Location")
+                url = urljoin(url, location)
+                continue
+            if response.status_code != 200:
+                status = response.status_code
+                response.close()
+                raise OSError(f"MySpace CDN HTTP {status}")
+            try:
+                body = bytearray()
+                for chunk in response.iter_content(chunk_size=65536):
+                    body.extend(chunk)
+                    if len(body) > self.max_bytes:
+                        raise ValueError("MySpace image exceeds the size limit")
+                return type("Payload", (), {"body": bytes(body), "url": url,
+                    "status": response.status_code, "headers": dict(response.headers)})()
+            finally:
+                response.close()
+        raise ValueError("Too many MySpace CDN redirects")
+
+
+def recover_myspace_origin_assets(root: Path, max_files: int = 100, delay: float = 0.5, client=None,
+                                  retry_failed: bool = False) -> dict:
+    """Recover still-live image URLs explicitly observed in archived profile HTML."""
+    if max_files < 1 or delay < 0:
+        raise ValueError("MySpace origin recovery limits must be positive")
+    root = Path(root)
+    archive = root / "recovery/myspace-blue-scholars"
+    linked_path = archive / "index/linked-assets.json"
+    linked = json.loads(linked_path.read_text()).get("records", []) if linked_path.exists() else []
+    wayback_path = archive / "index/assets.json"
+    wayback = json.loads(wayback_path.read_text()).get("assets", []) if wayback_path.exists() else []
+    path = archive / "index/origin-assets.json"
+    saved = json.loads(path.read_text()) if path.exists() else {"assets": []}
+    records = {item["url"]: item for item in saved.get("assets", [])}
+    _write_checkpoint(path, {"assets": [records[k] for k in sorted(records)]})
+    wayback_saved = {item.get("url") for item in wayback if item.get("status") == "recovered" and
+                     item.get("raw_path") and (root / item["raw_path"]).is_file()}
+    eligible = []
+    for item in linked:
+        url = item.get("url", "")
+        host = (urlsplit(url).hostname or "").lower()
+        previous = records.get(url)
+        if (item.get("kind", "image") == "image" and host.endswith(".myspacecdn.com")
+                and urlsplit(url).path.lower().endswith((".jpg", ".jpeg", ".png", ".gif", ".webp"))
+                and url not in wayback_saved and (previous is None or (retry_failed and previous.get("status") == "failed"))):
+            eligible.append(item)
+    eligible.sort(key=lambda item: ("content.myspacecdn.com" not in (urlsplit(item["url"]).hostname or ""), item["url"]))
+    client = client or MySpaceOriginClient(delay=delay)
+    attempted = recovered = failed = placeholders = 0
+    for item in eligible[:max_files]:
+        url = item["url"]
+        record = {"url": url, "kind": "image", "source_type": "linked_origin_asset",
+                  "source_captures": item.get("source_captures", []),
+                  "retrieved_at": datetime.now(timezone.utc).isoformat()}
+        attempted += 1
+        try:
+            response = client.get(url)
+            headers = {str(key).lower(): value for key, value in response.headers.items()}
+            if response.status != 200 or not str(headers.get("content-type", "")).lower().startswith("image/"):
+                raise ValueError("MySpace CDN response was not a successful image")
+            validate_payload(response.body, "image")
+            digest = hashlib.sha256(response.body).hexdigest()
+            ext = ".jpg" if response.body.startswith(b"\xff\xd8") else ".png" if response.body.startswith(b"\x89PNG") else ".gif" if response.body.startswith((b"GIF87a", b"GIF89a")) else ".webp"
+            filename = digest + ext
+            raw_path = f"recovery/myspace-blue-scholars/assets/{filename}"
+            target = root / raw_path
+            target.parent.mkdir(parents=True, exist_ok=True)
+            if not target.exists(): target.write_bytes(response.body)
+            record.update(status="recovered", source_url=url, final_url=response.url,
+                          raw_path=raw_path, local_path="/myspace/assets/" + filename,
+                          sha256=digest, bytes=len(response.body), content_type=headers.get("content-type", ""))
+            if digest in MYSPACE_DEFAULT_IMAGE_SHA256:
+                record.update(status="placeholder", local_path=None,
+                              note="MySpace CDN returned its generic camera image, not the linked profile photo.")
+                placeholders += 1
+            else:
+                recovered += 1
+        except Exception as exc:
+            record.update(status="failed", error=f"{type(exc).__name__}: {exc}")
+            failed += 1
+        records[url] = record
+        _write_checkpoint(path, {"assets": [records[k] for k in sorted(records)]})
+    return {"source_type": "linked_origin_asset", "attempted": attempted, "recovered": recovered,
+            "placeholders": placeholders, "failed": failed,
+            "remaining_eligible": max(0, len(eligible) - attempted)}
+
 
 def _write(path: Path, text: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(text, encoding="utf-8")
+
+
+def _write_checkpoint(path: Path, value: dict) -> None:
+    """Atomically checkpoint a small JSON acquisition manifest."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_suffix(path.suffix + ".tmp")
+    temporary.write_text(json.dumps(value, indent=2) + "\n", encoding="utf-8")
+    temporary.replace(path)
 
 
 def _after_retry_cursor(items: list[dict], cursor: dict | None) -> list[dict]:
@@ -335,6 +472,16 @@ def build_myspace_archive(root: Path, output: Path, base: str = "") -> dict:
     records = json.loads(data_path.read_text()).get("records", []) if data_path.exists() else []
     assets_path = root / "recovery/myspace-blue-scholars/index/assets.json"
     asset_data = json.loads(assets_path.read_text()).get("assets", []) if assets_path.exists() else []
+    origin_path = root / "recovery/myspace-blue-scholars/index/origin-assets.json"
+    origin_data = json.loads(origin_path.read_text()).get("assets", []) if origin_path.exists() else []
+    origin_statuses = Counter(item.get("status", "unknown") for item in origin_data)
+    wayback_urls = {item.get("url") for item in asset_data if item.get("status") == "recovered"
+                    and item.get("local_path") and item.get("raw_path")
+                    and (root / item["raw_path"]).is_file()}
+    asset_data = asset_data + [item for item in origin_data if item.get("source_type") == "linked_origin_asset"
+                               and item.get("status") == "recovered"
+                               and item.get("url") not in wayback_urls
+                               and item.get("sha256") not in MYSPACE_DEFAULT_IMAGE_SHA256]
     assets = {}
     for asset in asset_data:
         if not asset.get("local_path") or not asset.get("raw_path") or not (root / asset["raw_path"]).is_file():
@@ -404,6 +551,9 @@ def build_myspace_archive(root: Path, output: Path, base: str = "") -> dict:
         _write(output / "myspace/index.html", latest_page.read_text(encoding="utf-8"))
     else:
         _write(output / "myspace/index.html", catalog)
-    result = {"status": "built", "profile": "https://myspace.com/bluescholars", "indexed_page_captures": len(records), "recovered_pages": len(valid), "failed_pages": len(gaps), "capture_years": years, "local_assets": len(assets), "latest_capture": latest["timestamp"] if latest else None, "latest_route": latest["route"] if latest else None, "captures_index": "/myspace/captures/", "pages": rendered}
+    origin_renderable = [item for item in origin_data if item.get("status") == "recovered"
+                         and item.get("sha256") not in MYSPACE_DEFAULT_IMAGE_SHA256
+                         and item.get("raw_path") and (root / item["raw_path"]).is_file()]
+    result = {"status": "built", "profile": "https://myspace.com/bluescholars", "indexed_page_captures": len(records), "recovered_pages": len(valid), "failed_pages": len(gaps), "capture_years": years, "local_assets": len(assets), "linked_origin_asset_statuses": dict(origin_statuses), "linked_origin_renderable_urls": len(origin_renderable), "linked_origin_unique_renderable_files": len({item.get("sha256") for item in origin_renderable}), "latest_capture": latest["timestamp"] if latest else None, "latest_route": latest["route"] if latest else None, "captures_index": "/myspace/captures/", "pages": rendered}
     (output / "myspace/report.json").write_text(json.dumps(result, indent=2) + "\n")
     return result

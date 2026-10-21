@@ -1,0 +1,1496 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-ca">
+   <head>
+   
+   
+   
+      <title>206Proof - Forum - Search</title>
+      <link rel="shortcut icon" href="/forum/themes/206Proof/styles/default/favicon.ico" />
+            <link rel="stylesheet" type="text/css" href="/forum/themes/206Proof/styles/default/vanilla.css" media="screen" />
+            <link rel="stylesheet" type="text/css" href="/forum/themes/206Proof/styles/default/vanilla.print.css" media="print" />
+            <link rel="stylesheet" type="text/css" href="/forum/extensions/Nugget/nugget.css" />
+            <link rel="stylesheet" type="text/css" href="/forum/extensions/SidepanelImageLink/style.css" />
+            <link rel="stylesheet" type="text/css" href="/forum/extensions/Signatures/style.css" />
+            <link rel="stylesheet" type="text/css" href="/forum/extensions/ModTools/style.css" />
+            <link rel="stylesheet" type="text/css" href="/forum/extensions/GuestSignIn/style.css" />
+            <script type="text/javascript" src="/forum/js/global.js"></script>
+            <script type="text/javascript" src="/forum/js/vanilla.js"></script>
+            <script type="text/javascript" src="/forum/js/ajax.js"></script>
+            <script type="text/javascript" src="/forum/js/ac.js"></script>
+            <script type="text/javascript" src="/forum/extensions/JQuery/jquery-1.1.3.1.pack.js"></script>
+            <script type="text/javascript" src="/forum/extensions/ModTools/function.js"></script><style>
+		.ProfileTitle.WithIcon .ProfileIcon { width: 60px; height: 60px; }
+		#AccountProfile .Picture { width: 280px; height: 280px; }
+		#Comments .CommentHeader { line-height: 60px; }
+		#Comments .CommentHeader li div.CommentIcon { padding: 60px 0px 60px 60px; }
+		li.User.Name .UserIcon { padding: 60px 0px 60px 60px !important; }
+		li.User.Name.WithIcon { line-height: 60px; }
+	</style>
+<!--[if lte IE 7]><link rel="stylesheet" href="http://www.206proof.com/forum/themes/206Proof/styles/default/ie.css" type="text/css" media="screen" charset="utf-8"><![endif]-->
+<script type="text/javascript" src="http://www.206proof.com/forum/js/menu.js"></script></head>
+   <body id="SearchPage"  onload="Focus('txtKeywords');"><!--[if lt IE 7]><script src="http://www.206proof.com/ie7/ie7-standard-p.js" type="text/javascript"></script><![endif]--><b></b>
+		<div id="top">
+		<div id="top-content-wrapper">
+			<ul id="topnav">
+ 			   <li><a href="http://www.206proof.com/forum/" class="menuhead">206Proof</a>
+      			  <ul class="proof-dropdown">
+        		    <li><a href="http://www.206proof.com/shop/">Shop</a></li>
+           			<li><a href="http://www.206proof.com/advertise/">Advertise</a></li>
+        		    <li><a href="http://www.206proof.com/about/">About &amp; FAQ</a></li>
+       			 </ul>
+       		   </li>
+   			   <li><a href="http://www.raindrophustla.com">RaindropHustla</a></li>
+   			   <li><a href="http://www.reigncity.com" class="menuhead">ReignCity</a>
+      			  <ul class="reign-dropdown">
+           			<li><a href="http://www.reigncity.com/calendar/">Calendar</a></li>
+           			<li><a href="http://www.reigncity.com/news/">News &amp; Reviews</a></li>
+            		<li><a href="http://www.reigncity.com/about/">About &amp; Contact</a></li>
+        		  </ul>
+   			    </li>
+			</ul>
+		</div>
+		</div>
+
+<div id="Header"><div id="Session">Not signed in (<a href="/forum/people.php?ReturnUrl=http://www.206proof.com/forum/search.php?PostBackAction=Search&amp;Keywords=candidt%3A&amp;Type=Comments&amp;btnSubmit=Search">Sign In</a> or <a href="http://www.206proof.com/forum/people.php?PostBackAction=ApplyForm">Register</a>)</div><a name="pgtop"></a>
+			<h1>
+				206Proof - Forum
+			</h1>
+			
+			<ul><li><a href="index.php" >Discussions</a></li><li><a href="categories.php" >Categories</a></li><li class="TabOn"><a href="search.php" >Search</a></li></ul>
+   </div><div id="Body"><div id="Panel"><div id="GuestSignIn">
+      <h2>Sign In</h2>
+      <p></p>
+   <fieldset><form id="frmSignIn" method="post" action="http://www.206proof.com/forum/people.php">
+     <input name="PostBackAction" value="SignIn" type="hidden">
+     <input name="ReturnUrl" value="http://www.206proof.com/forum/search.php?PostBackAction=Search&amp;Keywords=candidt%3A&amp;Type=Comments&amp;btnSubmit=Search" type="hidden">
+     <ul>
+      <li><label for="txtUsername">Username</label>
+      <input id="txtUsername" name="Username" value="" class="text" maxlength="20" type="text">
+     </li>
+     <li><label for="txtPassword">Password</label>
+      <input id="txtPassword" name="Password" value="" class="text" type="password">
+     </li>
+     </ul>
+     <input name="btnSignIn" id="btnSignIn" value="Sign In" class="Button" type="image" src="http://www.206proof.com/forum/themes/206Proof/styles/default/signin.gif">
+   </form></fieldset>
+  </div><ul><li><h2>Menu</h2><ul><li>
+
+
+
+<a href="http://www.206proof.com/shop/">206Proof Merchandise</a>
+
+
+
+</li>
+
+
+
+<li>
+
+
+
+<a href="http://www.206proof.com/forum/faq.php">Frequently Asked Questions</a>
+
+
+
+</li>
+
+
+
+
+
+
+
+<li>
+
+
+
+<a href="http://www.206proof.com/forum/about.php">About 206Proof</a>
+
+
+
+</li>
+
+
+
+
+
+
+
+<li>
+
+
+
+<a href="http://en.wikipedia.org/wiki/Bbcode">BBCode Reference</a>
+
+
+
+</li>
+
+
+
+
+
+
+
+<li>
+
+
+
+<a href="http://www.gimp.org/">Free Image Editor (GIMP)</a>
+
+
+
+</li></ul></li></ul>
+      <ul id="Banner">
+      	 <li><h2>Advertisements</h2></li>
+         <li class="BannerImage"><a href="http://www.triplecrownkings.com"><img src="extensions/SidepanelImageLink/triple.jpg" class="center"/></a></li>
+      </ul><ul><li><ul><a href="http://www.206proof.com/advertise/">Local Artists Advertise Free</a></ul></li></ul><p id="AboutVanilla"><a href="http://getvanilla.com">Vanilla 1.1.4</a> is a product of <a href="http://lussumo.com">Lussumo</a>. More Information: <a href="http://lussumo.com/docs">Documentation</a>, <a href="http://lussumo.com/community">Community Support</a>.</p></div>
+<div id="Content"><div id="Form" class="Account Search">
+	<fieldset id="SearchSimpleFields">
+		<legend>Search</legend>
+		<a href="./" onclick="ShowAdvancedSearch(); return false;" class="SearchSwitch">Advanced</a><form id="SearchSimple" method="get" action="http://www.206proof.com/forum/search.php"><div><input type="hidden" name="PostBackAction" value="Search" />
+				</div><ul>
+				<li id="MainSearchInput">
+					<label for="txtKeywords">SearchTerms</label>
+					<input id="txtKeywords" type="text" name="Keywords" value="candidt:" class="SearchInput" />
+				</li>
+				<li id="SimpleSearchRadios">Search:<input type="radio" name="Type"  id="Radio_Topics" value="Topics" class="SearchRadio" />
+			<label for="Radio_Topics" class="Radio">Topics</label>
+			<input type="radio" name="Type"  id="Radio_Comments" value="Comments" checked="checked" class="SearchRadio" />
+			<label for="Radio_Comments" class="Radio">Comments</label>
+			<input type="radio" name="Type"  id="Radio_Users" value="Users" class="SearchRadio" />
+			<label for="Radio_Users" class="Radio">Users</label>
+			</li>
+				<li>
+					<input type="submit" name="btnSubmit" value="Search" class="Button SearchButton" />
+				</li>
+			</ul>
+		</form>
+	</fieldset><fieldset id="SearchDiscussionFields">
+		<legend>Discussion topic search</legend>
+		<a href="./" onclick="ShowSimpleSearch(); return false;" class="SearchSwitch">Simple</a><form id="SearchDiscussions" method="get" action="http://www.206proof.com/forum/search.php"><div><input type="hidden" name="PostBackAction" value="Search" />
+				<input type="hidden" name="Type" value="Discussions" />
+				<input type="hidden" name="Advanced" value="1" />
+				</div><ul>
+				<li>
+					<label for="txtDiscussionKeywords">Find discussion topics containing</label>
+					<input id="txtDiscussionKeywords" type="text" name="Keywords" value="" class="SearchInput AdvancedSearchInput" />
+				</li><li>
+						<label for="ddDiscussionCategories">in the category</label><select name="Categories" class="SearchSelect"  id="ddDiscussionCategories">
+		<option value=""  selected="selected">All categories</option>
+			<option value="General" >General</option>
+			<option value="Shows" >Shows</option>
+			<option value="Suggestions" >Suggestions</option>
+			<option value="Technical" >Technical</option>
+			</select>
+		
+					</li><li>
+					<label for="DiscussionAuthUsername">where the author was</label>
+					<input id="DiscussionAuthUsername" name="AuthUsername" type="text" value="" class="SearchInput AdvancedUserInput" />
+					<script type="text/javascript">
+						var DiscussionAutoComplete = new AutoComplete("DiscussionAuthUsername", false);
+						DiscussionAutoComplete.TableID = "DiscussionAutoCompleteResults";
+						DiscussionAutoComplete.KeywordSourceUrl = "/forum/ajax/getusers.php?Search=";
+					</script>
+				</li>
+				<li>
+					<input type="submit" name="btnSubmit" value="Search" class="Button SearchButton" />
+				</li>
+			</ul>
+		</form>
+	</fieldset><fieldset id="SearchCommentFields">
+		<legend>Discussion comment search</legend><form id="SearchComments" method="get" action="http://www.206proof.com/forum/search.php"><div><input type="hidden" name="PostBackAction" value="Search" />
+				<input type="hidden" name="Advanced" value="1" />
+				<input type="hidden" name="Type" value="Comments" />
+				</div><ul>
+				<li>
+					<label for="txtCommentKeywords">Find comments containing</label>
+					<input id="txtCommentKeywords" type="text" name="Keywords" value="" class="SearchInput AdvancedSearchInput" />
+				</li><li>
+						<label for="ddCommentCategories">in the category</label><select name="Categories" class="SearchSelect"  id="ddCommentCategories">
+		<option value=""  selected="selected">All categories</option>
+			<option value="General" >General</option>
+			<option value="Shows" >Shows</option>
+			<option value="Suggestions" >Suggestions</option>
+			<option value="Technical" >Technical</option>
+			</select>
+		
+					</li><li>
+					<label for="CommentAuthUsername">where the author was</label>
+					<input id="CommentAuthUsername" name="AuthUsername" type="text" value="candidt" class="SearchInput AdvancedUserInput" />
+					<script type="text/javascript">
+						var CommentAutoComplete = new AutoComplete("CommentAuthUsername", false);
+						CommentAutoComplete.TableID = "CommentAutoCompleteResults";
+						CommentAutoComplete.KeywordSourceUrl = "/forum/ajax/getusers.php?Search=";
+					</script>
+				</li>
+				<li>
+					<input type="submit" name="btnSubmit" value="Search" class="Button SearchButton" />
+				</li>
+			</ul>
+		</form>
+	</fieldset><fieldset id="SearchUserFields">
+		<legend>User account search</legend><form id="SearchUsers" method="get" action="http://www.206proof.com/forum/search.php"><div><input type="hidden" name="PostBackAction" value="Search" />
+				<input type="hidden" name="Advanced" value="1" />
+				<input type="hidden" name="Type" value="Users" />
+				</div><ul>
+				<li>
+					<label for="txtUserKeywords">Find user accounts containing</label>
+					<input id="txtUserKeywords" type="text" name="Keywords" value="" class="SearchInput AdvancedSearchInput" />
+				</li>
+				<li>
+					<label for="ddRoles">in the role</label>
+					<select name="Roles" class="SearchSelect"  id="ddRoles">
+		<option value=""  selected="selected">All roles</option>
+			<option value="Probation (New Discussions)" >Probation (New Discussions)</option>
+			<option value="Global Admin" >Global Admin</option>
+			<option value="Probation (Posting)" >Probation (Posting)</option>
+			<option value="Moderator" >Moderator</option>
+			<option value="Banned" >Banned</option>
+			<option value="Member" >Member</option>
+			<option value="Administrator" >Administrator</option>
+			</select>
+		
+				</li>
+				<li>
+					<label for="ddOrder">sort results by</label>
+					<select name="UserOrder" class="SearchSelect"  id="ddOrder">
+		<option value=""  selected="selected">Username</option>
+			<option value="Date" >Date last active</option>
+			</select>
+		
+				</li>
+				<li>
+					<input type="submit" name="btnSubmit" value="Search" class="Button SearchButton" />
+				</li>
+			</ul>
+		</form>
+	</fieldset>
+</div><div class="ContentInfo Top">
+	<h1>Comments</h1>
+	<div class="PageInfo">
+		<p>Results 1 to 50 for <strong>nothing</strong></p>
+		<div class="PageList">Previous  <a href="http://www.206proof.com/forum/search.php?page=2&amp;PostBackAction=Search&amp;Keywords=candidt%3A&amp;Type=Comments&amp;btnSubmit=Search">Next</a> </div>
+	</div>
+</div>
+<div id="ContentBody">
+	<ol id="CommentResults"><li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14872">SOTA X P SMOOV &quot;Hey Hey&quot; on Amazon Best 100 Songs of 2010</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14872&amp;Focus=315403#Comment_315403">2010 has been a helluva year for northwest hiphop Yo! Be proud! Cheers</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 9th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14814">2010 WAS A HELLUVA YEAR FOR NORTHWEST HIPHOP!  HOLY SHYT!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14814&amp;Focus=315225#Comment_315225">[quote][cite] candidt:[/cite]SO MANY TO NAME BUT IM SUPER FEELIN ALL THE ARTIST THAT RELEASED THEIR ART THIS YEAR!  SO MANY GOOD MOVES MADE ALL ACROSS THE BOARD, CHEERS! NW IS ON ITS GRIZZLY![/quote] Suge where in there do I say anything about NOT posting your work put out this year? It was a ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 6th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14814">2010 WAS A HELLUVA YEAR FOR NORTHWEST HIPHOP!  HOLY SHYT!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14814&amp;Focus=315169#Comment_315169">[quote][cite] Suge White:[/cite]It's fucking tacky and you guys should know better[/quote] Oh Im tacky now?! Know better? Wow! Calm down dude.  You promote your business ventures just like any other human bein!  Fuckoutta here wit your life coachin!  I do for ME not YOU never forget that.  I ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 5th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14814">2010 WAS A HELLUVA YEAR FOR NORTHWEST HIPHOP!  HOLY SHYT!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14814&amp;Focus=315122#Comment_315122">[quote][cite] Suge White:[/cite]What a goddamn geek loser move it is for all of you to post your own releases.  JFC..what the fuck is wrong with you people.[/quote] Why not?  Shows what people did, I aint mad at it.  Although that wasnt my intention initially but meiy?</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 4th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14244">Candidt/Brotha Brown/Xperience/Onry Ozzborn perform acapella for KEXP</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14244&amp;Focus=315039#Comment_315039">N</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 3rd 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14814">2010 WAS A HELLUVA YEAR FOR NORTHWEST HIPHOP!  HOLY SHYT!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14814&amp;Focus=315032#Comment_315032">[IMG]http://i264.photobucket.com/albums/ii177/lazysnare/CANDIDTCOVERPIC.jpg[/IMG]  Get one! *EASY STREET RECORDS(Queen Anne &amp; West Seattle) *SONIC BOOM (Cap Hill) *EVERYDAY MUSIC (Cap Hill) *ARS (Rainer Beach) also avail at  http://www.itunes.com/candidt http://www.cdbaby.com/cd/candidt</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 3rd 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14687">Candidt- &quot;Imaginary Stereo&quot; Video feat/ EVERYBODY!!!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14687&amp;Focus=315030#Comment_315030">Get hip!</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 3rd 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14814">2010 WAS A HELLUVA YEAR FOR NORTHWEST HIPHOP!  HOLY SHYT!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14814&amp;Focus=314981#Comment_314981">SO MANY TO NAME BUT IM SUPER FEELIN ALL THE ARTIST THAT RELEASED THEIR ART THIS YEAR!  SO MANY GOOD MOVES MADE ALL ACROSS THE BOARD, CHEERS! NW IS ON ITS GRIZZLY!</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Dec 2nd 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14687">Candidt- &quot;Imaginary Stereo&quot; Video feat/ EVERYBODY!!!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14687&amp;Focus=314186#Comment_314186">http://lineout.thestranger.com/lineout/archives/2010/11/04/big-soul-dont-fold-when-they-say-no</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Nov 7th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14664">CANDIDT &quot;SWEATSUIT &amp; CHURCHSHOES&quot; PHYSICAL COPIES AVAIL NOW!!!!!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14664&amp;Focus=314184#Comment_314184">Re-stocked and ready to roll!  Get one! *EASY STREET RECORDS(Queen Anne &amp; West Seattle) *SONIC BOOM (Cap Hill) *EVERYDAY MUSIC (Cap Hill) *ARS (Rainer Beach) also avail at  http://www.itunes.com/candidt http://www.cdbaby.com/cd/candidt ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Nov 7th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14687">Candidt- &quot;Imaginary Stereo&quot; Video feat/ EVERYBODY!!!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14687&amp;Focus=314159#Comment_314159">[quote][cite] Billy the Fridge:[/cite]This song goes so hard. I remember the first time I saw it, live, it was just electric. Perfect mixture of everything. VERY CRISPERS. The video is great too, a lot of the town up in there. I've watched the video 3 times now and I'm pretty sure I'll end up ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Nov 6th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14687">Candidt- &quot;Imaginary Stereo&quot; Video feat/ EVERYBODY!!!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14687&amp;Focus=314152#Comment_314152">[quote][cite] kungfoogripbbj206:[/cite]love the song &amp; video[/quote] Say dat dien!!  Yall go super hard too!  B'lead'dat!</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Nov 6th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14687">Candidt- &quot;Imaginary Stereo&quot; Video feat/ EVERYBODY!!!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14687&amp;Focus=314146#Comment_314146">[quote][cite] Large Robert:[/cite]Very dope Candidt! I love it.[/quote] Crisp!</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Nov 6th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14687">Candidt- &quot;Imaginary Stereo&quot; Video feat/ EVERYBODY!!!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14687&amp;Focus=314112#Comment_314112">[quote][cite] grieves:[/cite]candidt raps his ass off! i'm a fan![/quote] Yezzir G Tanx!  N!</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Nov 5th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14687">Candidt- &quot;Imaginary Stereo&quot; Video feat/ EVERYBODY!!!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14687&amp;Focus=314099#Comment_314099">[quote][cite] Tay Sean:[/cite]Clean! Nice editing![/quote] NICE BEAT YOUNG FILTHY! I told u long ago bout the mission of the song....vision! POW!</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Nov 5th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14687">Candidt- &quot;Imaginary Stereo&quot; Video feat/ EVERYBODY!!!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14687&amp;Focus=314097#Comment_314097">Say dat dien luv1's!  If you havent already pick up the album at Easy Street(West and Queen Anne), Sonic Boom9Cap Hill), ARS(Rainer Beach) and Everyday Music(Cap Hill).  Or online www.itunes.com/candidt  www.cdbaby.com/cd/candidt  Lets ride!</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Nov 5th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14687">Candidt- &quot;Imaginary Stereo&quot; Video feat/ EVERYBODY!!!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14687&amp;Focus=314061#Comment_314061">Candidt: Sweatsuit &amp; Churchshoes instores now!!!  Also available at www.itunes.com/candidt  www.cdbaby.com/cd/candidt  Get sum!</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Nov 4th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14687">Candidt- &quot;Imaginary Stereo&quot; Video feat/ EVERYBODY!!!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14687&amp;Focus=314060#Comment_314060">http://www.youtube.com/watch?v=o2ZwOZ2zkJg</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Nov 4th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14676">Sound on the Sound reviews XPs&#039; &quot;William The VIII&quot;and Candidts &quot;Sweatsuit and Church Shoes&quot;</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14676&amp;Focus=314014#Comment_314014">It don't stop!  In stores now! Get dat!</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Nov 3rd 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14676">Sound on the Sound reviews XPs&#039; &quot;William The VIII&quot;and Candidts &quot;Sweatsuit and Church Shoes&quot;</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14676&amp;Focus=314013#Comment_314013">It don't stop!  In stores now! Get dat!</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Nov 3rd 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14664">CANDIDT &quot;SWEATSUIT &amp; CHURCHSHOES&quot; PHYSICAL COPIES AVAIL NOW!!!!!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14664&amp;Focus=314004#Comment_314004">Good lookin all yall that cop'd one from the stores!  I have to re-stock already!  Goodness!  Thanks a mill!  &quot;SWEATSUIT &amp; CHURCHSHOES&quot; PHYSICAL COPIES AVAIL NOW!!!!!   *EASY STREET RECORDS(Queen Anne &amp; West Seattle) *SONIC BOOM (Cap Hill) *EVERYDAY MUSIC (Cap Hill) *ARS (Rainer ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Nov 3rd 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14664">CANDIDT &quot;SWEATSUIT &amp; CHURCHSHOES&quot; PHYSICAL COPIES AVAIL NOW!!!!!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14664&amp;Focus=313817#Comment_313817">[IMG]http://i264.photobucket.com/albums/ii177/lazysnare/CANDIDTCOVERPIC.jpg[/IMG] &quot;SWEATSUIT &amp; CHURCHSHOES&quot; PHYSICAL COPIES AVAIL NOW!!!!!   *EASY STREET RECORDS *SONIC BOOM *EVERYDAY MUSIC *ARS  STRANGER ARTICLE  HTTP://STRN.GR/4786539    SSG review   http://t.co/Xmig2oP via ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Oct 29th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14651">&quot;Bitches&quot;</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14651&amp;Focus=313694#Comment_313694">BAMMER!!! I can rap better than that backwards! POW!</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Oct 28th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14468">FRI 10.22 @ HARD ROCK CAFE: *MASH HALL * HELLA DOPE * CANDIDT * SPACEMAN * LUCKONE * DJ TERRY RADJAW</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14468&amp;Focus=313384#Comment_313384">peep super jawns http://www.cdbaby.com/cd/candidt  http://www.itunes.com/candidt</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Oct 21st 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14468">FRI 10.22 @ HARD ROCK CAFE: *MASH HALL * HELLA DOPE * CANDIDT * SPACEMAN * LUCKONE * DJ TERRY RADJAW</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14468&amp;Focus=313318#Comment_313318">LETS GOOOOOO!</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Oct 20th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=13948">CANDIDT: &quot;SWEATSUIT &amp; CHURCHSHOES&quot; DIRTY &amp; CLEAN VERSIONS OUT NOW! ITUNES, CDBABY +MORE!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=13948&amp;Focus=312985#Comment_312985">&quot;Hard bottoms and rayon all day you're promo in our city and anywhere planes fly too I love it and u&quot; - Palaceer Lazaro of Shabazz Palaces  &quot;Checkthisshitout ur album has some crackin jamz.&quot; -White Pepper  &quot;Listenin to album (with miles ha!). What a fantabulous finished ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Oct 13th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14468">FRI 10.22 @ HARD ROCK CAFE: *MASH HALL * HELLA DOPE * CANDIDT * SPACEMAN * LUCKONE * DJ TERRY RADJAW</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14468&amp;Focus=312984#Comment_312984">[quote][cite] gatsworth:[/cite][quote][cite] Wiki entry on &quot;No Frills&quot;:[/cite]No-frills or no frills is a term used to describe any service or product for which the non-essential features have been removed to keep the price low. The use of the term &quot;frills&quot; refers to a style of ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Oct 13th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14506">Candidt &quot;Sweatsuit &amp; Churchshoes&quot; selected as a staff pick on cbbaby.com!! GO OFF!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14506&amp;Focus=312983#Comment_312983">@ishoothdvideos No question, Lets do it!</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Oct 13th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14468">FRI 10.22 @ HARD ROCK CAFE: *MASH HALL * HELLA DOPE * CANDIDT * SPACEMAN * LUCKONE * DJ TERRY RADJAW</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14468&amp;Focus=312799#Comment_312799">Yeah I def have frills I think! Hell! Even my deep fryer is crome! POW!</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Oct 8th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14468">FRI 10.22 @ HARD ROCK CAFE: *MASH HALL * HELLA DOPE * CANDIDT * SPACEMAN * LUCKONE * DJ TERRY RADJAW</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14468&amp;Focus=312775#Comment_312775">What the hell is a &quot;frill&quot; anywayz? Cuz I think I have frills?!</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Oct 8th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14506">Candidt &quot;Sweatsuit &amp; Churchshoes&quot; selected as a staff pick on cbbaby.com!! GO OFF!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14506&amp;Focus=312360#Comment_312360">[quote][cite] gatsworth:[/cite]Dizo, nice promo clips![/quote] GO OFF!</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Sep 30th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14506">Candidt &quot;Sweatsuit &amp; Churchshoes&quot; selected as a staff pick on cbbaby.com!! GO OFF!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14506&amp;Focus=312346#Comment_312346">&quot;Hard bottoms and rayon all day you're promo in our city and anywhere planes fly too I love it and u&quot; - Palaceer Lazaro of Shabazz Palaces  &quot;Checkthisshitout ur album has some crackin jamz.&quot; -White Pepper  &quot;Listenin to album (with miles ha!). What a fantabulous finished ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Sep 30th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14506">Candidt &quot;Sweatsuit &amp; Churchshoes&quot; selected as a staff pick on cbbaby.com!! GO OFF!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14506&amp;Focus=312345#Comment_312345">Candidt &quot;Sweatsuit &amp; Churchshoes&quot; selected as a staff pick on cbbaby.com!! GO OFF! http://www.cdbaby.com/StaffPicks   IT DONT STOP!!</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Sep 30th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12593">ESPN Licensed D.Black&#039;s Music a Third Time</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=12593&amp;Focus=312310#Comment_312310">Thats bomb!  Im working on the same thang Jack! ewww!</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Sep 29th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14493">Almost Famous Saturdays at HG Lodge</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14493&amp;Focus=312298#Comment_312298">[quote][cite] Large Robert:[/cite]Looks like we found a guest of honor!!![/quote][quote][cite] ae.k.ae:[/cite]oooh i like the sound of that, sir.[/quote] Skeern, skeern, skee, skeeeeeeern!!(reggea airhorn) Wait??!!!...No more Yo Son on Sat at HG's?</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Sep 29th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14468">FRI 10.22 @ HARD ROCK CAFE: *MASH HALL * HELLA DOPE * CANDIDT * SPACEMAN * LUCKONE * DJ TERRY RADJAW</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14468&amp;Focus=312297#Comment_312297">[quote][cite] gatsworth:[/cite]MASH HALL wil be doing a one time only MASH HALL REMIXES set @ this bad boy[/quote] GO OFF LBoogie!  Candidt will be doin a new star-studded set aswell! DONT NOT GO FUCKERZ!</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Sep 29th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14475">10/16 Bilal w/ Live Band! Featuring Xperience, DJ TopSpin, Hosted by Choklate</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14475&amp;Focus=312245#Comment_312245">U said &quot;several&quot; thats hard halla! &quot;several&quot;</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Sep 28th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14468">FRI 10.22 @ HARD ROCK CAFE: *MASH HALL * HELLA DOPE * CANDIDT * SPACEMAN * LUCKONE * DJ TERRY RADJAW</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14468&amp;Focus=312135#Comment_312135">peep jawz jawns at:  http://www.itunes.com/candidt  http://www.cdbaby.com/cd/candidt  GO OFF!</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Sep 25th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14468">FRI 10.22 @ HARD ROCK CAFE: *MASH HALL * HELLA DOPE * CANDIDT * SPACEMAN * LUCKONE * DJ TERRY RADJAW</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14468&amp;Focus=312134#Comment_312134">[IMG]http://i264.photobucket.com/albums/ii177/lazysnare/pics/nofrills2_web.jpg[/IMG]  *MASH HALL *HELLA DOPE  *CANDIDT(W/XP, MACKLEMORE, BROTHA BROWN, MAYA JENKINS &amp; SOTA BOYS!!!) *SPACEMAN  *LUCKONE  *DJ TERRY RADJAW  GO OFF!</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Sep 25th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14449">[VIDEO] SUNTONIO BANDANAZ - &quot;BOOGIE UP THE BLOCK&quot;</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14449&amp;Focus=311929#Comment_311929">I love it!  GOIN OFF all the way through!  Im really feelin alot of our music right now Seattle!</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Sep 22nd 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14397">EZELL&#039;S FOUNDER FRIED</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14397&amp;Focus=311484#Comment_311484">My wings kills all these pricks wings!  And my fryer is crome! GO OFF! P.S. My rolls suck major ass tho:(  Im no Betty Crocker!</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Sep 16th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14388">I slept and probably prematuely hated</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14388&amp;Focus=311357#Comment_311357">[quote][cite] Suge White:[/cite]http://www.youtube.com/watch?v=ScvX59ZTCH4  I bump, I just hated the name.   the remix is not as tight   mack, larry and distant 3rd........grynchie[/quote]  &quot;Its too laaaate/its too late to apologiiiize/its too laaaaate/its too late to apologize&quot; Whoever ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Sep 15th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14351">9.15: DARKTIME SUNSHINE * VOIDPEDAL * CANDIDT * MG THE VISIONARY * DJ ZAC HENDRIX @ HELL&#039;S KITCHEN</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14351&amp;Focus=311213#Comment_311213">And bring Wo too Rizeberg!</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Sep 13th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14351">9.15: DARKTIME SUNSHINE * VOIDPEDAL * CANDIDT * MG THE VISIONARY * DJ ZAC HENDRIX @ HELL&#039;S KITCHEN</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14351&amp;Focus=311053#Comment_311053">[IMG]http://i264.photobucket.com/albums/ii177/lazysnare/darwishtour-tacoma-web.jpg[/IMG]</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Sep 9th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14196">CANDIDT - &quot;CAN WE SMILE&quot; - SONG OF THE WEEK 8/25</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14196&amp;Focus=310071#Comment_310071">[quote][cite] D-SANE:[/cite]I can dig it.  Looking forward to hearing the album.[/quote] Say dat dien D-Sane!</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Aug 31st 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=13948">CANDIDT: &quot;SWEATSUIT &amp; CHURCHSHOES&quot; DIRTY &amp; CLEAN VERSIONS OUT NOW! ITUNES, CDBABY +MORE!</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=13948&amp;Focus=310070#Comment_310070">[quote][cite] candidt:[/cite]For all the parents out there Candidt &quot;Sweatsuit &amp; Churchshoes&quot; CLEAN VERSION available 8.31.10 on cdbaby, itunes, Zune, Amazon etc...GO![/quote] OUT NOW!!! RADIO DJ'S, PARENTS, KIDS ETC...LETS RIDE!</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Aug 31st 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14256">Macklemore wins 2010 Spotlight Award</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14256&amp;Focus=310006#Comment_310006">Congrats Mack!  Im soooooo feeling the town's music progression right now!  Goodness!</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Aug 30th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14244">Candidt/Brotha Brown/Xperience/Onry Ozzborn perform acapella for KEXP</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14244&amp;Focus=309932#Comment_309932">http://www.youtube.com/watch?v=2hWpHGC7fFs</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Aug 30th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14196">CANDIDT - &quot;CAN WE SMILE&quot; - SONG OF THE WEEK 8/25</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14196&amp;Focus=309930#Comment_309930">[quote][cite] iamenotLame:[/cite]yea, this album is a must have.. especially for the summer (which is currently trying to escape us)[/quote]  Yezzir!  Good vibe Yo! [quote][cite] rockwell powers:[/cite]wow, i really like this. going to check this album asap[/quote] Lets ride! I appreciate all the ...</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Aug 30th 2010
+		</li>
+	</ul>
+</li>
+<li class="SearchComment Alternate">
+	<ul>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14244">Candidt/Brotha Brown/Xperience/Onry Ozzborn perform acapella for KEXP</a>
+		</li>
+		<li class="CommentText">
+			<span>Comment</span>
+			<a href="http://www.206proof.com/forum/comments.php?DiscussionID=14244&amp;Focus=309922#Comment_309922">http://www.youtube.com/watch?v=51ofJfZtj5Y -Candidt, Brotha Brown, Xperience, and Onry Ozzborn perform two acapella rounds for KEXP in the Caffe Vita Bean Room during the 2010 Capitol Hill Block Party.</a>
+		</li>
+		<li class="DiscussionCategory">
+			<span>Category</span>
+			<a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+		</li>
+		<li class="CommentAuthor">
+			<span>Written by</span>
+			<a href="http://www.206proof.com/forum/account.php?u=439">candidt</a>
+		</li>
+		<li class="CommentAdded">
+			<span>Added</span>
+			Aug 30th 2010
+		</li>
+	</ul>
+</li>
+</ol>
+</div><div class="ContentInfo Bottom">
+		<div class="PageInfo">
+			<p>Results 1 to 50 for <strong>nothing</strong></p>
+			<div class="PageList">Previous  <a href="http://www.206proof.com/forum/search.php?page=2&amp;PostBackAction=Search&amp;Keywords=candidt%3A&amp;Type=Comments&amp;btnSubmit=Search">Next</a> </div>
+		</div>
+		<a href="http://www.206proof.com/forum/search.php?PostBackAction=Search&amp;Keywords=candidt%3A&amp;Type=Comments&amp;btnSubmit=Search#pgtop">Top of Page</a>
+	</div></div>
+<div id="pgbottom" name="pgbottom"><p>&copy; 2007 <a href="http://www.206Proof.com">206Proof</a>. Powered by  <a href="http://www.getvanilla.com">Vanilla</a>.</p>
+</div>
+            <script type="text/javascript" src="http://www.google-analytics.com/urchin.js"></script>
+            <script type="text/javascript">
+            // <![CDATA[
+            _uacct="UA-2210503-1";
+            urchinTracker();
+            // ]]>
+            </script>
+</body>
+</html>

@@ -3,8 +3,15 @@ from xml.etree import ElementTree as ET
 import re
 
 ALLOWED={'svg','g','path','rect','circle','ellipse','polygon','polyline','line','text','tspan','defs','use','clipPath','mask','linearGradient','radialGradient','stop','symbol','title','desc','pattern'}
+STANDARD_SVG11_DOCTYPE=re.compile(
+    br'<!\s*DOCTYPE\s+svg\s+PUBLIC\s+([\'\"])-//W3C//DTD SVG 1\.1//EN\1\s+'
+    br'([\'\"])http://www\.w3\.org/Graphics/SVG/1\.1/DTD/svg11\.dtd\2\s*>',re.I)
 
 def sanitize_svg(body: bytes) -> bytes:
+    # Many original SVG 1.1 assets carry this external W3C declaration. Strip
+    # only the known declaration; never resolve it, and continue rejecting all
+    # entity declarations and nonstandard doctypes below.
+    body=STANDARD_SVG11_DOCTYPE.sub(b'',body)
     if re.search(br'<!\s*(DOCTYPE|ENTITY)',body,re.I):
         raise ValueError('SVG document declarations are not allowed')
     try: root=ET.fromstring(body)

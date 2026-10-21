@@ -15,9 +15,11 @@ from .state import State,write_json
 from .urls import base_path
 from .artist_sites import (index_artist_sites,recover_artist_sites,promote_artist_sites,
                            review_artist_capture)
-from .massline import index_massline,index_massline_history,recover_massline,recover_massline_capture_variants
+from .massline import index_massline,index_massline_history,recover_massline,recover_massline_capture_variants,promote_massline
 from .massline_external import index_external_assets,recover_external_assets
-from .myspace import index_myspace_assets,recover_myspace_assets
+from .myspace import index_myspace_assets,recover_myspace_assets,recover_myspace_origin_assets,MySpaceOriginClient
+from .proof206 import promote_206proof
+from .linked_origin import LinkedOriginClient,recover_linked_origin_images
 
 def serve(directory: Path,base: str,port: int):
     from http.server import ThreadingHTTPServer,SimpleHTTPRequestHandler
@@ -66,10 +68,16 @@ def main(argv=None) -> int:
     p=commands.add_parser('artist-promote',help='Promote inspected artist-site sources; later captures need individual compatibility notes')
     p.add_argument('--reviewed',action='store_true')
     commands.add_parser('massline-index',help='Validate and summarize the saved masslinemedia.com Wayback CDX inventory')
+    p=commands.add_parser('massline-promote',help='Promote source-reviewed Mass Line pages, forum threads, and assets for release builds')
+    p.add_argument('--reviewed',action='store_true')
+    p=commands.add_parser('206proof-promote',help='Promote inspected 206Proof captures and assets for release builds')
+    p.add_argument('--reviewed',action='store_true')
     p=commands.add_parser('myspace-assets-index',help='Index exact Wayback histories for MySpace-linked images, with resumable checkpoints')
     p.add_argument('--max-urls',type=int,default=100);p.add_argument('--delay',type=float,default=1.0);p.add_argument('--retry-errors',action='store_true')
     p=commands.add_parser('myspace-assets-recover',help='Fetch and validate indexed MySpace profile image captures')
     p.add_argument('--max-files',type=int,default=100);p.add_argument('--delay',type=float,default=0.7);p.add_argument('--retry-failed',action='store_true')
+    p=commands.add_parser('myspace-origin-recover',help='Recover exact archived MySpace CDN image links that remain available at origin')
+    p.add_argument('--max-files',type=int,default=100);p.add_argument('--delay',type=float,default=0.5);p.add_argument('--retry-failed',action='store_true')
     p=commands.add_parser('massline-history',help='Page and checkpoint uncollapsed Mass Line Wayback capture history')
     p.add_argument('--max-pages',type=int,default=1);p.add_argument('--delay',type=float,default=0.8);p.add_argument('--timeout',type=int,default=60)
     p=commands.add_parser('massline-recover',help='Resumably recover Mass Line Media pages, forum threads, and local assets')
@@ -97,6 +105,8 @@ def main(argv=None) -> int:
     feed_recover.add_argument('--timeout',type=int,default=30);feed_recover.add_argument('--retries',type=int,default=2)
     rec=commands.add_parser('recover',help='Download original responses and discover dependencies')
     rec.add_argument('--max-files',type=int,default=150);rec.add_argument('--retry-failed',action='store_true')
+    origin=commands.add_parser('recover-origin-images',help='Recover observed Squarespace images still available from their original CDN; these are not Wayback captures')
+    origin.add_argument('--max-files',type=int,default=100);origin.add_argument('--delay',type=float,default=0.5)
     p=commands.add_parser('capture',help='Preserve an exact Wayback capture as a dated variant')
     p.add_argument('--url',required=True);p.add_argument('--timestamp',required=True)
     p.add_argument('--kind',choices=['html','css','image','font'],help='Override extension inference for source-linked external resources')
@@ -120,6 +130,8 @@ def main(argv=None) -> int:
     p.add_argument('--url',required=True);p.add_argument('--reason',required=True)
     p=commands.add_parser('approve',help='Record an explicit visual and publication review')
     p.add_argument('--visual-reviewed',action='store_true');p.add_argument('--publish-approved',action='store_true')
+    p=commands.add_parser('visual-review',help='Record agent-performed visual inspection without publication approval')
+    p.add_argument('--visual-reviewed',action='store_true',required=True)
     args=parser.parse_args(argv);root=args.root.resolve()
     try:
         if args.command=='seed':
@@ -148,12 +160,17 @@ def main(argv=None) -> int:
         elif args.command=='artist-promote':
             result=promote_artist_sites(root,args.reviewed)
         elif args.command=='massline-index':result=index_massline(root)
+        elif args.command=='massline-promote':result=promote_massline(root,args.reviewed)
+        elif args.command=='206proof-promote':result=promote_206proof(root,args.reviewed)
         elif args.command=='myspace-assets-index':
             if args.max_urls<1 or args.delay<0:raise ValueError('Invalid MySpace asset-index limits')
             result=index_myspace_assets(root,args.max_urls,args.delay,args.retry_errors)
         elif args.command=='myspace-assets-recover':
             if args.max_files<1 or args.delay<0:raise ValueError('Invalid MySpace asset-recovery limits')
             result=recover_myspace_assets(root,args.max_files,args.delay,args.retry_failed)
+        elif args.command=='myspace-origin-recover':
+            if args.max_files<1 or args.delay<0:raise ValueError('Invalid MySpace origin-recovery limits')
+            result=recover_myspace_origin_assets(root,args.max_files,args.delay,MySpaceOriginClient(delay=args.delay),args.retry_failed)
         elif args.command=='massline-history':
             result=index_massline_history(root,args.max_pages,args.delay,args.timeout)
             print(json.dumps(result,indent=2));return 2 if result.get('errors') else 0
@@ -175,6 +192,9 @@ def main(argv=None) -> int:
             result=recover_external_assets(root,args.max_files,args.delay,args.retry_failed,
                 progress=lambda p:print(json.dumps({'stage':'massline-external-recover','progress':p}),file=sys.stderr,flush=True))
         elif args.command=='merge-recovery': result=merge_artifact(root,args.artifact,args.run_id)
+        elif args.command=='recover-origin-images':
+            if args.max_files<1 or args.delay<0:raise ValueError('Invalid linked-origin recovery limits')
+            result=recover_linked_origin_images(State(root),LinkedOriginClient(delay=args.delay),args.max_files)
         elif args.command=='index-assets':
             if args.max_assets<1 or args.max_pages<1:raise ValueError('Asset index limits must be positive')
             client=ArchiveClient()
@@ -238,13 +258,43 @@ def main(argv=None) -> int:
             review={'actor':'Codex agent','reviewed_at':now(),'capture':record.get('actual_capture'),
                     'sha256':record.get('sha256'),'reason':reason}
             record['compatibility_review']=review;state.save();result={'url':args.url,**review}
+        elif args.command=='visual-review':
+            evidence_path=root/'docs/recovery-report/VISUAL_REVIEW.md'
+            if not (root/'_site/index.html').is_file():
+                raise ValueError('Build the reviewed-source site before recording visual review')
+            if not evidence_path.is_file():
+                raise ValueError('Visual review evidence not found: docs/recovery-report/VISUAL_REVIEW.md')
+            review_path=root/'source/review.json'
+            existing=json.loads(review_path.read_text()) if review_path.exists() else {}
+            result={**existing,
+                'visual_reviewed':True,
+                'visual_reviewed_by':'Codex agent',
+                'visual_reviewed_at':now(),
+                'visual_review_evidence':'docs/recovery-report/VISUAL_REVIEW.md',
+                'human_visual_reviewed':False,
+                'publish_approved':bool(existing.get('publish_approved',False)),
+                'note':'Agent-performed visual inspection is recorded separately from publication approval. No human visual review is claimed.'}
+            write_json(review_path,result)
         else:
             if not args.visual_reviewed or not args.publish_approved:
                 raise ValueError('Both --visual-reviewed and --publish-approved are required')
+            reviewer='Codex agent'
+            authorization='Conditional publication authorization in CODEX_PROMPT.md'
+            evidence_path=root/'docs/recovery-report/VISUAL_REVIEW.md'
+            if not evidence_path.is_file():
+                raise ValueError('Visual review evidence not found: docs/recovery-report/VISUAL_REVIEW.md')
             report=build(root,root/'_site')
             if report['recovered_pages']==0 or report['local_source_assets']==0:
                 raise ValueError('Original pages and assets must be recovered before approval')
-            result={'visual_reviewed':True,'publish_approved':True,'note':'Explicit owner review recorded through CLI.'}
+            result={
+                'visual_reviewed':True,
+                'visual_reviewed_by':reviewer,
+                'visual_reviewed_at':now(),
+                'visual_review_evidence':'docs/recovery-report/VISUAL_REVIEW.md',
+                'publish_approved':True,
+                'publish_authorization':authorization,
+                'note':'Agent-performed review is recorded separately from the user authorization. No human visual review is claimed.'
+            }
             write_json(root/'source/review.json',result)
         print(json.dumps(result,indent=2));return 0
     except (OSError,ValueError,KeyError) as exc:

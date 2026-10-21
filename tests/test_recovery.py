@@ -47,6 +47,14 @@ def test_html_masquerading_as_image_rejected():
 def test_tiff_image_payload_is_preserved():
     validate_payload(b'II*\x00\x08\x00\x00\x00'+b'\x00'*16,'image')
 
+def test_audio_media_requires_a_recognized_binary_signature():
+    validate_payload(b'ID3\x04\x00\x00\x00\x00\x00\x00'+b'\x00'*32,'media')
+    validate_payload(b'\xff\xfb\x90d'+b'\x00'*32,'media')
+    with pytest.raises(ValueError,match='media signature'):
+        validate_payload(b'<html><body>archive error</body></html>','media')
+    with pytest.raises(ValueError,match='media signature'):
+        validate_payload(b'not media','media')
+
 def test_font_capture_requires_a_recognized_binary_signature():
     validate_payload(b'wOF2fixture','font')
     with pytest.raises(ValueError,match='font signature'): validate_payload(b'<html>landed page</html>','font')
@@ -108,6 +116,25 @@ def test_old_wordpress_media_is_not_treated_as_a_homepage_dependency():
     wordpress={'url':HOME+'blog/wp-content/uploads/2010/11/legacy.jpg','kind':'image',
                'referrers':[HOME]}
     assert resource_priority(inline)[0] < resource_priority(wordpress)[0]
+
+def test_livejournal_platform_css_images_are_prioritized_as_source_dependencies():
+    linked={'url':'https://l-stat.livejournal.net/img/schemius/logo.svg?v=51065',
+            'kind':'image','referrers':['https://l-stat.livejournal.net/??schemius_v4/header.css']}
+    css={'url':'https://l-stat.livejournal.net/??lj_base.css?v=1518685122',
+         'kind':'css','referrers':['https://bluescholars.livejournal.com/']}
+    tracking={'url':'https://xc3.services.livejournal.com/ljcounter/?d=profile',
+              'kind':'image','referrers':['https://bluescholars.livejournal.com/']}
+    post_photo={'url':'https://imgprx.livejournal.net/example/photo-token',
+                'kind':'image','referrers':['https://bluescholars.livejournal.com/']}
+    unrelated={'url':'https://example.org/other-site-logo.png','kind':'image',
+               'referrers':['CDX:domain']}
+    assert resource_priority(linked)[0] < resource_priority(unrelated)[0]
+    assert resource_priority(css)[0] < resource_priority(unrelated)[0]
+    assert resource_priority(post_photo)[0] < resource_priority(unrelated)[0]
+    content={'url':'https://bluescholars.com/blog/2013/9/9/eugene-oregon-august-2013',
+             'kind':'html','referrers':['seed']}
+    assert resource_priority(content)[0] < resource_priority(post_photo)[0]
+    assert resource_priority(tracking)[0] > resource_priority(css)[0]
 
 class Response:
     def __init__(self,code=200,body=VALID,headers=None):

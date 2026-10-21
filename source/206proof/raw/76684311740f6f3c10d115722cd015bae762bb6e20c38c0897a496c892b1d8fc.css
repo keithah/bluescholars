@@ -1,0 +1,42 @@
+#GuestSignIn {
+   padding: 0px;
+   margin: 0px;
+   width: 180px;
+}
+#GuestSignIn h2 {
+   margin-bottom: 0px;
+}
+#GuestSignIn p {
+   padding: 4px;
+}
+#GuestSignIn a {
+   color: #062971;
+   text-decoration: underline;
+}
+#GuestSignIn a:hover {
+   color: #000000;
+   text-decoration: none;
+}#GuestSignIn fieldset {border: 0}
+
+#GuestSignIn label {
+margin:0;
+}
+
+#GuestSignIn fieldset {
+margin: 0 0 18px 10px;
+}
+
+#GuestSignIn input.text {
+  margin:0.2em 0 0.5em 0;
+  border:1px solid #bbb;
+  height: 15px;
+  padding: 2px;
+}
+
+#GuestSignIn input.text:focus {
+  border:1px solid #666;
+}
+
+#GuestSignIn #btnSignIn {
+display: none;
+}

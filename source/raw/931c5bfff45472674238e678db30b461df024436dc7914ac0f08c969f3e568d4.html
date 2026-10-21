@@ -1,0 +1,408 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Blue Scholars - The Store</title>		
+		<style>
+			body {
+				background-color:#FFFFFF;
+				font-family:Arial;
+				font-size:14px;
+			}
+			div, select {
+				position:relative;
+			}
+			ul {
+		
+				margin:0 0 0 15px;
+				padding:0;
+				font-size:11px;
+			}
+			a, a:visited {
+				text-decoration:underline;
+				color:#000099;
+			}
+			a:hover {
+				color:#cccccc;
+			}
+
+			.clear {
+				clear:both;
+				float:none;
+				margin-top:15px;
+				margin-left:15px;
+
+			}
+			div#maincontainer {
+				width:1024px;
+				margin: 0 auto;
+			
+				background-color:#FFFFFF;
+			}
+			div.column {
+				width:470px;
+				float:left;
+				margin-left:10px;
+				background-color:#FFFFFF;
+			}
+			div.firstcolumn {
+				margin-left:20;
+					margin-top:15px;
+			}
+			div#lowersection div.firstcolumn {
+				width:560px;
+			}
+			div#lowersection div.secondcolumn {
+				width:395px;
+				margin-top:15px;
+			}
+			div.column_double {
+	float:none;
+	clear:both;
+	background-color:#FFFFFF;
+	width:975px;
+			}
+			div.module {
+				position:relative;
+				border:solid 1px #000;
+				padding:10px;
+				margin-bottom:10px;
+				margin-left:10px;
+				margin-top:20px;
+				background-color:#FFF;
+			}
+			div.firstcolumn div.module {
+				min-height:105px;
+			}
+			div#lowersection div.firstcolumn div.module {
+				min-height:162px;
+			}
+			div#collectormodule {
+				min-height:283px;
+			}
+			div.column_double div.module {
+				min-height:100px;
+			}
+			div.headermodule {
+				border:0 none;
+				background:0 none;
+			}
+			.packageheader {
+				margin-bottom:16px;
+			}
+			.packagetitle {
+				font-weight:bold;
+			}
+			.packagedescription {
+				font-weight:bold;
+			}
+			.packageprice, .packagebuybutton, .moredetailslink {
+				position:absolute;
+			}
+			.packageprice {
+				right:104px;
+			}
+			.packagebuybutton {
+				right:6px;
+				height:22px;
+				width:80px;
+				text-align:center;
+				background-color:#FFCC00;
+				text-decoration:none;
+			}
+			#shirtbuybutton {
+				bottom:6px;
+			}
+			.packageimage {
+				float:left;
+				margin-right:20px;
+	
+				border:solid 1px #AAA;
+			}
+			#tshirtimage {
+				position:relative;
+				display:block;
+				margin:40px 10px;
+				border:solid 1px #AAA;
+			}
+			#collectorimage {
+				display:block;
+				float:right;
+				border:solid 1px #AAA;
+			}
+			.moredetailslink {
+				right:6px;
+				bottom:6px;
+			}
+			#shirtcombotitle {
+				float:left;
+				margin:0;
+				padding:19px 0;
+				width:50%;
+				text-align:center;
+			}
+			#shirtcombochoicetitle {
+				text-align:center;
+			}
+			#shirtform {
+				position:relative;
+				margin:0 0 10px 0;
+			}
+			#footer {
+				text-align:center;
+				padding:20px 0;
+				min-height:20px;
+				clear:both;
+				float:none;
+				font-size:11px;
+			}
+			#selectioncontainer {
+				position:absolute;
+				left:-500px;
+				top:0;
+				z-index:1000;
+				min-width:166px;
+				*width:180px;
+				*overflow:visible;
+				*height:114px;
+				background-color:#FFFFFF;
+				border-right:solid 1px #666;
+				border-bottom:solid 1px #666;
+				border-top:solid 1px #FFF;
+				border-left:solid 1px #FFF;
+			}
+			#selectioninnercont {
+				position:relative;
+				margin:8px;
+			}
+			#contBtnContainer {
+				margin-top: 6px;
+			}
+			#continueButton,
+			#cancelButton {
+				position:relative;
+				width:80px;
+				padding:4px 6px;
+				margin-right:6px;
+				text-align:center;
+				background-color:#FFFFFF;
+				color:#000;
+				text-decoration:none;
+			}
+			#cancelButton {
+				background:none;
+				color:#000;
+			}
+			#cancelButton:hover {
+				background-color:#FFCC00;
+				color:#000;
+			}
+			.footnote {
+				font-style:italic;
+			}
+			.addin {
+				float:right;
+				margin-right:105px;
+			}
+		.style1 {clear: both; float: none; margin-top: 15px; margin-left: 15px; font-size: 11px; }
+        .moredetailslink1 {				position:absolute;
+}
+        .style4 {color: #CC0033}
+        </style>
+</head>
+	<body>		
+    
+    <map name="Map" id="Map"><area shape="rect" coords="401,24,465,59" href="http://www.bluescholars.com/blog" alt="blog" />
+
+<area shape="rect" coords="485,23,547,62" href="http://bluescholars.com/blog/bio" alt="bio" />
+
+<area shape="rect" coords="568,22,669,60" href="http://bluescholars.com/blog/releases" alt="releases" />
+
+<area shape="rect" coords="690,21,766,60" href="http://www.indiemerchstore.com/massline/?g=90" target="new" alt="store" />
+
+<area shape="rect" coords="780,20,894,61" href="http://bluescholars.com/blog/tourdates" alt="tourdates" />
+
+<area shape="rect" coords="901,19,1006,65" href="http://bluescholars.com/blog/contact" alt="contact" />
+
+</map>
+
+<div id="maincontainer">
+	<div id="lowersection" class="column_double">
+				<div class="headermodule">
+					<img src="images/header.gif" width="1024" height="65" border="0" usemap="#Map">			
+                 </div>
+<div class="column firstcolumn">
+  <div class="module">
+<img class="packageimage" src="images/oof3_thumb.jpg" height="277" width="150"/>
+<div class="packageheader">
+						 <span class="packagetitle"><em>OOF! EP</em> <br>
+						  </span><span class="packagetitle">DELUXE CD PACKAGE</span> <span class="packageprice">$55</span> <a class="packagebuybutton" href="javascript:void(0);" onClick="Topspin.BundleHelper.buyClick(this, 'ep', 'tr'); return false;">BUY NOW</a>
+						    <a class="packagebuybutton" href="javascript:void(0);" onClick="Topspin.BundleHelper.buyClick(this, 'signed', 'tr'); return false;">BUY NOW</a><br/>
+					        <br/>
+        
+		</div>
+						<ul id="collectorlist" class="packagefeaturelist">
+						  <li>OOF! in premium DRM-free 320 kpbs MP3, FLAC or Apple Lossless</li>
+							<li>HI-808 Digital Video Download</li>
+							<li>High Quality 19&quot; x 25&quot; OOF!  Art Poster designed by Angry Woebots (<a target="_new" href="javascript:void(0);" onClick="window.open('angrywoebotsposter.html', 'angrywoebotsposter', 'status=no,toolbar=no,location=no,directories=no,resizeable=yes,scrollbars=yes,height=350,width=450'); return false;">click for details</a>)</li>
+						    <li>OOF! 8-color Angry Woebots designed T-shirt (<a target="_new" href="javascript:void(0);" onClick="window.open('angrywoebotstee.html', 'angrywoebotstee', 'status=no,toolbar=no,location=no,directories=no,resizeable=yes,scrollbars=yes,height=639,width=720'); return false;">click for details</a>)</li>
+							<li>Signed Limited Edition (<strong>Only <span class="style4">808</span> copies available</strong>) OOF! EP on 2 CDs in Tri-fold Digipack</li>
+						  <li><font color="#CC0033">Shipping  8/25/09</font></li>
+        </ul>
+					  <br style="clear:both;"/>
+	  </div>
+
+	<div class="module">
+		<img class="packageimage" src="images/oof_thumb.jpg" height="150" width="150"/>
+						<div class="packageheader">
+						  <span class="packagetitle"><em>OOF! EP</em> DIGITAL</span>
+						      <span class="packageprice">$10</span>
+						    <a class="packagebuybutton" href="javascript:void(0);" onClick="Topspin.BundleHelper.buyClick(this, 'ep', 'tr'); return false;">BUY NOW</a>						</div>
+<ul id="collectorlist" class="packagefeaturelist">
+							<li>OOF! in premium DRM-free 320 kpbs MP3, FLAC or Apple Lossless</li>
+						    <li>HI-808 Digital Video Download</li>
+						    </span>
+						</ul>
+	<br style="clear:both;"/>
+	  </div>
+	  <div class="module">
+<img class="packageimage" src="images/oof2_thumb.jpg" height="277" width="150"/>
+<div class="packageheader"><span class="packagetitle"><em>OOF! EP</em> DIGITAL PACKAGE</span> <span class="packageprice">$45</span> <a class="packagebuybutton" href="javascript:void(0);" onClick="Topspin.BundleHelper.buyClick(this, 'ep', 'tr'); return false;">BUY NOW</a><br/>
+<br/>
+						</div>
+						<ul id="collectorlist" class="packagefeaturelist">
+							<li>OOF! in premium DRM-free 320 kpbs MP3, FLAC or Apple Lossless</li>
+							<li>HI-808 Digital Video Download</li>
+							<li>High Quality 19&quot; x 25&quot; OOF!  Art Poster designed by Angry Woebots  (<a target="_new" href="javascript:void(0);" onClick="window.open('angrywoebotsposter.html', 'angrywoebotsposter', 'status=no,toolbar=no,location=no,directories=no,resizeable=yes,scrollbars=yes,height=350,width=450'); return false;">click for details</a>)</li>
+							<li>OOF! 8-color Angry Woebots designed T-shirt (<a target="_new" href="javascript:void(0);" onClick="window.open('angrywoebotstee.html', 'angrywoebotstee', 'status=no,toolbar=no,location=no,directories=no,resizeable=yes,scrollbars=yes,height=639,width=720'); return false;">click for details</a>)</li>
+							<li><font color="#CC0033">Shipping  8/25/09</font> </li>
+				      <br></span>
+						</ul>
+<br style="clear:both;"/>
+					</div>
+                    
+                     <div class="module">
+						
+                 <div>
+                   <p><strong>LISTEN TO <em>OOF! EP</em> STREAMING AUDIO               </strong></p>
+                   <p>
+                     <object type="application/x-shockwave-flash" height="400" width="400" id="TSWidget6199" data="http://cdn.topspin.net/widgets/bundle/swf/TSBundleWidget.swf?timestamp=1251096172" bgColor="#000000">  
+                       <param value="always" name="allowScriptAccess" />  
+                       <param name="allowfullscreen" value="true" />  
+                       <param name="quality" value="high" />  
+                       <param name="movie" value="http://cdn.topspin.net/widgets/bundle/swf/TSBundleWidget.swf?timestamp=1251096172" />  
+                       <param name="flashvars" value="widget_id=http://cdn.topspin.net/api/v1/artist/793/bundle_widget/6199?timestamp=1251096172&amp;theme=white" />  
+                       <param name="wmode" value="transparent" />
+                     </object>
+                   </p>
+                 </div>    
+<br style="clear:both;"/>
+					</div>
+	
+  <div class="module">
+						
+		<a href="http://www.indiemerchstore.com/massline/?g=90"><img class="packageimage" src="images/storelink.jpg" width="500" height="162" border="0"></a>
+<br style="clear:both;"/>
+					</div>
+</div>
+              
+<div class="column secondcolumn">
+					<div id="collectormodule" class="module">
+							<div class="packageheader">
+								<span class="packagetitle">BLUE SCHOLARS <br>CATALOG PACKAGE<br>
+								</span>
+								<span class="packageprice">$55</span>
+								<a class="packagebuybutton" href="javascript:void(0);" onClick="Topspin.BundleHelper.buyClick(this, 'catalog', 'tr'); return false;">BUY NOW</a><br/>
+							  <br/>
+							</div>
+							<img src="images/entirepackage.jpg" alt="wholepackage"><br><br>
+							<ul>
+							  <li>Bayani Redux in DRM-free 320 kpbs MP3, FLAC or Apple Lossless</li>
+							  <li>Bayani Redux CD</li>
+							  <li>The Long March in DRM-free 320 kpbs MP3, FLAC or Apple Lossless</li>
+							  <li>The Long March  CD</li>
+							  <li>Blue Scholars (self-titled) in DRM-free 320 kpbs MP3, FLAC or Apple Lossless</li>
+							  <li>Blue Scholars (self-titled) CD</li>
+							  <li>Joe Metro EP in DRM-free 320 kpbs MP3, FLAC or Apple Lossless</li>
+							  <li>BUTTER&amp;GUN$ in DRM-free 320 kpbs MP3, FLAC or Apple Lossless</li>
+							  <li>Joe Metro Digital  Video Download</li>
+							  <li>Back Home Digital  Video Download</li>
+							  <li>Loyalty Digital  Video Download</li>
+							  <li>Classic Blue Scholars Hand Style t-shirt</li>
+                              <li><font color="#CC0033">Pre-order, package shipping 9/1/09 (Digital files available now)</font></li>
+					  </ul>
+					  <br>
+					  <br style="clear:both;"/>
+			</div>
+						<div class="module">
+								<div class="packageheader">
+									<span class="packagetitle"><em>BAYANI REDUX</em> PACKAGE</span>
+									<span class="packageprice">$15</span>
+									<a class="packagebuybutton" href="javascript:void(0);" onClick="Topspin.BundleHelper.buyClick(this, 'redux', 'tr'); return false;">BUY NOW</a><br/>
+								  <br/>
+						  </div>
+								<img src="images/bayanireduxstore.jpg" alt="bayani redux" width="225" height="196"><br>
+								<br>
+								<ul class="packagefeaturelist">
+								  <li>Bayani Redux in DRM-free 320 kpbs MP3, FLAC or Apple Lossless</li>
+								  <li>Bayani Redux CD w/ three new songs &quot;27&quot; &quot;Southbound&quot; &amp; previously unreleased &quot;The Dawn Song&quot; featuring <strong>Shad</strong></li>
+								  <li>Joe Metro Digital Video Download</li>
+								  <li>Back Home Digital Video Download</li>
+								  <li>Loyalty Digital  Video Download</li>
+								  <li><font color="#CC0033">Pre-order, package shipping 9/1/09 (Digital files available now)</font></li>
+								  <br>
+						          <a href="http://bluescholars.com/blog/releases/bayani-redux/">More details</a></span>
+						                </ul>
+						  <br style="clear:both;"/>
+			</div>
+            	<div class="module">
+						
+									<p class="style1">All physical packages will ship within 24 hours of purchase and will have shipping and handling charges added to the purchase price.<br>
+		                          <p class="style1"><strong>Digital Formats
+			                        </strong>
+			                        <ul class="style1">
+				<li>High Quality MP3 Files (320Kbps, fully tagged, will play on any MP3 player)</li>
+				<li>FLAC Lossless (CD quality - will not play in iTunes without being converted)</li>
+				<li>Apple Lossless (CD quality - will play in iTunes)</li>
+				<li>All files are 100% DRM fre</li>
+			 
+		                          </ul><p class="style1">Please note: the FLAC format is for experienced users and requires additional software.<br>
+		                            <br/>
+                Learn more about FLAC and lossless audio here: <a href="http://flac.sourceforge.net">http://flac.sourceforge.net</a></p>
+	        
+			</div>
+</div>
+			<br style="clear:both;"/>
+			
+<div class="column_double">
+				<div id="footer">
+					<span>Ôø‡ Copyright 2009</span><br/> 
+					<a href="https://app.topspin.net/account/help_public">Customer Support</a> | 
+					<a href="http://app.topspin.net/account/privacypolicy_public">Privacy Policy</a> | 
+					<a href="http://app.topspin.net/account/fan_faq">FAQ</a> | 
+					<a href="https://app.topspin.net/account/terms_public">Terms of Service</a>				
+                </div>
+</div>
+
+</div>
+</div>
+		<script src="http://yui.yahooapis.com/2.7.0/build/yahoo-dom-event/yahoo-dom-event.js"></script>
+		<script src="ts_bundles.js"></script>
+		<script>
+			Topspin.BundleHelper.productContainerClass = "module";
+			Topspin.BundleHelper.artistID = 793; // AID
+			
+			function radioClick(elmRadio)
+			{
+				if (elmRadio && Topspin.BundleHelper.selectionBoxOpen())
+				{
+					//Topspin.BundleHelper.buyClick(elmRadio, elmRadio.value, 'br');
+					Topspin.BundleHelper.hideSelections();
+				}
+			}
+		</script>
+		<script type="text/javascript" src="http://cdn.topspin.net/javascripts/topspin_purchase.js?timestamp=1244148049"></script>
+	</body>
+</html>

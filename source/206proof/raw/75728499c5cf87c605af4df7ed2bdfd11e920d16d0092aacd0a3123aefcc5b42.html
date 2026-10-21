@@ -1,0 +1,946 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-ca">
+   <head>
+   
+   
+   
+      <title>206Proof - Forum - Search</title>
+      <link rel="shortcut icon" href="/forum/themes/206Proof/styles/default/favicon.ico" />
+            <link rel="stylesheet" type="text/css" href="/forum/themes/206Proof/styles/default/vanilla.css" media="screen" />
+            <link rel="stylesheet" type="text/css" href="/forum/themes/206Proof/styles/default/vanilla.print.css" media="print" />
+            <link rel="stylesheet" type="text/css" href="/forum/extensions/Nugget/nugget.css" />
+            <link rel="stylesheet" type="text/css" href="/forum/extensions/SidepanelImageLink/style.css" />
+            <link rel="stylesheet" type="text/css" href="/forum/extensions/Signatures/style.css" />
+            <link rel="stylesheet" type="text/css" href="/forum/extensions/ModTools/style.css" />
+            <link rel="stylesheet" type="text/css" href="/forum/extensions/GuestSignIn/style.css" />
+            <script type="text/javascript" src="/forum/js/global.js"></script>
+            <script type="text/javascript" src="/forum/js/vanilla.js"></script>
+            <script type="text/javascript" src="/forum/js/ajax.js"></script>
+            <script type="text/javascript" src="/forum/js/ac.js"></script>
+            <script type="text/javascript" src="/forum/extensions/JQuery/jquery-1.1.3.1.pack.js"></script>
+            <script type="text/javascript" src="/forum/extensions/ModTools/function.js"></script><style>
+		.ProfileTitle.WithIcon .ProfileIcon { width: 60px; height: 60px; }
+		#AccountProfile .Picture { width: 280px; height: 280px; }
+		#Comments .CommentHeader { line-height: 60px; }
+		#Comments .CommentHeader li div.CommentIcon { padding: 60px 0px 60px 60px; }
+		li.User.Name .UserIcon { padding: 60px 0px 60px 60px !important; }
+		li.User.Name.WithIcon { line-height: 60px; }
+	</style>
+<!--[if lte IE 7]><link rel="stylesheet" href="http://www.206proof.com/forum/themes/206Proof/styles/default/ie.css" type="text/css" media="screen" charset="utf-8"><![endif]-->
+<script type="text/javascript" src="http://www.206proof.com/forum/js/menu.js"></script></head>
+   <body id="SearchPage"  onload="Focus('txtKeywords');"><!--[if lt IE 7]><script src="http://www.206proof.com/ie7/ie7-standard-p.js" type="text/javascript"></script><![endif]--><b></b>
+		<div id="top">
+		<div id="top-content-wrapper">
+			<ul id="topnav">
+ 			   <li><a href="http://www.206proof.com/forum/" class="menuhead">206Proof</a>
+      			  <ul class="proof-dropdown">
+        		    <li><a href="http://www.206proof.com/shop/">Shop</a></li>
+           			<li><a href="http://www.206proof.com/advertise/">Advertise</a></li>
+        		    <li><a href="http://www.206proof.com/about/">About &amp; FAQ</a></li>
+       			 </ul>
+       		   </li>
+   			   <li><a href="http://www.raindrophustla.com">RaindropHustla</a></li>
+   			   <li><a href="http://www.reigncity.com" class="menuhead">ReignCity</a>
+      			  <ul class="reign-dropdown">
+           			<li><a href="http://www.reigncity.com/calendar/">Calendar</a></li>
+           			<li><a href="http://www.reigncity.com/news/">News &amp; Reviews</a></li>
+            		<li><a href="http://www.reigncity.com/about/">About &amp; Contact</a></li>
+        		  </ul>
+   			    </li>
+			</ul>
+		</div>
+		</div>
+
+<div id="Header"><div id="Session">Not signed in (<a href="/forum/people.php?ReturnUrl=http://www.206proof.com/forum/search.php?PostBackAction=Search&amp;Type=Discussions&amp;Advanced=1&amp;Keywords=&amp;Categories=&amp;AuthUsername=RCcidewayz&amp;btnSubmit=Search">Sign In</a> or <a href="http://www.206proof.com/forum/people.php?PostBackAction=ApplyForm">Register</a>)</div><a name="pgtop"></a>
+			<h1>
+				206Proof - Forum
+			</h1>
+			
+			<ul><li><a href="index.php" >Discussions</a></li><li><a href="categories.php" >Categories</a></li><li class="TabOn"><a href="search.php" >Search</a></li></ul>
+   </div><div id="Body"><div id="Panel"><div id="GuestSignIn">
+      <h2>Sign In</h2>
+      <p></p>
+   <fieldset><form id="frmSignIn" method="post" action="http://www.206proof.com/forum/people.php">
+     <input name="PostBackAction" value="SignIn" type="hidden">
+     <input name="ReturnUrl" value="http://www.206proof.com/forum/search.php?PostBackAction=Search&amp;Type=Discussions&amp;Advanced=1&amp;Keywords=&amp;Categories=&amp;AuthUsername=RCcidewayz&amp;btnSubmit=Search" type="hidden">
+     <ul>
+      <li><label for="txtUsername">Username</label>
+      <input id="txtUsername" name="Username" value="" class="text" maxlength="20" type="text">
+     </li>
+     <li><label for="txtPassword">Password</label>
+      <input id="txtPassword" name="Password" value="" class="text" type="password">
+     </li>
+     </ul>
+     <input name="btnSignIn" id="btnSignIn" value="Sign In" class="Button" type="image" src="http://www.206proof.com/forum/themes/206Proof/styles/default/signin.gif">
+   </form></fieldset>
+  </div><ul><li><h2>Menu</h2><ul><li>
+
+
+
+<a href="http://www.206proof.com/shop/">206Proof Merchandise</a>
+
+
+
+</li>
+
+
+
+<li>
+
+
+
+<a href="http://www.206proof.com/forum/faq.php">Frequently Asked Questions</a>
+
+
+
+</li>
+
+
+
+
+
+
+
+<li>
+
+
+
+<a href="http://www.206proof.com/forum/about.php">About 206Proof</a>
+
+
+
+</li>
+
+
+
+
+
+
+
+<li>
+
+
+
+<a href="http://en.wikipedia.org/wiki/Bbcode">BBCode Reference</a>
+
+
+
+</li>
+
+
+
+
+
+
+
+<li>
+
+
+
+<a href="http://www.gimp.org/">Free Image Editor (GIMP)</a>
+
+
+
+</li></ul></li></ul>
+      <ul id="Banner">
+      	 <li><h2>Advertisements</h2></li>
+         <li class="BannerImage"><a href="http://www.206proof.com/advertise/"><img src="extensions/SidepanelImageLink/local.gif" class="center"/></a></li>
+      </ul><ul><li><ul><a href="http://www.206proof.com/advertise/">Local Artists Advertise Free</a></ul></li></ul><p id="AboutVanilla"><a href="http://getvanilla.com">Vanilla 1.1.4</a> is a product of <a href="http://lussumo.com">Lussumo</a>. More Information: <a href="http://lussumo.com/docs">Documentation</a>, <a href="http://lussumo.com/community">Community Support</a>.</p></div>
+<div id="Content"><div id="Form" class="Account Search">
+	<fieldset id="SearchSimpleFields">
+		<legend>Search</legend>
+		<a href="./" onclick="ShowAdvancedSearch(); return false;" class="SearchSwitch">Advanced</a><form id="SearchSimple" method="get" action="http://www.206proof.com/forum/search.php"><div><input type="hidden" name="PostBackAction" value="Search" />
+				</div><ul>
+				<li id="MainSearchInput">
+					<label for="txtKeywords">SearchTerms</label>
+					<input id="txtKeywords" type="text" name="Keywords" value="RCcidewayz:" class="SearchInput" />
+				</li>
+				<li id="SimpleSearchRadios">Search:<input type="radio" name="Type"  id="Radio_Topics" value="Topics" checked="checked" class="SearchRadio" />
+			<label for="Radio_Topics" class="Radio">Topics</label>
+			<input type="radio" name="Type"  id="Radio_Comments" value="Comments" class="SearchRadio" />
+			<label for="Radio_Comments" class="Radio">Comments</label>
+			<input type="radio" name="Type"  id="Radio_Users" value="Users" class="SearchRadio" />
+			<label for="Radio_Users" class="Radio">Users</label>
+			</li>
+				<li>
+					<input type="submit" name="btnSubmit" value="Search" class="Button SearchButton" />
+				</li>
+			</ul>
+		</form>
+	</fieldset><fieldset id="SearchDiscussionFields">
+		<legend>Discussion topic search</legend>
+		<a href="./" onclick="ShowSimpleSearch(); return false;" class="SearchSwitch">Simple</a><form id="SearchDiscussions" method="get" action="http://www.206proof.com/forum/search.php"><div><input type="hidden" name="PostBackAction" value="Search" />
+				<input type="hidden" name="Type" value="Discussions" />
+				<input type="hidden" name="Advanced" value="1" />
+				</div><ul>
+				<li>
+					<label for="txtDiscussionKeywords">Find discussion topics containing</label>
+					<input id="txtDiscussionKeywords" type="text" name="Keywords" value="" class="SearchInput AdvancedSearchInput" />
+				</li><li>
+						<label for="ddDiscussionCategories">in the category</label><select name="Categories" class="SearchSelect"  id="ddDiscussionCategories">
+		<option value=""  selected="selected">All categories</option>
+			<option value="General" >General</option>
+			<option value="Shows" >Shows</option>
+			<option value="Suggestions" >Suggestions</option>
+			<option value="Technical" >Technical</option>
+			</select>
+		
+					</li><li>
+					<label for="DiscussionAuthUsername">where the author was</label>
+					<input id="DiscussionAuthUsername" name="AuthUsername" type="text" value="RCcidewayz" class="SearchInput AdvancedUserInput" />
+					<script type="text/javascript">
+						var DiscussionAutoComplete = new AutoComplete("DiscussionAuthUsername", false);
+						DiscussionAutoComplete.TableID = "DiscussionAutoCompleteResults";
+						DiscussionAutoComplete.KeywordSourceUrl = "/forum/ajax/getusers.php?Search=";
+					</script>
+				</li>
+				<li>
+					<input type="submit" name="btnSubmit" value="Search" class="Button SearchButton" />
+				</li>
+			</ul>
+		</form>
+	</fieldset><fieldset id="SearchCommentFields">
+		<legend>Discussion comment search</legend><form id="SearchComments" method="get" action="http://www.206proof.com/forum/search.php"><div><input type="hidden" name="PostBackAction" value="Search" />
+				<input type="hidden" name="Advanced" value="1" />
+				<input type="hidden" name="Type" value="Comments" />
+				</div><ul>
+				<li>
+					<label for="txtCommentKeywords">Find comments containing</label>
+					<input id="txtCommentKeywords" type="text" name="Keywords" value="" class="SearchInput AdvancedSearchInput" />
+				</li><li>
+						<label for="ddCommentCategories">in the category</label><select name="Categories" class="SearchSelect"  id="ddCommentCategories">
+		<option value=""  selected="selected">All categories</option>
+			<option value="General" >General</option>
+			<option value="Shows" >Shows</option>
+			<option value="Suggestions" >Suggestions</option>
+			<option value="Technical" >Technical</option>
+			</select>
+		
+					</li><li>
+					<label for="CommentAuthUsername">where the author was</label>
+					<input id="CommentAuthUsername" name="AuthUsername" type="text" value="" class="SearchInput AdvancedUserInput" />
+					<script type="text/javascript">
+						var CommentAutoComplete = new AutoComplete("CommentAuthUsername", false);
+						CommentAutoComplete.TableID = "CommentAutoCompleteResults";
+						CommentAutoComplete.KeywordSourceUrl = "/forum/ajax/getusers.php?Search=";
+					</script>
+				</li>
+				<li>
+					<input type="submit" name="btnSubmit" value="Search" class="Button SearchButton" />
+				</li>
+			</ul>
+		</form>
+	</fieldset><fieldset id="SearchUserFields">
+		<legend>User account search</legend><form id="SearchUsers" method="get" action="http://www.206proof.com/forum/search.php"><div><input type="hidden" name="PostBackAction" value="Search" />
+				<input type="hidden" name="Advanced" value="1" />
+				<input type="hidden" name="Type" value="Users" />
+				</div><ul>
+				<li>
+					<label for="txtUserKeywords">Find user accounts containing</label>
+					<input id="txtUserKeywords" type="text" name="Keywords" value="" class="SearchInput AdvancedSearchInput" />
+				</li>
+				<li>
+					<label for="ddRoles">in the role</label>
+					<select name="Roles" class="SearchSelect"  id="ddRoles">
+		<option value=""  selected="selected">All roles</option>
+			<option value="Probation (New Discussions)" >Probation (New Discussions)</option>
+			<option value="Global Admin" >Global Admin</option>
+			<option value="Probation (Posting)" >Probation (Posting)</option>
+			<option value="Moderator" >Moderator</option>
+			<option value="Banned" >Banned</option>
+			<option value="Member" >Member</option>
+			<option value="Administrator" >Administrator</option>
+			</select>
+		
+				</li>
+				<li>
+					<label for="ddOrder">sort results by</label>
+					<select name="UserOrder" class="SearchSelect"  id="ddOrder">
+		<option value=""  selected="selected">Username</option>
+			<option value="Date" >Date last active</option>
+			</select>
+		
+				</li>
+				<li>
+					<input type="submit" name="btnSubmit" value="Search" class="Button SearchButton" />
+				</li>
+			</ul>
+		</form>
+	</fieldset>
+</div><div class="ContentInfo Top">
+	<h1>Topics</h1>
+	<div class="PageInfo">
+		<p>Results 1 to 26 for <strong>nothing</strong></p>
+		<div class="PageList">&nbsp;</div>
+	</div>
+</div>
+<div id="ContentBody">
+	<ol id="Discussions">
+<li id="Discussion_14866" class="Discussion Unread NewComments Category_1">
+	<ul>
+		<li class="DiscussionType">
+			<span>Discussion Type</span>
+		</li>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=14866&amp;page=1#Item_0">Top 5 Performance Do&#039;s and Don&#039;ts</a>
+		</li>
+		
+			<li class="DiscussionCategory">
+				<span>Category </span><a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+			</li>
+			<li class="DiscussionStarted">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=14866#Item_1">Started by</a> </span><a href="http://www.206proof.com/forum/account.php?u=11703">RCcidewayz</a>
+		</li>
+		<li class="DiscussionComments">
+			<span>Comments </span>35
+		</li>
+		<li class="DiscussionLastComment">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=14866&amp;page=1#Item_35">Last comment by</a> </span><a href="http://www.206proof.com/forum/account.php?u=1500">DURANGED PITT</a>
+		</li>
+		<li class="DiscussionActive">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=14866&amp;page=1#Item_35">Last Active</a> </span>Dec 19th 2010
+		</li></ul>
+</li>
+<li id="Discussion_14711" class="Discussion Unread NewComments Category_1 Alternate">
+	<ul>
+		<li class="DiscussionType">
+			<span>Discussion Type</span>
+		</li>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=14711&amp;page=1#Item_0">DOPE EMPORIUM --SAT. NOV 13TH 2010--WASHINGTON HALL Free-All Ages</a>
+		</li>
+		
+			<li class="DiscussionCategory">
+				<span>Category </span><a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+			</li>
+			<li class="DiscussionStarted">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=14711#Item_1">Started by</a> </span><a href="http://www.206proof.com/forum/account.php?u=11703">RCcidewayz</a>
+		</li>
+		<li class="DiscussionComments">
+			<span>Comments </span>13
+		</li>
+		<li class="DiscussionLastComment">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=14711&amp;page=1#Item_13">Last comment by</a> </span><a href="http://www.206proof.com/forum/account.php?u=1843">Josh Rizeberg</a>
+		</li>
+		<li class="DiscussionActive">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=14711&amp;page=1#Item_13">Last Active</a> </span>Nov 29th 2010
+		</li></ul>
+</li>
+<li id="Discussion_14775" class="Discussion Unread NewComments Category_1">
+	<ul>
+		<li class="DiscussionType">
+			<span>Discussion Type</span>
+		</li>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=14775&amp;page=1#Item_0">Dope Emporium Producer Battle</a>
+		</li>
+		
+			<li class="DiscussionCategory">
+				<span>Category </span><a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+			</li>
+			<li class="DiscussionStarted">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=14775#Item_1">Started by</a> </span><a href="http://www.206proof.com/forum/account.php?u=11703">RCcidewayz</a>
+		</li>
+		<li class="DiscussionComments">
+			<span>Comments </span>2
+		</li>
+		<li class="DiscussionLastComment">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=14775&amp;page=1#Item_2">Last comment by</a> </span><a href="http://www.206proof.com/forum/account.php?u=1500">DURANGED PITT</a>
+		</li>
+		<li class="DiscussionActive">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=14775&amp;page=1#Item_2">Last Active</a> </span>Nov 22nd 2010
+		</li></ul>
+</li>
+<li id="Discussion_14298" class="Discussion Unread NewComments Category_1 Alternate">
+	<ul>
+		<li class="DiscussionType">
+			<span>Discussion Type</span>
+		</li>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=14298&amp;page=1#Item_0">DEE ALE x LARUE x NEEMA x TRE 8--SEPT 13TH @ CONTOUR</a>
+		</li>
+		
+			<li class="DiscussionCategory">
+				<span>Category </span><a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+			</li>
+			<li class="DiscussionStarted">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=14298#Item_1">Started by</a> </span><a href="http://www.206proof.com/forum/account.php?u=11703">RCcidewayz</a>
+		</li>
+		<li class="DiscussionComments">
+			<span>Comments </span>3
+		</li>
+		<li class="DiscussionLastComment">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=14298&amp;page=1#Item_3">Last comment by</a> </span><a href="http://www.206proof.com/forum/account.php?u=18136">Afterburner!</a>
+		</li>
+		<li class="DiscussionActive">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=14298&amp;page=1#Item_3">Last Active</a> </span>Sep 19th 2010
+		</li></ul>
+</li>
+<li id="Discussion_14011" class="Discussion Unread NewComments Category_1">
+	<ul>
+		<li class="DiscussionType">
+			<span>Discussion Type</span>
+		</li>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=14011&amp;page=1#Item_0">((VIDEO)) GENERAL WOJACK &quot;IN THE CITY&quot;  Video By Littleton Miller</a>
+		</li>
+		
+			<li class="DiscussionCategory">
+				<span>Category </span><a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+			</li>
+			<li class="DiscussionStarted">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=14011#Item_1">Started by</a> </span><a href="http://www.206proof.com/forum/account.php?u=11703">RCcidewayz</a>
+		</li>
+		<li class="DiscussionComments">
+			<span>Comments </span>4
+		</li>
+		<li class="DiscussionLastComment">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=14011&amp;page=1#Item_4">Last comment by</a> </span><a href="http://www.206proof.com/forum/account.php?u=2591">xaviant haze</a>
+		</li>
+		<li class="DiscussionActive">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=14011&amp;page=1#Item_4">Last Active</a> </span>Aug 3rd 2010
+		</li></ul>
+</li>
+<li id="Discussion_12040" class="Discussion Unread NewComments Category_1 Alternate">
+	<ul>
+		<li class="DiscussionType">
+			<span>Discussion Type</span>
+		</li>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=12040&amp;page=1#Item_0">RC THE TRACKAHOLIQ &lt;FULL CIRCLE&gt; ALBUM RELEASE CONCERT</a>
+		</li>
+		
+			<li class="DiscussionCategory">
+				<span>Category </span><a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+			</li>
+			<li class="DiscussionStarted">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=12040#Item_1">Started by</a> </span><a href="http://www.206proof.com/forum/account.php?u=11703">RCcidewayz</a>
+		</li>
+		<li class="DiscussionComments">
+			<span>Comments </span>15
+		</li>
+		<li class="DiscussionLastComment">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=12040&amp;page=1#Item_15">Last comment by</a> </span><a href="http://www.206proof.com/forum/account.php?u=21973">ishootHDvideos</a>
+		</li>
+		<li class="DiscussionActive">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=12040&amp;page=1#Item_15">Last Active</a> </span>Aug 2nd 2010
+		</li></ul>
+</li>
+<li id="Discussion_13990" class="Discussion Unread NewComments Category_1">
+	<ul>
+		<li class="DiscussionType">
+			<span>Discussion Type</span>
+		</li>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=13990&amp;page=1#Item_0">PD2- &quot;I Got Movement&quot;</a>
+		</li>
+		
+			<li class="DiscussionCategory">
+				<span>Category </span><a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+			</li>
+			<li class="DiscussionStarted">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=13990#Item_1">Started by</a> </span><a href="http://www.206proof.com/forum/account.php?u=11703">RCcidewayz</a>
+		</li>
+		<li class="DiscussionComments">
+			<span>Comments </span>7
+		</li>
+		<li class="DiscussionLastComment">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=13990&amp;page=1#Item_7">Last comment by</a> </span><a href="http://www.206proof.com/forum/account.php?u=1383">11:30</a>
+		</li>
+		<li class="DiscussionActive">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=13990&amp;page=1#Item_7">Last Active</a> </span>Aug 1st 2010
+		</li></ul>
+</li>
+<li id="Discussion_13856" class="Discussion Unread NewComments Category_1 Alternate">
+	<ul>
+		<li class="DiscussionType">
+			<span>Discussion Type</span>
+		</li>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=13856&amp;page=1#Item_0">A Good Mic???</a>
+		</li>
+		
+			<li class="DiscussionCategory">
+				<span>Category </span><a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+			</li>
+			<li class="DiscussionStarted">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=13856#Item_1">Started by</a> </span><a href="http://www.206proof.com/forum/account.php?u=11703">RCcidewayz</a>
+		</li>
+		<li class="DiscussionComments">
+			<span>Comments </span>23
+		</li>
+		<li class="DiscussionLastComment">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=13856&amp;page=1#Item_23">Last comment by</a> </span><a href="http://www.206proof.com/forum/account.php?u=625">geneworm</a>
+		</li>
+		<li class="DiscussionActive">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=13856&amp;page=1#Item_23">Last Active</a> </span>Jul 19th 2010
+		</li></ul>
+</li>
+<li id="Discussion_13826" class="Discussion Unread NewComments Category_1">
+	<ul>
+		<li class="DiscussionType">
+			<span>Discussion Type</span>
+		</li>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=13826&amp;page=1#Item_0">Why Should Artists Be Aware of The Business Side of Music? Jay Cooper</a>
+		</li>
+		
+			<li class="DiscussionCategory">
+				<span>Category </span><a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+			</li>
+			<li class="DiscussionStarted">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=13826#Item_1">Started by</a> </span><a href="http://www.206proof.com/forum/account.php?u=11703">RCcidewayz</a>
+		</li>
+		<li class="DiscussionComments">
+			<span>Comments </span>2
+		</li>
+		<li class="DiscussionLastComment">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=13826&amp;page=1#Item_2">Last comment by</a> </span><a href="http://www.206proof.com/forum/account.php?u=9989">(((206)))</a>
+		</li>
+		<li class="DiscussionActive">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=13826&amp;page=1#Item_2">Last Active</a> </span>Jul 14th 2010
+		</li></ul>
+</li>
+<li id="Discussion_13752" class="Discussion Unread NewComments Category_1 Alternate">
+	<ul>
+		<li class="DiscussionType">
+			<span>Discussion Type</span>
+		</li>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=13752&amp;page=1#Item_0">THE SHOW- WHO WANNA GO??</a>
+		</li>
+		
+			<li class="DiscussionCategory">
+				<span>Category </span><a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+			</li>
+			<li class="DiscussionStarted">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=13752#Item_1">Started by</a> </span><a href="http://www.206proof.com/forum/account.php?u=11703">RCcidewayz</a>
+		</li>
+		<li class="DiscussionComments">
+			<span>Comments </span>18
+		</li>
+		<li class="DiscussionLastComment">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=13752&amp;page=1#Item_18">Last comment by</a> </span><a href="http://www.206proof.com/forum/account.php?u=13">ae.k.ae</a>
+		</li>
+		<li class="DiscussionActive">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=13752&amp;page=1#Item_18">Last Active</a> </span>Jul 7th 2010
+		</li></ul>
+</li>
+<li id="Discussion_13624" class="Discussion Unread NewComments Category_1">
+	<ul>
+		<li class="DiscussionType">
+			<span>Discussion Type</span>
+		</li>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=13624&amp;page=1#Item_0">JULY 2ND&gt;SILVER SHADOW D   PAGE ONE   DEE ALE (FROM DMS)   SOUL THE INTERROGATOR   SATURDAY MORN....</a>
+		</li>
+		
+			<li class="DiscussionCategory">
+				<span>Category </span><a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+			</li>
+			<li class="DiscussionStarted">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=13624#Item_1">Started by</a> </span><a href="http://www.206proof.com/forum/account.php?u=11703">RCcidewayz</a>
+		</li>
+		<li class="DiscussionComments">
+			<span>Comments </span>31
+		</li>
+		<li class="DiscussionLastComment">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=13624&amp;page=1#Item_31">Last comment by</a> </span><a href="http://www.206proof.com/forum/account.php?u=30">Barfly</a>
+		</li>
+		<li class="DiscussionActive">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=13624&amp;page=1#Item_31">Last Active</a> </span>Jul 4th 2010
+		</li></ul>
+</li>
+<li id="Discussion_13428" class="Discussion Unread NewComments Category_1 Alternate">
+	<ul>
+		<li class="DiscussionType">
+			<span>Discussion Type</span>
+		</li>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=13428&amp;page=1#Item_0">((FREE)) RC THE TRACKAHOLIQ &amp; DJ PEG &quot;FIRST ROUND DRAFT PICKS&quot; MIXTAPE</a>
+		</li>
+		
+			<li class="DiscussionCategory">
+				<span>Category </span><a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+			</li>
+			<li class="DiscussionStarted">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=13428#Item_1">Started by</a> </span><a href="http://www.206proof.com/forum/account.php?u=11703">RCcidewayz</a>
+		</li>
+		<li class="DiscussionComments">
+			<span>Comments </span>11
+		</li>
+		<li class="DiscussionLastComment">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=13428&amp;page=1#Item_11">Last comment by</a> </span><a href="http://www.206proof.com/forum/account.php?u=7944">UNdarhymehustla</a>
+		</li>
+		<li class="DiscussionActive">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=13428&amp;page=1#Item_11">Last Active</a> </span>Jun 2nd 2010
+		</li></ul>
+</li>
+<li id="Discussion_13440" class="Discussion Unread NewComments NoReplies Category_1">
+	<ul>
+		<li class="DiscussionType">
+			<span>Discussion Type</span>
+		</li>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=13440&amp;page=1#Item_0">FULL CIRCLE SHOWCASE TOUR CHEHALIS-BELLINGHAM-BREMERTON</a>
+		</li>
+		
+			<li class="DiscussionCategory">
+				<span>Category </span><a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+			</li>
+			<li class="DiscussionStarted">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=13440#Item_1">Started by</a> </span><a href="http://www.206proof.com/forum/account.php?u=11703">RCcidewayz</a>
+		</li>
+		<li class="DiscussionComments">
+			<span>Comments </span>1
+		</li>
+		<li class="DiscussionLastComment">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=13440&amp;page=1#Item_1">Last comment by</a> </span><a href="http://www.206proof.com/forum/account.php?u=11703">RCcidewayz</a>
+		</li>
+		<li class="DiscussionActive">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=13440&amp;page=1#Item_1">Last Active</a> </span>Jun 1st 2010
+		</li></ul>
+</li>
+<li id="Discussion_13114" class="Discussion Unread NewComments Category_1 Alternate">
+	<ul>
+		<li class="DiscussionType">
+			<span>Discussion Type</span>
+		</li>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=13114&amp;page=1#Item_0">RC&#039;S FULL CIRCLE SHOWCASE MAY 22ND @ CODE RED</a>
+		</li>
+		
+			<li class="DiscussionCategory">
+				<span>Category </span><a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+			</li>
+			<li class="DiscussionStarted">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=13114#Item_1">Started by</a> </span><a href="http://www.206proof.com/forum/account.php?u=11703">RCcidewayz</a>
+		</li>
+		<li class="DiscussionComments">
+			<span>Comments </span>3
+		</li>
+		<li class="DiscussionLastComment">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=13114&amp;page=1#Item_3">Last comment by</a> </span><a href="http://www.206proof.com/forum/account.php?u=1383">11:30</a>
+		</li>
+		<li class="DiscussionActive">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=13114&amp;page=1#Item_3">Last Active</a> </span>May 19th 2010
+		</li></ul>
+</li>
+<li id="Discussion_13199" class="Discussion Unread NewComments Category_1">
+	<ul>
+		<li class="DiscussionType">
+			<span>Discussion Type</span>
+		</li>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=13199&amp;page=1#Item_0">This is just kinda funny to me....</a>
+		</li>
+		
+			<li class="DiscussionCategory">
+				<span>Category </span><a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+			</li>
+			<li class="DiscussionStarted">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=13199#Item_1">Started by</a> </span><a href="http://www.206proof.com/forum/account.php?u=11703">RCcidewayz</a>
+		</li>
+		<li class="DiscussionComments">
+			<span>Comments </span>4
+		</li>
+		<li class="DiscussionLastComment">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=13199&amp;page=1#Item_4">Last comment by</a> </span><a href="http://www.206proof.com/forum/account.php?u=1383">11:30</a>
+		</li>
+		<li class="DiscussionActive">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=13199&amp;page=1#Item_4">Last Active</a> </span>May 5th 2010
+		</li></ul>
+</li>
+<li id="Discussion_12760" class="Discussion Unread NewComments Category_1 Alternate">
+	<ul>
+		<li class="DiscussionType">
+			<span>Discussion Type</span>
+		</li>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=12760&amp;page=1#Item_0">BLACK STAX &quot;THIS RIGHT HERE&quot; **FREE DOWNLOAD** CIDEWAYZ PROD.</a>
+		</li>
+		
+			<li class="DiscussionCategory">
+				<span>Category </span><a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+			</li>
+			<li class="DiscussionStarted">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=12760#Item_1">Started by</a> </span><a href="http://www.206proof.com/forum/account.php?u=11703">RCcidewayz</a>
+		</li>
+		<li class="DiscussionComments">
+			<span>Comments </span>2
+		</li>
+		<li class="DiscussionLastComment">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=12760&amp;page=1#Item_2">Last comment by</a> </span><a href="http://www.206proof.com/forum/account.php?u=11703">RCcidewayz</a>
+		</li>
+		<li class="DiscussionActive">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=12760&amp;page=1#Item_2">Last Active</a> </span>Mar 31st 2010
+		</li></ul>
+</li>
+<li id="Discussion_12440" class="Discussion Unread NewComments Category_1">
+	<ul>
+		<li class="DiscussionType">
+			<span>Discussion Type</span>
+		</li>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=12440&amp;page=1#Item_0">Full Circle Release Concert Footage-Fatal Lucciano &quot;Diamonds&quot;</a>
+		</li>
+		
+			<li class="DiscussionCategory">
+				<span>Category </span><a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+			</li>
+			<li class="DiscussionStarted">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=12440#Item_1">Started by</a> </span><a href="http://www.206proof.com/forum/account.php?u=11703">RCcidewayz</a>
+		</li>
+		<li class="DiscussionComments">
+			<span>Comments </span>6
+		</li>
+		<li class="DiscussionLastComment">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=12440&amp;page=1#Item_6">Last comment by</a> </span><a href="http://www.206proof.com/forum/account.php?u=393">kitty wu</a>
+		</li>
+		<li class="DiscussionActive">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=12440&amp;page=1#Item_6">Last Active</a> </span>Mar 1st 2010
+		</li></ul>
+</li>
+<li id="Discussion_12315" class="Discussion Unread NewComments Category_1 Alternate">
+	<ul>
+		<li class="DiscussionType">
+			<span>Discussion Type</span>
+		</li>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=12315&amp;page=1#Item_0">&quot;I hope a dinosaur really steps on you&quot;</a>
+		</li>
+		
+			<li class="DiscussionCategory">
+				<span>Category </span><a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+			</li>
+			<li class="DiscussionStarted">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=12315#Item_1">Started by</a> </span><a href="http://www.206proof.com/forum/account.php?u=11703">RCcidewayz</a>
+		</li>
+		<li class="DiscussionComments">
+			<span>Comments </span>9
+		</li>
+		<li class="DiscussionLastComment">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=12315&amp;page=1#Item_9">Last comment by</a> </span><a href="http://www.206proof.com/forum/account.php?u=11703">RCcidewayz</a>
+		</li>
+		<li class="DiscussionActive">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=12315&amp;page=1#Item_9">Last Active</a> </span>Feb 18th 2010
+		</li></ul>
+</li>
+<li id="Discussion_12191" class="Discussion Unread NewComments Category_1">
+	<ul>
+		<li class="DiscussionType">
+			<span>Discussion Type</span>
+		</li>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=12191&amp;page=1#Item_0">Free Download &quot;DIAMONDS&quot; Featuring FATAL LUCCIAUNO by RC THE TRACKAHOLIQ</a>
+		</li>
+		
+			<li class="DiscussionCategory">
+				<span>Category </span><a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+			</li>
+			<li class="DiscussionStarted">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=12191#Item_1">Started by</a> </span><a href="http://www.206proof.com/forum/account.php?u=11703">RCcidewayz</a>
+		</li>
+		<li class="DiscussionComments">
+			<span>Comments </span>31
+		</li>
+		<li class="DiscussionLastComment">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=12191&amp;page=1#Item_31">Last comment by</a> </span><a href="http://www.206proof.com/forum/account.php?u=11703">RCcidewayz</a>
+		</li>
+		<li class="DiscussionActive">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=12191&amp;page=1#Item_31">Last Active</a> </span>Feb 9th 2010
+		</li></ul>
+</li>
+<li id="Discussion_12173" class="Discussion Unread NewComments Category_1 Alternate">
+	<ul>
+		<li class="DiscussionType">
+			<span>Discussion Type</span>
+		</li>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=12173&amp;page=1#Item_0">New Downtown Seattle Studio</a>
+		</li>
+		
+			<li class="DiscussionCategory">
+				<span>Category </span><a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+			</li>
+			<li class="DiscussionStarted">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=12173#Item_1">Started by</a> </span><a href="http://www.206proof.com/forum/account.php?u=11703">RCcidewayz</a>
+		</li>
+		<li class="DiscussionComments">
+			<span>Comments </span>14
+		</li>
+		<li class="DiscussionLastComment">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=12173&amp;page=1#Item_14">Last comment by</a> </span><a href="http://www.206proof.com/forum/account.php?u=8549">LANDOE</a>
+		</li>
+		<li class="DiscussionActive">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=12173&amp;page=1#Item_14">Last Active</a> </span>Feb 5th 2010
+		</li></ul>
+</li>
+<li id="Discussion_11960" class="Discussion Unread NewComments Category_1">
+	<ul>
+		<li class="DiscussionType">
+			<span>Discussion Type</span>
+		</li>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=11960&amp;page=1#Item_0">Emerald Street Boys</a>
+		</li>
+		
+			<li class="DiscussionCategory">
+				<span>Category </span><a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+			</li>
+			<li class="DiscussionStarted">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=11960#Item_1">Started by</a> </span><a href="http://www.206proof.com/forum/account.php?u=11703">RCcidewayz</a>
+		</li>
+		<li class="DiscussionComments">
+			<span>Comments </span>3
+		</li>
+		<li class="DiscussionLastComment">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=11960&amp;page=1#Item_3">Last comment by</a> </span><a href="http://www.206proof.com/forum/account.php?u=5">gatsworth</a>
+		</li>
+		<li class="DiscussionActive">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=11960&amp;page=1#Item_3">Last Active</a> </span>Jan 17th 2010
+		</li></ul>
+</li>
+<li id="Discussion_11769" class="Discussion Unread NewComments NoReplies Category_1 Alternate">
+	<ul>
+		<li class="DiscussionType">
+			<span>Discussion Type</span>
+		</li>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=11769&amp;page=1#Item_0">Seattle Videographers</a>
+		</li>
+		
+			<li class="DiscussionCategory">
+				<span>Category </span><a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+			</li>
+			<li class="DiscussionStarted">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=11769#Item_1">Started by</a> </span><a href="http://www.206proof.com/forum/account.php?u=11703">RCcidewayz</a>
+		</li>
+		<li class="DiscussionComments">
+			<span>Comments </span>1
+		</li>
+		<li class="DiscussionLastComment">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=11769&amp;page=1#Item_1">Last comment by</a> </span><a href="http://www.206proof.com/forum/account.php?u=11703">RCcidewayz</a>
+		</li>
+		<li class="DiscussionActive">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=11769&amp;page=1#Item_1">Last Active</a> </span>Jan 4th 2010
+		</li></ul>
+</li>
+<li id="Discussion_11552" class="Discussion Unread NewComments Category_1">
+	<ul>
+		<li class="DiscussionType">
+			<span>Discussion Type</span>
+		</li>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=11552&amp;page=1#Item_0">RC THE TRACKAHOLOQ-CIDEWAYZ: FULL CIRCLE ALBUM LISTENING PARTY</a>
+		</li>
+		
+			<li class="DiscussionCategory">
+				<span>Category </span><a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+			</li>
+			<li class="DiscussionStarted">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=11552#Item_1">Started by</a> </span><a href="http://www.206proof.com/forum/account.php?u=11703">RCcidewayz</a>
+		</li>
+		<li class="DiscussionComments">
+			<span>Comments </span>9
+		</li>
+		<li class="DiscussionLastComment">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=11552&amp;page=1#Item_9">Last comment by</a> </span><a href="http://www.206proof.com/forum/account.php?u=11703">RCcidewayz</a>
+		</li>
+		<li class="DiscussionActive">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=11552&amp;page=1#Item_9">Last Active</a> </span>Dec 15th 2009
+		</li></ul>
+</li>
+<li id="Discussion_11474" class="Discussion Unread NewComments Category_1 Alternate">
+	<ul>
+		<li class="DiscussionType">
+			<span>Discussion Type</span>
+		</li>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=11474&amp;page=1#Item_0">Freestyle Cliche</a>
+		</li>
+		
+			<li class="DiscussionCategory">
+				<span>Category </span><a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+			</li>
+			<li class="DiscussionStarted">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=11474#Item_1">Started by</a> </span><a href="http://www.206proof.com/forum/account.php?u=11703">RCcidewayz</a>
+		</li>
+		<li class="DiscussionComments">
+			<span>Comments </span>37
+		</li>
+		<li class="DiscussionLastComment">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=11474&amp;page=1#Item_37">Last comment by</a> </span><a href="http://www.206proof.com/forum/account.php?u=7944">UNdarhymehustla</a>
+		</li>
+		<li class="DiscussionActive">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=11474&amp;page=1#Item_37">Last Active</a> </span>Dec 15th 2009
+		</li></ul>
+</li>
+<li id="Discussion_11291" class="Discussion Unread NewComments Category_1">
+	<ul>
+		<li class="DiscussionType">
+			<span>Discussion Type</span>
+		</li>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=11291&amp;page=1#Item_0">Dark Time Sunshine Show</a>
+		</li>
+		
+			<li class="DiscussionCategory">
+				<span>Category </span><a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+			</li>
+			<li class="DiscussionStarted">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=11291#Item_1">Started by</a> </span><a href="http://www.206proof.com/forum/account.php?u=11703">RCcidewayz</a>
+		</li>
+		<li class="DiscussionComments">
+			<span>Comments </span>11
+		</li>
+		<li class="DiscussionLastComment">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=11291&amp;page=1#Item_11">Last comment by</a> </span><a href="http://www.206proof.com/forum/account.php?u=9553">lo_senyor</a>
+		</li>
+		<li class="DiscussionActive">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=11291&amp;page=1#Item_11">Last Active</a> </span>Dec 11th 2009
+		</li></ul>
+</li>
+<li id="Discussion_11168" class="Discussion Unread NewComments Category_1 Alternate">
+	<ul>
+		<li class="DiscussionType">
+			<span>Discussion Type</span>
+		</li>
+		<li class="DiscussionTopic">
+			<span>discussion topic</span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=11168&amp;page=1#Item_0">Clicks in Seattle music Scene</a>
+		</li>
+		
+			<li class="DiscussionCategory">
+				<span>Category </span><a href="http://www.206proof.com/forum/?CategoryID=1">General</a>
+			</li>
+			<li class="DiscussionStarted">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=11168#Item_1">Started by</a> </span><a href="http://www.206proof.com/forum/account.php?u=11703">RCcidewayz</a>
+		</li>
+		<li class="DiscussionComments">
+			<span>Comments </span>25
+		</li>
+		<li class="DiscussionLastComment">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=11168&amp;page=1#Item_25">Last comment by</a> </span><a href="http://www.206proof.com/forum/account.php?u=11703">RCcidewayz</a>
+		</li>
+		<li class="DiscussionActive">
+			<span><a href="http://www.206proof.com/forum/comments.php?DiscussionID=11168&amp;page=1#Item_25">Last Active</a> </span>Nov 12th 2009
+		</li></ul>
+</li></ol>
+</div><div class="ContentInfo Bottom">
+		<div class="PageInfo">
+			<p>Results 1 to 26 for <strong>nothing</strong></p>
+			<div class="PageList">&nbsp;</div>
+		</div>
+		<a href="http://www.206proof.com/forum/search.php?PostBackAction=Search&amp;Type=Discussions&amp;Advanced=1&amp;Keywords=&amp;Categories=&amp;AuthUsername=RCcidewayz&amp;btnSubmit=Search#pgtop">Top of Page</a>
+	</div></div>
+<div id="pgbottom" name="pgbottom"><p>&copy; 2007 <a href="http://www.206Proof.com">206Proof</a>. Powered by  <a href="http://www.getvanilla.com">Vanilla</a>.</p>
+</div>
+            <script type="text/javascript" src="http://www.google-analytics.com/urchin.js"></script>
+            <script type="text/javascript">
+            // <![CDATA[
+            _uacct="UA-2210503-1";
+            urchinTracker();
+            // ]]>
+            </script>
+</body>
+</html>

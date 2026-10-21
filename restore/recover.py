@@ -208,6 +208,22 @@ def resource_priority(record: dict) -> tuple[int,int]:
     query_keys={part.split('=',1)[0].lower() for part in parts.query.split('&') if part}
     own_host=parts.hostname in ('bluescholars.com','www.bluescholars.com')
     refs=record.get('referrers',[])
+    livejournal_css=(parts.hostname in ('l-stat.livejournal.net','l-stat.livejournal.com')
+                     and record['kind']=='css')
+    linked_livejournal_image=(record['kind']=='image'
+        and parts.hostname in ('l-stat.livejournal.net','l-stat.livejournal.com')
+        and any(urlsplit(ref).hostname in ('l-stat.livejournal.net','l-stat.livejournal.com')
+                for ref in refs if ref and not ref.startswith('CDX:')))
+    linked_livejournal_proxy=(record['kind']=='image'
+        and parts.hostname=='imgprx.livejournal.net'
+        and any(urlsplit(ref).hostname=='bluescholars.livejournal.com'
+                for ref in refs if ref and not ref.startswith('CDX:')))
+    if livejournal_css or linked_livejournal_image:
+        return 1,len(url)
+    if linked_livejournal_proxy:
+        # Preserve the exact source-linked URLs, but try article bodies and
+        # recoverable original images before Wayback's opaque proxy tokens.
+        return 5,len(url)
     if record['kind']=='html' and parts.hostname=='02cd02a.netsolhost.com':
         return 3,len(url)
     if record['kind']=='html' and own_host and path=='':

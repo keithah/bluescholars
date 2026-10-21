@@ -1,13 +1,14 @@
 import hashlib
 import json
 from pathlib import Path
+import pytest
 
 from restore.massline import (build_massline_archive, massline_route, massline_summary,
                               rewrite_massline_css, sanitize_massline_html,
                               select_massline_homepage_versions, merge_massline_capture_rows,
                               select_latest_massline_rows, _priority, _forum_index_pages, _forum_topic_order,
                               _massline_asset_route, recover_massline_capture_variants,
-                              _write_massline_report)
+                              _write_massline_report, promote_massline)
 
 
 def test_massline_report_does_not_claim_pages_was_not_deployed(tmp_path):
@@ -16,6 +17,34 @@ def test_massline_report_does_not_claim_pages_was_not_deployed(tmp_path):
     report = (tmp_path / "docs/recovery-report/massline-report.md").read_text()
     assert "No Pages deployment was made" not in report
     assert "Pages preview status is recorded in `docs/VERIFICATION.md`" in report
+
+
+def test_promoted_massline_manifest_is_used_by_release_build(tmp_path):
+    raw=tmp_path/'recovery/massline/raw';raw.mkdir(parents=True)
+    body=b'<!doctype html><html><head><title>Mass Line</title></head><body><h1>Mass Line</h1></body></html>'
+    digest=hashlib.sha256(body).hexdigest()
+    path=raw/(digest+'.html');path.write_bytes(body)
+    record={'kind':'html','status':'recovered','raw_path':str(path.relative_to(tmp_path)),
+            'sha256':digest,'timestamp':'20090813183844','source_url':'http://masslinemedia.com/'}
+    recovery=tmp_path/'recovery/massline/manifest.json'
+    recovery.write_text(json.dumps({'version':1,'resources':{'http://masslinemedia.com/':record},
+                                    'external_resources':{},'homepage_variants':[],
+                                    'resource_variants':[]}))
+    review=tmp_path/'source/review.json'
+    review.parent.mkdir(parents=True,exist_ok=True)
+    review.write_text(json.dumps({'publish_approved':True,'visual_reviewed':True}))
+
+    with pytest.raises(ValueError,match='review'):
+        promote_massline(tmp_path)
+    promoted=promote_massline(tmp_path,reviewed=True)
+    assert promoted['promoted']==1
+    assert json.loads((tmp_path/'source/massline.json').read_text())['source_review']['actor']=='Codex agent'
+    approval=json.loads(review.read_text())
+    assert approval['publish_approved'] is False and approval['visual_reviewed'] is False
+    output=tmp_path/'_site';output.mkdir()
+    report=build_massline_archive(tmp_path,output,'/bluescholars',candidate=False)
+    assert report['status']=='built'
+    assert (output/'masslinemedia/site/index.html').is_file()
 
 
 def test_massline_routes_distinguish_forum_threads_and_pages():

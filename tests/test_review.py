@@ -32,6 +32,12 @@ def test_svg_external_and_active_content_removed():
     assert '<script' not in clean and 'onload' not in clean and 'evil.example' not in clean
     assert 'path' in clean
 
+def test_svg11_standard_external_doctype_is_removed_before_sanitizing():
+    value=b'''<?xml version="1.0"?>\n<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">\n<svg xmlns="http://www.w3.org/2000/svg"><path d="M0 0h4v4z"/></svg>'''
+    clean=sanitize_svg(value).decode()
+    assert '<!DOCTYPE' not in clean
+    assert '<path' in clean
+
 def test_homepage_styles_before_blog_backlog(tmp_path):
     s=State(tmp_path);s.add(HOME,'html','seed',TARGET)
     seen=[]

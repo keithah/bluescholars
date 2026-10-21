@@ -1,5 +1,5 @@
 from restore.recovery_206proof import resource_identity, select_latest_vanilla
-from restore.proof206 import build_206proof_archive
+from restore.proof206 import build_206proof_archive, promote_206proof
 
 
 def test_select_latest_vanilla_keeps_queries_and_excludes_later_editions():
@@ -110,3 +110,35 @@ def test_build_preserves_separate_206proof_editions_and_localizes_captured_conte
     assert ' <a href="hthttp://www.mediafire.com' not in topic_html
     assert 'data-original-href="hhttp://www.youtube.com/watch?v=bad-prefix"' in topic_html
     assert ' <a href="hhttp://www.youtube.com' not in topic_html
+
+
+def test_promoted_206proof_sources_are_available_to_release_builds(tmp_path):
+    import hashlib
+    import json
+
+    raw=tmp_path/'recovery/206proof/raw';raw.mkdir(parents=True)
+    body=b'<!doctype html><html><head><title>206Proof archive</title></head><body><h1>206Proof</h1></body></html>'
+    digest=hashlib.sha256(body).hexdigest()
+    path=raw/(digest+'.html');path.write_bytes(body)
+    row={'kind':'html','result':'recovered','original':'http://206proof.com/',
+         'requested_capture':'20071012230232','actual_capture':'20071012230232',
+         'raw_path':str(path.relative_to(tmp_path)),'bytes':len(body),'sha256':digest}
+    recovery=tmp_path/'recovery/206proof/recovered-resources.json'
+    recovery.parent.mkdir(parents=True,exist_ok=True)
+    recovery.write_text(json.dumps({'resources':[row]}))
+    review=tmp_path/'source/review.json'
+    review.parent.mkdir(parents=True,exist_ok=True)
+    review.write_text(json.dumps({'publish_approved':True,'visual_reviewed':True}))
+
+    result=promote_206proof(tmp_path,reviewed=True)
+
+    assert result['promoted']==1
+    approval=json.loads(review.read_text())
+    assert approval['publish_approved'] is False and approval['visual_reviewed'] is False
+    source=json.loads((tmp_path/'source/206proof/recovered-resources.json').read_text())
+    assert source['resources'][0]['raw_path'].startswith('source/206proof/raw/')
+    output=tmp_path/'_site';output.mkdir()
+    report=build_206proof_archive(tmp_path,output,'/bluescholars',candidate=False)
+    assert report['status']=='built' and report['candidate_only'] is False
+    assert (output/'206proof/index.html').is_file()
+    assert (output/'206proof/2007/site/index.html').is_file()

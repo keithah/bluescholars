@@ -143,6 +143,16 @@ def validate_payload(body: bytes,kind: str) -> None:
                (b'<svg' in prefix and b'<html' not in prefix))
         if not valid: raise ValueError('Expected image bytes; received HTML or unknown content')
         return
+    if kind=='media':
+        # Preserve common audio/video formats as inert downloads. Require a
+        # real container/codec signature so archive error pages cannot pass.
+        valid=(body.startswith(b'ID3') or body.startswith((b'fLaC',b'OggS',b'RIFF')) and
+               (body.startswith((b'fLaC',b'OggS')) or body[8:12]==b'WAVE') or
+               (len(body)>=12 and body[4:8]==b'ftyp') or
+               body.startswith(b'\x1aE\xdf\xa3') or
+               (len(body)>=4 and body[0]==0xff and (body[1]&0xe0)==0xe0))
+        if not valid: raise ValueError('Expected media signature; received HTML or unknown content')
+        return
     text=body.decode('utf-8',errors='replace')
     if kind=='css':
         if '<html' in text.lower() or '<!doctype' in text.lower() or ('{' not in text and '@import' not in text):

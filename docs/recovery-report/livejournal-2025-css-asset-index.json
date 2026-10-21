@@ -1,0 +1,653 @@
+{
+  "archive": "Internet Archive Wayback",
+  "css_bundles": [
+    "https://l-stat.livejournal.net/??schemius_v4/header_v5.css,schemius_v4/header-journal.css,medius/scheme/components.css,lj_base-journal.css,common-post.css,adv/native.css,widgets/threeposts.css,recaptcha.css,categories/category-panel.css,core/components/tag.css,core/components/basepopup.css,core/components/lightcontrols.css,core/components/note-inner.css,core/components/alert.css,popup/popup-suggestion.css,popup/popup-trump.css,popup/popup-map-invite.css,popup/push-woosh-popup.css,widgets/reactions.css,notifications/list.css,widgets/polls.css,schemius_v4/asap-news.css,components/interest.css,components/cookies-banner.css,components/modal-repost.css,components/buttons.css,components/promo-video.css,components/banners/sherry.css?v=1748507624",
+    "https://l-stat.livejournal.net/??lj_base.css,flatbutton.css,widgets/calendar.css,widgets/filter-settings.css,components/modal.css,components/form.css,widgets/rutos.css,widgets/likes.css,widgets/login_v2.css,msgsystem.css?v=1748507624",
+    "https://l-stat.livejournal.net/??svg/flaticon.css,svg/headerextra.css,proximanova-opentype.css?v=1748507624"
+  ],
+  "failures": [
+    {
+      "error": "Archive HTTP 429: https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fl-stat.livejournal.net%2Fimg%2Fmessage-system-close.gif%3Fv%3D9067&matchType=exact&output=json&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest&showResumeKey=true&limit=500",
+      "url": "https://l-stat.livejournal.net/img/message-system-close.gif?v=9067"
+    },
+    {
+      "error": "Archive HTTP 429: https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fl-stat.livejournal.net%2Fimg%2Fpoints.png%3Fv5&matchType=exact&output=json&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest&showResumeKey=true&limit=500",
+      "url": "https://l-stat.livejournal.net/img/points.png?v5"
+    },
+    {
+      "error": "Archive HTTP 429: https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fl-stat.livejournal.net%2Fimg%2Fpoints.svg%3Fv5&matchType=exact&output=json&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest&showResumeKey=true&limit=500",
+      "url": "https://l-stat.livejournal.net/img/points.svg?v5"
+    },
+    {
+      "error": "Archive HTTP 429: https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fl-stat.livejournal.net%2Fimg%2Fpopup-close.gif%3Fv%3D9045&matchType=exact&output=json&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest&showResumeKey=true&limit=500",
+      "url": "https://l-stat.livejournal.net/img/popup-close.gif?v=9045"
+    },
+    {
+      "error": "Archive HTTP 429: https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fl-stat.livejournal.net%2Fimg%2Fpopup%2Fmap-invite%2Fpopup-map-invite.png%3Fv%3D1603876916&matchType=exact&output=json&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest&showResumeKey=true&limit=500",
+      "url": "https://l-stat.livejournal.net/img/popup/map-invite/popup-map-invite.png?v=1603876916"
+    },
+    {
+      "error": "Archive HTTP 429: https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fl-stat.livejournal.net%2Fimg%2Fpopup%2Fmap-invite%2Fpopup-map-invite%402x.png%3Fv%3D1603876916&matchType=exact&output=json&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest&showResumeKey=true&limit=500",
+      "url": "https://l-stat.livejournal.net/img/popup/map-invite/popup-map-invite@2x.png?v=1603876916"
+    },
+    {
+      "error": "HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /cdx/search/cdx?url=https%3A%2F%2Fl-stat.livejournal.net%2Fimg%2Fpopup%2Fsuggestion%2Fmr-cabbage.png%3Fv%3D1559127351&matchType=exact&output=json&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest&showResumeKey=true&limit=500 (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+      "url": "https://l-stat.livejournal.net/img/popup/suggestion/mr-cabbage.png?v=1559127351"
+    },
+    {
+      "error": "HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /cdx/search/cdx?url=https%3A%2F%2Fl-stat.livejournal.net%2Fimg%2Fpopup%2Fsuggestion%2Fmr-cabbage%402x.png%3Fv%3D1559127351&matchType=exact&output=json&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest&showResumeKey=true&limit=500 (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+      "url": "https://l-stat.livejournal.net/img/popup/suggestion/mr-cabbage@2x.png?v=1559127351"
+    },
+    {
+      "error": "HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /cdx/search/cdx?url=https%3A%2F%2Fl-stat.livejournal.net%2Fimg%2Fpopup%2Ftrump%2Fhead.png%3Fv%3D1615538148&matchType=exact&output=json&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest&showResumeKey=true&limit=500 (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+      "url": "https://l-stat.livejournal.net/img/popup/trump/head.png?v=1615538148"
+    },
+    {
+      "error": "HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /cdx/search/cdx?url=https%3A%2F%2Fl-stat.livejournal.net%2Fimg%2Fpopup%2Ftrump%2Foval.svg%3Fv%3D1615538148&matchType=exact&output=json&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest&showResumeKey=true&limit=500 (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+      "url": "https://l-stat.livejournal.net/img/popup/trump/oval.svg?v=1615538148"
+    }
+  ],
+  "indexed_capture_records": 27995,
+  "note": "The one-page bounded queries are checkpointed in recovery/state.json and can be resumed individually. Multi-capture versioned CDN resources may return additional pages; those continuations are not represented as complete.",
+  "queried_urls": 66,
+  "queries_with_resume_cursor": 66,
+  "query_type": "exact URLs extracted from the three original June 2025 LiveJournal CSS bundles",
+  "selected_urls": 66,
+  "source_page": "https://bluescholars.livejournal.com/@@wayback:20250602155501:337788e62127",
+  "urls": [
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/air/default_theme/img/sprite.png?v=40848"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/air/default_theme/img/sprite.svg?v=40878"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/CloseButton_gray.gif?ver=1"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/arrow-spotlight.gif?v=16423"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/btn_actions.png?v=1644238029"
+    },
+    {
+      "capture_records": 499,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/community_v3.svg?v=43924"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/frameworkus/checkbox.svg?v=63456"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/icon-social-capital.png?v=19876"
+    },
+    {
+      "capture_records": 499,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/icons/close-32x32_l.png?v=37489"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/icons/donate-inactive.png?v=13054"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/icons/donate.png?v=12515"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/icons/error.png?v=15718"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/icons/fire.svg?v=1545601435"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/icons/help.png?v=15718"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/icons/lj-repost-disabled.svg?v=71292"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/icons/lj-repost-light.svg?v=71292"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/icons/lj-repost-light.svg?v=71660"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/icons/lj-repost-reposted-light.svg?v=1510221496"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/icons/lj-repost-reposted.svg?v=71649"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/icons/lj-repost.svg?v=71292"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/icons/lock-16-gray.gif?v=1"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/icons/paidrepost.png?v=22784"
+    },
+    {
+      "capture_records": 499,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/icons/repost.png?v=20181"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/icons/services.png?v=1611932020"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/icons/sharethis.png?v=36067"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/icons/thumbs-up.svg?v=1545601435"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/icons/warning-age-sprite.png?v=13205"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/ljuser-medius.svg?v=64196"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/mediaplaceholder.png?v=11488"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/message-error.gif?v=4888"
+    },
+    {
+      "capture_records": 0,
+      "index_complete": false,
+      "index_error": "Archive HTTP 429: https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fl-stat.livejournal.net%2Fimg%2Fmessage-system-close.gif%3Fv%3D9067&matchType=exact&output=json&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest&showResumeKey=true&limit=500",
+      "kind": "image",
+      "resume_key_present": false,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/message-system-close.gif?v=9067"
+    },
+    {
+      "capture_records": 0,
+      "index_complete": false,
+      "index_error": "Archive HTTP 429: https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fl-stat.livejournal.net%2Fimg%2Fpoints.png%3Fv5&matchType=exact&output=json&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest&showResumeKey=true&limit=500",
+      "kind": "image",
+      "resume_key_present": false,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/points.png?v5"
+    },
+    {
+      "capture_records": 0,
+      "index_complete": false,
+      "index_error": "Archive HTTP 429: https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fl-stat.livejournal.net%2Fimg%2Fpoints.svg%3Fv5&matchType=exact&output=json&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest&showResumeKey=true&limit=500",
+      "kind": "image",
+      "resume_key_present": false,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/points.svg?v5"
+    },
+    {
+      "capture_records": 0,
+      "index_complete": false,
+      "index_error": "Archive HTTP 429: https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fl-stat.livejournal.net%2Fimg%2Fpopup-close.gif%3Fv%3D9045&matchType=exact&output=json&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest&showResumeKey=true&limit=500",
+      "kind": "image",
+      "resume_key_present": false,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/popup-close.gif?v=9045"
+    },
+    {
+      "capture_records": 0,
+      "index_complete": false,
+      "index_error": "Archive HTTP 429: https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fl-stat.livejournal.net%2Fimg%2Fpopup%2Fmap-invite%2Fpopup-map-invite.png%3Fv%3D1603876916&matchType=exact&output=json&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest&showResumeKey=true&limit=500",
+      "kind": "image",
+      "resume_key_present": false,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/popup/map-invite/popup-map-invite.png?v=1603876916"
+    },
+    {
+      "capture_records": 0,
+      "index_complete": false,
+      "index_error": "Archive HTTP 429: https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fl-stat.livejournal.net%2Fimg%2Fpopup%2Fmap-invite%2Fpopup-map-invite%402x.png%3Fv%3D1603876916&matchType=exact&output=json&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest&showResumeKey=true&limit=500",
+      "kind": "image",
+      "resume_key_present": false,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/popup/map-invite/popup-map-invite@2x.png?v=1603876916"
+    },
+    {
+      "capture_records": 0,
+      "index_complete": false,
+      "index_error": "HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /cdx/search/cdx?url=https%3A%2F%2Fl-stat.livejournal.net%2Fimg%2Fpopup%2Fsuggestion%2Fmr-cabbage.png%3Fv%3D1559127351&matchType=exact&output=json&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest&showResumeKey=true&limit=500 (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+      "kind": "image",
+      "resume_key_present": false,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/popup/suggestion/mr-cabbage.png?v=1559127351"
+    },
+    {
+      "capture_records": 0,
+      "index_complete": false,
+      "index_error": "HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /cdx/search/cdx?url=https%3A%2F%2Fl-stat.livejournal.net%2Fimg%2Fpopup%2Fsuggestion%2Fmr-cabbage%402x.png%3Fv%3D1559127351&matchType=exact&output=json&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest&showResumeKey=true&limit=500 (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+      "kind": "image",
+      "resume_key_present": false,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/popup/suggestion/mr-cabbage@2x.png?v=1559127351"
+    },
+    {
+      "capture_records": 0,
+      "index_complete": false,
+      "index_error": "HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /cdx/search/cdx?url=https%3A%2F%2Fl-stat.livejournal.net%2Fimg%2Fpopup%2Ftrump%2Fhead.png%3Fv%3D1615538148&matchType=exact&output=json&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest&showResumeKey=true&limit=500 (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+      "kind": "image",
+      "resume_key_present": false,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/popup/trump/head.png?v=1615538148"
+    },
+    {
+      "capture_records": 0,
+      "index_complete": false,
+      "index_error": "HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /cdx/search/cdx?url=https%3A%2F%2Fl-stat.livejournal.net%2Fimg%2Fpopup%2Ftrump%2Foval.svg%3Fv%3D1615538148&matchType=exact&output=json&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest&showResumeKey=true&limit=500 (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+      "kind": "image",
+      "resume_key_present": false,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/popup/trump/oval.svg?v=1615538148"
+    },
+    {
+      "capture_records": 499,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/post/flower.svg?v=1649666168"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/preloader-s.gif?v=9673"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/preloader-s.gif?ver=1"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/preloader/preloader-blue-gray.gif?v=16423"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/preloader/preloader-blue-white.gif?v=16618"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/preloader/preloader-disc-blue-white-16.gif?v=39502"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/repost/pics-aframe.gif?v=9960"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/repost/pics-arr.png?v=9859"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/repost/pics-bg.png?v=9861"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/repost/pics-frame.gif?v=9859"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/repost/pics-l.png?v=9859"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/repost/pics-r.png?v=9859"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/schemius/logo-dobroshrift.svg?v=1696195444"
+    },
+    {
+      "capture_records": 499,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/schemius/logo.png?v=40835"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/schemius/logo.svg?v=51065"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/schemius/s-icons.png?v=40651"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/schemius/s-icons.svg?v=40651"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/schemius/s-nav-sub-right.png?v=1"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/schemius/s-nav-sub.png?v=49993"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/showmore-login.gif?v=11457"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/social-icons/colored/twitter-white.svg?v=1693407142"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/social-icons/social-icons-16.svg?v=1634556721"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/social-icons/social-icons.svg?v=1692193969"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/subjecticons.gif?v=19333"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/userinfo_v3.svg?v=41686"
+    },
+    {
+      "capture_records": 500,
+      "index_complete": false,
+      "index_error": null,
+      "kind": "image",
+      "resume_key_present": true,
+      "status": "queued",
+      "url": "https://l-stat.livejournal.net/img/userinfo_v8.svg?v=70323"
+    }
+  ]
+}

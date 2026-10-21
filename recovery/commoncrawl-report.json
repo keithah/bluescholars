@@ -1,571 +1,20 @@
 {
   "archive": "Common Crawl",
-  "attempted_records": 380,
+  "attempted_records": 0,
   "collections": [
     {
       "error": "OSError: Archive request retries exhausted",
-      "id": "CC-MAIN-2026-39",
+      "id": "CC-MAIN-2012",
       "outcome": "failed"
     },
     {
       "error": "OSError: Archive request retries exhausted",
-      "id": "CC-MAIN-2026-25",
-      "outcome": "failed"
-    },
-    {
-      "id": "CC-MAIN-2026-30",
-      "name": "July 2026 Index",
-      "outcome": "indexed",
-      "records": 1
-    },
-    {
-      "id": "CC-MAIN-2026-21",
-      "name": "May 2026 Index",
-      "outcome": "indexed",
-      "records": 1
-    },
-    {
-      "id": "CC-MAIN-2026-17",
-      "name": "April 2026 Index",
-      "outcome": "indexed",
-      "records": 1
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2026-08-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2026-08",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2025-51-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2025-51",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2025-47-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2025-47",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2025-43-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2025-43",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2025-38-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2025-38",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2026-34-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2026-34",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2025-30-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2025-30",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2025-26-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2025-26",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2025-21-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2025-21",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2025-18-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2025-18",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2025-13-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2025-13",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2025-08-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2025-08",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2026-12-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by ConnectTimeoutError(<HTTPSConnection(host='index.commoncrawl.org', port=443) at 0x107520a10>, 'Connection to index.commoncrawl.org timed out. (connect timeout=40)'))",
-      "id": "CC-MAIN-2026-12",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2025-05-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2025-05",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2025-33-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2025-33",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2026-04-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2026-04",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2024-51-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2024-51",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2024-42-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2024-42",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2024-33-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2024-33",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2024-30-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2024-30",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2024-26-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2024-26",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2024-22-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2024-22",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2024-18-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2024-18",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2024-10-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2024-10",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2023-50-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2023-50",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2023-23-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2023-23",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2023-40-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2023-40",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2023-06-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2023-06",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2023-14-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2023-14",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2022-49-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2022-49",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2022-40-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2022-40",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2022-33-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2022-33",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2024-46-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2024-46",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2022-21-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2022-21",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2022-05-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2022-05",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2021-49-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2021-49",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2021-43-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2021-43",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2021-39-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2021-39",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2021-31-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2021-31",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2021-25-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2021-25",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2021-21-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2021-21",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2021-17-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2021-17",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2021-10-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2021-10",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2021-04-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2021-04",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2020-50-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2020-50",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2022-27-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by ConnectTimeoutError(<HTTPSConnection(host='index.commoncrawl.org', port=443) at 0x1075f24d0>, 'Connection to index.commoncrawl.org timed out. (connect timeout=40)'))",
-      "id": "CC-MAIN-2022-27",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2020-45-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2020-45",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2020-40-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2020-40",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2020-29-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2020-29",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2020-24-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2020-24",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2020-34-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2020-34",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2020-16-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2020-16",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2020-10-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2020-10",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2020-05-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2020-05",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2019-47-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2019-47",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2019-51-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2019-51",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2019-43-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2019-43",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2024-38-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by ConnectTimeoutError(<HTTPSConnection(host='index.commoncrawl.org', port=443) at 0x107644a10>, 'Connection to index.commoncrawl.org timed out. (connect timeout=40)'))",
-      "id": "CC-MAIN-2024-38",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2019-39-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2019-39",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2019-35-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2019-35",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2019-22-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2019-22",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2019-18-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2019-18",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2019-13-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2019-13",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2019-09-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2019-09",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2019-04-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2019-04",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2018-51-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2018-51",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2018-47-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2018-47",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2018-43-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2018-43",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2018-39-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2018-39",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2018-34-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2018-34",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2018-30-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2018-30",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2018-26-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2018-26",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2018-22-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2018-22",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2018-17-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2018-17",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2019-30-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by ConnectTimeoutError(<HTTPSConnection(host='index.commoncrawl.org', port=443) at 0x1076b9590>, 'Connection to index.commoncrawl.org timed out. (connect timeout=40)'))",
-      "id": "CC-MAIN-2019-30",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2018-13-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2018-13",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2018-09-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2018-09",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2017-51-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2017-51",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2017-47-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2017-47",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2017-43-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2017-43",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2017-39-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2017-39",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2017-34-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2017-34",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2017-30-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2017-30",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2017-26-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2017-26",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2017-22-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2017-22",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2017-17-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2017-17",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2017-13-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2017-13",
-      "outcome": "failed"
-    },
-    {
-      "id": "CC-MAIN-2017-04",
-      "name": "January 2017 Index",
-      "outcome": "indexed",
-      "records": 371
-    },
-    {
-      "id": "CC-MAIN-2019-26",
-      "name": "June 2019 Index",
-      "outcome": "indexed",
-      "records": 47
-    },
-    {
-      "error": "OSError: Archive request retries exhausted",
-      "id": "CC-MAIN-2017-09",
+      "id": "CC-MAIN-2009-2010",
       "outcome": "failed"
     },
     {
       "error": "OSError: Archive request retries exhausted",
-      "id": "CC-MAIN-2018-05",
-      "outcome": "failed"
-    },
-    {
-      "id": "CC-MAIN-2016-44",
-      "name": "October 2016 Index",
-      "outcome": "indexed",
-      "records": 33
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2016-30-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2016-30",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2016-26-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2016-26",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2016-22-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2016-22",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2016-18-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2016-18",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2016-07-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2016-07",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2015-48-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2015-48",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2015-40-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2015-40",
-      "outcome": "failed"
-    },
-    {
-      "error": "ReadTimeout: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Read timed out. (read timeout=40)",
-      "id": "CC-MAIN-2016-40",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2016-36-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2016-36",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2015-27-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2015-27",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2016-50-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2016-50",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2015-22-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2015-22",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2015-32-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2015-32",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2015-14-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2015-14",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2015-06-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2015-06",
+      "id": "CC-MAIN-2013-20",
       "outcome": "failed"
     },
     {
@@ -574,43 +23,33 @@
       "outcome": "failed"
     },
     {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2014-49-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2014-49",
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2015-48-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+      "id": "CC-MAIN-2015-48",
       "outcome": "failed"
     },
     {
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2015-35-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by ConnectTimeoutError(<HTTPSConnection(host='index.commoncrawl.org', port=443) at 0x10c91e410>, 'Connection to index.commoncrawl.org timed out. (connect timeout=40)'))",
-      "id": "CC-MAIN-2015-35",
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2016-50-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+      "id": "CC-MAIN-2016-50",
       "outcome": "failed"
     },
     {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2014-42-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2014-42",
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2017-51-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+      "id": "CC-MAIN-2017-51",
       "outcome": "failed"
     },
     {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2015-18-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2015-18",
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2018-51-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+      "id": "CC-MAIN-2018-51",
       "outcome": "failed"
     },
     {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2014-35-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2014-35",
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2019-51-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+      "id": "CC-MAIN-2019-51",
       "outcome": "failed"
     },
     {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2014-15-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2014-15",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2015-11-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2015-11",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2014-10-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2014-10",
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2020-50-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+      "id": "CC-MAIN-2020-50",
       "outcome": "failed"
     },
     {
@@ -619,39 +58,34 @@
       "outcome": "failed"
     },
     {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2012-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2012",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2009-2010-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2009-2010",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2013-20-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2013-20",
-      "outcome": "failed"
-    },
-    {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2008-2009-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+      "error": "ReadTimeout: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Read timed out. (read timeout=40)",
       "id": "CC-MAIN-2008-2009",
       "outcome": "failed"
     },
     {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2014-41-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2014-41",
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2021-49-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+      "id": "CC-MAIN-2021-49",
       "outcome": "failed"
     },
     {
-      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2014-23-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-      "id": "CC-MAIN-2014-23",
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2022-49-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+      "id": "CC-MAIN-2022-49",
+      "outcome": "failed"
+    },
+    {
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2023-50-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+      "id": "CC-MAIN-2023-50",
+      "outcome": "failed"
+    },
+    {
+      "error": "ConnectionError: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2023-40-index?url=bluescholars.com&matchType=domain&output=json&filter=status%3A200&collapse=urlkey&fl=timestamp%2Curl%2Cmime%2Cdigest%2Cstatus%2Cfilename%2Coffset%2Clength (Caused by NewConnectionError(\"HTTPSConnection(host='index.commoncrawl.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+      "id": "CC-MAIN-2023-40",
       "outcome": "failed"
     }
   ],
   "failures": [],
-  "generated_at": "2026-10-15T23:20:17Z",
-  "query_records": 380,
-  "recovered_records": 380,
-  "unique_records": 380
+  "generated_at": "2026-10-21T10:37:42Z",
+  "query_records": 0,
+  "recovered_records": 0,
+  "unique_records": 0
 }

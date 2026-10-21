@@ -175,7 +175,7 @@
     "unique_raw_files": 97,
     "visual_reviewed": false
   },
-  "updated_at": "2026-10-21T10:15:00Z",
+  "updated_at": "2026-10-21T10:37:42Z",
   "tests": {
     "command": ".venv311/bin/python -m pytest -q",
     "result": "259 passed",
@@ -1589,5 +1589,50 @@
     "publish_approved": false,
     "human_visual_review": false
   },
-  "preview_deployment_pending": false
+  "preview_deployment_pending": false,
+  "latest_commoncrawl_retry": {
+    "run_at": "2026-10-21T10:37:42Z",
+    "archive": "Common Crawl",
+    "collections_queried": 16,
+    "collections_failed": 16,
+    "query_records": 0,
+    "unique_records": 0,
+    "attempted_records": 0,
+    "recovered_records": 0,
+    "interpretation": "The independent Common Crawl index connection was refused for all queried collections; no conclusion can be drawn about archive-wide absence."
+  },
+  "latest_origin_image_retry": {
+    "attempted": 75,
+    "recovered": 0,
+    "failed": 75,
+    "remaining_eligible": 52,
+    "note": "Direct original CDN responses are separate from Wayback captures; failed requests are not treated as evidence of absence."
+  },
+  "latest_arquivo_domain_pass": {
+    "archive": "Arquivo.pt",
+    "index_rows": 35,
+    "selected_latest_per_url_edition": 3,
+    "attempted_records": 0,
+    "recovered_records": 0,
+    "completed_records": 3,
+    "total_failures": 0,
+    "by_era": {
+      "2007": {
+        "attempted": 0,
+        "recovered": 0,
+        "selected": 0
+      },
+      "2009": {
+        "attempted": 0,
+        "recovered": 0,
+        "selected": 0
+      },
+      "2013": {
+        "attempted": 0,
+        "recovered": 0,
+        "selected": 3
+      }
+    },
+    "interpretation": "The indexed domain pass succeeded; all 3 selected 2013 entries were already completed in the local recovery state, so this pass added no new files."
+  }
 }

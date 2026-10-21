@@ -11,6 +11,10 @@ Measured gaps include 6,606 unavailable embedded assets, 396 linked assets not r
 
 The refreshed preview is deployed at [https://keithah.github.io/bluescholars/](https://keithah.github.io/bluescholars/) from [`gh-pages` commit `b3a4af7`](https://github.com/keithah/bluescholars/commit/b3a4af7b77b9ea73d62f8817fcb48c59c28a7701). [Pages build 39585431523](https://github.com/keithah/bluescholars/actions/runs/39585431523) succeeded and the Pages API reports `built`. Thirteen sampled routes returned HTTP 200, including the three editions, the recovered 2020 product page, the linked 2009 article, LiveJournal and its newly captured replies, Twitter, Massline forums, and local CSS; a deliberately nonexistent route returned 404. This is an incomplete, unreviewed recovery preview. Human visual review and formal publication approval remain false.
 
+The October 21 follow-up also queried 16 Common Crawl collections; all index connections were refused and no records could be queried or recovered. This is a network-service limitation for this pass, not a finding that the site or its media are absent from Common Crawl.
+
+Arquivo.pt was also re-queried through its complete domain index: it returned 35 rows, with 3 latest page/style/image entries selected (all in the 2013 era). Those records were already completed locally, so this pass added no new files and reported no failures.
+
 ## Current measured local checkpoint — October 17, 2026, after the 2013, 2009 and broad queue continuations
 
 The resumable Wayback checkpoint contains 11,194 resource URLs and 23,303 indexed capture rows: 3,921 resources recovered, 72 held for compatibility review, 1,897 failed attempts, and 5,304 queued. The raw directory contains 2,305 unique response files (147,695,894 bytes). These counts include page, stylesheet, image, and other resource URLs; they are not page counts.

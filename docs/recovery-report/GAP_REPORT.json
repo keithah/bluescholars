@@ -1402,5 +1402,35 @@
     },
     "unknown_route_http": 404,
     "classification": "incomplete unreviewed recovery preview"
+  },
+  "latest_memento_aggregator_sweep": {
+    "checked_at": "2026-10-21T21:15:00Z",
+    "archive": "ODU MemGator, aggregating 13 public archives",
+    "queries": 29,
+    "queries_with_mementos": 14,
+    "no_memento_responses": 15,
+    "memento_memberships": 17,
+    "unique_memento_uris": 10,
+    "unique_archive_uri_hosts": [
+      "archive.md"
+    ],
+    "new_capture_leads": [
+      "206proof.com — 2007-10-12",
+      "sabzi.co — 2013-06-24",
+      "bluescholars.com — 2013-01-02",
+      "prometheusbrown.com — 2015-08-09",
+      "bluescholars.livejournal.com — 2015-04-19",
+      "Blue Scholars MySpace — 2012-12-02, 2014-01-11, 2015-03-23"
+    ],
+    "acquisition": "No body bytes acquired. Five representative replays returned a 429 challenge after redirect to archive.li.",
+    "report": "recovery/memgator-report.json",
+    "interpretation": "Archive discovery only; the returned leads are not yet preserved locally. Other listed archives either returned no memento for these exact URLs or had unresolved service failures."
+  },
+  "latest_commoncrawl_connection_retry": {
+    "checked_on": "2026-10-21",
+    "archive": "Common Crawl",
+    "endpoint": "https://index.commoncrawl.org/collinfo.json",
+    "result": "Connection refused before the collection list loaded; no index queries or WARC requests ran in this retry.",
+    "interpretation": "This is an endpoint access failure, not a zero-result archive search. The preceding partial CC-MAIN-2008-2009 query remains the latest successful Common Crawl retrieval."
   }
 }

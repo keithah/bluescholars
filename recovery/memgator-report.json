@@ -1,0 +1,189 @@
+{
+  "archive": "ODU MemGator Memento aggregator",
+  "version": "1.0-rc8",
+  "checked_at": "2026-10-21T21:15:00Z",
+  "about_url": "https://memgator.cs.odu.edu/about",
+  "timemap_template": "https://memgator.cs.odu.edu/timemap/json/{fully-percent-encoded-original-uri}",
+  "queries_total": 29,
+  "queries_with_mementos": 14,
+  "queries_returning_404_no_memento": 15,
+  "query_uris": [
+    "http://bluescholars.com/",
+    "http://www.bluescholars.com/",
+    "https://bluescholars.com/",
+    "http://prometheusbrown.com/",
+    "http://prometheusbrown.com/bluescholars/",
+    "http://www.prometheusbrown.com/",
+    "http://sabzi.co/",
+    "https://sabzi.co/",
+    "http://www.sabzi.co/",
+    "http://masslinemedia.com/",
+    "http://masslinemedia.com/smf/",
+    "http://masslinemedia.com/forum/",
+    "http://206proof.com/",
+    "http://206proof.com/forums/",
+    "https://twitter.com/prometheusbrown",
+    "http://bluescholars.livejournal.com/",
+    "http://myspace.com/bluescholars",
+    "http://www.myspace.com/bluescholars",
+    "https://myspace.com/bluescholars",
+    "http://www.myspace.com/prometheusbrown",
+    "http://twitter.com/prometheusbrown",
+    "https://twitter.com/prometheusbrown",
+    "http://twitter.com/BlueScholars",
+    "https://twitter.com/BlueScholars",
+    "http://206proof.com",
+    "http://www.206proof.com/",
+    "http://prometheusbrown.com",
+    "http://sabzi.co",
+    "http://masslinemedia.com/smf/index.php"
+  ],
+  "no_memento_uris": [
+    "http://prometheusbrown.com/bluescholars/",
+    "http://www.prometheusbrown.com/",
+    "http://www.sabzi.co/",
+    "http://masslinemedia.com/",
+    "http://masslinemedia.com/smf/",
+    "http://masslinemedia.com/forum/",
+    "http://206proof.com/forums/",
+    "https://twitter.com/prometheusbrown",
+    "http://www.myspace.com/prometheusbrown",
+    "http://twitter.com/prometheusbrown",
+    "https://twitter.com/prometheusbrown",
+    "http://twitter.com/BlueScholars",
+    "https://twitter.com/BlueScholars",
+    "http://www.206proof.com/",
+    "http://masslinemedia.com/smf/index.php"
+  ],
+  "memento_memberships_returned": 17,
+  "unique_memento_uris": 10,
+  "mementos": [
+    {
+      "datetime": "2013-01-02T03:55:02Z",
+      "original_url": "http://bluescholars.com/",
+      "memento_uri": "http://archive.md/20130102035502/http://bluescholars.com/"
+    },
+    {
+      "datetime": "2013-01-02T03:55:02Z",
+      "original_url": "http://www.bluescholars.com/",
+      "memento_uri": "http://archive.md/20130102035502/http://www.bluescholars.com/"
+    },
+    {
+      "datetime": "2015-08-09T15:58:21Z",
+      "original_url": "http://prometheusbrown.com/",
+      "memento_uri": "http://archive.md/20150809155821/http://prometheusbrown.com/"
+    },
+    {
+      "datetime": "2013-06-24T19:02:52Z",
+      "original_url": "http://sabzi.co/",
+      "memento_uri": "http://archive.md/20130624190252/http://sabzi.co/"
+    },
+    {
+      "datetime": "2007-10-12T23:02:32Z",
+      "original_url": "http://206proof.com/",
+      "memento_uri": "http://archive.md/20071012230232/http://206proof.com/"
+    },
+    {
+      "datetime": "2015-04-19T14:26:47Z",
+      "original_url": "http://bluescholars.livejournal.com/",
+      "memento_uri": "http://archive.md/20150419142647/http://bluescholars.livejournal.com/"
+    },
+    {
+      "datetime": "2012-12-02T02:54:32Z",
+      "original_url": "http://www.myspace.com/bluescholars",
+      "memento_uri": "http://archive.md/20121202025432/http://www.myspace.com/bluescholars"
+    },
+    {
+      "datetime": "2014-01-11T15:00:42Z",
+      "original_url": "https://myspace.com/bluescholars",
+      "memento_uri": "http://archive.md/20140111150042/https://myspace.com/bluescholars"
+    },
+    {
+      "datetime": "2014-01-11T15:00:42Z",
+      "original_url": "https://www.myspace.com/bluescholars",
+      "memento_uri": "http://archive.md/20140111150042/https://www.myspace.com/bluescholars"
+    },
+    {
+      "datetime": "2015-03-23T23:40:19Z",
+      "original_url": "http://myspace.com/bluescholars",
+      "memento_uri": "http://archive.md/20150323234019/http://myspace.com/bluescholars"
+    }
+  ],
+  "upstream_archives_reported_by_about": [
+    "Archive.today",
+    "Portuguese Web Archive (Arquivo.pt)",
+    "Perma Archive (Perma.cc)",
+    "BAnQ",
+    "National Diet Library, Japan (WARP)",
+    "Archive-It",
+    "Icelandic Web Archive",
+    "Internet Archive",
+    "Australian Web Archive",
+    "Library and Archives Canada",
+    "National Records of Scotland",
+    "UK Web Archive",
+    "UK Parliament Web Archive"
+  ],
+  "upstream_observation": "All returned memento URIs were on archive.md (the Archive.today network). This sampled result does not establish that other upstream archives have no matching captures; the live service reported repeated consecutive failures for Icelandic Web Archive, Internet Archive, and UK Web Archive.",
+  "replay_access_tests": [
+    {
+      "memento_uri": "http://archive.md/20130102035502/http://bluescholars.com/",
+      "result": "archive.md HTTP 302 to archive.li; the archive.li replay returned HTTP 429 challenge/security page; no archived source bytes acquired."
+    },
+    {
+      "memento_uri": "http://archive.md/20150809155821/http://prometheusbrown.com/",
+      "result": "archive.md HTTP 302 to archive.li; the archive.li replay returned HTTP 429 challenge/security page; no archived source bytes acquired."
+    },
+    {
+      "memento_uri": "http://archive.md/20130624190252/http://sabzi.co/",
+      "result": "archive.md HTTP 302 to archive.li; the archive.li replay returned HTTP 429 challenge/security page; no archived source bytes acquired."
+    },
+    {
+      "memento_uri": "http://archive.md/20071012230232/http://206proof.com/",
+      "result": "archive.md HTTP 302 to archive.li; the archive.li replay returned HTTP 429 challenge/security page; no archived source bytes acquired."
+    },
+    {
+      "memento_uri": "http://archive.md/20150419142647/http://bluescholars.livejournal.com/",
+      "result": "archive.md HTTP 302 to archive.li; the archive.li replay returned HTTP 429 challenge/security page; no archived source bytes acquired."
+    }
+  ],
+  "memento_proxy_tests": {
+    "attempted": 4,
+    "captures": [
+      "20071012230232",
+      "20130102035502",
+      "20150809155821",
+      "20130624190252"
+    ],
+    "result": "MemGator proxy route returned HTTP 404 for each. This is an endpoint result, not evidence the underlying mementos are absent."
+  },
+  "limitations": [
+    "The aggregator provides discovery metadata, not archived source bytes.",
+    "Exact root and social-profile URLs were sampled; this was not a recursive query of every URL in the project inventory.",
+    "Direct Archive.today replay access was challenged; no challenge bypass was attempted.",
+    "A no-memento response is limited to this aggregator and exact URL."
+  ],
+  "upstream_status_at_check": {
+    "Icelandic Web Archive": {
+      "consecutive_failures": 58685
+    },
+    "Internet Archive": {
+      "consecutive_failures": 4660
+    },
+    "UK Web Archive": {
+      "consecutive_failures": 1126180
+    },
+    "note": "These are MemGator /about service health counters observed on 2026-10-21, not per-URL capture results."
+  },
+  "archive_page_timemap_checks": {
+    "queried": 5,
+    "urls": [
+      "http://archive.md/20130102035502/http://bluescholars.com/",
+      "http://archive.md/20150809155821/http://prometheusbrown.com/",
+      "http://archive.md/20130624190252/http://sabzi.co/",
+      "http://archive.md/20071012230232/http://206proof.com/",
+      "http://archive.md/20150419142647/http://bluescholars.livejournal.com/"
+    ],
+    "result": "All five exact archive.md snapshot-page URLs returned HTTP 404 (no memento) from the same MemGator TimeMap API. This only records the aggregator result for these exact URLs; it does not establish absence from other archives."
+  }
+}

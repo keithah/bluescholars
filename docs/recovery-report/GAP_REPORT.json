@@ -604,48 +604,46 @@
   "pages_deployment": {
     "url": "https://keithah.github.io/bluescholars/",
     "source_branch": "gh-pages",
-    "commit": "287f3aaa335199520d56b27db4675d1b081cb433",
-    "workflow_run": "https://github.com/keithah/bluescholars/actions/runs/39564136166",
+    "commit": "3883a0c491b72b854fd9746a1f76a23bd3553ac1",
+    "workflow_run": "https://github.com/keithah/bluescholars/actions/runs/39630375173",
     "workflow_conclusion": "success",
     "api_status": "built",
     "routes_checked": [
       "/bluescholars/",
-      "/bluescholars/2007/news.html",
-      "/bluescholars/twitter-prometheusbrown/",
-      "/bluescholars/twitter-prometheusbrown/captures/20090725010529/",
-      "/bluescholars/prometheusbrown/2008/",
-      "/bluescholars/massline-forums/",
-      "/bluescholars/lj/",
-      "/bluescholars/assets/archive-ui.css"
+      "/bluescholars/2007/",
+      "/bluescholars/2009/",
+      "/bluescholars/2013/",
+      "/bluescholars/community-media/",
+      "/bluescholars/assets/community-media-40894269f4af34e2.jpg",
+      "/bluescholars/archive-status/"
     ],
     "all_routes_http_status": 200,
-    "classification": "incomplete recovery preview; formal release approval remains false"
+    "unknown_route_http": 404,
+    "classification": "incomplete unreviewed recovery preview; formal release approval remains false"
   },
   "preview_deployment": {
     "url": "https://keithah.github.io/bluescholars/",
     "branch": "gh-pages",
-    "commit": "02635a73cdad4d0a7cff5b233f099a2d9735f307",
-    "pages_build_run": "39068335222",
-    "pages_build_status": "success",
+    "commit": "3883a0c491b72b854fd9746a1f76a23bd3553ac1",
+    "main_commit": "1d6b51593",
+    "workflow_run": "https://github.com/keithah/bluescholars/actions/runs/39630375173",
+    "workflow_conclusion": "success",
     "pages_api_status": "built",
     "https_enforced": true,
     "custom_domain": null,
-    "verified_at": "2026-10-17T20:50:14.144562+00:00",
+    "verified_at": "2026-10-21T15:59:23Z",
     "verified_routes": {
       "/bluescholars/": 200,
-      "/bluescholars/lj/": 200,
-      "/bluescholars/lj/posts/16641.html": 200,
-      "/bluescholars/lj/captures/20180219081111/posts/16641.html": 200,
-      "/bluescholars/lj/comments/16641.html/53249/": 200,
-      "/bluescholars/2007/news.html": 200,
-      "/bluescholars/archive-status/": 200,
-      "/bluescholars/assets/archive-ui.css": 200
+      "/bluescholars/2007/": 200,
+      "/bluescholars/2009/": 200,
+      "/bluescholars/2013/": 200,
+      "/bluescholars/community-media/": 200,
+      "/bluescholars/assets/community-media-40894269f4af34e2.jpg": 200,
+      "/bluescholars/archive-status/": 200
     },
     "unknown_route_http": 404,
-    "candidate_source": "root-resolved project-subpath candidate from main commit b721fe8371d150b5c25f65ed65230a410d0e4fbb",
-    "classification": "unreviewed recovery preview; not an approved final release",
-    "publish_approved": false,
-    "visual_reviewed": false
+    "local_asset_test": "Recovered 2007 assets and the six-image supplemental gallery load locally; both candidate path checks found zero errors.",
+    "classification": "incomplete, unreviewed recovery preview; formal publication and human visual review remain false"
   },
   "latest_seventh_broad_retry": {
     "report": "recovery/broad-200-local-20261017-07-report.json",
@@ -1220,7 +1218,7 @@
     "result": "blocked by design",
     "reason": "Publication requires source, visual and publish review approval; source/publication approval remains false after owner permission was recorded."
   },
-  "generated_at": "2026-10-21T15:55:24Z",
+  "generated_at": "2026-10-21T15:59:23Z",
   "twitter_archive": {
     "profile": "https://twitter.com/prometheusbrown",
     "archive": "Internet Archive Wayback Machine",
@@ -1308,7 +1306,7 @@
     "human_visual_review": false,
     "tests": "267 passed"
   },
-  "preview_deployment_pending": true,
+  "preview_deployment_pending": false,
   "latest_targeted_image_index": {
     "archive": "Internet Archive Wayback",
     "query": "exact source-linked image URLs from expanded inventory",
@@ -1373,5 +1371,28 @@
       "example_file": "https://commons.wikimedia.org/wiki/File:Blue_Scholars-Geologic-SasquatchFestival06.JPG",
       "description": "20 related files listed; the cited May 28, 2006 Sasquatch photo is CC BY 2.0 with photographer attribution. Not part of original site captures and not yet packaged."
     }
+  },
+  "published_preview": {
+    "url": "https://keithah.github.io/bluescholars/",
+    "branch": "gh-pages",
+    "commit": "3883a0c491b72b854fd9746a1f76a23bd3553ac1",
+    "main_commit": "1d6b51593",
+    "pages_build_run": "39630375173",
+    "pages_build_status": "success",
+    "pages_api_status": "built",
+    "https_enforced": true,
+    "custom_domain": null,
+    "verified_at": "2026-10-21T15:59:23Z",
+    "verified_routes": {
+      "/bluescholars/": 200,
+      "/bluescholars/2007/": 200,
+      "/bluescholars/2009/": 200,
+      "/bluescholars/2013/": 200,
+      "/bluescholars/community-media/": 200,
+      "/bluescholars/assets/community-media-40894269f4af34e2.jpg": 200,
+      "/bluescholars/archive-status/": 200
+    },
+    "unknown_route_http": 404,
+    "classification": "incomplete unreviewed recovery preview"
   }
 }

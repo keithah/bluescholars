@@ -10,7 +10,7 @@ A further bounded Wayback batch processed 75 queued URLs and recovered 32 resour
 
 The updated checkpoint contains **13,051 resource URLs**, **185,517 indexed capture rows**, 5,287 recovered resources, 296 awaiting review, 4,639 queued, 2,825 failed, and 4 excluded. It has 2,800 unique local response files (174,618,405 bytes). The candidate contains 1,108 recovered pages, 2,173 placeholders, 1,638 local source assets and 6 separately licensed Commons images. The refreshed root and `/bluescholars/` offline checks both pass with zero errors; the test suite passes **267 tests**.
 
-The latest checked candidate is being prepared for the existing unreviewed Pages preview. Visual-fidelity verification and publication approval remain false. Outstanding image gaps and failed archive requests remain documented; the failed count is not evidence that no other archive copy exists.
+The checked candidate is deployed at [https://keithah.github.io/bluescholars/](https://keithah.github.io/bluescholars/) from `gh-pages` commit `3883a0c491b72b854fd9746a1f76a23bd3553ac1` (source commit `1d6b51593`). Pages workflow [39630375173](https://github.com/keithah/bluescholars/actions/runs/39630375173) completed successfully and the Pages API reports `built`. The homepage, all three edition homes, the Commons gallery and a gallery image, and archive status returned HTTP 200; a nonexistent route returned 404. Both offline candidate checks and all 267 tests passed. Visual-fidelity verification and formal publication approval remain false. Outstanding image gaps and failed archive requests remain documented; the failed count is not evidence that no other archive copy exists.
 
 ## Latest refreshed preview — October 21, 2026
 

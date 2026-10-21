@@ -1338,24 +1338,23 @@
   "failed_attempts": 11873,
   "index_complete": true,
   "latest_local_recovery_batch": {
-    "run_at": "2026-10-20T22:19:32.919576+00:00",
-    "command": ".venv311/bin/python -m restore recover --max-files 75 --delay 0.2 --timeout 8 --retries 1",
-    "result": {
-      "generated_at": "2026-10-20T22:19:32.919576+00:00",
-      "index_complete": true,
-      "indexed_capture_records": 159338,
-      "resource_urls": 12819,
-      "statuses": {
-        "excluded": 4,
-        "failed": 2634,
-        "needs_review": 283,
-        "queued": 4923,
-        "recovered": 4975
-      },
-      "unique_downloaded_files": 2741,
-      "downloaded_bytes": 171623580,
-      "failed_attempts": 11873
-    }
+    "generated_at": "2026-10-21T08:07:14.578522+00:00",
+    "attempt_limit": 75,
+    "processed": 75,
+    "resource_urls": 12890,
+    "indexed_capture_records": 181935,
+    "statuses": {
+      "queued": 4776,
+      "recovered": 5089,
+      "needs_review": 285,
+      "failed_retryable": 2736,
+      "excluded": 4
+    },
+    "unique_downloaded_files": 2747,
+    "downloaded_bytes": 171722549,
+    "failed_attempts": 12297,
+    "candidate_updated": false,
+    "note": "Subsequent to the deployed candidate; new material is still queued for per-capture review and promotion."
   },
   "livejournal_2025_css_and_image_followup": {
     "dated_at": "2026-10-20T18:43:27Z",
@@ -1561,5 +1560,10 @@
     "failed_attempts": 12062,
     "candidate_updated": false,
     "note": "New records are local acquisition material pending individual capture-date/content review and promotion."
+  },
+  "ci_timeout_fix": {
+    "previous_job_timeout_minutes": 10,
+    "new_job_timeout_minutes": 30,
+    "reason": "Hosted run was cancelled at the 10-minute job limit while the first full root build was still running; local root and project-prefix build/check pairs both pass."
   }
 }

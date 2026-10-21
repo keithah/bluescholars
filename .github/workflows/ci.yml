@@ -9,7 +9,9 @@ permissions:
 jobs:
   test:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    # The source-backed root and project-subpath builds walk the complete
+    # recovered forum corpus; keep enough time for both build/check pairs.
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-python@v7

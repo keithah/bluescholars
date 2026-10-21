@@ -32,9 +32,9 @@
     "responsive_limit": "The connected browser exposed a fixed viewport; 1440px, 768px and 390px screenshots were not available in this run. This is not a mobile visual-review pass."
   },
   "candidate_build": {
-    "recovered_pages": 1070,
+    "recovered_pages": 1108,
     "feed_recovered_pages": 12,
-    "placeholder_pages": 2188,
+    "placeholder_pages": 2176,
     "derived_pages": 1,
     "local_source_assets": 1613,
     "visual_fidelity_verified": false,
@@ -44,16 +44,16 @@
       "2009": 503,
       "2013": 440
     },
-    "livejournal_recovered_pages": 70,
+    "livejournal_recovered_pages": 108,
     "issue_counts": {
-      "missing_asset": 5712,
+      "missing_asset": 6606,
       "font_not_packaged": 197,
       "linked_asset_not_recovered": 396,
-      "external_media_link_only": 167
+      "external_media_link_only": 199
     },
     "remote_automatic_resources": 0,
     "visual_reviewed": false,
-    "built_for_checkpoint": "2026-10-21T09:11:20.671936+00:00",
+    "built_for_checkpoint": "2026-10-21T10:10:47.982165+00:00",
     "latest_batch_in_build": true,
     "twitter_archive": {
       "account_takeover_captures": 1,
@@ -71,7 +71,7 @@
       "errors": 0,
       "output": "_candidate",
       "base_path": "",
-      "checkpoint": "2026-10-21T09:11:20.671936+00:00",
+      "checkpoint": "2026-10-21T10:10:47.982165+00:00",
       "current_content_batch_built": true
     },
     "project_subpath": {
@@ -79,25 +79,25 @@
       "errors": 0,
       "output": "_candidate",
       "base_path": "/bluescholars",
-      "checkpoint": "2026-10-21T09:11:20.671936+00:00",
+      "checkpoint": "2026-10-21T10:10:47.982165+00:00",
       "current_content_batch_built": true
     }
   },
   "checkpoint": {
-    "downloaded_bytes": 173391598,
-    "failed_attempts": 12495,
-    "generated_at": "2026-10-21T09:11:20.671936+00:00",
+    "downloaded_bytes": 174480698,
+    "failed_attempts": 12714,
+    "generated_at": "2026-10-21T10:10:47.982165+00:00",
     "index_complete": true,
-    "indexed_capture_records": 185439,
-    "resource_urls": 13006,
+    "indexed_capture_records": 185481,
+    "resource_urls": 13050,
     "statuses": {
       "excluded": 4,
-      "failed": 2782,
-      "needs_review": 289,
-      "queued": 4753,
-      "recovered": 5178
+      "failed": 2797,
+      "needs_review": 294,
+      "queued": 4717,
+      "recovered": 5238
     },
-    "unique_downloaded_files": 2773
+    "unique_downloaded_files": 2796
   },
   "latest_import": {
     "run_id": "38975520061",
@@ -175,7 +175,7 @@
     "unique_raw_files": 97,
     "visual_reviewed": false
   },
-  "updated_at": "2026-10-21T09:30:00Z",
+  "updated_at": "2026-10-21T10:15:00Z",
   "tests": {
     "command": ".venv311/bin/python -m pytest -q",
     "result": "259 passed",
@@ -266,22 +266,24 @@
   "pages_deployment": {
     "url": "https://keithah.github.io/bluescholars/",
     "source_branch": "gh-pages",
-    "commit": "b8e319b94ab8d4e7f0816d54c20e64a858f967be",
-    "workflow_run": "https://github.com/keithah/bluescholars/actions/runs/39577878859",
+    "commit": "b3a4af7b77b9ea73d62f8817fcb48c59c28a7701",
+    "workflow_run": "https://github.com/keithah/bluescholars/actions/runs/39585431523",
     "workflow_conclusion": "success",
     "api_status": "built",
     "routes_checked": [
       "/bluescholars/",
       "/bluescholars/archive-status/",
-      "/bluescholars/lj/",
-      "/bluescholars/lj/captures/20111002074446/posts/16954.html",
-      "/bluescholars/lj/comments/16954.html/50490/",
-      "/bluescholars/lj/assets/058636b1e0b0b47e1881c516e51bf47b670b6dc7ddc7bd7eb3680a28f96871da.gif",
       "/bluescholars/2007/",
       "/bluescholars/2009/",
       "/bluescholars/2013/",
+      "/bluescholars/2013/shop/hqx4z59k89yjiosxgdjg1hvsb7xv91/",
+      "/bluescholars/2009/new-shows-eugene-portland-april-23/",
+      "/bluescholars/lj/",
+      "/bluescholars/lj/captures/20111002074004/comments/16954.html/50490/index.html",
+      "/bluescholars/lj/captures/20111002074950/comments/17222.html/52038/index.html",
       "/bluescholars/twitter-prometheusbrown/",
-      "/bluescholars/massline-forums/"
+      "/bluescholars/massline-forums/",
+      "/bluescholars/assets/archive-ui.css"
     ],
     "all_routes_http_status": 200,
     "classification": "incomplete unreviewed recovery preview; formal release approval remains false"
@@ -495,14 +497,8 @@
     "inventory_urls": 42,
     "queried_urls": 42,
     "indexed_capture_records": 0,
-    "failures": [
-      {
-        "url": "http://media.tumblr.com/86812e71c1fe259a78cef3d7cd7917e5/tumblr_inline_mkn0u4tvM51qz4rgp.jpg",
-        "error": "HTTPS connection refused from local environment; this URL has no verified result in this pass."
-      }
-    ],
-    "interpretation": "No new image captures were found in the successful exact-URL queries. The one failed request is unknown, not a confirmed no-capture result.",
-    "source_report": "asset-index-2026-10-17.json"
+    "failures": 1,
+    "interpretation": "The CDX endpoint refused one connection; the other queried URLs yielded no new capture records. This does not prove the assets absent from all archives."
   },
   "squarespace_older_listing": {
     "source_capture": "20160611143343",
@@ -663,28 +659,30 @@
   "published_preview": {
     "url": "https://keithah.github.io/bluescholars/",
     "branch": "gh-pages",
-    "commit": "b8e319b94ab8d4e7f0816d54c20e64a858f967be",
-    "pages_build_run": "39577878859",
+    "commit": "b3a4af7b77b9ea73d62f8817fcb48c59c28a7701",
+    "pages_build_run": "39585431523",
     "pages_build_status": "success",
     "pages_api_status": "built",
     "https_enforced": true,
     "custom_domain": null,
-    "verified_at": "2026-10-21T09:30:00Z",
+    "verified_at": "2026-10-21T10:15:00Z",
     "verified_routes": {
       "/bluescholars/": 200,
       "/bluescholars/archive-status/": 200,
-      "/bluescholars/lj/": 200,
-      "/bluescholars/lj/captures/20111002074446/posts/16954.html": 200,
-      "/bluescholars/lj/comments/16954.html/50490/": 200,
-      "/bluescholars/lj/assets/058636b1e0b0b47e1881c516e51bf47b670b6dc7ddc7bd7eb3680a28f96871da.gif": 200,
       "/bluescholars/2007/": 200,
       "/bluescholars/2009/": 200,
       "/bluescholars/2013/": 200,
+      "/bluescholars/2013/shop/hqx4z59k89yjiosxgdjg1hvsb7xv91/": 200,
+      "/bluescholars/2009/new-shows-eugene-portland-april-23/": 200,
+      "/bluescholars/lj/": 200,
+      "/bluescholars/lj/captures/20111002074004/comments/16954.html/50490/index.html": 200,
+      "/bluescholars/lj/captures/20111002074950/comments/17222.html/52038/index.html": 200,
       "/bluescholars/twitter-prometheusbrown/": 200,
-      "/bluescholars/massline-forums/": 200
+      "/bluescholars/massline-forums/": 200,
+      "/bluescholars/assets/archive-ui.css": 200
     },
     "unknown_route_http": 404,
-    "candidate_source": "unreviewed candidate built from the local checkpoint at 2026-10-21T09:11Z; static output deployed by normal fast-forward",
+    "candidate_source": "unreviewed candidate built from local recovery checkpoint 2026-10-21T10:10Z",
     "classification": "unreviewed recovery preview; not an approved final release",
     "publish_approved": false,
     "visual_reviewed": false
@@ -1330,37 +1328,37 @@
     "pushed": false,
     "deployed": false
   },
-  "resource_urls": 13006,
-  "indexed_capture_records": 185439,
+  "resource_urls": 13050,
+  "indexed_capture_records": 185481,
   "statuses": {
     "excluded": 4,
-    "failed": 2782,
-    "needs_review": 289,
-    "queued": 4753,
-    "recovered": 5178
+    "failed": 2797,
+    "needs_review": 294,
+    "queued": 4717,
+    "recovered": 5238
   },
-  "unique_downloaded_files": 2773,
-  "downloaded_bytes": 173391598,
-  "failed_attempts": 12495,
+  "unique_downloaded_files": 2796,
+  "downloaded_bytes": 174480698,
+  "failed_attempts": 12714,
   "index_complete": true,
   "latest_local_recovery_batch": {
-    "generated_at": "2026-10-21T09:11:20.671936+00:00",
+    "generated_at": "2026-10-21T10:10:47.982165+00:00",
     "attempt_limit": 75,
     "processed": 75,
-    "resource_urls": 13006,
-    "indexed_capture_records": 185439,
+    "resource_urls": 13050,
+    "indexed_capture_records": 185481,
     "statuses": {
       "excluded": 4,
-      "failed": 2782,
-      "needs_review": 289,
-      "queued": 4753,
-      "recovered": 5178
+      "failed": 2797,
+      "needs_review": 294,
+      "queued": 4717,
+      "recovered": 5238
     },
-    "unique_downloaded_files": 2773,
-    "downloaded_bytes": 173391598,
-    "failed_attempts": 12495,
+    "unique_downloaded_files": 2796,
+    "downloaded_bytes": 174480698,
+    "failed_attempts": 12714,
     "candidate_updated": true,
-    "note": "Recovered and retried a bounded set of Wayback pages, images and LiveJournal replies. Newly eligible material was promoted with credential redaction; final source/publication approval remains false."
+    "note": "A bounded Wayback retry recovered 11 resources, including a product/shop capture; one prior placeholder now maps to a recovered 2009 article. A separate 42-URL exact image index produced no captures after a CDX connection refusal. A 75-item direct Squarespace-origin asset attempt recovered 0 and failed 75; 52 remain eligible. Promoted source data is redacted; publication approval remains false."
   },
   "livejournal_2025_css_and_image_followup": {
     "dated_at": "2026-10-20T18:43:27Z",

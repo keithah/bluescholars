@@ -1,6 +1,13 @@
 # Independent archive findings
 
-**Updated:** October 16, 2026. This is a focused cross-archive check, not proof that every web archive was exhausted. Machine-readable results and capture provenance are in [OTHER_ARCHIVES.json](OTHER_ARCHIVES.json).
+**Updated:** October 21, 2026. This is a focused cross-archive check, not proof that every web archive was exhausted. Machine-readable results and capture provenance are in [OTHER_ARCHIVES.json](OTHER_ARCHIVES.json).
+
+
+## New historical-media leads — October 21, 2026
+
+Search found a contemporaneous Flickr album, [Blue Scholars in store @ Requests!](https://www.flickr.com/photos/brendanms/sets/72157622443039254/), described by the uploader as 33 photos from a September 19, 2009 in-store performance. An individual photograph is marked “All rights reserved,” so this set is a source lead only and is not copied into the restoration.
+
+Wikimedia Commons lists 20 Blue Scholars-related files. One historically relevant example is [Blue Scholars-Geologic-SasquatchFestival06.JPG](https://commons.wikimedia.org/wiki/File:Blue_Scholars-Geologic-SasquatchFestival06.JPG), taken May 28, 2006 and sourced from Flickr. Its page states CC BY 2.0 and identifies photographer Tammy Lo; it can be reused with attribution and a license link. The photograph is independent context, not a recovered original site asset, and is not yet included in a site edition. Check every Commons file's own license before reuse.
 
 Arquivo.pt returned 35 domain-index rows. Three valid responses were acquired: a 2019 Squarespace homepage, a 2019 blog listing, and a favicon. The blog listing contains twenty visible cards, including eighteen internal post URLs. Arquivo.pt's exact-history endpoint returned no captures for those eighteen permalinks; their article HTML is already represented by Common Crawl captures. The acquired Arquivo.pt files remain in the local recovery checkpoint until reviewed and promoted.
 

@@ -32,36 +32,36 @@
     "responsive_limit": "The connected browser exposed a fixed viewport; 1440px, 768px and 390px screenshots were not available in this run. This is not a mobile visual-review pass."
   },
   "candidate_build": {
-    "recovered_pages": 1054,
+    "recovered_pages": 1070,
     "feed_recovered_pages": 12,
-    "placeholder_pages": 2221,
+    "placeholder_pages": 2188,
     "derived_pages": 1,
-    "local_source_assets": 1568,
+    "local_source_assets": 1613,
     "visual_fidelity_verified": false,
     "publish_approved": false,
     "recovered_pages_by_edition": {
-      "2007": 53,
+      "2007": 57,
       "2009": 503,
-      "2013": 439
+      "2013": 440
     },
-    "livejournal_recovered_pages": 56,
+    "livejournal_recovered_pages": 70,
     "issue_counts": {
-      "missing_asset": 5390,
+      "missing_asset": 5712,
       "font_not_packaged": 197,
       "linked_asset_not_recovered": 396,
-      "external_media_link_only": 156
+      "external_media_link_only": 167
     },
     "remote_automatic_resources": 0,
-    "visual_reviewed": true,
-    "built_for_checkpoint": "2026-10-21T01:05:14.955601+00:00",
+    "visual_reviewed": false,
+    "built_for_checkpoint": "2026-10-21T09:11:20.671936+00:00",
     "latest_batch_in_build": true,
     "twitter_archive": {
-      "status": "built",
-      "captures": 34,
-      "recovered_capture_pages": 34,
       "account_takeover_captures": 1,
+      "captures": 34,
       "platform_error_captures": 3,
       "recovered_assets": 675,
+      "recovered_capture_pages": 34,
+      "status": "built",
       "unique_asset_payloads": 357
     }
   },
@@ -69,9 +69,9 @@
     "root": {
       "ok": true,
       "errors": 0,
-      "output": "/tmp/bluescholars-root-check/_candidate",
+      "output": "_candidate",
       "base_path": "",
-      "checkpoint": "2026-10-21T01:05:14.955601+00:00",
+      "checkpoint": "2026-10-21T09:11:20.671936+00:00",
       "current_content_batch_built": true
     },
     "project_subpath": {
@@ -79,25 +79,25 @@
       "errors": 0,
       "output": "_candidate",
       "base_path": "/bluescholars",
-      "checkpoint": "2026-10-21T01:05:14.955601+00:00",
+      "checkpoint": "2026-10-21T09:11:20.671936+00:00",
       "current_content_batch_built": true
     }
   },
   "checkpoint": {
-    "downloaded_bytes": 171623580,
-    "failed_attempts": 12003,
-    "generated_at": "2026-10-21T01:05:14.955601+00:00",
+    "downloaded_bytes": 173391598,
+    "failed_attempts": 12495,
+    "generated_at": "2026-10-21T09:11:20.671936+00:00",
     "index_complete": true,
-    "indexed_capture_records": 165338,
-    "resource_urls": 12822,
+    "indexed_capture_records": 185439,
+    "resource_urls": 13006,
     "statuses": {
       "excluded": 4,
-      "failed": 2656,
-      "needs_review": 283,
-      "queued": 4898,
-      "recovered": 4981
+      "failed": 2782,
+      "needs_review": 289,
+      "queued": 4753,
+      "recovered": 5178
     },
-    "unique_downloaded_files": 2741
+    "unique_downloaded_files": 2773
   },
   "latest_import": {
     "run_id": "38975520061",
@@ -175,7 +175,7 @@
     "unique_raw_files": 97,
     "visual_reviewed": false
   },
-  "updated_at": "2026-10-20T23:40:14.211607+00:00",
+  "updated_at": "2026-10-21T09:30:00Z",
   "tests": {
     "command": ".venv311/bin/python -m pytest -q",
     "result": "259 passed",
@@ -266,22 +266,25 @@
   "pages_deployment": {
     "url": "https://keithah.github.io/bluescholars/",
     "source_branch": "gh-pages",
-    "commit": "287f3aaa335199520d56b27db4675d1b081cb433",
-    "workflow_run": "https://github.com/keithah/bluescholars/actions/runs/39564136166",
+    "commit": "b8e319b94ab8d4e7f0816d54c20e64a858f967be",
+    "workflow_run": "https://github.com/keithah/bluescholars/actions/runs/39577878859",
     "workflow_conclusion": "success",
     "api_status": "built",
     "routes_checked": [
       "/bluescholars/",
-      "/bluescholars/2007/news.html",
-      "/bluescholars/twitter-prometheusbrown/",
-      "/bluescholars/twitter-prometheusbrown/captures/20090725010529/",
-      "/bluescholars/prometheusbrown/2008/",
-      "/bluescholars/massline-forums/",
+      "/bluescholars/archive-status/",
       "/bluescholars/lj/",
-      "/bluescholars/assets/archive-ui.css"
+      "/bluescholars/lj/captures/20111002074446/posts/16954.html",
+      "/bluescholars/lj/comments/16954.html/50490/",
+      "/bluescholars/lj/assets/058636b1e0b0b47e1881c516e51bf47b670b6dc7ddc7bd7eb3680a28f96871da.gif",
+      "/bluescholars/2007/",
+      "/bluescholars/2009/",
+      "/bluescholars/2013/",
+      "/bluescholars/twitter-prometheusbrown/",
+      "/bluescholars/massline-forums/"
     ],
     "all_routes_http_status": 200,
-    "classification": "incomplete recovery preview; formal release approval remains false"
+    "classification": "incomplete unreviewed recovery preview; formal release approval remains false"
   },
   "active_wayback_batch": null,
   "resume_plan": {
@@ -660,25 +663,28 @@
   "published_preview": {
     "url": "https://keithah.github.io/bluescholars/",
     "branch": "gh-pages",
-    "commit": "02635a73cdad4d0a7cff5b233f099a2d9735f307",
-    "pages_build_run": "39068335222",
+    "commit": "b8e319b94ab8d4e7f0816d54c20e64a858f967be",
+    "pages_build_run": "39577878859",
     "pages_build_status": "success",
     "pages_api_status": "built",
     "https_enforced": true,
     "custom_domain": null,
-    "verified_at": "2026-10-17T20:50:14.144562+00:00",
+    "verified_at": "2026-10-21T09:30:00Z",
     "verified_routes": {
       "/bluescholars/": 200,
-      "/bluescholars/lj/": 200,
-      "/bluescholars/lj/posts/16641.html": 200,
-      "/bluescholars/lj/captures/20180219081111/posts/16641.html": 200,
-      "/bluescholars/lj/comments/16641.html/53249/": 200,
-      "/bluescholars/2007/news.html": 200,
       "/bluescholars/archive-status/": 200,
-      "/bluescholars/assets/archive-ui.css": 200
+      "/bluescholars/lj/": 200,
+      "/bluescholars/lj/captures/20111002074446/posts/16954.html": 200,
+      "/bluescholars/lj/comments/16954.html/50490/": 200,
+      "/bluescholars/lj/assets/058636b1e0b0b47e1881c516e51bf47b670b6dc7ddc7bd7eb3680a28f96871da.gif": 200,
+      "/bluescholars/2007/": 200,
+      "/bluescholars/2009/": 200,
+      "/bluescholars/2013/": 200,
+      "/bluescholars/twitter-prometheusbrown/": 200,
+      "/bluescholars/massline-forums/": 200
     },
     "unknown_route_http": 404,
-    "candidate_source": "root-resolved project-subpath candidate from main commit b721fe8371d150b5c25f65ed65230a410d0e4fbb",
+    "candidate_source": "unreviewed candidate built from the local checkpoint at 2026-10-21T09:11Z; static output deployed by normal fast-forward",
     "classification": "unreviewed recovery preview; not an approved final release",
     "publish_approved": false,
     "visual_reviewed": false
@@ -1324,37 +1330,37 @@
     "pushed": false,
     "deployed": false
   },
-  "resource_urls": 12819,
-  "indexed_capture_records": 159338,
+  "resource_urls": 13006,
+  "indexed_capture_records": 185439,
   "statuses": {
     "excluded": 4,
-    "failed": 2634,
-    "needs_review": 283,
-    "queued": 4923,
-    "recovered": 4975
+    "failed": 2782,
+    "needs_review": 289,
+    "queued": 4753,
+    "recovered": 5178
   },
-  "unique_downloaded_files": 2741,
-  "downloaded_bytes": 171623580,
-  "failed_attempts": 11873,
+  "unique_downloaded_files": 2773,
+  "downloaded_bytes": 173391598,
+  "failed_attempts": 12495,
   "index_complete": true,
   "latest_local_recovery_batch": {
-    "generated_at": "2026-10-21T08:18:53.529375+00:00",
+    "generated_at": "2026-10-21T09:11:20.671936+00:00",
     "attempt_limit": 75,
     "processed": 75,
-    "resource_urls": 12985,
-    "indexed_capture_records": 184959,
+    "resource_urls": 13006,
+    "indexed_capture_records": 185439,
     "statuses": {
-      "queued": 4797,
-      "recovered": 5137,
-      "needs_review": 288,
-      "failed_retryable": 2759,
-      "excluded": 4
+      "excluded": 4,
+      "failed": 2782,
+      "needs_review": 289,
+      "queued": 4753,
+      "recovered": 5178
     },
-    "unique_downloaded_files": 2756,
-    "downloaded_bytes": 172784834,
-    "failed_attempts": 12464,
+    "unique_downloaded_files": 2773,
+    "downloaded_bytes": 173391598,
+    "failed_attempts": 12495,
     "candidate_updated": true,
-    "note": "Recovered main-domain pages/assets were promoted into the source collection; capture dates and original paths remain recorded."
+    "note": "Recovered and retried a bounded set of Wayback pages, images and LiveJournal replies. Newly eligible material was promoted with credential redaction; final source/publication approval remains false."
   },
   "livejournal_2025_css_and_image_followup": {
     "dated_at": "2026-10-20T18:43:27Z",
@@ -1585,5 +1591,5 @@
     "publish_approved": false,
     "human_visual_review": false
   },
-  "preview_deployment_pending": true
+  "preview_deployment_pending": false
 }

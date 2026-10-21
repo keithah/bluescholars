@@ -1,6 +1,15 @@
 # Recovery gap report
 
-**Updated:** October 17, 2026. This report distinguishes a checked limitation from a search still in progress. Network failures and unqueried URLs are not evidence that a resource is absent from every archive.
+**Updated:** October 21, 2026. This report distinguishes a checked limitation from a search still in progress. Network failures and unqueried URLs are not evidence that a resource is absent from every archive.
+
+
+## Latest refreshed preview — October 21, 2026
+
+The current resumable recovery checkpoint contains **13,006 resource URLs** and **185,439 indexed capture rows**: 5,178 recovered, 289 awaiting review, 4,753 queued, 2,782 failed, and 4 excluded. The local recovery cache has 2,773 unique files totaling 173,391,598 bytes. A 75-resource retry batch was promoted into the candidate with credential redaction; it recovered additional LiveJournal pages and assets.
+
+The refreshed unreviewed candidate contains **1,070 recovered pages**, 12 feed pages, 2,188 explicit placeholders, one derived page, and 1,613 local source assets. Edition counts are 57 (2007), 503 (2009), and 440 (2013); 70 LiveJournal pages are recovered. Known measured gaps include 5,712 unavailable embedded assets, 396 linked assets not recovered, 167 external media links without local recordings, and 197 fonts omitted under the binary-font policy. Both root and `/bluescholars/` candidate checks pass with zero errors, and the output has no automatic remote asset dependencies. These checks do not establish complete source coverage or human visual approval.
+
+The preview was refreshed by normal fast-forward to [`gh-pages` commit `b8e319b`](https://github.com/keithah/bluescholars/commit/b8e319b94ab8d4e7f0816d54c20e64a858f967be). [Pages build 39577878859](https://github.com/keithah/bluescholars/actions/runs/39577878859) succeeded; the Pages API reports `built`. Eleven sampled routes returned HTTP 200, including all three editions, LiveJournal and its newly recovered reply capture, Twitter, and Massline forums; a deliberately nonexistent route returned 404. The public URL is [https://keithah.github.io/bluescholars/](https://keithah.github.io/bluescholars/). This remains an explicitly incomplete, unreviewed recovery preview.
 
 ## Current measured local checkpoint — October 17, 2026, after the 2013, 2009 and broad queue continuations
 

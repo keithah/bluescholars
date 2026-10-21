@@ -536,6 +536,89 @@
       "acquisition_status": "No original response bytes acquired from these 16 routes in this pass. An initial capture invocation misclassified extensionless CDX text/html routes as images; a subsequent local Wayback connection was refused before retrying. These errors do not mean the captures are unavailable.",
       "source_checkpoint": "The first CDX response was not saved during the direct probe. Workflow 38985105267 completed its download and independent archive steps but was cancelled while building the candidate, before the artifact upload placed after that build. Dependent run 38991229745 failed to restore its unavailable artifact and acquired no new content. Workflow 334e9952 moved source/checkpoint preservation ahead of candidate generation. Run 38992255338 resumed from the last durable artifact (38975520061); its supplemental-host index step completed at 2026-10-17T01:47:33Z and its acquisition step is in progress. Full CDX index response and acquired HTML bytes are still pending this artifact.",
       "interpretation": "A distinct historical WordPress host yields additional CDX records beyond the current local URL-key inventory. Query evidence alone is not treated as recovered page content."
+    },
+    "Common Crawl 2008-2009": {
+      "index": "https://index.commoncrawl.org/CC-MAIN-2008-2009-index",
+      "query_scope": "Retried the bluescholars.com domain query against 16 collection indexes; only the 2008-2009 ARC index returned records.",
+      "collection_queries": 16,
+      "successful_collection_queries": 1,
+      "failed_or_timed_out_queries": 15,
+      "index_rows": 5,
+      "unique_records": 4,
+      "warc_records_attempted": 4,
+      "validated_responses": 3,
+      "records": [
+        {
+          "actual_capture": "20080513165912",
+          "url": "http://www.bluescholars.com/",
+          "sha256": "b709976776c50d707e137615537f8996096aac4992ac31b662656d2136505ae6",
+          "bytes": 1564,
+          "source_collection": "CC-MAIN-2008-2009",
+          "source_warc": "crawl-001/2008/06/25/15/1214437021742_15.arc.gz",
+          "source_offset": 41603512,
+          "source_length": 1047,
+          "source_digest": "OC5QK7QUVK7GMQEFBZIIB7ZYAUTL3QAU",
+          "raw_path": "recovery/raw/b709976776c50d707e137615537f8996096aac4992ac31b662656d2136505ae6.html",
+          "review_note": "Image-only splash HTML; references images/splah001.jpg, which is not recovered.",
+          "wayback_duplicate_matches": [
+            {
+              "key": "http://www.bluescholars.com/@@wayback:20080513165912:b709976776c5",
+              "actual_capture": "20080513165912"
+            }
+          ]
+        },
+        {
+          "actual_capture": "20080907180956",
+          "url": "http://bluescholars.com/",
+          "sha256": "39f12c901f3b3c0c0dd66f3bd3c45388a663480d5a5bf533b478048b5c5aba47",
+          "bytes": 72922,
+          "source_collection": "CC-MAIN-2008-2009",
+          "source_warc": "crawl-001/2008/10/03/27/1223084964471_27.arc.gz",
+          "source_offset": 71720606,
+          "source_length": 13657,
+          "source_digest": "JQCD6BNLO43NUMO6OYSITD6QL4G5BR6K",
+          "raw_path": "recovery/raw/39f12c901f3b3c0c0dd66f3bd3c45388a663480d5a5bf533b478048b5c5aba47.html",
+          "review_note": "Contains extensive injected gambling/SEO spam and a link to an unrelated backup directory; excluded from historical site presentation.",
+          "wayback_duplicate_matches": [
+            {
+              "key": "http://bluescholars.com/@@wayback:20080907180956:39f12c901f3b",
+              "actual_capture": "20080907180956"
+            },
+            {
+              "key": "http://bluescholars.com:80/@@wayback:20080817084306:39f12c901f3b",
+              "actual_capture": "20080817084306"
+            }
+          ]
+        },
+        {
+          "actual_capture": "20090107045551",
+          "url": "http://bluescholars.com/",
+          "sha256": "90f4397cda3780f2a6107d5af0336ee479cff42e07fe0a9faf43b9bf8252066c",
+          "bytes": 1563,
+          "source_collection": "CC-MAIN-2008-2009",
+          "source_warc": "crawl-001/2009/01/12/1/1231765043510_1.arc.gz",
+          "source_offset": 85077431,
+          "source_length": 1070,
+          "source_digest": "32UTW4GLTRV5LLET4SKRZOXO3FRSWF6D",
+          "raw_path": "recovery/raw/90f4397cda3780f2a6107d5af0336ee479cff42e07fe0a9faf43b9bf8252066c.html",
+          "review_note": "Image-only splash HTML; image map links to prometheusbrown.com/bluescholars and references the missing images/splah001.jpg.",
+          "wayback_duplicate_matches": [
+            {
+              "key": "http://www.bluescholars.com:80/@@wayback:20081218062129:90f4397cda37",
+              "actual_capture": "20081218062129"
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "The missing splash image images/splah001.jpg was not acquired. Its Wayback attempts returned 404 at the checked dates; exact Common Crawl index retries were connection-refused.",
+        "Two splash-only captures are preserved as review-held source material; they are not a complete site page.",
+        "The September 2008 response is compromised and must not be presented as an authentic site state.",
+        "Most collection indexes could not be queried because of connection refusal or timeout; this is not evidence of absence."
+      ],
+      "report_path": "recovery/commoncrawl-report.json",
+      "unique_new_content_bodies": 0,
+      "notes": "All three validated Common Crawl bodies SHA-256 match bodies already acquired from Wayback (the September 2008 compromised homepage, May 2008 splash, and December 2008 splash respectively). Common Crawl adds independent source provenance and dates, not three unique new page bodies."
     }
   },
   "limitations": [

@@ -337047,7 +337047,18 @@
       "url": "http://bluescholars.com:80/images/line.gif"
     },
     "http://bluescholars.com:80/images/line_cross_med.gif": {
-      "attempts": [],
+      "actual_capture": "20060615033644",
+      "attempts": [
+        {
+          "actual_capture": "20060615033644",
+          "at": "2026-10-21T22:16:54.566548+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://bluescholars.com:80/images/line_cross_med.gif",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "6419a96b9a0194b9ba18dcdb0a23521a25c360465104efaa146c4ef784dc0586"
+        }
+      ],
+      "bytes": 183,
       "captures": [
         {
           "digest": "7PPQY7BFOKEZL5JFZ4AC5CE27XK2CUZ2",
@@ -337064,13 +337075,24 @@
           "timestamp": "20060712165904"
         }
       ],
-      "hints": [],
+      "content_type": "image/gif",
+      "final_original": "http://www.bluescholars.com/images/line_cross_med.gif",
+      "final_url": "https://web.archive.org/web/20060615033644id_/http://www.bluescholars.com/images/line_cross_med.gif",
+      "hints": [
+        "20060715153605"
+      ],
       "kind": "image",
       "referrers": [
-        "CDX:domain"
+        "CDX:domain",
+        "http://bluescholars.com:80/index.htm"
       ],
-      "status": "queued",
-      "url": "http://bluescholars.com:80/images/line_cross_med.gif"
+      "retrieved_at": "2026-10-21T22:16:57.655358+00:00",
+      "sha256": "6419a96b9a0194b9ba18dcdb0a23521a25c360465104efaa146c4ef784dc0586",
+      "status": "recovered",
+      "url": "http://bluescholars.com:80/images/line_cross_med.gif",
+      "raw_path": "source/raw/6419a96b9a0194b9ba18dcdb0a23521a25c360465104efaa146c4ef784dc0586.gif",
+      "source_reviewed": true,
+      "source_archive": "Internet Archive Wayback"
     },
     "http://bluescholars.com:80/images/line_long.gif": {
       "attempts": [],

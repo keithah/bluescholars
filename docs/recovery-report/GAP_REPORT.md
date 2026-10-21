@@ -1,5 +1,12 @@
 # Recovery gap report
 
+## Third older-site image batch — October 21, 2026
+
+A third bounded run processed 75 queued URLs, recovered 21 response bodies, and added six unique files (81,207 bytes). New material includes 2004 menu and spacing graphics; 2007 store, splash, shows, media and navigation artwork; a 2012 merchandise image; and several separately dated YouTube thumbnails. The source inventory retains the exact URL, capture timestamp, and hash for each body.
+
+The resumable checkpoint now contains **13,051 resource URLs**, **185,596 indexed capture rows**, 5,343 recovered, 301 awaiting review, 4,549 queued, 2,854 failed, and 4 excluded. It stores 2,812 unique response files (174,859,900 bytes). The candidate has 1,108 recovered pages and 1,670 local assets. Root and `/bluescholars/` offline checks both passed with zero errors; the 267-test suite remains the latest full test run. This candidate awaits its preview refresh.
+
+
 ## Second older-site image batch — October 21, 2026
 
 A further bounded batch processed 75 queued Wayback resources and retrieved 40 responses, adding six unique payloads (160,288 bytes). These include a Seattle poster image, 2007 page backgrounds and panel artwork, media/press/shows/store graphics, another archived MySpace badge, a 2012 store header, and a separately captured video thumbnail. Exact capture identities and hashes are preserved in the resource catalog. Some variants were duplicate responses, and 297 resources are currently held for review.

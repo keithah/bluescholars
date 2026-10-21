@@ -62,7 +62,7 @@
       "output": "_candidate",
       "base_path": "",
       "current_content_batch_built": true,
-      "verified_at": "2026-10-21T16:29:03Z"
+      "verified_at": "2026-10-21T17:01:17Z"
     },
     "project_subpath": {
       "ok": true,
@@ -70,24 +70,24 @@
       "output": "_candidate",
       "base_path": "/bluescholars",
       "current_content_batch_built": true,
-      "verified_at": "2026-10-21T16:29:03Z"
+      "verified_at": "2026-10-21T17:01:17Z"
     }
   },
   "checkpoint": {
     "resource_urls": 13051,
-    "indexed_capture_records": 185557,
+    "indexed_capture_records": 185596,
     "statuses": {
-      "queued": 4577,
-      "recovered": 5326,
-      "needs_review": 297,
-      "failed": 2847,
+      "queued": 4549,
+      "recovered": 5343,
+      "needs_review": 301,
+      "failed": 2854,
       "excluded": 4
     },
-    "unique_downloaded_files": 2806,
-    "downloaded_bytes": 174778693,
-    "failed_attempts": 13189,
+    "unique_downloaded_files": 2812,
+    "downloaded_bytes": 174859900,
+    "failed_attempts": 13331,
     "index_complete": true,
-    "generated_at": "2026-10-21T16:29:03.787327+00:00"
+    "generated_at": "2026-10-21T17:01:18.103154+00:00"
   },
   "latest_import": {
     "run_id": "38975520061",
@@ -1288,48 +1288,45 @@
     "deployed": false
   },
   "resource_urls": 13051,
-  "indexed_capture_records": 185557,
+  "indexed_capture_records": 185596,
   "statuses": {
-    "queued": 4577,
-    "recovered": 5326,
-    "needs_review": 297,
-    "failed": 2847,
+    "queued": 4549,
+    "recovered": 5343,
+    "needs_review": 301,
+    "failed": 2854,
     "excluded": 4
   },
-  "unique_downloaded_files": 2806,
-  "downloaded_bytes": 174778693,
-  "failed_attempts": 13189,
+  "unique_downloaded_files": 2812,
+  "downloaded_bytes": 174859900,
+  "failed_attempts": 13331,
   "index_complete": true,
   "latest_local_recovery_batch": {
-    "generated_at": "2026-10-21T16:29:03Z",
+    "generated_at": "2026-10-21T17:01:17Z",
     "attempt_limit": 75,
     "processed": 75,
     "resource_urls": 13051,
-    "indexed_capture_records": 185557,
+    "indexed_capture_records": 185596,
     "statuses": {
-      "queued": 4577,
-      "recovered": 5326,
-      "needs_review": 297,
-      "failed": 2847,
+      "queued": 4549,
+      "recovered": 5343,
+      "needs_review": 301,
+      "failed": 2854,
       "excluded": 4
     },
-    "unique_downloaded_files": 2806,
-    "downloaded_bytes": 174778693,
-    "failed_attempts": 13189,
-    "new_downloaded_resource_attempts": 40,
+    "unique_downloaded_files": 2812,
+    "downloaded_bytes": 174859900,
+    "failed_attempts": 13331,
+    "new_downloaded_resource_attempts": 21,
     "unique_files_added": 6,
-    "downloaded_bytes_added": 160288,
+    "downloaded_bytes_added": 81207,
     "newly_recovered_assets": [
-      "2006 Seattle poster image",
-      "2007 lower site background and page-panel graphics",
-      "media audio, video, gallery, updates and press image labels",
-      "shows side panel and merchandise/store imagery",
-      "additional MySpace link badge capture",
-      "2012 store header",
-      "archived video thumbnail"
+      "2004 menu and spacing graphics",
+      "2007 store, splash, shows, media and menu graphics",
+      "2012 merchandise and shop imagery",
+      "seven individually captured YouTube thumbnail files"
     ],
     "candidate_updated": true,
-    "note": "A second bounded 75-resource Wayback batch recovered 40 response attempts and six additional unique local payloads. Some requests were held for review or failed; the queue remains resumable."
+    "note": "A third bounded 75-resource Wayback batch recovered 21 response bodies and six unique payloads. The selected queue continues to contain retryable and review-held resources; failures are not treated as archive-wide absence."
   },
   "livejournal_2025_css_and_image_followup": {
     "dated_at": "2026-10-20T18:43:27Z",
@@ -1434,7 +1431,7 @@
       "ok": true,
       "errors": []
     },
-    "verified_at": "2026-10-21T16:29:03Z"
+    "verified_at": "2026-10-21T17:01:17Z"
   },
   "latest_visual_review_record": {
     "dated_at": "2026-10-20",
@@ -1451,7 +1448,7 @@
     "result": "blocked by design",
     "reason": "Publication requires source, visual and publish review approval; source/publication approval remains false after owner permission was recorded."
   },
-  "generated_at": "2026-10-21T16:31:01Z",
+  "generated_at": "2026-10-21T17:01:17Z",
   "twitter_archive": {
     "profile": "https://twitter.com/prometheusbrown",
     "archive": "Internet Archive Wayback Machine",
@@ -1532,7 +1529,7 @@
     "feed_recovered_pages": 12,
     "placeholder_pages": 2173,
     "derived_pages": 1,
-    "local_source_assets": 1657,
+    "local_source_assets": 1670,
     "community_media_items": 6,
     "root_check": {
       "ok": true,
@@ -1546,7 +1543,7 @@
     "human_visual_review": false,
     "tests": "267 passed"
   },
-  "preview_deployment_pending": false,
+  "preview_deployment_pending": true,
   "latest_commoncrawl_retry": {
     "run_at": "2026-10-21T10:37:42Z",
     "archive": "Common Crawl",
@@ -1606,13 +1603,13 @@
   "resource_inventory": {
     "resource_urls": 13051,
     "statuses": {
-      "queued": 4577,
-      "recovered": 5326,
-      "needs_review": 297,
-      "failed": 2847,
+      "queued": 4549,
+      "recovered": 5343,
+      "needs_review": 301,
+      "failed": 2854,
       "excluded": 4
     },
-    "indexed_capture_records": 185557,
+    "indexed_capture_records": 185596,
     "index_complete": true
   },
   "candidate": {
@@ -1620,7 +1617,7 @@
     "feed_recovered_pages": 12,
     "placeholder_pages": 2173,
     "derived_pages": 1,
-    "local_source_assets": 1657,
+    "local_source_assets": 1670,
     "community_media_items": 6,
     "recovered_pages_by_edition": {
       "2007": 57,
@@ -1628,7 +1625,7 @@
       "2013": 440
     },
     "issue_counts": {
-      "missing_asset": 6590,
+      "missing_asset": 6589,
       "font_not_packaged": 197,
       "linked_asset_not_recovered": 395,
       "external_media_link_only": 199

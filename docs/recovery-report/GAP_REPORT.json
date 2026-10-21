@@ -9,27 +9,27 @@
   "resource_inventory": {
     "resource_urls": 13051,
     "statuses": {
-      "queued": 4639,
-      "recovered": 5287,
-      "needs_review": 296,
-      "failed": 2825,
+      "queued": 4577,
+      "recovered": 5326,
+      "needs_review": 297,
+      "failed": 2847,
       "excluded": 4
     },
-    "indexed_capture_records": 185517,
+    "indexed_capture_records": 185557,
     "index_complete": true
   },
   "validated_local_files": {
-    "unique_sha256_files": 2800,
-    "bytes": 174618405,
-    "candidate_local_source_assets": 1638,
-    "source_catalog_records": 2
+    "unique_sha256_files": 2806,
+    "bytes": 174778693,
+    "candidate_local_source_assets": 1657,
+    "source_catalog_records": 13056
   },
   "candidate": {
     "recovered_pages": 1108,
     "feed_recovered_pages": 12,
     "placeholder_pages": 2173,
     "derived_pages": 1,
-    "local_source_assets": 1638,
+    "local_source_assets": 1657,
     "community_media_items": 6,
     "recovered_pages_by_edition": {
       "2007": 57,
@@ -37,9 +37,9 @@
       "2013": 440
     },
     "issue_counts": {
-      "missing_asset": 6597,
+      "missing_asset": 6590,
       "font_not_packaged": 197,
-      "linked_asset_not_recovered": 396,
+      "linked_asset_not_recovered": 395,
       "external_media_link_only": 199
     },
     "visual_fidelity_verified": false,
@@ -194,17 +194,17 @@
     "modern_cdn_image_alias_rows": 0
   },
   "resource_urls": 13051,
-  "indexed_capture_records": 185517,
+  "indexed_capture_records": 185557,
   "statuses": {
-    "queued": 4639,
-    "recovered": 5287,
-    "needs_review": 296,
-    "failed": 2825,
+    "queued": 4577,
+    "recovered": 5326,
+    "needs_review": 297,
+    "failed": 2847,
     "excluded": 4
   },
-  "unique_downloaded_files": 2800,
-  "downloaded_bytes": 174618405,
-  "failed_attempts": 13127,
+  "unique_downloaded_files": 2806,
+  "downloaded_bytes": 174778693,
+  "failed_attempts": 13189,
   "index_complete": true,
   "active_recovery_run": null,
   "local_checkpoint_after_recovery_sweep": {
@@ -586,20 +586,20 @@
     "visual_reviewed": false
   },
   "checkpoint": {
-    "downloaded_bytes": 174480698,
-    "failed_attempts": 12714,
-    "generated_at": "2026-10-21T10:10:47.982165+00:00",
-    "index_complete": true,
-    "indexed_capture_records": 185481,
-    "resource_urls": 13050,
+    "resource_urls": 13051,
+    "indexed_capture_records": 185557,
     "statuses": {
-      "excluded": 4,
-      "failed": 2797,
-      "needs_review": 294,
-      "queued": 4717,
-      "recovered": 5238
+      "queued": 4577,
+      "recovered": 5326,
+      "needs_review": 297,
+      "failed": 2847,
+      "excluded": 4
     },
-    "unique_downloaded_files": 2796
+    "unique_downloaded_files": 2806,
+    "downloaded_bytes": 174778693,
+    "failed_attempts": 13189,
+    "index_complete": true,
+    "generated_at": "2026-10-21T16:29:03.787327+00:00"
   },
   "pages_deployment": {
     "url": "https://keithah.github.io/bluescholars/",
@@ -671,16 +671,16 @@
       "errors": 0,
       "output": "_candidate",
       "base_path": "",
-      "checkpoint": "2026-10-21T15:55:24Z",
-      "current_content_batch_built": true
+      "current_content_batch_built": true,
+      "verified_at": "2026-10-21T16:29:03Z"
     },
     "project_subpath": {
       "ok": true,
       "errors": 0,
       "output": "_candidate",
       "base_path": "/bluescholars",
-      "checkpoint": "2026-10-21T15:55:24Z",
-      "current_content_batch_built": true
+      "current_content_batch_built": true,
+      "verified_at": "2026-10-21T16:29:03Z"
     }
   },
   "latest_tenth_broad_retry": {
@@ -1049,32 +1049,35 @@
     }
   },
   "latest_local_recovery_batch": {
-    "generated_at": "2026-10-21T15:55:24Z",
+    "generated_at": "2026-10-21T16:29:03Z",
     "attempt_limit": 75,
     "processed": 75,
     "resource_urls": 13051,
-    "indexed_capture_records": 185517,
+    "indexed_capture_records": 185557,
     "statuses": {
-      "queued": 4639,
-      "recovered": 5287,
-      "needs_review": 296,
-      "failed": 2825,
+      "queued": 4577,
+      "recovered": 5326,
+      "needs_review": 297,
+      "failed": 2847,
       "excluded": 4
     },
-    "unique_downloaded_files": 2800,
-    "downloaded_bytes": 174618405,
-    "failed_attempts": 13127,
-    "new_downloaded_resource_attempts": 32,
-    "unique_files_added": 2,
-    "downloaded_bytes_added": 3521,
+    "unique_downloaded_files": 2806,
+    "downloaded_bytes": 174778693,
+    "failed_attempts": 13189,
+    "new_downloaded_resource_attempts": 40,
+    "unique_files_added": 6,
+    "downloaded_bytes_added": 160288,
     "newly_recovered_assets": [
-      "2005–2007 Blue Scholars menu, navigation, event, press, contact and biography graphics",
-      "Geologic and Sabzi biography images",
-      "2007 splash panels and page backgrounds",
-      "MySpace link graphic"
+      "2006 Seattle poster image",
+      "2007 lower site background and page-panel graphics",
+      "media audio, video, gallery, updates and press image labels",
+      "shows side panel and merchandise/store imagery",
+      "additional MySpace link badge capture",
+      "2012 store header",
+      "archived video thumbnail"
     ],
     "candidate_updated": true,
-    "note": "A bounded 75-resource Wayback batch recovered 32 resource attempts; URL aliases included duplicate payloads. Candidate rebuilt after promotion."
+    "note": "A second bounded 75-resource Wayback batch recovered 40 response attempts and six additional unique local payloads. Some requests were held for review or failed; the queue remains resumable."
   },
   "livejournal_2025_css_and_image_followup": {
     "dated_at": "2026-10-20T18:43:27Z",
@@ -1179,7 +1182,7 @@
       "ok": true,
       "errors": []
     },
-    "verified_at": "2026-10-21T15:55:24Z"
+    "verified_at": "2026-10-21T16:29:03Z"
   },
   "release_blockers": [
     "Source/publication review remains unapproved; release build is gated until that review is genuinely completed.",
@@ -1218,7 +1221,7 @@
     "result": "blocked by design",
     "reason": "Publication requires source, visual and publish review approval; source/publication approval remains false after owner permission was recorded."
   },
-  "generated_at": "2026-10-21T15:59:23Z",
+  "generated_at": "2026-10-21T16:29:03Z",
   "twitter_archive": {
     "profile": "https://twitter.com/prometheusbrown",
     "archive": "Internet Archive Wayback Machine",
@@ -1292,7 +1295,7 @@
     "feed_recovered_pages": 12,
     "placeholder_pages": 2173,
     "derived_pages": 1,
-    "local_source_assets": 1638,
+    "local_source_assets": 1657,
     "community_media_items": 6,
     "root_check": {
       "ok": true,
@@ -1306,7 +1309,7 @@
     "human_visual_review": false,
     "tests": "267 passed"
   },
-  "preview_deployment_pending": false,
+  "preview_deployment_pending": true,
   "latest_targeted_image_index": {
     "archive": "Internet Archive Wayback",
     "query": "exact source-linked image URLs from expanded inventory",

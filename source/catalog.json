@@ -44511,7 +44511,18 @@
       "url": "http://02cd02a.netsolhost.com/favicon.ico"
     },
     "http://02cd02a.netsolhost.com/images/default.jpg": {
-      "attempts": [],
+      "actual_capture": "20130514055625",
+      "attempts": [
+        {
+          "actual_capture": "20130514055625",
+          "at": "2026-10-21T16:03:52.134192+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://02cd02a.netsolhost.com/images/default.jpg",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "4372d149f0a1f8461bfa75b8da6987d8e441b11bd37e32197ad97d5dcfd3e50a"
+        }
+      ],
+      "bytes": 15074,
       "captures": [
         {
           "digest": "ZBWRUXBLNW4JIPERHWEW5DHYQ7GNCIVA",
@@ -44521,6 +44532,9 @@
           "timestamp": "20130514055625"
         }
       ],
+      "content_type": "image/jpeg",
+      "final_original": "http://02cd02a.netsolhost.com/images/default.jpg",
+      "final_url": "https://web.archive.org/web/20130514055625id_/http://02cd02a.netsolhost.com/images/default.jpg",
       "hints": [
         "20110312094603",
         "20110313104724",
@@ -44532,6 +44546,8 @@
         "20110312094441"
       ],
       "kind": "image",
+      "later_capture_approved": false,
+      "raw_path": "source/raw/4372d149f0a1f8461bfa75b8da6987d8e441b11bd37e32197ad97d5dcfd3e50a.jpg",
       "referrers": [
         "CDX:domain:02cd02a.netsolhost.com",
         "http://02cd02a.netsolhost.com/blog/2010/12/",
@@ -44543,7 +44559,10 @@
         "http://02cd02a.netsolhost.com/blog/category/artsculture/",
         "http://02cd02a.netsolhost.com/blog/2009/09/"
       ],
-      "status": "queued",
+      "retrieved_at": "2026-10-21T16:03:54.623520+00:00",
+      "sha256": "4372d149f0a1f8461bfa75b8da6987d8e441b11bd37e32197ad97d5dcfd3e50a",
+      "source_reviewed": true,
+      "status": "recovered",
       "url": "http://02cd02a.netsolhost.com/images/default.jpg"
     },
     "http://02cd02a.netsolhost.com/images/default.jpg@@wayback:20130514055625:4372d149f0a1": {
@@ -242261,7 +242280,39 @@
       "url": "http://bluescholars.com/images/b_shows_off.gif"
     },
     "http://bluescholars.com/images/bayaniposter.jpg": {
-      "attempts": [],
+      "actual_capture": "20070706114518",
+      "attempts": [
+        {
+          "at": "2026-10-21T15:31:43.550693+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20210529010817id_/http://bluescholars.com/images/bayaniposter.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://bluescholars.com/images/bayaniposter.jpg",
+          "requested_capture": "20210529010817",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-21T15:31:45.015242+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20070701135556id_/http://bluescholars.com/images/bayaniposter.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20070701135556id_/http://bluescholars.com/images/bayaniposter.jpg",
+          "requested_capture": "20070701135556",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-21T15:31:46.502181+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20070701135531id_/http://bluescholars.com/images/bayaniposter.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20070701135531id_/http://bluescholars.com/images/bayaniposter.jpg",
+          "requested_capture": "20070701135531",
+          "result": "failed"
+        },
+        {
+          "actual_capture": "20070706114518",
+          "at": "2026-10-21T16:02:00.779184+00:00",
+          "request_url": "https://web.archive.org/web/20070706114518id_/http://bluescholars.com/images/bayaniposter.jpg",
+          "requested_capture": "20070706114518",
+          "result": "downloaded",
+          "sha256": "5d9884ed308a70b7c371b12d4e1cf0368dccd2e03c483661b11f65f90250a7b7"
+        }
+      ],
+      "bytes": 65409,
       "captures": [
         {
           "digest": "7JX2Y3575BMV43NF46QRD4RDBU6IBOXG",
@@ -242269,14 +242320,34 @@
           "original": "http://bluescholars.com/images/bayaniposter.jpg",
           "statuscode": "200",
           "timestamp": "20070701135556"
+        },
+        {
+          "digest": "7JX2Y3575BMV43NF46QRD4RDBU6IBOXG",
+          "mimetype": "image/jpeg",
+          "original": "http://www.bluescholars.com/images/bayaniposter.jpg",
+          "statuscode": "200",
+          "timestamp": "20070706114518"
         }
       ],
-      "hints": [],
-      "kind": "image",
-      "referrers": [
-        "CDX:domain"
+      "content_type": "image/jpeg",
+      "final_original": "http://bluescholars.com/images/bayaniposter.jpg",
+      "final_url": "https://web.archive.org/web/20070706114518id_/http://bluescholars.com/images/bayaniposter.jpg",
+      "hints": [
+        "20070701135531"
       ],
-      "status": "queued",
+      "kind": "image",
+      "later_capture_approved": false,
+      "raw_path": "source/raw/5d9884ed308a70b7c371b12d4e1cf0368dccd2e03c483661b11f65f90250a7b7.jpg",
+      "reason": "Untried capture dates or exact-URL index pages remain",
+      "referrers": [
+        "CDX:domain",
+        "http://bluescholars.com/shows.html",
+        "CDX:exact:http://bluescholars.com/images/bayaniposter.jpg"
+      ],
+      "retrieved_at": "2026-10-21T16:02:01.445692+00:00",
+      "sha256": "5d9884ed308a70b7c371b12d4e1cf0368dccd2e03c483661b11f65f90250a7b7",
+      "source_reviewed": true,
+      "status": "recovered",
       "url": "http://bluescholars.com/images/bayaniposter.jpg"
     },
     "http://bluescholars.com/images/bayaniposter.jpg@@wayback:20070701135556:5d9884ed308a": {
@@ -243120,7 +243191,18 @@
       "url": "http://bluescholars.com/images/bluevalve.jpg"
     },
     "http://bluescholars.com/images/bottom_center.gif": {
-      "attempts": [],
+      "actual_capture": "20070706113441",
+      "attempts": [
+        {
+          "actual_capture": "20070706113441",
+          "at": "2026-10-21T16:04:07.152356+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://bluescholars.com/images/bottom_center.gif",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "dc666f2934e374e00ce23d627ec220767be832dd5584a9ee72653f0505d6e52d"
+        }
+      ],
+      "bytes": 1896,
       "captures": [
         {
           "digest": "AIZOQZNBHW3INELVZD34DUI5PPBQKC3U",
@@ -243130,12 +243212,49 @@
           "timestamp": "20070701134810"
         }
       ],
-      "hints": [],
-      "kind": "image",
-      "referrers": [
-        "CDX:domain"
+      "content_type": "image/gif",
+      "final_original": "http://www.bluescholars.com/images/bottom_center.gif",
+      "final_url": "https://web.archive.org/web/20070706113441id_/http://www.bluescholars.com/images/bottom_center.gif",
+      "hints": [
+        "20070701134800",
+        "20070701134905",
+        "20070701135310",
+        "20070701135454",
+        "20070701135531",
+        "20080314051926",
+        "20080314051942",
+        "20080222195936",
+        "20071012030542",
+        "20080324041851",
+        "20071026144537",
+        "20080314051937",
+        "20080314051931",
+        "20080312025552",
+        "20071008140234",
+        "20080312025559"
       ],
-      "status": "queued",
+      "kind": "image",
+      "later_capture_approved": false,
+      "raw_path": "source/raw/dc666f2934e374e00ce23d627ec220767be832dd5584a9ee72653f0505d6e52d.gif",
+      "referrers": [
+        "CDX:domain",
+        "http://bluescholars.com/news.html",
+        "http://bluescholars.com/press.html",
+        "http://bluescholars.com/bio.html",
+        "http://bluescholars.com/lyrics.html",
+        "http://bluescholars.com/shows.html",
+        "http://bluescholars.com/store.html",
+        "http://bluescholars.com/shows2006.html",
+        "http://bluescholars.com/media.html",
+        "http://bluescholars.com/contact.html",
+        "http://bluescholars.com/media_audio.html",
+        "http://bluescholars.com/store_gear.html",
+        "http://bluescholars.com/media_gallery.html"
+      ],
+      "retrieved_at": "2026-10-21T16:04:08.031538+00:00",
+      "sha256": "dc666f2934e374e00ce23d627ec220767be832dd5584a9ee72653f0505d6e52d",
+      "source_reviewed": true,
+      "status": "recovered",
       "url": "http://bluescholars.com/images/bottom_center.gif"
     },
     "http://bluescholars.com/images/bottom_center.gif@@wayback:20070701134810:dc666f2934e3": {
@@ -243163,7 +243282,39 @@
       "url": "http://bluescholars.com/images/bottom_center.gif"
     },
     "http://bluescholars.com/images/bottom_left.gif": {
-      "attempts": [],
+      "actual_capture": "20070706113459",
+      "attempts": [
+        {
+          "at": "2026-10-21T15:29:16.376206+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20210529010817id_/http://bluescholars.com/images/bottom_left.gif (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://bluescholars.com/images/bottom_left.gif",
+          "requested_capture": "20210529010817",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-21T15:29:17.779683+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20080324041851id_/http://bluescholars.com/images/bottom_left.gif (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20080324041851id_/http://bluescholars.com/images/bottom_left.gif",
+          "requested_capture": "20080324041851",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-21T15:29:19.190795+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20071026144537id_/http://bluescholars.com/images/bottom_left.gif (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20071026144537id_/http://bluescholars.com/images/bottom_left.gif",
+          "requested_capture": "20071026144537",
+          "result": "failed"
+        },
+        {
+          "actual_capture": "20070706113459",
+          "at": "2026-10-21T16:00:44.141534+00:00",
+          "request_url": "https://web.archive.org/web/20071012030542id_/http://bluescholars.com/images/bottom_left.gif",
+          "requested_capture": "20071012030542",
+          "result": "downloaded",
+          "sha256": "ed105f207faa43bab52bb220a247ef85b27684d0b5d8c5e2afa5786097bf1ca0"
+        }
+      ],
+      "bytes": 6769,
       "captures": [
         {
           "digest": "VSDKYG5D5BKPXVHTFMVBYL4JSJYPH2DS",
@@ -243173,12 +243324,39 @@
           "timestamp": "20070701134821"
         }
       ],
-      "hints": [],
-      "kind": "image",
-      "referrers": [
-        "CDX:domain"
+      "content_type": "image/gif",
+      "final_original": "http://www.bluescholars.com/images/bottom_left.gif",
+      "final_url": "https://web.archive.org/web/20070706113459id_/http://www.bluescholars.com/images/bottom_left.gif",
+      "hints": [
+        "20070701134800",
+        "20070701134905",
+        "20070701135310",
+        "20070701135454",
+        "20070701135531",
+        "20071012030542",
+        "20080324041851",
+        "20071026144537",
+        "20071008140234"
       ],
-      "status": "queued",
+      "kind": "image",
+      "later_capture_approved": false,
+      "raw_path": "source/raw/ed105f207faa43bab52bb220a247ef85b27684d0b5d8c5e2afa5786097bf1ca0.gif",
+      "reason": "Untried capture dates or exact-URL index pages remain",
+      "referrers": [
+        "CDX:domain",
+        "http://bluescholars.com/news.html",
+        "http://bluescholars.com/press.html",
+        "http://bluescholars.com/bio.html",
+        "http://bluescholars.com/lyrics.html",
+        "http://bluescholars.com/shows.html",
+        "http://bluescholars.com/store.html",
+        "http://bluescholars.com/shows2006.html",
+        "http://bluescholars.com/store_gear.html"
+      ],
+      "retrieved_at": "2026-10-21T16:00:45.176256+00:00",
+      "sha256": "ed105f207faa43bab52bb220a247ef85b27684d0b5d8c5e2afa5786097bf1ca0",
+      "source_reviewed": true,
+      "status": "recovered",
       "url": "http://bluescholars.com/images/bottom_left.gif"
     },
     "http://bluescholars.com/images/bottom_left.gif@@wayback:20070701134821:ed105f207faa": {
@@ -245708,22 +245886,96 @@
       "url": "http://bluescholars.com/images/media.jpg"
     },
     "http://bluescholars.com/images/media_audio.jpg": {
-      "attempts": [],
-      "captures": [],
+      "actual_capture": "20070726233742",
+      "attempts": [
+        {
+          "at": "2026-10-21T15:29:21.813076+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20210529010817id_/http://bluescholars.com/images/media_audio.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://bluescholars.com/images/media_audio.jpg",
+          "requested_capture": "20210529010817",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-21T15:29:23.195317+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20080312025552id_/http://bluescholars.com/images/media_audio.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20080312025552id_/http://bluescholars.com/images/media_audio.jpg",
+          "requested_capture": "20080312025552",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-21T15:29:24.654969+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20060118095918id_/http://bluescholars.com/images/media_audio.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20060118095918id_/http://bluescholars.com/images/media_audio.jpg",
+          "requested_capture": "20060118095918",
+          "result": "failed"
+        },
+        {
+          "actual_capture": "20070726233742",
+          "at": "2026-10-21T16:00:50.576340+00:00",
+          "request_url": "https://web.archive.org/web/20070726233742id_/http://bluescholars.com/images/media_audio.jpg",
+          "requested_capture": "20070726233742",
+          "result": "downloaded",
+          "sha256": "81389266bbb6d3fe2ed4539469986c314042e5628c88825c9f4c4d50955c75d1"
+        }
+      ],
+      "bytes": 1921,
+      "captures": [
+        {
+          "digest": "NC4BGKT6VUTSYI6FCPTBHWK2FIJMAHYZ",
+          "mimetype": "image/jpeg",
+          "original": "http://www.bluescholars.com:80/images/media_audio.jpg",
+          "statuscode": "200",
+          "timestamp": "20070117175621"
+        },
+        {
+          "digest": "NC4BGKT6VUTSYI6FCPTBHWK2FIJMAHYZ",
+          "mimetype": "image/jpeg",
+          "original": "http://www.bluescholars.com:80/images/media_audio.jpg",
+          "statuscode": "200",
+          "timestamp": "20070218025625"
+        },
+        {
+          "digest": "NC4BGKT6VUTSYI6FCPTBHWK2FIJMAHYZ",
+          "mimetype": "image/jpeg",
+          "original": "http://www.bluescholars.com/images/media_audio.jpg",
+          "statuscode": "200",
+          "timestamp": "20070726233742"
+        }
+      ],
+      "content_type": "image/jpeg",
+      "final_original": "http://bluescholars.com/images/media_audio.jpg",
+      "final_url": "https://web.archive.org/web/20070726233742id_/http://bluescholars.com/images/media_audio.jpg",
       "hints": [
         "20060118095918",
         "20080312025552"
       ],
       "kind": "image",
+      "later_capture_approved": false,
+      "raw_path": "source/raw/81389266bbb6d3fe2ed4539469986c314042e5628c88825c9f4c4d50955c75d1.jpg",
+      "reason": "Untried capture dates or exact-URL index pages remain",
       "referrers": [
         "http://bluescholars.com/media.htm",
         "http://bluescholars.com/media_audio.html"
       ],
-      "status": "queued",
+      "retrieved_at": "2026-10-21T16:00:51.251367+00:00",
+      "sha256": "81389266bbb6d3fe2ed4539469986c314042e5628c88825c9f4c4d50955c75d1",
+      "source_reviewed": true,
+      "status": "recovered",
       "url": "http://bluescholars.com/images/media_audio.jpg"
     },
     "http://bluescholars.com/images/media_buttons.jpg": {
-      "attempts": [],
+      "actual_capture": "20070706114051",
+      "attempts": [
+        {
+          "actual_capture": "20070706114051",
+          "at": "2026-10-21T16:04:09.268565+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://bluescholars.com/images/media_buttons.jpg",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "4a912f136ed00589f988daa42b53ab82f112c8ef45525683c10356afcbbbce43"
+        }
+      ],
+      "bytes": 17004,
       "captures": [
         {
           "digest": "J4K3UMD6AOHFATJZL2GJWRXH7VMU2QY6",
@@ -245733,12 +245985,30 @@
           "timestamp": "20070701135511"
         }
       ],
-      "hints": [],
-      "kind": "image",
-      "referrers": [
-        "CDX:domain"
+      "content_type": "image/jpeg",
+      "final_original": "http://www.bluescholars.com/images/media_buttons.jpg",
+      "final_url": "https://web.archive.org/web/20070706114051id_/http://www.bluescholars.com/images/media_buttons.jpg",
+      "hints": [
+        "20070701135454",
+        "20080324041851",
+        "20080314051937",
+        "20080312025552",
+        "20080312025559"
       ],
-      "status": "queued",
+      "kind": "image",
+      "later_capture_approved": false,
+      "raw_path": "source/raw/4a912f136ed00589f988daa42b53ab82f112c8ef45525683c10356afcbbbce43.jpg",
+      "referrers": [
+        "CDX:domain",
+        "http://bluescholars.com/lyrics.html",
+        "http://bluescholars.com/media.html",
+        "http://bluescholars.com/media_audio.html",
+        "http://bluescholars.com/media_gallery.html"
+      ],
+      "retrieved_at": "2026-10-21T16:04:10.245515+00:00",
+      "sha256": "4a912f136ed00589f988daa42b53ab82f112c8ef45525683c10356afcbbbce43",
+      "source_reviewed": true,
+      "status": "recovered",
       "url": "http://bluescholars.com/images/media_buttons.jpg"
     },
     "http://bluescholars.com/images/media_buttons.jpg@@wayback:20070701135511:4a912f136ed0": {
@@ -245766,16 +246036,35 @@
       "url": "http://bluescholars.com/images/media_buttons.jpg"
     },
     "http://bluescholars.com/images/media_gallery.jpg": {
-      "attempts": [],
+      "actual_capture": "20070726233651",
+      "attempts": [
+        {
+          "actual_capture": "20070726233651",
+          "at": "2026-10-21T16:04:11.488126+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://bluescholars.com/images/media_gallery.jpg",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "e23056d854f535e0cdec495ed789f1096f6310896bef4e92a98f35c9fe2221d7"
+        }
+      ],
+      "bytes": 2104,
       "captures": [],
+      "content_type": "image/jpeg",
+      "final_original": "http://www.bluescholars.com/images/media_gallery.jpg",
+      "final_url": "https://web.archive.org/web/20070726233651id_/http://www.bluescholars.com/images/media_gallery.jpg",
       "hints": [
         "20080312025559"
       ],
       "kind": "image",
+      "later_capture_approved": false,
+      "raw_path": "source/raw/e23056d854f535e0cdec495ed789f1096f6310896bef4e92a98f35c9fe2221d7.jpg",
       "referrers": [
         "http://bluescholars.com/media_gallery.html"
       ],
-      "status": "queued",
+      "retrieved_at": "2026-10-21T16:04:12.433745+00:00",
+      "sha256": "e23056d854f535e0cdec495ed789f1096f6310896bef4e92a98f35c9fe2221d7",
+      "source_reviewed": true,
+      "status": "recovered",
       "url": "http://bluescholars.com/images/media_gallery.jpg"
     },
     "http://bluescholars.com/images/media_naudio.gif": {
@@ -245817,7 +246106,18 @@
       "url": "http://bluescholars.com/images/media_nvideo.gif"
     },
     "http://bluescholars.com/images/media_updates.jpg": {
-      "attempts": [],
+      "actual_capture": "20070706114149",
+      "attempts": [
+        {
+          "actual_capture": "20070706114149",
+          "at": "2026-10-21T16:04:13.663170+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://bluescholars.com/images/media_updates.jpg",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "0d5bc68957c1ede789b8770d85ab0d5c4e76bbd011cc22f369661ce80d1a18e9"
+        }
+      ],
+      "bytes": 2085,
       "captures": [
         {
           "digest": "IO45366O3IUTUXLBEQBHROCCVTMEF25A",
@@ -245827,12 +246127,26 @@
           "timestamp": "20070701135525"
         }
       ],
-      "hints": [],
-      "kind": "image",
-      "referrers": [
-        "CDX:domain"
+      "content_type": "image/jpeg",
+      "final_original": "http://www.bluescholars.com/images/media_updates.jpg",
+      "final_url": "https://web.archive.org/web/20070706114149id_/http://www.bluescholars.com/images/media_updates.jpg",
+      "hints": [
+        "20070701135454",
+        "20080324041851",
+        "20080314051937"
       ],
-      "status": "queued",
+      "kind": "image",
+      "later_capture_approved": false,
+      "raw_path": "source/raw/0d5bc68957c1ede789b8770d85ab0d5c4e76bbd011cc22f369661ce80d1a18e9.jpg",
+      "referrers": [
+        "CDX:domain",
+        "http://bluescholars.com/lyrics.html",
+        "http://bluescholars.com/media.html"
+      ],
+      "retrieved_at": "2026-10-21T16:04:15.902759+00:00",
+      "sha256": "0d5bc68957c1ede789b8770d85ab0d5c4e76bbd011cc22f369661ce80d1a18e9",
+      "source_reviewed": true,
+      "status": "recovered",
       "url": "http://bluescholars.com/images/media_updates.jpg"
     },
     "http://bluescholars.com/images/media_updates.jpg@@wayback:20070701135525:0d5bc68957c1": {
@@ -245860,16 +246174,58 @@
       "url": "http://bluescholars.com/images/media_updates.jpg"
     },
     "http://bluescholars.com/images/media_video.jpg": {
-      "attempts": [],
-      "captures": [],
+      "actual_capture": "20070726233716",
+      "attempts": [
+        {
+          "at": "2026-10-21T15:29:27.345875+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20210529010817id_/http://bluescholars.com/images/media_video.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://bluescholars.com/images/media_video.jpg",
+          "requested_capture": "20210529010817",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-21T15:29:28.741855+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20060118095918id_/http://bluescholars.com/images/media_video.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20060118095918id_/http://bluescholars.com/images/media_video.jpg",
+          "requested_capture": "20060118095918",
+          "result": "failed"
+        },
+        {
+          "actual_capture": "20070726233716",
+          "at": "2026-10-21T16:00:54.214810+00:00",
+          "request_url": "https://web.archive.org/web/20070726233716id_/http://bluescholars.com/images/media_video.jpg",
+          "requested_capture": "20070726233716",
+          "result": "downloaded",
+          "sha256": "970ba1747e7f2f1a0cd113557500c8d1a6892c19ad62d463ecaddf3d329d7de5"
+        }
+      ],
+      "bytes": 1942,
+      "captures": [
+        {
+          "digest": "UPCHLILZZVPKBSTKCF2CT6QC5SVNLTXY",
+          "mimetype": "image/jpeg",
+          "original": "http://www.bluescholars.com/images/media_video.jpg",
+          "statuscode": "200",
+          "timestamp": "20070726233716"
+        }
+      ],
+      "content_type": "image/jpeg",
+      "final_original": "http://bluescholars.com/images/media_video.jpg",
+      "final_url": "https://web.archive.org/web/20070726233716id_/http://bluescholars.com/images/media_video.jpg",
       "hints": [
         "20060118095918"
       ],
       "kind": "image",
+      "later_capture_approved": false,
+      "raw_path": "source/raw/970ba1747e7f2f1a0cd113557500c8d1a6892c19ad62d463ecaddf3d329d7de5.jpg",
+      "reason": "Untried capture dates or exact-URL index pages remain",
       "referrers": [
         "http://bluescholars.com/media.htm"
       ],
-      "status": "queued",
+      "retrieved_at": "2026-10-21T16:00:54.785479+00:00",
+      "sha256": "970ba1747e7f2f1a0cd113557500c8d1a6892c19ad62d463ecaddf3d329d7de5",
+      "source_reviewed": true,
+      "status": "recovered",
       "url": "http://bluescholars.com/images/media_video.jpg"
     },
     "http://bluescholars.com/images/menu_01_off.gif": {
@@ -246602,35 +246958,82 @@
       "url": "http://bluescholars.com/images/menu_news.gif"
     },
     "http://bluescholars.com/images/menu_news_off.gif": {
-      "attempts": [],
+      "actual_capture": "20060518142457",
+      "attempts": [
+        {
+          "at": "2026-10-21T16:04:30.618692+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20210529010817id_/http://bluescholars.com/images/menu_news_off.gif (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://bluescholars.com/images/menu_news_off.gif",
+          "requested_capture": "20210529010817",
+          "result": "failed"
+        },
+        {
+          "actual_capture": "20060518142457",
+          "at": "2026-10-21T16:04:32.154543+00:00",
+          "request_url": "https://web.archive.org/web/20060518142049id_/http://bluescholars.com/images/menu_news_off.gif",
+          "requested_capture": "20060518142049",
+          "result": "downloaded",
+          "sha256": "82346bcab7eb4bee8528b59d7db98242354e525b5ba2c9ea3bfcbf8eb343c8e9"
+        }
+      ],
+      "bytes": 1395,
       "captures": [],
+      "content_type": "image/gif",
+      "final_original": "http://www.bluescholars.com/images/menu_news_off.gif",
+      "final_url": "https://web.archive.org/web/20060518142457id_/http://www.bluescholars.com/images/menu_news_off.gif",
       "hints": [
         "20050204141732",
         "20060118095918",
         "20050208002453",
-        "20060518142049"
+        "20060518142049",
+        "20050204152607"
       ],
       "kind": "image",
+      "later_capture_approved": false,
+      "raw_path": "source/raw/82346bcab7eb4bee8528b59d7db98242354e525b5ba2c9ea3bfcbf8eb343c8e9.gif",
       "referrers": [
         "http://bluescholars.com/press.htm",
         "http://bluescholars.com/media.htm",
         "http://bluescholars.com/contact.htm",
-        "http://bluescholars.com/events_2002.htm"
+        "http://bluescholars.com/events_2002.htm",
+        "http://bluescholars.com/Guestbook/guestbook.html"
       ],
-      "status": "queued",
+      "retrieved_at": "2026-10-21T16:04:33.484732+00:00",
+      "sha256": "82346bcab7eb4bee8528b59d7db98242354e525b5ba2c9ea3bfcbf8eb343c8e9",
+      "source_reviewed": true,
+      "status": "recovered",
       "url": "http://bluescholars.com/images/menu_news_off.gif"
     },
     "http://bluescholars.com/images/menu_news_on.gif": {
-      "attempts": [],
+      "actual_capture": "20060623005823",
+      "attempts": [
+        {
+          "actual_capture": "20060623005823",
+          "at": "2026-10-21T16:02:07.732850+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://bluescholars.com/images/menu_news_on.gif",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "80af18255fad57d932f15425c5fa732ecf170e77d6806ec6230b630a3c75d252"
+        }
+      ],
+      "bytes": 1323,
       "captures": [],
+      "content_type": "image/gif",
+      "final_original": "http://www.bluescholars.com/images/menu_news_on.gif",
+      "final_url": "https://web.archive.org/web/20060623005823id_/http://www.bluescholars.com/images/menu_news_on.gif",
       "hints": [
         "20041204213553"
       ],
       "kind": "image",
+      "later_capture_approved": false,
+      "raw_path": "source/raw/80af18255fad57d932f15425c5fa732ecf170e77d6806ec6230b630a3c75d252.gif",
       "referrers": [
         "http://bluescholars.com/news.htm"
       ],
-      "status": "queued",
+      "retrieved_at": "2026-10-21T16:02:08.771646+00:00",
+      "sha256": "80af18255fad57d932f15425c5fa732ecf170e77d6806ec6230b630a3c75d252",
+      "source_reviewed": true,
+      "status": "recovered",
       "url": "http://bluescholars.com/images/menu_news_on.gif"
     },
     "http://bluescholars.com/images/menu_press_off.gif": {
@@ -246664,21 +247067,75 @@
       "url": "http://bluescholars.com/images/menu_press_off.gif"
     },
     "http://bluescholars.com/images/menu_press_on.gif": {
-      "attempts": [],
+      "actual_capture": "20061011162304",
+      "attempts": [
+        {
+          "actual_capture": "20061011162304",
+          "at": "2026-10-21T16:04:34.723877+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://bluescholars.com/images/menu_press_on.gif",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "a85c7273c1a0323e7eca3a6708fdb83a6a0f4f0208e543c64825d03a69bc1a31"
+        }
+      ],
+      "bytes": 1335,
       "captures": [],
+      "content_type": "image/gif",
+      "final_original": "http://www.bluescholars.com/images/menu_press_on.gif",
+      "final_url": "https://web.archive.org/web/20061011162304id_/http://www.bluescholars.com/images/menu_press_on.gif",
       "hints": [
         "20041205093403"
       ],
       "kind": "image",
+      "later_capture_approved": false,
+      "raw_path": "source/raw/a85c7273c1a0323e7eca3a6708fdb83a6a0f4f0208e543c64825d03a69bc1a31.gif",
       "referrers": [
         "http://bluescholars.com/press.htm"
       ],
-      "status": "queued",
+      "retrieved_at": "2026-10-21T16:04:35.728014+00:00",
+      "sha256": "a85c7273c1a0323e7eca3a6708fdb83a6a0f4f0208e543c64825d03a69bc1a31",
+      "source_reviewed": true,
+      "status": "recovered",
       "url": "http://bluescholars.com/images/menu_press_on.gif"
     },
     "http://bluescholars.com/images/menu_spacer.gif": {
-      "attempts": [],
+      "actual_capture": "20040814010038",
+      "attempts": [
+        {
+          "at": "2026-10-21T15:29:32.997553+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20210529010817id_/http://bluescholars.com/images/menu_spacer.gif (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://bluescholars.com/images/menu_spacer.gif",
+          "requested_capture": "20210529010817",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-21T15:29:34.550237+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20041205093813id_/http://bluescholars.com/images/menu_spacer.gif (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20041205093813id_/http://bluescholars.com/images/menu_spacer.gif",
+          "requested_capture": "20041205093813",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-21T15:29:35.972639+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20041205093403id_/http://bluescholars.com/images/menu_spacer.gif (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20041205093403id_/http://bluescholars.com/images/menu_spacer.gif",
+          "requested_capture": "20041205093403",
+          "result": "failed"
+        },
+        {
+          "actual_capture": "20040814010038",
+          "at": "2026-10-21T16:00:56.118240+00:00",
+          "request_url": "https://web.archive.org/web/20041205091350id_/http://bluescholars.com/images/menu_spacer.gif",
+          "requested_capture": "20041205091350",
+          "result": "downloaded",
+          "sha256": "59043865b47413a34bd28bb13a3ee2fbabd3f73e41f37111fc67da7cb2b05b81"
+        }
+      ],
+      "bytes": 646,
       "captures": [],
+      "content_type": "image/gif",
+      "final_original": "http://www.bluescholars.com/images/menu_spacer.gif",
+      "final_url": "https://web.archive.org/web/20040814010038id_/http://www.bluescholars.com/images/menu_spacer.gif",
       "hints": [
         "20041205085324",
         "20041204213553",
@@ -246689,6 +247146,9 @@
         "20041205084451"
       ],
       "kind": "image",
+      "later_capture_approved": false,
+      "raw_path": "source/raw/59043865b47413a34bd28bb13a3ee2fbabd3f73e41f37111fc67da7cb2b05b81.gif",
+      "reason": "Untried capture dates or exact-URL index pages remain",
       "referrers": [
         "http://bluescholars.com/disc.htm",
         "http://bluescholars.com/news.htm",
@@ -246698,7 +247158,10 @@
         "http://bluescholars.com/store.htm",
         "http://bluescholars.com/contact.htm"
       ],
-      "status": "queued",
+      "retrieved_at": "2026-10-21T16:00:57.530584+00:00",
+      "sha256": "59043865b47413a34bd28bb13a3ee2fbabd3f73e41f37111fc67da7cb2b05b81",
+      "source_reviewed": true,
+      "status": "recovered",
       "url": "http://bluescholars.com/images/menu_spacer.gif"
     },
     "http://bluescholars.com/images/menu_store_off.gif": {
@@ -246731,16 +247194,35 @@
       "url": "http://bluescholars.com/images/menu_store_off.gif"
     },
     "http://bluescholars.com/images/menu_store_on.gif": {
-      "attempts": [],
+      "actual_capture": "20060623005934",
+      "attempts": [
+        {
+          "actual_capture": "20060623005934",
+          "at": "2026-10-21T16:04:36.994044+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://bluescholars.com/images/menu_store_on.gif",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "62378b7498f309064e0be9948f014d7961cc28b26deb0b2fa0d7a6410564ccb5"
+        }
+      ],
+      "bytes": 1087,
       "captures": [],
+      "content_type": "image/gif",
+      "final_original": "http://www.bluescholars.com/images/menu_store_on.gif",
+      "final_url": "https://web.archive.org/web/20060623005934id_/http://www.bluescholars.com/images/menu_store_on.gif",
       "hints": [
         "20041205093813"
       ],
       "kind": "image",
+      "later_capture_approved": false,
+      "raw_path": "source/raw/62378b7498f309064e0be9948f014d7961cc28b26deb0b2fa0d7a6410564ccb5.gif",
       "referrers": [
         "http://bluescholars.com/store.htm"
       ],
-      "status": "queued",
+      "retrieved_at": "2026-10-21T16:04:37.891397+00:00",
+      "sha256": "62378b7498f309064e0be9948f014d7961cc28b26deb0b2fa0d7a6410564ccb5",
+      "source_reviewed": true,
+      "status": "recovered",
       "url": "http://bluescholars.com/images/menu_store_on.gif"
     },
     "http://bluescholars.com/images/myspace.gif": {
@@ -247601,7 +248083,18 @@
       "url": "http://bluescholars.com/images/press/print/2006-03_vibe.jpg"
     },
     "http://bluescholars.com/images/press_photos.gif": {
-      "attempts": [],
+      "actual_capture": "20070706113934",
+      "attempts": [
+        {
+          "actual_capture": "20070706113934",
+          "at": "2026-10-21T16:02:10.058228+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://bluescholars.com/images/press_photos.gif",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "637e3364aeb849b6db033d6c911cfa77ebb9c9380094e406215d4c0d7e6eccd3"
+        }
+      ],
+      "bytes": 3343,
       "captures": [
         {
           "digest": "BCL2FRYR4MX7FMKO3QQFGUBQGUHNOOUF",
@@ -247611,12 +248104,24 @@
           "timestamp": "20070701135251"
         }
       ],
-      "hints": [],
-      "kind": "image",
-      "referrers": [
-        "CDX:domain"
+      "content_type": "image/gif",
+      "final_original": "http://www.bluescholars.com/images/press_photos.gif",
+      "final_url": "https://web.archive.org/web/20070706113934id_/http://www.bluescholars.com/images/press_photos.gif",
+      "hints": [
+        "20070701134905",
+        "20080314051942"
       ],
-      "status": "queued",
+      "kind": "image",
+      "later_capture_approved": false,
+      "raw_path": "source/raw/637e3364aeb849b6db033d6c911cfa77ebb9c9380094e406215d4c0d7e6eccd3.gif",
+      "referrers": [
+        "CDX:domain",
+        "http://bluescholars.com/press.html"
+      ],
+      "retrieved_at": "2026-10-21T16:02:11.047259+00:00",
+      "sha256": "637e3364aeb849b6db033d6c911cfa77ebb9c9380094e406215d4c0d7e6eccd3",
+      "source_reviewed": true,
+      "status": "recovered",
       "url": "http://bluescholars.com/images/press_photos.gif"
     },
     "http://bluescholars.com/images/press_photos.gif@@wayback:20070701135251:637e3364aeb8": {
@@ -248037,7 +248542,18 @@
       "url": "http://bluescholars.com/images/shows_bar.gif"
     },
     "http://bluescholars.com/images/shows_side01.gif": {
-      "attempts": [],
+      "actual_capture": "20070706114436",
+      "attempts": [
+        {
+          "actual_capture": "20070706114436",
+          "at": "2026-10-21T16:02:12.275396+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://bluescholars.com/images/shows_side01.gif",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "b3f8514d735075f401f5db926a8f2ad4a8bca7fa15fba059175fc6576f75ce37"
+        }
+      ],
+      "bytes": 44484,
       "captures": [
         {
           "digest": "7OWEDU7SWMVBICV6TKE3A2G3X6XSE3DY",
@@ -248047,12 +248563,24 @@
           "timestamp": "20070701135546"
         }
       ],
-      "hints": [],
-      "kind": "image",
-      "referrers": [
-        "CDX:domain"
+      "content_type": "image/gif",
+      "final_original": "http://www.bluescholars.com/images/shows_side01.gif",
+      "final_url": "https://web.archive.org/web/20070706114436id_/http://www.bluescholars.com/images/shows_side01.gif",
+      "hints": [
+        "20070701135531",
+        "20080222195936"
       ],
-      "status": "queued",
+      "kind": "image",
+      "later_capture_approved": false,
+      "raw_path": "source/raw/b3f8514d735075f401f5db926a8f2ad4a8bca7fa15fba059175fc6576f75ce37.gif",
+      "referrers": [
+        "CDX:domain",
+        "http://bluescholars.com/shows.html"
+      ],
+      "retrieved_at": "2026-10-21T16:02:13.427840+00:00",
+      "sha256": "b3f8514d735075f401f5db926a8f2ad4a8bca7fa15fba059175fc6576f75ce37",
+      "source_reviewed": true,
+      "status": "recovered",
       "url": "http://bluescholars.com/images/shows_side01.gif"
     },
     "http://bluescholars.com/images/shows_side01.gif@@wayback:20070701135546:b3f8514d7350": {
@@ -248080,16 +248608,35 @@
       "url": "http://bluescholars.com/images/shows_side01.gif"
     },
     "http://bluescholars.com/images/shows_side01a.gif": {
-      "attempts": [],
+      "actual_capture": "20070325025046",
+      "attempts": [
+        {
+          "actual_capture": "20070325025046",
+          "at": "2026-10-21T16:04:39.140115+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://bluescholars.com/images/shows_side01a.gif",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "e5526ee04654e239e65f7e456aa818d74d112dca7167267d0db11c938a7d1fce"
+        }
+      ],
+      "bytes": 13528,
       "captures": [],
+      "content_type": "image/gif",
+      "final_original": "http://www.bluescholars.com/images/shows_side01a.gif",
+      "final_url": "https://web.archive.org/web/20070325025046id_/http://www.bluescholars.com/images/shows_side01a.gif",
       "hints": [
         "20071026144537"
       ],
       "kind": "image",
+      "later_capture_approved": false,
+      "raw_path": "source/raw/e5526ee04654e239e65f7e456aa818d74d112dca7167267d0db11c938a7d1fce.gif",
       "referrers": [
         "http://bluescholars.com/shows2006.html"
       ],
-      "status": "queued",
+      "retrieved_at": "2026-10-21T16:04:40.149152+00:00",
+      "sha256": "e5526ee04654e239e65f7e456aa818d74d112dca7167267d0db11c938a7d1fce",
+      "source_reviewed": true,
+      "status": "recovered",
       "url": "http://bluescholars.com/images/shows_side01a.gif"
     },
     "http://bluescholars.com/images/shows_upcoming.gif": {
@@ -248878,31 +249425,69 @@
       "url": "http://bluescholars.com/images/store_bar.gif"
     },
     "http://bluescholars.com/images/store_free12.jpg": {
-      "attempts": [],
+      "actual_capture": "20070706114853",
+      "attempts": [
+        {
+          "actual_capture": "20070706114853",
+          "at": "2026-10-21T16:02:14.640128+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://bluescholars.com/images/store_free12.jpg",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "e12db63be9889d530a9867abfb1b06f2c178cfa5ca727188d08e28059f69b581"
+        }
+      ],
+      "bytes": 4279,
       "captures": [],
+      "content_type": "image/jpeg",
+      "final_original": "http://www.bluescholars.com/images/store_free12.jpg",
+      "final_url": "https://web.archive.org/web/20070706114853id_/http://www.bluescholars.com/images/store_free12.jpg",
       "hints": [
         "20071012030542"
       ],
       "kind": "image",
+      "later_capture_approved": false,
+      "raw_path": "source/raw/e12db63be9889d530a9867abfb1b06f2c178cfa5ca727188d08e28059f69b581.jpg",
       "referrers": [
         "http://bluescholars.com/store.html"
       ],
-      "status": "queued",
+      "retrieved_at": "2026-10-21T16:02:15.924629+00:00",
+      "sha256": "e12db63be9889d530a9867abfb1b06f2c178cfa5ca727188d08e28059f69b581",
+      "source_reviewed": true,
+      "status": "recovered",
       "url": "http://bluescholars.com/images/store_free12.jpg"
     },
     "http://bluescholars.com/images/store_left01.jpg": {
-      "attempts": [],
+      "actual_capture": "20070706114733",
+      "attempts": [
+        {
+          "actual_capture": "20070706114733",
+          "at": "2026-10-21T16:02:17.158303+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://bluescholars.com/images/store_left01.jpg",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "ff9ac57aed5e3e99e3707800bdcd6f0fd079b704b13cb043303c1510d259ef31"
+        }
+      ],
+      "bytes": 11294,
       "captures": [],
+      "content_type": "image/jpeg",
+      "final_original": "http://www.bluescholars.com/images/store_left01.jpg",
+      "final_url": "https://web.archive.org/web/20070706114733id_/http://www.bluescholars.com/images/store_left01.jpg",
       "hints": [
         "20071012030542",
         "20071008140234"
       ],
       "kind": "image",
+      "later_capture_approved": false,
+      "raw_path": "source/raw/ff9ac57aed5e3e99e3707800bdcd6f0fd079b704b13cb043303c1510d259ef31.jpg",
       "referrers": [
         "http://bluescholars.com/store.html",
         "http://bluescholars.com/store_gear.html"
       ],
-      "status": "queued",
+      "retrieved_at": "2026-10-21T16:02:18.160745+00:00",
+      "sha256": "ff9ac57aed5e3e99e3707800bdcd6f0fd079b704b13cb043303c1510d259ef31",
+      "source_reviewed": true,
+      "status": "recovered",
       "url": "http://bluescholars.com/images/store_left01.jpg"
     },
     "http://bluescholars.com/images/store_massline.jpg": {
@@ -248919,16 +249504,35 @@
       "url": "http://bluescholars.com/images/store_massline.jpg"
     },
     "http://bluescholars.com/images/store_tshirt.jpg": {
-      "attempts": [],
+      "actual_capture": "20070726234145",
+      "attempts": [
+        {
+          "actual_capture": "20070726234145",
+          "at": "2026-10-21T16:02:19.384175+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://bluescholars.com/images/store_tshirt.jpg",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "fe0883788688725d0818af115cf3d6f48fa248472f49387af68c0a5ff4b2f7d1"
+        }
+      ],
+      "bytes": 7361,
       "captures": [],
+      "content_type": "image/jpeg",
+      "final_original": "http://www.bluescholars.com/images/store_tshirt.jpg",
+      "final_url": "https://web.archive.org/web/20070726234145id_/http://www.bluescholars.com/images/store_tshirt.jpg",
       "hints": [
         "20071008140234"
       ],
       "kind": "image",
+      "later_capture_approved": false,
+      "raw_path": "source/raw/fe0883788688725d0818af115cf3d6f48fa248472f49387af68c0a5ff4b2f7d1.jpg",
       "referrers": [
         "http://bluescholars.com/store_gear.html"
       ],
-      "status": "queued",
+      "retrieved_at": "2026-10-21T16:02:20.338691+00:00",
+      "sha256": "fe0883788688725d0818af115cf3d6f48fa248472f49387af68c0a5ff4b2f7d1",
+      "source_reviewed": true,
+      "status": "recovered",
       "url": "http://bluescholars.com/images/store_tshirt.jpg"
     },
     "http://bluescholars.com/images/storemenu.gif": {
@@ -268837,7 +269441,18 @@
       "url": "http://bluescholars.com/store/images/entirepackage.jpg"
     },
     "http://bluescholars.com/store/images/header.gif": {
-      "attempts": [],
+      "actual_capture": "20120215203530",
+      "attempts": [
+        {
+          "actual_capture": "20120215203530",
+          "at": "2026-10-21T16:02:30.838931+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://bluescholars.com/store/images/header.gif",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "4ff184789fbe553d0e4df8487808b1ec6d92ae53bae919f8c0724ea8e65336e4"
+        }
+      ],
+      "bytes": 3654,
       "captures": [
         {
           "digest": "LEAG3DLG62WHVZTGR26EIVA3IXZO6CSL",
@@ -268854,12 +269469,28 @@
           "timestamp": "20120215203530"
         }
       ],
-      "hints": [],
-      "kind": "image",
-      "referrers": [
-        "CDX:domain"
+      "content_type": "image/gif",
+      "final_original": "http://bluescholars.com/store/images/header.gif",
+      "final_url": "https://web.archive.org/web/20120215203530id_/http://bluescholars.com/store/images/header.gif",
+      "hints": [
+        "20120215203345",
+        "20100902221859",
+        "20110724142301"
       ],
-      "status": "queued",
+      "kind": "image",
+      "later_capture_approved": false,
+      "raw_path": "source/raw/4ff184789fbe553d0e4df8487808b1ec6d92ae53bae919f8c0724ea8e65336e4.gif",
+      "referrers": [
+        "CDX:domain",
+        "http://bluescholars.com/store/",
+        "CDX:exact:http://bluescholars.com:80/store/images/header.gif",
+        "CDX:exact:http://www.bluescholars.com/store/images/header.gif",
+        "CDX:exact:http://www.bluescholars.com:80/store/images/header.gif"
+      ],
+      "retrieved_at": "2026-10-21T16:02:31.837587+00:00",
+      "sha256": "4ff184789fbe553d0e4df8487808b1ec6d92ae53bae919f8c0724ea8e65336e4",
+      "source_reviewed": true,
+      "status": "recovered",
       "url": "http://bluescholars.com/store/images/header.gif"
     },
     "http://bluescholars.com/store/images/header.gif@@wayback:20120215203530:4ff184789fbe": {
@@ -335386,18 +336017,37 @@
       "url": "http://bluescholars.com:80/images/bio_nsabzi.gif"
     },
     "http://bluescholars.com:80/images/bio_sabzi.jpg": {
-      "attempts": [],
+      "actual_capture": "20070726233400",
+      "attempts": [
+        {
+          "actual_capture": "20070726233400",
+          "at": "2026-10-21T16:02:33.102392+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://bluescholars.com:80/images/bio_sabzi.jpg",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "c8d31ba98b62d797484fc9c1878776ef43e53c82e795b51d5cace79c50b98ed9"
+        }
+      ],
+      "bytes": 6772,
       "captures": [],
+      "content_type": "image/jpeg",
+      "final_original": "http://www.bluescholars.com/images/bio_sabzi.jpg",
+      "final_url": "https://web.archive.org/web/20070726233400id_/http://www.bluescholars.com/images/bio_sabzi.jpg",
       "hints": [
         "20080314051926",
         "20050204153007"
       ],
       "kind": "image",
+      "later_capture_approved": false,
+      "raw_path": "source/raw/c8d31ba98b62d797484fc9c1878776ef43e53c82e795b51d5cace79c50b98ed9.jpg",
       "referrers": [
         "http://bluescholars.com:80/bio.html",
         "http://bluescholars.com:80/bio.htm"
       ],
-      "status": "queued",
+      "retrieved_at": "2026-10-21T16:02:34.206019+00:00",
+      "sha256": "c8d31ba98b62d797484fc9c1878776ef43e53c82e795b51d5cace79c50b98ed9",
+      "source_reviewed": true,
+      "status": "recovered",
       "url": "http://bluescholars.com:80/images/bio_sabzi.jpg"
     },
     "http://bluescholars.com:80/images/bottom_center.gif": {
@@ -335742,7 +336392,39 @@
       "url": "http://bluescholars.com:80/images/default.jpg"
     },
     "http://bluescholars.com:80/images/dots-335.gif": {
-      "attempts": [],
+      "actual_capture": "20070314030023",
+      "attempts": [
+        {
+          "at": "2026-10-21T15:29:38.761683+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20210529010817id_/http://bluescholars.com:80/images/dots-335.gif (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://bluescholars.com:80/images/dots-335.gif",
+          "requested_capture": "20210529010817",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-21T15:29:40.169771+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20071008140234id_/http://bluescholars.com:80/images/dots-335.gif (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20071008140234id_/http://bluescholars.com:80/images/dots-335.gif",
+          "requested_capture": "20071008140234",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-21T15:29:41.671763+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20070314030023id_/http://bluescholars.com:80/images/dots-335.gif (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20070314030023id_/http://bluescholars.com:80/images/dots-335.gif",
+          "requested_capture": "20070314030023",
+          "result": "failed"
+        },
+        {
+          "actual_capture": "20070314030023",
+          "at": "2026-10-21T16:00:58.751896+00:00",
+          "request_url": "https://web.archive.org/web/20070310221708id_/http://bluescholars.com:80/images/dots-335.gif",
+          "requested_capture": "20070310221708",
+          "result": "downloaded",
+          "sha256": "79d71ade57b3be65d2bc0bc49bf41f5c3c6e6a239e6a18b820cc027c9ce600ec"
+        }
+      ],
+      "bytes": 75,
       "captures": [
         {
           "digest": "TJ3YEROQVJCXYRYVCELZ554WJV5IX7RZ",
@@ -335752,12 +336434,29 @@
           "timestamp": "20070314030023"
         }
       ],
-      "hints": [],
-      "kind": "image",
-      "referrers": [
-        "CDX:domain"
+      "content_type": "image/gif",
+      "final_original": "http://bluescholars.com/images/dots-335.gif",
+      "final_url": "https://web.archive.org/web/20070314030023id_/http://bluescholars.com/images/dots-335.gif",
+      "hints": [
+        "20070310213221",
+        "20070310221708",
+        "20071008140234"
       ],
-      "status": "queued",
+      "kind": "image",
+      "later_capture_approved": false,
+      "raw_path": "source/raw/79d71ade57b3be65d2bc0bc49bf41f5c3c6e6a239e6a18b820cc027c9ce600ec.gif",
+      "reason": "Untried capture dates or exact-URL index pages remain",
+      "referrers": [
+        "CDX:domain",
+        "http://bluescholars.com:80/store_misc.html",
+        "http://bluescholars.com:80/store.html",
+        "http://bluescholars.com:80/store_gear.html",
+        "CDX:exact:http://bluescholars.com/images/dots-335.gif"
+      ],
+      "retrieved_at": "2026-10-21T16:01:00.091671+00:00",
+      "sha256": "79d71ade57b3be65d2bc0bc49bf41f5c3c6e6a239e6a18b820cc027c9ce600ec",
+      "source_reviewed": true,
+      "status": "recovered",
       "url": "http://bluescholars.com:80/images/dots-335.gif"
     },
     "http://bluescholars.com:80/images/dots-335.gif@@wayback:20070314030023:79d71ade57b3": {
@@ -336622,8 +337321,43 @@
       "url": "http://bluescholars.com:80/images/myspace.gif"
     },
     "http://bluescholars.com:80/images/new_menu.gif": {
-      "attempts": [],
+      "actual_capture": "20070706113745",
+      "attempts": [
+        {
+          "at": "2026-10-21T15:29:44.277682+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20210529010817id_/http://bluescholars.com:80/images/new_menu.gif (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://bluescholars.com:80/images/new_menu.gif",
+          "requested_capture": "20210529010817",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-21T15:29:45.851594+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20080314141729id_/http://bluescholars.com:80/images/new_menu.gif (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20080314141729id_/http://bluescholars.com:80/images/new_menu.gif",
+          "requested_capture": "20080314141729",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-21T15:29:47.246611+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20080314051942id_/http://bluescholars.com:80/images/new_menu.gif (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20080314051942id_/http://bluescholars.com:80/images/new_menu.gif",
+          "requested_capture": "20080314051942",
+          "result": "failed"
+        },
+        {
+          "actual_capture": "20070706113745",
+          "at": "2026-10-21T16:01:01.304953+00:00",
+          "request_url": "https://web.archive.org/web/20080314051937id_/http://bluescholars.com:80/images/new_menu.gif",
+          "requested_capture": "20080314051937",
+          "result": "downloaded",
+          "sha256": "f583bc32926842cfdb40b17264e292d4239ee59bb3332bc9c1dbf694ce80362d"
+        }
+      ],
+      "bytes": 17672,
       "captures": [],
+      "content_type": "image/gif",
+      "final_original": "http://www.bluescholars.com/images/new_menu.gif",
+      "final_url": "https://web.archive.org/web/20070706113745id_/http://www.bluescholars.com/images/new_menu.gif",
       "hints": [
         "20070310213221",
         "20070310221708",
@@ -336641,6 +337375,9 @@
         "20080222194034"
       ],
       "kind": "image",
+      "later_capture_approved": false,
+      "raw_path": "source/raw/f583bc32926842cfdb40b17264e292d4239ee59bb3332bc9c1dbf694ce80362d.gif",
+      "reason": "Untried capture dates or exact-URL index pages remain",
       "referrers": [
         "http://bluescholars.com:80/store_misc.html",
         "http://bluescholars.com:80/store.html",
@@ -336654,7 +337391,10 @@
         "http://bluescholars.com:80/press.html",
         "http://bluescholars.com:80/media_video.html"
       ],
-      "status": "queued",
+      "retrieved_at": "2026-10-21T16:01:02.258084+00:00",
+      "sha256": "f583bc32926842cfdb40b17264e292d4239ee59bb3332bc9c1dbf694ce80362d",
+      "source_reviewed": true,
+      "status": "recovered",
       "url": "http://bluescholars.com:80/images/new_menu.gif"
     },
     "http://bluescholars.com:80/images/oof2_thumb.jpg": {
@@ -671015,7 +671755,39 @@
       "url": "http://www.bluescholars.com/images/bio_bluescholars.jpg"
     },
     "http://www.bluescholars.com/images/bio_geo.jpg": {
-      "attempts": [],
+      "actual_capture": "20070726233345",
+      "attempts": [
+        {
+          "at": "2026-10-21T15:30:21.391699+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20210529010817id_/http://www.bluescholars.com/images/bio_geo.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://www.bluescholars.com/images/bio_geo.jpg",
+          "requested_capture": "20210529010817",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-21T15:30:23.047334+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20080314051926id_/http://www.bluescholars.com/images/bio_geo.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20080314051926id_/http://www.bluescholars.com/images/bio_geo.jpg",
+          "requested_capture": "20080314051926",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-21T15:30:25.148297+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20070929034555id_/http://www.bluescholars.com/images/bio_geo.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20070929034555id_/http://www.bluescholars.com/images/bio_geo.jpg",
+          "requested_capture": "20070929034555",
+          "result": "failed"
+        },
+        {
+          "actual_capture": "20070726233345",
+          "at": "2026-10-21T16:01:23.320554+00:00",
+          "request_url": "https://web.archive.org/web/20070726233345id_/http://www.bluescholars.com/images/bio_geo.jpg",
+          "requested_capture": "20070726233345",
+          "result": "downloaded",
+          "sha256": "927eac597be029ffe4c4b7c16ca0e2a4189704f75da7a35c789750322d579657"
+        }
+      ],
+      "bytes": 8129,
       "captures": [
         {
           "digest": "EMREZQW42WBJ2EPVFRRFRYLGBMDHCW6P",
@@ -671025,12 +671797,27 @@
           "timestamp": "20070726233345"
         }
       ],
-      "hints": [],
-      "kind": "image",
-      "referrers": [
-        "CDX:domain"
+      "content_type": "image/jpeg",
+      "final_original": "http://www.bluescholars.com/images/bio_geo.jpg",
+      "final_url": "https://web.archive.org/web/20070726233345id_/http://www.bluescholars.com/images/bio_geo.jpg",
+      "hints": [
+        "20070929034555",
+        "20060623005547",
+        "20080314051926"
       ],
-      "status": "queued",
+      "kind": "image",
+      "later_capture_approved": false,
+      "raw_path": "source/raw/927eac597be029ffe4c4b7c16ca0e2a4189704f75da7a35c789750322d579657.jpg",
+      "reason": "Untried capture dates or exact-URL index pages remain",
+      "referrers": [
+        "CDX:domain",
+        "http://www.bluescholars.com/bio.html",
+        "http://www.bluescholars.com/bio.htm"
+      ],
+      "retrieved_at": "2026-10-21T16:01:23.935484+00:00",
+      "sha256": "927eac597be029ffe4c4b7c16ca0e2a4189704f75da7a35c789750322d579657",
+      "source_reviewed": true,
+      "status": "recovered",
       "url": "http://www.bluescholars.com/images/bio_geo.jpg"
     },
     "http://www.bluescholars.com/images/bio_geo.jpg@@wayback:20070726233345:927eac597be0": {
@@ -672320,7 +673107,32 @@
       "url": "http://www.bluescholars.com/images/contact.jpg"
     },
     "http://www.bluescholars.com/images/dots-335.gif": {
-      "attempts": [],
+      "actual_capture": "20070706115159",
+      "attempts": [
+        {
+          "at": "2026-10-21T16:03:22.179642+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20210529010817id_/http://www.bluescholars.com/images/dots-335.gif (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://www.bluescholars.com/images/dots-335.gif",
+          "requested_capture": "20210529010817",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-21T16:03:23.669009+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20071012030542id_/http://www.bluescholars.com/images/dots-335.gif (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20071012030542id_/http://www.bluescholars.com/images/dots-335.gif",
+          "requested_capture": "20071012030542",
+          "result": "failed"
+        },
+        {
+          "actual_capture": "20070706115159",
+          "at": "2026-10-21T16:03:25.174922+00:00",
+          "request_url": "https://web.archive.org/web/20070726234133id_/http://www.bluescholars.com/images/dots-335.gif",
+          "requested_capture": "20070726234133",
+          "result": "downloaded",
+          "sha256": "79d71ade57b3be65d2bc0bc49bf41f5c3c6e6a239e6a18b820cc027c9ce600ec"
+        }
+      ],
+      "bytes": 75,
       "captures": [
         {
           "digest": "TJ3YEROQVJCXYRYVCELZ554WJV5IX7RZ",
@@ -672330,12 +673142,29 @@
           "timestamp": "20070706115159"
         }
       ],
-      "hints": [],
-      "kind": "image",
-      "referrers": [
-        "CDX:domain"
+      "content_type": "image/gif",
+      "final_original": "http://www.bluescholars.com/images/dots-335.gif",
+      "final_url": "https://web.archive.org/web/20070706115159id_/http://www.bluescholars.com/images/dots-335.gif",
+      "hints": [
+        "20070706114648",
+        "20070726233754",
+        "20070726234133",
+        "20071012030542"
       ],
-      "status": "queued",
+      "kind": "image",
+      "later_capture_approved": false,
+      "raw_path": "source/raw/79d71ade57b3be65d2bc0bc49bf41f5c3c6e6a239e6a18b820cc027c9ce600ec.gif",
+      "referrers": [
+        "CDX:domain",
+        "http://www.bluescholars.com/store.html",
+        "http://www.bluescholars.com/store_misc.html",
+        "http://www.bluescholars.com/store_gear.html",
+        "CDX:exact:http://bluescholars.com/images/dots-335.gif"
+      ],
+      "retrieved_at": "2026-10-21T16:03:27.163672+00:00",
+      "sha256": "79d71ade57b3be65d2bc0bc49bf41f5c3c6e6a239e6a18b820cc027c9ce600ec",
+      "source_reviewed": true,
+      "status": "recovered",
       "url": "http://www.bluescholars.com/images/dots-335.gif"
     },
     "http://www.bluescholars.com/images/dots-335.gif@@wayback:20070706115159:79d71ade57b3": {
@@ -672448,8 +673277,22 @@
       "url": "http://www.bluescholars.com/images/e-mail.gif"
     },
     "http://www.bluescholars.com/images/events_n.gif": {
-      "attempts": [],
+      "actual_capture": "20060518142319",
+      "attempts": [
+        {
+          "actual_capture": "20060518142319",
+          "at": "2026-10-21T16:03:28.446317+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://www.bluescholars.com/images/events_n.gif",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "bc1545b30c569cda1d6937b5d081cd3b9f61d2c04a1b6d597c8c4fd639c35958"
+        }
+      ],
+      "bytes": 1059,
       "captures": [],
+      "content_type": "image/gif",
+      "final_original": "http://www.bluescholars.com/images/events_n.gif",
+      "final_url": "https://web.archive.org/web/20060518142319id_/http://www.bluescholars.com/images/events_n.gif",
       "hints": [
         "20060218165210",
         "20060518142107",
@@ -672458,6 +673301,8 @@
         "20060518142049"
       ],
       "kind": "image",
+      "later_capture_approved": false,
+      "raw_path": "source/raw/bc1545b30c569cda1d6937b5d081cd3b9f61d2c04a1b6d597c8c4fd639c35958.gif",
       "referrers": [
         "http://www.bluescholars.com/events.htm",
         "http://www.bluescholars.com/events_2003.htm",
@@ -672465,7 +673310,10 @@
         "http://www.bluescholars.com/events_2005.htm",
         "http://www.bluescholars.com/events_2002.htm"
       ],
-      "status": "queued",
+      "retrieved_at": "2026-10-21T16:03:29.412250+00:00",
+      "sha256": "bc1545b30c569cda1d6937b5d081cd3b9f61d2c04a1b6d597c8c4fd639c35958",
+      "source_reviewed": true,
+      "status": "recovered",
       "url": "http://www.bluescholars.com/images/events_n.gif"
     },
     "http://www.bluescholars.com/images/fader1.gif": {
@@ -676177,8 +677025,43 @@
       "url": "http://www.bluescholars.com/images/menu_bio_off.gif"
     },
     "http://www.bluescholars.com/images/menu_bs.gif": {
-      "attempts": [],
+      "actual_capture": "20060518142257",
+      "attempts": [
+        {
+          "at": "2026-10-21T15:31:00.816722+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20210529010817id_/http://www.bluescholars.com/images/menu_bs.gif (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://www.bluescholars.com/images/menu_bs.gif",
+          "requested_capture": "20210529010817",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-21T15:31:02.447124+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20070807183902id_/http://www.bluescholars.com/images/menu_bs.gif (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20070807183902id_/http://www.bluescholars.com/images/menu_bs.gif",
+          "requested_capture": "20070807183902",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-21T15:31:04.424003+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20060518142421id_/http://www.bluescholars.com/images/menu_bs.gif (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20060518142421id_/http://www.bluescholars.com/images/menu_bs.gif",
+          "requested_capture": "20060518142421",
+          "result": "failed"
+        },
+        {
+          "actual_capture": "20060518142257",
+          "at": "2026-10-21T16:01:39.968011+00:00",
+          "request_url": "https://web.archive.org/web/20060518142151id_/http://www.bluescholars.com/images/menu_bs.gif",
+          "requested_capture": "20060518142151",
+          "result": "downloaded",
+          "sha256": "d3f558ff79f46ba66cd2557e77a6042c8b81be4af9ef782dca20d7f1957dcf68"
+        }
+      ],
+      "bytes": 2876,
       "captures": [],
+      "content_type": "image/gif",
+      "final_original": "http://www.bluescholars.com/images/menu_bs.gif",
+      "final_url": "https://web.archive.org/web/20060518142257id_/http://www.bluescholars.com/images/menu_bs.gif",
       "hints": [
         "20060218165210",
         "20060218165200",
@@ -676190,9 +677073,14 @@
         "20060203031802",
         "20060518142049",
         "20060218165307",
-        "20060218165326"
+        "20060218165326",
+        "20070807183902",
+        "20060518142421"
       ],
       "kind": "image",
+      "later_capture_approved": false,
+      "raw_path": "source/raw/d3f558ff79f46ba66cd2557e77a6042c8b81be4af9ef782dca20d7f1957dcf68.gif",
+      "reason": "Untried capture dates or exact-URL index pages remain",
       "referrers": [
         "http://www.bluescholars.com/events.htm",
         "http://www.bluescholars.com/press.htm",
@@ -676203,9 +677091,13 @@
         "http://www.bluescholars.com/store_misc.htm",
         "http://www.bluescholars.com/store_music.htm",
         "http://www.bluescholars.com/events_2002.htm",
-        "http://www.bluescholars.com/store_cd_list.htm"
+        "http://www.bluescholars.com/store_cd_list.htm",
+        "http://www.bluescholars.com/Guestbook/guestbook.html"
       ],
-      "status": "queued",
+      "retrieved_at": "2026-10-21T16:01:40.863678+00:00",
+      "sha256": "d3f558ff79f46ba66cd2557e77a6042c8b81be4af9ef782dca20d7f1957dcf68",
+      "source_reviewed": true,
+      "status": "recovered",
       "url": "http://www.bluescholars.com/images/menu_bs.gif"
     },
     "http://www.bluescholars.com/images/menu_contact_off.gif": {
@@ -676471,7 +677363,39 @@
       "url": "http://www.bluescholars.com/images/menu_store_off.gif"
     },
     "http://www.bluescholars.com/images/myspace.gif": {
-      "attempts": [],
+      "actual_capture": "20061218191000",
+      "attempts": [
+        {
+          "at": "2026-10-21T15:31:07.159426+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20210529010817id_/http://www.bluescholars.com/images/myspace.gif (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://www.bluescholars.com/images/myspace.gif",
+          "requested_capture": "20210529010817",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-21T15:31:09.046641+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20070706114243id_/http://www.bluescholars.com/images/myspace.gif (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20070706114243id_/http://www.bluescholars.com/images/myspace.gif",
+          "requested_capture": "20070706114243",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-21T15:31:10.513194+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20070706114219id_/http://www.bluescholars.com/images/myspace.gif (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20070706114219id_/http://www.bluescholars.com/images/myspace.gif",
+          "requested_capture": "20070706114219",
+          "result": "failed"
+        },
+        {
+          "actual_capture": "20061218191000",
+          "at": "2026-10-21T16:01:45.137915+00:00",
+          "request_url": "https://web.archive.org/web/20061218191000id_/http://www.bluescholars.com/images/myspace.gif",
+          "requested_capture": "20061218191000",
+          "result": "downloaded",
+          "sha256": "6c32be405a42e9edcdbddf46de142e79c0ac9a5f2e48892761fddc0bf9c1d3e3"
+        }
+      ],
+      "bytes": 4287,
       "captures": [
         {
           "digest": "QFAJTQGO2XDLPGRSIZPTG3MVTHMR57KT",
@@ -676479,14 +677403,42 @@
           "original": "http://www.bluescholars.com/images/myspace.gif",
           "statuscode": "200",
           "timestamp": "20070706114243"
+        },
+        {
+          "digest": "QFAJTQGO2XDLPGRSIZPTG3MVTHMR57KT",
+          "mimetype": "image/gif",
+          "original": "http://www.bluescholars.com:80/images/myspace.gif",
+          "statuscode": "200",
+          "timestamp": "20061011063941"
+        },
+        {
+          "digest": "QFAJTQGO2XDLPGRSIZPTG3MVTHMR57KT",
+          "mimetype": "image/gif",
+          "original": "http://www.bluescholars.com:80/images/myspace.gif",
+          "statuscode": "200",
+          "timestamp": "20061218191000"
         }
       ],
-      "hints": [],
-      "kind": "image",
-      "referrers": [
-        "CDX:domain"
+      "content_type": "image/gif",
+      "final_original": "http://www.bluescholars.com/images/myspace.gif",
+      "final_url": "https://web.archive.org/web/20061218191000id_/http://www.bluescholars.com/images/myspace.gif",
+      "hints": [
+        "20070706114219"
       ],
-      "status": "queued",
+      "kind": "image",
+      "later_capture_approved": false,
+      "raw_path": "source/raw/6c32be405a42e9edcdbddf46de142e79c0ac9a5f2e48892761fddc0bf9c1d3e3.gif",
+      "reason": "Untried capture dates or exact-URL index pages remain",
+      "referrers": [
+        "CDX:domain",
+        "http://www.bluescholars.com/contact.html",
+        "CDX:exact:http://bluescholars.com/images/myspace.gif",
+        "CDX:exact:http://www.bluescholars.com/images/myspace.gif"
+      ],
+      "retrieved_at": "2026-10-21T16:01:45.661992+00:00",
+      "sha256": "6c32be405a42e9edcdbddf46de142e79c0ac9a5f2e48892761fddc0bf9c1d3e3",
+      "source_reviewed": true,
+      "status": "recovered",
       "url": "http://www.bluescholars.com/images/myspace.gif"
     },
     "http://www.bluescholars.com/images/myspace.gif@@wayback:20070706114243:6c32be405a42": {
@@ -676533,7 +677485,18 @@
       "url": "http://www.bluescholars.com/images/n30.jpg"
     },
     "http://www.bluescholars.com/images/new_menu.gif": {
-      "attempts": [],
+      "actual_capture": "20070706113745",
+      "attempts": [
+        {
+          "actual_capture": "20070706113745",
+          "at": "2026-10-21T16:03:30.673243+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://www.bluescholars.com/images/new_menu.gif",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "f583bc32926842cfdb40b17264e292d4239ee59bb3332bc9c1dbf694ce80362d"
+        }
+      ],
+      "bytes": 17672,
       "captures": [
         {
           "digest": "RR24QVN4CBGJWXAK2RSIIRV3B6V4WQJY",
@@ -676543,12 +677506,66 @@
           "timestamp": "20070706113745"
         }
       ],
-      "hints": [],
-      "kind": "image",
-      "referrers": [
-        "CDX:domain"
+      "content_type": "image/gif",
+      "final_original": "http://www.bluescholars.com/images/new_menu.gif",
+      "final_url": "https://web.archive.org/web/20070706113745id_/http://www.bluescholars.com/images/new_menu.gif",
+      "hints": [
+        "20070706113346",
+        "20070706113809",
+        "20070706114015",
+        "20070706114219",
+        "20070706114408",
+        "20070706114543",
+        "20070706114648",
+        "20070726233449",
+        "20070726233618",
+        "20070726233637",
+        "20070726233703",
+        "20070726233729",
+        "20070726233754",
+        "20070726234133",
+        "20070816142447",
+        "20070929034555",
+        "20080314051937",
+        "20080222195936",
+        "20080324041851",
+        "20080314051926",
+        "20071012022108",
+        "20071014011654",
+        "20080320020532",
+        "20071012030542",
+        "20080119200117",
+        "20071026144537",
+        "20080129152538",
+        "20080222202656",
+        "20080222203902"
       ],
-      "status": "queued",
+      "kind": "image",
+      "later_capture_approved": false,
+      "raw_path": "source/raw/f583bc32926842cfdb40b17264e292d4239ee59bb3332bc9c1dbf694ce80362d.gif",
+      "referrers": [
+        "CDX:domain",
+        "http://www.bluescholars.com/news.html",
+        "http://www.bluescholars.com/press.html",
+        "http://www.bluescholars.com/lyrics.html",
+        "http://www.bluescholars.com/contact.html",
+        "http://www.bluescholars.com/shows.html",
+        "http://www.bluescholars.com/media.html",
+        "http://www.bluescholars.com/store.html",
+        "http://www.bluescholars.com/press_web.html",
+        "http://www.bluescholars.com/press_reviews.html",
+        "http://www.bluescholars.com/media_gallery.html",
+        "http://www.bluescholars.com/media_video.html",
+        "http://www.bluescholars.com/media_audio.html",
+        "http://www.bluescholars.com/store_misc.html",
+        "http://www.bluescholars.com/store_gear.html",
+        "http://www.bluescholars.com/shows2006.html",
+        "http://www.bluescholars.com/bio.html"
+      ],
+      "retrieved_at": "2026-10-21T16:03:31.470855+00:00",
+      "sha256": "f583bc32926842cfdb40b17264e292d4239ee59bb3332bc9c1dbf694ce80362d",
+      "source_reviewed": true,
+      "status": "recovered",
       "url": "http://www.bluescholars.com/images/new_menu.gif"
     },
     "http://www.bluescholars.com/images/new_menu.gif@@wayback:20070706113745:f583bc329268": {
@@ -676834,7 +677851,8 @@
         "http://bluescholars.com:80/blog/releases/oof-ep/",
         "http://bluescholars.com:80/blog/releases/oof-ep",
         "http://02cd02a.netsolhost.com/blog/releases/oof-ep/",
-        "http://02cd02a.netsolhost.com:80/blog/releases/oof-ep/"
+        "http://02cd02a.netsolhost.com:80/blog/releases/oof-ep/",
+        "CDX:exact:http://bluescholars.com:80/images/oofep300.jpg"
       ],
       "retrieved_at": "2026-10-16T05:28:17.183239+00:00",
       "sha256": "4cd5ad5e7684a51f82d170d6133a2ed08843dd010e92f82fd10f139bfd55a5e6",
@@ -677003,17 +678021,66 @@
       "url": "http://www.bluescholars.com/images/ooflogos.jpg"
     },
     "http://www.bluescholars.com/images/poster.jpg": {
-      "attempts": [],
-      "captures": [],
+      "actual_capture": "20060218165313",
+      "attempts": [
+        {
+          "at": "2026-10-21T15:29:05.216590+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20210529010817id_/http://www.bluescholars.com/images/poster.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://www.bluescholars.com/images/poster.jpg",
+          "requested_capture": "20210529010817",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-21T15:29:06.612563+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20060218165307id_/http://www.bluescholars.com/images/poster.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20060218165307id_/http://www.bluescholars.com/images/poster.jpg",
+          "requested_capture": "20060218165307",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-21T15:29:08.019604+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20060203031802id_/http://www.bluescholars.com/images/poster.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20060203031802id_/http://www.bluescholars.com/images/poster.jpg",
+          "requested_capture": "20060203031802",
+          "result": "failed"
+        },
+        {
+          "actual_capture": "20060218165313",
+          "at": "2026-10-21T16:00:36.510486+00:00",
+          "request_url": "https://web.archive.org/web/20060218165313id_/http://www.bluescholars.com/images/poster.jpg",
+          "requested_capture": "20060218165313",
+          "result": "downloaded",
+          "sha256": "6c6ebfc0b962a086e050f866ad3a37a43eb2c99fedd5e9c9ca438b8807575d5e"
+        }
+      ],
+      "bytes": 140923,
+      "captures": [
+        {
+          "digest": "YUBOJUKOLBBWBOVJUBOBFUFKRK34PQOH",
+          "mimetype": "image/jpeg",
+          "original": "http://www.bluescholars.com:80/images/poster.jpg",
+          "statuscode": "200",
+          "timestamp": "20060218165313"
+        }
+      ],
+      "content_type": "image/jpeg",
+      "final_original": "http://www.bluescholars.com/images/poster.jpg",
+      "final_url": "https://web.archive.org/web/20060218165313id_/http://www.bluescholars.com/images/poster.jpg",
       "hints": [
         "20060203031802",
         "20060218165307"
       ],
       "kind": "image",
+      "later_capture_approved": false,
+      "raw_path": "source/raw/6c6ebfc0b962a086e050f866ad3a37a43eb2c99fedd5e9c9ca438b8807575d5e.jpg",
+      "reason": "Untried capture dates or exact-URL index pages remain",
       "referrers": [
         "http://www.bluescholars.com/store_music.htm"
       ],
-      "status": "queued",
+      "retrieved_at": "2026-10-21T16:00:37.042712+00:00",
+      "sha256": "6c6ebfc0b962a086e050f866ad3a37a43eb2c99fedd5e9c9ca438b8807575d5e",
+      "source_reviewed": true,
+      "status": "recovered",
       "url": "http://www.bluescholars.com/images/poster.jpg"
     },
     "http://www.bluescholars.com/images/press.jpg": {
@@ -678911,7 +679978,18 @@
       "url": "http://www.bluescholars.com/images/splah001.jpg"
     },
     "http://www.bluescholars.com/images/splash01.gif": {
-      "attempts": [],
+      "actual_capture": "20070706113114",
+      "attempts": [
+        {
+          "actual_capture": "20070706113114",
+          "at": "2026-10-21T16:03:32.724464+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://www.bluescholars.com/images/splash01.gif",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "2d11bd527a32e01ec37c8ffa1709393fd8ef75377a868a611b3ad733dc17584b"
+        }
+      ],
+      "bytes": 36007,
       "captures": [
         {
           "digest": "ZXDQ6PAHHUBAC3JEU4DYDYVAVF25TRWX",
@@ -678921,12 +679999,23 @@
           "timestamp": "20070706113114"
         }
       ],
-      "hints": [],
-      "kind": "image",
-      "referrers": [
-        "CDX:domain"
+      "content_type": "image/gif",
+      "final_original": "http://www.bluescholars.com/images/splash01.gif",
+      "final_url": "https://web.archive.org/web/20070706113114id_/http://www.bluescholars.com/images/splash01.gif",
+      "hints": [
+        "20060715153605"
       ],
-      "status": "queued",
+      "kind": "image",
+      "later_capture_approved": false,
+      "raw_path": "source/raw/2d11bd527a32e01ec37c8ffa1709393fd8ef75377a868a611b3ad733dc17584b.gif",
+      "referrers": [
+        "CDX:domain",
+        "http://www.bluescholars.com/index.htm"
+      ],
+      "retrieved_at": "2026-10-21T16:03:33.988195+00:00",
+      "sha256": "2d11bd527a32e01ec37c8ffa1709393fd8ef75377a868a611b3ad733dc17584b",
+      "source_reviewed": true,
+      "status": "recovered",
       "url": "http://www.bluescholars.com/images/splash01.gif"
     },
     "http://www.bluescholars.com/images/splash01.gif@@wayback:20070706113114:2d11bd527a32": {
@@ -678954,7 +680043,18 @@
       "url": "http://www.bluescholars.com/images/splash01.gif"
     },
     "http://www.bluescholars.com/images/splash02.gif": {
-      "attempts": [],
+      "actual_capture": "20070706113235",
+      "attempts": [
+        {
+          "actual_capture": "20070706113235",
+          "at": "2026-10-21T16:03:35.255207+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://www.bluescholars.com/images/splash02.gif",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "d8159939d50a3a37b94802eaa230dc7d8b667c85e95cef32bbbf9e28b9c319f1"
+        }
+      ],
+      "bytes": 12071,
       "captures": [
         {
           "digest": "6USZ75NIJACF4YUH74Z7ZYUC6MPNYTFR",
@@ -678964,12 +680064,23 @@
           "timestamp": "20070706113235"
         }
       ],
-      "hints": [],
-      "kind": "image",
-      "referrers": [
-        "CDX:domain"
+      "content_type": "image/gif",
+      "final_original": "http://www.bluescholars.com/images/splash02.gif",
+      "final_url": "https://web.archive.org/web/20070706113235id_/http://www.bluescholars.com/images/splash02.gif",
+      "hints": [
+        "20060715153605"
       ],
-      "status": "queued",
+      "kind": "image",
+      "later_capture_approved": false,
+      "raw_path": "source/raw/d8159939d50a3a37b94802eaa230dc7d8b667c85e95cef32bbbf9e28b9c319f1.gif",
+      "referrers": [
+        "CDX:domain",
+        "http://www.bluescholars.com/index.htm"
+      ],
+      "retrieved_at": "2026-10-21T16:03:36.244915+00:00",
+      "sha256": "d8159939d50a3a37b94802eaa230dc7d8b667c85e95cef32bbbf9e28b9c319f1",
+      "source_reviewed": true,
+      "status": "recovered",
       "url": "http://www.bluescholars.com/images/splash02.gif"
     },
     "http://www.bluescholars.com/images/splash02.gif@@wayback:20070706113235:d8159939d50a": {
@@ -678997,7 +680108,18 @@
       "url": "http://www.bluescholars.com/images/splash02.gif"
     },
     "http://www.bluescholars.com/images/splash03.gif": {
-      "attempts": [],
+      "actual_capture": "20070706113327",
+      "attempts": [
+        {
+          "actual_capture": "20070706113327",
+          "at": "2026-10-21T16:03:37.465627+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://www.bluescholars.com/images/splash03.gif",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "f1010d21e02bb564e965c29a8e413a7d6d55770fc64d857bed0a3577d808bc00"
+        }
+      ],
+      "bytes": 29037,
       "captures": [
         {
           "digest": "TAK7T7K7G3DS24I37O7GHJUBRXCPMF2V",
@@ -679007,12 +680129,23 @@
           "timestamp": "20070706113327"
         }
       ],
-      "hints": [],
-      "kind": "image",
-      "referrers": [
-        "CDX:domain"
+      "content_type": "image/gif",
+      "final_original": "http://www.bluescholars.com/images/splash03.gif",
+      "final_url": "https://web.archive.org/web/20070706113327id_/http://www.bluescholars.com/images/splash03.gif",
+      "hints": [
+        "20060715153605"
       ],
-      "status": "queued",
+      "kind": "image",
+      "later_capture_approved": false,
+      "raw_path": "source/raw/f1010d21e02bb564e965c29a8e413a7d6d55770fc64d857bed0a3577d808bc00.gif",
+      "referrers": [
+        "CDX:domain",
+        "http://www.bluescholars.com/index.htm"
+      ],
+      "retrieved_at": "2026-10-21T16:03:38.396423+00:00",
+      "sha256": "f1010d21e02bb564e965c29a8e413a7d6d55770fc64d857bed0a3577d808bc00",
+      "source_reviewed": true,
+      "status": "recovered",
       "url": "http://www.bluescholars.com/images/splash03.gif"
     },
     "http://www.bluescholars.com/images/splash03.gif@@wayback:20070706113327:f1010d21e02b": {
@@ -679040,7 +680173,18 @@
       "url": "http://www.bluescholars.com/images/splash03.gif"
     },
     "http://www.bluescholars.com/images/splash04.gif": {
-      "attempts": [],
+      "actual_capture": "20070706113203",
+      "attempts": [
+        {
+          "actual_capture": "20070706113203",
+          "at": "2026-10-21T16:03:39.688870+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://www.bluescholars.com/images/splash04.gif",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "00d3194126a1ed084b82bb201baccbfee2a9443f22551aef3100dace3969e680"
+        }
+      ],
+      "bytes": 5575,
       "captures": [
         {
           "digest": "OD6SYWN5COQVLMKYRWSQTEONEAWBMLMN",
@@ -679050,12 +680194,23 @@
           "timestamp": "20070706113203"
         }
       ],
-      "hints": [],
-      "kind": "image",
-      "referrers": [
-        "CDX:domain"
+      "content_type": "image/gif",
+      "final_original": "http://www.bluescholars.com/images/splash04.gif",
+      "final_url": "https://web.archive.org/web/20070706113203id_/http://www.bluescholars.com/images/splash04.gif",
+      "hints": [
+        "20060715153605"
       ],
-      "status": "queued",
+      "kind": "image",
+      "later_capture_approved": false,
+      "raw_path": "source/raw/00d3194126a1ed084b82bb201baccbfee2a9443f22551aef3100dace3969e680.gif",
+      "referrers": [
+        "CDX:domain",
+        "http://www.bluescholars.com/index.htm"
+      ],
+      "retrieved_at": "2026-10-21T16:03:41.606219+00:00",
+      "sha256": "00d3194126a1ed084b82bb201baccbfee2a9443f22551aef3100dace3969e680",
+      "source_reviewed": true,
+      "status": "recovered",
       "url": "http://www.bluescholars.com/images/splash04.gif"
     },
     "http://www.bluescholars.com/images/splash04.gif@@wayback:20070706113203:00d3194126a1": {
@@ -679083,7 +680238,18 @@
       "url": "http://www.bluescholars.com/images/splash04.gif"
     },
     "http://www.bluescholars.com/images/splash05.gif": {
-      "attempts": [],
+      "actual_capture": "20070706113056",
+      "attempts": [
+        {
+          "actual_capture": "20070706113056",
+          "at": "2026-10-21T16:03:42.828712+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://www.bluescholars.com/images/splash05.gif",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "e3c528b2e23d67bc7f120cb9dac09a80b9fda38613d05bb7d40dd5bf41ce21c5"
+        }
+      ],
+      "bytes": 13711,
       "captures": [
         {
           "digest": "AKZYIOHD3BC3I34QM2PRPJNR54OQ7R3F",
@@ -679093,12 +680259,23 @@
           "timestamp": "20070706113056"
         }
       ],
-      "hints": [],
-      "kind": "image",
-      "referrers": [
-        "CDX:domain"
+      "content_type": "image/gif",
+      "final_original": "http://www.bluescholars.com/images/splash05.gif",
+      "final_url": "https://web.archive.org/web/20070706113056id_/http://www.bluescholars.com/images/splash05.gif",
+      "hints": [
+        "20060715153605"
       ],
-      "status": "queued",
+      "kind": "image",
+      "later_capture_approved": false,
+      "raw_path": "source/raw/e3c528b2e23d67bc7f120cb9dac09a80b9fda38613d05bb7d40dd5bf41ce21c5.gif",
+      "referrers": [
+        "CDX:domain",
+        "http://www.bluescholars.com/index.htm"
+      ],
+      "retrieved_at": "2026-10-21T16:03:43.763331+00:00",
+      "sha256": "e3c528b2e23d67bc7f120cb9dac09a80b9fda38613d05bb7d40dd5bf41ce21c5",
+      "source_reviewed": true,
+      "status": "recovered",
       "url": "http://www.bluescholars.com/images/splash05.gif"
     },
     "http://www.bluescholars.com/images/splash05.gif@@wayback:20070706113056:e3c528b2e23d": {
@@ -679212,16 +680389,35 @@
       "url": "http://www.bluescholars.com/images/splash06_on.gif"
     },
     "http://www.bluescholars.com/images/splash07.gif": {
-      "attempts": [],
+      "actual_capture": "20070205111236",
+      "attempts": [
+        {
+          "actual_capture": "20070205111236",
+          "at": "2026-10-21T16:03:44.999844+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://www.bluescholars.com/images/splash07.gif",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "084de983a99924222a9d2f106ddcb73ae964159cf7d74ae838cadbd12428fd94"
+        }
+      ],
+      "bytes": 3241,
       "captures": [],
+      "content_type": "image/gif",
+      "final_original": "http://www.bluescholars.com/images/splash07.gif",
+      "final_url": "https://web.archive.org/web/20070205111236id_/http://www.bluescholars.com/images/splash07.gif",
       "hints": [
         "20060715153605"
       ],
       "kind": "image",
+      "later_capture_approved": false,
+      "raw_path": "source/raw/084de983a99924222a9d2f106ddcb73ae964159cf7d74ae838cadbd12428fd94.gif",
       "referrers": [
         "http://www.bluescholars.com/index.htm"
       ],
-      "status": "queued",
+      "retrieved_at": "2026-10-21T16:03:46.124525+00:00",
+      "sha256": "084de983a99924222a9d2f106ddcb73ae964159cf7d74ae838cadbd12428fd94",
+      "source_reviewed": true,
+      "status": "recovered",
       "url": "http://www.bluescholars.com/images/splash07.gif"
     },
     "http://www.bluescholars.com/images/splash_bot.gif": {
@@ -692989,7 +694185,18 @@
       "url": "http://www.bluescholars.com:80/images/massline0623.jpg"
     },
     "http://www.bluescholars.com:80/images/media.jpg": {
-      "attempts": [],
+      "actual_capture": "20070706114113",
+      "attempts": [
+        {
+          "actual_capture": "20070706114113",
+          "at": "2026-10-21T16:03:47.357995+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://www.bluescholars.com:80/images/media.jpg",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "88587421521248dc06f96519868929b8414cb5280af11dddf69c9e452930bd8d"
+        }
+      ],
+      "bytes": 4075,
       "captures": [
         {
           "digest": "7IJEEJC6IRDCS3FJYXBXRNNKJAU4Z2DV",
@@ -692999,12 +694206,31 @@
           "timestamp": "20070218025654"
         }
       ],
-      "hints": [],
-      "kind": "image",
-      "referrers": [
-        "CDX:domain"
+      "content_type": "image/jpeg",
+      "final_original": "http://www.bluescholars.com/images/media.jpg",
+      "final_url": "https://web.archive.org/web/20070706114113id_/http://www.bluescholars.com/images/media.jpg",
+      "hints": [
+        "20080222195851",
+        "20080222203857",
+        "20080222203902",
+        "20080320020532",
+        "20080324041851"
       ],
-      "status": "queued",
+      "kind": "image",
+      "later_capture_approved": false,
+      "raw_path": "source/raw/88587421521248dc06f96519868929b8414cb5280af11dddf69c9e452930bd8d.jpg",
+      "referrers": [
+        "CDX:domain",
+        "http://www.bluescholars.com:80/media_gallery.html",
+        "http://www.bluescholars.com:80/media.html",
+        "http://www.bluescholars.com:80/media_audio.html",
+        "http://www.bluescholars.com:80/media_video.html",
+        "http://www.bluescholars.com:80/lyrics.html"
+      ],
+      "retrieved_at": "2026-10-21T16:03:48.472621+00:00",
+      "sha256": "88587421521248dc06f96519868929b8414cb5280af11dddf69c9e452930bd8d",
+      "source_reviewed": true,
+      "status": "recovered",
       "url": "http://www.bluescholars.com:80/images/media.jpg"
     },
     "http://www.bluescholars.com:80/images/media.jpg@@wayback:20070218025654:885874215212": {
@@ -694278,20 +695504,39 @@
       "url": "http://www.bluescholars.com:80/images/poster.jpg"
     },
     "http://www.bluescholars.com:80/images/press.jpg": {
-      "attempts": [],
+      "actual_capture": "20070706113851",
+      "attempts": [
+        {
+          "actual_capture": "20070706113851",
+          "at": "2026-10-21T16:03:49.708255+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://www.bluescholars.com:80/images/press.jpg",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "eb2cb32982cd5e5081b581f33dcb13aa4ff08c5c31cdbed57bc333766111d5a5"
+        }
+      ],
+      "bytes": 13963,
       "captures": [],
+      "content_type": "image/jpeg",
+      "final_original": "http://www.bluescholars.com/images/press.jpg",
+      "final_url": "https://web.archive.org/web/20070706113851id_/http://www.bluescholars.com/images/press.jpg",
       "hints": [
         "20080119200117",
         "20080129152538",
         "20080222202625"
       ],
       "kind": "image",
+      "later_capture_approved": false,
+      "raw_path": "source/raw/eb2cb32982cd5e5081b581f33dcb13aa4ff08c5c31cdbed57bc333766111d5a5.jpg",
       "referrers": [
         "http://www.bluescholars.com:80/press_web.html",
         "http://www.bluescholars.com:80/press_reviews.html",
         "http://www.bluescholars.com:80/press.html"
       ],
-      "status": "queued",
+      "retrieved_at": "2026-10-21T16:03:50.912427+00:00",
+      "sha256": "eb2cb32982cd5e5081b581f33dcb13aa4ff08c5c31cdbed57bc333766111d5a5",
+      "source_reviewed": true,
+      "status": "recovered",
       "url": "http://www.bluescholars.com:80/images/press.jpg"
     },
     "http://www.bluescholars.com:80/images/press/BLUE%20SCHOLARS%20bio%20and%20press.pdf": {

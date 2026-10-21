@@ -265,29 +265,23 @@
   },
   "pages_deployment": {
     "url": "https://keithah.github.io/bluescholars/",
-    "branch": "gh-pages",
-    "commit": "02635a73cdad4d0a7cff5b233f099a2d9735f307",
-    "pages_build_run": "39068335222",
-    "pages_build_status": "success",
-    "pages_api_status": "built",
-    "https_enforced": true,
-    "custom_domain": null,
-    "verified_at": "2026-10-17T20:50:14.144562+00:00",
-    "verified_routes": {
-      "/bluescholars/": 200,
-      "/bluescholars/lj/": 200,
-      "/bluescholars/lj/posts/16641.html": 200,
-      "/bluescholars/lj/captures/20180219081111/posts/16641.html": 200,
-      "/bluescholars/lj/comments/16641.html/53249/": 200,
-      "/bluescholars/2007/news.html": 200,
-      "/bluescholars/archive-status/": 200,
-      "/bluescholars/assets/archive-ui.css": 200
-    },
-    "unknown_route_http": 404,
-    "candidate_source": "root-resolved project-subpath candidate from main commit b721fe8371d150b5c25f65ed65230a410d0e4fbb",
-    "classification": "unreviewed recovery preview; not an approved final release",
-    "publish_approved": false,
-    "visual_reviewed": false
+    "source_branch": "gh-pages",
+    "commit": "287f3aaa335199520d56b27db4675d1b081cb433",
+    "workflow_run": "https://github.com/keithah/bluescholars/actions/runs/39564136166",
+    "workflow_conclusion": "success",
+    "api_status": "built",
+    "routes_checked": [
+      "/bluescholars/",
+      "/bluescholars/2007/news.html",
+      "/bluescholars/twitter-prometheusbrown/",
+      "/bluescholars/twitter-prometheusbrown/captures/20090725010529/",
+      "/bluescholars/prometheusbrown/2008/",
+      "/bluescholars/massline-forums/",
+      "/bluescholars/lj/",
+      "/bluescholars/assets/archive-ui.css"
+    ],
+    "all_routes_http_status": 200,
+    "classification": "incomplete recovery preview; formal release approval remains false"
   },
   "active_wayback_batch": null,
   "resume_plan": {
@@ -1548,5 +1542,24 @@
     },
     "release_approval": false,
     "human_visual_review": false
+  },
+  "post_deployment_recovery_batch": {
+    "generated_at": "2026-10-21T07:51:24.205211+00:00",
+    "attempt_limit": 75,
+    "processed": 75,
+    "resource_urls": 12869,
+    "indexed_capture_records": 171366,
+    "statuses": {
+      "queued": 4889,
+      "recovered": 5010,
+      "needs_review": 283,
+      "failed_retryable": 2683,
+      "excluded": 4
+    },
+    "unique_downloaded_files": 2744,
+    "downloaded_bytes": 171680877,
+    "failed_attempts": 12062,
+    "candidate_updated": false,
+    "note": "New records are local acquisition material pending individual capture-date/content review and promotion."
   }
 }

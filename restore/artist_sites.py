@@ -19,7 +19,7 @@ import requests
 
 from .archive import ArchiveClient, parse_cdx, validate_payload
 from .discover import discover_css
-from .redact import redact_public_credentials
+from .redact import public_credential_fields, redact_public_credentials
 from .svg import sanitize_svg
 from .urls import capture_from, kind_for
 
@@ -890,7 +890,7 @@ def promote_artist_sites(root: Path, reviewed: bool = False) -> dict:
                           source_reviewed=True, status="recovered")
             if redaction_count:
                 copied["original_sha256"] = record["sha256"]
-                copied["source_redaction"] = {"field": "credential-shaped API value", "count": redaction_count,
+                copied["source_redaction"] = {"field": ", ".join(public_credential_fields(source.read_bytes())), "count": redaction_count,
                     "reason": "Credential-shaped value omitted from public source copy."}
             edition["resources"][url] = copied
             staged += 1

@@ -19,7 +19,7 @@ from .myspace import build_myspace_archive
 from .feeds import collect_feed_entries
 from .proof206 import build_206proof_archive
 from .twitter import build_twitter_archive
-from .redact import redact_public_credentials
+from .redact import public_credential_fields, redact_public_credentials
 
 CORE=[('/', 'Homepage'),('/blog/','Blog'),('/shows/','Shows'),('/video/','Video'),('/shop/','Shop'),('/holler/','Holler')]
 FALLBACK_UI='''.archive-restoration-notice,.archive-gap-page {font:16px/1.6 system-ui,sans-serif}
@@ -76,11 +76,12 @@ def promote(root: Path,reviewed: bool=False,allow_later: bool=False) -> dict:
         public_body,redaction_count=redact_public_credentials(body)
         if redaction_count:
             redacted_payloads+=1
+            fields=public_credential_fields(body)
             original_sha256=r['sha256']
             digest=hashlib.sha256(public_body).hexdigest()
             path=f'source/redacted/{digest}.html'
             copied.update(sha256=digest,original_sha256=original_sha256,
-                          source_redaction={'field':'googleMapsStaticApiKey',
+                          source_redaction={'field':', '.join(fields),
                                             'count':redaction_count,
                                             'reason':'Credential-shaped value omitted from public source copy.'})
         else:

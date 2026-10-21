@@ -1338,23 +1338,23 @@
   "failed_attempts": 11873,
   "index_complete": true,
   "latest_local_recovery_batch": {
-    "generated_at": "2026-10-21T08:07:14.578522+00:00",
+    "generated_at": "2026-10-21T08:18:53.529375+00:00",
     "attempt_limit": 75,
     "processed": 75,
-    "resource_urls": 12890,
-    "indexed_capture_records": 181935,
+    "resource_urls": 12985,
+    "indexed_capture_records": 184959,
     "statuses": {
-      "queued": 4776,
-      "recovered": 5089,
-      "needs_review": 285,
-      "failed_retryable": 2736,
+      "queued": 4797,
+      "recovered": 5137,
+      "needs_review": 288,
+      "failed_retryable": 2759,
       "excluded": 4
     },
-    "unique_downloaded_files": 2747,
-    "downloaded_bytes": 171722549,
-    "failed_attempts": 12297,
-    "candidate_updated": false,
-    "note": "Subsequent to the deployed candidate; new material is still queued for per-capture review and promotion."
+    "unique_downloaded_files": 2756,
+    "downloaded_bytes": 172784834,
+    "failed_attempts": 12464,
+    "candidate_updated": true,
+    "note": "Recovered main-domain pages/assets were promoted into the source collection; capture dates and original paths remain recorded."
   },
   "livejournal_2025_css_and_image_followup": {
     "dated_at": "2026-10-20T18:43:27Z",
@@ -1521,13 +1521,13 @@
     "remaining_failed_pairs": 99
   },
   "public_source_redactions": {
-    "unique_payloads": 735,
-    "catalog_references": 1095,
+    "unique_payloads": 692,
+    "catalog_references": 1139,
     "credential_fields": [
       "googleMapsStaticApiKey",
       "Stripe publishable API keys"
     ],
-    "originals": "Exact original payloads remain only in the ignored local recovery cache; they are excluded from Git and the portable package."
+    "originals": "Exact keyed originals remain in ignored recovery caches and are excluded from Git and portable package."
   },
   "source_candidate_verification": {
     "build": "reviewed_source_build",
@@ -1562,8 +1562,28 @@
     "note": "New records are local acquisition material pending individual capture-date/content review and promotion."
   },
   "ci_timeout_fix": {
-    "previous_job_timeout_minutes": 10,
-    "new_job_timeout_minutes": 30,
-    "reason": "Hosted run was cancelled at the 10-minute job limit while the first full root build was still running; local root and project-prefix build/check pairs both pass."
-  }
+    "previous_job_timeout_minutes": 30,
+    "new_job_timeout_minutes": 60,
+    "reason": "The 30-minute hosted run completed its root build/check then was canceled while the project-prefix build/check continued. Both corresponding local build/check pairs pass."
+  },
+  "latest_candidate_build_after_promotion": {
+    "mode": "reviewed_source_build",
+    "base_path": "/bluescholars",
+    "recovered_pages": 1065,
+    "feed_recovered_pages": 12,
+    "placeholder_pages": 2170,
+    "derived_pages": 1,
+    "local_source_assets": 1584,
+    "root_check": {
+      "ok": true,
+      "errors": []
+    },
+    "project_prefix_check": {
+      "ok": true,
+      "errors": []
+    },
+    "publish_approved": false,
+    "human_visual_review": false
+  },
+  "preview_deployment_pending": true
 }

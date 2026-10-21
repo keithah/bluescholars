@@ -1022,4 +1022,5 @@ def test_promote_redacts_stripe_publishable_key_from_archived_source(tmp_path):
     assert key not in public_source
     assert b'[redacted-publishable-key]' in public_source
     assert saved['source_redaction']['count']==1
+    assert saved['source_redaction']['field']=='Stripe publishable API key'
     assert (tmp_path/state.data['resources'][HOME]['raw_path']).read_bytes()==body

@@ -626,3 +626,10 @@
 - The public site remains an incomplete recovery preview. `publish_approved:false` and `human_visual_reviewed:false` are preserved.
 - Two additional bounded passes brought the active checkpoint to 12,890 resource URLs / 181,935 capture rows: 5,089 recovered, 285 needs review, 4,776 queued, 2,736 failed/retryable, four excluded; 2,747 downloads (171,722,549 bytes), 12,297 failed attempts. These latest acquisitions are not yet promoted into the deployed candidate.
 - Diagnosed hosted CI cancellations: `.github/workflows/ci.yml` allowed only 10 minutes, and each run was cancelled while the first full root build was in progress. Increased its job timeout to 30 minutes so root and project-subpath build/check pairs can finish; latest local full suite remains 264 passing, with both local candidate check runs clean.
+
+## October 21, 2026 — expanded source promotion and build verification
+
+- Promoted the eligible pre-baseline captures after six bounded recovery passes. The source collection now contains 5,157 eligible recovered resources; 1,139 catalog references across 692 unique original payloads document Google Maps or Stripe publishable-key redactions. Exact original keyed captures remain only in ignored recovery caches.
+- Full suite: 264 passed. Fresh reviewed-source builds at root and `/bluescholars/` each report 1,065 recovered pages (12 feeds), 2,170 placeholders, one derived page, and 1,584 local main-site assets. Both offline checkers return `ok: true`, zero errors.
+- Updated `.github/workflows/ci.yml` to a 60-minute job limit. The 10-minute run had been cancelled during root generation; a 30-minute run passed the root build/check and was cancelled while the project-prefix build/check was still running. The local counterparts for both paths pass.
+- This expanded candidate is ready for a preview refresh after the source commit is pushed. Publication approval remains false; it is an incomplete recovery preview.

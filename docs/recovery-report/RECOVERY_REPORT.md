@@ -179,3 +179,10 @@ Four 50-item batches processed the next 200 queued source resources. They resolv
 Cumulative checkpoint after these slices: 13,053 URLs; 185,686 indexed capture rows; 5,412 recovered; 301 needs review; 4,435 queued; 2,901 failed; four excluded; 2,819 unique files (174,977,141 bytes); 13,605 failed attempts. The existing candidate build predates these additions.
 
 The third and fourth batches returned 37 additional exact image URL records. Their 29 distinct hashes were already present in reviewed sources except for the one newly recovered 183-byte divider. The 37 URLs now have their own catalog entries with per-URL timestamps and Wayback replay URLs, referencing hash-verified local content. This retains alternate-host capture provenance without duplicating identical files.
+
+
+## October 21, 2026 — fifth media recovery slice
+
+A fifth 50-resource batch resolved 17 archived image URLs and added one distinct 161,789-byte JPEG. The image is linked by the captured August 25, 2008 Blue Scholars blog post “Denver, Day 1”; its original host was The Stranger. I hash-verified and visually inspected the file, recorded its 2011-07-17 Wayback timestamp and blog referrer, and marked the record `needs_review`. It remains in the ignored local recovery cache and is excluded from public source files pending permission verification under `RIGHTS.md`.
+
+Checkpoint totals: 13,053 resource URLs; 185,723 indexed captures; 5,429 recovered; 301 needs review; 4,405 queued; 2,914 failed; four excluded; 2,820 unique downloaded files (175,138,930 bytes); 13,673 failed attempts.

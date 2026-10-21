@@ -613641,17 +613641,44 @@
       "url": "http://silkroadproductions.us/images2/BF.flier.back.2008.gif"
     },
     "http://slog.thestranger.com/files/2008/08/blues11.jpg": {
-      "attempts": [],
+      "actual_capture": "20110717034359",
+      "attempts": [
+        {
+          "at": "2026-10-21T22:24:36.058303+00:00",
+          "error": "OSError: Archive HTTP 404: https://web.archive.org/web/20231223155123id_/https://slog.thestranger.com/files/2008/08/blues11.jpg",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://slog.thestranger.com/files/2008/08/blues11.jpg",
+          "requested_capture": "20210529010817",
+          "result": "failed"
+        },
+        {
+          "actual_capture": "20110717034359",
+          "at": "2026-10-21T22:24:39.722819+00:00",
+          "request_url": "https://web.archive.org/web/20110312094351id_/http://slog.thestranger.com/files/2008/08/blues11.jpg",
+          "requested_capture": "20110312094351",
+          "result": "downloaded",
+          "sha256": "d1d353fb8b5a3383d529a1595361d2d870f6a96aa1462c5c67864f784ee372ca"
+        }
+      ],
+      "bytes": 161789,
       "captures": [],
+      "content_type": "image/jpeg",
+      "final_original": "http://slog.thestranger.com/files/2008/08/blues11.jpg",
+      "final_url": "https://web.archive.org/web/20110717034359id_/http://slog.thestranger.com/files/2008/08/blues11.jpg",
       "hints": [
         "20110312094351"
       ],
       "kind": "image",
+      "raw_path": "recovery/raw/d1d353fb8b5a3383d529a1595361d2d870f6a96aa1462c5c67864f784ee372ca.jpg",
       "referrers": [
         "http://02cd02a.netsolhost.com:80/blog/2008/08/"
       ],
-      "status": "queued",
-      "url": "http://slog.thestranger.com/files/2008/08/blues11.jpg"
+      "retrieved_at": "2026-10-21T22:24:42.060544+00:00",
+      "sha256": "d1d353fb8b5a3383d529a1595361d2d870f6a96aa1462c5c67864f784ee372ca",
+      "status": "needs_review",
+      "url": "http://slog.thestranger.com/files/2008/08/blues11.jpg",
+      "source_archive": "Internet Archive Wayback",
+      "source_rights_review": "Withheld from public source files pending permission verification for third-party image hosted by The Stranger.",
+      "source_reviewed": false
     },
     "http://sphotos.ak.fbcdn.net/hphotos-ak-ash1/hs894.ash1/180229_10150103762949921_740214920_6049478_7308392_n.jpg": {
       "actual_capture": "20110203024052",

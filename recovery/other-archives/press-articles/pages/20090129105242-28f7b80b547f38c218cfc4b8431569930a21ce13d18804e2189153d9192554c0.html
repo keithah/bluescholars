@@ -1,0 +1,594 @@
+<!--/learn/docu_music_revolutionaries.asp-->
+<html>
+<head>
+
+	
+	<title>KEXP 90.3 FM - where the music matters</title>
+	<link rel="stylesheet" type="text/css" href="/includes/kexp_styles.css">
+	<link rel="stylesheet" href="/css/kexp_header.css" />
+	<link rel="stylesheet" href="/css/kexp_navbar.css" />
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="/playlist/kexp-rss.asp" />
+	<link rel="search" type="application/opensearchdescription+xml" title="KEXP Search Plugin" href="/search/opensearchplugin-kexp.xml" />
+
+	<script language="javascript" src="/includes/clientside.js"></script>
+
+	
+	<script language="javascript">
+	<!--
+	isLoaded = false;
+	
+	init.add("DynDivInit();");
+	init.add("isLoaded=true;");
+	rollID = 0;
+	function setRoll() {
+		rollID = setTimeout("moreoptions.hide();roll.out('moreoptions');",600);
+	}
+	function resetRoll() {
+		clearTimeout(rollID);
+	}
+	function rollOption(oThis, sState) {
+		if (sState == "over") {
+			resetRoll();
+			oThis.style.backgroundColor = "934e1e";
+		} else {
+			oThis.style.backgroundColor = "ececec";
+			setRoll();
+		}
+	}
+	function doPopup(sPage, iPopup, iWidth, iHeight) {
+		KEXPpopup = new csWin(sPage,iPopup,iWidth,iHeight)
+	}
+	function openWindow(URL) {
+		popupWin = window.open( URL, 'remote', 'width=430,height=237')
+	}
+	//-->
+
+	<!-- Begin
+	function popUp(URL) {
+	day = new Date();
+	id = day.getTime();
+	eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=550,height=550,left = 365,top = 237');");
+	}
+	
+	function calender(URL) {
+		day = new Date();
+		id = day.getTime();
+		eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=0,width=200,height=500,left = 365,top = 237');");
+	}
+	
+	function tally(URL) {
+		day = new Date();
+		id = day.getTime();
+		eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=1,locations=1,statusbar=0,menubar=0,resizble=1,width=400,height=600,left = 365,top = 237');");
+	}
+	// End -->
+
+	function docus(URL) {
+		day = new Date();
+		id = day.getTime();
+		eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=0,locations=1,statusbar=0,menubar=0,resizble=0,width=333,height=525');");
+	}
+
+
+	function docusfavs(URL) {
+		day = new Date();
+		id = day.getTime();
+		eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=1,locations=1,statusbar=0,menubar=0,resizble=0,width=333,height=525');");
+	}
+
+	
+	function CJL_loadXmlDocument(xmlFile, cbFun)
+	{
+	   var xdoc;
+	
+	   if( window.ActiveXObject && /Win/.test(navigator.userAgent) )
+	   {
+	      xdoc = new ActiveXObject("Microsoft.XMLDOM");
+	
+	      xdoc.async = false;
+	      xdoc.load(xmlFile);
+	
+	      cbFun(xdoc);
+	
+	      return true;
+	   }
+	   else if( document.implementation && document.implementation.createDocument )
+	   {
+	      xdoc = document.implementation.createDocument("", "", null);
+	      xdoc.load(xmlFile);
+	
+	      xdoc.onload = function()
+	      {
+	         cbFun(xdoc);
+	      }
+	
+	      return true;
+	   }
+	   else
+	   {
+	      return false;
+	   }
+	}
+	//]]>
+	</script>
+	
+	
+	
+	<!--BEGIN google analytics tracking script -->
+<script src="https://ssl.google-analytics.com/urchin.js" type="text/javascript"></script>
+<script type="text/javascript" src="/js/swfobject.js"></script>
+<script type="text/javascript">
+_uacct = 'UA-1741309-61';//this is for the IMA
+urchinTracker();
+_uff=0;
+_uacct = 'UA-1975883-1';//this is for KEXP
+urchinTracker();
+</script>
+  	<!--END google analytics tracking script -->
+<style type="text/css">
+body 
+{
+	background: #EEE url('/content/images/structure/page_bg.gif') repeat-y top left;
+}
+select.navdropdown
+{
+	border: 1px solid #666;
+	padding: 1px;
+}
+</style>
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onload="init.start();">
+<a name="top"></a>
+
+	<div class="header_box">
+		<div class="header" id="header">
+		<a href="http://www.kexp.org/support/pledgenow.asp"><img src="/content/images/structure/pledge-now-angle.gif" alt="pledge now!" id="header_pledge" /></a>
+			<div id="flashplayer">
+				<div id="flash-logo"><img src="/content/images/structure/kexp-logo.gif" alt="KEXP 90.3 FM" id="header_logo" /></a></div>
+	            <div id="flashcontent"><table class="classicnav" style="background-color: #e4e4e4; width: 100%;"><tbody>
+					<tr><td align="right"><b>WindowsMedia:</b></td><td><a href="/audio/kexp.wmx" 
+						onclick="javascript:urchinTracker ('/audio/kexp_wmx');">Play</a></td></tr>
+					<tr><td align="right"><b>Real:</b></td><td><a href="/audio/live.ram" 
+						onclick="javascript:urchinTracker ('/audio/live_ram');">Play</a></td></tr>
+					<tr><td align="right"><b>MP3:</b></td><td><a href="http://kexp-mp3-1.cac.washington.edu:8000/listen.pls" 
+						onclick="javascript:urchinTracker ('/audio/mp3_32k');">32k</a>&nbsp;<a href="http://kexp-mp3-128k.cac.washington.edu:8000/listen.pls" 
+						onclick="javascript:urchinTracker ('/audio/mp3_128k');">128k</a></td></tr>
+					</tbody></table></div>
+	<script type="text/javascript">
+		// <![CDATA[
+		var o = new SWFObject("/content/elements/flash/kexp-logo.swf", "kexp-logo", "140", "56", "7", "#feac31");
+		o.addVariable("hu",		"/Default.aspx");
+		o.write("flash-logo");
+		// ]]>
+	</script>
+
+	<script type="text/javascript">
+		// <![CDATA[
+		
+		var hostn = "http://" + window.location.host;
+		var o = new SWFObject("/content/elements/flash/kexp.swf", "kexp", "224", "134", "7", "#e3e3e3");
+
+		o.addVariable("bu",		hostn);
+		o.addVariable("su",		"s/s.aspx");
+		o.addVariable("ru",		"s/r.aspx");
+		o.addVariable("mu",		"s/storeconfig.xml");
+
+		o.addVariable("ht",		"Help");
+		o.addVariable("pt",		"PROGRAM");
+		o.addVariable("ct",		"DJ COMMENT");
+		o.addVariable("st",		"LISTEN NOW");
+		o.addVariable("bt",		"BUY");
+		o.addVariable("mt",		"Select a Store");
+		o.addVariable("xt",		"CLOSE");
+
+		o.addVariable("f1t",	"MP3");
+		o.addVariable("f1s1t",	"32k");
+		o.addVariable("f1s1u",	"http://kexp-mp3-1.cac.washington.edu:8000/listen.pls");
+		o.addVariable("f1s2t",	"128k");
+		o.addVariable("f1s2u",	"http://kexp-mp3-2.cac.washington.edu:8000/listen.pls");
+		o.addVariable("f1s3t",	"");
+		o.addVariable("f1s3u",	"");
+
+		o.addVariable("f2t",	"Windows Media");
+		o.addVariable("f2s1t",	"Play");
+		o.addVariable("f2s1u",	"/audio/kexp.wmx");
+		o.addVariable("f2s2t",	"1.4Mbps");
+		o.addVariable("f2s2u",	"/audio/kexp-uncomp.asx");
+		o.addVariable("f2s3t",	"");
+		o.addVariable("f2s3u",	"");
+
+		o.addVariable("f3t",	"Real");
+		o.addVariable("f3s1t",	"Play");
+		o.addVariable("f3s1u",	"http://kexp.org/audio/live.ram");
+		o.addVariable("f3s2t",	"");
+		o.addVariable("f3s2u",	"");
+		o.addVariable("f3s3t",	"");
+		o.addVariable("f3s3u",	"");
+	
+
+		o.write("flashcontent");
+		// ]]>
+	</script>
+	</div>	
+
+			
+			<img src="/content/images/structure/sponsoredby-sm.gif" alt="Sponsored By" id="sponsoredtop" />
+			<div id="ad_main">
+			<script type='text/javascript'><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://ads.pastemagazine.com/adserver/www/delivery/ajs.php':'http://ads.pastemagazine.com/adserver/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=70");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script>
+<noscript><a href='http://ads.pastemagazine.com/adserver/www/delivery/ck.php?n=a92a4cdd&amp;cb={random:16}' target='_blank'><img src='http://ads.pastemagazine.com/adserver/www/delivery/avw.php?zoneid=70&amp;cb={random:16}&amp;n=a92a4cdd' border='0' alt='' /></a></noscript>
+                    
+				<div id="kexp_navbar" class="navbarlist">
+				<script type="text/javascript" src="/includes/csinc_win.js"></script>
+<script type="text/javascript">
+	function doPopup(sPage, iPopup, iWidth, iHeight) {
+		KEXPpopup = new csWin(sPage,iPopup,iWidth,iHeight)
+	}
+</script>
+
+<ul id="knavUL">
+<li onmouseover="this.className='msieFix'" onfocus="this.className='msieFix'" 
+	onmouseout="this.className=''" onblur="this.className=''"><a href="/playlist/playlist.asp">Playlist</a>
+		<ul><li><a href="/playlist/playlist.asp">Playlist</a></li>
+		<li><a href="javascript:doPopup('/playlist/popup_pl_frameset.asp','Mini',405,356);">Mini-Playlist</a></li>
+		<li><a href="/about/email.asp?email=dj">DJ Request</a></li>
+		<li><a href="/about/mobile.asp">Mobile</a></li>
+		<li><a href="/programming/charts.asp">Charts</a></li>
+		<li class="lilast"><a href="/reviews/reviews.asp">Reviews</a></li></ul></li>
+		
+<li onmouseover="this.className='msieFix'" onmouseout="this.className=''" 
+	onfocus="this.className='msieFix'" onblur="this.className=''"><a href="/programming/programming.asp">Shows</a>
+	<ul><li><a href="/programming/programming.asp">Shows</a></li>
+	<li><a href="/aspnet_client/get_show_archive.aspx?showID=9">Audioasis</a>
+	<li><a href="/aspnet_client/get_show_archive.aspx?showID=2">The Best Ambiance</a></li>
+	<li><a href="/aspnet_client/get_show_archive.aspx?showID=11">Expansions</a></li>
+	<li><a href="/aspnet_client/get_show_archive.aspx?showID=15">Jazz Theatre</a></li>
+	<li><a href="/aspnet_client/get_show_archive.aspx?showID=7">Mind Over Matters</a></li>
+	<li><a href="/aspnet_client/get_show_archive.aspx?showID=8">Positive Vibrations</a></li>
+	<li><a href="/aspnet_client/get_show_archive.aspx?showID=13">Preachin' The Blues</a></li>
+	<li><a href="/aspnet_client/get_show_archive.aspx?showID=4">The Roadhouse</a></li>
+	<li><a href="/aspnet_client/get_show_archive.aspx?showID=6">Shake The Shack</a></li>
+	<li><a href="/aspnet_client/get_show_archive.aspx?showID=12">Sonarchy Radio</a></li>
+	<li><a href="/aspnet_client/get_show_archive.aspx?showID=46">Sonic Reducer</a></li>
+	<li><a href="/aspnet_client/get_show_archive.aspx?showID=14">Street Sounds</a></li>
+	<li><a href="/aspnet_client/get_show_archive.aspx?showID=5">Swingin' Doors</a></li>
+	<li><a href="/aspnet_client/get_show_archive.aspx?showID=1">Variety Mix</a></li>
+	<li class="lilast"><a href="/aspnet_client/get_show_archive.aspx?showID=3">Wo' Pop</a></li></ul></li>
+
+<li onmouseover="this.className='msieFix'" onmouseout="this.className=''"><a href="/programming/djpage.asp?DJID=0">DJs</a>
+    <ul><li><a href="/programming/djmail.asp">DJ Mailing List</a></li>
+	<li class="lilast"><a href="/about/email.asp?email=dj">DJ Request</a></li></ul></li>
+	
+<li onmouseover="this.className='msieFix'" onmouseout="this.className=''"><a href="/ondemand.asp">On Demand</a>
+	<ul><li><a href="/ondemand.asp">On Demand</a></li>
+		<li><a href="/podcasting/podcasting.asp">Podcasting</a></li>
+		<li><a href="/streamarchive/streamarchive.asp">Streaming Archive</a></li>
+		<li><a href="/aspnet_client/live.asp">Live Performances</a></li>
+		<li><a href="/learn/documentaries.asp">Documentaries</a></li>
+		<li class="lilast"><a href="/about/connectionFAQ.asp">Streaming Help</a></li></ul></li>
+
+<li onmouseover="this.className='msieFix'" onmouseout="this.className=''"><a href="/events/events.asp">Events</a>
+		<ul><li><a href="/events/events.asp">Recommended Events</a></li>
+		<li><a href="/programming/instudio.asp">Upcoming In-studios</a></li>
+		<li><a href="/events/clublist.asp">Venues</a></li>
+		<li><a href="/events/special.asp">Special Events</a></li>
+		<li><a href="/events/past.asp">Past Events</a></li>
+		<li><a href="/events/photos.asp">Photo Galleries</a></li>
+		<li><a href="/events/giveaways.asp">Giveaways</a></li>
+		<li class="lilast"><a href="/events/clubcalendar.asp">Club Calendar</a></li></ul></li>
+
+<li onmouseover="this.className='msieFix'" onmouseout="this.className=''"><a href="/newyork/default.aspx">kexp in nyc</a>
+	<ul><li><a href="/newyork/default.aspx">kexp in nyc</a></li>
+    <li><a href="/newyork/default.aspx#theshows">NYC Shows</a></li>
+    <li class="lilast"><a href="/newyork/aboutradionewyork.aspx">About Radio NY</a></li></ul></li>
+
+<li onmouseover="this.className='msieFix'" onmouseout="this.className=''"><a href="/support/pledgenow.asp">donate</a>
+	<ul><li><a href="/support/pledgenow.asp">Donate</a></li>
+		<li><a href="/support/memberben.asp">Member Benefits</a></li>
+		<li><a href="/support/bizeventsponsor.asp">Event Sponsorhips</a></li>
+		<li><a href="/support/vehicle.asp">Vehicle Donations</a></li>
+		<li class="lilast"><a href="/support/membershipFAQ.asp">Membership FAQ</a></li></ul></li>
+
+<li onmouseover="this.className='msieFix'" onmouseout="this.className=''"><a href="http://blog.kexp.org/blog">blog</a>
+    <ul><li><a href="http://blog.kexp.org/blog">blog</a></li>
+	<li><a href="http://blog.kexp.org/blog/category/photo-galleries/">Photos</a></li>
+	<li><a href="http://blog.kexp.org/blog/category/song-of-the-day-podcast/">Song of the Day</a></li>
+	<li><a href="http://blog.kexp.org/blog/category/live-reviews/">Live Show Reviews</a></li>
+	<li><a href="http://blog.kexp.org/blog/category/live-video-of-the-week/">Live Videos</a></li>
+	<li><a href="http://blog.kexp.org/blog/category/music-news/">Music News Headlines</a></li>
+	<li class="lilast"><a href="http://blog.kexp.org/blog/category/out-this-week/">New Releases</a></li></ul></li>
+
+<li onmouseover="this.className='msieFix'" onmouseout="this.className=''" style="border-right: none;"><a href="/about/about.asp">about</a>
+	<ul><li><a href="/learn/learn.asp">Learn</a></li>
+	<li><a href="/about/about.asp">History</a></li>
+	<li><a href="http://www.shiftboard.com/kexp/">Volunteer</a></li>
+	<li><a href="/support/internships.asp">Internships</a></li>
+	<li><a href="/about/partnership.asp">Community Partnerships</a></li>
+	<li><a href="/support/bizsupport.asp">Business Support</a></li>
+	<li><a href="/about/press.asp">Press</a></li>
+	<li><a href="/about/help.asp">Help</a></li>
+	<li><a href="/about/contact.asp">Contact</a></li>
+	<li><a href="/about/jobs.asp">Help Wanted</a></li>
+	<li class="lilast"><a href="/programming/airplay.asp">Getting Airplay</a></li></ul></li>
+</ul>
+
+				</div>
+<form class="searchform" method="GET" action="/search/search.aspx">
+<span class="searchspan">
+            <input
+            value="Search KEXP!" 
+            class="searchfield" 
+            name="q"
+            size="28" 
+            maxlength="256" 
+            type="text" 
+            onfocus="if(this.value=='Search KEXP!'){this.value='';this.style.color='#b3b3b3';}else{this.select();this.style.color='#b3b3b3';}"
+            onblur="if(this.value==''){this.value='Search KEXP!';this.style.color='#b3b3b3';}" 
+            tabindex="1" 
+            />
+
+            <input
+            alt="Search" 
+            class="searchbtn" 
+            src="/content/images/structure/submit_btn.gif" 
+            value="Search" 
+            type="image"
+            onclick="javascript:document.getElementById('gs').submit();" 
+            onkeypress="javascript:document.getElementById('gs').submit();"
+            style="color:#b3b3b3;"
+            tabindex="2"
+            />
+                <input type="hidden" name="cx" value="005196529597108582349:fuytrvag5y8" />
+    <input type="hidden" name="client" value="google-csbe" />
+    <input type="hidden" name="output" value="xml_no_dtd" />
+    <input type="hidden" name="gl" value="us" />
+    <input type="hidden" name="num" value="20" />
+            </span>
+</form>
+
+            
+
+<div style="clear: both;"></div>
+			</div>	
+		
+		</div>
+	</div><div style="clear: both;"></div>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+<tr height="100%" valign="top"><td style="padding-left: 14px;">
+<img src="/images/spacer.gif" width="1" height="12" border="0" /><br />
+
+<link rel="stylesheet" type="text/css" href="kexp_docu.css"/>
+
+
+<table cellpadding="0" cellspacing="0" border="0">
+<tr><td><img src="/images/spacer.gif" width="8" height="1" border="0"></td>
+	<!-- left column -->
+	<td valign="top">
+<table cellpadding="0" cellspacing="0" border="0" width="165">
+
+<tr><td align="right"><a href="/learn/learn.asp"class="down">Learn</a></td></tr>
+<tr><td><img src="/images/spacer.gif" width="1" height="8" border="0"></td></tr>
+<tr><td align="right"><a href="/learn/spapm.asp">Seattle Partnership for American Popular Music</a></td></tr>
+<tr><td><img src="/images/spacer.gif" width="1" height="8" border="0"></td></tr>
+<tr><td align="right"><a href="/aspnet_client/SpecialFolder.aspx?special=855&pID=528">KEXP/EMP Music History Series</a></td></tr>
+<tr><td><img src="/images/spacer.gif" width="1" height="8" border="0"></td></tr>
+<tr><td align="right"><a href="/learn/popconference.asp">Pop Conference</a></td></tr>
+<tr><td><img src="/images/spacer.gif" width="1" height="8" border="0"></td></tr>
+<tr><td align="right"><a href="/learn/nprmodules.asp">NPR Music Highlights</a></td></tr>
+<tr><td><img src="/images/spacer.gif" width="1" height="8" border="0"></td></tr>
+
+<tr><td><img src="/images/div_h_dashed_column.gif" height="13" border="0" width="157" /><br /></td></tr>
+<tr><td><a href="http://blog.kexp.org"><img src="/images/home_blog-left.jpg" hspace="2" border="0"></a>
+<br></td></tr>
+<tr><td align="right"><img src="/images/div_h_dashed_column.gif"  width="157" height="13" alt="" border="0"></td></tr>
+</table></td>
+	<td><img src="/images/spacer.gif" width="51" height="1" border="0"></td>
+	<!-- right column -->
+	<td valign="top">
+		<table cellpadding="0" cellspacing="0" border="0" width="500">
+		<tr><td colspan="3">
+			<img src="/images/hdr_sub_kexpdocumentaries.gif" width="210" height="23" alt="KEXP Learn" border="0"><br>
+			<br>
+<img src="kexp-documentaries-music-revolutionaries.gif" alt="KEXP Documentaries: Music Revolutionaries"><br><br>Recent episodes:<br>      <span class="bucketheader" style="position:relative;"><a href="#1">#1: Michael Franti Goes To Iraq</a></span><br>      <span class="bucketheader" style="position:relative;"><a href="#2">#2: Linton Kwesi Johnson Writes Words of Revolution</a></span><br>      <span class="bucketheader" style="position:relative;"><a href="#3">#3: M.I.A. Embraces The Chaos</a></span><br>      <span class="bucketheader" style="position:relative;"><a href="#4">#4: El Vez Runs For Prez</a></span><br>      <span class="bucketheader" style="position:relative;"><a href="#5">#5: Billy Bragg is a One-Man Clash</a></span><br>      <span class="bucketheader" style="position:relative;"><a href="#6">#6: Patti Smith’s Philosophy of Revolution</a></span><br>      <span class="bucketheader" style="position:relative;"><a href="#7">#7: Beth Ditto Takes it Off</a></span><br>      <span class="bucketheader" style="position:relative;"><a href="#8">#8: Rage Against The Machine</a></span><br>      <span class="bucketheader" style="position:relative;"><a href="#9">#9: R.E.M. Accelerates</a></span><br>      <span class="bucketheader" style="position:relative;"><a href="#10">#10: The Blue Scholars</a></span><br><br><br> Artists who change today’s world, one song at a time.
+  <br><img src="/images/div_h_dashed_fullpage.gif" width="484" height="11" alt="" border="0"><a name="1"></a><div class="bucketwrapper clearfix">
+<div class="bucketheader clearfix">#1: Michael Franti Goes To Iraq<br clear="all"></div>
+<div class="picandtextcol clearfix">
+<div class="bucketphotocol  clearfix"><img src="docu_music-FrantiOnTheRoadFromMyspace.jpg" alt="Franti On The Road From Myspace"><br><i>Franti on the road from Myspace</i><br><br><br clear="all"><img src="docu_music-FrantiOnstageFromMyspace.jpg" alt="Franti on Stage From Myspace"><br><i>Franti on stage from Myspace</i><br><br><br clear="all"><br clear="all"></div>
+<div class="bucketrightcol clearfix">
+<div class="buckettextrect clearfix">
+    Hip-hop veteran and activist Michael Franti has always written songs against war. 
+	But when the war in Iraq started he decided to take his activism a step further, by traveling to Iraq and playing on the streets.  
+	Hear Michael’s story of his trip and how it inspired the documentary film <a href="http://www.iknowimnotalone.com/" target="_new">“I Know I’m Not Alone”</a>
+	and the upbeat album “Yell Fire”.<br />
+	Also, check out <a href="http://www.globalexchange.com" target="_new">Global Exchange</a>
+	– An international organization dedicated to human rights!
+    <br clear="all"></div>
+<div class="buckettextrect buckettextspacer clearfix"> <br clear="all"></div>
+<div class="buckettextrect bucketbutton clearfix"><span style="width: 110px; height: 50px;" id="docu_1">Flash Player</span>
+<script type="text/javascript">
+var sodocu_1 = new SWFObject('/content/elements/flash/player.swf','mpl','110','20','9');
+sodocu_1.addParam('allowscriptaccess','always');
+sodocu_1.addParam('allowfullscreen','true');
+sodocu_1.addParam('flashvars','&file=http://www.digitalwell.washington.edu/dw/1/51/09/09e1743e-0dd1-487f-aea8-6fe303f555cf.mp3&skin=/content/elements/flash/Simple.swf');
+sodocu_1.write('docu_1');</script><br clear="all"></div><br clear="all"></div><br clear="all"></div><br clear="all"></div><img src="/images/div_h_dashed_fullpage.gif" width="484" height="11" alt="" style="border:0px"><a name="2"></a><div class="bucketwrapper clearfix">
+<div class="bucketheader clearfix">#2: Linton Kwesi Johnson Writes Words of Revolution<br clear="all"></div>
+<div class="picandtextcol clearfix">
+<div class="bucketphotocol  clearfix"><img src="docu_music-LKJfromMyspace.gif" alt="Linton Kwesi Johnson From Myspace"><br><i>Linton Kwesi Johnson from Myspace</i><br><br><br clear="all"><br clear="all"></div>
+<div class="bucketrightcol clearfix">
+<div class="buckettextrect clearfix">
+    Poet Linton Kwesi Johnson writes to the rhythms of reggae music.  
+	His deep voice recites words of revolution, drawing a dark, stunning picture of life as a Jamaican immigrant living in London.
+    <br clear="all"></div>
+<div class="buckettextrect buckettextspacer clearfix"> <br clear="all"></div>
+<div class="buckettextrect bucketbutton clearfix"><span style="width: 110px; height: 50px;" id="docu_2">Flash Player</span>
+<script type="text/javascript">
+var sodocu_2 = new SWFObject('/content/elements/flash/player.swf','mpl','110','20','9');
+sodocu_2.addParam('allowscriptaccess','always');
+sodocu_2.addParam('allowfullscreen','true');
+sodocu_2.addParam('flashvars','&file=http://www.digitalwell.washington.edu/dw/1/51/37/37790b08-ed3a-4f65-981a-8fbc6f80cc84.mp3&skin=/content/elements/flash/Simple.swf');
+sodocu_2.write('docu_2');</script><br clear="all"></div><br clear="all"></div><br clear="all"></div><br clear="all"></div><img src="/images/div_h_dashed_fullpage.gif" width="484" height="11" alt="" style="border:0px"><a name="3"></a><div class="bucketwrapper clearfix">
+<div class="bucketheader clearfix">#3: M.I.A. Embraces The Chaos<br clear="all"></div>
+<div class="picandtextcol clearfix">
+<div class="bucketphotocol  clearfix"><img src="docu_music-MIA-fromMyspace.jpg" alt="M.I.A. From Myspace"><br><i>M.I.A. From Myspace</i><br><br><br clear="all"><img src="docu_music-MIA_WorksWith3rdWorldYouth-fromMyspace.jpg" alt="M.I.A. Works with third world youth - From Myspace"><br><i>M.I.A. Works with third world youth - From Myspace</i><br><br><br clear="all"><br clear="all"></div>
+<div class="bucketrightcol clearfix">
+<div class="buckettextrect clearfix">
+	Sri Lankan artist M.I.A. was denied entry to America because the U.S. Government determined that her profile made her a potential terrorist. 
+	She turned this all around by using her time to help build a playground in Liberia, visit youth detention centers and make a new album.  
+	The record “Kala” samples indie bands and brings the culture to many third world countries for the first time ever.    <br clear="all"></div>
+<div class="buckettextrect buckettextspacer clearfix"> <br clear="all"></div>
+<div class="buckettextrect bucketbutton clearfix"><span style="width: 110px; height: 50px;" id="docu_3">Flash Player</span>
+<script type="text/javascript">
+var sodocu_3 = new SWFObject('/content/elements/flash/player.swf','mpl','110','20','9');
+sodocu_3.addParam('allowscriptaccess','always');
+sodocu_3.addParam('allowfullscreen','true');
+sodocu_3.addParam('flashvars','&file=http://www.digitalwell.washington.edu/dw/1/51/be/bed4d52d-0e9e-44e2-898f-8bf15f70d8e5.mp3&skin=/content/elements/flash/Simple.swf');
+sodocu_3.write('docu_3');</script><br clear="all"></div><br clear="all"></div><br clear="all"></div><br clear="all"></div><img src="/images/div_h_dashed_fullpage.gif" width="484" height="11" alt="" style="border:0px"><a name="4"></a><div class="bucketwrapper clearfix">
+<div class="bucketheader clearfix">#4: El Vez Runs For Prez<br clear="all"></div>
+<div class="picandtextcol clearfix">
+<div class="bucketphotocol  clearfix"><img src="docu_music-ElVez.jpg" alt="El Vez Runs For Prez"><br><i>El Vez Runs For Prez</i><br><br><br clear="all"><br clear="all"></div>
+<div class="bucketrightcol clearfix">
+<div class="buckettextrect clearfix">El Vez, The Mexican Elvis, calls himself a crusader for truth, justice and the Mexican-American way.   In this feature, Roberto Lopez tells us how he was inspired to create the character of El Vez, and why El Vez will run for president in 2008.
+	 Find out more about El Vez and other Latino musical innovators at Experience Music Project's "American Sabor" exhibit, open until September 2008. <br clear="all"></div>
+<div class="buckettextrect buckettextspacer clearfix"> <br clear="all"></div>
+<div class="buckettextrect bucketbutton clearfix"><span style="width: 110px; height: 50px;" id="docu_4">Flash Player</span>
+<script type="text/javascript">
+var sodocu_4 = new SWFObject('/content/elements/flash/player.swf','mpl','110','20','9');
+sodocu_4.addParam('allowscriptaccess','always');
+sodocu_4.addParam('allowfullscreen','true');
+sodocu_4.addParam('flashvars','&file=http://www.digitalwell.washington.edu/dw/1/51/49/49e89ba1-51c3-4c6e-b533-96abe17c1f67.mp3&skin=/content/elements/flash/Simple.swf');
+sodocu_4.write('docu_4');</script><br clear="all"></div><br clear="all"></div><br clear="all"></div><br clear="all"></div><img src="/images/div_h_dashed_fullpage.gif" width="484" height="11" alt="" style="border:0px"><a name="5"></a><div class="bucketwrapper clearfix">
+<div class="bucketheader clearfix">#5: Billy Bragg is a One-Man Clash<br clear="all"></div>
+<div class="picandtextcol clearfix">
+<div class="bucketphotocol  clearfix"><img src="docu_music-BillyBragg.jpg" alt="Billy Bragg at South By Southwest - Photo by Greg Perez"><br><i>Billy Bragg at South By Southwest - Photo by Greg Perez</i><br><br><br clear="all"><br clear="all"></div>
+<div class="bucketrightcol clearfix">
+<div class="buckettextrect clearfix">UK singer-songwriter Billy Bragg was inspired by Dylan and The Clash. His music marries the raw, pure power of folk with the attitude of punk rock.<br clear="all"></div>
+<div class="buckettextrect buckettextspacer clearfix"> <br clear="all"></div>
+<div class="buckettextrect bucketbutton clearfix"><span style="width: 110px; height: 50px;" id="docu_5">Flash Player</span>
+<script type="text/javascript">
+var sodocu_5 = new SWFObject('/content/elements/flash/player.swf','mpl','110','20','9');
+sodocu_5.addParam('allowscriptaccess','always');
+sodocu_5.addParam('allowfullscreen','true');
+sodocu_5.addParam('flashvars','&file=http://www.digitalwell.washington.edu/dw/1/51/26/2620b54d-d92a-48d9-905a-eae9df23a536.mp3&skin=/content/elements/flash/Simple.swf');
+sodocu_5.write('docu_5');</script><br clear="all"></div><br clear="all"></div><br clear="all"></div><br clear="all"></div><img src="/images/div_h_dashed_fullpage.gif" width="484" height="11" alt="" style="border:0px"><a name="6"></a><div class="bucketwrapper clearfix">
+<div class="bucketheader clearfix">#6: Patti Smith’s Philosophy of Revolution<br clear="all"></div>
+<div class="picandtextcol clearfix">
+<div class="bucketphotocol  clearfix"><img src="docu_music-PattiSmithMyspace1.jpg" alt="Patti Smith - From Myspace - Photo by Angelo Cricchi"><br><i>Patti Smith - From Myspace - Photo by Angelo Cricchi</i><br><br><br clear="all"><img src="docu_music-PattiSmithMyspace2.jpg" alt="Patti Smith - From Myspace"><br><i>Patti Smith - From Myspace</i><br><br><br clear="all"><br clear="all"></div>
+<div class="bucketrightcol clearfix">
+<div class="buckettextrect clearfix">For decades rock legend Patti Smith has spoken out against war, censorship and oppression.  In this exclusive KEXP audio, Smith talks about her role as a revolutionary and how music can change the world. <br clear="all"></div>
+<div class="buckettextrect buckettextspacer clearfix"> <br clear="all"></div>
+<div class="buckettextrect bucketbutton clearfix"><span style="width: 110px; height: 50px;" id="docu_6">Flash Player</span>
+<script type="text/javascript">
+var sodocu_6 = new SWFObject('/content/elements/flash/player.swf','mpl','110','20','9');
+sodocu_6.addParam('allowscriptaccess','always');
+sodocu_6.addParam('allowfullscreen','true');
+sodocu_6.addParam('flashvars','&file=http://www.digitalwell.washington.edu/dw/1/51/54/54f92834-d463-4373-8a4c-1bc20112265f.mp3&skin=/content/elements/flash/Simple.swf');
+sodocu_6.write('docu_6');</script><br clear="all"></div><br clear="all"></div><br clear="all"></div><br clear="all"></div><img src="/images/div_h_dashed_fullpage.gif" width="484" height="11" alt="" style="border:0px"><a name="7"></a><div class="bucketwrapper clearfix">
+<div class="bucketheader clearfix">#7: Beth Ditto Takes it Off<br clear="all"></div>
+<div class="picandtextcol clearfix">
+<div class="bucketphotocol  clearfix"><img src="docu_music-TheGossipFromMyspace.jpg" alt="The Gossip - From Myspace"><br><i>The Gossip - From Myspace</i><br><br><br clear="all"><img src="docu_music-StandingInTheWayOfControl.jpg" alt="Standing in the Way of Control - 2006 Album Cover"><br><i>Standing in the Way of Control - 2006 Album Cover</i><br><br><br clear="all"><br clear="all"></div>
+<div class="bucketrightcol clearfix">
+<div class="buckettextrect clearfix">Beth Ditto, lead singer for the soulful Portland rock band The Gossip is an activist for gay rights, civil rights and now called herself a &quot;Fat Activist&quot;.  
+Her controversial nude front cover for the British pop magazine NME has people arguing over whether it is &quot;acceptable&quot; for a big, beautiful woman to show herself naked.<br clear="all"></div>
+<div class="buckettextrect buckettextspacer clearfix"> <br clear="all"></div>
+<div class="buckettextrect bucketbutton clearfix"><span style="width: 110px; height: 50px;" id="docu_7">Flash Player</span>
+<script type="text/javascript">
+var sodocu_7 = new SWFObject('/content/elements/flash/player.swf','mpl','110','20','9');
+sodocu_7.addParam('allowscriptaccess','always');
+sodocu_7.addParam('allowfullscreen','true');
+sodocu_7.addParam('flashvars','&file=http://www.digitalwell.washington.edu/dw/1/51/ed/ed6d8a1b-09b9-404c-9c85-ec4ff5ecd72c.mp3&skin=/content/elements/flash/Simple.swf');
+sodocu_7.write('docu_7');</script><br clear="all"></div><br clear="all"></div><br clear="all"></div><br clear="all"></div><img src="/images/div_h_dashed_fullpage.gif" width="484" height="11" alt="" style="border:0px"><a name="8"></a><div class="bucketwrapper clearfix">
+<div class="bucketheader clearfix">#8: Rage Against The Machine<br clear="all"></div>
+<div class="picandtextcol clearfix">
+<div class="bucketphotocol  clearfix"><img src="docu_music-RageFromMyspace.jpg" alt="Rage Against The Machine - From Myspace"><br><i>Rage Against The Machine - From Myspace</i><br><br><br clear="all"><img src="docu_music-RageFromFacebook.jpg" alt="Rage Against The Machine - From Facebook"><br><i>Rage Against The Machine - From Facebook</i><br><br><br clear="all"><br clear="all"></div>
+<div class="bucketrightcol clearfix">
+<div class="buckettextrect clearfix">Los Angeles band Rage Against The Machine mix hip-hop and rock to back-up some of the strongest political statements in music today. In this feature guitarist Tom Morello talks about how music really can change the world.<br clear="all"></div>
+<div class="buckettextrect buckettextspacer clearfix"> <br clear="all"></div>
+<div class="buckettextrect bucketbutton clearfix"><span style="width: 110px; height: 50px;" id="docu_8">Flash Player</span>
+<script type="text/javascript">
+var sodocu_8 = new SWFObject('/content/elements/flash/player.swf','mpl','110','20','9');
+sodocu_8.addParam('allowscriptaccess','always');
+sodocu_8.addParam('allowfullscreen','true');
+sodocu_8.addParam('flashvars','&file=http://www.digitalwell.washington.edu/dw/1/51/fa/fa965817-05d1-443e-9581-79d0d64e806f.mp3&skin=/content/elements/flash/Simple.swf');
+sodocu_8.write('docu_8');</script><br clear="all"></div><br clear="all"></div><br clear="all"></div><br clear="all"></div><img src="/images/div_h_dashed_fullpage.gif" width="484" height="11" alt="" style="border:0px"><a name="9"></a><div class="bucketwrapper clearfix">
+<div class="bucketheader clearfix">#9: R.E.M. Accelerates<br clear="all"></div>
+<div class="picandtextcol clearfix">
+<div class="bucketphotocol  clearfix"><img src="docu_music-REM.jpg" alt="R.E.M. - From Myspace"><br><i>R.E.M. - From Myspace</i><br><br><br clear="all"><br clear="all"></div>
+<div class="bucketrightcol clearfix">
+<div class="buckettextrect clearfix">Legendary alternative rockers REM have been making political music for almost three decades. Click here to find out why their 2008 release &quot;Accelerate&quot; has been hailed as their comeback album.  And hear what the band currently has to say about how music can be used as a tool for change.<br clear="all"></div>
+<div class="buckettextrect buckettextspacer clearfix"> <br clear="all"></div>
+<div class="buckettextrect bucketbutton clearfix"><span style="width: 110px; height: 50px;" id="docu_9">Flash Player</span>
+<script type="text/javascript">
+var sodocu_9 = new SWFObject('/content/elements/flash/player.swf','mpl','110','20','9');
+sodocu_9.addParam('allowscriptaccess','always');
+sodocu_9.addParam('allowfullscreen','true');
+sodocu_9.addParam('flashvars','&file=http://www.digitalwell.washington.edu/dw/1/51/93/9372f9d2-e778-4517-a15d-25c907060039.mp3&skin=/content/elements/flash/Simple.swf');
+sodocu_9.write('docu_9');</script><br clear="all"></div><br clear="all"></div><br clear="all"></div><br clear="all"></div><img src="/images/div_h_dashed_fullpage.gif" width="484" height="11" alt="" style="border:0px"><a name="10"></a><div class="bucketwrapper clearfix">
+<div class="bucketheader clearfix">#10: The Blue Scholars<br clear="all"></div>
+<div class="picandtextcol clearfix">
+<div class="bucketphotocol  clearfix"><img src="docu_music-BlueScholars-GeoandSabzi.jpg" alt="Blue Scholars - From Myspace"><br><i>Blue Scholars - From Myspace</i><br><br><br clear="all"><img src="docu_music-BlueScholars-Myspace.jpg" alt="Blue Scholars - The Long March EP"><br><i>Blue Scholars - The Long March EP</i><br><br><br clear="all"><br clear="all"></div>
+<div class="bucketrightcol clearfix">
+<div class="buckettextrect clearfix">Seattle hip hop visionaries Blue Scholars keep their politics on a personal level. Geo and Sabzi take direct action in their community and write songs that bring home the concept of war and what it means to our U.S. families.<br clear="all"></div>
+<div class="buckettextrect buckettextspacer clearfix"> <br clear="all"></div>
+<div class="buckettextrect bucketbutton clearfix"><span style="width: 110px; height: 50px;" id="docu_10">Flash Player</span>
+<script type="text/javascript">
+var sodocu_10 = new SWFObject('/content/elements/flash/player.swf','mpl','110','20','9');
+sodocu_10.addParam('allowscriptaccess','always');
+sodocu_10.addParam('allowfullscreen','true');
+sodocu_10.addParam('flashvars','&file=http://www.digitalwell.washington.edu/dw/1/51/b6/b677018e-7ab2-4634-8ea9-8fa6900d2d30.mp3&skin=/content/elements/flash/Simple.swf');
+sodocu_10.write('docu_10');</script><br clear="all"></div><br clear="all"></div><br clear="all"></div><br clear="all"></div><img src="/images/div_h_dashed_fullpage.gif" width="484" height="11" alt="" style="border:0px">
+<!--end of content-->
+<br/><br/>
+&raquo; <a href="/learn/documentaries.asp">Back to KEXP Documentaries</a>.
+</td></tr>
+		</table>
+		</td>
+	<!-- background grey right image -->
+	<td valign="top" align="right"><img src="/images/bkg/bkg_learn.gif" width="50" height="595" border="0"></td>
+</tr>
+</table>
+
+</td></tr>
+<tr height="73"><td valign="bottom">
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr><td><img src="/images/spacer.gif" width="1" height="20" border="0" /></td></tr>
+	<tr>
+		<td>
+			<table border="0" cellpadding="0" cellspacing="0" width="960" bgcolor="#feac31">
+			<tr>
+			<td><img src="/images/spacer.gif" width="4" height="35" border="0" /></td>
+				<td class="footer" style="font-family: Arial, Verdana, Helvetica, Sans-Serif; font-size: 11px;">
+				<a style="font-family: Arial, Verdana, Helvetica, Sans-Serif; font-size: 11px;" href="/about/email.asp?email=dj">DJ Request</a> 
+				|
+				<a style="font-family: Arial, Verdana, Helvetica, Sans-Serif; font-size: 11px;" 
+				href="/about/privacy.asp">Privacy / Terms</a> 
+				| 
+				<a style="font-family: Arial, Verdana, Helvetica, Sans-Serif; font-size: 11px;" href="/about/help.asp">Help</a> 
+				| 
+				KEXP is licensed to the <a style="font-family: Arial, Verdana, Helvetica, Sans-Serif; font-size: 11px;" 
+				href="http://www.washington.edu" target="_new">University of Washington</a></td>
+				<td align="right" class="footer">Copyright 2008 KEXP All rights reserved</td>
+				<td><img src="/images/spacer.gif" width="4" height="35" border="0" /></td>
+			</tr>
+			</table></td>
+	</tr>	
+	</table>
+</td></tr>
+</table>
+</body>
+</html>

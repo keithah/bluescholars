@@ -1,0 +1,2028 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#">
+	<head>
+		<meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"fa09265af4",applicationID:"798950867"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+<noscript><style>form.antibot * :not(.antibot-message) { display: none !important; }</style>
+</noscript><script async src="https://www.googletagmanager.com/gtag/js?id=UA-1197400-1"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments)};gtag("js", new Date());gtag("set", "developer_id.dMDhkMT", true);gtag("config", "UA-1197400-1", {"groups":"default","anonymize_ip":true,"page_placeholder":"PLACEHOLDER_page_path"});</script>
+<link rel="canonical" href="https://crosscut.com/kuya-geo" />
+<link rel="image_src" href="https://crosscut.com/sites/default/files/images/logo/crosscut-logo-2560x1440.png" />
+<meta property="og:site_name" content="Crosscut" />
+<meta property="og:url" content="https://crosscut.com/kuya-geo" />
+<meta property="og:title" content="Kuya GEO" />
+<meta property="og:image" content="https://crosscut.com/sites/default/files/images/logo/crosscut-logo-2560x1440.png" />
+<meta property="og:image:url" content="https://crosscut.com/sites/default/files/images/logo/crosscut-logo-2560x1440.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="2560" />
+<meta property="og:image:height" content="1440" />
+<meta property="og:image:alt" content="Crosscut logo" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@crosscut" />
+<meta name="twitter:title" content="Kuya GEO" />
+<meta name="twitter:url" content="https://crosscut.com/kuya-geo" />
+<meta name="twitter:image:alt" content="Crosscut logo" />
+<meta name="twitter:image:height" content="1440" />
+<meta name="twitter:image:width" content="2560" />
+<meta name="twitter:image" content="https://crosscut.com/sites/default/files/images/logo/crosscut-logo-2560x1440.png" />
+<meta name="Generator" content="Drupal 9 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="/core/misc/favicon.ico" type="image/vnd.microsoft.icon" />
+<script src="/sites/default/files/google_tag/primary/google_tag.script.js?rgf4i9" defer></script>
+
+		<title>Kuya GEO | Crosscut</title>
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/themes/custom/crosscut/favicon/apple-touch-icon.png?v=A07XApmMAk">
+    <link rel="icon" type="image/png" sizes="32x32" href="/themes/custom/crosscut/favicon/favicon-32x32.png?v=A07XApmMAk">
+    <link rel="icon" type="image/png" sizes="16x16" href="/themes/custom/crosscut/favicon/favicon-16x16.png?v=A07XApmMAk">
+    <link rel="manifest" href="/themes/custom/crosscut/favicon/site.webmanifest?v=A07XApmMAk">
+    <link rel="mask-icon" href="/themes/custom/crosscut/favicon/safari-pinned-tab.svg?v=A07XApmMAk" color="#172c3b">
+    <link rel="shortcut icon" href="/themes/custom/crosscut/favicon/favicon.ico?v=A07XApmMAk">
+    <meta name="msapplication-TileColor" content="#172c3b">
+    <meta name="msapplication-config" content="/themes/custom/crosscut/favicon/browserconfig.xml?v=A07XApmMAk">
+    <meta name="theme-color" content="#172c3b">
+
+        <!--
+    /**
+     * @license
+     * MyFonts Webfont Build ID 3698457, 2019-01-15T16:06:07-0500
+     *
+     * The fonts listed in this notice are subject to the End User License
+     * Agreement(s) entered into by the website owner. All other parties are
+     * explicitly restricted from using the Licensed Webfonts(s).
+     *
+     * You may obtain a valid license at the URLs below.
+     *
+     * Webfont: ProximaNova-BoldIt by Mark Simonson
+     * URL: https://www.myfonts.com/fonts/marksimonson/proxima-nova/bold-it/
+     *
+     * Webfont: ProximaNova-Bold by Mark Simonson
+     * URL: https://www.myfonts.com/fonts/marksimonson/proxima-nova/bold/
+     *
+     * Webfont: ProximaNova-Regular by Mark Simonson
+     * URL: https://www.myfonts.com/fonts/marksimonson/proxima-nova/regular/
+     *
+     * Webfont: ProximaNova-RegularIt by Mark Simonson
+     * URL: https://www.myfonts.com/fonts/marksimonson/proxima-nova/regular-it/
+     *
+     *
+     * License: https://www.myfonts.com/viewlicense?type=web&buildid=3698457
+     * Licensed pageviews: 1,000,000
+     * Webfonts copyright: Copyright (c) Mark Simonson, 2005. All rights reserved.
+     *
+     * © 2019 MyFonts Inc
+    */
+    -->
+
+		<link rel="stylesheet" media="all" href="/sites/default/files/css/css_Cf-TZNg4Kb0IWGxe3fTeIgHrA3KJ8pAhvOzy20YrKRw.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_zpqRFeYwJZXTrM3RRuXG7jiPCF4vZKlYks3DdZZ6SSI.css" />
+<link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Lora:400,400i,700,700i|Roboto+Slab:400,700|Roboto:400,400i,700&amp;display=swap" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_w5_uO-Q9rcUhhfBZ-rQvVPK8wCdKVVgEOJ3FrsiwXaw.css" />
+
+		<script src="//securepubads.g.doubleclick.net/tag/js/gpt.js" async></script>
+
+        <script>
+      window.googletag = window.googletag || {cmd: []};
+    </script>
+	</head>
+  <body  class="no-sidebar path-taxonomy">
+		<a id="page-top" href="#main-content" class="visually-hidden focusable skip-to-content-link">
+			Skip to main content
+		</a>
+
+        <script type="application/javascript">
+      var ezt = ezt || [];
+      (function(){
+        var elem = document.createElement('script');
+        elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://pixel") + ".quantserve.com/aquant.js?a=p-a2EEpzn47yTDS";
+        elem.async = true;
+        elem.type = "text/javascript";
+        var scpt = document.getElementsByTagName('script')[0];
+        scpt.parentNode.insertBefore(elem,scpt);
+      }());
+      ezt.push({qacct: 'p-a2EEpzn47yTDS',
+        orderid: '',
+        revenue: ''
+      });
+    </script>
+    <noscript aria-hidden="true"><img alt="Quantcast" border="0" height="1" src="//pixel.quantserve.com/pixel/p-a2EEpzn47yTDS.gif?labels=_fp.event.Default" style="display: none;" width="1" /></noscript>
+
+        <script type="application/javascript">
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window,document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '123516855160140');
+      fbq('track', 'PageView');
+    </script>
+    <noscript aria-hidden="true"><img height="1" width="1" src="https://www.facebook.com/tr?id=123516855160140&ev=PageView&noscript=1"/></noscript>
+
+    <noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NL5QH48" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+
+
+
+
+
+<div class="layout-container">
+  
+  <div class="pagetop">
+          <div data-drupal-messages-fallback class="hidden"></div>
+
+      </div>
+
+
+  <header class="header clearfix" role="banner">
+    
+    <div class="header-region">
+    <div class="header-content container">
+      <div class="row">
+        <div id="block-crosscut-branding" class="block-crosscut-branding">
+	
+							<div class="site-name">
+				<div class="logo">
+					<a href="/" title="Crosscut" rel="home" class="site-logo">
+						<img class="" src="/themes/custom/crosscut/logo_crosscut_2019.png" alt="Home" />
+					</a>
+				</div>
+				<a href="/" title="Home" rel="home" class="visually-hidden" aria-hidden="true" tabindex="-1">Crosscut</a>
+			</div>
+				
+</div>
+<div id="block-megamainmenu" class="block-megamainmenu block">
+	<div class="block-outer">
+		<div class="block-inner">
+			
+			
+							
+              <ul id="mega-main-menu" class="mega-main-menu hidden-xs hidden-sm d-none d-lg-flex" >
+                    <li class="mega-link-item link-1">
+                                <div class="mobile-item-wrapper d-lg-none">
+                <a href="/politics" data-drupal-link-system-path="taxonomy/term/1">Politics</a>
+              </div>
+              <div class="d-none d-lg-block">
+                                  <a class="mega-link-item__link" id="mega-toggle-1" href="" role="button" data-toggle="collapse" data-target="#mega-drop-1" aria-expanded="false" aria-controls="mega-drop-1">
+                    Politics
+                  </a>
+                              </div>
+                  
+                          <div id="mega-drop-1" class="mega-dropdown collapse multi-collapse" aria-labelledby="mega-toggle-1">
+            <div class="collapse-pad-wrap">
+              
+
+
+
+<div class="row colossal-menu-link__container">
+      <div class="col-lg-7 colossal-menu__top-story">
+      
+            <div class="field field--name-field-top-story field--type-viewsreference field--label-hidden field--item">
+  <div class="views-element-container form-group"><div class="view-name-main-menu-top-story js-view-dom-id-62c9e27c4a03677e0d5327bc0e73698e0cbaebfb0d329c3a5c82b7c7567eabd5">
+  
+  
+  
+
+      <header>
+      <span>Top Story</span>
+    </header>
+  
+  
+  
+
+    
+  <div class="views-row">
+    
+
+
+
+
+
+
+
+
+
+
+
+<article role="article" class="teaser teaser--2col teaser--view-mode--menu-teaser article-node article-node--menu-teaser">
+
+  <div class="row teaser__row">
+    <div  class="teaser__col col-md-5">
+      <div class="teaser__img-wrap img-icon-wrap">
+                <a  href="/politics/2022/08/wa-state-delays-watchdog-reports-prisons-concerning-advocates" title="WA state delays watchdog reports on prisons, concerning advocates" target="_self" tabindex="-1">
+
+                                    
+            <div class="field field--name-field-hero-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/default/files/styles/three_two_450x300/public/images/articles/prisonreport_hero.jpg?h=3980e4de&amp;itok=NISgmcJb" width="450" height="300" alt="A photo of Monroe Correctional Complex in Monroe, Washington." />
+
+
+</div>
+      
+                      
+                                
+        </a>
+      </div>
+    </div>
+    <div  class="teaser__col col-md-7">
+      <div class="teaser__text-wrap">
+
+        
+                  
+          <h3  class="teaser__title">
+            <a  href="/politics/2022/08/wa-state-delays-watchdog-reports-prisons-concerning-advocates" title="WA state delays watchdog reports on prisons, concerning advocates" target="_self" rel="bookmark3">
+              <span>WA state delays watchdog reports on prisons, concerning advocates</span>
+
+            </a>
+          </h3>
+          
+        
+        <div class="teaser__text">
+          
+    <div class="teaser__metadata">
+      <span
+          class="authored-by">by 
+      <ul class="field_author list-unstyled inline">
+              <li><a href="/author/joseph-osullivan" hreflang="en">Joseph O&#039;Sullivan</a></li>
+          </ul>
+   </span>
+      <span class="separator-slant separator--slant"> / </span>
+      <span class="published-date">August 11, 2022</span>
+    </div>
+
+              </div>
+      </div>
+    </div>
+  </div>
+
+</article>
+
+  </div>
+
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+</div>
+      
+      <div class="colossal-menu-link__extra_links">
+        
+      <div class="field field--name-field-category-link field--type-link field--label-hidden field--item">
+      <a class="btn btn-primary" href="/politics">All Politics</a>
+    </div>
+  
+        
+      </div>
+    </div>
+        <div class="col-lg-5 colossal-menu__menu__latest">
+      
+            <div class="field field--name-field-latest field--type-viewsreference field--label-hidden field--item">
+  <div class="views-element-container form-group"><div class="field--name-field-latest view-name-main-menu-latest js-view-dom-id-b7049c513ed56a88112acefb6f1bde211192767a99838d8e2ab71a5ef7e1c7e5">
+  
+  
+  
+
+      <header>
+      <span>Latest</span>
+    </header>
+  
+  
+  
+
+    
+  <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/politics/2022/08/trumps-presence-hovers-over-wa-primary-elections" hreflang="en">Trump&#039;s presence hovers over WA primary elections</a></span></div>
+  </div>
+  
+  <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/politics/2022/08/us-rep-jaime-herrera-beutler-poised-lose-primary-trump-endorsee" hreflang="en">U.S. Rep Jaime Herrera Beutler poised to lose primary to Trump endorsee </a></span></div>
+  </div>
+  
+  <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/politics/2022/08/no-red-wave-sight-after-early-returns-key-legislative-race" hreflang="en">No red wave in sight after early returns in key legislative race</a></span></div>
+  </div>
+
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+</div>
+      
+    </div>
+  </div>
+
+
+                          </div>
+          </div>
+        
+      </li>
+                <li class="mega-link-item link-3">
+                                <div class="mobile-item-wrapper d-lg-none">
+                <a href="/culture" data-drupal-link-system-path="taxonomy/term/3">Culture</a>
+              </div>
+              <div class="d-none d-lg-block">
+                                  <a class="mega-link-item__link" id="mega-toggle-3" href="" role="button" data-toggle="collapse" data-target="#mega-drop-3" aria-expanded="false" aria-controls="mega-drop-3">
+                    Culture
+                  </a>
+                              </div>
+                  
+                          <div id="mega-drop-3" class="mega-dropdown collapse multi-collapse" aria-labelledby="mega-toggle-3">
+            <div class="collapse-pad-wrap">
+              
+
+
+
+<div class="row colossal-menu-link__container">
+      <div class="col-lg-7 colossal-menu__top-story">
+      
+            <div class="field field--name-field-top-story field--type-viewsreference field--label-hidden field--item">
+  <div class="views-element-container form-group"><div class="view-name-main-menu-top-story js-view-dom-id-2b1a99a0ffd45bb8c598f62a0c26d8ce5c09a5f781027579f0a92048046c5a88">
+  
+  
+  
+
+      <header>
+      <span>Top Story</span>
+    </header>
+  
+  
+  
+
+    
+  <div class="views-row">
+    
+
+
+
+
+
+
+
+
+
+
+
+<article role="article" class="teaser teaser--2col teaser--view-mode--menu-teaser article-node article-node--menu-teaser">
+
+  <div class="row teaser__row">
+    <div  class="teaser__col col-md-5">
+      <div class="teaser__img-wrap img-icon-wrap">
+                <a  href="/culture/2022/08/made-there-kingston-pop-dishes-out-popular-latin-favorites" title="Made There: This Kingston pop-up dishes out popular Latin favorites" target="_self" tabindex="-1">
+
+                                    
+            <div class="field field--name-field-hero-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/default/files/styles/three_two_450x300/public/images/articles/tamaleargensal.jpg?h=8f74817f&amp;itok=iUdAdkxt" width="450" height="300" alt="A tamale in the making" />
+
+
+</div>
+      
+                      
+                                    <div class="teaser__icon icon icon-video"></div>
+                      
+        </a>
+      </div>
+    </div>
+    <div  class="teaser__col col-md-7">
+      <div class="teaser__text-wrap">
+
+        
+                  
+          <h3  class="teaser__title">
+            <a  href="/culture/2022/08/made-there-kingston-pop-dishes-out-popular-latin-favorites" title="Made There: This Kingston pop-up dishes out popular Latin favorites" target="_self" rel="bookmark3">
+              <span>Made There: This Kingston pop-up dishes out popular Latin favorites</span>
+
+            </a>
+          </h3>
+          
+        
+        <div class="teaser__text">
+          
+    <div class="teaser__metadata">
+      <span
+          class="authored-by">by 
+      <ul class="field_author list-unstyled inline">
+              <li><a href="/author/sarah-hall" hreflang="en">Sarah Hall</a></li>
+          </ul>
+   </span>
+      <span class="separator-slant separator--slant"> / </span>
+      <span class="published-date">August 12, 2022</span>
+    </div>
+
+              </div>
+      </div>
+    </div>
+  </div>
+
+</article>
+
+  </div>
+
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+</div>
+      
+      <div class="colossal-menu-link__extra_links">
+        
+      <div class="field field--name-field-category-link field--type-link field--label-hidden field--item">
+      <a class="btn btn-primary" href="/culture">All Culture</a>
+    </div>
+  
+        
+      </div>
+    </div>
+        <div class="col-lg-5 colossal-menu__menu__latest">
+      
+            <div class="field field--name-field-latest field--type-viewsreference field--label-hidden field--item">
+  <div class="views-element-container form-group"><div class="field--name-field-latest view-name-main-menu-latest js-view-dom-id-2d856a22c891fd93a8b057e090a1aa314071020a651c3e94c7e6a636f10b9268">
+  
+  
+  
+
+      <header>
+      <span>Latest</span>
+    </header>
+  
+  
+  
+
+    
+  <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/culture/2022/08/artsea-threads-technology-stitch-art-across-seattle" hreflang="en">ArtSEA: Threads of technology stitch art across Seattle</a></span></div>
+  </div>
+  
+  <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/culture/2022/08/report-puget-sounds-arts-and-culture-sector-danger-exodus" hreflang="en">Report: Puget Sound’s arts and culture sector in danger of exodus</a></span></div>
+  </div>
+  
+  <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/culture/2022/08/made-there-iggys-alive-cultured-anything-sour" hreflang="en">Made There: Iggy’s Alive &amp; Cultured is anything but sour</a></span></div>
+  </div>
+
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+</div>
+      
+    </div>
+  </div>
+
+
+                          </div>
+          </div>
+        
+      </li>
+                <li class="mega-link-item link-5">
+                                <div class="mobile-item-wrapper d-lg-none">
+                <a href="/equity" data-drupal-link-system-path="taxonomy/term/5">Equity</a>
+              </div>
+              <div class="d-none d-lg-block">
+                                  <a class="mega-link-item__link" id="mega-toggle-5" href="" role="button" data-toggle="collapse" data-target="#mega-drop-5" aria-expanded="false" aria-controls="mega-drop-5">
+                    Equity
+                  </a>
+                              </div>
+                  
+                          <div id="mega-drop-5" class="mega-dropdown collapse multi-collapse" aria-labelledby="mega-toggle-5">
+            <div class="collapse-pad-wrap">
+              
+
+
+
+<div class="row colossal-menu-link__container">
+      <div class="col-lg-7 colossal-menu__top-story">
+      
+            <div class="field field--name-field-top-story field--type-viewsreference field--label-hidden field--item">
+  <div class="views-element-container form-group"><div class="view-name-main-menu-top-story js-view-dom-id-30d2badd90b109f1de374bf8b3d32f4d9ca9fd0fcaae75744efc7ccce3173922">
+  
+  
+  
+
+      <header>
+      <span>Top Story</span>
+    </header>
+  
+  
+  
+
+    
+  <div class="views-row">
+    
+
+
+
+
+
+
+
+
+
+
+
+<article role="article" class="teaser teaser--2col teaser--view-mode--menu-teaser article-node article-node--menu-teaser">
+
+  <div class="row teaser__row">
+    <div  class="teaser__col col-md-5">
+      <div class="teaser__img-wrap img-icon-wrap">
+                <a  href="/equity/2022/08/meet-bipoc-groups-working-make-outdoors-accessible" title="Meet the BIPOC groups working to make the outdoors accessible" target="_self" tabindex="-1">
+
+                                    
+            <div class="field field--name-field-hero-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/default/files/styles/three_two_450x300/public/images/articles/bipocoutdoors_hero.jpeg?h=0a8b6f8b&amp;itok=tl77ggJr" width="450" height="300" alt="A group of nine hikers and a dog pose for a photo at a viewpoint" />
+
+
+</div>
+      
+                      
+                                
+        </a>
+      </div>
+    </div>
+    <div  class="teaser__col col-md-7">
+      <div class="teaser__text-wrap">
+
+        
+                  
+          <h3  class="teaser__title">
+            <a  href="/equity/2022/08/meet-bipoc-groups-working-make-outdoors-accessible" title="Meet the BIPOC groups working to make the outdoors accessible" target="_self" rel="bookmark3">
+              <span>Meet the BIPOC groups working to make the outdoors accessible</span>
+
+            </a>
+          </h3>
+          
+        
+        <div class="teaser__text">
+          
+    <div class="teaser__metadata">
+      <span
+          class="authored-by">by 
+      <ul class="field_author list-unstyled inline">
+              <li><a href="/author/maleeha-syed" hreflang="en">Maleeha Syed</a></li>
+          </ul>
+   </span>
+      <span class="separator-slant separator--slant"> / </span>
+      <span class="published-date">August 12, 2022</span>
+    </div>
+
+              </div>
+      </div>
+    </div>
+  </div>
+
+</article>
+
+  </div>
+
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+</div>
+      
+      <div class="colossal-menu-link__extra_links">
+        
+      <div class="field field--name-field-category-link field--type-link field--label-hidden field--item">
+      <a class="btn btn-primary" href="/equity">All Equity</a>
+    </div>
+  
+        
+      </div>
+    </div>
+        <div class="col-lg-5 colossal-menu__menu__latest">
+      
+            <div class="field field--name-field-latest field--type-viewsreference field--label-hidden field--item">
+  <div class="views-element-container form-group"><div class="field--name-field-latest view-name-main-menu-latest js-view-dom-id-4b63946039fea09fff1079662e08cc5cfe779a5e57405b9dbddd8d19b379f8a1">
+  
+  
+  
+
+      <header>
+      <span>Latest</span>
+    </header>
+  
+  
+  
+
+    
+  <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/equity/2022/08/what-988-call-line-could-mean-was-black-communities" hreflang="en">What the 988 call line could mean for WA&#039;s Black communities</a></span></div>
+  </div>
+  
+  <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/equity/2022/07/full-injustice-burden-court-fines-vary-race-county-wa" hreflang="en">&#039;Full of injustice&#039;: Burden of court fines vary by race, county in WA</a></span></div>
+  </div>
+  
+  <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/equity/2022/07/abortion-doulas-wa-adjust-post-roe-world" hreflang="en">Abortion doulas in WA adjust to a post-Roe world</a></span></div>
+  </div>
+
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+</div>
+      
+    </div>
+  </div>
+
+
+                          </div>
+          </div>
+        
+      </li>
+                <li class="mega-link-item link-7">
+                                <div class="mobile-item-wrapper d-lg-none">
+                <a href="/environment" data-drupal-link-system-path="taxonomy/term/7">Environment</a>
+              </div>
+              <div class="d-none d-lg-block">
+                                  <a class="mega-link-item__link" id="mega-toggle-7" href="" role="button" data-toggle="collapse" data-target="#mega-drop-7" aria-expanded="false" aria-controls="mega-drop-7">
+                    Environment
+                  </a>
+                              </div>
+                  
+                          <div id="mega-drop-7" class="mega-dropdown collapse multi-collapse" aria-labelledby="mega-toggle-7">
+            <div class="collapse-pad-wrap">
+              
+
+
+
+<div class="row colossal-menu-link__container">
+      <div class="col-lg-7 colossal-menu__top-story">
+      
+            <div class="field field--name-field-top-story field--type-viewsreference field--label-hidden field--item">
+  <div class="views-element-container form-group"><div class="view-name-main-menu-top-story js-view-dom-id-f15bc0a68d976afda8b6766b0e27fbc9bf0f1381f24177ac3229f9cf73cae2d9">
+  
+  
+  
+
+      <header>
+      <span>Top Story</span>
+    </header>
+  
+  
+  
+
+    
+  <div class="views-row">
+    
+
+
+
+
+
+
+
+
+
+
+
+<article role="article" class="teaser teaser--2col teaser--view-mode--menu-teaser article-node article-node--menu-teaser">
+
+  <div class="row teaser__row">
+    <div  class="teaser__col col-md-5">
+      <div class="teaser__img-wrap img-icon-wrap">
+                <a  href="/environment/2022/08/rainiers-largest-glacier-melting-heres-what-means-downstream" title="Rainier&amp;#039;s largest glacier is melting. Here&amp;#039;s what that means downstream" target="_self" tabindex="-1">
+
+                                    
+            <div class="field field--name-field-hero-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/default/files/styles/three_two_450x300/public/images/articles/emmons-for-crosscut-19.jpg?h=56d0ca2e&amp;itok=vw0ycSEd" width="450" height="300" alt="Emmons glacier" />
+
+
+</div>
+      
+                      
+                                
+        </a>
+      </div>
+    </div>
+    <div  class="teaser__col col-md-7">
+      <div class="teaser__text-wrap">
+
+        
+                  
+          <h3  class="teaser__title">
+            <a  href="/environment/2022/08/rainiers-largest-glacier-melting-heres-what-means-downstream" title="Rainier&amp;#039;s largest glacier is melting. Here&amp;#039;s what that means downstream" target="_self" rel="bookmark3">
+              <span>Rainier&#039;s largest glacier is melting. Here&#039;s what that means downstream</span>
+
+            </a>
+          </h3>
+          
+        
+        <div class="teaser__text">
+          
+    <div class="teaser__metadata">
+      <span
+          class="authored-by">by 
+      <ul class="field_author list-unstyled inline">
+              <li><a href="/author/ashli-blow" hreflang="en">Ashli Blow</a></li>
+          </ul>
+   </span>
+      <span class="separator-slant separator--slant"> / </span>
+      <span class="published-date">August 10, 2022</span>
+    </div>
+
+              </div>
+      </div>
+    </div>
+  </div>
+
+</article>
+
+  </div>
+
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+</div>
+      
+      <div class="colossal-menu-link__extra_links">
+        
+      <div class="field field--name-field-category-link field--type-link field--label-hidden field--item">
+      <a class="btn btn-primary" href="/environment">All Environment</a>
+    </div>
+  
+        
+      </div>
+    </div>
+        <div class="col-lg-5 colossal-menu__menu__latest">
+      
+            <div class="field field--name-field-latest field--type-viewsreference field--label-hidden field--item">
+  <div class="views-element-container form-group"><div class="field--name-field-latest view-name-main-menu-latest js-view-dom-id-02949a4e0c6d84d64bfbff178964718fc628e5f7f5d66e6ab2c5b3a09078a730">
+  
+  
+  
+
+      <header>
+      <span>Latest</span>
+    </header>
+  
+  
+  
+
+    
+  <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/environment/2022/08/madeline-ostrander-how-your-home-will-change-climate" hreflang="en">Madeline Ostrander on how your home will change with the climate</a></span></div>
+  </div>
+  
+  <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/environment/2022/08/undercurrents-play-columbia-river-dams-debate" hreflang="en">The undercurrents at play in the Columbia River dams debate</a></span></div>
+  </div>
+  
+  <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/environment/2022/08/indigenous-sea-gardens-fed-communities-preserved-ecosystems" hreflang="en">Indigenous sea gardens fed communities, preserved ecosystems</a></span></div>
+  </div>
+
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+</div>
+      
+    </div>
+  </div>
+
+
+                          </div>
+          </div>
+        
+      </li>
+                <li class="mega-link-item link-26">
+                                <div class="mobile-item-wrapper d-lg-none">
+                <a href="/video" data-drupal-link-system-path="taxonomy/term/89">Video</a>
+              </div>
+              <div class="d-none d-lg-block">
+                                  <a class="mega-link-item__link" id="mega-toggle-26" href="" role="button" data-toggle="collapse" data-target="#mega-drop-26" aria-expanded="false" aria-controls="mega-drop-26">
+                    Video
+                  </a>
+                              </div>
+                  
+                          <div id="mega-drop-26" class="mega-dropdown collapse multi-collapse" aria-labelledby="mega-toggle-26">
+            <div class="collapse-pad-wrap">
+              
+
+
+
+<div class="row colossal-menu-link__container">
+      <div class="col-lg-7 colossal-menu__top-story">
+      
+            <div class="field field--name-field-top-story field--type-viewsreference field--label-hidden field--item">
+  <div class="views-element-container form-group"><div class="view-name-main-menu-top-story js-view-dom-id-2a28c10e9f437495a7d5c151b0c1043cba0f2cd89d199e1182623867f3e9a367">
+  
+  
+  
+
+      <header>
+      <span>Latest Video</span>
+    </header>
+  
+  
+  
+
+    
+  <div class="views-row">
+    
+
+
+
+
+
+
+
+
+
+
+
+<article role="article" class="teaser teaser--2col teaser--view-mode--menu-teaser video-node video-node--menu-teaser">
+
+  <div class="row teaser__row">
+    <div  class="teaser__col col-md-5">
+      <div class="teaser__img-wrap img-icon-wrap">
+                <a  href="/video/made-there/argensal" title="Argensal" target="_self" tabindex="-1">
+
+                                    
+            <div class="field field--name-field-teaser-image field--type-image field--label-hidden field--item">  <a href="/video/made-there/argensal" title="/video/made-there/argensal"><img loading="lazy" src="/sites/default/files/styles/three_two_450x300/public/2022-08/QalL8Rl-asset-mezzanine-16x9-zlG5MA8_0.jpg?h=d1cb525d&amp;itok=VWvrH3pO" width="450" height="300" alt="Maria and Sabrina of Argensal" />
+
+</a>
+</div>
+      
+                      
+                                
+        </a>
+      </div>
+    </div>
+    <div  class="teaser__col col-md-7">
+      <div class="teaser__text-wrap">
+
+                  <div class="teaser__eyebrow">
+            
+            <div class="field field--name-field-series field--type-entity-reference field--label-hidden field--item"><a href="/video/made-there" hreflang="en">Made There</a></div>
+      
+          </div>
+        
+                  
+          <h3  class="teaser__title">
+            <a  href="/video/made-there/argensal" title="Argensal" target="_self" rel="bookmark3">
+              <span>Argensal</span>
+
+            </a>
+          </h3>
+          
+        
+        <div class="teaser__text">
+          
+    <div class="teaser__metadata">
+      <span class="authored-by">by </span>
+      <span class="separator-slant separator--slant"> / </span>
+      <span class="published-date">August 12, 2022</span>
+    </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+</article>
+
+
+  </div>
+
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+</div>
+      
+      <div class="colossal-menu-link__extra_links">
+        
+      <div class="field field--name-field-category-link field--type-link field--label-hidden field--item">
+      <a class="btn btn-primary" href="/video">All Video</a>
+    </div>
+  
+        
+      </div>
+    </div>
+        <div class="col-lg-5 colossal-menu__menu__latest">
+      
+            <div class="field field--name-field-latest field--type-viewsreference field--label-hidden field--item">
+  <div class="views-element-container form-group"><div class="field--name-field-latest view-name-main-menu-latest js-view-dom-id-35e645c61e6b41117f751d3d15319a5382fc45e9530689e1da8541afabc68c89">
+  
+  
+  
+
+      <header>
+      <span>More</span>
+    </header>
+  
+  
+  
+
+    
+  <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/video/made-there/iggys-alive-cultured" hreflang="en">Iggy&#039;s Alive &amp; Cultured</a></span></div>
+  </div>
+  
+  <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/video/made-there/ancient-grains-kitchen" hreflang="en">Ancient Grains Kitchen</a></span></div>
+  </div>
+  
+  <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/video/made-there/silver-city-brewery" hreflang="en">Silver City Brewery</a></span></div>
+  </div>
+
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+</div>
+      
+    </div>
+  </div>
+
+
+                          </div>
+          </div>
+        
+      </li>
+        </ul>
+  
+
+
+
+			
+			
+		</div>
+	</div>
+</div>
+
+
+
+<nav role="navigation"
+     aria-labelledby="block-secondarynav-menu" id="block-secondarynav" class="block-secondarynav collapse">
+            
+  <h2 class="visually-hidden" id="block-secondarynav-menu">Secondary Nav</h2>
+        <div id="mobile-wrap" class="d-lg-none secondary-nav-mobile block-secondarynav__inner">
+      <div class="secondary-nav-mobile__container">
+        <div class="secondary-nav-mobile__row secondary-nav-mobile__row--first">
+          <div class="secondary-nav-mobile__col">
+            <ul class="buttons"></ul>
+          </div>
+        </div>
+        <div class="secondary-nav-mobile__row secondary-nav-mobile__row--second">
+          <div class="secondary-nav-mobile__col col-auto">
+            <ul class="social"></ul>
+          </div>
+          <div class="secondary-nav-mobile__col col-auto">
+            <ul class="account-mgmnt"></ul>
+          </div>
+        </div>
+        <div class="secondary-nav-mobile__row secondary-nav-mobile__row--third">
+          <div class="secondary-nav-mobile__col col-6">
+            <div class="secondary-nav-mobile__primary-menu">
+              
+              <ul class="menu clearfix">
+        
+            	            <li class="parent-menu-0 link-number-1 menu-item">
+                          <a href="/politics" data-drupal-link-system-path="taxonomy/term/1">Politics</a>
+              </li>
+        	            <li class="parent-menu-0 link-number-2 menu-item">
+                          <a href="/culture" data-drupal-link-system-path="taxonomy/term/3">Culture</a>
+              </li>
+        	            <li class="parent-menu-0 link-number-3 menu-item">
+                          <a href="/equity" data-drupal-link-system-path="taxonomy/term/5">Equity</a>
+              </li>
+        	            <li class="parent-menu-0 link-number-4 menu-item">
+                          <a href="/environment" data-drupal-link-system-path="taxonomy/term/7">Environment</a>
+              </li>
+        	            <li class="parent-menu-0 link-number-5 menu-item">
+                          <a href="/search" data-drupal-link-system-path="search">Search</a>
+              </li>
+    
+
+        	    
+  
+
+
+            </div>
+          </div>
+          <div class="secondary-nav-mobile__col col-6">
+            <div class="secondary-nav-mobile__secondary-menu">
+              
+						<ul>
+
+		
+											<li class="parent-menu-0 my-account">
+				<a href="/my-account" class="user-account" data-drupal-link-system-path="my-account">Member Log In</a>
+							</li>
+											<li class="parent-menu-0 newsletters">
+				<a href="/newsletters" class="btn btn-secondary btn btn-secondary btn btn-secondary btn btn-secondary" data-drupal-link-system-path="node/55236">Subscribe</a>
+							</li>
+											<li class="parent-menu-0 donate">
+				<a href="/donate" target="_blank" class="btn btn-primary d-lg-none btn btn-primary d-lg-none" data-drupal-link-system-path="node/67696">Donate</a>
+							</li>
+											<li class="parent-menu-0 http:www.facebook.comcrosscut">
+				<a href="http://www.facebook.com/crosscut" class="ico ico-facebook clearfix" target="_blank" title="facebook.com/crosscut">Facebook</a>
+							</li>
+											<li class="parent-menu-0 http:twitter.comcrosscut">
+				<a href="http://twitter.com/crosscut" class="ico ico-twitter" target="_blank" title="twitter.com/crosscut">Twitter</a>
+							</li>
+											<li class="parent-menu-0 https:www.instagram.comcrosscut">
+				<a href="https://www.instagram.com/crosscut/" class="ico ico-instagram" target="_blank" title="instagram.com/crosscut">Instagram</a>
+							</li>
+											<li class="parent-menu-0 focus">
+				<a href="/focus" class="strong clearfix" target="_self" data-drupal-link-system-path="node/62876">Focus</a>
+							</li>
+											<li class="parent-menu-0 feature">
+				<a href="/feature" target="_self" class="strong clearfix strong clearfix" data-drupal-link-system-path="taxonomy/term/771">Features</a>
+							</li>
+											<li class="parent-menu-0 video">
+				<a href="/video" target="_self" class="strong" data-drupal-link-system-path="taxonomy/term/89">Video</a>
+							</li>
+											<li class="parent-menu-0 podcasts">
+				<a href="/podcasts" class="strong hr" title="Crosscut Podcasts" data-drupal-link-system-path="node/61306">Podcasts</a>
+							</li>
+											<li class="parent-menu-0 https:blackartslegacies.crosscut.com">
+				<a href="https://blackartslegacies.crosscut.com/">Black Arts Legacies</a>
+							</li>
+											<li class="parent-menu-0 festival">
+				<a href="/festival" data-drupal-link-system-path="node/77826">Crosscut Festival</a>
+							</li>
+											<li class="parent-menu-0 events">
+				<a href="/events" data-drupal-link-system-path="node/40117">Events</a>
+							</li>
+											<li class="parent-menu-0 about">
+				<a href="/about" data-drupal-link-system-path="node/51857">About</a>
+							</li>
+											<li class="parent-menu-0 https:www.cascadepublicmedia.orgcapital-campaign">
+				<a href="https://www.cascadepublicmedia.org/capital-campaign">Capital Campaign</a>
+							</li>
+											<li class="parent-menu-0 careers">
+				<a href="/careers">Careers</a>
+							</li>
+											<li class="parent-menu-0 newsletters">
+				<a href="/newsletters" data-drupal-link-system-path="node/55236">Newsletters</a>
+							</li>
+											<li class="parent-menu-0 advertise-crosscut">
+				<a href="/advertise-crosscut" data-drupal-link-system-path="node/35">Advertising</a>
+							</li>
+											<li class="parent-menu-0 contact-us">
+				<a href="/contact-us" data-drupal-link-system-path="node/33">Contact</a>
+							</li>
+		
+		</ul>
+	
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="desktop-wrap" class="d-none d-lg-block secondary-nav-desktop block-secondarynav__inner">
+      <div class="secondary-nav-desktop__container container">
+        
+						<ul>
+
+		
+											<li class="parent-menu-0 my-account">
+				<a href="/my-account" class="user-account" data-drupal-link-system-path="my-account">Member Log In</a>
+							</li>
+											<li class="parent-menu-0 newsletters">
+				<a href="/newsletters" class="btn btn-secondary btn btn-secondary btn btn-secondary btn btn-secondary" data-drupal-link-system-path="node/55236">Subscribe</a>
+							</li>
+											<li class="parent-menu-0 donate">
+				<a href="/donate" target="_blank" class="btn btn-primary d-lg-none btn btn-primary d-lg-none" data-drupal-link-system-path="node/67696">Donate</a>
+							</li>
+											<li class="parent-menu-0 http:www.facebook.comcrosscut">
+				<a href="http://www.facebook.com/crosscut" class="ico ico-facebook clearfix" target="_blank" title="facebook.com/crosscut">Facebook</a>
+							</li>
+											<li class="parent-menu-0 http:twitter.comcrosscut">
+				<a href="http://twitter.com/crosscut" class="ico ico-twitter" target="_blank" title="twitter.com/crosscut">Twitter</a>
+							</li>
+											<li class="parent-menu-0 https:www.instagram.comcrosscut">
+				<a href="https://www.instagram.com/crosscut/" class="ico ico-instagram" target="_blank" title="instagram.com/crosscut">Instagram</a>
+							</li>
+											<li class="parent-menu-0 focus">
+				<a href="/focus" class="strong clearfix" target="_self" data-drupal-link-system-path="node/62876">Focus</a>
+							</li>
+											<li class="parent-menu-0 feature">
+				<a href="/feature" target="_self" class="strong clearfix strong clearfix" data-drupal-link-system-path="taxonomy/term/771">Features</a>
+							</li>
+											<li class="parent-menu-0 video">
+				<a href="/video" target="_self" class="strong" data-drupal-link-system-path="taxonomy/term/89">Video</a>
+							</li>
+											<li class="parent-menu-0 podcasts">
+				<a href="/podcasts" class="strong hr" title="Crosscut Podcasts" data-drupal-link-system-path="node/61306">Podcasts</a>
+							</li>
+											<li class="parent-menu-0 https:blackartslegacies.crosscut.com">
+				<a href="https://blackartslegacies.crosscut.com/">Black Arts Legacies</a>
+							</li>
+											<li class="parent-menu-0 festival">
+				<a href="/festival" data-drupal-link-system-path="node/77826">Crosscut Festival</a>
+							</li>
+											<li class="parent-menu-0 events">
+				<a href="/events" data-drupal-link-system-path="node/40117">Events</a>
+							</li>
+											<li class="parent-menu-0 about">
+				<a href="/about" data-drupal-link-system-path="node/51857">About</a>
+							</li>
+											<li class="parent-menu-0 https:www.cascadepublicmedia.orgcapital-campaign">
+				<a href="https://www.cascadepublicmedia.org/capital-campaign">Capital Campaign</a>
+							</li>
+											<li class="parent-menu-0 careers">
+				<a href="/careers">Careers</a>
+							</li>
+											<li class="parent-menu-0 newsletters">
+				<a href="/newsletters" data-drupal-link-system-path="node/55236">Newsletters</a>
+							</li>
+											<li class="parent-menu-0 advertise-crosscut">
+				<a href="/advertise-crosscut" data-drupal-link-system-path="node/35">Advertising</a>
+							</li>
+											<li class="parent-menu-0 contact-us">
+				<a href="/contact-us" data-drupal-link-system-path="node/33">Contact</a>
+							</li>
+		
+		</ul>
+	
+
+
+      </div>
+    </div>
+    
+</nav>
+<div id="block-header-membership-button" class="block-header-membership-button block">
+	<div class="block-outer">
+		<div class="block-inner">
+			
+			
+							
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><div><a class="btn btn-primary" href="/donate" title="Membership">Membership</a></div>
+</div>
+      
+			
+			
+		</div>
+	</div>
+</div>
+<div class="views-exposed-form views-exposed-form-acquia-search-page block-acquia-search-form-header block block-header-search container collapse" id="block-acquia-search-form-header" data-drupal-selector="views-exposed-form-acquia-search-header">
+	<div class="block-outer">
+		<div class="block-inner">
+			
+			
+							<form action="/search" method="get" id="views-exposed-form-acquia-search-header" accept-charset="UTF-8" role="search">
+  <div class="form-group js-form-item form-item js-form-type-textfield form-item-search js-form-item-search">
+      <label for="edit-search">Search</label>
+        <input data-drupal-selector="edit-search" type="text" id="edit-search" name="search" value="" size="30" maxlength="128" class="form-text" />
+
+        </div>
+
+  <div data-drupal-selector="edit-actions" class="form-actions form-group js-form-wrapper form-wrapper"><input data-drupal-selector="edit-submit-acquia-search" type="submit" id="edit-submit-acquia-search" value="Search" class="button js-form-submit form-submit" />
+</div>
+
+
+
+</form>
+
+			
+			
+		</div>
+	</div>
+</div>
+
+
+        <a href="javascript: void(0)" class="search-toggle collapsed" data-toggle="collapse" data-target="#block-acquia-search-form-header"
+           title="Search" role="button">
+          <span class="ico-white ico-mglass"></span>
+        </a>
+        <div class="secondary-menu-toggle collapsed" data-toggle="collapse" data-target="#block-secondarynav">
+          <a class="menu-toggle-ellipsis" href="javascript: void(0)" aria-label="Secondary Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+      </header>
+
+  
+  
+
+  
+
+  
+
+  <main class="main main-node-type-0 main--margin-top single-column" role="main">
+    <a id="main-content" tabindex="-1"></a>    
+    
+    
+    
+    <div class="layout-content-container layout-content-container--padding-top layout-content-container--padding-bottom">
+
+      
+              <div class="">
+
+          
+          <div class="layout-content ">
+            
+  <div class="content">
+          <div id="block-crosscut-content" class="block-crosscut-content block">
+	<div class="block-outer">
+		<div class="block-inner">
+			
+			
+							<div>
+  
+    
+  
+</div>
+
+			
+			
+		</div>
+	</div>
+</div>
+<div class="views-element-container block-views-block-taxonomy-term-block block container paragraph" id="block-views-block-taxonomy-term-block">
+	<div class="block-outer">
+		<div class="block-inner">
+			
+			
+							
+  <div class="form-group"><div class="view-name-taxonomy-term js-view-dom-id-9a45080fe9912f8dc593d7b7a4f3248862a5b1248fe2f75ba7e454a15cdd78fb">
+  
+  
+  
+
+  
+  
+  
+  <div class="views-element-container form-group"><div class="view-name-taxonomy-term js-view-dom-id-7e62822038eff7f6bd9f333660115049c69d1348a4d1ea617b97f2fc458db16d">
+  
+      <h1 class="field--name-field-section-header"><span>Latest in Kuya GEO</span></h1>
+        
+
+  
+  
+  
+
+    
+  <div class="latest-category views-row">
+    
+
+
+
+
+
+<article role="article" class="teaser teaser--1col teaser--view-mode--teaser-hero article-node article-node--teaser-hero">
+
+  <div class="teaser__img-wrap img-icon-wrap">
+    <a href="/2020/06/juneteenth-day-contains-multitudes"
+       title="Juneteenth: A day that contains multitudes"
+       target="_self"
+       tabindex="-1">
+
+                        
+            <div class="blazy blazy--field blazy--field-teaser-image blazy--field-teaser-image--teaser-hero field field--name-field-teaser-image field--type-image field--label-hidden field--item" data-blazy="">
+
+
+
+  
+
+                <div class="media media--blazy media--bundle--article media--image">  <img class="media__image media__element b-lazy b-responsive" decoding="async" loading="lazy" data-src="/sites/default/files/images/articles/_benjamin_danielson_teaser.jpg.jpg" srcset="" sizes="(min-width: 1030px) 960px, 88vw" data-srcset="/sites/default/files/styles/three_two_960x640/public/images/articles/_benjamin_danielson_teaser.jpg.jpg?h=10d202d3&amp;itok=J60LhLYV 960w, /sites/default/files/styles/three_two_1350x900/public/images/articles/_benjamin_danielson_teaser.jpg.jpg?h=10d202d3&amp;itok=3SWav-FZ 1350w" src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039;%20viewBox%3D&#039;0%200%201%201&#039;%2F%3E" alt="Dr. Ben Danielson" />
+
+        </div>
+        
+  
+</div>
+      
+              
+                        </a>
+  </div>
+  <div class="teaser__text-wrap">
+
+    
+          
+      <h2  class="teaser__title teaser__title--h2">
+        <a href="/2020/06/juneteenth-day-contains-multitudes"
+           title="Juneteenth: A day that contains multitudes"
+           target="_self">
+          <span>Juneteenth: A day that contains multitudes </span>
+
+        </a>
+      </h2>
+      
+    
+    <div class="teaser__text">
+                
+            <div class="field field--name-field-article-teaser field--type-text-long field--label-hidden field--item"><p>Seattleites reflect on freedom, resistance and joy to honor the day liberation from slavery finally arrived, over two years after Emancipation.</p></div>
+      
+    
+    <div class="teaser__metadata">
+      <span
+          class="authored-by">by 
+      <ul class="field_author list-unstyled inline">
+              <li><a href="/author/ben-danielson" hreflang="en">Ben Danielson</a></li>
+          </ul>
+   </span>
+      <span class="separator-slant"> / </span>
+      <span class="published-date">June 19, 2020</span>
+          </div>
+
+          </div>
+  </div>
+
+  </article>
+
+  </div>
+
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+
+
+  
+  <div data-drupal-views-infinite-scroll-content-wrapper class="views-infinite-scroll-content-wrapper clearfix form-group">  
+  <div class="views-row">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<article role="article" class="teaser teaser--2col teaser--view-mode--teaser-quarter article-node article-node--teaser-quarter">
+
+  <div class="row teaser__row">
+    <div  class="teaser__col col-12 col-md-3">
+      <div class="teaser__img-wrap img-icon-wrap">
+                <a  href="/2018/12/rhymes-and-rants-about-seattle-driving" title="Rhymes and rants about Seattle driving" target="_self" tabindex="-1">
+
+                                    
+            <div class="blazy blazy--field blazy--field-teaser-image blazy--field-teaser-image--teaser-quarter field field--name-field-teaser-image field--type-image field--label-hidden field--item" data-blazy="">
+
+
+
+  
+
+                <div class="media media--blazy media--bundle--article media--image"><img class="media__image media__element b-lazy" decoding="async" loading="lazy" data-src="/sites/default/files/styles/three_two_450x300/public/images/articles/geo-seattle-driving-posture_0.jpg?itok=LUen2w_0" src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039;%20viewBox%3D&#039;0%200%201%201&#039;%2F%3E" width="450" height="300" />
+        </div>
+        
+  
+</div>
+      
+                      
+                                    <div class="teaser__icon icon icon-video"></div>
+                      
+        </a>
+      </div>
+    </div>
+    <div  class="teaser__col col-12 col-md-9">
+      <div class="teaser__text-wrap">
+
+                  <div class="teaser__eyebrow">
+              
+            <div class="field field--name-field-category field--type-entity-reference field--label-hidden field--item"><a href="/culture" hreflang="en">Culture</a></div>
+      
+  
+          </div>
+        
+                  
+          <h3  class="teaser__title">
+            <a  href="/2018/12/rhymes-and-rants-about-seattle-driving" title="Rhymes and rants about Seattle driving" target="_self" rel="bookmark3">
+              <span>Rhymes and rants about Seattle driving</span>
+
+            </a>
+          </h3>
+          
+        
+        <div class="teaser__text">
+          
+          
+            <div class="field field--name-field-article-teaser field--type-text-long field--label-hidden field--item"><p>WATCH: Kuya Geo digs into the stereotypes of Seattle driving culture.</p></div>
+      
+    
+    <div class="teaser__metadata">
+      <span
+          class="authored-by">by 
+      <ul class="field_author list-unstyled inline">
+              <li><a href="/author/aileen-imperial" hreflang="en">Aileen Imperial</a><span class="comma"> &amp;</span></li>
+              <li><a href="/author/stephen-hegg" hreflang="en">Stephen Hegg</a></li>
+          </ul>
+   </span>
+      <span class="separator-slant separator--slant"> / </span>
+      <span class="month-day-year-date">December 19, 2018</span>
+
+          </div>
+
+              </div>
+      </div>
+    </div>
+  </div>
+
+</article>
+
+  </div>
+  
+  <div class="views-row">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<article role="article" class="teaser teaser--2col teaser--view-mode--teaser-quarter article-node article-node--teaser-quarter">
+
+  <div class="row teaser__row">
+    <div  class="teaser__col col-12 col-md-3">
+      <div class="teaser__img-wrap img-icon-wrap">
+                <a  href="/2018/12/how-filipino-community-took-root-seattle" title="How the Filipino community took root in Seattle" target="_self" tabindex="-1">
+
+                                    
+            <div class="blazy blazy--field blazy--field-teaser-image blazy--field-teaser-image--teaser-quarter field field--name-field-teaser-image field--type-image field--label-hidden field--item" data-blazy="">
+
+
+
+  
+
+                <div class="media media--blazy media--bundle--article media--image"><img alt="" class="media__image media__element b-lazy" decoding="async" loading="lazy" data-src="/sites/default/files/styles/three_two_450x300/public/images/articles/geo-f-town-still.jpg?itok=83ulcJBR" src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039;%20viewBox%3D&#039;0%200%201%201&#039;%2F%3E" width="450" height="300" />
+        </div>
+        
+  
+</div>
+      
+                      
+                                    <div class="teaser__icon icon icon-video"></div>
+                      
+        </a>
+      </div>
+    </div>
+    <div  class="teaser__col col-12 col-md-9">
+      <div class="teaser__text-wrap">
+
+                  <div class="teaser__eyebrow">
+              
+            <div class="field field--name-field-category field--type-entity-reference field--label-hidden field--item"><a href="/culture" hreflang="en">Culture</a></div>
+      
+  
+          </div>
+        
+                  
+          <h3  class="teaser__title">
+            <a  href="/2018/12/how-filipino-community-took-root-seattle" title="How the Filipino community took root in Seattle" target="_self" rel="bookmark3">
+              <span>How the Filipino community took root in Seattle</span>
+
+            </a>
+          </h3>
+          
+        
+        <div class="teaser__text">
+          
+          
+            <div class="field field--name-field-article-teaser field--type-text-long field--label-hidden field--item"><p>A look at the history of the Filipino community's presence in the Chinatown International District. </p></div>
+      
+    
+    <div class="teaser__metadata">
+      <span
+          class="authored-by">by 
+      <ul class="field_author list-unstyled inline">
+              <li><a href="/author/aileen-imperial" hreflang="en">Aileen Imperial</a><span class="comma"> &amp;</span></li>
+              <li><a href="/author/stephen-hegg" hreflang="en">Stephen Hegg</a></li>
+          </ul>
+   </span>
+      <span class="separator-slant separator--slant"> / </span>
+      <span class="month-day-year-date">December 12, 2018</span>
+
+          </div>
+
+              </div>
+      </div>
+    </div>
+  </div>
+
+</article>
+
+  </div>
+  
+  <div class="views-row">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<article role="article" class="teaser teaser--2col teaser--view-mode--teaser-quarter article-node article-node--teaser-quarter">
+
+  <div class="row teaser__row">
+    <div  class="teaser__col col-12 col-md-3">
+      <div class="teaser__img-wrap img-icon-wrap">
+                <a  href="/2018/11/generational-zigs-and-zags-immigrant-identity" title="The generational zigs and zags of immigrant identity" target="_self" tabindex="-1">
+
+                                    
+            <div class="blazy blazy--field blazy--field-teaser-image blazy--field-teaser-image--teaser-quarter field field--name-field-teaser-image field--type-image field--label-hidden field--item" data-blazy="">
+
+
+
+  
+
+                <div class="media media--blazy media--bundle--article media--image"><img alt="Blue Scholars co-founder George “Geo” Quibuyen" class="media__image media__element b-lazy" decoding="async" loading="lazy" data-src="/sites/default/files/styles/three_two_450x300/public/images/articles/geo_with_z_1.png?itok=32HeRg6c" src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039;%20viewBox%3D&#039;0%200%201%201&#039;%2F%3E" width="450" height="300" />
+        </div>
+        
+  
+</div>
+      
+                      
+                                    <div class="teaser__icon icon icon-video"></div>
+                      
+        </a>
+      </div>
+    </div>
+    <div  class="teaser__col col-12 col-md-9">
+      <div class="teaser__text-wrap">
+
+                  <div class="teaser__eyebrow">
+              
+            <div class="field field--name-field-category field--type-entity-reference field--label-hidden field--item"><a href="/culture" hreflang="en">Culture</a></div>
+      
+  
+          </div>
+        
+                  
+          <h3  class="teaser__title">
+            <a  href="/2018/11/generational-zigs-and-zags-immigrant-identity" title="The generational zigs and zags of immigrant identity" target="_self" rel="bookmark3">
+              <span>The generational zigs and zags of immigrant identity</span>
+
+            </a>
+          </h3>
+          
+        
+        <div class="teaser__text">
+          
+          
+            <div class="field field--name-field-article-teaser field--type-text-long field--label-hidden field--item"><p>Blue Scholars co-founder “Kuya Geo” on the push-pull of assimilation and heritage — and how it differs by immigrant generation.</p></div>
+      
+    
+    <div class="teaser__metadata">
+      <span
+          class="authored-by">by 
+      <ul class="field_author list-unstyled inline">
+              <li><a href="/author/aileen-imperial" hreflang="en">Aileen Imperial</a><span class="comma"> &amp;</span></li>
+              <li><a href="/author/stephen-hegg" hreflang="en">Stephen Hegg</a></li>
+          </ul>
+   </span>
+      <span class="separator-slant separator--slant"> / </span>
+      <span class="month-day-year-date">November 8, 2018</span>
+
+          </div>
+
+              </div>
+      </div>
+    </div>
+  </div>
+
+</article>
+
+  </div>
+  
+  <div class="views-row">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<article role="article" class="teaser teaser--2col teaser--view-mode--teaser-quarter article-node article-node--teaser-quarter">
+
+  <div class="row teaser__row">
+    <div  class="teaser__col col-12 col-md-3">
+      <div class="teaser__img-wrap img-icon-wrap">
+                <a  href="/2018/05/how-bruce-lee-destroyed-stereotype-asian-male" title="How Bruce Lee destroyed the stereotype of the Asian male" target="_self" tabindex="-1">
+
+                                    
+            <div class="blazy blazy--field blazy--field-teaser-image blazy--field-teaser-image--teaser-quarter field field--name-field-teaser-image field--type-image field--label-hidden field--item" data-blazy="">
+
+
+
+  
+
+                <div class="media media--blazy media--bundle--article media--image"><img class="media__image media__element b-lazy" decoding="async" loading="lazy" data-src="/sites/default/files/styles/three_two_450x300/public/images/articles/geoheadphones-post.jpg?itok=2oG19u2k" src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039;%20viewBox%3D&#039;0%200%201%201&#039;%2F%3E" width="450" height="300" />
+        </div>
+        
+  
+</div>
+      
+                      
+                                    <div class="teaser__icon icon icon-video"></div>
+                      
+        </a>
+      </div>
+    </div>
+    <div  class="teaser__col col-12 col-md-9">
+      <div class="teaser__text-wrap">
+
+                  <div class="teaser__eyebrow">
+              
+            <div class="field field--name-field-category field--type-entity-reference field--label-hidden field--item"><a href="/culture" hreflang="en">Culture</a></div>
+      
+  
+          </div>
+        
+                  
+          <h3  class="teaser__title">
+            <a  href="/2018/05/how-bruce-lee-destroyed-stereotype-asian-male" title="How Bruce Lee destroyed the stereotype of the Asian male" target="_self" rel="bookmark3">
+              <span>How Bruce Lee destroyed the stereotype of the Asian male</span>
+
+            </a>
+          </h3>
+          
+        
+        <div class="teaser__text">
+          
+          
+            <div class="field field--name-field-article-teaser field--type-text-long field--label-hidden field--item"><p>A new series featuring Blue Scholars co-founder George Quibuyen.</p></div>
+      
+    
+    <div class="teaser__metadata">
+      <span
+          class="authored-by">by 
+      <ul class="field_author list-unstyled inline">
+              <li><a href="/author/stephen-hegg" hreflang="en">Stephen Hegg</a><span class="comma"> &amp;</span></li>
+              <li><a href="/author/aileen-imperial" hreflang="en">Aileen Imperial</a></li>
+          </ul>
+   </span>
+      <span class="separator-slant separator--slant"> / </span>
+      <span class="month-day-year-date">May 10, 2018</span>
+
+          </div>
+
+              </div>
+      </div>
+    </div>
+  </div>
+
+</article>
+
+  </div>
+</div>
+
+
+  
+  
+<nav  class="pager__infinite-scroll">
+  </nav>
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+
+			
+			
+		</div>
+	</div>
+</div>
+
+      </div>
+
+          </div>
+
+          
+        </div>
+            </div>
+
+    
+  </main>
+
+  <footer class="footer d-print-none" role="contentinfo">
+    <div class="footer__content container">
+      <div class="row">
+        <div class="col-12 col-md-7">
+          
+<div class="region--footer">
+  <div class="footer__branding">
+    <a href="/" title="Crosscut" rel="home"
+       class="site-logo">
+      <img width="300" height="60"
+          src="/themes/custom/crosscut/assets/images/logos/crosscut_logo_footer.png"
+          alt="Crosscut, a service of Cascade Public Media"/>
+    </a>
+    <ul>
+      <li><a class="ico ico-facebook clearfix"
+             href="https://www.facebook.com/crosscut" target="_blank"
+             aria-label="facebook.com/crosscut">Facebook</a></li>
+      <li><a class="ico ico-twitter" href="https://twitter.com/crosscut"
+             target="_blank" aria-label="twitter.com/crosscut">Twitter</a></li>
+      <li><a class="ico ico-instagram"
+             href="https://www.instagram.com/crosscut/" target="_blank"
+             aria-label="instagram.com/crosscut">Instagram</a></li>
+      <li><a class="ico ico-rss"
+             href="/articles.xml" target="_blank"
+             aria-label="RSS/crosscut">RSS</a></li>
+    </ul>
+  </div>
+
+  
+  
+<div id="block-quick-subscribe-footer" class="block-quick-subscribe-footer block block-quick-subscribe block-quick-subscribe--default">
+  <div class="block-outer">
+    <div class="block-inner">
+      
+      
+              
+
+<div  class="ces-quick-subscribe-block--inline ces-quick-subscribe-block">
+      <div class="quick-subscribe-block-prefix">
+      <span>Sign up for the Crosscut Weekly newsletter
+</span>
+
+    </div>
+  
+  <div class="quick-subscribe-block-form">
+    <form class="crosscut-email-subscribe-quick-subscribe-form form-inline antibot" data-drupal-selector="crosscut-email-subscribe-quick-subscribe-form-2" data-action="/kuya-geo" action="/antibot" method="post" id="crosscut-email-subscribe-quick-subscribe-form--2" accept-charset="UTF-8">
+  <noscript>
+  <div class="antibot-no-js antibot-message antibot-message-warning">You must have JavaScript enabled to use this form.</div>
+</noscript>
+
+  <div id="crosscut-email-subscribe-quick-subscribe-form" data-drupal-selector="edit-container" class="form-group js-form-wrapper form-wrapper"><div class="form-group js-form-item form-item js-form-type-email form-item-email js-form-item-email form-no-label">
+      <label for="edit-email" class="visually-hidden js-form-required form-required">Email address</label>
+        <input placeholder="Enter your email address" autocomplete="email" data-drupal-selector="edit-email" type="email" id="edit-email" name="email" value="" size="60" maxlength="254" class="form-email required" required="required" aria-required="true" aria-label="input email" />
+
+        </div>
+
+  <div data-drupal-selector="edit-actions" class="form-actions form-group js-form-wrapper form-wrapper" id="edit-actions--2"><input class="btn btn-secondary button button--secondary js-form-submit form-submit" data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="op" value="Subscribe" />
+</div>
+
+</div>
+
+<input data-drupal-selector="edit-antibot-key" type="hidden" name="antibot_key" value="" />
+<input autocomplete="off" data-drupal-selector="form-zwvooh7hwrimor5k9imhhbvleh-uaia0oahickcmml8" type="hidden" name="form_build_id" value="form-ZWvOoh7HWriMor5k9ImHHbvleH-uAIA0OahIcKcmMl8" />
+<input data-drupal-selector="edit-crosscut-email-subscribe-quick-subscribe-form" type="hidden" name="form_id" value="crosscut_email_subscribe_quick_subscribe_form" />
+
+</form>
+<div class="ces-quick-subscribe-terms">By subscribing, you agree to receive occasional membership emails from Crosscut/Cascade Public Media.</div>
+  </div>
+
+  </div>
+
+      
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+        </div>
+        <div class="col-12 col-md-5">
+          
+  <div class="footer-menu row">
+          <div id="block-footer-menu-main" class="block-footer-menu-main block col-6">
+	<div class="block-outer">
+		<div class="block-inner">
+			
+			
+							
+              <ul class="menu clearfix">
+        
+            	            <li class="parent-menu-0 link-number-1 menu-item">
+                          <a href="/politics" data-drupal-link-system-path="taxonomy/term/1">Politics</a>
+              </li>
+        	            <li class="parent-menu-0 link-number-2 menu-item">
+                          <a href="/culture" data-drupal-link-system-path="taxonomy/term/3">Culture</a>
+              </li>
+        	            <li class="parent-menu-0 link-number-3 menu-item">
+                          <a href="/equity" data-drupal-link-system-path="taxonomy/term/5">Equity</a>
+              </li>
+        	            <li class="parent-menu-0 link-number-4 menu-item">
+                          <a href="/environment" data-drupal-link-system-path="taxonomy/term/7">Environment</a>
+              </li>
+        	            <li class="parent-menu-0 link-number-5 menu-item">
+                          <a href="/search" data-drupal-link-system-path="search">Search</a>
+              </li>
+    
+
+        	    
+  
+
+
+			
+			
+		</div>
+	</div>
+</div>
+<div id="block-footer-menu-secondary" class="block-footer-menu-secondary block col-6">
+	<div class="block-outer">
+		<div class="block-inner">
+			
+			
+							
+						<ul>
+
+		
+											<li class="parent-menu-0 my-account">
+				<a href="/my-account" class="user-account" data-drupal-link-system-path="my-account">Member Log In</a>
+							</li>
+											<li class="parent-menu-0 newsletters">
+				<a href="/newsletters" class="btn btn-secondary btn btn-secondary btn btn-secondary btn btn-secondary" data-drupal-link-system-path="node/55236">Subscribe</a>
+							</li>
+											<li class="parent-menu-0 donate">
+				<a href="/donate" target="_blank" class="btn btn-primary d-lg-none btn btn-primary d-lg-none" data-drupal-link-system-path="node/67696">Donate</a>
+							</li>
+											<li class="parent-menu-0 http:www.facebook.comcrosscut">
+				<a href="http://www.facebook.com/crosscut" class="ico ico-facebook clearfix" target="_blank" title="facebook.com/crosscut">Facebook</a>
+							</li>
+											<li class="parent-menu-0 http:twitter.comcrosscut">
+				<a href="http://twitter.com/crosscut" class="ico ico-twitter" target="_blank" title="twitter.com/crosscut">Twitter</a>
+							</li>
+											<li class="parent-menu-0 https:www.instagram.comcrosscut">
+				<a href="https://www.instagram.com/crosscut/" class="ico ico-instagram" target="_blank" title="instagram.com/crosscut">Instagram</a>
+							</li>
+											<li class="parent-menu-0 focus">
+				<a href="/focus" class="strong clearfix" target="_self" data-drupal-link-system-path="node/62876">Focus</a>
+							</li>
+											<li class="parent-menu-0 feature">
+				<a href="/feature" target="_self" class="strong clearfix strong clearfix" data-drupal-link-system-path="taxonomy/term/771">Features</a>
+							</li>
+											<li class="parent-menu-0 video">
+				<a href="/video" target="_self" class="strong" data-drupal-link-system-path="taxonomy/term/89">Video</a>
+							</li>
+											<li class="parent-menu-0 podcasts">
+				<a href="/podcasts" class="strong hr" title="Crosscut Podcasts" data-drupal-link-system-path="node/61306">Podcasts</a>
+							</li>
+											<li class="parent-menu-0 https:blackartslegacies.crosscut.com">
+				<a href="https://blackartslegacies.crosscut.com/">Black Arts Legacies</a>
+							</li>
+											<li class="parent-menu-0 festival">
+				<a href="/festival" data-drupal-link-system-path="node/77826">Crosscut Festival</a>
+							</li>
+											<li class="parent-menu-0 events">
+				<a href="/events" data-drupal-link-system-path="node/40117">Events</a>
+							</li>
+											<li class="parent-menu-0 about">
+				<a href="/about" data-drupal-link-system-path="node/51857">About</a>
+							</li>
+											<li class="parent-menu-0 https:www.cascadepublicmedia.orgcapital-campaign">
+				<a href="https://www.cascadepublicmedia.org/capital-campaign">Capital Campaign</a>
+							</li>
+											<li class="parent-menu-0 careers">
+				<a href="/careers">Careers</a>
+							</li>
+											<li class="parent-menu-0 newsletters">
+				<a href="/newsletters" data-drupal-link-system-path="node/55236">Newsletters</a>
+							</li>
+											<li class="parent-menu-0 advertise-crosscut">
+				<a href="/advertise-crosscut" data-drupal-link-system-path="node/35">Advertising</a>
+							</li>
+											<li class="parent-menu-0 contact-us">
+				<a href="/contact-us" data-drupal-link-system-path="node/33">Contact</a>
+							</li>
+		
+		</ul>
+	
+
+
+			
+			
+		</div>
+	</div>
+</div>
+
+      </div>
+
+        </div>
+        <div class="footer__copyright">
+          <p>
+            &copy;2022 Cascade Public Media. All Rights Reserved.<br/>
+            <a href="https://cascadepublicmedia.org/terms-use" target="_blank">Terms of Use</a> and <a
+              href="https://cascadepublicmedia.org/privacy-policy" target="_blank">Privacy Policy</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  
+
+</div>
+<div class="canvas-bkgd"></div>
+
+  </div>
+
+		
+		<script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"taxonomy\/term\/196","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"antibot\/antibot.form,blazy\/bio.ajax,blazy\/blazy,blazy\/classlist,blazy\/filter,blazy\/load,blazy\/polyfill,blazy\/promise,blazy\/raf,blazy\/ratio,blazy\/webp,core\/drupal.form,crosscut\/global-css,crosscut\/global-fonts,crosscut\/global-js-footer,crosscut\/global-js-header,crosscut\/mega-dropdown,crosscut\/secondary-nav-navigate,google_analytics\/google_analytics,system\/base,views\/views.ajax,views\/views.module,views_infinite_scroll\/views-infinite-scroll","theme":"crosscut","theme_token":null},"ajaxTrustedUrl":{"form_action_p_pvdeGsVG5zNF_XLGPTvYSKCf43t8qZYSwcfZl2uzM":true,"\/search":true},"google_analytics":{"account":{},"trackOutbound":true,"trackMailto":true,"trackTel":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackColorbox":true,"trackDomainMode":1},"antibot":{"forms":{"crosscut-email-subscribe-quick-subscribe-form--2":{"id":"crosscut-email-subscribe-quick-subscribe-form--2","key":"VxJcp8uzo0mnXBmg3AiIrIYQekItiGFV2rc0QgsxfPA"}}},"views":{"ajax_path":"\/views\/ajax","ajaxViews":{"views_dom_id:9a45080fe9912f8dc593d7b7a4f3248862a5b1248fe2f75ba7e454a15cdd78fb":{"view_name":"taxonomy_term","view_display_id":"block","view_args":"196","view_path":"\/taxonomy\/term\/196","view_base_path":"taxonomy\/term\/%","view_dom_id":"9a45080fe9912f8dc593d7b7a4f3248862a5b1248fe2f75ba7e454a15cdd78fb","pager_element":0}}},"blazy":{"loadInvisible":true,"offset":100,"saveViewportOffsetDelay":50,"validateDelay":25,"container":"","loader":true,"unblazy":false,"compat":true},"blazyIo":{"disconnect":false,"rootMargin":"0px","threshold":[0,0.25,0.5,0.75,1]},"crosscut":[],"user":{"uid":0,"permissionsHash":"5f3e55e02252bbc476dcbb6f274778c82b6f7d3f9b75275ea796f77b0b65298f"}}</script>
+<script src="/sites/default/files/js/js_IebicPjeze8GXn4y5to6cyjjkPwNjkEndUllwR9K3hE.js"></script>
+
+	<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"fa09265af4","applicationID":"798950867","transactionName":"ZVEEbBRVWBFWW0ZQWFwbJU0VQFkPGF1cTV5GTUhMB0xZDFhVS2ZDV0YLFgVVWA1ZUVFYWwhHA1sJWlIDRUFtWlZGUQFXFE0=","queueTime":0,"applicationTime":678,"atts":"SRYHGlxPSx8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

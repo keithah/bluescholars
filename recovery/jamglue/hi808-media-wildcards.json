@@ -1,0 +1,37 @@
+{
+  "archive": "Internet Archive Wayback CDX",
+  "queries": [
+    {
+      "query": "www.jamglue.com/tracks/11773079*",
+      "rows": [],
+      "error": null
+    },
+    {
+      "query": "www.jamglue.com/tracks/11773077*",
+      "rows": [
+        {
+          "timestamp": "20091125193112",
+          "original": "http://www.jamglue.com:80/tracks/11773077-Acapella-HI-808",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "Z5IKZF573LRQHR6MW2JTJJB5ZDALLYQT",
+          "length": "5256"
+        },
+        {
+          "timestamp": "20091126023957",
+          "original": "http://www.jamglue.com:80/tracks/11773077/popover?pop_id=1059529267-tlt-11773077",
+          "mimetype": "text/javascript",
+          "statuscode": "200",
+          "digest": "DC3DO2ZS6DPQIKAGY5GY6V3A3YYYJAJL",
+          "length": "1277"
+        }
+      ],
+      "error": null
+    },
+    {
+      "query": "www.jamglue.com/mixes/11682609*/download.mp3",
+      "rows": [],
+      "error": null
+    }
+  ]
+}

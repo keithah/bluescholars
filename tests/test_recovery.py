@@ -44,6 +44,9 @@ def test_provider_error_with_200_rejected(body):
 def test_real_content_with_error_word_not_rejected():
     validate_payload(b'<html><title>BLUE SCHOLARS</title><p>Error is the song name</p></html>','html')
 
+def test_xhtml_public_doctype_is_accepted():
+    validate_payload(b'<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"><html><head><title>Archived forum topic</title></head><body><p>Captured post text</p></body></html>', 'html')
+
 def test_untitled_provider_error_capture_rejected():
     body=b'<html><body>Error. Page cannot be displayed. Please contact your service provider for more details. (18)</body></html>'
     with pytest.raises(ValueError,match='provider/archive error'):
@@ -66,6 +69,13 @@ def test_audio_media_requires_a_recognized_binary_signature():
 def test_font_capture_requires_a_recognized_binary_signature():
     validate_payload(b'wOF2fixture','font')
     with pytest.raises(ValueError,match='font signature'): validate_payload(b'<html>landed page</html>','font')
+
+def test_pdf_capture_requires_pdf_header_and_end_marker():
+    validate_payload(b'%PDF-1.4\n1 0 obj\n<<>>\nendobj\n%%EOF', 'pdf')
+    with pytest.raises(ValueError,match='complete PDF'):
+        validate_payload(b'<html>PDF not found</html>', 'pdf')
+    with pytest.raises(ValueError,match='complete PDF'):
+        validate_payload(b'%PDF-1.4\ntruncated', 'pdf')
 
 def test_rank_before_reference_first():
     r={'url':HOME,'hints':['20200101000000'],'captures':[

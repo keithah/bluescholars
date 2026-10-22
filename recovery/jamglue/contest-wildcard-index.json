@@ -1,0 +1,100 @@
+{
+  "archive": "Internet Archive Wayback CDX",
+  "scope": "Wildcards under Blue Scholars Jamglue contest route prefixes, exact status 200 rows; 1000 row cap per query",
+  "queries": [
+    {
+      "query": "www.jamglue.com/contests/bluescholars*",
+      "http_status": 200,
+      "rows": [
+        {
+          "timestamp": "20070913204554",
+          "original": "http://www.jamglue.com:80/contests/bluescholars",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "53V736G7Z5GOGCV4SQ33MKNAX6QINDF2",
+          "length": "4354"
+        },
+        {
+          "timestamp": "20091024115242",
+          "original": "http://www.jamglue.com:80/contests/bluescholars/entries",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "NGF6N4CGNSZUJQUH7YBFKR6ZZV7N75H5",
+          "length": "8477"
+        },
+        {
+          "timestamp": "20090912051250",
+          "original": "http://www.jamglue.com:80/contests/bluescholars?src=bnr",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "Q5QCBUG2XBHYYZRFZMXN72EHEVYXKBQ7",
+          "length": "13110"
+        },
+        {
+          "timestamp": "20071024112910",
+          "original": "http://www.jamglue.com:80/contests/bluescholars_dj",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "DQA563BBHJTGQNGIKJGIAE4DJTVOGTMF",
+          "length": "27469"
+        },
+        {
+          "timestamp": "20071025000206",
+          "original": "http://www.jamglue.com:80/contests/bluescholars_mc",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "GTPT4GRGIWPYZCP5NU6XGVJQ2BJPT35Q",
+          "length": "15769"
+        }
+      ],
+      "error": null
+    },
+    {
+      "query": "jamglue.com/contests/bluescholars*",
+      "http_status": 200,
+      "rows": [
+        {
+          "timestamp": "20070913204554",
+          "original": "http://www.jamglue.com:80/contests/bluescholars",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "53V736G7Z5GOGCV4SQ33MKNAX6QINDF2",
+          "length": "4354"
+        },
+        {
+          "timestamp": "20091024115242",
+          "original": "http://www.jamglue.com:80/contests/bluescholars/entries",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "NGF6N4CGNSZUJQUH7YBFKR6ZZV7N75H5",
+          "length": "8477"
+        },
+        {
+          "timestamp": "20090912051250",
+          "original": "http://www.jamglue.com:80/contests/bluescholars?src=bnr",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "Q5QCBUG2XBHYYZRFZMXN72EHEVYXKBQ7",
+          "length": "13110"
+        },
+        {
+          "timestamp": "20071024112910",
+          "original": "http://www.jamglue.com:80/contests/bluescholars_dj",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "DQA563BBHJTGQNGIKJGIAE4DJTVOGTMF",
+          "length": "27469"
+        },
+        {
+          "timestamp": "20071025000206",
+          "original": "http://www.jamglue.com:80/contests/bluescholars_mc",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "GTPT4GRGIWPYZCP5NU6XGVJQ2BJPT35Q",
+          "length": "15769"
+        }
+      ],
+      "error": null
+    }
+  ]
+}

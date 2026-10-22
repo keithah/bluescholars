@@ -1,0 +1,13 @@
+{
+  "archive": "Internet Archive Wayback",
+  "failures": [
+    {
+      "error": "HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /cdx/search/cdx?url=http%3A%2F%2Fmedia.tumblr.com%2F86812e71c1fe259a78cef3d7cd7917e5%2Ftumblr_inline_mkn0u4tvM51qz4rgp.jpg&matchType=exact&output=json&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode%2Cdigest&showResumeKey=true&limit=500 (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))",
+      "url": "http://media.tumblr.com/86812e71c1fe259a78cef3d7cd7917e5/tumblr_inline_mkn0u4tvM51qz4rgp.jpg"
+    }
+  ],
+  "indexed_capture_records": 0,
+  "inventory_urls": 42,
+  "queried_urls": 42,
+  "query_type": "exact source-linked asset URL"
+}

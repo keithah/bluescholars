@@ -1,0 +1,35 @@
+{
+  "archive": "Arquivo.pt Full Text Search",
+  "endpoint": "https://arquivo.pt/textsearch",
+  "queries": [
+    {
+      "query": "\"Blue Scholars\" \"Bayani\" \"Seattle PI\"",
+      "page": 1,
+      "rows": 0,
+      "estimated_nr_results": 0
+    },
+    {
+      "query": "\"Blue Scholars\" \"The Program\" \"Neumos\"",
+      "page": 1,
+      "rows": 7,
+      "estimated_nr_results": 13
+    },
+    {
+      "query": "\"Blue Scholars\" \"A Song for Ourselves\"",
+      "page": 1,
+      "rows": 12,
+      "estimated_nr_results": 13
+    }
+  ],
+  "search_rows": 19,
+  "relevant_candidates": 2,
+  "attempted": 0,
+  "recovered": 0,
+  "failures": [],
+  "limitations": [
+    "This is a ranked, bounded full-text search, not an export of the complete Arquivo.pt index.",
+    "Only valid archived HTML is saved; third-party content remains recovery-only pending source/reuse review."
+  ],
+  "capture_records": 257,
+  "unique_payloads": 257
+}

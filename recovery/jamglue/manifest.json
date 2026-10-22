@@ -1,0 +1,672 @@
+{
+  "archive": "Internet Archive Wayback Machine",
+  "scope": "Blue Scholars-linked Jamglue remix contest pages",
+  "pages": {
+    "hub": {
+      "url": "http://www.jamglue.com/contests/bluescholars",
+      "capture_rows": 23,
+      "distinct_payloads": 21,
+      "captures": [
+        {
+          "timestamp": "20070913204554",
+          "original": "http://www.jamglue.com:80/contests/bluescholars",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "53V736G7Z5GOGCV4SQ33MKNAX6QINDF2",
+          "same_digest_timestamps": [
+            "20070913204554"
+          ],
+          "fetch_status": "recovered",
+          "actual_capture": "20070913204554",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 13524,
+          "sha256": "137c3e81c0c7a43371fab76abce70d09481b336fe6bfb0cf52024589b12e1823",
+          "raw_path": "recovery/jamglue/raw/hub-20070913204554-137c3e81c0c7a43371fab76abce70d09481b336fe6bfb0cf52024589b12e1823.html"
+        },
+        {
+          "timestamp": "20071011055524",
+          "original": "http://www.jamglue.com:80/contests/bluescholars",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "WOQKUGCGQ6NOPJ56HU7DZIMJEBTWJ65G",
+          "same_digest_timestamps": [
+            "20071011055524"
+          ],
+          "fetch_status": "recovered",
+          "actual_capture": "20071011055524",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 13874,
+          "sha256": "7bdb37e0c60c2d5dea282ee064d0637bc2be93b5ab14341ceef2a4f288594a37",
+          "raw_path": "recovery/jamglue/raw/hub-20071011055524-7bdb37e0c60c2d5dea282ee064d0637bc2be93b5ab14341ceef2a4f288594a37.html"
+        },
+        {
+          "timestamp": "20080201072214",
+          "original": "http://www.jamglue.com:80/contests/bluescholars",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "LCL34WCXBBQ54S2VCIBOH4YW4OBTFKM6",
+          "same_digest_timestamps": [
+            "20080201072214"
+          ],
+          "fetch_status": "recovered",
+          "actual_capture": "20080201072214",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 14890,
+          "sha256": "6069459a8e85042ce44e294b27cc0081f737162991ea9d431c3f6116580398c8",
+          "raw_path": "recovery/jamglue/raw/hub-20080201072214-6069459a8e85042ce44e294b27cc0081f737162991ea9d431c3f6116580398c8.html"
+        },
+        {
+          "timestamp": "20080522131547",
+          "original": "http://www.jamglue.com/contests/bluescholars",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "DDB5NLPNLNS67IANOGKDYI7KQ4KWVG25",
+          "same_digest_timestamps": [
+            "20080522131547"
+          ],
+          "fetch_status": "recovered",
+          "error": "ContentDecodingError: ('Received response with content-encoding: gzip, but failed to decode it.', error('Error -3 while decompressing data: incorrect header check'))",
+          "retry_error": "ContentDecodingError: ('Received response with content-encoding: gzip, but failed to decode it.', error('Error -3 while decompressing data: incorrect header check'))",
+          "retry_result": {
+            "requested_capture": "20080522131547",
+            "actual_capture": "20080522131547",
+            "original": "http://www.jamglue.com/contests/bluescholars",
+            "kind": "html",
+            "content_type": "text/html; charset=utf-8",
+            "bytes": 15032,
+            "sha256": "a8b087447f843a07befabf996d4ee7e85ec957d4a3e1ed373154d93145aa9879",
+            "raw_path": "recovery/jamglue/raw/hub-20080522131547-a8b087447f843a07befabf996d4ee7e85ec957d4a3e1ed373154d93145aa9879.html",
+            "status": "recovered",
+            "provider_url": "https://web.archive.org/web/20080522131547id_/http://www.jamglue.com/contests/bluescholars"
+          },
+          "actual_capture": "20080522131547",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 15032,
+          "sha256": "a8b087447f843a07befabf996d4ee7e85ec957d4a3e1ed373154d93145aa9879",
+          "raw_path": "recovery/jamglue/raw/hub-20080522131547-a8b087447f843a07befabf996d4ee7e85ec957d4a3e1ed373154d93145aa9879.html"
+        },
+        {
+          "timestamp": "20080617164123",
+          "original": "http://www.jamglue.com:80/contests/bluescholars",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "JBITBXSXVB2OHP44VMYYJHRZT7JQNH7R",
+          "same_digest_timestamps": [
+            "20080617164123"
+          ],
+          "fetch_status": "recovered",
+          "actual_capture": "20080617164123",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 15180,
+          "sha256": "543c4806749c6a226b234efb95654255df690418c777f6fb2334bb9d5c9daaac",
+          "raw_path": "recovery/jamglue/raw/hub-20080617164123-543c4806749c6a226b234efb95654255df690418c777f6fb2334bb9d5c9daaac.html"
+        },
+        {
+          "timestamp": "20080917024416",
+          "original": "http://www.jamglue.com:80/contests/bluescholars",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "OPFJUJNCO7SKKCV5S54KYKHFW4GJ4MET",
+          "same_digest_timestamps": [
+            "20080917024416"
+          ],
+          "fetch_status": "recovered",
+          "actual_capture": "20080917024416",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 15053,
+          "sha256": "de4b6451f4e2765c65aba933adef9725d2c4841c9c51156fb621ea5a6fa7b2f7",
+          "raw_path": "recovery/jamglue/raw/hub-20080917024416-de4b6451f4e2765c65aba933adef9725d2c4841c9c51156fb621ea5a6fa7b2f7.html"
+        },
+        {
+          "timestamp": "20081126100747",
+          "original": "http://www.jamglue.com/contests/bluescholars",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "NPSXPU3GVCH5TVMF5S7PUL5PBZIJ4HLO",
+          "same_digest_timestamps": [
+            "20081126100747"
+          ],
+          "fetch_status": "recovered",
+          "actual_capture": "20081126100747",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 15051,
+          "sha256": "9f9e0b64d40c1835683a7719da8d3f5b37900379de4b46b2e7f91add0766bae6",
+          "raw_path": "recovery/jamglue/raw/hub-20081126100747-9f9e0b64d40c1835683a7719da8d3f5b37900379de4b46b2e7f91add0766bae6.html"
+        },
+        {
+          "timestamp": "20081217132704",
+          "original": "http://www.jamglue.com:80/contests/bluescholars",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "KOBDEVPNDLZQ3NCHQ5BT6MXV3FI436KX",
+          "same_digest_timestamps": [
+            "20081217132704"
+          ],
+          "fetch_status": "recovered",
+          "actual_capture": "20081217132704",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 14913,
+          "sha256": "66db76434e0badf656a431bf6129da329958ca349235f052781868331459fd2e",
+          "raw_path": "recovery/jamglue/raw/hub-20081217132704-66db76434e0badf656a431bf6129da329958ca349235f052781868331459fd2e.html"
+        },
+        {
+          "timestamp": "20090221092719",
+          "original": "http://www.jamglue.com:80/contests/bluescholars",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "MTWTWK2A2CHNLTYIPCVCOM4NVIFGXZGU",
+          "same_digest_timestamps": [
+            "20090221092719"
+          ],
+          "fetch_status": "recovered",
+          "actual_capture": "20090221092719",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 14984,
+          "sha256": "b2ce7679ceea002b8cf1aac6e249d37e46acae3c20c5cce43752e6934a8c0be4",
+          "raw_path": "recovery/jamglue/raw/hub-20090221092719-b2ce7679ceea002b8cf1aac6e249d37e46acae3c20c5cce43752e6934a8c0be4.html"
+        },
+        {
+          "timestamp": "20090914115648",
+          "original": "http://www.jamglue.com:80/contests/bluescholars?",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "A2MOKJLKI5EYFA3L4IN3WTBOV3XOW723",
+          "same_digest_timestamps": [
+            "20090914115648"
+          ],
+          "fetch_status": "recovered",
+          "actual_capture": "20090914115648",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 57290,
+          "sha256": "006f40c84c043dfdc0fdec81e81e9e13150c47ac2071385f765a45c65754816b",
+          "raw_path": "recovery/jamglue/raw/hub-20090914115648-006f40c84c043dfdc0fdec81e81e9e13150c47ac2071385f765a45c65754816b.html"
+        },
+        {
+          "timestamp": "20090915005200",
+          "original": "http://www.jamglue.com:80/contests/bluescholars?",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "SMWGHIC4HPVDP2NP4HYNRTJNH4OTCYTS",
+          "same_digest_timestamps": [
+            "20090915005200"
+          ],
+          "fetch_status": "recovered",
+          "actual_capture": "20090915005200",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 57317,
+          "sha256": "1ab8125879e3b1fa8212ea4959809dd08b9d39ad17b3c5cf74ea5c0a8e760bab",
+          "raw_path": "recovery/jamglue/raw/hub-20090915005200-1ab8125879e3b1fa8212ea4959809dd08b9d39ad17b3c5cf74ea5c0a8e760bab.html"
+        },
+        {
+          "timestamp": "20100326165323",
+          "original": "http://www.jamglue.com/contests/bluescholars",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "7NNVNO3P6V5AFZRXC2HEDJ4AZ3FGPNKJ",
+          "same_digest_timestamps": [
+            "20100326165323"
+          ],
+          "fetch_status": "recovered",
+          "actual_capture": "20100326165323",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 77956,
+          "sha256": "82ed58f29286273ffc8d662d504f8f75a351fcd70c9da7cd6bc7f1c92a85cecc",
+          "raw_path": "recovery/jamglue/raw/hub-20100326165323-82ed58f29286273ffc8d662d504f8f75a351fcd70c9da7cd6bc7f1c92a85cecc.html"
+        },
+        {
+          "timestamp": "20100328083713",
+          "original": "http://www.jamglue.com/contests/bluescholars",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "EDNUWDDZQRD4UUTJOVTFJPERYLE3P5DX",
+          "same_digest_timestamps": [
+            "20100328083713"
+          ],
+          "fetch_status": "recovered",
+          "actual_capture": "20100328083713",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 77970,
+          "sha256": "fdc8e3303763482bc77b47fedb0529ffd713e6f5b3954b37bd1585e8d66574f2",
+          "raw_path": "recovery/jamglue/raw/hub-20100328083713-fdc8e3303763482bc77b47fedb0529ffd713e6f5b3954b37bd1585e8d66574f2.html"
+        },
+        {
+          "timestamp": "20100328172153",
+          "original": "http://www.jamglue.com/contests/bluescholars",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "RABSL3V67EO5GTEVXIPNS7M36FMYSQPF",
+          "same_digest_timestamps": [
+            "20100328172153",
+            "20100328172153"
+          ],
+          "fetch_status": "recovered",
+          "actual_capture": "20100328172153",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 77972,
+          "sha256": "c195780ad5083ec7d942ba1a6707688ba7b01ec5a4c7219133b8140cb19eb3fa",
+          "raw_path": "recovery/jamglue/raw/hub-20100328172153-c195780ad5083ec7d942ba1a6707688ba7b01ec5a4c7219133b8140cb19eb3fa.html"
+        },
+        {
+          "timestamp": "20100330055506",
+          "original": "http://www.jamglue.com/contests/bluescholars",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "Q5MNTGPRA5AXYL4JQJFPIOZX2GEKDBLE",
+          "same_digest_timestamps": [
+            "20100330055506",
+            "20100330055506"
+          ],
+          "fetch_status": "recovered",
+          "actual_capture": "20100330055506",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 77974,
+          "sha256": "0b064f1ccf6a211fc9edde14c85ef8b1987f824f4ce53fce3ee717bf646fdb0b",
+          "raw_path": "recovery/jamglue/raw/hub-20100330055506-0b064f1ccf6a211fc9edde14c85ef8b1987f824f4ce53fce3ee717bf646fdb0b.html"
+        },
+        {
+          "timestamp": "20100330175410",
+          "original": "http://www.jamglue.com/contests/bluescholars",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "P2B6EGGU7AIWJ4L256JLDIP7PTWPEJGL",
+          "same_digest_timestamps": [
+            "20100330175410"
+          ],
+          "fetch_status": "recovered",
+          "actual_capture": "20100330175410",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 77961,
+          "sha256": "49e1a216ac370bdbbd987bd7476ce14a07ac7f5c84b3b8f3fc0e92ec2a872c77",
+          "raw_path": "recovery/jamglue/raw/hub-20100330175410-49e1a216ac370bdbbd987bd7476ce14a07ac7f5c84b3b8f3fc0e92ec2a872c77.html"
+        },
+        {
+          "timestamp": "20100331180524",
+          "original": "http://www.jamglue.com/contests/bluescholars",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "ZDPMONRCF2YIEZZYP4LKF75C2TEYXDL3",
+          "same_digest_timestamps": [
+            "20100331180524"
+          ],
+          "fetch_status": "recovered",
+          "actual_capture": "20100331180524",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 77954,
+          "sha256": "af90a0e739ae5fc4fc86100ccb71bf83b699a6e4b6f735247427dfd4365b8979",
+          "raw_path": "recovery/jamglue/raw/hub-20100331180524-af90a0e739ae5fc4fc86100ccb71bf83b699a6e4b6f735247427dfd4365b8979.html"
+        },
+        {
+          "timestamp": "20100401215535",
+          "original": "http://www.jamglue.com/contests/bluescholars",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "XVAQQW5HFHXIJZR5SOB5UHB5CINGUBVI",
+          "same_digest_timestamps": [
+            "20100401215535"
+          ],
+          "fetch_status": "recovered",
+          "actual_capture": "20100402231627",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 77944,
+          "sha256": "9f7d8364c2ba9144c59822fab406f0b5e90577099c1b1c6e6cea887c04a13fca",
+          "raw_path": "recovery/jamglue/raw/hub-20100401215535-9f7d8364c2ba9144c59822fab406f0b5e90577099c1b1c6e6cea887c04a13fca.html"
+        },
+        {
+          "timestamp": "20100402231627",
+          "original": "http://www.jamglue.com/contests/bluescholars",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "X2NBBH7U27XT3I7PXLWV6WS3WSBOEY6A",
+          "same_digest_timestamps": [
+            "20100402231627"
+          ],
+          "fetch_status": "recovered",
+          "actual_capture": "20100402231627",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 77944,
+          "sha256": "9f7d8364c2ba9144c59822fab406f0b5e90577099c1b1c6e6cea887c04a13fca",
+          "raw_path": "recovery/jamglue/raw/hub-20100402231627-9f7d8364c2ba9144c59822fab406f0b5e90577099c1b1c6e6cea887c04a13fca.html"
+        },
+        {
+          "timestamp": "20201127014042",
+          "original": "http://www.jamglue.com/contests/bluescholars",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "5FJZFK7LFJQEB3L2YYLDMMUHJ2NMAOBS",
+          "same_digest_timestamps": [
+            "20201127014042"
+          ],
+          "fetch_status": "recovered",
+          "actual_capture": "20201127014042",
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 10418,
+          "sha256": "7eed8ecdfb224b49cb42b74d54c568e80cb76fee39d4957bc7b945e9be500c71",
+          "raw_path": "recovery/jamglue/raw/hub-20201127014042-7eed8ecdfb224b49cb42b74d54c568e80cb76fee39d4957bc7b945e9be500c71.html"
+        },
+        {
+          "timestamp": "20260115111647",
+          "original": "https://jamglue.com/contests/bluescholars",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "NCRTIJ6PMNOQTIY2V6JNQZEYPAELXYIA",
+          "same_digest_timestamps": [
+            "20260115111647"
+          ],
+          "fetch_status": "recovered",
+          "actual_capture": "20260115111647",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 906,
+          "sha256": "a384b9a65beedefb293918be8471ccd5675d1242d5097a171f3163a21e6e1125",
+          "raw_path": "recovery/jamglue/raw/hub-20260115111647-a384b9a65beedefb293918be8471ccd5675d1242d5097a171f3163a21e6e1125.html"
+        }
+      ]
+    },
+    "mc": {
+      "url": "http://www.jamglue.com/contests/bluescholars_mc",
+      "capture_rows": 4,
+      "distinct_payloads": 4,
+      "captures": [
+        {
+          "timestamp": "20071025000206",
+          "original": "http://www.jamglue.com:80/contests/bluescholars_mc",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "GTPT4GRGIWPYZCP5NU6XGVJQ2BJPT35Q",
+          "same_digest_timestamps": [
+            "20071025000206"
+          ],
+          "fetch_status": "recovered",
+          "actual_capture": "20071025000206",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 102674,
+          "sha256": "6dea94b0d809851ee6a40398bb91f8e00d844b7a379c39508354a61d83021099",
+          "raw_path": "recovery/jamglue/raw/mc-20071025000206-6dea94b0d809851ee6a40398bb91f8e00d844b7a379c39508354a61d83021099.html"
+        },
+        {
+          "timestamp": "20080221144250",
+          "original": "http://www.jamglue.com:80/contests/bluescholars_mc",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "O5HRENWG4XG4TBOJIPDNLCOKJX3QN6RW",
+          "same_digest_timestamps": [
+            "20080221144250"
+          ],
+          "fetch_status": "recovered",
+          "actual_capture": "20080221144250",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 98456,
+          "sha256": "ea8331ab487bfd17c47f8c5027e0adf8d3117741c542e1e35117c372a4308fde",
+          "raw_path": "recovery/jamglue/raw/mc-20080221144250-ea8331ab487bfd17c47f8c5027e0adf8d3117741c542e1e35117c372a4308fde.html"
+        },
+        {
+          "timestamp": "20080705154343",
+          "original": "http://www.jamglue.com/contests/bluescholars_mc",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "UFJGWFGUNJW3ZSV2WA6A4KSGZESNPEWB",
+          "same_digest_timestamps": [
+            "20080705154343"
+          ],
+          "fetch_status": "recovered",
+          "error": "ContentDecodingError: ('Received response with content-encoding: gzip, but failed to decode it.', error('Error -3 while decompressing data: incorrect header check'))",
+          "retry_error": "ContentDecodingError: ('Received response with content-encoding: gzip, but failed to decode it.', error('Error -3 while decompressing data: incorrect header check'))",
+          "retry_result": {
+            "requested_capture": "20080705154343",
+            "actual_capture": "20080705154343",
+            "original": "http://www.jamglue.com/contests/bluescholars_mc",
+            "kind": "html",
+            "content_type": "text/html; charset=utf-8",
+            "bytes": 98893,
+            "sha256": "c8d306a8c44ebc547b3792b2f64be394279399c91f5b4cb40003ca74122c39c4",
+            "raw_path": "recovery/jamglue/raw/mc-20080705154343-c8d306a8c44ebc547b3792b2f64be394279399c91f5b4cb40003ca74122c39c4.html",
+            "status": "recovered",
+            "provider_url": "https://web.archive.org/web/20080705154343id_/http://www.jamglue.com/contests/bluescholars_mc"
+          },
+          "actual_capture": "20080705154343",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 98893,
+          "sha256": "c8d306a8c44ebc547b3792b2f64be394279399c91f5b4cb40003ca74122c39c4",
+          "raw_path": "recovery/jamglue/raw/mc-20080705154343-c8d306a8c44ebc547b3792b2f64be394279399c91f5b4cb40003ca74122c39c4.html"
+        },
+        {
+          "timestamp": "20090221095922",
+          "original": "http://www.jamglue.com:80/contests/bluescholars_mc",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "VYYZAYHBW5QD6AXSVLVTZZYOW7RKIO7P",
+          "same_digest_timestamps": [
+            "20090221095922"
+          ],
+          "fetch_status": "recovered",
+          "actual_capture": "20090221095922",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 99109,
+          "sha256": "6cdf022a4b2a5f82f17eb7ec56bcaf9d679fad6679bb22ad6147cf41e9b3010a",
+          "raw_path": "recovery/jamglue/raw/mc-20090221095922-6cdf022a4b2a5f82f17eb7ec56bcaf9d679fad6679bb22ad6147cf41e9b3010a.html"
+        }
+      ]
+    },
+    "dj": {
+      "url": "http://www.jamglue.com/contests/bluescholars_dj",
+      "capture_rows": 14,
+      "distinct_payloads": 12,
+      "captures": [
+        {
+          "timestamp": "20071024112910",
+          "original": "http://www.jamglue.com:80/contests/bluescholars_dj",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "DQA563BBHJTGQNGIKJGIAE4DJTVOGTMF",
+          "same_digest_timestamps": [
+            "20071024112910"
+          ],
+          "fetch_status": "recovered",
+          "actual_capture": "20071024112910",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 300862,
+          "sha256": "5cb29b672cdd338968f610f16dc6940528800a28d008ece47b097ffaf11b72c2",
+          "raw_path": "recovery/jamglue/raw/dj-20071024112910-5cb29b672cdd338968f610f16dc6940528800a28d008ece47b097ffaf11b72c2.html"
+        },
+        {
+          "timestamp": "20080221123709",
+          "original": "http://www.jamglue.com:80/contests/bluescholars_dj",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "JGXC33APLYM2CTOBTCMRPRPYLANULKVQ",
+          "same_digest_timestamps": [
+            "20080221123709"
+          ],
+          "fetch_status": "recovered",
+          "actual_capture": "20080221123709",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 296243,
+          "sha256": "00c36b7ac7758b4c9708399ce56b885ef2e19602ec7c6276b9ffbe042c8fe692",
+          "raw_path": "recovery/jamglue/raw/dj-20080221123709-00c36b7ac7758b4c9708399ce56b885ef2e19602ec7c6276b9ffbe042c8fe692.html"
+        },
+        {
+          "timestamp": "20080705163312",
+          "original": "http://www.jamglue.com/contests/bluescholars_dj",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "RRZFGNUOVRQV2YZRLLZNR4Z3766SHS35",
+          "same_digest_timestamps": [
+            "20080705163312"
+          ],
+          "fetch_status": "recovered",
+          "error": "ContentDecodingError: ('Received response with content-encoding: gzip, but failed to decode it.', error('Error -3 while decompressing data: incorrect header check'))",
+          "retry_error": "ContentDecodingError: ('Received response with content-encoding: gzip, but failed to decode it.', error('Error -3 while decompressing data: incorrect header check'))",
+          "retry_result": {
+            "requested_capture": "20080705163312",
+            "actual_capture": "20080705163312",
+            "original": "http://www.jamglue.com/contests/bluescholars_dj",
+            "kind": "html",
+            "content_type": "text/html; charset=utf-8",
+            "bytes": 131072,
+            "sha256": "27232189862a6e3efb1faf529a760d4852638a327baf70a93c0e9baa1595e15a",
+            "raw_path": "recovery/jamglue/raw/dj-20080705163312-27232189862a6e3efb1faf529a760d4852638a327baf70a93c0e9baa1595e15a.html",
+            "status": "recovered",
+            "provider_url": "https://web.archive.org/web/20080705163312id_/http://www.jamglue.com/contests/bluescholars_dj"
+          },
+          "actual_capture": "20080705163312",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 131072,
+          "sha256": "27232189862a6e3efb1faf529a760d4852638a327baf70a93c0e9baa1595e15a",
+          "raw_path": "recovery/jamglue/raw/dj-20080705163312-27232189862a6e3efb1faf529a760d4852638a327baf70a93c0e9baa1595e15a.html"
+        },
+        {
+          "timestamp": "20081125063354",
+          "original": "http://www.jamglue.com/contests/bluescholars_dj",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "YGRKN63NILOTFWKIXH2YMDL2YTMTUJ6A",
+          "same_digest_timestamps": [
+            "20081125063354"
+          ],
+          "fetch_status": "recovered",
+          "actual_capture": "20081125063354",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 234734,
+          "sha256": "9a89dc433c267d1bee252062b709782a723c252e741ef4dc40035d67908c7ca4",
+          "raw_path": "recovery/jamglue/raw/dj-20081125063354-9a89dc433c267d1bee252062b709782a723c252e741ef4dc40035d67908c7ca4.html"
+        },
+        {
+          "timestamp": "20100326165349",
+          "original": "http://www.jamglue.com/contests/bluescholars_dj",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "IN53XYE66EGDYHVTYE7PP5EISCSZR3EW",
+          "same_digest_timestamps": [
+            "20100326165349"
+          ],
+          "fetch_status": "recovered",
+          "actual_capture": "20100326165349",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 225237,
+          "sha256": "5b13b34ed03b023289221e038a45cbfc93396decc57054224fec118e76911aa0",
+          "raw_path": "recovery/jamglue/raw/dj-20100326165349-5b13b34ed03b023289221e038a45cbfc93396decc57054224fec118e76911aa0.html"
+        },
+        {
+          "timestamp": "20100328083706",
+          "original": "http://www.jamglue.com/contests/bluescholars_dj",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "XUDFCDRLL36DKM6CTFTZNKJGCBDWSQOD",
+          "same_digest_timestamps": [
+            "20100328083706"
+          ],
+          "fetch_status": "recovered",
+          "actual_capture": "20100328083706",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 225231,
+          "sha256": "b14fbc027700897d6d0450636719e0f24bdc3ea806bf113fd189e04d85ca9e3a",
+          "raw_path": "recovery/jamglue/raw/dj-20100328083706-b14fbc027700897d6d0450636719e0f24bdc3ea806bf113fd189e04d85ca9e3a.html"
+        },
+        {
+          "timestamp": "20100328172114",
+          "original": "http://www.jamglue.com/contests/bluescholars_dj",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "L3XM4ECNL26UZHY4VVLKMK7WXTQNQ5CP",
+          "same_digest_timestamps": [
+            "20100328172114",
+            "20100328172114"
+          ],
+          "fetch_status": "recovered",
+          "actual_capture": "20100328172114",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 225229,
+          "sha256": "b0338f0f7032508f689d38e4ec49ad9f071f2eac42e4779f35d1aa89ef17ea8f",
+          "raw_path": "recovery/jamglue/raw/dj-20100328172114-b0338f0f7032508f689d38e4ec49ad9f071f2eac42e4779f35d1aa89ef17ea8f.html"
+        },
+        {
+          "timestamp": "20100330055425",
+          "original": "http://www.jamglue.com/contests/bluescholars_dj",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "VJXAQ6EUCBZRXKNOBCAVIIJB2VXABO74",
+          "same_digest_timestamps": [
+            "20100330055425",
+            "20100330055425"
+          ],
+          "fetch_status": "recovered",
+          "actual_capture": "20100330055425",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 225206,
+          "sha256": "d63f604200a86cf1b502159b566d8837144789c347a3544319de580959bfe210",
+          "raw_path": "recovery/jamglue/raw/dj-20100330055425-d63f604200a86cf1b502159b566d8837144789c347a3544319de580959bfe210.html"
+        },
+        {
+          "timestamp": "20100330175225",
+          "original": "http://www.jamglue.com/contests/bluescholars_dj",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "PPVT4VKJGI33VCOGBS35XQODLSPGIAAA",
+          "same_digest_timestamps": [
+            "20100330175225"
+          ],
+          "fetch_status": "recovered",
+          "actual_capture": "20100330175225",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 225193,
+          "sha256": "ff83dd1a1842b9c7709e799b77b3f233e6282bbdd6492476607c2bdfbdbfc9e9",
+          "raw_path": "recovery/jamglue/raw/dj-20100330175225-ff83dd1a1842b9c7709e799b77b3f233e6282bbdd6492476607c2bdfbdbfc9e9.html"
+        },
+        {
+          "timestamp": "20100331175610",
+          "original": "http://www.jamglue.com/contests/bluescholars_dj",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "M5YGVXVAI3GB5JWACIROH6WM7H6R2GPV",
+          "same_digest_timestamps": [
+            "20100331175610"
+          ],
+          "fetch_status": "recovered",
+          "actual_capture": "20100331175610",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 225236,
+          "sha256": "ad88abcd7b0570f7dbee444ba3709ac3fdaab187400e18639fb135f720f1d9e0",
+          "raw_path": "recovery/jamglue/raw/dj-20100331175610-ad88abcd7b0570f7dbee444ba3709ac3fdaab187400e18639fb135f720f1d9e0.html"
+        },
+        {
+          "timestamp": "20100401214451",
+          "original": "http://www.jamglue.com/contests/bluescholars_dj",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "ILE2JJLGGUPIB63FYLT3UKJKSK54BM72",
+          "same_digest_timestamps": [
+            "20100401214451"
+          ],
+          "fetch_status": "recovered",
+          "actual_capture": "20100402231700",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 225214,
+          "sha256": "a95150ab00aff2d3010b33226ab94831764bd9a347dd057d78a1c17088d6250a",
+          "raw_path": "recovery/jamglue/raw/dj-20100401214451-a95150ab00aff2d3010b33226ab94831764bd9a347dd057d78a1c17088d6250a.html"
+        },
+        {
+          "timestamp": "20100402231700",
+          "original": "http://www.jamglue.com/contests/bluescholars_dj",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "AI6YE34CQJWWJFCOLFKIT7JEIPM5SLI5",
+          "same_digest_timestamps": [
+            "20100402231700"
+          ],
+          "fetch_status": "recovered",
+          "actual_capture": "20100402231700",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 225214,
+          "sha256": "a95150ab00aff2d3010b33226ab94831764bd9a347dd057d78a1c17088d6250a",
+          "raw_path": "recovery/jamglue/raw/dj-20100402231700-a95150ab00aff2d3010b33226ab94831764bd9a347dd057d78a1c17088d6250a.html"
+        }
+      ]
+    }
+  },
+  "attempts": [],
+  "last_recovery_batch": {
+    "completed_utc": "2026-10-22T02:50:07.678504+00:00",
+    "retried_pages": 3,
+    "recovered_assets": 25,
+    "asset_rows_attempted": 25
+  }
+}

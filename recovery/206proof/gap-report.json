@@ -2,7 +2,7 @@
   "schema_version": 1,
   "scope": "206proof.com/* Internet Archive CDX query and selected exact replay captures",
   "status": "partial_source_checkpoint_no_public_site_build",
-  "retrieved_utc": "2026-10-19T03:21:33Z",
+  "retrieved_utc": "2026-10-22T00:00:00Z",
   "capture_index": {
     "all_status": {
       "url": "206proof.com/*",
@@ -22,27 +22,27 @@
     }
   },
   "recovery": {
-    "attempted_capture_records": 2967,
-    "validated_payload_records": 2958,
-    "failed_or_rejected_records": 9,
+    "attempted_capture_records": 7516,
+    "validated_payload_records": 7460,
+    "failed_or_rejected_records": 56,
     "by_kind_result": {
-      "html:recovered": 2070,
-      "html:failed": 9,
-      "css:recovered": 91,
-      "image:recovered": 790,
-      "audio:recovered": 7
+      "audio:recovered": 7,
+      "css:recovered": 128,
+      "html:failed": 56,
+      "html:recovered": 6163,
+      "image:recovered": 1162
     },
-    "unique_sha256_payloads": 2708,
-    "sum_payload_bytes": 88141692,
-    "raw_directory_bytes": 86151873
+    "unique_sha256_payloads": 6741,
+    "sum_payload_bytes": 193395153,
+    "raw_directory_bytes": 189055189
   },
   "vanilla_2008_2012": {
     "selector": "latest status-200 text/html capture per exact original URL; query strings and www aliases preserved",
     "selected_exact_urls": 5137,
-    "attempted_selected": 1000,
-    "validated_selected": 995,
-    "failed_selected": 5,
-    "queued_selected": 4137
+    "attempted_selected": 5137,
+    "validated_selected": 5086,
+    "failed_selected": 51,
+    "queued_selected": 0
   },
   "assets": {
     "source_pages_scanned": 2070,
@@ -180,12 +180,15 @@
   ],
   "known_gaps": [
     "Only the exact 206proof.com/* CDX query has been exhausted; no assertion is made for unqueried alternate domains or external hosts.",
-    "The current selector still has unattempted 2008\u20132012 Vanilla routes; queue count is recorded above.",
     "Referenced assets without successful CDX rows are not proven absent from the archive.",
     "External YouTube and SoundCloud references are not recovered playable media.",
     "No independent Common Crawl body or original forum page from Arquivo.pt has been recovered.",
     "Failed replay attempts remain individually listed for retry.",
     "No static 206proof edition, browser visual review, compatibility review, or deployment has been completed.",
-    "Rights review remains outstanding for public redistribution of posts, imagery, and audio."
+    "Rights review remains outstanding for public redistribution of posts, imagery, and audio.",
+    "All 5,137 routes selected by the current latest-capture Vanilla selector have been attempted; 56 failed or were rejected and remain listed in the manifest. The selector is not an exhaustive capture of alternate dates, hosts, routes outside the selected years, or inaccessible index results.",
+    "The 206proof resources remain recovery-only. No separate public static edition has been built or reviewed, and image/media redistribution rights have not been assessed.",
+    "All 5,137 routes selected by the current latest-capture Vanilla selector have been attempted; 56 failed or were rejected and remain listed in the manifest. This does not cover alternate dates, hosts, routes outside the selected years, or inaccessible index results.",
+    "The 206proof resources remain recovery-only. No separate public static edition has been built or reviewed, and image/media redistribution rights have not been assessed."
   ]
 }

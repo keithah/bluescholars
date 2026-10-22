@@ -1,0 +1,481 @@
+{
+  "archive": "Archive-It",
+  "search_endpoint": "https://archive-it.org/explore/",
+  "queries": [
+    {
+      "query": "bluescholars.com",
+      "status": 200,
+      "summary": "About 17 results for “bluescholars.com”.",
+      "records": 14
+    },
+    {
+      "query": "prometheusbrown",
+      "status": 200,
+      "summary": "About 66 results for “prometheusbrown”.",
+      "records": 18
+    },
+    {
+      "query": "Sabzi Blue Scholars",
+      "status": 200,
+      "summary": "About 750 results for “Sabzi Blue Scholars”.",
+      "records": 19
+    },
+    {
+      "query": "bluescholars myspace",
+      "status": 200,
+      "summary": "About 10 results for “bluescholars myspace”.",
+      "records": 9
+    },
+    {
+      "query": "Blue Scholars Jamglue",
+      "status": 200,
+      "summary": "About 5 results for “Blue Scholars Jamglue”.",
+      "records": 4
+    },
+    {
+      "query": "Blue Scholars Massline",
+      "status": 200,
+      "summary": "About 86 results for “Blue Scholars Massline”.",
+      "records": 15
+    },
+    {
+      "query": "Blue Scholars 2007",
+      "status": 200,
+      "summary": "About 1335 results for “Blue Scholars 2007”.",
+      "records": 17
+    },
+    {
+      "query": "Blue Scholars 2009",
+      "status": 200,
+      "summary": "About 1347 results for “Blue Scholars 2009”.",
+      "records": 20
+    },
+    {
+      "query": "Blue Scholars 2011",
+      "status": 200,
+      "summary": "About 1347 results for “Blue Scholars 2011”.",
+      "records": 18
+    },
+    {
+      "query": "206proof.com",
+      "status": 200,
+      "summary": "About 3 results for “206proof.com”.",
+      "records": 3
+    },
+    {
+      "query": "masslinemedia.com",
+      "status": 200,
+      "summary": "About 2 results for “masslinemedia.com”.",
+      "records": 2
+    }
+  ],
+  "search_cards": 139,
+  "relevant_capture_candidates": 76,
+  "attempted": 76,
+  "new_payloads": 10,
+  "failures": [
+    {
+      "replay_url": "https://wayback.archive-it.org/1952/20151026054046/http://www.dmzhawaii.org/?cat=1&amp;paged=36",
+      "title": "DMZ Hawai'i / Aloha 'Aina Uncategorized Page 36",
+      "original_url": "http://www.dmzhawaii.org/?cat=1&paged=36",
+      "error": "HTTPError: 404 Client Error: NOT FOUND for url: https://wayback.archive-it.org/1952/20151026054046id_/http://www.dmzhawaii.org/?cat=1&amp;paged=36"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/3996/20140628212510/http://zh.scribd.com/doc/102426082/The-Power-of-Hip-Hop-The-Beginnings-Present-Day-Hip-Hop-and-Possibilities-for-the-Future",
+      "title": "The Power of Hip Hop: The Beginnings, Present Day Hip Hop and Possibilities for the Future",
+      "original_url": "http://zh.scribd.com/doc/102426082/The-Power-of-Hip-Hop-The-Beginnings-Present-Day-Hip-Hop-and-Possibilities-for-the-Future",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/3996/20140628212510id_/http://zh.scribd.com/doc/102426082/The-Power-of-Hip-Hop-The-Beginnings-Present-Day-Hip-Hop-and-Possibilities-for-the-Future"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/1950/20121130002846/https://plus.google.com/105406713523222664494",
+      "title": "https://plus.google.com/105406713523222664494",
+      "original_url": "https://plus.google.com/105406713523222664494",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/1950/20121130002846id_/https://plus.google.com/105406713523222664494"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/2017/20101217225946/http://itunes.apple.com/us/podcast/citizen-radio/id387432077",
+      "title": "Citizen Radio - Download free podcast episodes by WeAreCitizenRadio.com on iTunes.",
+      "original_url": "http://itunes.apple.com/us/podcast/citizen-radio/id387432077",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/2017/20101217225946id_/http://itunes.apple.com/us/podcast/citizen-radio/id387432077"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/194/20090919073730/http://twitter.com/prometheusbrown",
+      "title": "Geo of Blue Scholars (prometheusbrown) on Twitter",
+      "original_url": "http://twitter.com/prometheusbrown",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/194/20090919073730id_/http://twitter.com/prometheusbrown"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/10019/20180227225331/http://prometheusbrown.tumblr.com/post/24492216094/vancouver-bc-click-photo-for-more-info",
+      "title": "http://prometheusbrown.tumblr.com/post/24492216094/vancouver-bc-click-photo-for-more-info",
+      "original_url": "http://prometheusbrown.tumblr.com/post/24492216094/vancouver-bc-click-photo-for-more-info",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/10019/20180227225331id_/http://prometheusbrown.tumblr.com/post/24492216094/vancouver-bc-click-photo-for-more-info"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/10019/20180227225325/http://jrcelski.com/post/24494566159/prometheusbrown-vancouver-bc-click-photo-for",
+      "title": "The Official Website of J.R. Celski — prometheusbrown: VANCOUVER, BC! click photo for...",
+      "original_url": "http://jrcelski.com/post/24494566159/prometheusbrown-vancouver-bc-click-photo-for",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/10019/20180227225325id_/http://jrcelski.com/post/24494566159/prometheusbrown-vancouver-bc-click-photo-for"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/1147/20090923212127/http://twitpic.com/photos/prometheusbrown",
+      "title": "Twitpic / prometheusbrown",
+      "original_url": "http://twitpic.com/photos/prometheusbrown",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/1147/20090923212127id_/http://twitpic.com/photos/prometheusbrown"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/4224/20140517205653/http://www.youtube.com/watch?v=GJUmuS0OCDo",
+      "title": "BLUE SCHOLARS: Coffee and Snow 2 - YouTube",
+      "original_url": "http://www.youtube.com/watch?v=GJUmuS0OCDo",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/4224/20140517205653id_/http://www.youtube.com/watch?v=GJUmuS0OCDo"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/4224/20241018194348/https://www.seattlechinatownid.com/",
+      "title": "Seattle's Chinatown-International District | Seattle Chinatown-International District",
+      "original_url": "https://www.seattlechinatownid.com/",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/4224/20241018194348id_/https://www.seattlechinatownid.com/"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/194/20121216010914/http://206up.com/2012/12/04/new-music-video-the-decisive-moment-anna-karina-blue-scholars/",
+      "title": "NEW MUSIC &amp; VIDEO: “The Decisive Moment” &amp; “Anna Karina” – Blue Scholars «",
+      "original_url": "http://206up.com/2012/12/04/new-music-video-the-decisive-moment-anna-karina-blue-scholars/",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/194/20121216010914id_/http://206up.com/2012/12/04/new-music-video-the-decisive-moment-anna-karina-blue-scholars/"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/5962/20171014022611/https://mobile.twitter.com/BlueScholars",
+      "title": "Blue Scholars (@BlueScholars) on Twitter",
+      "original_url": "https://mobile.twitter.com/BlueScholars",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/5962/20171014022611id_/https://mobile.twitter.com/BlueScholars"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/194/20110607044911/http://www.flickr.com/people/daps1/",
+      "title": "Flickr: daps1",
+      "original_url": "http://www.flickr.com/people/daps1/",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/194/20110607044911id_/http://www.flickr.com/people/daps1/"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/1035/20090809181329/https://www.blogcatalog.com/topic/sammamish/",
+      "title": "Sammamish // BlogCatalog Topic // BlogCatalog",
+      "original_url": "https://www.blogcatalog.com/topic/sammamish/",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/1035/20090809181329id_/https://www.blogcatalog.com/topic/sammamish/"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/1749/20111105022134/http://api.twitter.com/Alex_Marcus",
+      "title": "Alex Marcus (@Alex_Marcus) on Twitter",
+      "original_url": "http://api.twitter.com/Alex_Marcus",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/1749/20111105022134id_/http://api.twitter.com/Alex_Marcus"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/4837/20141010222809/http://storify.com/AJAMStream/the-confederate-flag-heritage-or-hate/embed?header=none&amp;border=false",
+      "title": "Deconstructing the Confederate flag controversy",
+      "original_url": "http://storify.com/AJAMStream/the-confederate-flag-heritage-or-hate/embed?header=none&border=false",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/4837/20141010222809id_/http://storify.com/AJAMStream/the-confederate-flag-heritage-or-hate/embed?header=none&amp;border=false"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/6193/20150219173253/https://instagr.in/u/cranegeronimo",
+      "title": "cranegeronimo | User Profile | Instagrin",
+      "original_url": "https://instagr.in/u/cranegeronimo",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/6193/20150219173253id_/https://instagr.in/u/cranegeronimo"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/194/20130319225802/http://a-tunes.net/2010/08/09/paul-dateh-mashes-up-dj-shadow-classic-jazz/",
+      "title": "Paul Dateh Mashes Up DJ Shadow &amp; Classic Jazz | a-Tunes",
+      "original_url": "http://a-tunes.net/2010/08/09/paul-dateh-mashes-up-dj-shadow-classic-jazz/",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/194/20130319225802id_/http://a-tunes.net/2010/08/09/paul-dateh-mashes-up-dj-shadow-classic-jazz/"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/6830/20160321135221/http://websta.me//n/equiknocks?lang=th",
+      "title": "Jesse Strauss Bass @equiknocks Instagram photos | Websta (Webstagram)",
+      "original_url": "http://websta.me//n/equiknocks?lang=th",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/6830/20160321135221id_/http://websta.me//n/equiknocks?lang=th"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/4224/20231218195940/https://api.kexp.org/v2/shows/?expand=hosts&amp;start_time_after=2023-12-04T19:00:00.000Z&amp;limit=200",
+      "title": "Show Public List – Django REST framework",
+      "original_url": "https://api.kexp.org/v2/shows/?expand=hosts&start_time_after=2023-12-04T19:00:00.000Z&limit=200",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/4224/20231218195940id_/https://api.kexp.org/v2/shows/?expand=hosts&amp;start_time_after=2023-12-04T19:00:00.000Z&amp;limit=200"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/4877/20141203025648/http://flickrslideshowembed.com/flickr-slideshow-embed-tumblr.html",
+      "title": "Flickr Slideshow Embed Tumblr | Flickr Slideshow",
+      "original_url": "http://flickrslideshowembed.com/flickr-slideshow-embed-tumblr.html",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/4877/20141203025648id_/http://flickrslideshowembed.com/flickr-slideshow-embed-tumblr.html"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/2284/20130306135226/http://en.wikipedia.org/wiki/Blue_Scholars",
+      "title": "Blue Scholars - Wikipedia, the free encyclopedia",
+      "original_url": "http://en.wikipedia.org/wiki/Blue_Scholars",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/2284/20130306135226id_/http://en.wikipedia.org/wiki/Blue_Scholars"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/3241/20191214174135/https://filmandmusic.seattle.gov/the-seattle-times-interviews-sabzi-of-the-blue-scholars/embed/",
+      "title": "THE SEATTLE TIMES INTERVIEWS SABZI OF THE BLUE SCHOLARS – Seattle Film + Music Blog",
+      "original_url": "https://filmandmusic.seattle.gov/the-seattle-times-interviews-sabzi-of-the-blue-scholars/embed/",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/3241/20191214174135id_/https://filmandmusic.seattle.gov/the-seattle-times-interviews-sabzi-of-the-blue-scholars/embed/"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/10695/20190825014135/http://uofsdmedia.com/coffee-and-coversation-with-sabzi-of-the-blue-scholars/embed/",
+      "title": "Coffee and Coversation with Sabzi of the Blue Scholars – USD Student Media",
+      "original_url": "http://uofsdmedia.com/coffee-and-coversation-with-sabzi-of-the-blue-scholars/embed/",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/10695/20190825014135id_/http://uofsdmedia.com/coffee-and-coversation-with-sabzi-of-the-blue-scholars/embed/"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/2370/20110315174318/http://www.vh1.com/artists/az/blue_scholars/artist.jhtml",
+      "title": "Blue Scholars | Free Music Videos, News, Photos, Interviews, Lyrics, Tour Dates, Ringtones | VH1",
+      "original_url": "http://www.vh1.com/artists/az/blue_scholars/artist.jhtml",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/2370/20110315174318id_/http://www.vh1.com/artists/az/blue_scholars/artist.jhtml"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/1215/20090116041236/http://www.mtv.com/music/artist/blue_scholars/artist.jhtml",
+      "title": "Blue Scholars | Music Videos, News, Photos, Tour Dates, Ringtones, and Lyrics | MTV",
+      "original_url": "http://www.mtv.com/music/artist/blue_scholars/artist.jhtml",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/1215/20090116041236id_/http://www.mtv.com/music/artist/blue_scholars/artist.jhtml"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/1029/20080306180204/http://www.motherjones.com/radio/2006/08/geologic_bio.html",
+      "title": "Geologic",
+      "original_url": "http://www.motherjones.com/radio/2006/08/geologic_bio.html",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/1029/20080306180204id_/http://www.motherjones.com/radio/2006/08/geologic_bio.html"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/2290/20110105061952/http://www.youtube.com//watch?v=mSO8IhJG0KM",
+      "title": "YouTube - Blue Scholars Performing \"The Ave.\" Bumbershoot 2006.",
+      "original_url": "http://www.youtube.com//watch?v=mSO8IhJG0KM",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/2290/20110105061952id_/http://www.youtube.com//watch?v=mSO8IhJG0KM"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/4224/20190402085907/https://www.knkx.org/post/video-local-hiphop-artists-tribute-pho-it-dont-rhyme-yo-0",
+      "title": "https://www.knkx.org/post/video-local-hiphop-artists-tribute-pho-it-dont-rhyme-yo-0",
+      "original_url": "https://www.knkx.org/post/video-local-hiphop-artists-tribute-pho-it-dont-rhyme-yo-0",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/4224/20190402085907id_/https://www.knkx.org/post/video-local-hiphop-artists-tribute-pho-it-dont-rhyme-yo-0"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/230/20111013222640/http://www.biconews.com/arts/bryn-mawr-arts/20849-blue-scholars-impress-at-academix-2011.html?tmpl=component&amp;print=1&amp;page=",
+      "title": "Blue Scholars Impress at Academix 2011",
+      "original_url": "http://www.biconews.com/arts/bryn-mawr-arts/20849-blue-scholars-impress-at-academix-2011.html?tmpl=component&print=1&page=",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/230/20111013222640id_/http://www.biconews.com/arts/bryn-mawr-arts/20849-blue-scholars-impress-at-academix-2011.html?tmpl=component&amp;print=1&amp;page="
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/4224/20140518104336/https://www.kexp.org/live/liveperformance.aspx?rId=14268",
+      "title": "KEXP 90.3 FM - Live performance by Blue Scholars on 10/9/2004",
+      "original_url": "https://www.kexp.org/live/liveperformance.aspx?rId=14268",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/4224/20140518104336id_/https://www.kexp.org/live/liveperformance.aspx?rId=14268"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/4639/20150706113915/http://www.illdoctrine.com/2012/01/first_thoughts_on_gingrich_and.html",
+      "title": "First Thoughts on Gingrich and Romney",
+      "original_url": "http://www.illdoctrine.com/2012/01/first_thoughts_on_gingrich_and.html",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/4639/20150706113915id_/http://www.illdoctrine.com/2012/01/first_thoughts_on_gingrich_and.html"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/2354/20110309041539/http://www.people.com/people/package/americanidol2007/article/0,,20007868_20038846,00.html",
+      "title": "Blake Brings the Beat Home - American Idol : People.com",
+      "original_url": "http://www.people.com/people/package/americanidol2007/article/0,,20007868_20038846,00.html",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/2354/20110309041539id_/http://www.people.com/people/package/americanidol2007/article/0,,20007868_20038846,00.html"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/2284/20111106161107/http://record.williams.edu/wp/?p=16835",
+      "title": "ACE announces Spring Fling concert headliners : The Williams Record",
+      "original_url": "http://record.williams.edu/wp/?p=16835",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/2284/20111106161107id_/http://record.williams.edu/wp/?p=16835"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/3241/20191220073459/https://www.seattlechannel.org/CommunityStories/episodes?videoid=x26658",
+      "title": "Community Stories: The Blue Scholars | seattlechannel.org",
+      "original_url": "https://www.seattlechannel.org/CommunityStories/episodes?videoid=x26658",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/3241/20191220073459id_/https://www.seattlechannel.org/CommunityStories/episodes?videoid=x26658"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/6764/20160121221648/http://www.uwyo.edu/uw/news/2009/01/hip-hop-duo-to-perform-at-uw.html",
+      "title": "Hip-Hop Duo to Perform at UW",
+      "original_url": "http://www.uwyo.edu/uw/news/2009/01/hip-hop-duo-to-perform-at-uw.html",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/6764/20160121221648id_/http://www.uwyo.edu/uw/news/2009/01/hip-hop-duo-to-perform-at-uw.html"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/2239/20110223143307/http://www.pandora.com/music/artist/blue+scholars",
+      "title": "Blue Scholars - Pandora Internet Radio",
+      "original_url": "http://www.pandora.com/music/artist/blue+scholars",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/2239/20110223143307id_/http://www.pandora.com/music/artist/blue+scholars"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/2410/20250701055957/https://fcaatumd.com/cc/rap/",
+      "title": "Culture Corner – Filipino Cultural Association at the University of Maryland, College Park",
+      "original_url": "https://fcaatumd.com/cc/rap/",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/2410/20250701055957id_/https://fcaatumd.com/cc/rap/"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/4224/20150119045246/http://beaconhill.seattle.wa.us/2012/01/25/blue-scholars-new-video-is-out-seijun-suzuki/?shared=email&amp;msg=fail",
+      "title": "Beacon Hill Blog » Archive » Blue Scholars’ new video is out: “Seijun Suzuki”",
+      "original_url": "http://beaconhill.seattle.wa.us/2012/01/25/blue-scholars-new-video-is-out-seijun-suzuki/?shared=email&msg=fail",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/4224/20150119045246id_/http://beaconhill.seattle.wa.us/2012/01/25/blue-scholars-new-video-is-out-seijun-suzuki/?shared=email&amp;msg=fail"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/5962/20170125191603/https://mustangnews.net/blue-scholars-get-personal-with-cal-poly/",
+      "title": "Blue Scholars get personal with Cal Poly - Mustang News",
+      "original_url": "https://mustangnews.net/blue-scholars-get-personal-with-cal-poly/",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/5962/20170125191603id_/https://mustangnews.net/blue-scholars-get-personal-with-cal-poly/"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/2290/20110105062030/http://www.youtube.com//watch?v=XJ7qRQWzV68",
+      "title": "YouTube - American Idol Blake does beatbox with Blue Scholars",
+      "original_url": "http://www.youtube.com//watch?v=XJ7qRQWzV68",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/2290/20110105062030id_/http://www.youtube.com//watch?v=XJ7qRQWzV68"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/1870/20100328083706/http://www.jamglue.com/contests/bluescholars_dj",
+      "title": "Jamglue - Remix Blue Scholars!",
+      "original_url": "http://www.jamglue.com/contests/bluescholars_dj",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/1870/20100328083706id_/http://www.jamglue.com/contests/bluescholars_dj"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/2284/20150506230745/http://en.wikipedia.org/wiki/Blue_Scholars",
+      "title": "Blue Scholars - Wikipedia, the free encyclopedia",
+      "original_url": "http://en.wikipedia.org/wiki/Blue_Scholars",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/2284/20150506230745id_/http://en.wikipedia.org/wiki/Blue_Scholars"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/1285/20090325213306/http://www.myspace.com/bluescholars",
+      "title": "Blue Scholars on MySpace Music - Free Streaming MP3s, Pictures &amp; Music Downloads",
+      "original_url": "http://www.myspace.com/bluescholars",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/1285/20090325213306id_/http://www.myspace.com/bluescholars"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/1230/20090303001042/http://digg.com/basketball/The_NBA_s_All_Injured_Team?t=23722395",
+      "title": "Digg - The NBA's 'All-Injured' Team",
+      "original_url": "http://digg.com/basketball/The_NBA_s_All_Injured_Team?t=23722395",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/1230/20090303001042id_/http://digg.com/basketball/The_NBA_s_All_Injured_Team?t=23722395"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/3241/20211217123438/https://myspace.com/bluescholars/music/song/the-ave-27099689-26900874",
+      "title": "The Ave by Blue Scholars | Song | Free Music, Listen Now on Myspace",
+      "original_url": "https://myspace.com/bluescholars/music/song/the-ave-27099689-26900874",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/3241/20211217123438id_/https://myspace.com/bluescholars/music/song/the-ave-27099689-26900874"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/10695/20191224231859/https://uofsdmedia.com/coffee-and-coversation-with-sabzi-of-the-blue-scholars/",
+      "title": "Coffee and Coversation with Sabzi of the Blue Scholars – USD Student Media",
+      "original_url": "https://uofsdmedia.com/coffee-and-coversation-with-sabzi-of-the-blue-scholars/",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/10695/20191224231859id_/https://uofsdmedia.com/coffee-and-coversation-with-sabzi-of-the-blue-scholars/"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/1870/20100328172153/http://www.jamglue.com/contests/bluescholars",
+      "title": "Jamglue - Blue Scholars Remix Contest",
+      "original_url": "http://www.jamglue.com/contests/bluescholars",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/1870/20100328172153id_/http://www.jamglue.com/contests/bluescholars"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/279/20070808043001/http://creativecommons.org/",
+      "title": "Creative Commons",
+      "original_url": "http://creativecommons.org/",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/279/20070808043001id_/http://creativecommons.org/"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/1466/20100729151244/http://digitalarchive.gsu.edu/cgi/viewcontent.cgi?article=1048&amp;context=english_theses",
+      "title": "http://digitalarchive.gsu.edu/cgi/viewcontent.cgi?article=1048&amp;context=english_theses",
+      "original_url": "http://digitalarchive.gsu.edu/cgi/viewcontent.cgi?article=1048&context=english_theses",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/1466/20100729151244id_/http://digitalarchive.gsu.edu/cgi/viewcontent.cgi?article=1048&amp;context=english_theses"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/1466/20091115014944/http://etd.gsu.edu/theses/available/etd-11192008-131707/unrestricted/SNEAD_BRIAN_MA_200812.pdf",
+      "title": "OFFICE OF GRADUATE STUDIES",
+      "original_url": "http://etd.gsu.edu/theses/available/etd-11192008-131707/unrestricted/SNEAD_BRIAN_MA_200812.pdf",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/1466/20091115014944id_/http://etd.gsu.edu/theses/available/etd-11192008-131707/unrestricted/SNEAD_BRIAN_MA_200812.pdf"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/2284/20141107073132/http://en.wikipedia.org/wiki/Blue_Scholars",
+      "title": "Blue Scholars - Wikipedia, the free encyclopedia",
+      "original_url": "http://en.wikipedia.org/wiki/Blue_Scholars",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/2284/20141107073132id_/http://en.wikipedia.org/wiki/Blue_Scholars"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/1657/20091210114839/http://www.myspace.com/commonmarket",
+      "title": "Common Market on MySpace Music - Free Streaming MP3s, Pictures &amp; Music Downloads",
+      "original_url": "http://www.myspace.com/commonmarket",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/1657/20091210114839id_/http://www.myspace.com/commonmarket"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/1120/20080819152932/http://ru.youtube.com/watch?v=odL3MEZBzVc",
+      "title": "YouTube - Blue Scholars - Loyalty",
+      "original_url": "http://ru.youtube.com/watch?v=odL3MEZBzVc",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/1120/20080819152932id_/http://ru.youtube.com/watch?v=odL3MEZBzVc"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/6338/20130218075636/http://www.socialism.com/drupal-6.8/?q=node/146",
+      "title": "Soundtrack for a revolution II | www.socialism.com",
+      "original_url": "http://www.socialism.com/drupal-6.8/?q=node/146",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/6338/20130218075636id_/http://www.socialism.com/drupal-6.8/?q=node/146"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/1466/20090815014027/http://www2.gsu.edu/~www885/April2008.html",
+      "title": "WRAS Rotation Charts: April 2008",
+      "original_url": "http://www2.gsu.edu/~www885/April2008.html",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/1466/20090815014027id_/http://www2.gsu.edu/~www885/April2008.html"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/1635/20100707004354/http://www.citypages.com/content/result/issue:190332",
+      "title": "Minneapolis - Issue: July 4, 2007 | Page: 1 - Archive Search",
+      "original_url": "http://www.citypages.com/content/result/issue:190332",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/1635/20100707004354id_/http://www.citypages.com/content/result/issue:190332"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/10695/20190924231239/https://uofsdmedia.com/coffee-and-coversation-with-sabzi-of-the-blue-scholars/",
+      "title": "Coffee and Coversation with Sabzi of the Blue Scholars – USD Student Media",
+      "original_url": "https://uofsdmedia.com/coffee-and-coversation-with-sabzi-of-the-blue-scholars/",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/10695/20190924231239id_/https://uofsdmedia.com/coffee-and-coversation-with-sabzi-of-the-blue-scholars/"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/4224/20140718063001/https://www.kexp.org/charts/Hiphop/2007",
+      "title": "KEXP 90.3 FM - KEXP Hiphop music charts for 2007",
+      "original_url": "https://www.kexp.org/charts/Hiphop/2007",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/4224/20140718063001id_/https://www.kexp.org/charts/Hiphop/2007"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/2370/20110308085404/http://www.vh1.com/video/blue-scholars/424457/hi-808.jhtml",
+      "title": "\"HI-808\" by Blue Scholars | Music Video | VH1.com",
+      "original_url": "http://www.vh1.com/video/blue-scholars/424457/hi-808.jhtml",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/2370/20110308085404id_/http://www.vh1.com/video/blue-scholars/424457/hi-808.jhtml"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/3059/20120209082901/http://www.mtv.com/videos/blue-scholars/424457/hi-808.jhtml",
+      "title": "HI-808 | Blue Scholars | Music Video | MTV",
+      "original_url": "http://www.mtv.com/videos/blue-scholars/424457/hi-808.jhtml",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/3059/20120209082901id_/http://www.mtv.com/videos/blue-scholars/424457/hi-808.jhtml"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/2239/20110113224347/http://www.pandora.com/music/album/blue+scholars/bayani",
+      "title": "Bayani - Blue Scholars - Pandora Internet Radio",
+      "original_url": "http://www.pandora.com/music/album/blue+scholars/bayani",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/2239/20110113224347id_/http://www.pandora.com/music/album/blue+scholars/bayani"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/3870/20130910172418/http://kdvs.org/show-info/2611?date=2013-08-22",
+      "title": "Show Details |",
+      "original_url": "http://kdvs.org/show-info/2611?date=2013-08-22",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/3870/20130910172418id_/http://kdvs.org/show-info/2611?date=2013-08-22"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/22294/20250223124614/https://en-academic.com/dic.nsf/enwiki/9853098",
+      "title": "Butter &amp;amp; Gun$ EP",
+      "original_url": "https://en-academic.com/dic.nsf/enwiki/9853098",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/22294/20250223124614id_/https://en-academic.com/dic.nsf/enwiki/9853098"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/2270/20120407151945/https://www.npr.org/templates/rundowns/rundown.php?prgId=2&amp;prgDate=07-03-2011",
+      "title": "All Things Considered : NPR",
+      "original_url": "https://www.npr.org/templates/rundowns/rundown.php?prgId=2&prgDate=07-03-2011",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/2270/20120407151945id_/https://www.npr.org/templates/rundowns/rundown.php?prgId=2&amp;prgDate=07-03-2011"
+    },
+    {
+      "replay_url": "https://wayback.archive-it.org/230/20141019211830/http://www.haverford.edu/academix/performers.php",
+      "title": "Haverford College : AcadeMIX : Performers",
+      "original_url": "http://www.haverford.edu/academix/performers.php",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wayback.archive-it.org/230/20141019211830id_/http://www.haverford.edu/academix/performers.php"
+    }
+  ],
+  "limitations": [
+    "The public Explore page returns ranked first-page results; this is not a complete archive-wide export.",
+    "Only text/html capture bytes that pass structural validation are preserved by this script.",
+    "Raw third-party pages remain recovery-only pending rights review."
+  ],
+  "capture_records": 10,
+  "unique_payloads": 10
+}

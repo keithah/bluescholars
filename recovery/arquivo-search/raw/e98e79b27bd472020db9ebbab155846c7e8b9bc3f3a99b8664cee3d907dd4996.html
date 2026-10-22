@@ -1,0 +1,1568 @@
+<!DOCTYPE html>
+<html charset='UTF-8' dir='ltr' encoding='UTF-8' itemtype='http://schema.org/WebPage' lang='en-US' language='English' ng-app='Ink' prefix='og: http://ogp.me/ns#'>
+<head>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"NRJS-5df159e6622835f7639","applicationID":"345179926","transactionName":"cgxeQUcMWVUDQxpRW1ANXlBZEBpKDl5C","queueTime":0,"applicationTime":726,"agent":""}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-5df159e6622835f7639",applicationID:"345179926"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(10),c=t(11),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(12);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],7:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(9),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],8:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],9:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],10:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],11:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],12:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(10),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!P++){var t=M.info=NREUM.info,e=g.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(O,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+M.offset],null,"api"),c("timing",["load",n]);var r=g.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=v+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===g.readyState&&o()}function o(){c("mark",["domContent",a()+M.offset],null,"api")}var a=t(5),c=t("handle"),f=t(10),u=t("ee"),s=t(8),d=t(6),p=t(2),l=t(3),v=p.getConfiguration("ssl")===!1?"http":"https",m=window,g=m.document,y="addEventListener",h="attachEvent",w=m.XMLHttpRequest,b=w&&w.prototype,E=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:w,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,O={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1215.min.js"},T=w&&b&&b[y]&&!/CriOS/.test(navigator.userAgent),M=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:T,userAgent:s,disabled:E};if(!E){t(1),t(7),g[y]?(g[y]("DOMContentLoaded",o,l(!1)),m[y]("load",r,l(!1))):(g[h]("onreadystatechange",i),m[h]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var P=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(11),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+<title>Music | Arts &amp; Culture | Seattle Met</title>
+<link rel="canonical" href="https://www.seattlemet.com/arts-and-culture/music">
+
+<meta name="description" property="description" content="Our guide to Seattle&#39;s music scene, from local standouts to international stars. Featuring ballet, contemporary, hip-hop, burlesque, and more." />
+<meta name="robots" property="robots" content="follow,index" />
+<meta name="og:description" property="og:description" content="Our guide to Seattle&#39;s music scene, from local standouts to international stars. Featuring ballet, contemporary, hip-hop, burlesque, and more." />
+
+<meta name="og:site_name" property="og:site_name" content="Seattle Met" />
+<meta name="og:title" property="og:title" content="Music | Arts &amp; Culture" />
+
+<meta name="og:url" property="og:url" content="https://www.seattlemet.com/arts-and-culture/music" />
+<meta name="og:updated_time" property="og:updated_time" content="2017-04-27 11:28:46 -0700" />
+<meta name="twitter:card" property="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" property="twitter:description" content="Our guide to Seattle&#39;s music scene, from local standouts to international stars. Featuring ballet, contemporary, hip-hop, burlesque, and more." />
+
+<meta name="twitter:title" property="twitter:title" content="Music | Arts &amp; Culture" />
+<meta name="gpt:vertical" property="gpt:vertical" content="v_arts" />
+<meta name="gpt:channel" property="gpt:channel" content="arts-and-culture,music" />
+
+
+<meta name="gpt:networkCode" property="gpt:networkCode" content="1020224" />
+<meta name="gpt:property" property="gpt:property" content="SeattleMet" />
+<meta name="gpt:tags" property="gpt:tags" content="arts-and-culture,music" />
+<meta name="gpt:slug" property="gpt:slug" content="music" />
+
+<meta name="disqus:shortname" property="disqus:shortname" content="seattlemetmag" />
+
+<meta name="cloud_name" property="cloud_name" content="sagacity" />
+<meta name="cloud_key" property="cloud_key" content="112292951192885" />
+<meta name="vimeo_access_token" property="vimeo_access_token" content="3adbfd296aaf76a1fc16aadb34b8e5dd" />
+<meta name="jwplayer_url" property="jwplayer_url" content="//content.jwplatform.com/libraries/P6zlhDTk.js" />
+<meta name="bounds" property="bounds" content="47.047669,-122.651367,48.151428,-121.876831" />
+<meta name="viewport" property="viewport" content="height=device-height,width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+<meta name="format-detection" property="format-detection" content="telephone=no,date=no,address=no,email=no,url=no" />
+<meta name="SKYPE_TOOLBAR" property="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+<meta name="mssmarttagspreventparsing" property="mssmarttagspreventparsing" content="true" />
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="TfD1foRM_197j4NHTqxqjIXR56HJbR3ZqCnTeSaiMES1MksEfaEk2CTlwWnF9iQx8VSGfGgk6QkW-FaNCD_IIw" />
+
+
+<link rel="stylesheet" media="all" href="/assets/seattle_met-0852de356dde70ece398d0b5e18ba229927b978d3859b7e86e417e78172fd117.css" />
+
+<link rel="stylesheet" media="screen" href="/packs/css/application-7414c353.css" />
+<link rel="shortcut icon" type="image/x-icon" href="/assets/seattle_met/favicon-70a6eb0790bdc5d5869d716d9adb1787946360ffb614f0f846c65ffdeb1b30cf.ico" />
+<script async src='https://securepubads.g.doubleclick.net/tag/js/gpt.js'></script>
+<script>
+  var gptTargeting = {
+    'vertical':             'v_arts',
+    'channel':              'arts-and-culture,music',
+    'tags':                 'arts-and-culture,music',
+    'uuid':                 '',
+    'microsites':           '',
+  };
+  
+  var dataLayer = [{
+    'channels':             'arts-and-culture,music',
+    'primary_channel':      '',
+    'primary_channel_root': '',
+    'microsites':           '',
+    'issue':                '',
+    'authors':              '',
+    'sponsored':            'false',
+    'evergreen':            'false',
+    'ecommerce':            'false',
+    'uuid':                 '',
+    'publish_at':           '',
+    'updated_at':           '2017-04-27 11:28:46 -0700',
+    'tags':                 'arts-and-culture,music'
+  }];
+</script>
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WMKJLRX');
+</script>
+
+<script src="/assets/application-d93c3fa03347843bcab846e144f9f44c9f0e09bf1f8c378960b40cd4a1b384f2.js"></script>
+<script src="/packs/js/application-53a51b40ce035c22e336.js"></script>
+<link rel="alternate" type="application/atom+xml" title="Seattle Met - Music" href="/arts-and-culture/music/feed" />
+
+<style type="text/css">
+#widget-466 .widget__title {
+    background-image: url('https://www.pdxmonthly.com/assets/portland_monthly/logo-8c23efbfacef9de3b1ef9228f6c50d0002b62bcb95e5445499ddafceb8873388.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+}
+</style>
+
+</head>
+<body class='preload'>
+<noscript>
+<iframe height='0' src='//www.googletagmanager.com/ns.html?id=GTM-WMKJLRX' style='display: none; visiblity: hidden;' width='0'></iframe>
+</noscript>
+<div class='site-wrapper'>
+<header class='site-header'>
+<div class='global-navbar navbar'>
+<a class='screen-reader-only' href='#main'>Skip to main content</a>
+<nav class='global-menu' data-controller='modal'>
+<button aria-controls='site-menu-wrapper' aria-expanded='false' aria-haspopup='true' aria-label='open menu' class='navbar__action' data-action='modal#open' type='button'>
+<svg aria-hidden='true' class='icon icon-menu'>
+<use xlink:href='/assets/icon-sprite-b93936962cffdfc64f8ad8e7b22b7c5aafd15b91b179c51b1b248fd2f01a00e0.svg#menu'></use>
+</svg>
+
+</button>
+<div class='slideover' data-modal-target='element' id='site-menu-wrapper' role='menu'>
+<div class='global-menu__header'>
+<button aria-label='close menu' class='navbar__action' data-action='modal#close' type='button'>
+<svg aria-hidden='true' class='icon icon-close'>
+<use xlink:href='/assets/icon-sprite-b93936962cffdfc64f8ad8e7b22b7c5aafd15b91b179c51b1b248fd2f01a00e0.svg#close'></use>
+</svg>
+
+</button>
+</div>
+<div class='global-menu__body'>
+<section class='global-menu--primary'>
+<ul><li class='menu has-children' data-controller='toggle'>
+<div class='menu__label'>
+Eat &amp; Drink
+<button aria-controls='menu-3' aria-expanded='false' aria-label='toggle menu Eat &amp; Drink' class='menu__toggle' data-action='toggle#toggle'>
+<svg aria-hidden='true' class='icon icon-plus'>
+<use xlink:href='/assets/icon-sprite-b93936962cffdfc64f8ad8e7b22b7c5aafd15b91b179c51b1b248fd2f01a00e0.svg#plus'></use>
+</svg>
+
+</button>
+</div>
+<ul class='menu__items' data-toggle-target='toggleable'>
+<li class='menu__item'>
+<a href="/eat-and-drink">View all</a>
+</li>
+<li class='menu__item'>
+<a href="/eat-and-drink/seattles-best-restaurants">Best Restaurants</a>
+</li>
+<li class='menu__item'>
+<a href="/eat-and-drink/food-news-and-events">Food News &amp; Events</a>
+</li>
+<li class='menu__item'>
+<a href="/eat-and-drink/restaurant-reviews">Restaurant Reviews</a>
+</li>
+<li class='menu__item'>
+<a href="/eat-and-drink/groceries-and-markets">Groceries &amp; Markets</a>
+</li>
+<li class='menu__item'>
+<a href="/eat-and-drink/bars-and-nightlife">Best Bars</a>
+</li>
+<li class='menu__item'>
+<a href="/eat-and-drink/beer">Beer</a>
+</li>
+<li class='menu__item'>
+<a href="/eat-and-drink/wine">Wine</a>
+</li>
+<li class='menu__item'>
+<a href="/eat-and-drink/cheap-eats">Cheap Eats</a>
+</li>
+<li class='menu__item'>
+<a href="/eat-and-drink/cocktails-and-spirits">Cocktails &amp; Spirits</a>
+</li>
+</ul>
+</li>
+<li class='menu has-children' data-controller='toggle'>
+<div class='menu__label'>
+Arts &amp; Culture
+<button aria-controls='menu-4' aria-expanded='false' aria-label='toggle menu Arts &amp; Culture' class='menu__toggle' data-action='toggle#toggle'>
+<svg aria-hidden='true' class='icon icon-plus'>
+<use xlink:href='/assets/icon-sprite-b93936962cffdfc64f8ad8e7b22b7c5aafd15b91b179c51b1b248fd2f01a00e0.svg#plus'></use>
+</svg>
+
+</button>
+</div>
+<ul class='menu__items' data-toggle-target='toggleable'>
+<li class='menu__item'>
+<a href="/arts-and-culture">View all</a>
+</li>
+<li class='menu__item'>
+<a href="/arts-and-culture/books-and-talks">Books &amp; Talks</a>
+</li>
+<li class='menu__item'>
+<a href="/arts-and-culture/charity">Charity</a>
+</li>
+<li class='menu__item'>
+<a href="/arts-and-culture/comedy">Comedy</a>
+</li>
+<li class='menu__item'>
+<a href="/arts-and-culture/dance">Dance</a>
+</li>
+<li class='menu__item'>
+<a href="/arts-and-culture/film-and-television">Film &amp; Television</a>
+</li>
+<li class='menu__item'>
+<a href="/arts-and-culture/music">Music</a>
+</li>
+<li class='menu__item'>
+<a href="/arts-and-culture/special-events">Special Events</a>
+</li>
+<li class='menu__item'>
+<a href="/arts-and-culture/sports">Sports</a>
+</li>
+<li class='menu__item'>
+<a href="/arts-and-culture/theater">Theater</a>
+</li>
+<li class='menu__item'>
+<a href="/arts-and-culture/upcoming-events">Upcoming Events</a>
+</li>
+<li class='menu__item'>
+<a href="/arts-and-culture/visual-art">Visual Art</a>
+</li>
+</ul>
+</li>
+<li class='menu has-children' data-controller='toggle'>
+<div class='menu__label'>
+Style &amp; Shopping
+<button aria-controls='menu-5' aria-expanded='false' aria-label='toggle menu Style &amp; Shopping' class='menu__toggle' data-action='toggle#toggle'>
+<svg aria-hidden='true' class='icon icon-plus'>
+<use xlink:href='/assets/icon-sprite-b93936962cffdfc64f8ad8e7b22b7c5aafd15b91b179c51b1b248fd2f01a00e0.svg#plus'></use>
+</svg>
+
+</button>
+</div>
+<ul class='menu__items' data-toggle-target='toggleable'>
+<li class='menu__item'>
+<a href="/style-and-shopping">View all</a>
+</li>
+<li class='menu__item'>
+<a href="/style-and-shopping/body-and-beauty">Body &amp; Beauty</a>
+</li>
+<li class='menu__item'>
+<a href="/style-and-shopping/fashion-features">Fashion Features</a>
+</li>
+<li class='menu__item'>
+<a href="/style-and-shopping/fashion-news-and-events">Fashion News &amp; Events</a>
+</li>
+<li class='menu__item'>
+<a href="/style-and-shopping/mens-fashion">Men&#39;s Fashion</a>
+</li>
+<li class='menu__item'>
+<a href="/style-and-shopping/shopping-and-trends">Shopping &amp; Trends</a>
+</li>
+<li class='menu__item'>
+<a href="/style-and-shopping/womens-fashion">Women&#39;s Fashion</a>
+</li>
+</ul>
+</li>
+<li class='menu has-children' data-controller='toggle'>
+<div class='menu__label'>
+News &amp; City Life
+<button aria-controls='menu-7' aria-expanded='false' aria-label='toggle menu News &amp; City Life' class='menu__toggle' data-action='toggle#toggle'>
+<svg aria-hidden='true' class='icon icon-plus'>
+<use xlink:href='/assets/icon-sprite-b93936962cffdfc64f8ad8e7b22b7c5aafd15b91b179c51b1b248fd2f01a00e0.svg#plus'></use>
+</svg>
+
+</button>
+</div>
+<ul class='menu__items' data-toggle-target='toggleable'>
+<li class='menu__item'>
+<a href="/news-and-city-life">View all</a>
+</li>
+<li class='menu__item'>
+<a href="/news-and-city-life/city-hall">City Hall</a>
+</li>
+<li class='menu__item'>
+<a href="/news-and-city-life/elections">Elections</a>
+</li>
+<li class='menu__item'>
+<a href="/news-and-city-life/city-and-region">City &amp; Region</a>
+</li>
+<li class='menu__item'>
+<a href="/news-and-profiles/people-and-profiles">People &amp; Profiles</a>
+</li>
+<li class='menu__item'>
+<a href="/news-and-city-life/politics">Politics</a>
+</li>
+<li class='menu__item'>
+<a href="/news-and-city-life/crime">Crime</a>
+</li>
+<li class='menu__item'>
+<a href="/news-and-city-life/business">Business</a>
+</li>
+</ul>
+</li>
+<li class='menu has-children' data-controller='toggle'>
+<div class='menu__label'>
+Travel &amp; Outdoors
+<button aria-controls='menu-6' aria-expanded='false' aria-label='toggle menu Travel &amp; Outdoors' class='menu__toggle' data-action='toggle#toggle'>
+<svg aria-hidden='true' class='icon icon-plus'>
+<use xlink:href='/assets/icon-sprite-b93936962cffdfc64f8ad8e7b22b7c5aafd15b91b179c51b1b248fd2f01a00e0.svg#plus'></use>
+</svg>
+
+</button>
+</div>
+<ul class='menu__items' data-toggle-target='toggleable'>
+<li class='menu__item'>
+<a href="/travel-and-outdoors">View all</a>
+</li>
+<li class='menu__item'>
+<a href="/travel-and-outdoors/hiking-and-biking/">Hiking &amp; Biking</a>
+</li>
+<li class='menu__item'>
+<a href="/travel-and-outdoors/northwest-travel/">Northwest Travel</a>
+</li>
+<li class='menu__item'>
+<a href="/travel-and-outdoors/travel-features">Travel Features</a>
+</li>
+<li class='menu__item'>
+<a href="/travel-and-outdoors/travel-news-and-deals">Travel News &amp; Deals</a>
+</li>
+</ul>
+</li>
+<li class='menu has-children' data-controller='toggle'>
+<div class='menu__label'>
+Home &amp; Real Estate
+<button aria-controls='menu-10' aria-expanded='false' aria-label='toggle menu Home &amp; Real Estate' class='menu__toggle' data-action='toggle#toggle'>
+<svg aria-hidden='true' class='icon icon-plus'>
+<use xlink:href='/assets/icon-sprite-b93936962cffdfc64f8ad8e7b22b7c5aafd15b91b179c51b1b248fd2f01a00e0.svg#plus'></use>
+</svg>
+
+</button>
+</div>
+<ul class='menu__items' data-toggle-target='toggleable'>
+<li class='menu__item'>
+<a href="/home-and-real-estate/">View all</a>
+</li>
+<li class='menu__item'>
+<a href="/home-and-real-estate/architecture-and-design">Architecture &amp; Design</a>
+</li>
+<li class='menu__item'>
+<a href="/home-and-real-estate/featured-homes-and-gardens">Featured Homes &amp; Gardens</a>
+</li>
+<li class='menu__item'>
+<a href="/home-and-real-estate/gardening">Gardening</a>
+</li>
+<li class='menu__item'>
+<a href="/home-and-real-estate/home-decor">Home Décor</a>
+</li>
+<li class='menu__item'>
+<a href="/home-and-real-estate/real-estate">Real Estate</a>
+</li>
+<li class='menu__item'>
+<a href="/home-and-real-estate/top-neighborhoods">Top Neighborhoods</a>
+</li>
+</ul>
+</li>
+<li class='menu has-children' data-controller='toggle'>
+<div class='menu__label'>
+Gift Guides
+<button aria-controls='menu-29' aria-expanded='false' aria-label='toggle menu Gift Guides' class='menu__toggle' data-action='toggle#toggle'>
+<svg aria-hidden='true' class='icon icon-plus'>
+<use xlink:href='/assets/icon-sprite-b93936962cffdfc64f8ad8e7b22b7c5aafd15b91b179c51b1b248fd2f01a00e0.svg#plus'></use>
+</svg>
+
+</button>
+</div>
+<ul class='menu__items' data-toggle-target='toggleable'>
+<li class='menu__item'>
+<a href="/gift-guides/best-mothers-day-gift-ideas">Mother&#39;s Day</a>
+</li>
+<li class='menu__item'>
+<a href="/gift-guides">View all</a>
+</li>
+<li class='menu__item'>
+<a href="/gift-guides/outdoor-camping-hiking-gifts">Gifts for People Who Love the Outdoors</a>
+</li>
+<li class='menu__item'>
+<a href="/gift-guides/best-local-seattle-made-gifts-shops">Your Guide to Shopping Local</a>
+</li>
+<li class='menu__item'>
+<a href="/gift-guides/style-fashion-clothing-shoes-purses-gifts">Gifts for Style Icons</a>
+</li>
+<li class='menu__item'>
+<a href="/gift-guides/food-drinks-snacks-wine-gifts">Gifts for People Who Love Food &amp; Drinks</a>
+</li>
+<li class='menu__item'>
+<a href="/gift-guides/best-gifts-kids-teens-sister-brother-baby-toddler">Best Gifts for Kids</a>
+</li>
+<li class='menu__item'>
+<a href="/gift-guides/seattle-sports-team-jerseys-gear-merch-gifts">Gifts for Seattle Sports Fans</a>
+</li>
+</ul>
+</li>
+<li class='menu has-children' data-controller='toggle'>
+<div class='menu__label'>
+Health &amp; Wellness
+<button aria-controls='menu-11' aria-expanded='false' aria-label='toggle menu Health &amp; Wellness' class='menu__toggle' data-action='toggle#toggle'>
+<svg aria-hidden='true' class='icon icon-plus'>
+<use xlink:href='/assets/icon-sprite-b93936962cffdfc64f8ad8e7b22b7c5aafd15b91b179c51b1b248fd2f01a00e0.svg#plus'></use>
+</svg>
+
+</button>
+</div>
+<ul class='menu__items' data-toggle-target='toggleable'>
+<li class='menu__item'>
+<a href="/doctors">Top Doctors</a>
+</li>
+<li class='menu__item'>
+<a href="/health-and-wellness">View all</a>
+</li>
+<li class='menu__item'>
+<a href="/dentists">Top Dentists</a>
+</li>
+<li class='menu__item'>
+<a href="/health-and-wellness/fitness">Fitness</a>
+</li>
+<li class='menu__item'>
+<a href="/health-and-wellness/health-news-and-events">Health News &amp; Events</a>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section class='global-menu--secondary'>
+<ul><li class='menu'>
+<div class='menu__label'><a href="/coronavirus">COVID-19</a></div>
+</li>
+<li class='menu has-children' data-controller='toggle'>
+<div class='menu__label'>
+Best of the City
+<button aria-controls='menu-14' aria-expanded='false' aria-label='toggle menu Best of the City' class='menu__toggle' data-action='toggle#toggle'>
+<svg aria-hidden='true' class='icon icon-plus'>
+<use xlink:href='/assets/icon-sprite-b93936962cffdfc64f8ad8e7b22b7c5aafd15b91b179c51b1b248fd2f01a00e0.svg#plus'></use>
+</svg>
+
+</button>
+</div>
+<ul class='menu__items' data-toggle-target='toggleable'>
+<li class='menu__item'>
+<a href="/newcomer-s-guide">Newcomer&#39;s Guide</a>
+</li>
+<li class='menu__item'>
+<a href="/articles/2019/9/10/seattle-s-100-best-restaurants-right-now">100 Best Restaurants</a>
+</li>
+<li class='menu__item'>
+<a href="/articles/2019/3/26/city-trails">City Trails</a>
+</li>
+<li class='menu__item'>
+<a href="/articles/2018/3/27/19-of-seattle-s-best-brunch-spots-right-now">Brunch</a>
+</li>
+<li class='menu__item'>
+<a href="/articles/2019/3/26/the-top-12-neighborhoods-in-seattle-2019-edition">Neighborhoods</a>
+</li>
+<li class='menu__item'>
+<a href="/features/best-bars">Bars</a>
+</li>
+<li class='menu__item'>
+<a href="/features/a-5-step-plan-for-exploring-the-seattle-beer-scene/">Beer</a>
+</li>
+<li class='menu__item'>
+<a href="/doctors">Doctors</a>
+</li>
+<li class='menu__item'>
+<a href="/dentists">Dentists</a>
+</li>
+<li class='menu__item'>
+<a href="/articles/2016/1/29/best-asian-restaurants">Asian Restaurants</a>
+</li>
+<li class='menu__item'>
+<a href="/articles/best-places-to-work-2015">Best Places to Work</a>
+</li>
+</ul>
+</li>
+<li class='menu'>
+<div class='menu__label'><a href="/the-met-pages">The Met Pages</a></div>
+</li>
+<li class='menu has-children' data-controller='toggle'>
+<div class='menu__label'>
+The Magazine
+<button aria-controls='menu-18' aria-expanded='false' aria-label='toggle menu The Magazine' class='menu__toggle' data-action='toggle#toggle'>
+<svg aria-hidden='true' class='icon icon-plus'>
+<use xlink:href='/assets/icon-sprite-b93936962cffdfc64f8ad8e7b22b7c5aafd15b91b179c51b1b248fd2f01a00e0.svg#plus'></use>
+</svg>
+
+</button>
+</div>
+<ul class='menu__items' data-toggle-target='toggleable'>
+<li class='menu__item'>
+<a href="/subscribe">Subscribe</a>
+</li>
+<li class='menu__item'>
+<a href="/issues/current">Current Issue</a>
+</li>
+<li class='menu__item'>
+<a href="/issues">Past Issues</a>
+</li>
+<li class='menu__item'>
+<a href="https://www.seattlemet.com/sponsored?is_sponsored=true">Sponsored Content</a>
+</li>
+<li class='menu__item'>
+<a href="/pages/about">About Us</a>
+</li>
+<li class='menu__item'>
+<a href="/pages/contact">Contact Us</a>
+</li>
+<li class='menu__item'>
+<a href="/pages/advertise">Advertise/Media Kit</a>
+</li>
+</ul>
+</li>
+<li class='menu has-children' data-controller='toggle'>
+<div class='menu__label'>
+Subscribe
+<button aria-controls='menu-24' aria-expanded='false' aria-label='toggle menu Subscribe' class='menu__toggle' data-action='toggle#toggle'>
+<svg aria-hidden='true' class='icon icon-plus'>
+<use xlink:href='/assets/icon-sprite-b93936962cffdfc64f8ad8e7b22b7c5aafd15b91b179c51b1b248fd2f01a00e0.svg#plus'></use>
+</svg>
+
+</button>
+</div>
+<ul class='menu__items' data-toggle-target='toggleable'>
+<li class='menu__item'>
+<a href="/subscribe">The Magazine</a>
+</li>
+<li class='menu__item'>
+<a href="/pages/professional-subscription">Professional Subscription</a>
+</li>
+<li class='menu__item'>
+<a href="/newsletters">Newsletters</a>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section class='global-menu--social'>
+<ul class='social-media-menu'>
+<li>
+<a href="https://facebook.com/seattlemet"><span class='visually-hidden'>Facebook</span>
+<svg aria-hidden='true' class='icon icon-facebook'>
+<use xlink:href='/assets/icon-sprite-b93936962cffdfc64f8ad8e7b22b7c5aafd15b91b179c51b1b248fd2f01a00e0.svg#facebook'></use>
+</svg>
+
+</a></li>
+<li>
+<a href="https://twitter.com/seattlemet"><span class='visually-hidden'>Twitter</span>
+<svg aria-hidden='true' class='icon icon-twitter'>
+<use xlink:href='/assets/icon-sprite-b93936962cffdfc64f8ad8e7b22b7c5aafd15b91b179c51b1b248fd2f01a00e0.svg#twitter'></use>
+</svg>
+
+</a></li>
+<li>
+<a href="https://instagram.com/seattlemet"><span class='visually-hidden'>Instagram</span>
+<svg aria-hidden='true' class='icon icon-instagram'>
+<use xlink:href='/assets/icon-sprite-b93936962cffdfc64f8ad8e7b22b7c5aafd15b91b179c51b1b248fd2f01a00e0.svg#instagram'></use>
+</svg>
+
+</a></li>
+<li>
+<a href="https://pinterest.com/seattlemet"><span class='visually-hidden'>Pinterest</span>
+<svg aria-hidden='true' class='icon icon-pinterest'>
+<use xlink:href='/assets/icon-sprite-b93936962cffdfc64f8ad8e7b22b7c5aafd15b91b179c51b1b248fd2f01a00e0.svg#pinterest'></use>
+</svg>
+
+</a></li>
+<li>
+<a href="https://www.linkedin.com/company/seattle-met"><span class='visually-hidden'>LinkedIn</span>
+<svg aria-hidden='true' class='icon icon-linkedin'>
+<use xlink:href='/assets/icon-sprite-b93936962cffdfc64f8ad8e7b22b7c5aafd15b91b179c51b1b248fd2f01a00e0.svg#linkedin'></use>
+</svg>
+
+</a></li>
+</ul>
+
+</section>
+<section class='global-menu--footer'>
+<ul><li class='menu has-children'>
+<div class='menu__label'>Channels</div>
+<ul class='menu__items'>
+<li class='menu__item'>
+<a href="/eat-and-drink">Eat &amp; Drink</a>
+</li>
+<li class='menu__item'>
+<a href="/arts-and-entertainment">Arts &amp; Entertainment</a>
+</li>
+<li class='menu__item'>
+<a href="/news-and-city-life">News &amp; City Life</a>
+</li>
+<li class='menu__item'>
+<a href="/style-and-shopping">Style &amp; Shopping</a>
+</li>
+<li class='menu__item'>
+<a href="/travel-and-outdoors">Travel &amp; Outdoors</a>
+</li>
+<li class='menu__item'>
+<a href="/best-of-the-city">Best of the City</a>
+</li>
+<li class='menu__item'>
+<a href="/home-and-real-estate/">Home &amp; Real Estate</a>
+</li>
+</ul>
+</li>
+<li class='menu has-children'>
+<div class='menu__label'>About Us</div>
+<ul class='menu__items'>
+<li class='menu__item'>
+<a href="/pages/about/">Masthead</a>
+</li>
+<li class='menu__item'>
+<a href="/pages/advertise">Advertise</a>
+</li>
+<li class='menu__item'>
+<a href="/pages/jobs-at-seattlemet">Jobs</a>
+</li>
+<li class='menu__item'>
+<a href="/pages/internships-at-seattlemet/">Internships</a>
+</li>
+<li class='menu__item'>
+<a href="/pages/privacy">Privacy Policy</a>
+</li>
+<li class='menu__item'>
+<a href="/pages/terms/">Terms of Use</a>
+</li>
+<li class='menu__item'>
+<a href="/sitemap">Site Map</a>
+</li>
+<li class='menu__item'>
+<a href="/pages/contact">Contact Us</a>
+</li>
+</ul>
+</li>
+<li class='menu has-children'>
+<div class='menu__label'>Subscriptions</div>
+<ul class='menu__items'>
+<li class='menu__item'>
+<a href="https://sea.pcdfusion.com/pcd/Order?iKey=I**HPG">Subscribe</a>
+</li>
+<li class='menu__item'>
+<a href="https://sea-sso-pcd.pcdsso.com/cas/login?service=https%3a%2f%2fsea.pcdfusion.com%2fpcd%2fCustomerSupport%2fAccount%2fValidateTicket">Renew Subscription</a>
+</li>
+<li class='menu__item'>
+<a href="https://sea-sso-pcd.pcdsso.com/cas/login?service=https%3a%2f%2fsea.pcdfusion.com%2fpcd%2fCustomerSupport%2fAccount%2fValidateTicket">Change Address</a>
+</li>
+<li class='menu__item'>
+<a href="/pages/subscriber-faq/">Subscriber FAQ</a>
+</li>
+<li class='menu__item'>
+<a href="/issues/">Purchase Back Issues</a>
+</li>
+<li class='menu__item'>
+<a href="https://sea-sso-pcd.pcdsso.com/cas/login?service=https%3a%2f%2fsea.pcdfusion.com%2fpcd%2fCustomerSupport%2fAccount%2fValidateTicket">Pay Invoice</a>
+</li>
+<li class='menu__item'>
+<a href="/newsletters">Newsletters</a>
+</li>
+</ul>
+</li>
+<li class='menu has-children'>
+<div class='menu__label'>Other SagaCity Media</div>
+<ul class='menu__items'>
+<li class='menu__item'>
+<a href="https://pdxmonthly.com">Portland Monthly</a>
+</li>
+<li class='menu__item'>
+<a href="https://www.houstoniamag.com">Houstonia</a>
+</li>
+<li class='menu__item'>
+<a href="https://www.sarasotamagazine.com">Sarasota Magazine</a>
+</li>
+<li class='menu__item'>
+<a href="https://mag.jewishinseattle.org">Jewish In Seattle</a>
+</li>
+<li class='menu__item'>
+<a href="https://www.aspensojo.com">Aspen Sojourner</a>
+</li>
+<li class='menu__item'>
+<a href="https://www.parkcitymag.com">Park City Magazine</a>
+</li>
+<li class='menu__item'>
+<a href="https://www.vailmag.com">Vail-Beaver Creek Magazine</a>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section class='global-menu--address'>
+<p>
+<strong>Seattle Met</strong>
+<br>
+509 Olive Way, Suite 305, Seattle, WA 98101 <br/> Phone: 206-957-2234 &bull; Fax: 206-447-3388
+
+
+</p>
+</section>
+<section class='global-menu--boilerplate'>
+<a target="_blank" href="https://sagacitymedia.com"><img class="sagacity-logo" src="/assets/sagacity-logo-4eb164415b45e75ae875ccc04a66480635877f5bca672b4507453ec64ed04baf.svg" />
+</a><span>&copy; 2022</span>
+</section>
+</div>
+</div>
+<div class='scrim'></div>
+</nav>
+<h1 class='global-logo'>
+<a href="/"><span class='screen-reader-only'>Seattle Met</span>
+<!-- Generator: Adobe Illustrator 26.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="497px" height="80px" viewBox="0 0 497 80" enable-background="new 0 0 497 80" xml:space="preserve">
+<path id="primary" fill-rule="evenodd" clip-rule="evenodd" d="M302.6,63.7c-4.6,4.4-10.6,6.4-15.4,6.4c-7,0-10.1-3.3-10.1-8.1  c0-4.8,3-8.5,13.1-8.9h0.1v-6.4c-10-0.3-12.4-3.5-12.4-7.1c0-3.6,2.2-5.6,5.9-5.6c4,0,7.4,1.2,10.8,3.4l4.1-5.9  c-4.2-3.2-10.4-5.5-18.9-5.5c-11.7,0-20.3,5.2-20.3,14.4c0,4.2,3,8,7.3,9.8c-5.1,1.8-9.9,5.9-9.9,13.2c0,1.5,0.3,3,0.8,4.4  c-1.1,1.3-2.7,2.2-4.8,2.2c-2.8,0-4-1.5-4-4.8V33.1c7.9-0.5,14-6.3,14-15.5C263,6.5,256.4,0,244,0c-7.9,0-14.8,4.2-14.8,15.3v12.4  h-9.5V13h-19.9v14.6h-9.5V13h-19.8v14.6h-10v5.5h10v31.6c0,0.9,0.1,1.8,0.2,2.6c-1.3,1.8-3.1,3.1-6,3.1c-3.5,0-4.8-2-4.8-5.1V41.8  c0-8.9-11.1-15.1-25.1-15.1c-13,0-26,9.4-26,27c0,4.4,0.7,8.2,1.8,11.4c-4.4,3.9-9.4,5.1-14,5.1c-7,0-10.2-3.3-10.2-8.1  c0-4.8,3-8.5,13.1-8.9h0.1v-6.4c-10-0.3-12.4-3.5-12.4-7.1c0-3.6,2.2-5.6,5.9-5.6c3.9,0,7.3,1.2,10.8,3.4l4.1-5.9  C103.7,28.4,97.5,26,89,26c-11.7,0-20.3,5.2-20.3,14.4c0,4.2,3,8,7.3,9.8c-4.9,1.7-9.6,5.7-9.9,12.5c-1.5-0.5-3-1-4.6-1.5  c0.4-1.6,0.6-3.2,0.6-5c0-9.6-7.7-15.2-17.1-21C33.3,28,28.1,24.1,28.1,20.2c0-2.8,2.8-5,7-5c4-0.1,10,1.9,16.7,7.2l6.8-10  c-5.3-5-14.8-9.4-24.4-9.4C16.3,2.9,7.7,12,7.7,23.4c0,9.3,7.7,16.5,17,22.2c5.5,3.3,10.6,6.4,13.5,9.3c-6.9-1.5-13.5-2.3-19.6-2.3  C6.7,52.5,0,56.4,0,64.1c0,7.4,5.8,15,26,15c16.2,0,27.9-4.5,33.1-12.4c2.8,0.8,5.6,1.7,8.6,2.7c3.2,5.6,11,9.2,21.4,9.2  c11.7,0,18.7-3.9,24.2-8.3c3.9,5.6,9.8,8.3,16.1,8.3c6.1,0,10.2-2.2,13.2-5.5c2.5,3.4,6.8,5.5,12.8,5.5c8.3,0,13.4-2.2,17.1-6  c2.6,4.1,7.5,6,12.8,6c7.2,0,12.3-2.1,16.2-6.5c2.6,4.4,7.5,6.5,13.1,6.5c7.2,0,12.3-2.1,16.2-6.5c2.6,4.4,7.5,6.5,13.1,6.5  c7.2,0,12.4-2.1,16.3-6.6c3.9,4.1,10.7,6.6,19.4,6.6c13.6,0,21.2-5.2,26.6-10.3C306.4,68.3,302.8,63.7,302.6,63.7L302.6,63.7z   M25.2,67.3c-6.2,0-9.4-1.2-9.4-3.7c0-2,2.8-3.4,8.9-3.3c4.6,0,9.8,0.6,15.5,1.7C38.2,65.5,32.1,67.3,25.2,67.3L25.2,67.3z   M135.5,70.1c-3.5,0-6.9-3.3-6.9-17.4c0-14.3,2.7-19.2,6.8-19.2c3.1,0,4.6,1.8,4.6,4.2v27.1c0,1.1,0.1,2.1,0.3,3.1  C139.2,69.3,137.9,70.1,135.5,70.1L135.5,70.1z M249,14c0-2.4,0.7-3.4,2.7-3.4c2.6,0,4.9,1.9,4.9,7.7c0,6.4-3.6,9.4-7.6,9.4V14z   M194.3,70.1c-2.8,0-3.9-1.5-3.9-4.8V33.2h9.5v31.6c0,0.7,0.1,1.3,0.1,1.9C198.8,68.4,197,70.1,194.3,70.1L194.3,70.1z M223.6,70.1  c-2.8,0-4-1.5-4-4.8V33.2h9.5v31.6c0,0.7,0,1.3,0.1,1.9C228.1,68.4,226.3,70.1,223.6,70.1L223.6,70.1z M496.5,33.2v-5.5h-22V13  h-19.9v14.6h-8.7v5.5h8.7v24.3l-0.1-0.1c-6.6,9.7-14.4,12.7-22.6,12.7c-7,0-10.1-3.3-10.1-8.1c0-4.8,3-8.5,13.1-8.9h0.1v-6.4  c-10-0.3-12.4-3.5-12.4-7.1c0-3.6,2.2-5.6,5.9-5.6c4,0,7.4,1.2,10.8,3.4l4.1-5.9c-4.2-3.2-10.4-5.5-18.9-5.5  c-11.7,0-20.3,5.2-20.3,14.4c0,4.2,3,8,7.3,9.8c-5.1,1.8-9.9,5.9-9.9,13.2c0,1.5,0.3,3,0.8,4.3c-1.1,1.4-2.5,2.3-4.5,2.3  c-2.8,0-4.2-1.5-4.2-4.3V23.9c0-14-7.7-19.4-17.3-19.4c-7.1,0-12.4,3-15.7,7.5c-2.9-4.1-7.8-7.5-15.3-7.5c-5.8,0-11,2.2-14.4,6.9  c-2.4-4.3-7.6-6.9-14.7-6.9c-5.3,0-10.4,2.6-14.3,5.8l3.2,4.3c1.3-1,2.9-1.9,4-1.9c2.5,0,3.5,1.7,3.5,4.4V77h19.8V24  c0-4.1,1.9-6,5.5-6c3.4,0,5.2,1.9,5.2,5.9V77h19.8V23.9c0-4,1.9-5.9,5.4-5.9c3.5,0,5.3,1.9,5.3,5.9v40.9c0,9.4,6.5,13.9,15,13.9  c7.6,0,12.6-2.3,16.4-6.4c3.9,4,10.7,6.4,19.3,6.4c13.8,0,21.9-3.5,30.1-12.4c0.2,7,5.3,12.2,16.1,12.2c7,0,13.1-2.9,15.9-7.7  l-2.6-3.4c-1.5,1.7-3.4,2.8-5.6,2.8c-2.8,0-4.1-1.4-4.1-4.3V33.2H496.5z"></path>
+</svg>
+
+</a></h1>
+<form action='/search' class='global-search' data-controller='modal' method='GET'>
+<button aria-controls='site-search' aria-expanded='false' aria-haspopup='true' aria-label='open search' class='navbar__action' data-action='modal#open' type='button'>
+<svg aria-hidden='true' class='icon icon-search'>
+<use xlink:href='/assets/icon-sprite-b93936962cffdfc64f8ad8e7b22b7c5aafd15b91b179c51b1b248fd2f01a00e0.svg#search'></use>
+</svg>
+
+</button>
+<div class='modal' data-modal-target='element' id='site-search'>
+<div class='navbar'>
+<button aria-label='close menu' class='navbar__action' data-action='modal#close' type='button'>
+<svg aria-hidden='true' class='icon icon-close'>
+<use xlink:href='/assets/icon-sprite-b93936962cffdfc64f8ad8e7b22b7c5aafd15b91b179c51b1b248fd2f01a00e0.svg#close'></use>
+</svg>
+
+</button>
+</div>
+<div class='container'>
+<div class='global-search__fields'>
+<input name='query' placeholder='Search...' type='search'>
+<button aria-label='submit search' title='Submit search' type='submit'>
+<svg aria-hidden='true' class='icon icon-search'>
+<use xlink:href='/assets/icon-sprite-b93936962cffdfc64f8ad8e7b22b7c5aafd15b91b179c51b1b248fd2f01a00e0.svg#search'></use>
+</svg>
+
+</button>
+</div>
+</div>
+</div>
+</form>
+</div>
+<div class='global-quicklinks'>
+<ul><li><a href="/eat-and-drink">Eat &amp; Drink</a></li>
+<li><a href="/arts-and-culture">Arts &amp; Culture</a></li>
+<li><a href="/style-and-shopping">Style &amp; Shopping</a></li>
+<li><a href="/news-and-city-life">News &amp; City Life</a></li>
+<li><a href="/travel-and-outdoors">Travel &amp; Outdoors</a></li>
+<li><a href="/home-and-real-estate/">Home &amp; Real Estate</a></li>
+<li><a href="/gift-guides">Gift Guides</a></li>
+<li><a href="/health-and-wellness">Health &amp; Wellness</a></li>
+</ul>
+</div>
+</header>
+
+<main class='site-main'>
+<div class='layout layout--channel layout--channel--music'>
+<div class='l-container--full-width' id='layout-section--1'>
+
+<div class='widget widget--ad' data-widget-type='ad' id='widget-'>
+<div class='ad-section'>
+<div data-controller='display-ad' data-display-ad-dimensions-desktop-value='[[970, 90], [728, 90], [3, 1]]' data-display-ad-dimensions-mobile-value='[[320, 50], [3, 1]]' data-display-ad-dimensions-tablet-value='[[728, 90], [3, 1]]'></div>
+</div>
+</div>
+
+</div>
+<nav aria-label='Breadcrumb' class='breadcrumbs' data-controller='sticky'>
+<ol>
+<li>
+<a href="/"><img src="/assets/seattle_met/icon-bea26b6e3836c1424f57beafa90d9e27b4670ceacb0540a15867853d287112c3.png" />
+</a></li>
+<li><a href="https://www.seattlemet.com/arts-and-culture">Arts &amp; Culture</a></li>
+<li class='current'><a aria-current="page" href="https://www.seattlemet.com/arts-and-culture/music">Music</a></li>
+
+
+</ol>
+</nav>
+
+<div class='l-container'>
+<header class='channel-header'>
+<h1 class='channel-header__title'>Music</h1>
+</header>
+
+
+</div>
+<div class='l-container--right-rail'>
+<div class='l-main'>
+<div class='item-index'>
+<div class='item'>
+<a href="/arts-and-culture/2020/01/rick-steves-brings-his-politics-and-cheer-to-seattle-symphony"><div class='item__thumb'>
+<div class='thumbnail aspect_ratio_square' data-controller='image'>
+<img data-image-target="image" data-src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_3000,w_3000,x_503,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_auto/asj-rick-public-speakingCMYK_a41nrg.jpg" class="cld-responsive" />
+<noscript>
+<img src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_3000,w_3000,x_503,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_auto/asj-rick-public-speakingCMYK_a41nrg.jpg" />
+</noscript>
+</div>
+
+</div>
+</a><div class='item__content'>
+<p class='item__kicker'>Peripatetic Local</p>
+<h1 class='item__title'><a href="/arts-and-culture/2020/01/rick-steves-brings-his-politics-and-cheer-to-seattle-symphony">Rick Steves Brings Politics and Cheer to Seattle Symphony</a></h1>
+<p class='item__teaser'>First, a show with the Seattle Symphony on music’s nationalist powers; next, a Town Hall showing of his new doc. It’s basically Rick Steves’s Seattle.</p>
+<p class='item__meta'>
+<span class='inline-list__item'>01/16/2020</span>
+<span class='inline-list__item'>
+By
+<a href="/producers/stefan-milne">Stefan Milne</a>
+</span>
+
+</p>
+</div>
+</div>
+<div class='item'>
+<a href="/arts-and-culture/2019/12/top-albums-of-the-decade-by-washington-artists"><div class='item__thumb'>
+<div class='thumbnail aspect_ratio_square' data-controller='image'>
+<img data-image-target="image" data-src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_1200,w_1200,x_0,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_auto/a1882684399_10_b4jonb.jpg" class="cld-responsive" />
+<noscript>
+<img src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_1200,w_1200,x_0,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_auto/a1882684399_10_b4jonb.jpg" />
+</noscript>
+</div>
+
+</div>
+</a><div class='item__content'>
+<p class='item__kicker'>Best of the 2010s</p>
+<h1 class='item__title'><a href="/arts-and-culture/2019/12/top-albums-of-the-decade-by-washington-artists">Seattle Musicians Pick Their Favorite Local Albums of the Decade</a></h1>
+<p class='item__teaser'>Members of Lisa Prank, Tacocat, and Tres Leches each dish on which Washington records excited them the most. </p>
+<p class='item__meta'>
+<span class='inline-list__item'>12/26/2019</span>
+<span class='inline-list__item'>
+By
+<a href="/producers/nicole-pasia">Nicole Pasia</a>
+</span>
+
+</p>
+</div>
+</div>
+<div class='item'>
+<a href="/arts-and-culture/2019/12/god-save-the-punks-mars-hill-tooth-and-nail-and-seattle-s-christian-alternative"><div class='item__thumb'>
+<div class='thumbnail aspect_ratio_square' data-controller='image'>
+<img data-image-target="image" data-src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_3000,w_3000,x_735,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_auto/Jacket_Opener_nodek_close_gpd96f.jpg" class="cld-responsive" />
+<noscript>
+<img src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_3000,w_3000,x_735,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_auto/Jacket_Opener_nodek_close_gpd96f.jpg" />
+</noscript>
+</div>
+
+</div>
+</a><div class='item__content'>
+<p class='item__kicker'>Feature</p>
+<h1 class='item__title'><a href="/arts-and-culture/2019/12/god-save-the-punks-mars-hill-tooth-and-nail-and-seattle-s-christian-alternative">God Save the Punks: Mars Hill, Tooth and Nail, and Seattle’s Christian Alternative</a></h1>
+<p class='item__teaser'>How Seattle music helped turn an oxymoron into big business.</p>
+<p class='item__meta'>
+<span class='inline-list__item'>12/23/2019</span>
+<span class='inline-list__item'>
+By
+<a href="/producers/stefan-milne">Stefan Milne</a>
+</span>
+
+</p>
+</div>
+</div>
+
+<div class='item is-cream' data-controller='native-ad'></div>
+
+<div class='item'>
+<a href="/arts-and-culture/2019/12/which-seattle-albums-made-national-best-of-the-decade-lists"><div class='item__thumb'>
+<div class='thumbnail aspect_ratio_square' data-controller='image'>
+<img data-image-target="image" data-src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_1500,w_1500,x_0,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_auto/ELV040_display_acn4j0.jpg" class="cld-responsive" />
+<noscript>
+<img src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_1500,w_1500,x_0,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_auto/ELV040_display_acn4j0.jpg" />
+</noscript>
+</div>
+
+</div>
+</a><div class='item__content'>
+<p class='item__kicker'>Farewell 2010s</p>
+<h1 class='item__title'><a href="/arts-and-culture/2019/12/which-seattle-albums-made-national-best-of-the-decade-lists">Which Seattle Albums Made National Best-of-the-Decade Lists?</a></h1>
+<p class='item__teaser'>We combed through 12 end-of-the-2010s lists and tallied the results. </p>
+<p class='item__meta'>
+<span class='inline-list__item'>12/11/2019</span>
+<span class='inline-list__item'>
+By
+<a href="/producers/stefan-milne">Stefan Milne</a>
+</span>
+
+</p>
+</div>
+</div>
+<div class='item'>
+<a href="/arts-and-culture/2019/11/brandi-carlile-brings-her-subversive-pop-to-the-seattle-symphony"><div class='item__thumb'>
+<div class='thumbnail aspect_ratio_square' data-controller='image'>
+<img data-image-target="image" data-src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_5000,w_5000,x_1788,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_auto/BrandiCarlile_AlysseGafkjen_1_ekxelx.jpg" class="cld-responsive" />
+<noscript>
+<img src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_5000,w_5000,x_1788,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_auto/BrandiCarlile_AlysseGafkjen_1_ekxelx.jpg" />
+</noscript>
+</div>
+
+</div>
+</a><div class='item__content'>
+<p class='item__kicker'>Party of Many</p>
+<h1 class='item__title'><a href="/arts-and-culture/2019/11/brandi-carlile-brings-her-subversive-pop-to-the-seattle-symphony">Brandi Carlile Brings Her Subversive Pop to the Seattle Symphony</a></h1>
+<p class='item__teaser'>The singer extends her wild year into 2020 with a trio of concerts at Benaroya Hall. </p>
+<p class='item__meta'>
+<span class='inline-list__item'>11/26/2019</span>
+<span class='inline-list__item'>
+By
+<a href="/producers/stefan-milne">Stefan Milne</a>
+</span>
+
+</p>
+</div>
+</div>
+<div class='item'>
+<a href="/arts-and-culture/2019/11/guayaba-s-fantasmagoria-is-an-eerie-and-eclectic-wonderland"><div class='item__thumb'>
+<div class='thumbnail aspect_ratio_square' data-controller='image'>
+<img data-image-target="image" data-src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_2036,w_2036,x_0,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_auto/unafantareal_pxo6e4.png" class="cld-responsive" />
+<noscript>
+<img src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_2036,w_2036,x_0,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_auto/unafantareal_pxo6e4.png" />
+</noscript>
+</div>
+
+</div>
+</a><div class='item__content'>
+<p class='item__kicker'>Hear Here</p>
+<h1 class='item__title'><a href="/arts-and-culture/2019/11/guayaba-s-fantasmagoria-is-an-eerie-and-eclectic-wonderland">Guayaba’s <em>Fantasmagoría</em> Is an Eerie and Eclectic Wonderland</a></h1>
+<p class='item__teaser'>The local rapper and singer’s new album packs manifold influences—bossa nova, Edith Piaf, Three 6 Mafia—into an “opera of the bizarre.” </p>
+<p class='item__meta'>
+<span class='inline-list__item'>11/21/2019</span>
+<span class='inline-list__item'>
+By
+<a href="/producers/stefan-milne">Stefan Milne</a>
+</span>
+
+</p>
+</div>
+</div>
+<div class='item'>
+<a href="/arts-and-culture/2019/11/brandi-carlile-announces-gorge-show-with-sheryl-crow-and-yola"><div class='item__thumb'>
+<div class='thumbnail aspect_ratio_square' data-controller='image'>
+<img data-image-target="image" data-src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_4068,w_4068,x_0,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_auto/brandi_carlile6_cpuykv.jpg" class="cld-responsive" />
+<noscript>
+<img src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_4068,w_4068,x_0,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_auto/brandi_carlile6_cpuykv.jpg" />
+</noscript>
+</div>
+
+</div>
+</a><div class='item__content'>
+<p class='item__kicker'>Ticket Alert</p>
+<h1 class='item__title'><a href="/arts-and-culture/2019/11/brandi-carlile-announces-gorge-show-with-sheryl-crow-and-yola">Brandi Carlile Announces Gorge Show with Sheryl Crow and Yola</a></h1>
+<p class='item__teaser'>For the second year running, the folk star headlines the Gorge Amphitheatre for her Echoes Through the Canyon show.  </p>
+<p class='item__meta'>
+<span class='inline-list__item'>11/19/2019</span>
+<span class='inline-list__item'>
+By
+<a href="/producers/stefan-milne">Stefan Milne</a>
+</span>
+
+</p>
+</div>
+</div>
+<div class='item'>
+<a href="/arts-and-culture/2019/10/dave-matthews-dave-bazan-and-some-grunge-musicians-announce-a-show-at-the-moore"><div class='item__thumb'>
+<div class='thumbnail aspect_ratio_square' data-controller='image'>
+<img data-image-target="image" data-src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_666,w_666,x_0,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_auto/082913-dave-matthews-band_tgo9h6.jpg" class="cld-responsive" />
+<noscript>
+<img src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_666,w_666,x_0,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_auto/082913-dave-matthews-band_tgo9h6.jpg" />
+</noscript>
+</div>
+
+</div>
+</a><div class='item__content'>
+<p class='item__kicker'>Ticket Alert</p>
+<h1 class='item__title'><a href="/arts-and-culture/2019/10/dave-matthews-dave-bazan-and-some-grunge-musicians-announce-a-show-at-the-moore">Dave Matthews, David Bazan, and Some Grunge Musicians Announce a Show at the Moore</a></h1>
+<p class='item__teaser'>SMASH, a benefit for musicians' health care, will see the artists and many others covering Neil Young songs. </p>
+<p class='item__meta'>
+<span class='inline-list__item'>10/30/2019</span>
+<span class='inline-list__item'>
+By
+<a href="/producers/stefan-milne">Stefan Milne</a>
+</span>
+
+</p>
+</div>
+</div>
+<div class='item'>
+<a href="/arts-and-culture/2019/10/timbrrr-winter-music-festival-announces-its-2020-lineup"><div class='item__thumb'>
+<div class='thumbnail aspect_ratio_square' data-controller='image'>
+<img data-image-target="image" data-src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_1667,w_1667,x_0,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_auto/0119-cult-timbrrr_rs5ga8.jpg" class="cld-responsive" />
+<noscript>
+<img src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_1667,w_1667,x_0,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_auto/0119-cult-timbrrr_rs5ga8.jpg" />
+</noscript>
+</div>
+
+</div>
+</a><div class='item__content'>
+<p class='item__kicker'>The Big Chill</p>
+<h1 class='item__title'><a href="/arts-and-culture/2019/10/timbrrr-winter-music-festival-announces-its-2020-lineup">Timbrrr! Winter Music Festival Announces Its 2020 Lineup</a></h1>
+<p class='item__teaser'>Pedro the Lion and Bully headline, along with some of Seattle's best live bands. </p>
+<p class='item__meta'>
+<span class='inline-list__item'>10/21/2019</span>
+<span class='inline-list__item'>
+By
+<a href="/producers/stefan-milne">Stefan Milne</a>
+</span>
+
+</p>
+</div>
+</div>
+<div class='item'>
+<a href="/arts-and-culture/2019/10/dave-matthews-band-and-soundgarden-nab-rock-and-roll-hall-of-fame-nominations"><div class='item__thumb'>
+<div class='thumbnail aspect_ratio_square' data-controller='image'>
+<img data-image-target="image" data-src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_4005,w_4010,x_1330,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_auto/shutterstock_1520382959_vvlflp.jpg" class="cld-responsive" />
+<noscript>
+<img src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_4005,w_4010,x_1330,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_auto/shutterstock_1520382959_vvlflp.jpg" />
+</noscript>
+</div>
+
+</div>
+</a><div class='item__content'>
+<p class='item__kicker'>Lauded Locals</p>
+<h1 class='item__title'><a href="/arts-and-culture/2019/10/dave-matthews-band-and-soundgarden-nab-rock-and-roll-hall-of-fame-nominations">Dave Matthews Band and Soundgarden Nab Rock and Roll Hall of Fame Nominations</a></h1>
+<p class='item__teaser'>And for Dave that might actually mean something. </p>
+<p class='item__meta'>
+<span class='inline-list__item'>10/15/2019</span>
+<span class='inline-list__item'>
+By
+<a href="/producers/stefan-milne">Stefan Milne</a>
+</span>
+
+</p>
+</div>
+</div>
+
+
+</div>
+</div>
+<div class='l-sidebar' id='layout-section--3'><div class='widget widget--ad' data-widget-type='ad' id='widget-346'>
+<div class='ad-section'>
+<div data-controller='display-ad' data-display-ad-dimensions-desktop-value='[[300, 600]]' data-display-ad-dimensions-mobile-value='[]' data-display-ad-dimensions-tablet-value='[]'></div>
+</div>
+</div>
+<div class='widget widget--content-list' data-widget-type='content_views_list' id='widget-347'>
+<div class='widget__header'>
+<h1 class='widget__title'>Popular Content</h1>
+</div>
+<div class='widget__body'>
+<ol class='item-list'>
+<div class='item'>
+<div class='item__content'>
+<h1 class='item__title'><a href="/travel-and-outdoors/uw-cherry-blossoms-seattle">A Viewing Guide for the UW Cherry Blossoms</a></h1>
+</div>
+</div>
+<div class='item'>
+<div class='item__content'>
+<h1 class='item__title'><a href="/news-and-city-life/2022/04/ijeoma-oluo-new-seattle-home-after-fire">Let This Be the Last Time</a></h1>
+</div>
+</div>
+<div class='item'>
+<div class='item__content'>
+<h1 class='item__title'><a href="/eat-and-drink/seattle-s-100-best-restaurants-right-now">Seattle’s 100 Best Restaurants</a></h1>
+</div>
+</div>
+<div class='item'>
+<div class='item__content'>
+<h1 class='item__title'><a href="/home-and-real-estate/2022/04/seattle-suburbs-real-estate-housing-prices-bellevue-woodinville-mercer-island">6 Seattle Suburbs with the Highest Price Growth in March</a></h1>
+</div>
+</div>
+<div class='item'>
+<div class='item__content'>
+<h1 class='item__title'><a href="/home-and-real-estate/2022/03/russell-wilson-ciara-bellevue-home">The Broncos Got Russell Wilson, But We Get to Keep the House</a></h1>
+</div>
+</div>
+<div class='item'>
+<div class='item__content'>
+<h1 class='item__title'><a href="/home-and-real-estate/2022/04/seattle-neighborhood-real-estate-prices-home-buying-march-2022">March Home Prices Were Way Up in These 6 Seattle Enclaves</a></h1>
+</div>
+</div>
+
+</ol>
+</div>
+
+</div>
+<div class='widget widget--ad' data-widget-type='ad' id='widget-348'>
+<div class='ad-section'>
+<div data-controller='display-ad' data-display-ad-dimensions-desktop-value='[[300, 150]]' data-display-ad-dimensions-mobile-value='[[300, 150]]' data-display-ad-dimensions-tablet-value='[[300, 150]]'></div>
+</div>
+</div>
+</div>
+</div>
+<div class='l-container--full-width' id='layout-section--4'></div>
+<div class='l-container--right-rail'>
+<div class='l-main'>
+<div class='item-index'>
+<div class='item'>
+<a href="/arts-and-culture/2019/10/3-local-albums-to-listen-to-this-october"><div class='item__thumb'>
+<div class='thumbnail aspect_ratio_square' data-controller='image'>
+<img data-image-target="image" data-src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_1200,w_1200,x_0,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_auto/LisaPrank_j6dicd.jpg" class="cld-responsive" />
+<noscript>
+<img src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_1200,w_1200,x_0,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_auto/LisaPrank_j6dicd.jpg" />
+</noscript>
+</div>
+
+</div>
+</a><div class='item__content'>
+<p class='item__kicker'>Hear Here</p>
+<h1 class='item__title'><a href="/arts-and-culture/2019/10/3-local-albums-to-listen-to-this-october">3 Local Albums to Listen to This October</a></h1>
+<p class='item__teaser'>New releases from Lisa Prank, Lemolo, and Great Grandpa.</p>
+<p class='item__meta'>
+<span class='inline-list__item'>10/10/2019</span>
+<span class='inline-list__item'>
+By
+<a href="/producers/stefan-milne">Stefan Milne</a>
+</span>
+
+</p>
+</div>
+</div>
+<div class='item'>
+<a href="/arts-and-culture/2019/10/earshot-jazz-festival-is-stacked-this-year"><div class='item__thumb'>
+<div class='thumbnail aspect_ratio_square' data-controller='image'>
+<img data-image-target="image" data-src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_1000,w_1000,x_415,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_auto/Berliner_Sasha_by_The_Cell_Theatre_idyn53.jpg" class="cld-responsive" />
+<noscript>
+<img src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_1000,w_1000,x_415,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_auto/Berliner_Sasha_by_The_Cell_Theatre_idyn53.jpg" />
+</noscript>
+</div>
+
+</div>
+</a><div class='item__content'>
+<p class='item__kicker'>Hear Here</p>
+<h1 class='item__title'><a href="/arts-and-culture/2019/10/earshot-jazz-festival-is-stacked-this-year">Earshot Jazz Festival Is Stacked with Talent This Year</a></h1>
+<p class='item__teaser'>The annual month of jazz brings in local and national luminaries. </p>
+<p class='item__meta'>
+<span class='inline-list__item'>10/08/2019</span>
+<span class='inline-list__item'>
+By
+<a href="/producers/stefan-milne">Stefan Milne</a>
+</span>
+
+</p>
+</div>
+</div>
+<div class='item'>
+<a href="/arts-and-culture/2019/09/billie-eilish-announces-tacoma-dome-show"><div class='item__thumb'>
+<div class='thumbnail aspect_ratio_square' data-controller='image'>
+<img data-image-target="image" data-src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_2993,w_2993,x_1197,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_auto/shutterstock_1488792806_eyoxfv.jpg" class="cld-responsive" />
+<noscript>
+<img src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_2993,w_2993,x_1197,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_auto/shutterstock_1488792806_eyoxfv.jpg" />
+</noscript>
+</div>
+
+</div>
+</a><div class='item__content'>
+<p class='item__kicker'>Ticket Alert</p>
+<h1 class='item__title'><a href="/arts-and-culture/2019/09/billie-eilish-announces-tacoma-dome-show">Billie Eilish Announces Tacoma Dome Show</a></h1>
+<p class='item__teaser'>The pop wunderkind hits the arena in April. </p>
+<p class='item__meta'>
+<span class='inline-list__item'>09/27/2019</span>
+<span class='inline-list__item'>
+By
+<a href="/producers/stefan-milne">Stefan Milne</a>
+</span>
+
+</p>
+</div>
+</div>
+
+<div class='item is-cream' data-controller='native-ad'></div>
+
+<div class='item'>
+<a href="/arts-and-culture/2019/09/3-local-albums-to-listen-to-this-september"><div class='item__thumb'>
+<div class='thumbnail aspect_ratio_square' data-controller='image'>
+<img data-image-target="image" data-src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_4084,w_4082,x_1969,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_auto/2019_TexasIsaiah_LosAngeles_SassyBlack_04_vrzrqw.jpg" class="cld-responsive" />
+<noscript>
+<img src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_4084,w_4082,x_1969,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_auto/2019_TexasIsaiah_LosAngeles_SassyBlack_04_vrzrqw.jpg" />
+</noscript>
+</div>
+
+</div>
+</a><div class='item__content'>
+<p class='item__kicker'>Hear Here</p>
+<h1 class='item__title'><a href="/arts-and-culture/2019/09/3-local-albums-to-listen-to-this-september">3 Local Albums to Listen to This September</a></h1>
+<p class='item__teaser'>New releases from SassyBlack, Chastity Belt, and Somesurprises drop soon. </p>
+<p class='item__meta'>
+<span class='inline-list__item'>09/12/2019</span>
+<span class='inline-list__item'>
+By
+<a href="/producers/stefan-milne">Stefan Milne</a>
+</span>
+
+</p>
+</div>
+</div>
+<div class='item'>
+<a href="/arts-and-culture/2019/08/who-to-see-at-bumbershoot-2019"><div class='item__thumb'>
+<div class='thumbnail aspect_ratio_square' data-controller='image'>
+<img data-image-target="image" data-src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_2000,w_2000,x_510,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_auto/Bumbershoot_day1_7-2_gpq7au.jpg" class="cld-responsive" />
+<noscript>
+<img src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_2000,w_2000,x_510,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_auto/Bumbershoot_day1_7-2_gpq7au.jpg" />
+</noscript>
+</div>
+
+</div>
+</a><div class='item__content'>
+<p class='item__kicker'>Festival Season</p>
+<h1 class='item__title'><a href="/arts-and-culture/2019/08/who-to-see-at-bumbershoot-2019">Who to See at Bumbershoot 2019</a></h1>
+<p class='item__teaser'>No great surprise here: If you go one day, make it Friday. </p>
+<p class='item__meta'>
+<span class='inline-list__item'>08/28/2019</span>
+<span class='inline-list__item'>
+By
+<a href="/producers/stefan-milne">Stefan Milne</a>
+</span>
+
+</p>
+</div>
+</div>
+<div class='item'>
+<a href="/arts-and-culture/2019/08/what-do-directors-mean-for-seattle-s-artistic-future"><div class='item__thumb'>
+<div class='thumbnail aspect_ratio_square' data-controller='image'>
+<img data-image-target="image" data-src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_3311,w_3310,x_770,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_auto/amada-cruz-5809_cit48h.jpg" class="cld-responsive" />
+<noscript>
+<img src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_3311,w_3310,x_770,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_auto/amada-cruz-5809_cit48h.jpg" />
+</noscript>
+</div>
+
+</div>
+</a><div class='item__content'>
+<p class='item__kicker'>The Directors</p>
+<h1 class='item__title'><a href="/arts-and-culture/2019/08/what-do-directors-mean-for-seattle-s-artistic-future">What Do New Directors Mean for Seattle's Artistic Future?</a></h1>
+<p class='item__teaser'>Seattle Art Museum, Symphony, and Opera all get new leaders this season. </p>
+<p class='item__meta'>
+<span class='inline-list__item'>08/20/2019</span>
+<span class='inline-list__item'>
+By
+<a href="/producers/stefan-milne">Stefan Milne</a>
+</span>
+
+</p>
+</div>
+</div>
+<div class='item'>
+<a href="/arts-and-culture/2019/08/strange-negotiations-delves-into-david-bazans-crisis-of-faith"><div class='item__thumb'>
+<div class='thumbnail aspect_ratio_square' data-controller='image'>
+<img data-image-target="image" data-src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_2813,w_2811,x_1106,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_auto/Strange_Negotiations-Brandon_Vedder_zlgist.jpg" class="cld-responsive" />
+<noscript>
+<img src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_2813,w_2811,x_1106,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_auto/Strange_Negotiations-Brandon_Vedder_zlgist.jpg" />
+</noscript>
+</div>
+
+</div>
+</a><div class='item__content'>
+<p class='item__kicker'>Journeys </p>
+<h1 class='item__title'><a href="/arts-and-culture/2019/08/strange-negotiations-delves-into-david-bazans-crisis-of-faith"><em>Strange Negotiations</em> Delves into David Bazan's Crisis of Faith</a></h1>
+<p class='item__teaser'>A new documentary charts the travels, and travails, of the local singer-songwriter. </p>
+<p class='item__meta'>
+<span class='inline-list__item'>08/20/2019</span>
+<span class='inline-list__item'>
+By
+<a href="/producers/stefan-milne">Stefan Milne</a>
+</span>
+
+</p>
+</div>
+</div>
+<div class='item'>
+<a href="/arts-and-culture/2019/08/seattle-musicians-are-migrating-to-california"><div class='item__thumb'>
+<div class='thumbnail aspect_ratio_square' data-controller='image'>
+<img data-image-target="image" data-src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_2723,w_2720,x_1091,y_197/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_auto/PromQueen-Peter_Hilgendorf_emh4tw.jpg" class="cld-responsive" />
+<noscript>
+<img src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_2723,w_2720,x_1091,y_197/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_auto/PromQueen-Peter_Hilgendorf_emh4tw.jpg" />
+</noscript>
+</div>
+
+</div>
+</a><div class='item__content'>
+<p class='item__kicker'>If I Was in LA</p>
+<h1 class='item__title'><a href="/arts-and-culture/2019/08/seattle-musicians-are-migrating-to-california">Seattle Musicians Are Migrating to California</a></h1>
+<p class='item__teaser'>Last year a number of longtime Seattle artists departed south—why?</p>
+<p class='item__meta'>
+<span class='inline-list__item'>08/20/2019</span>
+<span class='inline-list__item'>
+By
+<a href="/producers/stefan-milne">Stefan Milne</a>
+</span>
+
+</p>
+</div>
+</div>
+<div class='item'>
+<a href="/arts-and-culture/2019/08/phonic-seattle-explores-our-less-typical-music-venues"><div class='item__thumb'>
+<div class='thumbnail aspect_ratio_square' data-controller='image'>
+<img data-image-target="image" data-src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_710,w_710,x_254,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_auto/Phonic_Seattle_Snapshot_onmdwu.png" class="cld-responsive" />
+<noscript>
+<img src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_710,w_710,x_254,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_auto/Phonic_Seattle_Snapshot_onmdwu.png" />
+</noscript>
+</div>
+
+</div>
+</a><div class='item__content'>
+<p class='item__kicker'>Hear Here</p>
+<h1 class='item__title'><a href="/arts-and-culture/2019/08/phonic-seattle-explores-our-less-typical-music-venues"> <em>Phonic Seattle</em> Explores Our Less Typical Music Venues</a></h1>
+<p class='item__teaser'>The new documentary looks into spaces that don’t fit the standard mold. </p>
+<p class='item__meta'>
+<span class='inline-list__item'>08/15/2019</span>
+<span class='inline-list__item'>
+By
+<a href="/producers/stefan-milne">Stefan Milne</a>
+</span>
+
+</p>
+</div>
+</div>
+<div class='item'>
+<a href="/arts-and-culture/2019/08/chong-the-nomad-plays-the-chinatown-international-district-block-party"><div class='item__thumb'>
+<div class='thumbnail aspect_ratio_square' data-controller='image'>
+<img data-image-target="image" data-src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_2333,w_2333,x_1167,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_auto/20190518_chongthenomad_civicstadium_sunnymartini_7831_bqme3m.jpg" class="cld-responsive" />
+<noscript>
+<img src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_2333,w_2333,x_1167,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_auto/20190518_chongthenomad_civicstadium_sunnymartini_7831_bqme3m.jpg" />
+</noscript>
+</div>
+
+</div>
+</a><div class='item__content'>
+<p class='item__kicker'>Festival Season</p>
+<h1 class='item__title'><a href="/arts-and-culture/2019/08/chong-the-nomad-plays-the-chinatown-international-district-block-party">Chong the Nomad Plays the Chinatown–International District Block Party</a></h1>
+<p class='item__teaser'>The C–ID's second block party hosts the up-and-coming musician, along with Prometheus Brown of the Blue Scholars, food trucks, and a bar scavenger hunt. </p>
+<p class='item__meta'>
+<span class='inline-list__item'>08/01/2019</span>
+<span class='inline-list__item'>
+By
+<a href="/producers/stefan-milne">Stefan Milne</a>
+</span>
+
+</p>
+</div>
+</div>
+
+
+</div>
+<div class='pagination__container'>
+<nav class='pagination'>
+<ul>
+<li class='pagination__previous'>
+<a class="button button--primary" rel="prev" href="/music?ancestry=arts-and-culture&amp;page=2">&lsaquo; Prev</a>
+</li>
+
+<li class='pagination__pages'>
+<ul>
+<li class='pagination__page'>
+<a class="button button--link" href="/music?ancestry=arts-and-culture">1</a>
+</li>
+
+<li class='pagination__page'>
+<a class="button button--link" rel="prev" href="/music?ancestry=arts-and-culture&amp;page=2">2</a>
+</li>
+
+<li class='pagination__page current button button--link'>
+3
+</li>
+
+<li class='pagination__page'>
+<a class="button button--link" rel="next" href="/music?ancestry=arts-and-culture&amp;page=4">4</a>
+</li>
+
+<li class='pagination__page'>
+<a class="button button--link" href="/music?ancestry=arts-and-culture&amp;page=5">5</a>
+</li>
+
+<li class='pagination__page'>
+<a class="button button--link" href="/music?ancestry=arts-and-culture&amp;page=6">6</a>
+</li>
+
+<li class='pagination__page'>
+<a class="button button--link" href="/music?ancestry=arts-and-culture&amp;page=7">7</a>
+</li>
+
+<li class='pagination__page gap button button--link'>
+&hellip;
+</li>
+
+<li class='pagination__page'>
+<a class="button button--link" href="/music?ancestry=arts-and-culture&amp;page=20">20</a>
+</li>
+
+</ul>
+</li>
+<li class='pagination__next'>
+<a class="button button--primary" rel="next" href="/music?ancestry=arts-and-culture&amp;page=4">Next &rsaquo;</a>
+</li>
+
+</ul>
+</nav>
+
+</div>
+</div>
+<div class='l-sidebar' id='layout-section--5'><div class='widget widget--ad' data-widget-type='ad' id='widget-349'>
+<div class='ad-section'>
+<div data-controller='display-ad' data-display-ad-dimensions-desktop-value='[[300, 600]]' data-display-ad-dimensions-mobile-value='[]' data-display-ad-dimensions-tablet-value='[]'></div>
+</div>
+</div>
+<div class='widget widget--latest-issue hide-tablet' data-widget-type='latest_issue' id='widget-350'>
+<div class='widget__header'>
+<h1 class='widget__title'>Latest Issue</h1>
+</div>
+<div class='widget__body'>
+<div class='item issue-item'>
+<div class='item__thumb'>
+<a href="https://www.seattlemet.com/issues/1972-issue-spring-2022"><div class='thumbnail aspect_ratio_none' data-controller='image'>
+<img data-image-target="image" data-src="https://res.cloudinary.com/sagacity/image/upload/c_crop/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_auto/1SPR22_Seattle-Met_Cover_1972_unmpgb.gif" class="cld-responsive" />
+<noscript>
+<img src="https://res.cloudinary.com/sagacity/image/upload/c_crop/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_auto/1SPR22_Seattle-Met_Cover_1972_unmpgb.gif" />
+</noscript>
+</div>
+
+</a></div>
+<div class='item__content'>
+<div class='item__header'>
+<p class='item__kicker'>Spring 2022</p>
+<h1 class='item__title'><a href="https://www.seattlemet.com/issues/1972-issue-spring-2022">The 1972 Issue</a></h1>
+</div>
+<div class='item__body'>
+<p class='item__teaser'>
+<a class='button button--primary' href='/subscribe'>Subscribe</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='l-container--full-width' id='layout-section--6'></div>
+</div>
+
+
+</main>
+<div class='g-footer'>
+<div class='l-section'>
+<div class='l-container'>
+<div class='g-footer__section'>
+<div class='level'>
+<div class='level-left'>
+<div class='level-item g-footer__logo'><img src="/assets/seattle_met/logo-inverse-2fc80da32c30ba7bc56b6fdb9943c65142a6a0d334ed51c3a98c36fc6586dad2.png" /></div>
+<div class='level-item g-footer__contact'>509 Olive Way, Suite 305, Seattle, WA 98101 <br/> Phone: 206-957-2234 &bull; Fax: 206-447-3388
+
+</div>
+</div>
+<div class='level-right'>
+<div class='level-item'>
+<ul class='g-footer__social'>
+<li><a class="g-footer__social--fb" title="Facebook" data-tooltip="Facebook" href="https://facebook.com/seattlemet"></a></li>
+<li><a class="g-footer__social--tw" title="Twitter" data-tooltip="Twitter" href="https://twitter.com/seattlemet"></a></li>
+<li><a class="g-footer__social--ig" title="Instagram" data-tooltip="Instagram" href="https://instagram.com/seattlemet"></a></li>
+<li><a class="g-footer__social--pn" title="Pinterest" data-tooltip="Pinterest" href="https://pinterest.com/seattlemet"></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class='g-footer__section'>
+<nav class='g-footer__nav'>
+<ul class='g-footer__menu'>
+<h3 class='g-footer__menu__header'>Channels</h3>
+<li>
+<a href="/eat-and-drink">Eat & Drink</a>
+</li>
+<li>
+<a href="/arts-and-entertainment">Arts & Entertainment</a>
+</li>
+<li>
+<a href="/news-and-city-life">News & City Life</a>
+</li>
+<li>
+<a href="/style-and-shopping">Style & Shopping</a>
+</li>
+<li>
+<a href="/travel-and-outdoors">Travel & Outdoors</a>
+</li>
+<li>
+<a href="/best-of-the-city">Best of the City</a>
+</li>
+<li>
+<a href="/home-and-real-estate/">Home & Real Estate</a>
+</li>
+</ul>
+<ul class='g-footer__menu'>
+<h3 class='g-footer__menu__header'>About Us</h3>
+<li>
+<a href="/pages/about/">Masthead</a>
+</li>
+<li>
+<a href="/pages/advertise">Advertise</a>
+</li>
+<li>
+<a href="/pages/jobs-at-seattlemet">Jobs</a>
+</li>
+<li>
+<a href="/pages/internships-at-seattlemet/">Internships</a>
+</li>
+<li>
+<a href="/pages/privacy">Privacy Policy</a>
+</li>
+<li>
+<a href="/pages/terms/">Terms of Use</a>
+</li>
+<li>
+<a href="/sitemap">Site Map</a>
+</li>
+<li>
+<a href="/pages/contact">Contact Us</a>
+</li>
+</ul>
+<ul class='g-footer__menu'>
+<h3 class='g-footer__menu__header'>Subscriptions</h3>
+<li>
+<a href="https://sea.pcdfusion.com/pcd/Order?iKey=I**HPG">Subscribe</a>
+</li>
+<li>
+<a href="https://sea-sso-pcd.pcdsso.com/cas/login?service=https%3a%2f%2fsea.pcdfusion.com%2fpcd%2fCustomerSupport%2fAccount%2fValidateTicket">Renew Subscription</a>
+</li>
+<li>
+<a href="https://sea-sso-pcd.pcdsso.com/cas/login?service=https%3a%2f%2fsea.pcdfusion.com%2fpcd%2fCustomerSupport%2fAccount%2fValidateTicket">Change Address</a>
+</li>
+<li>
+<a href="/pages/subscriber-faq/">Subscriber FAQ</a>
+</li>
+<li>
+<a href="/issues/">Purchase Back Issues</a>
+</li>
+<li>
+<a href="https://sea-sso-pcd.pcdsso.com/cas/login?service=https%3a%2f%2fsea.pcdfusion.com%2fpcd%2fCustomerSupport%2fAccount%2fValidateTicket">Pay Invoice</a>
+</li>
+<li>
+<a href="/newsletters">Newsletters</a>
+</li>
+</ul>
+<ul class='g-footer__menu'>
+<h3 class='g-footer__menu__header'>Other SagaCity Media</h3>
+<li>
+<a href="https://pdxmonthly.com">Portland Monthly</a>
+</li>
+<li>
+<a href="https://www.houstoniamag.com">Houstonia</a>
+</li>
+<li>
+<a href="https://www.sarasotamagazine.com">Sarasota Magazine</a>
+</li>
+<li>
+<a href="https://mag.jewishinseattle.org">Jewish In Seattle</a>
+</li>
+<li>
+<a href="https://www.aspensojo.com">Aspen Sojourner</a>
+</li>
+<li>
+<a href="https://www.parkcitymag.com">Park City Magazine</a>
+</li>
+<li>
+<a href="https://www.vailmag.com">Vail-Beaver Creek Magazine</a>
+</li>
+</ul>
+</nav>
+</div>
+<div class='g-footer__section'>
+<div class='level'>
+<div class='level-left'>
+<div class='level-item g-footer__sagacity-logo'><a href="https://www.sagacitymedia.com"><img src="/assets/sagacity-logo-f6175bd9a56270636d37326c950f4eaa6c7985d9a171bdd8c31108d397861a30.png" /></a></div>
+</div>
+<div class='level-left'>
+&copy; 2022 SagaCity Media
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+</body>
+</html>

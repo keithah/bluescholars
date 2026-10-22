@@ -1,0 +1,50 @@
+{
+  "archive": "Internet Archive Wayback",
+  "source_index": "recovery/wayback-related/manifest.json",
+  "capture_selection": "One downloaded memento for each distinct CDX HTML digest under the selected original URL filter and year range.",
+  "revision_records": 109,
+  "unique_payload_hashes": 108,
+  "bytes_recorded": 13532723,
+  "verified_sha256_and_html_files": 109,
+  "by_original_url": {
+    "http://www.myspace.com/bluescholars": {
+      "revision_records": 89,
+      "unique_payload_hashes": 88,
+      "date_start": "20070307131210",
+      "date_end": "20250816191351"
+    },
+    "http://bluescholars.squarespace.com/": {
+      "revision_records": 20,
+      "unique_payload_hashes": 20,
+      "date_start": "20160406062840",
+      "date_end": "20200703183602"
+    }
+  },
+  "persistent_replay_failures": [
+    {
+      "original_url": "http://www.myspace.com/bluescholars",
+      "timestamp": "20080707050101",
+      "status": "200",
+      "mime": "text/html",
+      "cdx_digest": "IPP5AZKQZ7ECZOKDLQ4Z7IT5S7Y4ZE7M",
+      "cdx_length": "18930",
+      "stage": "replay",
+      "error": "ContentDecodingError: ('Received response with content-encoding: gzip, but failed to decode it.', error('Error -3 while decompressing data: incorrect header check'))"
+    },
+    {
+      "original_url": "http://www.myspace.com/bluescholars",
+      "timestamp": "20080724054056",
+      "status": "200",
+      "mime": "text/html",
+      "cdx_digest": "Z64KYKMVDJXFWV4OBYKF4J3MTHR3W44Q",
+      "cdx_length": "20133",
+      "stage": "replay",
+      "error": "ContentDecodingError: ('Received response with content-encoding: gzip, but failed to decode it.', error('Error -3 while decompressing data: incorrect header check'))"
+    }
+  ],
+  "limitations": [
+    "These are source pages only, kept in recovery/wayback-versions/raw and not promoted into public editions.",
+    "Two MySpace 2008 responses declared gzip but failed decoding; the response error and CDX metadata are retained, with retry available via --retry-failed.",
+    "The source CDX index contains additional timestamp rows; duplicate CDX digests were sampled once per original URL."
+  ]
+}

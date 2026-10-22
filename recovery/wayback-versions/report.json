@@ -1,0 +1,23 @@
+{
+  "archive": "Internet Archive Wayback",
+  "source_index": "recovery/wayback-related/manifest.json",
+  "url_filter": "bluescholars.bandcamp.com/album/coffee-snow-2",
+  "after_year_inclusive": null,
+  "before_year_exclusive": null,
+  "candidate_mementos": 30,
+  "distinct_cdx_revisions": 30,
+  "pending_before_batch": 30,
+  "previous_failures_skipped": 0,
+  "attempted": 30,
+  "recovered": 30,
+  "failures": [],
+  "rate_limited": false,
+  "limitations": [
+    "Distinct CDX digests are sampled once per original URL; timestamp-level coverage remains in the parent CDX manifest.",
+    "All pages stay in recovery-only storage pending content, relevance, compatibility and rights review."
+  ],
+  "revision_records_total": 145,
+  "failure_records_total": 4,
+  "unique_payloads_total": 144,
+  "pending_after_batch": 0
+}

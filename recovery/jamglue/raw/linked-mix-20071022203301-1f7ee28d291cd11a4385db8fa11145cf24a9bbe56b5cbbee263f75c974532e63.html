@@ -1,0 +1,1547 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en">
+<head>
+  <title>
+    Jamglue -
+          Remixing for the Masses
+      </title>
+  <link rel="icon" type="image/png" href="http://three.static.jamglue.com/favicon.v13092007.png" />
+          <link href="http://rss.jamglue.com/mixes/popular.rss" rel="alternate" title="Popular Jamglue Mixes" type="application/rss+xml" />
+      <link href="http://rss.jamglue.com/tracks/popular.rss" rel="alternate" title="Popular Jamglue Tracks" type="application/rss+xml" />
+      <link href="http://rss.jamglue.com/mixes/recent.rss" rel="alternate" title="Recent Jamglue Mixes" type="application/rss+xml" />
+      <link href="http://rss.jamglue.com/tracks/recent.rss" rel="alternate" title="Recent Jamglue Tracks" type="application/rss+xml" />
+      <link href="http://rss.jamglue.com/people/recent.rss" rel="alternate" title="Recent Jamglue People" type="application/rss+xml" />
+      <link href="http://rss.jamglue.com/people/content.rss" rel="alternate" title="Jamglue People with the most content" type="application/rss+xml" />
+      <link rel="search" type="application/opensearchdescription+xml" href="http://static.jamglue.com/jamglue-search.xml" title="Jamglue search" />
+  
+
+<link href="http://three.static.jamglue.com/stylesheets/general.v13092007.css" media="all" rel="Stylesheet" type="text/css" />
+<link href="http://two.static.jamglue.com/stylesheets/mixer.v13092007.css" media="all" rel="Stylesheet" type="text/css" />
+<link href="http://six.static.jamglue.com/stylesheets/adder.v13092007.css" media="all" rel="Stylesheet" type="text/css" />
+<link href="http://four.static.jamglue.com/stylesheets/iehacks.v13092007.css" media="all" rel="Stylesheet" type="text/css" />
+
+<!--[if lte IE 6]>
+<style>
+#adderResults {
+  height: 400px;
+}
+
+#sidebar {
+  right: 10px;
+}
+</style>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+
+<div id="wrapper" style="height: 100%;">
+
+<div id="topnav">
+
+<div id="mainNavContainer" align="center">
+  <table width="760" height="34" border="0" cellpadding="0" cellspacing="0" id="mainNav">
+
+    <tr align="center">
+      <td class="inactive"><a href="/">HOME</a></td>
+      <td class="active"><a href="/mixes">MIXES</a></td>
+      <td class="inactive"><a href="/tracks">TRACKS</a></td>
+      <td class="inactive"><a href="/people">PEOPLE</a></td>
+      <td class="inactive"><a href="/contests">CONTESTS</a></td>
+    </tr>
+  </table>
+</div>
+
+
+<!-- breadcrumb //-->
+<div id="breadCrumbContainer">
+<table align="left" width="760">
+  <tr>
+    <td>
+      You're Here:   <a href="/">Jamglue</a> &gt;
+  <a href="/mixes">Mixes</a> &gt;
+  <a href="/mixes/332007-Fire-for-the-People-DJ-Contest-Mix">Fire for the People - DJ Contest Mix</a> 
+    (by <a href="/people/BlueScholars">BlueScholars</a>) &gt;
+  <strong>Remix</strong> 
+
+    </td>
+  </tr>
+</table>
+</div>
+<!-- end breadcrumb //-->
+
+</div>
+
+<div id="mixer">
+  <div style="padding-top: 70px; width=100%">
+  <div class="notice">
+  Loading the mixer... you need Flash 8 or higher installed and JavaScript enabled to use it.
+  </div>
+  </div>
+</div>
+
+
+<div id="sidebartoggle">
+<a href="#" id="sidebarToggleLink" onclick="toggleSidebar();">&lt;&lt; Add stuff to this mix</a>
+</div>
+
+<div id="sidebar" style="display: none; height:100%;">
+
+<div id="adderHeader">
+  <ul>
+
+    <li id="yourStuffTab" style='display:none;'>
+    <a href="#" onclick="Element.show('loadingResults'); Element.hide('loadingResults'); switchAdder('yourStuff');; return false;">Yours</a>
+    </li>
+
+    <li id="allStuffTab" class='selected'>
+    <a href="#" onclick="Element.show('loadingResults'); Element.hide('loadingResults'); switchAdder('allStuff');; return false;">Everybody's</a>
+    </li>
+
+    <li id="searchTab">
+      <a href="#" onclick="Element.show('loadingResults'); switchAdder('search'); Element.hide('loadingResults');; return false;">Search</a>
+    </li>
+
+    <li id="newStuffTab" style='display:none;'>
+      <a href="#" onclick="Element.show('loadingResults'); switchAdder('newStuff'); Element.hide('loadingResults');; return false;">Add New</a>
+    </li>
+
+    <li id="contestsTab">
+      <a href="#" onclick="Element.show('loadingResults'); switchAdder('contests'); Element.hide('loadingResults');; return false;">Featured</a>
+    </li>
+
+  </ul>
+</div>
+
+<div id='loadingResults' class='adderLoading' style='display:none;'>
+  <img align="absmiddle" alt="Busy" src="http://one.static.jamglue.com/images/busy.v13092007.gif" /> Loading...
+</div>
+
+<br/>
+
+
+<div id="yourStuffBody" class='adderInterContents' style='right: -1000px;'>
+  <div id="adderSubHeader">
+    <ul>
+    <li id="yourTracksTab" class="selected">
+      <a href="#" onclick="Element.show('loadingResults'); switchAdder('yourTracks'); Element.hide('loadingResults');; return false;">Your Tracks</a>
+    </li>
+    <li id="yourMixesTab">
+      <span id='yourMixesTabLoad'>
+        <a href="#" onclick="new Ajax.Updater('yourMixesBodyDiv', '/songs/add_your_songs/332007-Fire-for-the-People-DJ-Contest-Mix?mode=mixer', {asynchronous:true, evalScripts:true, onComplete:function(request){Element.hide('loadingResults'); showSomePopovers($('yourMixesBodyDiv')); switchAdder('yourMixes'); Element.hide('yourMixesTabLoad'); Element.show('yourMixesTabSwitch');}, onLoading:function(request){Element.show('loadingResults');}}); return false;">Your Mixes</a>
+      </span>
+      <span id='yourMixesTabSwitch' style='display:none;'>
+        <a href="#" onclick="Element.show('loadingResults'); switchAdder('yourMixes'); Element.hide('loadingResults');; return false;">Your Mixes</a>
+      </span>
+    </li>
+    <li id="yourFavesTab">
+      <span id='yourFavesTabLoad'>
+        <a href="#" onclick="new Ajax.Updater('yourFavesBodyDiv', '/songs/add_your_favorites/332007-Fire-for-the-People-DJ-Contest-Mix?mode=mixer', {asynchronous:true, evalScripts:true, onComplete:function(request){Element.hide('loadingResults'); showSomePopovers($('yourFavesBodyDiv')); switchAdder('yourFaves'); Element.hide('yourFavesTabLoad'); Element.show('yourFavesTabSwitch');}, onLoading:function(request){Element.show('loadingResults');}}); return false;">Your Favorites</a>
+      </span>
+      <span id='yourFavesTabSwitch' style='display:none;'>
+        <a href="#" onclick="Element.show('loadingResults'); switchAdder('yourFaves'); Element.hide('loadingResults');; return false;">Your Favorites</a>
+      </span>
+    </li>
+    </ul>
+  </div>
+
+  <br/>
+
+  <div id="yourTracksBody" class='adderSubContents' style='right:11px;'>  
+    <span id='yourTracksBusy' class='refreshLoading' style='display:none;'>
+      <img align="absmiddle" alt="Busy" src="http://one.static.jamglue.com/images/busy.v13092007.gif" /> Loading...
+    </span>
+        <a href="#" onclick="new Ajax.Updater('yourTracksBodyDiv', '/songs/add_your_tracks/332007-Fire-for-the-People-DJ-Contest-Mix?mode=mixer', {asynchronous:true, evalScripts:true, onComplete:function(request){Element.hide('yourTracksBusy'); showSomePopovers($('yourTracksBodyDiv'));}, onLoading:function(request){Element.show('yourTracksBusy');}})">Refresh</a>
+    <div id='yourTracksBodyDiv'></div>
+  </div>
+
+  <br/>
+
+  <div id="yourMixesBody" class='adderSubContents' style='right:-1000px;'>  
+    <span id='yourMixesBusy' class='refreshLoading' style='display:none;'>
+      <img align="absmiddle" alt="Busy" src="http://one.static.jamglue.com/images/busy.v13092007.gif" /> Loading...
+    </span>
+    <a href="#" onclick="new Ajax.Updater('yourMixesBodyDiv', '/songs/add_your_songs/332007-Fire-for-the-People-DJ-Contest-Mix?mode=mixer', {asynchronous:true, evalScripts:true, onComplete:function(request){Element.hide('yourMixesBusy'); showSomePopovers($('yourMixesBodyDiv'));}, onLoading:function(request){Element.show('yourMixesBusy');}}); return false;">Refresh</a>
+    <div id='yourMixesBodyDiv'>
+    </div>
+  </div>
+
+  <br/>
+
+  <div id="yourFavesBody" class='adderSubContents' style='right:-1000px;'>  
+    <span id='yourFavesBusy' class='refreshLoading' style='display:none;'>
+      <img align="absmiddle" alt="Busy" src="http://one.static.jamglue.com/images/busy.v13092007.gif" /> Loading...
+    </span>
+    <a href="#" onclick="new Ajax.Updater('yourFavesBodyDiv', '/songs/add_your_favorites/332007-Fire-for-the-People-DJ-Contest-Mix?mode=mixer', {asynchronous:true, evalScripts:true, onComplete:function(request){Element.hide('yourFavesBusy'); showSomePopovers($('yourFavesBodyDiv'));}, onLoading:function(request){Element.show('yourFavesBusy');}}); return false;">Refresh</a>
+    <div id='yourFavesBodyDiv'>
+    </div>
+  </div>
+</div>
+
+<br/>
+
+<div id="allStuffBody" class='adderInterContents' style='right: -12px;'>
+  <div id="adderSubHeader">
+    <ul>
+    <li id="allTracksTab" class='selected'>
+      <a href="#" onclick="Element.show('loadingResults'); switchAdder('allTracks'); Element.hide('loadingResults');; return false;">Popular Tracks</a>
+    </li>
+    <li id="allMixesTab">
+      <span id='allMixesTabLoad'>
+        <a href="#" onclick="new Ajax.Updater('allMixesBodyDiv', '/songs/add_popular_songs/332007-Fire-for-the-People-DJ-Contest-Mix?mode=mixer', {asynchronous:true, evalScripts:true, onComplete:function(request){Element.hide('loadingResults'); showSomePopovers($('allMixesBodyDiv')); switchAdder('allMixes'); Element.hide('allMixesTabLoad'); Element.show('allMixesTabSwitch');}, onLoading:function(request){Element.show('loadingResults');}}); return false;">Popular Mixes</a>
+      </span>
+      <span id='allMixesTabSwitch' style='display:none;'>
+        <a href="#" onclick="Element.show('loadingResults'); switchAdder('allMixes'); Element.hide('loadingResults');; return false;">Popular Mixes</a>
+      </span>
+    </li>
+    </ul>
+  </div>
+
+  <br/>
+
+  <div id="allTracksBody" class='adderSubContents' style='right:11px;'>  
+      <span id='allTracksBusy' class='refreshLoading' style='display:none;'>
+        <img align="absmiddle" alt="Busy" src="http://one.static.jamglue.com/images/busy.v13092007.gif" /> Loading...
+      </span>
+      
+      <a href="#" onclick="new Ajax.Updater('allTracksBodyDiv', '/songs/add_popular_tracks/332007-Fire-for-the-People-DJ-Contest-Mix?mode=mixer', {asynchronous:true, evalScripts:true, onComplete:function(request){Element.hide('allTracksBusy'); showSomePopovers($('allTracksBodyDiv'));}, onLoading:function(request){Element.show('allTracksBusy');}})">Refresh</a>
+      <div id='allTracksBodyDiv'></div>
+  </div>
+
+  <br/>
+
+  <div id="allMixesBody" class='adderSubContents' style='right:-1000px;'>  
+    <span id='allMixesBusy' class='refreshLoading' style='display:none;'>
+      <img align="absmiddle" alt="Busy" src="http://one.static.jamglue.com/images/busy.v13092007.gif" /> Loading...
+    </span>
+    <a href="#" onclick="new Ajax.Updater('allMixesBodyDiv', '/songs/add_popular_songs/332007-Fire-for-the-People-DJ-Contest-Mix?mode=mixer', {asynchronous:true, evalScripts:true, onComplete:function(request){Element.hide('allMixesBusy'); showSomePopovers($('allMixesBodyDiv'));}, onLoading:function(request){Element.show('allMixesBusy');}}); return false;">Refresh</a>
+    <div id='allMixesBodyDiv'>
+    </div>
+  </div>
+</div>
+
+<br/>
+
+<div id="searchBody" class='adderContents' style='right: -1000px;'>
+  <div id="adderSearchBox">
+<form action="/songs/adder_search_results/332007-Fire-for-the-People-DJ-Contest-Mix" method="post" onsubmit="new Ajax.Updater('adderSearchResults', '/songs/adder_search_results/332007-Fire-for-the-People-DJ-Contest-Mix', {asynchronous:true, evalScripts:true, onComplete:function(request){showSomePopovers($('adderSearchResults'))}, onLoading:function(request){$('adderSearchResults').innerHTML = '&lt;br/&gt;&lt;img align=\&quot;absmiddle\&quot; alt=\&quot;Busy\&quot; src=\&quot;http://one.static.jamglue.com/images/busy.v13092007.gif\&quot; /&gt; Searching...';
+}, parameters:Form.serialize(this)}); return false;">
+Search Jamglue for <input id="query" name="query" type="text" />
+<input name="commit" type="submit" value="Go" />
+</form>
+<br/>
+<span class="tiny">Tip: Try restricting your search results by tempo, <br/>e.g.  <strong>bpm:125 drums</strong> or <strong>bpm:[123 TO 127] vocals male</strong></span>
+</div>
+
+<div id="adderSearchResults">
+</div>
+
+</div>
+
+<br/>
+
+<div id="newStuffBody" class='adderInterContents' style='right: -1000px;'>
+  <div id="adderSubHeader">
+    <ul>
+    <li id="uploadTab" class='selected'>
+      <a href="#" onclick="Element.show('loadingResults'); switchAdder('upload'); Element.hide('loadingResults');; return false;">Upload</a>
+    </li>
+    <li id="recordTab">
+      <a href="#" onclick="Element.show('loadingResults'); switchAdder('record'); Element.hide('loadingResults');; return false;">Record</a>
+    </li>
+    </ul>
+  </div>
+
+  <br/>
+
+  <div id="uploadBody" class='adderSubContents' style='right:11px;'>
+      </div>
+
+  <br/>
+
+  <div id="recordBody" class='adderSubContents' style='right: -1000px;'>
+      </div>
+</div>
+
+<br/>
+
+<div id="contestsBody" class='adderInterContents' style='right: -1000px;'>
+    <div id="adderSubHeader">
+    <ul>
+    <li id="TPainTab" class="selected">
+    <a href="#" onclick="Element.show('loadingResults'); switchAdder('TPain'); Element.hide('loadingResults');; return false;">T-Pain</a>
+    </li>
+    <li id="BlueScholarsTab">
+    <a href="#" onclick="Element.show('loadingResults'); switchAdder('BlueScholars'); Element.hide('loadingResults');; return false;">Blue Scholars</a>
+    </li>
+    <li id="RKellyTab">
+    <a href="#" onclick="Element.show('loadingResults'); switchAdder('RKelly'); Element.hide('loadingResults');; return false;">R. Kelly</a>
+    </li>
+    <li id="coldcutTab">
+    <a href="#" onclick="Element.show('loadingResults'); switchAdder('coldcut'); Element.hide('loadingResults');; return false;">Coldcut</a>
+    </li>
+    </ul>
+  </div>
+
+  <br/>
+
+  <div id="TPainBody" class='adderSubContents' style='right:11px;'>  
+  
+<h4>Tracks</h4>
+
+<ul>
+  <li>
+    <form action="/mixes/81895-White-Kids-Aren-t-Hyphy-copy-/remix" method="post">
+    <input name="commit" onclick="$('mixerFlash').addComponent(817427); return false;" type="submit" value="Add" />
+&nbsp;&nbsp;
+
+
+
+<span id="424643765-iap-817427" class="inlinePlayerWrapper">
+<img align="absMiddle" alt="Play_button" class="handCursor" onclick=" var so = new SWFObject(&quot;/flash/inline-player.swf&quot;, &quot;inline-player&quot;, &quot;20&quot;, &quot;20&quot;, &quot;7&quot;, &quot;#FFFFFF&quot;); so.addParam(&quot;align&quot;, &quot;absmiddle&quot;); so.addParam(&quot;wmode&quot;, &quot;transparent&quot;); so.addVariable(&quot;rootId&quot;, 817427); so.addVariable(&quot;autoStart&quot;, 1); so.write(&quot;424643765-iap-817427&quot;); " src="http://one.static.jamglue.com/images/play_button.v13092007.gif" />
+</span>
+
+
+<span class="pop">
+<div class="popOverBox" id="1463331615-tlt-369725" style="display: none;">&nbsp;</div>
+</span>
+
+
+<a href="http://www.jamglue.com/tracks/369725-Bartender-T-Pain-Lead-Vocals"><img align="absmiddle" alt="26255-tiny" border="0" src="http://images.jamglue.com/26255-tiny.gif" /></a>
+
+
+
+
+<a href="/tracks/369725-Bartender-T-Pain-Lead-Vocals" class="songName" title="Bartender - T-Pain Lead Vocals">Bartender - T-Pain ...</a>
+
+<span class="poplink" id="pop_1463331615-tlt-369725" style="display:none;">
+<a href="#" onclick="new Ajax.Request('/tracks/369725/popover?pop_id=1463331615-tlt-369725', {asynchronous:true, evalScripts:true}); return false;"><img align="absmiddle" alt="Pop" border="0" src="http://six.static.jamglue.com/images/pop.v13092007.gif" /></a>
+</span>
+
+
+  <span class="popspacer" id="pop_spacer_1463331615-tlt-369725">
+    <img align="absmiddle" alt="Transparent" border="0" height="13" src="http://three.static.jamglue.com/images/transparent.v13092007.png" width="13" />
+  </span>
+
+
+</form>
+
+  </li>
+  <li>
+    <form action="/mixes/81895-White-Kids-Aren-t-Hyphy-copy-/remix" method="post">
+    <input name="commit" onclick="$('mixerFlash').addComponent(817413); return false;" type="submit" value="Add" />
+&nbsp;&nbsp;
+
+
+
+<span id="241377773-iap-817413" class="inlinePlayerWrapper">
+<img align="absMiddle" alt="Play_button" class="handCursor" onclick=" var so = new SWFObject(&quot;/flash/inline-player.swf&quot;, &quot;inline-player&quot;, &quot;20&quot;, &quot;20&quot;, &quot;7&quot;, &quot;#FFFFFF&quot;); so.addParam(&quot;align&quot;, &quot;absmiddle&quot;); so.addParam(&quot;wmode&quot;, &quot;transparent&quot;); so.addVariable(&quot;rootId&quot;, 817413); so.addVariable(&quot;autoStart&quot;, 1); so.write(&quot;241377773-iap-817413&quot;); " src="http://one.static.jamglue.com/images/play_button.v13092007.gif" />
+</span>
+
+
+<span class="pop">
+<div class="popOverBox" id="2118099368-tlt-369717" style="display: none;">&nbsp;</div>
+</span>
+
+
+<a href="http://www.jamglue.com/tracks/369717-Bartender-Hook-Vocals"><img align="absmiddle" alt="26257-tiny" border="0" src="http://images.jamglue.com/26257-tiny.gif" /></a>
+
+
+
+
+<a href="/tracks/369717-Bartender-Hook-Vocals" class="songName" title="Bartender - Hook Vocals">Bartender - Hook Vo...</a>
+
+<span class="poplink" id="pop_2118099368-tlt-369717" style="display:none;">
+<a href="#" onclick="new Ajax.Request('/tracks/369717/popover?pop_id=2118099368-tlt-369717', {asynchronous:true, evalScripts:true}); return false;"><img align="absmiddle" alt="Pop" border="0" src="http://six.static.jamglue.com/images/pop.v13092007.gif" /></a>
+</span>
+
+
+  <span class="popspacer" id="pop_spacer_2118099368-tlt-369717">
+    <img align="absmiddle" alt="Transparent" border="0" height="13" src="http://three.static.jamglue.com/images/transparent.v13092007.png" width="13" />
+  </span>
+
+
+</form>
+
+  </li>
+  <li>
+    <form action="/mixes/81895-White-Kids-Aren-t-Hyphy-copy-/remix" method="post">
+    <input name="commit" onclick="$('mixerFlash').addComponent(817405); return false;" type="submit" value="Add" />
+&nbsp;&nbsp;
+
+
+
+<span id="109333795-iap-817405" class="inlinePlayerWrapper">
+<img align="absMiddle" alt="Play_button" class="handCursor" onclick=" var so = new SWFObject(&quot;/flash/inline-player.swf&quot;, &quot;inline-player&quot;, &quot;20&quot;, &quot;20&quot;, &quot;7&quot;, &quot;#FFFFFF&quot;); so.addParam(&quot;align&quot;, &quot;absmiddle&quot;); so.addParam(&quot;wmode&quot;, &quot;transparent&quot;); so.addVariable(&quot;rootId&quot;, 817405); so.addVariable(&quot;autoStart&quot;, 1); so.write(&quot;109333795-iap-817405&quot;); " src="http://one.static.jamglue.com/images/play_button.v13092007.gif" />
+</span>
+
+
+<span class="pop">
+<div class="popOverBox" id="3698438044-tlt-369709" style="display: none;">&nbsp;</div>
+</span>
+
+
+<a href="http://www.jamglue.com/tracks/369709-Bartender-Ad-Libs-Echoes-"><img align="absmiddle" alt="26251-tiny" border="0" src="http://images.jamglue.com/26251-tiny.gif" /></a>
+
+
+
+
+<a href="/tracks/369709-Bartender-Ad-Libs-Echoes-" class="songName" title="Bartender - Ad Libs (Echoes)">Bartender - Ad Libs...</a>
+
+<span class="poplink" id="pop_3698438044-tlt-369709" style="display:none;">
+<a href="#" onclick="new Ajax.Request('/tracks/369709/popover?pop_id=3698438044-tlt-369709', {asynchronous:true, evalScripts:true}); return false;"><img align="absmiddle" alt="Pop" border="0" src="http://six.static.jamglue.com/images/pop.v13092007.gif" /></a>
+</span>
+
+
+  <span class="popspacer" id="pop_spacer_3698438044-tlt-369709">
+    <img align="absmiddle" alt="Transparent" border="0" height="13" src="http://three.static.jamglue.com/images/transparent.v13092007.png" width="13" />
+  </span>
+
+
+</form>
+
+  </li>
+  <li>
+    <form action="/mixes/81895-White-Kids-Aren-t-Hyphy-copy-/remix" method="post">
+    <input name="commit" onclick="$('mixerFlash').addComponent(817425); return false;" type="submit" value="Add" />
+&nbsp;&nbsp;
+
+
+
+<span id="155950309-iap-817425" class="inlinePlayerWrapper">
+<img align="absMiddle" alt="Play_button" class="handCursor" onclick=" var so = new SWFObject(&quot;/flash/inline-player.swf&quot;, &quot;inline-player&quot;, &quot;20&quot;, &quot;20&quot;, &quot;7&quot;, &quot;#FFFFFF&quot;); so.addParam(&quot;align&quot;, &quot;absmiddle&quot;); so.addParam(&quot;wmode&quot;, &quot;transparent&quot;); so.addVariable(&quot;rootId&quot;, 817425); so.addVariable(&quot;autoStart&quot;, 1); so.write(&quot;155950309-iap-817425&quot;); " src="http://one.static.jamglue.com/images/play_button.v13092007.gif" />
+</span>
+
+
+<span class="pop">
+<div class="popOverBox" id="1658225300-tlt-369723" style="display: none;">&nbsp;</div>
+</span>
+
+
+<a href="http://www.jamglue.com/tracks/369723-Bartender-Akon-Vocals"><img align="absmiddle" alt="26243-tiny" border="0" src="http://images.jamglue.com/26243-tiny.gif" /></a>
+
+
+
+
+<a href="/tracks/369723-Bartender-Akon-Vocals" class="songName" title="Bartender - Akon Vocals">Bartender - Akon Vo...</a>
+
+<span class="poplink" id="pop_1658225300-tlt-369723" style="display:none;">
+<a href="#" onclick="new Ajax.Request('/tracks/369723/popover?pop_id=1658225300-tlt-369723', {asynchronous:true, evalScripts:true}); return false;"><img align="absmiddle" alt="Pop" border="0" src="http://six.static.jamglue.com/images/pop.v13092007.gif" /></a>
+</span>
+
+
+  <span class="popspacer" id="pop_spacer_1658225300-tlt-369723">
+    <img align="absmiddle" alt="Transparent" border="0" height="13" src="http://three.static.jamglue.com/images/transparent.v13092007.png" width="13" />
+  </span>
+
+
+</form>
+
+  </li>
+  <li>
+    <form action="/mixes/81895-White-Kids-Aren-t-Hyphy-copy-/remix" method="post">
+    <input name="commit" onclick="$('mixerFlash').addComponent(817411); return false;" type="submit" value="Add" />
+&nbsp;&nbsp;
+
+
+
+<span id="1053593891-iap-817411" class="inlinePlayerWrapper">
+<img align="absMiddle" alt="Play_button" class="handCursor" onclick=" var so = new SWFObject(&quot;/flash/inline-player.swf&quot;, &quot;inline-player&quot;, &quot;20&quot;, &quot;20&quot;, &quot;7&quot;, &quot;#FFFFFF&quot;); so.addParam(&quot;align&quot;, &quot;absmiddle&quot;); so.addParam(&quot;wmode&quot;, &quot;transparent&quot;); so.addVariable(&quot;rootId&quot;, 817411); so.addVariable(&quot;autoStart&quot;, 1); so.write(&quot;1053593891-iap-817411&quot;); " src="http://one.static.jamglue.com/images/play_button.v13092007.gif" />
+</span>
+
+
+<span class="pop">
+<div class="popOverBox" id="2682188532-tlt-369715" style="display: none;">&nbsp;</div>
+</span>
+
+
+<a href="http://www.jamglue.com/tracks/369715-Bartender-Keyboards"><img align="absmiddle" alt="26247-tiny" border="0" src="http://images.jamglue.com/26247-tiny.gif" /></a>
+
+
+
+
+<a href="/tracks/369715-Bartender-Keyboards" class="songName" title="">Bartender - Keyboards</a>
+
+<span class="poplink" id="pop_2682188532-tlt-369715" style="display:none;">
+<a href="#" onclick="new Ajax.Request('/tracks/369715/popover?pop_id=2682188532-tlt-369715', {asynchronous:true, evalScripts:true}); return false;"><img align="absmiddle" alt="Pop" border="0" src="http://six.static.jamglue.com/images/pop.v13092007.gif" /></a>
+</span>
+
+
+  <span class="popspacer" id="pop_spacer_2682188532-tlt-369715">
+    <img align="absmiddle" alt="Transparent" border="0" height="13" src="http://three.static.jamglue.com/images/transparent.v13092007.png" width="13" />
+  </span>
+
+
+</form>
+
+  </li>
+  <li>
+    <form action="/mixes/81895-White-Kids-Aren-t-Hyphy-copy-/remix" method="post">
+    <input name="commit" onclick="$('mixerFlash').addComponent(817347); return false;" type="submit" value="Add" />
+&nbsp;&nbsp;
+
+
+
+<span id="3919547917-iap-817347" class="inlinePlayerWrapper">
+<img align="absMiddle" alt="Play_button" class="handCursor" onclick=" var so = new SWFObject(&quot;/flash/inline-player.swf&quot;, &quot;inline-player&quot;, &quot;20&quot;, &quot;20&quot;, &quot;7&quot;, &quot;#FFFFFF&quot;); so.addParam(&quot;align&quot;, &quot;absmiddle&quot;); so.addParam(&quot;wmode&quot;, &quot;transparent&quot;); so.addVariable(&quot;rootId&quot;, 817347); so.addVariable(&quot;autoStart&quot;, 1); so.write(&quot;3919547917-iap-817347&quot;); " src="http://one.static.jamglue.com/images/play_button.v13092007.gif" />
+</span>
+
+
+<span class="pop">
+<div class="popOverBox" id="2588309966-tlt-369677" style="display: none;">&nbsp;</div>
+</span>
+
+
+<a href="http://www.jamglue.com/tracks/369677-Bartender-Percussion"><img align="absmiddle" alt="26259-tiny" border="0" src="http://images.jamglue.com/26259-tiny.gif" /></a>
+
+
+
+
+<a href="/tracks/369677-Bartender-Percussion" class="songName" title="">Bartender - Percussion</a>
+
+<span class="poplink" id="pop_2588309966-tlt-369677" style="display:none;">
+<a href="#" onclick="new Ajax.Request('/tracks/369677/popover?pop_id=2588309966-tlt-369677', {asynchronous:true, evalScripts:true}); return false;"><img align="absmiddle" alt="Pop" border="0" src="http://six.static.jamglue.com/images/pop.v13092007.gif" /></a>
+</span>
+
+
+  <span class="popspacer" id="pop_spacer_2588309966-tlt-369677">
+    <img align="absmiddle" alt="Transparent" border="0" height="13" src="http://three.static.jamglue.com/images/transparent.v13092007.png" width="13" />
+  </span>
+
+
+</form>
+
+  </li>
+  <li>
+    <form action="/mixes/81895-White-Kids-Aren-t-Hyphy-copy-/remix" method="post">
+    <input name="commit" onclick="$('mixerFlash').addComponent(817337); return false;" type="submit" value="Add" />
+&nbsp;&nbsp;
+
+
+
+<span id="2116645185-iap-817337" class="inlinePlayerWrapper">
+<img align="absMiddle" alt="Play_button" class="handCursor" onclick=" var so = new SWFObject(&quot;/flash/inline-player.swf&quot;, &quot;inline-player&quot;, &quot;20&quot;, &quot;20&quot;, &quot;7&quot;, &quot;#FFFFFF&quot;); so.addParam(&quot;align&quot;, &quot;absmiddle&quot;); so.addParam(&quot;wmode&quot;, &quot;transparent&quot;); so.addVariable(&quot;rootId&quot;, 817337); so.addVariable(&quot;autoStart&quot;, 1); so.write(&quot;2116645185-iap-817337&quot;); " src="http://one.static.jamglue.com/images/play_button.v13092007.gif" />
+</span>
+
+
+<span class="pop">
+<div class="popOverBox" id="4156393205-tlt-369675" style="display: none;">&nbsp;</div>
+</span>
+
+
+<a href="http://www.jamglue.com/tracks/369675-Bartender-Strings-and-Synth"><img align="absmiddle" alt="26253-tiny" border="0" src="http://images.jamglue.com/26253-tiny.gif" /></a>
+
+
+
+
+<a href="/tracks/369675-Bartender-Strings-and-Synth" class="songName" title="Bartender - Strings and Synth">Bartender - Strings...</a>
+
+<span class="poplink" id="pop_4156393205-tlt-369675" style="display:none;">
+<a href="#" onclick="new Ajax.Request('/tracks/369675/popover?pop_id=4156393205-tlt-369675', {asynchronous:true, evalScripts:true}); return false;"><img align="absmiddle" alt="Pop" border="0" src="http://six.static.jamglue.com/images/pop.v13092007.gif" /></a>
+</span>
+
+
+  <span class="popspacer" id="pop_spacer_4156393205-tlt-369675">
+    <img align="absmiddle" alt="Transparent" border="0" height="13" src="http://three.static.jamglue.com/images/transparent.v13092007.png" width="13" />
+  </span>
+
+
+</form>
+
+  </li>
+  <li>
+    <form action="/mixes/81895-White-Kids-Aren-t-Hyphy-copy-/remix" method="post">
+    <input name="commit" onclick="$('mixerFlash').addComponent(817407); return false;" type="submit" value="Add" />
+&nbsp;&nbsp;
+
+
+
+<span id="2639336349-iap-817407" class="inlinePlayerWrapper">
+<img align="absMiddle" alt="Play_button" class="handCursor" onclick=" var so = new SWFObject(&quot;/flash/inline-player.swf&quot;, &quot;inline-player&quot;, &quot;20&quot;, &quot;20&quot;, &quot;7&quot;, &quot;#FFFFFF&quot;); so.addParam(&quot;align&quot;, &quot;absmiddle&quot;); so.addParam(&quot;wmode&quot;, &quot;transparent&quot;); so.addVariable(&quot;rootId&quot;, 817407); so.addVariable(&quot;autoStart&quot;, 1); so.write(&quot;2639336349-iap-817407&quot;); " src="http://one.static.jamglue.com/images/play_button.v13092007.gif" />
+</span>
+
+
+<span class="pop">
+<div class="popOverBox" id="2534510200-tlt-369711" style="display: none;">&nbsp;</div>
+</span>
+
+
+<a href="http://www.jamglue.com/tracks/369711-Bartender-Bass"><img align="absmiddle" alt="26249-tiny" border="0" src="http://images.jamglue.com/26249-tiny.gif" /></a>
+
+
+
+
+<a href="/tracks/369711-Bartender-Bass" class="songName" title="">Bartender - Bass</a>
+
+<span class="poplink" id="pop_2534510200-tlt-369711" style="display:none;">
+<a href="#" onclick="new Ajax.Request('/tracks/369711/popover?pop_id=2534510200-tlt-369711', {asynchronous:true, evalScripts:true}); return false;"><img align="absmiddle" alt="Pop" border="0" src="http://six.static.jamglue.com/images/pop.v13092007.gif" /></a>
+</span>
+
+
+  <span class="popspacer" id="pop_spacer_2534510200-tlt-369711">
+    <img align="absmiddle" alt="Transparent" border="0" height="13" src="http://three.static.jamglue.com/images/transparent.v13092007.png" width="13" />
+  </span>
+
+
+</form>
+
+  </li>
+</ul>
+
+
+  </div>
+
+  <br/>
+
+  <div id="BlueScholarsBody" class='adderSubContents' style='right:-1000px;'>  
+  
+<h4>Tracks</h4>
+
+<ul>
+  <li>
+    <form action="/mixes/81895-White-Kids-Aren-t-Hyphy-copy-/remix" method="post">
+    <input name="commit" onclick="$('mixerFlash').addComponent(742849); return false;" type="submit" value="Add" />
+&nbsp;&nbsp;
+
+
+
+<span id="1792231132-iap-742849" class="inlinePlayerWrapper">
+<img align="absMiddle" alt="Play_button" class="handCursor" onclick=" var so = new SWFObject(&quot;/flash/inline-player.swf&quot;, &quot;inline-player&quot;, &quot;20&quot;, &quot;20&quot;, &quot;7&quot;, &quot;#FFFFFF&quot;); so.addParam(&quot;align&quot;, &quot;absmiddle&quot;); so.addParam(&quot;wmode&quot;, &quot;transparent&quot;); so.addVariable(&quot;rootId&quot;, 742849); so.addVariable(&quot;autoStart&quot;, 1); so.write(&quot;1792231132-iap-742849&quot;); " src="http://one.static.jamglue.com/images/play_button.v13092007.gif" />
+</span>
+
+
+<span class="pop">
+<div class="popOverBox" id="1301944989-tlt-332001" style="display: none;">&nbsp;</div>
+</span>
+
+
+<a href="http://www.jamglue.com/tracks/332001-Geologic-s-Acapella"><img align="absmiddle" alt="23411-tiny" border="0" src="http://images.jamglue.com/23411-tiny.gif" /></a>
+
+
+
+
+<a href="/tracks/332001-Geologic-s-Acapella" class="songName" title="">Geologic's Acapella</a>
+
+<span class="poplink" id="pop_1301944989-tlt-332001" style="display:none;">
+<a href="#" onclick="new Ajax.Request('/tracks/332001/popover?pop_id=1301944989-tlt-332001', {asynchronous:true, evalScripts:true}); return false;"><img align="absmiddle" alt="Pop" border="0" src="http://six.static.jamglue.com/images/pop.v13092007.gif" /></a>
+</span>
+
+
+  <span class="popspacer" id="pop_spacer_1301944989-tlt-332001">
+    <img align="absmiddle" alt="Transparent" border="0" height="13" src="http://three.static.jamglue.com/images/transparent.v13092007.png" width="13" />
+  </span>
+
+
+</form>
+
+  </li>
+  <li>
+    <form action="/mixes/81895-White-Kids-Aren-t-Hyphy-copy-/remix" method="post">
+    <input name="commit" onclick="$('mixerFlash').addComponent(750113); return false;" type="submit" value="Add" />
+&nbsp;&nbsp;
+
+
+
+<span id="1586639762-iap-750113" class="inlinePlayerWrapper">
+<img align="absMiddle" alt="Play_button" class="handCursor" onclick=" var so = new SWFObject(&quot;/flash/inline-player.swf&quot;, &quot;inline-player&quot;, &quot;20&quot;, &quot;20&quot;, &quot;7&quot;, &quot;#FFFFFF&quot;); so.addParam(&quot;align&quot;, &quot;absmiddle&quot;); so.addParam(&quot;wmode&quot;, &quot;transparent&quot;); so.addVariable(&quot;rootId&quot;, 750113); so.addVariable(&quot;autoStart&quot;, 1); so.write(&quot;1586639762-iap-750113&quot;); " src="http://one.static.jamglue.com/images/play_button.v13092007.gif" />
+</span>
+
+
+<span class="pop">
+<div class="popOverBox" id="1620202789-tlt-335639" style="display: none;">&nbsp;</div>
+</span>
+
+
+<a href="http://www.jamglue.com/tracks/335639-Bass-Full-Track"><img align="absmiddle" alt="23601-tiny" border="0" src="http://images.jamglue.com/23601-tiny.gif" /></a>
+
+
+
+
+<a href="/tracks/335639-Bass-Full-Track" class="songName" title="">Bass - Full Track</a>
+
+<span class="poplink" id="pop_1620202789-tlt-335639" style="display:none;">
+<a href="#" onclick="new Ajax.Request('/tracks/335639/popover?pop_id=1620202789-tlt-335639', {asynchronous:true, evalScripts:true}); return false;"><img align="absmiddle" alt="Pop" border="0" src="http://six.static.jamglue.com/images/pop.v13092007.gif" /></a>
+</span>
+
+
+  <span class="popspacer" id="pop_spacer_1620202789-tlt-335639">
+    <img align="absmiddle" alt="Transparent" border="0" height="13" src="http://three.static.jamglue.com/images/transparent.v13092007.png" width="13" />
+  </span>
+
+
+</form>
+
+  </li>
+  <li>
+    <form action="/mixes/81895-White-Kids-Aren-t-Hyphy-copy-/remix" method="post">
+    <input name="commit" onclick="$('mixerFlash').addComponent(750145); return false;" type="submit" value="Add" />
+&nbsp;&nbsp;
+
+
+
+<span id="2864680958-iap-750145" class="inlinePlayerWrapper">
+<img align="absMiddle" alt="Play_button" class="handCursor" onclick=" var so = new SWFObject(&quot;/flash/inline-player.swf&quot;, &quot;inline-player&quot;, &quot;20&quot;, &quot;20&quot;, &quot;7&quot;, &quot;#FFFFFF&quot;); so.addParam(&quot;align&quot;, &quot;absmiddle&quot;); so.addParam(&quot;wmode&quot;, &quot;transparent&quot;); so.addVariable(&quot;rootId&quot;, 750145); so.addVariable(&quot;autoStart&quot;, 1); so.write(&quot;2864680958-iap-750145&quot;); " src="http://one.static.jamglue.com/images/play_button.v13092007.gif" />
+</span>
+
+
+<span class="pop">
+<div class="popOverBox" id="823643148-tlt-335653" style="display: none;">&nbsp;</div>
+</span>
+
+
+<a href="http://www.jamglue.com/tracks/335653-Piano-Full-Track"><img align="absmiddle" alt="23599-tiny" border="0" src="http://images.jamglue.com/23599-tiny.gif" /></a>
+
+
+
+
+<a href="/tracks/335653-Piano-Full-Track" class="songName" title="">Piano - Full Track</a>
+
+<span class="poplink" id="pop_823643148-tlt-335653" style="display:none;">
+<a href="#" onclick="new Ajax.Request('/tracks/335653/popover?pop_id=823643148-tlt-335653', {asynchronous:true, evalScripts:true}); return false;"><img align="absmiddle" alt="Pop" border="0" src="http://six.static.jamglue.com/images/pop.v13092007.gif" /></a>
+</span>
+
+
+  <span class="popspacer" id="pop_spacer_823643148-tlt-335653">
+    <img align="absmiddle" alt="Transparent" border="0" height="13" src="http://three.static.jamglue.com/images/transparent.v13092007.png" width="13" />
+  </span>
+
+
+</form>
+
+  </li>
+  <li>
+    <form action="/mixes/81895-White-Kids-Aren-t-Hyphy-copy-/remix" method="post">
+    <input name="commit" onclick="$('mixerFlash').addComponent(750153); return false;" type="submit" value="Add" />
+&nbsp;&nbsp;
+
+
+
+<span id="2149235965-iap-750153" class="inlinePlayerWrapper">
+<img align="absMiddle" alt="Play_button" class="handCursor" onclick=" var so = new SWFObject(&quot;/flash/inline-player.swf&quot;, &quot;inline-player&quot;, &quot;20&quot;, &quot;20&quot;, &quot;7&quot;, &quot;#FFFFFF&quot;); so.addParam(&quot;align&quot;, &quot;absmiddle&quot;); so.addParam(&quot;wmode&quot;, &quot;transparent&quot;); so.addVariable(&quot;rootId&quot;, 750153); so.addVariable(&quot;autoStart&quot;, 1); so.write(&quot;2149235965-iap-750153&quot;); " src="http://one.static.jamglue.com/images/play_button.v13092007.gif" />
+</span>
+
+
+<span class="pop">
+<div class="popOverBox" id="3607050311-tlt-335661" style="display: none;">&nbsp;</div>
+</span>
+
+
+<a href="http://www.jamglue.com/tracks/335661-Snare-Shaker-Full-Track"><img align="absmiddle" alt="23595-tiny" border="0" src="http://images.jamglue.com/23595-tiny.gif" /></a>
+
+
+
+
+<a href="/tracks/335661-Snare-Shaker-Full-Track" class="songName" title="Snare - Shaker - Full Track">Snare - Shaker - Fu...</a>
+
+<span class="poplink" id="pop_3607050311-tlt-335661" style="display:none;">
+<a href="#" onclick="new Ajax.Request('/tracks/335661/popover?pop_id=3607050311-tlt-335661', {asynchronous:true, evalScripts:true}); return false;"><img align="absmiddle" alt="Pop" border="0" src="http://six.static.jamglue.com/images/pop.v13092007.gif" /></a>
+</span>
+
+
+  <span class="popspacer" id="pop_spacer_3607050311-tlt-335661">
+    <img align="absmiddle" alt="Transparent" border="0" height="13" src="http://three.static.jamglue.com/images/transparent.v13092007.png" width="13" />
+  </span>
+
+
+</form>
+
+  </li>
+  <li>
+    <form action="/mixes/81895-White-Kids-Aren-t-Hyphy-copy-/remix" method="post">
+    <input name="commit" onclick="$('mixerFlash').addComponent(750147); return false;" type="submit" value="Add" />
+&nbsp;&nbsp;
+
+
+
+<span id="2986469751-iap-750147" class="inlinePlayerWrapper">
+<img align="absMiddle" alt="Play_button" class="handCursor" onclick=" var so = new SWFObject(&quot;/flash/inline-player.swf&quot;, &quot;inline-player&quot;, &quot;20&quot;, &quot;20&quot;, &quot;7&quot;, &quot;#FFFFFF&quot;); so.addParam(&quot;align&quot;, &quot;absmiddle&quot;); so.addParam(&quot;wmode&quot;, &quot;transparent&quot;); so.addVariable(&quot;rootId&quot;, 750147); so.addVariable(&quot;autoStart&quot;, 1); so.write(&quot;2986469751-iap-750147&quot;); " src="http://one.static.jamglue.com/images/play_button.v13092007.gif" />
+</span>
+
+
+<span class="pop">
+<div class="popOverBox" id="3680826975-tlt-335655" style="display: none;">&nbsp;</div>
+</span>
+
+
+<a href="http://www.jamglue.com/tracks/335655-Rally-Sounds-Full-Track"><img align="absmiddle" alt="23593-tiny" border="0" src="http://images.jamglue.com/23593-tiny.gif" /></a>
+
+
+
+
+<a href="/tracks/335655-Rally-Sounds-Full-Track" class="songName" title="Rally Sounds - Full Track">Rally Sounds - Full...</a>
+
+<span class="poplink" id="pop_3680826975-tlt-335655" style="display:none;">
+<a href="#" onclick="new Ajax.Request('/tracks/335655/popover?pop_id=3680826975-tlt-335655', {asynchronous:true, evalScripts:true}); return false;"><img align="absmiddle" alt="Pop" border="0" src="http://six.static.jamglue.com/images/pop.v13092007.gif" /></a>
+</span>
+
+
+  <span class="popspacer" id="pop_spacer_3680826975-tlt-335655">
+    <img align="absmiddle" alt="Transparent" border="0" height="13" src="http://three.static.jamglue.com/images/transparent.v13092007.png" width="13" />
+  </span>
+
+
+</form>
+
+  </li>
+  <li>
+    <form action="/mixes/81895-White-Kids-Aren-t-Hyphy-copy-/remix" method="post">
+    <input name="commit" onclick="$('mixerFlash').addComponent(750141); return false;" type="submit" value="Add" />
+&nbsp;&nbsp;
+
+
+
+<span id="1020123093-iap-750141" class="inlinePlayerWrapper">
+<img align="absMiddle" alt="Play_button" class="handCursor" onclick=" var so = new SWFObject(&quot;/flash/inline-player.swf&quot;, &quot;inline-player&quot;, &quot;20&quot;, &quot;20&quot;, &quot;7&quot;, &quot;#FFFFFF&quot;); so.addParam(&quot;align&quot;, &quot;absmiddle&quot;); so.addParam(&quot;wmode&quot;, &quot;transparent&quot;); so.addVariable(&quot;rootId&quot;, 750141); so.addVariable(&quot;autoStart&quot;, 1); so.write(&quot;1020123093-iap-750141&quot;); " src="http://one.static.jamglue.com/images/play_button.v13092007.gif" />
+</span>
+
+
+<span class="pop">
+<div class="popOverBox" id="65024267-tlt-335649" style="display: none;">&nbsp;</div>
+</span>
+
+
+<a href="http://www.jamglue.com/tracks/335649-Kicks-Full-Track"><img align="absmiddle" alt="23603-tiny" border="0" src="http://images.jamglue.com/23603-tiny.gif" /></a>
+
+
+
+
+<a href="/tracks/335649-Kicks-Full-Track" class="songName" title="">Kicks - Full Track</a>
+
+<span class="poplink" id="pop_65024267-tlt-335649" style="display:none;">
+<a href="#" onclick="new Ajax.Request('/tracks/335649/popover?pop_id=65024267-tlt-335649', {asynchronous:true, evalScripts:true}); return false;"><img align="absmiddle" alt="Pop" border="0" src="http://six.static.jamglue.com/images/pop.v13092007.gif" /></a>
+</span>
+
+
+  <span class="popspacer" id="pop_spacer_65024267-tlt-335649">
+    <img align="absmiddle" alt="Transparent" border="0" height="13" src="http://three.static.jamglue.com/images/transparent.v13092007.png" width="13" />
+  </span>
+
+
+</form>
+
+  </li>
+  <li>
+    <form action="/mixes/81895-White-Kids-Aren-t-Hyphy-copy-/remix" method="post">
+    <input name="commit" onclick="$('mixerFlash').addComponent(750173); return false;" type="submit" value="Add" />
+&nbsp;&nbsp;
+
+
+
+<span id="3130776648-iap-750173" class="inlinePlayerWrapper">
+<img align="absMiddle" alt="Play_button" class="handCursor" onclick=" var so = new SWFObject(&quot;/flash/inline-player.swf&quot;, &quot;inline-player&quot;, &quot;20&quot;, &quot;20&quot;, &quot;7&quot;, &quot;#FFFFFF&quot;); so.addParam(&quot;align&quot;, &quot;absmiddle&quot;); so.addParam(&quot;wmode&quot;, &quot;transparent&quot;); so.addVariable(&quot;rootId&quot;, 750173); so.addVariable(&quot;autoStart&quot;, 1); so.write(&quot;3130776648-iap-750173&quot;); " src="http://one.static.jamglue.com/images/play_button.v13092007.gif" />
+</span>
+
+
+<span class="pop">
+<div class="popOverBox" id="3441404903-tlt-335675" style="display: none;">&nbsp;</div>
+</span>
+
+
+<a href="http://www.jamglue.com/tracks/335675-Synth-Full-Track"><img align="absmiddle" alt="23597-tiny" border="0" src="http://images.jamglue.com/23597-tiny.gif" /></a>
+
+
+
+
+<a href="/tracks/335675-Synth-Full-Track" class="songName" title="">Synth - Full Track</a>
+
+<span class="poplink" id="pop_3441404903-tlt-335675" style="display:none;">
+<a href="#" onclick="new Ajax.Request('/tracks/335675/popover?pop_id=3441404903-tlt-335675', {asynchronous:true, evalScripts:true}); return false;"><img align="absmiddle" alt="Pop" border="0" src="http://six.static.jamglue.com/images/pop.v13092007.gif" /></a>
+</span>
+
+
+  <span class="popspacer" id="pop_spacer_3441404903-tlt-335675">
+    <img align="absmiddle" alt="Transparent" border="0" height="13" src="http://three.static.jamglue.com/images/transparent.v13092007.png" width="13" />
+  </span>
+
+
+</form>
+
+  </li>
+  <li>
+    <form action="/mixes/81895-White-Kids-Aren-t-Hyphy-copy-/remix" method="post">
+    <input name="commit" onclick="$('mixerFlash').addComponent(750115); return false;" type="submit" value="Add" />
+&nbsp;&nbsp;
+
+
+
+<span id="4001656335-iap-750115" class="inlinePlayerWrapper">
+<img align="absMiddle" alt="Play_button" class="handCursor" onclick=" var so = new SWFObject(&quot;/flash/inline-player.swf&quot;, &quot;inline-player&quot;, &quot;20&quot;, &quot;20&quot;, &quot;7&quot;, &quot;#FFFFFF&quot;); so.addParam(&quot;align&quot;, &quot;absmiddle&quot;); so.addParam(&quot;wmode&quot;, &quot;transparent&quot;); so.addVariable(&quot;rootId&quot;, 750115); so.addVariable(&quot;autoStart&quot;, 1); so.write(&quot;4001656335-iap-750115&quot;); " src="http://one.static.jamglue.com/images/play_button.v13092007.gif" />
+</span>
+
+
+<span class="pop">
+<div class="popOverBox" id="3577459842-tlt-335641" style="display: none;">&nbsp;</div>
+</span>
+
+
+<a href="http://www.jamglue.com/tracks/335641-Elephant-Horns-Full-Track"><img align="absmiddle" alt="23609-tiny" border="0" src="http://images.jamglue.com/23609-tiny.gif" /></a>
+
+
+
+
+<a href="/tracks/335641-Elephant-Horns-Full-Track" class="songName" title="Elephant Horns - Full Track">Elephant Horns - Fu...</a>
+
+<span class="poplink" id="pop_3577459842-tlt-335641" style="display:none;">
+<a href="#" onclick="new Ajax.Request('/tracks/335641/popover?pop_id=3577459842-tlt-335641', {asynchronous:true, evalScripts:true}); return false;"><img align="absmiddle" alt="Pop" border="0" src="http://six.static.jamglue.com/images/pop.v13092007.gif" /></a>
+</span>
+
+
+  <span class="popspacer" id="pop_spacer_3577459842-tlt-335641">
+    <img align="absmiddle" alt="Transparent" border="0" height="13" src="http://three.static.jamglue.com/images/transparent.v13092007.png" width="13" />
+  </span>
+
+
+</form>
+
+  </li>
+</ul>
+
+
+  </div>
+
+  <br/>
+
+  <div id="RKellyBody" class='adderSubContents' style='right:-1000px;'>
+  
+<h4>Tracks</h4>
+
+<ul>
+  <li>
+    <form action="/mixes/81895-White-Kids-Aren-t-Hyphy-copy-/remix" method="post">
+    <input name="commit" onclick="$('mixerFlash').addComponent(349659); return false;" type="submit" value="Add" />
+&nbsp;&nbsp;
+
+
+
+<span id="4202207304-iap-349659" class="inlinePlayerWrapper">
+<img align="absMiddle" alt="Play_button" class="handCursor" onclick=" var so = new SWFObject(&quot;/flash/inline-player.swf&quot;, &quot;inline-player&quot;, &quot;20&quot;, &quot;20&quot;, &quot;7&quot;, &quot;#FFFFFF&quot;); so.addParam(&quot;align&quot;, &quot;absmiddle&quot;); so.addParam(&quot;wmode&quot;, &quot;transparent&quot;); so.addVariable(&quot;rootId&quot;, 349659); so.addVariable(&quot;autoStart&quot;, 1); so.write(&quot;4202207304-iap-349659&quot;); " src="http://one.static.jamglue.com/images/play_button.v13092007.gif" />
+</span>
+
+
+<span class="pop">
+<div class="popOverBox" id="1293071222-tlt-146195" style="display: none;">&nbsp;</div>
+</span>
+
+
+<a href="http://www.jamglue.com/tracks/146195-I-m-A-Flirt-R-Kelly-Backing-Track"><img align="absmiddle" alt="12261-tiny" border="0" src="http://images.jamglue.com/12261-tiny.gif" /></a>
+
+
+
+
+<a href="/tracks/146195-I-m-A-Flirt-R-Kelly-Backing-Track" class="songName" title="I'm A Flirt - R. Kelly Backing Track">I'm A Flirt - R. Ke...</a>
+
+<span class="poplink" id="pop_1293071222-tlt-146195" style="display:none;">
+<a href="#" onclick="new Ajax.Request('/tracks/146195/popover?pop_id=1293071222-tlt-146195', {asynchronous:true, evalScripts:true}); return false;"><img align="absmiddle" alt="Pop" border="0" src="http://six.static.jamglue.com/images/pop.v13092007.gif" /></a>
+</span>
+
+
+  <span class="popspacer" id="pop_spacer_1293071222-tlt-146195">
+    <img align="absmiddle" alt="Transparent" border="0" height="13" src="http://three.static.jamglue.com/images/transparent.v13092007.png" width="13" />
+  </span>
+
+
+</form>
+
+  </li>
+</ul>
+
+
+  </div>
+
+  <br/>
+
+  <div id="coldcutBody" class='adderSubContents' style='right:-1000px;'>
+  
+<h4>Tracks</h4>
+
+<ul>
+  <li>
+    <form action="/mixes/81895-White-Kids-Aren-t-Hyphy-copy-/remix" method="post">
+    <input name="commit" onclick="$('mixerFlash').addComponent(248579); return false;" type="submit" value="Add" />
+&nbsp;&nbsp;
+
+
+
+<span id="807729804-iap-248579" class="inlinePlayerWrapper">
+<img align="absMiddle" alt="Play_button" class="handCursor" onclick=" var so = new SWFObject(&quot;/flash/inline-player.swf&quot;, &quot;inline-player&quot;, &quot;20&quot;, &quot;20&quot;, &quot;7&quot;, &quot;#FFFFFF&quot;); so.addParam(&quot;align&quot;, &quot;absmiddle&quot;); so.addParam(&quot;wmode&quot;, &quot;transparent&quot;); so.addVariable(&quot;rootId&quot;, 248579); so.addVariable(&quot;autoStart&quot;, 1); so.write(&quot;807729804-iap-248579&quot;); " src="http://one.static.jamglue.com/images/play_button.v13092007.gif" />
+</span>
+
+
+<span class="pop">
+<div class="popOverBox" id="550392978-tlt-105161" style="display: none;">&nbsp;</div>
+</span>
+
+
+<a href="http://www.jamglue.com/tracks/105161-Bass-True-Skool"><img align="absmiddle" alt="8803-tiny" border="0" src="http://images.jamglue.com/8803-tiny.gif" /></a>
+
+
+
+
+<a href="/tracks/105161-Bass-True-Skool" class="songName" title="">Bass - True Skool</a>
+
+<span class="poplink" id="pop_550392978-tlt-105161" style="display:none;">
+<a href="#" onclick="new Ajax.Request('/tracks/105161/popover?pop_id=550392978-tlt-105161', {asynchronous:true, evalScripts:true}); return false;"><img align="absmiddle" alt="Pop" border="0" src="http://six.static.jamglue.com/images/pop.v13092007.gif" /></a>
+</span>
+
+
+  <span class="popspacer" id="pop_spacer_550392978-tlt-105161">
+    <img align="absmiddle" alt="Transparent" border="0" height="13" src="http://three.static.jamglue.com/images/transparent.v13092007.png" width="13" />
+  </span>
+
+
+</form>
+
+  </li>
+  <li>
+    <form action="/mixes/81895-White-Kids-Aren-t-Hyphy-copy-/remix" method="post">
+    <input name="commit" onclick="$('mixerFlash').addComponent(248581); return false;" type="submit" value="Add" />
+&nbsp;&nbsp;
+
+
+
+<span id="30737891-iap-248581" class="inlinePlayerWrapper">
+<img align="absMiddle" alt="Play_button" class="handCursor" onclick=" var so = new SWFObject(&quot;/flash/inline-player.swf&quot;, &quot;inline-player&quot;, &quot;20&quot;, &quot;20&quot;, &quot;7&quot;, &quot;#FFFFFF&quot;); so.addParam(&quot;align&quot;, &quot;absmiddle&quot;); so.addParam(&quot;wmode&quot;, &quot;transparent&quot;); so.addVariable(&quot;rootId&quot;, 248581); so.addVariable(&quot;autoStart&quot;, 1); so.write(&quot;30737891-iap-248581&quot;); " src="http://one.static.jamglue.com/images/play_button.v13092007.gif" />
+</span>
+
+
+<span class="pop">
+<div class="popOverBox" id="444332117-tlt-105163" style="display: none;">&nbsp;</div>
+</span>
+
+
+<a href="http://www.jamglue.com/tracks/105163-Drums-True-Skool"><img align="absmiddle" alt="8801-tiny" border="0" src="http://images.jamglue.com/8801-tiny.gif" /></a>
+
+
+
+
+<a href="/tracks/105163-Drums-True-Skool" class="songName" title="">Drums - True Skool</a>
+
+<span class="poplink" id="pop_444332117-tlt-105163" style="display:none;">
+<a href="#" onclick="new Ajax.Request('/tracks/105163/popover?pop_id=444332117-tlt-105163', {asynchronous:true, evalScripts:true}); return false;"><img align="absmiddle" alt="Pop" border="0" src="http://six.static.jamglue.com/images/pop.v13092007.gif" /></a>
+</span>
+
+
+  <span class="popspacer" id="pop_spacer_444332117-tlt-105163">
+    <img align="absmiddle" alt="Transparent" border="0" height="13" src="http://three.static.jamglue.com/images/transparent.v13092007.png" width="13" />
+  </span>
+
+
+</form>
+
+  </li>
+  <li>
+    <form action="/mixes/81895-White-Kids-Aren-t-Hyphy-copy-/remix" method="post">
+    <input name="commit" onclick="$('mixerFlash').addComponent(248681); return false;" type="submit" value="Add" />
+&nbsp;&nbsp;
+
+
+
+<span id="3572139286-iap-248681" class="inlinePlayerWrapper">
+<img align="absMiddle" alt="Play_button" class="handCursor" onclick=" var so = new SWFObject(&quot;/flash/inline-player.swf&quot;, &quot;inline-player&quot;, &quot;20&quot;, &quot;20&quot;, &quot;7&quot;, &quot;#FFFFFF&quot;); so.addParam(&quot;align&quot;, &quot;absmiddle&quot;); so.addParam(&quot;wmode&quot;, &quot;transparent&quot;); so.addVariable(&quot;rootId&quot;, 248681); so.addVariable(&quot;autoStart&quot;, 1); so.write(&quot;3572139286-iap-248681&quot;); " src="http://one.static.jamglue.com/images/play_button.v13092007.gif" />
+</span>
+
+
+<span class="pop">
+<div class="popOverBox" id="2442089007-tlt-105195" style="display: none;">&nbsp;</div>
+</span>
+
+
+<a href="http://www.jamglue.com/tracks/105195-Female-Vox-True-Skool"><img align="absmiddle" alt="8799-tiny" border="0" src="http://images.jamglue.com/8799-tiny.gif" /></a>
+
+
+
+
+<a href="/tracks/105195-Female-Vox-True-Skool" class="songName" title="Female Vox - True Skool">Female Vox - True S...</a>
+
+<span class="poplink" id="pop_2442089007-tlt-105195" style="display:none;">
+<a href="#" onclick="new Ajax.Request('/tracks/105195/popover?pop_id=2442089007-tlt-105195', {asynchronous:true, evalScripts:true}); return false;"><img align="absmiddle" alt="Pop" border="0" src="http://six.static.jamglue.com/images/pop.v13092007.gif" /></a>
+</span>
+
+
+  <span class="popspacer" id="pop_spacer_2442089007-tlt-105195">
+    <img align="absmiddle" alt="Transparent" border="0" height="13" src="http://three.static.jamglue.com/images/transparent.v13092007.png" width="13" />
+  </span>
+
+
+</form>
+
+  </li>
+  <li>
+    <form action="/mixes/81895-White-Kids-Aren-t-Hyphy-copy-/remix" method="post">
+    <input name="commit" onclick="$('mixerFlash').addComponent(248683); return false;" type="submit" value="Add" />
+&nbsp;&nbsp;
+
+
+
+<span id="728884743-iap-248683" class="inlinePlayerWrapper">
+<img align="absMiddle" alt="Play_button" class="handCursor" onclick=" var so = new SWFObject(&quot;/flash/inline-player.swf&quot;, &quot;inline-player&quot;, &quot;20&quot;, &quot;20&quot;, &quot;7&quot;, &quot;#FFFFFF&quot;); so.addParam(&quot;align&quot;, &quot;absmiddle&quot;); so.addParam(&quot;wmode&quot;, &quot;transparent&quot;); so.addVariable(&quot;rootId&quot;, 248683); so.addVariable(&quot;autoStart&quot;, 1); so.write(&quot;728884743-iap-248683&quot;); " src="http://one.static.jamglue.com/images/play_button.v13092007.gif" />
+</span>
+
+
+<span class="pop">
+<div class="popOverBox" id="76933128-tlt-105197" style="display: none;">&nbsp;</div>
+</span>
+
+
+<a href="http://www.jamglue.com/tracks/105197-Rodney-True-Skool"><img align="absmiddle" alt="8797-tiny" border="0" src="http://images.jamglue.com/8797-tiny.gif" /></a>
+
+
+
+
+<a href="/tracks/105197-Rodney-True-Skool" class="songName" title="">Rodney - True Skool</a>
+
+<span class="poplink" id="pop_76933128-tlt-105197" style="display:none;">
+<a href="#" onclick="new Ajax.Request('/tracks/105197/popover?pop_id=76933128-tlt-105197', {asynchronous:true, evalScripts:true}); return false;"><img align="absmiddle" alt="Pop" border="0" src="http://six.static.jamglue.com/images/pop.v13092007.gif" /></a>
+</span>
+
+
+  <span class="popspacer" id="pop_spacer_76933128-tlt-105197">
+    <img align="absmiddle" alt="Transparent" border="0" height="13" src="http://three.static.jamglue.com/images/transparent.v13092007.png" width="13" />
+  </span>
+
+
+</form>
+
+  </li>
+  <li>
+    <form action="/mixes/81895-White-Kids-Aren-t-Hyphy-copy-/remix" method="post">
+    <input name="commit" onclick="$('mixerFlash').addComponent(248689); return false;" type="submit" value="Add" />
+&nbsp;&nbsp;
+
+
+
+<span id="19831700-iap-248689" class="inlinePlayerWrapper">
+<img align="absMiddle" alt="Play_button" class="handCursor" onclick=" var so = new SWFObject(&quot;/flash/inline-player.swf&quot;, &quot;inline-player&quot;, &quot;20&quot;, &quot;20&quot;, &quot;7&quot;, &quot;#FFFFFF&quot;); so.addParam(&quot;align&quot;, &quot;absmiddle&quot;); so.addParam(&quot;wmode&quot;, &quot;transparent&quot;); so.addVariable(&quot;rootId&quot;, 248689); so.addVariable(&quot;autoStart&quot;, 1); so.write(&quot;19831700-iap-248689&quot;); " src="http://one.static.jamglue.com/images/play_button.v13092007.gif" />
+</span>
+
+
+<span class="pop">
+<div class="popOverBox" id="2712034890-tlt-105199" style="display: none;">&nbsp;</div>
+</span>
+
+
+<a href="http://www.jamglue.com/tracks/105199-sfx-True-Skool"><img align="absmiddle" alt="8795-tiny" border="0" src="http://images.jamglue.com/8795-tiny.gif" /></a>
+
+
+
+
+<a href="/tracks/105199-sfx-True-Skool" class="songName" title="">sfx - True Skool</a>
+
+<span class="poplink" id="pop_2712034890-tlt-105199" style="display:none;">
+<a href="#" onclick="new Ajax.Request('/tracks/105199/popover?pop_id=2712034890-tlt-105199', {asynchronous:true, evalScripts:true}); return false;"><img align="absmiddle" alt="Pop" border="0" src="http://six.static.jamglue.com/images/pop.v13092007.gif" /></a>
+</span>
+
+
+  <span class="popspacer" id="pop_spacer_2712034890-tlt-105199">
+    <img align="absmiddle" alt="Transparent" border="0" height="13" src="http://three.static.jamglue.com/images/transparent.v13092007.png" width="13" />
+  </span>
+
+
+</form>
+
+  </li>
+  <li>
+    <form action="/mixes/81895-White-Kids-Aren-t-Hyphy-copy-/remix" method="post">
+    <input name="commit" onclick="$('mixerFlash').addComponent(248691); return false;" type="submit" value="Add" />
+&nbsp;&nbsp;
+
+
+
+<span id="2325460473-iap-248691" class="inlinePlayerWrapper">
+<img align="absMiddle" alt="Play_button" class="handCursor" onclick=" var so = new SWFObject(&quot;/flash/inline-player.swf&quot;, &quot;inline-player&quot;, &quot;20&quot;, &quot;20&quot;, &quot;7&quot;, &quot;#FFFFFF&quot;); so.addParam(&quot;align&quot;, &quot;absmiddle&quot;); so.addParam(&quot;wmode&quot;, &quot;transparent&quot;); so.addVariable(&quot;rootId&quot;, 248691); so.addVariable(&quot;autoStart&quot;, 1); so.write(&quot;2325460473-iap-248691&quot;); " src="http://one.static.jamglue.com/images/play_button.v13092007.gif" />
+</span>
+
+
+<span class="pop">
+<div class="popOverBox" id="3089604901-tlt-105201" style="display: none;">&nbsp;</div>
+</span>
+
+
+<a href="http://www.jamglue.com/tracks/105201-Shakes-True-Skool"><img align="absmiddle" alt="8793-tiny" border="0" src="http://images.jamglue.com/8793-tiny.gif" /></a>
+
+
+
+
+<a href="/tracks/105201-Shakes-True-Skool" class="songName" title="">Shakes - True Skool</a>
+
+<span class="poplink" id="pop_3089604901-tlt-105201" style="display:none;">
+<a href="#" onclick="new Ajax.Request('/tracks/105201/popover?pop_id=3089604901-tlt-105201', {asynchronous:true, evalScripts:true}); return false;"><img align="absmiddle" alt="Pop" border="0" src="http://six.static.jamglue.com/images/pop.v13092007.gif" /></a>
+</span>
+
+
+  <span class="popspacer" id="pop_spacer_3089604901-tlt-105201">
+    <img align="absmiddle" alt="Transparent" border="0" height="13" src="http://three.static.jamglue.com/images/transparent.v13092007.png" width="13" />
+  </span>
+
+
+</form>
+
+  </li>
+  <li>
+    <form action="/mixes/81895-White-Kids-Aren-t-Hyphy-copy-/remix" method="post">
+    <input name="commit" onclick="$('mixerFlash').addComponent(248693); return false;" type="submit" value="Add" />
+&nbsp;&nbsp;
+
+
+
+<span id="287689520-iap-248693" class="inlinePlayerWrapper">
+<img align="absMiddle" alt="Play_button" class="handCursor" onclick=" var so = new SWFObject(&quot;/flash/inline-player.swf&quot;, &quot;inline-player&quot;, &quot;20&quot;, &quot;20&quot;, &quot;7&quot;, &quot;#FFFFFF&quot;); so.addParam(&quot;align&quot;, &quot;absmiddle&quot;); so.addParam(&quot;wmode&quot;, &quot;transparent&quot;); so.addVariable(&quot;rootId&quot;, 248693); so.addVariable(&quot;autoStart&quot;, 1); so.write(&quot;287689520-iap-248693&quot;); " src="http://one.static.jamglue.com/images/play_button.v13092007.gif" />
+</span>
+
+
+<span class="pop">
+<div class="popOverBox" id="619920179-tlt-105203" style="display: none;">&nbsp;</div>
+</span>
+
+
+<a href="http://www.jamglue.com/tracks/105203-Strings-True-Skool"><img align="absmiddle" alt="8791-tiny" border="0" src="http://images.jamglue.com/8791-tiny.gif" /></a>
+
+
+
+
+<a href="/tracks/105203-Strings-True-Skool" class="songName" title="">Strings - True Skool</a>
+
+<span class="poplink" id="pop_619920179-tlt-105203" style="display:none;">
+<a href="#" onclick="new Ajax.Request('/tracks/105203/popover?pop_id=619920179-tlt-105203', {asynchronous:true, evalScripts:true}); return false;"><img align="absmiddle" alt="Pop" border="0" src="http://six.static.jamglue.com/images/pop.v13092007.gif" /></a>
+</span>
+
+
+  <span class="popspacer" id="pop_spacer_619920179-tlt-105203">
+    <img align="absmiddle" alt="Transparent" border="0" height="13" src="http://three.static.jamglue.com/images/transparent.v13092007.png" width="13" />
+  </span>
+
+
+</form>
+
+  </li>
+  <li>
+    <form action="/mixes/81895-White-Kids-Aren-t-Hyphy-copy-/remix" method="post">
+    <input name="commit" onclick="$('mixerFlash').addComponent(248707); return false;" type="submit" value="Add" />
+&nbsp;&nbsp;
+
+
+
+<span id="1523134748-iap-248707" class="inlinePlayerWrapper">
+<img align="absMiddle" alt="Play_button" class="handCursor" onclick=" var so = new SWFObject(&quot;/flash/inline-player.swf&quot;, &quot;inline-player&quot;, &quot;20&quot;, &quot;20&quot;, &quot;7&quot;, &quot;#FFFFFF&quot;); so.addParam(&quot;align&quot;, &quot;absmiddle&quot;); so.addParam(&quot;wmode&quot;, &quot;transparent&quot;); so.addVariable(&quot;rootId&quot;, 248707); so.addVariable(&quot;autoStart&quot;, 1); so.write(&quot;1523134748-iap-248707&quot;); " src="http://one.static.jamglue.com/images/play_button.v13092007.gif" />
+</span>
+
+
+<span class="pop">
+<div class="popOverBox" id="3539269741-tlt-105211" style="display: none;">&nbsp;</div>
+</span>
+
+
+<a href="http://www.jamglue.com/tracks/105211-Tablas-True-Skool"><img align="absmiddle" alt="8789-tiny" border="0" src="http://images.jamglue.com/8789-tiny.gif" /></a>
+
+
+
+
+<a href="/tracks/105211-Tablas-True-Skool" class="songName" title="">Tablas - True Skool</a>
+
+<span class="poplink" id="pop_3539269741-tlt-105211" style="display:none;">
+<a href="#" onclick="new Ajax.Request('/tracks/105211/popover?pop_id=3539269741-tlt-105211', {asynchronous:true, evalScripts:true}); return false;"><img align="absmiddle" alt="Pop" border="0" src="http://six.static.jamglue.com/images/pop.v13092007.gif" /></a>
+</span>
+
+
+  <span class="popspacer" id="pop_spacer_3539269741-tlt-105211">
+    <img align="absmiddle" alt="Transparent" border="0" height="13" src="http://three.static.jamglue.com/images/transparent.v13092007.png" width="13" />
+  </span>
+
+
+</form>
+
+  </li>
+</ul>
+
+<h4>Mixes</h4>
+<ul>
+  <li>
+    <form action="/mixes/81895-White-Kids-Aren-t-Hyphy-copy-/remix" method="post">
+    <input name="commit" onclick="$('mixerFlash').addComponent(248715); return false;" type="submit" value="Add" />
+&nbsp;&nbsp;
+
+
+
+
+
+<span id="2716348175-iap-248715" class="inlinePlayerWrapper">
+<img align="absMiddle" alt="Play_button" class="handCursor" onclick=" var so = new SWFObject(&quot;/flash/inline-player.swf&quot;, &quot;inline-player&quot;, &quot;20&quot;, &quot;20&quot;, &quot;7&quot;, &quot;#FFFFFF&quot;); so.addParam(&quot;align&quot;, &quot;absmiddle&quot;); so.addParam(&quot;wmode&quot;, &quot;transparent&quot;); so.addVariable(&quot;rootId&quot;, 248715); so.addVariable(&quot;autoStart&quot;, 1); so.write(&quot;2716348175-iap-248715&quot;); " src="http://one.static.jamglue.com/images/play_button.v13092007.gif" />
+</span>
+
+           <a href="/mixes/105219-True-Skool/remix"><img align="absMiddle" alt="Remix_button_off" border="0" id="3346889097-slt-105219" onmouseout=" $(&quot;3346889097-slt-105219&quot;).src = &quot;http://three.static.jamglue.com/images/remix_button_off.v13092007.gif&quot;; " onmouseover=" $(&quot;3346889097-slt-105219&quot;).src = &quot;http://three.static.jamglue.com/images/remix_button_on.v13092007.gif&quot;; " src="http://three.static.jamglue.com/images/remix_button_off.v13092007.gif" /></a>
+
+<span class="pop">
+<div class="popOverBox" id="2031816314" style="display: none;">&nbsp;</div>
+</span>
+
+
+<a href="http://www.jamglue.com/mixes/105219-True-Skool"><img align="absmiddle" alt="8805-tiny" border="0" src="http://images.jamglue.com/8805-tiny.gif" /></a>
+
+
+
+
+<a href="/mixes/105219-True-Skool" class="songName" title="">True Skool</a>
+
+
+<span class="poplink" id="pop_2031816314" style="display:none;">
+<a href="#" onclick="new Ajax.Request('/mixes/105219/popover?pop_id=2031816314', {asynchronous:true, evalScripts:true}); return false;"><img align="absmiddle" alt="Pop" border="0" src="http://six.static.jamglue.com/images/pop.v13092007.gif" /></a>
+</span>
+
+
+  <span class="popspacer" id="pop_spacer_2031816314">
+    <img align="absmiddle" alt="Transparent" border="0" height="13" src="http://three.static.jamglue.com/images/transparent.v13092007.png" width="13" />
+  </span>
+
+
+</form>
+
+  </li>
+</ul>
+
+  </div>
+
+</div>
+
+<div style="clear: both;">&nbsp;</div>
+
+
+</div>
+
+</div>
+
+ 
+  
+<script src="http://one.static.jamglue.com/javascripts/prototype.v13092007.js" type="text/javascript"></script>
+<script src="http://two.static.jamglue.com/javascripts/effects.v13092007.js" type="text/javascript"></script>
+<script src="http://four.static.jamglue.com/javascripts/dragdrop.v13092007.js" type="text/javascript"></script>
+<script src="http://four.static.jamglue.com/javascripts/controls.v13092007.js" type="text/javascript"></script>
+<script src="http://two.static.jamglue.com/javascripts/application.v13092007.js" type="text/javascript"></script>
+<script src="http://five.static.jamglue.com/javascripts/extensions.v13092007.js" type="text/javascript"></script>
+<script src="http://six.static.jamglue.com/javascripts/swfobject.v13092007.js" type="text/javascript"></script>
+<script src="http://three.static.jamglue.com/javascripts/popover_check.v13092007.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+<!--
+
+var isDirty = false;
+var sidebarShown = false;
+
+var reloadMixesOnLogin = false;
+var reloadFavesOnLogin = false;
+
+function setDirty(flag) {
+  isDirty = flag;
+}
+
+var numUploads = 0;
+var activeUploads = 0;
+function checkDirtyAndUploads() {
+  var str = '';
+  if (isDirty) {
+    str += "You'll lose your unsaved changes to this mix.\n";
+  }
+  if(activeUploads != 0) {
+    str += "Your uploads (" + activeUploads + " active) may be aborted before they finish.";
+  }
+  if (str.length > 0) {
+    return str;
+  }
+}
+
+window.onbeforeunload = checkDirtyAndUploads;
+
+function toggleSidebar() {
+  if (!sidebarShown) {
+    Element.setStyle('mixer', {'margin-right': '460px'});
+    Element.setStyle('sidebar', {'right': '20px'});
+    $('sidebarToggleLink').innerHTML = "Hide &gt;&gt;";
+  } else {
+    Element.setStyle('sidebar', {'right': '-1000px'});
+    Element.setStyle('mixer', {'margin-right': '0'});
+    $('sidebarToggleLink').innerHTML = "&lt;&lt; Add stuff to this mix";
+  }
+
+  sidebarShown = !sidebarShown;
+  return false;
+}
+
+function reloadPermissions() {
+  $('mixerFlash').reloadPermissions();
+
+  // Reveal the two top-level tabs we may have been hiding
+  Element.show('yourStuffTab', 'newStuffTab');
+
+  // Refresh all the leaf-level tabs that:
+  // ( require user to be signed in AND 
+  //   ( are the default subtab for their top-level tab OR 
+  //     are not ajaxy and just need to be rendered ) )
+  new Ajax.Updater('yourTracksBodyDiv', '/songs/add_your_tracks/332007-Fire-for-the-People-DJ-Contest-Mix?mode=mixer', {asynchronous:true, evalScripts:true, onComplete:function(request){Element.hide('yourTracksBusy'); showSomePopovers($('yourTracksBodyDiv'));}, onLoading:function(request){Element.show('yourTracksBusy');}})
+  new Ajax.Updater('uploadBody', '/songs/add_via_upload/332007-Fire-for-the-People-DJ-Contest-Mix?mode=mixer', {asynchronous:true, evalScripts:true})
+  new Ajax.Updater('recordBody', '/songs/add_via_record/332007-Fire-for-the-People-DJ-Contest-Mix?mode=mixer', {asynchronous:true, evalScripts:true})
+
+  if(reloadMixesOnLogin) {
+  new Ajax.Updater('yourMixesBodyDiv', '/songs/add_your_songs/332007-Fire-for-the-People-DJ-Contest-Mix?mode=mixer', {asynchronous:true, evalScripts:true, onComplete:function(request){Element.hide('yourMixesBusy'); showSomePopovers($('yourMixesBodyDiv'));}, onLoading:function(request){Element.show('yourMixesBusy');}})
+    reloadMixesOnLogin = false;
+  }
+  if(reloadFavesOnLogin) {
+  new Ajax.Updater('yourFavesBodyDiv', '/songs/add_your_favorites/332007-Fire-for-the-People-DJ-Contest-Mix?mode=mixer', {asynchronous:true, evalScripts:true, onComplete:function(request){Element.hide('yourFavesBusy'); showSomePopovers($('yourFavesBodyDiv'));}, onLoading:function(request){Element.show('yourFavesBusy');}})
+    reloadFavesOnLogin = false;
+  }
+}
+
+function showSignin() {
+  window.open('/sign_up/in/mixer', 'signin', 'width=600, height=400, menubar=yes, resizable=yes, scrollbars=yes');
+}
+
+function showLogin() {
+  window.open('/sign_in/in/mixer', 'signin', 'width=600, height=400, menubar=yes, resizable=yes, scrollbars=yes');
+}
+
+function showEditMixInfo() {
+  window.location = '/mixes/332007-Fire-for-the-People-DJ-Contest-Mix/edit_information';
+}
+
+function anotherUpload() {
+  // clear out id from old iframe
+  Element.hide('uploadiframe');
+  $('uploadiframe').id = "";
+
+  var iframe = document.createElement('iframe');
+  iframe.src = '/upload/tracks/one?add_to_mix=332007-Fire-for-the-People-DJ-Contest-Mix';
+  iframe.frameborder = 0;
+  iframe.className = "upload";
+  iframe.id = "uploadiframe";
+  
+  // add it to the div
+  $('upload').appendChild(iframe);
+}
+
+function changeUploadSaveButton(span) {
+  $('submit_' + span).disabled = false;
+  $('submit_' + span).value = "Save";
+}
+
+function startUpload(name) {
+  var spanID = 'upload' + numUploads;
+  numUploads++;
+
+  activeUploads++;
+
+  new Insertion.Bottom('uploading', '<span id="' + spanID + '"><fieldset><legend>Uploading</legend><img align="absmiddle" alt="Busy" src="http://one.static.jamglue.com/images/busy.v13092007.gif" /> ' + name + '</fieldset></span>');
+
+  return spanID;
+}
+
+function startRecordUpload(name) {
+  var spanID = 'upload' + numUploads;
+  numUploads++;
+
+  activeUploads++;
+
+  new Insertion.Bottom('recorded', '<span id="' + spanID + '"><fieldset><legend>Uploading</legend><img align="absmiddle" alt="Busy" src="http://one.static.jamglue.com/images/busy.v13092007.gif" /> ' + name + '</fieldset></span>');
+
+  return spanID;
+}
+
+function urlUploadSubmit() {
+    var url = $('urltext').value;
+
+  // make sure that something was specified.
+  if ( url == '' ) {
+    alert('You didn\'t specify a URL!  Please try again.');
+    return false;
+  }
+
+  var uploadSpan = startUpload(url);
+  $('urltext').value = '';
+
+  new Ajax.Request('/upload/tracks/url?add_to_mix=332007-Fire-for-the-People-DJ-Contest-Mix', {asynchronous:true, evalScripts:true, parameters:'span=' + uploadSpan + '&url=' + url})
+}
+
+function urlUploadOnKeyPress(event) {
+  if (event.keyCode == 13) {
+    urlUploadSubmit();
+    return false;
+  } else {
+    return true;
+  }
+}
+
+function recordingFinished(key) {
+  var uploadSpan = startRecordUpload('Processing your recording');
+
+  new Ajax.Request('/record?add_to_mix=332007-Fire-for-the-People-DJ-Contest-Mix', {asynchronous:true, evalScripts:true, parameters:'span=' + uploadSpan + '&key=' + key})
+}
+
+function switchAdder(name) {
+  tab = document.getElementById(name + 'Tab');
+  allTabULs = tab.parentNode.childNodes;
+  for(i=0; i<allTabULs.length; i++) {
+    if (allTabULs[i].id != undefined) {
+      allTabULs[i].className = '';
+    }
+  }
+  tab.className = 'selected';
+
+  body = document.getElementById(name + 'Body');
+  bodySiblings = body.parentNode.childNodes;
+  for(i=0; i<bodySiblings.length; i++) {
+    if ((bodySiblings[i].className == 'adderContents') ||
+        (bodySiblings[i].className == 'adderInterContents') ||
+        (bodySiblings[i].className == 'adderSubContents')) {
+      Element.setStyle(bodySiblings[i].id, {'right': '-1000px'});
+    }
+  }
+  if (body.className == 'adderSubContents') {
+    Element.setStyle(name + 'Body', {'right': '11px'});
+  }
+  else {
+    Element.setStyle(name + 'Body', {'right': '-12px'});
+  }
+}
+
+// -->
+</script>
+
+ 
+ 
+  
+<script type="text/javascript">
+  var so = new SWFObject("/flash/mixer.swf", "mixerFlash", "100%", "100%", "8", "#666666");
+  so.addParam("align", "middle");
+  so.addParam("wmode", "opaque");
+  so.addVariable("rootId", 742861);
+  so.write("mixer");
+</script>
+
+<script>
+Event.observe(window, 'load',
+  function() { Element.setStyle('sidebar', {'right': '-1000px'}); Element.show('sidebar'); }
+);
+</script>
+
+
+<script>
+    new Ajax.Updater('allTracksBodyDiv', '/songs/add_popular_tracks/332007-Fire-for-the-People-DJ-Contest-Mix?mode=mixer', {asynchronous:true, evalScripts:true, onComplete:function(request){Element.hide('allTracksBusy'); showSomePopovers($('allTracksBodyDiv'));}, onLoading:function(request){Element.show('allTracksBusy');}})
+</script>
+
+ 
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-832461-1";
+urchinTracker();
+</script>
+<script type="text/javascript" src="http://quantserve.com/quant.js"></script>
+<script type="text/javascript">
+_qacct="p-e15W06CICRfzM";quantserve();</script>
+<noscript>
+<img src="http://quantserve.com/pixel/p-e15W06CICRfzM.gif" style="display: none" height="1" width="1"/></noscript>
+
+<!-- magically created on domU-12-31-37-00-00-0D.usma3.compute.amazonaws.com -->
+</body>
+</html>
+

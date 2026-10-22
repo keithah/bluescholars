@@ -1,0 +1,1213 @@
+<!DOCTYPE html><script>var __pbpa = true;</script><script>var translated_warning_string = 'Warning: Never enter your Tumblr password unless \u201chttps://www.tumblr.com/login\u201d\x0ais the address in your web browser.\x0a\x0aYou should also see a green \u201cTumblr, Inc.\u201d identification in the address bar.\x0a\x0aSpammers and other bad guys use fake forms to steal passwords.\x0a\x0aTumblr will never ask you to log in from a user\u2019s blog.\x0a\x0aAre you absolutely sure you want to continue?';</script><script type="text/javascript" language="javascript" src="http://assets.tumblr.com/assets/scripts/pre_tumblelog.js?_v=472beb185dc3d62d59bcf893499ebf45"></script><!DOCTYPE html>
+
+<!--
+
+Observer Theme
+By Zack Sultan
+Released January 2013
+Revised June 25, 2017
+
+-->
+
+<html>
+    <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# blog: http://ogp.me/ns/blog#">
+        <title></title>
+        <style>figure{margin:0}.tmblr-iframe{position:absolute}.tmblr-iframe.hide{display:none}.tmblr-iframe--amp-cta-button{visibility:hidden;position:fixed;bottom:10px;left:50%;transform:translateX(-50%);z-index:100}.tmblr-iframe--amp-cta-button.tmblr-iframe--loaded{visibility:visible;animation:iframe-app-cta-transition .2s ease-out}</style><link rel="shortcut icon" href="http://78.media.tumblr.com/avatar_7fc64e58db3b_128.pnj">
+        <link rel="alternate" type="application/rss+xml" href="http://prometheusbrown.tumblr.com/rss">
+        
+        <link rel="shortcut icon" href="http://78.media.tumblr.com/avatar_7fc64e58db3b_128.pnj">
+        <link rel="alternate" type="application/rss+xml" href="http://prometheusbrown.tumblr.com/rss">
+        <meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=no" />
+
+
+
+<!-- Options -->
+
+
+        <meta name="if:Show Navigation" content="1"/>
+        <meta name="if:Alternate Header Layout" content="0"/>
+        <meta name="if:Show Description" content="0"/>
+        <meta name="if:Show Archive Navigation Link" content="1"/>
+        <meta name="if:Wide Images" content="1"/>
+        <meta name="if:Photoset Layout" content="0"/>
+        <meta name="if:Show Post Tags" content="1"/>
+        <meta name="if:Show Post Notes" content="1"/>
+        <meta name="if:Show Copyright" content="0"/>
+
+        <meta name="Title font" content="Gibson">
+        <meta name="Title font weight" content="bold" title="Bold">
+        <meta name="Title font weight" content="normal" title="Normal">
+        <meta name="font:Body font" content="Calluna"/>
+
+        <meta name="Background color" content="#fff">
+        <meta name="Title color" content="#444444">
+        <meta name="Link color" content="#5f79a4">
+
+        <meta name="color:Body text" content="#333333"/>
+		<meta name="color:Secondary text" content="#888888"/>
+        <meta name="image:Logo" content=""/>
+        <meta name="text:TypeKit ID" content=""/>
+        <meta name="text:Title Font" content=""/>
+        <meta name="text:Body Font" content=""/>
+        <meta name="text:Post Headline Font" content=""/>
+        <!--<meta name="text:Secondary Font" content=""/>-->
+
+        <meta name='text:Disqus Shortname' content='' />
+        <meta name='text:Google Analytics' content='' />
+
+<!-- Scripts -->
+
+    <script src="http://static.tumblr.com/4kpnlef/Pttmhz2ap/jquery-1.9.1.min.js"></script>
+
+    
+
+    <!-- Media resizing -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // Make desktop tumblr video stretch to 100%
+            $('.tumblr_video_container').css({ 'width' : '100%', 'height' : '100%' });
+            // Resize tumblr video on mobile
+            $('.iphone-video a').css({ 'width' : '100%', 'height' : '200px' });
+		});
+
+        //Make Spotify the right size and responsive
+	    $(document).ready(function(){
+	        $('.mobile-spotify iframe').css('height', '80px');
+            $('.mobile-spotify iframe').css('width', '290px');
+            $('iframe[src*="embed.spotify.com"]').each( function() {
+                $(this).css('width',$(this).parent(1).css('width'));
+                $(this).css('height', '82');
+                $(this).attr('src',$(this).attr('src'));
+            });
+        });
+        $(window).resize(function() {
+            $('iframe[src*="embed.spotify.com"]').each( function() {
+                $(this).css('width',$(this).parent(1).css('width'));
+                $(this).css('height', '82');
+                $(this).attr('src',$(this).attr('src'));
+            });
+        });
+
+        // Fix Flickr images treated as videos.
+        $(document).ready(function(){
+          // Grab the videoWrappers that are already here.
+          var videoWrappers = document.querySelectorAll('.videoWrapper');
+          for(var i = 0, len = videoWrappers.length; i < len; i++) {
+              fixFlickr(videoWrappers[i]);
+          }
+
+          // Also process any new nodes that are added to the page.
+          var observer,
+          observerConfig = {
+          	childList: true,
+          	subtree: true
+          };
+
+          observer = new MutationObserver(function (mutations) {
+          	for (var i = 0, len = mutations.length; i < len; i++) {
+          		// If there were new nodes added, we check that they are valid flickr embeds
+          		if (mutations[i].addedNodes.length && mutations[i].addedNodes[0].querySelector) {
+          		    var newVideoWrapper = mutations[i].addedNodes[0].querySelector('.videoWrapper');
+          			if (newVideoWrapper !== null) {
+          				fixFlickr(newVideoWrapper);
+          			}
+          		}
+          	}
+          });
+
+          observer.observe(document.getElementById('content'), observerConfig);
+        });
+
+        function fixFlickr(videoWrapper){
+          var potentialEmbed = videoWrapper.firstElementChild;
+          if(potentialEmbed.hasAttribute('data-flickr-embed')) {
+              videoWrapper.style.paddingBottom = 0;
+              videoWrapper.style.height = 'auto';
+          }
+        }
+
+        //disable safari active states
+        document.addEventListener("touchstart", function() {},false);
+
+	</script>
+
+
+
+
+<!-- Style Sheet -->
+
+<style type="text/css">
+
+.regular p {
+	font-weight: bold;
+	color:aqua;
+}
+
+.regular .bottom-nav {
+	display: none;
+}
+
+::selection {
+    background: #529ECC; /* Safari */
+	color: #333333;
+	}
+
+::-moz-selection {
+	background: #529ECC; /* Firefox */
+	color: #333333;
+}
+
+body {
+	margin: 0px;
+	margin-bottom: 0px;
+	padding: 0px;
+    font-size:18px;
+	-webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+	}
+
+p, li, blockquote {
+	line-height: 28px;
+	margin: 0;
+}
+
+h1, h2, h3 {
+	margin: 0;
+	padding: 0;
+	font-weight: 400;
+	font-size: 30px;
+}
+
+.ir {
+	text-indent: -99999em;
+}
+
+.center {
+	text-align: center;
+}
+
+/* Global colors
+********************************/
+
+body {
+	color: #333333;
+	background-color: #FAFAFA;
+}
+
+.blog-description {
+	color: #888888;
+}
+
+a {
+	color: #333333;
+	text-decoration: none;
+	border-bottom: 1px solid rgba(136, 136, 136, 0.3);
+}
+
+#header h1 a {
+	color: #444444;
+	border-bottom: none;
+}
+
+a:hover {
+}
+
+a:active {
+	position: relative;
+	outline: none;
+	top: 1px;
+}
+
+
+.metadata a, #footer-links a, #footer p.promo a, .links a {
+	color: #888888;
+	border-bottom: none;
+}
+
+.metadata a:hover, #footer-links a:hover, #footer p.promo a:hover, .links a:hover, .more a:hover, a.mobile-player:hover {
+
+}
+
+.post {
+	border-bottom: 1px solid rgba(136, 136, 136, 0.2);
+}
+
+.colophon p {
+	color: #888888;
+}
+
+
+/* Global fonts
+********************************/
+
+body {
+	font-family: Century Schoolbook, Georgia, 'Times New Roman', Times, serif, 'Calluna', serif, georgia, serif;
+	font-weight: normal;
+}
+
+.title h1, .link-title h1, .chat-title h1, .q h1, .a h1, .album-info h2, #footer h2 {
+	font-family:  'Gibson', sans-serif, georgia, serif;
+	font-weight: bold;
+}
+
+.blog-title h1 {
+	font-family: Century Schoolbook, Georgia, 'Times New Roman', Times, serif, 'Gibson', sans-serif, futura, helvetica, arial, sans-serif;
+	font-weight: bold;
+	font-size: 96px;
+	line-height: 1em;
+}
+
+.metadata a {
+	font-family: Century Schoolbook, Georgia, 'Times New Roman', Times, serif, , helvetica, arial, sans-serif;
+	font-weight: normal;
+}
+
+
+/* Page
+********************************/
+
+
+#page {
+	border: 0px solid;
+	max-width: 900px;
+	padding-left:  50px;
+	padding-right: 50px;
+	margin: auto;
+}
+
+
+
+
+
+
+
+
+/* Header Centered
+********************************/
+
+#header {
+	margin-top: 20px;
+	margin-bottom: 80px;
+	display: block;
+	overflow: visible;
+}
+
+#header a {
+	text-decoration: none;
+}
+
+.blog-title {
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin-top: 70px;
+}
+
+.blog-title a {
+	border-bottom: none;
+}
+
+.blog-title img {
+	max-width: 100%;
+}
+
+.blog-description {
+	font-size: 16px;
+	line-height: 20px;
+	margin-top: 20px;
+}
+
+.links {
+	margin-top: 0px;
+	text-align: center;
+	float: none;
+	border-bottom: 1px solid rgba(136, 136, 136, 0.2);
+}
+
+.links ul {
+	margin-top: 10px;
+	padding: 0;
+	display: block;
+	text-align: center;
+	float: none;
+}
+
+.links li {
+	display: inline;
+	margin-left: 10px;
+	text-transform: none;
+}
+
+.links li:first-child {
+	margin-left: 0px;
+}
+
+
+
+/* Post wrappers
+********************************/
+
+#content {
+	width: 100%;
+	overflow-x: hidden;
+	clear: both;
+}
+
+.post {
+	margin-bottom: 45px;
+	padding-bottom: 40px;
+	width: 100%;
+}
+
+.narrow {
+	max-width: 640px;
+	margin: auto;
+}
+
+
+/* Headings
+********************************/
+
+.title h1, .link-title h1, .chat-title h1 {
+	text-align: center;
+	margin: auto;
+	margin-bottom: 25px;
+	font-size: 42px;
+	line-height: 50px;
+}
+
+.link-title a {
+	text-decoration: none;
+	position: relative;
+	border: none;
+	color: #529ECC;
+}
+
+span.link-arrow {
+	position: relative;
+	font-size: 20px;
+	bottom: 3px;
+}
+
+.quote-short {
+	font-size: 24px;
+	line-height: 36px;
+	margin-bottom: 25px;
+}
+
+.photo img, .album-art img, .videoWrapper {
+  max-width: 100%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+	border-radius: 2px;
+}
+
+.photo img, .album-art img, .videoWrapper img {
+	min-width: 640px;
+}
+
+.photoset-layout {
+    max-width: 700px;
+    display: block;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.tumblr_audio_player {
+	height: 250px;
+}
+
+.audio iframe {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+
+.videoWrapper iframe, .videoWrapper object {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.videoWrapper iframe.flickr-embed-frame, .videoWrapper img {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Post body styles
+********************************/
+
+.caption p {
+	margin-bottom: 15px;
+}
+
+.caption h1 {
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+
+.caption h2 {
+	font-weight: bold;
+	margin-bottom: 15px;
+	font-size: 24px;
+}
+
+.caption blockquote {
+	margin-bottom: 10px;
+	border-left: 3px solid rgba(136, 136, 136, 0.2);
+	margin-left: 5px;
+	padding-left: 15px;
+	line-height: 26px;
+}
+
+.caption pre {
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -pre-wrap;
+	white-space: -o-pre-wrap;
+	word-wrap: break-word;
+	background-color: rgba(136, 136, 136, 0.2);
+	border-radius: 2px;
+	padding: 10px 15px 10px 15px;
+	font-size: 15px;
+	line-height: 24px;
+	margin: 15px 0 25px 0;
+}
+
+.caption ul, ol {
+	margin-top: 0;
+	margin-bottom: 25px;
+	padding-left: 40px;
+}
+
+.caption img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 30px auto 30px auto;
+    border-radius: 2px;
+}
+
+.quote-short {
+	line-height: 40px;
+	font-size: 36px;
+	margin-bottom: 20px;
+}
+
+.quote-medium, .quote-long {
+	line-height: 32px;
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+ul.chat {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.chat li {
+	border-bottom: 1px solid rgba(136, 136, 136, 0.3);
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+}
+
+.chat li:last-child {
+	border: none;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+span.odd, span.even  {
+	font-weight: bold;
+}
+
+.more a {
+	display: block;
+	width: 99%;
+	height: 30px;
+	border: 1px solid rgba(136, 136, 136, 0.3);
+	text-align: center;
+	text-decoration: none;
+	border-radius: 2px;
+	padding-top: 10px;
+	margin-bottom: 30px;
+}
+
+
+.more a:active {
+    background: rgba(136, 136, 136, 0.08);
+    box-shadow: inset 0px 1px 4px rgba(136, 136, 136, 0.2);
+    top: 0px;
+}
+
+.audio-module {
+	display: block;
+	overflow: hidden;
+	margin-bottom: 25px;
+}
+
+a.mobile-player {
+	border: 1px solid rgba(136, 136, 136, 0.2);
+	background: rgba(136, 136, 136, 0.1);
+	width: 99%;
+	padding: 30px 0 30px 0;
+	margin-bottom: 25px;
+	border-radius: 2px;
+	display: none;
+}
+
+a.mobile-player:active {
+    top: 0px;
+    box-shadow: inset 0px 1px 4px rgba(136, 136, 136, 0.2);
+    background: rgba(136, 136, 136, 0.18);
+    border: 1px solid rgba(136, 136, 136, 0.3);
+}
+
+.play-triangle {
+	margin-left: 20px;
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 6.5px 0 6.5px 10px;
+	border-color: transparent transparent transparent rgba(136, 136, 136, 0.8);
+}
+
+.album-info {
+	display: block;
+	float: left;
+	width: 63%;
+}
+
+.player {
+	display: block;
+	background-color: #ffffff;
+	float: right;
+	padding-top: 5px;
+	padding-right: 2px;
+	border: 1px solid rgba(136, 136, 136, 0.3);
+}
+
+.desktop-spotify {
+	display: block;
+
+}
+
+.mobile-spotify {
+	display: none;
+	width: 290px;
+	margin: auto;
+}
+
+.iphone-video object {
+    display: block;
+    margin: 0px auto 20px;
+}
+
+.asker-block, .answer-text {
+	display: block;
+	overflow: auto;
+}
+
+p.question {
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+p.album, p.question {
+	font-size: 24px;
+	line-height: 32px;
+}
+
+h1.qa-letter {
+	display: block;
+	float: left;
+	width: 45px;
+	position: relative;
+	bottom: 3px;
+	font-size: 30px;
+}
+
+.q {
+	margin-bottom: 20px;
+}
+
+img.asker {
+	float:left;
+	margin-right: 8px;
+	border-radius: 2px;
+	position: relative;
+	top: 2px;
+}
+
+p.asker {
+	font-style: italic;
+}
+
+p.question {
+	clear: both;
+}
+
+
+/* Metadata
+********************************/
+
+.metadata {
+	border: 0px solid gray;
+	overflow: auto;
+	font-size: 12px;
+	text-transform: uppercase;
+	margin-top: 20px;
+}
+
+.metadata a {
+	text-decoration: none;
+}
+
+.date, .tags, .notes-count {
+	display: block;
+	float: left;
+	margin-right: 15px;
+}
+
+.tags a, .notes-count a, .date a {
+	margin-right: 5px;
+}
+
+
+/* Footer
+********************************/
+
+#footer {
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+#footer a {
+	text-decoration: none;
+	border-bottom: none;
+}
+
+a.back-next {
+    margin: 0px 10px 0px 10px;
+}
+
+#footer h2 {
+	font-size: 24px;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+
+#footer-links ul {
+	margin-bottom: 0px;
+	padding: 0;
+	display: block;
+	text-align: center;
+}
+
+#footer-links li {
+	display: inline;
+	margin-left: 5px;
+	font-size: 14px;
+}
+
+#footer-links li:first-child {
+	margin-left: 0px;
+}
+
+#footer .colophon p {
+	font-size: 14px;
+	font-style: italic;
+}
+
+#footer p.promo {
+	font-size: 12px;
+	text-transform: uppercase;
+	font-style: normal;
+}
+
+
+/* Notes and comments
+********************************/
+
+#permalink-content {
+	margin-top: 40px;
+}
+
+.avatar_frame {
+	position: relative;
+	top: 4px;
+	margin-right: 10px;
+}
+
+.comments {
+	margin-bottom: 35px;
+}
+
+.comments h3, .permalink-notes h3 {
+	font-size: 18px;
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+
+.permalink-notes ol {
+	padding-left: 0;
+}
+
+.permalink-notes li {
+	list-style: none;
+	margin-bottom: 10px;
+	padding-top: 10px;
+	border-top: 1px solid rgba(136, 136, 136, 0.3);
+	font-size: 13px;
+}
+
+.permalink-notes blockquote {
+	margin: 5px 0px 5px 0px;
+	border-left: 3px solid rgba(136, 136, 136, 0.2);
+	margin-left: 20px;
+	padding-left: 15px;
+    line-height: 24px;
+}
+
+.notes a {
+	border-bottom: none;
+	text-decoration: underline;
+}
+
+
+.post iframe, .post object {
+max-width: 100%;
+}
+
+
+/* Browser size break-points
+********************************/
+
+
+@media screen and (max-width: 800px) {
+
+#header {
+	margin-top: 20px;
+	display: block;
+	overflow: visible;
+	padding-bottom: 0px;
+}
+
+.blog-title {
+	display: block;
+	text-align: center;
+	margin-top: 50px;
+	float: none;
+	width: 100%;
+    margin-bottom: 50px;
+}
+
+.blog-title h1 {
+	font-size: 40px;
+	margin-bottom: 10px;
+}
+
+.blog-description {
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.links {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	text-align: center;
+	float: none;
+	border-bottom: 1px solid rgba(136, 136, 136, 0.4);
+}
+
+.links ul {
+	margin-top: 10px;
+	padding: 0;
+	display: block;
+	text-align: center;
+	float: none;
+}
+
+.links li {
+	display: inline;
+	margin-left: 16px;
+	font-size: 17px;
+	text-transform: none;
+}
+
+
+.metadata {
+	font-size: 16px;
+	}
+
+.player {
+	display: none;
+}
+
+a.mobile-player {
+	display: block;
+}
+
+.album-info {
+	width: 100%
+}
+
+.title h1, .link-title h1, .chat-title h1 {
+text-align: center;
+font-size: 36px;
+line-height: 42px;
+}
+
+}
+
+@media screen and (max-width: 740px) {
+
+#page {
+	padding-left:  1em;
+	padding-right: 1em;
+}
+
+#header {
+	margin-bottom: 50px;
+}
+
+/* WRANGLE TUMBLR VIDEO PLAYER */
+
+
+.iphone-video img {
+	width: 90%;
+}
+
+.iphone-video a {
+	margin-bottom: 20px;
+}
+
+/* IMAGES */
+
+.photo img, .album-art img, .videoWrapper img {
+	min-width: 100%;
+}
+
+.link-title a {
+	line-height: 50px;
+}
+
+.desktop-spotify {
+	display: none;
+}
+
+.mobile-spotify {
+	display: block;
+}
+
+}
+
+body {
+	margin: 0px;
+	margin-bottom: 0px;
+	padding: 0px;
+    font-size:14px;
+	-webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+	}
+
+</style>
+
+<!-- End header -->
+
+    <link rel="alternate" href="android-app://com.tumblr/tumblr/x-callback-url/blog?blogName=prometheusbrown%26postID=24492216094" /><link rel="alternate" href="ios-app://305343404/tumblr/x-callback-url/blog?blogName=prometheusbrown&postID=24492216094" /><link rel="alternate" type="application/json+oembed" href="https://www.tumblr.com/oembed/1.0?url=http://prometheusbrown.tumblr.com/post/24492216094/vancouver-bc-click-photo-for-more-info" title="VANCOUVER, BC! click photo for more info
+&ldquo; Hillydilly.com is proud to present Prometheus Brown of the Blue Scholars &amp; Bambu (The Bar) w/ special guests RA Scion &amp; Rebel live in Vancouver, BC on June 15th, 2012.
+*This show is an early show that will..."/><link rel="amphtml" href=http://prometheusbrown.tumblr.com/post/24492216094/vancouver-bc-click-photo-for-more-info/amp /><script src="http://assets.tumblr.com/assets/scripts/tumblelog_post_message_queue.js?_v=8a635a4514a95df9615127e354b374d0"></script><link rel="stylesheet" type="text/css" href="http://assets.tumblr.com/fonts/calluna/stylesheet.css?v=3"><link rel="stylesheet" type="text/css" href="http://assets.tumblr.com/fonts/gibson/stylesheet.css?v=3"><meta name="keywords" content="The Bar,Prometheus Brown,Bambu,Hillydilly,Vancouver" /><!-- BEGIN TUMBLR FACEBOOK OPENGRAPH TAGS --><!-- If you'd like to specify your own Open Graph tags, define the og:url and og:title tags in your theme's HTML. --><!-- Read more: http://ogp.me/ --><meta property="fb:app_id" content="48119224995" /><meta property="og:site_name" content="prometheusbrown" /><meta property="og:title" content="" /><meta property="og:url" content="http://prometheusbrown.tumblr.com/post/24492216094/vancouver-bc-click-photo-for-more-info" /><meta property="og:description" content="VANCOUVER, BC! click photo for more info
+&ldquo; Hillydilly.com is proud to present Prometheus Brown of the Blue Scholars &amp; Bambu (The Bar) w/ special guests RA Scion &amp; Rebel live in Vancouver, BC on June..." /><meta property="og:determiner" content="a" /><meta property="og:type" content="tumblr-feed:photo" /><meta property="og:image" content="http://78.media.tumblr.com/tumblr_m55xnnGYBC1qcdek0o1_r2_1280.gif" /><meta property="og:image:height" content="927" /><meta property="og:image:width" content="600" /><meta property="al:ios:url" content="tumblr://x-callback-url/blog?blogName=prometheusbrown&amp;postID=24492216094" /><meta property="al:ios:app_name" content="Tumblr" /><meta property="al:ios:app_store_id" content="305343404" /><meta property="al:android:url" content="tumblr://x-callback-url/blog?blogName=prometheusbrown&amp;postID=24492216094" /><meta property="al:android:app_name" content="Tumblr" /><meta property="al:android:package" content="com.tumblr" /><!-- END TUMBLR FACEBOOK OPENGRAPH TAGS --><!-- TWITTER TAGS --><meta charset="utf-8"><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content="prometheusbrown" /><meta name="twitter:description" content="VANCOUVER, BC! click photo for more info &ldquo; Hillydilly.com is proud to present Prometheus Brown of the Blue Scholars &amp; Bambu (The Bar) w/ special guests RA Scion &amp; Rebel live in Vancouver, BC on June..." /><meta name="twitter:image" content="http://78.media.tumblr.com/tumblr_m55xnnGYBC1qcdek0o1_r2_500.gif" /><meta name="twitter:url" content="http://prometheusbrown.tumblr.com/post/24492216094/vancouver-bc-click-photo-for-more-info" /><meta name="twitter:site" content="tumblr" /><meta name="twitter:creator" content="prometheusbrown" /><meta name="twitter:app:name:iphone" content="Tumblr" /><meta name="twitter:app:name:ipad" content="Tumblr" /><meta name="twitter:app:name:googleplay" content="Tumblr" /><meta name="twitter:app:id:iphone" content="305343404" /><meta name="twitter:app:id:ipad" content="305343404" /><meta name="twitter:app:id:googleplay" content="com.tumblr" /><meta name="twitter:app:url:iphone" content="tumblr://x-callback-url/blog?blogName=prometheusbrown&amp;postID=24492216094&amp;referrer=twitter-cards" /><meta name="twitter:app:url:ipad" content="tumblr://x-callback-url/blog?blogName=prometheusbrown&amp;postID=24492216094&amp;referrer=twitter-cards" /><meta name="twitter:app:url:googleplay" content="tumblr://x-callback-url/blog?blogName=prometheusbrown&amp;postID=24492216094&amp;referrer=twitter-cards" /><!-- GOOGLE CAROUSEL --><script type="application/ld+json">
+	{"@type":"SocialMediaPosting","url":"http:\/\/prometheusbrown.tumblr.com\/post\/24492216094\/vancouver-bc-click-photo-for-more-info","mainEntityOfPage":true,"datePublished":"2012-06-05T21:14:00-04:00","author":"prometheusbrown","image":"http:\/\/78.media.tumblr.com\/tumblr_m55xnnGYBC1qcdek0o1_r2_1280.gif","articleBody":"VANCOUVER, BC! click photo for more info\n\u201c Hillydilly.com is proud to present Prometheus Brown of the Blue Scholars & Bambu (The Bar) w\/ special guests RA Scion & Rebel live in Vancouver, BC on June 15th, 2012.\n*This show is an early show that will run from 7PM to 11PM\nPurchase 10$ advance online...","@context":"http:\/\/schema.org"}</script><link rel="canonical" href="http://prometheusbrown.tumblr.com/post/24492216094/vancouver-bc-click-photo-for-more-info" /></head>
+
+	<body>
+
+		<div id="page">
+
+			<div id="header">
+
+                
+
+
+
+				<div class="blog-title">
+
+                    
+
+                    
+                    <h1><a href="/"></a></h1>
+                    
+
+                    
+				</div>
+
+
+
+			</div> <!-- header end -->
+
+			<div id="content">
+            
+
+
+                
+
+				
+				<!-- PHOTO POST
+				///////////////////////////////////////////////////////-->
+
+				<div class="post photo">
+
+					<div class="wide">
+                        <a href="http://hillydilly.com/2012/05/08/prometheus-brown-of-blue-scholars-bambu-the-bar-w-ra-scion-of-common-market-rebel-live-in-vancouver-on-june-15th-hd-live-events/">
+
+						<img src="http://78.media.tumblr.com/tumblr_m55xnnGYBC1qcdek0o1_r2_1280.gif" alt="VANCOUVER, BC! click photo for more info
+&ldquo; Hillydilly.com is proud to present Prometheus Brown of the Blue Scholars &amp; Bambu (The Bar) w/ special guests RA Scion &amp; Rebel live in Vancouver, BC on June 15th, 2012.
+*This show is an early show that will..." />
+
+                        </a>
+					</div>
+
+					<div class="narrow">
+
+                        
+						<div class="caption">
+						    <p>VANCOUVER, BC! click photo for more info</p><blockquote><p>Hillydilly.com is proud to present <strong>Prometheus Brown of the Blue Scholars &amp; Bambu (The Bar) </strong>w/ special guests <strong>RA Scion </strong>&amp;<strong> Rebel</strong> live in Vancouver, BC on June 15th, 2012.</p><p>*This show is an early show that will run from 7PM to 11PM</p><p>Purchase 10$ advance online tickets&nbsp;<a href="https://t.umblr.com/redirect?z=http%3A%2F%2Ftktwb.tw%2FJ9Exdf&amp;t=NDZhMTI0ZTljYmRlYmY3NGI0MTIyZmM2MjkxYzAxNGQyNWRhNDAxZixzQ29keTd6SA%3D%3D&amp;b=t%3AJ1uKb_VJqygz-4oleU9fGQ&amp;p=http%3A%2F%2Fprometheusbrown.tumblr.com%2Fpost%2F24492216094%2Fvancouver-bc-click-photo-for-more-info&amp;m=1">HERE</a>.</p><p>Hard copy tickets are available at Zulu Records &amp; Beatstreet Records.</p><p>HEADLINER:&nbsp;<strong>The Bar (Promtheus Brown &amp; Bambu)</strong>LISTEN:&nbsp;<a href="https://t.umblr.com/redirect?z=http%3A%2F%2Fbeatrockmusic.bandcamp.com%2Falbum%2Fwalk-into-a-bar&amp;t=ZDU5MjhiOTY2OTg1ZThlMGFmNmVhMmIzMjE3MmJmZTc0MzllYzRiZCxzQ29keTd6SA%3D%3D&amp;b=t%3AJ1uKb_VJqygz-4oleU9fGQ&amp;p=http%3A%2F%2Fprometheusbrown.tumblr.com%2Fpost%2F24492216094%2Fvancouver-bc-click-photo-for-more-info&amp;m=1">Walk Into A Bar (debut EP)</a></p><p>The Bar is lead by the commanding raps of Seattle&rsquo;s Prometheus Brown (of the Blue Scholars) and L.A&rsquo;s Bambu who has built a reputation for being an intense live performer. The combination of these two level headed emcees has created music that you can admire and look up to. Too often these days we find rappers elevated within the public eye that don&rsquo;t correctly represent that &lsquo;good shit&rsquo;. Luckily for us Prometheus Brown &amp; Bambu are exactly what rappers should be; a voice for the people.&nbsp;<em>Walk Into A Bar</em>, was their first release that dropped back in the summer of 2011.&nbsp;</p></blockquote></div>
+                        
+
+						<div class="metadata">
+
+							
+    						<div class="date">
+								<a href="http://prometheusbrown.tumblr.com/post/24492216094/vancouver-bc-click-photo-for-more-info">Jun. 5 2012</a>
+							</div>
+                            
+
+                            
+
+                            
+							
+                            <div class="tags">
+                                
+								<a href="http://prometheusbrown.tumblr.com/tagged/The-Bar">#The Bar</a>
+							    
+								<a href="http://prometheusbrown.tumblr.com/tagged/Prometheus-Brown">#Prometheus Brown</a>
+							    
+								<a href="http://prometheusbrown.tumblr.com/tagged/Bambu">#Bambu</a>
+							    
+								<a href="http://prometheusbrown.tumblr.com/tagged/Hillydilly">#Hillydilly</a>
+							    
+								<a href="http://prometheusbrown.tumblr.com/tagged/Vancouver">#Vancouver</a>
+							    
+							</div>
+                            
+						    
+
+                            
+                            
+                            <div class="notes-count">
+								<a href="http://prometheusbrown.tumblr.com/post/24492216094/vancouver-bc-click-photo-for-more-info">53 notes</a>
+							</div>
+                            
+                            
+
+						</div> <!-- metadata end -->
+
+					</div> <!-- narrow end -->
+
+				</div> <!-- post end -->
+
+                
+
+
+                
+
+
+				
+
+
+				
+
+
+                
+
+
+
+				
+
+
+
+		        
+
+
+
+				
+
+            
+
+            
+                <!-- PERMALINK CONTENT
+                ////////////////////////////////////////////////// -->
+
+                <div class="narrow">
+
+						<div id="permalink-content">
+
+                        
+
+                            
+							<div class="permalink-notes">
+
+								<h3>Notes</h3>
+
+                                
+<ol class="notes"><!-- START NOTES --><li class="note reblog tumblelog_glowlngeyeball without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://glowlngeyeball.tumblr.com/" title=""><img src="http://78.media.tumblr.com/avatar_0156b9172cbc_16.pnj" class="avatar " alt="" /></a><span class="action" data-post-url="http://glowlngeyeball.tumblr.com/post/25081917989"><a rel="nofollow" href="http://glowlngeyeball.tumblr.com/" class="tumblelog" title="">glowlngeyeball</a> reblogged this from <a rel="nofollow" href="http://prometheusbrown.tumblr.com/" class="source_tumblelog" title="">prometheusbrown</a>                                                                                                                                                                                    </span><div class="clear"></div></li><li class="note like tumblelog_glowlngeyeball without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://glowlngeyeball.tumblr.com/" title=" " rel="nofollow"><img src="http://78.media.tumblr.com/avatar_0156b9172cbc_16.pnj" class="avatar " alt="" /></a><span class="action"><a rel="nofollow" href="http://glowlngeyeball.tumblr.com/" title="" rel="nofollow">glowlngeyeball</a> liked this                                    </span><div class="clear"></div></li><li class="note like tumblelog_dondonthedon-blog without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://dondonthedon-blog.tumblr.com/" title="Dondabeats " rel="nofollow"><img src="http://78.media.tumblr.com/avatar_461f64641c93_16.pnj" class="avatar " alt="" /></a><span class="action"><a rel="nofollow" href="http://dondonthedon-blog.tumblr.com/" title="Dondabeats" rel="nofollow">dondonthedon-blog</a> liked this                                    </span><div class="clear"></div></li><li class="note reblog tumblelog_dondonthedon-blog without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://dondonthedon-blog.tumblr.com/" title="Dondabeats"><img src="http://78.media.tumblr.com/avatar_461f64641c93_16.pnj" class="avatar " alt="" /></a><span class="action" data-post-url="http://dondonthedon-blog.tumblr.com/post/24606920507"><a rel="nofollow" href="http://dondonthedon-blog.tumblr.com/" class="tumblelog" title="Dondabeats">dondonthedon-blog</a> reblogged this from <a rel="nofollow" href="http://beatrockmusic-blog-blog.tumblr.com/" class="source_tumblelog" title="">beatrockmusic-blog-blog</a>                                                                                                                                                                                    </span><div class="clear"></div></li><li class="note like tumblelog_whiskey-on-my-shirt-blog without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://whiskey-on-my-shirt-blog.tumblr.com/" title="Shit I Like " rel="nofollow"><img src="http://78.media.tumblr.com/avatar_0300bb2c32a6_16.pnj" class="avatar " alt="" /></a><span class="action"><a rel="nofollow" href="http://whiskey-on-my-shirt-blog.tumblr.com/" title="Shit I Like" rel="nofollow">whiskey-on-my-shirt-blog</a> liked this                                    </span><div class="clear"></div></li><li class="note like tumblelog_crystamanda21 without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://crystamanda21.tumblr.com/" title="acst21 " rel="nofollow"><img src="http://78.media.tumblr.com/avatar_f7cc191d7112_16.pnj" class="avatar " alt="" /></a><span class="action"><a rel="nofollow" href="http://crystamanda21.tumblr.com/" title="acst21" rel="nofollow">crystamanda21</a> liked this                                    </span><div class="clear"></div></li><li class="note reblog tumblelog_bhonstro without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://bhonstro.tumblr.com/" title="Words."><img src="http://78.media.tumblr.com/avatar_bd928dbc8860_16.pnj" class="avatar " alt="" /></a><span class="action" data-post-url="http://bhonstro.tumblr.com/post/24539037445"><a rel="nofollow" href="http://bhonstro.tumblr.com/" class="tumblelog" title="Words.">bhonstro</a> reblogged this from <a rel="nofollow" href="http://bambudepistola.tumblr.com/" class="source_tumblelog" title="BAMBU DEPISTOLA">bambudepistola</a>                                                                                                                                                                                    </span><div class="clear"></div></li><li class="note like tumblelog_stndrdsmla-blog-blog without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://stndrdsmla-blog-blog.tumblr.com/" title="STNDRDS " rel="nofollow"><img src="http://78.media.tumblr.com/avatar_1ec1f392ff81_16.pnj" class="avatar " alt="" /></a><span class="action"><a rel="nofollow" href="http://stndrdsmla-blog-blog.tumblr.com/" title="STNDRDS" rel="nofollow">stndrdsmla-blog-blog</a> liked this                                    </span><div class="clear"></div></li><li class="note like tumblelog_loverzandfighterz-blog-blog without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://loverzandfighterz-blog-blog.tumblr.com/" title="LOverz &amp; FightERz " rel="nofollow"><img src="http://78.media.tumblr.com/avatar_90a203db5194_16.pnj" class="avatar " alt="" /></a><span class="action"><a rel="nofollow" href="http://loverzandfighterz-blog-blog.tumblr.com/" title="LOverz &amp; FightERz" rel="nofollow">loverzandfighterz-blog-blog</a> liked this                                    </span><div class="clear"></div></li><li class="note reblog tumblelog_lovethatgirl without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://lovethatgirl.tumblr.com/" title="KEEP LIVIN&#039;"><img src="http://78.media.tumblr.com/avatar_cfc367a03481_16.pnj" class="avatar " alt="" /></a><span class="action" data-post-url="http://lovethatgirl.tumblr.com/post/24530409210"><a rel="nofollow" href="http://lovethatgirl.tumblr.com/" class="tumblelog" title="KEEP LIVIN&#039;">lovethatgirl</a> reblogged this from <a rel="nofollow" href="http://bambudepistola.tumblr.com/" class="source_tumblelog" title="BAMBU DEPISTOLA">bambudepistola</a>                                                                                                                                                                                    </span><div class="clear"></div></li><li class="note reblog tumblelog_theerex-t without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://theerex-t.tumblr.com/" title="step inside my world..."><img src="http://78.media.tumblr.com/avatar_372ea094965f_16.pnj" class="avatar " alt="" /></a><span class="action" data-post-url="http://theerex-t.tumblr.com/post/24529442865"><a rel="nofollow" href="http://theerex-t.tumblr.com/" class="tumblelog" title="step inside my world...">theerex-t</a> reblogged this from <a rel="nofollow" href="http://beatrockmusic-blog-blog.tumblr.com/" class="source_tumblelog" title="">beatrockmusic-blog-blog</a>                                                                                                                                                                                    </span><div class="clear"></div></li><li class="note like tumblelog_stephanie-allison without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://stephanie-allison.tumblr.com/" title="stephanie allison " rel="nofollow"><img src="http://78.media.tumblr.com/avatar_ea4929df5c09_16.pnj" class="avatar " alt="" /></a><span class="action"><a rel="nofollow" href="http://stephanie-allison.tumblr.com/" title="stephanie allison" rel="nofollow">stephanie-allison</a> liked this                                    </span><div class="clear"></div></li><li class="note reblog tumblelog_chickenlilcurry without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://chickenlilcurry.tumblr.com/" title="Chicken Little Curry"><img src="http://78.media.tumblr.com/avatar_16b7cd5b157e_16.pnj" class="avatar " alt="" /></a><span class="action" data-post-url="http://chickenlilcurry.tumblr.com/post/24529018166"><a rel="nofollow" href="http://chickenlilcurry.tumblr.com/" class="tumblelog" title="Chicken Little Curry">chickenlilcurry</a> reblogged this from <a rel="nofollow" href="http://beatrockmusic-blog-blog.tumblr.com/" class="source_tumblelog" title="">beatrockmusic-blog-blog</a>                                                                                                                                                                                    </span><div class="clear"></div></li><li class="note like tumblelog_djmurdokphotos without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://djmurdokphotos.tumblr.com/" title="Deejay Murdok Photos! " rel="nofollow"><img src="http://78.media.tumblr.com/avatar_04fbf0a1c197_16.pnj" class="avatar " alt="" /></a><span class="action"><a rel="nofollow" href="http://djmurdokphotos.tumblr.com/" title="Deejay Murdok Photos!" rel="nofollow">djmurdokphotos</a> liked this                                    </span><div class="clear"></div></li><li class="note like tumblelog_heyyjenn without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://heyyjenn.tumblr.com/" title="Self-evaluation " rel="nofollow"><img src="http://78.media.tumblr.com/avatar_5eec06097a3d_16.pnj" class="avatar " alt="" /></a><span class="action"><a rel="nofollow" href="http://heyyjenn.tumblr.com/" title="Self-evaluation" rel="nofollow">heyyjenn</a> liked this                                    </span><div class="clear"></div></li><li class="note like tumblelog_xnxela without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://xnxela.tumblr.com/" title="xnxela " rel="nofollow"><img src="http://78.media.tumblr.com/avatar_603c2be5f94b_16.pnj" class="avatar " alt="" /></a><span class="action"><a rel="nofollow" href="http://xnxela.tumblr.com/" title="xnxela" rel="nofollow">xnxela</a> liked this                                    </span><div class="clear"></div></li><li class="note like tumblelog_mzx3chii-blog without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://mzx3chii-blog.tumblr.com/" title="an exploration into my thoughts &amp; mind. " rel="nofollow"><img src="http://78.media.tumblr.com/avatar_8624e4dc05f5_16.pnj" class="avatar " alt="" /></a><span class="action"><a rel="nofollow" href="http://mzx3chii-blog.tumblr.com/" title="an exploration into my thoughts &amp; mind." rel="nofollow">mzx3chii-blog</a> liked this                                    </span><div class="clear"></div></li><li class="note reblog tumblelog_bambudepistola without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://bambudepistola.tumblr.com/" title="BAMBU DEPISTOLA"><img src="http://78.media.tumblr.com/avatar_f3f352705fef_16.pnj" class="avatar " alt="" /></a><span class="action" data-post-url="http://bambudepistola.tumblr.com/post/24527767960"><a rel="nofollow" href="http://bambudepistola.tumblr.com/" class="tumblelog" title="BAMBU DEPISTOLA">bambudepistola</a> reblogged this from <a rel="nofollow" href="http://prometheusbrown.tumblr.com/" class="source_tumblelog" title="">prometheusbrown</a>                                                                                                                                                                                    </span><div class="clear"></div></li><li class="note like tumblelog_bambudepistola without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://bambudepistola.tumblr.com/" title="BAMBU DEPISTOLA " rel="nofollow"><img src="http://78.media.tumblr.com/avatar_f3f352705fef_16.pnj" class="avatar " alt="" /></a><span class="action"><a rel="nofollow" href="http://bambudepistola.tumblr.com/" title="BAMBU DEPISTOLA" rel="nofollow">bambudepistola</a> liked this                                    </span><div class="clear"></div></li><li class="note reblog tumblelog_sallythekid without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://sallythekid.tumblr.com/" title="Salman"><img src="http://78.media.tumblr.com/avatar_76c3f847fee2_16.pnj" class="avatar " alt="" /></a><span class="action" data-post-url="http://sallythekid.tumblr.com/post/24522475722"><a rel="nofollow" href="http://sallythekid.tumblr.com/" class="tumblelog" title="Salman">sallythekid</a> reblogged this from <a rel="nofollow" href="http://prometheusbrown.tumblr.com/" class="source_tumblelog" title="">prometheusbrown</a>                                                                                                                                                                                    </span><div class="clear"></div></li><li class="note like tumblelog_donfernando without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://donfernando.tumblr.com/" title="Don Fernando " rel="nofollow"><img src="http://78.media.tumblr.com/avatar_cdf77ab019b2_16.pnj" class="avatar " alt="" /></a><span class="action"><a rel="nofollow" href="http://donfernando.tumblr.com/" title="Don Fernando" rel="nofollow">donfernando</a> liked this                                    </span><div class="clear"></div></li><li class="note like tumblelog_creativekuya without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://creativekuya.tumblr.com/" title="Designer David&#039;s Works &amp; Fuckery " rel="nofollow"><img src="http://78.media.tumblr.com/avatar_d705c7d6dd4a_16.pnj" class="avatar " alt="" /></a><span class="action"><a rel="nofollow" href="http://creativekuya.tumblr.com/" title="Designer David&#039;s Works &amp; Fuckery" rel="nofollow">creativekuya</a> liked this                                    </span><div class="clear"></div></li><li class="note reblog tumblelog_beatrockmusic-blog-blog without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://beatrockmusic-blog-blog.tumblr.com/" title=""><img src="http://78.media.tumblr.com/avatar_14176824e1e0_16.pnj" class="avatar " alt="" /></a><span class="action" data-post-url="http://beatrockmusic-blog-blog.tumblr.com/post/24514058602"><a rel="nofollow" href="http://beatrockmusic-blog-blog.tumblr.com/" class="tumblelog" title="">beatrockmusic-blog-blog</a> reblogged this from <a rel="nofollow" href="http://thebarmusic.tumblr.com/" class="source_tumblelog" title="THE BAR">thebarmusic</a>                                                                                                                                                                                    </span><div class="clear"></div></li><li class="note reblog tumblelog_dancindancel with_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://dancindancel.tumblr.com/" title="A.DANCEL"><img src="http://78.media.tumblr.com/avatar_46063525609b_16.pnj" class="avatar " alt="" /></a><span class="action" data-post-url="http://dancindancel.tumblr.com/post/24511646963"><a rel="nofollow" href="http://dancindancel.tumblr.com/" class="tumblelog" title="A.DANCEL">dancindancel</a> reblogged this from <a rel="nofollow" href="http://ehhmjay.tumblr.com/" class="source_tumblelog" title="">ehhmjay</a> and added:                                                                                                                                                                                    </span><div class="clear"></div><blockquote><a rel="nofollow" href="http://dancindancel.tumblr.com/post/24511646963" title="View post">
+                                come back to Bremerton!                            </a></blockquote></li><li class="note reblog tumblelog_ehhmjay without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://ehhmjay.tumblr.com/" title=""><img src="http://78.media.tumblr.com/avatar_b2d898a5ffaa_16.pnj" class="avatar " alt="" /></a><span class="action" data-post-url="http://ehhmjay.tumblr.com/post/24509761497"><a rel="nofollow" href="http://ehhmjay.tumblr.com/" class="tumblelog" title="">ehhmjay</a> reblogged this from <a rel="nofollow" href="http://prometheusbrown.tumblr.com/" class="source_tumblelog" title="">prometheusbrown</a>                                                                                                                                                                                    </span><div class="clear"></div></li><li class="note reblog tumblelog_laaaaaa without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://laaaaaa.tumblr.com/" title="I&#039;ll take your trend, chew it up&amp;spit it back out."><img src="http://78.media.tumblr.com/avatar_38f679c0c780_16.pnj" class="avatar " alt="" /></a><span class="action" data-post-url="http://laaaaaa.tumblr.com/post/24505370130"><a rel="nofollow" href="http://laaaaaa.tumblr.com/" class="tumblelog" title="I&#039;ll take your trend, chew it up&amp;spit it back out.">laaaaaa</a> reblogged this from <a rel="nofollow" href="http://celduran.tumblr.com/" class="source_tumblelog" title="cel.duran">celduran</a>                                                                                                                                                                                    </span><div class="clear"></div></li><li class="note like tumblelog_android1014 without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://android1014.tumblr.com/" title="We Are Robots. " rel="nofollow"><img src="http://78.media.tumblr.com/avatar_118ae0bf78ba_16.pnj" class="avatar " alt="" /></a><span class="action"><a rel="nofollow" href="http://android1014.tumblr.com/" title="We Are Robots." rel="nofollow">android1014</a> liked this                                    </span><div class="clear"></div></li><li class="note like tumblelog_micflont without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://micflont.tumblr.com/" title="THE FLONT FILES " rel="nofollow"><img src="http://78.media.tumblr.com/avatar_816a697779be_16.pnj" class="avatar " alt="" /></a><span class="action"><a rel="nofollow" href="http://micflont.tumblr.com/" title="THE FLONT FILES" rel="nofollow">micflont</a> liked this                                    </span><div class="clear"></div></li><li class="note reblog tumblelog_exceptdissent without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://exceptdissent.tumblr.com/" title="1312;"><img src="http://78.media.tumblr.com/avatar_c64083d4c7ff_16.pnj" class="avatar " alt="" /></a><span class="action" data-post-url="http://exceptdissent.tumblr.com/post/24504360957"><a rel="nofollow" href="http://exceptdissent.tumblr.com/" class="tumblelog" title="1312;">exceptdissent</a> reblogged this from <a rel="nofollow" href="http://thebarmusic.tumblr.com/" class="source_tumblelog" title="THE BAR">thebarmusic</a>                                                                                                                                                                                    </span><div class="clear"></div></li><li class="note reblog tumblelog_celduran without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://celduran.tumblr.com/" title="cel.duran"><img src="http://78.media.tumblr.com/avatar_5b973962218b_16.pnj" class="avatar " alt="" /></a><span class="action" data-post-url="http://celduran.tumblr.com/post/24503942826"><a rel="nofollow" href="http://celduran.tumblr.com/" class="tumblelog" title="cel.duran">celduran</a> reblogged this from <a rel="nofollow" href="http://prometheusbrown.tumblr.com/" class="source_tumblelog" title="">prometheusbrown</a>                                                                                                                                                                                    </span><div class="clear"></div></li><li class="note like tumblelog_heartsaphasia without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://heartsaphasia.tumblr.com/" title="qui vivra verra " rel="nofollow"><img src="http://78.media.tumblr.com/avatar_936b95137582_16.pnj" class="avatar " alt="" /></a><span class="action"><a rel="nofollow" href="http://heartsaphasia.tumblr.com/" title="qui vivra verra" rel="nofollow">heartsaphasia</a> liked this                                    </span><div class="clear"></div></li><li class="note reblog tumblelog_ng-s without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://ng-s.tumblr.com/" title=""><img src="http://78.media.tumblr.com/avatar_e49491109f8f_16.pnj" class="avatar " alt="" /></a><span class="action" data-post-url="http://ng-s.tumblr.com/post/24495801863"><a rel="nofollow" href="http://ng-s.tumblr.com/" class="tumblelog" title="">ng-s</a> reblogged this from <a rel="nofollow" href="http://prometheusbrown.tumblr.com/" class="source_tumblelog" title="">prometheusbrown</a>                                                                                                                                                                                    </span><div class="clear"></div></li><li class="note like tumblelog_ng-s without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://ng-s.tumblr.com/" title=" " rel="nofollow"><img src="http://78.media.tumblr.com/avatar_e49491109f8f_16.pnj" class="avatar " alt="" /></a><span class="action"><a rel="nofollow" href="http://ng-s.tumblr.com/" title="" rel="nofollow">ng-s</a> liked this                                    </span><div class="clear"></div></li><li class="note like tumblelog_realnifty without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://realnifty.tumblr.com/" title="Classy Chassis " rel="nofollow"><img src="http://78.media.tumblr.com/avatar_f27efac2bc29_16.pnj" class="avatar " alt="" /></a><span class="action"><a rel="nofollow" href="http://realnifty.tumblr.com/" title="Classy Chassis" rel="nofollow">realnifty</a> liked this                                    </span><div class="clear"></div></li><li class="note reblog tumblelog_manilaryce without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://manilaryce.tumblr.com/" title="Manila Ryce has a Tumblr"><img src="http://78.media.tumblr.com/avatar_d7935edd099a_16.pnj" class="avatar " alt="" /></a><span class="action" data-post-url="http://manilaryce.tumblr.com/post/24494822955"><a rel="nofollow" href="http://manilaryce.tumblr.com/" class="tumblelog" title="Manila Ryce has a Tumblr">manilaryce</a> reblogged this from <a rel="nofollow" href="http://prometheusbrown.tumblr.com/" class="source_tumblelog" title="">prometheusbrown</a>                                                                                                                                                                                    </span><div class="clear"></div></li><li class="note reblog tumblelog_jcelski without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://jrcelski.com/" title="The Official Website of J.R. Celski"><img src="http://78.media.tumblr.com/avatar_2269c7df83e8_16.pnj" class="avatar " alt="" /></a><span class="action" data-post-url="http://jrcelski.com/post/24494566159"><a rel="nofollow" href="http://jrcelski.com/" class="tumblelog" title="The Official Website of J.R. Celski">jcelski</a> reblogged this from <a rel="nofollow" href="http://prometheusbrown.tumblr.com/" class="source_tumblelog" title="">prometheusbrown</a>                                                                                                                                                                                    </span><div class="clear"></div></li><li class="note like tumblelog_inanimatefear without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://inanimatefear.tumblr.com/" title="stand still and wait... " rel="nofollow"><img src="http://78.media.tumblr.com/avatar_6b4624c0f776_16.pnj" class="avatar " alt="" /></a><span class="action"><a rel="nofollow" href="http://inanimatefear.tumblr.com/" title="stand still and wait..." rel="nofollow">inanimatefear</a> liked this                                    </span><div class="clear"></div></li><li class="note reblog tumblelog_818-polo with_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://818-polo.tumblr.com/" title="818 ANTICS"><img src="http://78.media.tumblr.com/avatar_f9bc8a922bd6_16.pnj" class="avatar " alt="" /></a><span class="action" data-post-url="http://818-polo.tumblr.com/post/24493021237"><a rel="nofollow" href="http://818-polo.tumblr.com/" class="tumblelog" title="818 ANTICS">818-polo</a> reblogged this from <a rel="nofollow" href="http://prometheusbrown.tumblr.com/" class="source_tumblelog" title="">prometheusbrown</a> and added:                                                                                                                                                                                    </span><div class="clear"></div><blockquote><a rel="nofollow" href="http://818-polo.tumblr.com/post/24493021237" title="View post">
+                                I need to see Bambu Live again, foo puts on the best fucking show                            </a></blockquote></li><li class="note reblog tumblelog_thebarmusic without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://thebarmusic.tumblr.com/" title="THE BAR"><img src="http://78.media.tumblr.com/avatar_eef36222ae92_16.pnj" class="avatar " alt="" /></a><span class="action" data-post-url="http://thebarmusic.tumblr.com/post/24492565874"><a rel="nofollow" href="http://thebarmusic.tumblr.com/" class="tumblelog" title="THE BAR">thebarmusic</a> reblogged this from <a rel="nofollow" href="http://prometheusbrown.tumblr.com/" class="source_tumblelog" title="">prometheusbrown</a>                                                                                                                                                                                    </span><div class="clear"></div></li><li class="note like tumblelog_pamjane without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://pamjane.tumblr.com/" title="Motion &amp; Movement " rel="nofollow"><img src="http://78.media.tumblr.com/avatar_b6b0becf390d_16.pnj" class="avatar " alt="" /></a><span class="action"><a rel="nofollow" href="http://pamjane.tumblr.com/" title="Motion &amp; Movement" rel="nofollow">pamjane</a> liked this                                    </span><div class="clear"></div></li><li class="note reblog tumblelog_pledgeallegiancetothedj without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://pledgeallegiancetothedj.tumblr.com/" title="PLEDGE ALLEGIANCE TO THE DJ"><img src="http://78.media.tumblr.com/avatar_d35bdfa199d8_16.pnj" class="avatar " alt="" /></a><span class="action" data-post-url="http://pledgeallegiancetothedj.tumblr.com/post/24492447169"><a rel="nofollow" href="http://pledgeallegiancetothedj.tumblr.com/" class="tumblelog" title="PLEDGE ALLEGIANCE TO THE DJ">pledgeallegiancetothedj</a> reblogged this from <a rel="nofollow" href="http://theripest1.tumblr.com/" class="source_tumblelog" title="Modern Man&#039;s Hustle">theripest1</a>                                                                                                                                                                                    </span><div class="clear"></div></li><li class="note reblog tumblelog_theripest1 with_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://theripest1.tumblr.com/" title="Modern Man&#039;s Hustle"><img src="http://78.media.tumblr.com/avatar_369b089caac0_16.pnj" class="avatar " alt="" /></a><span class="action" data-post-url="http://theripest1.tumblr.com/post/24492379062"><a rel="nofollow" href="http://theripest1.tumblr.com/" class="tumblelog" title="Modern Man&#039;s Hustle">theripest1</a> reblogged this from <a rel="nofollow" href="http://prometheusbrown.tumblr.com/" class="source_tumblelog" title="">prometheusbrown</a> and added:                                                                                                                                                                                    </span><div class="clear"></div><blockquote><a rel="nofollow" href="http://theripest1.tumblr.com/post/24492379062" title="View post">
+                                Well shit&hellip;.why don&rsquo;t I live in Canada.                            </a></blockquote></li><li class="note more_notes_link_container" style="text-align:center;" id="more_notes_24492216094"><a class="more_notes_link" rel="nofollow" href="#" onclick="this.style.display='none';document.getElementById('notes_loading_24492216094').style.display = 'block';if(window.ActiveXObject)var tumblrReq=new ActiveXObject('Microsoft.XMLHTTP');else if(window.XMLHttpRequest)var tumblrReq=new XMLHttpRequest();else return false;tumblrReq.onreadystatechange=function(){if(tumblrReq.readyState==4){var notes_html=tumblrReq.responseText.split('<!-- START '+'NOTES -->')[1].split('<!-- END '+'NOTES -->')[0];
+if(window.tumblrNotesLoaded)if(tumblrNotesLoaded(notes_html)==false)return;var more_notes_link=document.getElementById('more_notes_24492216094');var notes=more_notes_link.parentNode;notes.removeChild(more_notes_link);notes.innerHTML+=notes_html;if(window.tumblrNotesInserted)tumblrNotesInserted(notes_html);}};tumblrReq.open('GET','/notes/24492216094/uAth5ZTr5?from_c=1338930997',true);tumblrReq.send();return false;">Show more notes</a><span class="notes_loading" id="notes_loading_24492216094" style="display:none;">Loading...</span></li><!-- END NOTES --></ol></div> <!-- notes end -->
+                            
+
+						</div> <!-- permalink content end -->
+
+				
+
+			</div> <!-- content end -->
+
+			<div id="footer">
+
+
+                
+
+
+				<div id="footer-links">
+
+						<ul>
+							<li><a href="/">Home</a></li>
+                            
+                            
+    					    <li><a href="/ask">ASK ME SOMETHING GOOD</a></li>
+						    
+                            
+                            <li><a href="/archive">Archive</a></li>
+					</ul>
+				</div>
+
+				<div class="colophon">
+
+                    
+
+					<p class="promo"><a href="http://zacksultan.com">Observer theme by Zack Sultan</a></p>
+
+				</div>
+
+			</div><!-- content end -->
+
+		</div> <!-- page end -->
+
+
+<iframe scrolling="no" width="1" height="1" frameborder="0" style="background-color:transparent; overflow:hidden; position:absolute; top:0; left:0; z-index:9999;" id="ga_target"></iframe><script type="text/javascript">
+    (function(){
+        var analytics_frame = document.getElementById('ga_target');
+        var analytics_iframe_loaded;
+        var user_logged_in;
+        var blog_is_nsfw = 'No';
+        var addthis_enabled = false;
+
+        var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+        var eventer = window[eventMethod];
+        var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+        eventer(messageEvent,function(e) {
+            var message = (e.data && e.data.split) ? e.data.split(';') : '';
+            switch (message[0]) {
+                case 'analytics_iframe_loaded':
+                    analytics_iframe_loaded = true;
+                    postCSMessage();
+                    postGAMessage();
+                    postATMessage();
+                    postRapidMessage();
+                    break;
+                case 'user_logged_in':
+                    user_logged_in = message[1];
+                    postGAMessage();
+                    postATMessage();
+                    break;
+            }
+        }, false);
+
+        analytics_frame.src = "https://assets.tumblr.com/analytics.html?a76144f6ac3f4c5ec0b80b2f2a5b4fd0#" +
+                              "http://prometheusbrown.tumblr.com";
+        function postGAMessage() {
+            if (analytics_iframe_loaded && user_logged_in) {
+                var is_ajax = false;
+                analytics_frame.contentWindow.postMessage(['tick_google_analytics', is_ajax, user_logged_in, blog_is_nsfw, '/post/24492216094/vancouver-bc-click-photo-for-more-info?route=%2Fpost%2F%3Aid%2F%3Asummary'].join(';'), analytics_frame.src.split('/analytics.html')[0]);
+            }
+        }
+        function postCSMessage() {
+            COMSCORE = true;
+            analytics_frame.contentWindow.postMessage('enable_comscore;' + window.location, analytics_frame.src.split('/analytics.html')[0]);
+        }
+        function postATMessage() {
+            if (addthis_enabled && analytics_iframe_loaded) {
+                analytics_frame.contentWindow.postMessage('enable_addthis', analytics_frame.src.split('/analytics.html')[0]);
+            }
+        }
+        function postRapidMessage() {
+                            if (analytics_iframe_loaded) {
+                    var is_ajax = '';
+                    var route = '/post/:id/:summary';
+                    var tumblelog_id = '6082260';
+                    var yahoo_space_id = '1197719230';
+                    var rapid_client_only = '1';
+                    var apv = '1';
+                    var rapid_ex = '';
+
+                    analytics_frame.contentWindow.postMessage(
+                        [
+                            'tick_rapid', is_ajax, route, user_logged_in, tumblelog_id,
+                            yahoo_space_id, rapid_client_only, apv, rapid_ex
+                        ].join(';'),
+                        analytics_frame.src.split('/analytics.html')[0]
+                    );
+                }
+                    }
+    })();
+</script><script type="text/javascript">!function(s){s.src='https://px.srvcs.tumblr.com/impixu?T=1519772011&J=eyJ0eXBlIjoidXJsIiwidXJsIjoiaHR0cDpcL1wvcHJvbWV0aGV1c2Jyb3duLnR1bWJsci5jb21cL3Bvc3RcLzI0NDkyMjE2MDk0XC92YW5jb3V2ZXItYmMtY2xpY2stcGhvdG8tZm9yLW1vcmUtaW5mbyIsInJlcXR5cGUiOjAsInJvdXRlIjoiXC9wb3N0XC86aWRcLzpzdW1tYXJ5In0=&U=AOBCKHNOHK&K=a322b6a77b24e4cafde491a9fa945288e6b60869fe78fb2ab9daa5b3d6def9cb&R=http%3A%2F%2Fjrcelski.com%2Fpost%2F24494566159%2Fprometheusbrown-vancouver-bc-click-photo-for'.replace(/&R=[^&$]*/,'').concat('&R='+escape(document.referrer)).slice(0,2000).replace(/%.?.?$/,'');}(new Image());</script><noscript><img style="position:absolute;z-index:-3334;top:0px;left:0px;visibility:hidden;" src="https://px.srvcs.tumblr.com/impixu?T=1519772011&J=eyJ0eXBlIjoidXJsIiwidXJsIjoiaHR0cDpcL1wvcHJvbWV0aGV1c2Jyb3duLnR1bWJsci5jb21cL3Bvc3RcLzI0NDkyMjE2MDk0XC92YW5jb3V2ZXItYmMtY2xpY2stcGhvdG8tZm9yLW1vcmUtaW5mbyIsInJlcXR5cGUiOjAsInJvdXRlIjoiXC9wb3N0XC86aWRcLzpzdW1tYXJ5Iiwibm9zY3JpcHQiOjF9&U=AOBCKHNOHK&K=8d9a9a6ae826db54faf01230c2fc605f1eea807bacc4e65305ed9bf2dc45553e&R=http%3A%2F%2Fjrcelski.com%2Fpost%2F24494566159%2Fprometheusbrown-vancouver-bc-click-photo-for"></noscript><script >
+        (function (w,d) {
+            'use strict';
+            var l = function(el, type, listener, useCapture) {
+                el.addEventListener ?
+                el.addEventListener(type, listener, !!useCapture) :
+                el.attachEvent && el.attachEvent('on' + type, listener, !!useCapture);
+            };
+            var a = function () {
+                                if (d.getElementById('tumblr-cdx')) {
+                    return;
+                }
+                var s = d.createElement('script');
+                var el = d.getElementsByTagName('script')[0];
+                s.async = true;
+                s.src = 'http://assets.tumblr.com/assets/scripts/vendor/cedexis/1-13960-radar10.min.js?_v=0620cee9a1cd7262086db377835362d6';
+                s.type = 'text/javascript';
+                s.id = 'tumblr-cdx';
+                d.body.appendChild(s);
+            };
+            l(w,'load',a);
+        }(window, document));
+</script><script type="text/javascript">!function(s){s.src='https://px.srvcs.tumblr.com/impixu?T=1519772011&J=eyJ0eXBlIjoicG9zdCIsInVybCI6Imh0dHA6XC9cL3Byb21ldGhldXNicm93bi50dW1ibHIuY29tXC9wb3N0XC8yNDQ5MjIxNjA5NFwvdmFuY291dmVyLWJjLWNsaWNrLXBob3RvLWZvci1tb3JlLWluZm8iLCJyZXF0eXBlIjowLCJyb3V0ZSI6IlwvcG9zdFwvOmlkXC86c3VtbWFyeSIsInBvc3RzIjpbeyJwb3N0aWQiOiIyNDQ5MjIxNjA5NCIsImJsb2dpZCI6IjYwODIyNjAiLCJzb3VyY2UiOjMzfV19&U=PBEALDBKHG&K=7643c7e0ac20eed8fa9e09f4fe937bb70e236b07d36c62d5898571139d45c1c2&R=http%3A%2F%2Fjrcelski.com%2Fpost%2F24494566159%2Fprometheusbrown-vancouver-bc-click-photo-for'.replace(/&R=[^&$]*/,'').concat('&R='+escape(document.referrer)).slice(0,2000).replace(/%.?.?$/,'');}(new Image());</script><noscript><img style="position:absolute;z-index:-3334;top:0px;left:0px;visibility:hidden;" src="https://px.srvcs.tumblr.com/impixu?T=1519772011&J=eyJ0eXBlIjoicG9zdCIsInVybCI6Imh0dHA6XC9cL3Byb21ldGhldXNicm93bi50dW1ibHIuY29tXC9wb3N0XC8yNDQ5MjIxNjA5NFwvdmFuY291dmVyLWJjLWNsaWNrLXBob3RvLWZvci1tb3JlLWluZm8iLCJyZXF0eXBlIjowLCJyb3V0ZSI6IlwvcG9zdFwvOmlkXC86c3VtbWFyeSIsInBvc3RzIjpbeyJwb3N0aWQiOiIyNDQ5MjIxNjA5NCIsImJsb2dpZCI6IjYwODIyNjAiLCJzb3VyY2UiOjMzfV0sIm5vc2NyaXB0IjoxfQ==&U=PBEALDBKHG&K=1957a65e5d2c6566441726750f9e01d6ff9cbaf66cd5e29218f265e313794e90&R=http%3A%2F%2Fjrcelski.com%2Fpost%2F24494566159%2Fprometheusbrown-vancouver-bc-click-photo-for"></noscript><noscript id="bootloader" data-bootstrap="{&quot;Components&quot;:{&quot;PostActivity&quot;:[],&quot;NotificationPoller&quot;:{&quot;messaging_keys&quot;:[],&quot;token&quot;:&quot;c86f8a500596474a7ef5034081f694bd&quot;,&quot;inbox_unread&quot;:0},&quot;TumblelogIframe&quot;:{&quot;unified&quot;:true,&quot;variant&quot;:null,&quot;isCompact&quot;:true,&quot;tumblelogBundleSrc&quot;:&quot;http:\/\/assets.tumblr.com\/client\/prod\/standalone\/tumblelog\/index.build.js?_v=ddc0015d9158e16b2a91e8d09f1b3c2a&quot;,&quot;tumblelogName&quot;:&quot;prometheusbrown&quot;,&quot;isLoggedIn&quot;:false,&quot;isFriend&quot;:false,&quot;formKey&quot;:&quot;&quot;,&quot;canSubscribe&quot;:false,&quot;isSubscribed&quot;:false,&quot;tumblelogTitle&quot;:&quot;&quot;,&quot;tumblelogAvatar&quot;:&quot;http:\/\/78.media.tumblr.com\/avatar_7fc64e58db3b_40.pnj&quot;,&quot;tumblelogHost&quot;:&quot;http:\/\/prometheusbrown.tumblr.com&quot;,&quot;isOptica&quot;:false,&quot;isCustomTheme&quot;:false,&quot;themeHeaderImage&quot;:&quot;https:\/\/assets.tumblr.com\/images\/default_header\/optica_pattern_03_focused_v3.png?_v=a0f20b51ed40eb5a930ab86effe42a40&quot;,&quot;themeBackgroundColor&quot;:&quot;#FAFAFA&quot;,&quot;themeTitleColor&quot;:&quot;#444444&quot;,&quot;themeAccentColor&quot;:&quot;#529ECC&quot;,&quot;brag&quot;:true,&quot;adsEnabled&quot;:true,&quot;canShowAd&quot;:true,&quot;isPremium&quot;:false,&quot;showLrecAds&quot;:false,&quot;showStickyLrecBackfill&quot;:false,&quot;showGeminiAds&quot;:false,&quot;geminiSectionCodeDesktop&quot;:&quot;a10bca9c-0c5d-4a02-ab13-14ab8513d81d&quot;,&quot;geminiSectionCodeMobile&quot;:&quot;ced63809-b609-4aca-96a0-abc099acba6b&quot;,&quot;currentPageType&quot;:&quot;single_post&quot;,&quot;currentPage&quot;:&quot;1&quot;,&quot;searchQuery&quot;:&quot;&quot;,&quot;tag&quot;:&quot;&quot;,&quot;query&quot;:&quot;&quot;,&quot;chrono&quot;:false,&quot;postId&quot;:&quot;24492216094&quot;,&quot;src&quot;:&quot;http:\/\/prometheusbrown.tumblr.com\/post\/24492216094\/vancouver-bc-click-photo-for-more-info&quot;,&quot;postUrl&quot;:&quot;&quot;,&quot;isBlocked&quot;:null,&quot;isAdmin&quot;:false,&quot;lookupButtonUrl&quot;:&quot;&quot;,&quot;showSpamButton&quot;:false,&quot;showRootPostButton&quot;:false,&quot;rootPostUrl&quot;:&quot;&quot;,&quot;showRadarPostButton&quot;:false,&quot;radarKeys&quot;:&quot;&quot;,&quot;isUniblocked&quot;:false,&quot;isNsfw&quot;:false,&quot;isAdult&quot;:false,&quot;isSpam&quot;:false,&quot;isPrimaryBlog&quot;:false,&quot;canEdit&quot;:false,&quot;canReblogSelf&quot;:false,&quot;showLikeButton&quot;:false,&quot;showReblogButton&quot;:false,&quot;reblogUrl&quot;:&quot;&quot;,&quot;showFanMailButton&quot;:false,&quot;showMessagingButton&quot;:false,&quot;loginCheckIframeSrc&quot;:&quot;http:\/\/assets.tumblr.com\/assets\/html\/iframe\/login_check.html?_v=a7930a424784262b51489b3cbe0e96ab&quot;,&quot;appInstallUrls&quot;:{&quot;android&quot;:&quot;https:\/\/play.google.com\/store\/apps\/details?id=com.tumblr\u0026referrer=utm_source%3Dtumblr%26utm_medium%3Diframe%26utm_campaign%3Dblog_network_floating_cta&quot;,&quot;ios&quot;:&quot;https:\/\/itunes.apple.com\/app\/apple-store\/id305343404?pt=9029\u0026ct=blog_network_floating_cta\u0026mt=8&quot;},&quot;appOpenReferrer&quot;:&quot;tumblr_new_iframe&quot;,&quot;isShowSearch&quot;:true,&quot;supplyLogging&quot;:[],&quot;secondsSinceLastActivity&quot;:-1}},&quot;Flags&quot;:{&quot;doods&quot;:&quot;eyJmaWx0ZXJfbnNmdyI6dHJ1ZSwic2FmZV9tb2RlIjp0cnVlLCJzYWZlX21vZGVfZW5hYmxlZCI6dHJ1ZSwia2V5Y29tbWFuZF9hdXRvX3BhZ2luYXRlIjp0cnVlLCJsb2dnZWRfb3V0X3NlYXJjaCI6dHJ1ZSwia3Jha2VuX3dlYl9sb2dnaW5nX2xpYnJhcnkiOnRydWUsInNlY3VyZV9mb3JtX2tleSI6dHJ1ZSwic2VjdXJlX2Zvcm1fa2V5X2Z1bGx5X29uIjp0cnVlLCJ0dW1ibGVsb2dfcG9wb3ZlciI6dHJ1ZSwiY2Fub25pY2FsX3VybF93cml0ZXMiOnRydWUsImVuYWJsZV9jYXB0dXJlX2pzIjp0cnVlLCJwcmltYV9wb3N0X2Zvcm1zIjp0cnVlLCJsb2NrZWRfcmVibG9nX3VpIjp0cnVlLCJ0YWJsZXRfYmFubmVyX2FjdGl2ZSI6dHJ1ZSwibW9iaWxlX2Jhbm5lcl9hY3RpdmUiOnRydWUsImxvZ19zZWFyY2hfYm94Ijp0cnVlLCJ1c2VyX21lbnRpb25zIjp0cnVlLCJodG1sNV9hdWRpb19wbGF5ZXIiOnRydWUsInBvcG92ZXJfcmVjb21tZW5kYXRpb25zIjp0cnVlLCJpbmRhc2hfcmVjb21tZW5kYXRpb25zIjp0cnVlLCJwb3B0aWNhX3R1bWJsZWxvZ19wb3BvdmVycyI6dHJ1ZSwidHVtYmxyX3R2Ijp0cnVlLCJkZXByZWNhdGVfZmVhdHVyZWRfdGFncyI6dHJ1ZSwicmVibG9nX3VpX3JlZnJlc2giOnRydWUsInRhYl9zd2l0Y2hlciI6dHJ1ZSwiZmFzdF9jb21wb3NlIjp0cnVlLCJkYXNoYm9hcmRfcmVmcmVzaCI6dHJ1ZSwibW9iaWxlX3dlYl9waG90b3NldHMiOnRydWUsIm1vYmlsZV93ZWJfZ2F0ZSI6dHJ1ZSwibW9iaWxlX3dlYl9wYWdlX3RpdGxlcyI6dHJ1ZSwibW9iaWxlX3dlYl9hYnVzZV9mb3JtIjp0cnVlLCJkb250X2Nhc3RfanNfZm9sbG93cyI6dHJ1ZSwiYWRzX25ld192ZW5kb3JfYnV0dG9ucyI6dHJ1ZSwicmVhY3RpdmF0aW9uX2Zsb3ciOnRydWUsImd1bHBqc19hZG1pbiI6dHJ1ZSwiZW5hYmxlX2pzX2Vycm9yc19sb2ciOnRydWUsImVuYWJsZV9qc19lcGhlbWVyYWxfbG9nIjp0cnVlLCJqc19lcnJvcnNfYiI6dHJ1ZSwibG9nX2xhZHkiOnRydWUsImNzbG9nZ2VyX2pzIjp0cnVlLCJkaXNjb3ZlcnlfaHViX2FjY2VzcyI6dHJ1ZSwiaGVhZGVyX2FjY291bnRfbWVudSI6dHJ1ZSwiZW5hYmxlX3NoYXJlX2VtYmVkX2NvZGUiOnRydWUsInJlZGRpdF9zaGFyaW5nIjp0cnVlLCJwb3N0X2l0X2ZvcndhcmQiOnRydWUsInBlZXByX3NlYXJjaF9hbmRfZmlsdGVyIjp0cnVlLCJpbnRlcm5zX3BhZ2UiOnRydWUsImZvbGxvd2VkX3NlYXJjaGVzX2JpZ193ZWIiOnRydWUsImxpdmVwaG90b3Nfd2ViIjp0cnVlLCJzYWZlX21vZGVfb3duX3Bvc3QiOnRydWUsImhpZGVfZGVmYXVsdF9oZWFkZXJzX2Jsb2dfY2FyZHMiOnRydWUsImtyYWtlbl93ZWJfYmJsb2dfYWN0aXZlIjp0cnVlLCJhcmNoaXZlLXBsdXMiOnRydWUsImRhcmxhX2FkX2ZlZWRiYWNrIjp0cnVlLCJzdGF0dXNfaW5kaWNhdG9yIjp0cnVlLCJkaXNhYmxlX3lhaG9vX2JfY29va2llIjp0cnVlLCJsaXZlcGhvdG9zIjp0cnVlfQ==&quot;},&quot;Context&quot;:{&quot;name&quot;:&quot;default&quot;,&quot;time&quot;:1519772011000,&quot;userinfo&quot;:{&quot;primary&quot;:&quot;&quot;,&quot;name&quot;:&quot;&quot;,&quot;channels&quot;:[]},&quot;hosts&quot;:{&quot;assets_host&quot;:&quot;http:\/\/assets.tumblr.com&quot;,&quot;secure_assets_host&quot;:&quot;https:\/\/assets.tumblr.com&quot;,&quot;www_host&quot;:&quot;http:\/\/www.tumblr.com&quot;,&quot;secure_www_host&quot;:&quot;https:\/\/www.tumblr.com&quot;,&quot;embed_host&quot;:&quot;https:\/\/embed.tumblr.com&quot;,&quot;safe_host&quot;:&quot;http:\/\/safe.txmblr.com&quot;,&quot;platform_host&quot;:&quot;http:\/\/platform.tumblr.com&quot;},&quot;language&quot;:&quot;en_US&quot;,&quot;language_simple&quot;:&quot;en&quot;,&quot;assets&quot;:&quot;http:\/\/assets.tumblr.com\/client\/prod\/&quot;},&quot;Translations&quot;:{&quot;%1$sReport %2$s&#039;s post?%3$sIf it violates our community guidelines, we&#039;ll remove it.%4$s&quot;:&quot;%1$sReport %2$s&#039;s reblog?%3$sIf it violates our community guidelines, we&#039;ll remove it.%4$s&quot;,&quot;%1$sReport %2$s&#039;s reply?%3$sIf it violates our community guidelines, we&#039;ll remove it.%4$s&quot;:&quot;%1$sReport %2$s&#039;s reblog?%3$sIf it violates our community guidelines, we&#039;ll remove it.%4$s&quot;}}"></noscript><script src="http://assets.tumblr.com/client/prod/standalone/tumblelog/index.build.js?_v=ddc0015d9158e16b2a91e8d09f1b3c2a"></script></body>
+
+</html>

@@ -1,0 +1,143 @@
+{
+  "archive": "Archive-It Explore full-text results",
+  "date": "2026-10-22",
+  "queries": 26,
+  "search_result_pages_saved": 546,
+  "result_cards_saved": 5896,
+  "broad_filter_unique_capture_candidates": 175,
+  "validated_html_capture_records": 71,
+  "unique_html_payloads": 70,
+  "later_ranges_22_27": {
+    "pages": 112,
+    "cards": 961,
+    "broad_filter_candidates": 6,
+    "new_unique_capture_urls": 0,
+    "replays_attempted": 0
+  },
+  "limitations": [
+    "Explore is ranked, not a complete collection export.",
+    "Relevant results use a broad source/title/snippet filter and include third-party pages.",
+    "Replay bodies remain recovery-only pending rights review."
+  ],
+  "search_result_ranges": [
+    {
+      "file": "recovery/archiveit/search-results-pages-10-12.json",
+      "search_result_pages": 60,
+      "cards": 700
+    },
+    {
+      "file": "recovery/archiveit/search-results-pages-13-15.json",
+      "search_result_pages": 59,
+      "cards": 694
+    },
+    {
+      "file": "recovery/archiveit/search-results-pages-16-18.json",
+      "search_result_pages": 58,
+      "cards": 641
+    },
+    {
+      "file": "recovery/archiveit/search-results-pages-19-21.json",
+      "search_result_pages": 58,
+      "cards": 568
+    },
+    {
+      "file": "recovery/archiveit/search-results-pages-22-24.json",
+      "search_result_pages": 56,
+      "cards": 489
+    },
+    {
+      "file": "recovery/archiveit/search-results-pages-25-27.json",
+      "search_result_pages": 56,
+      "cards": 472
+    },
+    {
+      "file": "recovery/archiveit/search-results-pages-4-6.json",
+      "search_result_pages": 60,
+      "cards": 746
+    },
+    {
+      "file": "recovery/archiveit/search-results-pages-7-9.json",
+      "search_result_pages": 59,
+      "cards": 710
+    },
+    {
+      "file": "recovery/archiveit/search-results.json",
+      "search_result_pages": 60,
+      "cards": 827
+    }
+  ],
+  "focused_query_files": [
+    {
+      "file": "search-results-query-blue-scholars-206proof-blue-scholars-forum-pages-4-4.json",
+      "pages": 2,
+      "cards": 21
+    },
+    {
+      "file": "search-results-query-bluescholars-livejournal-com-prometheusbrown-com-sabzi-co-twitter-com-prometheus-pages-1-3.json",
+      "pages": 18,
+      "cards": 28
+    }
+  ],
+  "continuation_2026-10-22": {
+    "deeper_ranked_search": {
+      "pages": "29-31",
+      "queries": 20,
+      "search_cards": 482,
+      "relevant_capture_candidates": 6,
+      "attempted": 6,
+      "new_html_payloads": 6,
+      "manifest_total_capture_records": 68,
+      "manifest_total_unique_html_payloads": 67,
+      "search_file": "recovery/archiveit/search-results-pages-29-31.json"
+    },
+    "geo_quibuyen_search": {
+      "pages": 3,
+      "search_cards": 52,
+      "relevant_capture_candidates": 4,
+      "attempted": 3,
+      "new_html_payloads": 3,
+      "manifest_total_capture_records": 71,
+      "manifest_total_unique_html_payloads": 70,
+      "search_file": "recovery/archiveit/search-results-query-geo-quibuyen-pages-1-3.json"
+    },
+    "additional_video_queries": {
+      "queries": [
+        "Blue Scholars video",
+        "Blue Scholars Coffee and Snow",
+        "Blue Scholars Paul Valery"
+      ],
+      "search_cards": 57,
+      "relevant_capture_candidates": 0,
+      "new_payloads": 0,
+      "note": "The video query returned no relevant candidate in its first three pages; the other two queries timed out on their first pages."
+    },
+    "captured_examples": [
+      {
+        "timestamp": "20121111042858",
+        "original_url": "http://www.youtube.com/user/bluescholarsTV",
+        "title": "BlueScholars - YouTube"
+      },
+      {
+        "timestamp": "20130918234913",
+        "original_url": "https://twitter.com/prometheusbrown",
+        "title": "Prometheus Brown Twitter profile"
+      },
+      {
+        "timestamp": "20180114070225",
+        "original_url": "https://twitter.com/BlueScholars",
+        "title": "Blue Scholars Twitter profile"
+      },
+      {
+        "timestamp": "20191220125328",
+        "original_url": "https://filmandmusic.seattle.gov/the-seattle-times-interviews-geo-of-the-blue-scholars/embed/",
+        "title": "Seattle Film + Music interview embed"
+      },
+      {
+        "timestamp": "20191024230548",
+        "original_url": "https://uofsdmedia.com/coffee-and-coversation-with-sabzi-of-the-blue-scholars/",
+        "title": "Sabzi interview"
+      }
+    ],
+    "limitation": "These are separate third-party or social page captures in recovery storage, not Blue Scholars site editions or cleared publication assets."
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "description": "Visually confirmed embedded Blue Scholars photo extractions from archived press PDFs.",
+  "method": "Extract original PDF image streams; verify JPEG signature, pixel dimensions, page placement, image appearance, and printed caption/credit.",
+  "extractor": "pdfplumber via Codex bundled workspace Python; Pillow used for visual verification only",
+  "images": [
+    {
+      "pdf": "18163f7bd9e92b934e67cda4bf79bce24b29089270142eb8b4ff5f59a1031a54.pdf",
+      "page": 37,
+      "object": "FXX10",
+      "credit": "Ryan Lewis (credit printed on page)",
+      "caption": "Blue Scholars' Sabzi (left) and Geologic.",
+      "label": "CMJ 2006 Geologic and Sabzi portrait",
+      "pdf_path": "recovery/other-archives/press-pdfs/raw/18163f7bd9e92b934e67cda4bf79bce24b29089270142eb8b4ff5f59a1031a54.pdf",
+      "pdf_sha256": "18163f7bd9e92b934e67cda4bf79bce24b29089270142eb8b4ff5f59a1031a54",
+      "page_image_object": "FXX10",
+      "dimensions_px": {
+        "width": 543,
+        "height": 436
+      },
+      "placement_points": {
+        "x0": 33.36,
+        "top": 232.78,
+        "x1": 294.22,
+        "bottom": 441.8
+      },
+      "extracted_sha256": "5f02de7577abf574bf92bb24e73a9eedb8a6e1a760a1979e6419c769ecee7dcb",
+      "bytes": 35513,
+      "path": "recovery/other-archives/press-pdfs/images/5f02de7577abf574bf92bb24e73a9eedb8a6e1a760a1979e6419c769ecee7dcb.jpg",
+      "source_page_url": "https://www.worldradiohistory.com/Archive-All-Music/CMJ/2006/CMJ-New-Music-2006-152.pdf",
+      "wayback_replay": "https://web.archive.org/web/20241106090401id_/https://www.worldradiohistory.com/Archive-All-Music/CMJ/2006/CMJ-New-Music-2006-152.pdf",
+      "verification": "JPEG decoded and visually inspected against rendered page; page caption and photo credit recorded",
+      "publication_status": "recovery-only; rights review required"
+    },
+    {
+      "pdf": "df2fb553ed20eebba594738f149510f3250ede19a745610fde349ed3f6f7d08e.pdf",
+      "page": 10,
+      "object": "Im0",
+      "credit": "Zenith Richards (caption printed on page)",
+      "caption": "Blue Scholars Coax Call and Response from the 'Sco; photograph shows Geologic performing in the crowd.",
+      "label": "Oberlin Review 2008 Geologic performance",
+      "pdf_path": "recovery/other-archives/press-pdfs/raw/df2fb553ed20eebba594738f149510f3250ede19a745610fde349ed3f6f7d08e.pdf",
+      "pdf_sha256": "df2fb553ed20eebba594738f149510f3250ede19a745610fde349ed3f6f7d08e",
+      "page_image_object": "Im0",
+      "dimensions_px": {
+        "width": 848,
+        "height": 669
+      },
+      "placement_points": {
+        "x0": 35.7,
+        "top": 427.91,
+        "x1": 442.59,
+        "bottom": 748.92
+      },
+      "extracted_sha256": "53b5bb06a66c26011c5d8b42ff5410dbfcc19c6278cc93f1e31a6d0fb98ee6f8",
+      "bytes": 61032,
+      "path": "recovery/other-archives/press-pdfs/images/53b5bb06a66c26011c5d8b42ff5410dbfcc19c6278cc93f1e31a6d0fb98ee6f8.jpg",
+      "source_page_url": "http://www.oberlin.edu/stupub/ocreview/2008/03/14/ISSUE.pdf",
+      "wayback_replay": "https://web.archive.org/web/20100602180231id_/http://www.oberlin.edu/stupub/ocreview/2008/03/14/ISSUE.pdf",
+      "verification": "JPEG decoded and visually inspected against rendered page; page caption and photo credit recorded",
+      "publication_status": "recovery-only; rights review required"
+    }
+  ]
+}

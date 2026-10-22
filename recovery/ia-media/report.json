@@ -1,0 +1,91 @@
+{
+  "archive": "Internet Archive item-level media",
+  "queries": [
+    {
+      "query": "mediatype:audio AND \"Blue Scholars\"",
+      "num_found": 41
+    },
+    {
+      "query": "mediatype:audio AND \"DJ Sabzi\"",
+      "num_found": 3
+    },
+    {
+      "query": "mediatype:audio AND \"Prometheus Brown\"",
+      "num_found": 3
+    },
+    {
+      "query": "mediatype:movies AND \"Blue Scholars\"",
+      "num_found": 6
+    },
+    {
+      "query": "\"Blue Scholars\" AND mediatype:audio",
+      "num_found": 41
+    },
+    {
+      "query": "\"Blue Scholars\" AND mediatype:movies",
+      "num_found": 6
+    },
+    {
+      "query": "\"Sabzi\" AND mediatype:audio",
+      "num_found": 15
+    },
+    {
+      "query": "\"Geologic\" AND mediatype:audio",
+      "num_found": 178
+    },
+    {
+      "query": "\"Geologic\" AND mediatype:movies",
+      "num_found": 326
+    },
+    {
+      "query": "\"Townfolk\" AND \"Sabzi\"",
+      "num_found": 0
+    },
+    {
+      "query": "\"The Sound\" AND \"Blue Scholars\" AND mediatype:audio",
+      "num_found": 1
+    },
+    {
+      "query": "\"The Decisive Moment\" AND \"Blue Scholars\"",
+      "num_found": 0
+    },
+    {
+      "query": "\"WASSUP PHAM\" AND mediatype:movies",
+      "num_found": 0
+    }
+  ],
+  "selected_items": 33,
+  "selected_media_files": 43,
+  "downloaded_files": 1,
+  "downloaded_bytes": 71341879,
+  "failures": [
+    {
+      "identifier": "SMA_12838",
+      "filename": "12838.mp4",
+      "stage": "metadata",
+      "error": "File outside supported media/size limit (247630316 bytes)"
+    }
+  ],
+  "limitations": [
+    "Only selected original MP3/MP4/Ogg files are acquired; alternate encodings and derivatives are not duplicated.",
+    "Files are stored in ignored recovery/media/ia and are not included in the public site.",
+    "Internet Archive availability does not grant redistribution rights; missing license metadata is retained as unresolved."
+  ],
+  "item_records_total": 33,
+  "source_files_total": 42,
+  "aggregate_summary": {
+    "items": 33,
+    "source_files": 42,
+    "unique_payloads": 42,
+    "source_bytes": 956871950,
+    "unique_bytes": 956871950,
+    "new_file_types": {
+      "MP3": 36,
+      "MP4": 1,
+      "OGG": 5
+    },
+    "licensed_item_records": 21,
+    "local_storage": "recovery/media/ia (ignored; not part of public site)",
+    "rights_note": "Internet Archive availability does not grant redistribution rights; all files remain local-only pending rights review."
+  }
+}

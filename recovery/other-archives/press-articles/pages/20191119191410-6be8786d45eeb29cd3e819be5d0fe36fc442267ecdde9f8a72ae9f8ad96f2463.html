@@ -1,0 +1,1890 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"fa09265af4",applicationID:"319653580"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1130.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<meta itemprop="acquia_lift:content_title" content="Episodes" />
+<meta itemprop="acquia_lift:content_type" content="page" />
+<meta itemprop="acquia_lift:page_type" content="content page" />
+<meta itemprop="acquia_lift:context_language" content="en" />
+<meta itemprop="acquia_lift:content_section" content="" />
+<meta itemprop="acquia_lift:content_keywords" content="" />
+<meta itemprop="acquia_lift:post_id" content="" />
+<meta itemprop="acquia_lift:content_uuid" content="" />
+<meta itemprop="acquia_lift:published_date" content="" />
+<meta itemprop="acquia_lift:persona" content="" />
+<meta itemprop="acquia_lift:engagement_score" content="1" />
+<meta itemprop="acquia_lift:account_id" content="KCTS" />
+<meta itemprop="acquia_lift:site_id" content="zenithkcts" />
+<meta itemprop="acquia_lift:contentOrigin" content="" />
+<meta itemprop="acquia_lift:liftAssetsURL" content="https://builder.lift.acquia.com" />
+<meta itemprop="acquia_lift:liftDecisionAPIURL" content="" />
+<meta itemprop="acquia_lift:authEndpoint" content="" />
+<meta itemprop="acquia_lift:bootstrapMode" content="auto" />
+<meta itemprop="acquia_lift:contentReplacementMode" content="untrusted" />
+<script src="https://builder.lift.acquia.com/lift.js" async></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2418330-1"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments)};gtag("js", new Date());gtag("config", "UA-2418330-1", {"groups":"default","anonymize_ip":true});</script>
+<meta name="title" content="Kuya Geo | KCTS 9" />
+<meta name="twitter:card" content="summary" />
+<meta property="og:site_name" content="KCTS 9" />
+<link rel="canonical" href="https://www.kcts9.org/show/kuya-geo" />
+<meta property="og:type" content="video.tv_show" />
+<meta name="twitter:description" content="Explore identity, music, food and culture in the Puget Sound area from a Filipino American" />
+<meta name="description" content="Explore identity, music, food and culture in the Puget Sound area from a Filipino American" />
+<meta name="twitter:title" content="Kuya Geo" />
+<meta name="twitter:site" content="@kcts9" />
+<meta property="og:url" content="https://www.kcts9.org/show/kuya-geo/episodes" />
+<meta property="og:title" content="Kuya Geo" />
+<link rel="image_src" href="//image.pbs.org/video-assets/1LisB1U-asset-mezzanine-16x9-mCS4vNe.JPG" />
+<meta property="og:description" content="Explore identity, music, food and culture in the Puget Sound area from a Filipino American" />
+<meta name="twitter:url" content="https://www.kcts9.org/show/kuya-geo/episodes" />
+<meta name="twitter:image" content="https://image.pbs.org/video-assets/1LisB1U-asset-mezzanine-16x9-mCS4vNe.JPG" />
+<meta property="og:image" content="https://image.pbs.org/video-assets/1LisB1U-asset-mezzanine-16x9-mCS4vNe.JPG" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script type="text/javascript">
+// Initialize the google variables.
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+// Add a place to store the slot name variable.
+googletag.slots = googletag.slots || {};
+(function() {
+  var useSSL = "https:" == document.location.protocol;
+  var src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+  document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+})();
+</script>
+<script type="text/javascript">
+  
+  googletag.slots["js-dfp-tag-3bM"] = googletag.defineSlot("/9868881/KCTS_Zenith_Rectangle", [300, 250], "js-dfp-tag-3bM")
+
+    .addService(googletag.pubads())
+
+  
+  
+  
+      ;
+</script>
+<script type="text/javascript">
+  
+  googletag.slots["js-dfp-tag-itI"] = googletag.defineSlot("/9868881/KCTS_Zenith_Rectangle", [300, 250], "js-dfp-tag-itI")
+
+    .addService(googletag.pubads())
+
+  
+  
+  
+      ;
+</script>
+<script type="text/javascript">
+  
+  googletag.slots["js-dfp-tag-jp4"] = googletag.defineSlot("/9868881/KCTS_Zenith_Rectangle", [300, 250], "js-dfp-tag-jp4")
+
+    .addService(googletag.pubads())
+
+  
+  
+  
+      ;
+</script>
+<script type="text/javascript">
+googletag.cmd.push(function() {
+      googletag.pubads().enableAsyncRendering();
+        googletag.pubads().enableSingleRequest();
+        googletag.pubads().collapseEmptyDivs();
+      });
+googletag.enableServices();
+</script>
+<link rel="shortcut icon" href="/sites/default/files/favicon.ico" type="image/vnd.microsoft.icon" />
+<script src="/sites/default/files/google_tag/primary/google_tag.script.js?q11247" defer="true"></script>
+
+    <title>Kuya Geo | KCTS 9</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_LP1dOR2usE9qRovhEPQ8cszTrmLH-44zIj0qk8o_3U4.css?q11247" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_d21sgtuf2aP2TaVEmDWDHrtU-BWtWjZr6q7UVKERkcM.css?q11247" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+  </head>
+  <body class="preload">
+    <a href="#main-content" class="visually-hidden focusable">
+      Skip to main content
+    </a>
+    <noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQD4SC2" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+
+
+  
+
+
+
+
+  
+<div  class="layout-container layout-container--has-hero">
+
+  
+            
+
+<header  class="header">
+  <div  class="header__inner">
+
+    <a href="#" id="toggle-expand" class="toggle-expand" aria-haspopup="true" aria-expanded="false" aria-controls="off-canvas">
+      <span class="toggle-expand__line"></span>
+      <span class="toggle-expand__text visually-hidden">Main Menu</span>
+    </a>
+
+
+        
+
+
+<figure  id="block-sitebranding" class="logo">
+      <a  class="header__logo"
+        href="/">
+        
+  
+<picture
+   class="logo__image"
+>
+      
+<img
+   class="logo__img"
+      src="/themes/custom/kcts9/logo.svg"
+      alt="Home"
+    />
+</picture>
+        </a>
+  
+  </figure>
+
+<nav role="navigation" aria-labelledby="block-mainnavigation-menu" id="block-mainnavigation" class="header__main-menu">
+            
+  <h2 class="visually-hidden" id="block-mainnavigation-menu">Main navigation</h2>
+  
+
+        
+
+<div  region="header" class="main-nav">
+  
+
+    
+                          
+        
+<ul  class="main-menu">
+  
+                    
+
+
+
+
+
+
+  
+
+
+
+<li  class="main-menu__item">
+                
+    
+    
+    <a href="/" class="main-menu__link" data-drupal-link-system-path="&lt;front&gt;">        Shows
+      </a>
+
+      </li>
+                    
+
+
+
+
+
+
+  
+
+
+
+<li  class="main-menu__item">
+                
+    
+    
+    <a href="/watch/live/KCTSDT" class="main-menu__link" data-drupal-link-system-path="watch/live/KCTSDT">        Live TV
+      </a>
+
+      </li>
+                    
+
+
+
+
+
+
+  
+
+
+
+<li  class="main-menu__item">
+                
+    
+    
+    <a href="/schedule" class="main-menu__link" data-drupal-link-system-path="schedule">        Schedule
+      </a>
+
+      </li>
+                    
+
+
+
+
+
+          
+  
+
+
+
+<li  class="main-menu__item main-menu__item--header-cta">
+                
+    
+    
+    <a href="/donate" class="main-menu__link header-cta" data-drupal-link-system-path="node/418521">        Donate
+      </a>
+
+      </li>
+              </ul>
+  
+
+</div>
+
+  </nav>
+
+<nav role="navigation" aria-labelledby="block-secondarymenu-menu" id="block-secondarymenu" class="header__user-menu">
+            
+  <h2 class="visually-hidden" id="block-secondarymenu-menu">Secondary Menu</h2>
+  
+
+        
+
+    
+                          
+        
+<ul  region="header" class="icon-menu">
+  
+                    
+
+
+
+
+
+          
+  
+    
+
+
+<li  class="icon-menu__item icon-menu__item--search">
+                
+    
+    
+    <a href="/search" class="icon-menu__link search" data-icon="search" data-drupal-link-system-path="search">        
+
+<svg  class="icon"
+
+    
+          aria-labelledby="title-search"
+    
+    >
+      <title id="title-search">Search</title>
+      <use xlink:href="/themes/custom/kcts9/dist/img/sprite/sprite.svg#search"></use>
+</svg>        <span  class="label">Search</span>
+      </a>
+
+      </li>
+                    
+
+
+
+
+
+          
+  
+    
+
+
+<li  class="icon-menu__item icon-menu__item--heart">
+                
+    
+    
+    <a href="/my-account" class="icon-menu__link heart" data-icon="heart" data-drupal-link-system-path="favorites">        
+
+<svg  class="icon"
+
+    
+          aria-labelledby="title-heart"
+    
+    >
+      <title id="title-heart">My Favorites</title>
+      <use xlink:href="/themes/custom/kcts9/dist/img/sprite/sprite.svg#heart"></use>
+</svg>        <span  class="label">My Favorites</span>
+      </a>
+
+      </li>
+                    
+
+
+
+
+
+          
+  
+    
+
+
+<li  class="icon-menu__item icon-menu__item--user">
+                
+    
+    
+    <a href="/my-account" class="icon-menu__link user" data-icon="user" data-drupal-link-system-path="my-account">Log In</a>
+
+      </li>
+              </ul>
+  
+
+
+  </nav>
+
+  
+  </div>
+
+</header>
+
+      
+            
+<div  class="off-canvas">
+  <div  class="off-canvas__header">
+    <div  class="off-canvas__header__inner">
+            
+<a
+   class="off-canvas__header__icon toggle-close"
+    href="#"
+>
+            
+
+<svg  class="off-canvas__close"
+
+    
+          aria-labelledby="title-close"
+    
+    >
+      <title id="title-close">Close</title>
+      <use xlink:href="/themes/custom/kcts9/dist/img/sprite/sprite.svg#close"></use>
+</svg>        </a>
+            
+<a
+   class="off-canvas__header__icon toggle-search"
+    href="/search"
+>
+            
+
+<svg  class="off-canvas__search"
+
+    
+          aria-labelledby="title-search"
+    
+    >
+      <title id="title-search">Search</title>
+      <use xlink:href="/themes/custom/kcts9/dist/img/sprite/sprite.svg#search"></use>
+</svg>        </a>
+    </div>
+  </div>
+
+  <div  class="off-canvas__inner">
+        
+<nav role="navigation" aria-labelledby="block-mainnavigation-2-menu" id="block-mainnavigation-2" class="off-canvas__main-menu">
+            
+  <h2 class="visually-hidden" id="block-mainnavigation-2-menu">Main navigation</h2>
+  
+
+        
+
+<div  region="off_canvas" class="main-nav">
+  
+
+    
+                          
+        
+<ul  class="main-menu">
+  
+                    
+
+
+
+
+
+
+  
+
+
+
+<li  class="main-menu__item">
+                
+    
+    
+    <a href="/" class="main-menu__link" data-drupal-link-system-path="&lt;front&gt;">        Shows
+      </a>
+
+      </li>
+                    
+
+
+
+
+
+
+  
+
+
+
+<li  class="main-menu__item">
+                
+    
+    
+    <a href="/watch/live/KCTSDT" class="main-menu__link" data-drupal-link-system-path="watch/live/KCTSDT">        Live TV
+      </a>
+
+      </li>
+                    
+
+
+
+
+
+
+  
+
+
+
+<li  class="main-menu__item">
+                
+    
+    
+    <a href="/schedule" class="main-menu__link" data-drupal-link-system-path="schedule">        Schedule
+      </a>
+
+      </li>
+                    
+
+
+
+
+
+          
+  
+
+
+
+<li  class="main-menu__item main-menu__item--header-cta">
+                
+    
+    
+    <a href="/donate" class="main-menu__link header-cta" data-drupal-link-system-path="node/418521">        Donate
+      </a>
+
+      </li>
+              </ul>
+  
+
+</div>
+
+  </nav>
+
+<nav role="navigation" aria-labelledby="block-secondarymenu-2-menu" id="block-secondarymenu-2" class="off-canvas__user-menu">
+            
+  <h2 class="visually-hidden" id="block-secondarymenu-2-menu">Secondary Menu</h2>
+  
+
+        
+
+    
+                          
+        
+<ul  region="off_canvas" class="icon-menu">
+  
+                    
+
+
+
+
+
+          
+  
+    
+
+
+<li  class="icon-menu__item icon-menu__item--search">
+                
+    
+    
+    <a href="/search" class="icon-menu__link search" data-icon="search" data-drupal-link-system-path="search">        
+
+<svg  class="icon"
+
+    
+          aria-labelledby="title-search"
+    
+    >
+      <title id="title-search">Search</title>
+      <use xlink:href="/themes/custom/kcts9/dist/img/sprite/sprite.svg#search"></use>
+</svg>        <span  class="label">Search</span>
+      </a>
+
+      </li>
+                    
+
+
+
+
+
+          
+  
+    
+
+
+<li  class="icon-menu__item icon-menu__item--heart">
+                
+    
+    
+    <a href="/my-account" class="icon-menu__link heart" data-icon="heart" data-drupal-link-system-path="favorites">        
+
+<svg  class="icon"
+
+    
+          aria-labelledby="title-heart"
+    
+    >
+      <title id="title-heart">My Favorites</title>
+      <use xlink:href="/themes/custom/kcts9/dist/img/sprite/sprite.svg#heart"></use>
+</svg>        <span  class="label">My Favorites</span>
+      </a>
+
+      </li>
+                    
+
+
+
+
+
+          
+  
+    
+
+
+<li  class="icon-menu__item icon-menu__item--user">
+                
+    
+    
+    <a href="/my-account" class="icon-menu__link user" data-icon="user" data-drupal-link-system-path="my-account">Log In</a>
+
+      </li>
+              </ul>
+  
+
+
+  </nav>
+
+    </div>
+
+</div>
+
+      
+  <div  class="hero-region">
+                <div>
+    
+
+<div  id="block-showheroblock" class="block block-showheroblock">
+  
+    
+        
+  
+    
+<article  region="hero" role="article" about="/show/kuya-geo" class="node">
+
+  
+  
+
+  <div>
+        
+
+  <div  class="hero-bg" >
+    <div  class="hero-bg__favorite">
+          
+      </div>
+    <div  class="hero-bg__background"
+        style='background-image: url(//image.pbs.org/video-assets/1LisB1U-asset-mezzanine-16x9-mCS4vNe.JPG?resize=1920x);'>
+              <div  class="hero-bg__gradient"></div>
+          </div>
+    <div  class="hero-bg__wrapper">
+
+          <div  class="show-hero__content">
+              <div  class="show-hero__poster-image">
+          
+<img
+   class="img"
+      src="//image.pbs.org/contentchannels/S50XVIi-show-poster2x3-z3N5LSx.jpg?resize=183x"
+      alt="Kuya Geo"
+    />
+        </div>
+            <div  class="show-hero__info">
+        
+<h1  class="show-hero__h1">
+      Kuya Geo
+  </h1>
+        <div  class="show-hero__meta">
+          <span><a href="/search?genre=culture&amp;full_length=1&amp;passport=All">Culture</a></span>                  </div>
+
+        <div  class="show-hero__description show-hero__description--xl">
+          
+  
+
+<p  class="paragraph">
+      Explore identity, music, food and culture in the Puget Sound area from a Filipino American
+  </p>
+
+        </div>
+
+                  <div  class="show-hero__latest">
+            
+<div  class="icon-with-text">
+      <a  class="icon-with-text__link use-ajax"
+            href=https://www.kcts9.org/show/kuya-geo/episode/meet-kuya-geo-a-filipino-american-twist-on-seattle-culture-ytrkfn>
+    
+
+<svg  class="icon-with-text__icon"
+
+    
+    
+    >
+      <use xlink:href="/themes/custom/kcts9/dist/img/sprite/sprite.svg#play-white"></use>
+</svg>      
+<span  class="icon-with-text__text">
+      Watch Latest: Meet Kuya Geo: A Filipino-American Twist on Seattle Culture
+  </span>
+  
+      </a>
+  </div>
+          </div>
+              </div>
+
+    </div>
+
+
+      </div>
+  </div>
+      </div>
+
+</article>
+
+  </div>
+
+  </div>
+
+        </div>
+
+      
+    
+    
+    
+  
+      <div  class="content-top">
+            <div>
+    <div data-drupal-messages-fallback class="hidden"></div>
+<nav role="navigation" aria-labelledby="block-showpage-menu" id="block-showpage">
+            
+  <h2 class="visually-hidden" id="block-showpage-menu">Show Page</h2>
+  
+
+        
+
+
+<nav  region="content_top" class="secondary-nav">
+  <div  class="secondary-nav__inner">
+          
+
+    
+                          
+        
+<ul  class="inline-menu">
+  
+                    
+
+  
+
+
+
+
+  
+
+
+
+<li  class="inline-menu__item inline-menu__item--is-active">
+                
+    
+    
+    <a href="/show/kuya-geo/episodes" class="inline-menu__link is-active">        Episodes
+      </a>
+
+      </li>
+                    
+
+
+
+
+
+
+  
+
+
+
+<li  class="inline-menu__item">
+                
+    
+    
+    <a href="/show/kuya-geo/about" class="inline-menu__link">        About
+      </a>
+
+      </li>
+              </ul>
+  
+
+      </div>
+</nav>
+
+<nav  class="secondary-nav__mobile">
+  <div  class="secondary-nav__mobile__inner">
+    <div class="select selected select--open">
+      <a href='#'></a>
+    </div>
+    <div class="select-items">
+      
+
+    
+                          
+        
+<ul  class="vertical-menu">
+  
+                    
+
+  
+
+
+
+
+  
+
+
+
+<li  class="vertical-menu__item vertical-menu__item--is-active">
+                
+    
+    
+    <a href="/show/kuya-geo/episodes" class="vertical-menu__link is-active">        Episodes
+      </a>
+
+      </li>
+                    
+
+
+
+
+
+
+  
+
+
+
+<li  class="vertical-menu__item">
+                
+    
+    
+    <a href="/show/kuya-geo/about" class="vertical-menu__link">        About
+      </a>
+
+      </li>
+              </ul>
+  
+
+    </div>
+  </div>
+</nav>
+
+  </nav>
+
+  </div>
+
+      </div>
+  
+  <main role="main"  class="main main--snug-top">
+    <a id="main-content" tabindex="-1"></a>
+
+    <div  class="main-content">
+            <div>
+    
+
+<div  id="block-kcts9-content" class="block block-kcts9-content">
+  
+    
+      <div class="js-view-dom-id-72dfe4d07b934bc68054cb257f892f99b1e05438d99c427692c74fa316607ecf">
+  
+  
+  
+
+  
+  <form class="views-exposed-form bef-exposed-form" data-bef-auto-submit-full-form="" data-drupal-selector="views-exposed-form-show-episodes-block-1" action="/show/kuya-geo/episodes" method="get" id="views-exposed-form-show-episodes-block-1" accept-charset="UTF-8">
+  <div class="js-form-item form-item">
+        <div class="form-item__dropdown"><select data-drupal-selector="edit-season-filter" id="edit-season-filter" name="season_filter" class="form-select required form-item__select" required="required" aria-required="true"><option value="0" selected="selected">Season 2019</option></select></div>
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input data-bef-auto-submit-click="" class="js-hide button js-form-submit form-submit form-item__textfield" data-drupal-selector="edit-submit-show-episodes" type="submit" id="edit-submit-show-episodes" value="Apply" />
+</div>
+
+
+</form>
+
+  
+
+  
+<div  class="show-episodes">
+              
+
+
+<article  role="article" about="/node/380811" class="node">
+
+  
+  
+
+  <div>
+        
+
+
+
+<div  class="m-card m-card--large">
+  <div  class="m-card__inner">
+    
+    
+          <div  class="m-card__image-container m-card__image-container--mezz">
+                  
+<a
+   class="link use-ajax"
+    href="/show/kuya-geo/episode/meet-kuya-geo-a-filipino-american-twist-on-seattle-culture-ytrkfn"
+>
+                
+
+<svg  class="m-card__play-icon"
+
+    
+    
+    >
+      <use xlink:href="/themes/custom/kcts9/dist/img/sprite/sprite.svg#play-white"></use>
+</svg>            </a>
+        
+        
+<a
+   class="link use-ajax"
+    href="/show/kuya-geo/episode/meet-kuya-geo-a-filipino-american-twist-on-seattle-culture-ytrkfn"
+>
+              <div  class="m-card__image m-card__image--mezz" style="background-image:url('//image.pbs.org/video-assets/1LisB1U-asset-mezzanine-16x9-mCS4vNe.JPG?resize=263x');"></div>
+          </a>
+      </div>
+        <div  class="m-card__body">
+      <div  class="m-card__eyebrow">
+                3m 54s
+            </div>
+              
+<h4  class="m-card__title">
+      
+<a
+   class="title__link use-ajax"
+    href="/show/kuya-geo/episode/meet-kuya-geo-a-filipino-american-twist-on-seattle-culture-ytrkfn"
+>
+      <span>Meet Kuya Geo: A Filipino-American Twist on Seattle Culture</span>
+
+  </a>
+  </h4>
+      
+              <div  class="m-card__details">
+          <div  class="m-card__description">
+            <p>George Quibuyen, a first-generation Filipino-American raised near Puget Sound, is co-founder of the hip hop duo Blue Scholars and a writer, musician, rhymer and restaurateur. Kuya, meanwhile, is a Filipino term of respect for a &quot;brother&quot; or &quot;cousin,&quot; from whom one is likely to receive wisdom. In this video series, GEO will give a regular take on identity, music, food and urban culture.</p>
+
+          </div>
+                  </div>
+          </div>
+  </div>
+</div>
+    </div>
+
+</article>
+
+            
+
+
+<article  role="article" about="/node/380796" class="node">
+
+  
+  
+
+  <div>
+        
+
+
+
+<div  class="m-card m-card--large">
+  <div  class="m-card__inner">
+    
+    
+          <div  class="m-card__image-container m-card__image-container--mezz">
+                  
+<a
+   class="link use-ajax"
+    href="/show/kuya-geo/episode/seattle-drivers-kuya-geo-has-a-rap-for-that-prhvxp"
+>
+                
+
+<svg  class="m-card__play-icon"
+
+    
+    
+    >
+      <use xlink:href="/themes/custom/kcts9/dist/img/sprite/sprite.svg#play-white"></use>
+</svg>            </a>
+        
+        
+<a
+   class="link use-ajax"
+    href="/show/kuya-geo/episode/seattle-drivers-kuya-geo-has-a-rap-for-that-prhvxp"
+>
+              <div  class="m-card__image m-card__image--mezz" style="background-image:url('//image.pbs.org/video-assets/eQ7Enon-asset-mezzanine-16x9-EOx0r96.jpg?resize=263x');"></div>
+          </a>
+      </div>
+        <div  class="m-card__body">
+      <div  class="m-card__eyebrow">
+                3m 19s
+            </div>
+              
+<h4  class="m-card__title">
+      
+<a
+   class="title__link use-ajax"
+    href="/show/kuya-geo/episode/seattle-drivers-kuya-geo-has-a-rap-for-that-prhvxp"
+>
+      <span>Seattle drivers? Kuya Geo Has a Rap for That</span>
+
+  </a>
+  </h4>
+      
+              <div  class="m-card__details">
+          <div  class="m-card__description">
+            <p>In this episode of our Kuya GEO series, George &quot;Geo&quot; Quibuyen rhymes and rants about the quirks of driving in Seattle.</p>
+
+          </div>
+                  </div>
+          </div>
+  </div>
+</div>
+    </div>
+
+</article>
+
+            
+
+
+<article  role="article" about="/node/380801" class="node">
+
+  
+  
+
+  <div>
+        
+
+
+
+<div  class="m-card m-card--large">
+  <div  class="m-card__inner">
+    
+    
+          <div  class="m-card__image-container m-card__image-container--mezz">
+                  
+<a
+   class="link use-ajax"
+    href="/show/kuya-geo/episode/the-roots-of-seattles-filipino-community-ikqoqk"
+>
+                
+
+<svg  class="m-card__play-icon"
+
+    
+    
+    >
+      <use xlink:href="/themes/custom/kcts9/dist/img/sprite/sprite.svg#play-white"></use>
+</svg>            </a>
+        
+        
+<a
+   class="link use-ajax"
+    href="/show/kuya-geo/episode/the-roots-of-seattles-filipino-community-ikqoqk"
+>
+              <div  class="m-card__image m-card__image--mezz" style="background-image:url('//image.pbs.org/video-assets/YFxFYqr-asset-mezzanine-16x9-Aygx1Hz.jpg?resize=263x');"></div>
+          </a>
+      </div>
+        <div  class="m-card__body">
+      <div  class="m-card__eyebrow">
+                3m 46s
+            </div>
+              
+<h4  class="m-card__title">
+      
+<a
+   class="title__link use-ajax"
+    href="/show/kuya-geo/episode/the-roots-of-seattles-filipino-community-ikqoqk"
+>
+      <span>The Roots of Seattle&#039;s Filipino Community</span>
+
+  </a>
+  </h4>
+      
+              <div  class="m-card__details">
+          <div  class="m-card__description">
+            <p>In this episode of our Kuya GEO series, George &quot;Geo&quot; Quibuyen explores the history of the Filipino community&#039;s presence in Seattle&#039;s Historic Chinatown International, known to some as Filipino Town.</p>
+
+          </div>
+                  </div>
+          </div>
+  </div>
+</div>
+    </div>
+
+</article>
+
+            
+
+
+<article  role="article" about="/node/380806" class="node">
+
+  
+  
+
+  <div>
+        
+
+
+
+<div  class="m-card m-card--large">
+  <div  class="m-card__inner">
+    
+    
+          <div  class="m-card__image-container m-card__image-container--mezz">
+                  
+<a
+   class="link use-ajax"
+    href="/show/kuya-geo/episode/kuya-geo-zig-zag-generations-58um96"
+>
+                
+
+<svg  class="m-card__play-icon"
+
+    
+    
+    >
+      <use xlink:href="/themes/custom/kcts9/dist/img/sprite/sprite.svg#play-white"></use>
+</svg>            </a>
+        
+        
+<a
+   class="link use-ajax"
+    href="/show/kuya-geo/episode/kuya-geo-zig-zag-generations-58um96"
+>
+              <div  class="m-card__image m-card__image--mezz" style="background-image:url('//image.pbs.org/video-assets/rmq3OtG-asset-mezzanine-16x9-xwtGiOL.png?resize=263x');"></div>
+          </a>
+      </div>
+        <div  class="m-card__body">
+      <div  class="m-card__eyebrow">
+                3m 10s
+            </div>
+              
+<h4  class="m-card__title">
+      
+<a
+   class="title__link use-ajax"
+    href="/show/kuya-geo/episode/kuya-geo-zig-zag-generations-58um96"
+>
+      <span>Kuya GEO: Zig Zag Generations</span>
+
+  </a>
+  </h4>
+      
+              <div  class="m-card__details">
+          <div  class="m-card__description">
+            <p>A look at the history of the Filipino community&#039;s presence in Seattle&#039;s International District and the efforts to preserve and cultivate Filipino spaces and culture.<br />
+Dive into more Kuya Geo on KCTS9.org:</p>
+
+          </div>
+                  </div>
+          </div>
+  </div>
+</div>
+    </div>
+
+</article>
+
+      </div>
+
+    
+
+  
+  
+
+  
+  
+</div>
+
+  </div>
+
+
+<div  id="block-promoshowpages" class="block block-promoshowpages">
+  
+    
+      <div class="views-element-container"><div class="js-view-dom-id-6ab84eb55feb9f1720af9315cb4ddb7e30c18f6a8d226cd6cbc46d2969c2efa5">
+  
+  
+  
+
+  
+  
+  
+
+      <div class="views-row"><div class="philanthropy-space">
+  
+
+
+            <div>  
+
+
+<div  class="promo promo--philanthropy-default-passport promo--text-center" style="background-image: url(/themes/custom/kcts9/images/MembershipPromo_1920x800.jpg);">
+  <div  class="promo__content promo__content--philanthropy-default-passport promo__content--text-center">
+        
+
+<svg  class="icon"
+
+    
+    
+    >
+      <use xlink:href="/themes/custom/kcts9/dist/img/sprite/sprite.svg#passport"></use>
+</svg>    
+<h3  class="h3">
+        Your schedule, your shows, <b>your KCTS 9.</b>
+
+  </h3>
+    
+<h4  class="h4">
+      You make KCTS 9 possible. Become a member and enjoy the benefit of KCTS 9 Passport,
+          an on-demand library of 1,500+ episodes of your favorite PBS shows.
+  </h4>
+    
+<h4  class="h4">
+        <b>Only $5/month.</b>
+
+  </h4>
+    
+<a
+   class="button__link button__link--primary"
+    href="/passport"
+>
+      Get Passport
+  </a>
+    </div>
+</div></div>
+      
+</div>
+</div>
+
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+  </div>
+
+
+<div  id="block-kctsrectanglesadsinarow" class="ads-list ads-list--horizontal">
+  
+<span  class="ads-list__title">
+      Supported by
+  </span>
+
+  <div  class="ads-list__container ads-list__container--horizontal">
+      <div id="js-dfp-tag-jp4"  class="kcts-zenith-rectangle-1">
+        <script type="text/javascript">
+        googletag.cmd.push(function() {
+            googletag.display('js-dfp-tag-jp4');
+        });
+    </script>
+</div>
+<div id="js-dfp-tag-itI"  class="kcts-zenith-rectangle-2">
+        <script type="text/javascript">
+        googletag.cmd.push(function() {
+            googletag.display('js-dfp-tag-itI');
+        });
+    </script>
+</div>
+<div id="js-dfp-tag-3bM"  class="kcts-zenith-rectangle-3">
+        <script type="text/javascript">
+        googletag.cmd.push(function() {
+            googletag.display('js-dfp-tag-3bM');
+        });
+    </script>
+</div>
+
+  </div>
+
+</div>
+
+
+
+  </div>
+
+      </div>
+
+      </main>
+
+  
+      <footer class="footer">
+      <div class="footer__inner">
+                  
+<div  class="footer__first">
+      
+
+
+<figure  id="block-sitebranding-2" class="logo">
+      <a  class="footer__logo"
+        href="/">
+        
+  
+<picture
+   class="logo__image"
+>
+      
+<img
+   class="logo__img"
+      src="/themes/custom/kcts9/logo.svg"
+      alt="Home"
+    />
+</picture>
+        </a>
+  
+  </figure>
+
+  
+  
+<a
+   class="footer__first__cascade-text"
+      target="_blank"
+    href="https://cascadepublicmedia.org"
+>
+        
+<span  class="footer__first__cascade-text">
+      A Service of Cascade Public Media
+  </span>
+    </a>
+
+  
+<a
+   class="link"
+      target="_blank"
+    href="https://cascadepublicmedia.org"
+>
+        
+
+<svg  class="footer__first__cascade"
+
+    
+    
+    >
+      <use xlink:href="/themes/custom/kcts9/dist/img/sprite/sprite.svg#footer-service"></use>
+</svg>    </a>
+</div>
+
+                          <div class="footer__second">
+    <nav role="navigation" aria-labelledby="block-footer-menu" id="block-footer" class="footer__footer-menu">
+            
+  <h2 class="visually-hidden" id="block-footer-menu">Footer</h2>
+  
+
+        
+
+
+    
+                          
+        
+<ul  region="footer_second" class="footer-menu">
+  
+                    
+
+
+
+
+
+
+  
+
+
+
+<li  class="footer-menu__item">
+                
+    
+    
+    <a href="/watch" class="footer-menu__link" data-drupal-link-system-path="node/518666">        Ways To Watch
+      </a>
+
+      </li>
+                    
+
+
+
+
+
+
+  
+
+
+
+<li  class="footer-menu__item">
+                
+    
+    
+    <a href="/donate" class="footer-menu__link" data-drupal-link-system-path="node/418521">        Ways To Give
+      </a>
+
+      </li>
+                    
+
+
+
+
+
+
+  
+
+
+
+<li  class="footer-menu__item">
+                
+    
+    
+    <a href="/passport" class="footer-menu__link" data-drupal-link-system-path="passport">        Passport
+      </a>
+
+      </li>
+                    
+
+
+
+
+
+
+  
+
+
+
+<li  class="footer-menu__item">
+                
+    
+    
+    <a href="/watch/schedule/viewer-guide" class="footer-menu__link" data-drupal-link-system-path="node/516851">        Viewer Guide
+      </a>
+
+      </li>
+                    
+
+
+
+
+
+
+  
+
+
+
+<li  class="footer-menu__item">
+                
+    
+    
+    <a href="/watch/canada" class="footer-menu__link" data-drupal-link-system-path="node/523631">        KCTS 9 in Canada
+      </a>
+
+      </li>
+                    
+
+
+
+
+
+
+  
+
+
+
+<li  class="footer-menu__item">
+                
+    
+    
+    <a href="/about" class="footer-menu__link" data-drupal-link-system-path="node/526691">        About
+      </a>
+
+      </li>
+                    
+
+
+
+
+
+
+  
+
+
+
+<li  class="footer-menu__item">
+                
+    
+    
+    <a href="/help" class="footer-menu__link">        Help
+      </a>
+
+      </li>
+                    
+
+
+
+
+
+
+  
+
+
+
+<li  class="footer-menu__item">
+                
+    
+    
+    <a href="/contact/general" class="footer-menu__link" data-drupal-link-system-path="contact/general">        Contact
+      </a>
+
+      </li>
+                    
+
+
+
+
+
+
+  
+
+
+
+<li  class="footer-menu__item">
+                
+    
+    
+    <a href="/donate/corporate-sponsorship" class="footer-menu__link" data-drupal-link-system-path="node/485371">        Corporate Support
+      </a>
+
+      </li>
+                    
+
+
+
+
+
+
+  
+
+
+
+<li  class="footer-menu__item">
+                
+    
+    
+    <a href="https://cascadepublicmedia.org/careers" target="_blank" class="footer-menu__link">        Careers
+      </a>
+
+      </li>
+                    
+
+
+
+
+
+
+  
+
+
+
+<li  class="footer-menu__item">
+                
+    
+    
+    <a href="https://cascadepublicmedia.org/privacy-policy" target="_blank" class="footer-menu__link">        Privacy
+      </a>
+
+      </li>
+                    
+
+
+
+
+
+
+  
+
+
+
+<li  class="footer-menu__item">
+                
+    
+    
+    <a href="https://cascadepublicmedia.org/terms-use" target="_blank" class="footer-menu__link">        Terms of Use
+      </a>
+
+      </li>
+                    
+
+
+
+
+
+
+  
+
+
+
+<li  class="footer-menu__item">
+                
+    
+    
+    <a href="https://publicfiles.fcc.gov/tv-profile/kcts-tv" target="_blank" class="footer-menu__link">        KCTS 9 Public File
+      </a>
+
+      </li>
+                    
+
+
+
+
+
+
+  
+
+
+
+<li  class="footer-menu__item">
+                
+    
+    
+    <a href="https://publicfiles.fcc.gov/tv-profile/kyve" target="_blank" class="footer-menu__link">        KYVE Public File
+      </a>
+
+      </li>
+              </ul>
+  
+
+
+  </nav>
+
+</div>
+
+                          <div class="footer__third">
+    <div class="quick-subscribe">
+        <form method="GET" action="https://www.kcts9.org/newsletters" class="form-inline">
+      <div class="form-group form-item">
+        <label for="email" class="form-item__label form-item__label--textfield visually-hidden">Email Address</label>
+        <input name="email" type="email" class="form-item__textfield form-item__textfield--light-bg"
+               placeholder="Enter your email address" maxlength="254" size="60">
+      </div>
+      <div class="form-actions form-group">
+        <input class="button button--secondary form-submit" type="submit" value="Subscribe">
+      </div>
+    </form>
+  </div>
+
+
+    <nav role="navigation" aria-labelledby="block-sociallinks-menu" id="block-sociallinks">
+            
+  <h2 class="visually-hidden" id="block-sociallinks-menu">Social Links</h2>
+  
+
+        
+
+
+    
+                          
+        
+<ul  region="footer_third" class="icon-menu">
+  
+                    
+
+
+
+
+
+          
+  
+    
+
+
+<li  class="icon-menu__item icon-menu__item--social">
+                
+    
+    
+    <a href="http://www.facebook.com/KCTS9" class="icon-menu__link social" target="_blank" data-icon="facebook">        
+
+<svg  class="icon"
+
+    
+          aria-labelledby="title-facebook"
+    
+    >
+      <title id="title-facebook">Facebook</title>
+      <use xlink:href="/themes/custom/kcts9/dist/img/sprite/sprite.svg#facebook"></use>
+</svg>        <span  class="label">Facebook</span>
+      </a>
+
+      </li>
+                    
+
+
+
+
+
+          
+  
+    
+
+
+<li  class="icon-menu__item icon-menu__item--social">
+                
+    
+    
+    <a href="http://twitter.com/kcts9" class="icon-menu__link social" target="_blank" data-icon="twitter">        
+
+<svg  class="icon"
+
+    
+          aria-labelledby="title-twitter"
+    
+    >
+      <title id="title-twitter">Twitter</title>
+      <use xlink:href="/themes/custom/kcts9/dist/img/sprite/sprite.svg#twitter"></use>
+</svg>        <span  class="label">Twitter</span>
+      </a>
+
+      </li>
+                    
+
+
+
+
+
+          
+  
+    
+
+
+<li  class="icon-menu__item icon-menu__item--social">
+                
+    
+    
+    <a href="https://www.instagram.com/kcts9/" class="icon-menu__link social" target="_blank" data-icon="instagram">        
+
+<svg  class="icon"
+
+    
+          aria-labelledby="title-instagram"
+    
+    >
+      <title id="title-instagram">Instagram</title>
+      <use xlink:href="/themes/custom/kcts9/dist/img/sprite/sprite.svg#instagram"></use>
+</svg>        <span  class="label">Instagram</span>
+      </a>
+
+      </li>
+                    
+
+
+
+
+
+          
+  
+    
+
+
+<li  class="icon-menu__item icon-menu__item--social">
+                
+    
+    
+    <a href="https://www.youtube.com/user/KCTS9" class="icon-menu__link social" target="_blank" data-icon="youtube">        
+
+<svg  class="icon"
+
+    
+          aria-labelledby="title-youtube"
+    
+    >
+      <title id="title-youtube">Youtube</title>
+      <use xlink:href="/themes/custom/kcts9/dist/img/sprite/sprite.svg#youtube"></use>
+</svg>        <span  class="label">Youtube</span>
+      </a>
+
+      </li>
+              </ul>
+  
+
+
+
+  </nav>
+
+
+  
+  
+
+<p  class="footercopyright">
+        &copy; 2019 Cascade Public Media. All Rights Reserved.
+    </p>
+
+</div>
+
+              </div>
+    </footer>
+  
+        <div class="footer-alert-region">
+    
+
+<div  id="block-views-block-footer-alert-block-footer-alert" class="block block-views-block-footer-alert-block-footer-alert views-element-container">
+  
+    
+      <div region="footer_alert"><div class="js-view-dom-id-ad475b3d0356514751ad1042b155a7ed07675292db7ccba939cd66b7844764a2">
+  
+  
+  
+
+  
+  
+  
+
+      <div class="views-row">
+  
+    
+<article  role="article" about="/node/581441" class="node">
+
+  
+  
+
+  <div>
+        
+
+
+<div  class="footer-alert">
+  <div  class="footer-alert__inner">
+    <div  class="footer-alert__main-content">
+              
+<img
+   class="img"
+      src="/sites/default/files/styles/thumbnail/public/2019-11/dome-night2-480-360.jpg?itok=eWWbB7mg"
+      alt="The United States Capitol dome"
+    />
+      
+      <div  class="footer-alert__text">
+        
+<h4  class="footer-alert__title">
+      
+<a
+   class="title__link"
+    href="/impeachment"
+>
+      <span>The Impeachment Hearings</span>
+
+  </a>
+  </h4>
+
+                  
+  
+
+<p  class="footer-alert__paragraph">
+      Watch PBS NewsHour&#039;s coverage of Marie Louise &quot;Masha&quot; Yovanovitch&#039;s testimony
+  </p>
+
+              </div>
+    </div>
+    <div  class="footer-alert__cta">
+              
+<a
+   class="button__link button__link--outline-secondary"
+    href="/impeachment"
+>
+      Watch Now
+  </a>
+          </div>
+
+    
+<a
+   class="footer-alert__close-button close-alert"
+    href="#"
+>
+          
+
+<svg  class="footer-alert__close"
+
+    
+          aria-labelledby="title-close"
+    
+    >
+      <title id="title-close">Close</title>
+      <use xlink:href="/themes/custom/kcts9/dist/img/sprite/sprite.svg#close"></use>
+</svg>      </a>
+  </div>
+</div>
+    </div>
+
+</article>
+</div>
+
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+  </div>
+
+  </div>
+
+  </div>
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"show\/kuya-geo\/episodes","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","ajaxPageState":{"libraries":"better_exposed_filters\/auto_submit,better_exposed_filters\/general,core\/html5shiv,fastly\/fastly,flag\/flag.link_ajax,google_analytics\/google_analytics,kcts9\/global,kcts9\/main-menu,kcts9\/partner-player,kcts9\/promo-footer-alert,kcts9\/secondary-nav,kcts9\/site-header,kcts9\/sprite,system\/base,views\/views.ajax,views\/views.module","theme":"kcts9","theme_token":null},"ajaxTrustedUrl":{"\/show\/kuya-geo\/episodes":true},"google_analytics":{"account":"UA-2418330-1","trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackDomainMode":1},"views":{"ajax_path":"\/views\/ajax","ajaxViews":{"views_dom_id:72dfe4d07b934bc68054cb257f892f99b1e05438d99c427692c74fa316607ecf":{"view_name":"show_episodes","view_display_id":"block_1","view_args":"2926\/2019","view_path":"\/show\/kuya-geo\/episodes","view_base_path":null,"view_dom_id":"72dfe4d07b934bc68054cb257f892f99b1e05438d99c427692c74fa316607ecf","pager_element":0}}},"user":{"uid":0,"permissionsHash":"a75f8217a36d7f4424fd844550d1036bdc45ceb7a5b61b4fedd379a17da3863d"}}</script>
+<script src="/sites/default/files/js/js_ZGVgsLvVeQNLEcMb5Oi4hoLSqgUP7tTxGYhDMgAQbmk.js"></script>
+<script src="/themes/custom/kcts9/components/js/svgxuse.min.js?q11247" defer></script>
+<script src="/sites/default/files/js/js_Smgx6HcTAsYuGQTRdqK6ZnrMmLeUPeD8qjQLGZBHW8Y.js"></script>
+<script src="/themes/custom/kcts9/dist/02-molecules/menus/secondary-nav/secondary-nav.js?q11247"></script>
+<script src="/sites/default/files/js/js_Pq3henrAWE02m_c8LNoQyzIF7l9DIPKq_RjUbOS0P8I.js"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"fa09265af4","applicationID":"319653580","transactionName":"ZVEEbBRVWBFWW0ZQWFwbJ1sSXVkMGEhTXlJtVwdbDlE=","queueTime":0,"applicationTime":31,"atts":"SRYHGlxPSx8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

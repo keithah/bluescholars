@@ -1,0 +1,60 @@
+{
+  "batch_history": [
+    {
+      "pages": "1-3",
+      "attempts": 80,
+      "recovered": 80,
+      "failures": 0
+    },
+    {
+      "pages": "1-3 continuation",
+      "attempts": 100,
+      "recovered": 97,
+      "failures": 3
+    },
+    {
+      "pages": "1-3 continuation",
+      "attempts": 11,
+      "recovered": 8,
+      "failures": 3
+    },
+    {
+      "pages": "4-6",
+      "attempts": 7,
+      "recovered": 7,
+      "failures": 0
+    },
+    {
+      "pages": "7-9",
+      "attempts": 11,
+      "recovered": 11,
+      "failures": 0
+    },
+    {
+      "pages": "10-12",
+      "attempts": 13,
+      "recovered": 13,
+      "failures": 0
+    },
+    {
+      "pages": "13-15",
+      "attempts": 11,
+      "recovered": 11,
+      "failures": 0
+    },
+    {
+      "pages": "16-18",
+      "attempts": 3,
+      "recovered": 2,
+      "failures": 1
+    },
+    {
+      "pages": "19-21",
+      "attempts": 0,
+      "recovered": 0,
+      "failures": 0
+    }
+  ],
+  "capture_records_total": 229,
+  "candidate_failures_unique": 4
+}

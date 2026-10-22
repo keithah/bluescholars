@@ -1,0 +1,34 @@
+{
+  "archive": "Arquivo.pt Image Search",
+  "queries": 7,
+  "ranked_offsets_examined_per_query": "0 through 1750 (up to 36 pages of 50 results)",
+  "saved_query_result_pages": 249,
+  "search_result_rows": 12450,
+  "asset_records": 383,
+  "unique_payload_hashes": 383,
+  "bytes": 29707636,
+  "unresolved_downloads": [
+    {
+      "source_image_url": "https://www.lisbonportugaltourism.com/images/museu-geologico-lisbon.jpg",
+      "error": "Arquivo.pt image replay timed out after 45 seconds; source is likely a false positive for Geologic."
+    }
+  ],
+  "query_result_files": [
+    "recovery/arquivo-images/query-results.json",
+    "recovery/arquivo-images/query-results-pages-13-15.json",
+    "recovery/arquivo-images/query-results-pages-10-12.json",
+    "recovery/arquivo-images/query-results-pages-28-30.json",
+    "recovery/arquivo-images/query-results-pages-31-33.json",
+    "recovery/arquivo-images/query-results-pages-25-27.json",
+    "recovery/arquivo-images/query-results-pages-19-21.json",
+    "recovery/arquivo-images/query-results-pages-7-9.json",
+    "recovery/arquivo-images/query-results-pages-34-36.json",
+    "recovery/arquivo-images/query-results-pages-16-18.json",
+    "recovery/arquivo-images/query-results-pages-4-6.json",
+    "recovery/arquivo-images/query-results-pages-22-24.json"
+  ],
+  "limitations": [
+    "Ranked image search only; the inspected offsets are a small sample of the archive index.",
+    "Results include unrelated similarly named pages and images; all remain review candidates and have not been published."
+  ]
+}

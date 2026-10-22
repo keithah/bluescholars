@@ -10,7 +10,7 @@ Source pages remain separated by host and dated edition. The machine-readable re
 ## Recovered editions
 
 - `prometheusbrown.com/2008`: 29 locally saved responses; 97 unresolved or excluded linked resources; crawl queue drained.
-- `prometheusbrown.com/2009`: 278 locally saved responses; 659 unresolved or excluded linked resources; crawl queue drained.
+- `prometheusbrown.com/2009`: 427 locally saved responses; 1072 unresolved or excluded linked resources; crawl queue drained.
 - `prometheusbrown.com/2010`: 456 locally saved responses; 1420 unresolved or excluded linked resources; crawl queue drained.
 - `prometheusbrown.com/2013`: 1 locally saved responses; 6 unresolved or excluded linked resources; crawl queue drained.
 - `prometheusbrown.com/2016`: 11 locally saved responses; 2 unresolved or excluded linked resources; crawl queue drained.
@@ -23,6 +23,6 @@ Source pages remain separated by host and dated edition. The machine-readable re
 
 ## Source-integrity notes
 
-The acquisition contains 674 unique SHA-256 payloads. Each recovered record retains the original URL, capture timestamp, Wayback source, and CDX digest when available.
+The acquisition contains 691 unique SHA-256 payloads. Each recovered record retains the original URL, capture timestamp, Wayback source, and CDX digest when available.
 A sampled Prometheus Brown `/0.html` capture from 2009-09-01 is spam-injected (its page title is ‘Cialis Get Viagra’), while the `/blog/` capture from 2009-12-28 is a genuine Prometheus Brown WordPress blog. Those are kept distinct. Eight unique 2024 root digests (15 index rows) were inspected individually; all are spam-injected JAYA77 casino pages. They are not treated as artist-site editions. 2024–2026 rows remain in the source index for continued review, and the latest selected artist homepage remains 2022.
 Missing linked resources are listed in `artist-sites-report.json`; a failed dependency is not silently replaced with a live asset. Dynamic Gravatar profile-image URLs are listed as excluded gaps. Site pages have scripts, embedded remote frames and forms removed; CSS/image rendering dependencies are local-only in generated output.

@@ -1,0 +1,959 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" id="sixapart-standard">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=7"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://sunlit-shadows.livejournal.com/data/rss" />
+<link rel="alternate" type="application/atom+xml" title="Atom" href="http://sunlit-shadows.livejournal.com/data/atom" />
+<link rel="service.feed" type="application/atom+xml" title="AtomAPI-enabled feed" href="http://www.livejournal.com/interface/atomapi/sunlit_shadows/feed" />
+<link rel="service.post" type="application/atom+xml" title="Create a new post" href="http://www.livejournal.com/interface/atomapi/sunlit_shadows/post" />
+<link rel="openid.server" href="http://www.livejournal.com/openid/server.bml" />
+<meta http-equiv="X-XRDS-Location" content="http://sunlit-shadows.livejournal.com/data/yadis" />
+<link rel='stylesheet' href='http://l-stat.livejournal.com/ad_base.css' type='text/css' />
+<script src='http://l-stat.livejournal.com/js/core.js' type='text/javascript'></script>
+<script src='http://l-stat.livejournal.com/js/dom.js' type='text/javascript'></script>
+<script src='http://l-stat.livejournal.com/js/httpreq.js' type='text/javascript'></script>
+
+<script type='text/javascript'>
+    function controlstrip_init() {
+        if (! $('lj_controlstrip') ){
+            HTTPReq.getJSON({
+              url: "/sunlit_shadows/__rpc_controlstrip?user=sunlit_shadows",
+              onData: function (data) {
+                  var body = document.getElementsByTagName("body")[0];
+                  var div = document.createElement("div");
+                  div.innerHTML = data;
+                      body.appendChild(div);
+              },
+              onError: function (msg) { }
+            });
+        }
+    }
+    DOM.addEventListener(window, "load", controlstrip_init);
+</script>
+    <link rel="meta" type="application/rdf+xml" title="FOAF" href="http://sunlit-shadows.livejournal.com/data/foaf" />
+<link rel="group friends made" title="LiveJournal friends" href="http://sunlit-shadows.livejournal.com/friends" />
+
+        <script type="text/javascript">
+            var Site;
+            if (!Site)
+                Site = {};
+
+            var site_p = {"media_embed_enabled": 1,
+"inbox_update_poll": 0,
+"has_remote": 0,
+"statprefix": "http://l-stat.livejournal.com",
+"server_time": 1261697818,
+"ctx_popup": 1,
+"remote_is_suspended": 0,
+"imgprefix": "http://l-stat.livejournal.com/img",
+"esn_async": 1,
+"currentJournal": "sunlit_shadows",
+"siteroot": "http://www.livejournal.com",
+"currentJournalBase": "http://sunlit-shadows.livejournal.com"};
+            var site_k = ["media_embed_enabled", "inbox_update_poll", "has_remote", "statprefix", "server_time", "ctx_popup", "remote_is_suspended", "imgprefix", "esn_async", "currentJournal", "siteroot", "currentJournalBase"];
+            for (var i = 0; site_k.length > i; i++) {
+                Site[site_k[i]] = site_p[site_k[i]];
+            }
+       </script>
+    <script type="text/javascript" src="http://l-stat.livejournal.com/js/??core.js,dom.js,httpreq.js,livejournal.js,common/AdEngine.js,esn.js,ippu.js,lj_ippu.js,hourglass.js,contextualhover.js,md5.js,login.js,livejournal-local.js?v=1260993949"></script>
+<link rel="stylesheet" type="text/css" href="http://l-stat.livejournal.com/??lj_base.css,esn.css,contextualhover.css,controlstrip.css,controlstrip-dark.css,controlstrip-dark-local.css,controlstrip-local.css?v=1261005691" />
+
+              <style type="text/css">
+              /* overflow for assets */
+              .asset-body, .widget-inner {
+                  overflow-x: auto !important;
+                  overflow-y: hidden !important;
+              }
+
+              .asset-body, .widget-inner {
+                  overflow: auto !important #;
+              }
+
+              * html .asset-body, .widget-inner {
+                  overflow-x: auto !important;
+                  overflow-y: hidden !important;
+                  width: 100% !important;
+                  padding-bottom: 10px;
+              }
+              </style>
+          <link rel="stylesheet" href="http://l-stat.livejournal.com/voxhtml/base.css" type="text/css" />
+
+<link rel="stylesheet" href="http://l-stat.livejournal.com/voxhtml/default/screen.css" type="text/css" />
+<link rel="stylesheet" href="http://l-stat.livejournal.com/voxhtml/ocean/screen.css" type="text/css" />
+
+<link rel="stylesheet" href="http://l-stat.livejournal.com/voxhtml/ocean-fish/screen.css" type="text/css" />
+
+<link rel="stylesheet" href="http://l-stat.livejournal.com/voxhtml/ljextras.css" type="text/css" />
+
+<link rel="stylesheet" href="http://l-stat.livejournal.com/voxhtml/header.css" type="text/css" />
+
+<link rel="stylesheet" href="http://sunlit-shadows.livejournal.com/res/36727123/stylesheet?1260303265" type="text/css" />
+
+<title>if that&#39;s all there is, then let&#39;s keep dancing</title>
+
+</head>
+<body class="asset-stream layout-tw lj-view-recent" id="home"><table id='lj_controlstrip' cellpadding='0' cellspacing='0'><tr valign='top'>                <td id='lj_controlstrip_userpic'><a href='http://www.livejournal.com/'><img src='http://l-stat.livejournal.com/img/controlstrip/ljlogo-transparent.gif' border='0' alt='Home' title='Home' /></a></td>
+                <td id='lj_controlstrip_login' style='background-image: none;' nowrap='nowrap'><form id="login" class="lj_login_form" action="http://www.livejournal.com/login.bml?ret=1" method="post"><div>
+                <input type="hidden" name="mode" value="login" />
+                <input type='hidden' name='chal' id='login_chal' class='lj_login_chal' value='c0:1261695600:2218:300:KA7covFUHuEQDtANgW0D:7cbfaa751949bedfc5c97588e46103c6' />
+                <input type='hidden' name='response' id='login_response' class='lj_login_response' value='' />
+                <table cellspacing="0" cellpadding="0" style="margin-right: 1em;"><tr><td>
+                <label for="xc_user">Username:</label> <input type="text" name="user" size="7" maxlength="17" tabindex="1" id="xc_user" value="" />
+                </td><td>
+                <label style="margin-left: 3px;" for="xc_password">Password:</label> <input type="password" name="password" size="7" tabindex="2" id="xc_password" class='lj_login_password' />
+<input type='submit' value="Log in" tabindex='4' /></td></tr><tr><td valign='top'><a href='http://www.livejournal.com/lostinfo.bml'>Forgot your password?</a></td><td style='font: 10px Arial, Helvetica, sans-serif;' valign='top' colspan='2' align='right'><input type='checkbox' id='xc_remember' name='remember_me' style='height: 10px; width: 10px;' tabindex='3' /><label for='xc_remember'>Remember Me</label></td></tr></table></div></form></td><td id='lj_controlstrip_actionlinks' nowrap='nowrap'><span id='lj_controlstrip_statustext'>You are viewing <span class='ljuser ljuser-name_sunlit_shadows' lj:user='sunlit_shadows' style='white-space: nowrap;'><a href='http://sunlit-shadows.livejournal.com/profile'><img src='http://l-stat.livejournal.com/img/userinfo.gif' alt='[info]' width='17' height='17' style='vertical-align: bottom; border: 0; padding-right: 1px;' /></a><a href='http://sunlit-shadows.livejournal.com/'><b>sunlit_shadows</b></a></span>'s journal</span><br /><a href='http://www.livejournal.com/create.bml'>Create a LiveJournal Account</a>&nbsp;&nbsp; <a href='http://www.livejournal.com/tour/'>Learn more</a></td><td id='lj_controlstrip_search' nowrap='nowrap'><a href='http://www.livejournal.com/explore/' id='main_link'>Explore LJ:</a>&nbsp;&nbsp; <a href='http://www.livejournal.com/life/'>Life</a>&nbsp;&nbsp; <a href='http://www.livejournal.com/entertainment/'>Entertainment</a>&nbsp;&nbsp; <a href='http://www.livejournal.com/music/'>Music</a>&nbsp;&nbsp; <a href='http://www.livejournal.com/culture/'>Culture</a>&nbsp;&nbsp; <a href='http://www.livejournal.com/news-and-politics/'>News & Politics</a>&nbsp;&nbsp; <a href='http://www.livejournal.com/technology/'>Technology</a>&nbsp;&nbsp; <br /><form action='http://www.livejournal.com/search/'>
+    <table cellspacing='0' style='width:90%'>
+    <tr>
+    <td style='width:85%'>
+    <input id='lj_controlstrip_search_input_text' class='lj_controlstrip_search_input_text_sup' type='text' name='q' />
+    </td>
+    <td>
+    <input id='lj_controlstrip_search_submit' class='lj_controlstrip_search_submit_sup' type='submit' value='search' />
+    </td>
+    </tr>
+    </table>
+<input type='hidden' name='ie' value='utf-8' />
+</form>
+</td></tr></table><div id="container"><div id="container-inner">
+<div id="page"><div id="page-inner">
+<div id="message-window" class="hidden"></div>
+<div id="header"><div id="header-inner">
+<div id="header-content"><div id="header-content-inner">
+<div id="header-photo">
+<div id="header-photo-inner"></div>
+</div>
+<div id="header-text"><ul class="nav">
+<li class="item current first"><a href="http://sunlit-shadows.livejournal.com/" title="Recent Entries">Recent Entries</a></li><li class="item"><a href="http://sunlit-shadows.livejournal.com/calendar" title="Archive">Archive</a></li><li class="item"><a href="http://sunlit-shadows.livejournal.com/friends" title="Friends">Friends</a></li><li class="item"><a href="http://sunlit-shadows.livejournal.com/profile" title="User Info">User Info</a></li><li class="item"><a href="http://www.livejournal.com/tools/memories.bml?user=sunlit_shadows" title="Memories">Memories</a></li>
+
+    </ul>
+    <div id="header-name"><a href="http://sunlit-shadows.livejournal.com">if that&#39;s all there is, then let&#39;s keep dancing</a>
+    </div>
+      <div id="header-description">let&#39;s break out the booze and have a ball</div></div>
+    </div><span id="header-content-decor" class="decor"><b></b><u></u><s></s><i></i></span></div><!-- End Header Content -->
+    </div><span id="header-decor" class="decor"><b></b><u></u><s></s><i></i></span></div><!-- End Header --><div id="content"><div id="content-inner">
+<div id="alpha"><div id="alpha-inner">
+<div class="stream-header">
+<p class="prevnext">
+<a class="prev" href="http://sunlit-shadows.livejournal.com/?skip=20">Previous 20</a>
+</p>
+</div>
+
+    <div id="asset-sunlit_shadows-499863" class="post-asset asset">
+      <div class="asset-inner">
+        <div class="asset-header">
+          <div class="asset-header-inner">
+            <div class="asset-header-content">
+              <div class="asset-header-content-inner">
+                <h2 class="asset-name page-header2"><a href="http://sunlit-shadows.livejournal.com/499863.html" class="subj-link" >I steamed some milk and I shook the milk around and said look at that milk.</a></h2>
+          <div class="asset-meta">
+            <ul class="asset-meta-list">
+              <li class="item"><span><abbr class="datetime">May. 13th, 2008 at 8:07 PM</abbr></span></li>
+            </ul>
+          </div>
+        </div></div></div>
+        </div> <!-- end asset-header -->
+        <div class="asset-content">
+            <div class="asset-body"><div class="user-icon"><img src="http://l-userpic.livejournal.com/43214064/685992" title="" alt="in my head" height="100" width="100" /><br /></div>i love seattle but... this feature in last week's stranger was hilariously apt. <br /><a href="http://www.thestranger.com/seattle/Content?oid=567821&amp;ft">What I Can Tell You About Seattle Based on the People I've Met Who Are From There (I Live in Brooklyn) by Tao Lin</a><br /><br />especially this part: <br /><br />"<b>SEATTLE CAUSES PEOPLE WITH COLLEGE DEGREES TO GET NEAR-MINIMUM-WAGE SERVICE JOBS</b><br /><br />About a year ago, a person e-mailed me telling me to read a "story" he had published in an online magazine. The story was called "Clichés vs. Concrete Words." The first sentence was "Clichés are not as good as concrete words because clichés leave out information." The person was 22, his name was Brandon, and he lived in Seattle. Later, I went to Seattle on a book tour and Brandon came to my reading. He was working as a copywriter. We had dinner together. A few months later, I read on his blog that his contract as a copywriter was over. A few months after that, I read on his blog that he got a job at a cafe. "I steamed some milk and I shook the milk around and said look at that milk, look at that milk," said his blog. Brandon has a BA in psychology."<br /><br />i love you seattle, why don't you love me back?</div>
+<div class="lj-currents">
+<ul>
+<li><span class="entryMetadata-label">Location:</span><span class="entryMetadata-content"><a href="http://maps.google.com/maps?q=my+room">my room</a></span></li><li><span class="entryMetadata-label">Mood:</span><span class="entryMetadata-content"> <img src="http://l-stat.livejournal.com/img/mood/neko/kaokitty/amused.gif" title="" alt="" height="40" width="40" /> amused</span></li><li><span class="entryMetadata-label">Music:</span><span class="entryMetadata-content">kexp music that matters podcast</span></li></ul>
+</div>
+</div>
+<div class="asset-meta">
+<ul class="asset-meta-list">
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/499863.html?mode=reply">Leave a comment</a></li>
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://www.livejournal.com/tools/memadd.bml?journal=sunlit_shadows&amp;itemid=499863">Add to Memories</a></li><li class="asset-meta-comments item asset-meta-no-comments"><a href="http://www.livejournal.com/tools/tellafriend.bml?journal=sunlit_shadows&amp;itemid=499863">Tell a Friend</a></li><li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/499863.html">Link</a></li>
+</ul>
+</div>
+
+<div class="asset-footer"></div>
+</div>
+</div>
+
+    <div id="asset-sunlit_shadows-492195" class="post-asset asset">
+      <div class="asset-inner">
+        <div class="asset-header">
+          <div class="asset-header-inner">
+            <div class="asset-header-content">
+              <div class="asset-header-content-inner">
+                <h2 class="asset-name page-header2"><a href="http://sunlit-shadows.livejournal.com/492195.html" class="subj-link" >oh my god, this is old school</a></h2>
+          <div class="asset-meta">
+            <ul class="asset-meta-list">
+              <li class="item"><span><abbr class="datetime">Feb. 19th, 2008 at 3:59 AM</abbr></span></li>
+            </ul>
+          </div>
+        </div></div></div>
+        </div> <!-- end asset-header -->
+        <div class="asset-content">
+            <div class="asset-body"><div class="user-icon"><img src="http://l-userpic.livejournal.com/16458788/685992" title="" alt="bowler hat" height="100" width="90" /><br /></div>anyone remember the band that josie, johanna, tom, and i had in 2004 (my junior year), the sluts (super luscious undergraduate tarts)? i found <a href="http://community.livejournal.com/___slutxcore/5696.html?nc=1">this post</a> by josie in the community we created for it that i forgot all about. it is hilarious and adorable. <br /><img src="http://nzapata.icons.ljtoys.org.uk/mi/dot.gif" border="0" alt=""><br /><b>(&nbsp;<a href="http://sunlit-shadows.livejournal.com/492195.html#cutid1">'song for noel and brandon' under the cut</a>&nbsp;)</b></div>
+<div class="lj-currents">
+<ul>
+<li><span class="entryMetadata-label">Mood:</span><span class="entryMetadata-content"> <img src="http://l-stat.livejournal.com/img/mood/neko/kaokitty/amused.gif" title="" alt="" height="40" width="40" /> teehee</span></li><li><span class="entryMetadata-label">Music:</span><span class="entryMetadata-content">ace of motherfuckin' base</span></li></ul>
+</div>
+</div>
+<div class="asset-meta">
+<ul class="asset-meta-list">
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/492195.html">6 comments</a></li>
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/492195.html?mode=reply">Leave a comment</a></li>
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://www.livejournal.com/tools/memadd.bml?journal=sunlit_shadows&amp;itemid=492195">Add to Memories</a></li><li class="asset-meta-comments item asset-meta-no-comments"><a href="http://www.livejournal.com/tools/tellafriend.bml?journal=sunlit_shadows&amp;itemid=492195">Tell a Friend</a></li><li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/492195.html">Link</a></li>
+</ul>
+</div>
+
+<div class="asset-footer"></div>
+</div>
+</div>
+
+    <div id="asset-sunlit_shadows-488022" class="post-asset asset">
+      <div class="asset-inner">
+        <div class="asset-header">
+          <div class="asset-header-inner">
+            <div class="asset-header-content">
+              <div class="asset-header-content-inner">
+                <h2 class="asset-name page-header2"><a href="http://sunlit-shadows.livejournal.com/488022.html" class="subj-link" >2007 Books read:</a></h2>
+          <div class="asset-meta">
+            <ul class="asset-meta-list">
+              <li class="item"><span><abbr class="datetime">Dec. 31st, 2007 at 5:26 PM</abbr></span></li>
+            </ul>
+          </div>
+        </div></div></div>
+        </div> <!-- end asset-header -->
+        <div class="asset-content">
+            <div class="asset-body"><div class="user-icon"><img src="http://l-userpic.livejournal.com/43214064/685992" title="" alt="in my head" height="100" width="100" /><br /></div><a href="http://www.goodreads.com/review/list?shelf=2007">Check out my goodreads for my reviews of these books and more</a>.<br /><br />48 books- not bad, i almost made my goal of reading a book for every week of the year!<br /><br />January: <br />Lullabies for Little Criminals: A Novel (P.S.) 	O'Neill, Heather 	<br />Buddy Does Seattle (The Complete Buddy Bradley Stories from "Hate" Comics, Vol. I, 1990-94) 	Bagge, Peter 	<br />Hard-Boiled Wonderland and the End of the World: A Novel (Vintage International) 	Murakami, Haruki 	<br />In My Skin: A Memoir (Hardcover) 	Holden, Kate 	<br />Possible Side Effects (Paperback) 	Burroughs, Augusten <br /><img src="http://nzapata.icons.ljtoys.org.uk/mi/dot.gif" border="0" alt=""><br />February:<br />Beijing Doll (Paperback) 	Sue, Chun 	<br />Stumbling on Happiness (Hardcover) 	Gilbert, Daniel 	<br />Paint It Black (Hardcover) 	<br />Polly: A Novel (P.S.) 	Bryant, Amy <br /><br />March:<br />Not Buying It: My Year Without Shopping (Paperback) 	<br />White Ghost Girls (Paperback) 	Greenway, Alice <br /><br />April:<br />Confessions of a Memory Eater (Paperback) 	Kennedy, Pagan<br />Strange Candy (Paperback) 	Hamilton, Laurell K. 	<br />Fun Home: A Family Tragicomic (Hardcover) 	Bechdel, Alison <br /><br />May: <br />The Tattoo Artist: A Novel (Hardcover) 	Ciment, Jill <br />A Spot of Bother (Hardcover) 	Haddon, Mark 	<br />NP (Paperback) 	Yoshimoto, Banana 	<br />Why Should Extroverts Make All the Money?: Networking Made Easy for the Introvert (Paperback) 	Balzano, Frederica J., Ph.D. 	<br />Kafka on the Shore (Hardcover) 	Murakami, Haruki 		<br />Blind Willow, Sleeping Woman (Hardcover) 	Murakami, Haruki 	<br />My Friend Leonard (Hardcover) 	Frey, James 	<br /><br />June: <br />What Is the What (Hardcover) 	Eggers, Dave <br />Chicken with Plums (Hardcover) 	Satrapi, Marjane <br />Winkie (Paperback) 	Chase, Clifford<br /><br />July: <br />The Road (Paperback) 	McCarthy, Cormac 	<br />Bolt Risk (Paperback) 	Wood, Ann 	<br />Lord of the Flies (Paperback) 	Golding, William 	<br />Flight: A Novel (Paperback) 	Alexie, Sherman 	<br />There Is No Me Without You: One Woman's Odyssey to Rescue Africa's Children (Hardcover) 	Greene, Melissa Fay 	<br />The Edible Woman (Mass Market Paperback) 	Atwood, Margaret <br />Dreams from My Father: A Story of Race and Inheritance (Paperback) 	Obama, Barack <br /><br />August:<br />Junky: The Definitive Text of Junk (50th Anniversary Edition) 	William S. Burroughs<br />When I Was Five I Killed Myself (Paperback) 	Buten, Howard 	<br />A Wild Sheep Chase (Paperback) 	Murakami, Haruki 	<br />Less Than Zero (Paperback) 	Ellis, Bret Easton 	<br />Chobits, Volume 1 (Paperback) 	Clamp 	<br />Mysterious Skin (Paperback) 	Heim, Scott 	<br />A Personal Matter (Paperback) 	Oë, Kenzaburo 		<br /><br />September: <br />Harry Potter and the Half-Blood Prince (Book 6) 	Rowling, J. K. <br />Rules of Attraction (Paperback) 	Ellis, Bret Easton 	<br />Harry Potter and the Deathly Hallows (Book 7) 	Rowling, J. K. <br />A Long Way Gone: Memoirs of a Boy Soldier (Hardcover) 	Beah, Ishmael <br /><br />October: <br />Necklace of Kisses: A Novel (Paperback) 	Block, Francesca Lia 	<br /><br />November:<br />A Home at the End of the World: A Novel (Paperback) <br />The Blue Girl (Firebird) 	Lint, Charles de 	<br />Crank (Paperback) 	Hopkins, Ellen 	<br /><br />December: <br />Glass (Hardcover) 	Hopkins, Ellen <br />The Game (Firebird) 	Jones, Diana Wynne</div>
+<div class="lj-currents">
+<ul>
+<li><span class="entryMetadata-label">Mood:</span><span class="entryMetadata-content"> <img src="http://l-stat.livejournal.com/img/mood/neko/kaokitty/geeky.gif" title="" alt="" height="40" width="40" /> geeky</span></li><li><span class="entryMetadata-label">Music:</span><span class="entryMetadata-content">KEXP podcast: Music that Matters</span></li></ul>
+</div>
+<div class="asset-tags"><h4 class="asset-tags-header page-header-4">Tags:</h4>
+<ul class="asset-tags-list">
+ <li class="item"><a rel="tag" href="http://sunlit-shadows.livejournal.com/tag/2007">2007</a>, </li><li class="item"><a rel="tag" href="http://sunlit-shadows.livejournal.com/tag/year+end+lists">year end lists</a></li>
+</ul>
+</div>
+</div>
+<div class="asset-meta">
+<ul class="asset-meta-list">
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/488022.html?mode=reply">Leave a comment</a></li>
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://www.livejournal.com/tools/memadd.bml?journal=sunlit_shadows&amp;itemid=488022">Add to Memories</a></li><li class="asset-meta-comments item asset-meta-no-comments"><a href="http://www.livejournal.com/tools/tellafriend.bml?journal=sunlit_shadows&amp;itemid=488022">Tell a Friend</a></li><li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/488022.html">Link</a></li>
+</ul>
+</div>
+
+<div class="asset-footer"></div>
+</div>
+</div>
+
+    <div id="asset-sunlit_shadows-487309" class="post-asset asset">
+      <div class="asset-inner">
+        <div class="asset-header">
+          <div class="asset-header-inner">
+            <div class="asset-header-content">
+              <div class="asset-header-content-inner">
+                <h2 class="asset-name page-header2"><a href="http://sunlit-shadows.livejournal.com/487309.html" class="subj-link" >the person who wrote this blog post is pretty much my hero</a></h2>
+          <div class="asset-meta">
+            <ul class="asset-meta-list">
+              <li class="item"><span><abbr class="datetime">Dec. 21st, 2007 at 2:38 AM</abbr></span></li>
+            </ul>
+          </div>
+        </div></div></div>
+        </div> <!-- end asset-header -->
+        <div class="asset-content">
+            <div class="asset-body"><div class="user-icon"><img src="http://l-userpic.livejournal.com/43214064/685992" title="" alt="in my head" height="100" width="100" /><br /></div>if you have ever worked in customer service, food service, or the restaurant/hospitality industry, you should read this article. it puts into words perfectly what i've always felt about obnoxious, unreasonably demanding customers.<br /><br /> i was the subject of some brief but intense internet noteriety in the oberlin lj community for expressing very similar sentiments in a post to the community- mostly by people taking the side of the customers. (i have a variety of theories as to why this is the case, but that's beside the point). anyways- this post fucking preaches it. <br /><br /><b>Violent Acres: <a href="http://www.violentacres.com/archives/59/two-phrases-that-destroyed-american-culture">Two Phrases That Destroyed American Culture</a><br />December 13th, 2006</b><br /><br />Every time I promise myself that I will work on controlling my temper, I always end up making a scene.<br /><br />This time, it wasn’t my fault. All I wanted was a bagel. A bagel, a cup of coffee, and perhaps a spot near a window where I could idly watch the traffic go by as I browsed through the newspaper and licked cream cheese from my fingers. But apparently the Gods were not on my side.<br /><br />Today I got in line behind a middle aged woman in a fur coat who was barking orders at the poor bagel girl like she was a dumb misbehaving dog. Fur Coat was ordering multiple bagel sandwiches from a list, but instead of ordering them in such a way that would make sense, she was attempting to order them all at the same time. The Bagel Girl was obviously confused and you could tell by her shaking hands that Fur Coat’s harsh tone was intimidating her. Finally, Fur Coat snapped, “I said light butter on that bagel! Light butter! Jesus!”<br /><br />I couldn’t stand it anymore. I cut in, “You don’t have to be such a bitch about it.”<br /><br />Fur Coat glared daggers at me and stated, “I’m not.”<br /><br />“Well, I beg to differ.”<br /><br />With a disgusted ‘Hrmph,’ Fur Coat went back to her overly complicated order, but she did so quietly and even managed to begrudge the poor girl a ‘Thank you’ after she was finished.<br /><br />I have a theory about asshole customers: I think they only act that way because no one ever calls them on their bullshit. The poor kids behind the counter can’t stand up for themselves lest they lose their jobs and other patrons look the other way claiming ‘it’s none of my business.’<br /><br />Fuck that. When I see some self important asshole verbally degrading a teenaged kid with dead eyes behind a counter, it ruins my day. So, I say some shit. Besides, I feel that if I stay silent, I am almost giving an abuser permission to act like a raging asshole. Ignoring their behavior suggests to them on some sick level that what they’re doing is Ok.<br /><br />It’s not OK.<br /><br />The phrase ‘The Customer is Always Right’ is the single worst philosophy that has ever been adopted by American culture. It gave an entire generation of people the green light to be as impolite, unreasonable, and demanding as their little hearts desired because they were always going to be considered right. It destroyed the entire concept of courtesy and rendered manners obsolete. People began to treat their peers in the service industry like incompetent morons, lacking in feelings or human dignity, who deserved to be browbeaten and abused for no other reason than they had the audacity to run out of a particular brand of coffee. Furthermore, instead of suffering negative repercussions for their appallingly disrespectful behavior, they are awarded with free coupons and plenty of ass kissing. In reality, they should be shunned and humiliated for behaving like such self absorbed little children.<br /><br />Speaking of respect, another idea that has ruined American culture is the one that states, ‘I don’t give respect freely. You have to earn my respect.’ This one is most often uttered by punk kids with bad attitudes and black fingernail polish.<br /><br />Fucking gag me.<br /><br />I mean, how egotistical does one have to be to automatically assume that their respect is so fucking important that one must jump through multiples hoops in order to earn it? How about we give people respect because they are humans with lives and feelings just as important as our own? Why not give people a default level of respect and more or less can either be won or lost based on the behavior of the individual? The loss of respect is something that should be based on actions. The idea that that one must win basic respect in the first place is incredibly belittling. How narcissistic can you be to embrace that ideology?<br /><br />A few Sundays ago, my husband and I went out to breakfast. If anyone has ever attempted to go out to breakfast on a Sunday morning, they know that restaurants are usually packed around then. We were finally seated and our server was not only very busy, but also a new employee according to her ‘Hi! I’m new!’ nametag.<br /><br />I’d like to say that everyone in her section was very understanding. The place was a madhouse and she was obviously out of her element. I wish I could say that the patrons in that restaurant were mannerly and polite and treated her with even an ounce of dignity and consideration. But, if I did, I’d be fucking lying.<br /><br />Nearly everyone yelled at her or condescended to her like she was a stupid little child. One guy ordered a side of ‘home fries’ and reamed her ass when she brought him French fries. Had he looked at the menu a little closer, he would have seen that ‘home fries’ weren’t listed. This particular restaurant only served French fries or hash browns. Her mistake was understandable and he was basically yelling at her because she didn’t read his mind accurately enough.<br /><br />But let’s all forget about that for just a moment. Instead, I want to point out that there are a multitude of things that can go wrong in one’s life. Death, illness, and poverty just to name a few. Yet, here I was watching a grown man lose his fucking shit because he was going to have to wait 5 minutes for a side of hash browns. Suddenly, I lost my appetite.<br /><br />At this point, the angry little man demanded to speak to a manager and a kowtowing corporate whore scuttled over with free coupons and many apologies. The angry man furiously demanded that his waitress be fired right that instant. Over hash browns.<br /><br />I couldn’t take it anymore. I leaned over and interrupted, “When you’re finished talking to this man, I’d like to speak to you. I have the same server.”<br /><br />The angry man smiled smugly, no doubt convinced that I was going to back him up on his quest to get a new girl fired because he had to wait 5 fucking minutes.<br /><br />The manager finished with him and moped over to my table ready for his second tongue lashing of the day. I surprised him by loudly saying, “I just want you to know that our server is doing the best that she can. She’s been trying very hard and has been very sweet to us even though that asshole has treated her so poorly.”<br /><br />The manager suddenly looked panicked and started shooting terrified looks at the table that just finished reaming him out. “I know,” he whispered fearfully, “Don’t worry, I’m not going to fire her.”<br /><br />And while I was pleased to learn that this particular manager wasn’t going to fire the new girl based on the whim of some fat ass piece of trailer trash, I was disappointed that he rewarded said trash’s temper tantrum with free food. I long for the day a manager walks up to a table and says, “How dare you treat my employee this way. Get out now.”<br /><br />I’m sure they want to, but that ridiculous policy ‘The Customer is Always Right’ silences them. So until we banish that phrase from American culture forever, I suggest we quit looking the other way when people behave like scumbags.<br /><br />After all, technicalities may suggest that they are always right, but that doesn’t make them any less an asshole.<br /><br /><img src="http://nzapata.icons.ljtoys.org.uk/mi/dot.gif" border="0" alt=""></div>
+<div class="lj-currents">
+<ul>
+<li><span class="entryMetadata-label">Location:</span><span class="entryMetadata-content"><a href="http://maps.google.com/maps?q=Fremont">Fremont</a></span></li><li><span class="entryMetadata-label">Mood:</span><span class="entryMetadata-content"> <img src="http://l-stat.livejournal.com/img/mood/neko/kaokitty/mischievous.gif" title="" alt="" height="40" width="40" /> vindicated</span></li><li><span class="entryMetadata-label">Music:</span><span class="entryMetadata-content">liz phair</span></li></ul>
+</div>
+<div class="asset-tags"><h4 class="asset-tags-header page-header-4">Tags:</h4>
+<ul class="asset-tags-list">
+ <li class="item"><a rel="tag" href="http://sunlit-shadows.livejournal.com/tag/jobs">jobs</a></li>
+</ul>
+</div>
+</div>
+<div class="asset-meta">
+<ul class="asset-meta-list">
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/487309.html">4 comments</a></li>
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/487309.html?mode=reply">Leave a comment</a></li>
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://www.livejournal.com/tools/memadd.bml?journal=sunlit_shadows&amp;itemid=487309">Add to Memories</a></li><li class="asset-meta-comments item asset-meta-no-comments"><a href="http://www.livejournal.com/tools/tellafriend.bml?journal=sunlit_shadows&amp;itemid=487309">Tell a Friend</a></li><li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/487309.html">Link</a></li>
+</ul>
+</div>
+
+<div class="asset-footer"></div>
+</div>
+</div>
+
+    <div id="asset-sunlit_shadows-485471" class="post-asset asset">
+      <div class="asset-inner">
+        <div class="asset-header">
+          <div class="asset-header-inner">
+            <div class="asset-header-content">
+              <div class="asset-header-content-inner">
+                <h2 class="asset-name page-header2"><a href="http://sunlit-shadows.livejournal.com/485471.html" class="subj-link" >i'm a little bit sad about futures that died</a></h2>
+          <div class="asset-meta">
+            <ul class="asset-meta-list">
+              <li class="item"><span><abbr class="datetime">Dec. 8th, 2007 at 2:18 AM</abbr></span></li>
+            </ul>
+          </div>
+        </div></div></div>
+        </div> <!-- end asset-header -->
+        <div class="asset-content">
+            <div class="asset-body"><div class="user-icon"><img src="http://l-userpic.livejournal.com/43214064/685992" title="" alt="in my head" height="100" width="100" /><br /></div>after the floods, i had a dream a few nights ago that the apocalypse came to seattle. <br /><br />there was an earthquake, and then a tsunami, two tornados, a propane tank explosion, and a train wreck. <br />i saw the ground split in front of me on denny way and a giant wave engulf the new condos downtown. <br />i ran up a hill away from the chaos, pulling a towheaded little girl along behind me, helping her scramble across cracks in the concrete. <br />a tornado slowly made its way across belltown, ripping a path through chainlink fences <br />and a 7-11 gas station, and was joined by another tornado that sucked the top of the space needle into its vortex, where it spun for a few minutes like it was being flushed down a drain, and then detached completely, crushing buildings below in fisher plaza. people on the street screamed, some from witnessing that sight, some from their own tragedies. <br /><br />(i thought at the time- shit, i guess i'm not going to work tomorrow.)<br /><br />a deep and distant boom shook the pavement, echoing the earthquake. i got to the top of the hill (queen anne, perhaps), emerged from a forested path, and went into a building to ask what was going on. someone told me there was a propane tank explosion on the railroad and a train crash. the TVs mounted from the ceiling blared with fires and aerial shots from helicopters of the carnage in seattle. <br /><br />there were people coming down the escalators, all of them horribly wounded. two people stumbled off the escalator, headless, unaware of their condition and not yet lifeless. bandaged bodies slithered down the escalator, prone, their faces melted or their eyes protruding unnaturally above burned lips and mouths. i realized that something horrible had happened upstairs in the building too. that dull, deeply stunned shock reverberated through me as it dawned on me that things would never be the same again. <br /><br /><br />and it was one of those dream that you believe is real while it's happening and have to take a few moments to get back into reality after waking up. the twisted shit that comes out of my head... (i think it may have originated from the "regional state of emergency" that was declared earlier this week when we were having heavy rains and flooding.)<br /><br />possible interpretations? a premonition that i should be careful working at the space needle in case of natural or unnatural disasters, nervousness from the way it sways when it's windy (1 inch for every 10 mph), too many disaster movies and real life disasters?</div>
+<div class="lj-currents">
+<ul>
+<li><span class="entryMetadata-label">Location:</span><span class="entryMetadata-content"><a href="http://maps.google.com/maps?q=fremont">fremont</a></span></li><li><span class="entryMetadata-label">Mood:</span><span class="entryMetadata-content"> <img src="http://l-stat.livejournal.com/img/mood/neko/kaokitty/thoughtful.gif" title="" alt="" height="50" width="40" /> thoughtful</span></li><li><span class="entryMetadata-label">Music:</span><span class="entryMetadata-content">rilo kiley</span></li></ul>
+</div>
+<div class="asset-tags"><h4 class="asset-tags-header page-header-4">Tags:</h4>
+<ul class="asset-tags-list">
+ <li class="item"><a rel="tag" href="http://sunlit-shadows.livejournal.com/tag/dreams">dreams</a></li>
+</ul>
+</div>
+</div>
+<div class="asset-meta">
+<ul class="asset-meta-list">
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/485471.html">1 comment</a></li>
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/485471.html?mode=reply">Leave a comment</a></li>
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://www.livejournal.com/tools/memadd.bml?journal=sunlit_shadows&amp;itemid=485471">Add to Memories</a></li><li class="asset-meta-comments item asset-meta-no-comments"><a href="http://www.livejournal.com/tools/tellafriend.bml?journal=sunlit_shadows&amp;itemid=485471">Tell a Friend</a></li><li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/485471.html">Link</a></li>
+</ul>
+</div>
+
+<div class="asset-footer"></div>
+</div>
+</div>
+
+    <div id="asset-sunlit_shadows-480200" class="post-asset asset">
+      <div class="asset-inner">
+        <div class="asset-header">
+          <div class="asset-header-inner">
+            <div class="asset-header-content">
+              <div class="asset-header-content-inner">
+                <h2 class="asset-name page-header2"><a href="http://sunlit-shadows.livejournal.com/480200.html" class="subj-link" >it's time to switch the roles</a></h2>
+          <div class="asset-meta">
+            <ul class="asset-meta-list">
+              <li class="item"><span><abbr class="datetime">Sep. 12th, 2007 at 11:01 PM</abbr></span></li>
+            </ul>
+          </div>
+        </div></div></div>
+        </div> <!-- end asset-header -->
+        <div class="asset-content">
+            <div class="asset-body"><div class="user-icon"><img src="http://l-userpic.livejournal.com/16458788/685992" title="" alt="bowler hat" height="100" width="90" /><br /></div>ciara's "like a boy"<br /><br /><iframe src="http://lj-toys.com/?auth_token=sessionless:1261695600:embedcontent:685992%263%26:4baa0f6a66adacd9f65d3a284e1c45c5da9a6716&amp;moduleid=3&amp;preview=&amp;journalid=685992" width="425" height="350" frameborder="0" class="lj_embedcontent" name="embed_685992_3"></iframe><br /> <br><a href="http://www.completealbumlyrics.com/single/Ciara/" title="Ciara lyrics">Ciara</a> - <a href="http://www.completealbumlyrics.com/lyric/131197/Ciara+-+Like+A+Boy.html" title="Like A Boy lyrics">Like A Boy lyrics</a><br /><br />ok, i know what i said about hip-pop... but the imagery and message of this song won me over. actually it made me feel like cheering. i am kind of sad now that i won't be in oberlin for drag ball this year- i just know there are going to be some drag kings performing to this song, and i would love to see that. <br />yay genderplay!<br /><br /><i>ETA: the sociologist/feminist side of me could definitely find a lot to critique if i deconstructed this video. actually one wouldn't need to look too hard to find problematic things in it. but for now, i just wanted to enjoy the aesthetics of the video, and celebrate the fact that gender play showed up in the pop world- compared to a lot of stuff out there, this is pretty subversive.</i><br /><br />found via <a href="http://feministing.com/archives/007719.html#comments&quot;">feministing</a>- the comments actually echo some of <span class='ljuser ljuser-name_inkyoctopus' lj:user='inkyoctopus' style='white-space: nowrap;'><a href='http://inkyoctopus.livejournal.com/profile'><img src='http://l-stat.livejournal.com/img/userinfo.gif' alt='[info]' width='17' height='17' style='vertical-align: bottom; border: 0; padding-right: 1px;' /></a><a href='http://inkyoctopus.livejournal.com/'><b>inkyoctopus</b></a></span>'s critiques about gender in the song. go there for your deconstruction fix. :P</div>
+<div class="lj-currents">
+<ul>
+<li><span class="entryMetadata-label">Mood:</span><span class="entryMetadata-content"> <img src="http://l-stat.livejournal.com/img/mood/neko/kaokitty/giggly.gif" title="" alt="" height="40" width="40" /> giggly</span></li><li><span class="entryMetadata-label">Music:</span><span class="entryMetadata-content">kc accidental</span></li></ul>
+</div>
+</div>
+<div class="asset-meta">
+<ul class="asset-meta-list">
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/480200.html">4 comments</a></li>
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/480200.html?mode=reply">Leave a comment</a></li>
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://www.livejournal.com/tools/memadd.bml?journal=sunlit_shadows&amp;itemid=480200">Add to Memories</a></li><li class="asset-meta-comments item asset-meta-no-comments"><a href="http://www.livejournal.com/tools/tellafriend.bml?journal=sunlit_shadows&amp;itemid=480200">Tell a Friend</a></li><li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/480200.html">Link</a></li>
+</ul>
+</div>
+
+<div class="asset-footer"></div>
+</div>
+</div>
+
+    <div id="asset-sunlit_shadows-478826" class="post-asset asset">
+      <div class="asset-inner">
+        <div class="asset-header">
+          <div class="asset-header-inner">
+            <div class="asset-header-content">
+              <div class="asset-header-content-inner">
+                <h2 class="asset-name page-header2"><a href="http://sunlit-shadows.livejournal.com/478826.html" class="subj-link" >it's the hipster olympics!</a></h2>
+          <div class="asset-meta">
+            <ul class="asset-meta-list">
+              <li class="item"><span><abbr class="datetime">Sep. 2nd, 2007 at 1:56 AM</abbr></span></li>
+            </ul>
+          </div>
+        </div></div></div>
+        </div> <!-- end asset-header -->
+        <div class="asset-content">
+            <div class="asset-body"><div class="user-icon"><img src="http://l-userpic.livejournal.com/24484079/685992" title="" alt="dorky" height="100" width="100" /><br /></div>if you have ever been annoyed by hipsters (or accused of being one) you must watch this.<br /><br /><iframe src="http://lj-toys.com/?auth_token=sessionless:1261695600:embedcontent:685992%261%26:1174ad43bd961f92c7410d21a283392b1c51def6&amp;moduleid=1&amp;preview=&amp;journalid=685992" width="425" height="350" frameborder="0" class="lj_embedcontent" name="embed_685992_1"></iframe></div>
+<div class="lj-currents">
+<ul>
+<li><span class="entryMetadata-label">Mood:</span><span class="entryMetadata-content"> <img src="http://l-stat.livejournal.com/img/mood/neko/kaokitty/amused.gif" title="" alt="" height="40" width="40" /> amused</span></li><li><span class="entryMetadata-label">Music:</span><span class="entryMetadata-content">sid vicious: not a hipster</span></li></ul>
+</div>
+<div class="asset-tags"><h4 class="asset-tags-header page-header-4">Tags:</h4>
+<ul class="asset-tags-list">
+ <li class="item"><a rel="tag" href="http://sunlit-shadows.livejournal.com/tag/funny">funny</a></li>
+</ul>
+</div>
+</div>
+<div class="asset-meta">
+<ul class="asset-meta-list">
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/478826.html">2 comments</a></li>
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/478826.html?mode=reply">Leave a comment</a></li>
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://www.livejournal.com/tools/memadd.bml?journal=sunlit_shadows&amp;itemid=478826">Add to Memories</a></li><li class="asset-meta-comments item asset-meta-no-comments"><a href="http://www.livejournal.com/tools/tellafriend.bml?journal=sunlit_shadows&amp;itemid=478826">Tell a Friend</a></li><li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/478826.html">Link</a></li>
+</ul>
+</div>
+
+<div class="asset-footer"></div>
+</div>
+</div>
+
+    <div id="asset-sunlit_shadows-478718" class="post-asset asset">
+      <div class="asset-inner">
+        <div class="asset-header">
+          <div class="asset-header-inner">
+            <div class="asset-header-content">
+              <div class="asset-header-content-inner">
+                <h2 class="asset-name page-header2"><a href="http://sunlit-shadows.livejournal.com/478718.html" class="subj-link" >p.s.</a></h2>
+          <div class="asset-meta">
+            <ul class="asset-meta-list">
+              <li class="item"><span><abbr class="datetime">Aug. 30th, 2007 at 1:01 AM</abbr></span></li>
+            </ul>
+          </div>
+        </div></div></div>
+        </div> <!-- end asset-header -->
+        <div class="asset-content">
+            <div class="asset-body"><div class="user-icon"><img src="http://l-userpic.livejournal.com/45694460/685992" title="" alt="ichigo" height="80" width="100" /><br /></div>even though i'm coming back in october, i'm still pained by every minute i spend away from the seattle music scene. especially now that bumbershoot is coming up and i haven't been to it since my senior year of high school. missing the capital hill block party sucked too. :'( <br /><br />TO TOP IT ALL OFF: i missed both the seattle and columbus, ohio tour dates of rufus wainwright's release the stars tour. now he's going to be touring in europe and who knows when his next US tour will be. i haven't seen him live since 2004. it's kind of sad to think that (what i think of as) his golden age is gone.<br /><br />also. i need people. i need a scene. my friends in cleveland include brandon, garth (but not his roommates in little italy, who are assholes), occasionally a girl garth is hanging out with, and random people who i run into on coventry or at the b-side. i still don't know if i should bother trying to make friends here. maybe i'll get a cool roommate for september.</div>
+<div class="lj-currents">
+<ul>
+<li><span class="entryMetadata-label">Mood:</span><span class="entryMetadata-content"> <img src="http://l-stat.livejournal.com/img/mood/neko/kaokitty/sad.gif" title="" alt="" height="40" width="40" /> bummed</span></li><li><span class="entryMetadata-label">Music:</span><span class="entryMetadata-content">blue scholars</span></li></ul>
+</div>
+</div>
+<div class="asset-meta">
+<ul class="asset-meta-list">
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/478718.html">6 comments</a></li>
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/478718.html?mode=reply">Leave a comment</a></li>
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://www.livejournal.com/tools/memadd.bml?journal=sunlit_shadows&amp;itemid=478718">Add to Memories</a></li><li class="asset-meta-comments item asset-meta-no-comments"><a href="http://www.livejournal.com/tools/tellafriend.bml?journal=sunlit_shadows&amp;itemid=478718">Tell a Friend</a></li><li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/478718.html">Link</a></li>
+</ul>
+</div>
+
+<div class="asset-footer"></div>
+</div>
+</div>
+
+    <div id="asset-sunlit_shadows-475502" class="post-asset asset">
+      <div class="asset-inner">
+        <div class="asset-header">
+          <div class="asset-header-inner">
+            <div class="asset-header-content">
+              <div class="asset-header-content-inner">
+                <h2 class="asset-name page-header2"><a href="http://sunlit-shadows.livejournal.com/475502.html" class="subj-link" >i got a crush...on obama!</a></h2>
+          <div class="asset-meta">
+            <ul class="asset-meta-list">
+              <li class="item"><span><abbr class="datetime">Jul. 22nd, 2007 at 6:06 PM</abbr></span></li>
+            </ul>
+          </div>
+        </div></div></div>
+        </div> <!-- end asset-header -->
+        <div class="asset-content">
+            <div class="asset-body"><div class="user-icon"><img src="http://l-userpic.livejournal.com/43214064/685992" title="" alt="in my head" height="100" width="100" /><br /></div>this is too cute:<br /><br />
+<object width="425" height="350">
+    <param name="movie" value="http://www.youtube.com/v/wKsoXHYICqU"></param>
+    
+    <embed src="http://www.youtube.com/v/wKsoXHYICqU" type="application/x-shockwave-flash" width="425" height="350"   allowScriptAccess="never"></embed>
+</object>
+    <br /><br />debate '08: obama girls vs. giuliani girl<br /><br />
+<object width="425" height="350">
+    <param name="movie" value="http://www.youtube.com/v/ekSxxlj6rGE"></param>
+    
+    <embed src="http://www.youtube.com/v/ekSxxlj6rGE" type="application/x-shockwave-flash" width="425" height="350"   allowScriptAccess="never"></embed>
+</object>
+    </div>
+<div class="lj-currents">
+<ul>
+<li><span class="entryMetadata-label">Mood:</span><span class="entryMetadata-content"> <img src="http://l-stat.livejournal.com/img/mood/neko/kaokitty/cheerful.gif" title="" alt="" height="40" width="40" /> squee!</span></li></ul>
+</div>
+</div>
+<div class="asset-meta">
+<ul class="asset-meta-list">
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/475502.html?mode=reply">Leave a comment</a></li>
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://www.livejournal.com/tools/memadd.bml?journal=sunlit_shadows&amp;itemid=475502">Add to Memories</a></li><li class="asset-meta-comments item asset-meta-no-comments"><a href="http://www.livejournal.com/tools/tellafriend.bml?journal=sunlit_shadows&amp;itemid=475502">Tell a Friend</a></li><li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/475502.html">Link</a></li>
+</ul>
+</div>
+
+<div class="asset-footer"></div>
+</div>
+</div>
+
+    <div id="asset-sunlit_shadows-473556" class="post-asset asset">
+      <div class="asset-inner">
+        <div class="asset-header">
+          <div class="asset-header-inner">
+            <div class="asset-header-content">
+              <div class="asset-header-content-inner">
+                <h2 class="asset-name page-header2"><a href="http://sunlit-shadows.livejournal.com/473556.html" class="subj-link" >Best photo hosting site?</a></h2>
+          <div class="asset-meta">
+            <ul class="asset-meta-list">
+              <li class="item"><span><abbr class="datetime">May. 21st, 2007 at 11:03 AM</abbr></span></li>
+            </ul>
+          </div>
+        </div></div></div>
+        </div> <!-- end asset-header -->
+        <div class="asset-content">
+            <div class="asset-body"><div class="user-icon"><img src="http://l-userpic.livejournal.com/43214064/685992" title="" alt="in my head" height="100" width="100" /><br /></div>So I have photos online in a zillion different places (yahoo, facebook, myspace, t-mobile, photobucket, livejournal, my hard drive...) and i want to put them all on one photo hosting site so i don't lose track of any of them. Which site do you think is the best/most useful? Picasa, Flickr, photobucket? Flickr seems to be popular, but apparently they only show the most recent 200 photos. Does that mean you can't link to them too? What do you use?</div>
+<div class="lj-currents">
+<ul>
+<li><span class="entryMetadata-label">Location:</span><span class="entryMetadata-content"><a href="http://maps.google.com/maps?q=csu">csu</a></span></li><li><span class="entryMetadata-label">Mood:</span><span class="entryMetadata-content"> <img src="http://l-stat.livejournal.com/img/mood/neko/kaokitty/curious.gif" title="" alt="" height="40" width="40" /> curious</span></li></ul>
+</div>
+<div class="asset-tags"><h4 class="asset-tags-header page-header-4">Tags:</h4>
+<ul class="asset-tags-list">
+ <li class="item"><a rel="tag" href="http://sunlit-shadows.livejournal.com/tag/advice">advice</a></li>
+</ul>
+</div>
+</div>
+<div class="asset-meta">
+<ul class="asset-meta-list">
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/473556.html">7 comments</a></li>
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/473556.html?mode=reply">Leave a comment</a></li>
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://www.livejournal.com/tools/memadd.bml?journal=sunlit_shadows&amp;itemid=473556">Add to Memories</a></li><li class="asset-meta-comments item asset-meta-no-comments"><a href="http://www.livejournal.com/tools/tellafriend.bml?journal=sunlit_shadows&amp;itemid=473556">Tell a Friend</a></li><li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/473556.html">Link</a></li>
+</ul>
+</div>
+
+<div class="asset-footer"></div>
+</div>
+</div>
+
+    <div id="asset-sunlit_shadows-462632" class="post-asset asset">
+      <div class="asset-inner">
+        <div class="asset-header">
+          <div class="asset-header-inner">
+            <div class="asset-header-content">
+              <div class="asset-header-content-inner">
+                <h2 class="asset-name page-header2"><a href="http://sunlit-shadows.livejournal.com/462632.html" class="subj-link" >hahaha</a></h2>
+          <div class="asset-meta">
+            <ul class="asset-meta-list">
+              <li class="item"><span><abbr class="datetime">Dec. 12th, 2006 at 9:30 AM</abbr></span></li>
+            </ul>
+          </div>
+        </div></div></div>
+        </div> <!-- end asset-header -->
+        <div class="asset-content">
+            <div class="asset-body"><div class="user-icon"><img src="http://l-userpic.livejournal.com/13194588/685992" title="" alt="slc punk- &quot;you&#39;re not jesus, you&#39;re bob!&quot;, silly" height="100" width="100" /><br /></div><a href="http://www.overheardatcollege.com/?p=935">from overheard at college</a><br /><br />Drunk girl: So I heard you guys like have a Sex Day where you put up like tents and stuff?<br />Oberlin kids: ...<br />Drunk girl: Or not. Okay, Jell-o shots, then?<br /><br />Northwestern University<br />Evanston, Illinois</div>
+<div class="lj-currents">
+<ul>
+<li><span class="entryMetadata-label">Location:</span><span class="entryMetadata-content"><a href="http://maps.google.com/maps?q=cleveland+state+university">cleveland state university</a></span></li><li><span class="entryMetadata-label">Mood:</span><span class="entryMetadata-content"> <img src="http://l-stat.livejournal.com/img/mood/neko/kaokitty/amused.gif" title="" alt="" height="40" width="40" /> amused</span></li><li><span class="entryMetadata-label">Music:</span><span class="entryMetadata-content">the blue scholars</span></li></ul>
+</div>
+<div class="asset-tags"><h4 class="asset-tags-header page-header-4">Tags:</h4>
+<ul class="asset-tags-list">
+ <li class="item"><a rel="tag" href="http://sunlit-shadows.livejournal.com/tag/oberlin">oberlin</a></li>
+</ul>
+</div>
+</div>
+<div class="asset-meta">
+<ul class="asset-meta-list">
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/462632.html">1 comment</a></li>
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/462632.html?mode=reply">Leave a comment</a></li>
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://www.livejournal.com/tools/memadd.bml?journal=sunlit_shadows&amp;itemid=462632">Add to Memories</a></li><li class="asset-meta-comments item asset-meta-no-comments"><a href="http://www.livejournal.com/tools/tellafriend.bml?journal=sunlit_shadows&amp;itemid=462632">Tell a Friend</a></li><li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/462632.html">Link</a></li>
+</ul>
+</div>
+
+<div class="asset-footer"></div>
+</div>
+</div>
+
+    <div id="asset-sunlit_shadows-455887" class="post-asset asset">
+      <div class="asset-inner">
+        <div class="asset-header">
+          <div class="asset-header-inner">
+            <div class="asset-header-content">
+              <div class="asset-header-content-inner">
+                <h2 class="asset-name page-header2"><a href="http://sunlit-shadows.livejournal.com/455887.html" class="subj-link" >pwn3d!</a></h2>
+          <div class="asset-meta">
+            <ul class="asset-meta-list">
+              <li class="item"><span><abbr class="datetime">Aug. 6th, 2006 at 1:13 AM</abbr></span></li>
+            </ul>
+          </div>
+        </div></div></div>
+        </div> <!-- end asset-header -->
+        <div class="asset-content">
+            <div class="asset-body"><div class="user-icon"><img src="http://l-userpic.livejournal.com/43214064/685992" title="" alt="in my head" height="100" width="100" /><br /></div>a dumb person: <br /><br /><i>"Don't judge me"<br />You know, this is one of my favorite combinations. Someone with several colors of hair (concurrently - none of which are found in nature), facial piercings and clothes that KISS would have been proud to wear bemoans the fact that so many people (including prospective employers, border guards, and police officers) feel so free to judge them by appearance. "You can't judge a book by it's cover," they say.<br /><br />"So true," I say. Then I ask, "Why do you choose to look like that?"<br /><br />"That's easy" they say, "It an expression of who I am."<br /><br />The best part is, even though I've been through this conversation more than once, the other person has never seen the irony of their statements.</i><br /><br />sunlit_shadows:<br />	<br />but the thing is, you, and the police officers, are attaching a negative value to this particular expression of personality. what's so bad about funky hair, piercings, or non-conservative clothes? yeah, they can be expressions of disagreement with prevalent cultural values of materialism, conformity, gender roles, authoritarianism, and such- and your point is? what's wrong with that? assuming that people who dress like that are criminals or bad people is just blindly judgemental, and it's the attitude that those clothes are protesting. i find it very amusing that YOU fail to see the irony of your statements.</div>
+</div>
+<div class="asset-meta">
+<ul class="asset-meta-list">
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/455887.html">4 comments</a></li>
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/455887.html?mode=reply">Leave a comment</a></li>
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://www.livejournal.com/tools/memadd.bml?journal=sunlit_shadows&amp;itemid=455887">Add to Memories</a></li><li class="asset-meta-comments item asset-meta-no-comments"><a href="http://www.livejournal.com/tools/tellafriend.bml?journal=sunlit_shadows&amp;itemid=455887">Tell a Friend</a></li><li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/455887.html">Link</a></li>
+</ul>
+</div>
+
+<div class="asset-footer"></div>
+</div>
+</div>
+
+    <div id="asset-sunlit_shadows-453664" class="post-asset asset">
+      <div class="asset-inner">
+        <div class="asset-header">
+          <div class="asset-header-inner">
+            <div class="asset-header-content">
+              <div class="asset-header-content-inner">
+                <h2 class="asset-name page-header2"><a href="http://sunlit-shadows.livejournal.com/453664.html" class="subj-link" >bookslut</a></h2>
+          <div class="asset-meta">
+            <ul class="asset-meta-list">
+              <li class="item"><span><abbr class="datetime">Jul. 27th, 2006 at 11:41 PM</abbr></span></li>
+            </ul>
+          </div>
+        </div></div></div>
+        </div> <!-- end asset-header -->
+        <div class="asset-content">
+            <div class="asset-body"><div class="user-icon"><img src="http://l-userpic.livejournal.com/43214064/685992" title="" alt="in my head" height="100" width="100" /><br /></div>books i have read this summer (june- present):<br /><br />*recommended!<br /><br />1. time's arrow- martin amis<br />*2. my summer of love- helen cross<br /><i>her words were like tinfoil; they shone and they covered things up.</i> p. 95<br />3. everything bad is good for you: how today's popular culture is actually making us smarter- steven johnson<br />*4. the burn journals- brent runyon<br />5. honky- dalton conley<br />*6. extremely loud and incredibly close- jonathon safran-foer<br />*7. smashed: story of a drunken girlhood- koren zailckas<br />8. fast girls: teenage tribes and the myth of the slut- emily white<br />*9. saying yes: in defense of drug use- jacob sullum<br />10. a long way down- nick hornby<br />11. girl, interrupted- susanna kaysen<br />*12. the last stand of mr. america- jason flores<br />*13. bobos in paradise: the new upper class and how they got there- david brooks<br />14. high fidelity- nick hornby<br />*15. never let me go- kazuo ishiguro<br />15. an artist of the floating world- kazuo ishiguro<br />16. the wonder spot- melissa bank<br />*17. without a net: the female experience of growing up working class- edited by michelle tea<br />18. after the quake: stories- haruki murakami<br />*19. brokeback mountain- annie proulx<br />20. how we are hungry: stories- dave eggers<br />*21. choke- chuck palahniuk<br />*22. a million little pieces- james frey<br /><br />in progress:<br />23. wilco: learning how to die- greg kot<br />24. rock & roll archaeologist- peter blecha<br />25. hey nostradamus!- douglas coupland<br /><br />jesus, am i a freak or what?<br /><br />what have you been reading? what should i read next?<img src="http://nzapata.icons.ljtoys.org.uk/mi/dot.gif" border="0"></div>
+<div class="lj-currents">
+<ul>
+<li><span class="entryMetadata-label">Mood:</span><span class="entryMetadata-content"> <img src="http://l-stat.livejournal.com/img/mood/neko/kaokitty/nerdy.gif" title="" alt="" height="40" width="40" /> nerdy</span></li><li><span class="entryMetadata-label">Music:</span><span class="entryMetadata-content">Copafeelia // Seasick by Imperial Teen</span></li></ul>
+</div>
+</div>
+<div class="asset-meta">
+<ul class="asset-meta-list">
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/453664.html">9 comments</a></li>
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/453664.html?mode=reply">Leave a comment</a></li>
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://www.livejournal.com/tools/memadd.bml?journal=sunlit_shadows&amp;itemid=453664">Add to Memories</a></li><li class="asset-meta-comments item asset-meta-no-comments"><a href="http://www.livejournal.com/tools/tellafriend.bml?journal=sunlit_shadows&amp;itemid=453664">Tell a Friend</a></li><li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/453664.html">Link</a></li>
+</ul>
+</div>
+
+<div class="asset-footer"></div>
+</div>
+</div>
+
+    <div id="asset-sunlit_shadows-453247" class="post-asset asset">
+      <div class="asset-inner">
+        <div class="asset-header">
+          <div class="asset-header-inner">
+            <div class="asset-header-content">
+              <div class="asset-header-content-inner">
+                <h2 class="asset-name page-header2"><a href="http://sunlit-shadows.livejournal.com/453247.html" class="subj-link" >pop music musings</a></h2>
+          <div class="asset-meta">
+            <ul class="asset-meta-list">
+              <li class="item"><span><abbr class="datetime">Jul. 26th, 2006 at 8:42 PM</abbr></span></li>
+            </ul>
+          </div>
+        </div></div></div>
+        </div> <!-- end asset-header -->
+        <div class="asset-content">
+            <div class="asset-body"><div class="user-icon"><img src="http://l-userpic.livejournal.com/18183153/685992" title="" alt="diseased mind" height="100" width="100" /><br /></div>listening to oldies for eight hours a day at work is really fucking with my head. i guess my july 4th theory was wrong, as the default muzak is now oldies regardless of the holiday season. all of these innocent 50s songs with earnest declarations of love and desire to marry just make me incredibly bitter. if only the 50s weren't so sexually repressed, two whole generations would have been saved from false promises of true and everlasting love because the singers in doo-wop and rock n roll songs could have said "i wanna fuck you like an animal" instead of "i want to marry you and take you home" or even "i wanna hold your hand." and now my generation is stuck being disappointed when sex doesn't mean you're in love and when people say they love you because they want sex. <br /><br />at the same time, some 50s and 60s songs are suprisingly, incredibly cynical. "this diamond ring doesn't shine for me anymore," "take good care of my baby," etc. they have that sort of bittersweet edge that slaps you in the face when you really listen to the lyrics instead of the happy bopping melodies. <br /><br />they never play anything like "we've gotta get out of this place" or "in the ghetto", though. maybe i'm attributing too much influence to pop music, but you have to admit that it is a reflection of the values and mores of the time. <br /><br />i gave my two weeks notice today. i also got my 30 day evaluation- i got excellent marks on everything except for dress code- i need to tuck in my shirt, but it's a girl shirt so it's too short to tuck in. <img src="http://nzapata.icons.ljtoys.org.uk/mi/dot.gif" border="0"></div>
+<div class="lj-currents">
+<ul>
+<li><span class="entryMetadata-label">Mood:</span><span class="entryMetadata-content"> <img src="http://l-stat.livejournal.com/img/mood/neko/kaokitty/thoughtful.gif" title="" alt="" height="50" width="40" /> thoughtful</span></li><li><span class="entryMetadata-label">Music:</span><span class="entryMetadata-content">my morning jacket</span></li></ul>
+</div>
+</div>
+<div class="asset-meta">
+<ul class="asset-meta-list">
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/453247.html">8 comments</a></li>
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/453247.html?mode=reply">Leave a comment</a></li>
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://www.livejournal.com/tools/memadd.bml?journal=sunlit_shadows&amp;itemid=453247">Add to Memories</a></li><li class="asset-meta-comments item asset-meta-no-comments"><a href="http://www.livejournal.com/tools/tellafriend.bml?journal=sunlit_shadows&amp;itemid=453247">Tell a Friend</a></li><li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/453247.html">Link</a></li>
+</ul>
+</div>
+
+<div class="asset-footer"></div>
+</div>
+</div>
+
+    <div id="asset-sunlit_shadows-447140" class="post-asset asset">
+      <div class="asset-inner">
+        <div class="asset-header">
+          <div class="asset-header-inner">
+            <div class="asset-header-content">
+              <div class="asset-header-content-inner">
+                <h2 class="asset-name page-header2"><a href="http://sunlit-shadows.livejournal.com/447140.html" class="subj-link" >oddly enough</a></h2>
+          <div class="asset-meta">
+            <ul class="asset-meta-list">
+              <li class="item"><span><abbr class="datetime">May. 30th, 2006 at 11:50 PM</abbr></span></li>
+            </ul>
+          </div>
+        </div></div></div>
+        </div> <!-- end asset-header -->
+        <div class="asset-content">
+            <div class="asset-body"><div class="user-icon"><img src="http://l-userpic.livejournal.com/3615678/685992" title="" alt="good girl" height="90" width="90" /><br /></div>one of the most satisfying things about graduating is changing my status from "some college" to "college degree" or "alumni" in myspace, thefacebook, okcupid, and the other online thingies i'm addicted to. <br /><br />now i have to pack up all of my earthly belongings to be mailed home, stored in brandon's house over the summer, or brought home with me on my flight back to seattle.</div>
+<div class="lj-currents">
+<ul>
+<li><span class="entryMetadata-label">Mood:</span><span class="entryMetadata-content"> <img src="http://l-stat.livejournal.com/img/mood/neko/kaokitty/amused.gif" title="" alt="" height="40" width="40" /> amused</span></li><li><span class="entryMetadata-label">Music:</span><span class="entryMetadata-content">faye wong-firefly (thanks, johanna!)</span></li></ul>
+</div>
+</div>
+<div class="asset-meta">
+<ul class="asset-meta-list">
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/447140.html?mode=reply">Leave a comment</a></li>
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://www.livejournal.com/tools/memadd.bml?journal=sunlit_shadows&amp;itemid=447140">Add to Memories</a></li><li class="asset-meta-comments item asset-meta-no-comments"><a href="http://www.livejournal.com/tools/tellafriend.bml?journal=sunlit_shadows&amp;itemid=447140">Tell a Friend</a></li><li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/447140.html">Link</a></li>
+</ul>
+</div>
+
+<div class="asset-footer"></div>
+</div>
+</div>
+
+    <div id="asset-sunlit_shadows-440101" class="post-asset asset">
+      <div class="asset-inner">
+        <div class="asset-header">
+          <div class="asset-header-inner">
+            <div class="asset-header-content">
+              <div class="asset-header-content-inner">
+                <h2 class="asset-name page-header2"><a href="http://sunlit-shadows.livejournal.com/440101.html" class="subj-link" >that movie meme, drag ball report to follow</a></h2>
+          <div class="asset-meta">
+            <ul class="asset-meta-list">
+              <li class="item"><span><abbr class="datetime">Apr. 10th, 2006 at 12:08 AM</abbr></span></li>
+            </ul>
+          </div>
+        </div></div></div>
+        </div> <!-- end asset-header -->
+        <div class="asset-content">
+            <div class="asset-body"><div class="user-icon"><img src="http://l-userpic.livejournal.com/43214064/685992" title="" alt="in my head" height="100" width="100" /><br /></div>Supposedly if you've seen more than 70 of these 200 movies, you have no life. yoinked from a bunch of people on my friends list. i don't think anyone actually reads these- the real fun is in filling them out, not reading other peoples', but i might as well post it for someone else to fill out. :)<br /><br /><b>(&nbsp;<a href="http://sunlit-shadows.livejournal.com/440101.html#cutid1">60- close but no cigar</a>&nbsp;)</b></div>
+<div class="lj-currents">
+<ul>
+<li><span class="entryMetadata-label">Mood:</span><span class="entryMetadata-content"> <img src="http://l-stat.livejournal.com/img/mood/neko/kaokitty/working.gif" title="" alt="" height="40" width="40" /> working</span></li><li><span class="entryMetadata-label">Music:</span><span class="entryMetadata-content">ben folds five- narcolepsy</span></li></ul>
+</div>
+</div>
+<div class="asset-meta">
+<ul class="asset-meta-list">
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/440101.html">2 comments</a></li>
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/440101.html?mode=reply">Leave a comment</a></li>
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://www.livejournal.com/tools/memadd.bml?journal=sunlit_shadows&amp;itemid=440101">Add to Memories</a></li><li class="asset-meta-comments item asset-meta-no-comments"><a href="http://www.livejournal.com/tools/tellafriend.bml?journal=sunlit_shadows&amp;itemid=440101">Tell a Friend</a></li><li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/440101.html">Link</a></li>
+</ul>
+</div>
+
+<div class="asset-footer"></div>
+</div>
+</div>
+
+    <div id="asset-sunlit_shadows-436805" class="post-asset asset">
+      <div class="asset-inner">
+        <div class="asset-header">
+          <div class="asset-header-inner">
+            <div class="asset-header-content">
+              <div class="asset-header-content-inner">
+                <h2 class="asset-name page-header2"><a href="http://sunlit-shadows.livejournal.com/436805.html" class="subj-link" >last.fm lemmingness</a></h2>
+          <div class="asset-meta">
+            <ul class="asset-meta-list">
+              <li class="item"><span><abbr class="datetime">Mar. 14th, 2006 at 2:04 AM</abbr></span></li>
+            </ul>
+          </div>
+        </div></div></div>
+        </div> <!-- end asset-header -->
+        <div class="asset-content">
+            <div class="asset-body"><div class="user-icon"><img src="http://l-userpic.livejournal.com/24460551/685992" title="" alt="love rock" height="100" width="100" /><br /></div>i just joined last.fm. <br /><br /><a href="http://www.last.fm/user/sunlit_shadows/?chartstyle=winterheadphones"><img src="http://imagegen.last.fm/winterheadphones/artists/sunlit_shadows.gif" border="0" alt="sunlit_shadows&#39;s Last.fm Weekly Artists Chart" /></a> <br /><br />now we can compare <strike>indie cred dick sizes</strike> music, whee! :) add me if you're on it too. <br /><br />today i have the first non-reading schoolwork of the entire semester (preparing for a presentation). i know, be jealous. don't worry, come midterms in a few weeks, i'll be suffering right along with the rest of you. (i'm working a shitload too, so i really am kinda busy most of the time.)</div>
+<div class="lj-currents">
+<ul>
+<li><span class="entryMetadata-label">Mood:</span><span class="entryMetadata-content"> <img src="http://l-stat.livejournal.com/img/mood/neko/kaokitty/accomplished.gif" title="" alt="" height="40" width="40" /> accomplished</span></li><li><span class="entryMetadata-label">Music:</span><span class="entryMetadata-content">peaches- bag it</span></li></ul>
+</div>
+</div>
+<div class="asset-meta">
+<ul class="asset-meta-list">
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/436805.html">1 comment</a></li>
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/436805.html?mode=reply">Leave a comment</a></li>
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://www.livejournal.com/tools/memadd.bml?journal=sunlit_shadows&amp;itemid=436805">Add to Memories</a></li><li class="asset-meta-comments item asset-meta-no-comments"><a href="http://www.livejournal.com/tools/tellafriend.bml?journal=sunlit_shadows&amp;itemid=436805">Tell a Friend</a></li><li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/436805.html">Link</a></li>
+</ul>
+</div>
+
+<div class="asset-footer"></div>
+</div>
+</div>
+
+    <div id="asset-sunlit_shadows-432997" class="post-asset asset">
+      <div class="asset-inner">
+        <div class="asset-header">
+          <div class="asset-header-inner">
+            <div class="asset-header-content">
+              <div class="asset-header-content-inner">
+                <h2 class="asset-name page-header2"><a href="http://sunlit-shadows.livejournal.com/432997.html" class="subj-link" >neato</a></h2>
+          <div class="asset-meta">
+            <ul class="asset-meta-list">
+              <li class="item"><span><abbr class="datetime">Feb. 10th, 2006 at 1:24 PM</abbr></span></li>
+            </ul>
+          </div>
+        </div></div></div>
+        </div> <!-- end asset-header -->
+        <div class="asset-content">
+            <div class="asset-body"><div class="user-icon"><img src="http://l-userpic.livejournal.com/10430162/685992" title="" alt="philosophical" height="99" width="97" /><br /></div><a href="http://kevan.org/johari?name=sunlit_shadows">go to my johari window and pick the words that describe me.</a><br /><br /><i>The Johari Window was invented by Joseph Luft and Harrington Ingram in the 1950s as a model for mapping personality awareness. By describing yourself from a fixed list of adjectives, then asking your friends and colleagues to describe you from the same list, a grid of overlap and difference can be built up.</i><br /><br />this is a interesting toy. you can make a johari window of your own afterwards. do it!!!</div>
+<div class="lj-currents">
+<ul>
+<li><span class="entryMetadata-label">Mood:</span><span class="entryMetadata-content"> <img src="http://l-stat.livejournal.com/img/mood/neko/kaokitty/irritated.gif" title="" alt="" height="40" width="40" /> irritated</span></li></ul>
+</div>
+</div>
+<div class="asset-meta">
+<ul class="asset-meta-list">
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/432997.html?mode=reply">Leave a comment</a></li>
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://www.livejournal.com/tools/memadd.bml?journal=sunlit_shadows&amp;itemid=432997">Add to Memories</a></li><li class="asset-meta-comments item asset-meta-no-comments"><a href="http://www.livejournal.com/tools/tellafriend.bml?journal=sunlit_shadows&amp;itemid=432997">Tell a Friend</a></li><li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/432997.html">Link</a></li>
+</ul>
+</div>
+
+<div class="asset-footer"></div>
+</div>
+</div>
+
+    <div id="asset-sunlit_shadows-426778" class="post-asset asset">
+      <div class="asset-inner">
+        <div class="asset-header">
+          <div class="asset-header-inner">
+            <div class="asset-header-content">
+              <div class="asset-header-content-inner">
+                <h2 class="asset-name page-header2"><a href="http://sunlit-shadows.livejournal.com/426778.html" class="subj-link" >yoinked from leyo</a></h2>
+          <div class="asset-meta">
+            <ul class="asset-meta-list">
+              <li class="item"><span><abbr class="datetime">Dec. 7th, 2005 at 9:31 PM</abbr></span></li>
+            </ul>
+          </div>
+        </div></div></div>
+        </div> <!-- end asset-header -->
+        <div class="asset-content">
+            <div class="asset-body"><div class="user-icon"><img src="http://l-userpic.livejournal.com/43214064/685992" title="" alt="in my head" height="100" width="100" /><br /></div>it's 7 degrees outside. that's just not right. <br /><br />Bold the ones you've read, italicize those you've not finished, underline the ones you own copies of. Add five of your own.<br /><br />1. The Lord of the Rings, JRR Tolkien<br />2. Pride and Prejudice, Jane Austen<br /><b><u>3. His Dark Materials, Philip Pullman</u><br />4. The Hitchhikers Guide to the Galaxy, Douglas Adams<br />5. Harry Potter and the Goblet of Fire, JK Rowling</b><br />6. To Kill a Mockingbird, Harper Lee<br /><u><b>7. Winnie the Pooh, AA Milne<br />8. 1984, George Orwell<br />9. The Lion, the Witch and the Wardrobe, CS Lewis<br />10. Jane Eyre, Charlotte Bronte</b></u><br />11. Catch-22, Joseph Heller<br />12. Wuthering Heights, Emily Bronte<br />13. Birdsong, Sebastian Faulks<br />14. Rebecca, Daphne du Maurier<br /><b><u>15. The Catcher in the Rye, JD Salinger</u></b><br />16. The Wind in the Willows, Kenneth Grahame<br />17. Great Expectations, Charles Dickens<br /><b><u>18. Little Women, Louisa May Alcott</u></b><br />19. Captain Corellis Mandolin, Louis de Bernieres<br />20. War and Peace, Leo Tolstoy<b>(&nbsp;<a href="http://sunlit-shadows.livejournal.com/426778.html#cutid1">Read more...</a>&nbsp;)</b></div>
+<div class="lj-currents">
+<ul>
+<li><span class="entryMetadata-label">Mood:</span><span class="entryMetadata-content"> <img src="http://l-stat.livejournal.com/img/mood/neko/kaokitty/lazy.gif" title="" alt="" height="40" width="40" /> procrastinating</span></li></ul>
+</div>
+<div class="asset-tags"><h4 class="asset-tags-header page-header-4">Tags:</h4>
+<ul class="asset-tags-list">
+ <li class="item"><a rel="tag" href="http://sunlit-shadows.livejournal.com/tag/meme">meme</a></li>
+</ul>
+</div>
+</div>
+<div class="asset-meta">
+<ul class="asset-meta-list">
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/426778.html?mode=reply">Leave a comment</a></li>
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://www.livejournal.com/tools/memadd.bml?journal=sunlit_shadows&amp;itemid=426778">Add to Memories</a></li><li class="asset-meta-comments item asset-meta-no-comments"><a href="http://www.livejournal.com/tools/tellafriend.bml?journal=sunlit_shadows&amp;itemid=426778">Tell a Friend</a></li><li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/426778.html">Link</a></li>
+</ul>
+</div>
+
+<div class="asset-footer"></div>
+</div>
+</div>
+
+    <div id="asset-sunlit_shadows-412631" class="post-asset asset">
+      <div class="asset-inner">
+        <div class="asset-header">
+          <div class="asset-header-inner">
+            <div class="asset-header-content">
+              <div class="asset-header-content-inner">
+                <h2 class="asset-name page-header2"><a href="http://sunlit-shadows.livejournal.com/412631.html">Sep. 11th, 2005</a></h2>
+          <div class="asset-meta">
+            <ul class="asset-meta-list">
+              <li class="item"><span><abbr class="datetime">12:55 AM</abbr></span></li>
+            </ul>
+          </div>
+        </div></div></div>
+        </div> <!-- end asset-header -->
+        <div class="asset-content">
+            <div class="asset-body"><div class="user-icon"><img src="http://l-userpic.livejournal.com/43214064/685992" title="" alt="in my head" height="100" width="100" /><br /></div>i saw nausicaa of the valley of the wind tonight. now i want an <a href="http://www.northarc.com/images/nausicaa/nausic03.jpg">ohmu</a> plushie, but they don't appear to exist. T_T</div>
+<div class="lj-currents">
+<ul>
+<li><span class="entryMetadata-label">Mood:</span><span class="entryMetadata-content"> <img src="http://l-stat.livejournal.com/img/mood/neko/kaokitty/okay.gif" title="" alt="" height="40" width="40" /> okay</span></li></ul>
+</div>
+<div class="asset-tags"><h4 class="asset-tags-header page-header-4">Tags:</h4>
+<ul class="asset-tags-list">
+ <li class="item"><a rel="tag" href="http://sunlit-shadows.livejournal.com/tag/anime">anime</a></li>
+</ul>
+</div>
+</div>
+<div class="asset-meta">
+<ul class="asset-meta-list">
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/412631.html">2 comments</a></li>
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/412631.html?mode=reply">Leave a comment</a></li>
+<li class="asset-meta-comments item asset-meta-no-comments"><a href="http://www.livejournal.com/tools/memadd.bml?journal=sunlit_shadows&amp;itemid=412631">Add to Memories</a></li><li class="asset-meta-comments item asset-meta-no-comments"><a href="http://www.livejournal.com/tools/tellafriend.bml?journal=sunlit_shadows&amp;itemid=412631">Tell a Friend</a></li><li class="asset-meta-comments item asset-meta-no-comments"><a href="http://sunlit-shadows.livejournal.com/412631.html">Link</a></li>
+</ul>
+</div>
+
+<div class="asset-footer"></div>
+</div>
+</div>
+<div class="stream-footer">
+<p class="prevnext">
+<a class="prev" href="http://sunlit-shadows.livejournal.com/?skip=20">Previous 20</a>
+ | <a href="#home">Back to Top</a></p>
+</div>
+</div></div>
+<div id="beta"><div id="beta-inner">
+<div class="about-me-widget widget">
+<div class="widget-inner">
+<h3 class="widget-header">
+<a href="http://sunlit-shadows.livejournal.com/profile">
+Profile</a>
+</h3>
+<div class="widget-content">
+<div class="user-pic"><img src="http://l-userpic.livejournal.com/43214064/685992" title="" alt="in my head" height="100" width="100" /></div>
+
+<dl class="profile-list widget-list">
+<dd class="profile-username item"><span class='ljuser ljuser-name_sunlit_shadows' lj:user='sunlit_shadows' style='white-space: nowrap;'><a href='http://sunlit-shadows.livejournal.com/profile'><img src='http://l-stat.livejournal.com/img/userinfo.gif' alt='[info]' width='17' height='17' style='vertical-align: bottom; border: 0; padding-right: 1px;' /></a><a href='http://sunlit-shadows.livejournal.com/'><b>sunlit_shadows</b></a></span></dd>
+<dd class="profile-name item">antisocialbutterfly</dd>
+<dd class="profile-name item"><a href="http://sunlit-shadows.livejournal.com/friends/non-+high+volume+comms">custom friends</a></dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="calendar-widget widget">
+<div class="widget-inner">
+<h3 class="widget-header">
+Latest Month</h3>
+<div class="widget-content">
+<table cellspacing="5" cellpadding="0" summary="Monthly calendar with links to each day\'s posts">
+<tr><td colspan="7" align="center"><a href="http://sunlit-shadows.livejournal.com/2008/05/">May 2008</a></td></tr>
+<tr>
+<th>S</th>
+<th>M</th>
+<th>T</th>
+<th>W</th>
+<th>T</th>
+<th>F</th>
+<th>S</th>
+</tr>
+<tr>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>1</td><td>2</td><td>3</td></tr>
+<tr>
+<td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+<tr>
+<td>11</td><td>12</td><td><a href="http://sunlit-shadows.livejournal.com/2008/05/13/">13</a></td><td>14</td><td>15</td><td>16</td><td>17</td></tr>
+<tr>
+<td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td></tr>
+<tr>
+<td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td></tr>
+</table>
+<div class="widget-footer"><p><a href="http://sunlit-shadows.livejournal.com/calendar" title="View All Archives">View All Archives</a></p></div>
+</div>
+</div>
+</div>
+<div class="typelist-widget widget">
+<div class="widget-inner">
+<h3 class="widget-header">
+Links</h3>
+<div class="widget-content">
+<ul class="widget-list">
+<li class="item"><a href="http://www.flickr.com/photos/sunlit_shadows/">flickr</a> </li><li class="item"><a href="http://www.t-mobilepictures.com/anarchydawn/ps/ALBUM/VIEWWEBSITE?foneblog=1096663505027">phone photos</a> </li><li class="item"><a href="http://photobucket.com/albums/v214/nzapata/">photobucket</a> </li><li class="item"><a href="http://www.livejournal.com/tools/memories.bml?user=sunlit_shadows&amp;keyword=my+poems&amp;filter=own">my poetry</a> </li><li class="item"><a href="http://artconspiracy.com/conspiracy_word_gallery.asp?id=2144110001&amp;counthit=1">old poetry</a> </li><li class="item"><a href="http://www.erowid.org">erowid</a> </li><li class="item"><a href="http://www.pipeline.com/~dada3zen/introvert.htm">the introvert&#39;s hideaway</a> </li><li class="item"><a href="http://www.ourlittleplace.com/fragfree.html">why fragrance free?</a> </li><li class="item"><a href="http://www.shutesbury.org/ada_committee/project_underway.htm">another explanation about chemical sensitivity</a> </li></ul>
+</div>
+</div>
+</div>
+<div class="categories-widget widget">
+<div class="widget-inner">
+<h3 class="widget-header">
+Tags</h3>
+<div class="widget-content">
+<ul class="widget-list tagcloud">
+<li class="item tag"><a href="http://sunlit-shadows.livejournal.com/tag/2007" style="font-size: 7px;" title="1 use, public">2007</a> </li><li class="item tag"><a href="http://sunlit-shadows.livejournal.com/tag/advice" style="font-size: 7px;" title="1 use, public">advice</a> </li><li class="item tag"><a href="http://sunlit-shadows.livejournal.com/tag/anime" style="font-size: 7px;" title="1 use, public">anime</a> </li><li class="item tag"><a href="http://sunlit-shadows.livejournal.com/tag/dreams" style="font-size: 23px;" title="19 uses, public">dreams</a> </li><li class="item tag"><a href="http://sunlit-shadows.livejournal.com/tag/funny" style="font-size: 11px;" title="5 uses, public">funny</a> </li><li class="item tag"><a href="http://sunlit-shadows.livejournal.com/tag/jobs" style="font-size: 13px;" title="8 uses, public">jobs</a> </li><li class="item tag"><a href="http://sunlit-shadows.livejournal.com/tag/meme" style="font-size: 17px;" title="13 uses, public">meme</a> </li><li class="item tag"><a href="http://sunlit-shadows.livejournal.com/tag/oberlin" style="font-size: 10px;" title="4 uses, public">oberlin</a> </li><li class="item tag"><a href="http://sunlit-shadows.livejournal.com/tag/year+end+lists" style="font-size: 7px;" title="1 use, public">year end lists</a> </li></ul>
+<div class="widget-footer"><a href="http://sunlit-shadows.livejournal.com/tag/" title="View my Tags page">View my Tags page</a></div>
+</div>
+</div>
+</div>
+<div class="archive-widget widget">
+<div class="widget-inner">
+<h3 class="widget-header">
+Page Summary</h3>
+<div class="widget-content">
+<ul class="widget-list">
+<li class="item"><a href="#asset-sunlit_shadows-499863">I steamed some milk and I shook the milk around and said look at that milk.</a> <a href="http://sunlit-shadows.livejournal.com/499863.html">[+0]</a> </li><li class="item"><a href="#asset-sunlit_shadows-492195">oh my god, this is old school</a> <a href="http://sunlit-shadows.livejournal.com/492195.html">[+6]</a> </li><li class="item"><a href="#asset-sunlit_shadows-488022">2007 Books read:</a> <a href="http://sunlit-shadows.livejournal.com/488022.html">[+0]</a> </li><li class="item"><a href="#asset-sunlit_shadows-487309">the person who wrote this blog post is pretty much my hero</a> <a href="http://sunlit-shadows.livejournal.com/487309.html">[+4]</a> </li><li class="item"><a href="#asset-sunlit_shadows-485471">i'm a little bit sad about futures that died</a> <a href="http://sunlit-shadows.livejournal.com/485471.html">[+1]</a> </li><li class="item"><a href="#asset-sunlit_shadows-480200">it's time to switch the roles</a> <a href="http://sunlit-shadows.livejournal.com/480200.html">[+4]</a> </li><li class="item"><a href="#asset-sunlit_shadows-478826">it's the hipster olympics!</a> <a href="http://sunlit-shadows.livejournal.com/478826.html">[+2]</a> </li><li class="item"><a href="#asset-sunlit_shadows-478718">p.s.</a> <a href="http://sunlit-shadows.livejournal.com/478718.html">[+6]</a> </li><li class="item"><a href="#asset-sunlit_shadows-475502">i got a crush...on obama!</a> <a href="http://sunlit-shadows.livejournal.com/475502.html">[+0]</a> </li><li class="item"><a href="#asset-sunlit_shadows-473556">Best photo hosting site?</a> <a href="http://sunlit-shadows.livejournal.com/473556.html">[+7]</a> </li><li class="item"><a href="#asset-sunlit_shadows-462632">hahaha</a> <a href="http://sunlit-shadows.livejournal.com/462632.html">[+1]</a> </li><li class="item"><a href="#asset-sunlit_shadows-455887">pwn3d!</a> <a href="http://sunlit-shadows.livejournal.com/455887.html">[+4]</a> </li><li class="item"><a href="#asset-sunlit_shadows-453664">bookslut</a> <a href="http://sunlit-shadows.livejournal.com/453664.html">[+9]</a> </li><li class="item"><a href="#asset-sunlit_shadows-453247">pop music musings</a> <a href="http://sunlit-shadows.livejournal.com/453247.html">[+8]</a> </li><li class="item"><a href="#asset-sunlit_shadows-447140">oddly enough</a> <a href="http://sunlit-shadows.livejournal.com/447140.html">[+0]</a> </li><li class="item"><a href="#asset-sunlit_shadows-440101">that movie meme, drag ball report to follow</a> <a href="http://sunlit-shadows.livejournal.com/440101.html">[+2]</a> </li><li class="item"><a href="#asset-sunlit_shadows-436805">last.fm lemmingness</a> <a href="http://sunlit-shadows.livejournal.com/436805.html">[+1]</a> </li><li class="item"><a href="#asset-sunlit_shadows-432997">neato</a> <a href="http://sunlit-shadows.livejournal.com/432997.html">[+0]</a> </li><li class="item"><a href="#asset-sunlit_shadows-426778">yoinked from leyo</a> <a href="http://sunlit-shadows.livejournal.com/426778.html">[+0]</a> </li><li class="item"><a href="#asset-sunlit_shadows-412631"><i class="nosubject">(no subject)</i></a> <a href="http://sunlit-shadows.livejournal.com/412631.html">[+2]</a> </li></ul>
+</div>
+</div>
+</div>
+<div class="syndicate-widget widget">
+<div class="widget-inner">
+<h3 class="widget-header">
+Syndicate</h3>
+<div class="widget-content">
+ <a href="http://sunlit-shadows.livejournal.com/data/rss"><img border='0' width="32" height="15" alt="RSS" title="RSS" src="http://l-stat.livejournal.com/img/data_rss.gif"  /></a>  <a href="http://sunlit-shadows.livejournal.com/data/atom"><img border='0' width="32" height="15" alt="Atom" title="Atom" src="http://l-stat.livejournal.com/img/data_atom.gif"  /></a> </div>
+</div>
+</div>
+<div class="powered-widget widget">
+<div class="widget-inner">
+<div class="widget-content">
+Powered by <a href="http://www.livejournal.com/">LiveJournal.com</a></div>
+</div>
+</div>
+<div class="designed-widget widget">
+<div class="widget-inner">
+<div class="widget-content">
+<div class="asset-name-hover">Designed by <a href="http://tiffany.vox.com/">Tiffany Chow</a></div>
+</div>
+</div>
+</div>
+</div></div>
+</div></div>
+<!-- End Content --><div id="footer"><div id="footer-inner">
+</div></div>
+<!-- End Footer --></div></div>
+<!-- End Page --></div></div>
+<!-- End Container --><div id='hello-world' style='text-align: left; font-size:0; line-height:0; height:0; overflow:hidden;'></div></body>
+</html>

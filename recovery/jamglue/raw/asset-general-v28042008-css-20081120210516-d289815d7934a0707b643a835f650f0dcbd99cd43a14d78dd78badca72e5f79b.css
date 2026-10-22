@@ -1,0 +1,887 @@
+/* CSS Document */
+
+body {
+  background-color: #EEE;
+  margin: 4px;
+  font-family: Tahoma, Verdana, Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+input {
+  vertical-align: middle;
+}
+
+a {
+  color: #1E1E5C;
+}
+h1 {
+  color: #B80100;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.h1 {
+  color: #B80100;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+#header {
+  min-width: 760px;
+  
+}
+
+#logo {
+  height: 54px;
+}
+
+#greetingBox {
+  padding: 4px;
+  color: #000;
+  font-size: 11px;
+}
+
+#greetingBox form {
+  display: inline;
+}
+
+#searchBox {
+  white-space: nowrap;
+  padding: 4px 10px 4px 10px;
+  color: #1E1E5C;
+  font-size: 12px;
+}
+
+#mainMenuContainer {
+  width: 100%;
+  height: 34px;
+  min-width: 760px;
+  border-bottom: 2px solid #1E1E5C;
+}
+
+#mainNavContainer {
+  background: url(/images/nav/mainNav_bg_inactive.gif) repeat-x bottom left #666666;
+}
+
+table#mainNav {
+  background: url(/images/nav/mainNav_bg_inactive.gif) repeat-x bottom left #666666;
+  color: #FFF;
+  font-size: 12px;
+  font-weight: bold;
+  border-left: 1px solid #000;
+  border-right: 1px solid #525152;
+}
+
+table#mainNav td {
+  width: 20%;
+}
+
+table#mainNav a {
+  color: #FFF;
+  text-decoration: none;      
+}
+
+table#mainNav a:hover {
+  color: #FFF;
+  text-decoration: underline;
+}
+
+table#mainNav td.active {
+  color: #1E1E5C;
+  background: url(/images/nav/mainNav_bg_active.gif) center bottom no-repeat;
+  border-left: 1px solid #525152;
+  border-right: 1px solid #212021;  
+} 
+
+table#mainNav td.active a {
+  color: #FFE87D;
+} 
+
+table#mainNav td.inactive {
+  border-left: 1px solid #525152;
+  border-right: 1px solid #212021;  
+} 
+
+table#mainNav td.inactive:hover {
+  color: #1E1E5C;
+} 
+
+#subNavContainer {
+  width: 100%;
+  background: url(/images/nav/subNav_bg.gif) top left repeat-x;
+  color: #000;
+  font-size: 11px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 11px;
+}
+ 
+#breadCrumbContainer {
+  width: 99%;
+  background-color: #EEE;
+  padding: 4px;
+  font-size: 11px;
+  line-height: 11px;
+}
+
+
+div.avatar img {
+  vertical-align: middle;
+}
+
+.success {
+  border: 1px solid green;
+  color: black;
+  background-color: #99ff99;
+  font-weight: bold;
+  text-align: center;
+  padding: 2px;
+}
+
+.warning {
+  border: 1px solid yellow;
+  background-color: #FFFF99;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  padding: 2px;
+}
+
+.notice {
+  border: 1px solid red;
+  background-color: #ff9999;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  padding: 2px;
+}
+  
+.alert {
+  border: 1px dotted black;
+  color: black;
+  background-color: #FFFF99;
+  font-weight: bold;
+  text-align: center;
+  padding: 2px;
+  margin-left: 225px;
+  margin-right: 225px;
+  margin-top: 10px;
+}
+
+#main {
+  background-color: #FFF;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#content {
+  position: relative;
+  width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 625px;
+}
+
+div#skyscraper {
+  position: absolute;
+  right: -150px;
+  top: 48px;
+  max-width: 150px;
+  max-height: 700px;
+  overflow: hidden;
+}
+
+div#skyscraper_wide {
+  position: absolute;
+  right: -190px;
+  top: 48px;
+  max-width: 190px;
+  max-height: 700px;
+  overflow: hidden;
+}
+
+div#skyscraper_rect {
+  position: relative;
+  left: 30px;
+  max-width: 350px;
+  max-height: 250px;
+  overflow: hidden;
+}
+
+div#skyscraper_widerect {
+  position: relative;
+  left: 10px;
+  max-width: 350px;
+  max-height: 250px;
+  overflow: hidden;
+}
+
+div#skyscraper_homepage {
+  position: absolute;
+  right: -150px;
+  top: 5px;
+  max-width: 150px;
+  max-height: 700px;
+  overflow: hidden;
+}
+
+div#skyscraper_wide_home {
+  position: absolute;
+  right: -190px;
+  top: 5px;
+  max-width: 190px;
+  max-height: 700px;
+  overflow: hidden;
+}
+
+div.banner {
+  margin-top: 15px;
+  max-width: 750px;
+  max-height: 100px;
+  overflow: hidden;
+}
+
+div.topbanner {
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  max-height: 100px;
+  overflow: hidden;
+}
+
+#footer {
+  height: 24px;
+  padding: 4px;
+  font-size: 10px;
+  color: #666956;
+  border-top: 2px solid #212021;
+  clear: both;
+}
+
+.floatLeft {
+  float: left;
+}
+
+.floatRight {
+  float: right;
+}
+
+.smallMargin {
+  margin: 5px;
+}
+
+.tinyMargin {
+  margin: 1px;
+}
+
+.clear {
+  clear: both;
+}
+
+/* ================================ BUTTONS ================================ */
+
+a.addInvite {
+  background-color: #FD8B04;
+  color: #CF3310;
+  padding: 4px;
+  border-bottom: 1px solid #000;
+  border-right: 1px solid  #000;
+  border-top: 1px solid  #FEBC20;
+  border-left: 1px solid  #FEBC20;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+a.addInvite:hover {
+  background-color: #FD8B04;
+  color: #FFF;
+}
+a.showAll {
+  padding: 2px;
+  font-weight: bold;
+}
+
+img.rss {
+  float: right;
+  border: 0;
+}
+
+img.noborder {
+  border: 0;
+}
+
+/* ================================ TEXT ================================ */
+
+.tiny {
+  font-size: 10px;
+}
+.small {
+  font-size: 12px;
+}
+.large {
+  font-size: 16px;
+}
+.huge {
+  font-size: 20px;
+}
+.gray {
+  color: #999999;
+}
+
+/* ================================ SONGS ================================ */
+
+.songName {
+  font-weight: bold;
+}
+
+div#mixContents li {
+  padding-left: 24px;
+}
+
+div.AddComponents {
+  background-color:lightGray;
+  padding:10px;
+}
+
+div.songComponentLink {
+  padding-left:25px;
+}
+
+div.expandCollapseSign {
+  float:left;
+}
+
+div.songComponentDeleteLink {
+  float:right;
+  padding:10px;
+}
+
+div.whyExplanationBox {
+  font-size: 12px;
+  text-align: left;
+  border: 1px solid #666956;
+  background-color: #dedede;
+  padding: 2px;
+  margin: 0;
+}
+
+div.explainBox {
+  font-size: 10px;
+  text-align: left;
+  border: 1px solid #666956;
+  background-color: #dedede;
+  padding: 2px;
+  margin: 0;
+  width: 300px;
+}
+
+div.smallExplainBox {
+  font-size: 10px;
+  text-align: left;
+  border: 1px solid #666956;
+  background-color: #dedede;;
+  padding: 2px;
+  margin: 0;
+}
+
+div.draftNotice {
+  font-size: 14px;
+  padding: 0 10px 10px 10px; 
+  font-weight: normal;
+}
+
+input.embed {
+  width: 300px;
+  font-size: 9px;
+  padding: 2px;
+}
+
+div#embedBox {
+  padding: 10px;
+  background-color: #eeeeee;
+  border: 1px solid #cacbc4;
+}
+
+div.embedCode {
+  margin-bottom: 5px;
+}
+
+div#embedPreview {
+  background-color: white;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+span.byLine {
+  font-size: 10px;
+  margin-left: 115px;
+}
+
+/* ================================ HOME PAGE ================================ */
+
+table#signIn {
+  background-color: #FFDE90;
+}
+
+table#signIn td.header {
+  font-weight: bold;
+  background: url(/images/sign-in_bg.gif) #CF3310 repeat-x top left;
+  color: #9C270D;
+}
+
+table#signUp {
+  background-color: #FFDE90;
+}
+
+table#signUp td.header {
+  font-weight: bold;
+  background: url(/images/sign-in_bg.gif) #CF3310 repeat-x top left;
+  color: #9C270D;
+}
+  
+table#advertisement {
+  border: 1px solid #CCC;
+}
+
+table#advertisement td.header {
+  font-size: 10px;
+  text-transform:uppercase;
+  letter-spacing: 4px;
+  color: #999;
+}
+
+ul {
+  padding-left: 0px;
+  margin-left: 0px;
+}
+
+ul li {
+  border-bottom: 1px dotted #cacbc4;
+  list-style: none;
+  padding: 5px;
+}
+
+ul li:first-child {
+  border-top: 1px dotted #cacbc4;
+}
+
+ul li > ul li, ul li > ul li:first-child {
+  border: 0;
+}
+
+ol.dashed {
+  list-style-position: inside;
+  padding: 0;
+}
+
+ol.dashed li:first-child {
+  border-top: 1px dotted #cacbc4;
+}
+
+ol li {
+  padding: 4px;
+}
+
+ol.dashed li {
+  border-bottom: 1px dotted #cacbc4;
+}
+
+ul.noborder li {
+  border: 0;
+}
+
+ul.plain {
+  padding-left: 15px;
+}
+
+ul.plain li {
+  border: 0;
+  list-style: disc;
+}
+
+ol.plain {
+  padding-left: 15px;
+}
+
+ol.plain li {
+  border: 0;
+  list-style: decimal;
+}
+
+table#newPeople {
+  
+}
+table#newGroups {
+  
+}
+#tagCloud {
+  margin: 0 20px 0 20px;
+  padding: 10px;
+  border: 1px solid #BCE5F9;
+  background-color: #DEF2FC;
+  text-align: justify;
+}
+
+#tagCloud a {
+  line-height: 2em;
+}
+
+/* ================================ LIST PAGE ================================ */
+
+select.sort_type {
+  font-size: 9px;
+}
+
+/* ================================ USER PAGE ================================ */
+
+#nameContainer {
+  background-color: #FFF;
+  border-bottom: 2px solid #292B1D;
+}
+.description {
+  font-size: 11px;
+  font-style: oblique;
+  overflow:auto;
+}
+#userImage {
+  
+}
+#bioBox, #downloadBox, #gearBox {
+  font-size: 11px;
+  border: 1px solid #212021;
+  background-color: #FFF;
+  margin-top: 5px;
+  width: 220px;
+  overflow: auto;
+}
+#bioBox thead, #downloadBox thead, #gearBox thead {
+  font-size: 14px;
+  font-weight: bold;
+  color: #FFF;
+  background-color: #212021;
+  text-align: left;
+}
+#bioBox thead a:visited, #downloadBox thead a:visited, #gearBox thead a:visited {
+  color: #aaaaaa;
+}
+#bioBox thead a:link, #downloadBox thead a:link, #gearBox thead a:link {
+  color: #dddddd;
+}
+#userImageContainer {
+  
+}
+#morePhotosContainer {
+  position: absolute;
+  float: right;
+  z-index: 5;
+  width: 153px;
+  height: 202px;
+}
+#userActionsBar {
+  font-size: 12px;
+  font-weight: normal;
+  color: #999;
+}
+#tagBox {
+  font-size: 11px;
+  border: 1px solid #BCE5F9;
+  background-color: #DEF2FC;
+  margin-top: 5px;
+}
+#tagBox thead {
+  font-size: 14px;
+  font-weight: bold;
+  color: #1E1E5C;
+  background-color: #BCE5F9;
+}
+
+#userTagCloud {
+  padding: 10px;
+  line-height: 2em;
+}
+
+#remixer {
+  overflow: hidden;
+  height: 600px;
+}
+
+iframe.upload {
+  width: 100%;
+  height: 160px;
+  border-width: 0px;
+}
+
+div.uploadStatus {
+  border: 1px solid gray;
+  padding: 15px;
+  margin: 3px;
+}
+
+iframe.hidden {
+  visibility: hidden;
+  width: 0px;
+  height: 0px;
+}
+
+.homeElement {
+  border: 1px solid #cacbc4;
+  margin: 5px 5px 10px 5px;
+  padding: 0px 5px 10px 5px;
+  background: url(/images/homeElement_bg.gif) top repeat-x left #FFF ;
+}
+
+.homeWelcomeElement {
+  background: url(/images/welcome_graphic_bg.jpg) top left no-repeat;
+  border: 1px solid #cacbc4;
+  margin: 5px 5px 10px 5px;
+  padding: 0px;
+  padding-bottom: 15px;
+}
+
+.homePromoElement {
+  border: 0px;
+  margin: 5px 5px 10px 5px;
+  padding: 0px; 
+  height: 230px;
+}
+
+.homeVdayElement {
+  border: 1px solid #f16fc9;
+  margin: 5px 5px 10px 5px;
+  padding: 0px; 
+  height: 230px;
+  background: url(/images/home_vday_bg.jpg) top left no-repeat #f16fc9; 
+}
+
+.homeVdayElement table {
+  position: relative;
+  top: 148px;
+  left: 33px;
+  background-color: #000;
+}
+
+.homeVdayElement table .count {
+  font-weight: bold;
+  font-size: x-large;
+  color: #220016;
+}
+
+.homeVdayElement table .vs {
+  font-size: medium;
+  color: #220016;
+}
+
+.homeContestElement {
+  border: 1px solid #000;
+  margin: 5px 5px 10px 5px;
+  padding: 0px;	
+  height: 230px;
+  background-color: #000;
+}
+
+div.seeMore {
+  margin-top: 10px;
+}
+
+.heading {
+  font-size: 20px;
+  font-weight: bold;
+  color: #B80100;
+}
+
+.profileLink {
+  font-weight: bold;
+  background-color: #FF0;
+  padding: 4px;
+}
+
+.handCursor {
+  cursor: pointer;
+  cursor: hand;
+}
+
+
+#inlineSearchBox {
+  background-color: #e2eeff;
+  border: 1px solid rgb(76, 130, 201);
+  padding: 6px;
+}
+
+.pop {
+  position: relative;
+  z-index: auto;
+}
+
+.popcontent {
+  z-index: 900;
+  background-color: white;
+  border: 1px inset black;
+
+  position: absolute;
+  left: 0px;
+
+  text-align: left;
+
+  width: 200px;
+
+  padding: 4px;
+  margin: 0;
+
+  text-indent: 0;
+}
+
+.poptitle {
+  background-color: #DEDEDE;
+  padding: 2px;
+  font-weight: bold;
+}
+
+.popclose {
+  position: absolute;
+  right: 5px;
+  top: 2px;
+}
+
+.popclose a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#welcomeGraphic {
+  padding: 10px 5px 20px 5px;
+  text-align: left;
+  font-size: 14px;
+}
+
+#startMixing {
+  float: left;
+  margin-left: 25px;
+}
+
+#tourButton {
+  margin-left: 10px;
+  float: left;
+}
+
+#welcomeGraphic .region {
+  position: relative;
+  float: left;
+  width: 185px;
+  height: 100px;
+}
+
+#welcomeGraphic .region .icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#welcomeGraphic .region .slogan {
+  position: absolute;
+  left: 62px;
+}
+
+#welcomeGraphic .region .text {
+  position: absolute;
+  left: 62px;
+  top: 45px;
+  text-align: left;
+  color: #666;
+  padding: 4px 0 0 4px;
+  font-family:  Tahoma, Verdana, Arial, Helvetica, san-serif;
+  font-size: 10px;
+  line-height: 150%;
+}
+
+.draft {
+  color: #36814E;
+}
+
+#searchBox {
+  color: black;
+}
+
+#blogEntry {
+  margin-left: 10px;
+}
+
+#blogLink {
+  float: right;
+}
+
+ul.userFullDisplayList li {
+  border: 0;
+}
+
+.userFullDisplay {
+  border: 1px solid #999;
+  width: 365px;
+  float: left;
+  height: 230px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+
+.userFullDisplay .userInfo {
+  float: left;
+  width: 120px;
+  padding-top: 10px;
+}
+
+.userFullDisplay .userMixables {
+  float: left;
+  margin-left: 10px;
+  width: 230px;
+}
+
+.userFullDisplay ul li {
+  border: 0;
+}
+
+.mixerAccount {
+  padding: 5px;
+}
+
+.mixerAccount h1 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #B80100;
+  border: 0;
+  border-bottom: 2px solid black;
+}
+
+.mixerAccount ul li {
+  border: 0;
+}
+
+.inlinePlayerWrapper {
+  white-space: nowrap;
+}
+
+table.signup td {
+  padding: 0px 20px 10px 20px;
+}
+
+/* ========== POP-OVER BOX SPECIFIC CSS ========== */
+
+.popOverBox { z-index: 900; position: absolute; width: 240px; left: 0px; min-width:1em; color:#000; }
+.popOverBox .bottom, .popOverBox .bottom .r { height: 10px; }
+
+.popOverBox .top { background: url(/images/popover/tl.gif) no-repeat 0px 0px #E4E4E4; }
+.popOverBox .top .r { background: url(/images/popover/tr.gif) no-repeat right 0px; }
+.popOverBox .top .r .c { padding: 7px 0 7px 10px; margin-right: 10px; }
+
+.popOverBox .middleTop { background: url(/images/popover/m_top.gif) no-repeat 0px 0px; height: 4px;}
+.popOverBox .middle { background:transparent url(/images/popover/ml.gif) repeat-y 0px 0px; }
+.popOverBox .middle .r { background: url(/images/popover/mr.gif) repeat-y right 0px; }
+.popOverBox .middle .r .c { margin:0px 0px 0px 10px; padding:5px 0 0 0; }
+
+.popOverBox .bottom { background:transparent url(/images/popover/bl.gif) no-repeat 0px 0px; }
+.popOverBox .bottom .r { background:transparent url(/images/popover/br.gif) no-repeat right 0px; }
+
+.popOverBox hr { margin-right: 10px; border-top: 1px dotted #cacbc4; }
+.popOverBox p { padding: 0; margin-top: 6px; margin-bottom: 0; } 

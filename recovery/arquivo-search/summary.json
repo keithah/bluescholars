@@ -1,0 +1,67 @@
+{
+  "archive": "Arquivo.pt Full Text Search",
+  "endpoint": "https://arquivo.pt/textsearch",
+  "queries": 14,
+  "highest_page_examined": 60,
+  "saved_query_pages": 329,
+  "search_rows": 16003,
+  "unique_relevant_html_candidates": 247,
+  "validated_html_capture_records": 248,
+  "unique_payload_hashes": 248,
+  "unresolved_candidate_records": 4,
+  "excluded_false_positive_capture_records": 9,
+  "failures": [
+    {
+      "url": "https://thestranger.com/seattle/content?oid=219275",
+      "title": "The Realest - Music - The Stranger",
+      "error": "Archived replay retrieval failed with TLS wrong-version error."
+    },
+    {
+      "url": "https://realitytvworld.com/pophollywood/macklemore/biography",
+      "title": "Macklemore Biography",
+      "error": "Archived replay retrieval failed with TLS wrong-version error."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/macklemore",
+      "title": "Macklemore - Wikipedia",
+      "error": "Archived replay retrieval failed with TLS wrong-version error."
+    },
+    {
+      "url": "https://daily-beat.com/is-macklemore-a-sell-out",
+      "title": "Is Macklemore A Sell-Out? - Daily Beat",
+      "error": "Archived replay retrieval failed with TLS wrong-version error."
+    }
+  ],
+  "local_manifest": "recovery/arquivo-search/manifest.json",
+  "query_result_files": [
+    "recovery/arquivo-search/query-results-custom-454ff10099b8-pages-1-3.json",
+    "recovery/arquivo-search/query-results-custom-781808651d3a-pages-1-3.json",
+    "recovery/arquivo-search/query-results-pages-10-12.json",
+    "recovery/arquivo-search/query-results-pages-13-15.json",
+    "recovery/arquivo-search/query-results-pages-16-18.json",
+    "recovery/arquivo-search/query-results-pages-19-21.json",
+    "recovery/arquivo-search/query-results-pages-22-24.json",
+    "recovery/arquivo-search/query-results-pages-25-27.json",
+    "recovery/arquivo-search/query-results-pages-28-30.json",
+    "recovery/arquivo-search/query-results-pages-31-33.json",
+    "recovery/arquivo-search/query-results-pages-34-36.json",
+    "recovery/arquivo-search/query-results-pages-37-39.json",
+    "recovery/arquivo-search/query-results-pages-4-6-failed-initial.json",
+    "recovery/arquivo-search/query-results-pages-4-6.json",
+    "recovery/arquivo-search/query-results-pages-40-42.json",
+    "recovery/arquivo-search/query-results-pages-43-45.json",
+    "recovery/arquivo-search/query-results-pages-46-48.json",
+    "recovery/arquivo-search/query-results-pages-49-51.json",
+    "recovery/arquivo-search/query-results-pages-52-54.json",
+    "recovery/arquivo-search/query-results-pages-55-57.json",
+    "recovery/arquivo-search/query-results-pages-58-60.json",
+    "recovery/arquivo-search/query-results-pages-7-9.json",
+    "recovery/arquivo-search/query-results.json"
+  ],
+  "limitations": [
+    "This is a ranked, bounded full-text search, not an export of the complete Arquivo.pt index.",
+    "The saved query pages are a sample, not an exhaustive index export.",
+    "Search snippets and relevance filters yield false positives. Captured third-party pages remain raw recovery-only data pending content and rights review."
+  ],
+  "capture_attempts_total": 262
+}

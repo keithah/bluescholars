@@ -1,0 +1,411 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Blue Scholars : NPR Music</title><meta name="date" content="Wed, 31 Dec 1969 19:00:00 -0500"></meta><style type="text/css" media="screen">@import "/templates/css/music/common.css";</style><style type="text/css" media="screen">@import "/templates/css/music/artistpage.css";</style><style type="text/css" media="print">@import "/templates/css/music/print.css";</style>    <meta http-equiv="Content-type" content="text/html; charset=iso-8859-1" />
+    <meta http-equiv="Content-Language" content="en-us" />
+    <meta name="robots" content="noarchive,index,follow" />
+    <meta name="Copyright" content="Copyright (c) 2007 NPR" />
+    <meta http-equiv="imagetoolbar" content="no" />
+    <meta name="MSSmartTagsPreventParsing" content="true" />
+
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <script type="text/javascript" src="/templates/javascript/jsfuncs.js"></script>
+    <script type="text/javascript" src="../javascript/ecommerce.js"></script>
+    <script type="text/javascript" src="/templates/javascript/player/player.js"></script></head><body><script type="text/javascript">
+//<![CDATA[
+sfHover = function() {
+	var sfEls = document.getElementById("header").getElementsByTagName("LI");
+
+    //var stnNav = document.getElementById("stn_nav");
+ 	//if (stnNav != null) { sfEls = concatCollections(sfEls, stnNav.getElementsByTagName("LI")); }
+
+	for (var i=0; i<sfEls.length; i++) {
+		sfEls[i].onmouseover=function() {
+			this.className+=" sfhover";
+		}
+		sfEls[i].onmouseout=function() {
+			this.className=this.className.replace(new RegExp(" sfhover\\b"), "");
+		}
+	}
+}
+//if (window.attachEvent) window.attachEvent("onload", sfHover);
+if (document.all && window.attachEvent) window.attachEvent("onload", sfHover);
+//]]>
+</script>
+<script type="text/javascript" src="/templates/javascript/localize/zip_code.js"></script>
+
+<div id="header">
+
+	<div id="site_nav">
+
+		<ul class="primary dropdown">
+			<li><a href="/" class="npr"></a></li>
+			<li><script type="text/javascript" src="/templates/javascript/localize/station_include_music.js"></script></li>
+			<li><a href="topics" onclick="return false;" class="topics pointer"></a>
+				<ul class="topicdd">
+					<li><a href="/templates/topics/topic.php?topicId=1001">News</a></li>
+					<li><a href="/templates/topics/topic.php?topicId=1012">Politics &amp; Society</a></li>
+					<li><a href="/templates/topics/topic.php?topicId=1006">Business</a></li>
+					<li><a href="/templates/topics/topic.php?topicId=1021">People &amp; Places</a></li>
+					<li><a href="/templates/topics/topic.php?topicId=1007">Health &amp; Science</a></li>
+					<li><a href="/templates/topics/topic.php?topicId=1032">Books</a></li>
+					<li><a href="/templates/topics/topic.php?topicId=1039">Music</a></li>
+					<li><a href="/templates/topics/topic.php?topicId=1008">Arts &amp; Culture</a></li>
+					<li><a href="/templates/topics/topic.php?topicId=1051">Diversions</a></li>
+					<li><a href="/templates/topics/topic.php?topicId=1057">Opinion</a></li>
+				</ul>
+			</li>
+
+			<li><a href="/programs/" class="programs"></a>
+				<ul class="programdd">
+					<li>
+						<table cellpadding="0" cellspacing="0" border="0">
+							<tr>
+								<td valign="top">
+									<h6>News/Talk</h6>
+									<a href="/templates/rundowns/rundown.php?prgId=2">All Things Considered</a>	
+									<a href="/templates/rundowns/rundown.php?prgId=47">The Bryant Park Project</a>
+									<a href="/templates/rundowns/rundown.php?prgId=17">Day to Day</a>
+									<a href="/templates/rundowns/rundown.php?prgId=13">Fresh Air</a>
+									<a href="/templates/rundowns/rundown.php?prgId=3">Morning Edition</a>
+									<a href="/templates/rundowns/rundown.php?prgId=11">News &amp; Notes</a>
+									<a href="/templates/rundowns/rundown.php?prgId=5">Talk of the Nation</a>
+									<a href="/templates/rundowns/rundown.php?prgId=46">Tell Me More</a>
+									<a href="/programs/waitwait/">Wait Wait...Don't Tell Me</a>
+									<a href="/templates/rundowns/rundown.php?prgId=7">Weekend Edition Saturday</a>
+									<a href="/templates/rundowns/rundown.php?prgId=10">Weekend Edition Sunday</a>
+								</td>
+								<td valign="top">
+									<h6>Music</h6>
+									<a href="/templates/rundowns/rundown.php?prgId=37&amp;agg=1">All Songs Considered</a>
+									<a href="/templates/rundowns/rundown.php?prgId=43&amp;agg=1">From the Top</a>
+									<a href="/templates/rundowns/rundown.php?prgId=20&amp;agg=1">JazzSet</a>
+									<a href="/templates/rundowns/rundown.php?prgId=24&amp;agg=1">Marian McPartland's Piano Jazz</a>
+									<a href="/templates/rundowns/rundown.php?prgId=39&amp;agg=1">World Cafe</a>
+									<a href="/templates/rundowns/rundown.php?prgId=36&amp;agg=1">World of Opera</a>
+								</td>
+							</tr>
+							<tr><td colspan="2"><a href="/programs/" class="moreprograms">More Programs A-Z</a></td></tr>
+						</table>
+					</li>
+				</ul>
+			</li>
+			<li><a href="/stations/" class="stations"></a></li>
+			<li><a href="http://shop.npr.org" class="shop"></a></li>
+			<li><a href="/about/" class="about"></a></li>
+			<li><a href="/contact/" class="contact"></a></li>
+			<li><a href="/help/" class="help"></a></li>
+		</ul>
+
+		<ul class="services">
+			<li><a href="/podcasts/" class="podcasts"></a></li>
+			<li><a href="http://www.publicradiomail.org/nprnewsletters/home.html" target="_blank" class="newsletters"></a></li>
+			<li><a href="/rss/" class="rssnav"></a></li>
+			<li><a href="/services/desktop.html" class="desktop"></a></li>
+		</ul>
+
+		<div class="spacer">&nbsp;</div>
+
+	</div>
+
+
+
+	<div id="banner">
+		<script type="text/javascript" src="/templates/javascript/localize/station_include_music_partner.js"></script>
+		<script type="text/javascript">
+			getPartnerStation();
+		</script>
+
+		<form method="get" action="/search.php" name="searchForm" id="searchForm" class="search">
+			<label for="text">Search: </label>
+			<input type="text" name="text" id="text" class="searchbox" />
+			<input type="button" value="GO" class="button" onclick="submit();" />
+		</form>
+
+		<div class="livestreams">
+			<a href="/music/stations/streams.html"><img src="http://media.npr.org/chrome/music/nav_livestreams.gif" width="177" height="22" alt="Live Streams" /></a>
+			<script type="text/javascript" src="/templates/javascript/music/random_img.js"></script>
+		</div>
+
+		<ul class="genres">
+			<li><a href="/templates/story/story.php?storyId=10001" class="rock"></a></li>
+			<li><a href="/templates/story/story.php?storyId=10003" class="classical"></a></li>
+			<li><a href="/templates/story/story.php?storyId=10002" class="jazz"></a></li>
+			<li><a href="/templates/story/story.php?storyId=10004" class="world"></a></li>
+			<li><a href="/templates/story/story.php?storyId=10005" class="urban"></a></li>
+		</ul>
+
+		<div class="spacer">&nbsp;</div>
+	</div>
+
+
+	<div id="music_nav">
+		<ul class="dropdown">
+			<li><a href="/music/" class="home"></a></li>
+			<li><a href="/templates/topics/topic.php?topicId=1108" class="discover"></a>
+				<ul>
+				    <li><a href="/templates/topics/topic.php?topicId=1108">Discover Songs Home</a></li>
+					<li><a href="/templates/story/story.php?storyId=4703895">Song of the Day</a></li>
+					<li><a href="/templates/rundowns/rundown.php?prgId=37&amp;agg=1">All Songs Considered</a></li>
+					<li><a href="/templates/topics/topic.php?topicId=1107">Music Lists</a></li>
+					<li><a href="/templates/story/story.php?storyId=15466058">Second Stage</a></li>
+					<li><a href="/templates/story/story.php?storyId=15668524">Project Song Videos</a></li>
+					<li><a href="/templates/story/story.php?storyId=9904205">What's in a Song?</a></li>
+					<li><a href="/templates/story/story.php?storyId=15668660">Video Sessions</a></li>
+				</ul>
+			</li>
+			<li><a href="/templates/topics/topic.php?topicId=1109" class="concerts"></a></li>
+			<li><a href="/templates/topics/topic.php?topicId=1103" class="sessions"></a></li>
+			<li><a href="/templates/topics/topic.php?topicId=1105" class="interviews"></a></li>
+			<li><a href="/templates/archives/archive.php?thingId=1106" class="news"></a></li>
+			<li><a href="/templates/topics/topic.php?topicId=1104" class="reviews"></a></li>
+			<li><a href="/music/blogs/" class="blogs"></a></li>
+			<li><a href="/templates/artist/artist_index.php?filter=A" class="browse"></a></li>
+		</ul>
+
+		<div class="spacer">&nbsp;</div>
+	</div>
+
+</div>
+
+<div id="wrapper"><!-- START MAIN CONTENT --><div id="main_content">            <h1>Blue Scholars</h1>
+            <ul class="storytools">
+                <li><a href="/templates/xanadu/emailAFriend.php?storyId=16070839" target="_blank" class="email">Email Page</a></li>
+                <li><a href="javascript: window.print(); void(1);" class="print">Print</a></li>
+            </ul>            <!-- profile -->
+            <div class="profile noimg">
+
+                <p>Blue Scholars artist page: interviews, features and/or performances archived at NPR Music</p>
+                <div class="spacer">&nbsp;</div>
+            </div>            <!-- Discover Songs -->
+            <div class="bucketwrap feature">
+                <h3>Discover Songs</h3>            <div class="bucket img">
+                <a href="http://www.kexp.org/" target="_blank"><img src="http://media.npr.org/images/stations/50x30/kexp_bw.gif" width="50" height="30" class="stationlogo" alt="KEXP"></a>
+                <a href="/templates/story/story.php?storyId=16070613"><img src="http://media.npr.org/music/images/2007/hiphop_lists/ohmega75.jpg" width="75" height="75" alt="The Best Hip-Hop of the Pacific Northwest" class="thumb" /></a>
+                <div class="bucketblock">
+                    <div class="titleblock">
+                        <h3 class="slug">Music Lists</h3>
+                        <h4><a href="/templates/story/story.php?storyId=16070613">The Best Hip-Hop of the Pacific Northwest</a></h4>
+                        <div class="byline">By Kevin Cole</div>
+                        <div class="date">November 8, 2007</div>
+                        <p><a href='/templates/story/story.php?storyId=16070613' class='arrow'>Listen to the Songs</a></p>
+                    </div>
+                    <p>At the top of the West, hip-hop is thriving. From the righteous rhyme of Blue Scholars and Ohmega Watts to the infectious party-rap of The Saturday Knights, here's a taste of the region's best hip-hop.</p>
+                </div>
+                <div class="spacer">&nbsp;</div>
+
+            </div>
+</div>
+<!-- MORE STORIES --><div class="bucketwrap feature"><h3>More Stories</h3>            <div class="bucket img">
+                <a href="http://www.kexp.org/" target="_blank"><img src="http://media.npr.org/images/stations/50x30/kexp_bw.gif" width="50" height="30" class="stationlogo" alt="KEXP"></a>
+                <a href="/templates/story/story.php?storyId=17519166"><img src="http://media.npr.org/music/bestof07/kexp/mia75.jpg" width="75" height="75" alt="Best Hip-Hop of 2007 Changes the Game" class="thumb" /></a>
+                <div class="bucketblock">
+                    <div class="titleblock">
+                        <h3 class="slug">Best CDs of 2007</h3>
+                        <h4><a href="/templates/story/story.php?storyId=17519166">Best Hip-Hop of 2007 Changes the Game</a></h4>
+                        <div class="byline">By Don Yates</div>
+                        <div class="date">December 24, 2007</div>
+                        <p><a href='/templates/story/story.php?storyId=17519166' class='arrow'>Hear the Music</a></p>
+                    </div>
+                    <p>This wasn't the strongest year for hip-hop, but 2007 still featured some excellent releases that pushed the genre's boundaries, as well as a few records that reveled, old-school style, in great beats and rhymes.</p>
+                </div>
+                <div class="spacer">&nbsp;</div>
+
+            </div></div><!-- END CLASS="BUCKETWRAP FEATURE" --></div><!-- END ID="MAIN_CONTENT" --><!-- END MAIN CONTENT --><!-- START SIDEBAR --><div id="main_sidebar"><!-- START BROWSE ARTISTS --><div class='bucketwrap browse'><h3><a href="/templates/artist/artist_index.php?filter=A"><span>Find Other Artists</span></a></h3><ul class='abc'><li><a href="/templates/artist/artist_index.php?filter=#">#</a></li>
+<li><a href="/templates/artist/artist_index.php?filter=A">A</a></li>
+<li><a href="/templates/artist/artist_index.php?filter=B">B</a></li>
+<li><a href="/templates/artist/artist_index.php?filter=C">C</a></li>
+<li><a href="/templates/artist/artist_index.php?filter=D">D</a></li>
+<li><a href="/templates/artist/artist_index.php?filter=E">E</a></li>
+<li><a href="/templates/artist/artist_index.php?filter=F">F</a></li>
+<li><a href="/templates/artist/artist_index.php?filter=G">G</a></li>
+<li><a href="/templates/artist/artist_index.php?filter=H">H</a></li>
+<li><a href="/templates/artist/artist_index.php?filter=I">I</a></li>
+<li><a href="/templates/artist/artist_index.php?filter=J">J</a></li>
+<li><a href="/templates/artist/artist_index.php?filter=K">K</a></li>
+<li><a href="/templates/artist/artist_index.php?filter=L">L</a></li>
+<li><a href="/templates/artist/artist_index.php?filter=M">M</a></li>
+<li><a href="/templates/artist/artist_index.php?filter=N">N</a></li>
+<li><a href="/templates/artist/artist_index.php?filter=O">O</a></li>
+<li><a href="/templates/artist/artist_index.php?filter=P">P</a></li>
+<li><a href="/templates/artist/artist_index.php?filter=Q">Q</a></li>
+<li><a href="/templates/artist/artist_index.php?filter=R">R</a></li>
+<li><a href="/templates/artist/artist_index.php?filter=S">S</a></li>
+<li><a href="/templates/artist/artist_index.php?filter=T">T</a></li>
+<li><a href="/templates/artist/artist_index.php?filter=U">U</a></li>
+<li><a href="/templates/artist/artist_index.php?filter=V">V</a></li>
+<li><a href="/templates/artist/artist_index.php?filter=W">W</a></li>
+<li><a href="/templates/artist/artist_index.php?filter=X">X</a></li>
+<li><a href="/templates/artist/artist_index.php?filter=Y">Y</a></li>
+<li><a href="/templates/artist/artist_index.php?filter=Z">Z</a></li>
+</ul></div><!-- END CLASS='BUCKETWRAP BROWSE' --><!-- END BROWSE ARTISTS --><!-- START UNDERWRITING --><div class="adwrapper">        <!-- ACCIPITER TARGET -->
+        <script language="JavaScript">
+        <!--
+    userver = "http://u.npr.org";
+    target = "/site=NPRMUSIC/area=NO_TOPIC/storyid=16070839";
+        // -->
+        </script>        <!--  ACCIPITER AD MANAGER  -->
+        <script language="JavaScript">
+        <!--
+        aloc = "/utype=banner/aamsz=300x250/position=right_main";
+        random = Math.round(Math.random() * 8000000000 + 1000000000);
+        if (!pageNum) var pageNum = Math.round(Math.random() * 100000000);
+        sc = get_source_code();
+        document.write('<');
+        document.write('script language=\"JavaScript\" src="' + window.userver + '/jserver/random=' + random + window.target + aloc + sc + '/pageid=' + pageNum + '">');
+        document.write('<');
+        document.write('/script>');
+        // -->
+        </script>
+        <noscript>
+        <a rel="nofollow" HREF="http://u.npr.org/adclick/site=NPRMUSIC/area=NO_TOPIC/storyid=16070839/utype=banner/aamsz=300x250/position=right_main/pageid=1">
+        <img src="http://u.npr.org/nserver/site=NPRMUSIC/area=NO_TOPIC/storyid=16070839/utype=banner/aamsz=300x250/position=right_main/pageid=1" /></a>
+        </noscript></div><!-- END CLASS="ADWRAPPER" --><!-- END UNDERWRITING --><div class="bucketwrap feature"></div><!-- END CLASS="BUCKETWRAP FEATURE" --><!-- START ECOMMERCE --><div class="bucketwrap feature buy"><h3>Purchase Featured Music</h3><div class="bucket ecommerce"><ul class="line"><li><a" href="javascript:toggleEcommerceDiv('857229001710', '1', 'Bayani');""><img width="75" height="75" alt="Bayani" src="http://media.npr.org/images/amg/pop/cov75/dri700/i775/i77545xinzr.jpg"/></a><div class="spacer">&nbsp;</div><div class="titleblock"><div class="album"><a href="javascript:toggleEcommerceDiv('857229001710', '1', 'Bayani');">Bayani</a></div><div class="artist">Blue Scholars</div></div><!-- END CLASS="TITLEBLOCK" -->            <div id="ecommerceDiv857229001710_1" class="commPopWrapper closeDiv">
+                    <div class="commPop">
+                        <div class="header">
+                            <h3><img src="http://download.npr.org/anon.npr-www/chrome/icon_ecommerce2.gif" width="21" height="21" class="ecommerceIcon" /> <div class="popTitle">Purchase Featured Music</div></h3>
+                            <a href="javascript:toggleEcommerceDiv('857229001710', '1', 'Bayani');" class="close"><img src="http://download.npr.org/anon.npr-www/chrome/close_white.gif" width="57" height="14" alt="Close window" /></a>
+                            <div class="spacer">&nbsp;</div>
+                        </div>
+                        <div class="commPopLine"></div>
+                        <ul>
+                            <li>CD:</li>
+                            <li><span class="cdtitle">Bayani</span></li>
+                            <li>Artist : Blue Scholars</li>
+                            <li>Label: Red Urban</li>
+                            <li>Released: 2007</li>
+                            
+                        </ul>
+                        <div class="commPopLine"></div><div class="links"><span id="VendorLinks857229001710_1"></span><div class="spacer">&nbsp;</div></div><!-- END CLASS="LINKS" --> <div class="spacer">&nbsp;</div>
+ </div>
+<div class="commPopBg">&nbsp;</div>
+</div>
+</li><li><a" href="javascript:toggleEcommerceDiv('780661121824', '2', 'Watts Happening');""><img width="75" height="75" alt="Watts Happening" src="http://media.npr.org/images/amg/pop/cov75/drj000/j097/j09756fzop0.jpg"/></a><div class="spacer">&nbsp;</div><div class="titleblock"><div class="album"><a href="javascript:toggleEcommerceDiv('780661121824', '2', 'Watts Happening');">Watts Happening</a></div><div class="artist">Ohmega Watts</div></div><!-- END CLASS="TITLEBLOCK" -->            <div id="ecommerceDiv780661121824_2" class="commPopWrapper closeDiv">
+                    <div class="commPop">
+                        <div class="header">
+                            <h3><img src="http://download.npr.org/anon.npr-www/chrome/icon_ecommerce2.gif" width="21" height="21" class="ecommerceIcon" /> <div class="popTitle">Purchase Featured Music</div></h3>
+                            <a href="javascript:toggleEcommerceDiv('780661121824', '2', 'Watts Happening');" class="close"><img src="http://download.npr.org/anon.npr-www/chrome/close_white.gif" width="57" height="14" alt="Close window" /></a>
+                            <div class="spacer">&nbsp;</div>
+                        </div>
+                        <div class="commPopLine"></div>
+                        <ul>
+                            <li>CD:</li>
+                            <li><span class="cdtitle">Watts Happening</span></li>
+                            <li>Artist : Ohmega Watts</li>
+                            <li>Label: Ubiquity</li>
+                            <li>Released: 2007</li>
+                            
+                        </ul>
+                        <div class="commPopLine"></div><div class="links"><span id="VendorLinks780661121824_2"></span><div class="spacer">&nbsp;</div></div><!-- END CLASS="LINKS" --> <div class="spacer">&nbsp;</div>
+ </div>
+<div class="commPopBg">&nbsp;</div>
+</div>
+</li><li><a" href="javascript:toggleEcommerceDiv('619981241625', '3', 'Alive At The Assembly Line');""><img width="75" height="75" alt="Alive At The Assembly Line" src="http://media.npr.org/images/amg/pop/cov75/drj000/j073/j07378a2u80.jpg"/></a><div class="spacer">&nbsp;</div><div class="titleblock"><div class="album"><a href="javascript:toggleEcommerceDiv('619981241625', '3', 'Alive At The Assembly Line');">Alive At The Assembly Line</a></div><div class="artist">Othello</div></div><!-- END CLASS="TITLEBLOCK" -->            <div id="ecommerceDiv619981241625_3" class="commPopWrapper closeDiv">
+                    <div class="commPop">
+                        <div class="header">
+                            <h3><img src="http://download.npr.org/anon.npr-www/chrome/icon_ecommerce2.gif" width="21" height="21" class="ecommerceIcon" /> <div class="popTitle">Purchase Featured Music</div></h3>
+                            <a href="javascript:toggleEcommerceDiv('619981241625', '3', 'Alive At The Assembly Line');" class="close"><img src="http://download.npr.org/anon.npr-www/chrome/close_white.gif" width="57" height="14" alt="Close window" /></a>
+                            <div class="spacer">&nbsp;</div>
+                        </div>
+                        <div class="commPopLine"></div>
+                        <ul>
+                            <li>CD:</li>
+                            <li><span class="cdtitle">Alive At The Assembly Line</span></li>
+                            <li>Artist : Othello</li>
+                            <li>Label: Hiphop Is Music</li>
+                            
+                            
+                        </ul>
+                        <div class="commPopLine"></div><div class="links"><span id="VendorLinks619981241625_3"></span><div class="spacer">&nbsp;</div></div><!-- END CLASS="LINKS" --> <div class="spacer">&nbsp;</div>
+ </div>
+<div class="commPopBg">&nbsp;</div>
+</div>
+</li><li><a" href="javascript:toggleEcommerceDiv('826257008626', '4', 'Bloody Radio');""><img width="75" height="75" alt="Bloody Radio" src="http://media.npr.org/images/amg/pop/cov75/drj000/j021/j02145hxdrb.jpg"/></a><div class="spacer">&nbsp;</div><div class="titleblock"><div class="album"><a href="javascript:toggleEcommerceDiv('826257008626', '4', 'Bloody Radio');">Bloody Radio</a></div><div class="artist">Grayskul</div></div><!-- END CLASS="TITLEBLOCK" -->            <div id="ecommerceDiv826257008626_4" class="commPopWrapper closeDiv">
+                    <div class="commPop">
+                        <div class="header">
+                            <h3><img src="http://download.npr.org/anon.npr-www/chrome/icon_ecommerce2.gif" width="21" height="21" class="ecommerceIcon" /> <div class="popTitle">Purchase Featured Music</div></h3>
+                            <a href="javascript:toggleEcommerceDiv('826257008626', '4', 'Bloody Radio');" class="close"><img src="http://download.npr.org/anon.npr-www/chrome/close_white.gif" width="57" height="14" alt="Close window" /></a>
+                            <div class="spacer">&nbsp;</div>
+                        </div>
+                        <div class="commPopLine"></div>
+                        <ul>
+                            <li>CD:</li>
+                            <li><span class="cdtitle">Bloody Radio</span></li>
+                            <li>Artist : Grayskul</li>
+                            <li>Label: Rhymesayers</li>
+                            <li>Released: 2007</li>
+                            
+                        </ul>
+                        <div class="commPopLine"></div><div class="links"><span id="VendorLinks826257008626_4"></span><div class="spacer">&nbsp;</div></div><!-- END CLASS="LINKS" --> <div class="spacer">&nbsp;</div>
+ </div>
+<div class="commPopBg">&nbsp;</div>
+</div>
+</li><li><a" href="javascript:toggleEcommerceDiv('826853002424', '5', 'Saturday Knights [EP]');""><img width="75" height="75" alt="Saturday Knights [EP]" src="http://media.npr.org/images/amg/pop/cov75/dri400/i443/i44361prbmv.jpg"/></a><div class="spacer">&nbsp;</div><div class="titleblock"><div class="album"><a href="javascript:toggleEcommerceDiv('826853002424', '5', 'Saturday Knights [EP]');">Saturday Knights [EP]</a></div><div class="artist">The Saturday Knights</div></div><!-- END CLASS="TITLEBLOCK" -->            <div id="ecommerceDiv826853002424_5" class="commPopWrapper closeDiv">
+                    <div class="commPop">
+                        <div class="header">
+                            <h3><img src="http://download.npr.org/anon.npr-www/chrome/icon_ecommerce2.gif" width="21" height="21" class="ecommerceIcon" /> <div class="popTitle">Purchase Featured Music</div></h3>
+                            <a href="javascript:toggleEcommerceDiv('826853002424', '5', 'Saturday Knights [EP]');" class="close"><img src="http://download.npr.org/anon.npr-www/chrome/close_white.gif" width="57" height="14" alt="Close window" /></a>
+                            <div class="spacer">&nbsp;</div>
+                        </div>
+                        <div class="commPopLine"></div>
+                        <ul>
+                            <li>CD:</li>
+                            <li><span class="cdtitle">Saturday Knights [EP]</span></li>
+                            <li>Artist : The Saturday Knights</li>
+                            <li>Label: Light in the Attic</li>
+                            <li>Released: 2007</li>
+                            
+                        </ul>
+                        <div class="commPopLine"></div><div class="links"><span id="VendorLinks826853002424_5"></span><div class="spacer">&nbsp;</div></div><!-- END CLASS="LINKS" --> <div class="spacer">&nbsp;</div>
+ </div>
+<div class="commPopBg">&nbsp;</div>
+</div>
+</li></ul></div><!-- END CLASS="BUCKET ECOMMERCE" --><script type="text/javascript" src="../javascript/ecommerce.js"></script></div><!-- END CLASS="BUCKETWRAP FEATURE BUY" --><!-- END ECOMMERCE --></div><!-- END ID="MAIN_SIDEBAR" --><!-- END SIDEBAR --><div class="spacer">&nbsp;</div></div><!-- END ID="WRAPPER" --><div id="footer">
+    <ul>
+        <li><a href="/">NPR.org Home</a> <span class="pipe">|</span></li>
+        <li><a href="/music/">Music Home</a> <span class="pipe">|</span></li>
+        <li><a href="/templates/topics/topic.php?topicId=1108">Discover Songs</a> <span class="pipe">|</span></li>
+        <li><a href="/templates/topics/topic.php?topicId=1109">Live Concerts</a> <span class="pipe">|</span></li>
+        <li><a href="/templates/topics/topic.php?topicId=1103">Studio Sessions</a> <span class="pipe">|</span></li>
+        <li><a href="/templates/topics/topic.php?topicId=1105">Interviews &amp; Profiles</a> <span class="pipe">|</span></li>
+        <li><a href="/templates/archives/archive.php?thingId=1106">News</a> <span class="pipe">|</span></li>
+        <li><a href="/templates/topics/topic.php?topicId=1104">Reviews</a> <span class="pipe">|</span></li>
+        <li><a href="/music/blogs/">Blogs</a> <span class="pipe">|</span></li>
+        <li><a href="/templates/artist/artist_index.php?filter=A">Browse Artists</a> <span class="pipe">|</span></li>
+        <li><a href="/music/stations/streams.html">Live Music Streams</a></li>
+    </ul>
+    <ul>
+        <li><a href="/templates/story/story.php?storyId=10001">Rock/Pop/Folk</a> <span class="pipe">|</span></li>
+        <li><a href="/templates/story/story.php?storyId=10003">Classical</a> <span class="pipe">|</span></li>
+        <li><a href="/templates/story/story.php?storyId=10002">Jazz &amp; Blues</a> <span class="pipe">|</span></li>
+        <li><a href="/templates/story/story.php?storyId=10004">World</a> <span class="pipe">|</span></li>
+        <li><a href="/templates/story/story.php?storyId=10005">Urban</a></li>
+    </ul>
+    <ul>
+        <li><a href="/podcasts/">Podcasts</a> <span class="pipe">|</span></li>
+        <li><a href="http://www.publicradiomail.org/nprnewsletters/home.html" target="_blank">Newsletters</a> <span class="pipe">|</span></li>
+        <li><a href="/rss/">RSS Feeds</a> <span class="pipe">|</span></li>
+        <li><a href="/services/desktop.html">Desktop Alerts</a></li>
+    </ul>
+    <ul class="lastrow">
+        <li>&copy; Copyright
+            <script type="text/javascript">
+                year = new Date();
+                document.write(year.getFullYear());
+            </script>  NPR <span class="pipe">|</span></li>
+        <li><a href="/about/termsofuse.html">Terms of Use</a> <span class="pipe">|</span></li>
+        <li><a href="/about/permissioninfo.html">Permissions</a> <span class="pipe">|</span></li>
+        <li><a href="/about/privacypolicy.html">Privacy Policy</a></li>
+    </ul>
+</div>
+
+<script type="text/javascript" src="/include/javascript/test/test1.js"></script>            <script type="text/javascript">
+                window.vstag = {"storyId":"16070839","title":"Blue+Scholars","date":"19691231","pageTypeId":"17","orgId":"1","storyLength":490};
+            </script>
+            <script type="text/javascript" src="/templates/javascript/zig.js" ></script>
+            <noscript>
+            <img src="/images/zag.gif?Log=1&v_jd=1&storyId=16070839&dt=Blue+Scholars&date=19691231&pageTypeId=17&orgId=1&storyLength=490" border="0" width="1" height="1"/>
+            </noscript></body></html>
+
+<!--  Burned on demand at 2008-04-14 06:46:47-->
+
+<!-- LIVE -->

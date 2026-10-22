@@ -1,0 +1,35 @@
+{
+  "description": "Unaltered compound image objects extracted from archived Billboard PDF pages.",
+  "method": "Extract original JPEG XObject streams; retain entire composite and record page placement, parent PDF hash, and qualified identification.",
+  "images": [
+    {
+      "pdf": "800fe84ab3cc3632e510583b6dc2daece77b8fd15fd9472e7d4c38d79847971a.pdf",
+      "page": 35,
+      "object": "I6",
+      "label": "Billboard July 2006 Blue Scholars page composite",
+      "association": "Probable Blue Scholars duo photograph at left; composite also includes unrelated photographs.",
+      "source_page_context": "Billboard issue page headed The Blue Scholars; article text describes the Seattle duo.",
+      "source_type": "unaltered PDF image object; compound page artwork",
+      "pdf_path": "recovery/other-archives/press-pdfs/raw/800fe84ab3cc3632e510583b6dc2daece77b8fd15fd9472e7d4c38d79847971a.pdf",
+      "pdf_sha256": "800fe84ab3cc3632e510583b6dc2daece77b8fd15fd9472e7d4c38d79847971a",
+      "wayback_timestamp": "20210127000729",
+      "wayback_replay": "https://web.archive.org/web/20210127000729id_/https://worldradiohistory.com/Archive-All-Music/Billboard/00s/2006/BB-2006-07-15.pdf",
+      "page_image_object": "I6",
+      "dimensions_px": {
+        "width": 1642,
+        "height": 876
+      },
+      "placement_points": {
+        "x0": 0.0,
+        "top": 211.2,
+        "x1": 788.16,
+        "bottom": 631.44
+      },
+      "bytes": 62186,
+      "sha256": "7eda2449b013a4b4d070d7cd0bf5ce2a44acf6a88616202fd9af3b5437405620",
+      "path": "recovery/other-archives/press-pdfs/images/7eda2449b013a4b4d070d7cd0bf5ce2a44acf6a88616202fd9af3b5437405620.jpg",
+      "visual_review": "JPEG inspected; left panel likely depicts the duo, but image is a multi-photo composite and attribution is not printed in the extracted object.",
+      "rights_status": "recovery-only; rights review required"
+    }
+  ]
+}

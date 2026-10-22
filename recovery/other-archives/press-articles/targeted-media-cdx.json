@@ -1,0 +1,25 @@
+{
+  "archive": "Internet Archive Wayback CDX",
+  "query_type": "source-linked prefix and exact media URL checks",
+  "queries": [
+    {
+      "name": "thehundreds-legacy-image-prefix",
+      "url": "https://storage.googleapis.com/thehundreds/media/2015/02/foodandshit_prometheus-brown_thehundreds",
+      "rows": [],
+      "error": "ReadTimeout: HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=35)"
+    },
+    {
+      "name": "thehundreds-current-image-prefix",
+      "url": "https://thehundreds.com/cdn/shop/articles/foodandshit_prometheus-brown_thehundreds",
+      "rows": [],
+      "error": "ReadTimeout: HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=35)"
+    },
+    {
+      "name": "pbs-geo-bruce-thumbnail-prefix",
+      "url": "https://image.pbs.org/video-assets/6xZ5CEq-asset-mezzanine-16x9-B9IQkJc.png",
+      "rows": [],
+      "error": "HTTPError: 503 Server Error: Service Unavailable for url: https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fimage.pbs.org%2Fvideo-assets%2F6xZ5CEq-asset-mezzanine-16x9-B9IQkJc.png&matchType=prefix&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest%2Clength&filter=statuscode%3A200&limit=1000"
+    }
+  ],
+  "checked_at": "2026-10-22"
+}

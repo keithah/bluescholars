@@ -1,0 +1,1340 @@
+   
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head><title>
+	CDBaby | Native Guns | Barrel Men
+</title>
+
+    <meta name="description" content="CD Baby is the largest online distributor of independent music. CDBaby.com is our quaint little record store where we hope you will discover your next favorite artist." />
+
+    <script type="text/javascript" src="/Scripts/jquery-1.3.2.min.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery.preloadimages.min.js"></script>
+    
+    <script type="text/javascript" src="/Plugins/OverflowScroller/Scripts/jquery.overflowscroller.min.js"></script>
+    <link type="text/css" href="/Plugins/OverflowScroller/Styles/styles.css" rel="stylesheet" />
+    
+    <script type="text/javascript" src="/Scripts/jquery.hoverpulse.min.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery.scrollTo-min.js"></script>
+    
+    <script type="text/javascript" src="/Scripts/scripts.min.js"></script>
+    <link type="text/css" href="/CSS/styles.min.css" rel="stylesheet" />
+
+    <!--[if lt IE 7.]>
+    <script defer type="text/javascript" src="/Scripts/pngfix.min.js"></script>
+
+	<style type="text/css">
+	    .album-container .img-container,
+	    .artist-container .img-container     { z-index:1 !important; }	
+	    .album-container .img-container a,
+	    .artist-container .img-container a   { z-index:9991 !important; }	
+	</style>
+
+    <![endif]-->
+
+
+
+    <script type="text/javascript">
+        function PageEvents() 
+        {
+            
+
+        // (Not in content panels) Make sure these events has not already been bound 
+        if ( $("#boundPageEvents_Albumdetails").attr("title") == "NO" )
+        {
+    
+            $(".album-notes p.info").each(function(){
+                if( $(this).height() > 92 )
+                {
+                    $(this).css("height","92px").css("overflow","hidden").parent().find(".read-more-notes").css("display","inline");
+                }
+            });
+            $(".album-notes a").click(function () { 
+                var $link = $(this); 
+                if ( $link.text() == "Read more..." ) {
+	               $link.parent().find("p.info").css("height","100%");
+	               $link.text("Read less...");
+                }
+                else {
+	               $link.parent().find("p").animate({ height:'92px' }, 500, function(){ $link.text("Read more..."); } );
+                } 
+                return false;
+            });
+
+            $("#back-to-artist").hover(
+	            function () { $(this).attr("src","/Images/buttons/button-backtoArtist_f2.jpg"); }, 
+	            function () { $(this).attr("src","/Images/buttons/button-backtoArtist.jpg"); }
+            );
+
+             $.preloadImages
+            ([
+                '/Images/buttons/button-backtoArtist_f2.jpg'
+            ]);
+ 
+            // Block these events from getting bound by any other content panels on the page
+            $("#boundPageEvents_Albumdetails").attr("title","YES");
+
+        }
+
+
+
+        // (In content panels) Make sure these events has not already been bound
+        if ( $("#boundPageEvents_ContentPanels").attr("title") == "NO" )
+        {
+    
+            // ====== AlbumDetails.aspx ======
+                        
+            $("#see-more").click(function () { $.scrollTo( $(".album-notes"), 800 ); });
+
+            $(".wishlist-button").hover(
+	            function () { $(this).attr("src","/Images/Buttons/button-addtoWishlist_f2.jpg"); }, 
+	            function () { $(this).attr("src","/Images/Buttons/button-addtoWishlist.jpg"); }
+            );
+            $(".download-buynow-button").hover(
+	            function () { $(this).attr("src","/Images/Buttons/button-buyNow_f2.jpg"); }, 
+	            function () { $(this).attr("src","/Images/Buttons/button-buyNow.jpg"); }
+            );
+            $(".cd-buynow-button").hover(
+	            function () { $(this).attr("src","/Images/Buttons/button-buyNowGreen_f2.jpg"); }, 
+	            function () { $(this).attr("src","/Images/Buttons/button-buyNowGreen.jpg"); }
+            );
+            $(".download-tracks-button").hover(
+	            function () { $(this).attr("src","/Images/Buttons/button-downloadSongs_f2.jpg"); }, 
+	            function () { $(this).attr("src","/Images/Buttons/button-downloadSongs.jpg"); }
+            );
+             $.preloadImages
+            ([
+                '/Images/Buttons/button-buyNow_f2.jpg',
+                '/Images/Buttons/button-buyNowGreen_f2.jpg',
+                '/Images/Buttons/button-downloadSongs_f2.jpg',
+                '/Images/Buttons/button-addtoWishlist_f2.jpg'
+            ]);
+          
+            // ====== Misc_ShoppingCartOverlay.ascx , Misc_WishListOverlay.ascx ======
+
+            function HideDropDowns() {
+                $("select").not("no-replace").each(function() {
+
+                    $(this)
+                            .after("<span class='replacement'></span>").next()
+                            .addClass($(this).attr('class'))
+                            .attr('id', $(this).attr('id'))
+                            .html($(this).html())
+                            .width($(this).width())
+                            .height($(this).height())
+                            .prev().remove();
+                });
+            }
+            
+            if ( $(".overlay-cart").css("display") == "block" ) { HideDropDowns(); } 
+            if ( $(".overlay-wish").css("display") == "block" ) { HideDropDowns(); } 
+
+            function ShowDropDowns() {
+                $(".replacement").each(function() {
+                    
+                    $(this)
+                            .after("<select></select>").next()
+                            .removeClass("replacement")
+                            .attr('class', $(this).attr('class')).attr('id', $(this).attr('id'))
+                            .html($(this).html())
+                            .prev().remove();
+
+                });
+            }
+            
+            var $screenHeight = (window.innerHeight || window.innerWidth || document.documentElement.clientHeight)
+            var $screenWidth = (window.innerWidth || document.documentElement.clientWidth)
+            $(".overlay-cover").width($screenWidth);
+            $(".overlay-content-wrap").css("left",($screenWidth/2) + "px");
+            var $screenTop = (document.documentElement.scrollTop || document.body.scrollTop);
+            var $contentHeightCart =  $(".overlay-cart .overlay-content-wrap").height();
+            var $contentHeightWish =  $(".overlay-wish .overlay-content-wrap").height();
+            var $contentTopCart;
+            var $contentTopWish;
+            if ( ($contentHeightCart+40) < $screenHeight ) { $contentTopCart = Math.round(($screenHeight-$contentHeightCart)/2) + $screenTop; }
+            else { $contentTopCart = $screenTop + 40; }
+            if ( ($contentHeightWish+40) < $screenHeight ) { $contentTopWish = Math.round(($screenHeight-$contentHeightWish)/2) + $screenTop; }
+            else { $contentTopWish = $screenTop + 40; }
+            if ( ($screenTop + $contentHeightCart + 40) < ($("#container-page").height()+40) )
+            {
+                $(".overlay-cover").height($("#container-page").height()+40);
+            }
+            else
+            {
+                $(".overlay-cover").height($screenTop + $contentHeightCart + 80);
+            }
+
+            $(".overlay-cart .overlay-content-wrap").css("top",$contentTopCart + "px");
+            $(".overlay-wish .overlay-content-wrap").css("top",$contentTopWish + "px");
+          
+            // ====== Misc_ViewCart.ascx ======
+            
+            $(".overlay-content-wrap .overlay-buttons .shopping-button").hover(
+                function () { $(this).attr("src","/Images/buttons/button-continueShopping_f2.jpg"); }, 
+                function () { $(this).attr("src","/Images/buttons/button-continueShopping.jpg"); }
+            );
+            $(".overlay-content-wrap .overlay-buttons .checkout-button").hover(
+                function () { $(this).attr("src","/Images/buttons/button-checkout_f2.jpg"); }, 
+                function () { $(this).attr("src","/Images/buttons/button-checkout.jpg"); }
+            );
+
+            $.preloadImages
+            ([
+                '/Images/buttons/button-continueShopping_f2.jpg',
+                '/Images/buttons/button-checkout_f2.jpg'
+            ]);
+
+            // ====== Misc_Reviews.ascx ======
+            
+            $("#UC_Misc_Reviews .review-text").each(function(){
+                if( $(this).height() > 69 )
+                {
+                    $(this).css("height","69px").css("overflow","hidden").parent().find(".read-more").css("display","inline");
+                }
+            });
+            
+            $("#UC_Misc_Reviews .read-more").click(function () { 
+                var $link = $(this); 
+                if ( $(this).text() == "Read more..." ) {
+                   $(this).parent().find(".review-text").css("height","100%");
+                   $link.text("Read less...");
+                }
+                else {
+                   $(this).parent().find(".review-text").animate({ height:'69px' }, 500, function(){ $link.text("Read more..."); } );
+                } 
+                return false;
+            });
+            
+            $(".star1 img").hover(
+                function () { 
+                    $(".star1 img").attr("src","/images/star_full.jpg"); 
+                }, 
+                function () { 
+                    if ($(".star1 img").parent().attr("rel") != "full") { $(".star1 img").attr("src","/images/star_empty.jpg"); }
+                }
+            );
+            $(".star1").click( function () { 
+                $(this).parent().find("a").attr("rel","").find("img").attr("src","/images/star_empty.jpg");
+                $(".star1 img").attr("src","/images/star_full.jpg").parent().attr("rel","full"); 
+                $(".rating-label").val("1");
+                return false;
+            });
+            
+            $(".star2 img").hover(
+                function () { 
+                    $(".star1 img").attr("src","/images/star_full.jpg"); 
+                    $(".star2 img").attr("src","/images/star_full.jpg"); },
+                function () { 
+                    if ($(".star1 img").parent().attr("rel") != "full") { $(".star1 img").attr("src","/images/star_empty.jpg"); }
+                    if ($(".star2 img").parent().attr("rel") != "full") { $(".star2 img").attr("src","/images/star_empty.jpg"); }
+                }
+            );
+            $(".star2").click( function () { 
+                $(this).parent().find("a").attr("rel","").find("img").attr("src","/images/star_empty.jpg");
+                $(".star1 img").attr("src","/images/star_full.jpg").parent().attr("rel","full"); 
+                $(".star2 img").attr("src","/images/star_full.jpg").parent().attr("rel","full"); 
+                $(".rating-label").val("2");
+                return false;
+            });
+
+            $(".star3 img").hover(
+                function () { 
+                    $(".star1 img").attr("src","/images/star_full.jpg"); 
+                    $(".star2 img").attr("src","/images/star_full.jpg"); 
+                    $(this).attr("src","/images/star_full.jpg"); }, 
+                function () { 
+                    if ($(".star1 img").parent().attr("rel") != "full") { $(".star1 img").attr("src","/images/star_empty.jpg"); }
+                    if ($(".star2 img").parent().attr("rel") != "full") { $(".star2 img").attr("src","/images/star_empty.jpg"); }
+                    if ($(".star3 img").parent().attr("rel") != "full") { $(".star3 img").attr("src","/images/star_empty.jpg"); }
+                }
+            );
+            $(".star3").click( function () { 
+                $(this).parent().find("a").attr("rel","").find("img").attr("src","/images/star_empty.jpg");
+                $(".star1 img").attr("src","/images/star_full.jpg").parent().attr("rel","full"); 
+                $(".star2 img").attr("src","/images/star_full.jpg").parent().attr("rel","full"); 
+                $(".star3 img").attr("src","/images/star_full.jpg").parent().attr("rel","full"); 
+                $(".rating-label").val("3");
+               return false;
+            });
+
+            $(".star4 img").hover(
+                function () { 
+                    $(".star1 img").attr("src","/images/star_full.jpg"); 
+                    $(".star2 img").attr("src","/images/star_full.jpg"); 
+                    $(".star3 img").attr("src","/images/star_full.jpg"); 
+                    $(this).attr("src","/images/star_full.jpg"); }, 
+                function () { 
+                    if ($(".star1 img").parent().attr("rel") != "full") { $(".star1 img").attr("src","/images/star_empty.jpg"); }
+                    if ($(".star2 img").parent().attr("rel") != "full") { $(".star2 img").attr("src","/images/star_empty.jpg"); }
+                    if ($(".star3 img").parent().attr("rel") != "full") { $(".star3 img").attr("src","/images/star_empty.jpg"); }
+                    if ($(".star4 img").parent().attr("rel") != "full") { $(".star4 img").attr("src","/images/star_empty.jpg"); }
+                }
+            );
+            $(".star4").click( function () { 
+                $(this).parent().find("a").attr("rel","").find("img").attr("src","/images/star_empty.jpg");
+                $(".star1 img").attr("src","/images/star_full.jpg").parent().attr("rel","full"); 
+                $(".star2 img").attr("src","/images/star_full.jpg").parent().attr("rel","full"); 
+                $(".star3 img").attr("src","/images/star_full.jpg").parent().attr("rel","full"); 
+                $(".star4 img").attr("src","/images/star_full.jpg").parent().attr("rel","full"); 
+                $(".rating-label").val("4");
+               return false;
+            });
+
+            $(".star5 img").hover(
+                function () { 
+                    $(".rating-stars img").attr("src","/images/star_full.jpg"); }, 
+                function () { 
+                    if ($(".star1 img").parent().attr("rel") != "full") { $(".star1 img").attr("src","/images/star_empty.jpg"); }
+                    if ($(".star2 img").parent().attr("rel") != "full") { $(".star2 img").attr("src","/images/star_empty.jpg"); }
+                    if ($(".star3 img").parent().attr("rel") != "full") { $(".star3 img").attr("src","/images/star_empty.jpg"); }
+                    if ($(".star4 img").parent().attr("rel") != "full") { $(".star4 img").attr("src","/images/star_empty.jpg"); }
+                    if ($(".star5 img").parent().attr("rel") != "full") { $(".star5 img").attr("src","/images/star_empty.jpg"); }
+                }
+            );
+            $(".star5").click( function () { 
+                $(this).parent().find("a").attr("rel","").find("img").attr("src","/images/star_empty.jpg");
+                $(".star1 img").attr("src","/images/star_full.jpg").parent().attr("rel","full"); 
+                $(".star2 img").attr("src","/images/star_full.jpg").parent().attr("rel","full"); 
+                $(".star3 img").attr("src","/images/star_full.jpg").parent().attr("rel","full"); 
+                $(".star4 img").attr("src","/images/star_full.jpg").parent().attr("rel","full"); 
+                $(".star5 img").attr("src","/images/star_full.jpg").parent().attr("rel","full"); 
+                $(".rating-label").val("5");
+                return false;
+            });
+            
+
+            $(".submit-review").hover(
+                function () { $(this).attr("src","/Images/Buttons/button-submit_f2.jpg"); }, 
+                function () { $(this).attr("src","/Images/Buttons/button-submit.jpg"); }
+            );
+            $(".previous-link").hover(
+                function () { $(this).css("backgroundImage","url(/Images/Buttons/button-prev_f2.jpg)"); }, 
+                function () { $(this).css("backgroundImage","url(/Images/Buttons/button-prev.jpg)"); }
+            );
+            $(".next-link").hover(
+                function () { $(this).css("backgroundImage","url(/Images/Buttons/button-next_f2.jpg)"); }, 
+                function () { $(this).css("backgroundImage","url(/Images/Buttons/button-next.jpg)"); }
+            );
+            $(".page-numbers a").hover(
+                function () { $(this).css("backgroundImage","url(/Images/buttons/button-pagination_f2.jpg)"); }, 
+                function () { $(this).css("backgroundImage","url(/Images/buttons/button-pagination.jpg)"); }
+            );
+
+            $.preloadImages
+            ([
+                '/Images/Buttons/button-prev_f2.jpg',
+                '/Images/Buttons/button-next_f2.jpg',
+                '/Images/buttons/button-pagination_f2.jpg',
+                '/Images/buttons/button-submit_f2.jpg'
+            ]);
+            
+            $(".quantity-box").keypress(function (e) {
+                  if (e.which == 13) { return false; }
+                });
+
+            
+        
+            // ====== All Update Panel Triggers ======
+            // Unblock the events on this page and allow them to get bound on an AJAX call
+            $(".pagination a").click(function() { $("#boundPageEvents_ContentPanels").attr("title","NO"); });
+            $(".wishlist-button").click(function() { $("#boundPageEvents_ContentPanels").attr("title","NO"); });
+            $("#album-formats input").click(function() { $("#boundPageEvents_ContentPanels").attr("title","NO"); });
+            $(".download-tracks-button").click(function() { $("#boundPageEvents_ContentPanels").attr("title","NO"); });
+            $(".format-options").click(function() { $("#boundPageEvents_ContentPanels").attr("title","NO"); });
+            $(".update-link").click(function() { $("#boundPageEvents_ContentPanels").attr("title","NO"); });
+            $(".remove-link").click(function() { $("#boundPageEvents_ContentPanels").attr("title","NO"); });
+            $(".shopping-button").click(function() { $("#boundPageEvents_ContentPanels").attr("title","NO"); });
+            $(".submit-review").click(function() { $("#boundPageEvents_ContentPanels").attr("title","NO"); });
+            
+            
+            $(".overlay-close").click(function() 
+            { 
+                $(".overlay-cart").css("display","none");
+                $(".overlay-wish").css("display","none");
+                $("#boundPageEvents_ContentPanels").attr("title","NO"); 
+            });
+            
+            // Block these events from getting bound by any other content panels on the page
+            $("#boundPageEvents_ContentPanels").attr("title","YES");
+
+      }
+
+
+
+   
+
+    // Make sure these events has not already been bound
+    if ( $("#boundPageEvents_Album_Albumsyouwilllove").attr("title") == "NO" )
+    {
+    
+        $("#UC_Album_AlbumsYouWillLove .lovedalbums-container").overflowScroller(); 
+        $("#UC_Album_AlbumsYouWillLove .lovedalbums-container").hover(
+	        function () { $(this).overflowOver().css("backgroundColor","#f5ebd2"); }, 
+	        function () { $(this).overflowOut().css("backgroundColor","#fbf1d7"); }
+        );
+    
+        $('#lovedalbums-display img.pulse').hoverpulse({size:30});
+           
+        // Block these events from getting bound by any other content panels on the page
+        $("#boundPageEvents_Album_Albumsyouwilllove").attr("title","YES");
+
+    }
+
+
+    $(".overlay-close img").hover(
+	    function () { $(this).attr("src","/Images/Buttons/button-closeX_f2.png"); }, 
+	    function () { $(this).attr("src","/Images/Buttons/button-closeX.png"); }
+    );
+    $.preloadImages
+    ([
+        '/Images/Buttons/button-closeX_f2.png'
+    ]);
+
+
+    $(".download-button img").hover(
+        function () { $(this).attr("src","/Images/Buttons/button-downloadMusic_f2.jpg"); }, 
+        function () { $(this).attr("src","/Images/Buttons/button-downloadMusic.jpg"); }
+    );
+    $.preloadImages
+    ([
+        '/Images/Buttons/button-downloadMusic_f2.jpg'
+    ]);
+
+
+    $(".overlay-close img").hover(
+	    function () { $(this).attr("src","/Images/Buttons/button-closeX_f2.png"); }, 
+	    function () { $(this).attr("src","/Images/Buttons/button-closeX.png"); }
+    );
+    $.preloadImages
+    ([
+        '/Images/Buttons/button-closeX_f2.png'
+    ]);
+
+
+
+
+
+
+        }
+    </script>    
+        
+    
+
+    <script type="text/javascript">
+        function TrackChoiceMade()
+        {
+            returnValue = false;
+
+            $(".check-download-track input").each(function() {
+                if ($(this).attr("checked") == true) { returnValue = true; }
+            });
+            
+            if ( returnValue == false ) { alert("Please choose a track to download."); }
+            
+            return returnValue;
+        }
+    </script>
+    
+    <style type="text/css">
+        #album-cover-container { height:200px; }
+        #back-to-artist { margin-bottom:20px; }
+        .wishlist-button { width:144px; height:19px; margin:20px 28px; }
+        
+        #album-info-container { margin-bottom:25px; }
+        
+        #album-info-left { float:left; width:503px; }
+        
+            .album-description { display:block; margin-bottom:20px; }
+            .album-name { display:block; font-size:23px; color:#000; font-weight:bold; margin-bottom:2px; }
+            .artist-name a { display:block; font-size:16px; color:#333; text-decoration:none; margin-bottom:2px; }
+            .artist-name a:hover { text-decoration:underline; }
+            .album-label { display:block; color:#666; font-size:13px; }
+            
+            #album-formats { margin:15px 0 15px 0; }
+            #album-formats li { position:relative; margin-bottom:10px; height:20px; }
+            #album-formats li span { position:absolute; display:block; height:20px; line-height:20px; top:0px; left:76px; }
+            .download-buynow-button, .cd-buynow-button { width:66px; height:20px;  }
+            .cd-buynow-button { }
+            .format-message { font-weight:bold; font-size:14px; margin-left:10px; }
+            #see-more { text-decoration:underline; color:#333; font-size:13px; }
+        
+        #album-info-right { float:left; width:232px; }
+
+            #album-availability { margin-bottom:40px; }
+            .stock-message { float:right; width:62px; height:61px; }
+            .discount-info { float:left; height:61px; width:150px; text-align:right; padding-right:20px; padding-top:10px; }
+            .five-dollar-banner { float:right; }
+        
+        #tracks-display { width:100%; margin-bottom:30px; }
+        #tracks-display th { padding:5px; text-align:center; border:1px solid #333; font-weight:bold; }
+        #tracks-display td { padding:8px 5px; text-align:center; border-bottom:1px solid #aaa; }
+        
+        .previewall { text-decoration:none; color:#333; margin-left:10px; font-size:13px; font-weight:bold; border:none! important; text-align:left ! important;  padding-left:15px ! important; }
+        
+        .album-notes { margin-bottom:30px; }
+        .album-notes p.info { color:#666; line-height:23px; margin-bottom:10px; }
+        .album-notes .read-more-notes { text-decoration:underline; color:#FF902F; font-weight:bold; display:none; }
+        
+        .wishlist-link { color:#ff902f;	text-decoration:underline; font-size:14px; display:block; width:200px; text-align:center; margin:20px auto; }
+    
+        #copyright-barcode span { display:block; font-size:13px; color:#666; }
+        .album-copyright { float:left; vertical-align:middle; }
+        .album-barcode { float:left; vertical-align:middle; margin-left:10px; }
+    </style>
+   
+</head>
+<body>
+    
+    <form name="aspnetForm" method="post" action="/cd/nativeguns" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNjczODAwNzAyD2QWAmYPZBYEAgEPZBYCAgMPFgIeBFRleHQFwpIBCgogICAgICAgIC8vIChOb3QgaW4gY29udGVudCBwYW5lbHMpIE1ha2Ugc3VyZSB0aGVzZSBldmVudHMgaGFzIG5vdCBhbHJlYWR5IGJlZW4gYm91bmQgCiAgICAgICAgaWYgKCAkKCIjYm91bmRQYWdlRXZlbnRzX0FsYnVtZGV0YWlscyIpLmF0dHIoInRpdGxlIikgPT0gIk5PIiApCiAgICAgICAgewogICAgCiAgICAgICAgICAgICQoIi5hbGJ1bS1ub3RlcyBwLmluZm8iKS5lYWNoKGZ1bmN0aW9uKCl7CiAgICAgICAgICAgICAgICBpZiggJCh0aGlzKS5oZWlnaHQoKSA+IDkyICkKICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICAkKHRoaXMpLmNzcygiaGVpZ2h0IiwiOTJweCIpLmNzcygib3ZlcmZsb3ciLCJoaWRkZW4iKS5wYXJlbnQoKS5maW5kKCIucmVhZC1tb3JlLW5vdGVzIikuY3NzKCJkaXNwbGF5IiwiaW5saW5lIik7CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0pOwogICAgICAgICAgICAkKCIuYWxidW0tbm90ZXMgYSIpLmNsaWNrKGZ1bmN0aW9uICgpIHsgCiAgICAgICAgICAgICAgICB2YXIgJGxpbmsgPSAkKHRoaXMpOyAKICAgICAgICAgICAgICAgIGlmICggJGxpbmsudGV4dCgpID09ICJSZWFkIG1vcmUuLi4iICkgewoJICAgICAgICAgICAgICAgJGxpbmsucGFyZW50KCkuZmluZCgicC5pbmZvIikuY3NzKCJoZWlnaHQiLCIxMDAlIik7CgkgICAgICAgICAgICAgICAkbGluay50ZXh0KCJSZWFkIGxlc3MuLi4iKTsKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgIGVsc2UgewoJICAgICAgICAgICAgICAgJGxpbmsucGFyZW50KCkuZmluZCgicCIpLmFuaW1hdGUoeyBoZWlnaHQ6JzkycHgnIH0sIDUwMCwgZnVuY3Rpb24oKXsgJGxpbmsudGV4dCgiUmVhZCBtb3JlLi4uIik7IH0gKTsKICAgICAgICAgICAgICAgIH0gCiAgICAgICAgICAgICAgICByZXR1cm4gZmFsc2U7CiAgICAgICAgICAgIH0pOwoKICAgICAgICAgICAgJCgiI2JhY2stdG8tYXJ0aXN0IikuaG92ZXIoCgkgICAgICAgICAgICBmdW5jdGlvbiAoKSB7ICQodGhpcykuYXR0cigic3JjIiwiL0ltYWdlcy9idXR0b25zL2J1dHRvbi1iYWNrdG9BcnRpc3RfZjIuanBnIik7IH0sIAoJICAgICAgICAgICAgZnVuY3Rpb24gKCkgeyAkKHRoaXMpLmF0dHIoInNyYyIsIi9JbWFnZXMvYnV0dG9ucy9idXR0b24tYmFja3RvQXJ0aXN0LmpwZyIpOyB9CiAgICAgICAgICAgICk7CgogICAgICAgICAgICAgJC5wcmVsb2FkSW1hZ2VzCiAgICAgICAgICAgIChbCiAgICAgICAgICAgICAgICAnL0ltYWdlcy9idXR0b25zL2J1dHRvbi1iYWNrdG9BcnRpc3RfZjIuanBnJwogICAgICAgICAgICBdKTsKIAogICAgICAgICAgICAvLyBCbG9jayB0aGVzZSBldmVudHMgZnJvbSBnZXR0aW5nIGJvdW5kIGJ5IGFueSBvdGhlciBjb250ZW50IHBhbmVscyBvbiB0aGUgcGFnZQogICAgICAgICAgICAkKCIjYm91bmRQYWdlRXZlbnRzX0FsYnVtZGV0YWlscyIpLmF0dHIoInRpdGxlIiwiWUVTIik7CgogICAgICAgIH0KCgoKICAgICAgICAvLyAoSW4gY29udGVudCBwYW5lbHMpIE1ha2Ugc3VyZSB0aGVzZSBldmVudHMgaGFzIG5vdCBhbHJlYWR5IGJlZW4gYm91bmQKICAgICAgICBpZiAoICQoIiNib3VuZFBhZ2VFdmVudHNfQ29udGVudFBhbmVscyIpLmF0dHIoInRpdGxlIikgPT0gIk5PIiApCiAgICAgICAgewogICAgCiAgICAgICAgICAgIC8vID09PT09PSBBbGJ1bURldGFpbHMuYXNweCA9PT09PT0KICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICQoIiNzZWUtbW9yZSIpLmNsaWNrKGZ1bmN0aW9uICgpIHsgJC5zY3JvbGxUbyggJCgiLmFsYnVtLW5vdGVzIiksIDgwMCApOyB9KTsKCiAgICAgICAgICAgICQoIi53aXNobGlzdC1idXR0b24iKS5ob3ZlcigKCSAgICAgICAgICAgIGZ1bmN0aW9uICgpIHsgJCh0aGlzKS5hdHRyKCJzcmMiLCIvSW1hZ2VzL0J1dHRvbnMvYnV0dG9uLWFkZHRvV2lzaGxpc3RfZjIuanBnIik7IH0sIAoJICAgICAgICAgICAgZnVuY3Rpb24gKCkgeyAkKHRoaXMpLmF0dHIoInNyYyIsIi9JbWFnZXMvQnV0dG9ucy9idXR0b24tYWRkdG9XaXNobGlzdC5qcGciKTsgfQogICAgICAgICAgICApOwogICAgICAgICAgICAkKCIuZG93bmxvYWQtYnV5bm93LWJ1dHRvbiIpLmhvdmVyKAoJICAgICAgICAgICAgZnVuY3Rpb24gKCkgeyAkKHRoaXMpLmF0dHIoInNyYyIsIi9JbWFnZXMvQnV0dG9ucy9idXR0b24tYnV5Tm93X2YyLmpwZyIpOyB9LCAKCSAgICAgICAgICAgIGZ1bmN0aW9uICgpIHsgJCh0aGlzKS5hdHRyKCJzcmMiLCIvSW1hZ2VzL0J1dHRvbnMvYnV0dG9uLWJ1eU5vdy5qcGciKTsgfQogICAgICAgICAgICApOwogICAgICAgICAgICAkKCIuY2QtYnV5bm93LWJ1dHRvbiIpLmhvdmVyKAoJICAgICAgICAgICAgZnVuY3Rpb24gKCkgeyAkKHRoaXMpLmF0dHIoInNyYyIsIi9JbWFnZXMvQnV0dG9ucy9idXR0b24tYnV5Tm93R3JlZW5fZjIuanBnIik7IH0sIAoJICAgICAgICAgICAgZnVuY3Rpb24gKCkgeyAkKHRoaXMpLmF0dHIoInNyYyIsIi9JbWFnZXMvQnV0dG9ucy9idXR0b24tYnV5Tm93R3JlZW4uanBnIik7IH0KICAgICAgICAgICAgKTsKICAgICAgICAgICAgJCgiLmRvd25sb2FkLXRyYWNrcy1idXR0b24iKS5ob3ZlcigKCSAgICAgICAgICAgIGZ1bmN0aW9uICgpIHsgJCh0aGlzKS5hdHRyKCJzcmMiLCIvSW1hZ2VzL0J1dHRvbnMvYnV0dG9uLWRvd25sb2FkU29uZ3NfZjIuanBnIik7IH0sIAoJICAgICAgICAgICAgZnVuY3Rpb24gKCkgeyAkKHRoaXMpLmF0dHIoInNyYyIsIi9JbWFnZXMvQnV0dG9ucy9idXR0b24tZG93bmxvYWRTb25ncy5qcGciKTsgfQogICAgICAgICAgICApOwogICAgICAgICAgICAgJC5wcmVsb2FkSW1hZ2VzCiAgICAgICAgICAgIChbCiAgICAgICAgICAgICAgICAnL0ltYWdlcy9CdXR0b25zL2J1dHRvbi1idXlOb3dfZjIuanBnJywKICAgICAgICAgICAgICAgICcvSW1hZ2VzL0J1dHRvbnMvYnV0dG9uLWJ1eU5vd0dyZWVuX2YyLmpwZycsCiAgICAgICAgICAgICAgICAnL0ltYWdlcy9CdXR0b25zL2J1dHRvbi1kb3dubG9hZFNvbmdzX2YyLmpwZycsCiAgICAgICAgICAgICAgICAnL0ltYWdlcy9CdXR0b25zL2J1dHRvbi1hZGR0b1dpc2hsaXN0X2YyLmpwZycKICAgICAgICAgICAgXSk7CiAgICAgICAgICAKICAgICAgICAgICAgLy8gPT09PT09IE1pc2NfU2hvcHBpbmdDYXJ0T3ZlcmxheS5hc2N4ICwgTWlzY19XaXNoTGlzdE92ZXJsYXkuYXNjeCA9PT09PT0KCiAgICAgICAgICAgIGZ1bmN0aW9uIEhpZGVEcm9wRG93bnMoKSB7CiAgICAgICAgICAgICAgICAkKCJzZWxlY3QiKS5ub3QoIm5vLXJlcGxhY2UiKS5lYWNoKGZ1bmN0aW9uKCkgewoKICAgICAgICAgICAgICAgICAgICAkKHRoaXMpCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAuYWZ0ZXIoIjxzcGFuIGNsYXNzPSdyZXBsYWNlbWVudCc+PC9zcGFuPiIpLm5leHQoKQogICAgICAgICAgICAgICAgICAgICAgICAgICAgLmFkZENsYXNzKCQodGhpcykuYXR0cignY2xhc3MnKSkKICAgICAgICAgICAgICAgICAgICAgICAgICAgIC5hdHRyKCdpZCcsICQodGhpcykuYXR0cignaWQnKSkKICAgICAgICAgICAgICAgICAgICAgICAgICAgIC5odG1sKCQodGhpcykuaHRtbCgpKQogICAgICAgICAgICAgICAgICAgICAgICAgICAgLndpZHRoKCQodGhpcykud2lkdGgoKSkKICAgICAgICAgICAgICAgICAgICAgICAgICAgIC5oZWlnaHQoJCh0aGlzKS5oZWlnaHQoKSkKICAgICAgICAgICAgICAgICAgICAgICAgICAgIC5wcmV2KCkucmVtb3ZlKCk7CiAgICAgICAgICAgICAgICB9KTsKICAgICAgICAgICAgfQogICAgICAgICAgICAKICAgICAgICAgICAgaWYgKCAkKCIub3ZlcmxheS1jYXJ0IikuY3NzKCJkaXNwbGF5IikgPT0gImJsb2NrIiApIHsgSGlkZURyb3BEb3ducygpOyB9IAogICAgICAgICAgICBpZiAoICQoIi5vdmVybGF5LXdpc2giKS5jc3MoImRpc3BsYXkiKSA9PSAiYmxvY2siICkgeyBIaWRlRHJvcERvd25zKCk7IH0gCgogICAgICAgICAgICBmdW5jdGlvbiBTaG93RHJvcERvd25zKCkgewogICAgICAgICAgICAgICAgJCgiLnJlcGxhY2VtZW50IikuZWFjaChmdW5jdGlvbigpIHsKICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAkKHRoaXMpCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAuYWZ0ZXIoIjxzZWxlY3Q+PC9zZWxlY3Q+IikubmV4dCgpCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAucmVtb3ZlQ2xhc3MoInJlcGxhY2VtZW50IikKICAgICAgICAgICAgICAgICAgICAgICAgICAgIC5hdHRyKCdjbGFzcycsICQodGhpcykuYXR0cignY2xhc3MnKSkuYXR0cignaWQnLCAkKHRoaXMpLmF0dHIoJ2lkJykpCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAuaHRtbCgkKHRoaXMpLmh0bWwoKSkKICAgICAgICAgICAgICAgICAgICAgICAgICAgIC5wcmV2KCkucmVtb3ZlKCk7CgogICAgICAgICAgICAgICAgfSk7CiAgICAgICAgICAgIH0KICAgICAgICAgICAgCiAgICAgICAgICAgIHZhciAkc2NyZWVuSGVpZ2h0ID0gKHdpbmRvdy5pbm5lckhlaWdodCB8fCB3aW5kb3cuaW5uZXJXaWR0aCB8fCBkb2N1bWVudC5kb2N1bWVudEVsZW1lbnQuY2xpZW50SGVpZ2h0KQogICAgICAgICAgICB2YXIgJHNjcmVlbldpZHRoID0gKHdpbmRvdy5pbm5lcldpZHRoIHx8IGRvY3VtZW50LmRvY3VtZW50RWxlbWVudC5jbGllbnRXaWR0aCkKICAgICAgICAgICAgJCgiLm92ZXJsYXktY292ZXIiKS53aWR0aCgkc2NyZWVuV2lkdGgpOwogICAgICAgICAgICAkKCIub3ZlcmxheS1jb250ZW50LXdyYXAiKS5jc3MoImxlZnQiLCgkc2NyZWVuV2lkdGgvMikgKyAicHgiKTsKICAgICAgICAgICAgdmFyICRzY3JlZW5Ub3AgPSAoZG9jdW1lbnQuZG9jdW1lbnRFbGVtZW50LnNjcm9sbFRvcCB8fCBkb2N1bWVudC5ib2R5LnNjcm9sbFRvcCk7CiAgICAgICAgICAgIHZhciAkY29udGVudEhlaWdodENhcnQgPSAgJCgiLm92ZXJsYXktY2FydCAub3ZlcmxheS1jb250ZW50LXdyYXAiKS5oZWlnaHQoKTsKICAgICAgICAgICAgdmFyICRjb250ZW50SGVpZ2h0V2lzaCA9ICAkKCIub3ZlcmxheS13aXNoIC5vdmVybGF5LWNvbnRlbnQtd3JhcCIpLmhlaWdodCgpOwogICAgICAgICAgICB2YXIgJGNvbnRlbnRUb3BDYXJ0OwogICAgICAgICAgICB2YXIgJGNvbnRlbnRUb3BXaXNoOwogICAgICAgICAgICBpZiAoICgkY29udGVudEhlaWdodENhcnQrNDApIDwgJHNjcmVlbkhlaWdodCApIHsgJGNvbnRlbnRUb3BDYXJ0ID0gTWF0aC5yb3VuZCgoJHNjcmVlbkhlaWdodC0kY29udGVudEhlaWdodENhcnQpLzIpICsgJHNjcmVlblRvcDsgfQogICAgICAgICAgICBlbHNlIHsgJGNvbnRlbnRUb3BDYXJ0ID0gJHNjcmVlblRvcCArIDQwOyB9CiAgICAgICAgICAgIGlmICggKCRjb250ZW50SGVpZ2h0V2lzaCs0MCkgPCAkc2NyZWVuSGVpZ2h0ICkgeyAkY29udGVudFRvcFdpc2ggPSBNYXRoLnJvdW5kKCgkc2NyZWVuSGVpZ2h0LSRjb250ZW50SGVpZ2h0V2lzaCkvMikgKyAkc2NyZWVuVG9wOyB9CiAgICAgICAgICAgIGVsc2UgeyAkY29udGVudFRvcFdpc2ggPSAkc2NyZWVuVG9wICsgNDA7IH0KICAgICAgICAgICAgaWYgKCAoJHNjcmVlblRvcCArICRjb250ZW50SGVpZ2h0Q2FydCArIDQwKSA8ICgkKCIjY29udGFpbmVyLXBhZ2UiKS5oZWlnaHQoKSs0MCkgKQogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAkKCIub3ZlcmxheS1jb3ZlciIpLmhlaWdodCgkKCIjY29udGFpbmVyLXBhZ2UiKS5oZWlnaHQoKSs0MCk7CiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxzZQogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAkKCIub3ZlcmxheS1jb3ZlciIpLmhlaWdodCgkc2NyZWVuVG9wICsgJGNvbnRlbnRIZWlnaHRDYXJ0ICsgODApOwogICAgICAgICAgICB9CgogICAgICAgICAgICAkKCIub3ZlcmxheS1jYXJ0IC5vdmVybGF5LWNvbnRlbnQtd3JhcCIpLmNzcygidG9wIiwkY29udGVudFRvcENhcnQgKyAicHgiKTsKICAgICAgICAgICAgJCgiLm92ZXJsYXktd2lzaCAub3ZlcmxheS1jb250ZW50LXdyYXAiKS5jc3MoInRvcCIsJGNvbnRlbnRUb3BXaXNoICsgInB4Iik7CiAgICAgICAgICAKICAgICAgICAgICAgLy8gPT09PT09IE1pc2NfVmlld0NhcnQuYXNjeCA9PT09PT0KICAgICAgICAgICAgCiAgICAgICAgICAgICQoIi5vdmVybGF5LWNvbnRlbnQtd3JhcCAub3ZlcmxheS1idXR0b25zIC5zaG9wcGluZy1idXR0b24iKS5ob3ZlcigKICAgICAgICAgICAgICAgIGZ1bmN0aW9uICgpIHsgJCh0aGlzKS5hdHRyKCJzcmMiLCIvSW1hZ2VzL2J1dHRvbnMvYnV0dG9uLWNvbnRpbnVlU2hvcHBpbmdfZjIuanBnIik7IH0sIAogICAgICAgICAgICAgICAgZnVuY3Rpb24gKCkgeyAkKHRoaXMpLmF0dHIoInNyYyIsIi9JbWFnZXMvYnV0dG9ucy9idXR0b24tY29udGludWVTaG9wcGluZy5qcGciKTsgfQogICAgICAgICAgICApOwogICAgICAgICAgICAkKCIub3ZlcmxheS1jb250ZW50LXdyYXAgLm92ZXJsYXktYnV0dG9ucyAuY2hlY2tvdXQtYnV0dG9uIikuaG92ZXIoCiAgICAgICAgICAgICAgICBmdW5jdGlvbiAoKSB7ICQodGhpcykuYXR0cigic3JjIiwiL0ltYWdlcy9idXR0b25zL2J1dHRvbi1jaGVja291dF9mMi5qcGciKTsgfSwgCiAgICAgICAgICAgICAgICBmdW5jdGlvbiAoKSB7ICQodGhpcykuYXR0cigic3JjIiwiL0ltYWdlcy9idXR0b25zL2J1dHRvbi1jaGVja291dC5qcGciKTsgfQogICAgICAgICAgICApOwoKICAgICAgICAgICAgJC5wcmVsb2FkSW1hZ2VzCiAgICAgICAgICAgIChbCiAgICAgICAgICAgICAgICAnL0ltYWdlcy9idXR0b25zL2J1dHRvbi1jb250aW51ZVNob3BwaW5nX2YyLmpwZycsCiAgICAgICAgICAgICAgICAnL0ltYWdlcy9idXR0b25zL2J1dHRvbi1jaGVja291dF9mMi5qcGcnCiAgICAgICAgICAgIF0pOwoKICAgICAgICAgICAgLy8gPT09PT09IE1pc2NfUmV2aWV3cy5hc2N4ID09PT09PQogICAgICAgICAgICAKICAgICAgICAgICAgJCgiI1VDX01pc2NfUmV2aWV3cyAucmV2aWV3LXRleHQiKS5lYWNoKGZ1bmN0aW9uKCl7CiAgICAgICAgICAgICAgICBpZiggJCh0aGlzKS5oZWlnaHQoKSA+IDY5ICkKICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICAkKHRoaXMpLmNzcygiaGVpZ2h0IiwiNjlweCIpLmNzcygib3ZlcmZsb3ciLCJoaWRkZW4iKS5wYXJlbnQoKS5maW5kKCIucmVhZC1tb3JlIikuY3NzKCJkaXNwbGF5IiwiaW5saW5lIik7CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0pOwogICAgICAgICAgICAKICAgICAgICAgICAgJCgiI1VDX01pc2NfUmV2aWV3cyAucmVhZC1tb3JlIikuY2xpY2soZnVuY3Rpb24gKCkgeyAKICAgICAgICAgICAgICAgIHZhciAkbGluayA9ICQodGhpcyk7IAogICAgICAgICAgICAgICAgaWYgKCAkKHRoaXMpLnRleHQoKSA9PSAiUmVhZCBtb3JlLi4uIiApIHsKICAgICAgICAgICAgICAgICAgICQodGhpcykucGFyZW50KCkuZmluZCgiLnJldmlldy10ZXh0IikuY3NzKCJoZWlnaHQiLCIxMDAlIik7CiAgICAgICAgICAgICAgICAgICAkbGluay50ZXh0KCJSZWFkIGxlc3MuLi4iKTsKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgIGVsc2UgewogICAgICAgICAgICAgICAgICAgJCh0aGlzKS5wYXJlbnQoKS5maW5kKCIucmV2aWV3LXRleHQiKS5hbmltYXRlKHsgaGVpZ2h0Oic2OXB4JyB9LCA1MDAsIGZ1bmN0aW9uKCl7ICRsaW5rLnRleHQoIlJlYWQgbW9yZS4uLiIpOyB9ICk7CiAgICAgICAgICAgICAgICB9IAogICAgICAgICAgICAgICAgcmV0dXJuIGZhbHNlOwogICAgICAgICAgICB9KTsKICAgICAgICAgICAgCiAgICAgICAgICAgICQoIi5zdGFyMSBpbWciKS5ob3ZlcigKICAgICAgICAgICAgICAgIGZ1bmN0aW9uICgpIHsgCiAgICAgICAgICAgICAgICAgICAgJCgiLnN0YXIxIGltZyIpLmF0dHIoInNyYyIsIi9pbWFnZXMvc3Rhcl9mdWxsLmpwZyIpOyAKICAgICAgICAgICAgICAgIH0sIAogICAgICAgICAgICAgICAgZnVuY3Rpb24gKCkgeyAKICAgICAgICAgICAgICAgICAgICBpZiAoJCgiLnN0YXIxIGltZyIpLnBhcmVudCgpLmF0dHIoInJlbCIpICE9ICJmdWxsIikgeyAkKCIuc3RhcjEgaW1nIikuYXR0cigic3JjIiwiL2ltYWdlcy9zdGFyX2VtcHR5LmpwZyIpOyB9CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICk7CiAgICAgICAgICAgICQoIi5zdGFyMSIpLmNsaWNrKCBmdW5jdGlvbiAoKSB7IAogICAgICAgICAgICAgICAgJCh0aGlzKS5wYXJlbnQoKS5maW5kKCJhIikuYXR0cigicmVsIiwiIikuZmluZCgiaW1nIikuYXR0cigic3JjIiwiL2ltYWdlcy9zdGFyX2VtcHR5LmpwZyIpOwogICAgICAgICAgICAgICAgJCgiLnN0YXIxIGltZyIpLmF0dHIoInNyYyIsIi9pbWFnZXMvc3Rhcl9mdWxsLmpwZyIpLnBhcmVudCgpLmF0dHIoInJlbCIsImZ1bGwiKTsgCiAgICAgICAgICAgICAgICAkKCIucmF0aW5nLWxhYmVsIikudmFsKCIxIik7CiAgICAgICAgICAgICAgICByZXR1cm4gZmFsc2U7CiAgICAgICAgICAgIH0pOwogICAgICAgICAgICAKICAgICAgICAgICAgJCgiLnN0YXIyIGltZyIpLmhvdmVyKAogICAgICAgICAgICAgICAgZnVuY3Rpb24gKCkgeyAKICAgICAgICAgICAgICAgICAgICAkKCIuc3RhcjEgaW1nIikuYXR0cigic3JjIiwiL2ltYWdlcy9zdGFyX2Z1bGwuanBnIik7IAogICAgICAgICAgICAgICAgICAgICQoIi5zdGFyMiBpbWciKS5hdHRyKCJzcmMiLCIvaW1hZ2VzL3N0YXJfZnVsbC5qcGciKTsgfSwKICAgICAgICAgICAgICAgIGZ1bmN0aW9uICgpIHsgCiAgICAgICAgICAgICAgICAgICAgaWYgKCQoIi5zdGFyMSBpbWciKS5wYXJlbnQoKS5hdHRyKCJyZWwiKSAhPSAiZnVsbCIpIHsgJCgiLnN0YXIxIGltZyIpLmF0dHIoInNyYyIsIi9pbWFnZXMvc3Rhcl9lbXB0eS5qcGciKTsgfQogICAgICAgICAgICAgICAgICAgIGlmICgkKCIuc3RhcjIgaW1nIikucGFyZW50KCkuYXR0cigicmVsIikgIT0gImZ1bGwiKSB7ICQoIi5zdGFyMiBpbWciKS5hdHRyKCJzcmMiLCIvaW1hZ2VzL3N0YXJfZW1wdHkuanBnIik7IH0KICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgKTsKICAgICAgICAgICAgJCgiLnN0YXIyIikuY2xpY2soIGZ1bmN0aW9uICgpIHsgCiAgICAgICAgICAgICAgICAkKHRoaXMpLnBhcmVudCgpLmZpbmQoImEiKS5hdHRyKCJyZWwiLCIiKS5maW5kKCJpbWciKS5hdHRyKCJzcmMiLCIvaW1hZ2VzL3N0YXJfZW1wdHkuanBnIik7CiAgICAgICAgICAgICAgICAkKCIuc3RhcjEgaW1nIikuYXR0cigic3JjIiwiL2ltYWdlcy9zdGFyX2Z1bGwuanBnIikucGFyZW50KCkuYXR0cigicmVsIiwiZnVsbCIpOyAKICAgICAgICAgICAgICAgICQoIi5zdGFyMiBpbWciKS5hdHRyKCJzcmMiLCIvaW1hZ2VzL3N0YXJfZnVsbC5qcGciKS5wYXJlbnQoKS5hdHRyKCJyZWwiLCJmdWxsIik7IAogICAgICAgICAgICAgICAgJCgiLnJhdGluZy1sYWJlbCIpLnZhbCgiMiIpOwogICAgICAgICAgICAgICAgcmV0dXJuIGZhbHNlOwogICAgICAgICAgICB9KTsKCiAgICAgICAgICAgICQoIi5zdGFyMyBpbWciKS5ob3ZlcigKICAgICAgICAgICAgICAgIGZ1bmN0aW9uICgpIHsgCiAgICAgICAgICAgICAgICAgICAgJCgiLnN0YXIxIGltZyIpLmF0dHIoInNyYyIsIi9pbWFnZXMvc3Rhcl9mdWxsLmpwZyIpOyAKICAgICAgICAgICAgICAgICAgICAkKCIuc3RhcjIgaW1nIikuYXR0cigic3JjIiwiL2ltYWdlcy9zdGFyX2Z1bGwuanBnIik7IAogICAgICAgICAgICAgICAgICAgICQodGhpcykuYXR0cigic3JjIiwiL2ltYWdlcy9zdGFyX2Z1bGwuanBnIik7IH0sIAogICAgICAgICAgICAgICAgZnVuY3Rpb24gKCkgeyAKICAgICAgICAgICAgICAgICAgICBpZiAoJCgiLnN0YXIxIGltZyIpLnBhcmVudCgpLmF0dHIoInJlbCIpICE9ICJmdWxsIikgeyAkKCIuc3RhcjEgaW1nIikuYXR0cigic3JjIiwiL2ltYWdlcy9zdGFyX2VtcHR5LmpwZyIpOyB9CiAgICAgICAgICAgICAgICAgICAgaWYgKCQoIi5zdGFyMiBpbWciKS5wYXJlbnQoKS5hdHRyKCJyZWwiKSAhPSAiZnVsbCIpIHsgJCgiLnN0YXIyIGltZyIpLmF0dHIoInNyYyIsIi9pbWFnZXMvc3Rhcl9lbXB0eS5qcGciKTsgfQogICAgICAgICAgICAgICAgICAgIGlmICgkKCIuc3RhcjMgaW1nIikucGFyZW50KCkuYXR0cigicmVsIikgIT0gImZ1bGwiKSB7ICQoIi5zdGFyMyBpbWciKS5hdHRyKCJzcmMiLCIvaW1hZ2VzL3N0YXJfZW1wdHkuanBnIik7IH0KICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgKTsKICAgICAgICAgICAgJCgiLnN0YXIzIikuY2xpY2soIGZ1bmN0aW9uICgpIHsgCiAgICAgICAgICAgICAgICAkKHRoaXMpLnBhcmVudCgpLmZpbmQoImEiKS5hdHRyKCJyZWwiLCIiKS5maW5kKCJpbWciKS5hdHRyKCJzcmMiLCIvaW1hZ2VzL3N0YXJfZW1wdHkuanBnIik7CiAgICAgICAgICAgICAgICAkKCIuc3RhcjEgaW1nIikuYXR0cigic3JjIiwiL2ltYWdlcy9zdGFyX2Z1bGwuanBnIikucGFyZW50KCkuYXR0cigicmVsIiwiZnVsbCIpOyAKICAgICAgICAgICAgICAgICQoIi5zdGFyMiBpbWciKS5hdHRyKCJzcmMiLCIvaW1hZ2VzL3N0YXJfZnVsbC5qcGciKS5wYXJlbnQoKS5hdHRyKCJyZWwiLCJmdWxsIik7IAogICAgICAgICAgICAgICAgJCgiLnN0YXIzIGltZyIpLmF0dHIoInNyYyIsIi9pbWFnZXMvc3Rhcl9mdWxsLmpwZyIpLnBhcmVudCgpLmF0dHIoInJlbCIsImZ1bGwiKTsgCiAgICAgICAgICAgICAgICAkKCIucmF0aW5nLWxhYmVsIikudmFsKCIzIik7CiAgICAgICAgICAgICAgIHJldHVybiBmYWxzZTsKICAgICAgICAgICAgfSk7CgogICAgICAgICAgICAkKCIuc3RhcjQgaW1nIikuaG92ZXIoCiAgICAgICAgICAgICAgICBmdW5jdGlvbiAoKSB7IAogICAgICAgICAgICAgICAgICAgICQoIi5zdGFyMSBpbWciKS5hdHRyKCJzcmMiLCIvaW1hZ2VzL3N0YXJfZnVsbC5qcGciKTsgCiAgICAgICAgICAgICAgICAgICAgJCgiLnN0YXIyIGltZyIpLmF0dHIoInNyYyIsIi9pbWFnZXMvc3Rhcl9mdWxsLmpwZyIpOyAKICAgICAgICAgICAgICAgICAgICAkKCIuc3RhcjMgaW1nIikuYXR0cigic3JjIiwiL2ltYWdlcy9zdGFyX2Z1bGwuanBnIik7IAogICAgICAgICAgICAgICAgICAgICQodGhpcykuYXR0cigic3JjIiwiL2ltYWdlcy9zdGFyX2Z1bGwuanBnIik7IH0sIAogICAgICAgICAgICAgICAgZnVuY3Rpb24gKCkgeyAKICAgICAgICAgICAgICAgICAgICBpZiAoJCgiLnN0YXIxIGltZyIpLnBhcmVudCgpLmF0dHIoInJlbCIpICE9ICJmdWxsIikgeyAkKCIuc3RhcjEgaW1nIikuYXR0cigic3JjIiwiL2ltYWdlcy9zdGFyX2VtcHR5LmpwZyIpOyB9CiAgICAgICAgICAgICAgICAgICAgaWYgKCQoIi5zdGFyMiBpbWciKS5wYXJlbnQoKS5hdHRyKCJyZWwiKSAhPSAiZnVsbCIpIHsgJCgiLnN0YXIyIGltZyIpLmF0dHIoInNyYyIsIi9pbWFnZXMvc3Rhcl9lbXB0eS5qcGciKTsgfQogICAgICAgICAgICAgICAgICAgIGlmICgkKCIuc3RhcjMgaW1nIikucGFyZW50KCkuYXR0cigicmVsIikgIT0gImZ1bGwiKSB7ICQoIi5zdGFyMyBpbWciKS5hdHRyKCJzcmMiLCIvaW1hZ2VzL3N0YXJfZW1wdHkuanBnIik7IH0KICAgICAgICAgICAgICAgICAgICBpZiAoJCgiLnN0YXI0IGltZyIpLnBhcmVudCgpLmF0dHIoInJlbCIpICE9ICJmdWxsIikgeyAkKCIuc3RhcjQgaW1nIikuYXR0cigic3JjIiwiL2ltYWdlcy9zdGFyX2VtcHR5LmpwZyIpOyB9CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICk7CiAgICAgICAgICAgICQoIi5zdGFyNCIpLmNsaWNrKCBmdW5jdGlvbiAoKSB7IAogICAgICAgICAgICAgICAgJCh0aGlzKS5wYXJlbnQoKS5maW5kKCJhIikuYXR0cigicmVsIiwiIikuZmluZCgiaW1nIikuYXR0cigic3JjIiwiL2ltYWdlcy9zdGFyX2VtcHR5LmpwZyIpOwogICAgICAgICAgICAgICAgJCgiLnN0YXIxIGltZyIpLmF0dHIoInNyYyIsIi9pbWFnZXMvc3Rhcl9mdWxsLmpwZyIpLnBhcmVudCgpLmF0dHIoInJlbCIsImZ1bGwiKTsgCiAgICAgICAgICAgICAgICAkKCIuc3RhcjIgaW1nIikuYXR0cigic3JjIiwiL2ltYWdlcy9zdGFyX2Z1bGwuanBnIikucGFyZW50KCkuYXR0cigicmVsIiwiZnVsbCIpOyAKICAgICAgICAgICAgICAgICQoIi5zdGFyMyBpbWciKS5hdHRyKCJzcmMiLCIvaW1hZ2VzL3N0YXJfZnVsbC5qcGciKS5wYXJlbnQoKS5hdHRyKCJyZWwiLCJmdWxsIik7IAogICAgICAgICAgICAgICAgJCgiLnN0YXI0IGltZyIpLmF0dHIoInNyYyIsIi9pbWFnZXMvc3Rhcl9mdWxsLmpwZyIpLnBhcmVudCgpLmF0dHIoInJlbCIsImZ1bGwiKTsgCiAgICAgICAgICAgICAgICAkKCIucmF0aW5nLWxhYmVsIikudmFsKCI0Iik7CiAgICAgICAgICAgICAgIHJldHVybiBmYWxzZTsKICAgICAgICAgICAgfSk7CgogICAgICAgICAgICAkKCIuc3RhcjUgaW1nIikuaG92ZXIoCiAgICAgICAgICAgICAgICBmdW5jdGlvbiAoKSB7IAogICAgICAgICAgICAgICAgICAgICQoIi5yYXRpbmctc3RhcnMgaW1nIikuYXR0cigic3JjIiwiL2ltYWdlcy9zdGFyX2Z1bGwuanBnIik7IH0sIAogICAgICAgICAgICAgICAgZnVuY3Rpb24gKCkgeyAKICAgICAgICAgICAgICAgICAgICBpZiAoJCgiLnN0YXIxIGltZyIpLnBhcmVudCgpLmF0dHIoInJlbCIpICE9ICJmdWxsIikgeyAkKCIuc3RhcjEgaW1nIikuYXR0cigic3JjIiwiL2ltYWdlcy9zdGFyX2VtcHR5LmpwZyIpOyB9CiAgICAgICAgICAgICAgICAgICAgaWYgKCQoIi5zdGFyMiBpbWciKS5wYXJlbnQoKS5hdHRyKCJyZWwiKSAhPSAiZnVsbCIpIHsgJCgiLnN0YXIyIGltZyIpLmF0dHIoInNyYyIsIi9pbWFnZXMvc3Rhcl9lbXB0eS5qcGciKTsgfQogICAgICAgICAgICAgICAgICAgIGlmICgkKCIuc3RhcjMgaW1nIikucGFyZW50KCkuYXR0cigicmVsIikgIT0gImZ1bGwiKSB7ICQoIi5zdGFyMyBpbWciKS5hdHRyKCJzcmMiLCIvaW1hZ2VzL3N0YXJfZW1wdHkuanBnIik7IH0KICAgICAgICAgICAgICAgICAgICBpZiAoJCgiLnN0YXI0IGltZyIpLnBhcmVudCgpLmF0dHIoInJlbCIpICE9ICJmdWxsIikgeyAkKCIuc3RhcjQgaW1nIikuYXR0cigic3JjIiwiL2ltYWdlcy9zdGFyX2VtcHR5LmpwZyIpOyB9CiAgICAgICAgICAgICAgICAgICAgaWYgKCQoIi5zdGFyNSBpbWciKS5wYXJlbnQoKS5hdHRyKCJyZWwiKSAhPSAiZnVsbCIpIHsgJCgiLnN0YXI1IGltZyIpLmF0dHIoInNyYyIsIi9pbWFnZXMvc3Rhcl9lbXB0eS5qcGciKTsgfQogICAgICAgICAgICAgICAgfQogICAgICAgICAgICApOwogICAgICAgICAgICAkKCIuc3RhcjUiKS5jbGljayggZnVuY3Rpb24gKCkgeyAKICAgICAgICAgICAgICAgICQodGhpcykucGFyZW50KCkuZmluZCgiYSIpLmF0dHIoInJlbCIsIiIpLmZpbmQoImltZyIpLmF0dHIoInNyYyIsIi9pbWFnZXMvc3Rhcl9lbXB0eS5qcGciKTsKICAgICAgICAgICAgICAgICQoIi5zdGFyMSBpbWciKS5hdHRyKCJzcmMiLCIvaW1hZ2VzL3N0YXJfZnVsbC5qcGciKS5wYXJlbnQoKS5hdHRyKCJyZWwiLCJmdWxsIik7IAogICAgICAgICAgICAgICAgJCgiLnN0YXIyIGltZyIpLmF0dHIoInNyYyIsIi9pbWFnZXMvc3Rhcl9mdWxsLmpwZyIpLnBhcmVudCgpLmF0dHIoInJlbCIsImZ1bGwiKTsgCiAgICAgICAgICAgICAgICAkKCIuc3RhcjMgaW1nIikuYXR0cigic3JjIiwiL2ltYWdlcy9zdGFyX2Z1bGwuanBnIikucGFyZW50KCkuYXR0cigicmVsIiwiZnVsbCIpOyAKICAgICAgICAgICAgICAgICQoIi5zdGFyNCBpbWciKS5hdHRyKCJzcmMiLCIvaW1hZ2VzL3N0YXJfZnVsbC5qcGciKS5wYXJlbnQoKS5hdHRyKCJyZWwiLCJmdWxsIik7IAogICAgICAgICAgICAgICAgJCgiLnN0YXI1IGltZyIpLmF0dHIoInNyYyIsIi9pbWFnZXMvc3Rhcl9mdWxsLmpwZyIpLnBhcmVudCgpLmF0dHIoInJlbCIsImZ1bGwiKTsgCiAgICAgICAgICAgICAgICAkKCIucmF0aW5nLWxhYmVsIikudmFsKCI1Iik7CiAgICAgICAgICAgICAgICByZXR1cm4gZmFsc2U7CiAgICAgICAgICAgIH0pOwogICAgICAgICAgICAKCiAgICAgICAgICAgICQoIi5zdWJtaXQtcmV2aWV3IikuaG92ZXIoCiAgICAgICAgICAgICAgICBmdW5jdGlvbiAoKSB7ICQodGhpcykuYXR0cigic3JjIiwiL0ltYWdlcy9CdXR0b25zL2J1dHRvbi1zdWJtaXRfZjIuanBnIik7IH0sIAogICAgICAgICAgICAgICAgZnVuY3Rpb24gKCkgeyAkKHRoaXMpLmF0dHIoInNyYyIsIi9JbWFnZXMvQnV0dG9ucy9idXR0b24tc3VibWl0LmpwZyIpOyB9CiAgICAgICAgICAgICk7CiAgICAgICAgICAgICQoIi5wcmV2aW91cy1saW5rIikuaG92ZXIoCiAgICAgICAgICAgICAgICBmdW5jdGlvbiAoKSB7ICQodGhpcykuY3NzKCJiYWNrZ3JvdW5kSW1hZ2UiLCJ1cmwoL0ltYWdlcy9CdXR0b25zL2J1dHRvbi1wcmV2X2YyLmpwZykiKTsgfSwgCiAgICAgICAgICAgICAgICBmdW5jdGlvbiAoKSB7ICQodGhpcykuY3NzKCJiYWNrZ3JvdW5kSW1hZ2UiLCJ1cmwoL0ltYWdlcy9CdXR0b25zL2J1dHRvbi1wcmV2LmpwZykiKTsgfQogICAgICAgICAgICApOwogICAgICAgICAgICAkKCIubmV4dC1saW5rIikuaG92ZXIoCiAgICAgICAgICAgICAgICBmdW5jdGlvbiAoKSB7ICQodGhpcykuY3NzKCJiYWNrZ3JvdW5kSW1hZ2UiLCJ1cmwoL0ltYWdlcy9CdXR0b25zL2J1dHRvbi1uZXh0X2YyLmpwZykiKTsgfSwgCiAgICAgICAgICAgICAgICBmdW5jdGlvbiAoKSB7ICQodGhpcykuY3NzKCJiYWNrZ3JvdW5kSW1hZ2UiLCJ1cmwoL0ltYWdlcy9CdXR0b25zL2J1dHRvbi1uZXh0LmpwZykiKTsgfQogICAgICAgICAgICApOwogICAgICAgICAgICAkKCIucGFnZS1udW1iZXJzIGEiKS5ob3ZlcigKICAgICAgICAgICAgICAgIGZ1bmN0aW9uICgpIHsgJCh0aGlzKS5jc3MoImJhY2tncm91bmRJbWFnZSIsInVybCgvSW1hZ2VzL2J1dHRvbnMvYnV0dG9uLXBhZ2luYXRpb25fZjIuanBnKSIpOyB9LCAKICAgICAgICAgICAgICAgIGZ1bmN0aW9uICgpIHsgJCh0aGlzKS5jc3MoImJhY2tncm91bmRJbWFnZSIsInVybCgvSW1hZ2VzL2J1dHRvbnMvYnV0dG9uLXBhZ2luYXRpb24uanBnKSIpOyB9CiAgICAgICAgICAgICk7CgogICAgICAgICAgICAkLnByZWxvYWRJbWFnZXMKICAgICAgICAgICAgKFsKICAgICAgICAgICAgICAgICcvSW1hZ2VzL0J1dHRvbnMvYnV0dG9uLXByZXZfZjIuanBnJywKICAgICAgICAgICAgICAgICcvSW1hZ2VzL0J1dHRvbnMvYnV0dG9uLW5leHRfZjIuanBnJywKICAgICAgICAgICAgICAgICcvSW1hZ2VzL2J1dHRvbnMvYnV0dG9uLXBhZ2luYXRpb25fZjIuanBnJywKICAgICAgICAgICAgICAgICcvSW1hZ2VzL2J1dHRvbnMvYnV0dG9uLXN1Ym1pdF9mMi5qcGcnCiAgICAgICAgICAgIF0pOwogICAgICAgICAgICAKICAgICAgICAgICAgJCgiLnF1YW50aXR5LWJveCIpLmtleXByZXNzKGZ1bmN0aW9uIChlKSB7DQogICAgICAgICAgICAgICAgICBpZiAoZS53aGljaCA9PSAxMykgeyByZXR1cm4gZmFsc2U7IH0NCiAgICAgICAgICAgICAgICB9KTsNCg0KICAgICAgICAgICAgCiAgICAgICAgCiAgICAgICAgICAgIC8vID09PT09PSBBbGwgVXBkYXRlIFBhbmVsIFRyaWdnZXJzID09PT09PQogICAgICAgICAgICAvLyBVbmJsb2NrIHRoZSBldmVudHMgb24gdGhpcyBwYWdlIGFuZCBhbGxvdyB0aGVtIHRvIGdldCBib3VuZCBvbiBhbiBBSkFYIGNhbGwKICAgICAgICAgICAgJCgiLnBhZ2luYXRpb24gYSIpLmNsaWNrKGZ1bmN0aW9uKCkgeyAkKCIjYm91bmRQYWdlRXZlbnRzX0NvbnRlbnRQYW5lbHMiKS5hdHRyKCJ0aXRsZSIsIk5PIik7IH0pOwogICAgICAgICAgICAkKCIud2lzaGxpc3QtYnV0dG9uIikuY2xpY2soZnVuY3Rpb24oKSB7ICQoIiNib3VuZFBhZ2VFdmVudHNfQ29udGVudFBhbmVscyIpLmF0dHIoInRpdGxlIiwiTk8iKTsgfSk7CiAgICAgICAgICAgICQoIiNhbGJ1bS1mb3JtYXRzIGlucHV0IikuY2xpY2soZnVuY3Rpb24oKSB7ICQoIiNib3VuZFBhZ2VFdmVudHNfQ29udGVudFBhbmVscyIpLmF0dHIoInRpdGxlIiwiTk8iKTsgfSk7CiAgICAgICAgICAgICQoIi5kb3dubG9hZC10cmFja3MtYnV0dG9uIikuY2xpY2soZnVuY3Rpb24oKSB7ICQoIiNib3VuZFBhZ2VFdmVudHNfQ29udGVudFBhbmVscyIpLmF0dHIoInRpdGxlIiwiTk8iKTsgfSk7CiAgICAgICAgICAgICQoIi5mb3JtYXQtb3B0aW9ucyIpLmNsaWNrKGZ1bmN0aW9uKCkgeyAkKCIjYm91bmRQYWdlRXZlbnRzX0NvbnRlbnRQYW5lbHMiKS5hdHRyKCJ0aXRsZSIsIk5PIik7IH0pOwogICAgICAgICAgICAkKCIudXBkYXRlLWxpbmsiKS5jbGljayhmdW5jdGlvbigpIHsgJCgiI2JvdW5kUGFnZUV2ZW50c19Db250ZW50UGFuZWxzIikuYXR0cigidGl0bGUiLCJOTyIpOyB9KTsKICAgICAgICAgICAgJCgiLnJlbW92ZS1saW5rIikuY2xpY2soZnVuY3Rpb24oKSB7ICQoIiNib3VuZFBhZ2VFdmVudHNfQ29udGVudFBhbmVscyIpLmF0dHIoInRpdGxlIiwiTk8iKTsgfSk7CiAgICAgICAgICAgICQoIi5zaG9wcGluZy1idXR0b24iKS5jbGljayhmdW5jdGlvbigpIHsgJCgiI2JvdW5kUGFnZUV2ZW50c19Db250ZW50UGFuZWxzIikuYXR0cigidGl0bGUiLCJOTyIpOyB9KTsKICAgICAgICAgICAgJCgiLnN1Ym1pdC1yZXZpZXciKS5jbGljayhmdW5jdGlvbigpIHsgJCgiI2JvdW5kUGFnZUV2ZW50c19Db250ZW50UGFuZWxzIikuYXR0cigidGl0bGUiLCJOTyIpOyB9KTsKICAgICAgICAgICAgCiAgICAgICAgICAgIAogICAgICAgICAgICAkKCIub3ZlcmxheS1jbG9zZSIpLmNsaWNrKGZ1bmN0aW9uKCkgCiAgICAgICAgICAgIHsgCiAgICAgICAgICAgICAgICAkKCIub3ZlcmxheS1jYXJ0IikuY3NzKCJkaXNwbGF5Iiwibm9uZSIpOwogICAgICAgICAgICAgICAgJCgiLm92ZXJsYXktd2lzaCIpLmNzcygiZGlzcGxheSIsIm5vbmUiKTsKICAgICAgICAgICAgICAgICQoIiNib3VuZFBhZ2VFdmVudHNfQ29udGVudFBhbmVscyIpLmF0dHIoInRpdGxlIiwiTk8iKTsgCiAgICAgICAgICAgIH0pOwogICAgICAgICAgICAKICAgICAgICAgICAgLy8gQmxvY2sgdGhlc2UgZXZlbnRzIGZyb20gZ2V0dGluZyBib3VuZCBieSBhbnkgb3RoZXIgY29udGVudCBwYW5lbHMgb24gdGhlIHBhZ2UKICAgICAgICAgICAgJCgiI2JvdW5kUGFnZUV2ZW50c19Db250ZW50UGFuZWxzIikuYXR0cigidGl0bGUiLCJZRVMiKTsKCiAgICAgIH0KCgoKICAgDQoNCiAgICAvLyBNYWtlIHN1cmUgdGhlc2UgZXZlbnRzIGhhcyBub3QgYWxyZWFkeSBiZWVuIGJvdW5kDQogICAgaWYgKCAkKCIjYm91bmRQYWdlRXZlbnRzX0FsYnVtX0FsYnVtc3lvdXdpbGxsb3ZlIikuYXR0cigidGl0bGUiKSA9PSAiTk8iICkNCiAgICB7DQogICAgDQogICAgICAgICQoIiNVQ19BbGJ1bV9BbGJ1bXNZb3VXaWxsTG92ZSAubG92ZWRhbGJ1bXMtY29udGFpbmVyIikub3ZlcmZsb3dTY3JvbGxlcigpOyANCiAgICAgICAgJCgiI1VDX0FsYnVtX0FsYnVtc1lvdVdpbGxMb3ZlIC5sb3ZlZGFsYnVtcy1jb250YWluZXIiKS5ob3ZlcigNCgkgICAgICAgIGZ1bmN0aW9uICgpIHsgJCh0aGlzKS5vdmVyZmxvd092ZXIoKS5jc3MoImJhY2tncm91bmRDb2xvciIsIiNmNWViZDIiKTsgfSwgDQoJICAgICAgICBmdW5jdGlvbiAoKSB7ICQodGhpcykub3ZlcmZsb3dPdXQoKS5jc3MoImJhY2tncm91bmRDb2xvciIsIiNmYmYxZDciKTsgfQ0KICAgICAgICApOw0KICAgIA0KICAgICAgICAkKCcjbG92ZWRhbGJ1bXMtZGlzcGxheSBpbWcucHVsc2UnKS5ob3ZlcnB1bHNlKHtzaXplOjMwfSk7DQogICAgICAgICAgIA0KICAgICAgICAvLyBCbG9jayB0aGVzZSBldmVudHMgZnJvbSBnZXR0aW5nIGJvdW5kIGJ5IGFueSBvdGhlciBjb250ZW50IHBhbmVscyBvbiB0aGUgcGFnZQ0KICAgICAgICAkKCIjYm91bmRQYWdlRXZlbnRzX0FsYnVtX0FsYnVtc3lvdXdpbGxsb3ZlIikuYXR0cigidGl0bGUiLCJZRVMiKTsNCg0KICAgIH0NCg0KDQogICAgJCgiLm92ZXJsYXktY2xvc2UgaW1nIikuaG92ZXIoDQoJICAgIGZ1bmN0aW9uICgpIHsgJCh0aGlzKS5hdHRyKCJzcmMiLCIvSW1hZ2VzL0J1dHRvbnMvYnV0dG9uLWNsb3NlWF9mMi5wbmciKTsgfSwgDQoJICAgIGZ1bmN0aW9uICgpIHsgJCh0aGlzKS5hdHRyKCJzcmMiLCIvSW1hZ2VzL0J1dHRvbnMvYnV0dG9uLWNsb3NlWC5wbmciKTsgfQ0KICAgICk7DQogICAgJC5wcmVsb2FkSW1hZ2VzDQogICAgKFsNCiAgICAgICAgJy9JbWFnZXMvQnV0dG9ucy9idXR0b24tY2xvc2VYX2YyLnBuZycNCiAgICBdKTsNCg0KDQogICAgJCgiLmRvd25sb2FkLWJ1dHRvbiBpbWciKS5ob3ZlcigNCiAgICAgICAgZnVuY3Rpb24gKCkgeyAkKHRoaXMpLmF0dHIoInNyYyIsIi9JbWFnZXMvQnV0dG9ucy9idXR0b24tZG93bmxvYWRNdXNpY19mMi5qcGciKTsgfSwgDQogICAgICAgIGZ1bmN0aW9uICgpIHsgJCh0aGlzKS5hdHRyKCJzcmMiLCIvSW1hZ2VzL0J1dHRvbnMvYnV0dG9uLWRvd25sb2FkTXVzaWMuanBnIik7IH0NCiAgICApOw0KICAgICQucHJlbG9hZEltYWdlcw0KICAgIChbDQogICAgICAgICcvSW1hZ2VzL0J1dHRvbnMvYnV0dG9uLWRvd25sb2FkTXVzaWNfZjIuanBnJw0KICAgIF0pOw0KDQoNCiAgICAkKCIub3ZlcmxheS1jbG9zZSBpbWciKS5ob3ZlcigNCgkgICAgZnVuY3Rpb24gKCkgeyAkKHRoaXMpLmF0dHIoInNyYyIsIi9JbWFnZXMvQnV0dG9ucy9idXR0b24tY2xvc2VYX2YyLnBuZyIpOyB9LCANCgkgICAgZnVuY3Rpb24gKCkgeyAkKHRoaXMpLmF0dHIoInNyYyIsIi9JbWFnZXMvQnV0dG9ucy9idXR0b24tY2xvc2VYLnBuZyIpOyB9DQogICAgKTsNCiAgICAkLnByZWxvYWRJbWFnZXMNCiAgICAoWw0KICAgICAgICAnL0ltYWdlcy9CdXR0b25zL2J1dHRvbi1jbG9zZVhfZjIucG5nJw0KICAgIF0pOw0KDQoNCg0KDQoNCmQCAw8WAh4GYWN0aW9uBQ4vY2QvbmF0aXZlZ3VucxYKAgcPZBYCAgEPDxYCHgdWaXNpYmxlZ2RkAgkPZBYEAgEPFgIfAmcWAmYPDxYEHgtOYXZpZ2F0ZVVybAUSL0FydGlzdC9OYXRpdmVHdW5zHwAFC05hdGl2ZSBHdW5zZGQCAw8PFgIfAAUKQmFycmVsIE1lbmRkAgsPZBYQAgEPDxYEHwMFEi9BcnRpc3QvTmF0aXZlR3Vucx8CZ2RkAgMPDxYEHghJbWFnZVVybAUgLy9DREJhYnkubmFtZS9uL2EvbmF0aXZlZ3Vucy5qcGceDUFsdGVybmF0ZVRleHQFGE5hdGl2ZSBHdW5zIDogQmFycmVsIE1lbmRkAgkPDxYCHwAFsAFUaGUgbG9uZy1hd2FpdGVkIGRlYnV0IGFsYnVtIGJ5IENhbGktYmFzZWQgRmlsaXBpbm8gZW1jZWVzIEtpd2kgJiBCYW1idSAoTmF0aXZlIEd1bnMpLCB0aGlzIENEIGJsZW5kcyB0aGUgbWFjaGluZS1ndW4gcG9saXRpY2FsIGx5cmljaXNtIHdpdGggcmF3IGJhbmdpbiBiZWF0cy4gR0VUIFRISVMgTk9XLi4uLmRkAgsPDxYCHwAFGUhpcC1Ib3AvUmFwOiZuYnNwO0hpcCBIb3BkZAINDw8WAh8ABQQyMDA2ZGQCDw9kFgYCAQ8WAh4LXyFJdGVtQ291bnQCAxYGAgEPZBYCZg8VAQpCbGFjayBTdGFyZAICD2QWAmYPFQEJZGVhZCBwcmV6ZAIDD2QWAmYPFQESSW1tb3J0YWwgVGVjaG5pcXVlZAIDDxYCHwYCAxYGAgEPZBYCZg8VAgkvU3R5bGUvNjIZSGlwLUhvcC9SYXA6Jm5ic3A7SGlwIEhvcGQCAg9kFgJmDxUCCS9TdHlsZS81OCVIaXAtSG9wL1JhcDombmJzcDtBbHRlcm5hdGl2ZSBIaXAgSG9wZAIDD2QWAmYPFQIKL1N0eWxlLzQ5NxtNb29kczombmJzcDtUeXBlOiBQb2xpdGljYWxkAgUPFgIfBgIBFgICAQ9kFgJmDxUCDC9QbGFjZXMvOUNBMApDYWxpZm9ybmlhZAIRD2QWAgIBDxYCHwYCARYCAgEPZBYCZg8VBg8vY2QvbmF0aXZlZ3VuczInLy9DREJhYnkubmFtZS9uL2EvbmF0aXZlZ3VuczJfc21hbGwuanBnC05hdGl2ZSBHdW5zHlN0cmF5IEJ1bGxldHMgTWl4dGFwZSBWb2x1bWUgMhlIaXAtSG9wL1JhcDombmJzcDtIaXAgSG9wDy9jZC9uYXRpdmVndW5zMmQCEw9kFgICAQ8WAh8GAgMWBgIBD2QWAmYPFQIZaHR0cDovL3d3dy5uYXRpdmVndW5zLmNvbQtOYXRpdmUgR3Vuc2QCAg9kFgJmDxUCHmh0dHA6Ly93d3cuY2RiYWJ5LmNvbS9jZC9iYW1idQVCYW1idWQCAw9kFgJmDxUCUGh0dHA6Ly9waG9ib3MuYXBwbGUuY29tL1dlYk9iamVjdHMvTVpTdG9yZS53b2Evd2Evdmlld0FsYnVtP3BsYXlMaXN0SWQ9MTg5ODQ0Mjc3DEFwcGxlIGlUdW5lc2QCDQ9kFhYCAQ8PFgIfAAUKQmFycmVsIE1lbmRkAgMPDxYCHwJnZGQCBQ8PFgIfAAUbJmNvcHkgQ29weXJpZ2h0LU5hdGl2ZSBHdW5zZGQCBw8PFgQfAAUOKDYzNDQ3OTM0MTQ1OCkfAmdkZAIJDw8WBB8ABRlSZWNvcmQgTGFiZWw6IE5hdGl2ZSBHdW5zHwJnZGQCCw9kFgJmD2QWAgIBDxYCHwYCARYCAgEPZBYCAgEPDxYCHg9Db21tYW5kQXJndW1lbnQFCURJTTAwMDAwMWRkAg8PDxYEHwAFQFNQRUNJQUw6IDEwJSBkaXNjb3VudCBpZiB5b3UgYnV5IG1vcmUgdGhhbiBvbmUgY29weSBvZiBpdCB0b2RheSEfAmdkZAIRDw8WAh8EBR0vSW1hZ2VzL2Jhbm5lci1DRGZld1N0b2NrLmdpZmRkAhUPZBYCZg9kFgYCAQ8WAh8GAg8WIAIBD2QWBgIBD2QWAmYPFQI+aHR0cDovL3d3dy5jZGJhYnkuY29tL2F1ZGlvL3NhbXBsZXMvMDgxN2YxMTYvbmF0aXZlZ3Vucy0wMS5tcDM+aHR0cDovL3d3dy5jZGJhYnkuY29tL2F1ZGlvL3NhbXBsZXMvMDgxN2YxMTYvbmF0aXZlZ3Vucy0wMS5tcDNkAgIPFQEKSW5pdGlhdGlvbmQCBQ8QDxYCHgtfIURhdGFCb3VuZGdkZBYAZAICD2QWBgIBD2QWAmYPFQI+aHR0cDovL3d3dy5jZGJhYnkuY29tL2F1ZGlvL3NhbXBsZXMvMDgxN2YxMTYvbmF0aXZlZ3Vucy0wMi5tcDM+aHR0cDovL3d3dy5jZGJhYnkuY29tL2F1ZGlvL3NhbXBsZXMvMDgxN2YxMTYvbmF0aXZlZ3Vucy0wMi5tcDNkAgIPFQEIQ2hhbXBpb25kAgUPEA8WAh8IZ2RkFgBkAgMPZBYGAgEPZBYCZg8VAj5odHRwOi8vd3d3LmNkYmFieS5jb20vYXVkaW8vc2FtcGxlcy8wODE3ZjExNi9uYXRpdmVndW5zLTAzLm1wMz5odHRwOi8vd3d3LmNkYmFieS5jb20vYXVkaW8vc2FtcGxlcy8wODE3ZjExNi9uYXRpdmVndW5zLTAzLm1wM2QCAg8VARJMb29rIGluIHRoZSBNaXJyb3JkAgUPEA8WAh8IZ2RkFgBkAgQPZBYGAgEPZBYCZg8VAj5odHRwOi8vd3d3LmNkYmFieS5jb20vYXVkaW8vc2FtcGxlcy8wODE3ZjExNi9uYXRpdmVndW5zLTA0Lm1wMz5odHRwOi8vd3d3LmNkYmFieS5jb20vYXVkaW8vc2FtcGxlcy8wODE3ZjExNi9uYXRpdmVndW5zLTA0Lm1wM2QCAg8VAQZIYW1tZXJkAgUPEA8WAh8IZ2RkFgBkAgUPZBYGAgEPZBYCZg8VAj5odHRwOi8vd3d3LmNkYmFieS5jb20vYXVkaW8vc2FtcGxlcy8wODE3ZjExNi9uYXRpdmVndW5zLTA1Lm1wMz5odHRwOi8vd3d3LmNkYmFieS5jb20vYXVkaW8vc2FtcGxlcy8wODE3ZjExNi9uYXRpdmVndW5zLTA1Lm1wM2QCAg8VAQhEcm93bmluZ2QCBQ8QDxYCHwhnZGQWAGQCBg9kFgYCAQ9kFgJmDxUCPmh0dHA6Ly93d3cuY2RiYWJ5LmNvbS9hdWRpby9zYW1wbGVzLzA4MTdmMTE2L25hdGl2ZWd1bnMtMDYubXAzPmh0dHA6Ly93d3cuY2RiYWJ5LmNvbS9hdWRpby9zYW1wbGVzLzA4MTdmMTE2L25hdGl2ZWd1bnMtMDYubXAzZAICDxUBDEFpbid0IEFmcmFpZGQCBQ8QDxYCHwhnZGQWAGQCBw9kFgYCAQ9kFgJmDxUCPmh0dHA6Ly93d3cuY2RiYWJ5LmNvbS9hdWRpby9zYW1wbGVzLzA4MTdmMTE2L25hdGl2ZWd1bnMtMDcubXAzPmh0dHA6Ly93d3cuY2RiYWJ5LmNvbS9hdWRpby9zYW1wbGVzLzA4MTdmMTE2L25hdGl2ZWd1bnMtMDcubXAzZAICDxUBB1RyZWFzb25kAgUPEA8WAh8IZ2RkFgBkAggPZBYGAgEPZBYCZg8VAj5odHRwOi8vd3d3LmNkYmFieS5jb20vYXVkaW8vc2FtcGxlcy8wODE3ZjExNi9uYXRpdmVndW5zLTA4Lm1wMz5odHRwOi8vd3d3LmNkYmFieS5jb20vYXVkaW8vc2FtcGxlcy8wODE3ZjExNi9uYXRpdmVndW5zLTA4Lm1wM2QCAg8VAQtSaWdodCBUaGVyZWQCBQ8QDxYCHwhnZGQWAGQCCQ9kFgYCAQ9kFgJmDxUCPmh0dHA6Ly93d3cuY2RiYWJ5LmNvbS9hdWRpby9zYW1wbGVzLzA4MTdmMTE2L25hdGl2ZWd1bnMtMDkubXAzPmh0dHA6Ly93d3cuY2RiYWJ5LmNvbS9hdWRpby9zYW1wbGVzLzA4MTdmMTE2L25hdGl2ZWd1bnMtMDkubXAzZAICDxUBBktvbWJhdGQCBQ8QDxYCHwhnZGQWAGQCCg9kFgYCAQ9kFgJmDxUCPmh0dHA6Ly93d3cuY2RiYWJ5LmNvbS9hdWRpby9zYW1wbGVzLzA4MTdmMTE2L25hdGl2ZWd1bnMtMTAubXAzPmh0dHA6Ly93d3cuY2RiYWJ5LmNvbS9hdWRpby9zYW1wbGVzLzA4MTdmMTE2L25hdGl2ZWd1bnMtMTAubXAzZAICDxUBDlNsYXZlIFRoaW5raW5nZAIFDxAPFgIfCGdkZBYAZAILD2QWBgIBD2QWAmYPFQI+aHR0cDovL3d3dy5jZGJhYnkuY29tL2F1ZGlvL3NhbXBsZXMvMDgxN2YxMTYvbmF0aXZlZ3Vucy0xMS5tcDM+aHR0cDovL3d3dy5jZGJhYnkuY29tL2F1ZGlvL3NhbXBsZXMvMDgxN2YxMTYvbmF0aXZlZ3Vucy0xMS5tcDNkAgIPFQEEMTk5NWQCBQ8QDxYCHwhnZGQWAGQCDA9kFgYCAQ9kFgJmDxUCPmh0dHA6Ly93d3cuY2RiYWJ5LmNvbS9hdWRpby9zYW1wbGVzLzA4MTdmMTE2L25hdGl2ZWd1bnMtMTIubXAzPmh0dHA6Ly93d3cuY2RiYWJ5LmNvbS9hdWRpby9zYW1wbGVzLzA4MTdmMTE2L25hdGl2ZWd1bnMtMTIubXAzZAICDxUBB1NhaWQgSXRkAgUPEA8WAh8IZ2RkFgBkAg0PZBYGAgEPZBYCZg8VAj5odHRwOi8vd3d3LmNkYmFieS5jb20vYXVkaW8vc2FtcGxlcy8wODE3ZjExNi9uYXRpdmVndW5zLTEzLm1wMz5odHRwOi8vd3d3LmNkYmFieS5jb20vYXVkaW8vc2FtcGxlcy8wODE3ZjExNi9uYXRpdmVndW5zLTEzLm1wM2QCAg8VAQdXb3JrIEl0ZAIFDxAPFgIfCGdkZBYAZAIOD2QWBgIBD2QWAmYPFQI+aHR0cDovL3d3dy5jZGJhYnkuY29tL2F1ZGlvL3NhbXBsZXMvMDgxN2YxMTYvbmF0aXZlZ3Vucy0xNC5tcDM+aHR0cDovL3d3dy5jZGJhYnkuY29tL2F1ZGlvL3NhbXBsZXMvMDgxN2YxMTYvbmF0aXZlZ3Vucy0xNC5tcDNkAgIPFQEHUHJvbWlzZWQCBQ8QDxYCHwhnZGQWAGQCDw9kFgYCAQ9kFgJmDxUCPmh0dHA6Ly93d3cuY2RiYWJ5LmNvbS9hdWRpby9zYW1wbGVzLzA4MTdmMTE2L25hdGl2ZWd1bnMtMTUubXAzPmh0dHA6Ly93d3cuY2RiYWJ5LmNvbS9hdWRpby9zYW1wbGVzLzA4MTdmMTE2L25hdGl2ZWd1bnMtMTUubXAzZAICDxUBCEdldCBEb3duZAIFDxAPFgIfCGdkZBYAZAIQD2QWAgIBD2QWAmYPZBYCAgEPZBYCZg8VAjtodHRwOi8vd3d3LmNkYmFieS5jb20vYXVkaW8vc2FtcGxlcy8wODE3ZjExNi9uYXRpdmVndW5zLnhtbDtodHRwOi8vd3d3LmNkYmFieS5jb20vYXVkaW8vc2FtcGxlcy8wODE3ZjExNi9uYXRpdmVndW5zLnhtbGQCAw9kFgJmDxYCHgVzdHlsZQUNZGlzcGxheTpub25lOxYEAgEPZBYCAgEPDxYCHwJnZGQCBQ8PFgIfAmhkZAIFD2QWAmYPFgIfCQUNZGlzcGxheTpub25lOxYCAgEPZBYCAgEPDxYCHwJnZGQCFw9kFgICAQ8PFgIfAAWQGVRIRSBOQVRJVkUgR1VOUyBERUJVVCBBTEJVTSwg4oCcQkFSUkVMIE1FTizigJ0gQVZBSUxBQkxFIE5PVyENPGJyIC8+DTxiciAvPg08YnIgLz4iLi4udGhpcyBpcyBhIEdSRUFUIHJlY29yZCIgIA08YnIgLz4tIEplZmYgQ2hhbmcgKGNhbnRzdG9wd29udHN0b3AuY29tKQ08YnIgLz4NPGJyIC8+Ii4uLnRhbGsgYWJvdXQgcG9saXRpY2FsLCBSRUFMIGhpcCBob3A/IENvbWluZyBmcm9tIGhhcmRjb3JlIGZpbGlwaW5vIHBvbGl0aWNhbCBtaW5kcz8gVGhpcyBpcyB3aGF0IEknbSB0YWxraW5nIGFib3V0LCBhcnRpc3RpYy4uLiBUaGlzIGlzIHRoYXQgSW1tb3J0YWwgVGVjaG5pcXVlLCB0aGF0IGRlYWQgcHJleiBzaCoqLCBmcm9tIHRoZSBGaWxpcGlubyBzaWRlIG9mIHRoZSBjb2luLiBZb3UgbmVlZCB0byBjaGVjayB0aGlzIG91dC4iDTxiciAvPi0gQWRpc2EgQmFuam9rbywgdGhlICJCaXNob3Agb2YgSGlwIEhvcCIgKGx5cmljYWxzd29yZHMuY29tKQ08YnIgLz4NPGJyIC8+Ii4uLnlvdSdsbCBpbW1lZGlhdGVseSB3YW50IHRvIHJlbG9hZCB0aGUgYWxidW0gYW5kIGxpc3RlbiBhZ2Fpbi4gVGhpcyBpcyBob3QuIg08YnIgLz4tIHd3dy5jYXVnaHRpbnRoZWNyb3NzZmlyZS5jb20NPGJyIC8+DTxiciAvPiJUaGUgZmlmdGVlbiB0cmFja3Mgb24gQmFycmVsIE1lbiBmaWdodCBmb3IgY29udHJvbCBvZiB5b3VyIGJvb3R5IGFuZCB5b3VyIGJyYWluLCBidXQgbmV2ZXIgZmlnaHQgb3ZlciB0aGUgdHdvLiBFYWNoIGJlYXQsIGNvbXBsZXRlIHdpdGggc2NyYXRjaGVzIGJ5IERKIFBoYXRyaWNrLCBpcyBhcyBkYW5jZS13b3J0aHkgYXMgYW55dGhpbmcgeW91J2QgaGVhciBhdCBhIGNsdWIuIg08YnIgLz4tIExlZnQgVHVybiBNYWdhemluZSANPGJyIC8+DTxiciAvPiJNb3JlIHRoYW4ganVzdCBzdHJlZXQtY29uc2Npb3VzLCB0aGUgcGFpciBzaGFyZXMgYSBmZWFybGVzcyBhdHRpdHVkZSBvZiBuby1ob2xkcy1iYXJyZWQgdm9jYWxpemluZyBhbmQgc3RheWluZyB0cnVlIHRvIHRoZWlyIHJvb3RzLiINPGJyIC8+LSBMLkEgQWx0ZXJuYXRpdmUgUHJlc3MNPGJyIC8+DTxiciAvPiJCYXJyZWwgTWVuIG1heSBiZSB0aGUgYmVzdCByYXAgYWxidW0gYnkgUGlub3kgZ2FuZyBtZW1iZXJzIHR1cm5lZCBjb25zY2lvdXMgTUNzIHlvdSd2ZSBldmVyIGhlYXJkLi4uZmlsbGVkIHdpdGggbWlsaXRhbnQtYnV0LW5vdC1nYW5nc3RhIHNlbnRpbWVudHMsIGNydWNpYWwgcmVnZ2FlIGFuZCBoaXAtaG9wIG1hc2hkb3ducywgb3V0c3Bva2VuIHNvY2lhbCBjb21tZW50YXJ5LCBhbmQgaW50cm9zcGVjdGl2ZSBzZWxmLXJlZmxlY3Rpb24uIg08YnIgLz4tIEVyaWMgQXJub2xkLCBFYXN0IEJheSBFeHByZXNzDTxiciAvPg08YnIgLz4NPGJyIC8+DTxiciAvPg08YnIgLz5Mb3MgQW5nZWxlcy9CYXkgQXJlYSwgQ0EgLSBBY2NsYWltZWQgcmV2b2x1dGlvbmFyeSBQaW5veSBoaXAgaG9wIGdyb3VwIE5hdGl2ZSBHdW5zIGFyZSBwcm91ZCB0byBhbm5vdW5jZSB0aGUgbG9uZy1hd2FpdGVkLCBoaWdobHkgYW50aWNpcGF0ZWQgcmVsZWFzZSBvZiB0aGVpciBkZWJ1dCBhbGJ1bSwg4oCcQmFycmVsIE1lbi7igJ0NPGJyIC8+DTxiciAvPkFuIHVyYmFuIHRyaWJhbCBtYXN0ZXJwaWVjZeKAlOKAnEJhcnJlbCBNZW7igJ0gcmVmbGVjdHMgdGhlIGxpZmUsIHRpbWVzLCBhbmQgbWlzc2lvbiBvZiB0aGVzZSDigJx0d28gYmFsZC1oZWFkZWQgYnJvd24gYnJvdGhhcyB3aXRoIHRhdHRvb3Mu4oCdIE1DcyBLaXdpIGFuZCBCYW1idSBib3RoIGdyZXcgdXAgaW4gaW5uZXItY2l0eSBMb3MgQW5nZWxlcyBkaXN0cmljdHMgd2hlcmUgZ2FuZyBjdWx0dXJlIHdhcyBhbiBpbnRlZ3JhbCBwYXJ0IG9mIHRoZWlyIHlvdXRoLiBCdWlsZGluZyBuYW1lcyBmb3IgdGhlbXNlbHZlcyBhcyBlbWNlZXMgc2VwYXJhdGVseSBpbiBMLkEu4oCZcyBwcm9saWZpYyB1bmRlcmdyb3VuZCBoaXAgaG9wIHNjZW5lLCB0aGV5IHdlcmUgdW5pdGVkIHRocm91Z2ggdGhlIHNhbWUgcGFzc2lvbiB0byBpbXByb3ZlIHRoZWlyIGNvbW11bml0eS4gQm90aCBjcmVkaXQgaGlwIGhvcCBmb3IgcHJvdmlkaW5nIGFuIGFsdGVybmF0aXZlIHRvIGdhbmcgbGlmZSBhbmQgc3BhcmtpbmcgdGhlaXIgc29jaWFsIGNvbnNjaW91c25lc3MuDTxiciAvPg08YnIgLz5XaXRoIHByb2R1Y3Rpb24gZnJvbSBESiBSaGV0dG1hdGljIChXb3JsZCBGYW1vdXMgQmVhdCBKdW5raWVzLCBWaXNpb25hcmllcyksIFNhYnppIChCbHVlIFNjaG9sYXJzKSwgQXNpIGFuZCBvdGhlcnMsIHRoZSBOYXRpdmUgR3VucyBjb21iaW5lIG11c2ljIHdpdGggY3JpdGljYWwgdGhvdWdodCwgY292ZXJpbmcgdG9waWNzIHJhbmdpbmcgZnJvbSB0aGlyZCB3b3JsZCBzd2VhdHNob3AgbGFib3IgKOKAnFdvcmsgSXTigJ0pIHRvIHNlbGYtY3JpdGljaXNtICjigJxMb29rIGluIHRoZSBNaXJyb3LigJ0pLiBTcGl0dGluZyBrbm93bGVkZ2UgZG9lc27igJl0IGhhdmUgdG8gYmUgYm9yaW5nOiB0aGUgR3VucyBwcm92ZSB0aGlzIHdpdGggdGhlaXIgaGVhZC1ub2RkaW5nIGFudGhlbSDigJxDaGFtcGlvbizigJ0gdGhlIGZpcnN0IHNpbmdsZSBmcm9tIHRoZSBhbGJ1bS4gQW5vdGhlciBzb25nIHRoYXQgaXMgc3VyZSB0byBnZXQgY3Jvd2RzIGp1bXBpbmcgaXMgdGhlIHRyYWNrIOKAnEhhbW1lcizigJ0gd2hpY2ggaXMgYSBib3VuY2luZyBjYWxsLXRvLWFybXMgZm9yIGZlbGxvdyB5b3V0aCBmcm9tIHRoZSBob29kLiDigJwxOTk14oCdIGhhcyBLaXdpIGFuZCBCYW1idSByZW1pbmlzY2luZyBhYm91dCB0aGUgZmVlbC1nb29kIGlubm9jZW50IGRheXMgb2YgZGlzY292ZXJpbmcgaGlwLWhvcCwgd2hpbGUg4oCcS29tYmF04oCdIHByb3ZpZGVzIGEgc2NhdGhpbmcgY3JpdGlxdWUgb2YgdG9kYXnigJlzIG1haW5zdHJlYW0gcmFwIGluZHVzdHJ5Lg08YnIgLz4NPGJyIC8+4oCcQmFycmVsIE1lbuKAnSByZXByZXNlbnRzIGEgZnJlc2ggcGVyc3BlY3RpdmUgaW4gaGlwIGhvcCwgZW1ib2R5aW5nIHRoZSBicmlkZ2UgYmV0d2VlbiBhcnQgYW5kIGFjdGl2aXNtLiBJbiB0aGlzIHRyYWRpdGlvbiBvZiBzb2NpYWxseSBjb25zY2lvdXMgbXVzaWMsIHRoaXMgYWxidW0gd2lsbCBjZXJ0YWlubHkgYmUgYW4gaW1wb3J0YW50IGNvbnRyaWJ1dGlvbiwgYm90aCBpbiB0aGUgY2xhc3Nyb29tIGFuZCBvbiB0aGUgc3RyZWV0IGNvcm5lci4NPGJyIC8+DTxiciAvPldlYnNpdGU6IHd3dy5uYXRpdmVndW5zLmNvbWRkAhkPZBYCAgEPZBYCZg9kFgYCAw8PFgIfAmdkFgICAQ8PFgIfAwUcL0xvZ2luP1BhZ2VUbz0vY2QvbmF0aXZlZ3Vuc2RkAgUPDxYCHwJoZGQCBw8WAh8GAgQWCAIBD2QWBGYPFQEKYSBsZWdpdCBjZGQCAg8VAgZtaWxlcmqqAWkgZWNobyB0aGUgcmVzdCBvZiB0aGUgcmV2aWV3ZXJzLi4uZ29vZCBiZWF0cyBhbmQgaW5zYW5lIGx5cmljcy4gIGFuZCB0aGlzIGlzIGEgREVFUCBjZCwgaSBrZWVwIGZpbmRpbmcgbGluZXMgYW5kIHRyYWNrcyBvZmYgdGhpcyBjZCB0aGF0IGkgaGFkblwndCByZWFsbHkgbm90aWNlZCBiZWZvcmUuZAIDD2QWBGYPFQEFRG9wZSFkAgIPFQILVmljaGV0IEhlbmcTSG90IHdoYXQgY2FuIEkgc2F5LmQCBQ9kFgRmDxUBHFRoaXMgaXMgd2hhdCBpdCdzIGFsbCBhYm91dC5kAgIPFQIOSmVyZW15IEtlcnNoYXf3AUdvb2QgcHJvZHVjdGlvbiBhbmQgdG9wIG5vdGNoIGx5cmljaXNtIHdpdGggYSBzZXJpb3VzIGFuZCBsZWdpdGltYXRlIG1lc3NhZ2UuICBUaGVzZSBhcmUgdGhlIHRoaW5ncyBJIGxvdmUgaW4gaGlwLWhvcC4gIEl0J3MganVzdCB0b28gYmFkIG1vcmUgYXJ0aXN0cyBkb24ndCBoYXZlIHRoZXNlIGhpZ2ggc3RhbmRhcmRzIGZvciB0aGVtc2VsdmVzLiAgSSBjYW4ndCB3YWl0IGZvciB0aGUgbmV4dCBORyBhbGJ1bS4gIE11c3QgaGF2ZS5kAgcPZBYEZg8VAQ13b3JrIGl0IGJhYnkhZAICDxUCAVGyAXRoZSBiYXJyZWwgbWVuIGJyaW5nIGl0IHdpdGggdGhpcyBDRC4gdGhpcyBpcyBzb21lIHNlcmlvdXNseSBnb29kIGhpcCBob3AuIGkgd291bGQgaGlnaGx5IHJlY29tbWVuZCB0aGlzIENEIHRvIGFueW9uZSB3aG8gaXMgc2VyaW91cyBhYm91dCBnb29kIG11c2ljLiB0aGUgZ3VucyBrZWVwIGl0IHJlYWwgYmFieSFkAg8PZBYCAgEPDxYEHwAFBUxvZ2luHwMFCy9Mb2dpbi5hc3B4ZGQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgMFI2N0bDAwJHVjUGFnZV9IZWFkZXIkYnRuU3VibWl0U2VhcmNoBTFjdGwwMCRyaWdodENvbHVtbiRycHRBbGJ1bUZvcm1hdHMkY3RsMDEkYnRuQnV5Tm93BTtjdGwwMCRyaWdodENvbHVtbiR1Y1Nob3BwaW5nQ2FydE92ZXJsYXkkYnRuQ29udGludWVTaG9wcGluZzxY2qNeaFwHz/CKKpOpGeppHAGx" />
+
+
+<script src="/ScriptResource.axd?d=VxFypc4wGrGAES6SQfm4QVGRxyp16aX1NN96bR93OcT0HhGdM_K53L8tdZ55YBFvmN0BnzzsPePPkW700dksxlFicPg-VHXONMQxaDMh1Ac1&amp;t=7b802101" type="text/javascript"></script>
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWHAKl9sfiDQKwkNWpDQKflI7IDwLsqbzKDALAvbLMBAK1tfiyDgKQ0+mzDgLP1Km6DgKa9um6DgLZtam5DgKU1cq5DgLT1oq4DgKOx+ioDgLNyvmmDgL+kOe7AgK9kvC5AgKYsOG6AgLXsaHBAgKi0+HBAgLhkqHAAgLfwqSICgK/uoiDAgK/upSDAgK/upCDAgK/uvyCAgK/uviCAgK/uoSDAgKfj4Yd15ERU/3XduLpYJRZBUtqO/GPtDU=" />
+
+        <div id="boundPageEvents" class="norebind" title="NO"></div>
+
+        
+        <div id="ctl00_upOmnitureCode">
+	
+                
+<!-- SiteCatalyst code version: H.20.2.
+Copyright 1997-2009 Omniture, Inc. More info available at
+http://www.omniture.com -->
+<script language="JavaScript" type="text/javascript" src="/s_code.js"></script>
+<script language="JavaScript" type="text/javascript"><!--
+    /* You may give each page an identifying name, server, and channel on
+    the next lines. */
+    s.pageName = "CDBaby | Native Guns | Barrel Men"
+    s.server = ""
+    s.channel = ""
+    s.pageType = ""
+    s.prop1 = ""
+    s.prop2 = ""
+    s.prop3 = ""
+    s.prop4 = ""
+    s.prop5 = ""
+    /* Conversion Variables */
+    s.campaign = ""
+    s.state = ""
+    s.zip = ""
+    s.events = "prodView"
+    s.products = ";nativeguns;;;;evar3="
+    s.purchaseID = ""
+    s.eVar1 = ""
+    s.eVar2 = ""
+    s.eVar3 = ""
+    s.eVar4 = ""
+    s.eVar5 = ""    /************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+    var s_code = s.t(); if (s_code) document.write(s_code)//--></script>
+<script language="JavaScript" type="text/javascript"><!--
+    if (navigator.appVersion.indexOf('MSIE') >= 0) document.write(unescape('%3C') + '\!-' + '-')
+//--></script><noscript><a href="http://www.omniture.com" title="Web Analytics"><img
+src="http://avlcdbabytest.112.2O7.net/b/ss/avlcdbabytest/1/H.20.2--NS/0"
+height="1" width="1" border="0" alt="" /></a></noscript><!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.20.2. -->
+            
+</div>
+        <div id="container-page">
+
+                            
+            
+            <div id="container-header">
+                
+                    
+    <div id="header-top">
+        
+        <a href="/" id="logo"></a>
+        
+        <a id="ctl00_ucPage_Header_lnkLogin" class="link-login-logout" href="/login">Log in</a>
+        
+        
+        <div id="ctl00_ucPage_Header_pnlSearch" class="search-container">
+	
+            <input name="ctl00$ucPage_Header$txtSearch" type="text" value="type your search here..." id="ctl00_ucPage_Header_txtSearch" class="textbox-25px search-box" />
+            <input type="image" name="ctl00$ucPage_Header$btnSubmitSearch" id="ctl00_ucPage_Header_btnSubmitSearch" class="search-button" src="/Images/Buttons/button-search.jpg" onclick="if ($('.search-box').val()=='type your search here...' || $('.search-box').val()=='') {return false;};" border="0" />
+        
+</div>
+        
+        <ul>
+            <li><a href="/Style" id="link-genres"><img src="/Images/nav-genres.gif" alt="Genres" /></a></li>
+            <li><a href="/Search" id="link-explore"><img src="/Images/nav-explore.gif" alt="Explore Music" /></a></li>
+            <li><a href="http://cdbaby.net" id="link-signup"><img src="/Images/nav-signup.gif" alt="Artist Signup" /></a></li>
+            <li><a href="/Account" id="link-myaccount"><img src="/Images/nav-myaccount.gif" alt="My Account" /></a></li>
+        </ul>
+        
+        <span id="div-viewcart" style="z-index:1;">
+            <span id="ctl00_ucPage_Header_lblCartItemsTotal"></span>
+            <a href="/Cart"></a>
+        </span>
+        
+    </div><!-- #header-top" -->
+    
+    <div id="header-bottom">
+    </div><!-- #header-bottom" -->
+                    
+
+                <div id="bread-crumb">
+                    
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li id="ctl00_breadCrumb_liArtist"><a id="ctl00_breadCrumb_lnkArtist" href="/Artist/NativeGuns">Native Guns</a></li>
+        <li id="last-crumb"><span id="ctl00_breadCrumb_lblBreadAlbumName">Barrel Men</span></li>
+    </ul>
+
+                </div><!-- #bread-crumb -->
+            </div><!-- #container-header -->
+        
+            <div id="container-inner-page">
+                
+                <div id="container-content-2c_200_735">
+                
+                    <div id="content-left">
+                        
+    
+    <a id="ctl00_leftColumn_hlBackToArtist" href="/Artist/NativeGuns">
+        <img src="/Images/buttons/button-backtoArtist.jpg" id="back-to-artist" alt="Back To Artist" width="199" height="35" />
+    </a>
+    
+    <div id="album-cover-container" class="img_195x195">
+        <img id="ctl00_leftColumn_imgAlbumCover" class="album-cover" src="//CDBaby.name/n/a/nativeguns.jpg" alt="Native Guns : Barrel Men" height="195" width="195" border="0" />
+    </div>
+    
+    <a id="ctl00_leftColumn_lbWishlistLogin" class="wishlist-link" href="javascript:__doPostBack('ctl00$leftColumn$lbWishlistLogin','')">Log in to add to your wishlist</a>
+    
+    <div id="ctl00_leftColumn_upWishList">
+	
+            <script type="text/javascript">Sys.Application.add_load(WireEvents);</script>            
+            
+        
+</div>
+    
+    <span id="ctl00_leftColumn_lblAlbumDescription" class="album-description">The long-awaited debut album by Cali-based Filipino emcees Kiwi & Bambu (Native Guns), this CD blends the machine-gun political lyricism with raw bangin beats. GET THIS NOW....</span>
+    
+    <div>
+        <strong>Genre: </strong>
+        <span id="ctl00_leftColumn_lblAlbumGenre">Hip-Hop/Rap:&nbsp;Hip Hop</span>
+    </div>
+    <div style="margin:3px 0 20px 0;">
+        <strong>Release Date: </strong>
+        <span id="ctl00_leftColumn_lblAlbumRelease">2006</span>
+    </div>
+    
+    
+    <div id="side-bar">
+        
+
+<div id="UC_Misc_RelatedItems">
+
+    <h2>Related Items</h2>
+    
+    <div class="inner-side-bar">
+        
+        
+                <h3>Recommended if you like</h3>
+                <ul>
+            
+                    <li>Black Star</li>
+            
+                    <li>dead prez</li>
+            
+                    <li>Immortal Technique</li>
+            
+                </ul>
+            
+        
+        
+                <h3>Genres you will love</h3>
+                <ul>
+            
+                    <li><a href="/Style/62">Hip-Hop/Rap:&nbsp;Hip Hop</a></li>
+            
+                    <li><a href="/Style/58">Hip-Hop/Rap:&nbsp;Alternative Hip Hop</a></li>
+            
+                    <li><a href="/Style/497">Moods:&nbsp;Type: Political</a></li>
+            
+                </ul>
+            
+        
+        
+                <h3>By Location</h3>
+                <ul class="bottom">
+            
+                    <li>
+                        <a href="/Places/9CA0">California</a>
+                    </li>
+            
+                </ul>
+            
+ 
+    </div>
+       
+</div>
+        
+
+<div id="UC_Album_AlbumsYouWillLove">
+
+    <h2>Albums you will love</h2>
+    
+    <div class="inner-side-bar">
+
+        
+                <div id="lovedalbums-display">
+            
+                    <div class="lovedalbums-container left-div">
+                        <div class="img-container img_50x50">
+                            <a href="/cd/nativeguns2">
+                                <img src="//CDBaby.name/n/a/nativeguns2_small.jpg" width="50" height="50" class="pulse" />
+                            </a>
+                        </div>
+                        <div class="hide-overflow scrollable lovedalbums-artist" style="margin-top:6px;">
+                            <span>Native Guns</span>
+                        </div>
+                        <div class="hide-overflow scrollable lovedalbums-album">
+                            <span>Stray Bullets Mixtape Volume 2</span>
+                        </div>
+                        <div class="hide-overflow scrollable lovedalbums-genre">
+                            <span>Hip-Hop/Rap:&nbsp;Hip Hop</span>
+                        </div>
+                        <a href="/cd/nativeguns2" class="overlay-link">&nbsp;</a>
+                    </div><!-- .lovedalbums-container -->
+            
+                    <div class="clear-left"></div>
+                </div><!-- #lovedalbums-display -->
+                
+ 
+    </div><!-- .inner-side-bar -->
+       
+</div><!-- #UC_Misc_CoolArtistStuff -->
+
+<div id="boundPageEvents_Album_Albumsyouwilllove" class="norebind" title="NO"></div>
+
+<!-- #scriptDiv -->
+
+        
+
+<div id="UC_Misc_CoolArtistStuff">
+
+    <h2>More cool artist stuff</h2>
+    
+    <div class="inner-side-bar">
+            
+        
+                <h3>Links</h3>
+                <ul class="bottom">
+            
+                    <li>
+                        <a target="_blank" href="http://www.nativeguns.com">Native Guns</a>
+                    </li>
+            
+                    <li>
+                        <a target="_blank" href="http://www.cdbaby.com/cd/bambu">Bambu</a>
+                    </li>
+            
+                    <li>
+                        <a target="_blank" href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?playListId=189844277">Apple iTunes</a>
+                    </li>
+            
+                </ul>
+            
+ 
+    </div><!-- .inner-side-bar -->
+       
+</div><!-- #UC_Misc_CoolArtistStuff -->
+        
+    </div>
+    
+
+                    </div><!-- #content-left -->
+                    
+                    <div id="content-right">
+                        
+        
+    <div id="album-info-container">
+        
+        <div id="album-info-left">
+            
+            <span id="ctl00_rightColumn_lblAlbumName" class="album-name">Barrel Men</span>
+            <div id="ctl00_rightColumn_pnlArtists" class="artist-name">
+	<a href="/Artist/NativeGuns">Native Guns</a>
+</div>
+            <div id="copyright-barcode">
+                <span id="ctl00_rightColumn_lblCopyright" class="album-copyright">&copy Copyright-Native Guns</span>
+                <span id="ctl00_rightColumn_lblBarcode" class="album-barcode">(634479341458)</span>
+                <div style="clear:both;"></div>
+            </div>
+            <span id="ctl00_rightColumn_lblRecordLabel" class="album-label">Record Label: Native Guns</span>
+                
+            <div id="ctl00_rightColumn_upBuyFormats">
+	
+                    
+                            <ul id="album-formats">
+                        
+                                <li>
+                                    <input type="image" name="ctl00$rightColumn$rptAlbumFormats$ctl01$btnBuyNow" id="ctl00_rightColumn_rptAlbumFormats_ctl01_btnBuyNow" class="cd-buynow-button" src="/Images/Buttons/button-buyNowGreen.jpg" border="0" />
+                                    <span id="ctl00_rightColumn_rptAlbumFormats_ctl01_lblFormatMessage" class="format-message">Buy CD - $11.00 <span class='stock-message'></span></span>
+                                </li>
+                        
+                            </ul>
+                                        
+                
+</div>
+           
+            <div id="ctl00_rightColumn_pnlSeemore">
+	
+                <a id="see-more" href="#">see album notes &amp; reviews</a>
+            
+</div>
+            
+        </div>
+            
+
+            
+        <div id="album-info-right">
+            <div id="album-availability">
+                <span id="ctl00_rightColumn_lblDiscountInfo" class="discount-info">SPECIAL: 10% discount if you buy more than one copy of it today!</span>
+                <img id="ctl00_rightColumn_imgStockInfo" class="stock-message" src="/Images/banner-CDfewStock.gif" height="61" width="62" border="0" />
+                <div class="clear-both"></div>
+            </div>
+            
+            <div class="clear-right"></div>
+       </div>
+        
+        <div class="clear-left"></div>
+        
+    </div>
+
+        <div id="ctl00_rightColumn_upAlbum">
+	
+                <script type="text/javascript">Sys.Application.add_load(WireEvents);</script>            
+                
+                        <table id="tracks-display">
+                            <tr>
+                                <th style="width:80px ! important;">Preview</th>
+                                <th style="text-align:left; padding-left:15px;">Song Name</th>
+                                <th>Time</th>
+                                <th>Format</th>
+                                <th>Price</th>
+                                <th>Select</th>
+                            </tr>
+                    
+                            <tr>
+                                <td>
+                                    
+                                </td>
+                                <td style="text-align:left; padding-left:15px;">Initiation</td>
+                                <td style="font-weight:bold;"><span id="ctl00_rightColumn_rptTracks_ctl01_lblTrackLength">3:37</span></td>
+                                <td></td>
+                                <td style="font-weight:bold;"><span id="ctl00_rightColumn_rptTracks_ctl01_lblFormatPrice">Not Available</span></td>
+                                <td><span class="check-download-track" disabled="disabled"><input id="ctl00_rightColumn_rptTracks_ctl01_chkDownloadTrack" type="checkbox" name="ctl00$rightColumn$rptTracks$ctl01$chkDownloadTrack" disabled="disabled" /></span></td>
+                            </tr>
+                    
+                            <tr>
+                                <td>
+                                    <span id="ctl00_rightColumn_rptTracks_ctl02_lblPlayer">
+                                        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="17" height="17" codebase="//download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab">
+                                            <param name="movie" value="/mp3Player.swf" /><param name="wmode" value="transparent" />
+                                            <param name="flashvars" value="filename=http://www.cdbaby.com/audio/samples/0817f116/nativeguns-02.mp3" />
+                                            <embed wmode="transparent" src="/mp3Player.swf" flashvars="filename=http://www.cdbaby.com/audio/samples/0817f116/nativeguns-02.mp3" type="application/x-shockwave-flash" width="17" height="17" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+                                        </object>
+                                    </span>
+                                </td>
+                                <td style="text-align:left; padding-left:15px;">Champion</td>
+                                <td style="font-weight:bold;"><span id="ctl00_rightColumn_rptTracks_ctl02_lblTrackLength">4:56</span></td>
+                                <td></td>
+                                <td style="font-weight:bold;"><span id="ctl00_rightColumn_rptTracks_ctl02_lblFormatPrice">Not Available</span></td>
+                                <td><span class="check-download-track" disabled="disabled"><input id="ctl00_rightColumn_rptTracks_ctl02_chkDownloadTrack" type="checkbox" name="ctl00$rightColumn$rptTracks$ctl02$chkDownloadTrack" disabled="disabled" /></span></td>
+                            </tr>
+                    
+                            <tr>
+                                <td>
+                                    <span id="ctl00_rightColumn_rptTracks_ctl03_lblPlayer">
+                                        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="17" height="17" codebase="//download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab">
+                                            <param name="movie" value="/mp3Player.swf" /><param name="wmode" value="transparent" />
+                                            <param name="flashvars" value="filename=http://www.cdbaby.com/audio/samples/0817f116/nativeguns-03.mp3" />
+                                            <embed wmode="transparent" src="/mp3Player.swf" flashvars="filename=http://www.cdbaby.com/audio/samples/0817f116/nativeguns-03.mp3" type="application/x-shockwave-flash" width="17" height="17" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+                                        </object>
+                                    </span>
+                                </td>
+                                <td style="text-align:left; padding-left:15px;">Look in the Mirror</td>
+                                <td style="font-weight:bold;"><span id="ctl00_rightColumn_rptTracks_ctl03_lblTrackLength">3:31</span></td>
+                                <td></td>
+                                <td style="font-weight:bold;"><span id="ctl00_rightColumn_rptTracks_ctl03_lblFormatPrice">Not Available</span></td>
+                                <td><span class="check-download-track" disabled="disabled"><input id="ctl00_rightColumn_rptTracks_ctl03_chkDownloadTrack" type="checkbox" name="ctl00$rightColumn$rptTracks$ctl03$chkDownloadTrack" disabled="disabled" /></span></td>
+                            </tr>
+                    
+                            <tr>
+                                <td>
+                                    <span id="ctl00_rightColumn_rptTracks_ctl04_lblPlayer">
+                                        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="17" height="17" codebase="//download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab">
+                                            <param name="movie" value="/mp3Player.swf" /><param name="wmode" value="transparent" />
+                                            <param name="flashvars" value="filename=http://www.cdbaby.com/audio/samples/0817f116/nativeguns-04.mp3" />
+                                            <embed wmode="transparent" src="/mp3Player.swf" flashvars="filename=http://www.cdbaby.com/audio/samples/0817f116/nativeguns-04.mp3" type="application/x-shockwave-flash" width="17" height="17" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+                                        </object>
+                                    </span>
+                                </td>
+                                <td style="text-align:left; padding-left:15px;">Hammer</td>
+                                <td style="font-weight:bold;"><span id="ctl00_rightColumn_rptTracks_ctl04_lblTrackLength">3:18</span></td>
+                                <td></td>
+                                <td style="font-weight:bold;"><span id="ctl00_rightColumn_rptTracks_ctl04_lblFormatPrice">Not Available</span></td>
+                                <td><span class="check-download-track" disabled="disabled"><input id="ctl00_rightColumn_rptTracks_ctl04_chkDownloadTrack" type="checkbox" name="ctl00$rightColumn$rptTracks$ctl04$chkDownloadTrack" disabled="disabled" /></span></td>
+                            </tr>
+                    
+                            <tr>
+                                <td>
+                                    
+                                </td>
+                                <td style="text-align:left; padding-left:15px;">Drowning</td>
+                                <td style="font-weight:bold;"><span id="ctl00_rightColumn_rptTracks_ctl05_lblTrackLength">3:52</span></td>
+                                <td></td>
+                                <td style="font-weight:bold;"><span id="ctl00_rightColumn_rptTracks_ctl05_lblFormatPrice">Not Available</span></td>
+                                <td><span class="check-download-track" disabled="disabled"><input id="ctl00_rightColumn_rptTracks_ctl05_chkDownloadTrack" type="checkbox" name="ctl00$rightColumn$rptTracks$ctl05$chkDownloadTrack" disabled="disabled" /></span></td>
+                            </tr>
+                    
+                            <tr>
+                                <td>
+                                    <span id="ctl00_rightColumn_rptTracks_ctl06_lblPlayer">
+                                        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="17" height="17" codebase="//download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab">
+                                            <param name="movie" value="/mp3Player.swf" /><param name="wmode" value="transparent" />
+                                            <param name="flashvars" value="filename=http://www.cdbaby.com/audio/samples/0817f116/nativeguns-06.mp3" />
+                                            <embed wmode="transparent" src="/mp3Player.swf" flashvars="filename=http://www.cdbaby.com/audio/samples/0817f116/nativeguns-06.mp3" type="application/x-shockwave-flash" width="17" height="17" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+                                        </object>
+                                    </span>
+                                </td>
+                                <td style="text-align:left; padding-left:15px;">Ain't Afraid</td>
+                                <td style="font-weight:bold;"><span id="ctl00_rightColumn_rptTracks_ctl06_lblTrackLength">3:45</span></td>
+                                <td></td>
+                                <td style="font-weight:bold;"><span id="ctl00_rightColumn_rptTracks_ctl06_lblFormatPrice">Not Available</span></td>
+                                <td><span class="check-download-track" disabled="disabled"><input id="ctl00_rightColumn_rptTracks_ctl06_chkDownloadTrack" type="checkbox" name="ctl00$rightColumn$rptTracks$ctl06$chkDownloadTrack" disabled="disabled" /></span></td>
+                            </tr>
+                    
+                            <tr>
+                                <td>
+                                    <span id="ctl00_rightColumn_rptTracks_ctl07_lblPlayer">
+                                        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="17" height="17" codebase="//download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab">
+                                            <param name="movie" value="/mp3Player.swf" /><param name="wmode" value="transparent" />
+                                            <param name="flashvars" value="filename=http://www.cdbaby.com/audio/samples/0817f116/nativeguns-07.mp3" />
+                                            <embed wmode="transparent" src="/mp3Player.swf" flashvars="filename=http://www.cdbaby.com/audio/samples/0817f116/nativeguns-07.mp3" type="application/x-shockwave-flash" width="17" height="17" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+                                        </object>
+                                    </span>
+                                </td>
+                                <td style="text-align:left; padding-left:15px;">Treason</td>
+                                <td style="font-weight:bold;"><span id="ctl00_rightColumn_rptTracks_ctl07_lblTrackLength">4:17</span></td>
+                                <td></td>
+                                <td style="font-weight:bold;"><span id="ctl00_rightColumn_rptTracks_ctl07_lblFormatPrice">Not Available</span></td>
+                                <td><span class="check-download-track" disabled="disabled"><input id="ctl00_rightColumn_rptTracks_ctl07_chkDownloadTrack" type="checkbox" name="ctl00$rightColumn$rptTracks$ctl07$chkDownloadTrack" disabled="disabled" /></span></td>
+                            </tr>
+                    
+                            <tr>
+                                <td>
+                                    
+                                </td>
+                                <td style="text-align:left; padding-left:15px;">Right There</td>
+                                <td style="font-weight:bold;"><span id="ctl00_rightColumn_rptTracks_ctl08_lblTrackLength">3:38</span></td>
+                                <td></td>
+                                <td style="font-weight:bold;"><span id="ctl00_rightColumn_rptTracks_ctl08_lblFormatPrice">Not Available</span></td>
+                                <td><span class="check-download-track" disabled="disabled"><input id="ctl00_rightColumn_rptTracks_ctl08_chkDownloadTrack" type="checkbox" name="ctl00$rightColumn$rptTracks$ctl08$chkDownloadTrack" disabled="disabled" /></span></td>
+                            </tr>
+                    
+                            <tr>
+                                <td>
+                                    <span id="ctl00_rightColumn_rptTracks_ctl09_lblPlayer">
+                                        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="17" height="17" codebase="//download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab">
+                                            <param name="movie" value="/mp3Player.swf" /><param name="wmode" value="transparent" />
+                                            <param name="flashvars" value="filename=http://www.cdbaby.com/audio/samples/0817f116/nativeguns-09.mp3" />
+                                            <embed wmode="transparent" src="/mp3Player.swf" flashvars="filename=http://www.cdbaby.com/audio/samples/0817f116/nativeguns-09.mp3" type="application/x-shockwave-flash" width="17" height="17" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+                                        </object>
+                                    </span>
+                                </td>
+                                <td style="text-align:left; padding-left:15px;">Kombat</td>
+                                <td style="font-weight:bold;"><span id="ctl00_rightColumn_rptTracks_ctl09_lblTrackLength">4:24</span></td>
+                                <td></td>
+                                <td style="font-weight:bold;"><span id="ctl00_rightColumn_rptTracks_ctl09_lblFormatPrice">Not Available</span></td>
+                                <td><span class="check-download-track" disabled="disabled"><input id="ctl00_rightColumn_rptTracks_ctl09_chkDownloadTrack" type="checkbox" name="ctl00$rightColumn$rptTracks$ctl09$chkDownloadTrack" disabled="disabled" /></span></td>
+                            </tr>
+                    
+                            <tr>
+                                <td>
+                                    
+                                </td>
+                                <td style="text-align:left; padding-left:15px;">Slave Thinking</td>
+                                <td style="font-weight:bold;"><span id="ctl00_rightColumn_rptTracks_ctl10_lblTrackLength">4:25</span></td>
+                                <td></td>
+                                <td style="font-weight:bold;"><span id="ctl00_rightColumn_rptTracks_ctl10_lblFormatPrice">Not Available</span></td>
+                                <td><span class="check-download-track" disabled="disabled"><input id="ctl00_rightColumn_rptTracks_ctl10_chkDownloadTrack" type="checkbox" name="ctl00$rightColumn$rptTracks$ctl10$chkDownloadTrack" disabled="disabled" /></span></td>
+                            </tr>
+                    
+                            <tr>
+                                <td>
+                                    <span id="ctl00_rightColumn_rptTracks_ctl11_lblPlayer">
+                                        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="17" height="17" codebase="//download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab">
+                                            <param name="movie" value="/mp3Player.swf" /><param name="wmode" value="transparent" />
+                                            <param name="flashvars" value="filename=http://www.cdbaby.com/audio/samples/0817f116/nativeguns-11.mp3" />
+                                            <embed wmode="transparent" src="/mp3Player.swf" flashvars="filename=http://www.cdbaby.com/audio/samples/0817f116/nativeguns-11.mp3" type="application/x-shockwave-flash" width="17" height="17" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+                                        </object>
+                                    </span>
+                                </td>
+                                <td style="text-align:left; padding-left:15px;">1995</td>
+                                <td style="font-weight:bold;"><span id="ctl00_rightColumn_rptTracks_ctl11_lblTrackLength">4:33</span></td>
+                                <td></td>
+                                <td style="font-weight:bold;"><span id="ctl00_rightColumn_rptTracks_ctl11_lblFormatPrice">Not Available</span></td>
+                                <td><span class="check-download-track" disabled="disabled"><input id="ctl00_rightColumn_rptTracks_ctl11_chkDownloadTrack" type="checkbox" name="ctl00$rightColumn$rptTracks$ctl11$chkDownloadTrack" disabled="disabled" /></span></td>
+                            </tr>
+                    
+                            <tr>
+                                <td>
+                                    <span id="ctl00_rightColumn_rptTracks_ctl12_lblPlayer">
+                                        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="17" height="17" codebase="//download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab">
+                                            <param name="movie" value="/mp3Player.swf" /><param name="wmode" value="transparent" />
+                                            <param name="flashvars" value="filename=http://www.cdbaby.com/audio/samples/0817f116/nativeguns-12.mp3" />
+                                            <embed wmode="transparent" src="/mp3Player.swf" flashvars="filename=http://www.cdbaby.com/audio/samples/0817f116/nativeguns-12.mp3" type="application/x-shockwave-flash" width="17" height="17" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+                                        </object>
+                                    </span>
+                                </td>
+                                <td style="text-align:left; padding-left:15px;">Said It</td>
+                                <td style="font-weight:bold;"><span id="ctl00_rightColumn_rptTracks_ctl12_lblTrackLength">4:07</span></td>
+                                <td></td>
+                                <td style="font-weight:bold;"><span id="ctl00_rightColumn_rptTracks_ctl12_lblFormatPrice">Not Available</span></td>
+                                <td><span class="check-download-track" disabled="disabled"><input id="ctl00_rightColumn_rptTracks_ctl12_chkDownloadTrack" type="checkbox" name="ctl00$rightColumn$rptTracks$ctl12$chkDownloadTrack" disabled="disabled" /></span></td>
+                            </tr>
+                    
+                            <tr>
+                                <td>
+                                    <span id="ctl00_rightColumn_rptTracks_ctl13_lblPlayer">
+                                        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="17" height="17" codebase="//download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab">
+                                            <param name="movie" value="/mp3Player.swf" /><param name="wmode" value="transparent" />
+                                            <param name="flashvars" value="filename=http://www.cdbaby.com/audio/samples/0817f116/nativeguns-13.mp3" />
+                                            <embed wmode="transparent" src="/mp3Player.swf" flashvars="filename=http://www.cdbaby.com/audio/samples/0817f116/nativeguns-13.mp3" type="application/x-shockwave-flash" width="17" height="17" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+                                        </object>
+                                    </span>
+                                </td>
+                                <td style="text-align:left; padding-left:15px;">Work It</td>
+                                <td style="font-weight:bold;"><span id="ctl00_rightColumn_rptTracks_ctl13_lblTrackLength">4:51</span></td>
+                                <td></td>
+                                <td style="font-weight:bold;"><span id="ctl00_rightColumn_rptTracks_ctl13_lblFormatPrice">Not Available</span></td>
+                                <td><span class="check-download-track" disabled="disabled"><input id="ctl00_rightColumn_rptTracks_ctl13_chkDownloadTrack" type="checkbox" name="ctl00$rightColumn$rptTracks$ctl13$chkDownloadTrack" disabled="disabled" /></span></td>
+                            </tr>
+                    
+                            <tr>
+                                <td>
+                                    <span id="ctl00_rightColumn_rptTracks_ctl14_lblPlayer">
+                                        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="17" height="17" codebase="//download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab">
+                                            <param name="movie" value="/mp3Player.swf" /><param name="wmode" value="transparent" />
+                                            <param name="flashvars" value="filename=http://www.cdbaby.com/audio/samples/0817f116/nativeguns-14.mp3" />
+                                            <embed wmode="transparent" src="/mp3Player.swf" flashvars="filename=http://www.cdbaby.com/audio/samples/0817f116/nativeguns-14.mp3" type="application/x-shockwave-flash" width="17" height="17" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+                                        </object>
+                                    </span>
+                                </td>
+                                <td style="text-align:left; padding-left:15px;">Promise</td>
+                                <td style="font-weight:bold;"><span id="ctl00_rightColumn_rptTracks_ctl14_lblTrackLength">3:31</span></td>
+                                <td></td>
+                                <td style="font-weight:bold;"><span id="ctl00_rightColumn_rptTracks_ctl14_lblFormatPrice">Not Available</span></td>
+                                <td><span class="check-download-track" disabled="disabled"><input id="ctl00_rightColumn_rptTracks_ctl14_chkDownloadTrack" type="checkbox" name="ctl00$rightColumn$rptTracks$ctl14$chkDownloadTrack" disabled="disabled" /></span></td>
+                            </tr>
+                    
+                            <tr>
+                                <td>
+                                    <span id="ctl00_rightColumn_rptTracks_ctl15_lblPlayer">
+                                        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="17" height="17" codebase="//download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab">
+                                            <param name="movie" value="/mp3Player.swf" /><param name="wmode" value="transparent" />
+                                            <param name="flashvars" value="filename=http://www.cdbaby.com/audio/samples/0817f116/nativeguns-15.mp3" />
+                                            <embed wmode="transparent" src="/mp3Player.swf" flashvars="filename=http://www.cdbaby.com/audio/samples/0817f116/nativeguns-15.mp3" type="application/x-shockwave-flash" width="17" height="17" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+                                        </object>
+                                    </span>
+                                </td>
+                                <td style="text-align:left; padding-left:15px;">Get Down</td>
+                                <td style="font-weight:bold;"><span id="ctl00_rightColumn_rptTracks_ctl15_lblTrackLength">4:36</span></td>
+                                <td></td>
+                                <td style="font-weight:bold;"><span id="ctl00_rightColumn_rptTracks_ctl15_lblFormatPrice">Not Available</span></td>
+                                <td><span class="check-download-track" disabled="disabled"><input id="ctl00_rightColumn_rptTracks_ctl15_chkDownloadTrack" type="checkbox" name="ctl00$rightColumn$rptTracks$ctl15$chkDownloadTrack" disabled="disabled" /></span></td>
+                            </tr>
+                    
+                            <tr id="ctl00_rightColumn_rptTracks_ctl16_trPreviewAll">
+		<td style="border:none;">
+                                    <span id="ctl00_rightColumn_rptTracks_ctl16_lblPlayer">
+                                        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="17" height="17" codebase="//download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab">
+                                            <param name="movie" value="/mp3Player-all.swf" /><param name="wmode" value="transparent" />
+                                            <param name="flashvars" value="filename=http://www.cdbaby.com/audio/samples/0817f116/nativeguns.xml" />
+                                            <embed wmode="transparent" src="/mp3Player-all.swf" flashvars="filename=http://www.cdbaby.com/audio/samples/0817f116/nativeguns.xml" type="application/x-shockwave-flash" width="17" height="17" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+                                        </object>
+                                    </span>
+                                 </td>
+		<td id="ctl00_rightColumn_rptTracks_ctl16_previewall" colspan="5" class="previewall">preview all songs</td>
+	</tr>
+	
+                            <tr>
+                                <td colspan="6" style="text-align:right; padding-right:none; padding-top:15px; border:none;">
+                                                
+                                </td>
+                            </tr>
+                        </table>
+                    
+            <div id="ctl00_rightColumn_ucShoppingCartOverlay_divShoppingCartOverlay" class="overlay-cart" style="display:none;">
+    <div class="overlay-cover"></div>
+    <div class="overlay-content-wrap">
+        
+        <div class="min-height-holder"></div>
+        <div class="overlay-content">
+            <h2 class="info-header-735">My Cart</h2>
+            
+        
+        
+<div id="UC_Misc_ViewCart">
+    
+    <div id="ctl00_rightColumn_ucShoppingCartOverlay_ucViewCart_pnlNoItems" class="no-items-panel">
+		
+       There are currently no items in your cart.
+    
+	</div>
+    
+    
+
+</div>
+
+<!-- #scriptDiv -->
+
+        </div>
+        <div class="overlay-buttons">
+            <input type="image" name="ctl00$rightColumn$ucShoppingCartOverlay$btnContinueShopping" id="ctl00_rightColumn_ucShoppingCartOverlay_btnContinueShopping" class="shopping-button" src="/images/buttons/button-continueShopping.jpg" border="0" />
+            
+        </div>
+        <div class="clear-left"></div>
+        <a href="#" class="overlay-close" style="background-image:url(/Images/Buttons/button-closeX.png); display:block; height:25px; width:25px; cursor:pointer;"></a>
+   </div>
+</div>
+
+<!-- #scriptDiv -->
+
+            <div id="ctl00_rightColumn_ucWishListOverlay_divWishListCartOverlay" class="overlay-wish" style="display:none;">
+    <div class="overlay-cover"></div>
+    <div class="overlay-content-wrap">
+        <div class="min-height-holder"></div>
+        <div class="overlay-content">
+            
+
+
+<div id="UC_Misc_Wishlist">
+
+    <h2 class="common-header-735">Wishlist</h2>
+
+    <div id="ctl00_rightColumn_ucWishListOverlay_ucViewWishList_pnlNoItems">
+		
+        No items available in your wishlist
+    
+	</div>
+
+
+    
+
+</div>
+
+<!-- #scriptDiv -->
+
+        </div>
+        <div class="clear-left"></div>
+        <a href="#" class="overlay-close" style="background-image:url(/Images/Buttons/button-closeX.png); display:block; height:25px; width:25px; cursor:pointer;"></a>
+   </div>
+</div>
+
+
+<!-- #scriptDiv -->
+
+        
+</div>
+    
+
+    <div id="ctl00_rightColumn_divAlbumNotes" class="album-notes">
+        <h2 class="info-header-735">Album Notes</h2>
+        <p class="info"><span id="ctl00_rightColumn_lblAlbumNotes">THE NATIVE GUNS DEBUT ALBUM, “BARREL MEN,” AVAILABLE NOW!<br /><br /><br />"...this is a GREAT record"  <br />- Jeff Chang (cantstopwontstop.com)<br /><br />"...talk about political, REAL hip hop? Coming from hardcore filipino political minds? This is what I'm talking about, artistic... This is that Immortal Technique, that dead prez sh**, from the Filipino side of the coin. You need to check this out."<br />- Adisa Banjoko, the "Bishop of Hip Hop" (lyricalswords.com)<br /><br />"...you'll immediately want to reload the album and listen again. This is hot."<br />- www.caughtinthecrossfire.com<br /><br />"The fifteen tracks on Barrel Men fight for control of your booty and your brain, but never fight over the two. Each beat, complete with scratches by DJ Phatrick, is as dance-worthy as anything you'd hear at a club."<br />- Left Turn Magazine <br /><br />"More than just street-conscious, the pair shares a fearless attitude of no-holds-barred vocalizing and staying true to their roots."<br />- L.A Alternative Press<br /><br />"Barrel Men may be the best rap album by Pinoy gang members turned conscious MCs you've ever heard...filled with militant-but-not-gangsta sentiments, crucial reggae and hip-hop mashdowns, outspoken social commentary, and introspective self-reflection."<br />- Eric Arnold, East Bay Express<br /><br /><br /><br /><br />Los Angeles/Bay Area, CA - Acclaimed revolutionary Pinoy hip hop group Native Guns are proud to announce the long-awaited, highly anticipated release of their debut album, “Barrel Men.”<br /><br />An urban tribal masterpiece—“Barrel Men” reflects the life, times, and mission of these “two bald-headed brown brothas with tattoos.” MCs Kiwi and Bambu both grew up in inner-city Los Angeles districts where gang culture was an integral part of their youth. Building names for themselves as emcees separately in L.A.’s prolific underground hip hop scene, they were united through the same passion to improve their community. Both credit hip hop for providing an alternative to gang life and sparking their social consciousness.<br /><br />With production from DJ Rhettmatic (World Famous Beat Junkies, Visionaries), Sabzi (Blue Scholars), Asi and others, the Native Guns combine music with critical thought, covering topics ranging from third world sweatshop labor (“Work It”) to self-criticism (“Look in the Mirror”). Spitting knowledge doesn’t have to be boring: the Guns prove this with their head-nodding anthem “Champion,” the first single from the album. Another song that is sure to get crowds jumping is the track “Hammer,” which is a bouncing call-to-arms for fellow youth from the hood. “1995” has Kiwi and Bambu reminiscing about the feel-good innocent days of discovering hip-hop, while “Kombat” provides a scathing critique of today’s mainstream rap industry.<br /><br />“Barrel Men” represents a fresh perspective in hip hop, embodying the bridge between art and activism. In this tradition of socially conscious music, this album will certainly be an important contribution, both in the classroom and on the street corner.<br /><br />Website: www.nativeguns.com</span></p>
+        <a id="ctl00_rightColumn_lnkReadMore" class="read-more-notes" href="#">Read more...</a>
+    </div>
+    
+
+    
+    
+
+<div id="UC_Misc_Reviews">
+
+    <h2 class="info-header-735">REVIEWS</h2>
+
+    <div id="ctl00_rightColumn_ucReviews_upReview">
+	
+            <script type="text/javascript">Sys.Application.add_load(WireEvents);</script>            
+            
+            
+            
+            <div id="ctl00_rightColumn_ucReviews_pnlNotLoggedIn" class="please-login">
+		
+                Please <a id="ctl00_rightColumn_ucReviews_hlLogin" href="/Login?PageTo=/cd/nativeguns">log in</a> to review the album.
+            
+	</div>
+            
+            
+            
+            
+                    <div class="item-container">
+                
+                        <div class="reviewed-title">a legit cd</div>
+                        <div id="ctl00_rightColumn_ucReviews_rptReviews_ctl01_pnlRating">
+		<img src="/images/star_full.jpg" border="0" /><img src="/images/star_full.jpg" border="0" /><img src="/images/star_full.jpg" border="0" /><img src="/images/star_full.jpg" border="0" /><img src="/images/star_full.jpg" border="0" />
+	</div>
+                        <div class="review-author">author: milerj</div>
+                        <div>
+                            <div class="reviewed-text">i echo the rest of the reviewers...good beats and insane lyrics.  and this is a DEEP cd, i keep finding lines and tracks off this cd that i hadn\'t really noticed before.</div>
+                            <a href="#" class="read-more">Read more...</a>
+                        </div>
+                
+                        <div class="seperator"></div>
+                
+                        <div class="reviewed-title">Dope!</div>
+                        <div id="ctl00_rightColumn_ucReviews_rptReviews_ctl03_pnlRating">
+		<img src="/images/star_full.jpg" border="0" /><img src="/images/star_full.jpg" border="0" /><img src="/images/star_full.jpg" border="0" /><img src="/images/star_full.jpg" border="0" /><img src="/images/star_full.jpg" border="0" />
+	</div>
+                        <div class="review-author">author: Vichet Heng</div>
+                        <div>
+                            <div class="reviewed-text">Hot what can I say.</div>
+                            <a href="#" class="read-more">Read more...</a>
+                        </div>
+                
+                        <div class="seperator"></div>
+                
+                        <div class="reviewed-title">This is what it's all about.</div>
+                        <div id="ctl00_rightColumn_ucReviews_rptReviews_ctl05_pnlRating">
+		<img src="/images/star_full.jpg" border="0" /><img src="/images/star_full.jpg" border="0" /><img src="/images/star_full.jpg" border="0" /><img src="/images/star_full.jpg" border="0" /><img src="/images/star_full.jpg" border="0" />
+	</div>
+                        <div class="review-author">author: Jeremy Kershaw</div>
+                        <div>
+                            <div class="reviewed-text">Good production and top notch lyricism with a serious and legitimate message.  These are the things I love in hip-hop.  It's just too bad more artists don't have these high standards for themselves.  I can't wait for the next NG album.  Must have.</div>
+                            <a href="#" class="read-more">Read more...</a>
+                        </div>
+                
+                        <div class="seperator"></div>
+                
+                        <div class="reviewed-title">work it baby!</div>
+                        <div id="ctl00_rightColumn_ucReviews_rptReviews_ctl07_pnlRating">
+		<img src="/images/star_full.jpg" border="0" /><img src="/images/star_full.jpg" border="0" /><img src="/images/star_full.jpg" border="0" /><img src="/images/star_full.jpg" border="0" /><img src="/images/star_full.jpg" border="0" />
+	</div>
+                        <div class="review-author">author: Q</div>
+                        <div>
+                            <div class="reviewed-text">the barrel men bring it with this CD. this is some seriously good hip hop. i would highly recommend this CD to anyone who is serious about good music. the guns keep it real baby!</div>
+                            <a href="#" class="read-more">Read more...</a>
+                        </div>
+                
+                    </div><!-- .item-container -->
+                    <table class="pagination">
+                        <tr valign="middle">
+                            <td>
+                                <a id="ctl00_rightColumn_ucReviews_rptReviews_ctl08_lnkPagePrev" disabled="disabled" class="previous-link"></a>
+                            </td>
+                            <td align="center" width="100%">
+                                <div id="ctl00_rightColumn_ucReviews_rptReviews_ctl08_pnlPages" class="page-numbers">
+		
+                                <table border="0">
+			<tr>
+				<td><a class="active" href="javascript:__doPostBack('ctl00$rightColumn$ucReviews$rptReviews$ctl08$ctl01','')">1</a></td><td><a class="plink2" href="javascript:__doPostBack('ctl00$rightColumn$ucReviews$rptReviews$ctl08$ctl02','')">2</a></td><td><a class="plink3" href="javascript:__doPostBack('ctl00$rightColumn$ucReviews$rptReviews$ctl08$ctl03','')">3</a></td><td><a class="plink4" href="javascript:__doPostBack('ctl00$rightColumn$ucReviews$rptReviews$ctl08$ctl04','')">4</a></td><td><a class="plink5" href="javascript:__doPostBack('ctl00$rightColumn$ucReviews$rptReviews$ctl08$ctl05','')">5</a></td><td><a class="plink6" href="javascript:__doPostBack('ctl00$rightColumn$ucReviews$rptReviews$ctl08$ctl06','')">6</a></td>
+			</tr>
+		</table>
+	</div>
+                            </td>
+                            <td>
+                                <a id="ctl00_rightColumn_ucReviews_rptReviews_ctl08_lnkPageNext" class="next-link" href="javascript:__doPostBack('ctl00$rightColumn$ucReviews$rptReviews$ctl08$lnkPageNext','')"></a>
+                            </td>
+                        </tr>
+                    </table><!-- .pagination -->
+                
+        
+</div>
+
+</div><!-- #UC_Misc_Reviews -->
+
+<!-- #scriptDiv -->
+
+
+
+
+    <div id="boundPageEvents_Albumdetails" class="norebind" title="NO"></div>
+
+    <div id="boundPageEvents_ContentPanels" class="norebind" title="NO"></div>
+
+    <!-- #scriptDiv -->
+
+
+                    </div><!-- #content-right -->
+                    
+                    <div class="clear-left" ></div>
+                        
+                </div><!-- #container-content -->
+            
+            </div><!-- #container-inner-page -->
+               
+            <div id="container-footer">
+                
+
+    <div id="footer-top">
+    </div><!-- #footer-top" -->
+    
+    <div id="footer-bottom">
+        
+        <div id="footer-bottom-left"></div>
+        
+        <div id="footer-bottom-middle">
+            <div id="footer-bottom-middle-inner">
+                <ul>
+                    <li class="list-header">Company Info</li>
+                    <li><a href="/About">About CD Baby</a></li>
+                    <li><a href="/Newsletter">Newsletter Sign Up</a></li>
+                    <li><a href="/Terms">Terms &amp; Conditions</a></li>
+                    <li><a href="/Privacy">Privacy Policy</a></li>
+                    <li><a href="http://diymusician.cdbaby.com/" target="_blank">DIY Musician Blog</a></li>
+                </ul>    
+                <ul>
+                    <li class="list-header">Need Help?</li>
+                    <li><a href="/Contact">Contact Us</a></li>
+                    <li><a href="/Shipping">Shipping Info</a></li>
+                    <li><a href="/Returns">Returns</a></li>
+                    <li><a href="/Auth">Forgot Your Password</a></li>
+                    <li><a href="/Faq">FAQ</a></li>
+                </ul>
+                <ul>
+                    <li class="list-header">My Account</li>
+                    <li><a id="ctl00_ucPage_Footer_lnkLoginLogout" href="/Login.aspx">Login</a></li>
+                    <li><a href="/MyAccount/ManageAccount.aspx">Manage Account</a></li>
+                    <li><a href="/MyAccount/OrderHistory.aspx">Order Info</a></li>
+                </ul>    
+                <ul id="last-list">
+                    <li class="list-header">More...</li>
+                    <li><a href="http://www.hostbaby.com" target="_blank">Host Baby</a></li>
+                    <li><a href="http://www.filmbaby.com" target="_blank">Film Baby</a></li>
+                    <li><a href="http://cdbabypodcast.com" target="_blank">Podcast</a></li>
+                    <li><a href="http://duplication.cdbaby.com" target="_blank">Duplication</a></li>
+                    <li><a href="/Redeem">Redeem Download Cards</a></li>
+                    <li><a href="http://www.cdbaby.net">Artist Sign Up</a></li>
+                </ul> 
+            </div><!-- #footer-bottom-middle-inner --> 
+        </div><!-- #footer-bottom-middle -->
+        
+        <div id="footer-bottom-right"></div>
+        
+        <div class="clear-left"></div>
+        
+    </div><!-- #footer-bottom" -->
+                
+
+            </div><!-- #container-footer -->
+            
+        </div><!-- #container-page -->
+        
+    
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.initialize();
+//]]>
+</script>
+</form>
+    
+</body>
+</html>
+
+

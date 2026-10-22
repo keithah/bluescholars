@@ -1057,15 +1057,21 @@ def _forum_index_pages(output: Path, output_base: str, board_rows: list[dict], t
             continue
         canonical = variant.get("canonical_url") or _canonical(variant.get("source_url", ""))
         parsed_topic = _forum_identifier(canonical, "topic")
+        parsed = _forum_identifier(canonical, "board")
+        if not parsed_topic and not parsed:
+            continue
+        # Topic captures only need their document title; avoid parsing complete
+        # 10-40 KB snapshots through BeautifulSoup when they cannot add board links.
         if parsed_topic:
             topic_id, _, _ = parsed_topic
-            soup = BeautifulSoup(body, "html.parser")
-            title = soup.title.get_text(" ", strip=True) if soup.title else ""
+            title = ""
+            title_match = re.search(rb"<title[^>]*>(.*?)</title", body, re.I | re.S)
+            if title_match:
+                title = BeautifulSoup(title_match.group(1), "html.parser").get_text(" ", strip=True)
             topic_groups.setdefault(topic_id, []).append({
                 "url": canonical, "route": route, "timestamp": variant.get("timestamp", ""),
                 "title": title,
             })
-        parsed = _forum_identifier(canonical, "board")
         if not parsed:
             continue
         board_id, offset, _ = parsed

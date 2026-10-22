@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!--
+      Seattle 100 Website
+      Launch: October 22, 2010
+      
+      Designed and developed by The Superformula.
+      http://www.thesuperformula.com/
+      info@thesuperformula.com
+      
+      
+      Copyright 2013 Chase Jarvis Inc.
+    -->
+    <title>
+      Blue Scholars
+      - Seattle 100
+    </title>
+    <link href="/favicon.ico" rel="shortcut icon">
+    <meta content="Blue Scholars" property="og:title">
+    <meta content="public_figure" property="og:type">
+    <meta content="http://s100.chasejarvis.com/people/bluescholars" property="og:url">
+    <meta content="http://seattle100.s3.amazonaws.com/bluescholars/bs.jpg" property="og:image">
+    <meta content="Seattle 100" property="og:site_name">
+    <meta content="701386007" property="fb:admins">
+    <meta content="139435886102056" property="fb:app_id">
+    <meta content="Undisputedly at the epicenter of Seattle’s bourgeoning hip-hop scene are MC Geologic (Geo Quibuyen) and DJ Sabzi (Saba Mohajerjasbi, also of Common Market and solo project TownFolk).  Since their album Bayani hit the streets in 2007, Geo and Sabzi have toured relentlessly, selling out shows up and down the West Coast and touring with hip-hop legends Hieroglyphics and GZA of Wu-Tang Clan. Seattle: Hidmo Eritrean Cuisine, fried catfish at the Shell Station “deli” on Beacon Hill, the Lawai crispy ginger chicken at Kauai Family Restaurant in Georgetown." property="og:description">
+    <!-- For Google maps, html5 and browsers that may be in quarks mode -->
+    <!-- Main Styles -->
+    <link type="text/css" href="http://yui.yahooapis.com/3.2.0/build/cssfonts/fonts-min.css" rel="stylesheet" media="screen" />
+    <link type="text/css" href="/stylesheets/carousel.css?1324057425" rel="stylesheet" media="screen" />
+    <link type="text/css" href="/stylesheets/s100.css?1324057425" rel="stylesheet" media="screen" />
+    <meta content="width=1024" name="viewport">
+    <!-- Maps extensions -->
+    <!-- Sencha Core -->
+    <!-- TODO we can also just use Sencha Touch and add in the missing hover methods for CompositeElement? -->
+    <script src="http://ajax.googleapis.com/ajax/libs/ext-core/3.1.0/ext-core.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/javascripts/ext/ext-template-from-touch.js?1324057425"></script>
+    <script type="text/javascript">
+      //<![CDATA[
+        /*!
+         * Modernizr JavaScript library 1.5
+         * http://www.modernizr.com/
+         *
+         * Copyright (c) 2009-2010 Faruk Ates - http://farukat.es/
+         * Dual-licensed under the BSD and MIT licenses.
+         * http://www.modernizr.com/license/
+         *
+         * Featuring major contributions by
+         * Paul Irish  - http://paulirish.com
+         */
+         window.Modernizr=function(i,e,I){function C(a,b){for(var c in a)if(m[a[c]]!==I&&(!b||b(a[c],D)))return true}function r(a,b){var c=a.charAt(0).toUpperCase()+a.substr(1);return!!C([a,"Webkit"+c,"Moz"+c,"O"+c,"ms"+c,"Khtml"+c],b)}function P(){j[E]=function(a){for(var b=0,c=a.length;b<c;b++)J[a[b]]=!!(a[b]in n);return J}("autocomplete autofocus list placeholder max min multiple pattern required step".split(" "));j[Q]=function(a){for(var b=0,c,h=a.length;b<h;b++){n.setAttribute("type",a[b]);if(c=n.type!==
+         "text"){n.value=K;/tel|search/.test(n.type)||(c=/url|email/.test(n.type)?n.checkValidity&&n.checkValidity()===false:n.value!=K)}L[a[b]]=!!c}return L}("search tel url email datetime date month week time datetime-local number range color".split(" "))}var j={},s=e.documentElement,D=e.createElement("modernizr"),m=D.style,n=e.createElement("input"),E="input",Q=E+"types",K=":)",M=Object.prototype.toString,y=" -o- -moz- -ms- -webkit- -khtml- ".split(" "),d={},L={},J={},N=[],u=function(){var a={select:"input",
+         change:"input",submit:"form",reset:"form",error:"img",load:"img",abort:"img"},b={};return function(c,h){var t=arguments.length==1;if(t&&b[c])return b[c];h=h||document.createElement(a[c]||"div");c="on"+c;var g=c in h;if(!g&&h.setAttribute){h.setAttribute(c,"return;");g=typeof h[c]=="function"}h=null;return t?(b[c]=g):g}}(),F={}.hasOwnProperty,O;O=typeof F!=="undefined"&&typeof F.call!=="undefined"?function(a,b){return F.call(a,b)}:function(a,b){return b in a&&typeof a.constructor.prototype[b]==="undefined"};
+         d.canvas=function(){return!!e.createElement("canvas").getContext};d.canvastext=function(){return!!(d.canvas()&&typeof e.createElement("canvas").getContext("2d").fillText=="function")};d.geolocation=function(){return!!navigator.geolocation};d.crosswindowmessaging=function(){return!!i.postMessage};d.websqldatabase=function(){var a=!!i.openDatabase;if(a)try{a=!!openDatabase("testdb","1.0","html5 test db",2E5)}catch(b){a=false}return a};d.indexedDB=function(){return!!i.indexedDB};d.hashchange=function(){return u("hashchange",
+         i)&&(document.documentMode===I||document.documentMode>7)};d.historymanagement=function(){return!!(i.history&&history.pushState)};d.draganddrop=function(){return u("drag")&&u("dragstart")&&u("dragenter")&&u("dragover")&&u("dragleave")&&u("dragend")&&u("drop")};d.websockets=function(){return"WebSocket"in i};d.rgba=function(){m.cssText="background-color:rgba(150,255,150,.5)";return(""+m.backgroundColor).indexOf("rgba")!==-1};d.hsla=function(){m.cssText="background-color:hsla(120,40%,100%,.5)";return(""+
+         m.backgroundColor).indexOf("rgba")!==-1};d.multiplebgs=function(){m.cssText="background:url(//:),url(//:),red url(//:)";return/(url\s*\(.*?){3}/.test(m.background)};d.backgroundsize=function(){return r("backgroundSize")};d.borderimage=function(){return r("borderImage")};d.borderradius=function(){return r("borderRadius","",function(a){return(""+a).indexOf("orderRadius")!==-1})};d.boxshadow=function(){return r("boxShadow")};d.opacity=function(){var a=y.join("opacity:.5;")+"";m.cssText=a;return(""+m.opacity).indexOf("0.5")!==
+         -1};d.cssanimations=function(){return r("animationName")};d.csscolumns=function(){return r("columnCount")};d.cssgradients=function(){var a=("background-image:"+y.join("gradient(linear,left top,right bottom,from(#9f9),to(white));background-image:")+y.join("linear-gradient(left top,#9f9, white);background-image:")).slice(0,-17);m.cssText=a;return(""+m.backgroundImage).indexOf("gradient")!==-1};d.cssreflections=function(){return r("boxReflect")};d.csstransforms=function(){return!!C(["transformProperty",
+         "WebkitTransform","MozTransform","OTransform","msTransform"])};d.csstransforms3d=function(){var a=!!C(["perspectiveProperty","WebkitPerspective","MozPerspective","OPerspective","msPerspective"]);if(a){var b=document.createElement("style"),c=e.createElement("div");b.textContent="@media ("+y.join("transform-3d),(")+"modernizr){#modernizr{height:3px}}";e.getElementsByTagName("head")[0].appendChild(b);c.id="modernizr";s.appendChild(c);a=c.offsetHeight===3;b.parentNode.removeChild(b);c.parentNode.removeChild(c)}return a};
+         d.csstransitions=function(){return r("transitionProperty")};d.fontface=function(){var a;if(/*@cc_on@if(@_jscript_version>=5)!@end@*/0)a=true;else{var b=e.createElement("style"),c=e.createElement("span"),h,t=false,g=e.body,o,w;b.textContent="@font-face{font-family:testfont;src:url('data:font/ttf;base64,AAEAAAAMAIAAAwBAT1MvMliohmwAAADMAAAAVmNtYXCp5qrBAAABJAAAANhjdnQgACICiAAAAfwAAAAEZ2FzcP//AAMAAAIAAAAACGdseWYv5OZoAAACCAAAANxoZWFk69bnvwAAAuQAAAA2aGhlYQUJAt8AAAMcAAAAJGhtdHgGDgC4AAADQAAAABRsb2NhAIQAwgAAA1QAAAAMbWF4cABVANgAAANgAAAAIG5hbWUgXduAAAADgAAABPVwb3N03NkzmgAACHgAAAA4AAECBAEsAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAACAAMDAAAAAAAAgAACbwAAAAoAAAAAAAAAAFBmRWQAAAAgqS8DM/8zAFwDMwDNAAAABQAAAAAAAAAAAAMAAAADAAAAHAABAAAAAABGAAMAAQAAAK4ABAAqAAAABgAEAAEAAgAuqQD//wAAAC6pAP///9ZXAwAAAAAAAAACAAAABgBoAAAAAAAvAAEAAAAAAAAAAAAAAAAAAAABAAIAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAEACoAAAAGAAQAAQACAC6pAP//AAAALqkA////1lcDAAAAAAAAAAIAAAAiAogAAAAB//8AAgACACIAAAEyAqoAAwAHAC6xAQAvPLIHBADtMrEGBdw8sgMCAO0yALEDAC88sgUEAO0ysgcGAfw8sgECAO0yMxEhESczESMiARDuzMwCqv1WIgJmAAACAFUAAAIRAc0ADwAfAAATFRQWOwEyNj0BNCYrASIGARQGKwEiJj0BNDY7ATIWFX8aIvAiGhoi8CIaAZIoN/43KCg3/jcoAWD0JB4eJPQkHh7++EY2NkbVRjY2RgAAAAABAEH/+QCdAEEACQAANjQ2MzIWFAYjIkEeEA8fHw8QDxwWFhwWAAAAAQAAAAIAAIuYbWpfDzz1AAsEAAAAAADFn9IuAAAAAMWf0i797/8zA4gDMwAAAAgAAgAAAAAAAAABAAADM/8zAFwDx/3v/98DiAABAAAAAAAAAAAAAAAAAAAABQF2ACIAAAAAAVUAAAJmAFUA3QBBAAAAKgAqACoAWgBuAAEAAAAFAFAABwBUAAQAAgAAAAEAAQAAAEAALgADAAMAAAAQAMYAAQAAAAAAAACLAAAAAQAAAAAAAQAhAIsAAQAAAAAAAgAFAKwAAQAAAAAAAwBDALEAAQAAAAAABAAnAPQAAQAAAAAABQAKARsAAQAAAAAABgAmASUAAQAAAAAADgAaAUsAAwABBAkAAAEWAWUAAwABBAkAAQBCAnsAAwABBAkAAgAKAr0AAwABBAkAAwCGAscAAwABBAkABABOA00AAwABBAkABQAUA5sAAwABBAkABgBMA68AAwABBAkADgA0A/tDb3B5cmlnaHQgMjAwOSBieSBEYW5pZWwgSm9obnNvbi4gIFJlbGVhc2VkIHVuZGVyIHRoZSB0ZXJtcyBvZiB0aGUgT3BlbiBGb250IExpY2Vuc2UuIEtheWFoIExpIGdseXBocyBhcmUgcmVsZWFzZWQgdW5kZXIgdGhlIEdQTCB2ZXJzaW9uIDMuYmFlYzJhOTJiZmZlNTAzMiAtIHN1YnNldCBvZiBKdXJhTGlnaHRiYWVjMmE5MmJmZmU1MDMyIC0gc3Vic2V0IG9mIEZvbnRGb3JnZSAyLjAgOiBKdXJhIExpZ2h0IDogMjMtMS0yMDA5YmFlYzJhOTJiZmZlNTAzMiAtIHN1YnNldCBvZiBKdXJhIExpZ2h0VmVyc2lvbiAyIGJhZWMyYTkyYmZmZTUwMzIgLSBzdWJzZXQgb2YgSnVyYUxpZ2h0aHR0cDovL3NjcmlwdHMuc2lsLm9yZy9PRkwAQwBvAHAAeQByAGkAZwBoAHQAIAAyADAAMAA5ACAAYgB5ACAARABhAG4AaQBlAGwAIABKAG8AaABuAHMAbwBuAC4AIAAgAFIAZQBsAGUAYQBzAGUAZAAgAHUAbgBkAGUAcgAgAHQAaABlACAAdABlAHIAbQBzACAAbwBmACAAdABoAGUAIABPAHAAZQBuACAARgBvAG4AdAAgAEwAaQBjAGUAbgBzAGUALgAgAEsAYQB5AGEAaAAgAEwAaQAgAGcAbAB5AHAAaABzACAAYQByAGUAIAByAGUAbABlAGEAcwBlAGQAIAB1AG4AZABlAHIAIAB0AGgAZQAgAEcAUABMACAAdgBlAHIAcwBpAG8AbgAgADMALgBiAGEAZQBjADIAYQA5ADIAYgBmAGYAZQA1ADAAMwAyACAALQAgAHMAdQBiAHMAZQB0ACAAbwBmACAASgB1AHIAYQBMAGkAZwBoAHQAYgBhAGUAYwAyAGEAOQAyAGIAZgBmAGUANQAwADMAMgAgAC0AIABzAHUAYgBzAGUAdAAgAG8AZgAgAEYAbwBuAHQARgBvAHIAZwBlACAAMgAuADAAIAA6ACAASgB1AHIAYQAgAEwAaQBnAGgAdAAgADoAIAAyADMALQAxAC0AMgAwADAAOQBiAGEAZQBjADIAYQA5ADIAYgBmAGYAZQA1ADAAMwAyACAALQAgAHMAdQBiAHMAZQB0ACAAbwBmACAASgB1AHIAYQAgAEwAaQBnAGgAdABWAGUAcgBzAGkAbwBuACAAMgAgAGIAYQBlAGMAMgBhADkAMgBiAGYAZgBlADUAMAAzADIAIAAtACAAcwB1AGIAcwBlAHQAIABvAGYAIABKAHUAcgBhAEwAaQBnAGgAdABoAHQAdABwADoALwAvAHMAYwByAGkAcAB0AHMALgBzAGkAbAAuAG8AcgBnAC8ATwBGAEwAAAAAAgAAAAAAAP+BADMAAAAAAAAAAAAAAAAAAAAAAAAAAAAFAAAAAQACAQIAEQt6ZXJva2F5YWhsaQ==')}";
+         e.getElementsByTagName("head")[0].appendChild(b);c.setAttribute("style","font:99px _,arial,helvetica;position:absolute;visibility:hidden");if(!g){g=s.appendChild(e.createElement("fontface"));t=true}c.innerHTML="........";c.id="fonttest";g.appendChild(c);h=c.offsetWidth*c.offsetHeight;c.style.font="99px testfont,_,arial,helvetica";a=h!==c.offsetWidth*c.offsetHeight;var v=function(){if(g.parentNode){a=j.fontface=h!==c.offsetWidth*c.offsetHeight;s.className=s.className.replace(/(no-)?fontface\b/,"")+
+         (a?" ":" no-")+"fontface"}};setTimeout(v,75);setTimeout(v,150);addEventListener("load",function(){v();(w=true)&&o&&o(a);setTimeout(function(){t||(g=c);g.parentNode.removeChild(g);b.parentNode.removeChild(b)},50)},false)}j._fontfaceready=function(p){w||a?p(a):(o=p)};return a||h!==c.offsetWidth};d.video=function(){var a=e.createElement("video"),b=!!a.canPlayType;if(b){b=new Boolean(b);b.ogg=a.canPlayType('video/ogg; codecs="theora"');b.h264=a.canPlayType('video/mp4; codecs="avc1.42E01E"');b.webm=a.canPlayType('video/webm; codecs="vp8, vorbis"')}return b};
+         d.audio=function(){var a=e.createElement("audio"),b=!!a.canPlayType;if(b){b=new Boolean(b);b.ogg=a.canPlayType('audio/ogg; codecs="vorbis"');b.mp3=a.canPlayType("audio/mpeg;");b.wav=a.canPlayType('audio/wav; codecs="1"');b.m4a=a.canPlayType("audio/x-m4a;")||a.canPlayType("audio/aac;")}return b};d.localStorage=function(){return"localStorage"in i&&i.localStorage!==null};d.sessionStorage=function(){try{return"sessionStorage"in i&&i.sessionStorage!==null}catch(a){return false}};d.webworkers=function(){return!!i.Worker};
+         d.applicationCache=function(){var a=i.applicationCache;return!!(a&&typeof a.status!="undefined"&&typeof a.update=="function"&&typeof a.swapCache=="function")};d.svg=function(){return!!e.createElementNS&&!!e.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect};d.smil=function(){return!!e.createElementNS&&/SVG/.test(M.call(e.createElementNS("http://www.w3.org/2000/svg","animate")))};d.svgclippaths=function(){return!!e.createElementNS&&/SVG/.test(M.call(e.createElementNS("http://www.w3.org/2000/svg",
+         "clipPath")))};for(var z in d)if(O(d,z))N.push(((j[z.toLowerCase()]=d[z]())?"":"no-")+z.toLowerCase());j[E]||P();j.addTest=function(a,b){a=a.toLowerCase();if(!j[a]){b=!!b();s.className+=" "+(b?"":"no-")+a;j[a]=b;return j}};m.cssText="";D=n=null;(function(){var a=e.createElement("div");a.innerHTML="<elem></elem>";return a.childNodes.length!==1})()&&function(a,b){function c(f,k){if(o[f])o[f].styleSheet.cssText+=k;else{var l=t[G],q=b[A]("style");q.media=f;l.insertBefore(q,l[G]);o[f]=q;c(f,k)}}function h(f,
+         k){for(var l=new RegExp("\\b("+w+")\\b(?!.*[;}])","gi"),q=function(B){return".iepp_"+B},x=-1;++x<f.length;){k=f[x].media||k;h(f[x].imports,k);c(k,f[x].cssText.replace(l,q))}}for(var t=b.documentElement,g=b.createDocumentFragment(),o={},w="abbr|article|aside|audio|canvas|command|datalist|details|figure|figcaption|footer|header|hgroup|keygen|mark|meter|nav|output|progress|section|source|summary|time|video",v=w.split("|"),p=[],H=-1,G="firstChild",A="createElement";++H<v.length;){b[A](v[H]);g[A](v[H])}g=
+         g.appendChild(b[A]("div"));a.attachEvent("onbeforeprint",function(){for(var f,k=b.getElementsByTagName("*"),l,q,x=new RegExp("^"+w+"$","i"),B=-1;++B<k.length;)if((f=k[B])&&(q=f.nodeName.match(x))){l=new RegExp("^\\s*<"+q+"(.*)\\/"+q+">\\s*$","i");g.innerHTML=f.outerHTML.replace(/\r|\n/g," ").replace(l,f.currentStyle.display=="block"?"<div$1/div>":"<span$1/span>");l=g.childNodes[0];l.className+=" iepp_"+q;l=p[p.length]=[f,l];f.parentNode.replaceChild(l[1],l[0])}h(b.styleSheets,"all")});a.attachEvent("onafterprint",
+         function(){for(var f=-1,k;++f<p.length;)p[f][1].parentNode.replaceChild(p[f][0],p[f][1]);for(k in o)t[G].removeChild(o[k]);o={};p=[]})}(this,e);j._enableHTML5=true;j._version="1.5";s.className=s.className.replace(/\bno-js\b/,"")+" js";s.className+=" "+N.join(" ");return j}(this,this.document);
+      //]]>
+    </script>
+    <script type="text/javascript" src="/javascripts/main.js?1324057425"></script>
+    <script type="text/javascript" src="/javascripts/carousel.js?1324057425"></script>
+    <script type="text/javascript" src="/javascripts/s100/carousel_nav.js?1324057425"></script>
+    <script type="text/javascript" src="/javascripts/s100/person.js?1324057425"></script>
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', "UA-1096491-11"]);
+
+
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script></head>
+  <body class="person">
+    <div id="fb-root"></div>
+    <div id="deferred-js"></div>
+    <script type="text/javascript">
+      //<![CDATA[
+        // load fb og asynchronously for non-blocking loading
+        window.fbAsyncInit = function() {
+          FB.init({
+              appId  : '139435886102056',
+              status : true, // check login status
+              cookie : true, // enable cookies to allow the server to access the session
+              xfbml  : true  // parse XFBML
+          });
+          
+          // Check if we already have a fb session
+          if (Ext.isObject(FB.getSession())) {
+              S100.observer.fireEvent('fb_status', {session: FB.getSession()});
+          } else {
+              FB.getLoginStatus(function(response) {
+                  S100.observer.fireEvent('fb_status', {session: response.session});
+              });
+          }
+          FB.Event.subscribe('auth.sessionChange', function(response) {
+              S100.observer.fireEvent('fb_status', {session: response.session});
+          });
+        };
+        
+        // Facebook
+        (function() {
+          var e = document.createElement('script');
+          e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+          e.async = true;
+          document.getElementById('fb-root').appendChild(e);
+        }());
+        // Twitter
+        (function() {
+          var e = document.createElement('script');
+          e.src = document.location.protocol + '//platform.twitter.com/widgets.js';
+          e.async = true;
+          document.getElementById('deferred-js').appendChild(e);
+        }());
+      //]]>
+    </script>
+    <header id="page-header">
+      <hgroup>
+        <a href="/">
+          <h1>Seattle 100</h1>
+        </a>
+        <h2>
+          Presented by:
+          <a href="http://www.chasejarvis.com">Chase Jarvis</a>
+        </h2>
+      </hgroup>
+      <nav>
+        <ol>
+          <li class="active">
+            <a href="/people">People</a>
+          </li>
+          <li>
+            <a href="/map">Map</a>
+          </li>
+          <li>
+            <a href="/seattle_on">Seattle On</a>
+          </li>
+          <li>
+            <a href="/community100">Community 100</a>
+          </li>
+          <li>
+            <a href="/book">Book</a>
+          </li>
+        </ol>
+      </nav>
+    </header>
+    <article>
+      <header class="content" id="section-header">
+        <hgroup>
+          <h1>Blue Scholars</h1>
+          <h2>Categories</h2>
+          <h3><a href="/people#kw-culture">Culture</a>, <a href="/people#kw-music">Music</a></h3>
+        </hgroup>
+        <nav>
+          <a href="/people/betseybrock">Prev</a>
+          &nbsp;|&nbsp;
+          <a href="/people/brycephillips">Next</a>
+        </nav>
+      </header>
+      <div id="main-content">
+        <div id="person-pane">
+          <article id="person-info">
+            <div id="panel-controls">
+              <div class="content">
+                <ol>
+                  <li class="label">Content:</li>
+                  <li class="show active">
+                    <img src="/images/empty.gif">
+                    Show
+                  </li>
+                  <li class="hide">
+                    <img src="/images/empty.gif">
+                    Hide
+                  </li>
+                </ol>
+              </div>
+              <div class="placement">
+                <ol>
+                  <li class="label">Placement:</li>
+                  <li class="active left">
+                    <img src="/images/empty.gif">
+                    Left
+                  </li>
+                  <li class="right">
+                    <img src="/images/empty.gif">
+                    Right
+                  </li>
+                </ol>
+              </div>
+            </div>
+            <nav id="image-nav">
+              <div id="image-paging">
+                <ul>
+                  <li class="prev">Prev</li>
+                  <li class="next">Next</li>
+                  <li class="viewing">
+                    Viewing
+                    <span class="page-num">1</span>
+                    of
+                    <span class="total-pages"></span>
+                  </li>
+                </ul>
+              </div>
+              <ol class="images">
+                <li class="active" data-index="0">
+                  <img src="http://seattle100.s3.amazonaws.com/bluescholars/assets/thumb_20080908_s100_has_09__077.jpg">
+                  <div class="border"></div>
+                </li>
+                <li data-index="1">
+                  <img src="http://seattle100.s3.amazonaws.com/bluescholars/assets/thumb_20080908_s100_has_08__132.jpg">
+                  <div class="border"></div>
+                </li>
+                <li data-index="2">
+                  <img src="http://seattle100.s3.amazonaws.com/bluescholars/assets/thumb_20080908_s100__620080908_s100_has_08__009.jpg">
+                  <div class="border"></div>
+                </li>
+                <li data-index="3">
+                  <img src="http://seattle100.s3.amazonaws.com/bluescholars/assets/thumb_20080908_s100__620080908_s100_has_08__028.jpg">
+                  <div class="border"></div>
+                </li>
+                <li data-index="4">
+                  <img src="http://seattle100.s3.amazonaws.com/bluescholars/assets/thumb_20080908_s100__620080908_s100_has_08__052.jpg">
+                  <div class="border"></div>
+                </li>
+                <li data-index="5">
+                  <img src="http://seattle100.s3.amazonaws.com/bluescholars/assets/thumb_20080908_s100__620080908_s100_has_08__059.jpg">
+                  <div class="border"></div>
+                </li>
+                <li data-index="6">
+                  <img src="http://seattle100.s3.amazonaws.com/bluescholars/assets/thumb_20080908_s100__620080908_s100_has_08__108.jpg">
+                  <div class="border"></div>
+                </li>
+                <li data-index="7">
+                  <img src="http://seattle100.s3.amazonaws.com/bluescholars/assets/thumb_20080908_s100__620080908_s100_has_08__126.jpg">
+                  <div class="border"></div>
+                </li>
+                <li data-index="8">
+                  <img src="http://seattle100.s3.amazonaws.com/bluescholars/assets/thumb_20080908_s100__620080908_s100_has_08__132_-_version_3.jpg">
+                  <div class="border"></div>
+                </li>
+                <li data-index="9">
+                  <img src="http://seattle100.s3.amazonaws.com/bluescholars/assets/thumb_20080908_s100__620080908_s100_has_08__181.jpg">
+                  <div class="border"></div>
+                </li>
+                <li data-index="10">
+                  <img src="http://seattle100.s3.amazonaws.com/bluescholars/assets/thumb_20080908_s100__620080908_s100_has_09__023.jpg">
+                  <div class="border"></div>
+                </li>
+                <li data-index="11">
+                  <img src="http://seattle100.s3.amazonaws.com/bluescholars/assets/thumb_20080908_s100__620080908_s100_has_09__077.jpg">
+                  <div class="border"></div>
+                </li>
+                <li data-index="12">
+                  <img src="http://seattle100.s3.amazonaws.com/bluescholars/assets/thumb_20080908_s100__620080908_s100_has_09__109.jpg">
+                  <div class="border"></div>
+                </li>
+                <li data-index="13">
+                  <img src="http://seattle100.s3.amazonaws.com/bluescholars/assets/thumb_20080908_s100__620080908_s100_has_09__159.jpg">
+                  <div class="border"></div>
+                </li>
+                <li data-index="14">
+                  <img src="http://seattle100.s3.amazonaws.com/bluescholars/assets/thumb_20080908_s100__620080908_s100_has_09__166.jpg">
+                  <div class="border"></div>
+                </li>
+                <li data-index="15">
+                  <img src="http://seattle100.s3.amazonaws.com/bluescholars/assets/thumb_20080908_s100__620080908_s100_has_09__177.jpg">
+                  <div class="border"></div>
+                </li>
+                <li data-index="16">
+                  <img src="http://seattle100.s3.amazonaws.com/bluescholars/assets/thumb_20080908_s100__620080908_s100_has_09__209.jpg">
+                  <div class="border"></div>
+                </li>
+                <li data-index="17">
+                  <img src="http://seattle100.s3.amazonaws.com/bluescholars/assets/thumb_20080908_s100__620080908_s100_has_09__218.jpg">
+                  <div class="border"></div>
+                </li>
+                <li data-index="18">
+                  <img src="http://seattle100.s3.amazonaws.com/bluescholars/assets/thumb_20080908_s100__620080908_s100_has_09__231.jpg">
+                  <div class="border"></div>
+                </li>
+              </ol>
+            </nav>
+            <div id="person-details">
+              <div class="info">
+                <p>Undisputedly at the epicenter of Seattle’s bourgeoning hip-hop scene are MC Geologic (Geo Quibuyen) and DJ Sabzi (Saba Mohajerjasbi, also of Common Market and solo project TownFolk).  Since their album Bayani hit the streets in 2007, Geo and Sabzi have toured relentlessly, selling out shows up and down the West Coast and touring with hip-hop legends Hieroglyphics and GZA of Wu-Tang Clan. Seattle: Hidmo Eritrean Cuisine, fried catfish at the Shell Station “deli” on Beacon Hill, the Lawai crispy ginger chicken at Kauai Family Restaurant in Georgetown.</p>
+                <h2>Blue Scholars</h2>
+                <h3></h3>
+              </div>
+              <div class="community">
+                <div class="social">
+                  <div class="like">
+                    <fb:like layout="button_count"></fb:like>
+                  </div>
+                  <div class="tweet">
+                    <a class="twitter-share-button" data-count="horizontal" data-related="TheSuperformula" data-text="Check out Blue Scholars on" data-via="TheSeattle100" href="http://twitter.com/share">
+                      Tweet
+                    </a>
+                  </div>
+                </div>
+                <div class="map-locations">
+                  <a href="/map#person:bluescholars">
+                    <img class="marker-icon" src="/images/empty.gif">
+                    Find Me
+                    <small>My map locations</small>
+                  </a>
+                </div>
+              </div>
+              <div class="my-locations">
+                <div class="place">
+                  <a href="/map#person:bluescholars">
+                    <h2>Hidmo Eritrean Cuisine</h2>
+                    <h3></h3>
+                  </a>
+                </div>
+                <div class="place">
+                  <a href="/map#person:bluescholars">
+                    <h2>Shell Station - Beacon Hill</h2>
+                    <h3>Must have fried catfish from the "deli"</h3>
+                  </a>
+                </div>
+                <div class="place">
+                  <a href="/map#person:bluescholars">
+                    <h2> Kauai's Family Restaurant</h2>
+                    <h3>Lawai Crispy Ginger Chicken</h3>
+                  </a>
+                </div>
+              </div>
+              <div class="trending twitter">
+                <h2>Twitter</h2>
+                <ol>
+                  <li>
+                    <p>new old beat from @<a class="tweet-url username" href="http://twitter.com/Sabzi" rel="nofollow">Sabzi</a> (the one w/ the TV On The Radio sample on that YouTube video at <a href="http://t.co/6VhvSk24" rel="nofollow">http://t.co/6VhvSk24</a> <a href="http://t.co/8rE1R2WB" rel="nofollow">http://t.co/8rE1R2WB</a></p>
+                    <time datetime="2013-02-12T15:43:32-08:00" pubdate="pubdate">
+                      <a href="https://twitter.com/#!/bluescholars/status/301476663261265920">
+                        03:43 PM Feb 12
+                      </a>
+                    </time>
+                  </li>
+                </ol>
+                <ol>
+                  <li>
+                    <p><a href="http://t.co/XPvmmTv4" rel="nofollow">http://t.co/XPvmmTv4</a> BACK IN BUSINESS</p>
+                    <time datetime="2013-02-12T15:41:32-08:00" pubdate="pubdate">
+                      <a href="https://twitter.com/#!/bluescholars/status/301476159940608000">
+                        03:41 PM Feb 12
+                      </a>
+                    </time>
+                  </li>
+                </ol>
+                <ol>
+                  <li>
+                    <p>prometheusbrown: Fresh Off The Boat With Eddie Huang: the Bay Area episode with Filipinos and burritos. Eddie… <a href="http://t.co/YG7B0wCG" rel="nofollow">http://t.co/YG7B0wCG</a></p>
+                    <time datetime="2013-02-04T13:23:22-08:00" pubdate="pubdate">
+                      <a href="https://twitter.com/#!/bluescholars/status/298542287644921856">
+                        01:23 PM Feb 04
+                      </a>
+                    </time>
+                  </li>
+                </ol>
+                <ol>
+                  <li>
+                    <p>Geo (@<a class="tweet-url username" href="http://twitter.com/prometheusbrown" rel="nofollow">prometheusbrown</a>) writes about rap &amp; photography in this month's  @<a class="tweet-url username" href="http://twitter.com/city_arts" rel="nofollow">city_arts</a> magazine <a href="http://t.co/JGxO8CaS" rel="nofollow">http://t.co/JGxO8CaS</a></p>
+                    <time datetime="2013-02-04T09:27:58-08:00" pubdate="pubdate">
+                      <a href="https://twitter.com/#!/bluescholars/status/298483047614017536">
+                        09:27 AM Feb 04
+                      </a>
+                    </time>
+                  </li>
+                </ol>
+                <ol>
+                  <li>
+                    <p>@<a class="tweet-url username" href="http://twitter.com/gcisha" rel="nofollow">gcisha</a> we too</p>
+                    <time datetime="2013-02-01T16:06:54-08:00" pubdate="pubdate">
+                      <a href="https://twitter.com/#!/bluescholars/status/297496279041314816">
+                        04:06 PM Feb 01
+                      </a>
+                    </time>
+                  </li>
+                </ol>
+                <a href="http://www.twitter.com/bluescholars">
+                  <img alt="Follow bluescholars on Twitter" src="http://twitter-badges.s3.amazonaws.com/follow_me-c.png">
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div id="person-carousel" style="width: 882px">
+          <img src="http://seattle100.s3.amazonaws.com/bluescholars/assets/carousel_20080908_s100_has_09__077.jpg">
+          <img src="http://seattle100.s3.amazonaws.com/bluescholars/assets/carousel_20080908_s100_has_08__132.jpg">
+          <img src="http://seattle100.s3.amazonaws.com/bluescholars/assets/carousel_20080908_s100__620080908_s100_has_08__009.jpg">
+          <img src="http://seattle100.s3.amazonaws.com/bluescholars/assets/carousel_20080908_s100__620080908_s100_has_08__028.jpg">
+          <img src="http://seattle100.s3.amazonaws.com/bluescholars/assets/carousel_20080908_s100__620080908_s100_has_08__052.jpg">
+          <img src="http://seattle100.s3.amazonaws.com/bluescholars/assets/carousel_20080908_s100__620080908_s100_has_08__059.jpg">
+          <img src="http://seattle100.s3.amazonaws.com/bluescholars/assets/carousel_20080908_s100__620080908_s100_has_08__108.jpg">
+          <img src="http://seattle100.s3.amazonaws.com/bluescholars/assets/carousel_20080908_s100__620080908_s100_has_08__126.jpg">
+          <img src="http://seattle100.s3.amazonaws.com/bluescholars/assets/carousel_20080908_s100__620080908_s100_has_08__132_-_version_3.jpg">
+          <img src="http://seattle100.s3.amazonaws.com/bluescholars/assets/carousel_20080908_s100__620080908_s100_has_08__181.jpg">
+          <img src="http://seattle100.s3.amazonaws.com/bluescholars/assets/carousel_20080908_s100__620080908_s100_has_09__023.jpg">
+          <img src="http://seattle100.s3.amazonaws.com/bluescholars/assets/carousel_20080908_s100__620080908_s100_has_09__077.jpg">
+          <img src="http://seattle100.s3.amazonaws.com/bluescholars/assets/carousel_20080908_s100__620080908_s100_has_09__109.jpg">
+          <img src="http://seattle100.s3.amazonaws.com/bluescholars/assets/carousel_20080908_s100__620080908_s100_has_09__159.jpg">
+          <img src="http://seattle100.s3.amazonaws.com/bluescholars/assets/carousel_20080908_s100__620080908_s100_has_09__166.jpg">
+          <img src="http://seattle100.s3.amazonaws.com/bluescholars/assets/carousel_20080908_s100__620080908_s100_has_09__177.jpg">
+          <img src="http://seattle100.s3.amazonaws.com/bluescholars/assets/carousel_20080908_s100__620080908_s100_has_09__209.jpg">
+          <img src="http://seattle100.s3.amazonaws.com/bluescholars/assets/carousel_20080908_s100__620080908_s100_has_09__218.jpg">
+          <img src="http://seattle100.s3.amazonaws.com/bluescholars/assets/carousel_20080908_s100__620080908_s100_has_09__231.jpg">
+        </div>
+      </div>
+    </article>
+    <footer id="page-footer">
+      <nav>
+        <ol>
+          <li>
+            <a href="http://www.chasejarvis.com">Chasejarvis.com</a>
+          </li>
+          <li class="space">|&nbsp;</li>
+          <li>
+            <a href="http://twitter.com/TheSeattle100">Twitter Feed</a>
+          </li>
+          <li class="space">|&nbsp;</li>
+          <li>
+            <a href="http://www.facebook.com/chasejarvis?ref=ts">Facebook Page</a>
+          </li>
+          <li class="space">|&nbsp;</li>
+          <li>
+            <a href="/privacy_policy">Privacy Policy</a>
+          </li>
+          <li class="space">|&nbsp;</li>
+          <li>
+            <a href="/usage_agreement">Usage Agreement</a>
+          </li>
+        </ol>
+      </nav>
+      <div class="social">
+        <fb:like href="http://s100.chasejarvis.com/" layout="button_count"></fb:like>
+        <br>
+        <div class="login">
+          <fb:login-button perms="publish_stream" show-faces="true"></fb:login-button>
+        </div>
+      </div>
+      <div class="credits">
+        <h1>
+          Site Credits:
+          <a href="http://www.thesuperformula.com">The Superformula</a>
+        </h1>
+      </div>
+    </footer>
+  </body>
+</html>

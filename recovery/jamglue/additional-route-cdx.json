@@ -1,0 +1,42 @@
+{
+  "archive": "Internet Archive Wayback CDX",
+  "scope": "Wildcard-discovered contest routes queried exactly",
+  "queries": [
+    {
+      "url": "http://www.jamglue.com/contests/bluescholars/entries",
+      "rows": [
+        {
+          "timestamp": "20091024115242",
+          "original": "http://www.jamglue.com:80/contests/bluescholars/entries",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "NGF6N4CGNSZUJQUH7YBFKR6ZZV7N75H5",
+          "length": "8477"
+        }
+      ],
+      "error": null
+    },
+    {
+      "url": "http://www.jamglue.com/contests/bluescholars?src=bnr",
+      "rows": [
+        {
+          "timestamp": "20090912051250",
+          "original": "http://www.jamglue.com:80/contests/bluescholars?src=bnr",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "Q5QCBUG2XBHYYZRFZMXN72EHEVYXKBQ7",
+          "length": "13110"
+        },
+        {
+          "timestamp": "20090922190033",
+          "original": "http://www.jamglue.com:80/contests/bluescholars?src=bnr",
+          "mimetype": "text/html",
+          "statuscode": "200",
+          "digest": "XYRIAYELXAIPY3RQUQZEXYIENRADBXQP",
+          "length": "13035"
+        }
+      ],
+      "error": null
+    }
+  ]
+}

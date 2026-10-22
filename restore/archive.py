@@ -123,6 +123,10 @@ def capture_candidates(record: dict,target: str=TARGET) -> list[str]:
 
 def validate_payload(body: bytes,kind: str) -> None:
     if not body: raise ValueError('Empty archive response')
+    if kind=='pdf':
+        if not body.startswith(b'%PDF-') or b'%%EOF' not in body[-4096:]:
+            raise ValueError('Expected a complete PDF file; received HTML or truncated content')
+        return
     if kind=='font':
         if not body.startswith((b'wOFF',b'wOF2',b'OTTO',b'\x00\x01\x00\x00')):
             raise ValueError('Expected a valid font signature; received HTML or unknown content')
@@ -158,7 +162,7 @@ def validate_payload(body: bytes,kind: str) -> None:
         if '<html' in text.lower() or '<!doctype' in text.lower() or ('{' not in text and '@import' not in text):
             raise ValueError('Expected CSS; received an error or unsupported content')
         return
-    if '<html' not in text.lower() and '<!doctype html' not in text.lower():
+    if '<html' not in text.lower() and '<!doctype html' not in text.lower() and '<!doctype' not in text.lower():
         raise ValueError('Expected a full HTML document')
     soup=BeautifulSoup(text,'html.parser')
     title=soup.title.get_text(' ',strip=True).lower() if soup.title else ''

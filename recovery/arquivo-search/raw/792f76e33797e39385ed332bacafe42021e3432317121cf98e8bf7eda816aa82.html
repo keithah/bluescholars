@@ -1,0 +1,2062 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#">
+	<head>
+		<meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"fa09265af4",applicationID:"798950867"};;(()=>{var e,t,r={9071:(e,t,r)=>{"use strict";r.d(t,{I:()=>n});var n=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(n=+i[1])},6900:(e,t,r)=>{"use strict";let n;if(r.d(t,{H:()=>i}),r(2374).il){const e=document.createElement("div");e.innerHTML="\x3c!--[if lte IE 6]><div></div><![endif]--\x3e\x3c!--[if lte IE 7]><div></div><![endif]--\x3e\x3c!--[if lte IE 8]><div></div><![endif]--\x3e\x3c!--[if lte IE 9]><div></div><![endif]--\x3e",n=e.getElementsByTagName("div").length}var i;i=4===n?6:3===n?7:2===n?8:1===n?9:0},6562:(e,t,r)=>{"use strict";r.d(t,{P_:()=>h,Mt:()=>v,C5:()=>d,DL:()=>w,OP:()=>B,lF:()=>V,Yu:()=>A,Dg:()=>p,CX:()=>l,GE:()=>y,sU:()=>M});var n={};r.r(n),r.d(n,{agent:()=>O,match:()=>_,version:()=>S});var i=r(6797),o=r(909),a=r(8610);class s{constructor(e,t){try{if(!e||"object"!=typeof e)return(0,a.Z)("New setting a Configurable requires an object as input");if(!t||"object"!=typeof t)return(0,a.Z)("Setting a Configurable requires a model to set its initial properties");Object.assign(this,t),Object.entries(e).forEach((e=>{let[t,r]=e;const n=(0,o.q)(t);n.length&&r&&"object"==typeof r&&n.forEach((e=>{e in r&&((0,a.Z)(`"${e}" is a protected attribute and can not be changed in feature ${t}.  It will have no effect.`),delete r[e])})),this[t]=r}))}catch(e){(0,a.Z)("An error occured while setting a Configurable",e)}}}const c={beacon:i.ce.beacon,errorBeacon:i.ce.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0},u={};function d(e){if(!e)throw new Error("All info objects require an agent identifier!");if(!u[e])throw new Error(`Info for ${e} was never set`);return u[e]}function l(e,t){if(!e)throw new Error("All info objects require an agent identifier!");u[e]=new s(t,c),(0,i.Qy)(e,u[e],"info")}const f={allow_bfcache:!1,privacy:{cookies_enabled:!0},ajax:{deny_list:void 0,enabled:!0,harvestTimeSeconds:10},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},ssl:void 0,obfuscate:void 0,jserrors:{enabled:!0,harvestTimeSeconds:10},metrics:{enabled:!0,harvestTimeSeconds:10},page_action:{enabled:!0,harvestTimeSeconds:30},page_view_event:{enabled:!0},page_view_timing:{enabled:!0,harvestTimeSeconds:30},session_trace:{enabled:!0,harvestTimeSeconds:10},spa:{enabled:!0,harvestTimeSeconds:10}},g={};function h(e){if(!e)throw new Error("All configuration objects require an agent identifier!");if(!g[e])throw new Error(`Configuration for ${e} was never set`);return g[e]}function p(e,t){if(!e)throw new Error("All configuration objects require an agent identifier!");g[e]=new s(t,f),(0,i.Qy)(e,g[e],"config")}function v(e,t){if(!e)throw new Error("All configuration objects require an agent identifier!");var r=h(e);if(r){for(var n=t.split("."),i=0;i<n.length-1;i++)if("object"!=typeof(r=r[n[i]]))return;r=r[n[n.length-1]]}return r}const m={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},b={};function w(e){if(!e)throw new Error("All loader-config objects require an agent identifier!");if(!b[e])throw new Error(`LoaderConfig for ${e} was never set`);return b[e]}function y(e,t){if(!e)throw new Error("All loader-config objects require an agent identifier!");b[e]=new s(t,m),(0,i.Qy)(e,b[e],"loader_config")}const A=(0,i.mF)().o;var x=r(6900),E=r(2053),O=null,S=null;if(navigator.userAgent){var D=navigator.userAgent,j=D.match(/Version\/(\S+)\s+Safari/);j&&-1===D.indexOf("Chrome")&&-1===D.indexOf("Chromium")&&(O="Safari",S=j[1])}function _(e,t){if(!O)return!1;if(e!==O)return!1;if(!t)return!0;if(!S)return!1;for(var r=S.split("."),n=t.split("."),i=0;i<n.length;i++)if(n[i]!==r[i])return!1;return!0}var k=r(5526),T=r(2374);const P="NRBA_SESSION_ID";function C(){if(!T.il)return null;try{let e;return null===(e=window.sessionStorage.getItem(P))&&(e=(0,k.ky)(16),window.sessionStorage.setItem(P,e)),e}catch(e){return null}}var I=T._A?.XMLHttpRequest,N=I&&I.prototype;const R={};function B(e){if(!e)throw new Error("All runtime objects require an agent identifier!");if(!R[e])throw new Error(`Runtime for ${e} was never set`);return R[e]}function M(e,t){if(!e)throw new Error("All runtime objects require an agent identifier!");var r;R[e]=new s(t,(r=e,{customTransaction:void 0,disabled:!1,features:{},isolatedBacklog:!1,loaderType:void 0,maxBytes:6===x.H?2e3:3e4,offset:(0,E.yf)(),onerror:void 0,origin:""+T._A?.location,ptid:void 0,releaseIds:{},sessionId:1==v(r,"privacy.cookies_enabled")?C():null,xhrWrappable:I&&N&&N.addEventListener&&!/CriOS/.test(navigator.userAgent),userAgent:n})),(0,i.Qy)(e,R[e],"runtime")}function V(e){return function(e){try{const t=d(e);return!!t.licenseKey&&!!t.errorBeacon&&!!t.applicationID}catch(e){return!1}}(e)}},8226:(e,t,r)=>{"use strict";r.d(t,{q:()=>n});const n="1223.PROD"},9557:(e,t,r)=>{"use strict";r.d(t,{w:()=>o});var n=r(8610);const i={agentIdentifier:""};class o{constructor(e){try{if("object"!=typeof e)return(0,n.Z)("shared context requires an object as input");this.sharedContext={},Object.assign(this.sharedContext,i),Object.entries(e).forEach((e=>{let[t,r]=e;Object.keys(i).includes(t)&&(this.sharedContext[t]=r)}))}catch(e){(0,n.Z)("An error occured while setting SharedContext",e)}}}},4329:(e,t,r)=>{"use strict";r.d(t,{L:()=>d,R:()=>c});var n=r(3752),i=r(7022),o=r(4045),a=r(2325);const s={};function c(e,t){const r={staged:!1,priority:a.p[t]||0};u(e),s[e].get(t)||s[e].set(t,r)}function u(e){e&&(s[e]||(s[e]=new Map))}function d(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"",t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"feature";if(u(e),!e||!s[e].get(t))return a(t);s[e].get(t).staged=!0;const r=Array.from(s[e]);function a(t){const r=e?n.ee.get(e):n.ee,a=o.X.handlers;if(r.backlog&&a){var s=r.backlog[t],c=a[t];if(c){for(var u=0;s&&u<s.length;++u)l(s[u],c);(0,i.D)(c,(function(e,t){(0,i.D)(t,(function(t,r){r[0].on(e,r[1])}))}))}delete a[t],r.backlog[t]=null,r.emit("drain-"+t,[])}}r.every((e=>{let[t,r]=e;return r.staged}))&&(r.sort(((e,t)=>e[1].priority-t[1].priority)),r.forEach((e=>{let[t]=e;a(t)})))}function l(e,t){var r=e[1];(0,i.D)(t[r],(function(t,r){var n=e[0];if(r[0]===n){var i=r[1],o=e[3],a=e[2];i.apply(o,a)}}))}},3752:(e,t,r)=>{"use strict";r.d(t,{ee:()=>u});var n=r(6797),i=r(3916),o=r(7022),a=r(6562),s="nr@context";let c=(0,n.fP)();var u;function d(){}function l(){return new d}function f(){(u.backlog.api||u.backlog.feature)&&(u.aborted=!0,u.backlog={})}c.ee?u=c.ee:(u=function e(t,r){var n={},c={},g={},h=!1;try{h=16===r.length&&(0,a.OP)(r).isolatedBacklog}catch(e){}var p={on:b,addEventListener:b,removeEventListener:w,emit:m,get:A,listeners:y,context:v,buffer:x,abort:f,aborted:!1,isBuffering:E,debugId:r,backlog:h?{}:t&&"object"==typeof t.backlog?t.backlog:{}};return p;function v(e){return e&&e instanceof d?e:e?(0,i.X)(e,s,l):l()}function m(e,r,n,i,o){if(!1!==o&&(o=!0),!u.aborted||i){t&&o&&t.emit(e,r,n);for(var a=v(n),s=y(e),d=s.length,l=0;l<d;l++)s[l].apply(a,r);var f=O()[c[e]];return f&&f.push([p,e,r,a]),a}}function b(e,t){n[e]=y(e).concat(t)}function w(e,t){var r=n[e];if(r)for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)}function y(e){return n[e]||[]}function A(t){return g[t]=g[t]||e(p,t)}function x(e,t){var r=O();p.aborted||(0,o.D)(e,(function(e,n){t=t||"feature",c[n]=t,t in r||(r[t]=[])}))}function E(e){return!!O()[c[e]]}function O(){return p.backlog}}(void 0,"globalEE"),c.ee=u)},9252:(e,t,r)=>{"use strict";r.d(t,{E:()=>n,p:()=>i});var n=r(3752).ee.get("handle");function i(e,t,r,i,o){o?(o.buffer([e],i),o.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},4045:(e,t,r)=>{"use strict";r.d(t,{X:()=>o});var n=r(9252);o.on=a;var i=o.handlers={};function o(e,t,r,o){a(o||n.E,i,e,t,r)}function a(e,t,r,i,o){o||(o="feature"),e||(e=n.E);var a=t[o]=t[o]||{};(a[r]=a[r]||[]).push([e,i])}},8544:(e,t,r)=>{"use strict";r.d(t,{bP:()=>s,iz:()=>c,m$:()=>a});var n=r(2374),i=!1;try{var o=Object.defineProperty({},"passive",{get:function(){i=!0}});n._A?.addEventListener("testPassive",null,o),n._A?.removeEventListener("testPassive",null,o)}catch(e){}function a(e){return i?{passive:!0,capture:!!e}:!!e}function s(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];window.addEventListener(e,t,a(r))}function c(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];document.addEventListener(e,t,a(r))}},5526:(e,t,r)=>{"use strict";r.d(t,{Rl:()=>i,ky:()=>o});var n=r(2374);function i(){var e=null,t=0,r=n._A?.crypto||n._A?.msCrypto;function i(){return e?15&e[t++]:16*Math.random()|0}r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var o,a="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",s="",c=0;c<a.length;c++)s+="x"===(o=a[c])?i().toString(16):"y"===o?(o=3&i()|8).toString(16):o;return s}function o(e){var t=null,r=0,n=self.crypto||self.msCrypto;n&&n.getRandomValues&&Uint8Array&&(t=n.getRandomValues(new Uint8Array(31)));for(var i=[],o=0;o<e;o++)i.push(a().toString(16));return i.join("");function a(){return t?15&t[r++]:16*Math.random()|0}}},2053:(e,t,r)=>{"use strict";r.d(t,{nb:()=>c,os:()=>u,yf:()=>s,zO:()=>a});var n=r(7145),i=(new Date).getTime(),o=i;function a(){return n.G&&performance.now?Math.round(performance.now()):(i=Math.max((new Date).getTime(),i))-o}function s(){return i}function c(e){o=e}function u(){return o}},7145:(e,t,r)=>{"use strict";r.d(t,{G:()=>n});const n=void 0!==r(2374)._A?.performance?.timing?.navigationStart},6625:(e,t,r)=>{"use strict";r.d(t,{s:()=>c,v:()=>u});var n=r(8283),i=r(9071),o=r(2053),a=r(7145),s=r(2374);let c=!0;function u(e){var t=function(){if(i.I&&i.I<9)return;if(a.G)return c=!1,s._A?.performance?.timing?.navigationStart}();t&&((0,n.B)(e,"starttime",t),(0,o.nb)(t))}},8283:(e,t,r)=>{"use strict";r.d(t,{B:()=>o,L:()=>a});var n=r(2053),i={};function o(e,t,r){void 0===r&&(r=(0,n.zO)()+(0,n.os)()),i[e]=i[e]||{},i[e][t]=r}function a(e,t,r,n){const o=e.sharedContext.agentIdentifier;var a=i[o]?.[r],s=i[o]?.[n];void 0!==a&&void 0!==s&&e.store("measures",t,{value:s-a})}},9548:(e,t,r)=>{"use strict";r.d(t,{T:()=>i});var n=r(2374);const i={isFileProtocol:function(){let e=Boolean("file:"===(0,n.lW)()?.location?.protocol);e&&(i.supportabilityMetricSent=!0);return e},supportabilityMetricSent:!1}},8610:(e,t,r)=>{"use strict";function n(e,t){console&&console.warn&&"function"==typeof console.warn&&(console.warn(`New Relic: ${e}`),t&&console.warn(t))}r.d(t,{Z:()=>n})},3916:(e,t,r)=>{"use strict";r.d(t,{X:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},2374:(e,t,r)=>{"use strict";r.d(t,{_A:()=>o,il:()=>n,lW:()=>a,v6:()=>i});const n=Boolean("undefined"!=typeof window&&window.document),i=Boolean("undefined"!=typeof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator);let o=(()=>{if(n)return window;if(i){if("undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope)return globalThis;if(self instanceof WorkerGlobalScope)return self}throw new Error("New Relic browser agent shutting down due to error: Unable to locate global scope. This is possibly due to code redefining browser global variables like `self` and `window`.")})();function a(){return o}},7022:(e,t,r)=>{"use strict";r.d(t,{D:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t){var r=[],i="",o=0;for(i in e)n.call(e,i)&&(r[o]=t(i,e[i]),o+=1);return r}},9226:(e,t,r)=>{"use strict";r.d(t,{$c:()=>u,Ng:()=>d,RR:()=>c});var n=r(6562),i=r(9557),o=r(9548),a=r(8610),s={regex:/^file:\/\/(.*)/,replacement:"file://OBFUSCATED"};class c extends i.w{constructor(e){super(e)}shouldObfuscate(){return u(this.sharedContext.agentIdentifier).length>0}obfuscateString(e){if(!e||"string"!=typeof e)return e;for(var t=u(this.sharedContext.agentIdentifier),r=e,n=0;n<t.length;n++){var i=t[n].regex,o=t[n].replacement||"*";r=r.replace(i,o)}return r}}function u(e){var t=[],r=(0,n.Mt)(e,"obfuscate")||[];return t=t.concat(r),o.T.isFileProtocol()&&t.push(s),t}function d(e){for(var t=!1,r=!1,n=0;n<e.length;n++){"regex"in e[n]?"string"!=typeof e[n].regex&&e[n].regex.constructor!==RegExp&&((0,a.Z)('An obfuscation replacement rule contains a "regex" value with an invalid type (must be a string or RegExp)'),r=!0):((0,a.Z)('An obfuscation replacement rule was detected missing a "regex" value.'),r=!0);var i=e[n].replacement;i&&"string"!=typeof i&&((0,a.Z)('An obfuscation replacement rule contains a "replacement" value with an invalid type (must be a string)'),t=!0)}return!t&&!r}},2650:(e,t,r)=>{"use strict";r.d(t,{K:()=>a,b:()=>o});var n=r(8544);function i(){return"undefined"==typeof document||"complete"===document.readyState}function o(e,t){if(i())return e();(0,n.bP)("load",e,t)}function a(e){if(i())return e();(0,n.iz)("DOMContentLoaded",e)}},6797:(e,t,r)=>{"use strict";r.d(t,{EZ:()=>u,Qy:()=>c,ce:()=>o,fP:()=>a,gG:()=>d,mF:()=>s});var n=r(2053),i=r(2374);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function a(){return i._A.NREUM||(i._A.NREUM={}),void 0===i._A.newrelic&&(i._A.newrelic=i._A.NREUM),i._A.NREUM}function s(){let e=a();return e.o||(e.o={ST:i._A.setTimeout,SI:i._A.setImmediate,CT:i._A.clearTimeout,XHR:i._A.XMLHttpRequest,REQ:i._A.Request,EV:i._A.Event,PR:i._A.Promise,MO:i._A.MutationObserver,FETCH:i._A.fetch}),e}function c(e,t,r){let i=a();const o=i.initializedAgents||{},s=o[e]||{};return Object.keys(s).length||(s.initializedAt={ms:(0,n.zO)(),date:new Date}),i.initializedAgents={...o,[e]:{...s,[r]:t}},i}function u(e,t){a()[e]=t}function d(){return function(){let e=a();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=a();const t=e.init||{};e.init={...t}}(),s(),function(){let e=a();const t=e.loader_config||{};e.loader_config={...t}}(),a()}},6998:(e,t,r)=>{"use strict";r.d(t,{N:()=>i,e:()=>o});var n=r(8544);function i(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1];return void(0,n.iz)("visibilitychange",r);function r(){if(t){if("hidden"!=document.visibilityState)return;e()}e(document.visibilityState)}}function o(){return"hidden"===document.visibilityState?-1:1/0}},6034:(e,t,r)=>{"use strict";r.d(t,{t:()=>n});const n=r(2325).D.metrics},2484:(e,t,r)=>{"use strict";r.d(t,{t:()=>n});const n=r(2325).D.pageViewEvent},6382:(e,t,r)=>{"use strict";r.d(t,{t:()=>n});const n=r(2325).D.pageViewTiming},1509:(e,t,r)=>{"use strict";r.d(t,{W:()=>s});var n=r(6562),i=r(3752),o=r(2384),a=r(6797);class s{constructor(e,t,r){this.agentIdentifier=e,this.aggregator=t,this.ee=i.ee.get(e,(0,n.OP)(this.agentIdentifier).isolatedBacklog),this.featureName=r,this.blocked=!1,this.checkConfiguration()}checkConfiguration(){if(!(0,n.lF)(this.agentIdentifier)){let e={...(0,a.gG)().info?.jsAttributes};try{e={...e,...(0,n.C5)(this.agentIdentifier)?.jsAttributes}}catch(e){}(0,o.j)(this.agentIdentifier,{...(0,a.gG)(),info:{...(0,a.gG)().info,jsAttributes:e}})}}}},2384:(e,t,r)=>{"use strict";r.d(t,{j:()=>w});var n=r(8683),i=r.n(n),o=r(2325),a=r(6562),s=r(9252),c=r(7022),u=r(3752),d=r(2053),l=r(4329),f=r(2650),g=r(2374);function h(e,t,n){n||(0,l.R)(e,"api"),function(e){function t(t){for(var r=arguments.length,n=new Array(r>1?r-1:0),i=1;i<r;i++)n[i-1]=arguments[i];Object.values(e.initializedAgents).forEach((e=>{e.exposed&&e.api[t]&&e.api[t](...n)}))}["setErrorHandler","finished","addToTrace","inlineHit","addRelease","addPageAction","setCurrentRouteName","setPageViewName","setCustomAttribute","interaction","noticeError"].forEach((r=>{e[r]=function(){for(var e=arguments.length,n=new Array(e),i=0;i<e;i++)n[i]=arguments[i];return t(r,...n)}}))}(t);var h=u.ee.get(e),p=h.get("tracer"),v="api-",m="api-ixn-";function b(){}(0,c.D)(["setErrorHandler","finished","addToTrace","inlineHit","addRelease"],(function(e,r){t[r]=y(v,r,!0,"api")})),t.addPageAction=y(v,"addPageAction",!0,o.D.pageAction),t.setCurrentRouteName=y(v,"routeName",!0,o.D.spa),t.setPageViewName=function(t,r){if("string"==typeof t)return"/"!==t.charAt(0)&&(t="/"+t),(0,a.OP)(e).customTransaction=(r||"http://custom.transaction")+t,y(v,"setPageViewName",!0,"api")()},t.setCustomAttribute=function(t,r){const n=(0,a.C5)(e);return(0,a.CX)(e,{...n,jsAttributes:{...n.jsAttributes,[t]:r}}),y(v,"setCustomAttribute",!0,"api")()},t.interaction=function(){return(new b).get()};var w=b.prototype={createTracer:function(e,t){var r={},n=this,i="function"==typeof t;return(0,s.p)("api-ixn-tracer",[(0,d.zO)(),e,r],n,o.D.spa,h),function(){if(p.emit((i?"":"no-")+"fn-start",[(0,d.zO)(),n,i],r),i)try{return t.apply(this,arguments)}catch(e){throw p.emit("fn-err",[arguments,this,"string"==typeof e?new Error(e):e],r),e}finally{p.emit("fn-end",[(0,d.zO)()],r)}}}};function y(e,t,r,n){return function(){return(0,s.p)("record-supportability",["API/"+t+"/called"],void 0,o.D.metrics,h),(0,s.p)(e+t,[(0,d.zO)()].concat(i()(arguments)),r?null:this,n,h),r?void 0:this}}function A(){r.e(692).then(r.bind(r,5692)).then((t=>{let{setAPI:r}=t;r(e),(0,l.L)(e,"api")}))}(0,c.D)("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),(function(e,t){w[t]=y(m,t,void 0,o.D.spa)})),t.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),(0,s.p)("record-supportability",["API/noticeError/called"],void 0,o.D.metrics,h),(0,s.p)("err",[e,(0,d.zO)(),!1,t],void 0,o.D.jserrors,h)},g.v6?A():(0,f.b)((()=>A()),!0)}var p=r(6797);const v={stn:o.D.sessionTrace,err:o.D.jserrors,ins:o.D.pageAction,spa:o.D.spa};function m(e,t){var r=u.ee.get(t);e&&"object"==typeof e&&((0,c.D)(e,(function(e,t){if(!t)return(0,s.p)("block-"+e,[],void 0,v[e],r);t&&!b[e]&&((0,s.p)("feat-"+e,[],void 0,v[e],r),b[e]=!0)})),(0,l.L)(t,o.D.pageViewEvent))}const b={};function w(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},r=arguments.length>2?arguments[2]:void 0,n=arguments.length>3?arguments[3]:void 0,{init:i,info:o,loader_config:s,runtime:c={loaderType:r},exposed:u=!0}=t;const d=(0,p.gG)();let l={};return o||(i=d.init,o=d.info,s=d.loader_config,l=d),g.v6&&(o.jsAttributes={...o.jsAttributes,isWorker:!0}),(0,a.CX)(e,o),(0,a.Dg)(e,i||{}),(0,a.GE)(e,s||{}),(0,a.sU)(e,c),h(e,l,n),(0,p.Qy)(e,d,"api"),(0,p.Qy)(e,u,"exposed"),g.v6||((0,p.EZ)("activatedFeatures",b),(0,p.EZ)("setToken",(t=>m(t,e)))),l}},909:(e,t,r)=>{"use strict";r.d(t,{Z:()=>i,q:()=>o});var n=r(2325);function i(e){switch(e){case n.D.ajax:return[n.D.jserrors];case n.D.sessionTrace:return[n.D.ajax,n.D.pageViewEvent];case n.D.pageViewTiming:return[n.D.pageViewEvent];default:return[]}}function o(e){return e===n.D.jserrors?[]:["auto"]}},2325:(e,t,r)=>{"use strict";r.d(t,{D:()=>n,p:()=>i});const n={ajax:"ajax",jserrors:"jserrors",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionTrace:"session_trace",spa:"spa"},i={[n.pageViewEvent]:1,[n.pageViewTiming]:2,[n.metrics]:3,[n.jserrors]:4,[n.ajax]:5,[n.sessionTrace]:6,[n.pageAction]:7,[n.spa]:8}},8683:e=>{e.exports=function(e,t,r){t||(t=0),void 0===r&&(r=e?e.length:0);for(var n=-1,i=r-t||0,o=Array(i<0?0:i);++n<i;)o[n]=e[t+n];return o}},4992:(e,t,r)=>{var n={"./ajax/aggregate":[960,779,960],"./jserrors/aggregate":[6112,779,112],"./metrics/aggregate":[4325,779,325],"./page_action/aggregate":[6817,779,817],"./page_view_event/aggregate":[4823,779,823],"./page_view_timing/aggregate":[8785,779,785],"./session_trace/aggregate":[1307,779,307],"./spa/aggregate":[9378,779,378]};function i(e){if(!r.o(n,e))return Promise.resolve().then((()=>{var t=new Error("Cannot find module '"+e+"'");throw t.code="MODULE_NOT_FOUND",t}));var t=n[e],i=t[0];return Promise.all(t.slice(1).map(r.e)).then((()=>r(i)))}i.keys=()=>Object.keys(n),i.id=4992,e.exports=i}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var o=n[e]={exports:{}};return r[e](o,o.exports,i),o.exports}i.m=r,i.n=e=>{var t=e&&e.__esModule?()=>e.default:()=>e;return i.d(t,{a:t}),t},i.d=(e,t)=>{for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce(((t,r)=>(i.f[r](e,t),t)),[])),i.u=e=>e+"."+i.h().slice(0,8)+"-1223.js",i.h=()=>"215647de1097144af948",i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA:",i.l=(r,n,o,a)=>{if(e[r])e[r].push(n);else{var s,c;if(void 0!==o)for(var u=document.getElementsByTagName("script"),d=0;d<u.length;d++){var l=u[d];if(l.getAttribute("src")==r||l.getAttribute("data-webpack")==t+o){s=l;break}}s||(c=!0,(s=document.createElement("script")).charset="utf-8",s.timeout=120,i.nc&&s.setAttribute("nonce",i.nc),s.setAttribute("data-webpack",t+o),s.src=r),e[r]=[n];var f=(t,n)=>{s.onerror=s.onload=null,clearTimeout(g);var i=e[r];if(delete e[r],s.parentNode&&s.parentNode.removeChild(s),i&&i.forEach((e=>e(n))),t)return t(n)},g=setTimeout(f.bind(null,void 0,{type:"timeout",target:s}),12e4);s.onerror=f.bind(null,s.onerror),s.onload=f.bind(null,s.onload),c&&document.head.appendChild(s)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={55:0,308:0};i.f.j=(t,r)=>{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var o=new Promise(((r,i)=>n=e[t]=[r,i]));r.push(n[2]=o);var a=i.p+i.u(t),s=new Error;i.l(a,(r=>{if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var o=r&&("load"===r.type?"missing":r.type),a=r&&r.target&&r.target.src;s.message="Loading chunk "+t+" failed.\n("+o+": "+a+")",s.name="ChunkLoadError",s.type=o,s.request=a,n[1](s)}}),"chunk-"+t,t)}};var t=(t,r)=>{var n,o,[a,s,c]=r,u=0;if(a.some((t=>0!==e[t]))){for(n in s)i.o(s,n)&&(i.m[n]=s[n]);if(c)c(i)}for(t&&t(r);u<a.length;u++)o=a[u],i.o(e,o)&&e[o]&&e[o][0](),e[o]=0},r=window.webpackChunkNRBA=window.webpackChunkNRBA||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})();var o={};(()=>{"use strict";i.r(o);var e=i(2325),t=i(6562);const r=Object.values(e.D);function n(e){const n={};return r.forEach((r=>{n[r]=function(e,r){return!1!==(0,t.Mt)(r,`${e}.enabled`)}(r,e)})),n}var a=i(2384),s=i(909),c=i(9557),u=i(7022);class d extends c.w{constructor(e){super(e),this.aggregatedData={}}store(e,t,r,n,i){var o=this.getBucket(e,t,r,i);return o.metrics=function(e,t){t||(t={count:0});return t.count+=1,(0,u.D)(e,(function(e,r){t[e]=l(r,t[e])})),t}(n,o.metrics),o}merge(e,t,r,n,i){var o=this.getBucket(e,t,n,i);if(o.metrics){var a=o.metrics;a.count+=r.count,(0,u.D)(r,(function(e,t){if("count"!==e){var n=a[e],i=r[e];i&&!i.c?a[e]=l(i.t,n):a[e]=function(e,t){if(!t)return e;t.c||(t=f(t.t));return t.min=Math.min(e.min,t.min),t.max=Math.max(e.max,t.max),t.t+=e.t,t.sos+=e.sos,t.c+=e.c,t}(i,a[e])}}))}else o.metrics=r}storeMetric(e,t,r,n){var i=this.getBucket(e,t,r);return i.stats=l(n,i.stats),i}getBucket(e,t,r,n){this.aggregatedData[e]||(this.aggregatedData[e]={});var i=this.aggregatedData[e][t];return i||(i=this.aggregatedData[e][t]={params:r||{}},n&&(i.custom=n)),i}get(e,t){return t?this.aggregatedData[e]&&this.aggregatedData[e][t]:this.aggregatedData[e]}take(e){for(var t={},r="",n=!1,i=0;i<e.length;i++)t[r=e[i]]=g(this.aggregatedData[r]),t[r].length&&(n=!0),delete this.aggregatedData[r];return n?t:null}}function l(e,t){return null==e?function(e){e?e.c++:e={c:1};return e}(t):t?(t.c||(t=f(t.t)),t.c+=1,t.t+=e,t.sos+=e*e,e>t.max&&(t.max=e),e<t.min&&(t.min=e),t):{t:e}}function f(e){return{t:e,min:e,max:e,sos:e*e,c:1}}function g(e){return"object"!=typeof e?[]:(0,u.D)(e,h)}function h(e,t){return t}var p=i(6797),v=i(5526),m=i(8610);var b=i(9252),w=i(2053),y=i(8283),A=i(6625),x=i(4329),E=i(1509),O=i(2650),S=i(2374);class D extends E.W{constructor(e,t,r){let n=!(arguments.length>3&&void 0!==arguments[3])||arguments[3];super(e,t,r),this.completed=new Promise(((e,t)=>{this.resolve=e,this.reject=t})),this.hasAggregator=!1,this.auto=n,n&&(0,x.R)(e,r)}importAggregator(){try{if(this.hasAggregator||!this.auto)return;this.hasAggregator=!0;const e=async()=>{try{const{Aggregate:e}=await i(4992)(`./${this.featureName}/aggregate`);new e(this.agentIdentifier,this.aggregator),this.resolve()}catch(e){(0,m.Z)(`Failed to import aggregator class for ${this.featureName}`,e)}};S.v6?e():(0,O.b)((()=>e()),!0)}catch(e){this.reject(e)}}}var j,_,k,T=i(2484);class P extends D{constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,T.t,r),S.il&&((0,A.v)(e),(0,y.B)(e,"firstbyte",(0,w.yf)()),(0,O.K)((()=>this.measureDomContentLoaded())),(0,O.b)((()=>this.measureWindowLoaded()),!0),this.importAggregator())}measureWindowLoaded(){var t=(0,w.zO)();(0,y.B)(this.agentIdentifier,"onload",t+(0,w.os)()),(0,b.p)("timing",["load",t],void 0,e.D.pageViewTiming,this.ee)}measureDomContentLoaded(){(0,y.B)(this.agentIdentifier,"domContent",(0,w.zO)()+(0,w.os)())}}j=P,_="featureName",k=T.t,_ in j?Object.defineProperty(j,_,{value:k,enumerable:!0,configurable:!0,writable:!0}):j[_]=k;var C=i(6998),I=i(8544),N=i(6382);class R extends D{constructor(t,r){var n;let i=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];if(super(t,r,N.t,i),n=this,S.il){if(this.pageHiddenTime=(0,C.e)(),this.performanceObserver,this.lcpPerformanceObserver,this.clsPerformanceObserver,this.fiRecorded=!1,"PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){this.performanceObserver=new PerformanceObserver((function(){return n.perfObserver(...arguments)}));try{this.performanceObserver.observe({entryTypes:["paint"]})}catch(e){}this.lcpPerformanceObserver=new PerformanceObserver((function(){return n.lcpObserver(...arguments)}));try{this.lcpPerformanceObserver.observe({entryTypes:["largest-contentful-paint"]})}catch(e){}this.clsPerformanceObserver=new PerformanceObserver((function(){return n.clsObserver(...arguments)}));try{this.clsPerformanceObserver.observe({type:"layout-shift",buffered:!0})}catch(e){}}this.fiRecorded=!1;["click","keydown","mousedown","pointerdown","touchstart"].forEach((e=>{(0,I.iz)(e,(function(){return n.captureInteraction(...arguments)}))})),(0,C.N)((()=>{this.pageHiddenTime=(0,w.zO)(),(0,b.p)("docHidden",[this.pageHiddenTime],void 0,e.D.pageViewTiming,this.ee)}),!0),(0,I.bP)("pagehide",(()=>(0,b.p)("winPagehide",[(0,w.zO)()],void 0,e.D.pageViewTiming,this.ee))),this.importAggregator()}}perfObserver(t,r){t.getEntries().forEach((t=>{"first-paint"===t.name?(0,b.p)("timing",["fp",Math.floor(t.startTime)],void 0,e.D.pageViewTiming,this.ee):"first-contentful-paint"===t.name&&(0,b.p)("timing",["fcp",Math.floor(t.startTime)],void 0,e.D.pageViewTiming,this.ee)}))}lcpObserver(t,r){var n=t.getEntries();if(n.length>0){var i=n[n.length-1];if(this.pageHiddenTime<i.startTime)return;var o=[i],a=this.addConnectionAttributes({});a&&o.push(a),(0,b.p)("lcp",o,void 0,e.D.pageViewTiming,this.ee)}}clsObserver(t){t.getEntries().forEach((t=>{t.hadRecentInput||(0,b.p)("cls",[t],void 0,e.D.pageViewTiming,this.ee)}))}addConnectionAttributes(e){var t=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(t)return t.type&&(e["net-type"]=t.type),t.effectiveType&&(e["net-etype"]=t.effectiveType),t.rtt&&(e["net-rtt"]=t.rtt),t.downlink&&(e["net-dlink"]=t.downlink),e}captureInteraction(r){if(r instanceof t.Yu.EV&&!this.fiRecorded){var n=Math.round(r.timeStamp),i={type:r.type};this.addConnectionAttributes(i),n<=(0,w.zO)()?i.fid=(0,w.zO)()-n:n>(0,w.os)()&&n<=Date.now()?(n-=(0,w.os)(),i.fid=(0,w.zO)()-n):n=(0,w.zO)(),this.fiRecorded=!0,(0,b.p)("timing",["fi",n,i],void 0,e.D.pageViewTiming,this.ee)}}}!function(e,t,r){t in e?Object.defineProperty(e,t,{value:r,enumerable:!0,configurable:!0,writable:!0}):e[t]=r}(R,"featureName",N.t);var B=i(4045),M="React",V="Angular",q="AngularJS",L="Backbone",z="Ember",W="Vue",$="Meteor",F="Zepto",G="Jquery";function Z(){if(!S.il)return[];var e=[];try{(function(){try{if(window.React||window.ReactDOM||window.ReactRedux)return!0;if(document.querySelector("[data-reactroot], [data-reactid]"))return!0;for(var e=document.querySelectorAll("body > div"),t=0;t<e.length;t++)if(Object.keys(e[t]).indexOf("_reactRootContainer")>=0)return!0;return!1}catch(e){return!1}})()&&e.push(M),function(){try{return!!window.angular||(!!document.querySelector(".ng-binding, [ng-app], [data-ng-app], [ng-controller], [data-ng-controller], [ng-repeat], [data-ng-repeat]")||!!document.querySelector('script[src*="angular.js"], script[src*="angular.min.js"]'))}catch(e){return!1}}()&&e.push(q),function(){try{return!!(window.hasOwnProperty("ng")&&window.ng.hasOwnProperty("coreTokens")&&window.ng.coreTokens.hasOwnProperty("NgZone"))||!!document.querySelectorAll("[ng-version]").length}catch(e){return!1}}()&&e.push(V),window.Backbone&&e.push(L),window.Ember&&e.push(z),window.Vue&&e.push(W),window.Meteor&&e.push($),window.Zepto&&e.push(F),window.jQuery&&e.push(G)}catch(e){}return e}var U=i(9548),H=i(9226),X=i(8226);const Q=Boolean(S._A?.Worker),K=Boolean(S._A?.SharedWorker),J=Boolean(S._A?.navigator?.serviceWorker);let Y,ee,te;var re=i(6034);class ne extends D{constructor(e,t){var r;let n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:{},i=!(arguments.length>3&&void 0!==arguments[3])||arguments[3];super(e,t,re.t,i),r=this,this.PfFeatStatusEnum=n,this.singleChecks(),this.eachSessionChecks(),(0,B.X)("record-supportability",(function(){return r.recordSupportability(...arguments)}),this.featureName,this.ee),(0,B.X)("record-custom",(function(){return r.recordCustom(...arguments)}),this.featureName,this.ee),this.importAggregator()}recordSupportability(e,t){var r=["sm",e,{name:e},t];return(0,b.p)("storeMetric",r,null,this.featureName,this.ee),r}recordCustom(e,t){var r=["cm",e,{name:e},t];return(0,b.p)("storeEventMetrics",r,null,this.featureName,this.ee),r}singleChecks(){this.recordSupportability(`Generic/Version/${X.q}/Detected`);const{loaderType:e}=(0,t.OP)(this.agentIdentifier);e&&this.recordSupportability(`Generic/LoaderType/${e}/Detected`),S.il&&(0,O.K)((()=>{Z().forEach((e=>{this.recordSupportability("Framework/"+e+"/Detected")}))})),U.T.isFileProtocol()&&(this.recordSupportability("Generic/FileProtocol/Detected"),U.T.supportabilityMetricSent=!0);const r=(0,H.$c)(this.agentIdentifier);r.length>0&&this.recordSupportability("Generic/Obfuscate/Detected"),r.length>0&&!(0,H.Ng)(r)&&this.recordSupportability("Generic/Obfuscate/Invalid"),S.il&&this.reportPolyfillsNeeded(),function(e){if(!Y){if(Q){Y=Worker;try{S._A.Worker=r(Y,"Dedicated")}catch(e){o(e,"Dedicated")}if(K){ee=SharedWorker;try{S._A.SharedWorker=r(ee,"Shared")}catch(e){o(e,"Shared")}}else n("Shared");if(J){te=navigator.serviceWorker.register;try{S._A.navigator.serviceWorker.register=(t=te,function(){for(var e=arguments.length,r=new Array(e),n=0;n<e;n++)r[n]=arguments[n];return i("Service",r[1]?.type),t.apply(navigator.serviceWorker,r)})}catch(e){o(e,"Service")}}else n("Service");var t;return}n("All")}function r(e,t){return new Proxy(e,{construct:(e,r)=>(i(t,r[1]?.type),new e(...r))})}function n(t){S.v6||e(`Workers/${t}/Unavailable`)}function i(t,r){e("module"===r?`Workers/${t}/Module`:`Workers/${t}/Classic`)}function o(t,r){e(`Workers/${r}/SM/Unsupported`),(0,m.Z)(`NR Agent: Unable to capture ${r} workers.`,t)}}(this.recordSupportability.bind(this))}reportPolyfillsNeeded(){this.recordSupportability(`Generic/Polyfill/Promise/${this.PfFeatStatusEnum.PROMISE}`),this.recordSupportability(`Generic/Polyfill/ArrayIncludes/${this.PfFeatStatusEnum.ARRAY_INCLUDES}`),this.recordSupportability(`Generic/Polyfill/ObjectAssign/${this.PfFeatStatusEnum.OBJECT_ASSIGN}`),this.recordSupportability(`Generic/Polyfill/ObjectEntries/${this.PfFeatStatusEnum.OBJECT_ENTRIES}`)}eachSessionChecks(){S.il&&(0,I.bP)("pageshow",(e=>{e.persisted&&this.recordCustom("Custom/BFCache/PageRestored")}))}}!function(e,t,r){t in e?Object.defineProperty(e,t,{value:r,enumerable:!0,configurable:!0,writable:!0}):e[t]=r}(ne,"featureName",re.t);new class{constructor(t){let r=arguments.length>1&&void 0!==arguments[1]?arguments[1]:(0,v.ky)(16);this.agentIdentifier=r,this.sharedAggregator=new d({agentIdentifier:this.agentIdentifier}),this.features={},this.desiredFeatures=t.features||[],this.desiredFeatures.sort(((t,r)=>e.p[t.featureName]-e.p[r.featureName])),Object.assign(this,(0,a.j)(this.agentIdentifier,t,t.loaderType||"agent")),this.start()}get config(){return{info:(0,t.C5)(this.agentIdentifier),init:(0,t.P_)(this.agentIdentifier),loader_config:(0,t.DL)(this.agentIdentifier),runtime:(0,t.OP)(this.agentIdentifier)}}start(){try{const e=n(this.agentIdentifier);this.desiredFeatures.forEach((t=>{if(e[t.featureName]){const r=(0,s.Z)(t.featureName);r.every((t=>e[t]))||(0,m.Z)(`${t.featureName} is enabled but one or more dependent features has been disabled (${JSON.stringify(r)}). This may cause unintended consequences or missing data...`),this.features[t.featureName]=new t(this.agentIdentifier,this.sharedAggregator)}})),(0,p.Qy)(this.agentIdentifier,this.features,"features")}catch(e){return(0,m.Z)("Failed to initialize instrument classes",e),!1}}}({features:[P,R,ne],loaderType:"lite"})})(),window.NRBA=o})();</script>
+<noscript><style>form.antibot * :not(.antibot-message) { display: none !important; }</style>
+</noscript><link rel="canonical" href="https://crosscut.com/2015/08/announcing-the-nominees-for-crosscuts-3rd-annual-courage-awards" />
+<meta name="robots" content="max-image-preview:standard" />
+<link rel="image_src" href="/sites/default/files/images/logo/crosscut-logo-2560x1440.png" />
+<meta property="og:site_name" content="Crosscut" />
+<meta property="og:url" content="https://crosscut.com/2015/08/announcing-the-nominees-for-crosscuts-3rd-annual-courage-awards" />
+<meta property="og:title" content="Announcing the nominees for Crosscut’s 3rd Annual Courage Awards" />
+<meta property="og:image" content="https://crosscut.com/sites/default/files/images/logo/crosscut-logo-2560x1440.png" />
+<meta property="og:image:url" content="https://crosscut.com/sites/default/files/images/logo/crosscut-logo-2560x1440.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="/sites/default/files/images/logo/crosscut-logo-2560x1440.png" />
+<meta property="og:image:height" content="1440" />
+<meta property="og:image:alt" content="Crosscut.com" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@crosscut" />
+<meta name="twitter:title" content="Announcing the nominees for Crosscut’s 3rd Annual Courage Awards" />
+<meta name="twitter:url" content="https://crosscut.com/2015/08/announcing-the-nominees-for-crosscuts-3rd-annual-courage-awards" />
+<meta name="twitter:image:alt" content="Crosscut.com" />
+<meta name="twitter:image:height" content="1440" />
+<meta name="twitter:image:width" content="2560" />
+<meta name="twitter:image" content="https://crosscut.com/sites/default/files/images/logo/crosscut-logo-2560x1440.png" />
+<meta name="Generator" content="Drupal 9 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "NewsArticle",
+            "headline": "Announcing the nominees for Crosscut’s 3rd Annual Courage Awards",
+            "name": "Announcing the nominees for Crosscut’s 3rd Annual Courage Awards",
+            "image": "/sites/default/files/images/logo/crosscut-logo-2560x1440.png",
+            "datePublished": "2015-08-27T14:19:16Z",
+            "dateModified": "2018-02-06T22:59:15-0800",
+            "author": {
+                "@type": "Person",
+                "name": "Crosscut Editors"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "@id": "https://crosscut.com/",
+                "name": "Crosscut",
+                "url": "https://crosscut.com/",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://crosscut.com/themes/crosscut/logo_crosscut_2019.png",
+                    "width": "300",
+                    "height": "51"
+                }
+            },
+            "thumbnailUrl": "/sites/default/files/images/logo/crosscut-logo-2560x1440.png",
+            "url": "https://crosscut.com/2015/08/announcing-the-nominees-for-crosscuts-3rd-annual-courage-awards",
+            "creator": {
+                "@type": "Person",
+                "name": "Crosscut Editors"
+            },
+            "mainEntityOfPage": "https://crosscut.com/2015/08/announcing-the-nominees-for-crosscuts-3rd-annual-courage-awards"
+        }
+    ]
+}</script>
+<meta name="parsely-post-id" content="35927" />
+<link rel="icon" href="/core/misc/favicon.ico" type="image/vnd.microsoft.icon" />
+<script src="/sites/default/files/google_tag/primary/google_tag.script.js?rq53hs" defer></script>
+
+		<title>Announcing the nominees for Crosscut’s 3rd Annual Courage Awards | Crosscut</title>
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/themes/custom/crosscut/favicon/apple-touch-icon.png?v=A07XApmMAk">
+    <link rel="icon" type="image/png" sizes="32x32" href="/themes/custom/crosscut/favicon/favicon-32x32.png?v=A07XApmMAk">
+    <link rel="icon" type="image/png" sizes="16x16" href="/themes/custom/crosscut/favicon/favicon-16x16.png?v=A07XApmMAk">
+    <link rel="manifest" href="/themes/custom/crosscut/favicon/site.webmanifest?v=A07XApmMAk">
+    <link rel="mask-icon" href="/themes/custom/crosscut/favicon/safari-pinned-tab.svg?v=A07XApmMAk" color="#172c3b">
+    <link rel="shortcut icon" href="/themes/custom/crosscut/favicon/favicon.ico?v=A07XApmMAk">
+    <meta name="msapplication-TileColor" content="#172c3b">
+    <meta name="msapplication-config" content="/themes/custom/crosscut/favicon/browserconfig.xml?v=A07XApmMAk">
+    <meta name="theme-color" content="#172c3b">
+
+        <!--
+    /**
+     * @license
+     * MyFonts Webfont Build ID 3698457, 2019-01-15T16:06:07-0500
+     *
+     * The fonts listed in this notice are subject to the End User License
+     * Agreement(s) entered into by the website owner. All other parties are
+     * explicitly restricted from using the Licensed Webfonts(s).
+     *
+     * You may obtain a valid license at the URLs below.
+     *
+     * Webfont: ProximaNova-BoldIt by Mark Simonson
+     * URL: https://www.myfonts.com/fonts/marksimonson/proxima-nova/bold-it/
+     *
+     * Webfont: ProximaNova-Bold by Mark Simonson
+     * URL: https://www.myfonts.com/fonts/marksimonson/proxima-nova/bold/
+     *
+     * Webfont: ProximaNova-Regular by Mark Simonson
+     * URL: https://www.myfonts.com/fonts/marksimonson/proxima-nova/regular/
+     *
+     * Webfont: ProximaNova-RegularIt by Mark Simonson
+     * URL: https://www.myfonts.com/fonts/marksimonson/proxima-nova/regular-it/
+     *
+     *
+     * License: https://www.myfonts.com/viewlicense?type=web&buildid=3698457
+     * Licensed pageviews: 1,000,000
+     * Webfonts copyright: Copyright (c) Mark Simonson, 2005. All rights reserved.
+     *
+     * © 2019 MyFonts Inc
+    */
+    -->
+
+		<link rel="stylesheet" media="all" href="/sites/default/files/css/css_bIK5GbuwCWCX0SO0zmBAAIrVG4MEgo755oQ8yRJ95Dc.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_zpqRFeYwJZXTrM3RRuXG7jiPCF4vZKlYks3DdZZ6SSI.css" />
+<link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Lora:400,400i,700,700i|Roboto+Slab:400,700|Roboto:400,400i,700&amp;display=swap" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_k74BvM3sXsEdBiz4dyzrEIXj5VN-EWsDancm0SK4wRY.css" />
+
+		<script src="//securepubads.g.doubleclick.net/tag/js/gpt.js" async></script>
+
+        <script>
+      window.googletag = window.googletag || {cmd: []};
+    </script>
+	</head>
+  <body  class="no-sidebar path-node js-path-node __15-08-announcing-the-nominees-for-crosscuts-3rd-annual-courage-awards page-node-type-article page-node-35927">
+		<a id="page-top" href="#main-content" class="visually-hidden focusable skip-to-content-link">
+			Skip to main content
+		</a>
+
+        <script type="application/javascript">
+      var ezt = ezt || [];
+      (function(){
+        var elem = document.createElement('script');
+        elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://pixel") + ".quantserve.com/aquant.js?a=p-a2EEpzn47yTDS";
+        elem.async = true;
+        elem.type = "text/javascript";
+        var scpt = document.getElementsByTagName('script')[0];
+        scpt.parentNode.insertBefore(elem,scpt);
+      }());
+      ezt.push({qacct: 'p-a2EEpzn47yTDS',
+        orderid: '',
+        revenue: ''
+      });
+    </script>
+    <noscript aria-hidden="true"><img alt="Quantcast" border="0" height="1" src="//pixel.quantserve.com/pixel/p-a2EEpzn47yTDS.gif?labels=_fp.event.Default" style="display: none;" width="1" /></noscript>
+
+        <script type="application/javascript">
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window,document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '123516855160140');
+      fbq('track', 'PageView');
+    </script>
+    <noscript aria-hidden="true"><img height="1" width="1" src="https://www.facebook.com/tr?id=123516855160140&ev=PageView&noscript=1"/></noscript>
+
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NL5QH48" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+
+
+
+
+
+<div class="layout-container">
+  
+  <div class="pagetop js-pagetop">
+          <div data-drupal-messages-fallback class="hidden"></div>
+
+      </div>
+
+
+  <header class="header clearfix js-header" role="banner">
+    
+    <div class="header-region">
+    <div class="header-content container">
+      <div class="row">
+        <div id="block-crosscut-branding" class="block-crosscut-branding">
+	
+							<div class="site-name">
+				<div class="logo">
+					<a href="/" title="Crosscut" rel="home" class="site-logo">
+						<img class="" src="/themes/custom/crosscut/logo_crosscut_2019.png" alt="Home" />
+					</a>
+				</div>
+				<a href="/" title="Home" rel="home" class="visually-hidden" aria-hidden="true" tabindex="-1">Crosscut</a>
+			</div>
+				
+</div>
+<div id="block-megamainmenu" class="block-megamainmenu block">
+	<div class="block-outer">
+		<div class="block-inner">
+			
+			
+							
+              <ul id="mega-main-menu" class="mega-main-menu hidden-xs hidden-sm d-none d-lg-flex" >
+                    <li class="mega-link-item link-1">
+                                <div class="mobile-item-wrapper d-lg-none">
+                <a href="/politics" data-drupal-link-system-path="taxonomy/term/1">Politics</a>
+              </div>
+              <div class="d-none d-lg-block">
+                                  <a class="mega-link-item__link collapsed" id="mega-toggle-1" href="/politics" onclick="return false;" role="button" data-toggle="collapse" data-target="#mega-drop-1" aria-expanded="false" aria-controls="mega-drop-1">
+                    Politics
+                  </a>
+                              </div>
+                  
+                          <div id="mega-drop-1" class="mega-dropdown collapse multi-collapse" aria-labelledby="mega-toggle-1">
+            <div class="collapse-pad-wrap">
+              
+
+
+
+
+
+
+<div class="row colossal-menu-link__container">
+      <div class="col-lg-7 colossal-menu__top-story">
+      
+            <div class="field field--name-field-top-story field--type-viewsreference field--label-hidden field--item">
+  <div class="views-element-container form-group"><div class="view-name-main-menu-top-story js-view-dom-id-ce70f1cd8ff4241e16e280360fb2863edf8e45623d7907edfe18e23ace3f6f67">
+  
+  
+  
+
+      <header>
+      <span>Top Story</span>
+    </header>
+  
+  
+  
+
+    
+  <div class="views-row">
+    
+
+
+
+
+
+
+
+
+
+
+
+<article role="article" class="teaser teaser--2col teaser--view-mode--menu-teaser article-node article-node--menu-teaser">
+
+  <div class="row teaser__row">
+    <div  class="teaser__col col-md-5">
+      <div class="teaser__img-wrap img-icon-wrap">
+                <a  href="/politics/2023/02/all-former-wa-prisoners-can-now-vote-so-far-few-have" title="All former WA prisoners can now vote. So far, few have" target="_self" tabindex="-1">
+
+                                    
+            <div class="field field--name-field-hero-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/default/files/styles/three_two_450x300/public/images/articles/voting_as_hero.jpg?h=41f55a5b&amp;itok=aGOYSFO-" width="450" height="300" alt="Profile of Cyril Walrond" />
+
+
+</div>
+      
+                      
+                                
+        </a>
+      </div>
+    </div>
+    <div  class="teaser__col col-md-7">
+      <div class="teaser__text-wrap">
+
+        
+                  
+          <h3  class="teaser__title">
+            <a  href="/politics/2023/02/all-former-wa-prisoners-can-now-vote-so-far-few-have" title="All former WA prisoners can now vote. So far, few have" target="_self" rel="bookmark3">
+              
+<span>All former WA prisoners can now vote. So far, few have</span>
+
+            </a>
+          </h3>
+          
+        
+        <div class="teaser__text">
+          
+    <div class="teaser__metadata">
+      <span
+          class="authored-by">by 
+      <ul class="field_author list-unstyled inline">
+              <li><a href="/author/brandon-block" hreflang="en">Brandon Block</a></li>
+          </ul>
+   </span>
+      <span class="separator-slant separator--slant"> / </span>
+      <span class="published-date">February 13, 2023</span>
+    </div>
+
+              </div>
+      </div>
+    </div>
+  </div>
+
+</article>
+
+  </div>
+
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+</div>
+      
+      <div class="colossal-menu-link__extra_links">
+        
+      <div class="field field--name-field-category-link field--type-link field--label-hidden field--item">
+      <a class="btn btn-primary" href="/politics">All Politics</a>
+    </div>
+  
+        
+      </div>
+    </div>
+        <div class="col-lg-5 colossal-menu__menu__latest">
+      
+            <div class="field field--name-field-latest field--type-viewsreference field--label-hidden field--item">
+  <div class="views-element-container form-group"><div class="field--name-field-latest view-name-main-menu-latest js-view-dom-id-c803abcf02cb0826219257e7dbf2079d5bb8c55c73a491a5723d2e880be64ace">
+  
+  
+  
+
+      <header>
+      <span>Latest</span>
+    </header>
+  
+  
+  
+
+    
+  <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/politics/2023/02/wa-bill-would-lower-legal-driving-limit-05-bac" hreflang="en">A WA bill would lower the legal driving limit to .05% BAC</a></span></div>
+  </div>
+  
+  <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/politics/2023/02/haphazard-and-unorganized-gop-lawmakers-react-dems-secrecy" hreflang="en">‘Haphazard and unorganized’: GOP lawmakers react to Dems’ secrecy</a></span></div>
+  </div>
+  
+  <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/politics/2023/02/whats-redacted-records-hidden-wa-democrats" hreflang="en">What’s in the redacted records hidden by WA Democrats?</a></span></div>
+  </div>
+
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+</div>
+      
+    </div>
+  </div>
+
+
+                          </div>
+          </div>
+        
+      </li>
+                <li class="mega-link-item link-3">
+                                <div class="mobile-item-wrapper d-lg-none">
+                <a href="/culture" data-drupal-link-system-path="taxonomy/term/3">Culture</a>
+              </div>
+              <div class="d-none d-lg-block">
+                                  <a class="mega-link-item__link collapsed" id="mega-toggle-3" href="/culture" onclick="return false;" role="button" data-toggle="collapse" data-target="#mega-drop-3" aria-expanded="false" aria-controls="mega-drop-3">
+                    Culture
+                  </a>
+                              </div>
+                  
+                          <div id="mega-drop-3" class="mega-dropdown collapse multi-collapse" aria-labelledby="mega-toggle-3">
+            <div class="collapse-pad-wrap">
+              
+
+
+
+
+
+
+<div class="row colossal-menu-link__container">
+      <div class="col-lg-7 colossal-menu__top-story">
+      
+            <div class="field field--name-field-top-story field--type-viewsreference field--label-hidden field--item">
+  <div class="views-element-container form-group"><div class="view-name-main-menu-top-story js-view-dom-id-eed748d3b04d3cad53f9c29e827faa963631df23870fd8962abfb8acb0f486eb">
+  
+  
+  
+
+      <header>
+      <span>Top Story</span>
+    </header>
+  
+  
+  
+
+    
+  <div class="views-row">
+    
+
+
+
+
+
+
+
+
+
+
+
+<article role="article" class="teaser teaser--2col teaser--view-mode--menu-teaser article-node article-node--menu-teaser">
+
+  <div class="row teaser__row">
+    <div  class="teaser__col col-md-5">
+      <div class="teaser__img-wrap img-icon-wrap">
+                <a  href="/culture/2023/02/things-do-seattle-feb-15-22" title="Things to do in Seattle: Feb. 15-22" target="_self" tabindex="-1">
+
+                                    
+            <div class="field field--name-field-hero-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/default/files/styles/three_two_450x300/public/images/articles/04.jpg?h=ac778ff2&amp;itok=Gm0uPzIc" width="450" height="300" alt="A group of drummers is standing on a stage as they perform" />
+
+
+</div>
+      
+                      
+                                
+        </a>
+      </div>
+    </div>
+    <div  class="teaser__col col-md-7">
+      <div class="teaser__text-wrap">
+
+        
+                  
+          <h3  class="teaser__title">
+            <a  href="/culture/2023/02/things-do-seattle-feb-15-22" title="Things to do in Seattle: Feb. 15-22" target="_self" rel="bookmark3">
+              
+<span>Things to do in Seattle: Feb. 15-22</span>
+
+            </a>
+          </h3>
+          
+        
+        <div class="teaser__text">
+          
+    <div class="teaser__metadata">
+      <span
+          class="authored-by">by 
+      <ul class="field_author list-unstyled inline">
+              <li><a href="/author/margo-vansynghel" hreflang="en">Margo Vansynghel</a><span class="comma"> &amp;</span></li>
+              <li><a href="/author/brangien-davis" hreflang="en">Brangien Davis</a><span class="comma"> &amp;</span></li>
+              <li><a href="/author/gavin-borchert" hreflang="en">Gavin Borchert</a></li>
+          </ul>
+   </span>
+      <span class="separator-slant separator--slant"> / </span>
+      <span class="published-date">February 15, 2023</span>
+    </div>
+
+              </div>
+      </div>
+    </div>
+  </div>
+
+</article>
+
+  </div>
+
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+</div>
+      
+      <div class="colossal-menu-link__extra_links">
+        
+      <div class="field field--name-field-category-link field--type-link field--label-hidden field--item">
+      <a class="btn btn-primary" href="/culture">All Culture</a>
+    </div>
+  
+        
+      </div>
+    </div>
+        <div class="col-lg-5 colossal-menu__menu__latest">
+      
+            <div class="field field--name-field-latest field--type-viewsreference field--label-hidden field--item">
+  <div class="views-element-container form-group"><div class="field--name-field-latest view-name-main-menu-latest js-view-dom-id-96dca3055ba26f7199575d5164b831f1a7946f1bd6c6b858d0c6c7a115d5db26">
+  
+  
+  
+
+      <header>
+      <span>Latest</span>
+    </header>
+  
+  
+  
+
+    
+  <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/culture/2023/02/pacific-science-center-plans-transform-its-iconic-pools" hreflang="en">Pacific Science Center plans to transform its iconic pools</a></span></div>
+  </div>
+  
+  <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/culture/2023/02/artsea-seattles-new-civic-poet-wants-see-poems-all-over-city" hreflang="en">ArtSEA: Seattle’s new Civic Poet wants to see poems all over the city</a></span></div>
+  </div>
+  
+  <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/culture/2023/02/revived-1964-broadway-play-has-message-seattle-liberals" hreflang="en">A revived 1964 Broadway play has a message for Seattle liberals</a></span></div>
+  </div>
+
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+</div>
+      
+    </div>
+  </div>
+
+
+                          </div>
+          </div>
+        
+      </li>
+                <li class="mega-link-item link-5">
+                                <div class="mobile-item-wrapper d-lg-none">
+                <a href="/equity" data-drupal-link-system-path="taxonomy/term/5">Equity</a>
+              </div>
+              <div class="d-none d-lg-block">
+                                  <a class="mega-link-item__link collapsed" id="mega-toggle-5" href="/equity" onclick="return false;" role="button" data-toggle="collapse" data-target="#mega-drop-5" aria-expanded="false" aria-controls="mega-drop-5">
+                    Equity
+                  </a>
+                              </div>
+                  
+                          <div id="mega-drop-5" class="mega-dropdown collapse multi-collapse" aria-labelledby="mega-toggle-5">
+            <div class="collapse-pad-wrap">
+              
+
+
+
+
+
+
+<div class="row colossal-menu-link__container">
+      <div class="col-lg-7 colossal-menu__top-story">
+      
+            <div class="field field--name-field-top-story field--type-viewsreference field--label-hidden field--item">
+  <div class="views-element-container form-group"><div class="view-name-main-menu-top-story js-view-dom-id-6239f6bcbcc01d1bfeb95e31c089c80238404cedf1e552f43b474b7c07d09a9b">
+  
+  
+  
+
+      <header>
+      <span>Top Story</span>
+    </header>
+  
+  
+  
+
+    
+  <div class="views-row">
+    
+
+
+
+
+
+
+
+
+
+
+
+<article role="article" class="teaser teaser--2col teaser--view-mode--menu-teaser article-node article-node--menu-teaser">
+
+  <div class="row teaser__row">
+    <div  class="teaser__col col-md-5">
+      <div class="teaser__img-wrap img-icon-wrap">
+                <a  href="/podcast/out-back/1/10/podcast-teaching-kids-color-love-outdoors" title="Podcast | Teaching kids of color to love the outdoors" target="_self" tabindex="-1">
+
+                                    
+            <div class="field field--name-field-hero-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/default/files/styles/three_two_450x300/public/images/articles/chelsea_alison_outside_interview.jpg?h=d1cb525d&amp;itok=hW1T60Io" width="450" height="300" alt="Two women sitting with two children in the forest" />
+
+
+</div>
+      
+                      
+                                
+        </a>
+      </div>
+    </div>
+    <div  class="teaser__col col-md-7">
+      <div class="teaser__text-wrap">
+
+        
+                  
+          <h3  class="teaser__title">
+            <a  href="/podcast/out-back/1/10/podcast-teaching-kids-color-love-outdoors" title="Podcast | Teaching kids of color to love the outdoors" target="_self" rel="bookmark3">
+              
+<span>Podcast | Teaching kids of color to love the outdoors</span>
+
+            </a>
+          </h3>
+          
+        
+        <div class="teaser__text">
+          
+    <div class="teaser__metadata">
+      <span
+          class="authored-by">by 
+      <ul class="field_author list-unstyled inline">
+              <li><a href="/author/alison-mariella-desir" hreflang="en">Alison Mariella Désir</a></li>
+          </ul>
+   </span>
+      <span class="separator-slant separator--slant"> / </span>
+      <span class="published-date">February 7, 2023</span>
+    </div>
+
+              </div>
+      </div>
+    </div>
+  </div>
+
+</article>
+
+  </div>
+
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+</div>
+      
+      <div class="colossal-menu-link__extra_links">
+        
+      <div class="field field--name-field-category-link field--type-link field--label-hidden field--item">
+      <a class="btn btn-primary" href="/equity">All Equity</a>
+    </div>
+  
+        
+      </div>
+    </div>
+        <div class="col-lg-5 colossal-menu__menu__latest">
+      
+            <div class="field field--name-field-latest field--type-viewsreference field--label-hidden field--item">
+  <div class="views-element-container form-group"><div class="field--name-field-latest view-name-main-menu-latest js-view-dom-id-f6e0b25122b88b82493e826e99a164d74f2d94d710dc6a80cde34e98e5274b2b">
+  
+  
+  
+
+      <header>
+      <span>Latest</span>
+    </header>
+  
+  
+  
+
+    
+  <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/equity/2023/01/out-back-how-denice-rochelle-encourages-outdoor-skill-building" hreflang="en">Out &amp; Back: How Denice Rochelle encourages outdoor skill-building</a></span></div>
+  </div>
+  
+  <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/equity/2023/01/out-back-hooked-fishing-black-stonefly" hreflang="en">Out &amp; Back: Hooked on fishing with The Black Stonefly</a></span></div>
+  </div>
+  
+  <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/equity/2023/01/out-back-portland-club-counters-racism-runnings-hometown" hreflang="en">Out &amp; Back: A Portland club counters the racism of running’s hometown</a></span></div>
+  </div>
+
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+</div>
+      
+    </div>
+  </div>
+
+
+                          </div>
+          </div>
+        
+      </li>
+                <li class="mega-link-item link-7">
+                                <div class="mobile-item-wrapper d-lg-none">
+                <a href="/environment" data-drupal-link-system-path="taxonomy/term/7">Environment</a>
+              </div>
+              <div class="d-none d-lg-block">
+                                  <a class="mega-link-item__link collapsed" id="mega-toggle-7" href="/environment" onclick="return false;" role="button" data-toggle="collapse" data-target="#mega-drop-7" aria-expanded="false" aria-controls="mega-drop-7">
+                    Environment
+                  </a>
+                              </div>
+                  
+                          <div id="mega-drop-7" class="mega-dropdown collapse multi-collapse" aria-labelledby="mega-toggle-7">
+            <div class="collapse-pad-wrap">
+              
+
+
+
+
+
+
+<div class="row colossal-menu-link__container">
+      <div class="col-lg-7 colossal-menu__top-story">
+      
+            <div class="field field--name-field-top-story field--type-viewsreference field--label-hidden field--item">
+  <div class="views-element-container form-group"><div class="view-name-main-menu-top-story js-view-dom-id-90dc05d53feab6ae393c7aff0121001f8cab9316ffaeb6dbf4fc3ff3b3a2cb64">
+  
+  
+  
+
+      <header>
+      <span>Top Story</span>
+    </header>
+  
+  
+  
+
+    
+  <div class="views-row">
+    
+
+
+
+
+
+
+
+
+
+
+
+<article role="article" class="teaser teaser--2col teaser--view-mode--menu-teaser article-node article-node--menu-teaser">
+
+  <div class="row teaser__row">
+    <div  class="teaser__col col-md-5">
+      <div class="teaser__img-wrap img-icon-wrap">
+                <a  href="/environment/2023/02/human-elements-vancouver-island-marmots-return-wild" title="Human Elements: Vancouver Island marmots return to the wild" target="_self" tabindex="-1">
+
+                                    
+            <div class="field field--name-field-teaser-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/default/files/styles/three_two_450x300/public/images/articles/he_s3_stills_selects_012.jpg?h=b6eadef1&amp;itok=-8Yka1yp" width="450" height="300" alt="A marmot coming out of burrow with grass around him" />
+
+
+</div>
+      
+                      
+                                
+        </a>
+      </div>
+    </div>
+    <div  class="teaser__col col-md-7">
+      <div class="teaser__text-wrap">
+
+        
+                  
+          <h3  class="teaser__title">
+            <a  href="/environment/2023/02/human-elements-vancouver-island-marmots-return-wild" title="Human Elements: Vancouver Island marmots return to the wild" target="_self" rel="bookmark3">
+              
+<span>Human Elements: Vancouver Island marmots return to the wild</span>
+
+            </a>
+          </h3>
+          
+        
+        <div class="teaser__text">
+          
+    <div class="teaser__metadata">
+      <span
+          class="authored-by">by 
+      <ul class="field_author list-unstyled inline">
+              <li><a href="/author/sarah-hoffman" hreflang="en">Sarah Hoffman</a></li>
+          </ul>
+   </span>
+      <span class="separator-slant separator--slant"> / </span>
+      <span class="published-date">February 10, 2023</span>
+    </div>
+
+              </div>
+      </div>
+    </div>
+  </div>
+
+</article>
+
+  </div>
+
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+</div>
+      
+      <div class="colossal-menu-link__extra_links">
+        
+      <div class="field field--name-field-category-link field--type-link field--label-hidden field--item">
+      <a class="btn btn-primary" href="/environment">All Environment</a>
+    </div>
+  
+        
+      </div>
+    </div>
+        <div class="col-lg-5 colossal-menu__menu__latest">
+      
+            <div class="field field--name-field-latest field--type-viewsreference field--label-hidden field--item">
+  <div class="views-element-container form-group"><div class="field--name-field-latest view-name-main-menu-latest js-view-dom-id-1c02404b25f8a2c9e96a3e7c0463d070e89bac7d43871791c79ae337b46f7af2">
+  
+  
+  
+
+      <header>
+      <span>Latest</span>
+    </header>
+  
+  
+  
+
+    
+  <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/environment/2023/02/grant-dollars-are-seeding-urban-forestry-push-washington" hreflang="en">Grant dollars are seeding the urban forestry push in Washington</a></span></div>
+  </div>
+  
+  <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/environment/2023/02/wa-cranberry-farmer-trying-turn-tides-washaway-beach" hreflang="en">The WA cranberry farmer trying to turn the tides of Washaway Beach</a></span></div>
+  </div>
+  
+  <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/environment/2023/01/fawn-sharp-indigenous-input-key-tackling-climate-change" hreflang="en">Fawn Sharp: Indigenous input is key to tackling climate change</a></span></div>
+  </div>
+
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+</div>
+      
+    </div>
+  </div>
+
+
+                          </div>
+          </div>
+        
+      </li>
+                <li class="mega-link-item link-26">
+                                <div class="mobile-item-wrapper d-lg-none">
+                <a href="/video" data-drupal-link-system-path="taxonomy/term/89">Video</a>
+              </div>
+              <div class="d-none d-lg-block">
+                                  <a class="mega-link-item__link collapsed" id="mega-toggle-26" href="/video" onclick="return false;" role="button" data-toggle="collapse" data-target="#mega-drop-26" aria-expanded="false" aria-controls="mega-drop-26">
+                    Video
+                  </a>
+                              </div>
+                  
+                          <div id="mega-drop-26" class="mega-dropdown collapse multi-collapse" aria-labelledby="mega-toggle-26">
+            <div class="collapse-pad-wrap">
+              
+
+
+
+
+
+
+<div class="row colossal-menu-link__container">
+      <div class="col-lg-7 colossal-menu__top-story">
+      
+            <div class="field field--name-field-top-story field--type-viewsreference field--label-hidden field--item">
+  <div class="views-element-container form-group"><div class="view-name-main-menu-top-story js-view-dom-id-9b563a47c3e6c4e0f3a5e102c6a3ca17626a4a2d442eab549b0f6245cf8dad36">
+  
+  
+  
+
+      <header>
+      <span>Latest Video</span>
+    </header>
+  
+  
+  
+
+    
+  <div class="views-row">
+    
+
+
+
+
+
+
+
+
+
+
+<article role="article" class="teaser teaser--2col teaser--view-mode--menu-teaser video-node video-node--menu-teaser">
+
+  <div class="row teaser__row">
+    <div  class="teaser__col col-md-5">
+      <div class="teaser__img-wrap img-icon-wrap">
+                <a  href="/video/human-elements/veterinarian" title="The Veterinarian" target="_self" tabindex="-1">
+
+                                    
+            <div class="field field--name-field-teaser-image field--type-image field--label-hidden field--item">  <a href="/video/human-elements/veterinarian" title="/video/human-elements/veterinarian"><img loading="lazy" src="/sites/default/files/styles/three_two_450x300/public/2023-02/73qfGL3-asset-mezzanine-16x9-EO405dT.jpeg?h=c74750f6&amp;itok=seNZMRZ6" width="450" height="300" alt="Still from The Veterinarian" />
+
+</a>
+</div>
+      
+                      
+                                
+        </a>
+      </div>
+    </div>
+    <div  class="teaser__col col-md-7">
+      <div class="teaser__text-wrap">
+
+                  <div class="teaser__eyebrow">
+            
+            <div class="field field--name-field-series field--type-entity-reference field--label-hidden field--item"><a href="/video/human-elements" hreflang="en">Human Elements</a></div>
+      
+          </div>
+        
+                  
+          <h3  class="teaser__title">
+            <a  href="/video/human-elements/veterinarian" title="The Veterinarian" target="_self" rel="bookmark3">
+              
+<span>The Veterinarian</span>
+
+            </a>
+          </h3>
+          
+        
+        <div class="teaser__text">
+          
+    <div class="teaser__metadata">
+              <span>
+  <div class="field field--name-field-season field--type-integer field--label-inline">
+    <div class="field--label"><span>Season</span></div>
+              <div class="field--item">3</div>
+          </div>
+</span>
+        <span class="separator--slant">/</span>
+                    <span>
+  <div class="field field--name-field-episode field--type-integer field--label-inline">
+    <div class="field--label"><span>Episode</span></div>
+              <div class="field--item">1</div>
+          </div>
+</span>
+        <span class="separator--slant">/</span>
+            <span>
+            <div class="field field--name-field-video-duration field--type-duration field--label-hidden field--item">8 min 10 s</div>
+      </span>
+    </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+</article>
+
+
+  </div>
+
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+</div>
+      
+      <div class="colossal-menu-link__extra_links">
+        
+      <div class="field field--name-field-category-link field--type-link field--label-hidden field--item">
+      <a class="btn btn-primary" href="/video">All Video</a>
+    </div>
+  
+        
+      </div>
+    </div>
+        <div class="col-lg-5 colossal-menu__menu__latest">
+      
+            <div class="field field--name-field-latest field--type-viewsreference field--label-hidden field--item">
+  <div class="views-element-container form-group"><div class="field--name-field-latest view-name-main-menu-latest js-view-dom-id-3cc3eff9b49ccac28fd8f7565f958d7421c010f6e8fcae50ed54dbe40b10d47e">
+  
+  
+  
+
+      <header>
+      <span>More</span>
+    </header>
+  
+  
+  
+
+    
+  <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/video/out-back-alison-mariella-desir/expedition-reclamation" hreflang="en">Expedition Reclamation</a></span></div>
+  </div>
+  
+  <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/video/out-back-alison-mariella-desir/rewriting-narrative" hreflang="en">Rewriting the Narrative</a></span></div>
+  </div>
+  
+  <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/video/out-back-alison-mariella-desir/breaking-barriers" hreflang="en">Breaking Barriers</a></span></div>
+  </div>
+
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+</div>
+      
+    </div>
+  </div>
+
+
+                          </div>
+          </div>
+        
+      </li>
+        </ul>
+  
+
+
+
+			
+			
+		</div>
+	</div>
+</div>
+
+
+
+<nav role="navigation"
+     aria-labelledby="block-secondarynav-menu" id="block-secondarynav" class="block-secondarynav collapse js-secondary-nav">
+            
+  <h2 class="visually-hidden" id="block-secondarynav-menu">Secondary Nav</h2>
+        <div id="mobile-wrap" class="d-lg-none secondary-nav-mobile block-secondarynav__inner">
+      <div class="secondary-nav-mobile__container">
+        <div class="secondary-nav-mobile__row secondary-nav-mobile__row--first">
+          <div class="secondary-nav-mobile__col">
+            <ul class="buttons"></ul>
+          </div>
+        </div>
+        <div class="secondary-nav-mobile__row secondary-nav-mobile__row--second">
+          <div class="secondary-nav-mobile__col col-auto">
+            <ul class="social"></ul>
+          </div>
+          <div class="secondary-nav-mobile__col col-auto">
+            <ul class="account-mgmnt"></ul>
+          </div>
+        </div>
+        <div class="secondary-nav-mobile__row secondary-nav-mobile__row--third">
+          <div class="secondary-nav-mobile__col col-6">
+            <div class="secondary-nav-mobile__primary-menu">
+              
+              <ul class="menu clearfix">
+        
+            	            <li class="parent-menu-0 link-number-1 menu-item">
+                          <a href="/politics" data-drupal-link-system-path="taxonomy/term/1">Politics</a>
+              </li>
+        	            <li class="parent-menu-0 link-number-2 menu-item">
+                          <a href="/culture" data-drupal-link-system-path="taxonomy/term/3">Culture</a>
+              </li>
+        	            <li class="parent-menu-0 link-number-3 menu-item">
+                          <a href="/equity" data-drupal-link-system-path="taxonomy/term/5">Equity</a>
+              </li>
+        	            <li class="parent-menu-0 link-number-4 menu-item">
+                          <a href="/environment" data-drupal-link-system-path="taxonomy/term/7">Environment</a>
+              </li>
+        	            <li class="parent-menu-0 link-number-5 menu-item">
+                          <a href="/search" data-drupal-link-system-path="search">Search</a>
+              </li>
+    
+
+        	    
+  
+
+
+            </div>
+          </div>
+          <div class="secondary-nav-mobile__col col-6">
+            <div class="secondary-nav-mobile__secondary-menu">
+              
+						<ul>
+
+		
+											<li class="parent-menu-0 my-account">
+				<a href="/my-account" class="user-account" data-drupal-link-system-path="my-account">Member Log In</a>
+							</li>
+											<li class="parent-menu-0 newsletters">
+				<a href="/newsletters" class="btn btn-secondary btn btn-secondary btn btn-secondary btn btn-secondary" data-drupal-link-system-path="node/55236">Newsletters</a>
+							</li>
+											<li class="parent-menu-0 donate">
+				<a href="/donate" target="_blank" class="btn btn-primary d-lg-none btn btn-primary d-lg-none" data-drupal-link-system-path="node/67696">Donate</a>
+							</li>
+											<li class="parent-menu-0 http:www.facebook.comcrosscut">
+				<a href="http://www.facebook.com/crosscut" class="ico ico-facebook clearfix" target="_blank" title="facebook.com/crosscut">Facebook</a>
+							</li>
+											<li class="parent-menu-0 http:twitter.comcrosscut">
+				<a href="http://twitter.com/crosscut" class="ico ico-twitter" target="_blank" title="twitter.com/crosscut">Twitter</a>
+							</li>
+											<li class="parent-menu-0 https:www.instagram.comcrosscut">
+				<a href="https://www.instagram.com/crosscut/" class="ico ico-instagram" target="_blank" title="instagram.com/crosscut">Instagram</a>
+							</li>
+											<li class="parent-menu-0 news">
+				<a href="/news" target="_self" class="strong clearfix strong clearfix" data-drupal-link-system-path="taxonomy/term/226">News</a>
+							</li>
+											<li class="parent-menu-0 focus">
+				<a href="/focus" class="strong clearfix" target="_self" data-drupal-link-system-path="node/62876">Focus</a>
+							</li>
+											<li class="parent-menu-0 video">
+				<a href="/video" target="_self" class="strong" data-drupal-link-system-path="taxonomy/term/89">Video</a>
+							</li>
+											<li class="parent-menu-0 podcasts">
+				<a href="/podcasts" class="strong hr" title="Crosscut Podcasts" data-drupal-link-system-path="node/61306">Podcasts</a>
+							</li>
+											<li class="parent-menu-0 WA-Recovery-Watch">
+				<a href="/WA-Recovery-Watch" data-drupal-link-system-path="node/79296">WA Recovery Watch</a>
+							</li>
+											<li class="parent-menu-0 origins">
+				<a href="/origins" data-drupal-link-system-path="node/86666">Crosscut Origins</a>
+							</li>
+											<li class="parent-menu-0 https:blackartslegacies.crosscut.com">
+				<a href="https://blackartslegacies.crosscut.com/">Black Arts Legacies</a>
+							</li>
+											<li class="parent-menu-0 festival">
+				<a href="/festival" data-drupal-link-system-path="node/77826">Crosscut Festival</a>
+							</li>
+											<li class="parent-menu-0 events">
+				<a href="/events" data-drupal-link-system-path="node/40117">Events</a>
+							</li>
+											<li class="parent-menu-0 about">
+				<a href="/about" data-drupal-link-system-path="node/51857">About</a>
+							</li>
+											<li class="parent-menu-0 https:www.cascadepublicmedia.orgcapital-campaign">
+				<a href="https://www.cascadepublicmedia.org/capital-campaign">Capital Campaign</a>
+							</li>
+											<li class="parent-menu-0 careers">
+				<a href="/careers">Careers</a>
+							</li>
+											<li class="parent-menu-0 advertise-crosscut">
+				<a href="/advertise-crosscut" data-drupal-link-system-path="node/35">Advertising</a>
+							</li>
+											<li class="parent-menu-0 contact-us">
+				<a href="/contact-us" data-drupal-link-system-path="node/33">Contact</a>
+							</li>
+		
+		</ul>
+	
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="desktop-wrap" class="d-none d-lg-block secondary-nav-desktop block-secondarynav__inner">
+      <div class="secondary-nav-desktop__container container">
+        
+						<ul>
+
+		
+											<li class="parent-menu-0 my-account">
+				<a href="/my-account" class="user-account" data-drupal-link-system-path="my-account">Member Log In</a>
+							</li>
+											<li class="parent-menu-0 newsletters">
+				<a href="/newsletters" class="btn btn-secondary btn btn-secondary btn btn-secondary btn btn-secondary" data-drupal-link-system-path="node/55236">Newsletters</a>
+							</li>
+											<li class="parent-menu-0 donate">
+				<a href="/donate" target="_blank" class="btn btn-primary d-lg-none btn btn-primary d-lg-none" data-drupal-link-system-path="node/67696">Donate</a>
+							</li>
+											<li class="parent-menu-0 http:www.facebook.comcrosscut">
+				<a href="http://www.facebook.com/crosscut" class="ico ico-facebook clearfix" target="_blank" title="facebook.com/crosscut">Facebook</a>
+							</li>
+											<li class="parent-menu-0 http:twitter.comcrosscut">
+				<a href="http://twitter.com/crosscut" class="ico ico-twitter" target="_blank" title="twitter.com/crosscut">Twitter</a>
+							</li>
+											<li class="parent-menu-0 https:www.instagram.comcrosscut">
+				<a href="https://www.instagram.com/crosscut/" class="ico ico-instagram" target="_blank" title="instagram.com/crosscut">Instagram</a>
+							</li>
+											<li class="parent-menu-0 news">
+				<a href="/news" target="_self" class="strong clearfix strong clearfix" data-drupal-link-system-path="taxonomy/term/226">News</a>
+							</li>
+											<li class="parent-menu-0 focus">
+				<a href="/focus" class="strong clearfix" target="_self" data-drupal-link-system-path="node/62876">Focus</a>
+							</li>
+											<li class="parent-menu-0 video">
+				<a href="/video" target="_self" class="strong" data-drupal-link-system-path="taxonomy/term/89">Video</a>
+							</li>
+											<li class="parent-menu-0 podcasts">
+				<a href="/podcasts" class="strong hr" title="Crosscut Podcasts" data-drupal-link-system-path="node/61306">Podcasts</a>
+							</li>
+											<li class="parent-menu-0 WA-Recovery-Watch">
+				<a href="/WA-Recovery-Watch" data-drupal-link-system-path="node/79296">WA Recovery Watch</a>
+							</li>
+											<li class="parent-menu-0 origins">
+				<a href="/origins" data-drupal-link-system-path="node/86666">Crosscut Origins</a>
+							</li>
+											<li class="parent-menu-0 https:blackartslegacies.crosscut.com">
+				<a href="https://blackartslegacies.crosscut.com/">Black Arts Legacies</a>
+							</li>
+											<li class="parent-menu-0 festival">
+				<a href="/festival" data-drupal-link-system-path="node/77826">Crosscut Festival</a>
+							</li>
+											<li class="parent-menu-0 events">
+				<a href="/events" data-drupal-link-system-path="node/40117">Events</a>
+							</li>
+											<li class="parent-menu-0 about">
+				<a href="/about" data-drupal-link-system-path="node/51857">About</a>
+							</li>
+											<li class="parent-menu-0 https:www.cascadepublicmedia.orgcapital-campaign">
+				<a href="https://www.cascadepublicmedia.org/capital-campaign">Capital Campaign</a>
+							</li>
+											<li class="parent-menu-0 careers">
+				<a href="/careers">Careers</a>
+							</li>
+											<li class="parent-menu-0 advertise-crosscut">
+				<a href="/advertise-crosscut" data-drupal-link-system-path="node/35">Advertising</a>
+							</li>
+											<li class="parent-menu-0 contact-us">
+				<a href="/contact-us" data-drupal-link-system-path="node/33">Contact</a>
+							</li>
+		
+		</ul>
+	
+
+
+      </div>
+    </div>
+    
+</nav>
+<div id="block-header-membership-button" class="block-header-membership-button block">
+	<div class="block-outer">
+		<div class="block-inner">
+			
+			
+							
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><div><a class="btn btn-primary" href="/donate" title="Membership">Membership</a></div>
+</div>
+      
+			
+			
+		</div>
+	</div>
+</div>
+<div class="views-exposed-form bef-exposed-form views-exposed-form-acquia-search-page block-acquia-search-form-header block block-header-search container collapse" id="block-acquia-search-form-header" data-drupal-selector="views-exposed-form-acquia-search-header">
+	<div class="block-outer">
+		<div class="block-inner">
+			
+			
+							<form action="/search" method="get" id="views-exposed-form-acquia-search-header" accept-charset="UTF-8" role="search">
+  <div class="form-group js-form-item form-item js-form-type-textfield form-item-search js-form-item-search">
+      <label for="edit-search">Search</label>
+        <input data-drupal-selector="edit-search" type="text" id="edit-search" name="search" value="" size="30" maxlength="128" class="form-text" />
+
+        </div>
+
+  <div data-drupal-selector="edit-actions" class="form-actions form-group js-form-wrapper form-wrapper"><input data-drupal-selector="edit-submit-acquia-search" type="submit" id="edit-submit-acquia-search" value="Search" class="button js-form-submit form-submit" />
+</div>
+
+
+
+</form>
+
+			
+			
+		</div>
+	</div>
+</div>
+
+
+        <a href="javascript: void(0)" class="search-toggle collapsed" data-toggle="collapse" data-target="#block-acquia-search-form-header"
+           title="Search" role="button">
+          <span class="ico-white ico-mglass"></span>
+        </a>
+        <div class="secondary-menu-toggle collapsed" data-toggle="collapse" data-target="#block-secondarynav">
+          <a class="menu-toggle-ellipsis" href="javascript: void(0)" aria-label="Secondary menu" title="Secondary menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+          
+  <div class="pre-content js-pre-content">
+          <div id="block-membership-banner" class="block-membership-banner block">
+	<div class="block-outer">
+		<div class="block-inner">
+			
+			
+							
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><div><a class="btn btn-primary" href="/donate" title="Membership">Membership</a></div>
+</div>
+      
+			
+			
+		</div>
+	</div>
+</div>
+
+      </div>
+
+      </header>
+
+  
+  
+
+  
+
+  
+
+  <main class="main main-node-type-article main--margin-top " role="main">
+    <a id="main-content" tabindex="-1"></a>    
+    
+    
+    
+    <div class="layout-content-container layout-content-container--padding-top layout-content-container--padding-bottom">
+
+      
+              <div class="">
+
+          
+          <div class="layout-content ">
+            
+  <div class="content js-content">
+          <div id="block-crosscut-content" class="block-crosscut-content block">
+	<div class="block-outer">
+		<div class="block-inner">
+			
+			
+							
+
+  
+
+
+
+
+<article role="article" data-article-id="35927" class="article-node--full js-article-node--full">
+    <div class="js-leaderboard-mobile container"></div>
+  
+    
+  <div class="node-full__hero">
+    <div class="layout-basic-main">
+      <div class="container">
+
+                  
+
+
+
+<div class="social-share__outer d-print-none">
+    <div  class="social-share__wrapper">
+    <h3 class="social-share__wrapper__heading">Share</h3>
+    <div class="social-share js-social-share">
+      <div class="social-share__list">
+        <ul>
+          <li class="ico">
+            <a class="social-share__link ico ico-facebook clearfix fb-share" href="#"
+               onclick="event.preventDefault();" target="_blank"
+               title="Share on Facebook" aria-label="Share content to Facebook"
+            >Share on Facebook</a>
+          </li>
+          <li class="ico">
+            <a class="social-share__link ico ico-twitter twitter-share" href="#"
+               onclick="event.preventDefault();" target="_blank"
+               title="Share on Twitter" aria-label="Share content to Twitter"
+            >Share on Twitter</a>
+          </li>
+          <li class="ico">
+            <a class="social-share__link ico ico-email email-share" href="#"
+               title="Share via E-mail" aria-label="Share content through email"
+            >Share via E-mail</a>
+          </li>
+
+                      <li class="ico">
+              <a class="social-share__link ico ico-print print-share"
+                 href="javascript: window.print();"
+                 title="Print article" aria-label="Print content">Print</a>
+            </li>
+                  </ul>
+      </div>
+
+      
+    </div>
+  </div>
+  </div>
+        
+        
+        
+        <h1>
+<span>Announcing the nominees for Crosscut’s 3rd Annual Courage Awards</span>
+</h1>
+        <div class="node-full__subtitle">
+          
+        </div>
+        <div class="byline">
+                      <span
+                class="authored-by clone-outlet">by 
+      <ul class="field_author list-unstyled inline">
+              <li><a href="/author/crosscut-editors" hreflang="en">Crosscut Editors</a></li>
+          </ul>
+   </span>
+            <span class="separator-slant"> / </span>
+                    <span class="published-date">August 27, 2015</span>
+          
+          
+          
+          
+        </div>
+
+                      
+  
+  <div class="node-full__hero-media ">
+    
+            <div class="blazy blazy--field blazy--field-hero-image blazy--field-hero-image--full field field--name-field-hero-image field--type-image field--label-hidden field--item" data-blazy="">
+
+
+
+  
+
+                <div class="media media--blazy media--bundle--article media--image">  <img class="b-lazy" loading="lazy" src="/themes/custom/crosscut/images/archive_replacement.jpg" alt="Crosscut archive image."/>
+
+        </div>
+        
+  
+</div>
+      
+  </div>
+
+        
+  
+
+              </div>
+
+      
+    </div>
+  </div>
+    <div class="js-leaderboard-desktop container"></div>
+      <div class="article-editor-note">
+      <div class="container">
+        
+      </div>
+    </div>
+    <div class="article-intro">
+    <div class="container">
+      
+    </div>
+  </div>
+  <div class="article-content">
+    
+
+
+<div  class="field field--name-field-article-sections field--type-entity-reference-revisions field--label-hidden container">
+  <div class="row">
+    <div class="col-auto col-md-7 col-xl-auto col-print-12">
+      <section  class="node__content-section node__content-section--main two-col-content-section two-col-content-section--main">
+                                      <div class="field--item">
+            
+  <div class="paragraph--contained paragraph paragraph--type--text-area paragraph--view-mode--standard">
+          
+            <div class="field field--name-field-text-area field--type-text-long field--label-hidden field--item"><p>The nominations are in! Last month, we asked you to tell us about the people in your community who are bravely standing up for what’s right, and pushing us all to think harder about how we can build a better future for our region. You delivered.</p><p>Here are the nominees for Crosscut’s <a href="http://crosscut.com/2015/07/nominations-open-for-crosscuts-3rd-annual-courage-awards/">2015 Courage Awards</a>. Winners will be honored at the third annual Courage Awards breakfast on October 29 at Seattle’s Benaroya Hall. <a href="http://crosscut.com/event/courage-awards/">Tickets (and tables!) are still available.</a> We hope you’ll join us.</p><p><strong>Courage in Public Service</strong></p><p><strong>Kaaren Andrews</strong> — Principal of the Interagency Academy, a network of high schools for troubled teens</p><p><strong>Ross Barnes</strong> — Champion of the use of science based evidence in decision making</p><p><strong>Miriam Barnett</strong> — CEO of YWCA Pierce County, fighting to eliminate racism and empower women</p><p><strong>Jorge L. Barón</strong> — Executive director at the Northwest Immigrant Rights Project</p><p><strong>Yoram Bauman</strong> — Founder of the Carbon Washington initiative, professor at the University of Washington, economist, and comedian</p><p><strong>Alex Becker</strong> — advocacy program manager for the Real Change Homeless Empowerment Project, and co-chair of the Seattle Human Rights Commission.</p><p><strong>Admiral Herbert Bridge</strong> — Naval officer, business magnate, and longtime philanthropist for a number of causes in Seattle and the Puget Sound area</p><p><strong>Ellen Bynum</strong> — Executive Director at Friends of Skagit County</p><p><strong>Dongho Chan</strong>g — Traffic Engineer for the city of Seattle</p><p><strong>Donnie Chin (posthumous</strong>) — Director and founder of the International District Emergency Center, shot in his car in the early morning hours on July 23</p><p><strong>Rep. Judy Clibborn and Sen. Curtis King</strong> — Worked across the aisle to craft and pass state transportation bill</p><p><strong>Desiree Douglass</strong> — President and founder of HeadStrong, and early advocate for safe crosswalks</p><p><strong>Jenny Durkan</strong> — U.S. Attorney for Western Washington from 2009 to 2014, helped win reform for Seattle Police Department</p><p><strong>Joni Earl</strong> — CEO of Sound Transit, led the effort to create a regional mass transit system</p><p><strong>Louisa Edgerly</strong> — Associate scholar at the Center for Local Strategies Research, and adjunct Instructor and Lecturer at Seattle University and University of Washington, helping to unionize contingent faculty</p><p><strong>Megan Ferland</strong> — Executive Director Western Washington Girl Scouts, fighting for the rights of transgender girls</p><p><strong>Priscilla Lisicichi</strong> — Executive Director of Safe Streets, pioneering community policing, drug treatment, and community safety networks</p><p><strong>L. Deon Fields</strong> — Mentor in Youth Violence Intervention with the Austin Foundation, and mentor at Seattle Public Schools</p><p><strong>Rep. Joe Fitzgibbon</strong> — Washington State Representative and advocate for environmental cause</p><p><strong>Kia Franklin</strong> — Partnership director at Equal Opportunity Schools, seeking to advance educational equity and reform</p><p><strong>Faye Garneau</strong> — Businesswoman whose contributions changed the way Seattle holds district elections</p><p><strong>Tom Glade</strong> — President of Evergreen Islands, advocates for a clean environment and quality of life in Skagit County</p><p><strong>Cecile Hansen</strong> — Chair of the Duwamish Tribe since 1975, founder of Duwamish Tribal Services, and longtime champion for federal recognition of the Duwamish people.</p><p><strong>Bruce Harrell</strong> — Seattle city councilmember and chair of the Public Safety, Civil Rights, and Technology Committee</p><p><strong>Monisha Harrell</strong> — Chairperson for Equal Rights Washington</p><p><strong>Nick Hanauer</strong> — Co-founder and partner at Second Avenue Partners, and civic activist for public education</p><p><strong>Hye Kyong Jeong</strong> — Director of Outreach and Advocacy at The Arc of King County</p><p><strong>Marissa Johnson and Mara Willaford</strong> — Black Lives Matter activists who protested Bernie Sanders' Westlake Park rally</p><p><strong>Debora Juarez</strong> — Candidate for Seattle City Council, and twelve-year partner of Williams Kastner in the Chair Tribal Practice Group</p><p><strong>Adrien Leavitt</strong> — Trial attorney with the King County Department of Public Defense, champion of queer issues, and photographer with #1 Must Have</p><p><strong>Christopher Liu</strong> — Executive Director at Washington State Department of Enterprise Services, working to create opportunities for Minority, Women and Veteran owned businesses</p><p><strong>Paulina Lopez</strong> - Community organizer in South Park and member of the Duwamish River Clean Up Coalition</p><p><strong>Nicole Marshall</strong> — Associate director of Impact at City Year</p><p><strong>Vince Matulionis</strong> — Director at United Way of King County and longtime advocate for fighting homelessness</p><p><strong>Lola Peters</strong> — Writer for The Seattle Star and South Seattle Emerald, helping organize against acts of violence as a part of the Black Lives Matter Movement</p><p><strong>Dave and Sue Pope</strong> — Local activists behind the Save the NE 130th Beach campaign</p><p><strong>Heather Powell</strong> — CEO of the Boys and Girls Club of Whatcom County</p><p><strong>Seattle Goodwill</strong> — Nonprofit organization that provides education and employment to individuals in need</p><p><strong>Susan Rooks</strong> — Board member of the City of Anacortes Housing Authority and all-around upstanding citizen</p><p><strong>Paul Shoemaker</strong> — Founding executive director of Social Venture Partners and author of the book, Can’t Not Do</p><p><strong>Marilyn Strickland</strong> — Mayor of Tacoma</p><p><strong>Christoph Strouse</strong> — North Seattle College student and member / leader of many campus sustainability projects, such as solar power</p><p><strong>Kurt Triplett</strong> — City Manager of Kirkland since 2010,  led effort to acquire 6-mile segment of the Eastside Rail Corridor</p><p><strong>Dick Wagner</strong> — Maritime historian of the Pacific Northwest and founder of the Center for Wooden Boats museum</p><p><strong>Washington Firefighters</strong> — Currently battling the largest wildfire in Washington state history</p><p><strong>Rainn Wilson</strong> — Actor from "The Office" (Dwight Schrute) and longtime supporter of the Mona Foundation</p><p><strong>Pam Winney</strong> — Leader of Friends of Forks Animals, dedicated to the health and welfare of animals in Clallam and Jefferson Counties</p><p><strong>John Wolfe</strong> — Port of Tacoma commissioner</p><p><strong>Women of Color for Systemic Change</strong> — Group dedicated to peaceful protests and dialogue aiming to ease tensions between people of color and police</p><p><strong>Courage in Culture</strong></p><p><strong>Jo-Anne Birnie Danzker</strong> — Executive Director of the Frye Art Museum</p><p><strong>Marcus Green</strong> — Editor-in-Chief of the South Seattle Emerald</p><p><strong>Desiree Douglass</strong> — President and founder of HeadStrong, and early advocate for safe crosswalks</p><p><strong>Duwamish Tribe</strong> — Native American tribe, indigenous to Seattle, but denied federal recognition</p><p><strong>Zeke əswəli </strong> — Preserver of the Lushootseed language and culture</p><p><strong>Sam Farrazaino </strong> — Founder of Equinox Studio</p><p><strong>Tia Fields</strong> — Vice prinicipal at Garfield High School and spoken word artist</p><p><strong>Melinda Fox</strong> — Co-founder and CEO of Echo Media Mobile S.P.C.</p><p><strong>Wyking Garrett</strong> — Founding director of Umoja P.E.A.C.E. Center and key member of AfricaTown</p><p><strong>Rev LaVerne Hall</strong> — Associate minister of Mount Zion Baptist Church and legacy life member of the National Council of Negro Women</p><p><strong>Wier Harman</strong> — Executive director of Town Hall Seattle</p><p><strong>Cecile Hansen</strong> — Chair of the Duwamish Tribe since 1975, founder of Duwamish Tribal Services, and longtime champion for federal recognition of Duwamish people</p><p><strong>Chris Jordan</strong> — Artist, Tacoma Arts, active in Black Lives Matter movement</p><p><strong>Dawn Mason</strong> — President of the board of directors of the First Place Scholars Charter School, and co-founder and longtime consulting director with Parents for Student Success</p><p><strong>Jacqueline Miller</strong> — President and CEO of the World Affairs Council</p><p><strong>Ijeoma Oluo</strong> — Writer addressing issues of race, feminism, identity, mental health, and the arts</p><p><strong>Elsie Taniguch</strong> — Longtime CEO and President of Leilani's Enterprises, and health &amp; wellness consultant at Nikken International</p><p><strong>Huong Vu</strong> — Manager of arts, culture, and civic grants for the Boeing Company, and board member for Grantmakers in the Arts</p><p><strong>Dick Wagner</strong> —Maritime historian of the Pacific Northwest and founder of the Center for Wooden Boats museum</p><p><strong>Courage in Business</strong></p><p><strong>The Arc of King County</strong> — Non-profit organization serving individuals with intellectual and developmental disabilities</p><p><strong>Prometheus Brown</strong> — Rapper with Blue Scholars, and advocate for Filipino issues</p><p><strong>Beto Yarce</strong> - Executive director of Ventures, a program that helps low-income business owners</p><p><strong>Hazel and Don Cameron</strong> — Leaders of the Seattle CARES Mentoring Program and the 4C Coalition</p><p><strong>Kevin Daniels</strong> — Owner of Daniels Real Estate, committed to preserving historic buildings</p><p><strong>Jaebadiah Gardner</strong> — Founder and CEO of Gardner Global, Inc., and managing partner for Onpoint Real Estate Services</p><p><strong>Nick Hanauer</strong> — Co-founder and partner at Second Avenue Partners, and ivic activist for public education</p><p><strong>Taylor Hoang</strong> — Executive Director of the Ethnic Business Coalition</p><p><strong>Norman Johnson</strong> — Executive director of Therapeutic Health Services</p><p><strong>Susie Lee</strong> — Co-founder and CEO of the Siren social media platform, and independent artist</p><p><strong>Nate Miles</strong> — Vice President of Strategic Initiatives at Eli Lilly, advocate for children, families, social justice and educational advancement</p><p><strong>Mona Foundation</strong> — Non-profit organization dedicated to improving education and gender equity in the U.S. and abroad</p><p><strong>Kurt Petrauskas</strong> — Owner and founder of Earthwise Architectural Salvage</p><p><strong>Heather Powell</strong> — CEO of the Boys and Girls Club of Whatcom County</p><p><strong>Dan Price</strong> — The founder and CEO of Gravity Payments, who raised the minimum salary of his employees to $70,000</p><p><strong>Norm Rice</strong> — Former mayor of Seattle and former CEO and president of The Seattle Foundation</p><p><strong>Jim Sinegal</strong> — Co-founder and former CEO of Costco, and major philanthropist</p><p><strong>Fisher Qua</strong> — Member of Impact Hub, principal Practitioner at Back Loop Consulting, and steering committee member and farm manager at Alleycat Acres</p><p><strong>Dick Wagner</strong> — Maritime historian of the Pacific Northwest, and founder of the Center for Wooden Boats museum</p><p><strong>Lifetime Achievement</strong></p><p><strong>Hazel Cameron</strong> — Executive director of the 4C Coalition, mentoring vulnerable youth in King County</p><p><strong>Donnie Chin (posthumous)</strong> — Director and founder of the International District Emergency Center, shot in his car in the early morning hours on July 23</p><p><strong>Lovell Deon</strong> — Mentor in Youth Violence Intervention with the Austin Foundation, and mentor at Seattle Public Schools</p><p><strong>Desiree Douglass</strong> — President and founder of HeadStrong, and early advocate for safe crosswalks</p><p><strong>Joni Earl</strong> — CEO of Sound Transit, led the effort to create a regional mass transit system</p><p><strong>Norman Johnson Fields</strong>  — Executive director of Therapeutic Health Services</p><p><strong>Elson Floyd (posthumous)</strong> — President of Washington State University and Chairman of the Pac-12 CEO group, died of cancer on June 20</p><p><strong>Carver Gayton</strong> — Former corporate manager of education relations at Boeing, and former executive director at the Northwest African American Museum</p><p><strong>Cecile Hansen</strong> — Chair of the Duwamish Tribe since 1975, founder of Duwamish Tribal Services, and longtime champion for federal recognition of Duwamish people</p><p><strong>Samuel Berry McKinney</strong> — Pastor emeritus of the Mount Zion Baptist Church, and longtime advocate for civil rights causes</p><p><strong>Barbara Moore</strong> — Principal of South Lake High School and creator of teen parent programs</p><p><strong>Sister Margaret "Peg" Murphy</strong> — OP of Catherine Place and advocate for women</p><p><strong>Norm Rice</strong> — Former mayor of Seattle and former CEO and president of the Seattle Foundation</p><p><strong>Dick Wagner</strong> — Maritime historian of the Pacific Northwest, and founder of the Center for Wooden Boats museum</p><p><strong>Jacquie Jones Walsh</strong> — Executive board member of the Coalition of Black Trade Unionists and longtime labor and civil rights activist</p><p><strong>Priscilla Lisicichi</strong> — Executive Director of Safe Streets, pioneering community policing, drug treatment, and community safety networks</p>  </div>
+      
+      </div>
+
+          </div>
+        
+                
+<div class="mt-5">
+  
+  
+
+  
+
+
+
+<div class="promo has-overlay"
+      style="background-image: url(/themes/custom/crosscut/images/promo/donate-promo-bkg-blue.jpg)"
+  >
+  <div class="promo__body">
+    <h3 class="promo__heading">
+      Please support independent local news for all.
+    </h3>
+    <p class="promo__body-text">We rely on donations from readers like you to sustain Crosscut&#039;s in-depth reporting on issues critical to the PNW.</p>
+    <a  class="promo__link btn btn-primary" href="/donate?campaign_source_usa=TV1AM-W220700002">Donate</a>
+  </div>
+
+  </div>
+</div>
+
+      </section>
+    </div>
+    <div class="col-auto col-md-5 col-xl-auto d-print-none">
+      <aside  class="node__content-section node__content-section--sidebar two-col-content-section two-col-content-section--sidebar">
+                                    
+                
+  <div class="views-element-container form-group"></div>
+
+
+      </aside>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="article-footer">
+    
+
+          <div class="container d-xl-none d-print-none">
+        
+
+
+  
+  <div  class="social-share__wrapper social-share__wrapper--bottom">
+    <h5 class="social-share__wrapper__heading">Share</h5>
+    <div class="social-share js-social-share">
+      <div class="social-share__list">
+        <ul>
+          <li class="ico">
+            <a class="social-share__link ico ico-facebook clearfix fb-share" href="#"
+               onclick="event.preventDefault();" target="_blank"
+               title="Share on Facebook" aria-label="Share content to Facebook"
+            >Share on Facebook</a>
+          </li>
+          <li class="ico">
+            <a class="social-share__link ico ico-twitter twitter-share" href="#"
+               onclick="event.preventDefault();" target="_blank"
+               title="Share on Twitter" aria-label="Share content to Twitter"
+            >Share on Twitter</a>
+          </li>
+          <li class="ico">
+            <a class="social-share__link ico ico-email email-share" href="#"
+               title="Share via E-mail" aria-label="Share content through email"
+            >Share via E-mail</a>
+          </li>
+
+                      <li class="ico">
+              <a class="social-share__link ico ico-print print-share"
+                 href="javascript: window.print();"
+                 title="Print article" aria-label="Print content">Print</a>
+            </li>
+                  </ul>
+      </div>
+
+      
+    </div>
+  </div>
+        </div>
+    
+  </div>
+</article>
+
+			
+			
+		</div>
+	</div>
+</div>
+<div id="block-article-contributors" class="block-article-contributors block container">
+	<div class="block-outer">
+		<div class="block-inner">
+			
+							<h2 class="block-title">About the Authors &amp; Contributors</h2>
+			
+							
+ 
+
+<article role="article" class="node-staff-teaser clearfix">
+  <div class="row-x">
+    <div class="author-pic">
+      
+            <div class="blazy blazy--field blazy--field-staff-photo blazy--field-staff-photo--teaser field field--name-field-staff-photo field--type-image field--label-hidden field--item" data-blazy="">
+
+
+
+  
+
+                <div class="media media--blazy media--bundle--staff media--image"><img alt="Crosscut Editors" title="Crosscut Editors" class="media__image media__element b-lazy" decoding="async" loading="lazy" data-src="/sites/default/files/styles/square_large/public/2017-07/19511585_10155565183382334_6744495160881759736_n.png?itok=Ct8UekkT" src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039;%20viewBox%3D&#039;0%200%201%201&#039;%2F%3E" width="620" height="620" />
+        </div>
+        
+  
+</div>
+      
+    </div>
+    <div class="author-details">
+      <h3>
+        <span class="author-name-link">
+          <a href="/author/crosscut-editors"
+             title="Crosscut Editors"
+             rel="bookmark">
+<span>Crosscut Editors</span>
+</a>
+        </span>
+      </h3>
+      
+      <div class="social-wrap">
+                  <a href="mailto:contactus@crosscut.com" title="contactus@crosscut.com"><i class="fa fa-envelope fa-2x"></i></a>
+                              </div>
+
+    </div>
+  </div>
+</article>
+
+			
+			
+		</div>
+	</div>
+</div>
+<div class="views-element-container block-views-block-up-next-block-1 block container paragraph" id="block-views-block-up-next-block-1">
+	<div class="block-outer">
+		<div class="block-inner">
+			
+			
+							
+  <div class="form-group"><div class="view-name-up-next js-view-dom-id-4945232c49a11faf55df601d70855c2d997a90a9d585d9b65a583561e5e1679c">
+  
+  
+  
+
+  
+  
+  
+
+    
+  <div class="views-row">
+    
+
+
+
+
+
+
+
+
+
+
+<article role="article" class="teaser teaser--2col teaser--view-mode--homepage-latest article-node article-node--homepage-latest">
+
+  <div class="row teaser__row">
+    <div  class="teaser__col col-12 col-md-6">
+      <div class="teaser__img-wrap img-icon-wrap">
+                <a  href="/politics/2023/02/wa-bills-propose-initiatives-bring-special-ed-students-back-home" title="WA bills propose initiatives to bring special-ed students back home" target="_self" tabindex="-1">
+
+                                    
+            <div class="blazy blazy--field blazy--field-hero-image blazy--field-hero-image--homepage-latest field field--name-field-hero-image field--type-image field--label-hidden field--item" data-blazy="">
+
+
+
+  
+
+                <div class="media media--blazy media--bundle--article media--image"><img alt="Diamond Ranch Academy" class="media__image media__element b-lazy" decoding="async" loading="lazy" data-src="/sites/default/files/styles/three_two_450x300/public/images/articles/diamond-ranch1.jpg?h=c12e0b96&amp;itok=QG5MDxWP" src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039;%20viewBox%3D&#039;0%200%201%201&#039;%2F%3E" width="450" height="300" />
+        </div>
+        
+  
+</div>
+      
+                      
+                                
+        </a>
+      </div>
+    </div>
+    <div  class="teaser__col col-12 col-md-6">
+      <div class="teaser__text-wrap">
+
+        
+            
+    <h3 class="up-next-heading-link">
+      <a href="/politics/2023/02/wa-bills-propose-initiatives-bring-special-ed-students-back-home" title="WA bills propose initiatives to bring special-ed students back home" target="_self">
+        Up next
+      </a>
+    </h3>
+    <div class="teaser__eyebrow">
+      
+            <div class="field field--name-field-category field--type-entity-reference field--label-hidden field--item"><a href="/politics" hreflang="en">Politics</a></div>
+      
+          </div>
+    <h3 class="teaser__title">
+      <a href="/politics/2023/02/wa-bills-propose-initiatives-bring-special-ed-students-back-home" title="WA bills propose initiatives to bring special-ed students back home" target="_self">
+        
+<span>WA bills propose initiatives to bring special-ed students back home</span>
+
+      </a>
+    </h3>
+    
+  
+        <div class="teaser__text">
+                    
+            <div class="field field--name-field-subtitle field--type-text-long field--label-hidden field--item"><p>State lawmakers hope to increase oversight of kids with disabilities sent out of state and prohibit or limit the use of isolation and restraint.</p></div>
+      
+    
+    <div class="teaser__metadata">
+      <span class="authored-by">by 
+      <ul class="field_author list-unstyled inline">
+              <li><a href="/author/wilson-criscione" hreflang="en">Wilson Criscione</a></li>
+          </ul>
+   
+            <div class="field field--name-field-outlet field--type-text field--label-hidden field--item">InvestigateWest</div>
+      </span>
+      <span class="separator-slant"> / </span>
+      <span class="month-day-date">February 6</span>
+      <span class="month-day-year-date">February 6, 2023</span>
+          </div>
+
+              </div>
+      </div>
+    </div>
+  </div>
+
+</article>
+
+  </div>
+
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+
+			
+			
+		</div>
+	</div>
+</div>
+
+      </div>
+
+          </div>
+
+          
+        </div>
+            </div>
+
+    
+  </main>
+
+  <footer class="footer d-print-none js-footer" role="contentinfo">
+    <div class="footer__content container">
+      <div class="row">
+        <div class="col-12 col-md-7">
+          
+<div class="region--footer">
+  <div class="footer__branding">
+    <a href="/" title="Crosscut" rel="home"
+       class="site-logo">
+      <img width="300" height="60"
+          src="/themes/custom/crosscut/assets/images/logos/crosscut_logo_footer.png"
+          alt="Crosscut, a service of Cascade Public Media"/>
+    </a>
+    <ul>
+      <li><a class="ico ico-facebook clearfix"
+             href="https://www.facebook.com/crosscut" target="_blank"
+             aria-label="facebook.com/crosscut">Facebook</a></li>
+      <li><a class="ico ico-twitter" href="https://twitter.com/crosscut"
+             target="_blank" aria-label="twitter.com/crosscut">Twitter</a></li>
+      <li><a class="ico ico-instagram"
+             href="https://www.instagram.com/crosscut/" target="_blank"
+             aria-label="instagram.com/crosscut">Instagram</a></li>
+      <li><a class="ico ico-rss"
+             href="/articles.xml" target="_blank"
+             aria-label="RSS/crosscut">RSS</a></li>
+    </ul>
+  </div>
+
+  
+  
+<div id="block-quick-subscribe-footer" class="block-quick-subscribe-footer block block-quick-subscribe block-quick-subscribe--default">
+  <div class="block-outer">
+    <div class="block-inner">
+      
+      
+              
+
+<div  class="ces-quick-subscribe-block--inline ces-quick-subscribe-block">
+      <div class="quick-subscribe-block-prefix">
+      <span>Sign up for the Crosscut Weekly newsletter
+</span>
+
+    </div>
+  
+  <div class="quick-subscribe-block-form">
+    <form class="crosscut-email-subscribe-quick-subscribe-form form-inline antibot" data-drupal-selector="crosscut-email-subscribe-quick-subscribe-form-2-pdi0zzwe" data-action="/2015/08/announcing-the-nominees-for-crosscuts-3rd-annual-courage-awards" action="/antibot" method="post" id="crosscut-email-subscribe-quick-subscribe-form--2--pDI0ZZwe" accept-charset="UTF-8">
+  <noscript>
+  <div class="antibot-no-js antibot-message antibot-message-warning">You must have JavaScript enabled to use this form.</div>
+</noscript>
+
+  <div id="crosscut-email-subscribe-quick-subscribe-form" data-drupal-selector="edit-container" class="form-group js-form-wrapper form-wrapper"><fieldset class="newsletters-list js-newsletters-list hidden js-form-item form-item js-form-wrapper form-wrapper" data-drupal-selector="edit-lists" id="edit-lists">
+        <legend>
+    <span class="fieldset-legend">Mailing Lists</span>
+  </legend>
+  <div class="fieldset-wrapper">
+            
+
+
+
+<div class="js-form-item form-item form-item--checkbox js-form-type-checkbox form-item-lists-et-opt-in-crosscut-weekly-enews__c js-form-item-lists-et-opt-in-crosscut-weekly-enews__c">
+      <div class="checkbox-container">
+          
+      <input data-drupal-selector="edit-lists-et-opt-in-crosscut-weekly-enews-c" aria-describedby="edit-lists-et-opt-in-crosscut-weekly-enews-c--description" type="checkbox" id="edit-lists-et-opt-in-crosscut-weekly-enews-c" name="lists[ET_Opt_In_Crosscut_Weekly_Enews__c]" value="1" checked="checked" class="form-checkbox form-item__checkbox" aria-label="checkbox" />
+<span class="custom-check"></span>
+
+
+
+              <label for="edit-lists-et-opt-in-crosscut-weekly-enews-c" class="option">Weekly</label>
+            </div>
+          <div id="edit-lists-et-opt-in-crosscut-weekly-enews-c--description" class="form-item__description">
+      Every Sunday morning, Crosscut's weekly email sums up the best stories of the week.
+    </div>
+  </div>
+
+          </div>
+</fieldset>
+<div class="form-group js-form-item form-item js-form-type-email form-item-email js-form-item-email form-no-label">
+      <label for="edit-email" class="visually-hidden js-form-required form-required">Email address</label>
+        <input placeholder="Enter your email address" autocomplete="email" data-drupal-selector="edit-email" type="email" id="edit-email" name="email" value="" size="60" maxlength="254" class="form-email required" required="required" aria-required="true" aria-label="input email" />
+
+        </div>
+
+  <div data-drupal-selector="edit-actions" class="form-actions form-group js-form-wrapper form-wrapper" id="edit-actions--2"><input class="btn btn-secondary button button--secondary js-form-submit form-submit" data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="op" value="Subscribe" />
+</div>
+
+</div>
+
+<input data-drupal-selector="edit-antibot-key" type="hidden" name="antibot_key" value="" />
+<input autocomplete="off" data-drupal-selector="form-whihof3jqe1d2vytriw6qugzm0typzjmfgj7olimdtk" type="hidden" name="form_build_id" value="form-whIHoF3JqE1d2vYtrIW6qugZm0typzjMFgj7OLiMdTk" />
+<input data-drupal-selector="edit-crosscut-email-subscribe-quick-subscribe-form" type="hidden" name="form_id" value="crosscut_email_subscribe_quick_subscribe_form" />
+
+</form>
+<div class="ces-quick-subscribe-terms">By subscribing, you agree to receive occasional membership emails from Crosscut/Cascade Public Media.</div>
+  </div>
+
+  </div>
+
+      
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+        </div>
+        <div class="col-12 col-md-5">
+          
+  <div class="footer-menu row">
+          <div id="block-footer-menu-main" class="block-footer-menu-main block col-6">
+	<div class="block-outer">
+		<div class="block-inner">
+			
+			
+							
+              <ul class="menu clearfix">
+        
+            	            <li class="parent-menu-0 link-number-1 menu-item">
+                          <a href="/politics" data-drupal-link-system-path="taxonomy/term/1">Politics</a>
+              </li>
+        	            <li class="parent-menu-0 link-number-2 menu-item">
+                          <a href="/culture" data-drupal-link-system-path="taxonomy/term/3">Culture</a>
+              </li>
+        	            <li class="parent-menu-0 link-number-3 menu-item">
+                          <a href="/equity" data-drupal-link-system-path="taxonomy/term/5">Equity</a>
+              </li>
+        	            <li class="parent-menu-0 link-number-4 menu-item">
+                          <a href="/environment" data-drupal-link-system-path="taxonomy/term/7">Environment</a>
+              </li>
+        	            <li class="parent-menu-0 link-number-5 menu-item">
+                          <a href="/search" data-drupal-link-system-path="search">Search</a>
+              </li>
+    
+
+        	    
+  
+
+
+			
+			
+		</div>
+	</div>
+</div>
+<div id="block-footer-menu-secondary" class="block-footer-menu-secondary block col-6">
+	<div class="block-outer">
+		<div class="block-inner">
+			
+			
+							
+						<ul>
+
+		
+											<li class="parent-menu-0 my-account">
+				<a href="/my-account" class="user-account" data-drupal-link-system-path="my-account">Member Log In</a>
+							</li>
+											<li class="parent-menu-0 newsletters">
+				<a href="/newsletters" class="btn btn-secondary btn btn-secondary btn btn-secondary btn btn-secondary" data-drupal-link-system-path="node/55236">Newsletters</a>
+							</li>
+											<li class="parent-menu-0 donate">
+				<a href="/donate" target="_blank" class="btn btn-primary d-lg-none btn btn-primary d-lg-none" data-drupal-link-system-path="node/67696">Donate</a>
+							</li>
+											<li class="parent-menu-0 http:www.facebook.comcrosscut">
+				<a href="http://www.facebook.com/crosscut" class="ico ico-facebook clearfix" target="_blank" title="facebook.com/crosscut">Facebook</a>
+							</li>
+											<li class="parent-menu-0 http:twitter.comcrosscut">
+				<a href="http://twitter.com/crosscut" class="ico ico-twitter" target="_blank" title="twitter.com/crosscut">Twitter</a>
+							</li>
+											<li class="parent-menu-0 https:www.instagram.comcrosscut">
+				<a href="https://www.instagram.com/crosscut/" class="ico ico-instagram" target="_blank" title="instagram.com/crosscut">Instagram</a>
+							</li>
+											<li class="parent-menu-0 news">
+				<a href="/news" target="_self" class="strong clearfix strong clearfix" data-drupal-link-system-path="taxonomy/term/226">News</a>
+							</li>
+											<li class="parent-menu-0 focus">
+				<a href="/focus" class="strong clearfix" target="_self" data-drupal-link-system-path="node/62876">Focus</a>
+							</li>
+											<li class="parent-menu-0 video">
+				<a href="/video" target="_self" class="strong" data-drupal-link-system-path="taxonomy/term/89">Video</a>
+							</li>
+											<li class="parent-menu-0 podcasts">
+				<a href="/podcasts" class="strong hr" title="Crosscut Podcasts" data-drupal-link-system-path="node/61306">Podcasts</a>
+							</li>
+											<li class="parent-menu-0 WA-Recovery-Watch">
+				<a href="/WA-Recovery-Watch" data-drupal-link-system-path="node/79296">WA Recovery Watch</a>
+							</li>
+											<li class="parent-menu-0 origins">
+				<a href="/origins" data-drupal-link-system-path="node/86666">Crosscut Origins</a>
+							</li>
+											<li class="parent-menu-0 https:blackartslegacies.crosscut.com">
+				<a href="https://blackartslegacies.crosscut.com/">Black Arts Legacies</a>
+							</li>
+											<li class="parent-menu-0 festival">
+				<a href="/festival" data-drupal-link-system-path="node/77826">Crosscut Festival</a>
+							</li>
+											<li class="parent-menu-0 events">
+				<a href="/events" data-drupal-link-system-path="node/40117">Events</a>
+							</li>
+											<li class="parent-menu-0 about">
+				<a href="/about" data-drupal-link-system-path="node/51857">About</a>
+							</li>
+											<li class="parent-menu-0 https:www.cascadepublicmedia.orgcapital-campaign">
+				<a href="https://www.cascadepublicmedia.org/capital-campaign">Capital Campaign</a>
+							</li>
+											<li class="parent-menu-0 careers">
+				<a href="/careers">Careers</a>
+							</li>
+											<li class="parent-menu-0 advertise-crosscut">
+				<a href="/advertise-crosscut" data-drupal-link-system-path="node/35">Advertising</a>
+							</li>
+											<li class="parent-menu-0 contact-us">
+				<a href="/contact-us" data-drupal-link-system-path="node/33">Contact</a>
+							</li>
+		
+		</ul>
+	
+
+
+			
+			
+		</div>
+	</div>
+</div>
+
+      </div>
+
+        </div>
+        <div class="footer__copyright">
+          <p>
+            &copy;2023 Cascade Public Media. All Rights Reserved.<br/>
+            <a href="https://cascadepublicmedia.org/terms-use" target="_blank">Terms of Use</a> and <a
+              href="https://cascadepublicmedia.org/privacy-policy" target="_blank">Privacy Policy</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  
+
+</div>
+<div class="canvas-bkgd"></div>
+
+  </div>
+
+		
+		<script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/35927","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"antibot\/antibot.form,better_exposed_filters\/general,blazy\/blazy,blazy\/classlist,blazy\/compat,blazy\/filter,blazy\/load,blazy\/polyfill,blazy\/promise,blazy\/raf,blazy\/ratio,blazy\/webp,core\/drupal.form,crosscut\/components.social-share,crosscut\/external-links,crosscut\/global-css,crosscut\/global-js-footer,crosscut\/global-js-header,crosscut\/mega-dropdown,crosscut\/recirculation,crosscut\/secondary-nav-navigate,crosscut_schema\/tag,paragraphs\/drupal.paragraphs.unpublished,system\/base,views\/views.module","theme":"crosscut","theme_token":null},"ajaxTrustedUrl":{"form_action_p_pvdeGsVG5zNF_XLGPTvYSKCf43t8qZYSwcfZl2uzM":true,"\/search":true},"antibot":{"forms":{"crosscut-email-subscribe-quick-subscribe-form--2--pDI0ZZwe":{"id":"crosscut-email-subscribe-quick-subscribe-form--2--pDI0ZZwe","key":"VxJcp8uzo0mnXBmg3AiIrIYQekItiGFV2rc0QgsxfPA"}}},"blazy":{"loadInvisible":true,"offset":100,"saveViewportOffsetDelay":50,"validateDelay":25,"container":"","loader":true,"unblazy":false,"compat":true},"blazyIo":{"disconnect":false,"rootMargin":"0px","threshold":[0,0.25,0.5,0.75,1]},"crosscut_schema":{"tag":{"site_id":"crosscut.com"}},"crosscut":{"recirc":[],"article":{"35927":{"nid":"35927","title":"Announcing the nominees for Crosscut\u2019s 3rd Annual Courage Awards","url":"\/2015\/08\/announcing-the-nominees-for-crosscuts-3rd-annual-courage-awards","author":["Crosscut Editors"],"publishedOn":"1440685156","category":null,"topics":[],"evergreen":false}},"node":{"id":"35927","revision_id":"36149","bundle":"article"},"ad_targeting":[]},"user":{"uid":0,"permissionsHash":"5f3e55e02252bbc476dcbb6f274778c82b6f7d3f9b75275ea796f77b0b65298f"}}</script>
+<script src="/sites/default/files/js/js_6p1MOEzPRVyWtzsAq4VdjshRlVV2M5tm3gn-LW_Izms.js"></script>
+<script src="//platform.twitter.com.widgets.js"></script>
+<script src="/sites/default/files/js/js_RznsJfBrKQzOm1hHVTpFEuSu3nAKndjxwehP9-bewb0.js"></script>
+
+	<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"fa09265af4","applicationID":"798950867","transactionName":"ZVEEbBRVWBFWW0ZQWFwbJU0VQFkPGF1cTV5GTUhWCVBTTFRZXFZZW1cHVFxVRBZeW15c","queueTime":0,"applicationTime":474,"atts":"SRYHGlxPSx8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

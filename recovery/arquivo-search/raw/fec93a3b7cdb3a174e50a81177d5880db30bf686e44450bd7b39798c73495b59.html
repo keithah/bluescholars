@@ -1,0 +1,460 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<style type="text/css">
+body {font: 14px GillSansRegular, "Gill Sans MT", "Gill Sans", "Trebuchet MS", sans-serif; width: 1500px; background: white}
+.canvas {position: relative}
+.genre {padding: 0px 2px; position: absolute; white-space: nowrap; cursor: pointer;}
+.genre:hover {color: black !important}
+.genre[played]:before {content: "\266B" !important; color: black !important}
+#mirror .genre:hover {color: white !important}
+#mirror .genre[played]:before {content: "\266B" !important; color: white !important}
+#mirror .current.genre[played]:before {color: gray !important}
+.genrelink {padding: 0px 2px; position: absolute; white-space: nowrap;}
+#mirror .genre[played] {color: #E6ADB7 !important}
+.title {float: left; font-weight: bold; font-size: 200%; margin-right: 32px; color: black}
+.title a {color: black}
+.showsong {position: absolute; left: 300px}
+form {display: inline; white-space: nowrap;}
+a, .related a {text-decoration: none; color: teal}
+a:hover, .fakelink:hover {color: FireBrick !important}
+.fakelink, .togglecontrols {cursor: pointer; color: teal}
+.genre.current {font-weight: bold; padding: 1px 2px; background: whitesmoke; border-color: black; border-style: solid;
+    border-width: 1px 1px 1px 8px; z-index: 1000}
+.genre.current .navlink {background: whitesmoke}
+.navlink {display: none; color: FireBrick; background: white; padding: 0px 2px}
+#mirror .navlink {background: inherit}
+.navlink:hover {color: white !important; background: black !important}
+#mirror .navlink:hover {color: black !important; background: white !important}
+.genre.current .navlink, .genre:hover .navlink, .genrelink:hover .navlink {display: inline; z-index: 10000}
+.genrelink:hover .navlink {color: black}
+.related {color: gray; margin-top: 32px; width: 1400px;}
+.related a {white-space: nowrap}
+.sigil {color: black}
+</style>
+
+
+<script type="text/javascript">
+var nowplaying = '';
+var nowpending = '';
+var gdivs = [];
+var scandivs = [];
+var clicknumber = 1;
+var scandur = 6000;
+
+function redraw() {
+    document.forms[0].submit();
+}
+
+function getpreviewurl(id) {
+    var http_request = new XMLHttpRequest();
+    url = '/spotproxy.cgi?track=' + id;
+    http_request.open("GET", url, false);
+    http_request.send(null);
+    tdata = JSON.parse(http_request.responseText);
+    if ('preview_url' in tdata) {
+        previewurl = tdata['preview_url'];
+        return previewurl;
+    }
+    return null;
+}
+
+function playx(key, genre, me) {
+    window.clearTimeout(nowpending);
+    var spotifyplayer = document.getElementById('spotifyplayer');
+    if (nowplaying == genre) {
+        spotifyplayer.pause();
+        highlight('');
+        nowplaying = '';
+        document.getElementById('scan').innerText = 'scan';
+    } else {
+        previewurl = me.getAttribute('preview_url')
+        if (!previewurl && key) {
+            previewurl = getpreviewurl(key);
+        }
+        if (previewurl) {
+            spotifyplayer.src = previewurl;
+            spotifyplayer.play();
+            me.setAttribute('played', clicknumber++);
+            nowplaying = genre;
+            highlight(genre);
+        }
+    }
+}
+
+function findPosX(obj)
+{
+    var left = 0;
+    if(obj.offsetParent)
+    {
+        while(1) 
+        {
+          left += obj.offsetLeft;
+          if(!obj.offsetParent)
+            break;
+          obj = obj.offsetParent;
+        }
+    }
+    else if(obj.x)
+    {
+        left += obj.x;
+    }
+    return left;
+}
+
+function findPosY(obj)
+{
+    var top = 0;
+    if(obj.offsetParent)
+    {
+        while(1)
+        {
+          top += obj.offsetTop;
+          if(!obj.offsetParent)
+            break;
+          obj = obj.offsetParent;
+        }
+    }
+    else if(obj.y)
+    {
+        top += obj.y;
+    }
+    return top;
+}
+
+function playhere(me, url) {
+    var rp = document.getElementById('rp');
+    rp.style.display = 'none';
+    rp.firstChild.onload = function() {
+        rp.style.top = findPosY(me) + 20;
+        rleft = findPosX(me);
+        if (rleft + 500 > window.innerWidth) {
+            rleft = window.innerWidth - 500;
+            if (rleft < 0) {
+                rleft = 0;
+            }
+        }
+        rp.style.left = rleft;
+        rp.style.display = 'block';
+    }
+    rp.lastChild.src = url;
+}
+
+function highlight(which) {
+    if (gdivs.length == 0) {
+        gdivs = document.getElementsByClassName('genre');
+    }
+    for (i=0; i<gdivs.length; i++) {
+        thisdiv = gdivs[i];
+        thistext = thisdiv.firstChild.textContent;
+        if (thisdiv.className.indexOf('scanme') > -1) {
+            basename = 'genre scanme';
+        } else {
+            basename = 'genre';
+        }
+        if (which.length > 0 && which.trim() == thistext.trim().replace('"', '')) {
+            thisdiv.className = basename + ' current';
+            if(typeof thisdiv.scrollIntoViewIfNeeded == 'function') {
+                thisdiv.scrollIntoViewIfNeeded();
+            } else {
+                thisdiv.scrollIntoView({behavior: "smooth", block: "center", inline: "center"});
+            }
+        } else {
+            thisdiv.className = basename;
+        }
+    }
+}
+
+function scan(e, state) {
+    if (typeof(e) == 'object') {
+        if (e.altKey) {
+            scandur = 20000;
+        } else {
+            scandur = 6000;
+        }
+    }
+    var spotifyplayer = document.getElementById('spotifyplayer');
+    if (state == 'stop') {
+        spotifyplayer.pause();        
+        highlight('');
+        window.clearTimeout(nowpending);
+    } else {
+        if (gdivs.length == 0) {
+            gdivs = document.getElementsByClassName('scanme');
+        }
+        scandivs = [];
+        for (i=0; i<gdivs.length; i++) {
+            thisdiv = gdivs[i];
+            if (thisdiv.getAttribute('scan') && !thisdiv.getAttribute('played')) {
+                scandivs.push(thisdiv)
+            }
+        }
+        picked = scandivs[Math.floor(Math.random() * scandivs.length)];
+        picked.onclick();
+        if (scandivs.length > 1) {
+            nowpending = window.setTimeout('scan("continue")', scandur);
+        } else {
+            nowpending = window.setTimeout('scan("stop")', scandur);
+        }
+    }
+}
+
+function togglecontrols() {
+    var spotifyplayer = document.getElementById('spotifyplayer');
+    if (spotifyplayer.style.visibility == 'hidden') {
+        spotifyplayer.style.visibility = 'visible';
+    } else {
+        spotifyplayer.style.visibility = 'hidden';
+    }
+}
+
+function kb(event) {
+    if(event.code === 'Space' || event.code === 'Enter') {
+        event.target.click();
+        event.preventDefault();
+    }
+}
+
+</script>
+
+<title>Every Noise at Once - hawaiian hip hop</title>
+
+</head>
+<body>
+
+<div class=title><a href="engenremap.html">Every Noise at Once</a> &middot; hawaiian hip hop
+&nbsp; <span class=fakelink role=button tabindex=0 id=scan onKeyDown="kb(event);" onclick="if (this.innerText == 'scan') {scan(event, 'start');this.innerHTML = 'stop';} else {scan(event, 'stop');this.innerHTML = 'scan';}" style="color: gray; cursor: pointer" >scan</span>
+&nbsp; <a style="color: gray" href="research.cgi?mode=genre&name=hawaiian%20hip%20hop">list</a>
+&nbsp; <a style="color: #989898" href="https://open.spotify.com/playlist/0CqFlDgsIr4aEcUAbxbIsu" title="listen to The Sound of Hawaiian Hip Hop on Spotify">playlist</a>
+&nbsp; <a style="color: #a6a6a6" href="https://open.spotify.com/user/particledetector/playlist/2FbzTQB0QU2nVF94GcPHXu" title="listen to a shorter introduction to this genre">intro</a>
+&nbsp; <a style="color: #b4b4b4" href="https://open.spotify.com/user/particledetector/playlist/50jKF2s9BzZWGJinOFz377" title="listen to this genre's fans' current favorites">pulse</a>
+&nbsp; <a style="color: #d0d0d0" href="https://open.spotify.com/user/particledetector/playlist/7AoKDrCRkooIOt07OqlZC1" title="listen to this genre's fans' favorites of 2022">2022</a>
+&nbsp; <a style="color: #d0d0d0" href="new_releases_by_genre.cgi?genre=hawaiian%20hip%20hop&region=US">new</a>
+</div>
+<div class=canvas role=main style="width: 1517px; height: 936px; top: 64px">
+<div id=item1 preview_url="https://p.scdn.co/mp3-preview/18b28c3280375d6187771ac87668957a632d500e" class="genre scanme" scan=true style="color: #9a8b06; top: 610px; left: 609px; font-size: 160%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;0dGqP4VickYjtIaB5VOt4H&quot;, &quot;Russ&quot;, this);" title="e.g. Russ &quot;3:15 (Breathe)&quot;">Russ<a class=navlink href="artistprofile.cgi?id=1z7b1Pr1rSlvWRzsW3HOrS" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item2 preview_url="https://p.scdn.co/mp3-preview/5fd416d1c01bc854c73ceef066b070eacd39dd56" class="genre scanme" scan=true style="color: #a89200; top: 334px; left: 139px; font-size: 103%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;5TtEL9TapqOo25Ebtxsnyt&quot;, &quot;damnboy!&quot;, this);" title="e.g. damnboy! &quot;Everything You Said Was A Lie&quot;">damnboy!<a class=navlink href="artistprofile.cgi?id=3t96ooAg7YcJQF7lPpcMiU" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item3 preview_url="https://p.scdn.co/mp3-preview/ce85af7952b33ffc4df2726a96752b1277543500" class="genre scanme" scan=true style="color: #ac811e; top: 438px; left: 758px; font-size: 103%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;3GI3DlwrqMKzkN0iGR3PEj&quot;, &quot;Blue Scholars&quot;, this);" title="e.g. Blue Scholars &quot;Sagaba&quot;">Blue Scholars<a class=navlink href="artistprofile.cgi?id=1SlPJ2l80sMnCHpz1wB8nT" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item4 preview_url="https://p.scdn.co/mp3-preview/c1217401cbde64ae71125d2a52b57d9ef678a4f0" class="genre scanme" scan=true style="color: #b28d00; top: 159px; left: 525px; font-size: 101%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;0pdokg6Vao4bqE2g8Ey6oY&quot;, &quot;Sudden Rush&quot;, this);" title="e.g. Sudden Rush &quot;Pure Aloha&quot;">Sudden Rush<a class=navlink href="artistprofile.cgi?id=08PDlCzlkVsF59Qrz6WkUZ" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item5 preview_url="https://p.scdn.co/mp3-preview/79b75a7b04adf2057de484d265f590d26afcab3e" class="genre scanme" scan=true style="color: #889600; top: 273px; left: 1246px; font-size: 101%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;5Ngc5OHF8TclxZ60K1lH1i&quot;, &quot;Hawaiian Soljah&quot;, this);" title="e.g. Hawaiian Soljah &quot;Where Im From&quot;">Hawaiian Soljah<a class=navlink href="artistprofile.cgi?id=2MH1FtVJf6GIjxQEv0gUD5" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item6 preview_url="https://p.scdn.co/mp3-preview/4bc536be2b745f50153c3bba13344920385d6ade" class="genre scanme" scan=true style="color: #908604; top: 610px; left: 437px; font-size: 101%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;4zGw4zyuiHa8BAY3ZM6yxu&quot;, &quot;Thomas Iannucci&quot;, this);" title="e.g. Thomas Iannucci &quot;Rage&quot;">Thomas Iannucci<a class=navlink href="artistprofile.cgi?id=1owYPqqX6qgsRRQsocw3Bm" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item7 preview_url="https://p.scdn.co/mp3-preview/edec5b6167977564dfb289a645109868688948de" class="genre scanme" scan=true style="color: #67a700; top: 457px; left: 953px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;7m30ZNorE4bDncQZHFIBOh&quot;, &quot;Wavvy&quot;, this);" title="e.g. Wavvy &quot;Peaches&quot;">Wavvy<a class=navlink href="artistprofile.cgi?id=1pYU5y6mtFPrF67l5VfOrW" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item8 preview_url="https://p.scdn.co/mp3-preview/61387fd23c5be9204945f197dff2cbc29aef92d6" class="genre scanme" scan=true style="color: #cb7400; top: 577px; left: 479px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;0kd5uaX0oWKiOyDXWt5T7d&quot;, &quot;Creed Chameleon&quot;, this);" title="e.g. Creed Chameleon &quot;COME HOME&quot;">Creed Chameleon<a class=navlink href="artistprofile.cgi?id=6Ys7P6xunOyHghjzC6t3A8" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item9 preview_url="https://p.scdn.co/mp3-preview/5d6bdbdfca11e9c1c7c7922efefdae03196bd49f" class="genre scanme" scan=true style="color: #7d9115; top: 713px; left: 386px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;4UDjdBGupiU4h7S9YteKmp&quot;, &quot;Scholar&quot;, this);" title="e.g. Scholar &quot;Where the Grass Is Greenest&quot;">Scholar<a class=navlink href="artistprofile.cgi?id=5KrZpKyK74FMDWiR6oo3mC" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item10 preview_url="https://p.scdn.co/mp3-preview/c216ee90b781776cfc8fe07528712188ee6e3507" class="genre scanme" scan=true style="color: #b18200; top: 417px; left: 874px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;3vCnx2C7xWc28UyaHFs97V&quot;, &quot;Paniolo Prince&quot;, this);" title="e.g. Paniolo Prince &quot;Occupied (Remastered)&quot;">Paniolo Prince<a class=navlink href="artistprofile.cgi?id=3pIaVmP7XbTggUrdOowoyu" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item11 preview_url="https://p.scdn.co/mp3-preview/617efe98a7f133eb44eac27b3a858a0e27062005" class="genre scanme" scan=true style="color: #c78100; top: 520px; left: 763px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;3mtDzHboyivZuCxjgFg0gn&quot;, &quot;Osnizzle&quot;, this);" title="e.g. Osnizzle &quot;IGEnomics&quot;">Osnizzle<a class=navlink href="artistprofile.cgi?id=2YP8yzQOImDKTgEAnUiRdT" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item12 preview_url="https://p.scdn.co/mp3-preview/335b419a648cd6fc2973f6bb7cc1e1cb4eb92ae6" class="genre scanme" scan=true style="color: #9f8004; top: 334px; left: 870px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;3bj8b8yONjGdIsTEAXq3ws&quot;, &quot;I.A.&quot;, this);" title="e.g. I.A. &quot;Hawaiian Time&quot;">I.A.<a class=navlink href="artistprofile.cgi?id=2hkGP3ZOXUmSxHfl2ZhCE7" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item13 preview_url="https://p.scdn.co/mp3-preview/c0e49be5a9a2537eba76b6223a65dc7ddcd2cc9b" class="genre scanme" scan=true style="color: #7d9000; top: 359px; left: 1107px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;5qS4UuKD65VuVxPy5501jS&quot;, &quot;Soul Redemption&quot;, this);" title="e.g. Soul Redemption &quot;Ua Mau (Hawaii 78)&quot;">Soul Redemption<a class=navlink href="artistprofile.cgi?id=38gZgCtehJp2ycGrjZZqLI" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item14 preview_url="https://p.scdn.co/mp3-preview/44f3eef7875df69da4c3fe887898d2dae1b501ed" class="genre scanme" scan=true style="color: #74a201; top: 346px; left: 1098px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;0Ls7SX1TwMfojVhIfWizny&quot;, &quot;Punchie Bandana&quot;, this);" title="e.g. Punchie Bandana &quot;Hawaii&quot;">Punchie Bandana<a class=navlink href="artistprofile.cgi?id=0TDeggs28dW9TvyvyVIiXV" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item15 preview_url="https://p.scdn.co/mp3-preview/b54456ff3c3318b59cb13de0e832853451ba49e6" class="genre scanme" scan=true style="color: #a98503; top: 425px; left: 828px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;21WLpTkyNF1MAhgw7YpIGQ&quot;, &quot;Bxmbz&quot;, this);" title="e.g. Bxmbz &quot;Hometown&quot;">Bxmbz<a class=navlink href="artistprofile.cgi?id=19ZvyigzbHRjEWL30LFAOy" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item16 preview_url="https://p.scdn.co/mp3-preview/0a167e10c2e7d0ce8b25635a5d9f8cd759c572c8" class="genre scanme" scan=true style="color: #86a300; top: 147px; left: 786px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;4epz0ejbujFxr0CWsu5Jry&quot;, &quot;B Karma&quot;, this);" title="e.g. B Karma &quot;Broken&quot;">B Karma<a class=navlink href="artistprofile.cgi?id=0ynWhY0uvz6PlM7kmtuKLQ" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item17 preview_url="https://p.scdn.co/mp3-preview/c0552c1db8c2dde3cbe22da2f83278142ce34c47" class="genre scanme" scan=true style="color: #a38c02; top: 571px; left: 907px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;0nVw2P6lOCO4UAPPEK4kD8&quot;, &quot;Prometheus Brown&quot;, this);" title="e.g. Prometheus Brown &quot;Seen It (Coming)&quot;">Prometheus Brown<a class=navlink href="artistprofile.cgi?id=4M56KND9kU2FZaRqf00Nha" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item18 preview_url="https://p.scdn.co/mp3-preview/393f276b1ceee037424e1df271080f86c736668b" class="genre scanme" scan=true style="color: #a48601; top: 543px; left: 935px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;3Of3EDsNeHnX4IVJNQisGS&quot;, &quot;Punahele&quot;, this);" title="e.g. Punahele &quot;Ulu&quot;">Punahele<a class=navlink href="artistprofile.cgi?id=2KR8HMmruqAIUItqbXPABv" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item19 preview_url="https://p.scdn.co/mp3-preview/7529e70b7f8e98554ee666a67da6e16bff6775e3" class="genre scanme" scan=true style="color: #b66c00; top: 229px; left: 1093px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;41ZFfR0mrgg2j2Wy9A4vC2&quot;, &quot;Island Trybe&quot;, this);" title="e.g. Island Trybe &quot;Skankin (feat. Po Boxx)&quot;">Island Trybe<a class=navlink href="artistprofile.cgi?id=4Y18MYIIH5wsBs4kbzAlnV" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item20 preview_url="https://p.scdn.co/mp3-preview/7589ff57aa514393a3bfffe8a6ff7418abdc101a" class="genre scanme" scan=true style="color: #bb7900; top: 462px; left: 781px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;1Yg9FReq1F7LUiUPDuNa9b&quot;, &quot;Angry Locals&quot;, this);" title="e.g. Angry Locals &quot;Hawaiian Newscaster&quot;">Angry Locals<a class=navlink href="artistprofile.cgi?id=6BLn86BLdi44i3Gd552och" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item21 preview_url="https://p.scdn.co/mp3-preview/875745e4d9bf96fab6a2dd8ed34b41227c73a9eb" class="genre scanme" scan=true style="color: #d06000; top: 634px; left: 367px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;3AEGfbYPVdqYuL6aWwVrZi&quot;, &quot;Prometheus Brown and Bambu&quot;, this);" title="e.g. Prometheus Brown and Bambu &quot;Lookin Up (Produced By Fatgums)&quot;">Prometheus Brown and Bambu<a class=navlink href="artistprofile.cgi?id=4nzheUYIndDAVLGibNfft9" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item22 preview_url="https://p.scdn.co/mp3-preview/f51ca42a0ade1a35ae91fcb1659453978fcf75d9" class="genre scanme" scan=true style="color: #b37701; top: 384px; left: 939px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;7IFioHXW7yIyQcfmyDjOBv&quot;, &quot;The Bar&quot;, this);" title="e.g. The Bar &quot;Coming (To America)&quot;">The Bar<a class=navlink href="artistprofile.cgi?id=7x6HD5XuwrXlASbHcEXjeT" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item23 preview_url="https://p.scdn.co/mp3-preview/719207532d61f3156e562aff8eda5232b5e945ca" class="genre scanme" scan=true style="color: #af7f00; top: 558px; left: 330px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;32FDHpiu1Z4szj7XHtw7t0&quot;, &quot;Kwalified&quot;, this);" title="e.g. Kwalified &quot;Heads Will Roll&quot;">Kwalified<a class=navlink href="artistprofile.cgi?id=6DEQX8iPbaZdDDvEI2OBs2" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item24 preview_url="https://p.scdn.co/mp3-preview/cbf0edada299030b3dfa4260eaef2f5689022b84" class="genre scanme" scan=true style="color: #919800; top: 450px; left: 809px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;70jJ67rjalcOkWGCgb5XA9&quot;, &quot;Astreaux Guillotine&quot;, this);" title="e.g. Astreaux Guillotine &quot;James Harden&quot;">Astreaux Guillotine<a class=navlink href="artistprofile.cgi?id=31yCius3DZWs7DAXAJIf07" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item25 preview_url="https://p.scdn.co/mp3-preview/8c051a36cfbac905fa28b9355569d0846589264d" class="genre scanme" scan=true style="color: #a69d00; top: 203px; left: 646px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;4p3CZq5H30DTQvsI0pzUvJ&quot;, &quot;KAHUNA&quot;, this);" title="e.g. KAHUNA &quot;No Demons&quot;">KAHUNA<a class=navlink href="artistprofile.cgi?id=7s3j7TKjXYhOEHbH6pqyO2" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item26 preview_url="https://p.scdn.co/mp3-preview/e720c94fe365e5bb39f3137759e6faa4cb1f8b00" class="genre scanme" scan=true style="color: #a28406; top: 900px; left: 404px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;0q0P34g1ZQ6Id1HlPGtS5Y&quot;, &quot;Cnrboy&quot;, this);" title="e.g. Cnrboy &quot;Tahitian Pearls&quot;">Cnrboy<a class=navlink href="artistprofile.cgi?id=1fmq40IjBaPJm1J5o6nCJd" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item27 preview_url="https://p.scdn.co/mp3-preview/ed55acffff19308f5bff61d4acc3f1c520644d21" class="genre scanme" scan=true style="color: #8e8803; top: 545px; left: 451px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;2vto1PWTQY1qbA0Y730vsC&quot;, &quot;Koins&quot;, this);" title="e.g. Koins &quot;S F B F&quot;">Koins<a class=navlink href="artistprofile.cgi?id=3dOutZGwZ6fBIjwMAWcD3c" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item28 preview_url="https://p.scdn.co/mp3-preview/67567eeb5d558e1ac16abf0a05310ced935b7ccb" class="genre scanme" scan=true style="color: #998b01; top: 300px; left: 814px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;4MgXF4UK3eovEf3U801lVW&quot;, &quot;Aktion&quot;, this);" title="e.g. Aktion &quot;Rubberbandz &amp; Contraband&quot;">Aktion<a class=navlink href="artistprofile.cgi?id=4x64zfivGfZDJtlSnuzqVF" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item29 preview_url="https://p.scdn.co/mp3-preview/a386221b40801ca80b3b984f63c6b09cbdbab46b" class="genre scanme" scan=true style="color: #aa8400; top: 260px; left: 535px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;4eMjFgOFLdYeAm8Rqbhr5U&quot;, &quot;Hou! Kanaka&quot;, this);" title="e.g. Hou! Kanaka &quot;The Queens Song&quot;">Hou! Kanaka<a class=navlink href="artistprofile.cgi?id=2QqD1L1SDS5xywtMeYP5Bz" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item30 preview_url="https://p.scdn.co/mp3-preview/64fa4161dc18f11125f3b9138010f94ee398ee2f" class="genre scanme" scan=true style="color: #8f9500; top: 520px; left: 1242px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;0Zet7WvcwenLvBnHWzfXUo&quot;, &quot;Jehzan Exclusive&quot;, this);" title="e.g. Jehzan Exclusive &quot;The World is Yours&quot;">Jehzan Exclusive<a class=navlink href="artistprofile.cgi?id=6aMtof2xZPWLot9bXUfC1J" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item31 preview_url="https://p.scdn.co/mp3-preview/6f6970b0dbc95712b33a29220975d600f7175537" class="genre scanme" scan=true style="color: #a17821; top: 543px; left: 772px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;1KLlR4xv0msIowa40kTMq1&quot;, &quot;G. Listen&quot;, this);" title="e.g. G. Listen &quot;Back for More&quot;">G. Listen<a class=navlink href="artistprofile.cgi?id=76FWfyb0vwxv7ZzNbVUNb1" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item32 preview_url="https://p.scdn.co/mp3-preview/50e955a2124bbb0834dcbb197023fc8803649acf" class="genre scanme" scan=true style="color: #6f9600; top: 338px; left: 1246px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;3CGXB2vUBqIiZmwxiOMVRk&quot;, &quot;Israel&quot;, this);" title="e.g. Israel &quot;MISO SOUP&quot;">Israel<a class=navlink href="artistprofile.cgi?id=4MPa63jCsZX8cSOQ6lR0yI" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item33 preview_url="https://p.scdn.co/mp3-preview/b073b82a5d7bdb03164ea3f9733c8beecf176c98" class="genre scanme" scan=true style="color: #ae8800; top: 313px; left: 628px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;5V1a1DaaQL0LZGw4AAeefw&quot;, &quot;Rappa Nui&quot;, this);" title="e.g. Rappa Nui &quot;Why Can't We&quot;">Rappa Nui<a class=navlink href="artistprofile.cgi?id=5tnrkyTUoxR9fJVvog8OdZ" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item34 preview_url="https://p.scdn.co/mp3-preview/274a153946d4db026b09592a052bd81317fbbf54" class="genre scanme" scan=true style="color: #b19300; top: 126px; left: 1023px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;6IWAguIXxZuRzI0T0ISSf2&quot;, &quot;Alika Manuel&quot;, this);" title="e.g. Alika Manuel &quot;RASCAL (Jelly eSports Anthem)&quot;">Alika Manuel<a class=navlink href="artistprofile.cgi?id=3iW2GLsTZrZal3f3iW1URH" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item35 preview_url="https://p.scdn.co/mp3-preview/6322f5813f55f902bb908ede7be26ba61a8e063a" class="genre scanme" scan=true style="color: #748100; top: 558px; left: 1400px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;0sz1gR8vof7hAHb9uplfHl&quot;, &quot;Arena Productions&quot;, this);" title="e.g. Arena Productions &quot;808 Party feat. Kaleo of Pepper&quot;">Arena Productions<a class=navlink href="artistprofile.cgi?id=6b3yZKOk4RYZSK6QnEBvYU" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item36 preview_url="https://p.scdn.co/mp3-preview/84d5cd7e7508cde6cbaa6c7f237f7e4680eeefe1" class="genre scanme" scan=true style="color: #b08b00; top: 606px; left: 149px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;3NXe2rPT2a2oybMtW93PyD&quot;, &quot;J Shiu&quot;, this);" title="e.g. J Shiu &quot;Light Be&quot;">J Shiu<a class=navlink href="artistprofile.cgi?id=5yvDN9PJCthUnVu4nXgrLZ" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item37 preview_url="https://p.scdn.co/mp3-preview/1a0df9cd6d8b5864c488747e8ca07931520bd180" class="genre scanme" scan=true style="color: #d06e01; top: 369px; left: 521px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;6YXJahjUHg8vSKdqwKPbCy&quot;, &quot;Og Libra&quot;, this);" title="e.g. Og Libra &quot;Hi Anthem&quot;">Og Libra<a class=navlink href="artistprofile.cgi?id=74BNUYhpwnuEuDL04gAMEM" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item38 preview_url="https://p.scdn.co/mp3-preview/b67b0444a59a5d6595883bdb17ffeb36a34b61d5" class="genre scanme" scan=true style="color: #a89800; top: 346px; left: 884px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;3n1cfu8VZctYgfBgMewhyV&quot;, &quot;Scribbs&quot;, this);" title="e.g. Scribbs &quot;Polk County&quot;">Scribbs<a class=navlink href="artistprofile.cgi?id=7sYgJ5dk7weFxmPFdG21gB" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item39 preview_url="https://p.scdn.co/mp3-preview/6cae1e3b8d8a71c9fcd9f0a55788df165cfb196d" class="genre scanme" scan=true style="color: #af8c0a; top: 294px; left: 567px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;0hbR8jizO2WfPVydFCFc4l&quot;, &quot;Jim Hurdle&quot;, this);" title="e.g. Jim Hurdle &quot;Big Mood&quot;">Jim Hurdle<a class=navlink href="artistprofile.cgi?id=6Z4Xh4GKg7kZUh6A0bjYwX" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item40 preview_url="https://p.scdn.co/mp3-preview/780feac5e2732cd24531ce5d47f6c691e7faee1a" class="genre scanme" scan=true style="color: #5daf01; top: 141px; left: 1056px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;5jZNFrudvXmRewvvVChRk7&quot;, &quot;Casey 808&quot;, this);" title="e.g. Casey 808 &quot;Hitz&quot;">Casey 808<a class=navlink href="artistprofile.cgi?id=2a8iTdVA4QdifL4KRT4K2F" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item41 preview_url="https://p.scdn.co/mp3-preview/de4c97ae31fdaa5f466718033f8e515721bac066" class="genre scanme" scan=true style="color: #879700; top: 338px; left: 693px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;0iH5pAFtIaV41l5gOm95ir&quot;, &quot;Tre Tru&quot;, this);" title="e.g. Tre Tru &quot;MarvelMan&quot;">Tre Tru<a class=navlink href="artistprofile.cgi?id=4ETtGe3fDYUMeyWPcAORDX" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item42 preview_url="https://p.scdn.co/mp3-preview/fe1d7a4ca96085f1451aa55efba8c2dabf500e0c" class="genre scanme" scan=true style="color: #749907; top: 497px; left: 953px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;542zFHGTngr1JjNN1skONl&quot;, &quot;Kody D&quot;, this);" title="e.g. Kody D &quot;Unstoppable&quot;">Kody D<a class=navlink href="artistprofile.cgi?id=2RoUdwrX6QycYdDyoCOqed" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item43 preview_url="https://p.scdn.co/mp3-preview/600c990172ad24ca87bfffe284bf1ad5d93e3d83" class="genre scanme" scan=true style="color: #8e9400; top: 287px; left: 767px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;5J8ty9BuoAR6I0kppiGG10&quot;, &quot;Hakeem Paragon&quot;, this);" title="e.g. Hakeem Paragon &quot;LoveForIt&quot;">Hakeem Paragon<a class=navlink href="artistprofile.cgi?id=25IU3ahZLxVnzJPjwzHGGA" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item44 preview_url="https://p.scdn.co/mp3-preview/bd653b916aaa765ba9a211b5accbf429a4c498f4" class="genre scanme" scan=true style="color: #8e9800; top: 413px; left: 828px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;5vKNx8o7GDbeC6XPn6HJcU&quot;, &quot;Slikk&quot;, this);" title="e.g. Slikk &quot;Take Me Away&quot;">Slikk<a class=navlink href="artistprofile.cgi?id=28JYQxpIzfg9i4ik7bwypR" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item45 preview_url="https://p.scdn.co/mp3-preview/169ccb558c041c0448551d15ec95f3e56a53ea25" class="genre scanme" scan=true style="color: #5e980a; top: 510px; left: 460px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;6HSHuzhjNaJ7DIqU48sMSF&quot;, &quot;Nowelo&quot;, this);" title="e.g. Nowelo &quot;Leave Me (Lovesick Version)&quot;">Nowelo<a class=navlink href="artistprofile.cgi?id=1CP8zMvTBMaN9cTTJYMlv8" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item46 preview_url="https://p.scdn.co/mp3-preview/f6fc6165e4c65bd2e6725acc61cbb0dbff5c213d" class="genre scanme" scan=true style="color: #b38801; top: 837px; left: 474px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;0TWqJfwttdh9RtwhIycFUD&quot;, &quot;Tantra&quot;, this);" title="e.g. Tantra &quot;Open Up&quot;">Tantra<a class=navlink href="artistprofile.cgi?id=28FzL4Ql6B0tXyZaLt8cqt" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item47 preview_url="" class="genre scanme"  style="color: #b35c00; top: 508px; left: 1284px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;&quot;, &quot;Island Trybe Ft. Sincere And Les'sonz&quot;, this);" title="(no sample available)">Island Trybe Ft. Sincere And Les'sonz<a class=navlink href="artistprofile.cgi?id=2CafRT8HJhes2YP3phYjEH" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item48 preview_url="https://p.scdn.co/mp3-preview/d294ad977b0c53345920e65f9723b393ec976504" class="genre scanme" scan=true style="color: #9b8f00; top: 464px; left: 702px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;4WCRQTOXxfUfIm2Z9JxzbO&quot;, &quot;OPENEYES&quot;, this);" title="e.g. OPENEYES &quot;Guac' (feat. Yungjame$ &amp; TallWall)&quot;">OPENEYES<a class=navlink href="artistprofile.cgi?id=2bq60ta8PxNqaNiM9hdjHk" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item49 preview_url="https://p.scdn.co/mp3-preview/e69d21b724d8ab882621f2f9e0d6747b2e6b4075" class="genre scanme" scan=true style="color: #c65c09; top: 725px; left: 363px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;73P3eI9Am0UI1nt1q9LVur&quot;, &quot;Hunger Pains&quot;, this);" title="e.g. Hunger Pains &quot;Weapon of Choice Feat. Creed Chameleon&quot;">Hunger Pains<a class=navlink href="artistprofile.cgi?id=3ts6WqGtS7bHndkmo6I6pd" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item50 preview_url="https://p.scdn.co/mp3-preview/25f13fe52b8a18c0298a15eb18bf96539d164187" class="genre scanme" scan=true style="color: #809f03; top: 124px; left: 190px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;5R1efzwINopYz2kyY4wBPC&quot;, &quot;Reina Love&quot;, this);" title="e.g. Reina Love &quot;Inception&quot;">Reina Love<a class=navlink href="artistprofile.cgi?id=43r9LuNkrJceargEDJAea3" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item51 preview_url="https://p.scdn.co/mp3-preview/ecda07036189f8a6abb943b07a5de65191b3b211" class="genre scanme" scan=true style="color: #879f00; top: 430px; left: 437px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;36oJPKHfLhbZbzcNUA4ukO&quot;, &quot;The Lower Aina Project&quot;, this);" title="e.g. The Lower Aina Project &quot;Lower Aina Riding&quot;">The Lower Aina Project<a class=navlink href="artistprofile.cgi?id=43JEqiTCbjpqJfbsbdLnCj" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item52 preview_url="https://p.scdn.co/mp3-preview/35c03d71edbb77961e86d32cdd8d9b7dc085f94f" class="genre scanme" scan=true style="color: #d66800; top: 636px; left: 563px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;1kfSsi3dh5GW6kEm8B1dYQ&quot;, &quot;Audible Lab Rats&quot;, this);" title="e.g. Audible Lab Rats &quot;Breathe&quot;">Audible Lab Rats<a class=navlink href="artistprofile.cgi?id=035YU7XnrBDvyGEzDAxDNK" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item53 preview_url="https://p.scdn.co/mp3-preview/8042f02600efe59b835cbd804c698d515d273337" class="genre scanme" scan=true style="color: #a58802; top: 552px; left: 567px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;7kOsFy4IbLUlkGPLFAzQv0&quot;, &quot;Allicat&quot;, this);" title="e.g. Allicat &quot;Where Do I Go (feat. Jonathan Wes &amp; Sam Watson)&quot;">Allicat<a class=navlink href="artistprofile.cgi?id=1qH0mDe7iBsYPnMoMm4ccP" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item54 preview_url="https://p.scdn.co/mp3-preview/489062fea2d46de87768b035cd054455b9a1565b" class="genre scanme" scan=true style="color: #7f9800; top: 243px; left: 1274px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;1cgkuLtRxAbIMvCqFVUbGx&quot;, &quot;Suavenchy&quot;, this);" title="e.g. Suavenchy &quot;Let the Choir Sing&quot;">Suavenchy<a class=navlink href="artistprofile.cgi?id=6iTwYc6gIyFtwgi6gP7ki0" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item55 preview_url="https://p.scdn.co/mp3-preview/b262e4c94792074f9c8e7babbbe6248420be46ca" class="genre scanme" scan=true style="color: #a49700; top: 145px; left: 614px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;2gbS0pKScVVuqVriIaV1bs&quot;, &quot;Aktion Twentybirdz&quot;, this);" title="e.g. Aktion Twentybirdz &quot;Too Late&quot;">Aktion Twentybirdz<a class=navlink href="artistprofile.cgi?id=3aiXDwx07Bft5XZ4bij2iM" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item56 preview_url="https://p.scdn.co/mp3-preview/197663efa5bbe8007d1cfcb9485b9a6579d7624f" class="genre scanme" scan=true style="color: #d97400; top: 566px; left: 0px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;0jkySn4TXdUI5JollJtYU8&quot;, &quot;Kwalified X Sirenz&quot;, this);" title="e.g. Kwalified X Sirenz &quot;Hello, It's Me&quot;">Kwalified X Sirenz<a class=navlink href="artistprofile.cgi?id=4McDAAwyotmknLpSbCpxHr" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item57 preview_url="https://p.scdn.co/mp3-preview/b67551ee33f332c56577a6ace8f33113c7d2dd3f" class="genre scanme" scan=true style="color: #978600; top: 678px; left: 521px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;2QiagdEZKSrxw1VjynhRfe&quot;, &quot;Rob Mizo&quot;, this);" title="e.g. Rob Mizo &quot;RIP Bob Marley&quot;">Rob Mizo<a class=navlink href="artistprofile.cgi?id=5jqMZkkU01UhwsY7JU7luF" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item58 preview_url="https://p.scdn.co/mp3-preview/0446ea473ae6e6f2190142c31c16671292ab7620" class="genre scanme" scan=true style="color: #dd6800; top: 680px; left: 22px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;22gKLbY9J260O0sfOBScJ4&quot;, &quot;Super Groupers&quot;, this);" title="e.g. Super Groupers &quot;Forgetting You (feat. Montclaire)&quot;">Super Groupers<a class=navlink href="artistprofile.cgi?id=5GlMa5U6lNSHAPHdRh40Mf" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item59 preview_url="" class="genre scanme"  style="color: #7a7a00; top: 583px; left: 953px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;&quot;, &quot;Ro&quot;, this);" title="(no sample available)">Ro<a class=navlink href="artistprofile.cgi?id=1BSWQdQRXainiVJIumqIzI" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+<div id=item60 preview_url="https://p.scdn.co/mp3-preview/806614a8ea1e15cf42bfa2ebfc6f7762639e1a81" class="genre scanme" scan=true style="color: #b08300; top: 0px; left: 572px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;3D9Ewg1Igcrvfa2aIm5FOp&quot;, &quot;Island Mojo&quot;, this);" title="e.g. Island Mojo &quot;Aloha (Hit Em With Aloha)&quot;">Island Mojo<a class=navlink href="artistprofile.cgi?id=5eccLl305aaGwgvP8MtwVk" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" target=artistprofile>&raquo;</a> </div>
+
+</div>
+<div id=tunnel role=complementary style="width: 1600px; padding: 32px 500px 16px 500px;">
+<div class=canvas style="width: 499px; height: 343px; border: 1px solid gray; background: #FCFCFC; top: 64px">
+<div id=nearbyitem1 preview_url="https://p.scdn.co/mp3-preview/79b75a7b04adf2057de484d265f590d26afcab3e" class="genre" scan=true style="color: #9d8a03; top: 211px; left: 221px; font-size: 240%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;5Ngc5OHF8TclxZ60K1lH1i&quot;, &quot;hawaiian hip hop&quot;, this);" title="e.g. Hawaiian Soljah &quot;Where Im From&quot;">hawaiian hip hop<a class=navlink href="everynoise1d.cgi?scope=all&root=hawaiian%20hip%20hop" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" >&raquo;</a> </div>
+
+<div id=nearbyitem2 preview_url="https://p.scdn.co/mp3-preview/f65b8d3d36029ff6c9d665e00c8993af8bedf815" class="genre" scan=true style="color: #9e8d06; top: 259px; left: 205px; font-size: 103%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;0UVR0QiTSuQjiRSmtGN65o&quot;, &quot;rap baiano&quot;, this);" title="e.g. VANDAL &quot;BALAH IH FOGOH&quot;">rap baiano<a class=navlink href="engenremap-rapbaiano.html#tunnel" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" >&raquo;</a> </div>
+
+<div id=nearbyitem3 preview_url="https://p.scdn.co/mp3-preview/47fe05fa58c75a599f09583a3d543c4d6043fc84" class="genre" scan=true style="color: #a08d0b; top: 198px; left: 197px; font-size: 103%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;7kYBMIKF6H3nb8vadxObSH&quot;, &quot;schweizer rap&quot;, this);" title="e.g. Xen &quot;Motivé&quot;">schweizer rap<a class=navlink href="engenremap-schweizerrap.html#tunnel" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" >&raquo;</a> </div>
+
+<div id=nearbyitem4 preview_url="https://p.scdn.co/mp3-preview/0825d0d2bd642ef5d286ae0a4b9a3937af2421d8" class="genre" scan=true style="color: #9d8f04; top: 240px; left: 158px; font-size: 102%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;1evXKFqr2K7DS643Odndhj&quot;, &quot;rap feminino nacional&quot;, this);" title="e.g. Flora Matos &quot;TEIA&quot;">rap feminino nacional<a class=navlink href="engenremap-rapfemininonacional.html#tunnel" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" >&raquo;</a> </div>
+
+<div id=nearbyitem5 preview_url="https://p.scdn.co/mp3-preview/4c27002e3f1714052a371a643a6329f9d5097893" class="genre" scan=true style="color: #a08b09; top: 124px; left: 284px; font-size: 102%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;4fScfxwrDDhvMPGnqEOYVj&quot;, &quot;rap maromba&quot;, this);" title="e.g. Larrodi &quot;Estético&quot;">rap maromba<a class=navlink href="engenremap-rapmaromba.html#tunnel" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" >&raquo;</a> </div>
+
+<div id=nearbyitem6 preview_url="https://p.scdn.co/mp3-preview/b02576b7497d9365d303b5c27b56d3f148902010" class="genre" scan=true style="color: #a18f02; top: 307px; left: 245px; font-size: 101%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;4yc9F6uIVUh98jGzuBmzmG&quot;, &quot;uk desi rap&quot;, this);" title="e.g. JJ Esko &quot;No Cap&quot;">uk desi rap<a class=navlink href="engenremap-ukdesirap.html#tunnel" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" >&raquo;</a> </div>
+
+<div id=nearbyitem7 preview_url="https://p.scdn.co/mp3-preview/cb5ceb7a987d49ac9b9328566d700c658df63448" class="genre" scan=true style="color: #a18e03; top: 72px; left: 253px; font-size: 101%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;20GZUhRgOO6bE7OdpsgbIt&quot;, &quot;deep underground hip hop&quot;, this);" title="e.g. Alien Family &quot;Alien Fam&quot;">deep underground hip hop<a class=navlink href="engenremap-deepundergroundhiphop.html#tunnel" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" >&raquo;</a> </div>
+
+<div id=nearbyitem8 preview_url="https://p.scdn.co/mp3-preview/bd934a8dd78f56ab767d510a008014c6ffad2be1" class="genre" scan=true style="color: #998b08; top: 159px; left: 118px; font-size: 101%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;5Zeh4PGp91F2CSV2Wc395s&quot;, &quot;idaho hip hop&quot;, this);" title="e.g. John Bond &quot;Built Dif&quot;">idaho hip hop<a class=navlink href="engenremap-idahohiphop.html#tunnel" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" >&raquo;</a> </div>
+
+<div id=nearbyitem9 preview_url="https://p.scdn.co/mp3-preview/73c25514251083503be5ad72bfe098673943c885" class="genre" scan=true style="color: #a68709; top: 147px; left: 111px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;2je9NxHH55PLvTrUT0djga&quot;, &quot;ukrainian hip hop&quot;, this);" title="e.g. Krechet &quot;До батьків&quot;">ukrainian hip hop<a class=navlink href="engenremap-ukrainianhiphop.html#tunnel" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" >&raquo;</a> </div>
+
+<div id=nearbyitem10 preview_url="https://p.scdn.co/mp3-preview/335065fe83884f509dc446e0508f5532bae721cc" class="genre" scan=true style="color: #a58d08; top: 279px; left: 205px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;1j0DMjnhGO8f6v0jAERL0D&quot;, &quot;ugandan hip hop&quot;, this);" title="e.g. Navio &quot;Hamadi&quot;">ugandan hip hop<a class=navlink href="engenremap-ugandanhiphop.html#tunnel" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" >&raquo;</a> </div>
+
+<div id=nearbyitem11 preview_url="https://p.scdn.co/mp3-preview/3d9945ab2f9331d5182f3e9228b157186efd2f95" class="genre" scan=true style="color: #a78704; top: 264px; left: 103px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;11HSXCxSkJNcaCJTbRnfVn&quot;, &quot;rap gaucho&quot;, this);" title="e.g. Ultramen &quot;Dívida&quot;">rap gaucho<a class=navlink href="engenremap-rapgaucho.html#tunnel" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" >&raquo;</a> </div>
+
+<div id=nearbyitem12 preview_url="https://p.scdn.co/mp3-preview/10d771cbcb255a9ff256fb843f2f7699c3a01964" class="genre" scan=true style="color: #988d08; top: 295px; left: 32px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;1l4667RlKg7diD6P1Dz9aL&quot;, &quot;indie hip hop&quot;, this);" title="e.g. femdot. &quot;94 Camry Music&quot;">indie hip hop<a class=navlink href="engenremap-indiehiphop.html#tunnel" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" >&raquo;</a> </div>
+
+<div id=nearbyitem13 preview_url="https://p.scdn.co/mp3-preview/c7827b19674914f080deb138424c5350a5fffdb9" class="genre" scan=true style="color: #a2860b; top: 211px; left: 16px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;5AAOcmngBvTijFZLsaZbJS&quot;, &quot;atlantic canada hip hop&quot;, this);" title="e.g. Quake Matthews &quot;*BONUS* Way Up&quot;">atlantic canada hip hop<a class=navlink href="engenremap-atlanticcanadahiphop.html#tunnel" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" >&raquo;</a> </div>
+
+<div id=nearbyitem14 preview_url="https://p.scdn.co/mp3-preview/783203b0ee9493d855e41de08400aa1161fc587f" class="genre" scan=true style="color: #a48709; top: 119px; left: 16px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;5CSlIOlkQZt5qwlTBrEkYQ&quot;, &quot;bc underground hip hop&quot;, this);" title="e.g. Evil Ebenezer &quot;Sunshine&quot;">bc underground hip hop<a class=navlink href="engenremap-bcundergroundhiphop.html#tunnel" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" >&raquo;</a> </div>
+
+<div id=nearbyitem15 preview_url="https://p.scdn.co/mp3-preview/09b1b2ee39b52f3b608ca2f28bbab2511004fc8e" class="genre" scan=true style="color: #a48809; top: 198px; left: 39px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;3SHqFtMZKSsqlvdVoNh9SM&quot;, &quot;south african hip hop&quot;, this);" title="e.g. DJ Sliqe &quot;On It&quot;">south african hip hop<a class=navlink href="engenremap-southafricanhiphop.html#tunnel" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" >&raquo;</a> </div>
+
+<div id=nearbyitem16 preview_url="https://p.scdn.co/mp3-preview/8c7bd7b308de11b6118973bafeed20cc5b63c748" class="genre" scan=true style="color: #9d8a0b; top: 186px; left: 134px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;4ApxvEZV8GuB0ayBv1DTJI&quot;, &quot;north carolina hip hop&quot;, this);" title="e.g. Getrichzay &quot;2 MIN FREESTYLE&quot;">north carolina hip hop<a class=navlink href="engenremap-northcarolinahiphop.html#tunnel" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" >&raquo;</a> </div>
+
+<div id=nearbyitem17 preview_url="https://p.scdn.co/mp3-preview/70c71d8b708469446c33e227566a1a9b1f944620" class="genre" scan=true style="color: #a68808; top: 134px; left: 0px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;5FQPhxGP8S7hr1cYDAGqR1&quot;, &quot;armenian hip hop&quot;, this);" title="e.g. Super Sako &quot;Mi Gna (feat. Hayko)&quot;">armenian hip hop<a class=navlink href="engenremap-armenianhiphop.html#tunnel" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" >&raquo;</a> </div>
+
+<div id=nearbyitem18 preview_url="https://p.scdn.co/mp3-preview/e62c95062b0602d9b926b89a3ce8263e9992bb65" class="genre" scan=true style="color: #aa870a; top: 155px; left: 300px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;7FXAik3QQacggiaSJ2QTbA&quot;, &quot;korean underground rap&quot;, this);" title="e.g. QM &quot;COME TO MY STU (Feat. Leellamarz)&quot;">korean underground rap<a class=navlink href="engenremap-koreanundergroundrap.html#tunnel" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" >&raquo;</a> </div>
+
+<div id=nearbyitem19 preview_url="https://p.scdn.co/mp3-preview/b1ea6e0ed592bbc34e62bd43c4176afcfea5aaed" class="genre" scan=true style="color: #a09109; top: 85px; left: 284px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;5ZCHWdMgsdoo78m9prkhOR&quot;, &quot;pakistani hip hop&quot;, this);" title="e.g. Rap Demon &quot;Agency&quot;">pakistani hip hop<a class=navlink href="engenremap-pakistanihiphop.html#tunnel" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" >&raquo;</a> </div>
+
+<div id=nearbyitem20 preview_url="https://p.scdn.co/mp3-preview/f12cac8d9c383904a953cb3c98c9f32c93983c44" class="genre" scan=true style="color: #948908; top: 0px; left: 158px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;1wSLX9nWj4EsvWwv4275HR&quot;, &quot;chopped and screwed&quot;, this);" title="e.g. Swishahouse &quot;International Players Anthem&quot;">chopped and screwed<a class=navlink href="engenremap-choppedandscrewed.html#tunnel" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" >&raquo;</a> </div>
+
+<div id=nearbyitem21 preview_url="https://p.scdn.co/mp3-preview/1aee0cc48fd397583ac1cf31224c48d74cf1ae54" class="genre" scan=true style="color: #959107; top: 295px; left: 158px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;00i8RUnoVt5tBuIg2zWV3y&quot;, &quot;belgian hip hop&quot;, this);" title="e.g. STIKSTOF &quot;FRONTAL&quot;">belgian hip hop<a class=navlink href="engenremap-belgianhiphop.html#tunnel" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" >&raquo;</a> </div>
+
+</div></div>
+<div id=mirror role=complementary style="width: 1600px; padding: 32px 500px 16px 500px;">
+<div class=canvas style="width: 499px; height: 338px; border: 1px solid gray; background: #404040; top: 64px">
+<div id=mirroritem1 preview_url="https://p.scdn.co/mp3-preview/c9b3cc9cb0352ce9c6f748bd2e662eb780c8c091" class="genre" scan=true style="color: #c9c1b7; top: 40px; left: 111px; font-size: 160%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;1FSrm3p9rg6wkwcqCBGOqA&quot;, &quot;japanese celtic&quot;, this);" title="e.g. Oledickfoggy &quot;夜光虫&quot;">japanese celtic<a class=navlink href="engenremap-japaneseceltic.html#tunnel" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" >&raquo;</a> </div>
+
+<div id=mirroritem2 preview_url="https://p.scdn.co/mp3-preview/c9d247fcc66b91208899b3c336593321dd9ec664" class="genre" scan=true style="color: #bec3b6; top: 217px; left: 87px; font-size: 147%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;3jCowIhDbYJxtLxlYdZCK9&quot;, &quot;neofolk&quot;, this);" title="e.g. Sonne Hagal &quot;The Shapes of Things to Come&quot;">neofolk<a class=navlink href="engenremap-neofolk.html#tunnel" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" >&raquo;</a> </div>
+
+<div id=mirroritem3 preview_url="https://p.scdn.co/mp3-preview/3cc4a7a07a635bcf9aaf292deb0e6940ad89a082" class="genre" scan=true style="color: #c5bcc0; top: 137px; left: 55px; font-size: 142%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;3RRhupyqEbeyy7CXCs9Y6D&quot;, &quot;martial industrial&quot;, this);" title="e.g. Arditi &quot;Omne Ensis Impera&quot;">martial industrial<a class=navlink href="engenremap-martialindustrial.html#tunnel" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" >&raquo;</a> </div>
+
+<div id=mirroritem4 preview_url="https://p.scdn.co/mp3-preview/9305b116c688673de6eea7d2c051d1b7a37c08aa" class="genre" scan=true style="color: #cbbabf; top: 300px; left: 178px; font-size: 141%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;3YYEXhRV0bi1ic3QvanBPt&quot;, &quot;japanese psychedelic&quot;, this);" title="e.g. Les Rallizes Dénudés &quot;White Awakening&quot;">japanese psychedelic<a class=navlink href="engenremap-japanesepsychedelic.html#tunnel" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" >&raquo;</a> </div>
+
+<div id=mirroritem5 preview_url="https://p.scdn.co/mp3-preview/4daa2614c876333ffd60ce7d429db30ac19ea67e" class="genre" scan=true style="color: #c7bdb7; top: 227px; left: 262px; font-size: 136%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;2h4KmvKPMxvZjTpHTpq2FE&quot;, &quot;cascadia psych&quot;, this);" title="e.g. Marisa Anderson &quot;Hesitation Theme and Variation Blues&quot;">cascadia psych<a class=navlink href="engenremap-cascadiapsych.html#tunnel" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" >&raquo;</a> </div>
+
+<div id=mirroritem6 preview_url="https://p.scdn.co/mp3-preview/da5a58e5cd2ac7b8b0cf176a886a21695a585c00" class="genre" scan=true style="color: #c6c6b0; top: 200px; left: 17px; font-size: 133%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;5DuoNhVeMZJc2Ts6n1ogqW&quot;, &quot;gaita&quot;, this);" title="e.g. Susana Seivane &quot;Sabelina&quot;">gaita<a class=navlink href="engenremap-gaita.html#tunnel" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" >&raquo;</a> </div>
+
+<div id=mirroritem7 preview_url="https://p.scdn.co/mp3-preview/28c60b385adcb6e4f0b33891ad67997fb5da7129" class="genre" scan=true style="color: #c0c4b9; top: 275px; left: 271px; font-size: 126%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;6BkeuHmO4P69Ln2BSonrXi&quot;, &quot;raga rock&quot;, this);" title="e.g. Ananda Shankar &quot;Jumpin' Jack Flash&quot;">raga rock<a class=navlink href="engenremap-ragarock.html#tunnel" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" >&raquo;</a> </div>
+
+<div id=mirroritem8 preview_url="https://p.scdn.co/mp3-preview/7650b45097e1e2a9781c1fc062d30411efc89e79" class="genre" scan=true style="color: #c1c5b4; top: 69px; left: 44px; font-size: 119%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;3NwTDLpZRmyOTaOtGoVm8X&quot;, &quot;ethereal wave&quot;, this);" title="e.g. Love Spirals Downwards &quot;City Moon&quot;">ethereal wave<a class=navlink href="engenremap-etherealwave.html#tunnel" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" >&raquo;</a> </div>
+
+<div id=mirroritem9 preview_url="https://p.scdn.co/mp3-preview/549f41b4e712c4712d956ffc04855c5831ca36ee" class="genre" scan=true style="color: #cdbeb3; top: 94px; left: 12px; font-size: 118%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;47tMJcB5zG3RhwTDhJVVjb&quot;, &quot;norwegian psychedelic&quot;, this);" title="e.g. Motorpsycho &quot;Vortex Surfer&quot;">norwegian psychedelic<a class=navlink href="engenremap-norwegianpsychedelic.html#tunnel" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" >&raquo;</a> </div>
+
+<div id=mirroritem10 preview_url="https://p.scdn.co/mp3-preview/0b179cbb540d3f6b506ef603ff10cf544c14d093" class="genre" scan=true style="color: #d2babc; top: 154px; left: 105px; font-size: 116%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;3KrI3CKZkX6BHw5NdQLLHj&quot;, &quot;space rock&quot;, this);" title="e.g. Causa Sui &quot;Rosso Di Sera Bel Tempo Si Spera&quot;">space rock<a class=navlink href="engenremap-spacerock.html#tunnel" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" >&raquo;</a> </div>
+
+<div id=mirroritem11 preview_url="https://p.scdn.co/mp3-preview/59d8671cdf0f5d4e6bdb39259be95894ffd1f249" class="genre" scan=true style="color: #cac2b4; top: 60px; left: 172px; font-size: 113%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;0iVUzpjSPczQoNPuwtEOkL&quot;, &quot;german prog&quot;, this);" title="e.g. Birth Control &quot;Gamma Ray&quot;">german prog<a class=navlink href="engenremap-germanprog.html#tunnel" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" >&raquo;</a> </div>
+
+<div id=mirroritem12 preview_url="https://p.scdn.co/mp3-preview/1bdf9462299ead9b3ac560a82ed871195550e115" class="genre" scan=true style="color: #ccbfb0; top: 13px; left: 169px; font-size: 108%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;5hUCTgttGB1eS4GJdPEQEM&quot;, &quot;dream pop&quot;, this);" title="e.g. Pale Saints &quot;Kinky Love&quot;">dream pop<a class=navlink href="engenremap-dreampop.html#tunnel" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" >&raquo;</a> </div>
+
+<div id=mirroritem13 preview_url="https://p.scdn.co/mp3-preview/6a1403abe9a693ceb64100f782716af1b8646fa3" class="genre" scan=true style="color: #c7c5be; top: 0px; left: 90px; font-size: 107%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;0rVTm2crUJpDnn64P5jAgD&quot;, &quot;pinoy shoegaze&quot;, this);" title="e.g. Megumi Acorda &quot;Ghost&quot;">pinoy shoegaze<a class=navlink href="engenremap-pinoyshoegaze.html#tunnel" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" >&raquo;</a> </div>
+
+<div id=mirroritem14 preview_url="https://p.scdn.co/mp3-preview/479f1eb6fe7d335ecd98c070e31adeffacf6155b" class="genre" scan=true style="color: #c1c1c5; top: 183px; left: 297px; font-size: 106%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;5CevbpxOgTUNsPuJUTl6RZ&quot;, &quot;krautrock&quot;, this);" title="e.g. Agitation Free &quot;First Communication&quot;">krautrock<a class=navlink href="engenremap-krautrock.html#tunnel" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" >&raquo;</a> </div>
+
+<div id=mirroritem15 preview_url="https://p.scdn.co/mp3-preview/795525d136515ea787e3ed23eb0d5724c20100cc" class="genre" scan=true style="color: #c5c4c5; top: 109px; left: 183px; font-size: 105%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;5LPyky887rVAdr5yvfIBEv&quot;, &quot;polish psychedelia&quot;, this);" title="e.g. Nene Heroine &quot;Wola&quot;">polish psychedelia<a class=navlink href="engenremap-polishpsychedelia.html#tunnel" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" >&raquo;</a> </div>
+
+<div id=mirroritem16 preview_url="https://p.scdn.co/mp3-preview/914f1b997627efd569880fa2f9a7ca04b8731024" class="genre" scan=true style="color: #cbb6b1; top: 196px; left: 300px; font-size: 102%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;6TQDlYYRwcS1jbPoQiB8KM&quot;, &quot;experimental rock&quot;, this);" title="e.g. This Heat &quot;Cenotaph&quot;">experimental rock<a class=navlink href="engenremap-experimentalrock.html#tunnel" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" >&raquo;</a> </div>
+
+<div id=mirroritem17 preview_url="https://p.scdn.co/mp3-preview/03ee3479d5ae40e884fc94b4c472268b9b38a5fb" class="genre" scan=true style="color: #cfb9ba; top: 252px; left: 0px; font-size: 102%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;1zcV54IyIHMrIDhTytt3b2&quot;, &quot;japanese psychedelic rock&quot;, this);" title="e.g. Boris &quot;Farewell&quot;">japanese psychedelic rock<a class=navlink href="engenremap-japanesepsychedelicrock.html#tunnel" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" >&raquo;</a> </div>
+
+<div id=mirroritem18 preview_url="https://p.scdn.co/mp3-preview/247c526fa020fe5889b855086a1750e58f7afc15" class="genre" scan=true style="color: #d0bdb0; top: 75px; left: 169px; font-size: 102%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;0QJb3mCfJAPn0KEyqt0Yne&quot;, &quot;dunedin sound&quot;, this);" title="e.g. 3Ds &quot;Outer Space&quot;">dunedin sound<a class=navlink href="engenremap-dunedinsound.html#tunnel" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" >&raquo;</a> </div>
+
+<div id=mirroritem19 preview_url="https://p.scdn.co/mp3-preview/40532f1c387f3433602eb8fb78f88403c69bd243" class="genre" scan=true style="color: #bcc5b9; top: 256px; left: 283px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;5BqN9YxYxyXqrbS7FWpOWH&quot;, &quot;lo-fi indie&quot;, this);" title="e.g. waveform* &quot;Favorite Song&quot;">lo-fi indie<a class=navlink href="engenremap-lofiindie.html#tunnel" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" >&raquo;</a> </div>
+
+<div id=mirroritem20 preview_url="https://p.scdn.co/mp3-preview/a6fcaad67b62fc7f3af58077ce84aff4aa941fb6" class="genre" scan=true style="color: #bbc7b3; top: 168px; left: 82px; font-size: 100%" role=button tabindex=0 onKeyDown="kb(event);" onclick="playx(&quot;4PSVK92v0jtq8NiOtgqnFe&quot;, &quot;rune folk&quot;, this);" title="e.g. The Moon &amp; The Nightspirit &quot;Ég felé&quot;">rune folk<a class=navlink href="engenremap-runefolk.html#tunnel" role=button tabindex=0 onKeyDown="kb(event);" onclick="event.stopPropagation();" >&raquo;</a> </div>
+
+</div></div>
+<div role=complementary style="text-align: center; width: 1500px; margin-top: 96px; color: gray">
+<a href="https://twitter.com/everynoise" target=twitter>@EveryNoise</a> &middot;&nbsp; 
+<a href="http://furia.com" target=furia>glenn mcdonald</a>
+</div>
+<div role=complementary style="margin: 16px 500px; width: 499px; text-align: justify; color: gray; display: table">
+Every Noise at Once is an ongoing attempt at an algorithmically-generated, readability-adjusted scatter-plot of the musical genre-space, based on data tracked and analyzed for 6,058 genre-shaped distinctions by Spotify as of 2023-03-20.
+The calibration is fuzzy, but in general down is more organic, up is more mechanical and electric; left is denser and more atmospheric, right is spikier and bouncier.<br>
+&nbsp;<br>Click anything to hear an example of what it sounds like.<br>
+&nbsp;<br>Click the &raquo; on an artist to see their Spotify catalog.<br>
+</div>
+
+<center class="sigil" title=s3><br>☊<br>
+<div class="display: none"><audio controls="controls" id=spotifyplayer style="visibility: hidden"></audio></div>
+</center>
+</body>
+</html>
+

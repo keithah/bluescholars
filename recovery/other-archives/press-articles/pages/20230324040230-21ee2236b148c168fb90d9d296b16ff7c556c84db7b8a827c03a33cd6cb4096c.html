@@ -1,0 +1,1921 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#">
+	<head>
+		<meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"fa09265af4",applicationID:"798950867"};;(()=>{var e,t,r={9071:(e,t,r)=>{"use strict";r.d(t,{I:()=>n});var n=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(n=+i[1])},6562:(e,t,r)=>{"use strict";r.d(t,{P_:()=>v,Mt:()=>h,C5:()=>d,DL:()=>y,OP:()=>R,lF:()=>L,Yu:()=>A,Dg:()=>p,CX:()=>f,GE:()=>w,sU:()=>M});var n={};r.r(n),r.d(n,{agent:()=>x,match:()=>O,version:()=>T});var i=r(6797),o=r(909),a=r(8610);class s{constructor(e,t){try{if(!e||"object"!=typeof e)return(0,a.Z)("New setting a Configurable requires an object as input");if(!t||"object"!=typeof t)return(0,a.Z)("Setting a Configurable requires a model to set its initial properties");Object.assign(this,t),Object.entries(e).forEach((e=>{let[t,r]=e;const n=(0,o.q)(t);n.length&&r&&"object"==typeof r&&n.forEach((e=>{e in r&&((0,a.Z)('"'.concat(e,'" is a protected attribute and can not be changed in feature ').concat(t,".  It will have no effect.")),delete r[e])})),this[t]=r}))}catch(e){(0,a.Z)("An error occured while setting a Configurable",e)}}}const c={beacon:i.ce.beacon,errorBeacon:i.ce.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0},u={};function d(e){if(!e)throw new Error("All info objects require an agent identifier!");if(!u[e])throw new Error("Info for ".concat(e," was never set"));return u[e]}function f(e,t){if(!e)throw new Error("All info objects require an agent identifier!");u[e]=new s(t,c),(0,i.Qy)(e,u[e],"info")}const l={allow_bfcache:!0,privacy:{cookies_enabled:!0},ajax:{deny_list:void 0,enabled:!0,harvestTimeSeconds:10},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},ssl:void 0,obfuscate:void 0,jserrors:{enabled:!0,harvestTimeSeconds:10},metrics:{enabled:!0},page_action:{enabled:!0,harvestTimeSeconds:30},page_view_event:{enabled:!0},page_view_timing:{enabled:!0,harvestTimeSeconds:30,long_task:!1},session_trace:{enabled:!0,harvestTimeSeconds:10},spa:{enabled:!0,harvestTimeSeconds:10}},g={};function v(e){if(!e)throw new Error("All configuration objects require an agent identifier!");if(!g[e])throw new Error("Configuration for ".concat(e," was never set"));return g[e]}function p(e,t){if(!e)throw new Error("All configuration objects require an agent identifier!");g[e]=new s(t,l),(0,i.Qy)(e,g[e],"config")}function h(e,t){if(!e)throw new Error("All configuration objects require an agent identifier!");var r=v(e);if(r){for(var n=t.split("."),i=0;i<n.length-1;i++)if("object"!=typeof(r=r[n[i]]))return;r=r[n[n.length-1]]}return r}const m={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},b={};function y(e){if(!e)throw new Error("All loader-config objects require an agent identifier!");if(!b[e])throw new Error("LoaderConfig for ".concat(e," was never set"));return b[e]}function w(e,t){if(!e)throw new Error("All loader-config objects require an agent identifier!");b[e]=new s(t,m),(0,i.Qy)(e,b[e],"loader_config")}const A=(0,i.mF)().o;var E=r(2053),x=null,T=null;if(navigator.userAgent){var _=navigator.userAgent,D=_.match(/Version\/(\S+)\s+Safari/);D&&-1===_.indexOf("Chrome")&&-1===_.indexOf("Chromium")&&(x="Safari",T=D[1])}function O(e,t){if(!x)return!1;if(e!==x)return!1;if(!t)return!0;if(!T)return!1;for(var r=T.split("."),n=t.split("."),i=0;i<n.length;i++)if(n[i]!==r[i])return!1;return!0}var j=r(5526),k=r(2374);const P="NRBA_SESSION_ID";function S(){if(!k.il)return null;try{let e;return null===(e=window.sessionStorage.getItem(P))&&(e=(0,j.ky)(16),window.sessionStorage.setItem(P,e)),e}catch(e){return null}}var I=r(8226);const C=e=>({customTransaction:void 0,disabled:!1,isolatedBacklog:!1,loaderType:void 0,maxBytes:3e4,offset:(0,E.yf)(),onerror:void 0,origin:""+k._A.location,ptid:void 0,releaseIds:{},sessionId:1==h(e,"privacy.cookies_enabled")?S():null,xhrWrappable:"function"==typeof k._A.XMLHttpRequest?.prototype?.addEventListener,userAgent:n,version:I.q}),N={};function R(e){if(!e)throw new Error("All runtime objects require an agent identifier!");if(!N[e])throw new Error("Runtime for ".concat(e," was never set"));return N[e]}function M(e,t){if(!e)throw new Error("All runtime objects require an agent identifier!");N[e]=new s(t,C(e)),(0,i.Qy)(e,N[e],"runtime")}function L(e){return function(e){try{const t=d(e);return!!t.licenseKey&&!!t.errorBeacon&&!!t.applicationID}catch(e){return!1}}(e)}},8226:(e,t,r)=>{"use strict";r.d(t,{q:()=>n});const n="1227.PROD"},9557:(e,t,r)=>{"use strict";r.d(t,{w:()=>o});var n=r(8610);const i={agentIdentifier:""};class o{constructor(e){try{if("object"!=typeof e)return(0,n.Z)("shared context requires an object as input");this.sharedContext={},Object.assign(this.sharedContext,i),Object.entries(e).forEach((e=>{let[t,r]=e;Object.keys(i).includes(t)&&(this.sharedContext[t]=r)}))}catch(e){(0,n.Z)("An error occured while setting SharedContext",e)}}}},4329:(e,t,r)=>{"use strict";r.d(t,{L:()=>d,R:()=>c});var n=r(3752),i=r(7022),o=r(4045),a=r(2325);const s={};function c(e,t){const r={staged:!1,priority:a.p[t]||0};u(e),s[e].get(t)||s[e].set(t,r)}function u(e){e&&(s[e]||(s[e]=new Map))}function d(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"",t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"feature";if(u(e),!e||!s[e].get(t))return a(t);s[e].get(t).staged=!0;const r=Array.from(s[e]);function a(t){const r=e?n.ee.get(e):n.ee,a=o.X.handlers;if(r.backlog&&a){var s=r.backlog[t],c=a[t];if(c){for(var u=0;s&&u<s.length;++u)f(s[u],c);(0,i.D)(c,(function(e,t){(0,i.D)(t,(function(t,r){r[0].on(e,r[1])}))}))}delete a[t],r.backlog[t]=null,r.emit("drain-"+t,[])}}r.every((e=>{let[t,r]=e;return r.staged}))&&(r.sort(((e,t)=>e[1].priority-t[1].priority)),r.forEach((e=>{let[t]=e;a(t)})))}function f(e,t){var r=e[1];(0,i.D)(t[r],(function(t,r){var n=e[0];if(r[0]===n){var i=r[1],o=e[3],a=e[2];i.apply(o,a)}}))}},3752:(e,t,r)=>{"use strict";r.d(t,{ee:()=>u});var n=r(6797),i=r(3916),o=r(7022),a=r(6562),s="nr@context";let c=(0,n.fP)();var u;function d(){}function f(){return new d}function l(){u.aborted=!0,u.backlog={}}c.ee?u=c.ee:(u=function e(t,r){var n={},c={},g={},v=!1;try{v=16===r.length&&(0,a.OP)(r).isolatedBacklog}catch(e){}var p={on:b,addEventListener:b,removeEventListener:y,emit:m,get:A,listeners:w,context:h,buffer:E,abort:l,aborted:!1,isBuffering:x,debugId:r,backlog:v?{}:t&&"object"==typeof t.backlog?t.backlog:{}};return p;function h(e){return e&&e instanceof d?e:e?(0,i.X)(e,s,f):f()}function m(e,r,n,i,o){if(!1!==o&&(o=!0),!u.aborted||i){t&&o&&t.emit(e,r,n);for(var a=h(n),s=w(e),d=s.length,f=0;f<d;f++)s[f].apply(a,r);var l=T()[c[e]];return l&&l.push([p,e,r,a]),a}}function b(e,t){n[e]=w(e).concat(t)}function y(e,t){var r=n[e];if(r)for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)}function w(e){return n[e]||[]}function A(t){return g[t]=g[t]||e(p,t)}function E(e,t){var r=T();p.aborted||(0,o.D)(e,(function(e,n){t=t||"feature",c[n]=t,t in r||(r[t]=[])}))}function x(e){return!!T()[c[e]]}function T(){return p.backlog}}(void 0,"globalEE"),c.ee=u)},9252:(e,t,r)=>{"use strict";r.d(t,{E:()=>n,p:()=>i});var n=r(3752).ee.get("handle");function i(e,t,r,i,o){o?(o.buffer([e],i),o.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},4045:(e,t,r)=>{"use strict";r.d(t,{X:()=>o});var n=r(9252);o.on=a;var i=o.handlers={};function o(e,t,r,o){a(o||n.E,i,e,t,r)}function a(e,t,r,i,o){o||(o="feature"),e||(e=n.E);var a=t[o]=t[o]||{};(a[r]=a[r]||[]).push([e,i])}},8544:(e,t,r)=>{"use strict";r.d(t,{bP:()=>s,iz:()=>c,m$:()=>a});var n=r(2374);let i=!1,o=!1;try{const e={get passive(){return i=!0,!1},get signal(){return o=!0,!1}};n._A.addEventListener("test",null,e),n._A.removeEventListener("test",null,e)}catch(e){}function a(e,t){return i||o?{capture:!!e,passive:i,signal:t}:!!e}function s(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];window.addEventListener(e,t,a(r))}function c(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];document.addEventListener(e,t,a(r))}},5526:(e,t,r)=>{"use strict";r.d(t,{Rl:()=>i,ky:()=>o});var n=r(2374);function i(){var e=null,t=0,r=n._A?.crypto||n._A?.msCrypto;function i(){return e?15&e[t++]:16*Math.random()|0}r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var o,a="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",s="",c=0;c<a.length;c++)s+="x"===(o=a[c])?i().toString(16):"y"===o?(o=3&i()|8).toString(16):o;return s}function o(e){var t=null,r=0,n=self.crypto||self.msCrypto;n&&n.getRandomValues&&Uint8Array&&(t=n.getRandomValues(new Uint8Array(31)));for(var i=[],o=0;o<e;o++)i.push(a().toString(16));return i.join("");function a(){return t?15&t[r++]:16*Math.random()|0}}},2053:(e,t,r)=>{"use strict";r.d(t,{nb:()=>s,os:()=>c,yf:()=>a,zO:()=>o});var n=(new Date).getTime(),i=n;function o(){return performance?.now?Math.round(performance.now()):(n=Math.max((new Date).getTime(),n))-i}function a(){return n}function s(e){i=e}function c(){return i}},6625:(e,t,r)=>{"use strict";r.d(t,{s:()=>a,v:()=>s});var n=r(8283),i=r(2053),o=r(2374);let a=!0;function s(e){var t=function(){a=!1;const e=o._A?.performance?.timeOrigin||o._A?.performance?.timing?.navigationStart;if(!e)return;return Math.round(e)}();t&&((0,n.B)(e,"starttime",t),(0,i.nb)(t))}},8283:(e,t,r)=>{"use strict";r.d(t,{B:()=>o,L:()=>a});var n=r(2053),i={};function o(e,t,r){void 0===r&&(r=(0,n.zO)()+(0,n.os)()),i[e]=i[e]||{},i[e][t]=r}function a(e,t,r,n){const o=e.sharedContext.agentIdentifier;var a=i[o]?.[r],s=i[o]?.[n];void 0!==a&&void 0!==s&&e.store("measures",t,{value:s-a})}},2545:(e,t,r)=>{"use strict";r.d(t,{L:()=>c});var n=r(9071),i=r(8544),o=r(8305),a=r(2374),s=r(6998);if(a.v6){a._A.cleanupTasks=[];const e=a._A.close;a._A.close=()=>{for(let e of a._A.cleanupTasks)e();e()}}function c(e,t){if(a.il)if(t)(0,s.N)(e,!0),(0,i.bP)("pagehide",e);else{var r=(0,o.Z)(e);!n.I||navigator.sendBeacon?(0,i.bP)("pagehide",r):(0,i.bP)("beforeunload",r),(0,i.bP)("unload",r)}else a.v6&&a._A.cleanupTasks.push(e)}},8610:(e,t,r)=>{"use strict";function n(e,t){console&&console.warn&&"function"==typeof console.warn&&(console.warn("New Relic: ".concat(e)),t&&console.warn(t))}r.d(t,{Z:()=>n})},3916:(e,t,r)=>{"use strict";r.d(t,{X:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},2374:(e,t,r)=>{"use strict";r.d(t,{_A:()=>o,il:()=>n,lW:()=>a,v6:()=>i});const n=Boolean("undefined"!=typeof window&&window.document),i=Boolean("undefined"!=typeof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator);let o=(()=>{if(n)return window;if(i){if("undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope)return globalThis;if(self instanceof WorkerGlobalScope)return self}throw new Error('New Relic browser agent shutting down due to error: Unable to locate global scope. This is possibly due to code redefining browser global variables like "self" and "window".')})();function a(){return o}},7022:(e,t,r)=>{"use strict";r.d(t,{D:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t){var r=[],i="",o=0;for(i in e)n.call(e,i)&&(r[o]=t(i,e[i]),o+=1);return r}},8305:(e,t,r)=>{"use strict";r.d(t,{Z:()=>o});var n=r(8683),i=r.n(n);function o(e){var t,r=!1;return function(){return r?t:(r=!0,t=e.apply(this,i()(arguments)))}}},2650:(e,t,r)=>{"use strict";r.d(t,{K:()=>a,b:()=>o});var n=r(8544);function i(){return"undefined"==typeof document||"complete"===document.readyState}function o(e,t){if(i())return e();(0,n.bP)("load",e,t)}function a(e){if(i())return e();(0,n.iz)("DOMContentLoaded",e)}},6797:(e,t,r)=>{"use strict";r.d(t,{EZ:()=>u,Qy:()=>c,ce:()=>o,fP:()=>a,gG:()=>d,mF:()=>s});var n=r(2053),i=r(2374);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function a(){return i._A.NREUM||(i._A.NREUM={}),void 0===i._A.newrelic&&(i._A.newrelic=i._A.NREUM),i._A.NREUM}function s(){let e=a();return e.o||(e.o={ST:i._A.setTimeout,SI:i._A.setImmediate,CT:i._A.clearTimeout,XHR:i._A.XMLHttpRequest,REQ:i._A.Request,EV:i._A.Event,PR:i._A.Promise,MO:i._A.MutationObserver,FETCH:i._A.fetch}),e}function c(e,t,r){let i=a();const o=i.initializedAgents||{},s=o[e]||{};return Object.keys(s).length||(s.initializedAt={ms:(0,n.zO)(),date:new Date}),i.initializedAgents={...o,[e]:{...s,[r]:t}},i}function u(e,t){a()[e]=t}function d(){return function(){let e=a();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=a();const t=e.init||{};e.init={...t}}(),s(),function(){let e=a();const t=e.loader_config||{};e.loader_config={...t}}(),a()}},6998:(e,t,r)=>{"use strict";r.d(t,{N:()=>i,e:()=>o});var n=r(8544);function i(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1];return void(0,n.iz)("visibilitychange",(function(){if(t){if("hidden"!=document.visibilityState)return;e()}e(document.visibilityState)}))}function o(){return"hidden"===document.visibilityState?-1:1/0}},6034:(e,t,r)=>{"use strict";r.d(t,{gF:()=>o,mY:()=>i,t9:()=>n,vz:()=>s,xS:()=>a});const n=r(2325).D.metrics,i="sm",o="cm",a="storeSupportabilityMetrics",s="storeEventMetrics"},2484:(e,t,r)=>{"use strict";r.d(t,{t:()=>n});const n=r(2325).D.pageViewEvent},6382:(e,t,r)=>{"use strict";r.d(t,{t:()=>n});const n=r(2325).D.pageViewTiming},1509:(e,t,r)=>{"use strict";r.d(t,{W:()=>s});var n=r(6562),i=r(3752),o=r(2384),a=r(6797);class s{constructor(e,t,r){this.agentIdentifier=e,this.aggregator=t,this.ee=i.ee.get(e,(0,n.OP)(this.agentIdentifier).isolatedBacklog),this.featureName=r,this.blocked=!1,this.checkConfiguration()}checkConfiguration(){if(!(0,n.lF)(this.agentIdentifier)){let e={...(0,a.gG)().info?.jsAttributes};try{e={...e,...(0,n.C5)(this.agentIdentifier)?.jsAttributes}}catch(e){}(0,o.j)(this.agentIdentifier,{...(0,a.gG)(),info:{...(0,a.gG)().info,jsAttributes:e}})}}}},2384:(e,t,r)=>{"use strict";r.d(t,{j:()=>w});var n=r(8683),i=r.n(n),o=r(2325),a=r(6562),s=r(9252),c=r(7022),u=r(3752),d=r(2053),f=r(4329),l=r(2650),g=r(2374),v=r(8610),p=r(6034);function h(e){["setErrorHandler","finished","addToTrace","inlineHit","addRelease","addPageAction","setCurrentRouteName","setPageViewName","setCustomAttribute","interaction","noticeError"].forEach((t=>{e[t]=function(){for(var r=arguments.length,n=new Array(r),i=0;i<r;i++)n[i]=arguments[i];return function(t){for(var r=arguments.length,n=new Array(r>1?r-1:0),i=1;i<r;i++)n[i-1]=arguments[i];Object.values(e.initializedAgents).forEach((e=>{e.exposed&&e.api[t]&&e.api[t](...n)}))}(t,...n)}}))}var m=r(6797);const b={stn:[o.D.sessionTrace],err:[o.D.jserrors,o.D.metrics],ins:[o.D.pageAction],spa:[o.D.spa]};const y={};function w(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},n=arguments.length>2?arguments[2]:void 0,w=arguments.length>3?arguments[3]:void 0,{init:A,info:E,loader_config:x,runtime:T={loaderType:n},exposed:_=!0}=t;const D=(0,m.gG)();let O={};return E||(A=D.init,E=D.info,x=D.loader_config,O=D),g.v6&&(E.jsAttributes={...E.jsAttributes,isWorker:!0}),(0,a.CX)(e,E),(0,a.Dg)(e,A||{}),(0,a.GE)(e,x||{}),(0,a.sU)(e,T),function(e,t,n){n||(0,f.R)(e,"api"),h(t);var m=u.ee.get(e),b=m.get("tracer"),y="api-",w=y+"ixn-";function A(){}(0,c.D)(["setErrorHandler","finished","addToTrace","inlineHit","addRelease"],(function(e,r){t[r]=x(y,r,!0,"api")})),t.addPageAction=x(y,"addPageAction",!0,o.D.pageAction),t.setCurrentRouteName=x(y,"routeName",!0,o.D.spa),t.setPageViewName=function(t,r){if("string"==typeof t)return"/"!==t.charAt(0)&&(t="/"+t),(0,a.OP)(e).customTransaction=(r||"http://custom.transaction")+t,x(y,"setPageViewName",!0,"api")()},t.setCustomAttribute=function(t,r){const n=(0,a.C5)(e);return(0,a.CX)(e,{...n,jsAttributes:{...n.jsAttributes,[t]:r}}),x(y,"setCustomAttribute",!0,"api")()},t.interaction=function(){return(new A).get()};var E=A.prototype={createTracer:function(e,t){var r={},n=this,i="function"==typeof t;return(0,s.p)(w+"tracer",[(0,d.zO)(),e,r],n,o.D.spa,m),function(){if(b.emit((i?"":"no-")+"fn-start",[(0,d.zO)(),n,i],r),i)try{return t.apply(this,arguments)}catch(e){throw b.emit("fn-err",[arguments,this,"string"==typeof e?new Error(e):e],r),e}finally{b.emit("fn-end",[(0,d.zO)()],r)}}}};function x(e,t,r,n){return function(){return(0,s.p)(p.xS,["API/"+t+"/called"],void 0,o.D.metrics,m),(0,s.p)(e+t,[(0,d.zO)()].concat(i()(arguments)),r?null:this,n,m),r?void 0:this}}function T(){r.e(439).then(r.bind(r,5692)).then((t=>{let{setAPI:r}=t;r(e),(0,f.L)(e,"api")})).catch((()=>(0,v.Z)("Downloading runtime APIs failed...")))}(0,c.D)("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),(function(e,t){E[t]=x(w,t,void 0,o.D.spa)})),t.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),(0,s.p)(p.xS,["API/noticeError/called"],void 0,o.D.metrics,m),(0,s.p)("err",[e,(0,d.zO)(),!1,t],void 0,o.D.jserrors,m)},g.v6?T():(0,l.b)((()=>T()),!0)}(e,O,w),(0,m.Qy)(e,D,"api"),(0,m.Qy)(e,_,"exposed"),(0,m.EZ)("activatedFeatures",y),(0,m.EZ)("setToken",(t=>function(e,t){var r=u.ee.get(t);e&&"object"==typeof e&&((0,c.D)(e,(function(e,t){if(!t)return(b[e]||[]).forEach((t=>{(0,s.p)("block-"+e,[],void 0,t,r)}));y[e]||((0,s.p)("feat-"+e,[],void 0,b[e],r),y[e]=!0)})),(0,f.L)(t,o.D.pageViewEvent))}(t,e))),O}},909:(e,t,r)=>{"use strict";r.d(t,{Z:()=>i,q:()=>o});var n=r(2325);function i(e){switch(e){case n.D.ajax:return[n.D.jserrors];case n.D.sessionTrace:return[n.D.ajax,n.D.pageViewEvent];case n.D.pageViewTiming:return[n.D.pageViewEvent];default:return[]}}function o(e){return e===n.D.jserrors?[]:["auto"]}},2325:(e,t,r)=>{"use strict";r.d(t,{D:()=>n,p:()=>i});const n={ajax:"ajax",jserrors:"jserrors",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionTrace:"session_trace",spa:"spa"},i={[n.pageViewEvent]:1,[n.pageViewTiming]:2,[n.metrics]:3,[n.jserrors]:4,[n.ajax]:5,[n.sessionTrace]:6,[n.pageAction]:7,[n.spa]:8}},8683:e=>{e.exports=function(e,t,r){t||(t=0),void 0===r&&(r=e?e.length:0);for(var n=-1,i=r-t||0,o=Array(i<0?0:i);++n<i;)o[n]=e[t+n];return o}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var o=n[e]={exports:{}};return r[e](o,o.exports,i),o.exports}i.m=r,i.n=e=>{var t=e&&e.__esModule?()=>e.default:()=>e;return i.d(t,{a:t}),t},i.d=(e,t)=>{for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce(((t,r)=>(i.f[r](e,t),t)),[])),i.u=e=>(({78:"page_action-aggregate",147:"metrics-aggregate",193:"session_trace-aggregate",317:"jserrors-aggregate",348:"page_view_timing-aggregate",439:"async-api",729:"lazy-loader",786:"page_view_event-aggregate",873:"spa-aggregate",898:"ajax-aggregate"}[e]||e)+"."+{78:"2f41aaf7",147:"28086cfb",178:"52056f28",193:"545db67a",317:"941c6e17",348:"a7d9d7be",439:"737e0ca6",729:"540ab0d1",786:"2ae3c96c",873:"494130b7",898:"52cc993d"}[e]+"-1227.min.js"),i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA:",i.l=(r,n,o,a)=>{if(e[r])e[r].push(n);else{var s,c;if(void 0!==o)for(var u=document.getElementsByTagName("script"),d=0;d<u.length;d++){var f=u[d];if(f.getAttribute("src")==r||f.getAttribute("data-webpack")==t+o){s=f;break}}s||(c=!0,(s=document.createElement("script")).charset="utf-8",s.timeout=120,i.nc&&s.setAttribute("nonce",i.nc),s.setAttribute("data-webpack",t+o),s.src=r),e[r]=[n];var l=(t,n)=>{s.onerror=s.onload=null,clearTimeout(g);var i=e[r];if(delete e[r],s.parentNode&&s.parentNode.removeChild(s),i&&i.forEach((e=>e(n))),t)return t(n)},g=setTimeout(l.bind(null,void 0,{type:"timeout",target:s}),12e4);s.onerror=l.bind(null,s.onerror),s.onload=l.bind(null,s.onload),c&&document.head.appendChild(s)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={703:0,946:0};i.f.j=(t,r)=>{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var o=new Promise(((r,i)=>n=e[t]=[r,i]));r.push(n[2]=o);var a=i.p+i.u(t),s=new Error;i.l(a,(r=>{if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var o=r&&("load"===r.type?"missing":r.type),a=r&&r.target&&r.target.src;s.message="Loading chunk "+t+" failed.\n("+o+": "+a+")",s.name="ChunkLoadError",s.type=o,s.request=a,n[1](s)}}),"chunk-"+t,t)}};var t=(t,r)=>{var n,o,[a,s,c]=r,u=0;if(a.some((t=>0!==e[t]))){for(n in s)i.o(s,n)&&(i.m[n]=s[n]);if(c)c(i)}for(t&&t(r);u<a.length;u++)o=a[u],i.o(e,o)&&e[o]&&e[o][0](),e[o]=0},r=window.webpackChunkNRBA=window.webpackChunkNRBA||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})();var o={};(()=>{"use strict";i.r(o);var e=i(2325),t=i(6562);const r=Object.values(e.D);function n(e){const n={};return r.forEach((r=>{n[r]=function(e,r){return!1!==(0,t.Mt)(r,"".concat(e,".enabled"))}(r,e)})),n}var a=i(2384),s=i(909),c=i(9252),u=i(2053),d=i(8283),f=i(6625),l=i(4329),g=i(1509),v=i(2650),p=i(2374),h=i(8610);class m extends g.W{constructor(e,t,r){let n=!(arguments.length>3&&void 0!==arguments[3])||arguments[3];super(e,t,r),this.hasAggregator=!1,this.auto=n,this.abortHandler,n&&(0,l.R)(e,r)}importAggregator(){if(this.hasAggregator||!this.auto)return;this.hasAggregator=!0;const e=async()=>{try{const{lazyLoader:e}=await i.e(729).then(i.bind(i,8110)),{Aggregate:t}=await e(this.featureName,"aggregate");new t(this.agentIdentifier,this.aggregator)}catch(e){(0,h.Z)("Downloading ".concat(this.featureName," failed...")),this.abortHandler?.()}};p.v6?e():(0,v.b)((()=>e()),!0)}}var b,y,w,A=i(2484);class E extends m{constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,A.t,r),(0,f.v)(e),(0,d.B)(e,"firstbyte",(0,u.yf)()),(0,v.K)((()=>this.measureDomContentLoaded())),(0,v.b)((()=>this.measureWindowLoaded()),!0),this.importAggregator()}measureWindowLoaded(){var t=(0,u.zO)();(0,d.B)(this.agentIdentifier,"onload",t+(0,u.os)()),(0,c.p)("timing",["load",t],void 0,e.D.pageViewTiming,this.ee)}measureDomContentLoaded(){(0,d.B)(this.agentIdentifier,"domContent",(0,u.zO)()+(0,u.os)())}}b=E,y="featureName",w=A.t,(y=function(e){var t=function(e,t){if("object"!=typeof e||null===e)return e;var r=e[Symbol.toPrimitive];if(void 0!==r){var n=r.call(e,t||"default");if("object"!=typeof n)return n;throw new TypeError("@@toPrimitive must return a primitive value.")}return("string"===t?String:Number)(e)}(e,"string");return"symbol"==typeof t?t:String(t)}(y))in b?Object.defineProperty(b,y,{value:w,enumerable:!0,configurable:!0,writable:!0}):b[y]=w;var x=i(9557),T=i(7022);class _ extends x.w{constructor(e){super(e),this.aggregatedData={}}store(e,t,r,n,i){var o=this.getBucket(e,t,r,i);return o.metrics=function(e,t){t||(t={count:0});return t.count+=1,(0,T.D)(e,(function(e,r){t[e]=D(r,t[e])})),t}(n,o.metrics),o}merge(e,t,r,n,i){var o=this.getBucket(e,t,n,i);if(o.metrics){var a=o.metrics;a.count+=r.count,(0,T.D)(r,(function(e,t){if("count"!==e){var n=a[e],i=r[e];i&&!i.c?a[e]=D(i.t,n):a[e]=function(e,t){if(!t)return e;t.c||(t=O(t.t));return t.min=Math.min(e.min,t.min),t.max=Math.max(e.max,t.max),t.t+=e.t,t.sos+=e.sos,t.c+=e.c,t}(i,a[e])}}))}else o.metrics=r}storeMetric(e,t,r,n){var i=this.getBucket(e,t,r);return i.stats=D(n,i.stats),i}getBucket(e,t,r,n){this.aggregatedData[e]||(this.aggregatedData[e]={});var i=this.aggregatedData[e][t];return i||(i=this.aggregatedData[e][t]={params:r||{}},n&&(i.custom=n)),i}get(e,t){return t?this.aggregatedData[e]&&this.aggregatedData[e][t]:this.aggregatedData[e]}take(e){for(var t={},r="",n=!1,i=0;i<e.length;i++)t[r=e[i]]=j(this.aggregatedData[r]),t[r].length&&(n=!0),delete this.aggregatedData[r];return n?t:null}}function D(e,t){return null==e?function(e){e?e.c++:e={c:1};return e}(t):t?(t.c||(t=O(t.t)),t.c+=1,t.t+=e,t.sos+=e*e,e>t.max&&(t.max=e),e<t.min&&(t.min=e),t):{t:e}}function O(e){return{t:e,min:e,max:e,sos:e*e,c:1}}function j(e){return"object"!=typeof e?[]:(0,T.D)(e,k)}function k(e,t){return t}var P=i(6797),S=i(5526);var I,C=i(6998),N=i(8544),R=i(6382),M=-1,L=function(e){addEventListener("pageshow",(function(t){t.persisted&&(M=t.timeStamp,e(t))}),!0)},B=function(){return window.performance&&performance.getEntriesByType&&performance.getEntriesByType("navigation")[0]},z=function(){var e=B();return e&&e.activationStart||0},V=function(e,t){var r=B(),n="navigate";return M>=0?n="back-forward-cache":r&&(n=document.prerendering||z()>0?"prerender":document.wasDiscarded?"restore":r.type.replace(/_/g,"-")),{name:e,value:void 0===t?-1:t,rating:"good",delta:0,entries:[],id:"v3-".concat(Date.now(),"-").concat(Math.floor(8999999999999*Math.random())+1e12),navigationType:n}},W=function(e,t,r){try{if(PerformanceObserver.supportedEntryTypes.includes(e)){var n=new PerformanceObserver((function(e){Promise.resolve().then((function(){t(e.getEntries())}))}));return n.observe(Object.assign({type:e,buffered:!0},r||{})),n}}catch(e){}},q=function(e,t){var r=function r(n){"pagehide"!==n.type&&"hidden"!==document.visibilityState||(e(n),t&&(removeEventListener("visibilitychange",r,!0),removeEventListener("pagehide",r,!0)))};addEventListener("visibilitychange",r,!0),addEventListener("pagehide",r,!0)},Z=function(e,t,r,n){var i,o;return function(a){t.value>=0&&(a||n)&&((o=t.value-(i||0))||void 0===i)&&(i=t.value,t.delta=o,t.rating=function(e,t){return e>t[1]?"poor":e>t[0]?"needs-improvement":"good"}(t.value,r),e(t))}},H=function(e){document.prerendering?addEventListener("prerenderingchange",(function(){return e()}),!0):e()},F=(new Date,0),U=1/0,G=0,X=function(e){e.forEach((function(e){e.interactionId&&(U=Math.min(U,e.interactionId),G=Math.max(G,e.interactionId),F=G?(G-U)/7+1:0)}))},Q=function(){return I?F:performance.interactionCount||0},K=function(){"interactionCount"in performance||I||(I=W("event",X,{type:"event",buffered:!0,durationThreshold:0}))},Y=0,J=function(){return Q()-Y},$=[],ee={},te=function(e){var t=$[$.length-1],r=ee[e.interactionId];if(r||$.length<10||e.duration>t.latency){if(r)r.entries.push(e),r.latency=Math.max(r.latency,e.duration);else{var n={id:e.interactionId,latency:e.duration,entries:[e]};ee[n.id]=n,$.push(n)}$.sort((function(e,t){return t.latency-e.latency})),$.splice(10).forEach((function(e){delete ee[e.id]}))}},re=i(2545);class ne extends m{constructor(r,n){var i;let o=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];if(super(r,n,R.t,o),i=this,p.il){if(this.pageHiddenTime=(0,C.e)(),this.performanceObserver,this.lcpPerformanceObserver,this.clsPerformanceObserver,this.fiRecorded=!1,"PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){this.performanceObserver=new PerformanceObserver((function(){return i.perfObserver(...arguments)}));try{this.performanceObserver.observe({entryTypes:["paint"]})}catch(e){}this.lcpPerformanceObserver=new PerformanceObserver((function(){return i.lcpObserver(...arguments)}));try{this.lcpPerformanceObserver.observe({entryTypes:["largest-contentful-paint"]})}catch(e){}this.clsPerformanceObserver=new PerformanceObserver((function(){return i.clsObserver(...arguments)}));try{this.clsPerformanceObserver.observe({type:"layout-shift",buffered:!0})}catch(e){}}this.fiRecorded=!1;["click","keydown","mousedown","pointerdown","touchstart"].forEach((e=>{(0,N.iz)(e,(function(){return i.captureInteraction(...arguments)}))})),function(e,t){t=t||{},H((function(){var r=[200,500];K();var n,i=V("INP"),o=function(e){e.forEach((function(e){e.interactionId&&te(e),"first-input"===e.entryType&&!$.some((function(t){return t.entries.some((function(t){return e.duration===t.duration&&e.startTime===t.startTime}))}))&&te(e)}));var t,r=(t=Math.min($.length-1,Math.floor(J()/50)),$[t]);r&&r.latency!==i.value&&(i.value=r.latency,i.entries=r.entries,n())},a=W("event",o,{durationThreshold:t.durationThreshold||40});n=Z(e,i,r,t.reportAllChanges),a&&(a.observe({type:"first-input",buffered:!0}),q((function(){o(a.takeRecords()),i.value<0&&J()>0&&(i.value=0,i.entries=[]),n(!0)})),L((function(){$=[],Y=Q(),i=V("INP"),n=Z(e,i,r,t.reportAllChanges)})))}))}((t=>{let{name:r,value:n,id:i}=t;(0,c.p)("timing",[r.toLowerCase(),n,{metricId:i}],void 0,e.D.pageViewTiming,this.ee)})),!0===(0,t.Mt)(this.agentIdentifier,"page_view_timing.long_task")&&(e=>{const t=t=>{t.forEach((t=>{const r={name:"LT",value:t.duration,info:{ltFrame:t.name,ltStart:t.startTime,ltCtr:t.attribution[0].containerType}};"window"!==r.info.ltCtr&&Object.assign(r.info,{ltCtrSrc:t.attribution[0].containerSrc,ltCtrId:t.attribution[0].containerId,ltCtrName:t.attribution[0].containerName}),e(r)}))};let r;try{PerformanceObserver.supportedEntryTypes.includes("longtask")&&(r=new PerformanceObserver((e=>{Promise.resolve().then((()=>{t(e.getEntries())}))})),r.observe({type:"longtask",buffered:!0}))}catch(e){}r&&(0,re.L)((()=>{t(r.takeRecords())}),!0)})((t=>{let{name:r,value:n,info:i}=t;(0,c.p)("timing",[r.toLowerCase(),n,i],void 0,e.D.pageViewTiming,this.ee)})),(0,C.N)((()=>{this.pageHiddenTime=(0,u.zO)(),(0,c.p)("docHidden",[this.pageHiddenTime],void 0,e.D.pageViewTiming,this.ee)}),!0),(0,N.bP)("pagehide",(()=>(0,c.p)("winPagehide",[(0,u.zO)()],void 0,e.D.pageViewTiming,this.ee))),this.importAggregator()}}perfObserver(t,r){t.getEntries().forEach((t=>{"first-paint"===t.name?(0,c.p)("timing",["fp",Math.floor(t.startTime)],void 0,e.D.pageViewTiming,this.ee):"first-contentful-paint"===t.name&&(0,c.p)("timing",["fcp",Math.floor(t.startTime)],void 0,e.D.pageViewTiming,this.ee)}))}lcpObserver(t,r){var n=t.getEntries();if(n.length>0){var i=n[n.length-1];if(this.pageHiddenTime<i.startTime)return;var o=[i],a=this.addConnectionAttributes({});a&&o.push(a),(0,c.p)("lcp",o,void 0,e.D.pageViewTiming,this.ee)}}clsObserver(t){t.getEntries().forEach((t=>{t.hadRecentInput||(0,c.p)("cls",[t],void 0,e.D.pageViewTiming,this.ee)}))}addConnectionAttributes(e){var t=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(t)return t.type&&(e["net-type"]=t.type),t.effectiveType&&(e["net-etype"]=t.effectiveType),t.rtt&&(e["net-rtt"]=t.rtt),t.downlink&&(e["net-dlink"]=t.downlink),e}captureInteraction(r){if(r instanceof t.Yu.EV&&!this.fiRecorded){var n=Math.round(r.timeStamp),i={type:r.type};this.addConnectionAttributes(i),n<=(0,u.zO)()?i.fid=(0,u.zO)()-n:n>(0,u.os)()&&n<=Date.now()?(n-=(0,u.os)(),i.fid=(0,u.zO)()-n):n=(0,u.zO)(),this.fiRecorded=!0,(0,c.p)("timing",["fi",n,i],void 0,e.D.pageViewTiming,this.ee)}}}!function(e,t,r){(t=function(e){var t=function(e,t){if("object"!=typeof e||null===e)return e;var r=e[Symbol.toPrimitive];if(void 0!==r){var n=r.call(e,t||"default");if("object"!=typeof n)return n;throw new TypeError("@@toPrimitive must return a primitive value.")}return("string"===t?String:Number)(e)}(e,"string");return"symbol"==typeof t?t:String(t)}(t))in e?Object.defineProperty(e,t,{value:r,enumerable:!0,configurable:!0,writable:!0}):e[t]=r}(ne,"featureName",R.t);const ie={dedicated:Boolean(p._A?.Worker),shared:Boolean(p._A?.SharedWorker),service:Boolean(p._A?.navigator?.serviceWorker)};let oe,ae,se;var ce=i(6034);class ue extends m{constructor(t,r){let n=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(t,r,ce.t9,n),function(e){if(!oe){if(ie.dedicated){oe=Worker;try{p._A.Worker=r(oe,"Dedicated")}catch(e){o(e,"Dedicated")}if(ie.shared){ae=SharedWorker;try{p._A.SharedWorker=r(ae,"Shared")}catch(e){o(e,"Shared")}}else n("Shared");if(ie.service){se=navigator.serviceWorker.register;try{p._A.navigator.serviceWorker.register=(t=se,function(){for(var e=arguments.length,r=new Array(e),n=0;n<e;n++)r[n]=arguments[n];return i("Service",r[1]?.type),t.apply(navigator.serviceWorker,r)})}catch(e){o(e,"Service")}}else n("Service");var t;return}n("All")}function r(e,t){return"undefined"==typeof Proxy?e:new Proxy(e,{construct:(e,r)=>(i(t,r[1]?.type),new e(...r))})}function n(t){p.v6||e("Workers/".concat(t,"/Unavailable"))}function i(t,r){e("Workers/".concat(t,"module"===r?"/Module":"/Classic"))}function o(t,r){e("Workers/".concat(r,"/SM/Unsupported")),(0,h.Z)("NR Agent: Unable to capture ".concat(r," workers."),t)}}((t=>(0,c.p)(ce.xS,[t],void 0,e.D.metrics,this.ee))),this.importAggregator()}}!function(e,t,r){(t=function(e){var t=function(e,t){if("object"!=typeof e||null===e)return e;var r=e[Symbol.toPrimitive];if(void 0!==r){var n=r.call(e,t||"default");if("object"!=typeof n)return n;throw new TypeError("@@toPrimitive must return a primitive value.")}return("string"===t?String:Number)(e)}(e,"string");return"symbol"==typeof t?t:String(t)}(t))in e?Object.defineProperty(e,t,{value:r,enumerable:!0,configurable:!0,writable:!0}):e[t]=r}(ue,"featureName",ce.t9),new class{constructor(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:(0,S.ky)(16);this.agentIdentifier=t,this.sharedAggregator=new _({agentIdentifier:this.agentIdentifier}),this.features={},this.desiredFeatures=new Set(e.features||[]),this.desiredFeatures.add(E),Object.assign(this,(0,a.j)(this.agentIdentifier,e,e.loaderType||"agent")),this.start()}get config(){return{info:(0,t.C5)(this.agentIdentifier),init:(0,t.P_)(this.agentIdentifier),loader_config:(0,t.DL)(this.agentIdentifier),runtime:(0,t.OP)(this.agentIdentifier)}}start(){const t="features";try{const r=n(this.agentIdentifier),i=Array.from(this.desiredFeatures);i.sort(((t,r)=>e.p[t.featureName]-e.p[r.featureName])),i.forEach((t=>{if(r[t.featureName]||t.featureName===e.D.pageViewEvent){const e=(0,s.Z)(t.featureName),n=e.every((e=>r[e]));n||(0,h.Z)("".concat(t.featureName," is enabled but one or more dependent features has been disabled (").concat(JSON.stringify(e),"). This may cause unintended consequences or missing data...")),this.features[t.featureName]=new t(this.agentIdentifier,this.sharedAggregator)}})),(0,P.Qy)(this.agentIdentifier,this.features,t)}catch(e){(0,h.Z)("Failed to initialize all enabled instrument classes (agent aborted) -",e);for(const e in this.features)this.features[e].abortHandler?.();const r=(0,P.fP)();return delete r.initializedAgents[this.agentIdentifier]?.api,delete r.initializedAgents[this.agentIdentifier]?.[t],delete this.sharedAggregator,r.ee?.abort(),delete r.ee?.get(this.agentIdentifier),!1}}}({features:[E,ne,ue],loaderType:"lite"})})(),window.NRBA=o})();</script>
+<noscript><style>form.antibot * :not(.antibot-message) { display: none !important; }</style>
+</noscript><link rel="canonical" href="https://crosscut.com/kuya-geo" />
+<link rel="image_src" href="https://crosscut.com/sites/default/files/images/logo/crosscut-logo-2560x1440.png" />
+<meta property="og:site_name" content="Crosscut" />
+<meta property="og:url" content="https://crosscut.com/kuya-geo" />
+<meta property="og:title" content="Kuya GEO" />
+<meta property="og:image" content="https://crosscut.com/sites/default/files/images/logo/crosscut-logo-2560x1440.png" />
+<meta property="og:image:url" content="https://crosscut.com/sites/default/files/images/logo/crosscut-logo-2560x1440.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="2560" />
+<meta property="og:image:height" content="1440" />
+<meta property="og:image:alt" content="Crosscut logo" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@crosscut" />
+<meta name="twitter:title" content="Kuya GEO" />
+<meta name="twitter:url" content="https://crosscut.com/kuya-geo" />
+<meta name="twitter:image:alt" content="Crosscut logo" />
+<meta name="twitter:image:height" content="1440" />
+<meta name="twitter:image:width" content="2560" />
+<meta name="twitter:image" content="https://crosscut.com/sites/default/files/images/logo/crosscut-logo-2560x1440.png" />
+<meta name="Generator" content="Drupal 9 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="/core/misc/favicon.ico" type="image/vnd.microsoft.icon" />
+<script src="/sites/default/files/google_tag/primary/google_tag.script.js?rrzzbk" defer></script>
+
+		<title>Kuya GEO | Crosscut</title>
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/themes/custom/crosscut/favicon/apple-touch-icon.png?v=A07XApmMAk">
+    <link rel="icon" type="image/png" sizes="32x32" href="/themes/custom/crosscut/favicon/favicon-32x32.png?v=A07XApmMAk">
+    <link rel="icon" type="image/png" sizes="16x16" href="/themes/custom/crosscut/favicon/favicon-16x16.png?v=A07XApmMAk">
+    <link rel="manifest" href="/themes/custom/crosscut/favicon/site.webmanifest?v=A07XApmMAk">
+    <link rel="mask-icon" href="/themes/custom/crosscut/favicon/safari-pinned-tab.svg?v=A07XApmMAk" color="#172c3b">
+    <link rel="shortcut icon" href="/themes/custom/crosscut/favicon/favicon.ico?v=A07XApmMAk">
+    <meta name="msapplication-TileColor" content="#172c3b">
+    <meta name="msapplication-config" content="/themes/custom/crosscut/favicon/browserconfig.xml?v=A07XApmMAk">
+    <meta name="theme-color" content="#172c3b">
+
+        <!--
+    /**
+     * @license
+     * MyFonts Webfont Build ID 3698457, 2019-01-15T16:06:07-0500
+     *
+     * The fonts listed in this notice are subject to the End User License
+     * Agreement(s) entered into by the website owner. All other parties are
+     * explicitly restricted from using the Licensed Webfonts(s).
+     *
+     * You may obtain a valid license at the URLs below.
+     *
+     * Webfont: ProximaNova-BoldIt by Mark Simonson
+     * URL: https://www.myfonts.com/fonts/marksimonson/proxima-nova/bold-it/
+     *
+     * Webfont: ProximaNova-Bold by Mark Simonson
+     * URL: https://www.myfonts.com/fonts/marksimonson/proxima-nova/bold/
+     *
+     * Webfont: ProximaNova-Regular by Mark Simonson
+     * URL: https://www.myfonts.com/fonts/marksimonson/proxima-nova/regular/
+     *
+     * Webfont: ProximaNova-RegularIt by Mark Simonson
+     * URL: https://www.myfonts.com/fonts/marksimonson/proxima-nova/regular-it/
+     *
+     *
+     * License: https://www.myfonts.com/viewlicense?type=web&buildid=3698457
+     * Licensed pageviews: 1,000,000
+     * Webfonts copyright: Copyright (c) Mark Simonson, 2005. All rights reserved.
+     *
+     * © 2019 MyFonts Inc
+    */
+    -->
+
+		<link rel="stylesheet" media="all" href="/sites/default/files/css/css_Gjuk9TwUp7KkK3oMb0i0bO9wmR7ZkL4j_b-xMNyoQhk.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_zpqRFeYwJZXTrM3RRuXG7jiPCF4vZKlYks3DdZZ6SSI.css" />
+<link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Lora:400,400i,700,700i|Roboto+Slab:400,700|Roboto:400,400i,700&amp;display=swap" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_k74BvM3sXsEdBiz4dyzrEIXj5VN-EWsDancm0SK4wRY.css" />
+
+		<script src="//securepubads.g.doubleclick.net/tag/js/gpt.js" async></script>
+
+        <script>
+      window.googletag = window.googletag || {cmd: []};
+    </script>
+	</head>
+  <body  class="no-sidebar path-taxonomy js-path-taxonomy">
+		<a id="page-top" href="#main-content" class="visually-hidden focusable skip-to-content-link">
+			Skip to main content
+		</a>
+
+        <script type="application/javascript">
+      var ezt = ezt || [];
+      (function(){
+        var elem = document.createElement('script');
+        elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://pixel") + ".quantserve.com/aquant.js?a=p-a2EEpzn47yTDS";
+        elem.async = true;
+        elem.type = "text/javascript";
+        var scpt = document.getElementsByTagName('script')[0];
+        scpt.parentNode.insertBefore(elem,scpt);
+      }());
+      ezt.push({qacct: 'p-a2EEpzn47yTDS',
+        orderid: '',
+        revenue: ''
+      });
+    </script>
+    <noscript aria-hidden="true"><img alt="Quantcast" border="0" height="1" src="//pixel.quantserve.com/pixel/p-a2EEpzn47yTDS.gif?labels=_fp.event.Default" style="display: none;" width="1" /></noscript>
+
+        <script type="application/javascript">
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window,document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '123516855160140');
+      fbq('track', 'PageView');
+    </script>
+    <noscript aria-hidden="true"><img height="1" width="1" src="https://www.facebook.com/tr?id=123516855160140&ev=PageView&noscript=1"/></noscript>
+
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NL5QH48" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+
+
+
+
+
+<div class="layout-container">
+  
+  <div class="pagetop js-pagetop">
+          <div data-drupal-messages-fallback class="hidden"></div>
+
+      </div>
+
+
+  <header class="header clearfix js-header" role="banner">
+    
+    <div class="header-region">
+    <div class="header-content container">
+      <div class="row">
+        <div id="block-crosscut-branding" class="block-crosscut-branding">
+	
+							<div class="site-name">
+				<div class="logo">
+					<a href="/" title="Crosscut" rel="home" class="site-logo">
+						<img class="" src="/themes/custom/crosscut/logo_crosscut_2019.png" alt="Home" />
+					</a>
+				</div>
+				<a href="/" title="Home" rel="home" class="visually-hidden" aria-hidden="true" tabindex="-1">Crosscut</a>
+			</div>
+				
+</div>
+<div id="block-megamainmenu" class="block-megamainmenu block">
+	<div class="block-outer">
+		<div class="block-inner">
+			
+			
+							
+              <ul id="mega-main-menu" class="mega-main-menu hidden-xs hidden-sm d-none d-lg-flex" >
+                    <li class="mega-link-item link-1">
+                                <div class="mobile-item-wrapper d-lg-none">
+                <a href="/politics" data-drupal-link-system-path="taxonomy/term/1">Politics</a>
+              </div>
+              <div class="d-none d-lg-block">
+                                  <a class="mega-link-item__link collapsed" id="mega-toggle-1" href="/politics" onclick="return false;" role="button" data-toggle="collapse" data-target="#mega-drop-1" aria-expanded="false" aria-controls="mega-drop-1">
+                    Politics
+                  </a>
+                              </div>
+                  
+                          <div id="mega-drop-1" class="mega-dropdown collapse multi-collapse" aria-labelledby="mega-toggle-1">
+            <div class="collapse-pad-wrap">
+              
+
+
+
+
+
+
+<div class="row colossal-menu-link__container">
+      <div class="col-lg-7 colossal-menu__top-story">
+      
+            <div class="field field--name-field-top-story field--type-viewsreference field--label-hidden field--item">
+  <div class="views-element-container form-group"><div class="view-name-main-menu-top-story js-view-dom-id-31ec9ce0863a01ab97274355b26a8852da3bae078618cde29b5561ca838e038d">
+  
+  
+  
+
+      <header>
+      <span>Top Story</span>
+    </header>
+  
+  
+  
+
+    
+  <div class="views-row">
+    
+
+
+
+
+
+
+
+
+
+
+
+<article role="article" class="teaser teaser--2col teaser--view-mode--menu-teaser article-node article-node--menu-teaser">
+
+  <div class="row teaser__row">
+    <div  class="teaser__col col-md-5">
+      <div class="teaser__img-wrap img-icon-wrap">
+                <a  href="/politics/2023/03/seattle-city-council-moves-give-gig-workers-paid-sick-leave" title="Seattle City Council moves to give gig workers paid sick leave" target="_self" tabindex="-1">
+
+                                    
+            <div class="field field--name-field-hero-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/default/files/styles/three_two_450x300/public/uploads/2023/03/ap20090794117419.jpeg?h=a0e7a0be&amp;itok=id1GR2xt" width="450" height="300" alt="a doordash delivery person sits on a moped with a red food delivery bag on their back at a stop light on the street" />
+
+
+</div>
+      
+                      
+                                
+        </a>
+      </div>
+    </div>
+    <div  class="teaser__col col-md-7">
+      <div class="teaser__text-wrap">
+
+        
+                  
+          <h3  class="teaser__title">
+            <a  href="/politics/2023/03/seattle-city-council-moves-give-gig-workers-paid-sick-leave" title="Seattle City Council moves to give gig workers paid sick leave" target="_self" rel="bookmark3">
+              
+<span>Seattle City Council moves to give gig workers paid sick leave</span>
+
+            </a>
+          </h3>
+          
+        
+        <div class="teaser__text">
+          
+    <div class="teaser__metadata">
+      <span
+          class="authored-by">by 
+      <ul class="field_author list-unstyled inline">
+              <li><a href="/author/josh-cohen" hreflang="en">Josh Cohen</a></li>
+          </ul>
+   </span>
+      <span class="separator-slant separator--slant"> / </span>
+      <span class="published-date">March 21, 2023</span>
+    </div>
+
+              </div>
+      </div>
+    </div>
+  </div>
+
+</article>
+
+  </div>
+
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+</div>
+      
+      <div class="colossal-menu-link__extra_links">
+        
+      <div class="field field--name-field-category-link field--type-link field--label-hidden field--item">
+      <a class="btn btn-primary" href="/politics">All Politics</a>
+    </div>
+  
+        
+      </div>
+    </div>
+        <div class="col-lg-5 colossal-menu__menu__latest">
+      
+            <div class="field field--name-field-latest field--type-viewsreference field--label-hidden field--item">
+  <div class="views-element-container form-group"><div class="field--name-field-latest view-name-main-menu-latest js-view-dom-id-149527a9c34e4100acbdd215e63e87ca8c4fa8c534e7c92ee129641c8f6f4f2c">
+  
+  
+  
+
+      <header>
+      <span>Latest</span>
+    </header>
+  
+  
+  
+
+    
+  <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/politics/2023/03/how-was-cloudy-economic-forecast-could-impact-state-spending" hreflang="en">How WA&#039;s cloudy economic forecast could impact state spending</a></span></div>
+  </div>
+  
+  <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/politics/2023/03/election-deniers-target-us-voter-database-wa-worries" hreflang="en">As election deniers target the U.S. voter database, WA worries</a></span></div>
+  </div>
+  
+  <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/politics/2023/03/following-wa-legislature-isnt-easy-non-english-speakers" hreflang="en">Following the WA Legislature isn&#039;t easy for non-English speakers</a></span></div>
+  </div>
+
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+</div>
+      
+    </div>
+  </div>
+
+
+                          </div>
+          </div>
+        
+      </li>
+                <li class="mega-link-item link-3">
+                                <div class="mobile-item-wrapper d-lg-none">
+                <a href="/culture" data-drupal-link-system-path="taxonomy/term/3">Culture</a>
+              </div>
+              <div class="d-none d-lg-block">
+                                  <a class="mega-link-item__link collapsed" id="mega-toggle-3" href="/culture" onclick="return false;" role="button" data-toggle="collapse" data-target="#mega-drop-3" aria-expanded="false" aria-controls="mega-drop-3">
+                    Culture
+                  </a>
+                              </div>
+                  
+                          <div id="mega-drop-3" class="mega-dropdown collapse multi-collapse" aria-labelledby="mega-toggle-3">
+            <div class="collapse-pad-wrap">
+              
+
+
+
+
+
+
+<div class="row colossal-menu-link__container">
+      <div class="col-lg-7 colossal-menu__top-story">
+      
+            <div class="field field--name-field-top-story field--type-viewsreference field--label-hidden field--item">
+  <div class="views-element-container form-group"><div class="view-name-main-menu-top-story js-view-dom-id-32759bfb27a79f98546b27ce4c8275387272712a15b0c4093c5e5fecce974c80">
+  
+  
+  
+
+      <header>
+      <span>Top Story</span>
+    </header>
+  
+  
+  
+
+    
+  <div class="views-row">
+    
+
+
+
+
+
+
+
+
+
+
+
+<article role="article" class="teaser teaser--2col teaser--view-mode--menu-teaser article-node article-node--menu-teaser">
+
+  <div class="row teaser__row">
+    <div  class="teaser__col col-md-5">
+      <div class="teaser__img-wrap img-icon-wrap">
+                <a  href="/culture/2023/03/artsea-seaweed-scented-dip-abyss-national-nordic-museum" title="ArtSEA: A seaweed-scented dip into the abyss at the National Nordic Museum" target="_self" tabindex="-1">
+
+                                    
+            <div class="field field--name-field-hero-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/default/files/styles/three_two_450x300/public/uploads/2023/03/nordic-flod-soldi.jpg?h=41f55a5b&amp;itok=yuFGQDOo" width="450" height="300" alt="a very dark room with a line of line down the middle and two small human forms way in the distance" />
+
+
+</div>
+      
+                      
+                                
+        </a>
+      </div>
+    </div>
+    <div  class="teaser__col col-md-7">
+      <div class="teaser__text-wrap">
+
+        
+                  
+          <h3  class="teaser__title">
+            <a  href="/culture/2023/03/artsea-seaweed-scented-dip-abyss-national-nordic-museum" title="ArtSEA: A seaweed-scented dip into the abyss at the National Nordic Museum" target="_self" rel="bookmark3">
+              
+<span>ArtSEA: A seaweed-scented dip into the abyss at the National Nordic Museum</span>
+
+            </a>
+          </h3>
+          
+        
+        <div class="teaser__text">
+          
+    <div class="teaser__metadata">
+      <span
+          class="authored-by">by 
+      <ul class="field_author list-unstyled inline">
+              <li><a href="/author/brangien-davis" hreflang="en">Brangien Davis</a></li>
+          </ul>
+   </span>
+      <span class="separator-slant separator--slant"> / </span>
+      <span class="published-date">March 23, 2023</span>
+    </div>
+
+              </div>
+      </div>
+    </div>
+  </div>
+
+</article>
+
+  </div>
+
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+</div>
+      
+      <div class="colossal-menu-link__extra_links">
+        
+      <div class="field field--name-field-category-link field--type-link field--label-hidden field--item">
+      <a class="btn btn-primary" href="/culture">All Culture</a>
+    </div>
+  
+        
+      </div>
+    </div>
+        <div class="col-lg-5 colossal-menu__menu__latest">
+      
+            <div class="field field--name-field-latest field--type-viewsreference field--label-hidden field--item">
+  <div class="views-element-container form-group"><div class="field--name-field-latest view-name-main-menu-latest js-view-dom-id-64e52343d57f951e4280fe0f83127b753529a81d012bfc4c4b6d28841544910f">
+  
+  
+  
+
+      <header>
+      <span>Latest</span>
+    </header>
+  
+  
+  
+
+    
+  <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/culture/2023/03/six-spring-theater-shows-seattle-hairspray-wolf-play" hreflang="en">Six spring theater shows in Seattle, from Hairspray to Wolf Play</a></span></div>
+  </div>
+  
+  <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/culture/2023/03/six-seattle-programs-young-performing-artists" hreflang="en">Six Seattle programs for young performing artists</a></span></div>
+  </div>
+  
+  <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/culture/2023/03/artsea-northwest-art-blooms-abstract-spring-equinox" hreflang="en">ArtSEA: Northwest art blooms abstract for the spring equinox</a></span></div>
+  </div>
+
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+</div>
+      
+    </div>
+  </div>
+
+
+                          </div>
+          </div>
+        
+      </li>
+                <li class="mega-link-item link-31">
+                                <div class="mobile-item-wrapper d-lg-none">
+                <a href="/investigations" data-drupal-link-system-path="node/86691">Investigations</a>
+              </div>
+              <div class="d-none d-lg-block">
+                                  <a class="mega-link-item__link collapsed" id="mega-toggle-31" href="/investigations" onclick="return false;" role="button" data-toggle="collapse" data-target="#mega-drop-31" aria-expanded="false" aria-controls="mega-drop-31">
+                    Investigations
+                  </a>
+                              </div>
+                  
+                          <div id="mega-drop-31" class="mega-dropdown collapse multi-collapse" aria-labelledby="mega-toggle-31">
+            <div class="collapse-pad-wrap">
+              
+
+
+
+
+
+
+<div class="row colossal-menu-link__container">
+      <div class="col-lg-7 colossal-menu__top-story">
+      
+            <div class="field field--name-field-top-story field--type-viewsreference field--label-hidden field--item">
+  <div class="views-element-container form-group"><div class="view-name-main-menu-top-story js-view-dom-id-2492bacd42d3fc8979303d93ebc62f16bec4683bf657b90ba75949f9a0259586">
+  
+  
+  
+
+      <header>
+      <span>Top Story</span>
+    </header>
+  
+  
+  
+
+    
+  <div class="views-row">
+    
+
+
+
+
+
+
+
+
+
+
+
+<article role="article" class="teaser teaser--2col teaser--view-mode--menu-teaser article-node article-node--menu-teaser">
+
+  <div class="row teaser__row">
+    <div  class="teaser__col col-md-5">
+      <div class="teaser__img-wrap img-icon-wrap">
+                <a  href="/investigations/2023/03/auditors-flag-half-washington-counties-over-covid-19-aid" title="Auditors flag half of Washington counties over COVID-19 aid" target="_self" tabindex="-1">
+
+                                    
+            <div class="field field--name-field-hero-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/default/files/styles/three_two_450x300/public/uploads/2023/03/stateauditor09.jpeg?h=aecdb15b&amp;itok=fD0jfzC5" width="450" height="300" alt="A blue sign reading State Auditor&#039;s Office hangs in front of an office building. " />
+
+
+</div>
+      
+                      
+                                
+        </a>
+      </div>
+    </div>
+    <div  class="teaser__col col-md-7">
+      <div class="teaser__text-wrap">
+
+        
+                  
+          <h3  class="teaser__title">
+            <a  href="/investigations/2023/03/auditors-flag-half-washington-counties-over-covid-19-aid" title="Auditors flag half of Washington counties over COVID-19 aid" target="_self" rel="bookmark3">
+              
+<span>Auditors flag half of Washington counties over COVID-19 aid</span>
+
+            </a>
+          </h3>
+          
+        
+        <div class="teaser__text">
+          
+    <div class="teaser__metadata">
+      <span
+          class="authored-by">by 
+      <ul class="field_author list-unstyled inline">
+              <li><a href="/author/jacob-jones" hreflang="en">Jacob Jones</a></li>
+          </ul>
+   </span>
+      <span class="separator-slant separator--slant"> / </span>
+      <span class="published-date">March 23, 2023</span>
+    </div>
+
+              </div>
+      </div>
+    </div>
+  </div>
+
+</article>
+
+  </div>
+
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+</div>
+      
+      <div class="colossal-menu-link__extra_links">
+        
+      <div class="field field--name-field-category-link field--type-link field--label-hidden field--item">
+      <a class="btn btn-primary" href="/investigations">ALL INVESTIGATIONS</a>
+    </div>
+  
+        
+      </div>
+    </div>
+        <div class="col-lg-5 colossal-menu__menu__latest">
+      
+            <div class="field field--name-field-latest field--type-viewsreference field--label-hidden field--item">
+  <div class="views-element-container form-group"><div class="field--name-field-latest view-name-main-menu-latest js-view-dom-id-9315336b8f11ad606a5674e1916a4bac801efa42ac63d48d3bf5e10def508ca4">
+  
+  
+  
+
+      <header>
+      <span>Latest</span>
+    </header>
+  
+  
+  
+
+    
+  <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/investigations/2023/03/starbucks-union-fight-shows-hard-road-many-toward-contract" hreflang="en">Starbucks union fight shows hard road for many toward contract</a></span></div>
+  </div>
+  
+  <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/investigations/2023/02/washington-food-banks-brace-hunger-cliff-amid-snap-cuts" hreflang="en">Washington food banks brace for &#039;hunger cliff&#039; amid SNAP cuts</a></span></div>
+  </div>
+  
+  <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/investigations/2023/02/community-navigators-bridge-healthcare-gap-bipoc-groups" hreflang="en">&#039;Community navigators&#039; bridge the healthcare gap for BIPOC groups</a></span></div>
+  </div>
+
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+</div>
+      
+    </div>
+  </div>
+
+
+                          </div>
+          </div>
+        
+      </li>
+                <li class="mega-link-item link-26">
+                                <div class="mobile-item-wrapper d-lg-none">
+                <a href="/video" data-drupal-link-system-path="taxonomy/term/89">Video</a>
+              </div>
+              <div class="d-none d-lg-block">
+                                  <a class="mega-link-item__link collapsed" id="mega-toggle-26" href="/video" onclick="return false;" role="button" data-toggle="collapse" data-target="#mega-drop-26" aria-expanded="false" aria-controls="mega-drop-26">
+                    Video
+                  </a>
+                              </div>
+                  
+                          <div id="mega-drop-26" class="mega-dropdown collapse multi-collapse" aria-labelledby="mega-toggle-26">
+            <div class="collapse-pad-wrap">
+              
+
+
+
+
+
+
+<div class="row colossal-menu-link__container">
+      <div class="col-lg-7 colossal-menu__top-story">
+      
+            <div class="field field--name-field-top-story field--type-viewsreference field--label-hidden field--item">
+  <div class="views-element-container form-group"><div class="view-name-main-menu-top-story js-view-dom-id-6d42a6629abbf5ceda2b1866d03eeec4a02ebe0078be67aa7abbbbd922a6ed88">
+  
+  
+  
+
+      <header>
+      <span>Latest Video</span>
+    </header>
+  
+  
+  
+
+    
+  <div class="views-row">
+    
+
+
+
+
+
+
+
+
+
+
+<article role="article" class="teaser teaser--2col teaser--view-mode--menu-teaser video-node video-node--menu-teaser">
+
+  <div class="row teaser__row">
+    <div  class="teaser__col col-md-5">
+      <div class="teaser__img-wrap img-icon-wrap">
+                <a  href="/video/crosscut-origins-refuge-after-war/rebuilding" title="Rebuilding" target="_self" tabindex="-1">
+
+                                    
+            <div class="field field--name-field-teaser-image field--type-image field--label-hidden field--item">  <a href="/video/crosscut-origins-refuge-after-war/rebuilding" title="/video/crosscut-origins-refuge-after-war/rebuilding"><img loading="lazy" src="/sites/default/files/styles/three_two_450x300/public/uploads/2023/03/I3U4GSk-asset-mezzanine-16x9-S9OhTFa.jpg?h=fd0a1f7a&amp;itok=3hxhHuwG" width="450" height="300" alt="Still from Refuge After War | Rebuilding" />
+
+</a>
+</div>
+      
+                      
+                                
+        </a>
+      </div>
+    </div>
+    <div  class="teaser__col col-md-7">
+      <div class="teaser__text-wrap">
+
+                  <div class="teaser__eyebrow">
+            
+            <div class="field field--name-field-series field--type-entity-reference field--label-hidden field--item"><a href="/video/crosscut-origins-refuge-after-war" hreflang="en">Crosscut Origins: Refuge After War</a></div>
+      
+          </div>
+        
+                  
+          <h3  class="teaser__title">
+            <a  href="/video/crosscut-origins-refuge-after-war/rebuilding" title="Rebuilding" target="_self" rel="bookmark3">
+              
+<span>Rebuilding</span>
+
+            </a>
+          </h3>
+          
+        
+        <div class="teaser__text">
+          
+    <div class="teaser__metadata">
+              <span>
+  <div class="field field--name-field-season field--type-integer field--label-inline">
+    <div class="field--label"><span>Season</span></div>
+              <div class="field--item">1</div>
+          </div>
+</span>
+        <span class="separator--slant">/</span>
+                    <span>
+  <div class="field field--name-field-episode field--type-integer field--label-inline">
+    <div class="field--label"><span>Episode</span></div>
+              <div class="field--item">3</div>
+          </div>
+</span>
+        <span class="separator--slant">/</span>
+            <span>
+            <div class="field field--name-field-video-duration field--type-duration field--label-hidden field--item">9 min 1 s</div>
+      </span>
+    </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+</article>
+
+
+  </div>
+
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+</div>
+      
+      <div class="colossal-menu-link__extra_links">
+        
+      <div class="field field--name-field-category-link field--type-link field--label-hidden field--item">
+      <a class="btn btn-primary" href="/video">All Video</a>
+    </div>
+  
+        
+      </div>
+    </div>
+        <div class="col-lg-5 colossal-menu__menu__latest">
+      
+            <div class="field field--name-field-latest field--type-viewsreference field--label-hidden field--item">
+  <div class="views-element-container form-group"><div class="field--name-field-latest view-name-main-menu-latest js-view-dom-id-f8fae18f5a7b190aa2c10ed13cf8afdf1e6654975d00027016245df6f8e6b7dc">
+  
+  
+  
+
+      <header>
+      <span>More</span>
+    </header>
+  
+  
+  
+
+    
+  <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/video/human-elements/nose" hreflang="en">The Nose</a></span></div>
+  </div>
+  
+  <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/video/crosscut-origins-refuge-after-war/us-allies" hreflang="en">U.S. Allies</a></span></div>
+  </div>
+  
+  <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/video/human-elements/bat-advocate" hreflang="en">The Bat Advocate</a></span></div>
+  </div>
+
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+</div>
+      
+    </div>
+  </div>
+
+
+                          </div>
+          </div>
+        
+      </li>
+                <li class="mega-link-item link-16">
+                                <div class="mobile-item-wrapper d-lg-none">
+                <a href="https://crosscut.com/festival">Festival</a>
+              </div>
+              <div class="d-none d-lg-block">
+                                  <a href="https://crosscut.com/festival" class="mega-link-item__link">Festival</a>
+                              </div>
+                  
+                
+      </li>
+        </ul>
+  
+
+
+
+			
+			
+		</div>
+	</div>
+</div>
+
+
+
+<nav role="navigation"
+     aria-labelledby="block-secondarynav-menu" id="block-secondarynav" class="block-secondarynav collapse js-secondary-nav">
+            
+  <h2 class="visually-hidden" id="block-secondarynav-menu">Secondary Nav</h2>
+        <div id="mobile-wrap" class="d-lg-none secondary-nav-mobile block-secondarynav__inner">
+      <div class="secondary-nav-mobile__container">
+        <div class="secondary-nav-mobile__row secondary-nav-mobile__row--first">
+          <div class="secondary-nav-mobile__col">
+            <ul class="buttons"></ul>
+          </div>
+        </div>
+        <div class="secondary-nav-mobile__row secondary-nav-mobile__row--second">
+          <div class="secondary-nav-mobile__col col-auto">
+            <ul class="social"></ul>
+          </div>
+          <div class="secondary-nav-mobile__col col-auto">
+            <ul class="account-mgmnt"></ul>
+          </div>
+        </div>
+        <div class="secondary-nav-mobile__row secondary-nav-mobile__row--third">
+          <div class="secondary-nav-mobile__col col-6">
+            <div class="secondary-nav-mobile__primary-menu">
+              
+              <ul class="menu clearfix">
+        
+            	            <li class="parent-menu-0 link-number-1 menu-item">
+                          <a href="/politics" data-drupal-link-system-path="taxonomy/term/1">Politics</a>
+              </li>
+        	            <li class="parent-menu-0 link-number-2 menu-item">
+                          <a href="/culture" data-drupal-link-system-path="taxonomy/term/3">Culture</a>
+              </li>
+        	            <li class="parent-menu-0 link-number-3 menu-item">
+                          <a href="/investigations-feed" data-drupal-link-system-path="taxonomy/term/2136">Investigations</a>
+              </li>
+        	            <li class="parent-menu-0 link-number-4 menu-item">
+                          <a href="/environment" data-drupal-link-system-path="taxonomy/term/7">Environment</a>
+              </li>
+        	            <li class="parent-menu-0 link-number-5 menu-item">
+                          <a href="/search" data-drupal-link-system-path="search">Search</a>
+              </li>
+    
+
+        	    
+  
+
+
+            </div>
+          </div>
+          <div class="secondary-nav-mobile__col col-6">
+            <div class="secondary-nav-mobile__secondary-menu">
+              
+						<ul>
+
+		
+											<li class="parent-menu-0 my-account">
+				<a href="/my-account" class="user-account" data-drupal-link-system-path="my-account">Member Log In</a>
+							</li>
+											<li class="parent-menu-0 newsletters">
+				<a href="/newsletters" class="btn btn-secondary btn btn-secondary btn btn-secondary btn btn-secondary" data-drupal-link-system-path="node/55236">Newsletters</a>
+							</li>
+											<li class="parent-menu-0 donate">
+				<a href="/donate" target="_blank" class="btn btn-primary d-lg-none btn btn-primary d-lg-none" data-drupal-link-system-path="node/67696">Donate</a>
+							</li>
+											<li class="parent-menu-0 http:www.facebook.comcrosscut">
+				<a href="http://www.facebook.com/crosscut" class="ico ico-facebook clearfix" target="_blank" title="facebook.com/crosscut">Facebook</a>
+							</li>
+											<li class="parent-menu-0 http:twitter.comcrosscut">
+				<a href="http://twitter.com/crosscut" class="ico ico-twitter" target="_blank" title="twitter.com/crosscut">Twitter</a>
+							</li>
+											<li class="parent-menu-0 https:www.instagram.comcrosscut">
+				<a href="https://www.instagram.com/crosscut/" class="ico ico-instagram" target="_blank" title="instagram.com/crosscut">Instagram</a>
+							</li>
+											<li class="parent-menu-0 news">
+				<a href="/news" target="_self" class="strong clearfix strong clearfix" data-drupal-link-system-path="taxonomy/term/226">News</a>
+							</li>
+											<li class="parent-menu-0 focus">
+				<a href="/focus" class="strong clearfix" target="_self" data-drupal-link-system-path="node/62876">Focus</a>
+							</li>
+											<li class="parent-menu-0 video">
+				<a href="/video" target="_self" class="strong" data-drupal-link-system-path="taxonomy/term/89">Video</a>
+							</li>
+											<li class="parent-menu-0 podcasts">
+				<a href="/podcasts" class="strong hr" title="Crosscut Podcasts" data-drupal-link-system-path="node/61306">Podcasts</a>
+							</li>
+											<li class="parent-menu-0 origins">
+				<a href="/origins" data-drupal-link-system-path="node/86666">Crosscut Origins</a>
+							</li>
+											<li class="parent-menu-0 https:blackartslegacies.crosscut.com">
+				<a href="https://blackartslegacies.crosscut.com/">Black Arts Legacies</a>
+							</li>
+											<li class="parent-menu-0 festival">
+				<a href="/festival" data-drupal-link-system-path="node/77826">Crosscut Festival</a>
+							</li>
+											<li class="parent-menu-0 events">
+				<a href="/events" data-drupal-link-system-path="node/40117">Events</a>
+							</li>
+											<li class="parent-menu-0 about">
+				<a href="/about" data-drupal-link-system-path="node/51857">About</a>
+							</li>
+											<li class="parent-menu-0 https:www.cascadepublicmedia.orgcapital-campaign">
+				<a href="https://www.cascadepublicmedia.org/capital-campaign">Capital Campaign</a>
+							</li>
+											<li class="parent-menu-0 careers">
+				<a href="/careers">Careers</a>
+							</li>
+											<li class="parent-menu-0 advertise-crosscut">
+				<a href="/advertise-crosscut" data-drupal-link-system-path="node/35">Advertising</a>
+							</li>
+											<li class="parent-menu-0 contact-us">
+				<a href="/contact-us" data-drupal-link-system-path="node/33">Contact</a>
+							</li>
+		
+		</ul>
+	
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="desktop-wrap" class="d-none d-lg-block secondary-nav-desktop block-secondarynav__inner">
+      <div class="secondary-nav-desktop__container container">
+        
+						<ul>
+
+		
+											<li class="parent-menu-0 my-account">
+				<a href="/my-account" class="user-account" data-drupal-link-system-path="my-account">Member Log In</a>
+							</li>
+											<li class="parent-menu-0 newsletters">
+				<a href="/newsletters" class="btn btn-secondary btn btn-secondary btn btn-secondary btn btn-secondary" data-drupal-link-system-path="node/55236">Newsletters</a>
+							</li>
+											<li class="parent-menu-0 donate">
+				<a href="/donate" target="_blank" class="btn btn-primary d-lg-none btn btn-primary d-lg-none" data-drupal-link-system-path="node/67696">Donate</a>
+							</li>
+											<li class="parent-menu-0 http:www.facebook.comcrosscut">
+				<a href="http://www.facebook.com/crosscut" class="ico ico-facebook clearfix" target="_blank" title="facebook.com/crosscut">Facebook</a>
+							</li>
+											<li class="parent-menu-0 http:twitter.comcrosscut">
+				<a href="http://twitter.com/crosscut" class="ico ico-twitter" target="_blank" title="twitter.com/crosscut">Twitter</a>
+							</li>
+											<li class="parent-menu-0 https:www.instagram.comcrosscut">
+				<a href="https://www.instagram.com/crosscut/" class="ico ico-instagram" target="_blank" title="instagram.com/crosscut">Instagram</a>
+							</li>
+											<li class="parent-menu-0 news">
+				<a href="/news" target="_self" class="strong clearfix strong clearfix" data-drupal-link-system-path="taxonomy/term/226">News</a>
+							</li>
+											<li class="parent-menu-0 focus">
+				<a href="/focus" class="strong clearfix" target="_self" data-drupal-link-system-path="node/62876">Focus</a>
+							</li>
+											<li class="parent-menu-0 video">
+				<a href="/video" target="_self" class="strong" data-drupal-link-system-path="taxonomy/term/89">Video</a>
+							</li>
+											<li class="parent-menu-0 podcasts">
+				<a href="/podcasts" class="strong hr" title="Crosscut Podcasts" data-drupal-link-system-path="node/61306">Podcasts</a>
+							</li>
+											<li class="parent-menu-0 origins">
+				<a href="/origins" data-drupal-link-system-path="node/86666">Crosscut Origins</a>
+							</li>
+											<li class="parent-menu-0 https:blackartslegacies.crosscut.com">
+				<a href="https://blackartslegacies.crosscut.com/">Black Arts Legacies</a>
+							</li>
+											<li class="parent-menu-0 festival">
+				<a href="/festival" data-drupal-link-system-path="node/77826">Crosscut Festival</a>
+							</li>
+											<li class="parent-menu-0 events">
+				<a href="/events" data-drupal-link-system-path="node/40117">Events</a>
+							</li>
+											<li class="parent-menu-0 about">
+				<a href="/about" data-drupal-link-system-path="node/51857">About</a>
+							</li>
+											<li class="parent-menu-0 https:www.cascadepublicmedia.orgcapital-campaign">
+				<a href="https://www.cascadepublicmedia.org/capital-campaign">Capital Campaign</a>
+							</li>
+											<li class="parent-menu-0 careers">
+				<a href="/careers">Careers</a>
+							</li>
+											<li class="parent-menu-0 advertise-crosscut">
+				<a href="/advertise-crosscut" data-drupal-link-system-path="node/35">Advertising</a>
+							</li>
+											<li class="parent-menu-0 contact-us">
+				<a href="/contact-us" data-drupal-link-system-path="node/33">Contact</a>
+							</li>
+		
+		</ul>
+	
+
+
+      </div>
+    </div>
+    
+</nav>
+<div id="block-header-membership-button" class="block-header-membership-button block">
+	<div class="block-outer">
+		<div class="block-inner">
+			
+			
+							
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><div><a class="btn btn-primary" href="/donate" title="Membership">Membership</a></div>
+</div>
+      
+			
+			
+		</div>
+	</div>
+</div>
+<div class="views-exposed-form bef-exposed-form views-exposed-form-acquia-search-page block-acquia-search-form-header block block-header-search container collapse" id="block-acquia-search-form-header" data-drupal-selector="views-exposed-form-acquia-search-header">
+	<div class="block-outer">
+		<div class="block-inner">
+			
+			
+							<form action="/search" method="get" id="views-exposed-form-acquia-search-header" accept-charset="UTF-8" role="search">
+  <div class="form-group js-form-item form-item js-form-type-textfield form-item-search js-form-item-search">
+      <label for="edit-search">Search</label>
+        <input data-drupal-selector="edit-search" type="text" id="edit-search" name="search" value="" size="30" maxlength="128" class="form-text" />
+
+        </div>
+
+  <div data-drupal-selector="edit-actions" class="form-actions form-group js-form-wrapper form-wrapper"><input data-drupal-selector="edit-submit-acquia-search" type="submit" id="edit-submit-acquia-search" value="Search" class="button js-form-submit form-submit" />
+</div>
+
+
+
+</form>
+
+			
+			
+		</div>
+	</div>
+</div>
+
+
+        <a href="javascript: void(0)" class="search-toggle collapsed" data-toggle="collapse" data-target="#block-acquia-search-form-header"
+           title="Search" role="button">
+          <span class="ico-white ico-mglass"></span>
+        </a>
+        <div class="secondary-menu-toggle collapsed" data-toggle="collapse" data-target="#block-secondarynav">
+          <a class="menu-toggle-ellipsis" href="javascript: void(0)" aria-label="Secondary menu" title="Secondary menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+      </header>
+
+  
+  
+
+  
+
+  
+
+  <main class="main main-node-type-0 main--margin-top single-column" role="main">
+    <a id="main-content" tabindex="-1"></a>    
+    
+    
+    
+    <div class="layout-content-container layout-content-container--padding-top layout-content-container--padding-bottom">
+
+      
+              <div class="">
+
+          
+          <div class="layout-content ">
+            
+  <div class="content js-content">
+          <div id="block-crosscut-content" class="block-crosscut-content block">
+	<div class="block-outer">
+		<div class="block-inner">
+			
+			
+							<div>
+  
+    
+  
+</div>
+
+			
+			
+		</div>
+	</div>
+</div>
+<div class="views-element-container block-views-block-taxonomy-term-block block container paragraph" id="block-views-block-taxonomy-term-block">
+	<div class="block-outer">
+		<div class="block-inner">
+			
+			
+							
+  <div class="form-group"><div class="view-name-taxonomy-term js-view-dom-id-2ee238bb26fbabf77aa23543c64696e2adb8296e43bc6b40c0ead6a82dcfb173">
+  
+  
+  
+
+  
+  
+  
+  <div class="views-element-container form-group"><div class="view-name-taxonomy-term js-view-dom-id-cdcb70ce08ddd6ab9028a8f212e6a23f2ab47740d04f555362e7e5a2140998d2">
+  
+      <h1 class="field--name-field-section-header"><span>Latest in Kuya GEO</span></h1>
+        
+
+  
+  
+  
+
+    
+  <div class="latest-category views-row">
+    
+
+
+
+
+
+<article role="article" class="teaser teaser--1col teaser--view-mode--teaser-hero article-node article-node--teaser-hero">
+
+  <div class="teaser__img-wrap img-icon-wrap">
+    <a href="/2020/06/juneteenth-day-contains-multitudes"
+       title="Juneteenth: A day that contains multitudes"
+       target="_self"
+       tabindex="-1">
+
+                        
+            <div class="blazy blazy--field blazy--field-teaser-image blazy--field-teaser-image--teaser-hero field field--name-field-teaser-image field--type-image field--label-hidden field--item" data-blazy="">
+
+
+
+  
+
+                <div class="media media--blazy media--bundle--article media--image">  <img class="media__image media__element b-lazy b-responsive" decoding="async" loading="lazy" data-src="/sites/default/files/images/articles/_benjamin_danielson_teaser.jpg.jpg" srcset="" sizes="(min-width: 1030px) 960px, 88vw" data-srcset="/sites/default/files/styles/three_two_960x640/public/images/articles/_benjamin_danielson_teaser.jpg.jpg?h=10d202d3&amp;itok=J60LhLYV 960w, /sites/default/files/styles/three_two_1350x900/public/images/articles/_benjamin_danielson_teaser.jpg.jpg?h=10d202d3&amp;itok=3SWav-FZ 1350w" src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039;%20viewBox%3D&#039;0%200%201%201&#039;%2F%3E" alt="Dr. Ben Danielson" />
+
+        </div>
+        
+  
+</div>
+      
+              
+                        </a>
+  </div>
+  <div class="teaser__text-wrap">
+
+    
+          
+      <h2  class="teaser__title teaser__title--h2">
+        <a href="/2020/06/juneteenth-day-contains-multitudes"
+           title="Juneteenth: A day that contains multitudes"
+           target="_self">
+          
+<span>Juneteenth: A day that contains multitudes </span>
+
+        </a>
+      </h2>
+      
+    
+    <div class="teaser__text">
+                
+            <div class="field field--name-field-article-teaser field--type-text-long field--label-hidden field--item"><p>Seattleites reflect on freedom, resistance and joy to honor the day liberation from slavery finally arrived, over two years after Emancipation.</p></div>
+      
+    
+    <div class="teaser__metadata">
+      <span
+          class="authored-by">by 
+      <ul class="field_author list-unstyled inline">
+              <li><a href="/author/ben-danielson" hreflang="en">Ben Danielson</a></li>
+          </ul>
+   </span>
+      <span class="separator-slant"> / </span>
+      <span class="published-date">June 19, 2020</span>
+          </div>
+
+          </div>
+  </div>
+
+  </article>
+
+  </div>
+
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+
+
+  
+  <div data-drupal-views-infinite-scroll-content-wrapper class="views-infinite-scroll-content-wrapper clearfix form-group">  
+  <div class="views-row">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<article role="article" class="teaser teaser--2col teaser--view-mode--teaser-quarter article-node article-node--teaser-quarter">
+
+  <div class="row teaser__row">
+    <div  class="teaser__col col-12 col-md-3">
+      <div class="teaser__img-wrap img-icon-wrap">
+                <a  href="/2018/12/rhymes-and-rants-about-seattle-driving" title="Rhymes and rants about Seattle driving" target="_self" tabindex="-1">
+
+                                    
+            <div class="blazy blazy--field blazy--field-teaser-image blazy--field-teaser-image--teaser-quarter field field--name-field-teaser-image field--type-image field--label-hidden field--item" data-blazy="">
+
+
+
+  
+
+                <div class="media media--blazy media--bundle--article media--image"><img alt="" class="media__image media__element b-lazy" decoding="async" loading="lazy" data-src="/sites/default/files/styles/three_two_450x300/public/images/articles/geo-seattle-driving-posture_0.jpg?itok=LUen2w_0" src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039;%20viewBox%3D&#039;0%200%201%201&#039;%2F%3E" width="450" height="300" />
+        </div>
+        
+  
+</div>
+      
+                      
+                                
+        </a>
+      </div>
+    </div>
+    <div  class="teaser__col col-12 col-md-9">
+      <div class="teaser__text-wrap">
+
+                  <div class="teaser__eyebrow">
+              
+            <div class="field field--name-field-category field--type-entity-reference field--label-hidden field--item"><a href="/culture" hreflang="en">Culture</a></div>
+      
+  
+          </div>
+        
+                  
+          <h3  class="teaser__title">
+            <a  href="/2018/12/rhymes-and-rants-about-seattle-driving" title="Rhymes and rants about Seattle driving" target="_self" rel="bookmark3">
+              
+<span>Rhymes and rants about Seattle driving</span>
+
+            </a>
+          </h3>
+          
+        
+        <div class="teaser__text">
+          
+          
+            <div class="field field--name-field-article-teaser field--type-text-long field--label-hidden field--item"><p>WATCH: Kuya Geo digs into the stereotypes of Seattle driving culture.</p></div>
+      
+    
+    <div class="teaser__metadata">
+      <span
+          class="authored-by">by 
+      <ul class="field_author list-unstyled inline">
+              <li><a href="/author/aileen-imperial" hreflang="en">Aileen Imperial</a><span class="comma"> &amp;</span></li>
+              <li><a href="/author/stephen-hegg" hreflang="en">Stephen Hegg</a></li>
+          </ul>
+   </span>
+      <span class="separator-slant separator--slant"> / </span>
+      <span class="month-day-year-date">December 19, 2018</span>
+
+          </div>
+
+              </div>
+      </div>
+    </div>
+  </div>
+
+</article>
+
+  </div>
+  
+  <div class="views-row">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<article role="article" class="teaser teaser--2col teaser--view-mode--teaser-quarter article-node article-node--teaser-quarter">
+
+  <div class="row teaser__row">
+    <div  class="teaser__col col-12 col-md-3">
+      <div class="teaser__img-wrap img-icon-wrap">
+                <a  href="/2018/12/how-filipino-community-took-root-seattle" title="How the Filipino community took root in Seattle" target="_self" tabindex="-1">
+
+                                    
+            <div class="blazy blazy--field blazy--field-teaser-image blazy--field-teaser-image--teaser-quarter field field--name-field-teaser-image field--type-image field--label-hidden field--item" data-blazy="">
+
+
+
+  
+
+                <div class="media media--blazy media--bundle--article media--image"><img alt="" class="media__image media__element b-lazy" decoding="async" loading="lazy" data-src="/sites/default/files/styles/three_two_450x300/public/images/articles/geo-f-town-still.jpg?itok=83ulcJBR" src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039;%20viewBox%3D&#039;0%200%201%201&#039;%2F%3E" width="450" height="300" />
+        </div>
+        
+  
+</div>
+      
+                      
+                                
+        </a>
+      </div>
+    </div>
+    <div  class="teaser__col col-12 col-md-9">
+      <div class="teaser__text-wrap">
+
+                  <div class="teaser__eyebrow">
+              
+            <div class="field field--name-field-category field--type-entity-reference field--label-hidden field--item"><a href="/culture" hreflang="en">Culture</a></div>
+      
+  
+          </div>
+        
+                  
+          <h3  class="teaser__title">
+            <a  href="/2018/12/how-filipino-community-took-root-seattle" title="How the Filipino community took root in Seattle" target="_self" rel="bookmark3">
+              
+<span>How the Filipino community took root in Seattle</span>
+
+            </a>
+          </h3>
+          
+        
+        <div class="teaser__text">
+          
+          
+            <div class="field field--name-field-article-teaser field--type-text-long field--label-hidden field--item"><p>A look at the history of the Filipino community's presence in the Chinatown International District. </p></div>
+      
+    
+    <div class="teaser__metadata">
+      <span
+          class="authored-by">by 
+      <ul class="field_author list-unstyled inline">
+              <li><a href="/author/aileen-imperial" hreflang="en">Aileen Imperial</a><span class="comma"> &amp;</span></li>
+              <li><a href="/author/stephen-hegg" hreflang="en">Stephen Hegg</a></li>
+          </ul>
+   </span>
+      <span class="separator-slant separator--slant"> / </span>
+      <span class="month-day-year-date">December 12, 2018</span>
+
+          </div>
+
+              </div>
+      </div>
+    </div>
+  </div>
+
+</article>
+
+  </div>
+  
+  <div class="views-row">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<article role="article" class="teaser teaser--2col teaser--view-mode--teaser-quarter article-node article-node--teaser-quarter">
+
+  <div class="row teaser__row">
+    <div  class="teaser__col col-12 col-md-3">
+      <div class="teaser__img-wrap img-icon-wrap">
+                <a  href="/2018/11/generational-zigs-and-zags-immigrant-identity" title="The generational zigs and zags of immigrant identity" target="_self" tabindex="-1">
+
+                                    
+            <div class="blazy blazy--field blazy--field-teaser-image blazy--field-teaser-image--teaser-quarter field field--name-field-teaser-image field--type-image field--label-hidden field--item" data-blazy="">
+
+
+
+  
+
+                <div class="media media--blazy media--bundle--article media--image"><img alt="Blue Scholars co-founder George “Geo” Quibuyen" class="media__image media__element b-lazy" decoding="async" loading="lazy" data-src="/sites/default/files/styles/three_two_450x300/public/images/articles/geo_with_z_1.png?itok=32HeRg6c" src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039;%20viewBox%3D&#039;0%200%201%201&#039;%2F%3E" width="450" height="300" />
+        </div>
+        
+  
+</div>
+      
+                      
+                                
+        </a>
+      </div>
+    </div>
+    <div  class="teaser__col col-12 col-md-9">
+      <div class="teaser__text-wrap">
+
+                  <div class="teaser__eyebrow">
+              
+            <div class="field field--name-field-category field--type-entity-reference field--label-hidden field--item"><a href="/culture" hreflang="en">Culture</a></div>
+      
+  
+          </div>
+        
+                  
+          <h3  class="teaser__title">
+            <a  href="/2018/11/generational-zigs-and-zags-immigrant-identity" title="The generational zigs and zags of immigrant identity" target="_self" rel="bookmark3">
+              
+<span>The generational zigs and zags of immigrant identity</span>
+
+            </a>
+          </h3>
+          
+        
+        <div class="teaser__text">
+          
+          
+            <div class="field field--name-field-article-teaser field--type-text-long field--label-hidden field--item"><p>Blue Scholars co-founder “Kuya Geo” on the push-pull of assimilation and heritage — and how it differs by immigrant generation.</p></div>
+      
+    
+    <div class="teaser__metadata">
+      <span
+          class="authored-by">by 
+      <ul class="field_author list-unstyled inline">
+              <li><a href="/author/aileen-imperial" hreflang="en">Aileen Imperial</a><span class="comma"> &amp;</span></li>
+              <li><a href="/author/stephen-hegg" hreflang="en">Stephen Hegg</a></li>
+          </ul>
+   </span>
+      <span class="separator-slant separator--slant"> / </span>
+      <span class="month-day-year-date">November 8, 2018</span>
+
+          </div>
+
+              </div>
+      </div>
+    </div>
+  </div>
+
+</article>
+
+  </div>
+  
+  <div class="views-row">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<article role="article" class="teaser teaser--2col teaser--view-mode--teaser-quarter article-node article-node--teaser-quarter">
+
+  <div class="row teaser__row">
+    <div  class="teaser__col col-12 col-md-3">
+      <div class="teaser__img-wrap img-icon-wrap">
+                <a  href="/2018/05/how-bruce-lee-destroyed-stereotype-asian-male" title="How Bruce Lee destroyed the stereotype of the Asian male" target="_self" tabindex="-1">
+
+                                    
+            <div class="blazy blazy--field blazy--field-teaser-image blazy--field-teaser-image--teaser-quarter field field--name-field-teaser-image field--type-image field--label-hidden field--item" data-blazy="">
+
+
+
+  
+
+                <div class="media media--blazy media--bundle--article media--image"><img alt="" class="media__image media__element b-lazy" decoding="async" loading="lazy" data-src="/sites/default/files/styles/three_two_450x300/public/images/articles/geoheadphones-post.jpg?itok=2oG19u2k" src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039;%20viewBox%3D&#039;0%200%201%201&#039;%2F%3E" width="450" height="300" />
+        </div>
+        
+  
+</div>
+      
+                      
+                                
+        </a>
+      </div>
+    </div>
+    <div  class="teaser__col col-12 col-md-9">
+      <div class="teaser__text-wrap">
+
+                  <div class="teaser__eyebrow">
+              
+            <div class="field field--name-field-category field--type-entity-reference field--label-hidden field--item"><a href="/culture" hreflang="en">Culture</a></div>
+      
+  
+          </div>
+        
+                  
+          <h3  class="teaser__title">
+            <a  href="/2018/05/how-bruce-lee-destroyed-stereotype-asian-male" title="How Bruce Lee destroyed the stereotype of the Asian male" target="_self" rel="bookmark3">
+              
+<span>How Bruce Lee destroyed the stereotype of the Asian male</span>
+
+            </a>
+          </h3>
+          
+        
+        <div class="teaser__text">
+          
+          
+            <div class="field field--name-field-article-teaser field--type-text-long field--label-hidden field--item"><p>A new series featuring Blue Scholars co-founder George Quibuyen.</p></div>
+      
+    
+    <div class="teaser__metadata">
+      <span
+          class="authored-by">by 
+      <ul class="field_author list-unstyled inline">
+              <li><a href="/author/stephen-hegg" hreflang="en">Stephen Hegg</a><span class="comma"> &amp;</span></li>
+              <li><a href="/author/aileen-imperial" hreflang="en">Aileen Imperial</a></li>
+          </ul>
+   </span>
+      <span class="separator-slant separator--slant"> / </span>
+      <span class="month-day-year-date">May 10, 2018</span>
+
+          </div>
+
+              </div>
+      </div>
+    </div>
+  </div>
+
+</article>
+
+  </div>
+</div>
+
+
+  
+  
+<nav  class="pager__infinite-scroll">
+  </nav>
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+
+			
+			
+		</div>
+	</div>
+</div>
+
+      </div>
+
+          </div>
+
+          
+        </div>
+            </div>
+
+    
+  </main>
+
+  <footer class="footer d-print-none js-footer" role="contentinfo">
+    <div class="footer__content container">
+      <div class="row">
+        <div class="col-12 col-md-7">
+          
+<div class="region--footer">
+  <div class="footer__branding">
+    <a href="/" title="Crosscut" rel="home"
+       class="site-logo">
+      <img width="300" height="60"
+          src="/themes/custom/crosscut/assets/images/logos/crosscut_logo_footer.png"
+          alt="Crosscut, a service of Cascade Public Media"/>
+    </a>
+    <ul>
+      <li><a class="ico ico-facebook clearfix"
+             href="https://www.facebook.com/crosscut" target="_blank"
+             aria-label="facebook.com/crosscut">Facebook</a></li>
+      <li><a class="ico ico-twitter" href="https://twitter.com/crosscut"
+             target="_blank" aria-label="twitter.com/crosscut">Twitter</a></li>
+      <li><a class="ico ico-instagram"
+             href="https://www.instagram.com/crosscut/" target="_blank"
+             aria-label="instagram.com/crosscut">Instagram</a></li>
+      <li><a class="ico ico-rss"
+             href="/articles.xml" target="_blank"
+             aria-label="RSS/crosscut">RSS</a></li>
+    </ul>
+  </div>
+
+  
+  
+<div id="block-quick-subscribe-footer" class="block-quick-subscribe-footer block block-quick-subscribe block-quick-subscribe--default">
+  <div class="block-outer">
+    <div class="block-inner">
+      
+      
+              
+
+<div  class="ces-quick-subscribe-block--inline ces-quick-subscribe-block">
+      <div class="quick-subscribe-block-prefix">
+      <span>Sign up for the Crosscut Weekly newsletter
+</span>
+
+    </div>
+  
+  <div class="quick-subscribe-block-form">
+    <form class="crosscut-email-subscribe-quick-subscribe-form form-inline antibot" data-drupal-selector="crosscut-email-subscribe-quick-subscribe-form-2-jm6o6pah" data-action="/kuya-geo" action="/antibot" method="post" id="crosscut-email-subscribe-quick-subscribe-form--2--jm6o6PAh" accept-charset="UTF-8">
+  <noscript>
+  <div class="antibot-no-js antibot-message antibot-message-warning">You must have JavaScript enabled to use this form.</div>
+</noscript>
+
+  <div id="crosscut-email-subscribe-quick-subscribe-form" data-drupal-selector="edit-container" class="form-group js-form-wrapper form-wrapper"><fieldset class="newsletters-list js-newsletters-list hidden js-form-item form-item js-form-wrapper form-wrapper" data-drupal-selector="edit-lists" id="edit-lists">
+        <legend>
+    <span class="fieldset-legend">Mailing Lists</span>
+  </legend>
+  <div class="fieldset-wrapper">
+            
+
+
+
+<div class="js-form-item form-item form-item--checkbox js-form-type-checkbox form-item-lists-et-opt-in-crosscut-weekly-enews__c js-form-item-lists-et-opt-in-crosscut-weekly-enews__c">
+      <div class="checkbox-container">
+          
+      <input data-drupal-selector="edit-lists-et-opt-in-crosscut-weekly-enews-c" aria-describedby="edit-lists-et-opt-in-crosscut-weekly-enews-c--description" type="checkbox" id="edit-lists-et-opt-in-crosscut-weekly-enews-c" name="lists[ET_Opt_In_Crosscut_Weekly_Enews__c]" value="1" checked="checked" class="form-checkbox form-item__checkbox" aria-label="checkbox" />
+<span class="custom-check"></span>
+
+
+
+              <label for="edit-lists-et-opt-in-crosscut-weekly-enews-c" class="option">Weekly</label>
+            </div>
+          <div id="edit-lists-et-opt-in-crosscut-weekly-enews-c--description" class="form-item__description">
+      Every Sunday morning, Crosscut's weekly email sums up the best stories of the week.
+    </div>
+  </div>
+
+          </div>
+</fieldset>
+<div class="form-group js-form-item form-item js-form-type-email form-item-email js-form-item-email form-no-label">
+      <label for="edit-email" class="visually-hidden js-form-required form-required">Email address</label>
+        <input placeholder="Enter your email address" autocomplete="email" data-drupal-selector="edit-email" type="email" id="edit-email" name="email" value="" size="60" maxlength="254" class="form-email required" required="required" aria-required="true" aria-label="input email" />
+
+        </div>
+
+  <div data-drupal-selector="edit-actions" class="form-actions form-group js-form-wrapper form-wrapper" id="edit-actions--4"><input class="btn btn-secondary button button--secondary js-form-submit form-submit" data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="op" value="Subscribe" />
+</div>
+
+</div>
+
+<input data-drupal-selector="edit-antibot-key" type="hidden" name="antibot_key" value="" />
+<input autocomplete="off" data-drupal-selector="form-pnxdcdzetseko-1bksgq-g-0jpjwtdzfxk3xhkb-ko" type="hidden" name="form_build_id" value="form-PNxDCdZEtsEKo--1bKsGQ-G_0jPjwtdZFXk3XHKb_ko" />
+<input data-drupal-selector="edit-crosscut-email-subscribe-quick-subscribe-form" type="hidden" name="form_id" value="crosscut_email_subscribe_quick_subscribe_form" />
+
+</form>
+<div class="ces-quick-subscribe-terms">By subscribing, you agree to receive occasional membership emails from Crosscut/Cascade Public Media.</div>
+  </div>
+
+  </div>
+
+      
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+        </div>
+        <div class="col-12 col-md-5">
+          
+  <div class="footer-menu row">
+          <div id="block-footer-menu-main" class="block-footer-menu-main block col-6">
+	<div class="block-outer">
+		<div class="block-inner">
+			
+			
+							
+              <ul class="menu clearfix">
+        
+            	            <li class="parent-menu-0 link-number-1 menu-item">
+                          <a href="/politics" data-drupal-link-system-path="taxonomy/term/1">Politics</a>
+              </li>
+        	            <li class="parent-menu-0 link-number-2 menu-item">
+                          <a href="/culture" data-drupal-link-system-path="taxonomy/term/3">Culture</a>
+              </li>
+        	            <li class="parent-menu-0 link-number-3 menu-item">
+                          <a href="/investigations-feed" data-drupal-link-system-path="taxonomy/term/2136">Investigations</a>
+              </li>
+        	            <li class="parent-menu-0 link-number-4 menu-item">
+                          <a href="/environment" data-drupal-link-system-path="taxonomy/term/7">Environment</a>
+              </li>
+        	            <li class="parent-menu-0 link-number-5 menu-item">
+                          <a href="/search" data-drupal-link-system-path="search">Search</a>
+              </li>
+    
+
+        	    
+  
+
+
+			
+			
+		</div>
+	</div>
+</div>
+<div id="block-footer-menu-secondary" class="block-footer-menu-secondary block col-6">
+	<div class="block-outer">
+		<div class="block-inner">
+			
+			
+							
+						<ul>
+
+		
+											<li class="parent-menu-0 my-account">
+				<a href="/my-account" class="user-account" data-drupal-link-system-path="my-account">Member Log In</a>
+							</li>
+											<li class="parent-menu-0 newsletters">
+				<a href="/newsletters" class="btn btn-secondary btn btn-secondary btn btn-secondary btn btn-secondary" data-drupal-link-system-path="node/55236">Newsletters</a>
+							</li>
+											<li class="parent-menu-0 donate">
+				<a href="/donate" target="_blank" class="btn btn-primary d-lg-none btn btn-primary d-lg-none" data-drupal-link-system-path="node/67696">Donate</a>
+							</li>
+											<li class="parent-menu-0 http:www.facebook.comcrosscut">
+				<a href="http://www.facebook.com/crosscut" class="ico ico-facebook clearfix" target="_blank" title="facebook.com/crosscut">Facebook</a>
+							</li>
+											<li class="parent-menu-0 http:twitter.comcrosscut">
+				<a href="http://twitter.com/crosscut" class="ico ico-twitter" target="_blank" title="twitter.com/crosscut">Twitter</a>
+							</li>
+											<li class="parent-menu-0 https:www.instagram.comcrosscut">
+				<a href="https://www.instagram.com/crosscut/" class="ico ico-instagram" target="_blank" title="instagram.com/crosscut">Instagram</a>
+							</li>
+											<li class="parent-menu-0 news">
+				<a href="/news" target="_self" class="strong clearfix strong clearfix" data-drupal-link-system-path="taxonomy/term/226">News</a>
+							</li>
+											<li class="parent-menu-0 focus">
+				<a href="/focus" class="strong clearfix" target="_self" data-drupal-link-system-path="node/62876">Focus</a>
+							</li>
+											<li class="parent-menu-0 video">
+				<a href="/video" target="_self" class="strong" data-drupal-link-system-path="taxonomy/term/89">Video</a>
+							</li>
+											<li class="parent-menu-0 podcasts">
+				<a href="/podcasts" class="strong hr" title="Crosscut Podcasts" data-drupal-link-system-path="node/61306">Podcasts</a>
+							</li>
+											<li class="parent-menu-0 origins">
+				<a href="/origins" data-drupal-link-system-path="node/86666">Crosscut Origins</a>
+							</li>
+											<li class="parent-menu-0 https:blackartslegacies.crosscut.com">
+				<a href="https://blackartslegacies.crosscut.com/">Black Arts Legacies</a>
+							</li>
+											<li class="parent-menu-0 festival">
+				<a href="/festival" data-drupal-link-system-path="node/77826">Crosscut Festival</a>
+							</li>
+											<li class="parent-menu-0 events">
+				<a href="/events" data-drupal-link-system-path="node/40117">Events</a>
+							</li>
+											<li class="parent-menu-0 about">
+				<a href="/about" data-drupal-link-system-path="node/51857">About</a>
+							</li>
+											<li class="parent-menu-0 https:www.cascadepublicmedia.orgcapital-campaign">
+				<a href="https://www.cascadepublicmedia.org/capital-campaign">Capital Campaign</a>
+							</li>
+											<li class="parent-menu-0 careers">
+				<a href="/careers">Careers</a>
+							</li>
+											<li class="parent-menu-0 advertise-crosscut">
+				<a href="/advertise-crosscut" data-drupal-link-system-path="node/35">Advertising</a>
+							</li>
+											<li class="parent-menu-0 contact-us">
+				<a href="/contact-us" data-drupal-link-system-path="node/33">Contact</a>
+							</li>
+		
+		</ul>
+	
+
+
+			
+			
+		</div>
+	</div>
+</div>
+
+      </div>
+
+        </div>
+        <div class="footer__copyright">
+          <p>
+            &copy;2023 Cascade Public Media. All Rights Reserved.<br/>
+            <a href="https://cascadepublicmedia.org/terms-use" target="_blank">Terms of Use</a> and <a
+              href="https://cascadepublicmedia.org/privacy-policy" target="_blank">Privacy Policy</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  
+
+</div>
+<div class="canvas-bkgd"></div>
+
+  </div>
+
+		
+		<script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"taxonomy\/term\/196","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"antibot\/antibot.form,better_exposed_filters\/general,blazy\/bio.ajax,blazy\/blazy,blazy\/classlist,blazy\/filter,blazy\/load,blazy\/polyfill,blazy\/promise,blazy\/raf,blazy\/ratio,blazy\/webp,core\/drupal.form,crosscut\/global-css,crosscut\/global-js-footer,crosscut\/global-js-header,crosscut\/mega-dropdown,crosscut\/secondary-nav-navigate,system\/base,views\/views.ajax,views\/views.module,views_infinite_scroll\/views-infinite-scroll","theme":"crosscut","theme_token":null},"ajaxTrustedUrl":{"form_action_p_pvdeGsVG5zNF_XLGPTvYSKCf43t8qZYSwcfZl2uzM":true,"\/search":true},"antibot":{"forms":{"crosscut-email-subscribe-quick-subscribe-form--2--jm6o6PAh":{"id":"crosscut-email-subscribe-quick-subscribe-form--2--jm6o6PAh","key":"VxJcp8uzo0mnXBmg3AiIrIYQekItiGFV2rc0QgsxfPA"}}},"views":{"ajax_path":"\/views\/ajax","ajaxViews":{"views_dom_id:2ee238bb26fbabf77aa23543c64696e2adb8296e43bc6b40c0ead6a82dcfb173":{"view_name":"taxonomy_term","view_display_id":"block","view_args":"196","view_path":"\/taxonomy\/term\/196","view_base_path":"taxonomy\/term\/%","view_dom_id":"2ee238bb26fbabf77aa23543c64696e2adb8296e43bc6b40c0ead6a82dcfb173","pager_element":0}}},"blazy":{"loadInvisible":true,"offset":100,"saveViewportOffsetDelay":50,"validateDelay":25,"container":"","loader":true,"unblazy":false,"compat":true},"blazyIo":{"disconnect":false,"rootMargin":"0px","threshold":[0,0.25,0.5,0.75,1]},"crosscut":[],"user":{"uid":0,"permissionsHash":"5f3e55e02252bbc476dcbb6f274778c82b6f7d3f9b75275ea796f77b0b65298f"}}</script>
+<script src="/sites/default/files/js/js_CHlq5QzmFwkk0hd-BppJJplR3ANnmaNkRK5CrHiReug.js"></script>
+
+	<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"fa09265af4","applicationID":"798950867","transactionName":"ZVEEbBRVWBFWW0ZQWFwbJU0VQFkPGF1cTV5GTUhMB0xZDFhVS2ZDV0YLFgVVWA1ZUVFYWwhHA1sJWlIDRUFtWlZGUQFXFE0=","queueTime":2,"applicationTime":674,"atts":"SRYHGlxPSx8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

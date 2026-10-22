@@ -1,0 +1,150 @@
+{
+  "archive": "Internet Archive Wayback",
+  "sources": 107,
+  "queried_page_sources": 33,
+  "page_capture_rows": 60,
+  "page_payloads_recovered": 50,
+  "image_urls_discovered": 0,
+  "image_urls_queried": 0,
+  "image_capture_rows": 0,
+  "image_payloads_recovered": 0,
+  "failures": [
+    {
+      "stage": "page_replay",
+      "url": "http://www.foodandsh-t.com/",
+      "timestamp": "20180425041612",
+      "error": "ValueError: CDX digest mismatch: SEQR57KI4JGJOHM56H5BZKEUTB7P2YKM != XGLXTM4LOT4FUCHGXGAYSOMH7444PDJQ"
+    },
+    {
+      "stage": "page_replay",
+      "url": "http://www.foodandsh-t.com:80/",
+      "timestamp": "20191030185628",
+      "error": "ValueError: Captured provider/archive error page, not site content"
+    },
+    {
+      "stage": "page_replay",
+      "url": "http://www.foodandsh-t.com:80/",
+      "timestamp": "20200105175955",
+      "error": "ValueError: Captured provider/archive error page, not site content"
+    },
+    {
+      "stage": "page_replay",
+      "url": "http://foodandsh-t.com/",
+      "timestamp": "20240621090421",
+      "error": "ValueError: CDX digest mismatch: 7AJQZDA7VOR7DQKYL6GSXG2RKD2NI3QD != 7RGCRTVAZTBGU5A2XBIGIQKTRSA3BZVC"
+    },
+    {
+      "stage": "page_replay",
+      "url": "https://foodandsh-t.com/",
+      "timestamp": "20240621091847",
+      "error": "ValueError: CDX digest mismatch: WLFGAXEV4XTSFTLO3EAA455BRMQI5WXC != PTZ3EDCN5QKM46ND563MAMWSSGNYENDL"
+    },
+    {
+      "stage": "page_replay",
+      "url": "http://foodandsh-t.com/",
+      "timestamp": "20241212154322",
+      "error": "ValueError: CDX digest mismatch: AM626QHABEH2TPP6EGMYESFMMKTATAIL != APPMBMHFHJJP3BAQMGSIUVZHQ657OWQP"
+    },
+    {
+      "stage": "page_replay",
+      "url": "https://foodandsh-t.com/",
+      "timestamp": "20241215071506",
+      "error": "ValueError: CDX digest mismatch: 6MVAGTSXZAOTZXAHVKEMIBTFDCBM2DYW != GDTTTNPZFAK5QJXBLQROSAZMWR2KWAUF"
+    },
+    {
+      "stage": "page_replay",
+      "url": "http://foodandsh-t.com/",
+      "timestamp": "20241215192222",
+      "error": "ValueError: CDX digest mismatch: P7CGOTNPN7UORPINXPNWTJCP4B7Y7ZD4 != 332BRTWJ75B53DJPYL57DBLGYDUF474G"
+    },
+    {
+      "stage": "page_replay",
+      "url": "http://www.foodandsh-t.com/blog",
+      "timestamp": "20161123052410",
+      "error": "ChunkedEncodingError: Response ended prematurely"
+    },
+    {
+      "stage": "page_replay",
+      "url": "https://www.foodandsh-t.com/chee-menu",
+      "timestamp": "20190921153632",
+      "error": "ValueError: CDX digest mismatch: O5WWGKCDXGFNUG66YVB3QKB5G4THUMXS != HQQPRHM7R6TVVPEOAYLL3Q74RTDLMK56"
+    },
+    {
+      "stage": "page_cdx",
+      "url": "http://www.foodandsh-t.com/blog/2014/9/11/salo-seattle-video-recap",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fwww.foodandsh-t.com%2Fblog%2F2014%2F9%2F11%2Fsalo-seattle-video-recap&matchType=exact&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest%2Clength&filter=statuscode%3A200&limit=100"
+    },
+    {
+      "stage": "page_cdx",
+      "url": "http://www.foodandsh-t.com/blog/2014/9/15/chee-one-year-anniversary-pop-up-dinner-sep-22",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fwww.foodandsh-t.com%2Fblog%2F2014%2F9%2F15%2Fchee-one-year-anniversary-pop-up-dinner-sep-22&matchType=exact&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest%2Clength&filter=statuscode%3A200&limit=100"
+    },
+    {
+      "stage": "page_cdx",
+      "url": "http://www.foodandsh-t.com/blog/2014/9/22/chee-menu",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fwww.foodandsh-t.com%2Fblog%2F2014%2F9%2F22%2Fchee-menu&matchType=exact&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest%2Clength&filter=statuscode%3A200&limit=100"
+    },
+    {
+      "stage": "page_cdx",
+      "url": "http://www.foodandsh-t.com/blog/2014/9/29/acrs-gala-2014-a-culinary-journey",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fwww.foodandsh-t.com%2Fblog%2F2014%2F9%2F29%2Facrs-gala-2014-a-culinary-journey&matchType=exact&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest%2Clength&filter=statuscode%3A200&limit=100"
+    },
+    {
+      "stage": "page_cdx",
+      "url": "http://www.foodandsh-t.com/blog/2014/9/29/one-year-of-food-sht-a-retrospective",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fwww.foodandsh-t.com%2Fblog%2F2014%2F9%2F29%2Fone-year-of-food-sht-a-retrospective&matchType=exact&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest%2Clength&filter=statuscode%3A200&limit=100"
+    },
+    {
+      "stage": "page_cdx",
+      "url": "http://www.foodandsh-t.com/blog/2014/9/29/one-year-of-food-sht-a-retrospective-part-ii",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fwww.foodandsh-t.com%2Fblog%2F2014%2F9%2F29%2Fone-year-of-food-sht-a-retrospective-part-ii&matchType=exact&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest%2Clength&filter=statuscode%3A200&limit=100"
+    },
+    {
+      "stage": "page_cdx",
+      "url": "http://www.foodandsh-t.com/contact",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fwww.foodandsh-t.com%2Fcontact&matchType=exact&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest%2Clength&filter=statuscode%3A200&limit=100"
+    },
+    {
+      "stage": "page_cdx",
+      "url": "http://www.foodandsh-t.com/events/",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fwww.foodandsh-t.com%2Fevents%2F&matchType=exact&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest%2Clength&filter=statuscode%3A200&limit=100"
+    },
+    {
+      "stage": "page_cdx",
+      "url": "http://www.foodandsh-t.com/food-sht-monthly-pop-up/",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fwww.foodandsh-t.com%2Ffood-sht-monthly-pop-up%2F&matchType=exact&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest%2Clength&filter=statuscode%3A200&limit=100"
+    },
+    {
+      "stage": "page_cdx",
+      "url": "https://www.foodandsh-t.com/events/2014/6/8/food-sht-honolulu",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.foodandsh-t.com%2Fevents%2F2014%2F6%2F8%2Ffood-sht-honolulu&matchType=exact&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest%2Clength&filter=statuscode%3A200&limit=100"
+    }
+  ],
+  "limitations": [
+    "Exact URL histories and source-page-linked images only; this is not an archive-wide export.",
+    "Third-party press pages/images are recovery evidence, not original Blue Scholars site pages.",
+    "Image files remain local-only until rights and relevance review."
+  ],
+  "focused_page_url": "foodandsh-t.com",
+  "page_capture_records_total": 429,
+  "unique_page_payloads_total": 409,
+  "unique_linked_image_urls_total": 158,
+  "image_capture_records_total": 897,
+  "unique_image_payloads_total": 78,
+  "unique_source_urls_queried_total": 104,
+  "image_relevance_review": {
+    "article_image_exact_url_memento": 17,
+    "excluded_page_chrome_or_tracking_asset": 189,
+    "visually_reviewed_other_performer_or_audience_photo": 6,
+    "visually_confirmed_blue_scholars_performance_photo": 3,
+    "visually_reviewed_unrelated_city_arts_article_image": 443,
+    "visually_confirmed_blue_scholars_photo": 27,
+    "visually_confirmed_blue_scholars_photo_or_artwork": 38,
+    "visually_confirmed_same_photo_as_2007_profile": 1,
+    "visually_reviewed_unrelated_photographer_site_template_or_social_widget_asset": 16,
+    "visually_reviewed_unrelated_crosscut_series_index_news_card": 53,
+    "visually_reviewed_unrelated_finding_your_roots_pbs_show_poster": 100,
+    "visually_confirmed_bruce_lee_episode_still": 4
+  },
+  "pending_visual_review_records": 0
+}

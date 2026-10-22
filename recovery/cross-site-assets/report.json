@@ -1,0 +1,24 @@
+{
+  "source": "locally recovered Prometheus Brown pages and Blue Scholars MySpace bulletins",
+  "candidate_urls": 76,
+  "queried": 30,
+  "index_rows": 3,
+  "attempted_replays": 0,
+  "recovered_revisions": 0,
+  "failures": [
+    {
+      "url": "http://masslinemedia.com/probrown/obamaprogress.jpg",
+      "stage": "cdx",
+      "error": "RuntimeError: HTTP 429; stopped"
+    }
+  ],
+  "rate_limited": true,
+  "limitations": [
+    "Only exact image URLs embedded in recovered source pages are included.",
+    "Third-party/source-linked assets remain local-only pending rights review.",
+    "A missing CDX result means no exact URL memento was returned by this query; alternate URL spellings may still exist."
+  ],
+  "candidate_urls_total": 76,
+  "revision_records": 0,
+  "unique_payloads": 0
+}

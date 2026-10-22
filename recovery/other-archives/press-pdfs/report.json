@@ -1,0 +1,44 @@
+{
+  "archive": "Internet Archive Wayback",
+  "sources": 7,
+  "queried_sources": 0,
+  "capture_rows": 12,
+  "attempted": 12,
+  "recovered": 7,
+  "failures": [
+    {
+      "label": "Oberlin Review March 14, 2008",
+      "url": "http://www.oberlin.edu/stupub/ocreview/2008/03/14/ISSUE.pdf",
+      "timestamp": "20080509161614",
+      "error": "ChunkedEncodingError: ('Connection broken: IncompleteRead(130809 bytes read, 8786848 more expected)', IncompleteRead(130809 bytes read, 8786848 more expected))"
+    },
+    {
+      "label": "Billboard July 15, 2006",
+      "url": "https://worldradiohistory.com/Archive-All-Music/Billboard/00s/2006/BB-2006-07-15.pdf",
+      "timestamp": "20220524124242",
+      "error": "ValueError: Expected a complete PDF file; received HTML or truncated content"
+    },
+    {
+      "label": "Billboard July 15, 2006",
+      "url": "https://www.worldradiohistory.com/Archive-All-Music/Billboard/00s/2006/BB-2006-07-15.pdf",
+      "timestamp": "20241108172434",
+      "error": "ValueError: Expected a complete PDF file; received HTML or truncated content"
+    },
+    {
+      "label": "Billboard July 7, 2007",
+      "url": "https://worldradiohistory.com/Archive-All-Music/Billboard/00s/2007/BB-2007-07-07.pdf",
+      "timestamp": "20210304060446",
+      "error": "ValueError: Expected a complete PDF file; received HTML or truncated content"
+    },
+    {
+      "label": "Billboard August 6, 2011",
+      "url": "https://worldradiohistory.com/Archive-All-Music/Billboard/00s/2011/BB-2011-08-06.pdf",
+      "timestamp": "20210228063016",
+      "error": "ValueError: Expected a complete PDF file; received HTML or truncated content"
+    }
+  ],
+  "not_found": [],
+  "rights_status": "third-party magazine/newspaper scans; recovery-only pending rights review",
+  "total_capture_records": 53,
+  "unique_pdf_payloads": 6
+}

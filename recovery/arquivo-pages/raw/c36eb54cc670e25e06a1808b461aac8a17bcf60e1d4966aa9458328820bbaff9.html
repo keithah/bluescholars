@@ -1,0 +1,634 @@
+<!DOCTYPE html
+         PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+            "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=7"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel='stylesheet' href='http://l-stat.livejournal.com/ad_base.css' type='text/css' />
+<script src='http://l-stat.livejournal.com/js/core.js' type='text/javascript'></script>
+<script src='http://l-stat.livejournal.com/js/dom.js' type='text/javascript'></script>
+<script src='http://l-stat.livejournal.com/js/httpreq.js' type='text/javascript'></script>
+
+<script type='text/javascript'>
+    function controlstrip_init() {
+        if (! $('lj_controlstrip') ){
+            HTTPReq.getJSON({
+              url: "/matalicious_rex/__rpc_controlstrip?user=matalicious_rex",
+              onData: function (data) {
+                  var body = document.getElementsByTagName("body")[0];
+                  var div = document.createElement("div");
+                  div.innerHTML = data;
+                      body.appendChild(div);
+              },
+              onError: function (msg) { }
+            });
+        }
+    }
+    DOM.addEventListener(window, "load", controlstrip_init);
+</script>
+    <link rel="meta" type="application/rdf+xml" title="FOAF" href="http://matalicious-rex.livejournal.com/data/foaf" />
+
+        <script type="text/javascript">
+            var Site;
+            if (!Site)
+                Site = {};
+
+            var site_p = {"media_embed_enabled": 1,
+"inbox_update_poll": 0,
+"has_remote": 0,
+"statprefix": "http://l-stat.livejournal.com",
+"server_time": 1261700786,
+"ctx_popup": 1,
+"remote_is_suspended": 0,
+"imgprefix": "http://l-stat.livejournal.com/img",
+"esn_async": 1,
+"currentJournal": "matalicious_rex",
+"siteroot": "http://www.livejournal.com",
+"currentJournalBase": "http://matalicious-rex.livejournal.com"};
+            var site_k = ["media_embed_enabled", "inbox_update_poll", "has_remote", "statprefix", "server_time", "ctx_popup", "remote_is_suspended", "imgprefix", "esn_async", "currentJournal", "siteroot", "currentJournalBase"];
+            for (var i = 0; site_k.length > i; i++) {
+                Site[site_k[i]] = site_p[site_k[i]];
+            }
+       </script>
+    <script type="text/javascript" src="http://l-stat.livejournal.com/js/??core.js,dom.js,httpreq.js,livejournal.js,common/AdEngine.js,esn.js,ippu.js,lj_ippu.js,hourglass.js,contextualhover.js,md5.js,login.js,livejournal-local.js?v=1260993949"></script>
+<link rel="stylesheet" type="text/css" href="http://l-stat.livejournal.com/??lj_base.css,esn.css,contextualhover.css,controlstrip.css,controlstrip-dark.css,controlstrip-dark-local.css,controlstrip-local.css?v=1261005691" />
+<link title="Smooth Sailing Default" rel="stylesheet" href="http://matalicious-rex.livejournal.com/res/19173597/stylesheet?1252008854" type="text/css" />
+<style type="text/css">
+/* Cleaned CSS: */
+body {
+     font-family: arial, tahoma;
+     font-size: 7pt;
+     margin: 0px;
+     background-color: #B0C5C3;
+     color: #00192F;
+     background: url(http://cbimg6.com/layouts/07/07/05/19087aa.png);
+     background-attachment: fixed;
+     background-color: #B0C5C3;
+     margin-top: 20px;
+     margin-bottom: 20px;
+     }
+  a {
+     color: #00192F; 
+     font-weight: lighter;
+    text-decoration: none;
+    font-weight: normal; 
+    }
+  a:visited {
+     color: #024476; 
+     font-weight: lighter;
+     text-decoration: none;
+    font-weight: normal; 
+    }
+  a:hover {
+     background-color: #00192F;
+     color: #B2C7C5;
+     font-weight: normal;
+     text-decoration: underline;
+     }
+
+  .pageblock{
+     width:681px;
+     margin: 0 auto;
+     background-color: #B0C5C3;
+     color: #B0C5C3;
+
+     background-position: center;
+     }
+  .pagefooterblock{
+     background-color: #266569;
+     color: #B2C7C5;
+     padding: 10px;
+     margin-top: 0px;
+
+     text-align: center;
+     text-transform: uppercase;
+
+}
+  .pagefooterblock a, .pagefooterblock a:visited {
+     color: #B2C7C5;
+     } 
+
+  .pageheaderblock {
+     text-align: left;
+     background-image: url(http://i7.photobucket.com/albums/y275/Saalis/sandman08clip1.jpg);
+     background-repeat: no-repeat;
+     Background-position: bottom center;
+     width: 679px;
+     height: 470px;
+     }
+
+  .header-title {
+     display: none;
+     }
+  .header-subtitle {
+     display: none;
+     }
+  .header-icon {
+     top: 0px;
+     right: 0px;
+     position: absolute;
+     z-index: 1;
+
+     }
+  .header-menu {
+     padding: 0px 0px 0px 0px;
+     background-color: transparent;
+     font-family: arial;
+     font-size: 10px;
+     line-height: 20px;
+     text-transform: uppercase;
+     text-align: center;
+     background-color: #B0C5C3;
+
+}
+  .header-menu a, .header-menu a:visited { 
+     white-space: nowrap;
+     text-align: left;
+     padding: 2px 7px 5px 5px;
+     color: #001435;
+     text-decoration: none;
+     font-weight: bold;
+     }
+  .header-menu a:hover {
+     color: #B2C7C5;
+     background-color: #266569;
+     }
+  .header-menu ul, #footer-menu ul {
+     margin: 0px;
+     padding: 0px;
+     }
+  .header-menu li, #footer-menu li {
+     display: inline;
+     }
+
+
+
+  .bodyblock {
+     padding:0px;
+
+     }
+  .bodyheaderblock {
+     display: none;
+     }
+  .bodynavblock {
+     background-color: #B0C5C3;
+     color: #ccc;
+     margin: 10px 0px 4px 0px;
+     padding: 9px;
+     }
+  .bodynavblock a, .bodynavblock a:visited {
+     color: ##002415;
+     }
+  .body-title {
+     display: none;
+     }
+  .body-midtitle {
+     font-family: arial;
+     font-size: 18px;
+     color: #002415;
+     text-align: left;
+     padding-left: 8px;
+     }
+
+
+  .entryHolder {
+     color: #B0C5C3;
+     background-color: #B0C5C3;
+     font-family: arial;
+     font-size: 11px;
+     margin: 4px 5px 4px 0px;
+     text-align: justify;
+     padding-right: 35px;
+     }
+  .entryUserinfo {
+     text-align: center;
+       margin: 5px 6px 3px 5px;
+     
+     background-color: transparent;
+     }
+  .entryUserinfo-usericon img { 
+     border: 0px;
+     } 
+  .entryText {
+     color: #374544;
+     padding: 6px;
+     }
+  .entryHeader {
+     background-color: #7D9893;
+     color: #283A3A;
+     font-family: arial;
+     font-size: 10px;
+     padding: 4px;
+     font-weight: bold;
+     text-transform: uppercase;
+     border-top: 1px solid #283A3A;
+     border-bottom: 1px solid #283A3A;
+     border-left: 1px solid #283A3A;
+     border-right: 1px solid #283A3A;
+     letter-spacing: 2px;
+     text-align: center;
+}
+  .entryHeader a{
+     color: #7D9893;
+     }
+  .entryHeaderSubject {
+
+     }
+  .entryHeaderDate a {
+     color : #7D9893;
+     text-decoration : none;
+     }
+  .entryHeaderDate a:hover {
+     color : #7D9893;
+     text-decoration : underline;
+     }
+  .entryMetadata {
+     padding-left: 6px;
+     }
+  .entryMetadata ul {
+     margin: 0px;
+     padding: 0px;
+     }
+  .entryMetadata li {
+     list-style: none;
+     display: inline;
+     padding-right: 10px;
+     }
+  .entryMetadata-label {
+     font-weight: bold;
+     padding-right: 4px;
+     }
+  .entryLinkbar {
+     font-family: tahoma;
+     font-size: 11px;
+     color: #7D9893;
+     text-align: right;
+     padding: 4px 0px 4px 0px;
+     }
+  .entryLinkbar ul {
+     margin: 0px;
+     padding: 0px;
+     }
+  .entryLinkbar li {
+     padding: 0px 5px 0px 5px;
+     margin: 0px;     
+     display: inline;
+     }
+
+
+
+
+
+  #footer-menu {
+     font-size: 11px;
+     text-align: center;
+     }
+  #footer-menu a, .footer-menu a:visited {
+     color: #033241;
+     white-space: nowrap;
+     padding: 6px;
+     text-align: center;
+     }
+
+  
+  .sidebar {
+     font-family: arial;
+     font-size: 11px;
+     margin-right: 5px;
+     width: 170px;
+     background-color: #B0C5C3;
+     padding: 0px 0px 0px 0px; 
+     margin-left: 40px;    
+}
+  .sidebox {
+     color: #648C88;
+     background-color: transparent;
+     margin: 4px 0px 4px 0px;
+
+     }
+  .sideboxTitle {
+     background-color: #7A9491;
+     color: #283A3A;
+     font-family: arial;
+     font-size: 10px;
+     padding: 5px;     
+     text-align: left;
+     text-transform: uppercase;
+     font-weight: bold;
+     border-top: 1px solid #283A3A;
+     border-bottom: 1px solid #283A3A;
+     border-left: 1px solid #283A3A;
+     border-right: 1px solid #283A3A;
+     letter-spacing: 2px;
+}
+  .sideboxContent {
+     text-align: justify;
+     padding: 2px 4px 2px 4px;
+     }
+  .sidebox #profile, .sidebox #latestmonth, .sidebox #search {
+     text-align: center;
+     }
+  .sidebox #tags_sidebox {
+     text-align: center;
+     }
+  .sidebox #systemlinks {
+     text-align: center;
+     }
+  .sidebox #latestmonth table{
+     width: 90%;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 4px;
+
+     }
+  .listtitle {
+     font-weight: bold;
+     }
+  .profile-label {
+     font-weight: bold;
+     }
+
+  .commentHolder {
+     color: #648C88;
+     background-color: #B0C5C3;
+     font-family: arial;
+     font-size: 11px;
+     margin: 14px 0px 4px 10px;
+     border-bottom: 1px solid #648C88;
+     margin-right: 35px;
+     }
+  .commentUserinfo {
+     text-align: center; 
+       margin: 0px 8px 8px 0px;
+     
+     background-color: #B0C5C3;
+     }
+  .commentUserinfo-usericon img { 
+     border: 0; 
+     } 
+  .commentText {
+     padding: 6px;
+     }
+  .commentHeader {
+     background-color: transparent;
+     color: #6F918D;
+     font-family: arial;
+     font-size: 12px;
+     padding: 4px 0px 4px 8px;
+     }
+  .commentHeader a{
+     color: #283A3A;
+     }
+  .commentHeaderScreened {
+     font-family: arial;
+     font-size: 12px;
+     background-color: #283A3A;
+     padding: 4px 0px 4px 8px;
+     }
+  .commentHeaderSubject {
+     font-weight: bold;
+     }
+  .commentLinkbar {
+     font-family: arial;
+     font-size: 11px;
+     color: #000000;
+     text-align: right;
+     padding-top: 4px;
+     padding-bottom: 4px;
+     }
+  .commentLinkbar ul {
+     margin: 0px;
+     padding: 0px;
+     }
+  .commentLinkbar li {
+     padding: 0px 5px 0px 5px;
+     margin: 0px;
+     display: inline;
+     }
+  .replyform {
+     background-color: #B0C5C3;
+     color: #648C88;
+     padding-left: 10px;
+     margin-right: 35px;
+     }
+  #commenttext{
+     width:100%;
+     }
+
+  .yearlinks{
+     text-align: right;
+     }
+  .yearlink{
+     padding-left:4px;
+     padding-right: 4px;
+     }
+  .month {
+     width: 320px;
+     border: 1px solid #dddddd;
+     margin: 8px 8px 8px 40px;
+     }
+  .daysubjects {
+     color: #000000;
+     padding: 8px 8px 8px 40px;
+     }
+  .daytitles {
+     text-align: center;
+     border: 1px solid #dddddd;
+     background: #B0C5C3;
+     color: #000000;
+     }
+  .day-blank {
+     border: 1px solid #dddddd;
+    }
+  .day {
+     border: 1px solid #dddddd;
+     }
+  .day-date {
+     border-right: 1px solid #dddddd;
+     border-bottom: 1px solid #dddddd;
+     color: #000000;
+     width: 50%;
+     text-align: center;
+     }
+  .day-count {
+     width: 50%;
+     text-align: center;
+     float: right;
+     font-size: 20px;
+     }
+  .day-count a {
+     text-decoration: none;
+     color: #000000;
+     }
+
+  .tagstable, .tagstable td {
+     border: 1px solid #dddddd;
+     }
+  .tagstable { width: 300px; }
+
+</style>
+<title>my thoughts on... - January 3rd, 2009</title>
+</head>
+<body>
+<a name="top"></a>
+<table id='lj_controlstrip' cellpadding='0' cellspacing='0'><tr valign='top'><td id='lj_controlstrip_loggedout_userpic'><a href='http://www.livejournal.com/'><img src='http://l-stat.livejournal.com/img/controlstrip/ljlogo-transparent-loggedout.gif' border='0' alt='Home' title='Home' /></a></td><td id='lj_controlstrip_actionlinks' nowrap='nowrap'><span id='lj_controlstrip_statustext'>You are viewing <span class='ljuser ljuser-name_matalicious_rex' lj:user='matalicious_rex' style='white-space: nowrap;'><a href='http://matalicious-rex.livejournal.com/profile'><img src='http://l-stat.livejournal.com/img/userinfo.gif' alt='[info]' width='17' height='17' style='vertical-align: bottom; border: 0; padding-right: 1px;' /></a><a href='http://matalicious-rex.livejournal.com/'><b>matalicious_rex</b></a></span>'s journal</span><br /><a href='http://www.livejournal.com/?returnto=http://matalicious-rex.livejournal.com/2009/01/03/'>Log in</a>&nbsp;&nbsp; <a href='http://www.livejournal.com/create.bml'>Create a LiveJournal Account</a>&nbsp;&nbsp; <a href='http://www.livejournal.com/tour/'>Learn more</a></td><td id='lj_controlstrip_search' nowrap='nowrap'><a href='http://www.livejournal.com/explore/' id='main_link'>Explore LJ:</a>&nbsp;&nbsp; <a href='http://www.livejournal.com/life/'>Life</a>&nbsp;&nbsp; <a href='http://www.livejournal.com/entertainment/'>Entertainment</a>&nbsp;&nbsp; <a href='http://www.livejournal.com/music/'>Music</a>&nbsp;&nbsp; <a href='http://www.livejournal.com/culture/'>Culture</a>&nbsp;&nbsp; <a href='http://www.livejournal.com/news-and-politics/'>News & Politics</a>&nbsp;&nbsp; <a href='http://www.livejournal.com/technology/'>Technology</a>&nbsp;&nbsp; <br /><form action='http://www.livejournal.com/search/'>
+    <table cellspacing='0' style='width:90%'>
+    <tr>
+    <td style='width:85%'>
+    <input id='lj_controlstrip_search_input_text' class='lj_controlstrip_search_input_text_sup' type='text' name='q' />
+    </td>
+    <td>
+    <input id='lj_controlstrip_search_submit' class='lj_controlstrip_search_submit_sup' type='submit' value='search' />
+    </td>
+    </tr>
+    </table>
+<input type='hidden' name='ie' value='utf-8' />
+</form>
+</td></tr></table><div class="pageblock">
+  <div class="pageheaderblock">
+      <div class="header-title">my thoughts on...</div><div class="header-subtitle">reality</div><DIV class="header-menu"><ul><li><a href="http://matalicious-rex.livejournal.com/2009/01/02">January 2nd, 2009</a></li><li><a href="http://matalicious-rex.livejournal.com/2009/01/04">January 4th, 2009</a></li><li><a href="http://matalicious-rex.livejournal.com/">Recent Entries</a></li><li><a href="http://matalicious-rex.livejournal.com/calendar">Archive</a></li><li><a href="http://matalicious-rex.livejournal.com/friends">Friends' Entries</a></li><li><a href="http://matalicious-rex.livejournal.com/profile">User Info</a></li><li><a href="http://www.livejournal.com/tools/memories.bml?user=matalicious_rex">Memories</a></li><li><a href=""></a></li></ul></div>
+  </div> <!--pageheaderblock-->
+  
+    <div class="bodyheaderblock">
+        <div class="body-title">January 3rd, 2009&nbsp;</div>
+    </div>
+  <div class="bodyblock"><div style="text-align: center;"><div class="ljad ljadleaderboard-top" id=""><h4 style='float: left; margin-bottom: 2px; margin-top: 2px; clear: both;'><a href='http://livejournalinc.com/sales.php'>Advertisement</a></h4>
+
+<div style='float: right; margin-bottom: 3px; padding-top: 0px; line-height: 1em; white-space: nowrap;'>
+<a href='http://www.livejournal.com/manage/account/adsettings.bml'>Customize</a>
+</div>
+
+<div style='clear: both; height: 0; overflow:hidden; font-size:0; line-height:0;'></div>
+            <SCRIPT TYPE="text/javascript" LANGUAGE="JavaScript">
+            var doubleclick_ad_params = 'a=1;r=0;w=1;wg=1;wa=24;wc=US;wac=br;wac=mo;wac=im;wac=ah;wac=mu;wi=alliteration;wi=banks;wi=cocoons;wi=doves;wi=eleks;wi=fucking;wi=grandpas;wi=hippies;wi=iguanas;wi=jesters;jid=11352790;c=jo;pt=jo';
+            </SCRIPT>
+                <SCRIPT TYPE="text/javascript" LANGUAGE="JavaScript">
+        <!-- Hide from old browsers
+        // Cache-busting and pageid values
+        if (!pageNum) var pageNum = Math.round(Math.random() * 10000000000);
+        document.write('<SCR');
+        document.write('IPT LANGUAGE="JavaScript" SRC="http://ad.doubleclick.net/adj/lj.ugc.day/;'
+            + 'a=1;r=0;w=1;wg=1;wa=24;wc=US;wac=br;wac=mo;wac=im;wac=ah;wac=mu;wi=alliteration;wi=banks;wi=cocoons;wi=doves;wi=eleks;wi=fucking;wi=grandpas;wi=hippies;wi=iguanas;wi=jesters;jid=11352790;c=jo;pt=jo' + ';sz=728x90;pos=t;tile=1;ord=' + pageNum + '?" TYPE="text/javascript">');
+        document.write('</SCR');
+        document.write('IPT>');
+        // End Hide -->
+        </SCRIPT>
+        <NOSCRIPT>
+            <A rel="nofollow" HREF="http://ad.doubleclick.net/jump/lj.ugc.day/;sz=728x90;tile=1;ord=5797332985?" target="_blank">
+            <img src="http://ad.doubleclick.net/ad/lj.ugc.day/;sz=728x90;tile=1;ord=5797332985?"
+              width="728" height="90" border="0" alt=""></A>
+        </NOSCRIPT>
+</div></div><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td valign="top"  width="200px"><div class="sidebar">
+    <div class="sidebox">
+    
+      <div class="sideboxTitle">Profile</div>
+      
+      <div class="sideboxContent" id="profile">
+        <div><a href="http://www.livejournal.com/allpics.bml?user=matalicious_rex"><img src="http://l-userpic.livejournal.com/53145154/11352790" alt="" border="0" class="profile-userpic" /></a></div>
+        <div><span class="profile-label">User: </span><span class="profile-content"><span class="ljuser ljuser-name_matalicious_rex" lj:user="matalicious_rex" style="white-space: nowrap;"><a href="http://matalicious-rex.livejournal.com/profile"><img src="http://l-stat.livejournal.com/img/userinfo.gif" alt="[info]" width="17" height="17" style="vertical-align: bottom; border: 0; padding-right: 1px;" /></a><a href="http://matalicious-rex.livejournal.com/"><b>matalicious_rex</b></a></span></span></div>
+        <div><span class="profile-label">Name: </span><span class="profile-content">matalicious_rex</span></div>
+        
+       </div> <!--sidebox-profile-->
+    
+    </div> <!-- sidebox -->
+    
+    <div class="sidebox">
+    
+      <div class="sideboxTitle">Page Summary</div>
+      <div class="sideboxContent" id="summary"><div class="summaryList"><b>&middot;&nbsp;</b>12:25 am - <a href="#matalicious_rex54986">old ghost to my dome</a></div>
+      <div class="summaryList"><b>&middot;&nbsp;</b>06:55 pm - <a href="#matalicious_rex55047">Elizabethtown</a></div>
+      </div> <!--sidebox-summary -->
+    </div> <!-- sidebox -->
+    
+    <div class="sidebox">
+    
+      <div class="sideboxTitle">Latest Month</div>
+      <div class="sideboxContent" id="latestmonth">
+          <table cellspacing="0" cellpadding="0">
+              <tr><td colspan="7" align="center"><a href="http://matalicious-rex.livejournal.com/2009/12/">December 2009</a></td></tr>
+              <tr><td colspan="2"></td><td width="14.28%"><div class="latestmonth-inactive">1</div></td><td width="14.28%"><div class="latestmonth-inactive">2</div></td><td width="14.28%"><div class="latestmonth-inactive">3</div></td><td width="14.28%"><div class="latestmonth-inactive">4</div></td><td width="14.28%"><div class="latestmonth-inactive">5</div></td></tr><tr><td width="14.28%"><div class="latestmonth-inactive">6</div></td><td width="14.28%"><div class="latestmonth-inactive">7</div></td><td width="14.28%"><div class="latestmonth-inactive">8</div></td><td width="14.28%"><div class="latestmonth-active"><a href="http://matalicious-rex.livejournal.com/2009/12/09/">9</a></div></td><td width="14.28%"><div class="latestmonth-inactive">10</div></td><td width="14.28%"><div class="latestmonth-inactive">11</div></td><td width="14.28%"><div class="latestmonth-inactive">12</div></td></tr><tr><td width="14.28%"><div class="latestmonth-inactive">13</div></td><td width="14.28%"><div class="latestmonth-inactive">14</div></td><td width="14.28%"><div class="latestmonth-inactive">15</div></td><td width="14.28%"><div class="latestmonth-inactive">16</div></td><td width="14.28%"><div class="latestmonth-inactive">17</div></td><td width="14.28%"><div class="latestmonth-inactive">18</div></td><td width="14.28%"><div class="latestmonth-inactive">19</div></td></tr><tr><td width="14.28%"><div class="latestmonth-inactive">20</div></td><td width="14.28%"><div class="latestmonth-inactive">21</div></td><td width="14.28%"><div class="latestmonth-inactive">22</div></td><td width="14.28%"><div class="latestmonth-inactive">23</div></td><td width="14.28%"><div class="latestmonth-inactive">24</div></td><td width="14.28%"><div class="latestmonth-inactive">25</div></td><td width="14.28%"><div class="latestmonth-inactive">26</div></td></tr><tr><td width="14.28%"><div class="latestmonth-inactive">27</div></td><td width="14.28%"><div class="latestmonth-inactive">28</div></td><td width="14.28%"><div class="latestmonth-inactive">29</div></td><td width="14.28%"><div class="latestmonth-inactive">30</div></td><td width="14.28%"><div class="latestmonth-inactive">31</div></td><td colspan="2"></td></tr>
+          </table>
+      </div>
+    </div> <!-- sidebox -->
+    
+    <div class="sidebox">
+    
+      <div class="sideboxTitle">Search</div>
+      
+    <div class="sideboxContent" id="search">
+    <form id='Search' action='http://www.livejournal.com/multisearch.bml' method='post' style='display: inline'>
+      <label for='SearchTerm'>Search:</label>
+      <input id='SearchTerm' type='text' name='q' size='15' value='' />
+      <br/>
+      <label for='SearchType'>Category:</label>
+      <select id='SearchType' name='type'>
+        <option value='nav_and_user' selected='selected'>Site & User</option>
+        <option value='faq'>FAQ</option>
+        <option value='nav'>Site</option>
+        <option value='region'>Region</option>
+        <option value='int'>Interest</option>
+        <option value='user'>Username</option>
+        <option value='email'>Email</option>
+        <option value='ljtalk'>Gizmo/LJ Talk</option>
+        <option value='aolim'>AIM</option>
+        <option value='icq'>ICQ Number</option>
+        <option value='yahoo'>Yahoo! ID</option>
+        <option value='msn'>MSN</option>
+        <option value='jabber'>Jabber</option>
+      </select>
+      <br/>
+      <input type='submit' value='Search' />
+    </form>
+    </div> <!-- sidebox-search-->
+    
+    </div> <!-- sidebox -->
+    
+    <div class="sidebox">
+    
+      <div class="sideboxTitle">Entry Tags</div>
+      <div class="sideboxContent" id="tags_sidebox"><a href="http://matalicious-rex.livejournal.com/tag/%29%27%28">)&#39;(</a>, <a href="http://matalicious-rex.livejournal.com/tag/alpha">alpha</a>, <a href="http://matalicious-rex.livejournal.com/tag/alskdhkjaf">alskdhkjaf</a>, <a href="http://matalicious-rex.livejournal.com/tag/bm">bm</a>, <a href="http://matalicious-rex.livejournal.com/tag/bm+%29%27%28">bm )&#39;(</a>, <a href="http://matalicious-rex.livejournal.com/tag/brighter">brighter</a>, <a href="http://matalicious-rex.livejournal.com/tag/burningman">burningman</a>, <a href="http://matalicious-rex.livejournal.com/tag/catan">catan</a>, <a href="http://matalicious-rex.livejournal.com/tag/catholics">catholics</a>, <a href="http://matalicious-rex.livejournal.com/tag/cowboy">cowboy</a>, <a href="http://matalicious-rex.livejournal.com/tag/del+toro">del toro</a>, <a href="http://matalicious-rex.livejournal.com/tag/fgh">fgh</a>, <a href="http://matalicious-rex.livejournal.com/tag/fsfsf">fsfsf</a>, <a href="http://matalicious-rex.livejournal.com/tag/headless">headless</a>, <a href="http://matalicious-rex.livejournal.com/tag/home">home</a>, <a href="http://matalicious-rex.livejournal.com/tag/home%21">home!</a>, <a href="http://matalicious-rex.livejournal.com/tag/jenny+lewis">jenny lewis</a>, <a href="http://matalicious-rex.livejournal.com/tag/live">live</a>, <a href="http://matalicious-rex.livejournal.com/tag/love">love</a>, <a href="http://matalicious-rex.livejournal.com/tag/me">me</a>, <a href="http://matalicious-rex.livejournal.com/tag/montana">montana</a>, <a href="http://matalicious-rex.livejournal.com/tag/omg">omg</a>, <a href="http://matalicious-rex.livejournal.com/tag/pet">pet</a>, <a href="http://matalicious-rex.livejournal.com/tag/playa">playa</a>, <a href="http://matalicious-rex.livejournal.com/tag/ratatat">ratatat</a>, <a href="http://matalicious-rex.livejournal.com/tag/rilo+kiley">rilo kiley</a>, <a href="http://matalicious-rex.livejournal.com/tag/santa+cruz">santa cruz</a>, <a href="http://matalicious-rex.livejournal.com/tag/starving">starving</a>, <a href="http://matalicious-rex.livejournal.com/tag/sucks">sucks</a>, <a href="http://matalicious-rex.livejournal.com/tag/tweakers">tweakers</a>, <a href="http://matalicious-rex.livejournal.com/tag/wine+and+roses">wine and roses</a>, <a href="http://matalicious-rex.livejournal.com/tag/work">work</a>, <a href="http://matalicious-rex.livejournal.com/tag/work+work+work+nostalgia">work work work nostalgia</a>, <a href="http://matalicious-rex.livejournal.com/tag/zhuanzi+reality+fucking-assholes">zhuanzi reality fucking-assholes</a></div>
+    </div> <!-- sidebox -->
+    </div> <!--sidebar--></td><td valign="top"  width=100%>
+    <a name="matalicious_rex54986"></a>
+    <div class="entryHolder">
+        <div class='entryHeader'><span class="entryHeaderDate">12:25 am</span><span class="entryHeaderSubject"> - <a href="http://matalicious-rex.livejournal.com/54986.html" class="subj-link" >old ghost to my dome</a></span></div><table width=100% cellpadding=0 cellspacing=0 border=0><tr valign=top><td><table border=0 cellspacing=0 cellpadding=0 align="left" class="entryUserinfo"><tr><td><div class="entryUserinfo-usericon"><a href="http://www.livejournal.com/allpics.bml?user=matalicious_rex"><img src="http://l-userpic.livejournal.com/53145154/11352790" title="" alt="Me" height="100" width="86" /></a></div></td></tr></table></td><td width=100%><div class="entryText">i just drank about 75% of a 1995r old ghost.<br /><br />im fucking hammered.<br /><br />yep...<br /><br />and all alone, hahahahahahahaha<br /><br />i want a cigarette....ok, bye</div><div class="entryMetadata"><ul><li><span class="entryMetadata-label">Location:</span><span class="entryMetadata-content"><a href='http://maps.google.com/maps?q=drunk+time'>drunk time</a></span></li><li><span class="entryMetadata-label">Music:</span><span class="entryMetadata-content">The Blue Scholars</span></li></ul></div></td></tr><tr><td colspan=2>
+          <div class="entryLinkbar"><ul>
+          <li><a  href='http://matalicious-rex.livejournal.com/54986.html?mode=reply' >Speak</a></li><li><a href="http://matalicious-rex.livejournal.com/54986.html">Link</a></li><li><a href="http://www.livejournal.com/tools/memadd.bml?journal=matalicious_rex&amp;itemid=54986">Remember</a></li><li><a href="http://www.livejournal.com/tools/tellafriend.bml?journal=matalicious_rex&amp;itemid=54986">Tell a Friend</a></li>
+          </ul></div> <!-- entryLinkbar -->
+          </td></tr></table>
+    </div> <!-- entryHolder -->
+    
+    <a name="matalicious_rex55047"></a>
+    <div class="entryHolder">
+        <div class='entryHeader'><span class="entryHeaderDate">06:55 pm</span><span class="entryHeaderSubject"> - <a href="http://matalicious-rex.livejournal.com/55047.html" class="subj-link" >Elizabethtown</a></span></div><table width=100% cellpadding=0 cellspacing=0 border=0><tr valign=top><td><table border=0 cellspacing=0 cellpadding=0 align="left" class="entryUserinfo"><tr><td><div class="entryUserinfo-usericon"><a href="http://www.livejournal.com/allpics.bml?user=matalicious_rex"><img src="http://l-userpic.livejournal.com/53145154/11352790" title="" alt="Me" height="100" width="86" /></a></div></td></tr></table></td><td width=100%><div class="entryText">why is that movie so damn adorable...<br /><br />it's disgusting....yet, I love it....<br /><br />this waspy version of garden state is certainly one of my favorite modern romantic comedies; it's jewish counterpart, however, has a slightly drier wit and i think a better sound track. I wouldn't expect anything else from Zach Braff. Garden State also has much more drug use than Elizabethtown.<br /><br />Just my thoughts....<br /><br />I am quite glad 2008 is over and through. Endika commented on my change in mood, and the Buddhist attributed my improved attitude to a change in the year and thus my outlook on life. Tee Hee. He told me today that I walked through doors smiling with an aura of happiness. Only 3 things have changed in my life the last few days. <br />1. the year is new!<br />2. I have made some wonderful new friends<br />3. I have a date on friday, with a real live woman. This is going to be interesting...  <br />The both of us will be trying to figure out if we want to continue and see each other again. And this will happen with each consecutive sighting, as each consecutive "date" will get exponentially closer in time to each other, until one of us decides that She, or I, no longer want to be involved in this relationship. <br /><br />I can see the entire relationship in my head, i just have no idea over how long it will last.<br /><br />it's really a silly practice.<br /><br />When I think about all the work it entails, id really much rather just sit around with my friends....and no worry about it.<br /><br />What I think is funny is that of most of my friends, of which they refer to me, along with Shannon, as the pure extroverts, are all in romantic relationships or chasing after them as they want to be in one.<br />Yet, I hate being alone, don't necessarily want romantic attachment with anybody at the moment. I just want a solid friend base. I am not opposed to the idea if it occurs, but I'm not really looking for it. Then again, perhaps I am a hypocrite by having gone on a few private outings with some people over the last few weeks.<br /><br />Well, I am starving...so I am going to find some food.</div><div class="entryMetadata"><ul><li><span class="entryMetadata-label">Location:</span><span class="entryMetadata-content"><a href='http://maps.google.com/maps?q=work'>work</a></span></li><li><span class="entryMetadata-label">Music:</span><span class="entryMetadata-content">nada</span></li></ul></div></td></tr><tr><td colspan=2>
+          <div class="entryLinkbar"><ul>
+          <li><a  href='http://matalicious-rex.livejournal.com/55047.html?mode=reply' >Speak</a></li><li><a href="http://matalicious-rex.livejournal.com/55047.html">Link</a></li><li><a href="http://www.livejournal.com/tools/memadd.bml?journal=matalicious_rex&amp;itemid=55047">Remember</a></li><li><a href="http://www.livejournal.com/tools/tellafriend.bml?journal=matalicious_rex&amp;itemid=55047">Tell a Friend</a></li>
+          </ul></div> <!-- entryLinkbar -->
+          </td></tr></table>
+    </div> <!-- entryHolder -->
+    <div class="bodynavblock" id="footer-menu"><ul><li><a href="http://matalicious-rex.livejournal.com/2009/01/02">January 2nd, 2009</a></li><li><a href="http://matalicious-rex.livejournal.com/2009/01/04">January 4th, 2009</a></li><li><a href="#top">Top of Page</a></li></ul></div><!--bodynavblock--></td></tr></table><div style="text-align: center;"><div class="ljad ljadleaderboard-bottom" id=""><h4 style='float: left; margin-bottom: 2px; margin-top: 2px; clear: both;'><a href='http://livejournalinc.com/sales.php'>Advertisement</a></h4>
+
+<div style='float: right; margin-bottom: 3px; padding-top: 0px; line-height: 1em; white-space: nowrap;'>
+<a href='http://www.livejournal.com/manage/account/adsettings.bml'>Customize</a>
+</div>
+
+<div style='clear: both; height: 0; overflow:hidden; font-size:0; line-height:0;'></div>        <SCRIPT TYPE="text/javascript" LANGUAGE="JavaScript">
+        <!-- Hide from old browsers
+        // Cache-busting and pageid values
+        if (!pageNum) var pageNum = Math.round(Math.random() * 10000000000);
+        document.write('<SCR');
+        document.write('IPT LANGUAGE="JavaScript" SRC="http://ad.doubleclick.net/adj/lj.ugc.day/;'
+            + 'a=1;r=0;w=1;wg=1;wa=24;wc=US;wac=br;wac=mo;wac=im;wac=ah;wac=mu;wi=alliteration;wi=banks;wi=cocoons;wi=doves;wi=eleks;wi=fucking;wi=grandpas;wi=hippies;wi=iguanas;wi=jesters;jid=11352790;c=jo;pt=jo' + ';sz=728x90;pos=b;tile=2;ord=' + pageNum + '?" TYPE="text/javascript">');
+        document.write('</SCR');
+        document.write('IPT>');
+        // End Hide -->
+        </SCRIPT>
+        <NOSCRIPT>
+            <A rel="nofollow" HREF="http://ad.doubleclick.net/jump/lj.ugc.day/;sz=728x90;tile=2;ord=5797332985?" target="_blank">
+            <img src="http://ad.doubleclick.net/ad/lj.ugc.day/;sz=728x90;tile=2;ord=5797332985?"
+              width="728" height="90" border="0" alt=""></A>
+        </NOSCRIPT>
+</div></div></div> <!--bodyblock--><div class="pagefooterblock">This page was loaded Dec 25th 2009, 12:26 am GMT.</div></div> <!--pageblock-->
+<div id='hello-world' style='text-align: left; font-size:0; line-height:0; height:0; overflow:hidden;'><script src="http://l-stat.livejournal.com/js/pagestats/sa1102.js" type="text/javascript"></script></div></body>
+</html>

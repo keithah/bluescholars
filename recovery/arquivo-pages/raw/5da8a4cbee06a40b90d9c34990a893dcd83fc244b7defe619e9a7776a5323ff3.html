@@ -1,0 +1,264 @@
+
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+       <meta http-equiv="X-UA-Compatible" content="IE=7"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://jeremytblack.livejournal.com/data/rss" />
+<link rel="alternate" type="application/atom+xml" title="Atom" href="http://jeremytblack.livejournal.com/data/atom" />
+<link rel="service.feed" type="application/atom+xml" title="AtomAPI-enabled feed" href="http://www.livejournal.com/interface/atomapi/jeremytblack/feed" />
+<link rel="service.post" type="application/atom+xml" title="Create a new post" href="http://www.livejournal.com/interface/atomapi/jeremytblack/post" />
+<link rel="openid.server" href="http://www.livejournal.com/openid/server.bml" />
+<meta http-equiv="X-XRDS-Location" content="http://jeremytblack.livejournal.com/data/yadis" />
+<link rel='stylesheet' href='http://l-stat.livejournal.com/ad_base.css' type='text/css' />
+<script src='http://l-stat.livejournal.com/js/core.js' type='text/javascript'></script>
+<script src='http://l-stat.livejournal.com/js/dom.js' type='text/javascript'></script>
+<script src='http://l-stat.livejournal.com/js/httpreq.js' type='text/javascript'></script>
+
+<script type='text/javascript'>
+    function controlstrip_init() {
+        if (! $('lj_controlstrip') ){
+            HTTPReq.getJSON({
+              url: "/jeremytblack/__rpc_controlstrip?user=jeremytblack",
+              onData: function (data) {
+                  var body = document.getElementsByTagName("body")[0];
+                  var div = document.createElement("div");
+                  div.innerHTML = data;
+                      body.appendChild(div);
+              },
+              onError: function (msg) { }
+            });
+        }
+    }
+    DOM.addEventListener(window, "load", controlstrip_init);
+</script>
+    <link rel="meta" type="application/rdf+xml" title="FOAF" href="http://jeremytblack.livejournal.com/data/foaf" />
+<link rel="group friends made" title="LiveJournal friends" href="http://jeremytblack.livejournal.com/friends" />
+
+        <script type="text/javascript">
+            var Site;
+            if (!Site)
+                Site = {};
+
+            var site_p = {"media_embed_enabled": 1,
+"inbox_update_poll": 0,
+"has_remote": 0,
+"statprefix": "http://l-stat.livejournal.com",
+"server_time": 1262023096,
+"ctx_popup": 1,
+"remote_is_suspended": 0,
+"imgprefix": "http://l-stat.livejournal.com/img",
+"esn_async": 1,
+"currentJournal": "jeremytblack",
+"siteroot": "http://www.livejournal.com",
+"currentJournalBase": "http://jeremytblack.livejournal.com"};
+            var site_k = ["media_embed_enabled", "inbox_update_poll", "has_remote", "statprefix", "server_time", "ctx_popup", "remote_is_suspended", "imgprefix", "esn_async", "currentJournal", "siteroot", "currentJournalBase"];
+            for (var i = 0; site_k.length > i; i++) {
+                Site[site_k[i]] = site_p[site_k[i]];
+            }
+       </script>
+    <script type="text/javascript" src="http://l-stat.livejournal.com/js/??core.js,dom.js,httpreq.js,livejournal.js,common/AdEngine.js,esn.js,ippu.js,lj_ippu.js,hourglass.js,contextualhover.js,md5.js,login.js,livejournal-local.js?v=1260993949"></script>
+<link rel="stylesheet" type="text/css" href="http://l-stat.livejournal.com/??lj_base.css,esn.css,contextualhover.css,controlstrip.css,controlstrip-dark.css,controlstrip-dark-local.css,controlstrip-local.css?v=1261005691" />
+<link rel="stylesheet" href="http://jeremytblack.livejournal.com/res/19955982/stylesheet?1252008849" type="text/css" />
+
+          <title>That Cruel Beast Hope</title>
+    </head>
+    <body>
+    <a name="top"></a>
+    <table id='lj_controlstrip' cellpadding='0' cellspacing='0'><tr valign='top'>                <td id='lj_controlstrip_userpic'><a href='http://www.livejournal.com/'><img src='http://l-stat.livejournal.com/img/controlstrip/ljlogo-transparent.gif' border='0' alt='Home' title='Home' /></a></td>
+                <td id='lj_controlstrip_login' style='background-image: none;' nowrap='nowrap'><form id="login" class="lj_login_form" action="http://www.livejournal.com/login.bml?ret=1" method="post"><div>
+                <input type="hidden" name="mode" value="login" />
+                <input type='hidden' name='chal' id='login_chal' class='lj_login_chal' value='c0:1262019600:3496:300:ft4gxYzB6jBRSa3C4dNm:224d31d918a6a675017efb230227463e' />
+                <input type='hidden' name='response' id='login_response' class='lj_login_response' value='' />
+                <table cellspacing="0" cellpadding="0" style="margin-right: 1em;"><tr><td>
+                <label for="xc_user">Username:</label> <input type="text" name="user" size="7" maxlength="17" tabindex="1" id="xc_user" value="" />
+                </td><td>
+                <label style="margin-left: 3px;" for="xc_password">Password:</label> <input type="password" name="password" size="7" tabindex="2" id="xc_password" class='lj_login_password' />
+<input type='submit' value="Log in" tabindex='4' /></td></tr><tr><td valign='top'><a href='http://www.livejournal.com/lostinfo.bml'>Forgot your password?</a></td><td style='font: 10px Arial, Helvetica, sans-serif;' valign='top' colspan='2' align='right'><input type='checkbox' id='xc_remember' name='remember_me' style='height: 10px; width: 10px;' tabindex='3' /><label for='xc_remember'>Remember Me</label></td></tr></table></div></form></td><td id='lj_controlstrip_actionlinks' nowrap='nowrap'><span id='lj_controlstrip_statustext'>You are viewing <span class='ljuser ljuser-name_jeremytblack' lj:user='jeremytblack' style='white-space: nowrap;'><a href='http://jeremytblack.livejournal.com/profile'><img src='http://l-stat.livejournal.com/img/userinfo.gif' alt='[info]' width='17' height='17' style='vertical-align: bottom; border: 0; padding-right: 1px;' /></a><a href='http://jeremytblack.livejournal.com/'><b>jeremytblack</b></a></span>'s journal</span><br /><a href='http://www.livejournal.com/create.bml'>Create a LiveJournal Account</a>&nbsp;&nbsp; <a href='http://www.livejournal.com/tour/'>Learn more</a></td><td id='lj_controlstrip_search' nowrap='nowrap'><a href='http://www.livejournal.com/explore/' id='main_link'>Explore LJ:</a>&nbsp;&nbsp; <a href='http://www.livejournal.com/life/'>Life</a>&nbsp;&nbsp; <a href='http://www.livejournal.com/entertainment/'>Entertainment</a>&nbsp;&nbsp; <a href='http://www.livejournal.com/music/'>Music</a>&nbsp;&nbsp; <a href='http://www.livejournal.com/culture/'>Culture</a>&nbsp;&nbsp; <a href='http://www.livejournal.com/news-and-politics/'>News & Politics</a>&nbsp;&nbsp; <a href='http://www.livejournal.com/technology/'>Technology</a>&nbsp;&nbsp; <br /><form action='http://www.livejournal.com/search/'>
+    <table cellspacing='0' style='width:90%'>
+    <tr>
+    <td style='width:85%'>
+    <input id='lj_controlstrip_search_input_text' class='lj_controlstrip_search_input_text_sup' type='text' name='q' />
+    </td>
+    <td>
+    <input id='lj_controlstrip_search_submit' class='lj_controlstrip_search_submit_sup' type='submit' value='search' />
+    </td>
+    </tr>
+    </table>
+<input type='hidden' name='ie' value='utf-8' />
+</form>
+</td></tr></table>
+    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tr>
+            <td>
+    <div class="border3">
+        <div class="border2">
+            <div id="bodycontent">
+    
+                <div id="userpic"><a href="http://www.livejournal.com/allpics.bml?user=jeremytblack"><img src="http://l-userpic.livejournal.com/69764590/14557746" width="100" height="100" alt="jeremytblack" title="jeremytblack" border="0" /></a></div>
+    
+                <div id="headerinfo">
+                    jeremytblack <br /> .::: .:.:. .::.: ..::
+                </div>
+    
+                <div id="header">
+                    <h3>That Cruel Beast Hope</h3>
+                    <div id="nav">
+    <a href="http://jeremytblack.livejournal.com/">Recent Entries</a>
+<a href="http://jeremytblack.livejournal.com/calendar">Archive</a>
+<a href="http://jeremytblack.livejournal.com/friends">Friends</a>
+<a href="http://jeremytblack.livejournal.com/profile">User Info</a>
+
+                        
+                    </div>
+                </div>
+    
+                <div id="content">
+                    <table cellspacing="10" cellpadding="0" border="0">
+                        <tr>
+                            <td valign="top" class="sidetd">
+                            <div id="sidecolumn">
+    
+
+                                <div class="border4">
+                                    <div class="border3">
+                                        <div class="border2">
+                                            <div class="columncontent">
+    <strong>Page Summary</strong><div class="columnitem"><a href="#item13815"><strong>2/12/08 08:34 pm</strong>  :: Happy 199th Birthday, Abraham</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br />
+    
+
+                                <div class="border4">
+                                    <div class="border3">
+                                        <div class="border2">
+                                            <div class="columncontent">
+    <strong>About this journal</strong><div class="columnitem">"It's all good!"  "Everything'll be all right!" "What's the worst that could happen?" "Hey, I've got great news!"  "We've got half the money raised to shoot, now all we gotta do is...."  "You know that cute guy at that party? He asked about you."  Shut up already!</div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br />
+    
+
+                                <div class="border4">
+                                    <div class="border3">
+                                        <div class="border2">
+                                            <div class="columncontent">
+    <strong>December 2009</strong>
+            <table cellspacing="2" cellpadding="2" border="0" width="100%">
+                <tr>
+                    <td class="calempty">&nbsp;</td>
+                    <td class="calempty">&nbsp;</td>
+                    <td class="calinitem">1</td>
+                    <td class="calinitem">2</td>
+                    <td class="calactitem"><a href="http://jeremytblack.livejournal.com/2009/12/03/">3</a></td>
+                    <td class="calactitem"><a href="http://jeremytblack.livejournal.com/2009/12/04/">4</a></td>
+                    <td class="calinitem">5</td></tr>
+
+                <tr>
+                    <td class="calinitem">6</td>
+                    <td class="calinitem">7</td>
+                    <td class="calinitem">8</td>
+                    <td class="calinitem">9</td>
+                    <td class="calinitem">10</td>
+                    <td class="calinitem">11</td>
+                    <td class="calinitem">12</td></tr>
+
+                <tr>
+                    <td class="calinitem">13</td>
+                    <td class="calinitem">14</td>
+                    <td class="calinitem">15</td>
+                    <td class="calinitem">16</td>
+                    <td class="calactitem"><a href="http://jeremytblack.livejournal.com/2009/12/17/">17</a></td>
+                    <td class="calinitem">18</td>
+                    <td class="calinitem">19</td></tr>
+
+                <tr>
+                    <td class="calinitem">20</td>
+                    <td class="calinitem">21</td>
+                    <td class="calinitem">22</td>
+                    <td class="calactitem"><a href="http://jeremytblack.livejournal.com/2009/12/23/">23</a></td>
+                    <td class="calactitem"><a href="http://jeremytblack.livejournal.com/2009/12/24/">24</a></td>
+                    <td class="calinitem">25</td>
+                    <td class="calinitem">26</td></tr>
+
+                <tr>
+                    <td class="calinitem">27</td>
+                    <td class="calinitem">28</td>
+                    <td class="calinitem">29</td>
+                    <td class="calinitem">30</td>
+                    <td class="calinitem">31</td></tr>
+</table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br />
+    
+                            </div>
+                            </td>
+
+                            <td valign="top" width="100%">
+    
+                                <div class="messageholder"><div class="systemmessage">
+                                <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                    <tr>
+                                        <td width="15%">&nbsp;</td>
+                                        <td width="70%" align="center">Viewing 0 - 1</td>
+                                        <td width="15%" align="right">&nbsp;</td>
+                                    </tr>
+                                </table>
+                                </div></div>
+    
+
+                                <div class="entries">
+    <a name="item13815"></a>
+                                    <div class="entry">
+                                        <div class="entrydivider"></div>
+    
+                                        <div class="entryinfo"> 2/12/08 08:34 pm</div>
+                                        <div class="entrydivider"></div>
+                                        <div class="entrylinks">
+    <a href="http://jeremytblack.livejournal.com/13815.html?mode=reply">&nbsp; Leave a comment &nbsp;</a><a href="http://jeremytblack.livejournal.com/13815.html"> &nbsp; 3 comments &nbsp; </a><a href="http://www.livejournal.com/tools/memadd.bml?journal=jeremytblack&amp;itemid=13815"> &nbsp; Add to Memories &nbsp; </a><a href="http://www.livejournal.com/tools/tellafriend.bml?journal=jeremytblack&amp;itemid=13815"> &nbsp; Tell a Friend &nbsp; </a><a href="http://jeremytblack.livejournal.com/13815.html"> &nbsp; Link &nbsp; </a>
+                                        </div>                                    <div class="entrytext">
+                                            <div class="subject"><a href="http://jeremytblack.livejournal.com/13815.html" class="subj-link" >Happy 199th Birthday, Abraham</a></div>
+    <p>Abraham Lincoln, born 1809, today.  <br /><br />My aunt used to live in Springfield, Illinois.  Illinois is one of my two home states.  Both sets of grandparents come from Illinois, but I was raised in Wisconsin.  But I lived in Canton, Illinois for a while as a teen.  Long enough to get my ass pounded into a gravel road. (There's a story for another day.)<br /><br />Anyway, I remember visiting the cabin where he lived, which is in Springfield, followed by the capital, when I was a young boy. I was too young to remember much in the way of stories. But I can still see the cabin, and feel the excitement I felt standing in front of it. <br /><br />And it's interesting.  Both the leading contenders for the Democratic nomination are from Illinois, and which  ever one gets the nomination, history will be made. Just feeling a little Illinois pride, and I thought I'd give it a shout out. <br /><br />(Nods to Kentucky and Indiana, too, Lincoln's birthplace and childhood home.)</p><div class="meta"><div class='ljtags'>Tags: <a rel='tag' href='http://jeremytblack.livejournal.com/tag/abraham+lincoln'>abraham lincoln</a>, <a rel='tag' href='http://jeremytblack.livejournal.com/tag/barrack+obama'>barrack obama</a>, <a rel='tag' href='http://jeremytblack.livejournal.com/tag/canton'>canton</a>, <a rel='tag' href='http://jeremytblack.livejournal.com/tag/hillary+clinton'>hillary clinton</a>, <a rel='tag' href='http://jeremytblack.livejournal.com/tag/illinois'>illinois</a>, <a rel='tag' href='http://jeremytblack.livejournal.com/tag/indiana'>indiana</a>, <a rel='tag' href='http://jeremytblack.livejournal.com/tag/kentucky'>kentucky</a>, <a rel='tag' href='http://jeremytblack.livejournal.com/tag/springfield'>springfield</a></div></div><div class="meta">Current Location: <a href="http://maps.google.com/maps?q=Los+Angeles">Los Angeles</a></div>
+<div class="meta">Current Mood: <img src="http://l-stat.livejournal.com/img/mood/niaha/kitty/ankhappyr.gif" width="46" height="48" alt="optimistic" title="optimistic" /> optimistic</div>
+<div class="meta">Current Music: MGMT's "Kids" and Blue Scholars' Butter and Guns</div>
+
+                                        </div>
+                                    </div>
+                                    <div class="backtop"><a href="#top">back to top</a></div>
+
+    
+                                </div>
+    
+                                <div class="messageholder"><div class="systemmessage">
+                                <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                    <tr>
+                                        <td width="15%">&nbsp;</td>
+                                        <td width="70%" align="center">Viewing 0 - 1</td>
+                                        <td width="15%" align="right">&nbsp;</td>
+                                    </tr>
+                                </table>
+                                </div></div>
+    
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+            </td>
+        </tr>
+    </table>
+    
+    <div id='hello-world' style='text-align: left; font-size:0; line-height:0; height:0; overflow:hidden;'></div></body>
+    </html>
+    

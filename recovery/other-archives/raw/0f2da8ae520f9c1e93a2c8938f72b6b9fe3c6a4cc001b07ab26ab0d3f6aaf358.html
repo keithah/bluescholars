@@ -1,0 +1,263 @@
+<html>
+<head>
+<title>Pho 99</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="css/main.css" type="text/css">
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+
+  <!-- www.phpied.com/conditional-comments-block-downloads/ -->
+  <!--[if IE]><![endif]-->
+
+  <!--  Mobile Viewport Fix
+        j.mp/mobileviewport & davidbcalhoun.com/2010/viewport-metatag 
+  device-width : Occupy full width of the screen in its current orientation
+  initial-scale = 1.0 retains dimensions instead of zooming out if page height > device height
+  maximum-scale = 1.0 retains dimensions instead of zooming in if page width < device width
+  -->
+  <meta name="viewport" content="width=device-width; height=device-width; initial-scale=1.0; maximum-scale=1.0;">
+
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root of your domain and delete these references -->
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+
+  <!-- CSS : implied media="all" -->
+  <link rel="stylesheet" type="text/css" href="http://960ls.atomidata.com/static/cssserve/8/8/1/0/0/88100.css">
+  <link rel="stylesheet" href="css/anythingslider.css?v=1">
+  <link rel="stylesheet" href="css/prettyPhoto.css?v=1">
+  <link rel="stylesheet" href="css/style.css?v=1">
+  <link rel="stylesheet" href="css/rainbow.css?v=1">
+  
+  <!-- For the less-enabled mobile browsers like Opera Mini -->
+  <link rel="stylesheet" media="handheld" href="css/handheld.css?v=1">
+  
+  <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <script>!window.jQuery && document.write('<script src="js/jquery-1.4.2.min.js"><\/script>')</script>
+
+  <!-- Cufon, font, timers, easing, slider, menu, prettyphoto and color plugins -->
+  
+  <script type="text/javascript" src="phoenixgallery/js/phoenixgallery.js"></script>
+<link rel="stylesheet" type="text/css" href="phoenixgallery/style/style.css">
+  <script src="http://cufon.shoqolate.com/js/cufon-yui.js"></script>
+  <script src="js/bebas-neue.cufonfonts.js"></script>
+  <script src="js/jquery.timers-1.2.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/swfobject.js"></script> <!-- http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js -->
+  <script src="js/jquery.anythingslider.min.js" charset="utf-8"></script>
+  <script src="js/hoverIntent.js"></script>
+  <script src="js/superfish.js"></script>
+  <script src="js/jquery.color.js"></script>
+  <script src="js/jquery.prettyPhoto.js"></script>
+<script>
+  var slider2 = ['Recipe', 'Quote', 'Image', 'Quote #2', 'Image #2'];
+		function formatText(index, panel){
+			return slider2[index - 1];
+		}
+
+		$(function () {
+			$('#slider1').anythingSlider({
+				startStopped    : false, // If autoPlay is on, this can force it to start stopped
+				width           : 800,  // Override the default CSS width
+				delay           : 8000,
+				buildNavigation : false,
+//				toggleControls  : true, // if true, then slide in controls on hover and slider change, hide @ other times
+				onSlideComplete : function(slider){
+					// alert('Welcome to Slide #' + slider.currentPage);
+				}
+			});
+
+			// Report Events to console
+			$('.anythingSlider').bind('slideshow_start slideshow_stop slideshow_paused slideshow_unpaused slide_init slide_begin slide_complete',function(e, slider){
+				// show object ID + event (e.g. "slider1: slide_begin")
+				var txt = slider.$el[0].id + ': ' + e.type + ', now on panel #' + slider.currentPage;
+				$('#status').text(txt);
+				if (window.console && window.console.firebug){ console.debug(txt); } // added window.console.firebug to make this work in Opera
+			});
+
+		});
+</script>
+  <script src="js/script.js?v=1"></script>
+  
+  <!--[if lt IE 7 ]>
+    <script src="js/dd_belatedpng.js?v=1"></script>
+	<script>
+  DD_belatedPNG.fix('img');
+	</script>
+  <![endif]-->
+  
+  <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
+  <script src="js/modernizr-1.5.min.js"></script>
+
+
+
+
+<script language="JavaScript">
+<!--
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0;
+}
+//-->
+</script>
+
+
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+    
+<script type='text/javascript'>
+$(document).ready(function(){
+$("img.a").hover(
+function() {
+$(this).stop().animate({"opacity": "0"}, "slow");
+},
+function() {
+$(this).stop().animate({"opacity": "1"}, "slow");
+}); 
+  
+});    
+</script>    
+       
+</head>
+ 
+<body>   
+ 
+<div id="container" class="container_12"> 
+<br><br><br><br>
+<center> 
+<a href="http://www.kickstarter.com/projects/townfolk/pho-life"><img src="images/header001.png" border="0" class="opacity"></a>
+</center> 
+
+<br>    
+    <!-- Slider -->
+    
+<center>
+
+  <!-- Slider -->
+    <div class="anythingSlider" align="center">
+    <div style="position:relative; left:-6px;">
+	
+		<!-- AnythingSlider #1 -->
+			<ul id="slider1">
+			
+				<li>
+				  <div class="SLIDER"><div align="center"><img src="images/anythingslider/001.jpg" alt="" /></div>
+				  </div></li>
+				<li><div class=""><div align="center"><img src="images/anythingslider/002.jpg" alt="" /></div></li>
+				<li><div class=""><div align="center"><img src="images/anythingslider/003.jpg" alt="" /></div></li>
+                <li><div class=""><div align="center"><img src="images/anythingslider/004.jpg" alt="" /></div></li>
+                <li><div class=""><div align="center"><img src="images/anythingslider/005.jpg" alt="" /></div></li>
+                <li><div class=""><div align="center"><img src="images/anythingslider/006.jpg" alt="" /></div></li>
+               <li><div class=""><div align="center"><img src="images/anythingslider/007.jpg" alt="" /></div></li>
+               <li><div class=""><div align="center"><img src="images/anythingslider/008.jpg" alt="" /></div></li>
+               <li><div class=""><div align="center"><img src="images/anythingslider/009.jpg" alt="" /></div></li>
+               <li><div class=""><div align="center"><img src="images/anythingslider/010.jpg" alt="" /></div></li>
+               <li><div class=""><div align="center"><img src="images/anythingslider/011.jpg" alt="" /></div></li>
+               <li><div class=""><div align="center"><img src="images/anythingslider/012.jpg" alt="" /></div></li>
+				
+			</ul></div>
+		<!-- END AnythingSlider #1 -->
+
+<p>
+  <script type="text/javascript">
+
+var targetgallery = jQuery('.phoenixgallery');
+targetgallery.css('opacity',0);
+
+jQuery(document).ready(function(){
+initMediaGallery();
+})
+
+function initMediaGallery(){
+targetgallery.phoenixgallery({
+nav_type:"thumbs",
+nav_position:"down",
+transition_type:"slide",
+thumb_width:0,
+thumb_height:0,
+thumb_space:0,
+nav_space:1,
+nav_arrow_size:1,
+settings_shadow:"off",
+settings_autoresize:"off",
+transition_strips_x:10,
+transition_strips_y:10,
+arrows_normal_alpha:1
+})
+}
+
+    </script>
+  
+  <!-- //Slider ends// -->
+  
+  
+ 
+<center>
+
+    <!-- //PUT CHO SHIT HERE!// -->
+  <br>
+
+<font color="#000000"><font size="5"><font face="Courier New, Courier, monospace">
+
+<iframe width="800" height="450" src="http://www.youtube.com/embed/YLBIRRObQDY" frameborder="0" allowfullscreen></iframe>  <br>
+  <br>
+<a href="http://www.kickstarter.com/projects/townfolk/pho-life"><img src="images/kickstarter-link.jpg" border="0" class="opacity"></a>  <br>
+
+<iframe width="84%" height="166" scrolling="no" frameborder="no" src="http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F66315923%3Fsecret_token%3Ds-mCvIX&amp;auto_play=false&amp;show_artwork=true&amp;color=000000"></iframe>
+<iframe width="84%" height="166" scrolling="no" frameborder="no" src="http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F66316973%3Fsecret_token%3Ds-PYUM7&amp;auto_play=false&amp;show_artwork=true&amp;color=000000"></iframe>
+<br><br><br><br>
+    <!-- //YO SHIT ENDS HERE!// -->
+  <a href="http://www.kickstarter.com/projects/townfolk/pho-life"><img src="images/T001.png"><a href="http://www.kickstarter.com/projects/townfolk/pho-life"><img src="images/T002.png"></a><a href="http://www.kickstarter.com/projects/townfolk/pho-life"><img src="images/T003.png"></a>
+  <br>
+  <a href="http://www.kickstarter.com/projects/townfolk/pho-life"><img src="images/T004.png"></a><a href="http://www.kickstarter.com/projects/townfolk/pho-life"><img src="images/T005.png"></a><a href="http://townfo.lk/"><img src="images/T006.png"></a>
+  
+  <br>
+  <br>
+  <br>
+   
+  <font color="#000000"><font size="2"><font face="Courier New, Courier, monospace">
+
+<br>Written & Directed by <a href="http://www.twitter.com/sabzi/"><font face="Courier New, Courier, monospace">@sabzi</a>
+<br><br> 
+
+Photography,  Assistant Producer :: Canh Solo / <a href="http://www.twitter.com/canhsolo/"><font face="Courier New, Courier, monospace">@canhsolo</a>
+<br>Illustrations :: Nina Nguyen / <a href="http://www.twitter.com/mis0happy/"><font face="Courier New, Courier, monospace">@mis0happy</a>
+<br>Video :: Harry Clean / <a href="http://www.twitter.com/gfunkology/"><font face="Courier New, Courier, monospace">@gfunkology</a>
+<br>Translations :: Joanne Nguyen-Austin / <a href="http://www.twitter.com/Joanne_Nitsua/"><font face="Courier New, Courier, monospace">@Joanne_Nitsua</a>
+<br> <br> 
+Pho by Khoa Pham & Yenvy Pham at <a href="https://plus.google.com/111115744321759898290/about?gl=us&hl=en"><font face="Courier New, Courier, monospace">Pho Bac</a>
+
+
+
+</font></font></font></center>
+
+ <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+
+
+ 
+   
+</div>
+</body>
+</html>

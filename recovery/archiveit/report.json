@@ -1,0 +1,54 @@
+{
+  "archive": "Archive-It",
+  "search_endpoint": "https://archive-it.org/explore/",
+  "queries": [
+    {
+      "query": "Lanilee Photography",
+      "page": 1,
+      "status": 200,
+      "summary": "About 1 results for “Lanilee Photography”.",
+      "records": 1
+    },
+    {
+      "query": "Lanilee Photography",
+      "page": 2,
+      "status": 200,
+      "summary": "About 1 results for “Lanilee Photography”.",
+      "records": 1
+    },
+    {
+      "query": "Blue Scholars The Program 2007",
+      "page": 1,
+      "error": "ReadTimeout: HTTPSConnectionPool(host='archive-it.org', port=443): Read timed out. (read timeout=25)"
+    },
+    {
+      "query": "seattlepi Blue Scholars 2007",
+      "page": 1,
+      "status": 200,
+      "summary": "About 12 results for “seattlepi Blue Scholars 2007”.",
+      "records": 11
+    },
+    {
+      "query": "seattlepi Blue Scholars 2007",
+      "page": 2,
+      "status": 200,
+      "summary": "About 24 results for “seattlepi Blue Scholars 2007”.",
+      "records": 4
+    }
+  ],
+  "search_cards": 17,
+  "relevant_capture_candidates": 0,
+  "attempted": 0,
+  "new_payloads": 0,
+  "failures": [],
+  "limitations": [
+    "The public Explore page returns ranked results; this batch searches pages 1-2, not a complete archive-wide export.",
+    "Only text/html capture bytes that pass structural validation are preserved by this script.",
+    "Raw third-party pages remain recovery-only pending rights review."
+  ],
+  "capture_records": 72,
+  "unique_payloads": 71,
+  "rate_limited": false,
+  "unattempted_candidates": 0,
+  "search_only": true
+}

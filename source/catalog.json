@@ -61418,7 +61418,17 @@
     },
     "http://29.media.tumblr.com/tumblr_lb2xh2HqKC1qdestjo1_500.jpg": {
       "attempts": [],
-      "captures": [],
+      "captures": [
+        {
+          "timestamp": "20120423195230",
+          "original": "http://29.media.tumblr.com/tumblr_lb2xh2HqKC1qdestjo1_500.jpg",
+          "statuscode": "200",
+          "mimetype": "image/jpeg",
+          "digest": null,
+          "sha256": "b9043d114b16a9b752e7e613e9af21577df899418fb2566e832cb942addd4322",
+          "length": "55048"
+        }
+      ],
       "hints": [
         "20110312110324",
         "20110312094553",
@@ -61431,8 +61441,14 @@
         "http://02cd02a.netsolhost.com/blog/happy-halloween/",
         "http://02cd02a.netsolhost.com:80/blog/page/5/"
       ],
-      "status": "queued",
-      "url": "http://29.media.tumblr.com/tumblr_lb2xh2HqKC1qdestjo1_500.jpg"
+      "status": "needs_review",
+      "url": "http://29.media.tumblr.com/tumblr_lb2xh2HqKC1qdestjo1_500.jpg",
+      "actual_capture": "20120423195230",
+      "sha256": "b9043d114b16a9b752e7e613e9af21577df899418fb2566e832cb942addd4322",
+      "bytes": 55048,
+      "content_type": "image/jpeg",
+      "source_archive": "Internet Archive Wayback",
+      "review_reason": "Tumblr-hosted image embedded in the official October 2010 blog post; creator/permission not verified."
     },
     "http://2dopeboyz.files.wordpress.com/2008/11/20081110-grnch.jpg": {
       "attempts": [],
@@ -358811,7 +358827,17 @@
     },
     "http://ecx.images-amazon.com/images/I/51D4HuWW6ML._AA240_.jpg": {
       "attempts": [],
-      "captures": [],
+      "captures": [
+        {
+          "timestamp": "20230703074403",
+          "original": "http://ecx.images-amazon.com/images/I/51D4HuWW6ML._AA240_.jpg",
+          "statuscode": "200",
+          "mimetype": "image/jpeg",
+          "digest": null,
+          "sha256": "7f91238947cd14afd8ba75053cd533bf490c1ab2e5aa04f208ec07d28237914f",
+          "length": "16010"
+        }
+      ],
       "hints": [
         "20110312094321"
       ],
@@ -358819,8 +358845,14 @@
       "referrers": [
         "http://02cd02a.netsolhost.com:80/blog/2008/02/"
       ],
-      "status": "queued",
-      "url": "http://ecx.images-amazon.com/images/I/51D4HuWW6ML._AA240_.jpg"
+      "status": "needs_review",
+      "url": "http://ecx.images-amazon.com/images/I/51D4HuWW6ML._AA240_.jpg",
+      "actual_capture": "20230703074403",
+      "sha256": "7f91238947cd14afd8ba75053cd533bf490c1ab2e5aa04f208ec07d28237914f",
+      "bytes": 16010,
+      "content_type": "image/jpeg",
+      "source_archive": "Internet Archive Wayback",
+      "review_reason": "Amazon-hosted product image from a 2023 capture, later than the preserved site era."
     },
     "http://ecx.images-amazon.com/images/I/51nRVFezraL._AA240_.jpg": {
       "attempts": [],
@@ -608912,7 +608944,17 @@
     },
     "http://nine.cdn-image.com/__media__/pics/451/netsol-logo.jpg": {
       "attempts": [],
-      "captures": [],
+      "captures": [
+        {
+          "timestamp": "20210529225957",
+          "original": "http://nine.cdn-image.com/__media__/pics/451/netsol-logo.jpg",
+          "statuscode": "200",
+          "mimetype": "image/jpeg",
+          "digest": null,
+          "sha256": "ff6ef3cd45017888f330134649c649b1e2820037a004b80921cbac834248bec8",
+          "length": "909"
+        }
+      ],
       "hints": [
         "20230825071909"
       ],
@@ -608920,8 +608962,14 @@
       "referrers": [
         "https://www.bluescholars.com/__media__/js/netsoltrademark.php?d=is.gd%2Fqnj4Xz"
       ],
-      "status": "queued",
-      "url": "http://nine.cdn-image.com/__media__/pics/451/netsol-logo.jpg"
+      "status": "needs_review",
+      "url": "http://nine.cdn-image.com/__media__/pics/451/netsol-logo.jpg",
+      "actual_capture": "20210529225957",
+      "sha256": "ff6ef3cd45017888f330134649c649b1e2820037a004b80921cbac834248bec8",
+      "bytes": 909,
+      "content_type": "image/jpeg",
+      "source_archive": "Internet Archive Wayback",
+      "review_reason": "Network Solutions trademark-domain placeholder from a compromised/later capture; not Blue Scholars site content."
     },
     "http://p-stat.livejournal.com/??lj_base.css,esn.css,contextualhover.css,lj_base-app.css,ad_base.css,horizon/screen.css,horizon/layout.css,widget.css,horizon/loggedout.css?v=1229982326": {
       "attempts": [],
@@ -613722,7 +613770,17 @@
         }
       ],
       "bytes": 161789,
-      "captures": [],
+      "captures": [
+        {
+          "timestamp": "20110717034359",
+          "original": "http://slog.thestranger.com/files/2008/08/blues11.jpg",
+          "statuscode": "200",
+          "mimetype": "image/jpeg",
+          "digest": null,
+          "sha256": "d1d353fb8b5a3383d529a1595361d2d870f6a96aa1462c5c67864f784ee372ca",
+          "length": "161789"
+        }
+      ],
       "content_type": "image/jpeg",
       "final_original": "http://slog.thestranger.com/files/2008/08/blues11.jpg",
       "final_url": "https://web.archive.org/web/20110717034359id_/http://slog.thestranger.com/files/2008/08/blues11.jpg",
@@ -613730,7 +613788,6 @@
         "20110312094351"
       ],
       "kind": "image",
-      "raw_path": "recovery/raw/d1d353fb8b5a3383d529a1595361d2d870f6a96aa1462c5c67864f784ee372ca.jpg",
       "referrers": [
         "http://02cd02a.netsolhost.com:80/blog/2008/08/"
       ],
@@ -613740,7 +613797,8 @@
       "url": "http://slog.thestranger.com/files/2008/08/blues11.jpg",
       "source_archive": "Internet Archive Wayback",
       "source_rights_review": "Withheld from public source files pending permission verification for third-party image hosted by The Stranger.",
-      "source_reviewed": false
+      "source_reviewed": false,
+      "review_reason": "Third-party newspaper-hosted photo; verify redistribution permission before public inclusion."
     },
     "http://sphotos.ak.fbcdn.net/hphotos-ak-ash1/hs894.ash1/180229_10150103762949921_740214920_6049478_7308392_n.jpg": {
       "actual_capture": "20110203024052",
@@ -618679,7 +618737,17 @@
     },
     "http://static.squarespace.com/universal/fonts/social-icon-font.svg": {
       "attempts": [],
-      "captures": [],
+      "captures": [
+        {
+          "timestamp": "20210513173858",
+          "original": "http://static.squarespace.com/universal/fonts/social-icon-font.svg",
+          "statuscode": "200",
+          "mimetype": "image/svg+xml",
+          "digest": null,
+          "sha256": "21681729ec82ecc101697c4b26335ee6588c2029eab02b44ff6067111465a7bb",
+          "length": "58991"
+        }
+      ],
       "hints": [
         "20131214234409",
         "20130923093143",
@@ -618691,10 +618759,25 @@
         "http://bluescholars.com/site.css?tid=4fb28dfb24ac7489f45b43a8&r=457&t=1371067617126",
         "http://bluescholars.com/site.css?tid=4fb28dfb24ac7489f45b43a8&r=464&t=1371067617126",
         "http://bluescholars.com/site.css?tid=4fb28dfb24ac7489f45b43a8&r=466&t=1371067617126",
-        "http://bluescholars.com/site.css?tid=4fb28dfb24ac7489f45b43a8&r=467&t=1371067617126"
+        "http://bluescholars.com/site.css?tid=4fb28dfb24ac7489f45b43a8&r=467&t=1371067617126",
+        "http://bluescholars.com/site.css?tid=4fb28dfb24ac7489f45b43a8&r=485&t=1371067617126",
+        "http://bluescholars.com/site.css?tid=4fb28dfb24ac7489f45b43a8&r=457&t=1371067617126&noMedia=true",
+        "http://bluescholars.com/site.css?tid=4fb28dfb24ac7489f45b43a8&r=464&t=1371067617126&noMedia=true",
+        "http://bluescholars.com/site.css?tid=4fb28dfb24ac7489f45b43a8&r=466&t=1371067617126&noMedia=true",
+        "http://bluescholars.com/site.css?tid=4fb28dfb24ac7489f45b43a8&r=467&t=1371067617126&noMedia=true",
+        "http://bluescholars.com/site.css?tid=4fb28dfb24ac7489f45b43a8&r=485&t=1371067617126&noMedia=true",
+        "http://bluescholars.com:80/site.css?tid=4fb28dfb24ac7489f45b43a8&r=457&t=1371067617126",
+        "http://static.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/515/1371067617126/site.css?&noMedia=true",
+        "http://static.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/515/1371067617126/site.css"
       ],
-      "status": "queued",
-      "url": "http://static.squarespace.com/universal/fonts/social-icon-font.svg"
+      "status": "needs_review",
+      "url": "http://static.squarespace.com/universal/fonts/social-icon-font.svg",
+      "actual_capture": "20210513173858",
+      "sha256": "21681729ec82ecc101697c4b26335ee6588c2029eab02b44ff6067111465a7bb",
+      "bytes": 58991,
+      "content_type": "image/svg+xml",
+      "source_archive": "Internet Archive Wayback",
+      "review_reason": "Third-party Squarespace/IcoMoon icon font; original font files are excluded under RIGHTS.md."
     },
     "http://static.squarespace.com/universal/fonts/social-icon-font.ttf": {
       "attempts": [],
@@ -707514,7 +707597,17 @@
     },
     "http://www.opentable.com/frontdoor/img/icons_final_dark.png": {
       "attempts": [],
-      "captures": [],
+      "captures": [
+        {
+          "timestamp": "20210601003400",
+          "original": "http://www.opentable.com/frontdoor/img/icons_final_dark.png",
+          "statuscode": "200",
+          "mimetype": "image/png",
+          "digest": null,
+          "sha256": "6090a6636d542da5c7ffa339032947a79d9ed5a058f1c1ed3f915507fc0aa8e8",
+          "length": "2078"
+        }
+      ],
       "hints": [
         "20131214234409",
         "20130923093143",
@@ -707526,10 +707619,25 @@
         "http://bluescholars.com/site.css?tid=4fb28dfb24ac7489f45b43a8&r=457&t=1371067617126",
         "http://bluescholars.com/site.css?tid=4fb28dfb24ac7489f45b43a8&r=464&t=1371067617126",
         "http://bluescholars.com/site.css?tid=4fb28dfb24ac7489f45b43a8&r=466&t=1371067617126",
-        "http://bluescholars.com/site.css?tid=4fb28dfb24ac7489f45b43a8&r=467&t=1371067617126"
+        "http://bluescholars.com/site.css?tid=4fb28dfb24ac7489f45b43a8&r=467&t=1371067617126",
+        "http://bluescholars.com/site.css?tid=4fb28dfb24ac7489f45b43a8&r=485&t=1371067617126",
+        "http://bluescholars.com/site.css?tid=4fb28dfb24ac7489f45b43a8&r=457&t=1371067617126&noMedia=true",
+        "http://bluescholars.com/site.css?tid=4fb28dfb24ac7489f45b43a8&r=464&t=1371067617126&noMedia=true",
+        "http://bluescholars.com/site.css?tid=4fb28dfb24ac7489f45b43a8&r=466&t=1371067617126&noMedia=true",
+        "http://bluescholars.com/site.css?tid=4fb28dfb24ac7489f45b43a8&r=467&t=1371067617126&noMedia=true",
+        "http://bluescholars.com/site.css?tid=4fb28dfb24ac7489f45b43a8&r=485&t=1371067617126&noMedia=true",
+        "http://bluescholars.com:80/site.css?tid=4fb28dfb24ac7489f45b43a8&r=457&t=1371067617126",
+        "http://static.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/515/1371067617126/site.css?&noMedia=true",
+        "http://static.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/515/1371067617126/site.css"
       ],
-      "status": "queued",
-      "url": "http://www.opentable.com/frontdoor/img/icons_final_dark.png"
+      "status": "needs_review",
+      "url": "http://www.opentable.com/frontdoor/img/icons_final_dark.png",
+      "actual_capture": "20210601003400",
+      "sha256": "6090a6636d542da5c7ffa339032947a79d9ed5a058f1c1ed3f915507fc0aa8e8",
+      "bytes": 2078,
+      "content_type": "image/png",
+      "source_archive": "Internet Archive Wayback",
+      "review_reason": "Third-party OpenTable platform sprite referenced by Squarespace CSS; not Blue Scholars artwork."
     },
     "http://www.pnoyapparel.com/img/header.jpg": {
       "attempts": [],
@@ -707784,7 +707892,10 @@
       "url": "http://www.whatthebleep.com/reviews/film3_files/logo.gif",
       "actual_capture": "20120806065702",
       "source_archive": "Internet Archive Wayback",
-      "review_reason": "Third-party What the Bleep! logo; preserve locally in ignored recovery cache pending permission review."
+      "review_reason": "Third-party What the Bleep! logo linked from a Blue Scholars blog; verify permission.",
+      "sha256": "54bc935bae29a11dad5eef4c92462604b60a9f044d60ef4a3453902fbe5917b8",
+      "bytes": 2046,
+      "content_type": "image/gif"
     },
     "http://xc3.services.livejournal.com/ljcounter/?d=srv:kr-botws01,r:0,j:3144771,uri:%22%2F16015.html%22,vig:0,extra:AC%2F8QwAv%2FEMAAD6P": {
       "attempts": [],

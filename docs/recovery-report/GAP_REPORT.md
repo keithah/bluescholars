@@ -2,11 +2,11 @@
 
 ## Latest measured checkpoint — October 22, 2026
 
-The resumable Wayback checkpoint contains **13,057 original resource URLs** and **186,122 capture rows**: 5,719 recovered, 309 held for review, 3,681 queued, 3,336 failed, and 12 excluded. Its raw cache contains 2,877 unique response files (175,932,783 bytes), with 15,308 failed attempts. The index is complete for its saved CDX queries, but queued and failed responses are not evidence of absence. Resume using the host-filtered command in [RECOVERY_REPORT.md](RECOVERY_REPORT.md).
+The resumable Wayback checkpoint contains **13,057 original resource URLs** and **186,143 capture rows**: 5,796 recovered, 309 held for review, 3,585 queued, 3,352 failed, and 15 excluded. Its raw cache contains 2,880 unique response files (175,974,124 bytes), with 15,331 failed attempts. The index is complete for its saved CDX queries, but queued and failed responses are not evidence of absence. Resume using the host-filtered command in [RECOVERY_REPORT.md](RECOVERY_REPORT.md).
 
 The October 22 Internet Archive item-level search found no additional website or image mementos, but located a 2008 Seattle Channel City of Music program and a KEXP live recording. Both files were downloaded unchanged, verified, and retained under the ignored local `recovery/media/ia/` cache with licenses and hashes documented in [OTHER_ARCHIVES.json](OTHER_ARCHIVES.json); the City of Music program’s exact performance timestamp still needs identification. Neither item is in the static output or public Git repository. The expanded Common Crawl retry returned no rows because all 16 index requests failed at the network layer. The current Australian Web Archive page documents its collections, but its linked Trove capture interface presented an Anubis challenge; no bypass was attempted.
 
-Continued host-specific Wayback recovery also promoted the verified 2006 BIO rollover button linked by an archived 2006 site page. It is included with local provenance and SHA-256 in the reviewed source catalog. The complete suite currently passes (271 tests).
+Continued host-specific Wayback recovery also promoted the verified 2006 BIO and MEDIA rollover buttons linked by archived site pages. Two additional May–July 2006 images were recovered: the 32,571-byte Massline launch-party poster and a 7,557-byte “The Long March EP” graphic. Both were visually inspected and preserved with exact Wayback provenance; domain CDX records do not identify their page placement, which remains explicitly unknown. All four files are hash-verified in the reviewed source catalog. The complete suite passed 271 tests before these source additions; a fresh full test run is pending.
 
 ## Third older-site image batch — October 21, 2026
 

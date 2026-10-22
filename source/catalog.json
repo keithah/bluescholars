@@ -696580,8 +696580,16 @@
       "referrers": [
         "CDX:domain"
       ],
-      "status": "queued",
-      "url": "http://www.bluescholars.com:80/images/massline0623.jpg"
+      "status": "recovered",
+      "url": "http://www.bluescholars.com:80/images/massline0623.jpg",
+      "actual_capture": "20060712192513",
+      "source_archive": "Internet Archive Wayback Machine",
+      "archive_url": "https://web.archive.org/web/20060712192513id_/http://www.bluescholars.com/images/massline0623.jpg",
+      "raw_path": "source/raw/8f11fc9b508e582e44c3225e3888b97776f9157adee47b56a062eb428f6566b2.jpg",
+      "sha256": "8f11fc9b508e582e44c3225e3888b97776f9157adee47b56a062eb428f6566b2",
+      "bytes": 32571,
+      "source_reviewed": true,
+      "source_review_note": "Visually inspected as the original June 2006 Massline launch-party poster. The captured site inventory records four 2006 image/jpeg responses for this exact URL; this locally verified response matches the identical CDX digest observed July 12, July 18 (two captures). CDX domain-index rows provide no page referrer, so its specific page placement is not asserted. Poster text identifies Blue Scholars, Common Market, Native Guerilla, Gabriel Teodros, DJ Scene, and Cancer Rising, with KEXP and Massline branding."
     },
     "http://www.bluescholars.com:80/images/media.jpg": {
       "actual_capture": "20070706114113",
@@ -697392,8 +697400,39 @@
       "referrers": [
         "CDX:domain"
       ],
-      "status": "queued",
-      "url": "http://www.bluescholars.com:80/images/menu_media_on.gif"
+      "status": "recovered",
+      "url": "http://www.bluescholars.com:80/images/menu_media_on.gif",
+      "actual_capture": "20060623005837",
+      "source_archive": "Internet Archive Wayback Machine",
+      "archive_url": "https://web.archive.org/web/20060623005837id_/http://www.bluescholars.com/images/menu_media_on.gif",
+      "raw_path": "source/raw/8f92b4812d32818be773b3b8945e7e9b72ff26199abe0ee1242ce2caf4fdf2bf.gif",
+      "sha256": "8f92b4812d32818be773b3b8945e7e9b72ff26199abe0ee1242ce2caf4fdf2bf",
+      "bytes": 1213,
+      "source_reviewed": true,
+      "source_review_note": "Visually inspected as the 66×20 MEDIA rollover button. The June 2006 captured pages reference images/menu_media_on.gif in the rollover navigation, and its intrinsic dimensions match the captured 66×20 slot. Identical Wayback CDX digest rows are recorded in February, May, June, and October 2006. The locally saved response is the June 23, 2006 capture."
+    },
+    "http://www.bluescholars.com:80/images/TheLongMarchBIG.gif": {
+      "actual_capture": "20060503190831",
+      "archive_url": "https://web.archive.org/web/20060503190831id_/http://www.bluescholars.com:80/images/TheLongMarchBIG.gif",
+      "bytes": 7557,
+      "captures": [
+        {
+          "digest": "VXK3ZDFR52R3EOLWXXHQ3WQDIY3QJAFA",
+          "mimetype": "image/gif",
+          "original": "http://www.bluescholars.com:80/images/TheLongMarchBIG.gif",
+          "statuscode": "200",
+          "timestamp": "20060503190831"
+        }
+      ],
+      "kind": "image",
+      "raw_path": "source/raw/6faf5db4bd01e1bc5a43c142905fef348cc9a7b152b5e64db9f78c88b48f54f4.gif",
+      "referrers": ["CDX:domain"],
+      "sha256": "6faf5db4bd01e1bc5a43c142905fef348cc9a7b152b5e64db9f78c88b48f54f4",
+      "source_archive": "Internet Archive Wayback Machine",
+      "source_reviewed": true,
+      "source_review_note": "Visually inspected as a Blue Scholars 'The Long March EP' cover graphic. The exact image URL has one successful May 3, 2006 Wayback capture; the domain index does not expose its page referrer, so specific placement is unknown and not asserted.",
+      "status": "recovered",
+      "url": "http://www.bluescholars.com:80/images/TheLongMarchBIG.gif"
     },
     "http://www.bluescholars.com:80/images/menu_news.gif": {
       "attempts": [],

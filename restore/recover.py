@@ -47,6 +47,7 @@ def index(state: State,client,max_pages: int=20,url: str='bluescholars.com',matc
                     requested=state.data['resources'][url]
                     if row not in requested['captures']: requested['captures'].append(row)
             checkpoint.update(resume_key=resume,complete=not bool(resume),pages=checkpoint['pages']+1,rows=checkpoint['rows']+len(rows),last_success=now())
+            checkpoint.pop('last_error',None)
             if key=='domain': state.data['index_complete']=checkpoint['complete']
             state.save()
             if not resume: break

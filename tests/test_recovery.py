@@ -200,6 +200,17 @@ def test_index_interruption_preserves_cursor(tmp_path):
     assert reloaded.data['index_complete']
     assert 'resumeKey=continue' in client.calls[0]
 
+def test_successful_domain_reindex_clears_stale_error(tmp_path):
+    state=State(tmp_path)
+    state.data['index']['domain:shop.bluescholars.com']={
+        'resume_key':None,'complete':False,'pages':0,'rows':0,'last_error':'previous timeout'}
+    client=Client(lambda u:Payload(json.dumps([HEADER]).encode(),u,200,{}))
+
+    result=index(state,client,max_pages=1,url='shop.bluescholars.com',match='domain')
+
+    assert result['complete'] is True
+    assert 'last_error' not in result
+
 def test_index_accepts_an_explicit_non_target_alias_domain(tmp_path):
     alias='http://02cd02a.netsolhost.com:80/blog/2009/03/sxsw-2009-where-well-be/'
     foreign='http://unrelated.example/blog/post/'

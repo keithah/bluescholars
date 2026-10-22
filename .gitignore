@@ -16,3 +16,7 @@ recovery/report.json
 .env.*
 recovery/imported/
 recovery/206proof/raw/
+
+# Large PBS MP4s are hosted on stream.new (links in source/community-media.json); local copies kept untracked
+recovery/other-archives/pbs-video/**/*.mp4
+recovery/other-archives/pbs-video/*.mp4

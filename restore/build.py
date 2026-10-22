@@ -137,14 +137,24 @@ def build_community_media(root:Path,output:Path,base:str,render_resources:dict,a
                 'Image reproduced unchanged.</p>')
         figures.append(f'<figure class="community-media-item"><img src="{image_url}" alt="{alt}" loading="lazy">'
                        f'<figcaption><strong>{title}</strong>{credit}</figcaption></figure>')
-    if not figures:return 0
-    body=('<p>This image was found in a separately licensed public collection. It is supplemental context, '
-          'not an asset recovered from a Blue Scholars website capture.</p>'
-          '<div class="community-media-grid">'+''.join(figures)+'</div>')
+    videos=''.join(
+        f'<li><a href="{html.escape(v["stream_url"],quote=True)}">{html.escape(v["title"])}</a> '
+        f'({html.escape(v["date"])}, {html.escape(v["format"])}). '
+        f'<a href="{html.escape(v["source_page"],quote=True)}">PBS page</a>. '
+        f'{html.escape(v["note"])}</li>' for v in catalog.get('videos',[]))
+    if not figures and not videos:return 0
+    body=''
+    if figures:
+        body+=('<p>This image was found in a separately licensed public collection. It is supplemental context, '
+               'not an asset recovered from a Blue Scholars website capture.</p>'
+               '<div class="community-media-grid">'+''.join(figures)+'</div>')
+    if videos:
+        body+=('<h2>Linked video</h2><p>These videos are hosted on stream.new and linked, not embedded. '
+               'They are current-source copies, not archived captures; rights are unreviewed.</p><ul>'+videos+'</ul>')
     text=page_shell('Supplemental community media',body)
     text,_=render_html(text,HOME,render_resources,base,aliases=aliases,ui_stylesheet=ui_href,ui_script=script_href)
     _write_page(output,'/community-media/',text)
-    return len(figures)
+    return len(figures)+len(catalog.get('videos',[]))
 
 def _write_page(output: Path,path: str,text: str):
     relative=unquote(path.lstrip('/'))

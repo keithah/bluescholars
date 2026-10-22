@@ -552,6 +552,18 @@ def test_candidate_includes_independently_licensed_community_photo_with_credit(t
     mounted=(tmp_path/'_candidate/community-media/index.html').read_text()
     assert '/bluescholars/assets/community-media-' in mounted
 
+def test_candidate_community_media_page_links_hosted_videos(tmp_path):
+    fixture_root(tmp_path)
+    (tmp_path/'source/community-media.json').write_text(json.dumps({'items':[],'videos':[{
+        'title':'Kuya GEO: Zig Zag Generations','date':'2018-11-07','format':'MP4 720p',
+        'stream_url':'https://stream.new/v/abc123','source_page':'https://www.pbs.org/video/kuya-geo-zig-zag-generations/',
+        'note':'Current PBS delivery copy; rights unreviewed.'}]}))
+    report=build(tmp_path,tmp_path/'_candidate','',candidate=True)
+    page=(tmp_path/'_candidate/community-media/index.html').read_text()
+    assert 'href="https://stream.new/v/abc123"' in page and 'rights unreviewed' in page
+    assert report['community_media_items']==1
+    assert check(tmp_path/'_candidate','')==[]
+
 def test_release_refuses_empty_site(tmp_path):
     fixture_root(tmp_path)
     with pytest.raises(ValueError,match='review'):build(tmp_path,tmp_path/'_site','',release=True)

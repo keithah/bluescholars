@@ -332,6 +332,19 @@ def test_untouched_queued_pages_precede_retries_of_failed_high_priority_urls(tmp
     assert state.data['resources'][queued_url]['status']=='recovered'
     assert len(client.calls)==1 and queued_url in client.calls[0]
 
+def test_recover_can_target_a_host_without_touching_other_queued_sites(tmp_path):
+    state=State(tmp_path)
+    unrelated=state.add(HOME+'store.html','html','seed',TARGET)
+    target='http://shop.bluescholars.com/products/autographed-bayani-poster'
+    state.add(target,'html','CDX:shop.bluescholars.com',TARGET)
+    client=Client(lambda url:Payload(VALID,url,200,{'Content-Type':'text/html'}))
+
+    recover(state,client,max_files=1,host='shop.bluescholars.com')
+
+    assert state.data['resources'][target]['status']=='recovered'
+    assert unrelated['status']=='queued'
+    assert len(client.calls)==1 and 'shop.bluescholars.com' in client.calls[0]
+
 def test_fully_exhausted_failure_is_not_retried_ahead_of_new_pages(tmp_path):
     state=State(tmp_path)
     failed=state.add(HOME,'html','seed',TARGET)

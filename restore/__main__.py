@@ -105,6 +105,7 @@ def main(argv=None) -> int:
     feed_recover.add_argument('--timeout',type=int,default=30);feed_recover.add_argument('--retries',type=int,default=2)
     rec=commands.add_parser('recover',help='Download original responses and discover dependencies')
     rec.add_argument('--max-files',type=int,default=150);rec.add_argument('--retry-failed',action='store_true')
+    rec.add_argument('--host',help='Recover queued resources for this exact hostname only')
     origin=commands.add_parser('recover-origin-images',help='Recover observed Squarespace images still available from their original CDN; these are not Wayback captures')
     origin.add_argument('--max-files',type=int,default=100);origin.add_argument('--delay',type=float,default=0.5)
     p=commands.add_parser('capture',help='Preserve an exact Wayback capture as a dated variant')
@@ -233,7 +234,8 @@ def main(argv=None) -> int:
                 print(json.dumps(result,indent=2));return 0
             if args.max_files<1:raise ValueError('--max-files must be positive')
             result=recover(s,client,args.max_files,args.retry_failed,
-                progress=lambda p:print(json.dumps({'stage':'recover','progress':p}),file=sys.stderr,flush=True))
+                progress=lambda p:print(json.dumps({'stage':'recover','progress':p}),file=sys.stderr,flush=True),
+                host=args.host)
             print(json.dumps(result,indent=2))
             return 2 if result['unique_downloaded_files']==0 and result['failed_attempts'] else 0
         elif args.command in ('build','check','serve'):

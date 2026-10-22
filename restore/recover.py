@@ -304,10 +304,13 @@ def failure_has_untried_work(record:dict,state:State)->bool:
     exact=state.data['index'].get('exact:'+record['url'],{})
     return not exact.get('complete')
 
-def recover(state: State,client,max_files: int=150,retry_failed: bool=False,progress=None) -> dict:
+def recover(state: State,client,max_files: int=150,retry_failed: bool=False,progress=None,
+            host: str|None=None) -> dict:
+    host=host.strip().lower().rstrip('.') if host else None
     processed=0;visited=set()
     while processed<max_files:
         pending=[r for r in state.data['resources'].values() if r['url'] not in visited and
+                 (not host or (urlsplit(r.get('url','')).hostname or '').lower().rstrip('.')==host) and
                  (r['status']=='queued' or
                   (retry_failed and r['status']=='failed' and failure_has_untried_work(r,state)))]
         if not pending: break

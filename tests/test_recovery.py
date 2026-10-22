@@ -20,6 +20,14 @@ def test_cdx_resume_after_json():
     rows,key=parse_cdx(json.dumps([HEADER])+ '\n\n'+json.dumps(['next']))
     assert rows==[] and key=='next'
 
+def test_state_checkpoint_uses_compact_json_and_remains_readable(tmp_path):
+    state=State(tmp_path)
+    state.data['resources'][HOME]={'url':HOME,'status':'queued','attempts':[]}
+    state.save()
+    saved=(tmp_path/'recovery/state.json').read_text()
+    assert json.loads(saved)['resources'][HOME]['status']=='queued'
+    assert '\n  "resources"' not in saved
+
 @pytest.mark.parametrize('text',['<html>maintenance</html>','{}','[["wrong"],["row"]]'])
 def test_invalid_cdx_not_complete(text):
     with pytest.raises(ValueError): parse_cdx(text)

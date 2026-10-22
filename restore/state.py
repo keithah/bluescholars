@@ -56,7 +56,15 @@ class State:
         return r
 
     def save(self) -> None:
-        write_json(self.path,self.data)
+        # The recovery state grows into tens of megabytes. Keep per-resource
+        # checkpoints durable and atomic without reformatting that entire file
+        # as pretty-printed JSON after every network request.
+        self.path.parent.mkdir(parents=True,exist_ok=True)
+        temp=self.path.with_suffix(self.path.suffix+'.tmp')
+        with temp.open('w',encoding='utf-8') as f:
+            json.dump(self.data,f,ensure_ascii=False,sort_keys=True,separators=(',',':'))
+            f.write('\n');f.flush();os.fsync(f.fileno())
+        temp.replace(self.path)
 
     def seed(self) -> None:
         inventory=json.loads((self.root/'recovery/seeds/inventory.json').read_text())

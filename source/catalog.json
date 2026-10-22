@@ -696917,7 +696917,18 @@
       "url": "http://www.bluescholars.com:80/images/menu_bio_off.gif"
     },
     "http://www.bluescholars.com:80/images/menu_bio_on.gif": {
-      "attempts": [],
+      "actual_capture": "20060623005741",
+      "attempts": [
+        {
+          "actual_capture": "20060623005741",
+          "at": "2026-10-22T02:13:50.854041+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://www.bluescholars.com:80/images/menu_bio_on.gif",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "c405ce357fafa1b88599ebde029fe80af0ed4fc5fd6d77df148c7474e88b5524"
+        }
+      ],
+      "bytes": 932,
       "captures": [
         {
           "digest": "5NCSG7OTE5CLMOWGUSI6JQLSAK2BRBPL",
@@ -696941,13 +696952,22 @@
           "timestamp": "20060623005741"
         }
       ],
+      "content_type": "image/gif",
+      "final_original": "http://www.bluescholars.com/images/menu_bio_on.gif",
+      "final_url": "https://web.archive.org/web/20060623005741id_/http://www.bluescholars.com/images/menu_bio_on.gif",
       "hints": [],
       "kind": "image",
+      "later_capture_approved": false,
+      "raw_path": "source/raw/c405ce357fafa1b88599ebde029fe80af0ed4fc5fd6d77df148c7474e88b5524.gif",
       "referrers": [
-        "CDX:domain"
+        "http://bluescholars.com/events_2003.htm"
       ],
-      "status": "queued",
-      "url": "http://www.bluescholars.com:80/images/menu_bio_on.gif"
+      "retrieved_at": "2026-10-22T02:13:51.188007+00:00",
+      "sha256": "c405ce357fafa1b88599ebde029fe80af0ed4fc5fd6d77df148c7474e88b5524",
+      "source_reviewed": true,
+      "status": "recovered",
+      "url": "http://www.bluescholars.com:80/images/menu_bio_on.gif",
+      "source_review_note": "Visually inspected as the 932-byte BIO hover button. The May 18, 2006 events_2003.htm capture references images/menu_bio_on.gif in its rollover navigation. The identical Wayback CDX digest appears at 20060218165333, 20060518142331, and 20060623005741; this raw response was served from 20060623005741."
     },
     "http://www.bluescholars.com:80/images/menu_bs.gif": {
       "attempts": [],

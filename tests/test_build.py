@@ -460,17 +460,46 @@ def test_2007_edition_uses_clean_2007_homepage_not_later_damaged_capture(tmp_pat
     clean['actual_capture']='20070724082915'
     dated=dict(clean,url=HOME,actual_capture='20080817084306',
         raw_path='recovery/raw/damaged.html',sha256=hashlib.sha256(b'<html><body><h1>Injected SEO links</h1></body></html>').hexdigest())
-    dated['edition_exclusion']={'exclude_from_site':True,'reason':'Compromised by injected SEO-link content.'}
     damaged=b'<html><body><h1>Injected SEO links</h1></body></html>'
     (tmp_path/'recovery/raw/damaged.html').write_bytes(damaged)
-    s.data['resources'][HOME+'@@wayback:20080817084306:'+dated['sha256'][:12]]=dated
+    source_key=HOME+'@@wayback:20080817084306:'+dated['sha256'][:12]
+    s.data['resources'][source_key]=dated
     s.save()
+    write_json(tmp_path/'source/catalog.json',{'version':1,'resources':{
+        source_key:{'edition_exclusion':{'exclude_from_site':True,
+            'reason':'Compromised by injected SEO-link content.'}}
+    }})
 
     build(tmp_path,tmp_path/'_candidate','',candidate=True)
 
     page=(tmp_path/'_candidate/2007/index.html').read_text()
     assert 'July 2007 home' in page
     assert 'Injected SEO links' not in page
+
+
+def test_candidate_applies_capture_exclusion_to_duplicate_archive_hashes(tmp_path):
+    fixture_root(tmp_path);s=State(tmp_path)
+    add_raw(s,HOME,'html',b'<html><body><h1>July 2007 home</h1></body></html>')
+    clean=s.data['resources'][HOME]
+    clean['actual_capture']='20070724082915'
+    damaged=b'<html><body><h1>Incomplete splash shell</h1></body></html>'
+    digest=hashlib.sha256(damaged).hexdigest()
+    (tmp_path/'recovery/raw/damaged.html').write_bytes(damaged)
+    state_key=HOME+'@@commoncrawl:20080513165912:'+digest[:12]
+    policy_key=HOME+'@@wayback:20080513165912:'+digest[:12]
+    s.data['resources'][state_key]=dict(clean,url=HOME,actual_capture='20080513165912',
+        raw_path='recovery/raw/damaged.html',sha256=digest,bytes=len(damaged))
+    s.save()
+    write_json(tmp_path/'source/catalog.json',{'version':1,'resources':{
+        policy_key:{'url':HOME,'actual_capture':'20080513165912','sha256':digest,
+            'edition_exclusion':{'exclude_from_site':True,'reason':'Incomplete splash shell.'}}
+    }})
+
+    build(tmp_path,tmp_path/'_candidate','',candidate=True)
+
+    page=(tmp_path/'_candidate/2007/index.html').read_text()
+    assert 'July 2007 home' in page
+    assert 'Incomplete splash shell' not in page
 
 
 def test_source_promotion_does_not_copy_font_binaries(tmp_path):

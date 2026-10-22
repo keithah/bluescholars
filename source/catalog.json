@@ -707763,7 +707763,16 @@
     },
     "http://www.whatthebleep.com/reviews/film3_files/logo.gif": {
       "attempts": [],
-      "captures": [],
+      "captures": [
+        {
+          "timestamp": "20120806065702",
+          "original": "http://www.whatthebleep.com/reviews/film3_files/logo.gif",
+          "statuscode": "200",
+          "mimetype": "image/gif",
+          "sha256": "54bc935bae29a11dad5eef4c92462604b60a9f044d60ef4a3453902fbe5917b8",
+          "bytes": 2046
+        }
+      ],
       "hints": [
         "20110312094336"
       ],
@@ -707771,8 +707780,11 @@
       "referrers": [
         "http://02cd02a.netsolhost.com:80/blog/2008/05/"
       ],
-      "status": "queued",
-      "url": "http://www.whatthebleep.com/reviews/film3_files/logo.gif"
+      "status": "needs_review",
+      "url": "http://www.whatthebleep.com/reviews/film3_files/logo.gif",
+      "actual_capture": "20120806065702",
+      "source_archive": "Internet Archive Wayback",
+      "review_reason": "Third-party What the Bleep! logo; preserve locally in ignored recovery cache pending permission review."
     },
     "http://xc3.services.livejournal.com/ljcounter/?d=srv:kr-botws01,r:0,j:3144771,uri:%22%2F16015.html%22,vig:0,extra:AC%2F8QwAv%2FEMAAD6P": {
       "attempts": [],
@@ -897745,6 +897757,51 @@
       ],
       "status": "queued",
       "url": "https://xc3.services.livejournal.com/ljcounter/?d=srv:kr-ws21,r:0,j:3144771,p:3144771,uri:%22%2F%22,vig:0,m:0,extra:AC%2F8QwAv%2FEMAAETPAC%2F8QwAv%2FEMAAENGAC%2F8QwAv%2FEMAAEI6AC%2F8QwAv%2FEMAAD6PAC%2F8QwAv%2FEMAAD9%2FAC%2F8QwAv%2FEMAAEBM"
+    },
+    "http://www.bluescholars.com/images/TheLongMarch_web.jpg@@wayback:20060205124442:88cd6d1ff136": {
+      "actual_capture": "20060205124442",
+      "bytes": 14504,
+      "captures": [
+        {
+          "digest": "GMMRUR7F7C7F35E6O5PXGGINTY6Q47CE",
+          "mimetype": "image/jpeg",
+          "original": "http://www.bluescholars.com/images/TheLongMarch_web.jpg",
+          "statuscode": "200",
+          "timestamp": "20070726233234"
+        },
+        {
+          "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+          "mimetype": "unk",
+          "original": "http://www.bluescholars.com/images/TheLongMarch_web.jpg",
+          "statuscode": "301",
+          "timestamp": "20140602211834"
+        }
+      ],
+      "content_type": "image/jpeg",
+      "final_original": "http://bluescholars.com/images/TheLongMarch_web.jpg",
+      "final_url": "https://web.archive.org/web/20060205124442id_/http://bluescholars.com/images/TheLongMarch_web.jpg",
+      "hints": [
+        "20070706114648",
+        "20071012030542",
+        "20060203031802",
+        "20060218165307"
+      ],
+      "kind": "image",
+      "raw_path": "source/raw/88cd6d1ff1361c81490cf0fe8578763407787c022f90946476805793d12977d1.jpg",
+      "reason": "Untried capture dates or exact-URL index pages remain",
+      "referrers": [
+        "CDX:domain",
+        "http://www.bluescholars.com/store.html",
+        "http://www.bluescholars.com/store_music.htm",
+        "CDX:exact:http://bluescholars.com/images/TheLongMarch_web.jpg"
+      ],
+      "sha256": "88cd6d1ff1361c81490cf0fe8578763407787c022f90946476805793d12977d1",
+      "status": "recovered",
+      "url": "http://www.bluescholars.com/images/TheLongMarch_web.jpg",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20060205124442",
+      "source_reviewed": true,
+      "rights_note": "Original Blue Scholars domain; historical product artwork, dated capture."
     }
   },
   "version": 1

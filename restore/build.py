@@ -229,6 +229,30 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
         raise ValueError('Publication requires source, visual and publish review approval')
     if candidate:
         data=State(root).data;records=json.loads(json.dumps(data['resources']))
+        catalog_path=root/'source/catalog.json'
+        if catalog_path.exists():
+            catalog=json.loads(catalog_path.read_text()).get('resources',{})
+            # Candidate builds read resumable bytes from recovery state, but
+            # reviewed source policy lives in the tracked catalog. A capture
+            # can have several archive keys, so carry dispositions across
+            # aliases only when both the normalized page URL and payload hash
+            # match.
+            exclusions_by_capture={}
+            for source_key,source_record in catalog.items():
+                exclusion=source_record.get('edition_exclusion')
+                digest=source_record.get('sha256')
+                url=source_record.get('url',source_key)
+                if exclusion and digest and url:
+                    exclusions_by_capture[(identity(url),digest)]=exclusion
+            for source_key,record in records.items():
+                policy=catalog.get(source_key,{})
+                if 'edition_exclusion' in policy:
+                    record['edition_exclusion']=policy['edition_exclusion']
+                else:
+                    exclusion=exclusions_by_capture.get((
+                        identity(record.get('url',source_key)),record.get('sha256')))
+                    if exclusion:
+                        record['edition_exclusion']=exclusion
     else:
         path=root/'source/catalog.json'
         catalog=json.loads(path.read_text()) if path.exists() else {'resources':{}}

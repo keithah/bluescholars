@@ -1,5 +1,11 @@
 # Recovery gap report
 
+## Latest measured checkpoint — October 22, 2026
+
+The resumable Wayback checkpoint contains **13,057 original resource URLs** and **186,062 capture rows**: 5,702 recovered, 309 held for review, 3,771 queued, 3,266 failed, and nine excluded. Its raw cache contains 2,876 unique response files (175,931,851 bytes), with 15,076 failed attempts. The index is complete for its saved CDX queries, but queued and failed responses are not evidence of absence. Resume using the host-filtered command in [RECOVERY_REPORT.md](RECOVERY_REPORT.md).
+
+The October 22 Internet Archive item-level search found no additional website or image mementos, but located a 2008 Seattle Channel City of Music program and a KEXP live recording. Both files were downloaded unchanged, verified, and retained under the ignored local `recovery/media/ia/` cache with licenses and hashes documented in [OTHER_ARCHIVES.json](OTHER_ARCHIVES.json); the City of Music program’s exact performance timestamp still needs identification. Neither item is in the static output or public Git repository. The expanded Common Crawl retry returned no rows because all 16 index requests failed at the network layer. The current Australian Web Archive page documents its collections, but its linked Trove capture interface presented an Anubis challenge; no bypass was attempted.
+
 ## Third older-site image batch — October 21, 2026
 
 A third bounded run processed 75 queued URLs, recovered 21 response bodies, and added six unique files (81,207 bytes). New material includes 2004 menu and spacing graphics; 2007 store, splash, shows, media and navigation artwork; a 2012 merchandise image; and several separately dated YouTube thumbnails. The source inventory retains the exact URL, capture timestamp, and hash for each body.

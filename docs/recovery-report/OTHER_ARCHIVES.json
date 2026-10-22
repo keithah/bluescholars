@@ -824,9 +824,47 @@
       "related_archive_index": {
         "name": "American Archive of Public Broadcasting — KEXP Live Performances collection",
         "url": "https://americanarchive.org/special_collections/kexp-live-performances",
-        "summary": "The collection describes more than 2,400 digitized KEXP live-performance recordings; public streaming is available for a subset. The Internet Archive KEXP recording is a related item-level source; no additional Blue Scholars-specific AAPB copy was confirmed."
+        "summary": "The collection describes more than 2,400 digitized KEXP live-performance recordings; public streaming is available for a subset. The Internet Archive KEXP recording is a related item-level source; no additional Blue Scholars-specific AAPB copy was confirmed.",
+        "direct_search_attempt": "Searches for Blue Scholars, Sabzi, Prometheus Brown, and Geo Quibuyen at americanarchive.org/catalog were redirected to a Turnstile challenge. No challenge bypass attempted; the collection landing page remained readable."
       },
-      "notes": "These are independently archived recordings, not captures of the Blue Scholars websites and not counted in the Wayback resource totals. Local files were downloaded without alteration and SHA-256 verified. No file was promoted to the public static-site build."
+      "notes": "These are independently archived recordings, not captures of the Blue Scholars websites and not counted in the Wayback resource totals. Local files were downloaded without alteration and SHA-256 verified. No file was promoted to the public static-site build.",
+      "related_project_queries": [
+        {
+          "query": "mediatype:movies AND \"Massline Media\"",
+          "numFound": 0
+        },
+        {
+          "query": "mediatype:audio AND \"Massline Media\"",
+          "numFound": 0
+        },
+        {
+          "query": "mediatype:movies AND \"206Proof\"",
+          "numFound": 0
+        },
+        {
+          "query": "mediatype:audio AND \"Prometheus Brown\"",
+          "numFound": 3,
+          "note": "Three item records appeared; none was a clearly licensed original Blue Scholars/Prometheus Brown site file, so none was acquired."
+        },
+        {
+          "query": "mediatype:movies AND \"Prometheus Brown\"",
+          "numFound": 1,
+          "note": "One unrelated 2025 school-library video; not treated as a historical site asset."
+        },
+        {
+          "query": "mediatype:image AND \"Prometheus Brown\"",
+          "numFound": 0
+        },
+        {
+          "query": "mediatype:audio AND Sabzi AND \"Blue Scholars\"",
+          "numFound": 1,
+          "note": "Community radio program metadata thanks Sabzi; no license field or exact Blue Scholars source media was verified."
+        },
+        {
+          "query": "mediatype:web AND \"masslineforums\"",
+          "numFound": 0
+        }
+      ]
     },
     "Common Crawl bounded retry 2026-10-22": {
       "workflow": "restore commoncrawl --max-records 40 --workers 3",

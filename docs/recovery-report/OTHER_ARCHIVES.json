@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-21",
-  "scope": "Independent public web archives checked for Blue Scholars website captures, linked posts, and supporting material.",
+  "updated_at": "2026-10-22",
+  "scope": "Independent public web archives and item-level archives checked for Blue Scholars website captures, linked posts, and supporting material.",
   "results": {
     "Arquivo.pt": {
       "domain_index": "https://arquivo.pt/wayback/cdx?url=bluescholars.com&matchType=domain&output=json&limit=100000&resolveRevisits=true",
@@ -755,6 +755,90 @@
       "limitations": [
         "Network transport to index.commoncrawl.org failed for API requests despite a successful lightweight HEAD check."
       ]
+    },
+    "Internet Archive item-level media search 2026-10-22": {
+      "service": "https://archive.org/advancedsearch.php",
+      "queries": [
+        {
+          "query": "mediatype:web AND \"bluescholars\"",
+          "numFound": 0
+        },
+        {
+          "query": "mediatype:image AND \"Blue Scholars\"",
+          "numFound": 0
+        },
+        {
+          "query": "mediatype:movies AND \"Blue Scholars\"",
+          "numFound": 6
+        },
+        {
+          "query": "mediatype:audio AND title:\"Blue Scholars\"",
+          "numFound": 2
+        }
+      ],
+      "records": [
+        {
+          "identifier": "SMA_12838",
+          "title": "Front Row: City of Music",
+          "creator": "Seattle Channel",
+          "date": "2008-10-29",
+          "item_url": "https://archive.org/details/SMA_12838",
+          "source_file_url": "https://archive.org/download/SMA_12838/12838.mp4",
+          "metadata_api": "https://archive.org/metadata/SMA_12838",
+          "rights": "Public record; Seattle Municipal Archives requests citation as Courtesy of the Seattle Municipal Archives and inclusion of item number 12838. Also marked CC BY-NC-ND 4.0 in IA metadata.",
+          "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+          "metadata_names_Blue_Scholars": "Yes; description lists Blue Scholars as a musical group among the event performances.",
+          "downloaded_local": "recovery/media/ia/SMA_12838-12838.mp4",
+          "downloaded_bytes": 247630316,
+          "sha256": "03152583109dd3541a60bc2d5f54683a80be2a43823d329a3759ca119d5a325e",
+          "container": "MP4, H.264 video 640x480 with AAC audio",
+          "duration_seconds": 2560.041,
+          "status": "Verified local raw source; not included in public static-site output or Git because of current media-packaging policy and 247 MB size.",
+          "qualification": "Catalog metadata supports the event/performer identification. Spot-checked a minute-spaced contact sheet of the full program, but did not isolate and verify the exact Blue Scholars segment timestamp."
+        },
+        {
+          "identifier": "KEXPKEXPLivePerformances_53",
+          "title": "KEXP Live Performances #53",
+          "creator": "KEXP",
+          "item_url": "https://archive.org/details/KEXPKEXPLivePerformances_53",
+          "source_file_url": "https://archive.org/download/KEXPKEXPLivePerformances_53/BlueScholars.mp3",
+          "metadata_api": "https://archive.org/metadata/KEXPKEXPLivePerformances_53",
+          "description": "Seattle hip-hop duo Blue Scholars perform live on KEXP.",
+          "license_url": "http://creativecommons.org/licenses/by-nc-nd/2.5/",
+          "downloaded_local": "recovery/media/ia/KEXPKEXPLivePerformances_53-BlueScholars.mp3",
+          "downloaded_bytes": 30079095,
+          "sha256": "6327cd032bc198a82dcb4747e64d09370f97f3a0624aa1d22dd1f5432a64e1a7",
+          "container": "MP3, 192 kbps, 48 kHz stereo",
+          "duration_seconds": 1253.208,
+          "status": "Verified local raw source; unchanged file retained outside public static-site output pending separate media-packaging decision."
+        },
+        {
+          "identifier": "BlueScholarsatSXSWclipped",
+          "title": "Interview with Blue Scholars at SXSW by Mediahacker",
+          "creator": "Mediahacker.org",
+          "item_url": "https://archive.org/details/BlueScholarsatSXSWclipped",
+          "metadata_api": "https://archive.org/metadata/BlueScholarsatSXSWclipped",
+          "status": "Catalog lead only; no license field found and no file acquired."
+        }
+      ],
+      "related_archive_index": {
+        "name": "American Archive of Public Broadcasting — KEXP Live Performances collection",
+        "url": "https://americanarchive.org/special_collections/kexp-live-performances",
+        "summary": "The collection describes more than 2,400 digitized KEXP live-performance recordings; public streaming is available for a subset. The Internet Archive KEXP recording is a related item-level source; no additional Blue Scholars-specific AAPB copy was confirmed."
+      },
+      "notes": "These are independently archived recordings, not captures of the Blue Scholars websites and not counted in the Wayback resource totals. Local files were downloaded without alteration and SHA-256 verified. No file was promoted to the public static-site build."
+    },
+    "Common Crawl bounded retry 2026-10-22": {
+      "workflow": "restore commoncrawl --max-records 40 --workers 3",
+      "scope": "Fresh primary-domain query of the 16 selected historical Common Crawl indexes, completed 2026-10-22.",
+      "collections_attempted": 16,
+      "successful_collection_queries": 0,
+      "failed_or_timed_out_queries": 16,
+      "query_records": 0,
+      "unique_records": 0,
+      "warc_records_attempted": 0,
+      "new_source_bytes": 0,
+      "outcomes": "Requests to index.commoncrawl.org timed out or were refused by connection; zero rows were returned by this run. This is an access failure, not evidence that the indexes contain no Blue Scholars captures."
     }
   },
   "limitations": [

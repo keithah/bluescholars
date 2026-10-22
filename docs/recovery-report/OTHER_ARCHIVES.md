@@ -1,6 +1,14 @@
 # Independent archive findings
 
-**Updated:** October 21, 2026. This is a focused cross-archive check, not proof that every web archive was exhausted. Machine-readable results and capture provenance are in [OTHER_ARCHIVES.json](OTHER_ARCHIVES.json).
+**Updated:** October 22, 2026. This is a focused cross-archive check, not proof that every web archive was exhausted. Machine-readable results and capture provenance are in [OTHER_ARCHIVES.json](OTHER_ARCHIVES.json).
+
+## Item-level media archives — October 22, 2026
+
+An Internet Archive item search found no additional `mediatype:web` or image records for the name/domain, but it did surface independent audio and video holdings. The Seattle Municipal Archives item [Front Row: City of Music](https://archive.org/details/SMA_12838) is a Seattle Channel program from October 29, 2008; its catalog description names Blue Scholars among the musical groups at the event. Seattle Municipal Archives identifies the footage as public record, requests citation as “Courtesy of the Seattle Municipal Archives” with item number 12838, and the Internet Archive record also carries CC BY-NC-ND 4.0. I downloaded the untouched 247,630,316-byte MP4 to the ignored local recovery cache and verified its SHA-256. A minute-spaced contact sheet was inspected, but the exact performance timestamp has not yet been isolated.
+
+The Internet Archive also holds [KEXP Live Performances #53](https://archive.org/details/KEXPKEXPLivePerformances_53), described as a Blue Scholars live performance. The item metadata identifies KEXP and CC BY-NC-ND 2.5. Its untouched 30,079,095-byte MP3 was retrieved and verified locally. An additional [Mediahacker SXSW interview record](https://archive.org/details/BlueScholarsatSXSWclipped) is cataloged, but no license field was found, so no audio was acquired from it. The American Archive of Public Broadcasting indexes a broader [KEXP Live Performances collection](https://americanarchive.org/special_collections/kexp-live-performances), but this search did not confirm another Blue Scholars-specific copy there.
+
+These are independently archived community/broadcast records, not copies of the band’s websites and not part of the Wayback recovery totals. Both downloaded files remain in the ignored local recovery cache; neither is committed or included in the static site. Exact URLs, license statements, file sizes, durations, and hashes are in [OTHER_ARCHIVES.json](OTHER_ARCHIVES.json). The fresh October 22 Common Crawl retry queried 16 historical indexes and received no usable index responses; transport failures do not establish that the collections lack captures.
 
 
 ## New historical-media leads — October 21, 2026

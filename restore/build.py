@@ -142,7 +142,10 @@ def build_community_media(root:Path,output:Path,base:str,render_resources:dict,a
         f'({html.escape(v["date"])}, {html.escape(v["format"])}). '
         f'<a href="{html.escape(v["source_page"],quote=True)}">PBS page</a>. '
         f'{html.escape(v["note"])}</li>' for v in catalog.get('videos',[]))
-    if not figures and not videos:return 0
+    linked=''.join(
+        f'<li><a href="{html.escape(v["url"],quote=True)}">{html.escape(v["title"])}</a> '
+        f'({html.escape(v["uploader"])}, {html.escape(v["date"])})</li>' for v in catalog.get('linked_videos',[]))
+    if not figures and not videos and not linked:return 0
     body=''
     if figures:
         body+=('<p>This image was found in a separately licensed public collection. It is supplemental context, '
@@ -151,10 +154,13 @@ def build_community_media(root:Path,output:Path,base:str,render_resources:dict,a
     if videos:
         body+=('<h2>Linked video</h2><p>These videos are linked, not embedded: most are hosted on stream.new, and one points to its publisher. '
                'They are current-source copies, not archived captures; rights are unreviewed.</p><ul>'+videos+'</ul>')
+    if linked:
+        body+=('<h2>Videos on other sites</h2><p>These are links to videos referenced by recovered pages that are still public on YouTube or Vimeo. '
+               'Nothing is copied or embedded here, and availability is as checked on the date in the recovery catalog.</p><ul>'+linked+'</ul>')
     text=page_shell('Supplemental community media',body)
     text,_=render_html(text,HOME,render_resources,base,aliases=aliases,ui_stylesheet=ui_href,ui_script=script_href)
     _write_page(output,'/community-media/',text)
-    return len(figures)+len(catalog.get('videos',[]))
+    return len(figures)+len(catalog.get('videos',[]))+len(catalog.get('linked_videos',[]))
 
 def _write_page(output: Path,path: str,text: str):
     relative=unquote(path.lstrip('/'))

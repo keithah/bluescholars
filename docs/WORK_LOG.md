@@ -909,3 +909,5 @@ PYTHONPATH=. .venv311/bin/python scripts/recover_press_archive_pages.py --only-s
 - Deploy note: build the `gh-pages` candidate from the main checkout (`/Users/hermes/src/bluescholars`), never from a clean worktree. A worktree lacks the ignored recovery state and drops ~16,000 pages. Fetch `origin/gh-pages` first, rsync `_candidate/` over it (keep `.nojekyll`), check `git diff --cached --diff-filter=D` is tiny, then push normally. Refreshed the preview this way.
 
 - Resolved the “May 2018 Bruce Lee special has no video” gap (same PBS asset as the saved “Meet Kuya Geo” MP4) and added `recovery/other-archives/external-media-catalog.json`, a metadata-only availability catalog of external YouTube/Vimeo/SoundCloud links (46 YouTube still public, 11 gone). Nothing downloaded.
+
+- Per owner direction, the still-public YouTube/Vimeo videos from the external-media catalog are linked from `/community-media/` (“Videos on other sites”, 49 links, no embeds, nothing downloaded) via `source/community-media.json` `linked_videos`.

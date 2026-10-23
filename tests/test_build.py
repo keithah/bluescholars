@@ -564,6 +564,16 @@ def test_candidate_community_media_page_links_hosted_videos(tmp_path):
     assert report['community_media_items']==1
     assert check(tmp_path/'_candidate','')==[]
 
+def test_candidate_community_media_page_links_external_videos_without_embedding(tmp_path):
+    fixture_root(tmp_path)
+    (tmp_path/'source/community-media.json').write_text(json.dumps({'items':[],'linked_videos':[{
+        'title':'Fou Lee','uploader':'bluescholarsTV','date':'2011-06-13','url':'https://www.youtube.com/watch?v=PJLZQVRMzYM'}]}))
+    build(tmp_path,tmp_path/'_candidate','',candidate=True)
+    page=(tmp_path/'_candidate/community-media/index.html').read_text()
+    assert 'href="https://www.youtube.com/watch?v=PJLZQVRMzYM"' in page
+    assert '<iframe' not in page and 'bluescholarsTV' in page
+    assert check(tmp_path/'_candidate','')==[]
+
 def test_release_refuses_empty_site(tmp_path):
     fixture_root(tmp_path)
     with pytest.raises(ValueError,match='review'):build(tmp_path,tmp_path/'_site','',release=True)

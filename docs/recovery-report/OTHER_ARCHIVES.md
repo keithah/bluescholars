@@ -413,3 +413,9 @@ Although Wayback has no exact image mementos, the seven older image URLs embedde
 ## Large videos hosted on stream.new — October 22, 2026
 
 The four PBS/KCTS Kuya Geo MP4s and the 247 MB Seattle Municipal Archives “Front Row: City of Music” MP4 were uploaded to stream.new (Mux) because they exceed or approach GitHub's file limits. The PBS MP4s were removed from git tracking (local copies remain, now git-ignored; they stay in earlier commit history). Links, PBS/Archive.org source pages and the unreviewed-rights note are recorded in the `videos` list of `source/community-media.json` and rendered on the candidate `/community-media/` page as links, not embeds. stream.new is an anonymous third-party host with no durability guarantee: keep the local files and the SHA-256 values in the episode manifest as the source of truth.
+
+## Bruce Lee special identified; external-media catalog — October 23, 2026
+
+The May 10, 2018 KCTS/Crosscut special “How Bruce Lee destroyed the stereotype of the Asian male” (PBS slug `6e2tln`) is the same PBS asset as the already-saved “Meet Kuya Geo” MP4: Cascade PBS's embedded partner player resolves to the same content ID (`1a5580d3-125d-4ce8-8b67-9c9eae7221fb`), the same `geobrucelee` mezzanine file and the same byte count (90,679,328). It is therefore a re-titled copy, not a missing video, and no further acquisition is needed. The standalone PBS page for the Bruce Lee title now returns 404, so the Cascade PBS embed is the only live route to it.
+
+`recovery/other-archives/external-media-catalog.json` records a metadata-only check (no media downloaded) of the external video links the candidate reports as missing: 46 of 57 YouTube IDs are still public with title, uploader, date and duration; 11 are private or unavailable and have no Wayback snapshot of the video; three Vimeo links resolve; four SoundCloud track URLs are listed unresolved. This is a to-do list for rights-reviewed recovery, not a recovery.

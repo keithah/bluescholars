@@ -149,7 +149,7 @@ def build_community_media(root:Path,output:Path,base:str,render_resources:dict,a
                'not an asset recovered from a Blue Scholars website capture.</p>'
                '<div class="community-media-grid">'+''.join(figures)+'</div>')
     if videos:
-        body+=('<h2>Linked video</h2><p>These videos are hosted on stream.new and linked, not embedded. '
+        body+=('<h2>Linked video</h2><p>These videos are linked, not embedded: most are hosted on stream.new, and one points to its publisher. '
                'They are current-source copies, not archived captures; rights are unreviewed.</p><ul>'+videos+'</ul>')
     text=page_shell('Supplemental community media',body)
     text,_=render_html(text,HOME,render_resources,base,aliases=aliases,ui_stylesheet=ui_href,ui_script=script_href)

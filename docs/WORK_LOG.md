@@ -915,3 +915,5 @@ PYTHONPATH=. .venv311/bin/python scripts/recover_press_archive_pages.py --only-s
 - Searched for new contemporaneous press sources; added ten exact URLs through `recover_press_archive_pages.py --additional-page-urls`, recovered nine verified Wayback page bodies (First Avenue had none), downloaded 60 linked-image capture records, visually reviewed all of them (8 Geo series stills, 52 unrelated) and left pending-review at zero. Recovery-only; nothing published.
 
 - Second press-source search: nine more URLs tested; verified Wayback bodies for five (three Seattle Times, one Stranger, RapReviews). Linked images were all unrelated Crosscut cards (reviewed, pending zero). Recovery-only.
+
+- Followed outbound links from the new press pages: 36 more URLs tested, 48 new verified page captures (Three Imaginary Girls, Guerrilla Candy, SSG Music, Photo by Tone, KAMP, 206up, Seattle P-I, CHS), 80 image records reviewed (pending zero). Recovery-only.

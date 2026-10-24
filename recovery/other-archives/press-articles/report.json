@@ -1,11 +1,11 @@
 {
   "archive": "Internet Archive Wayback",
-  "sources": 115,
+  "sources": 114,
   "queried_page_sources": 0,
-  "page_capture_rows": 21,
+  "page_capture_rows": 22,
   "page_payloads_recovered": 0,
-  "image_urls_discovered": 428,
-  "image_urls_queried": 16,
+  "image_urls_discovered": 429,
+  "image_urls_queried": 9,
   "image_capture_rows": 61,
   "image_payloads_recovered": 60,
   "failures": [
@@ -136,6 +136,12 @@
       "error": "ChunkedEncodingError: Response ended prematurely"
     },
     {
+      "stage": "page_replay",
+      "url": "https://www.seattletimes.com/entertainment/music/a-big-three-days-for-blue-scholars/",
+      "timestamp": "20240930232216",
+      "error": "ValueError: CDX digest mismatch: QI5ADBJA7HP7INNXB4MTTTRZ6YV2XI4L != WRA3QN3IITCQJXDLBEDDLW5TWAS3QRRO"
+    },
+    {
       "stage": "image_replay",
       "url": "https://s100.chasejarvis.com/images/empty.gif",
       "timestamp": "20260907014747",
@@ -147,12 +153,12 @@
     "Third-party press pages/images are recovery evidence, not original Blue Scholars site pages.",
     "Image files remain local-only until rights and relevance review."
   ],
-  "page_capture_records_total": 468,
-  "unique_page_payloads_total": 448,
-  "unique_linked_image_urls_total": 174,
-  "image_capture_records_total": 957,
-  "unique_image_payloads_total": 89,
-  "unique_source_urls_queried_total": 115,
+  "page_capture_records_total": 483,
+  "unique_page_payloads_total": 455,
+  "unique_linked_image_urls_total": 183,
+  "image_capture_records_total": 1017,
+  "unique_image_payloads_total": 98,
+  "unique_source_urls_queried_total": 124,
   "image_relevance_review": {
     "article_image_exact_url_memento": 17,
     "excluded_page_chrome_or_tracking_asset": 189,
@@ -163,7 +169,7 @@
     "visually_confirmed_blue_scholars_photo_or_artwork": 38,
     "visually_confirmed_same_photo_as_2007_profile": 1,
     "visually_reviewed_unrelated_photographer_site_template_or_social_widget_asset": 16,
-    "visually_reviewed_unrelated_crosscut_series_index_news_card": 105,
+    "visually_reviewed_unrelated_crosscut_series_index_news_card": 165,
     "visually_reviewed_unrelated_finding_your_roots_pbs_show_poster": 100,
     "visually_confirmed_bruce_lee_episode_still": 4,
     "visually_confirmed_kuya_geo_series_still": 8

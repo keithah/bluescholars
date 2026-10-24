@@ -913,3 +913,5 @@ PYTHONPATH=. .venv311/bin/python scripts/recover_press_archive_pages.py --only-s
 - Per owner direction, the still-public YouTube/Vimeo videos from the external-media catalog are linked from `/community-media/` (“Videos on other sites”, 49 links, no embeds, nothing downloaded) via `source/community-media.json` `linked_videos`.
 
 - Searched for new contemporaneous press sources; added ten exact URLs through `recover_press_archive_pages.py --additional-page-urls`, recovered nine verified Wayback page bodies (First Avenue had none), downloaded 60 linked-image capture records, visually reviewed all of them (8 Geo series stills, 52 unrelated) and left pending-review at zero. Recovery-only; nothing published.
+
+- Second press-source search: nine more URLs tested; verified Wayback bodies for five (three Seattle Times, one Stranger, RapReviews). Linked images were all unrelated Crosscut cards (reviewed, pending zero). Recovery-only.

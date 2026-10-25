@@ -917,3 +917,5 @@ PYTHONPATH=. .venv311/bin/python scripts/recover_press_archive_pages.py --only-s
 - Second press-source search: nine more URLs tested; verified Wayback bodies for five (three Seattle Times, one Stranger, RapReviews). Linked images were all unrelated Crosscut cards (reviewed, pending zero). Recovery-only.
 
 - Followed outbound links from the new press pages: 36 more URLs tested, 48 new verified page captures (Three Imaginary Girls, Guerrilla Candy, SSG Music, Photo by Tone, KAMP, 206up, Seattle P-I, CHS), 80 image records reviewed (pending zero). Recovery-only.
+
+- Third press search (interviews/radio/college press): verified bodies for NPR, WBUR, Daily Nexus, Stranger and Seattle Times pages (52 new page files); Soompi had none. Pending image review zero. Recovery-only.

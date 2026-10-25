@@ -1,13 +1,13 @@
 {
   "archive": "Internet Archive Wayback",
-  "sources": 141,
-  "queried_page_sources": 0,
-  "page_capture_rows": 21,
-  "page_payloads_recovered": 0,
-  "image_urls_discovered": 500,
-  "image_urls_queried": 13,
-  "image_capture_rows": 81,
-  "image_payloads_recovered": 80,
+  "sources": 112,
+  "queried_page_sources": 6,
+  "page_capture_rows": 70,
+  "page_payloads_recovered": 48,
+  "image_urls_discovered": 0,
+  "image_urls_queried": 0,
+  "image_capture_rows": 0,
+  "image_payloads_recovered": 0,
   "failures": [
     {
       "stage": "page_replay",
@@ -37,7 +37,7 @@
       "stage": "page_replay",
       "url": "https://soundscenerevolution.com/2006/12/",
       "timestamp": "20230403235408",
-      "error": "ValueError: CDX digest mismatch: GRT5M3CFUDSEBMCK5ERUUO42N5X7UAXO != V7PDTZT7P6MXSIMVNEOJRB7XD3RDARNP"
+      "error": "ValueError: CDX digest mismatch: NEOTOZXCCTMMMKYTDKXRD75ZW7ZWLGYY != V7PDTZT7P6MXSIMVNEOJRB7XD3RDARNP"
     },
     {
       "stage": "page_replay",
@@ -136,10 +136,10 @@
       "error": "ChunkedEncodingError: Response ended prematurely"
     },
     {
-      "stage": "image_replay",
-      "url": "https://s100.chasejarvis.com/images/empty.gif",
-      "timestamp": "20260907014747",
-      "error": "ValueError: CDX digest mismatch: EELDTBKLAPMIKAUDLMTETVBAMYAW7JCS != CNU4O2EEBYQ7RUJ4O7H7LKHZLEG3UJFU"
+      "stage": "page_replay",
+      "url": "https://www.thestranger.com/seattle/we-got-next/Content?oid=37586",
+      "timestamp": "20190926004227",
+      "error": "ValueError: CDX digest mismatch: LVG2RXO7BYFBDBUT6K4PUJKL2HJWCX4X != GWVP47HWX7W4SFIY54S4K55GMLEXPGQL"
     }
   ],
   "limitations": [
@@ -147,12 +147,12 @@
     "Third-party press pages/images are recovery evidence, not original Blue Scholars site pages.",
     "Image files remain local-only until rights and relevance review."
   ],
-  "page_capture_records_total": 531,
-  "unique_page_payloads_total": 501,
+  "page_capture_records_total": 579,
+  "unique_page_payloads_total": 543,
   "unique_linked_image_urls_total": 196,
   "image_capture_records_total": 1097,
   "unique_image_payloads_total": 108,
-  "unique_source_urls_queried_total": 160,
+  "unique_source_urls_queried_total": 166,
   "image_relevance_review": {
     "article_image_exact_url_memento": 17,
     "excluded_page_chrome_or_tracking_asset": 189,
@@ -163,7 +163,7 @@
     "visually_confirmed_blue_scholars_photo_or_artwork": 38,
     "visually_confirmed_same_photo_as_2007_profile": 1,
     "visually_reviewed_unrelated_photographer_site_template_or_social_widget_asset": 16,
-    "visually_reviewed_unrelated_crosscut_series_index_news_card": 240,
+    "visually_reviewed_unrelated_crosscut_series_index_news_card": 310,
     "visually_reviewed_unrelated_finding_your_roots_pbs_show_poster": 100,
     "visually_confirmed_bruce_lee_episode_still": 4,
     "visually_confirmed_kuya_geo_series_still": 13

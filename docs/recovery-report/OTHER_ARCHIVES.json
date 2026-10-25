@@ -5226,11 +5226,12 @@
         "media_directory": "recovery/other-archives/press-media/media/",
         "image_directory": "recovery/other-archives/press-articles/images/"
       },
-      "rights_status": "Third-party page, image and music remain recovery-only pending rights review; not published.",
+      "rights_status": "Rights remain unreviewed. Page, image and audio files are committed in the public GitHub recovery repository; they are not deployed on Pages.",
       "limits": [
         "The Wayback query covers the exact linked article and asset URLs only.",
         "Captured page variants range across later archival years; they are not proof of the original 2009 page presentation."
-      ]
+      ],
+      "repository_visibility": "Public GitHub recovery repository; not part of the Pages website."
     },
     "2013 Geo interview and 2007 Blue Scholars review 2026-10-25": {
       "archive": "Internet Archive Wayback CDX and replay",
@@ -5276,7 +5277,8 @@
           "archive_timestamp": "20260407155156",
           "bytes": 136124,
           "sha256": "4abcfab09fa387f5d0827f146a6ce9221ddb5f5f33add629d3df14e9d9d46d7d",
-          "visual_review": "confirmed portrait in the Geologic article; local-only"
+          "visual_review": "confirmed portrait in the Geologic article; local-only",
+          "publication_status": "Public recovery repository; not deployed on Pages."
         },
         {
           "source_page": "https://undergroundhiphopblog.com/exclusive-interviews/prometheus-brown-aka-geologic-exclusive-interview/",
@@ -5295,7 +5297,8 @@
       ],
       "additional_exact_url_check": "The 2007 Queen Princess interview found by search at https://hiphopruckus1.wordpress.com/2007/06/22/on-point-with-the-blue-scholars-exclusive-interview-with-queen-princess/ had no exact CDX rows for its HTTP/HTTPS and trailing-slash variants. A broader host query was not completed because Wayback refused the connection; absence is unconfirmed beyond the exact URL checks.",
       "provenance": "All saved HTML bodies match their selected Wayback CDX digests. Image and page files are preserved with capture dates and hashes in the press-articles manifest.",
-      "rights_status": "Third-party article pages and the recovered image remain local-only pending rights review."
+      "rights_status": "Rights remain unreviewed. Verified page and image files are committed in the public GitHub recovery repository; they are not deployed on Pages.",
+      "repository_visibility": "Public GitHub recovery repository; not part of the Pages website."
     }
   },
   "limitations": [

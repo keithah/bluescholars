@@ -12,7 +12,7 @@
   "limitations": [
     "Exact URL histories and source-page-linked images only; this is not an archive-wide export.",
     "Third-party press pages/images are recovery evidence, not original Blue Scholars site pages.",
-    "Image files remain local-only until rights and relevance review."
+    "Press HTML/image files are committed in the public GitHub recovery repository, not deployed on Pages; redistribution rights remain unreviewed."
   ],
   "focused_source_page": "a-fiendish-conversation-with-mc-geologic-of-blue-scholars",
   "page_capture_records_total": 850,
@@ -38,5 +38,7 @@
     "excluded_npr_author_headshot": 21,
     "excluded_unrelated_npr_story_card": 39
   },
-  "pending_visual_review_records": 0
+  "pending_visual_review_records": 0,
+  "publication_status": "Public GitHub recovery repository; not deployed on Pages; redistribution rights remain unreviewed.",
+  "repository_visibility": "Public GitHub recovery repository; not deployed on Pages."
 }

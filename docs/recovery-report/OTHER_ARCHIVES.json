@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-22",
+  "updated_at": "2026-10-25",
   "scope": "Independent public web archives and item-level archives checked for Blue Scholars website captures, linked posts, and supporting material.",
   "results": {
     "Arquivo.pt": {
@@ -1355,7 +1355,17 @@
         "result": "No indexed capture rows at six exact download URLs; audio is not recovered. This does not establish archive-wide absence."
       },
       "rights_and_publication": "Contest rules in recovered MC/DJ pages license supplied tracks and published entries CC BY-NC-SA 2.5, while the rule does not license Jamglue page design, banners, profile images, or all user material. These source captures remain in local recovery storage and are not included in the generated public site.",
-      "coverage_limit": "The recovery covers the 2007 contest routes, selected linked source pages, a blog-domain CDX listing capped at 300 rows, the 2009 HI-808 route family and its visible pagination links, and 85 distinct track-page payloads. It is not a full Jamglue crawl or a complete search of every web archive."
+      "coverage_limit": "The recovery covers the 2007 contest routes, selected linked source pages, a blog-domain CDX listing capped at 300 rows, the 2009 HI-808 route family and its visible pagination links, and 85 distinct track-page payloads. It is not a full Jamglue crawl or a complete search of every web archive.",
+      "additional_wayback_page_recovery_2026_10_25": {
+        "source_url": "https://jamglue.com/contests/bluescholars/",
+        "cdx_rows": 23,
+        "verified_page_mementos": 20,
+        "unique_bodies": 20,
+        "rejected_memento": {
+          "timestamp": "20080522131547",
+          "reason": "Wayback replay returned invalid gzip data; body not accepted as verified."
+        }
+      }
     },
     "Arquivo.pt targeted page histories 2026-10-21": {
       "known_urls": 36,
@@ -5105,6 +5115,187 @@
           "rights": "Unreviewed third-party photos; local-only, not published."
         }
       }
+    },
+    "NPR Grind and Shine 2011 series and Blue Scholars photograph 2026-10-25": {
+      "archive": "Internet Archive Wayback CDX and replay",
+      "source_discovery": "The captured NPR Blue Scholars article links to the legacy Grind and Shine series index. Its dated HTML links to five Seattle hip-hop interviews/guides, all added as separate source URLs.",
+      "series_index": {
+        "source_url": "http://www.npr.org/blogs/therecord/137436888/grind-and-shine",
+        "cdx_rows": 100,
+        "verified_page_mementos": 100,
+        "notes": "Exact URL query reached the 100-row cap. Ninety-two bodies use this exact source route and eight are URL variants; replay bodies passed CDX digest verification."
+      },
+      "linked_pages": [
+        {
+          "url": "http://www.npr.org/blogs/therecord/2011/07/01/137537350/grind-and-shine-blue-scholars",
+          "selected_cdx_rows": 20,
+          "note": "Up to 20 digest-collapsed rows selected; query covered 2011–2012 only."
+        },
+        {
+          "url": "http://www.npr.org/blogs/therecord/2011/07/05/137562588/grind-and-shine-a-guide-to-seattles-rap-scene",
+          "selected_cdx_rows": 20,
+          "note": "Up to 20 digest-collapsed rows selected; query covered 2011–2012 only."
+        },
+        {
+          "url": "http://www.npr.org/blogs/therecord/2011/07/01/137395743/grind-and-shine-talking-rap-in-seattle",
+          "selected_cdx_rows": 20,
+          "note": "Up to 20 digest-collapsed rows selected; query covered 2011–2012 only."
+        },
+        {
+          "url": "http://www.npr.org/blogs/therecord/2011/07/01/137395930/grind-and-shine-shabazz-palaces-and-theesatisfaction",
+          "selected_cdx_rows": 20,
+          "note": "Up to 20 digest-collapsed rows selected; query covered 2011–2012 only."
+        },
+        {
+          "url": "http://www.npr.org/blogs/therecord/2011/07/01/137450489/grind-and-shine-jake-one-and-thig-natural",
+          "selected_cdx_rows": 20,
+          "note": "Up to 20 digest-collapsed rows selected; query covered 2011–2012 only."
+        },
+        {
+          "url": "http://www.npr.org/blogs/therecord/2011/07/01/137505132/grind-and-shine-metal-chocolates",
+          "selected_cdx_rows": 20,
+          "note": "Up to 20 digest-collapsed rows selected; query covered 2011–2012 only."
+        }
+      ],
+      "linked_page_query_scope": "Each linked URL was queried separately for 2011–2012, status 200 HTML, digest-collapsed, limit 20. The six query result sets contributed 121 verified page capture records including original URL variants; these are bounded queries, not complete URL histories.",
+      "photograph": {
+        "source_url": "https://media.npr.org/assets/img/2011/06/30/npr_bluescholars_highres1_wide-51fb70817460d420b29bbd3fe9b4f5c23cf4737e.jpg",
+        "memento_records": 4,
+        "unique_payloads": 1,
+        "sha256": "763c54e4640df8f1273156d61273bd345ad24209f92247d14fb7feef52fa8078",
+        "caption": "NPR identifies Sabzi and Geo from left to right.",
+        "limitation": "The exact legacy size-suffixed image URLs embedded on article pages returned no CDX rows; the recovered file is the same photo from its unhashed base asset URL."
+      },
+      "image_review": "Reviewed 40 newly indexed NPR image records individually: excluded 21 author-headshot records and 39 unrelated story cards. Pending visual reviews: zero.",
+      "cumulative_press_inventory_after_batch": {
+        "verified_page_capture_records": 850,
+        "unique_page_payloads": 814,
+        "image_capture_records": 1240,
+        "unique_image_payloads": 127,
+        "source_urls": 181,
+        "pending_visual_review_records": 0
+      },
+      "paths": {
+        "manifest": "recovery/other-archives/press-articles/manifest.json",
+        "report": "recovery/other-archives/press-articles/report.json",
+        "query_records": [
+          "recovery/other-archives/npr-series-cdx.json",
+          "recovery/other-archives/npr-followup-cdx.json"
+        ]
+      },
+      "limitations": [
+        "Third-party NPR pages and images are recovery evidence and remain recovery-only.",
+        "The series index CDX query hit its 100-row limit.",
+        "Each of the six linked page queries was capped at 20 digest-collapsed rows and covered only 2011–2012.",
+        "No claim is made that Wayback or the NPR series has been fully exhausted."
+      ],
+      "linked_page_rows_and_verified_bodies": 121
+    },
+    "The Find Mag Sabzi interview, portrait and linked track 2026-10-25": {
+      "archive": "Internet Archive Wayback CDX and replay",
+      "source_page": "https://thefindmag.com/features/hip-hop-interviews/interview-sabzi-of-blue-scholars/",
+      "page_mementos": {
+        "cdx_rows": 25,
+        "verified_page_bodies": 25,
+        "capture_routes": [
+          "thefindmag.com",
+          "www.thefindmag.com"
+        ],
+        "all_cdx_sha1_verified": true
+      },
+      "portrait": {
+        "source_url": "https://www.thefindmag.com/wp-content/uploads/Sabzi.jpg",
+        "capture_records": 8,
+        "unique_payloads": 2,
+        "visually_reviewed": true,
+        "identification": "portrait of DJ Sabzi; confirmed against the article title and image"
+      },
+      "linked_track": {
+        "source_url": "http://thefindmag.com/wp-content/uploads/Loyalty.mp3",
+        "capture_records": 4,
+        "unique_payloads": 1,
+        "bytes": 4986724,
+        "sha256": "c9205366112a4b2940f21f5454f5453585613e6188b9a1b04eaedd56b0bad788",
+        "all_cdx_sha1_verified": true,
+        "raw_manifest": "recovery/other-archives/press-media/thefindmag-loyalty.json",
+        "raw_path": "recovery/other-archives/press-media/media/c9205366112a4b2940f21f5454f5453585613e6188b9a1b04eaedd56b0bad788.mp3",
+        "cdx_length_example": 4911663
+      },
+      "raw_paths": {
+        "page_manifest": "recovery/other-archives/press-articles/manifest.json",
+        "media_directory": "recovery/other-archives/press-media/media/",
+        "image_directory": "recovery/other-archives/press-articles/images/"
+      },
+      "rights_status": "Third-party page, image and music remain recovery-only pending rights review; not published.",
+      "limits": [
+        "The Wayback query covers the exact linked article and asset URLs only.",
+        "Captured page variants range across later archival years; they are not proof of the original 2009 page presentation."
+      ]
+    },
+    "2013 Geo interview and 2007 Blue Scholars review 2026-10-25": {
+      "archive": "Internet Archive Wayback CDX and replay",
+      "sources": [
+        {
+          "url": "https://undergroundhiphopblog.com/exclusive-interviews/prometheus-brown-aka-geologic-exclusive-interview/",
+          "title": "Prometheus Brown aka Geologic “Exclusive Interview”",
+          "article_date": "2013-09-25",
+          "verified_mementos": 2,
+          "capture_timestamps": [
+            "20220526073057",
+            "20251111224237"
+          ],
+          "unique_payloads": 2,
+          "content_note": "Geo interview recorded at Eugene, Oregon’s Kaleidoscope Music Festival in August 2013."
+        },
+        {
+          "url": "https://exclaim.ca/music/article/blue_scholars-bavani",
+          "title": "Blue Scholars Bavani",
+          "article_date": "2007-06-12",
+          "verified_mementos": 2,
+          "capture_timestamps": [
+            "20190825151948",
+            "20210126174800"
+          ],
+          "unique_payloads": 2,
+          "content_note": "Contemporary review of the Bayani album."
+        },
+        {
+          "url": "https://www.seattlemet.com/arts-and-culture/2012/11/a-fiendish-conversation-with-mc-geologic-of-blue-scholars",
+          "title": "A Fiendish Conversation with MC Geologic of Blue Scholars",
+          "article_date": "2012-11",
+          "verified_mementos": 1,
+          "capture_timestamps": [
+            "20260406233720"
+          ],
+          "unique_payloads": 1
+        }
+      ],
+      "source_linked_images": [
+        {
+          "source_page": "https://www.seattlemet.com/arts-and-culture/2012/11/a-fiendish-conversation-with-mc-geologic-of-blue-scholars",
+          "archive_timestamp": "20260407155156",
+          "bytes": 136124,
+          "sha256": "4abcfab09fa387f5d0827f146a6ce9221ddb5f5f33add629d3df14e9d9d46d7d",
+          "visual_review": "confirmed portrait in the Geologic article; local-only"
+        },
+        {
+          "source_page": "https://undergroundhiphopblog.com/exclusive-interviews/prometheus-brown-aka-geologic-exclusive-interview/",
+          "candidate_source_urls": [
+            "https://undergroundhiphopblog.com/wp-content/uploads/2013/09/Blue+Scholars+Geologic-e13801492465101.jpg",
+            "http://undergroundhiphopblog.com/wp-content/uploads/2013/09/Blue+Scholars+Geologic-e13801492465101.jpg"
+          ],
+          "exact_cdx_rows": 0,
+          "status": "no image memento found for these exact URLs",
+          "current_publisher_check": {
+            "checked_at": "2026-10-25",
+            "status": 404,
+            "note": "Current publisher image URL also returns 404; no current-source copy was saved."
+          }
+        }
+      ],
+      "additional_exact_url_check": "The 2007 Queen Princess interview found by search at https://hiphopruckus1.wordpress.com/2007/06/22/on-point-with-the-blue-scholars-exclusive-interview-with-queen-princess/ had no exact CDX rows for its HTTP/HTTPS and trailing-slash variants. A broader host query was not completed because Wayback refused the connection; absence is unconfirmed beyond the exact URL checks.",
+      "provenance": "All saved HTML bodies match their selected Wayback CDX digests. Image and page files are preserved with capture dates and hashes in the press-articles manifest.",
+      "rights_status": "Third-party article pages and the recovered image remain local-only pending rights review."
     }
   },
   "limitations": [

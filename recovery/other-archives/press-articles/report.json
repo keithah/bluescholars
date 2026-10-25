@@ -1,172 +1,42 @@
 {
   "archive": "Internet Archive Wayback",
-  "sources": 112,
-  "queried_page_sources": 6,
-  "page_capture_rows": 70,
-  "page_payloads_recovered": 48,
-  "image_urls_discovered": 0,
-  "image_urls_queried": 0,
-  "image_capture_rows": 0,
-  "image_payloads_recovered": 0,
-  "failures": [
-    {
-      "stage": "page_replay",
-      "url": "https://soundscenerevolution.com/2006/12/05/interview-with-blue-scholars-podcast-42/",
-      "timestamp": "20221213032228",
-      "error": "ValueError: CDX digest mismatch: PSZHNZSRWP7GCCMM3YW5M6WAKSQNOAZZ != M4I2YEU64WVFPCVWOPG4X2DPSXP3D4OS"
-    },
-    {
-      "stage": "page_replay",
-      "url": "https://soundscenerevolution.com/2006/12/05/interview-with-blue-scholars-podcast-42/",
-      "timestamp": "20221213032228",
-      "error": "ValueError: CDX digest mismatch: PSZHNZSRWP7GCCMM3YW5M6WAKSQNOAZZ != M4I2YEU64WVFPCVWOPG4X2DPSXP3D4OS"
-    },
-    {
-      "stage": "page_replay",
-      "url": "https://soundscenerevolution.com/2006/12/",
-      "timestamp": "20220605214958",
-      "error": "ValueError: CDX digest mismatch: Z43R3Z756NDUPLQITSFC4EZHUZ3OSWM3 != DHYRX4WLXDSXYJBDL7GDPBY5U2FJ4FHH"
-    },
-    {
-      "stage": "page_replay",
-      "url": "https://soundscenerevolution.com/2006/12/",
-      "timestamp": "20220714204800",
-      "error": "ValueError: CDX digest mismatch: 6AA7GZD6XAL2X65MPKGKCHS6L6RETNCW != SCEOUU5VROJEOVANQDIJIT2PV76XXTRG"
-    },
-    {
-      "stage": "page_replay",
-      "url": "https://soundscenerevolution.com/2006/12/",
-      "timestamp": "20230403235408",
-      "error": "ValueError: CDX digest mismatch: NEOTOZXCCTMMMKYTDKXRD75ZW7ZWLGYY != V7PDTZT7P6MXSIMVNEOJRB7XD3RDARNP"
-    },
-    {
-      "stage": "page_replay",
-      "url": "https://soundscenerevolution.com/2006/12/",
-      "timestamp": "20251112123147",
-      "error": "ValueError: CDX digest mismatch: PMZMXHQXTNQAKXABUMQPD46O5WUVSCDI != ZTB7SHXGPEZF3A5AEX6P2Y4LIBXK7IXD"
-    },
-    {
-      "stage": "page_replay",
-      "url": "https://www.cityartsmagazine.com/issues-seattle-2013-02-rapper-camera/",
-      "timestamp": "20181109105945",
-      "error": "ValueError: CDX digest mismatch: KWOGT5T3RAQU44WTJMMKQYFFQBZEZFIF != 6D7XP67E2LRXHEIDJDL3JWO2B2YFU2GK"
-    },
-    {
-      "stage": "page_replay",
-      "url": "https://www.cityartsmagazine.com/issues-seattle-2013-02-rapper-camera/",
-      "timestamp": "20190505225026",
-      "error": "ValueError: CDX digest mismatch: LVKQGSTMTFE4T4IADYCZ3ZJW3KSMPB4C != YIWRC6QXE2QOMSKWBADZAQ4QI4OY2R4D"
-    },
-    {
-      "stage": "page_replay",
-      "url": "https://bumbershoot.com/festivals/2009",
-      "timestamp": "20260922145814",
-      "error": "ValueError: CDX digest mismatch: 63KYFRPR4ZSCAXY2LISNUOHHDRVTG2FR != 5UUDZ5VLR4AX342E6MZZJJT7FGWTRP6J"
-    },
-    {
-      "stage": "page_replay",
-      "url": "https://www.kcts9.org/show/kuya-geo/episodes",
-      "timestamp": "20221006220750",
-      "error": "ValueError: CDX digest mismatch: C4RLETRGDOXYRUVIGPHCV7QWRAUOGXW6 != YITISIL2346NSFD7HYABAYJZEDJ4OX7E"
-    },
-    {
-      "stage": "page_replay",
-      "url": "https://www.kcts9.org/show/kuya-geo/episode/seattle-drivers-kuya-geo-has-a-rap-for-that-prhvxp",
-      "timestamp": "20220930002503",
-      "error": "ValueError: CDX digest mismatch: L24HVL4WC7VMHTJWH4RCGXGEP4EARQNG != 3FIRVHMQ5CU6TLVD54ENSYTNJRX3NWYB"
-    },
-    {
-      "stage": "page_replay",
-      "url": "https://www.kcts9.org/show/kuya-geo/episode/seattle-drivers-kuya-geo-has-a-rap-for-that-prhvxp",
-      "timestamp": "20230220153252",
-      "error": "ValueError: CDX digest mismatch: SP3PR4HYGSVETJTEJMMQNNZQCU6KGIER != TDDPJCVM4ZWFFRNNXWJJQ6P4YW5RVISO"
-    },
-    {
-      "stage": "page_replay",
-      "url": "https://www.kcts9.org/show/kuya-geo/episode/the-roots-of-seattles-filipino-community-ikqoqk",
-      "timestamp": "20220512203236",
-      "error": "ValueError: CDX digest mismatch: JLFYRNHDVA5JAAMXANJKHMBWKAIEHTCJ != XY5ABASDWL2QOAAOQHNUK33HS4ODWTQR"
-    },
-    {
-      "stage": "page_replay",
-      "url": "http://www.foodandsh-t.com:80/",
-      "timestamp": "20191030185628",
-      "error": "ValueError: Captured provider/archive error page, not site content"
-    },
-    {
-      "stage": "page_replay",
-      "url": "http://www.foodandsh-t.com:80/",
-      "timestamp": "20200105175955",
-      "error": "ValueError: Captured provider/archive error page, not site content"
-    },
-    {
-      "stage": "page_replay",
-      "url": "http://foodandsh-t.com/",
-      "timestamp": "20240621090421",
-      "error": "ValueError: CDX digest mismatch: 7AJQZDA7VOR7DQKYL6GSXG2RKD2NI3QD != 7RGCRTVAZTBGU5A2XBIGIQKTRSA3BZVC"
-    },
-    {
-      "stage": "page_replay",
-      "url": "https://foodandsh-t.com/",
-      "timestamp": "20240621091847",
-      "error": "ValueError: CDX digest mismatch: WLFGAXEV4XTSFTLO3EAA455BRMQI5WXC != PTZ3EDCN5QKM46ND563MAMWSSGNYENDL"
-    },
-    {
-      "stage": "page_replay",
-      "url": "http://foodandsh-t.com/",
-      "timestamp": "20241212154322",
-      "error": "ValueError: CDX digest mismatch: AM626QHABEH2TPP6EGMYESFMMKTATAIL != APPMBMHFHJJP3BAQMGSIUVZHQ657OWQP"
-    },
-    {
-      "stage": "page_replay",
-      "url": "https://foodandsh-t.com/",
-      "timestamp": "20241215071506",
-      "error": "ValueError: CDX digest mismatch: 6MVAGTSXZAOTZXAHVKEMIBTFDCBM2DYW != GDTTTNPZFAK5QJXBLQROSAZMWR2KWAUF"
-    },
-    {
-      "stage": "page_replay",
-      "url": "http://foodandsh-t.com/",
-      "timestamp": "20241215192222",
-      "error": "ValueError: CDX digest mismatch: P7CGOTNPN7UORPINXPNWTJCP4B7Y7ZD4 != 332BRTWJ75B53DJPYL57DBLGYDUF474G"
-    },
-    {
-      "stage": "page_replay",
-      "url": "http://www.foodandsh-t.com/blog",
-      "timestamp": "20161123052410",
-      "error": "ChunkedEncodingError: Response ended prematurely"
-    },
-    {
-      "stage": "page_replay",
-      "url": "https://www.thestranger.com/seattle/we-got-next/Content?oid=37586",
-      "timestamp": "20190926004227",
-      "error": "ValueError: CDX digest mismatch: LVG2RXO7BYFBDBUT6K4PUJKL2HJWCX4X != GWVP47HWX7W4SFIY54S4K55GMLEXPGQL"
-    }
-  ],
+  "sources": 105,
+  "queried_page_sources": 0,
+  "page_capture_rows": 0,
+  "page_payloads_recovered": 0,
+  "image_urls_discovered": 1,
+  "image_urls_queried": 1,
+  "image_capture_rows": 1,
+  "image_payloads_recovered": 1,
+  "failures": [],
   "limitations": [
     "Exact URL histories and source-page-linked images only; this is not an archive-wide export.",
     "Third-party press pages/images are recovery evidence, not original Blue Scholars site pages.",
     "Image files remain local-only until rights and relevance review."
   ],
-  "page_capture_records_total": 579,
-  "unique_page_payloads_total": 543,
-  "unique_linked_image_urls_total": 196,
-  "image_capture_records_total": 1097,
-  "unique_image_payloads_total": 108,
-  "unique_source_urls_queried_total": 166,
+  "focused_source_page": "a-fiendish-conversation-with-mc-geologic-of-blue-scholars",
+  "page_capture_records_total": 850,
+  "unique_page_payloads_total": 814,
+  "unique_linked_image_urls_total": 235,
+  "image_capture_records_total": 1240,
+  "unique_image_payloads_total": 127,
+  "unique_source_urls_queried_total": 181,
   "image_relevance_review": {
     "article_image_exact_url_memento": 17,
     "excluded_page_chrome_or_tracking_asset": 189,
     "visually_reviewed_other_performer_or_audience_photo": 6,
     "visually_confirmed_blue_scholars_performance_photo": 3,
     "visually_reviewed_unrelated_city_arts_article_image": 443,
-    "visually_confirmed_blue_scholars_photo": 27,
+    "visually_confirmed_blue_scholars_photo": 40,
     "visually_confirmed_blue_scholars_photo_or_artwork": 38,
     "visually_confirmed_same_photo_as_2007_profile": 1,
     "visually_reviewed_unrelated_photographer_site_template_or_social_widget_asset": 16,
     "visually_reviewed_unrelated_crosscut_series_index_news_card": 310,
     "visually_reviewed_unrelated_finding_your_roots_pbs_show_poster": 100,
     "visually_confirmed_bruce_lee_episode_still": 4,
-    "visually_confirmed_kuya_geo_series_still": 13
+    "visually_confirmed_kuya_geo_series_still": 13,
+    "excluded_npr_author_headshot": 21,
+    "excluded_unrelated_npr_story_card": 39
   },
   "pending_visual_review_records": 0
 }

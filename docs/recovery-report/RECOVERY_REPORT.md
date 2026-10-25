@@ -1,6 +1,10 @@
 # Blue Scholars historical recovery report
 
-**Updated:** October 22, 2026. **Scope:** separate copies of the 2007, 2009/WordPress, and Squarespace-era sites, with the May 29, 2021 homepage as the Squarespace visual reference.
+**Updated:** October 25, 2026. **Scope:** separate copies of the 2007, 2009/WordPress, and Squarespace-era sites, with the May 29, 2021 homepage as the Squarespace visual reference.
+
+## Current status — October 25, 2026
+
+Recovery is not complete. The local resumable inventory (last written October 23) has 13,062 URLs: 5,865 recovered, 3,351 queued, 3,501 failed, 315 needing review, and 30 excluded; its saved index records 175,408 rows. The latest full candidate metrics remain from October 21 and still flag visual fidelity as unverified and thousands of embedded assets as missing. This turn expanded source-linked press evidence to 850 verified page captures / 814 unique bodies and 1,240 image captures / 127 unique payloads; all source body and image files currently referenced by that manifest are present and hash-verified, with no image reviews pending. Third-party press captures stay distinct from the three site editions. See [GAP_REPORT.md](GAP_REPORT.md), [GAP_REPORT.json](GAP_REPORT.json), and [OTHER_ARCHIVES.md](OTHER_ARCHIVES.md) for dated limitations.
 
 ## Related Jamglue recovery — October 22, 2026
 

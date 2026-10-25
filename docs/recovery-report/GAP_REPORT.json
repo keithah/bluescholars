@@ -1,22 +1,23 @@
 {
-  "updated_at": "2026-10-21",
-  "source_checkpoint_run": "Local resumable checkpoint refreshed after a bounded 75-resource Wayback batch on 2026-10-21.",
+  "updated_at": "2026-10-25",
+  "source_checkpoint_run": "Live local resumable inventory read from recovery/state.json, last modified 2026-10-23T15:57:30.688209+00:00; this refresh updates resource/index status counts only, not candidate build or visual-review metrics.",
   "capture_index": {
     "indexed_capture_records": 77085,
     "complete": true,
     "scope": "Completed primary Bluescholars domain CDX plus merged targeted and auxiliary archive indexes; separate LiveJournal CDN exact-URL indexes retain cursors and failures."
   },
   "resource_inventory": {
-    "resource_urls": 13052,
+    "resource_urls": 13062,
     "statuses": {
-      "queued": 4549,
-      "recovered": 5344,
-      "needs_review": 301,
-      "failed": 2854,
-      "excluded": 4
+      "recovered": 5865,
+      "failed": 3501,
+      "queued": 3351,
+      "needs_review": 315,
+      "excluded": 30
     },
-    "indexed_capture_records": 185596,
-    "index_complete": true
+    "indexed_capture_records": 175408,
+    "index_complete": true,
+    "source_catalog_records": 13062
   },
   "validated_local_files": {
     "unique_sha256_files": 2812,
@@ -80,7 +81,7 @@
     "LiveJournal: several linked comment threads have local gap pages; the missing comment bodies remain unavailable in validated local captures.",
     "LiveJournal: platform CSS and many userpic/image URLs remain missing; the current local journal view is not a visual-fidelity reconstruction."
   ],
-  "interpretation": "The latest project-subpath candidate and route/resource check include the new recovered article and shop pages. Root build/check is verified for the prior content checkpoint and should be repeated before release. Archive coverage, visual fidelity verification and redistribution permission remain incomplete.",
+  "interpretation": "The latest project-subpath candidate and route/resource check include the new recovered article and shop pages. Root build/check is verified for the prior content checkpoint and should be repeated before release. Archive coverage, visual fidelity verification and redistribution permission remain incomplete. Resource/index counts above were refreshed from local state on 2026-10-25; site candidate and visual-fidelity fields remain at their earlier checkpoint and need a fresh build/review.",
   "targeted_image_index": {
     "archive": "Internet Archive Wayback",
     "query": "exact source-linked image URLs from expanded inventory",
@@ -1432,5 +1433,7 @@
     "endpoint": "https://index.commoncrawl.org/collinfo.json",
     "result": "Connection refused before the collection list loaded; no index queries or WARC requests ran in this retry.",
     "interpretation": "This is an endpoint access failure, not a zero-result archive search. The preceding partial CC-MAIN-2008-2009 query remains the latest successful Common Crawl retrieval."
-  }
+  },
+  "inventory_checkpoint_file_mtime_utc": "2026-10-23T15:57:30.688209+00:00",
+  "candidate_metrics_as_of": "2026-10-21; not regenerated in this checkpoint"
 }

@@ -20,6 +20,7 @@ from .feeds import collect_feed_entries
 from .proof206 import build_206proof_archive
 from .twitter import build_twitter_archive
 from .redact import public_credential_fields, redact_public_credentials
+from .press_archive import build_press_archive
 
 CORE=[('/', 'Homepage'),('/blog/','Blog'),('/shows/','Shows'),('/video/','Video'),('/shop/','Shop'),('/holler/','Holler')]
 FALLBACK_UI='''.archive-restoration-notice,.archive-gap-page {font:16px/1.6 system-ui,sans-serif}
@@ -933,6 +934,7 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
     proof206_report=build_206proof_archive(root,output,base,candidate)
     twitter_report=build_twitter_archive(root,output,base)
     community_media_items=build_community_media(root,output,base,render_resources,aliases,ui_href,script_href)
+    press_archive_report=build_press_archive(root,output,base,ui_href)
     gateway+='</nav><h2 class="archive-sites-heading">More recovered sites</h2><p class="archive-sites-intro">Explore the artists, community, and social pages connected to Blue Scholars.</p><nav class="archive-site-grid" aria-label="Other recovered sites">'
     related_sites=[
         ('/prometheusbrown/','Prometheus Brown','Artist site editions'),
@@ -945,6 +947,8 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
         related_sites.append(('/massline-forums/','Mass Line Forums','Separate SMF forum archive'))
     if proof206_report.get('status')=='built':
         related_sites.append(('/206proof/','206Proof forums','Separate historical forum generations'))
+    if press_archive_report.get('status')=='built':
+        related_sites.append(('/other-archives/press/','Press archive','Recovered articles, images, and audio'))
     related_sites.append(('/lj/','Blue Scholars LiveJournal','Recovered journal posts'))
     for path,title,detail in related_sites:
         extra=' lj-archive' if path=='/lj/' else ''
@@ -968,6 +972,7 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
             'pages':page_report,'issues':issues,'reference_capture':TARGET,'artist_sites':satellite_report,
             'myspace':myspace_report,'twitter':twitter_report,
             'community_media_items':community_media_items,
+            'press_archive':press_archive_report,
             'massline':massline_report,
             '206proof':proof206_report,
             'note':'A successful build is not proof of source completeness or visual fidelity.'}

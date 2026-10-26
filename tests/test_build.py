@@ -574,6 +574,87 @@ def test_candidate_community_media_page_links_external_videos_without_embedding(
     assert '<iframe' not in page and 'bluescholarsTV' in page
     assert check(tmp_path/'_candidate','')==[]
 
+def test_candidate_makes_recovered_press_pages_images_and_audio_browseable(tmp_path):
+    fixture_root(tmp_path)
+    page_url='https://press.example/interview-blue-scholars/'
+    image_url='https://images.example/blue-scholars.png'
+    media_url='https://press.example/audio/interview.mp3'
+    page_one=b'''<html><head><title>Blue Scholars interview</title><script>window.evil=1</script>
+        <link rel="stylesheet" href="https://press.example/theme.css"></head>
+        <body><h1>Blue Scholars interview</h1><p>Recovered press text.</p>
+        <img src="https://images.example/blue-scholars.png" alt="Band portrait">
+        <form action="https://press.example/send"><button>Send</button></form></body></html>'''
+    page_two=b'<html><head><title>Blue Scholars interview</title></head><body><p>Later capture.</p></body></html>'
+    image_body=b'\x89PNG\r\n\x1a\npress fixture'
+    media_body=b'ID3press fixture audio'
+    page_records=[]
+    for timestamp,body in [('20200102030405',page_one),('20210102030405',page_two)]:
+        digest=hashlib.sha256(body).hexdigest()
+        path=f'recovery/other-archives/press-articles/pages/{timestamp}-{digest}.html'
+        (tmp_path/path).parent.mkdir(parents=True,exist_ok=True)
+        (tmp_path/path).write_bytes(body)
+        page_records.append({
+            'source_page_url':page_url,'original_url':page_url,'timestamp':timestamp,
+            'replay_url':f'https://web.archive.org/web/{timestamp}id_/{page_url}',
+            'cdx_mime':'text/html','cdx_digest':f'digest-{timestamp}',
+            'cdx_sha1_verified':True,'bytes':len(body),'sha256':digest,'raw_path':path})
+    image_sha=hashlib.sha256(image_body).hexdigest()
+    image_path=f'recovery/other-archives/press-articles/images/20200102030405-{image_sha}.png'
+    (tmp_path/image_path).parent.mkdir(parents=True,exist_ok=True)
+    (tmp_path/image_path).write_bytes(image_body)
+    media_sha=hashlib.sha256(media_body).hexdigest()
+    media_path=f'recovery/other-archives/press-media/media/{media_sha}.mp3'
+    (tmp_path/media_path).parent.mkdir(parents=True,exist_ok=True)
+    (tmp_path/media_path).write_bytes(media_body)
+    write_json(tmp_path/'recovery/other-archives/press-articles/manifest.json',{
+        'sources':{page_url:{'source_url':page_url,'cdx_rows':[
+            [row['timestamp'],page_url,'200','text/html',row['cdx_digest'],str(row['bytes'])] for row in page_records]}},
+        'page_captures':{f'{page_url}@@{row["timestamp"]}':row for row in page_records},
+        'image_urls':{image_url:{'source_image_url':image_url,'source_pages':[{'page_url':page_url}],
+                                 'cdx_rows':[['20200102030405',image_url,'200','image/png','image-digest',str(len(image_body))]]}},
+        'image_captures':{'image-capture':{
+            'source_image_url':image_url,'original_url':image_url,'timestamp':'20200102030405',
+            'replay_url':'https://web.archive.org/web/20200102030405id_/'+image_url,
+            'cdx_mime':'image/png','cdx_digest':'image-digest','cdx_sha1_verified':True,
+            'bytes':len(image_body),'sha256':image_sha,'raw_path':image_path,
+            'source_article_title':'Blue Scholars interview','photographer_credit':'Press photographer',
+            'rights_status':'unreviewed','source_pages':[{'page_url':page_url,'timestamp':'20200102030405'}]}}
+    })
+    write_json(tmp_path/'recovery/other-archives/press-media/manifest.json',{
+        'source_page':page_url,'source_media_url':media_url,'archive':'Internet Archive Wayback',
+        'captures':{'audio-capture':{
+            'source_page_url':page_url,'source_media_url':media_url,'timestamp':'20200102030405',
+            'replay_url':'https://web.archive.org/web/20200102030405id_/'+media_url,
+            'cdx_mimetype':'audio/mpeg','cdx_digest':'audio-digest','cdx_sha1_verified':True,
+            'cdx_length':len(media_body),'bytes':len(media_body),'sha256':media_sha,
+            'raw_path':media_path,'rights_status':'unreviewed; redistribution rights not established'}}})
+
+    report=build(tmp_path,tmp_path/'_candidate','/bluescholars',candidate=True)
+    home=(tmp_path/'_candidate/index.html').read_text()
+    assert '/bluescholars/other-archives/press/' in home
+    assert report['press_archive']['page_capture_records']==2
+    assert report['press_archive']['image_payloads']==1
+    assert report['press_archive']['audio_payloads']==1
+    press_index=(tmp_path/'_candidate/other-archives/press/index.html').read_text()
+    assert 'Browse recovered press coverage' in press_index
+    article_index=next((tmp_path/'_candidate/other-archives/press/articles').glob('*/index.html')).read_text()
+    assert 'Blue Scholars interview' in article_index and '2020-01-02' in article_index and '2021-01-02' in article_index
+    capture=next(path.read_text() for path in (tmp_path/'_candidate/other-archives/press/captures').rglob('index.html')
+                 if 'Recovered press text.' in path.read_text())
+    assert 'Recovered press text.' in capture and 'window.evil' not in capture and 'press.example/theme.css' not in capture
+    assert '/bluescholars/other-archives/press/assets/'+image_sha+'.png' in capture
+    image_index=(tmp_path/'_candidate/other-archives/press/images/index.html').read_text()
+    assert 'Press photographer' in image_index and 'unreviewed' in image_index
+    audio_index=(tmp_path/'_candidate/other-archives/press/audio/index.html').read_text()
+    assert 'redistribution rights not established' in audio_index
+    audio_detail=next(path.read_text() for path in (tmp_path/'_candidate/other-archives/press/audio').rglob('index.html')
+                      if '<audio' in path.read_text())
+    assert '<audio' in audio_detail and "media-src &#x27;self&#x27;" in audio_detail
+    assert check(tmp_path/'_candidate','/bluescholars')==[]
+    build(tmp_path,tmp_path/'_candidate','',candidate=True)
+    assert check(tmp_path/'_candidate','')==[]
+    assert '/other-archives/press/' in (tmp_path/'_candidate/index.html').read_text()
+
 def test_release_refuses_empty_site(tmp_path):
     fixture_root(tmp_path)
     with pytest.raises(ValueError,match='review'):build(tmp_path,tmp_path/'_site','',release=True)

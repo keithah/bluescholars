@@ -5,7 +5,7 @@ import pytest
 from bs4 import BeautifulSoup
 from restore.render import render_html,render_css
 from restore.discover import discover_html
-from restore.build import build,promote,documented_asset_aliases,archive_availability,add_global_year_navigation
+from restore.build import build,promote,documented_asset_aliases,archive_availability,archive_home_routes,add_global_year_navigation
 from restore.check import check
 from restore.state import State,write_json
 from restore.urls import HOME,TARGET,route,historical_route_prefix,route_capture_hint,livejournal_route
@@ -31,6 +31,34 @@ def test_archive_year_ranges_follow_observed_capture_manifests(tmp_path):
     ]}))
     assert archive_availability(tmp_path,'/prometheusbrown/') == (2008,2019)
     assert archive_availability(tmp_path,'/twitter-prometheusbrown/') == (2009,2009)
+
+def test_archive_home_routes_are_exact_and_point_to_oldest_page_by_default(tmp_path):
+    for year in ('2009','2011','2013'):
+        page=tmp_path/'prometheusbrown'/year/'index.html'
+        page.parent.mkdir(parents=True,exist_ok=True);page.write_text(year)
+    routes=archive_home_routes(tmp_path,'/prometheusbrown/')
+    assert routes=={2009:'/prometheusbrown/2009/',2011:'/prometheusbrown/2011/',2013:'/prometheusbrown/2013/'}
+    rendered=add_global_year_navigation(
+        '<html><head></head><body>archive</body></html>',2011,'/bluescholars','/ui.css','/timeline.js',home_routes=routes)
+    soup=BeautifulSoup(rendered,'html.parser')
+    toolbar=soup.select_one('.archive-year-global')
+    assert json.loads(toolbar['data-home-routes'])=={'2009':'/prometheusbrown/2009/','2011':'/prometheusbrown/2011/','2013':'/prometheusbrown/2013/'}
+    assert soup.select_one('.archive-year-home')['href']=='/bluescholars/prometheusbrown/2011/?year=2011'
+
+def test_206proof_defaults_to_its_oldest_recovered_site_home(tmp_path):
+    old=tmp_path/'206proof/2007/site/index.html'
+    old.parent.mkdir(parents=True);old.write_text('2007 site home')
+    later=tmp_path/'206proof/vanilla/index.html'
+    later.parent.mkdir(parents=True);later.write_text('Vanilla forum home')
+    assert archive_home_routes(tmp_path,'/206proof/')=={2007:'/206proof/2007/site/',2008:'/206proof/vanilla/',
+        2009:'/206proof/vanilla/',2010:'/206proof/vanilla/',2011:'/206proof/vanilla/'}
+
+def test_timeline_uses_exact_year_routes_and_keeps_default_archive_cards_visible():
+    script=(Path(__file__).resolve().parents[1]/'public/archive-timeline.js').read_text()
+    assert 'dataset.homeRoutes' in script
+    assert 'Object.hasOwn(cardRoutes, String(year))' in script
+    assert 'yearSelected = true' in script
+    assert 'routesFor(link)[String(slider.value)]' in script
 
 def test_global_year_navigation_tracks_dated_links_and_era_homepages():
     page='<html><head></head><body><a href="/bluescholars/2007/news.html#shows">News</a></body></html>'
@@ -853,14 +881,14 @@ def test_root_is_a_gateway_to_separate_historical_editions(tmp_path):
     assert {a.get('href') for a in root.select('a.timeline-edition-card')}=={'/2007/','/2009/','/2013/'}
     cards=root.select('a.timeline-edition-card')
     assert [card.select_one('.archive-site-title').get_text(strip=True).split(' · ')[0] for card in cards]==['2007','2009','2013']
-    assert all(card.get('data-start-year') and card.get('data-end-year') for card in cards)
+    assert all(card.get('data-available-years') and card.get('data-home-routes') for card in cards)
     assert all(card.select_one('.edition-action') for card in cards)
     assert root.select_one('a.archive-site-card[href="/lj/"]') is None
     assert {a.get('href') for a in root.select('.timeline-edition-card')} == {
         '/2007/', '/2009/', '/2013/'
     }
-    assert root.select_one('.archive-site-card[data-start-year="2009"]')
-    assert not root.select_one('.archive-site-card[href="/twitter-prometheusbrown/"][data-start-year="2007"]')
+    assert root.select_one('.archive-site-card[data-available-years]')
+    assert not root.select_one('.archive-site-card[href="/twitter-prometheusbrown/"][data-available-years]')
     assert all(card.select_one('.edition-action') for card in root.select('.archive-site-card'))
     assert root.select_one('#archive-year[type="range"][min="2006"][max="2026"]')
     assert root.select_one('#archive-year.archive-year-global-control')

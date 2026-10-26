@@ -170,12 +170,14 @@ def _write_page(output: Path,path: str,text: str):
     destination.parent.mkdir(parents=True,exist_ok=True);destination.write_text(text,encoding='utf-8')
 
 def add_global_year_navigation(text: str,year: int,base: str,ui_href: str,
-                               timeline_script_href: str,page_years: dict[str,int]|None=None) -> str:
+                               timeline_script_href: str,page_years: dict[str,int]|None=None,
+                               home_routes: dict[int,str]|None=None) -> str:
     """Add the shared year control and annotate links to dated local pages."""
     base=base_path(base);page_years=page_years or {}
     try: year=int(year)
     except (TypeError,ValueError): year=2007
     year=max(2006,min(2026,year))
+    home_routes=home_routes or {y:('/2007/' if y<=2008 else '/2009/' if y<=2012 else '/2013/') for y in range(2006,2022)}
     soup=BeautifulSoup(text,'html.parser')
     if soup.html is None:
         wrapper=BeautifulSoup('<!doctype html><html><head></head><body></body></html>','html.parser')
@@ -190,9 +192,13 @@ def add_global_year_navigation(text: str,year: int,base: str,ui_href: str,
         output=soup.new_tag('output',attrs={'id':'archive-year-global-output','for':'archive-year-global-control'});output.string=str(year);section.append(output)
         control=soup.new_tag('input',attrs={'id':'archive-year-global-control','class':'archive-year-global-control','type':'range','min':'2006','max':'2026','step':'1','value':str(year),'data-default-year':str(year),'aria-label':'Choose a year and open that homepage','aria-valuetext':str(year)})
         section.append(control)
-        route='/2007/' if year<=2008 else '/2009/' if year<=2012 else '/2013/'
-        open_home=soup.new_tag('a',attrs={'class':'archive-year-home','href':base+route+'?year='+str(year)})
-        open_home.string='Open '+str(year)+' homepage';section.append(open_home)
+        route=home_routes.get(year)
+        open_home=soup.new_tag('a',attrs={'class':'archive-year-home','data-home-routes':json.dumps({str(k):v for k,v in sorted(home_routes.items())},separators=(',',':'))})
+        if route: open_home['href']=base+route+'?year='+str(year)
+        else: open_home['aria-disabled']='true'
+        open_home.string='Open '+str(year)+' homepage' if route else 'No homepage capture for '+str(year)
+        section['data-home-routes']=json.dumps({str(k):v for k,v in sorted(home_routes.items())},separators=(',',':'))
+        section.append(open_home)
         soup.body.insert(0,section)
     if not soup.head.select_one('link[data-archive-year-styles]'):
         soup.head.append(soup.new_tag('link',rel='stylesheet',href=ui_href,attrs={'data-archive-year-styles':'true'}))
@@ -241,6 +247,7 @@ def decorate_archive_pages(output: Path,base: str,ui_href: str,timeline_script_h
         stamp=str(row.get('actual_capture',''))
         if path and stamp[:4].isdigit(): page_years[path]=int(stamp[:4])
     changed=0
+    home_routes_by_archive={}
     for path in Path(output).rglob('*.html'):
         if not path.is_file(): continue
         relative=path.relative_to(output).as_posix()
@@ -252,10 +259,74 @@ def decorate_archive_pages(output: Path,base: str,ui_href: str,timeline_script_h
         year=page_years.get(route,_default_year_for_path(relative))
         if relative in ('2007/index.html','2009/index.html','2013/index.html'):
             year={'2007/index.html':2007,'2009/index.html':2009,'2013/index.html':2021}[relative]
-        updated=add_global_year_navigation(text,year,base,ui_href,timeline_script_href,page_years)
+        if route.startswith('/other-archives/press/'):
+            archive_path='/other-archives/press/'
+        else:
+            segment=route.strip('/').split('/',1)[0]
+            archive_path='/'+segment+'/' if segment else '/'
+        if archive_path not in home_routes_by_archive:
+            home_routes_by_archive[archive_path]=archive_home_routes(output,archive_path)
+        home_routes=home_routes_by_archive[archive_path]
+        updated=add_global_year_navigation(text,year,base,ui_href,timeline_script_href,page_years,home_routes)
         if updated!=text:
             path.write_text(updated,encoding='utf-8');changed+=1
     return changed
+
+def archive_home_routes(output: Path,path: str) -> dict[int,str]:
+    """Return only years with a local homepage route for one archive."""
+    output=Path(output);routes: dict[int,str]={}
+    def add(year,route):
+        try: year=int(year)
+        except (TypeError,ValueError): return
+        target=output/route.lstrip('/')
+        if target.is_dir(): target=target/'index.html'
+        if target.is_file() and year not in routes: routes[year]=route
+    if path in ('/2007/','/2009/','/2013/'):
+        bounds={'/2007/':(2007,2008),'/2009/':(2009,2012),'/2013/':(2013,2021)}[path]
+        for year in range(bounds[0],bounds[1]+1): add(year,path)
+    elif path in ('/prometheusbrown/','/sabzi/'):
+        prefix=path.strip('/')
+        for page in sorted((output/prefix).glob('[0-9][0-9][0-9][0-9]/index.html')):
+            add(page.parent.name,f'/{prefix}/{page.parent.name}/')
+    elif path=='/myspace/':
+        for page in sorted((output/'myspace').glob('[0-9][0-9][0-9][0-9]/*.html')):
+            add(page.parent.name,'/'+page.relative_to(output).as_posix())
+    elif path=='/twitter-prometheusbrown/':
+        for page in sorted((output/'twitter-prometheusbrown/captures').glob('[0-9]*/index.html')):
+            add(page.parent.name[:4],'/'+page.parent.relative_to(output).as_posix()+'/')
+    elif path=='/masslinemedia/':
+        for page in sorted((output/'masslinemedia/site').glob('home-*.html')):
+            year=page.stem.removeprefix('home-')
+            if year.isdigit(): add(year,'/'+page.relative_to(output).as_posix())
+    elif path=='/massline-forums/':
+        for page in sorted((output/'massline-forums').glob('index--capture-*.html')):
+            stamp=page.stem.removeprefix('index--capture-')
+            if stamp[:4].isdigit(): add(stamp[:4],'/'+page.relative_to(output).as_posix())
+    elif path=='/206proof/':
+        editions=((2007,'/206proof/2007/site/'),(2008,'/206proof/vanilla/'),(2009,'/206proof/vanilla/'),
+                  (2010,'/206proof/vanilla/'),(2011,'/206proof/vanilla/'),(2012,'/206proof/community/'),
+                  (2013,'/206proof/vbulletin/'),(2014,'/206proof/vbulletin/'))
+        for year,route in editions: add(year,route)
+    elif path=='/lj/':
+        state=output.parent/'recovery/state.json'
+        if state.is_file():
+            try:
+                records=json.loads(state.read_text()).get('resources',{}).values()
+                for record in sorted(records,key=lambda item:str(item.get('actual_capture') or '')):
+                    stamp=str(record.get('actual_capture') or '')
+                    if 'livejournal.com' in str(record.get('url','')) and record.get('status')=='recovered' and stamp[:4].isdigit():
+                        capture_route='/lj/captures/'+stamp+'/'
+                        add(stamp[:4],capture_route if (output/capture_route.lstrip('/')/'index.html').is_file() else '/lj/')
+            except (OSError,ValueError): pass
+    elif path=='/other-archives/press/':
+        manifest=output.parent/'recovery/other-archives/press-articles/manifest.json'
+        if manifest.is_file():
+            try:
+                years={str(item.get('timestamp',''))[:4] for item in json.loads(manifest.read_text()).get('page_captures',{}).values()}
+                for year in sorted(years):
+                    if year.isdigit(): add(year,path)
+            except (OSError,ValueError): pass
+    return routes
 
 def archive_availability(root: Path, path: str) -> tuple[int, int] | None:
     """Return an archive's observed capture-year bounds, where metadata exists."""
@@ -1110,12 +1181,16 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
             edition_text=page_shell(label,body)
             edition_text,_=render_html(edition_text,HOME,render_resources,base,aliases=aliases,ui_stylesheet=ui_href,ui_script=script_href)
             _write_page(output,prefix+'/',edition_text)
-    gateway='<p class="archive-home-intro">Move through the years. Archives appear below only when a dated source shows they existed.</p><section class="archive-timeline archive-year-global" data-base-path="'+html.escape(base,quote=True)+'" aria-labelledby="archive-year-label"><a class="archive-year-global-brand" href="'+html.escape(base+'/',quote=True)+'">Blue Scholars archive</a><label id="archive-year-label" for="archive-year">Explore a year</label><div class="archive-year-readout"><output id="archive-year-output" for="archive-year">2007</output><span id="archive-era-summary">The earliest preserved site era</span></div><input id="archive-year" class="archive-year-global-control" data-default-year="2007" type="range" min="2006" max="2026" step="1" value="2007" aria-label="Select archive year" aria-valuetext="2007"><div class="archive-year-markers" aria-hidden="true"><span>2006</span><span>2010</span><span>2015</span><span>2020</span><span>2026</span></div><a class="archive-year-home" href="'+base+'/2007/?year=2007">Open 2007 homepage</a></section><p id="archive-year-count" class="archive-year-count" aria-live="polite"></p><nav class="archive-site-grid archive-timeline-results" data-year="2007" aria-label="Archives available in the selected year">'
+    blue_routes={**archive_home_routes(output,'/2007/'),**archive_home_routes(output,'/2009/'),**archive_home_routes(output,'/2013/')}
+    blue_route_json=html.escape(json.dumps({str(k):v for k,v in sorted(blue_routes.items())},separators=(',',':')),quote=True)
+    gateway='<p class="archive-home-intro">Move through the years. Archives appear below only when a dated source shows they existed.</p><section class="archive-timeline archive-year-global" data-home-routes="'+blue_route_json+'" data-base-path="'+html.escape(base,quote=True)+'" aria-labelledby="archive-year-label"><a class="archive-year-global-brand" href="'+html.escape(base+'/',quote=True)+'">Blue Scholars archive</a><label id="archive-year-label" for="archive-year">Explore a year</label><div class="archive-year-readout"><output id="archive-year-output" for="archive-year">2007</output><span id="archive-era-summary">The earliest preserved site era</span></div><input id="archive-year" class="archive-year-global-control" data-default-year="2007" type="range" min="2006" max="2026" step="1" value="2007" aria-label="Select archive year" aria-valuetext="2007"><div class="archive-year-markers" aria-hidden="true"><span>2006</span><span>2010</span><span>2015</span><span>2020</span><span>2026</span></div><a class="archive-year-home" href="'+base+'/2007/?year=2007">Open 2007 homepage</a></section><p id="archive-year-count" class="archive-year-count" aria-live="polite"></p><nav class="archive-site-grid archive-timeline-results" data-year="2007" aria-label="Archives available in the selected year">'
     editions=(('/2007/','2007','Independent site'),('/2009/','2009','WordPress site'),('/2013/','2013','Squarespace site · first located in 2013'))
     for path,year,label in editions:
-        bounds=archive_availability(root,path)
-        if bounds:
-            gateway+='<a class="archive-site-card timeline-edition-card" data-start-year="'+str(bounds[0])+'" data-end-year="'+str(bounds[1])+'" href="'+base+path+'"><span class="archive-site-title">'+year+' · '+html.escape(label)+'</span><span class="archive-site-detail">Separate Blue Scholars website edition · '+str(bounds[0])+('–'+str(bounds[1]) if bounds[1]!=bounds[0] else '')+'</span><span class="edition-action">Browse this edition <span aria-hidden="true">↗</span></span></a>'
+        home_routes=archive_home_routes(output,path)
+        if home_routes:
+            route_json=html.escape(json.dumps({str(k):v for k,v in sorted(home_routes.items())},separators=(',',':')),quote=True)
+            available=','.join(map(str,sorted(home_routes)))
+            gateway+='<a class="archive-site-card timeline-edition-card" data-available-years="'+available+'" data-home-routes="'+route_json+'" href="'+base+home_routes[min(home_routes)]+'"><span class="archive-site-title">'+year+' · '+html.escape(label)+'</span><span class="archive-site-detail">Separate Blue Scholars website edition · '+str(min(home_routes))+('–'+str(max(home_routes)) if max(home_routes)!=min(home_routes) else '')+'</span><span class="edition-action">Browse this edition <span aria-hidden="true">↗</span></span></a>'
     satellite_report=build_artist_sites(root,output,base,candidate)
     massline_report=build_massline_archive(root,output,base,candidate)
     myspace_report=build_myspace_archive(root,output,base)
@@ -1123,7 +1198,7 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
     twitter_report=build_twitter_archive(root,output,base)
     community_media_items=build_community_media(root,output,base,render_resources,aliases,ui_href,script_href)
     press_archive_report=build_press_archive(root,output,base,ui_href)
-    gateway+='</nav><h2 class="archive-sites-heading">Other captured editions</h2><p class="archive-sites-intro">The slider follows capture dates: entries appear for years where preserved material exists. Select a year to browse.</p><nav class="archive-site-grid archive-timeline-results" data-year="2007" aria-label="Other archives available in the selected year">'
+    gateway+='</nav><h2 class="archive-sites-heading">Other captured editions</h2><p class="archive-sites-intro">All recovered archives are listed below. Move the slider to browse only material preserved in a particular year.</p><nav class="archive-site-grid archive-timeline-results" data-year="2007" aria-label="Other recovered archives">'
     related_sites=[
         ('/prometheusbrown/','Prometheus Brown','Artist site editions'),
         ('/sabzi/','Sabzi','Artist site editions'),
@@ -1140,10 +1215,12 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
     related_sites.append(('/lj/','Blue Scholars LiveJournal','Recovered journal posts'))
     for path,title,detail in related_sites:
         extra=' lj-archive' if path=='/lj/' else ''
-        bounds=archive_availability(root,path)
-        if not bounds: continue
-        start,end=bounds
-        gateway+='<a class="archive-site-card timeline-related-card'+extra+'" data-start-year="'+str(start)+'" data-end-year="'+str(end)+'" href="'+base+path+'"><span class="archive-site-title">'+html.escape(title)+'</span><span class="archive-site-detail">'+html.escape(detail)+' · '+str(start)+('–'+str(end) if end!=start else '')+'</span><span class="edition-action">Browse archive <span aria-hidden="true">↗</span></span></a>'
+        home_routes=archive_home_routes(output,path)
+        if not home_routes: continue
+        route_json=html.escape(json.dumps({str(k):v for k,v in sorted(home_routes.items())},separators=(',',':')),quote=True)
+        available=','.join(map(str,sorted(home_routes)))
+        start,end=min(home_routes),max(home_routes)
+        gateway+='<a class="archive-site-card timeline-related-card'+extra+'" data-available-years="'+available+'" data-home-routes="'+route_json+'" href="'+base+home_routes[start]+'"><span class="archive-site-title">'+html.escape(title)+'</span><span class="archive-site-detail">'+html.escape(detail)+' · '+str(start)+('–'+str(end) if end!=start else '')+'</span><span class="edition-action">Browse archive <span aria-hidden="true">↗</span></span></a>'
     gateway+='</nav><nav class="archive-home-links" aria-label="Archive information">'
     if community_media_items:
         gateway+='<a href="'+base+'/community-media/">Supplemental community media <span aria-hidden="true">↗</span></a>'

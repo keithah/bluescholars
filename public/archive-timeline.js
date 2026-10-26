@@ -1,7 +1,9 @@
 "use strict";
 (() => {
-  const editionHome = (year) => year <= 2008 ? "/2007/" : year <= 2012 ? "/2009/" : "/2013/";
   const validYear = (value) => /^\d{4}$/.test(String(value)) && Number(value) >= 2006 && Number(value) <= 2026;
+  const routesFor = (node) => {
+    try { return JSON.parse(node?.dataset.homeRoutes || "{}"); } catch (_) { return {}; }
+  };
   const query = new URLSearchParams(location.search);
   const yearFromUrl = query.get("year");
   const embeddedHomepage = query.get("archive-embed") === "1";
@@ -11,10 +13,14 @@
 
   if (slider) {
     if (validYear(yearFromUrl)) slider.value = yearFromUrl;
+    let yearSelected = validYear(yearFromUrl);
     const yearOut = document.getElementById("archive-year-output");
     const summary = document.getElementById("archive-era-summary");
     const count = document.getElementById("archive-year-count");
     const selectedHome = document.querySelector(".archive-home .archive-year-home");
+      const timeline = slider.closest(".archive-timeline");
+      const basePath = timeline ? timeline.dataset.basePath || "" : "";
+      const homeRoutes = routesFor(timeline);
     const cards = [...document.querySelectorAll(".archive-timeline-results .archive-site-card")];
     function updateCards() {
       const year = Number(slider.value);
@@ -25,32 +31,53 @@
       slider.setAttribute("aria-valuetext", String(year));
       let siteCount = 0;
       for (const card of cards) {
-        const show = year >= Number(card.dataset.startYear) && year <= Number(card.dataset.endYear);
+        const cardRoutes = routesFor(card);
+        const show = !yearSelected || Object.hasOwn(cardRoutes, String(year));
         card.hidden = !show;
+        if (show && yearSelected) {
+          const target = new URL(basePath + cardRoutes[String(year)], location.href);
+          if (target.origin === location.origin) {
+            target.searchParams.set("year", String(year));
+            card.href = target.pathname + target.search + target.hash;
+          }
+        }
         if (show && !card.classList.contains("timeline-edition-card")) siteCount++;
       }
-      if (summary) summary.textContent = year < 2009
-        ? "The early Blue Scholars era · Twitter is not yet in the recovered record"
-        : year === 2009
-          ? "Twitter enters the recovered record"
-          : "Showing archived material available in this year";
+      if (summary) summary.textContent = !yearSelected
+        ? "All recovered archives are listed · move the slider to browse a year"
+        : year < 2009
+          ? "The early Blue Scholars era · Twitter is not yet in the recovered record"
+          : year === 2009
+            ? "Twitter enters the recovered record"
+            : "Showing archived material available in this year";
       if (selectedHome) {
-        const timeline = slider.closest(".archive-timeline");
-        const basePath = timeline ? timeline.dataset.basePath || "" : "";
-        selectedHome.href = basePath + editionHome(year) + "?year=" + year;
-        selectedHome.textContent = "Open " + year + " homepage";
+        const route = homeRoutes[String(year)];
+        if (route) {
+          selectedHome.href = basePath + route + "?year=" + year;
+          selectedHome.textContent = "Open " + year + " homepage";
+          selectedHome.removeAttribute("aria-disabled");
+        } else {
+          selectedHome.removeAttribute("href");
+          selectedHome.setAttribute("aria-disabled", "true");
+          selectedHome.textContent = "No homepage capture for " + year;
+        }
       }
-      if (count) count.textContent = siteCount + " related archive" + (siteCount === 1 ? "" : "s")
-        + " with dated material in " + year + ".";
+      if (count) count.textContent = !yearSelected
+        ? siteCount + " related archive" + (siteCount === 1 ? "" : "s") + " listed. Move the slider to filter by year."
+        : siteCount + " related archive" + (siteCount === 1 ? "" : "s") + " with dated material in " + year + ".";
       document.querySelectorAll(".archive-timeline-results").forEach(node => { node.dataset.year = String(year); });
     }
-    slider.addEventListener("input", updateCards);
+    slider.addEventListener("input", () => { yearSelected = true; updateCards(); });
     document.querySelectorAll(".archive-timeline-results a.archive-site-card").forEach((link) => {
       link.addEventListener("click", () => {
-        const target = new URL(link.href, location.href);
-        if (target.origin === location.origin) {
-          target.searchParams.set("year", String(slider.value));
-          link.href = target.pathname + target.search + target.hash;
+        const route = yearSelected ? routesFor(link)[String(slider.value)] : null;
+        if (route) {
+          const timeline = slider.closest(".archive-timeline");
+          const target = new URL((timeline?.dataset.basePath || "") + route, location.href);
+          if (target.origin === location.origin) {
+            target.searchParams.set("year", String(slider.value));
+            link.href = target.pathname + target.search + target.hash;
+          }
         }
       });
     });
@@ -61,6 +88,7 @@
     const section = control.closest(".archive-year-global");
     const output = section.querySelector("output");
     const homeLink = section.querySelector(".archive-year-home");
+    const homeRoutes = routesFor(section);
     const initialYear = validYear(yearFromUrl) ? Number(yearFromUrl) : Number(control.dataset.defaultYear || control.value);
     control.value = String(initialYear);
     function updateGlobalControl() {
@@ -69,8 +97,16 @@
       output.textContent = String(year);
       control.setAttribute("aria-valuetext", String(year));
       const basePath = section.dataset.basePath || "";
-      homeLink.href = basePath + editionHome(year) + "?year=" + year;
-      homeLink.textContent = "Open " + year + " homepage";
+      const route = homeRoutes[String(year)];
+      if (route) {
+        homeLink.href = basePath + route + "?year=" + year;
+        homeLink.textContent = "Open " + year + " homepage";
+        homeLink.removeAttribute("aria-disabled");
+      } else {
+        homeLink.removeAttribute("href");
+        homeLink.setAttribute("aria-disabled", "true");
+        homeLink.textContent = "No homepage capture for " + year;
+      }
     }
     function showHomepageBelowSlider() {
       if (embeddedHomepage || control.id === "archive-year") return null;
@@ -99,6 +135,19 @@
           node.setAttribute("aria-hidden", "true");
         }
         toolbar.insertAdjacentElement("afterend", preview);
+        const missing = document.createElement("p");
+        missing.id = "archive-year-home-missing";
+        missing.className = "archive-year-home-missing";
+        missing.setAttribute("role", "status");
+        toolbar.insertAdjacentElement("afterend", missing);
+      }
+      const missing = document.getElementById("archive-year-home-missing");
+      const route = homeRoutes[String(control.value)];
+      preview.hidden = !route;
+      missing.hidden = Boolean(route);
+      if (!route) {
+        missing.textContent = "No homepage capture for " + control.value + " in this archive. Choose a year with a preserved page.";
+        return null;
       }
       const url = new URL(homeLink.href, location.href);
       url.searchParams.set("archive-embed", "1");
@@ -113,7 +162,7 @@
     control.addEventListener("change", () => {
       if (control.id === "archive-year" || embeddedHomepage) return;
       const preview = document.getElementById("archive-year-home-preview");
-      if (!preview) {
+      if (!preview && homeLink.href) {
         location.href = homeLink.href;
         return;
       }

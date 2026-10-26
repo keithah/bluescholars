@@ -236,11 +236,12 @@ def add_global_year_navigation(text: str,year: int,base: str,ui_href: str,
 def _timeline_markers(soup,years: list[int]):
     years=sorted(set(years))
     if not years: return soup.new_tag('div',attrs={'class':'archive-year-markers','aria-hidden':'true'})
-    markers=soup.new_tag('div',attrs={'class':'archive-year-markers','aria-hidden':'true'})
+    markers=soup.new_tag('div',attrs={'class':'archive-year-markers','role':'group','aria-label':'Years with archived activity'})
     lo,hi=years[0],years[-1]
     for year in years:
         position=50 if lo==hi else round((year-lo)*100/(hi-lo),2)
-        markers.append(soup.new_tag('span',attrs={'class':'archive-year-marker','data-year':str(year),
+        markers.append(soup.new_tag('button',attrs={'type':'button','class':'archive-year-marker','data-year':str(year),
+            'aria-label':'Go to archived activity in '+str(year),
             'title':'Archived activity in '+str(year),'style':'left:'+str(position)+'%'}))
     return markers
 
@@ -1252,9 +1253,7 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
     range_min=min(activity_range,default=default_year);range_max=max(activity_range,default=default_year)
     home_link=('<a class="archive-year-home" href="'+base+default_route+'?year='+str(default_year)+'">Open '+str(default_year)+' homepage</a>'
                if default_route else '<a class="archive-year-home" aria-disabled="true">No homepage capture recovered</a>')
-    preview=('<iframe id="archive-year-home-preview" class="archive-year-home-preview" title="Blue Scholars homepage, '+str(default_year)+'" loading="eager" referrerpolicy="no-referrer" src="'+base+default_route+'?year='+str(default_year)+'&amp;archive-embed=1"></iframe>'
-             if default_route else '<p class="archive-year-home-missing" role="status">No Blue Scholars homepage capture was recovered. The timeline still marks dates found on preserved pages.</p>')
-    gateway='<p class="archive-home-intro">One Blue Scholars website across the recovered captures. Move the timeline to the closest year with archived activity.</p><section class="archive-timeline archive-year-global" data-home-routes="'+blue_route_json+'" data-activity-years="'+activity_json+'" data-base-path="'+html.escape(base,quote=True)+'" aria-labelledby="archive-year-label"><a class="archive-year-global-brand" href="'+html.escape(base+'/',quote=True)+'">Blue Scholars archive</a><label id="archive-year-label" for="archive-year">Explore a year</label><div class="archive-year-readout"><output id="archive-year-output" for="archive-year">'+str(default_year)+'</output><span id="archive-era-summary">Blue Scholars archive activity</span></div><input id="archive-year" class="archive-year-global-control" data-default-year="'+str(default_year)+'" type="range" min="'+str(range_min)+'" max="'+str(range_max)+'" step="1" value="'+str(default_year)+'" aria-label="Select an archived year" aria-valuetext="'+str(default_year)+'">'+markers+home_link+'</section><p id="archive-year-count" class="archive-year-count" aria-live="polite"></p>'+preview+'<nav class="archive-site-grid archive-timeline-results" data-year="'+str(default_year)+'" aria-label="Archives available in the selected year">'
+    gateway='<p class="archive-home-intro">One Blue Scholars website across the recovered captures. Move the timeline to the closest year with archived activity.</p><section class="archive-timeline archive-year-global" data-home-routes="'+blue_route_json+'" data-activity-years="'+activity_json+'" data-base-path="'+html.escape(base,quote=True)+'" aria-labelledby="archive-year-label"><a class="archive-year-global-brand" href="'+html.escape(base+'/',quote=True)+'">Blue Scholars archive</a><label id="archive-year-label" for="archive-year">Explore a year</label><div class="archive-year-readout"><output id="archive-year-output" for="archive-year">'+str(default_year)+'</output><span id="archive-era-summary">Blue Scholars archive activity</span></div><input id="archive-year" class="archive-year-global-control" data-default-year="'+str(default_year)+'" type="range" min="'+str(range_min)+'" max="'+str(range_max)+'" step="1" value="'+str(default_year)+'" aria-label="Select an archived year" aria-valuetext="'+str(default_year)+'">'+markers+home_link+'</section><p id="archive-year-count" class="archive-year-count" aria-live="polite"></p><nav class="archive-site-grid archive-timeline-results" data-year="'+str(default_year)+'" aria-label="Archives available in the selected year">'
     if blue_routes:
         route_json=html.escape(json.dumps({str(k):v for k,v in sorted(blue_routes.items())},separators=(',',':')),quote=True)
         available=','.join(map(str,blue_activity_years))

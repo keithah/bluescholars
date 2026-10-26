@@ -141,7 +141,10 @@ def test_global_year_navigation_marks_capture_years_and_uses_combined_routes():
     toolbar=soup.select_one('.archive-year-global')
     assert json.loads(toolbar['data-home-routes'])=={'2007':'/2007/','2010':'/2009/','2013':'/2013/'}
     assert json.loads(toolbar['data-activity-years'])==[2007,2010,2013]
-    assert [int(mark['data-year']) for mark in toolbar.select('.archive-year-marker')]==[2007,2010,2013]
+    marks=toolbar.select('.archive-year-marker')
+    assert [int(mark['data-year']) for mark in marks]==[2007,2010,2013]
+    assert all(mark.name=='button' and mark.get('type')=='button' and mark.get('aria-label') for mark in marks)
+    assert "querySelectorAll('.archive-year-marker')" in (Path(__file__).resolve().parents[1]/'public/archive-timeline.js').read_text()
     assert toolbar.select_one('input[type="range"]')['min']=='2007'
     assert toolbar.select_one('input[type="range"]')['max']=='2013'
 
@@ -933,8 +936,8 @@ def test_root_combines_blue_scholars_editions_on_one_activity_timeline(tmp_path)
     assert cards[0]['href']=='/2013/?year=2021'
     assert root.select_one('.archive-timeline[data-activity-years="[2021]"] #archive-year[min="2021"][max="2021"]')
     assert root.select_one('.archive-year-markers [data-year="2021"]')
-    preview=root.select_one('#archive-year-home-preview')
-    assert preview and preview['src']=='/2013/?year=2021&archive-embed=1'
+    assert root.select_one('a.blue-scholars-site-card[href="/2013/?year=2021"]')
+    assert not root.select_one('#archive-year-home-preview')
     shared_routes={"2021":"/2013/"}
     for generation in ('2007','2009','2013'):
         page=BeautifulSoup((tmp_path/'_site'/generation/'index.html').read_text(),'html.parser')

@@ -215,6 +215,14 @@
       const next = target.pathname + target.search;
       if (current !== next) history.pushState({ archiveYearPreview: true }, "", next);
     });
+    section.querySelectorAll('.archive-year-marker').forEach((marker) => {
+      marker.addEventListener("click", () => {
+        if (!validYear(marker.dataset.year)) return;
+        control.value = marker.dataset.year;
+        control.dispatchEvent(new Event("input", { bubbles: true }));
+        control.dispatchEvent(new Event("change", { bubbles: true }));
+      });
+    });
     updateGlobalControl();
   }
 

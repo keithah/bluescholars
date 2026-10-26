@@ -5,7 +5,7 @@ import pytest
 from bs4 import BeautifulSoup
 from restore.render import render_html,render_css
 from restore.discover import discover_html
-from restore.build import build,promote,documented_asset_aliases,archive_availability
+from restore.build import build,promote,documented_asset_aliases,archive_availability,add_global_year_navigation
 from restore.check import check
 from restore.state import State,write_json
 from restore.urls import HOME,TARGET,route,historical_route_prefix,route_capture_hint,livejournal_route
@@ -31,6 +31,33 @@ def test_archive_year_ranges_follow_observed_capture_manifests(tmp_path):
     ]}))
     assert archive_availability(tmp_path,'/prometheusbrown/') == (2008,2019)
     assert archive_availability(tmp_path,'/twitter-prometheusbrown/') == (2009,2009)
+
+def test_global_year_navigation_tracks_dated_links_and_era_homepages():
+    page='<html><head></head><body><a href="/bluescholars/2007/news.html#shows">News</a></body></html>'
+    rendered=add_global_year_navigation(
+        page,year=2008,base='/bluescholars',ui_href='/bluescholars/assets/archive-ui.css',
+        timeline_script_href='/bluescholars/assets/archive-timeline.js',
+        page_years={'/2007/news.html':2008})
+    soup=BeautifulSoup(rendered,'html.parser')
+    control=soup.select_one('.archive-year-global input[type="range"]')
+    assert control and control['value']=='2008' and control['data-default-year']=='2008'
+    assert control.find_parent(class_='archive-year-global')['data-base-path']=='/bluescholars'
+    assert soup.select_one('.archive-year-home')['href']=='/bluescholars/2007/?year=2008'
+    assert soup.select_one('a[href="/bluescholars/2007/news.html?year=2008#shows"]')
+    assert soup.select_one('script[src="/bluescholars/assets/archive-timeline.js"]')
+
+def test_global_year_navigation_preserves_an_existing_selected_year():
+    page='<html><head></head><body><a href="/bluescholars/2007/news.html?year=2009#shows">News</a></body></html>'
+    rendered=add_global_year_navigation(
+        page,year=2008,base='/bluescholars',ui_href='/bluescholars/assets/archive-ui.css',
+        timeline_script_href='/bluescholars/assets/archive-timeline.js',
+        page_years={'/2007/news.html':2008})
+    soup=BeautifulSoup(rendered,'html.parser')
+    control=soup.select_one('.archive-year-global input[type="range"]')
+    assert control and control['value']=='2008'
+    assert soup.select_one('a[href="/bluescholars/2007/news.html?year=2009#shows"]')
+    assert soup.select_one('script[src="/bluescholars/assets/archive-timeline.js"]')
+
 HTML='''<!doctype html><html><head><title>BLUE SCHOLARS</title><base href="https://evil.example/">
 <link rel="stylesheet" href="/site.css"><script>alert(1)</script></head>
 <body class="original-layout"><div id="wm-ipp">Wayback toolbar</div><h1>BLUE SCHOLARS</h1>
@@ -825,12 +852,19 @@ def test_root_is_a_gateway_to_separate_historical_editions(tmp_path):
     assert not root.select_one('.archive-site-card[href="/twitter-prometheusbrown/"][data-start-year="2007"]')
     assert all(card.select_one('.edition-action') for card in root.select('.archive-site-card'))
     assert root.select_one('#archive-year[type="range"][min="2006"][max="2026"]')
+    assert root.select_one('#archive-year.archive-year-global-control')
+    assert root.select_one('.archive-year-home[href="/2007/?year=2007"]')
     assert root.select_one('script[src*="archive-timeline.js"]')
     twitter=(tmp_path/'_site/twitter-prometheusbrown/index.html').read_text()
     assert 'No archived profile captures' in twitter
     assert root.select_one('a.recovery-status')
     assert 'Original Squarespace homepage' in (tmp_path/'_site/2013/index.html').read_text()
     assert all((tmp_path/'_site'/year/'index.html').is_file() for year in ('2007','2009','2013'))
+    for year in ('2007','2009','2013'):
+        edition=BeautifulSoup((tmp_path/'_site'/year/'index.html').read_text(),'html.parser')
+        control=edition.select_one('.archive-year-global input[type="range"]')
+        assert control, f'{year} homepage should have the shared year slider'
+        assert edition.select_one('script[src*="archive-timeline.js"]')
 
 def test_root_edition_cards_use_project_prefix_and_have_compact_responsive_styles(tmp_path):
     fixture_root(tmp_path);s=State(tmp_path)

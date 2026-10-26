@@ -5,7 +5,7 @@ import html
 import json
 from pathlib import Path
 import shutil
-from urllib.parse import unquote,urlsplit
+from urllib.parse import parse_qsl,unquote,urlencode,urlsplit,urlunsplit
 from bs4 import BeautifulSoup
 from .archive import validate_payload
 from .discover import discover_html
@@ -168,6 +168,87 @@ def _write_page(output: Path,path: str,text: str):
     relative=unquote(path.lstrip('/'))
     destination=output/relative if relative.lower().endswith('.html') else output/relative/'index.html'
     destination.parent.mkdir(parents=True,exist_ok=True);destination.write_text(text,encoding='utf-8')
+
+def add_global_year_navigation(text: str,year: int,base: str,ui_href: str,
+                               timeline_script_href: str,page_years: dict[str,int]|None=None) -> str:
+    """Add the shared year control and annotate links to dated local pages."""
+    base=base_path(base);page_years=page_years or {}
+    try: year=int(year)
+    except (TypeError,ValueError): year=2007
+    year=max(2006,min(2026,year))
+    soup=BeautifulSoup(text,'html.parser')
+    if soup.html is None:
+        wrapper=BeautifulSoup('<!doctype html><html><head></head><body></body></html>','html.parser')
+        wrapper.body.extend(list(soup.contents));soup=wrapper
+    if soup.head is None: soup.html.insert(0,soup.new_tag('head'))
+    if soup.body is None: soup.html.append(soup.new_tag('body'))
+    if not soup.select_one('.archive-year-global'):
+        section=soup.new_tag('section',attrs={'class':'archive-year-global','aria-label':'Browse the archive by year','data-default-year':str(year),'data-base-path':base})
+        home=soup.new_tag('a',attrs={'class':'archive-year-global-brand','href':base+'/'})
+        home.string='Blue Scholars archive';section.append(home)
+        label=soup.new_tag('label',attrs={'for':'archive-year-global-control'});label.string='Year';section.append(label)
+        output=soup.new_tag('output',attrs={'id':'archive-year-global-output','for':'archive-year-global-control'});output.string=str(year);section.append(output)
+        control=soup.new_tag('input',attrs={'id':'archive-year-global-control','class':'archive-year-global-control','type':'range','min':'2006','max':'2026','step':'1','value':str(year),'data-default-year':str(year),'aria-label':'Choose a year and open that homepage','aria-valuetext':str(year)})
+        section.append(control)
+        route='/2007/' if year<=2008 else '/2009/' if year<=2012 else '/2013/'
+        open_home=soup.new_tag('a',attrs={'class':'archive-year-home','href':base+route+'?year='+str(year)})
+        open_home.string='Open '+str(year)+' homepage';section.append(open_home)
+        soup.body.insert(0,section)
+    if not soup.head.select_one('link[data-archive-year-styles]'):
+        soup.head.append(soup.new_tag('link',rel='stylesheet',href=ui_href,attrs={'data-archive-year-styles':'true'}))
+    if not soup.head.select_one('script[data-archive-year-script]'):
+        soup.head.append(soup.new_tag('script',src=timeline_script_href,defer='defer',attrs={'data-archive-year-script':'true'}))
+    for anchor in soup.find_all('a',href=True):
+        parts=urlsplit(anchor['href'])
+        if parts.scheme or parts.netloc or not parts.path.startswith(base+'/'):
+            continue
+        local_path=parts.path[len(base):]
+        target_year=page_years.get(local_path)
+        if target_year is None:
+            target_year=page_years.get(local_path.rstrip('/')+'/')
+        if target_year is None: continue
+        query=parse_qsl(parts.query,keep_blank_values=True)
+        if any(key=='year' for key,_ in query): continue
+        query.append(('year',str(target_year)))
+        anchor['href']=urlunsplit(('', '', parts.path,urlencode(query),parts.fragment))
+    return str(soup)
+
+def _default_year_for_path(path: str) -> int:
+    parts=Path(path).parts
+    for part in parts:
+        if len(part)>=4 and part[:4].isdigit() and 2006<=int(part[:4])<=2026:
+            return int(part[:4])
+    defaults={'2007':2007,'2009':2009,'2013':2021,'prometheusbrown':2008,
+        'sabzi':2013,'myspace':2007,'twitter-prometheusbrown':2009,
+        'masslinemedia':2006,'massline-forums':2006,'206proof':2007,'lj':2008,
+        'other-archives':2007}
+    return defaults.get(parts[0],2007) if parts else 2007
+
+def decorate_archive_pages(output: Path,base: str,ui_href: str,timeline_script_href: str,
+                           page_report: list[dict]) -> int:
+    """Install the shared slider on every page except the already interactive hub."""
+    if not timeline_script_href: return 0
+    page_years={}
+    for row in page_report:
+        path=str(row.get('path',''))
+        stamp=str(row.get('actual_capture',''))
+        if path and stamp[:4].isdigit(): page_years[path]=int(stamp[:4])
+    changed=0
+    for path in Path(output).rglob('*.html'):
+        if not path.is_file(): continue
+        relative=path.relative_to(output).as_posix()
+        if relative=='index.html': continue
+        text=path.read_text(encoding='utf-8',errors='replace')
+        if 'class="archive-year-global"' in text or "class='archive-year-global'" in text: continue
+        route='/'+relative.removesuffix('/index.html')
+        if relative.endswith('/index.html'): route+='/'
+        year=page_years.get(route,_default_year_for_path(relative))
+        if relative in ('2007/index.html','2009/index.html','2013/index.html'):
+            year={'2007/index.html':2007,'2009/index.html':2009,'2013/index.html':2021}[relative]
+        updated=add_global_year_navigation(text,year,base,ui_href,timeline_script_href,page_years)
+        if updated!=text:
+            path.write_text(updated,encoding='utf-8');changed+=1
+    return changed
 
 def archive_availability(root: Path, path: str) -> tuple[int, int] | None:
     """Return an archive's observed capture-year bounds, where metadata exists."""
@@ -583,7 +664,7 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
     (output/'assets/archive-ui.css').write_text(ui_text)
     timeline_script=root/'public/archive-timeline.js'
     timeline_script_text=timeline_script.read_text(encoding='utf-8') if timeline_script.is_file() else ''
-    timeline_script_href=base+'/assets/archive-timeline.js?v='+hashlib.sha256(timeline_script_text.encode()).hexdigest()[:16]
+    timeline_script_href=(base+'/assets/archive-timeline.js?v='+hashlib.sha256(timeline_script_text.encode()).hexdigest()[:16]) if timeline_script_text else ''
     if timeline_script_text: (output/'assets/archive-timeline.js').write_text(timeline_script_text,encoding='utf-8')
     # Generated, fixed destinations only. Unknown offsets stay visible rather than guessed.
     from .urls import PAGINATION
@@ -1022,7 +1103,7 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
             edition_text=page_shell(label,body)
             edition_text,_=render_html(edition_text,HOME,render_resources,base,aliases=aliases,ui_stylesheet=ui_href,ui_script=script_href)
             _write_page(output,prefix+'/',edition_text)
-    gateway='<p class="archive-home-intro">Move through the years. Archives appear below only when a dated source shows they existed.</p><section class="archive-timeline" aria-labelledby="archive-year-label"><label id="archive-year-label" for="archive-year">Explore a year</label><div class="archive-year-readout"><output id="archive-year-output" for="archive-year">2007</output><span id="archive-era-summary">The earliest preserved site era</span></div><input id="archive-year" type="range" min="2006" max="2026" step="1" value="2007" aria-label="Select archive year" aria-valuetext="2007"><div class="archive-year-markers" aria-hidden="true"><span>2006</span><span>2010</span><span>2015</span><span>2020</span><span>2026</span></div></section><p id="archive-year-count" class="archive-year-count" aria-live="polite"></p><nav class="archive-site-grid archive-timeline-results" data-year="2007" aria-label="Archives available in the selected year">'
+    gateway='<p class="archive-home-intro">Move through the years. Archives appear below only when a dated source shows they existed.</p><section class="archive-timeline archive-year-global" data-base-path="'+html.escape(base,quote=True)+'" aria-labelledby="archive-year-label"><a class="archive-year-global-brand" href="'+html.escape(base+'/',quote=True)+'">Blue Scholars archive</a><label id="archive-year-label" for="archive-year">Explore a year</label><div class="archive-year-readout"><output id="archive-year-output" for="archive-year">2007</output><span id="archive-era-summary">The earliest preserved site era</span></div><input id="archive-year" class="archive-year-global-control" data-default-year="2007" type="range" min="2006" max="2026" step="1" value="2007" aria-label="Select archive year" aria-valuetext="2007"><div class="archive-year-markers" aria-hidden="true"><span>2006</span><span>2010</span><span>2015</span><span>2020</span><span>2026</span></div><a class="archive-year-home" href="'+base+'/2007/?year=2007">Open 2007 homepage</a></section><p id="archive-year-count" class="archive-year-count" aria-live="polite"></p><nav class="archive-site-grid archive-timeline-results" data-year="2007" aria-label="Archives available in the selected year">'
     editions=(('/2007/','2007','Independent site'),('/2009/','2009','WordPress site'),('/2013/','2013','Squarespace site · first located in 2013'))
     for path,year,label in editions:
         bounds=archive_availability(root,path)
@@ -1095,5 +1176,6 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
     write_json(output/'archive-status/report.json',report)
     missing,_=render_html(page_shell('Page not recovered','<p>This historical page is not included in this restoration.</p><p><a href="/archive-status/">View the recovery inventory</a></p>'),HOME,render_resources,base,aliases=aliases,ui_stylesheet=ui_href,ui_script=script_href)
     (output/'404.html').write_text(missing)
+    decorate_archive_pages(output,base,ui_href,timeline_script_href,page_report)
     (output/'.nojekyll').touch()
     return report

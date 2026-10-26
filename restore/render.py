@@ -10,6 +10,26 @@ from .urls import HOME,TARGET,original_url,identity,is_site,route,base_path,live
 NAV=[('BLOG','/blog/'),('SHOWS','/shows/'),('VIDEO','/video/'),('SHOP','/shop/'),('HOLLER','/holler/')]
 CSP="default-src 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; font-src 'self'; connect-src 'none'; frame-src 'none'; media-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"
 
+def archived_companion_route(url: str,base: str) -> str|None:
+    """Keep links to archived companion sites inside this static restoration."""
+    parts=urlsplit(url);host=(parts.hostname or '').lower().removeprefix('www.')
+    path=parts.path.lower()
+    if host=='masslinemedia.com' or host.endswith('.masslinemedia.com'):
+        route='/massline-forums/' if path.startswith(('/smf','/forum')) or host.startswith(('forum.','forums.')) else '/masslinemedia/'
+    elif host=='prometheusbrown.com' or host.endswith('.prometheusbrown.com'):
+        route='/prometheusbrown/'
+    elif host=='sabzi.co' or host.endswith('.sabzi.co'):
+        route='/sabzi/'
+    elif host=='206proof.com' or host.endswith('.206proof.com'):
+        route='/206proof/'
+    elif host in ('twitter.com','x.com') and path.strip('/').split('/',1)[0]=='prometheusbrown':
+        route='/twitter-prometheusbrown/'
+    elif host=='myspace.com' and path.strip('/').split('/',1)[0] in ('bluescholars','bluescholarsmusic','blue_scholars'):
+        route='/myspace/'
+    else:
+        return None
+    return base+route
+
 class Resolver:
     def __init__(self,resources,base,issues,route_prefix='',aliases=None):
         self.resources=resources;self.base=base_path(base);self.issues=issues
@@ -63,6 +83,10 @@ class Resolver:
             except ValueError:
                 self.issues.append({'type':'unsafe_route','source':url,'url':u})
                 return self.base+'/archive-status/'
+        elif (archive_route:=archived_companion_route(u,self.base)):
+            source_record=self._record(url)
+            capture=str(source_record.get('actual_capture',''))[:4]
+            target=archive_route+('?year='+capture if capture.isdigit() and 2006<=int(capture)<=2026 else '')
         else: target=u
         return target+('#'+fragment if fragment else '')
 

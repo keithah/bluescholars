@@ -5,7 +5,7 @@ import pytest
 from bs4 import BeautifulSoup
 from restore.render import render_html,render_css
 from restore.discover import discover_html
-from restore.build import build,promote,documented_asset_aliases,archive_availability,archive_home_routes,add_global_year_navigation
+from restore.build import build,promote,documented_asset_aliases,archive_availability,archive_home_routes,add_global_year_navigation,blue_scholars_timeline
 from restore.check import check
 from restore.state import State,write_json
 from restore.urls import HOME,TARGET,route,historical_route_prefix,route_capture_hint,livejournal_route
@@ -45,6 +45,20 @@ def test_archive_home_routes_are_exact_and_point_to_oldest_page_by_default(tmp_p
     assert json.loads(toolbar['data-home-routes'])=={'2009':'/prometheusbrown/2009/','2011':'/prometheusbrown/2011/','2013':'/prometheusbrown/2013/'}
     assert soup.select_one('.archive-year-home')['href']=='/bluescholars/prometheusbrown/2011/?year=2011'
 
+def test_blue_scholars_timeline_combines_capture_years_from_all_generations():
+    pages=[
+        {'path':'/2007/','status':'recovered','actual_capture':'20070901000000'},
+        {'path':'/2007/news.html','status':'recovered','actual_capture':'20080601000000'},
+        {'path':'/2009/','status':'recovered','actual_capture':'20100101000000'},
+        {'path':'/2009/blog/story/','status':'recovered','actual_capture':'20120601000000'},
+        {'path':'/2013/blog/story/','status':'recovered','actual_capture':'20140601000000'},
+        {'path':'/2013/','status':'recovered','actual_capture':'20210529010817'},
+        {'path':'/lj/posts/story.html','status':'recovered','actual_capture':'20100601000000'},
+    ]
+    routes,years=blue_scholars_timeline(pages)
+    assert years==[2007,2008,2010,2012,2014,2021]
+    assert routes=={2007:'/2007/',2008:'/2007/',2010:'/2009/',2012:'/2009/',2014:'/2013/',2021:'/2013/'}
+
 def test_206proof_defaults_to_its_oldest_recovered_site_home(tmp_path):
     old=tmp_path/'206proof/2007/site/index.html'
     old.parent.mkdir(parents=True);old.write_text('2007 site home')
@@ -56,9 +70,11 @@ def test_206proof_defaults_to_its_oldest_recovered_site_home(tmp_path):
 def test_timeline_uses_exact_year_routes_and_keeps_default_archive_cards_visible():
     script=(Path(__file__).resolve().parents[1]/'public/archive-timeline.js').read_text()
     assert 'dataset.homeRoutes' in script
-    assert 'Object.hasOwn(cardRoutes, String(year))' in script
+    assert 'dataset.activityYears' in script
+    assert 'closestRoute(cardRoutes, year)' in script
+    assert 'year < best' in script
     assert 'yearSelected = true' in script
-    assert 'routesFor(link)[String(slider.value)]' in script
+    assert 'selected.year' in script
 
 def test_global_year_navigation_tracks_dated_links_and_era_homepages():
     page='<html><head></head><body><a href="/bluescholars/2007/news.html#shows">News</a></body></html>'
@@ -96,6 +112,38 @@ def test_global_year_navigation_allows_local_homepage_preview_frame():
     assert "script-src 'self'" in policy
     assert "frame-src 'self'" in policy
     assert "connect-src 'none'" in policy
+
+def test_links_to_archived_companion_sites_stay_inside_the_restoration():
+    page=('<html><body><a href="https://www.masslinemedia.com/smf/?board=1.0">Forum</a>'
+          '<a href="http://myspace.com/BlueScholars">MySpace</a>'
+          '<a href="https://prometheusbrown.com/">Prometheus</a>'
+          '<a href="https://sabzi.co/">Sabzi</a>'
+          '<a href="http://206proof.com/">206Proof</a>'
+          '<a href="https://example.org/about">Other site</a></body></html>')
+    rendered,_=render_html(page,HOME,{},'/bluescholars','/2013')
+    soup=BeautifulSoup(rendered,'html.parser')
+    assert soup.find('a',string='Forum')['href']=='/bluescholars/massline-forums/'
+    assert soup.find('a',string='MySpace')['href']=='/bluescholars/myspace/'
+    assert soup.find('a',string='Prometheus')['href']=='/bluescholars/prometheusbrown/'
+    assert soup.find('a',string='Sabzi')['href']=='/bluescholars/sabzi/'
+    assert soup.find('a',string='206Proof')['href']=='/bluescholars/206proof/'
+    assert soup.find('a',string='Other site')['href']=='https://example.org/about'
+    dated,_=render_html(page,HOME,{HOME:{'kind':'html','local_path':'/2013/index.html','actual_capture':'20140601000000'}},'/bluescholars','/2013')
+    dated_soup=BeautifulSoup(dated,'html.parser')
+    assert dated_soup.find('a',string='Prometheus')['href']=='/bluescholars/prometheusbrown/?year=2014'
+
+def test_global_year_navigation_marks_capture_years_and_uses_combined_routes():
+    page='<html><head></head><body><h1>Post</h1></body></html>'
+    rendered=add_global_year_navigation(
+        page,year=2011,base='/bluescholars',ui_href='/ui.css',timeline_script_href='/timeline.js',
+        home_routes={2007:'/2007/',2010:'/2009/',2013:'/2013/'},activity_years=[2007,2010,2013])
+    soup=BeautifulSoup(rendered,'html.parser')
+    toolbar=soup.select_one('.archive-year-global')
+    assert json.loads(toolbar['data-home-routes'])=={'2007':'/2007/','2010':'/2009/','2013':'/2013/'}
+    assert json.loads(toolbar['data-activity-years'])==[2007,2010,2013]
+    assert [int(mark['data-year']) for mark in toolbar.select('.archive-year-marker')]==[2007,2010,2013]
+    assert toolbar.select_one('input[type="range"]')['min']=='2007'
+    assert toolbar.select_one('input[type="range"]')['max']=='2013'
 
 HTML='''<!doctype html><html><head><title>BLUE SCHOLARS</title><base href="https://evil.example/">
 <link rel="stylesheet" href="/site.css"><script>alert(1)</script></head>
@@ -867,32 +915,41 @@ def test_legacy_article_navigation_has_a_local_edition_index(tmp_path):
         assert index.find('a',href=base+'/2009/blog/2010/01/saved-post/')
         assert check(tmp_path/'_site',base)==[]
 
-def test_root_is_a_gateway_to_separate_historical_editions(tmp_path):
+def test_root_combines_blue_scholars_editions_on_one_activity_timeline(tmp_path):
     fixture_root(tmp_path);s=State(tmp_path)
     write_json(tmp_path/'source/massline.json',{'resources':{}})
     (tmp_path/'public/archive-ui.css').write_text((Path(__file__).resolve().parents[1]/'public/archive-ui.css').read_text())
     (tmp_path/'public/archive-timeline.js').write_text((Path(__file__).resolve().parents[1]/'public/archive-timeline.js').read_text())
-    add_raw(s,HOME,'html',b'<html><head><title>BLUE SCHOLARS</title></head><body><h1>Original Squarespace homepage</h1></body></html>')
+    add_raw(s,HOME,'html',b'<html><head><title>BLUE SCHOLARS</title></head><body><h1>Original Squarespace homepage</h1><a href="https://prometheusbrown.com/">Prometheus Brown</a></body></html>')
     s.data['resources'][HOME]['actual_capture']='20210529010817';s.save()
     promote(tmp_path,reviewed=True)
     report=build(tmp_path,tmp_path/'_site','')
     root=BeautifulSoup((tmp_path/'_site/index.html').read_text(),'html.parser')
     assert root.find('h1',string='Blue Scholars archive')
-    assert {a.get('href') for a in root.select('a.timeline-edition-card')}=={'/2007/','/2009/','/2013/'}
-    cards=root.select('a.timeline-edition-card')
-    assert [card.select_one('.archive-site-title').get_text(strip=True).split(' · ')[0] for card in cards]==['2007','2009','2013']
-    assert all(card.get('data-available-years') and card.get('data-home-routes') for card in cards)
-    assert all(card.select_one('.edition-action') for card in cards)
+    cards=root.select('a.blue-scholars-site-card')
+    assert len(cards)==1
+    assert cards[0].select_one('.archive-site-title').get_text(strip=True)=='Blue Scholars website'
+    assert json.loads(cards[0]['data-home-routes'])=={'2021':'/2013/'}
+    assert cards[0]['href']=='/2013/?year=2021'
+    assert root.select_one('.archive-timeline[data-activity-years="[2021]"] #archive-year[min="2021"][max="2021"]')
+    assert root.select_one('.archive-year-markers [data-year="2021"]')
+    preview=root.select_one('#archive-year-home-preview')
+    assert preview and preview['src']=='/2013/?year=2021&archive-embed=1'
+    shared_routes={"2021":"/2013/"}
+    for generation in ('2007','2009','2013'):
+        page=BeautifulSoup((tmp_path/'_site'/generation/'index.html').read_text(),'html.parser')
+        toolbar=page.select_one('.archive-year-global')
+        assert json.loads(toolbar['data-home-routes'])==shared_routes
+        assert json.loads(toolbar['data-activity-years'])==[2021]
+    squarespace=BeautifulSoup((tmp_path/'_site/2013/index.html').read_text(),'html.parser')
+    assert squarespace.find('a',string='Prometheus Brown')['href']=='/prometheusbrown/?year=2021'
     assert root.select_one('a.archive-site-card[href="/lj/"]') is None
-    assert {a.get('href') for a in root.select('.timeline-edition-card')} == {
-        '/2007/', '/2009/', '/2013/'
-    }
     assert root.select_one('.archive-site-card[data-available-years]')
     assert not root.select_one('.archive-site-card[href="/twitter-prometheusbrown/"][data-available-years]')
     assert all(card.select_one('.edition-action') for card in root.select('.archive-site-card'))
-    assert root.select_one('#archive-year[type="range"][min="2006"][max="2026"]')
+    assert root.select_one('#archive-year[type="range"][min="2021"][max="2021"]')
     assert root.select_one('#archive-year.archive-year-global-control')
-    assert root.select_one('.archive-year-home[href="/2007/?year=2007"]')
+    assert root.select_one('.archive-year-home[href="/2013/?year=2021"]')
     assert root.select_one('script[src*="archive-timeline.js"]')
     twitter=(tmp_path/'_site/twitter-prometheusbrown/index.html').read_text()
     assert 'No archived profile captures' in twitter
@@ -905,7 +962,7 @@ def test_root_is_a_gateway_to_separate_historical_editions(tmp_path):
         assert control, f'{year} homepage should have the shared year slider'
         assert edition.select_one('script[src*="archive-timeline.js"]')
 
-def test_root_edition_cards_use_project_prefix_and_have_compact_responsive_styles(tmp_path):
+def test_single_root_archive_card_uses_project_prefix_and_compact_responsive_styles(tmp_path):
     fixture_root(tmp_path);s=State(tmp_path)
     (tmp_path/'public/archive-ui.css').write_text((Path(__file__).resolve().parents[1]/'public/archive-ui.css').read_text())
     add_raw(s,HOME,'html',b'<html><head><title>BLUE SCHOLARS</title></head><body><h1>Original Squarespace homepage</h1></body></html>')
@@ -913,8 +970,8 @@ def test_root_edition_cards_use_project_prefix_and_have_compact_responsive_style
     promote(tmp_path,reviewed=True)
     build(tmp_path,tmp_path/'_candidate','/bluescholars',candidate=True)
     root=BeautifulSoup((tmp_path/'_candidate/index.html').read_text(),'html.parser')
-    assert {card['href'] for card in root.select('a.timeline-edition-card')}=={
-        '/bluescholars/2007/','/bluescholars/2009/','/bluescholars/2013/'}
+    assert [card['href'] for card in root.select('a.blue-scholars-site-card')]==[
+        '/bluescholars/2013/?year=2021']
     styles=(tmp_path/'_candidate/assets/archive-ui.css').read_text()
     assert '.edition-grid' in styles and '@media' in styles
     assert '.archive-year-global{gap:7px;padding:8px 10px;font-size:11px;flex-wrap:wrap}' in styles

@@ -4,6 +4,22 @@
   const routesFor = (node) => {
     try { return JSON.parse(node?.dataset.homeRoutes || "{}"); } catch (_) { return {}; }
   };
+  const activityYearsFor = (node, routes) => {
+    try {
+      const years = JSON.parse(node?.dataset.activityYears || "[]");
+      if (Array.isArray(years) && years.length) return years.map(Number).filter(validYear).sort((a, b) => a - b);
+    } catch (_) {}
+    return Object.keys(routes || {}).map(Number).filter(validYear).sort((a, b) => a - b);
+  };
+  const closestYear = (value, years) => years.reduce((best, year) =>
+    Math.abs(year - value) < Math.abs(best - value) ||
+    (Math.abs(year - value) === Math.abs(best - value) && year < best) ? year : best, years[0]);
+  const closestRoute = (routes, year) => {
+    const keys = Object.keys(routes || {}).map(Number).filter(validYear).sort((a, b) => a - b);
+    if (!keys.length) return null;
+    const selected = closestYear(Number(year), keys);
+    return { year: selected, route: routes[String(selected)] };
+  };
   const query = new URLSearchParams(location.search);
   const yearFromUrl = query.get("year");
   const embeddedHomepage = query.get("archive-embed") === "1";
@@ -12,7 +28,8 @@
   const globalSliders = [...document.querySelectorAll(".archive-year-global-control")];
 
   if (slider) {
-    if (validYear(yearFromUrl)) slider.value = yearFromUrl;
+    const activityYears = activityYearsFor(slider.closest(".archive-timeline"), routesFor(slider.closest(".archive-timeline")));
+    if (activityYears.length) slider.value = String(closestYear(validYear(yearFromUrl) ? Number(yearFromUrl) : Number(slider.value), activityYears));
     let yearSelected = validYear(yearFromUrl);
     const yearOut = document.getElementById("archive-year-output");
     const summary = document.getElementById("archive-era-summary");
@@ -32,19 +49,21 @@
       let siteCount = 0;
       for (const card of cards) {
         const cardRoutes = routesFor(card);
-        const show = !yearSelected || Object.hasOwn(cardRoutes, String(year));
+        const show = !yearSelected || Object.keys(cardRoutes).length > 0;
         card.hidden = !show;
         if (show && yearSelected) {
-          const target = new URL(basePath + cardRoutes[String(year)], location.href);
-          if (target.origin === location.origin) {
-            target.searchParams.set("year", String(year));
+          const selected = closestRoute(cardRoutes, year);
+          if (selected) {
+            const target = new URL(basePath + selected.route, location.href);
+            if (target.origin !== location.origin) continue;
+            target.searchParams.set("year", String(selected.year));
             card.href = target.pathname + target.search + target.hash;
           }
         }
         if (show && !card.classList.contains("timeline-edition-card")) siteCount++;
       }
       if (summary) summary.textContent = !yearSelected
-        ? "All recovered archives are listed · move the slider to browse a year"
+        ? "Blue Scholars site activity · move the slider to an archived update"
         : year < 2009
           ? "The early Blue Scholars era · Twitter is not yet in the recovered record"
           : year === 2009
@@ -63,23 +82,44 @@
         }
       }
       if (count) count.textContent = !yearSelected
-        ? siteCount + " related archive" + (siteCount === 1 ? "" : "s") + " listed. Move the slider to filter by year."
-        : siteCount + " related archive" + (siteCount === 1 ? "" : "s") + " with dated material in " + year + ".";
+        ? siteCount + " related archive" + (siteCount === 1 ? "" : "s") + " listed. Move the timeline to browse Blue Scholars captures."
+        : siteCount + " related archive" + (siteCount === 1 ? "" : "s") + " listed; links open the closest available capture to " + year + ".";
       document.querySelectorAll(".archive-timeline-results").forEach(node => { node.dataset.year = String(year); });
+      const preview = document.getElementById("archive-year-home-preview");
+      const selected = closestRoute(homeRoutes, year);
+      if (preview && selected) {
+        const target = new URL(basePath + selected.route, location.href);
+        target.searchParams.set("year", String(selected.year));
+        target.searchParams.set("archive-embed", "1");
+        if (preview.src !== target.href) preview.src = target.href;
+        preview.title = "Blue Scholars homepage, " + selected.year;
+      }
     }
-    slider.addEventListener("input", () => { yearSelected = true; updateCards(); });
+    slider.addEventListener("input", () => {
+      if (activityYears.length) slider.value = String(closestYear(Number(slider.value), activityYears));
+      yearSelected = true;
+      updateCards();
+    });
     document.querySelectorAll(".archive-timeline-results a.archive-site-card").forEach((link) => {
       link.addEventListener("click", () => {
-        const route = yearSelected ? routesFor(link)[String(slider.value)] : null;
-        if (route) {
+        const selected = yearSelected ? closestRoute(routesFor(link), Number(slider.value)) : null;
+        if (selected) {
           const timeline = slider.closest(".archive-timeline");
-          const target = new URL((timeline?.dataset.basePath || "") + route, location.href);
+          const target = new URL((timeline?.dataset.basePath || "") + selected.route, location.href);
           if (target.origin === location.origin) {
-            target.searchParams.set("year", String(slider.value));
+            target.searchParams.set("year", String(selected.year));
             link.href = target.pathname + target.search + target.hash;
           }
         }
       });
+    });
+    document.getElementById("archive-year-home-preview")?.addEventListener("load", (event) => {
+      try {
+        const page = event.currentTarget.contentDocument;
+        if (!page) return;
+        page.documentElement.classList.add("archive-year-embedded");
+        for (const link of page.querySelectorAll("a[href]")) if (link.target !== "_blank") link.target = "_top";
+      } catch (_) {}
     });
     updateCards();
   }
@@ -89,10 +129,14 @@
     const output = section.querySelector("output");
     const homeLink = section.querySelector(".archive-year-home");
     const homeRoutes = routesFor(section);
-    const initialYear = validYear(yearFromUrl) ? Number(yearFromUrl) : Number(control.dataset.defaultYear || control.value);
+    const activityYears = activityYearsFor(section, homeRoutes);
+    const rawInitialYear = validYear(yearFromUrl) ? Number(yearFromUrl) : Number(control.dataset.defaultYear || control.value);
+    const initialYear = activityYears.length ? closestYear(rawInitialYear, activityYears) : rawInitialYear;
     control.value = String(initialYear);
     function updateGlobalControl() {
-      const year = Number(control.value);
+      const selectedYear = Number(control.value);
+      const year = activityYears.length ? closestYear(selectedYear, activityYears) : selectedYear;
+      control.value = String(year);
       output.value = String(year);
       output.textContent = String(year);
       control.setAttribute("aria-valuetext", String(year));

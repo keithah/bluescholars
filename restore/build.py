@@ -171,13 +171,18 @@ def _write_page(output: Path,path: str,text: str):
 
 def add_global_year_navigation(text: str,year: int,base: str,ui_href: str,
                                timeline_script_href: str,page_years: dict[str,int]|None=None,
-                               home_routes: dict[int,str]|None=None) -> str:
+                               home_routes: dict[int,str]|None=None,
+                               activity_years: list[int]|None=None) -> str:
     """Add the shared year control and annotate links to dated local pages."""
     base=base_path(base);page_years=page_years or {}
     try: year=int(year)
     except (TypeError,ValueError): year=2007
     year=max(2006,min(2026,year))
-    home_routes=home_routes or {y:('/2007/' if y<=2008 else '/2009/' if y<=2012 else '/2013/') for y in range(2006,2022)}
+    if home_routes is None:
+        home_routes={y:('/2007/' if y<=2008 else '/2009/' if y<=2012 else '/2013/') for y in range(2006,2022)}
+    activity_years=sorted({int(value) for value in (activity_years or home_routes) if str(value).isdigit() and 2006<=int(value)<=2026})
+    if not activity_years and home_routes: activity_years=sorted(home_routes)
+    if activity_years: year=min(activity_years,key=lambda value:(abs(value-year),value))
     soup=BeautifulSoup(text,'html.parser')
     if soup.html is None:
         wrapper=BeautifulSoup('<!doctype html><html><head></head><body></body></html>','html.parser')
@@ -190,13 +195,15 @@ def add_global_year_navigation(text: str,year: int,base: str,ui_href: str,
         home.string='Blue Scholars archive';section.append(home)
         label=soup.new_tag('label',attrs={'for':'archive-year-global-control'});label.string='Year';section.append(label)
         output=soup.new_tag('output',attrs={'id':'archive-year-global-output','for':'archive-year-global-control'});output.string=str(year);section.append(output)
-        control=soup.new_tag('input',attrs={'id':'archive-year-global-control','class':'archive-year-global-control','type':'range','min':'2006','max':'2026','step':'1','value':str(year),'data-default-year':str(year),'aria-label':'Choose a year and open that homepage','aria-valuetext':str(year)})
+        control=soup.new_tag('input',attrs={'id':'archive-year-global-control','class':'archive-year-global-control','type':'range','min':str(min(activity_years,default=year)),'max':str(max(activity_years,default=year)),'step':'1','value':str(year),'data-default-year':str(year),'aria-label':'Choose a year and open that homepage','aria-valuetext':str(year)})
         section.append(control)
+        section['data-activity-years']=json.dumps(activity_years,separators=(',',':'))
+        section.append(_timeline_markers(soup,activity_years))
         route=home_routes.get(year)
         open_home=soup.new_tag('a',attrs={'class':'archive-year-home','data-home-routes':json.dumps({str(k):v for k,v in sorted(home_routes.items())},separators=(',',':'))})
-        if route: open_home['href']=base+route+'?year='+str(year)
+        if route and activity_years: open_home['href']=base+route+'?year='+str(year)
         else: open_home['aria-disabled']='true'
-        open_home.string='Open '+str(year)+' homepage' if route else 'No homepage capture for '+str(year)
+        open_home.string='Open '+str(year)+' homepage' if route and activity_years else 'No homepage capture for '+str(year)
         section['data-home-routes']=json.dumps({str(k):v for k,v in sorted(home_routes.items())},separators=(',',':'))
         section.append(open_home)
         soup.body.insert(0,section)
@@ -226,6 +233,53 @@ def add_global_year_navigation(text: str,year: int,base: str,ui_href: str,
         anchor['href']=urlunsplit(('', '', parts.path,urlencode(query),parts.fragment))
     return str(soup)
 
+def _timeline_markers(soup,years: list[int]):
+    years=sorted(set(years))
+    if not years: return soup.new_tag('div',attrs={'class':'archive-year-markers','aria-hidden':'true'})
+    markers=soup.new_tag('div',attrs={'class':'archive-year-markers','aria-hidden':'true'})
+    lo,hi=years[0],years[-1]
+    for year in years:
+        position=50 if lo==hi else round((year-lo)*100/(hi-lo),2)
+        markers.append(soup.new_tag('span',attrs={'class':'archive-year-marker','data-year':str(year),
+            'title':'Archived activity in '+str(year),'style':'left:'+str(position)+'%'}))
+    return markers
+
+def blue_scholars_timeline(page_report: list[dict]) -> tuple[dict[int,str],list[int]]:
+    """Combine capture years from the three Blue Scholars platform generations."""
+    official=('/2007/','/2009/','/2013/')
+    activity=set();homes=set()
+    for row in page_report:
+        path=str(row.get('path',''))
+        stamp=str(row.get('actual_capture',''))
+        if not any(path.startswith(prefix) for prefix in official) or not stamp[:4].isdigit(): continue
+        year=int(stamp[:4])
+        if not 2006<=year<=2026: continue
+        activity.add(year)
+        if path in official and row.get('status') in ('recovered','derived_from_capture'):
+            homes.add(path)
+    years=sorted(activity)
+    routes={}
+    era_start={'/2007/':2007,'/2009/':2009,'/2013/':2013}
+    for year in years:
+        if homes:
+            preferred='/2007/' if year<=2008 else '/2009/' if year<=2012 else '/2013/'
+            path=preferred if preferred in homes else min(homes,key=lambda candidate:(abs(era_start[candidate]-year),era_start[candidate]))
+            routes[year]=path
+    return routes,years
+
+def routes_for_activity(home_routes: dict[int,str],years: list[int]) -> dict[int,str]:
+    if not home_routes: return {}
+    available=sorted(home_routes)
+    return {year:home_routes[min(available,key=lambda candidate:(abs(candidate-year),candidate))] for year in years}
+
+def archive_activity_years(page_report: list[dict],archive_path: str,home_routes: dict[int,str]) -> list[int]:
+    prefix=archive_path.rstrip('/')+'/'
+    years={int(str(row.get('actual_capture',''))[:4]) for row in page_report
+           if str(row.get('path','')).startswith(prefix)
+           and str(row.get('actual_capture',''))[:4].isdigit()
+           and 2006<=int(str(row.get('actual_capture',''))[:4])<=2026}
+    return sorted(years or home_routes)
+
 def _default_year_for_path(path: str) -> int:
     parts=Path(path).parts
     for part in parts:
@@ -248,6 +302,7 @@ def decorate_archive_pages(output: Path,base: str,ui_href: str,timeline_script_h
         if path and stamp[:4].isdigit(): page_years[path]=int(stamp[:4])
     changed=0
     home_routes_by_archive={}
+    blue_routes,blue_activity_years=blue_scholars_timeline(page_report)
     for path in Path(output).rglob('*.html'):
         if not path.is_file(): continue
         relative=path.relative_to(output).as_posix()
@@ -265,9 +320,15 @@ def decorate_archive_pages(output: Path,base: str,ui_href: str,timeline_script_h
             segment=route.strip('/').split('/',1)[0]
             archive_path='/'+segment+'/' if segment else '/'
         if archive_path not in home_routes_by_archive:
-            home_routes_by_archive[archive_path]=archive_home_routes(output,archive_path)
+            if archive_path in ('/2007/','/2009/','/2013/'):
+                home_routes_by_archive[archive_path]=blue_routes
+            else:
+                home_routes_by_archive[archive_path]=archive_home_routes(output,archive_path)
         home_routes=home_routes_by_archive[archive_path]
-        updated=add_global_year_navigation(text,year,base,ui_href,timeline_script_href,page_years,home_routes)
+        activity_years=blue_activity_years if archive_path in ('/2007/','/2009/','/2013/') else archive_activity_years(page_report,archive_path,home_routes)
+        if archive_path not in ('/2007/','/2009/','/2013/'):
+            home_routes=routes_for_activity(home_routes,activity_years)
+        updated=add_global_year_navigation(text,year,base,ui_href,timeline_script_href,page_years,home_routes,activity_years)
         if updated!=text:
             path.write_text(updated,encoding='utf-8');changed+=1
     return changed
@@ -1181,16 +1242,23 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
             edition_text=page_shell(label,body)
             edition_text,_=render_html(edition_text,HOME,render_resources,base,aliases=aliases,ui_stylesheet=ui_href,ui_script=script_href)
             _write_page(output,prefix+'/',edition_text)
-    blue_routes={**archive_home_routes(output,'/2007/'),**archive_home_routes(output,'/2009/'),**archive_home_routes(output,'/2013/')}
+    blue_routes,blue_activity_years=blue_scholars_timeline(page_report)
+    default_year=blue_activity_years[0] if blue_activity_years else min(blue_routes,default=2007)
+    default_route=blue_routes.get(default_year)
     blue_route_json=html.escape(json.dumps({str(k):v for k,v in sorted(blue_routes.items())},separators=(',',':')),quote=True)
-    gateway='<p class="archive-home-intro">Move through the years. Archives appear below only when a dated source shows they existed.</p><section class="archive-timeline archive-year-global" data-home-routes="'+blue_route_json+'" data-base-path="'+html.escape(base,quote=True)+'" aria-labelledby="archive-year-label"><a class="archive-year-global-brand" href="'+html.escape(base+'/',quote=True)+'">Blue Scholars archive</a><label id="archive-year-label" for="archive-year">Explore a year</label><div class="archive-year-readout"><output id="archive-year-output" for="archive-year">2007</output><span id="archive-era-summary">The earliest preserved site era</span></div><input id="archive-year" class="archive-year-global-control" data-default-year="2007" type="range" min="2006" max="2026" step="1" value="2007" aria-label="Select archive year" aria-valuetext="2007"><div class="archive-year-markers" aria-hidden="true"><span>2006</span><span>2010</span><span>2015</span><span>2020</span><span>2026</span></div><a class="archive-year-home" href="'+base+'/2007/?year=2007">Open 2007 homepage</a></section><p id="archive-year-count" class="archive-year-count" aria-live="polite"></p><nav class="archive-site-grid archive-timeline-results" data-year="2007" aria-label="Archives available in the selected year">'
-    editions=(('/2007/','2007','Independent site'),('/2009/','2009','WordPress site'),('/2013/','2013','Squarespace site · first located in 2013'))
-    for path,year,label in editions:
-        home_routes=archive_home_routes(output,path)
-        if home_routes:
-            route_json=html.escape(json.dumps({str(k):v for k,v in sorted(home_routes.items())},separators=(',',':')),quote=True)
-            available=','.join(map(str,sorted(home_routes)))
-            gateway+='<a class="archive-site-card timeline-edition-card" data-available-years="'+available+'" data-home-routes="'+route_json+'" href="'+base+home_routes[min(home_routes)]+'"><span class="archive-site-title">'+year+' · '+html.escape(label)+'</span><span class="archive-site-detail">Separate Blue Scholars website edition · '+str(min(home_routes))+('–'+str(max(home_routes)) if max(home_routes)!=min(home_routes) else '')+'</span><span class="edition-action">Browse this edition <span aria-hidden="true">↗</span></span></a>'
+    activity_json=html.escape(json.dumps(blue_activity_years,separators=(',',':')),quote=True)
+    markers=str(_timeline_markers(BeautifulSoup('', 'html.parser'),blue_activity_years))
+    activity_range=blue_activity_years or sorted(blue_routes)
+    range_min=min(activity_range,default=default_year);range_max=max(activity_range,default=default_year)
+    home_link=('<a class="archive-year-home" href="'+base+default_route+'?year='+str(default_year)+'">Open '+str(default_year)+' homepage</a>'
+               if default_route else '<a class="archive-year-home" aria-disabled="true">No homepage capture recovered</a>')
+    preview=('<iframe id="archive-year-home-preview" class="archive-year-home-preview" title="Blue Scholars homepage, '+str(default_year)+'" loading="eager" referrerpolicy="no-referrer" src="'+base+default_route+'?year='+str(default_year)+'&amp;archive-embed=1"></iframe>'
+             if default_route else '<p class="archive-year-home-missing" role="status">No Blue Scholars homepage capture was recovered. The timeline still marks dates found on preserved pages.</p>')
+    gateway='<p class="archive-home-intro">One Blue Scholars website across the recovered captures. Move the timeline to the closest year with archived activity.</p><section class="archive-timeline archive-year-global" data-home-routes="'+blue_route_json+'" data-activity-years="'+activity_json+'" data-base-path="'+html.escape(base,quote=True)+'" aria-labelledby="archive-year-label"><a class="archive-year-global-brand" href="'+html.escape(base+'/',quote=True)+'">Blue Scholars archive</a><label id="archive-year-label" for="archive-year">Explore a year</label><div class="archive-year-readout"><output id="archive-year-output" for="archive-year">'+str(default_year)+'</output><span id="archive-era-summary">Blue Scholars archive activity</span></div><input id="archive-year" class="archive-year-global-control" data-default-year="'+str(default_year)+'" type="range" min="'+str(range_min)+'" max="'+str(range_max)+'" step="1" value="'+str(default_year)+'" aria-label="Select an archived year" aria-valuetext="'+str(default_year)+'">'+markers+home_link+'</section><p id="archive-year-count" class="archive-year-count" aria-live="polite"></p>'+preview+'<nav class="archive-site-grid archive-timeline-results" data-year="'+str(default_year)+'" aria-label="Archives available in the selected year">'
+    if blue_routes:
+        route_json=html.escape(json.dumps({str(k):v for k,v in sorted(blue_routes.items())},separators=(',',':')),quote=True)
+        available=','.join(map(str,blue_activity_years))
+        gateway+='<a class="archive-site-card blue-scholars-site-card" data-available-years="'+available+'" data-home-routes="'+route_json+'" href="'+base+default_route+'?year='+str(default_year)+'"><span class="archive-site-title">Blue Scholars website</span><span class="archive-site-detail">One site across the recovered 2007–2021 platform changes</span><span class="edition-action">Open selected homepage <span aria-hidden="true">↗</span></span></a>'
     satellite_report=build_artist_sites(root,output,base,candidate)
     massline_report=build_massline_archive(root,output,base,candidate)
     myspace_report=build_myspace_archive(root,output,base)

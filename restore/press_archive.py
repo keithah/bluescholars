@@ -271,6 +271,18 @@ def build_press_archive(root: Path, output: Path, base: str, stylesheet: str) ->
         # recovery index instead of leaving a broken path on this host.
         for anchor in doc.select("a[href]"):
             href = anchor.get("href", "")
+            href_parts = urlsplit(href)
+            press_site_path = href_parts.path[len(base):] if base and href_parts.path.startswith(base + "/") else href_parts.path
+            if (not href_parts.netloc and press_site_path.startswith("/blog/")):
+                # A few captured 2011 press articles retained absolute-path
+                # links to the band's earlier blog. The surviving local
+                # collection is grouped under the 2013 edition.
+                candidate = "/2013" + press_site_path
+                if (output / candidate.lstrip("/") / "index.html").is_file():
+                    anchor["href"] = base + candidate + ("/" if not candidate.endswith("/") else "")
+                else:
+                    anchor["href"] = base + "/archive-status/"
+                continue
             target_url = original_url(href, source_url)
             if not target_url or not is_site(target_url):
                 continue
@@ -363,9 +375,15 @@ def build_press_archive(root: Path, output: Path, base: str, stylesheet: str) ->
             pages = record.get("source_pages", [])
             page_links = []
             for source in pages:
-                group = group_by_url.get(_group_key(source.get("page_url", "")))
-                page_links.append(_link(base, group["route"] + "/", source.get("page_url", "Browse source")) if group
-                                  else f'<a href="{_esc(source.get("page_url", ""))}" rel="noopener noreferrer">{_esc(source.get("page_url", ""))}</a>')
+                page_url = source.get("page_url", "") if isinstance(source, dict) else ""
+                group = group_by_url.get(_group_key(page_url)) if page_url.startswith(("http://", "https://")) else None
+                if group:
+                    page_links.append(_link(base, group["route"] + "/", page_url))
+                elif page_url.startswith(("http://", "https://")):
+                    page_links.append(f'<a href="{_esc(page_url)}" rel="noopener noreferrer">{_esc(page_url)}</a>')
+                else:
+                    note = page_url or "Source-page URL not recorded"
+                    page_links.append(f'<span>{_esc(note)}</span>')
             body_html += (f'<tr><td><a href="{_esc(record.get("replay_url", ""))}" rel="noopener noreferrer">{_esc(_date(record.get("timestamp", "")))}</a></td>'
                           f'<td>{_esc(record.get("source_article_title", ""))}<br>{"<br>".join(page_links)}<br>{_esc(record.get("photographer_credit", ""))}</td>'
                           f'<td>{_esc(record.get("relevance_status", ""))}<br>{_esc(record.get("relevance_note", record.get("review_note", "")))}<br>{_esc(record.get("rights_status", "rights status unrecorded"))}<br>CDX digest <code>{_esc(record.get("cdx_digest", ""))}</code></td></tr>')

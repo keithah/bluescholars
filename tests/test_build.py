@@ -583,6 +583,8 @@ def test_candidate_makes_recovered_press_pages_images_and_audio_browseable(tmp_p
         <link rel="stylesheet" href="https://press.example/theme.css"></head>
         <body><h1>Blue Scholars interview</h1><p>Recovered press text.</p>
         <img src="https://images.example/blue-scholars.png" alt="Band portrait">
+        <a href="https://bluescholars.com/blog/">Band blog</a>
+        <a href="https://www.bluescholars.com/blog/cinemetropolis/">Cinemetropolis</a>
         <form action="https://press.example/send"><button>Send</button></form></body></html>'''
     page_two=b'<html><head><title>Blue Scholars interview</title></head><body><p>Later capture.</p></body></html>'
     image_body=b'\x89PNG\r\n\x1a\npress fixture'
@@ -618,7 +620,8 @@ def test_candidate_makes_recovered_press_pages_images_and_audio_browseable(tmp_p
             'cdx_mime':'image/png','cdx_digest':'image-digest','cdx_sha1_verified':True,
             'bytes':len(image_body),'sha256':image_sha,'raw_path':image_path,
             'source_article_title':'Blue Scholars interview','photographer_credit':'Press photographer',
-            'rights_status':'unreviewed','source_pages':[{'page_url':page_url,'timestamp':'20200102030405'}]}}
+            'rights_status':'unreviewed','source_pages':[{'page_url':page_url,'timestamp':'20200102030405'},
+                                                          {'page_url':'explicit focused recovery URL','timestamp':None}]}}
     })
     write_json(tmp_path/'recovery/other-archives/press-media/manifest.json',{
         'source_page':page_url,'source_media_url':media_url,'archive':'Internet Archive Wayback',
@@ -643,8 +646,15 @@ def test_candidate_makes_recovered_press_pages_images_and_audio_browseable(tmp_p
                  if 'Recovered press text.' in path.read_text())
     assert 'Recovered press text.' in capture and 'window.evil' not in capture and 'press.example/theme.css' not in capture
     assert '/bluescholars/other-archives/press/assets/'+image_sha+'.png' in capture
+    assert 'href="/bluescholars/blog/"' not in capture
+    assert 'href="/bluescholars/2013/blog/"' in capture
+    assert 'href="/bluescholars/archive-status/"' in capture
     image_index=(tmp_path/'_candidate/other-archives/press/images/index.html').read_text()
     assert 'Press photographer' in image_index and 'unreviewed' in image_index
+    image_detail=next(path.read_text() for path in (tmp_path/'_candidate/other-archives/press/images').rglob('index.html')
+                      if 'Source and credit' in path.read_text())
+    assert 'explicit focused recovery URL</span>' in image_detail
+    assert 'href="explicit focused recovery URL"' not in image_detail
     audio_index=(tmp_path/'_candidate/other-archives/press/audio/index.html').read_text()
     assert 'redistribution rights not established' in audio_index
     audio_detail=next(path.read_text() for path in (tmp_path/'_candidate/other-archives/press/audio').rglob('index.html')

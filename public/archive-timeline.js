@@ -2,7 +2,10 @@
 (() => {
   const editionHome = (year) => year <= 2008 ? "/2007/" : year <= 2012 ? "/2009/" : "/2013/";
   const validYear = (value) => /^\d{4}$/.test(String(value)) && Number(value) >= 2006 && Number(value) <= 2026;
-  const yearFromUrl = new URLSearchParams(location.search).get("year");
+  const query = new URLSearchParams(location.search);
+  const yearFromUrl = query.get("year");
+  const embeddedHomepage = query.get("archive-embed") === "1";
+  if (embeddedHomepage) document.documentElement.classList.add("archive-year-embedded");
   const slider = document.getElementById("archive-year");
   const globalSliders = [...document.querySelectorAll(".archive-year-global-control")];
 
@@ -69,10 +72,60 @@
       homeLink.href = basePath + editionHome(year) + "?year=" + year;
       homeLink.textContent = "Open " + year + " homepage";
     }
-    control.addEventListener("input", updateGlobalControl);
+    function showHomepageBelowSlider() {
+      if (embeddedHomepage || control.id === "archive-year") return null;
+      let preview = document.getElementById("archive-year-home-preview");
+      if (!preview) {
+        preview = document.createElement("iframe");
+        preview.id = "archive-year-home-preview";
+        preview.className = "archive-year-home-preview";
+        preview.title = "Selected year homepage";
+        preview.loading = "eager";
+        preview.referrerPolicy = "no-referrer";
+        preview.addEventListener("load", () => {
+          try {
+            const page = preview.contentDocument;
+            if (!page) return;
+            page.documentElement.classList.add("archive-year-embedded");
+            for (const link of page.querySelectorAll("a[href]")) {
+              if (link.target !== "_blank") link.target = "_top";
+            }
+          } catch (_) {}
+        });
+        const toolbar = control.closest(".archive-year-global");
+        for (const node of [...document.body.children]) {
+          if (node === toolbar) continue;
+          node.hidden = true;
+          node.setAttribute("aria-hidden", "true");
+        }
+        toolbar.insertAdjacentElement("afterend", preview);
+      }
+      const url = new URL(homeLink.href, location.href);
+      url.searchParams.set("archive-embed", "1");
+      preview.title = "Selected year homepage, " + control.value;
+      preview.src = url.href;
+      return preview;
+    }
+    control.addEventListener("input", () => {
+      updateGlobalControl();
+      showHomepageBelowSlider();
+    });
     control.addEventListener("change", () => {
-      if (control.id !== "archive-year") location.href = homeLink.href;
+      if (control.id === "archive-year" || embeddedHomepage) return;
+      const preview = document.getElementById("archive-year-home-preview");
+      if (!preview) {
+        location.href = homeLink.href;
+        return;
+      }
+      const target = new URL(homeLink.href, location.href);
+      const current = location.pathname + location.search;
+      const next = target.pathname + target.search;
+      if (current !== next) history.pushState({ archiveYearPreview: true }, "", next);
     });
     updateGlobalControl();
   }
+
+  window.addEventListener("popstate", () => {
+    if (document.getElementById("archive-year-home-preview")) location.reload();
+  });
 })();

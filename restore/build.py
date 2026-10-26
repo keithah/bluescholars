@@ -198,6 +198,13 @@ def add_global_year_navigation(text: str,year: int,base: str,ui_href: str,
         soup.head.append(soup.new_tag('link',rel='stylesheet',href=ui_href,attrs={'data-archive-year-styles':'true'}))
     if not soup.head.select_one('script[data-archive-year-script]'):
         soup.head.append(soup.new_tag('script',src=timeline_script_href,defer='defer',attrs={'data-archive-year-script':'true'}))
+    policy=soup.head.find('meta',attrs={'http-equiv':'Content-Security-Policy'})
+    if policy:
+        directives=[part.strip() for part in str(policy.get('content','')).split(';') if part.strip()]
+        for name in ('script-src','frame-src'):
+            directives=[part for part in directives if part.split(None,1)[0].lower()!=name]
+            directives.append(name+" 'self'")
+        policy['content']='; '.join(directives)
     for anchor in soup.find_all('a',href=True):
         parts=urlsplit(anchor['href'])
         if parts.scheme or parts.netloc or not parts.path.startswith(base+'/'):

@@ -56,7 +56,18 @@ def test_global_year_navigation_preserves_an_existing_selected_year():
     control=soup.select_one('.archive-year-global input[type="range"]')
     assert control and control['value']=='2008'
     assert soup.select_one('a[href="/bluescholars/2007/news.html?year=2009#shows"]')
-    assert soup.select_one('script[src="/bluescholars/assets/archive-timeline.js"]')
+
+def test_global_year_navigation_allows_local_homepage_preview_frame():
+    page=("<html><head><meta http-equiv='Content-Security-Policy' "
+          "content=\"default-src 'none'; script-src 'none'; frame-src 'none'; "
+          "connect-src 'none'; img-src 'self'\"></head><body><main>Article</main></body></html>")
+    rendered=add_global_year_navigation(
+        page,year=2012,base='/bluescholars',ui_href='/bluescholars/assets/archive-ui.css',
+        timeline_script_href='/bluescholars/assets/archive-timeline.js')
+    policy=BeautifulSoup(rendered,'html.parser').select_one('meta[http-equiv="Content-Security-Policy"]')['content']
+    assert "script-src 'self'" in policy
+    assert "frame-src 'self'" in policy
+    assert "connect-src 'none'" in policy
 
 HTML='''<!doctype html><html><head><title>BLUE SCHOLARS</title><base href="https://evil.example/">
 <link rel="stylesheet" href="/site.css"><script>alert(1)</script></head>
@@ -878,6 +889,7 @@ def test_root_edition_cards_use_project_prefix_and_have_compact_responsive_style
         '/bluescholars/2007/','/bluescholars/2009/','/bluescholars/2013/'}
     styles=(tmp_path/'_candidate/assets/archive-ui.css').read_text()
     assert '.edition-grid' in styles and '@media' in styles
+    assert '.archive-year-global{gap:7px;padding:8px 10px;font-size:11px;flex-wrap:wrap}' in styles
 
 def test_archive_ui_stylesheet_url_is_content_versioned(tmp_path):
     fixture_root(tmp_path);s=State(tmp_path)

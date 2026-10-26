@@ -5,7 +5,7 @@ import pytest
 from bs4 import BeautifulSoup
 from restore.render import render_html,render_css
 from restore.discover import discover_html
-from restore.build import build,promote,documented_asset_aliases
+from restore.build import build,promote,documented_asset_aliases,archive_availability
 from restore.check import check
 from restore.state import State,write_json
 from restore.urls import HOME,TARGET,route,historical_route_prefix,route_capture_hint,livejournal_route
@@ -15,6 +15,22 @@ RES={
  'https://cdn.example/photo.jpg':{'kind':'image','local_path':'/assets/photo.jpg'},
  'https://cdn.example/bg.png':{'kind':'image','local_path':'/assets/bg.png'},
 }
+
+def test_archive_year_ranges_follow_observed_capture_manifests(tmp_path):
+    artist=tmp_path/'recovery/artist-sites/manifest.json'
+    artist.parent.mkdir(parents=True)
+    artist.write_text(json.dumps({'editions':{
+        'prometheusbrown.com/2008':{'resources':{'http://prometheusbrown.com/':{'kind':'html','status':'recovered','actual_capture':'20080701000000'}}},
+        'prometheusbrown.com/2019':{'resources':{'https://prometheusbrown.com/':{'kind':'html','status':'recovered','actual_capture':'20191001000000'}}},
+    }}))
+    twitter=tmp_path/'recovery/twitter-prometheusbrown/manifest.json'
+    twitter.parent.mkdir(parents=True)
+    twitter.write_text(json.dumps({'captures':[
+        {'timestamp':'20090725010529','content_classification':'profile_content','fetch':{'status':'recovered'}},
+        {'timestamp':'20221206172415','content_classification':'platform_error','fetch':{'status':'recovered'}},
+    ]}))
+    assert archive_availability(tmp_path,'/prometheusbrown/') == (2008,2019)
+    assert archive_availability(tmp_path,'/twitter-prometheusbrown/') == (2009,2009)
 HTML='''<!doctype html><html><head><title>BLUE SCHOLARS</title><base href="https://evil.example/">
 <link rel="stylesheet" href="/site.css"><script>alert(1)</script></head>
 <body class="original-layout"><div id="wm-ipp">Wayback toolbar</div><h1>BLUE SCHOLARS</h1>
@@ -788,23 +804,28 @@ def test_legacy_article_navigation_has_a_local_edition_index(tmp_path):
 def test_root_is_a_gateway_to_separate_historical_editions(tmp_path):
     fixture_root(tmp_path);s=State(tmp_path)
     write_json(tmp_path/'source/massline.json',{'resources':{}})
+    (tmp_path/'public/archive-ui.css').write_text((Path(__file__).resolve().parents[1]/'public/archive-ui.css').read_text())
+    (tmp_path/'public/archive-timeline.js').write_text((Path(__file__).resolve().parents[1]/'public/archive-timeline.js').read_text())
     add_raw(s,HOME,'html',b'<html><head><title>BLUE SCHOLARS</title></head><body><h1>Original Squarespace homepage</h1></body></html>')
     s.data['resources'][HOME]['actual_capture']='20210529010817';s.save()
     promote(tmp_path,reviewed=True)
     report=build(tmp_path,tmp_path/'_site','')
     root=BeautifulSoup((tmp_path/'_site/index.html').read_text(),'html.parser')
     assert root.find('h1',string='Blue Scholars archive')
-    assert {a.get('href') for a in root.select('a.edition')}=={'/2007/','/2009/','/2013/'}
-    cards=root.select('a.edition-card')
-    assert [card.select_one('.edition-year').get_text(strip=True) for card in cards]==['2007','2009','2013']
-    assert [card.select_one('.edition-era').get_text(strip=True) for card in cards]==[
-        'Independent site','WordPress site','Squarespace site · first located in 2013']
+    assert {a.get('href') for a in root.select('a.timeline-edition-card')}=={'/2007/','/2009/','/2013/'}
+    cards=root.select('a.timeline-edition-card')
+    assert [card.select_one('.archive-site-title').get_text(strip=True).split(' · ')[0] for card in cards]==['2007','2009','2013']
+    assert all(card.get('data-start-year') and card.get('data-end-year') for card in cards)
     assert all(card.select_one('.edition-action') for card in cards)
-    assert root.select_one('a.lj-archive[href="/lj/"]')
-    assert {a.get('href') for a in root.select('.archive-site-card')} == {
-        '/prometheusbrown/', '/sabzi/', '/myspace/', '/twitter-prometheusbrown/', '/masslinemedia/', '/massline-forums/', '/lj/'
+    assert root.select_one('a.archive-site-card[href="/lj/"]') is None
+    assert {a.get('href') for a in root.select('.timeline-edition-card')} == {
+        '/2007/', '/2009/', '/2013/'
     }
+    assert root.select_one('.archive-site-card[data-start-year="2009"]')
+    assert not root.select_one('.archive-site-card[href="/twitter-prometheusbrown/"][data-start-year="2007"]')
     assert all(card.select_one('.edition-action') for card in root.select('.archive-site-card'))
+    assert root.select_one('#archive-year[type="range"][min="2006"][max="2026"]')
+    assert root.select_one('script[src*="archive-timeline.js"]')
     twitter=(tmp_path/'_site/twitter-prometheusbrown/index.html').read_text()
     assert 'No archived profile captures' in twitter
     assert root.select_one('a.recovery-status')
@@ -819,7 +840,7 @@ def test_root_edition_cards_use_project_prefix_and_have_compact_responsive_style
     promote(tmp_path,reviewed=True)
     build(tmp_path,tmp_path/'_candidate','/bluescholars',candidate=True)
     root=BeautifulSoup((tmp_path/'_candidate/index.html').read_text(),'html.parser')
-    assert {card['href'] for card in root.select('a.edition-card')}=={
+    assert {card['href'] for card in root.select('a.timeline-edition-card')}=={
         '/bluescholars/2007/','/bluescholars/2009/','/bluescholars/2013/'}
     styles=(tmp_path/'_candidate/assets/archive-ui.css').read_text()
     assert '.edition-grid' in styles and '@media' in styles

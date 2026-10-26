@@ -20,6 +20,7 @@ def test_twitter_archive_builds_local_dated_pages_without_remote_dependencies(tm
         '<script src="https://twitter.com/live.js"></script>'
         '<link rel="stylesheet" href="https://assets.twitter.com/old.css"></head>'
         '<body><div id="content"><div class="tweet" href="/prometheusbrown/status/1">Oof wit ya boy!</div>'
+        '<a id="more" rel="next" class="round more" href="/prometheusbrown?max_id=1&amp;page=2&amp;twttr=true">more</a>'
         '<img src="https://example.org/avatar.jpg" srcset="https://example.org/avatar2.jpg 2x" alt="Geo"></div></body></html>'
     )
     asset_root = manifest.parent / "assets"
@@ -51,6 +52,15 @@ def test_twitter_archive_builds_local_dated_pages_without_remote_dependencies(tm
     assert page.select_one('link[rel="stylesheet"][href="/bluescholars/twitter-prometheusbrown/assets/old.css"]')
     assert "https://example.org/missing.png" not in (output / "twitter-prometheusbrown/assets/old.css").read_text()
     assert index.select_one(f'a[href="/bluescholars/twitter-prometheusbrown/captures/{capture}/"]')
+    assert report["tweet_entries"] == 1
+    assert report["pagination_gaps"] == 1
+    more = page.select_one("a.twitter-pagination-index")
+    assert more and more["href"] == "/bluescholars/twitter-prometheusbrown/tweets/?capture=20090725010529"
+    assert more["data-archive-href"] == "https://web.archive.org/web/20090725010529/http://twitter.com/prometheusbrown?max_id=1&page=2&twttr=true"
+    tweet_index = BeautifulSoup((output / "twitter-prometheusbrown/tweets/index.html").read_text(), "html.parser")
+    assert "Oof wit ya boy!" in tweet_index.get_text(" ", strip=True)
+    assert tweet_index.select_one('script[src="/bluescholars/twitter-prometheusbrown/tweets/search.js"]')
+    assert not tweet_index.find("script", string=True)
     assert report["recovered_capture_pages"] == 1
     (output / "index.html").write_text('<a href="/bluescholars/twitter-prometheusbrown/">Twitter archive</a>')
     assert check(output, "/bluescholars") == []

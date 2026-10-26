@@ -21,6 +21,7 @@ from .proof206 import build_206proof_archive
 from .twitter import build_twitter_archive
 from .redact import public_credential_fields, redact_public_credentials
 from .press_archive import build_press_archive
+from .twitter import build_twitter_archive
 
 CORE=[('/', 'Homepage'),('/blog/','Blog'),('/shows/','Shows'),('/video/','Video'),('/shop/','Shop'),('/holler/','Holler')]
 FALLBACK_UI='''.archive-restoration-notice,.archive-gap-page {font:16px/1.6 system-ui,sans-serif}
@@ -167,6 +168,101 @@ def _write_page(output: Path,path: str,text: str):
     relative=unquote(path.lstrip('/'))
     destination=output/relative if relative.lower().endswith('.html') else output/relative/'index.html'
     destination.parent.mkdir(parents=True,exist_ok=True);destination.write_text(text,encoding='utf-8')
+
+def archive_availability(root: Path, path: str) -> tuple[int, int] | None:
+    """Return an archive's observed capture-year bounds, where metadata exists."""
+    root=Path(root)
+    years=[]
+    def add(value):
+        stamp=str(value or '')
+        if len(stamp)>=4 and stamp[:4].isdigit(): years.append(int(stamp[:4]))
+    def walk(value):
+        if isinstance(value,dict):
+            for key,item in value.items():
+                if key in ('timestamp','actual_capture','capture') and isinstance(item,(str,int)): add(item)
+                else: walk(item)
+        elif isinstance(value,list):
+            for item in value: walk(item)
+    if path in ('/2007/','/2009/','/2013/'):
+        prefix={'/2007/':'/2007','/2009/':'/2009','/2013/':'/2013'}[path]
+        for entry in (root/'_candidate/archive-status/report.json',root/'docs/recovery-report/GAP_REPORT.json',root/'recovery/state.json'):
+            if entry.is_file():
+                try:
+                    report=json.loads(entry.read_text())
+                    if entry.name=='state.json':
+                        for item in report.get('resources',{}).values():
+                            url=str(item.get('url',''))
+                            if item.get('status')!='recovered': continue
+                            stamp=str(item.get('actual_capture',''))
+                            if prefix=='/2007' and ('bluescholars.com/artistedition' in url or stamp<'20090101000000'): add(stamp)
+                            elif prefix=='/2009' and 'bluescholars.com/blog/' in url and '2009'<=stamp[:4]<='2012': add(stamp)
+                            elif prefix=='/2013' and 'bluescholars.com' in url and '2013'<=stamp[:4]<='2021': add(stamp)
+                    else:
+                        for item in report.get('pages',[]):
+                            if str(item.get('path','')).startswith(prefix+'/') and item.get('status') in ('recovered','derived_from_capture'):
+                                add(item.get('actual_capture'))
+                except (OSError,ValueError): pass
+        site_inventory=root/'recovery/wayback-versions/manifest.json'
+        if site_inventory.is_file():
+            try:
+                for record in json.loads(site_inventory.read_text()).get('revisions',{}).values():
+                    url=str(record.get('original_url','')); stamp=str(record.get('timestamp',''))
+                    if prefix=='/2007' and ('bluescholars.com/artistedition' in url or ('bluescholars.com' in url and stamp<'20090101000000')): add(stamp)
+                    elif prefix=='/2009' and 'bluescholars.com/blog/' in url and '2009'<=stamp[:4]<='2012': add(stamp)
+                    elif prefix=='/2013' and ('2013'<=stamp[:4]<='2021'): add(stamp)
+            except (OSError,ValueError): pass
+        if path=='/2007/':
+            add(2007)
+        defaults={'/2007/':(2007,2007),'/2009/':(2009,2012),'/2013/':(2013,2021)}
+        bounds=(min(years),max(years)) if years else defaults[path]
+        if path=='/2007/': return max(2007,bounds[0]),min(2008,bounds[1])
+        if path=='/2009/': return max(2009,bounds[0]),min(2012,bounds[1])
+        if path=='/2013/': return max(2013,bounds[0]),min(2021,bounds[1])
+        return bounds
+    if path in ('/prometheusbrown/','/sabzi/'):
+        manifest=root/'recovery/artist-sites/manifest.json'
+        if manifest.is_file():
+            data=json.loads(manifest.read_text())
+            domain='prometheusbrown.com' if 'prometheusbrown' in path else 'sabzi.co'
+            for key,site in data.get('editions',{}).items():
+                if not key.startswith(domain+'/'): continue
+                for record in site.get('resources',{}).values():
+                    if record.get('kind')=='html' and record.get('status')=='recovered': add(record.get('actual_capture'))
+    elif path=='/myspace/':
+        p=root/'recovery/myspace-blue-scholars/index/acquisition.json'
+        if p.is_file():
+            for item in json.loads(p.read_text()).get('records',[]):
+                if item.get('status')=='recovered': add(item.get('actual_capture') or item.get('timestamp'))
+    elif path=='/twitter-prometheusbrown/':
+        p=root/'recovery/twitter-prometheusbrown/manifest.json'
+        if p.is_file():
+            for item in json.loads(p.read_text()).get('captures',[]):
+                if item.get('content_classification')=='profile_content' and item.get('fetch',{}).get('status')=='recovered': add(item.get('timestamp'))
+    elif path in ('/masslinemedia/','/massline-forums/'):
+        p=root/'recovery/massline/manifest.json'
+        if p.is_file():
+            data=json.loads(p.read_text())
+            for item in data.get('resource_variants',[]):
+                if item.get('kind')=='html': add(item.get('timestamp'))
+            for item in data.get('homepage_variants',[]): add(item.get('timestamp'))
+            for item in data.get('resources',{}).values():
+                if item.get('kind')=='html': add(item.get('timestamp'))
+    elif path=='/206proof/':
+        p=root/'recovery/206proof/manifest.json'
+        if p.is_file():
+            data=json.loads(p.read_text())
+            for item in data.get('resources',{}).values(): add(item.get('timestamp'))
+            for edition in data.get('editions',{}).values(): add(edition.get('capture'))
+    elif path=='/other-archives/press/':
+        p=root/'recovery/other-archives/press-articles/manifest.json'
+        if p.is_file():
+            for item in json.loads(p.read_text()).get('page_captures',{}).values(): add(item.get('timestamp'))
+    elif path=='/lj/':
+        state=root/'recovery/state.json'
+        if state.is_file():
+            for item in json.loads(state.read_text()).get('resources',{}).values():
+                if 'livejournal.com' in str(item.get('url','')) and item.get('status')=='recovered': add(item.get('actual_capture'))
+    return (min(years),max(years)) if years else None
 
 def edition_prefix(url: str, record: dict) -> str:
     """Place observed pages under the historical platform generation they belong to."""
@@ -485,6 +581,10 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
     ui_text=ui.read_text() if ui.exists() else FALLBACK_UI
     ui_href=base+'/assets/archive-ui.css?v='+hashlib.sha256(ui_text.encode()).hexdigest()[:16]
     (output/'assets/archive-ui.css').write_text(ui_text)
+    timeline_script=root/'public/archive-timeline.js'
+    timeline_script_text=timeline_script.read_text(encoding='utf-8') if timeline_script.is_file() else ''
+    timeline_script_href=base+'/assets/archive-timeline.js?v='+hashlib.sha256(timeline_script_text.encode()).hexdigest()[:16]
+    if timeline_script_text: (output/'assets/archive-timeline.js').write_text(timeline_script_text,encoding='utf-8')
     # Generated, fixed destinations only. Unknown offsets stay visible rather than guessed.
     from .urls import PAGINATION
     mappings={offset:base+'/2013'+path for offset,path in PAGINATION.items() if '/2013'+path in pages}
@@ -922,12 +1022,12 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
             edition_text=page_shell(label,body)
             edition_text,_=render_html(edition_text,HOME,render_resources,base,aliases=aliases,ui_stylesheet=ui_href,ui_script=script_href)
             _write_page(output,prefix+'/',edition_text)
-    gateway='<p class="archive-home-intro">Choose a preserved website generation. Each edition is built from its own dated source material; gaps remain marked.</p><nav class="edition-grid" aria-label="Preserved website generations">'
-    editions=(('/2007/','2007','Independent site'),
-              ('/2009/','2009','WordPress site'),
-              ('/2013/','2013','Squarespace site · first located in 2013'))
-    for prefix,year,era in editions:
-        gateway+='<a class="edition edition-card" href="'+base+prefix+'"><span class="edition-year">'+year+'</span><span class="edition-era">'+html.escape(era)+'</span><span class="edition-action">Explore this edition <span aria-hidden="true">↗</span></span></a>'
+    gateway='<p class="archive-home-intro">Move through the years. Archives appear below only when a dated source shows they existed.</p><section class="archive-timeline" aria-labelledby="archive-year-label"><label id="archive-year-label" for="archive-year">Explore a year</label><div class="archive-year-readout"><output id="archive-year-output" for="archive-year">2007</output><span id="archive-era-summary">The earliest preserved site era</span></div><input id="archive-year" type="range" min="2006" max="2026" step="1" value="2007" aria-label="Select archive year" aria-valuetext="2007"><div class="archive-year-markers" aria-hidden="true"><span>2006</span><span>2010</span><span>2015</span><span>2020</span><span>2026</span></div></section><p id="archive-year-count" class="archive-year-count" aria-live="polite"></p><nav class="archive-site-grid archive-timeline-results" data-year="2007" aria-label="Archives available in the selected year">'
+    editions=(('/2007/','2007','Independent site'),('/2009/','2009','WordPress site'),('/2013/','2013','Squarespace site · first located in 2013'))
+    for path,year,label in editions:
+        bounds=archive_availability(root,path)
+        if bounds:
+            gateway+='<a class="archive-site-card timeline-edition-card" data-start-year="'+str(bounds[0])+'" data-end-year="'+str(bounds[1])+'" href="'+base+path+'"><span class="archive-site-title">'+year+' · '+html.escape(label)+'</span><span class="archive-site-detail">Separate Blue Scholars website edition · '+str(bounds[0])+('–'+str(bounds[1]) if bounds[1]!=bounds[0] else '')+'</span><span class="edition-action">Browse this edition <span aria-hidden="true">↗</span></span></a>'
     satellite_report=build_artist_sites(root,output,base,candidate)
     massline_report=build_massline_archive(root,output,base,candidate)
     myspace_report=build_myspace_archive(root,output,base)
@@ -935,7 +1035,7 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
     twitter_report=build_twitter_archive(root,output,base)
     community_media_items=build_community_media(root,output,base,render_resources,aliases,ui_href,script_href)
     press_archive_report=build_press_archive(root,output,base,ui_href)
-    gateway+='</nav><h2 class="archive-sites-heading">More recovered sites</h2><p class="archive-sites-intro">Explore the artists, community, and social pages connected to Blue Scholars.</p><nav class="archive-site-grid" aria-label="Other recovered sites">'
+    gateway+='</nav><h2 class="archive-sites-heading">Other captured editions</h2><p class="archive-sites-intro">The slider follows capture dates: entries appear for years where preserved material exists. Select a year to browse.</p><nav class="archive-site-grid archive-timeline-results" data-year="2007" aria-label="Other archives available in the selected year">'
     related_sites=[
         ('/prometheusbrown/','Prometheus Brown','Artist site editions'),
         ('/sabzi/','Sabzi','Artist site editions'),
@@ -952,13 +1052,17 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
     related_sites.append(('/lj/','Blue Scholars LiveJournal','Recovered journal posts'))
     for path,title,detail in related_sites:
         extra=' lj-archive' if path=='/lj/' else ''
-        gateway+='<a class="archive-site-card'+extra+'" href="'+base+path+'"><span class="archive-site-title">'+html.escape(title)+'</span><span class="archive-site-detail">'+html.escape(detail)+'</span><span class="edition-action">Browse archive <span aria-hidden="true">↗</span></span></a>'
+        bounds=archive_availability(root,path)
+        if not bounds: continue
+        start,end=bounds
+        gateway+='<a class="archive-site-card timeline-related-card'+extra+'" data-start-year="'+str(start)+'" data-end-year="'+str(end)+'" href="'+base+path+'"><span class="archive-site-title">'+html.escape(title)+'</span><span class="archive-site-detail">'+html.escape(detail)+' · '+str(start)+('–'+str(end) if end!=start else '')+'</span><span class="edition-action">Browse archive <span aria-hidden="true">↗</span></span></a>'
     gateway+='</nav><nav class="archive-home-links" aria-label="Archive information">'
     if community_media_items:
         gateway+='<a href="'+base+'/community-media/">Supplemental community media <span aria-hidden="true">↗</span></a>'
     gateway+='<a class="recovery-status" href="'+base+'/archive-status/">Recovery status and source gaps <span aria-hidden="true">↗</span></a></nav>'
     hub=page_shell('Blue Scholars archive',gateway).replace('<main class="archive-gap-page">','<main class="archive-gap-page archive-home">')
-    hub=hub.replace('</head>','<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="'+ui_href+'"></head>')
+    timeline_tag='<script src="'+timeline_script_href+'" defer></script>' if timeline_script_text else ''
+    hub=hub.replace('</head>','<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="'+ui_href+'">'+timeline_tag+'</head>')
     _write_page(output,'/',hub)
     # Deduplicate identical findings without suppressing which page referenced a gap.
     issues=list({json.dumps(i,sort_keys=True):i for i in issues}.values())

@@ -976,6 +976,11 @@ def test_single_root_archive_card_uses_project_prefix_and_compact_responsive_sty
     assert '.edition-grid' in styles and '@media' in styles
     assert '.archive-year-global{gap:7px;padding:8px 10px;font-size:11px;flex-wrap:wrap}' in styles
 
+def test_unified_archive_landing_heading_and_copy_fit_mobile_width():
+    styles=(Path(__file__).resolve().parents[1]/'public/archive-ui.css').read_text()
+    assert '.archive-home h1{max-width:100%;font-size:clamp(36px,10vw,46px);overflow-wrap:anywhere}' in styles
+    assert '.archive-home-intro,.archive-sites-intro,.archive-year-count{overflow-wrap:anywhere}' in styles
+
 def test_archive_ui_stylesheet_url_is_content_versioned(tmp_path):
     fixture_root(tmp_path);s=State(tmp_path)
     css=(Path(__file__).resolve().parents[1]/'public/archive-ui.css').read_text()

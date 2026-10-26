@@ -59,5 +59,6 @@
 @media(max-width:760px){.archive-site-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.archive-site-card{min-height:148px;padding:16px}.archive-home .archive-sites-heading{margin-top:48px}}
 @media(max-width:480px){.archive-site-grid{grid-template-columns:1fr}.archive-site-card{min-height:132px}}
 @media(max-width:560px){.archive-year-global{gap:7px;padding:8px 10px;font-size:11px;flex-wrap:wrap}.archive-year-global-brand{max-width:88px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.archive-year-global-control{min-width:72px;width:100%;flex:1 1 100%}.archive-year-global output{font-size:15px}.archive-year-home{max-width:92px;text-align:right}}
+@media(max-width:560px){.archive-home h1{max-width:100%;font-size:clamp(36px,10vw,46px);overflow-wrap:anywhere}.archive-home-intro,.archive-sites-intro,.archive-year-count{overflow-wrap:anywhere}}
 @media(prefers-reduced-motion:reduce){.edition-card,.archive-site-card{transition:none}.edition-card:hover,.archive-site-card:hover{transform:none}}
 @media(max-width:600px){.archive-gap-page{margin-top:40px;padding-left:20px;padding-right:20px}.archive-restoration-notice{padding:10px 12px;font-size:11px}.archive-navigation nav{max-width:170px}.archive-gap-page .archive-lead{font-size:18px}}

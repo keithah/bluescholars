@@ -140,6 +140,14 @@
       output.value = String(year);
       output.textContent = String(year);
       control.setAttribute("aria-valuetext", String(year));
+      const min = Number(control.min || year);
+      const max = Number(control.max || year);
+      const progress = max === min ? 100 : ((year - min) / (max - min)) * 100;
+      control.closest(".archive-year-slider")?.style.setProperty("--timeline-progress", `${progress}%`);
+      section.querySelectorAll(".archive-year-marker").forEach((marker) => {
+        if (Number(marker.dataset.year) === year) marker.setAttribute("aria-current", "true");
+        else marker.removeAttribute("aria-current");
+      });
       const basePath = section.dataset.basePath || "";
       const route = homeRoutes[String(year)];
       if (route) {

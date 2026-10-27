@@ -144,6 +144,9 @@ def test_global_year_navigation_marks_capture_years_and_uses_combined_routes():
     marks=toolbar.select('.archive-year-marker')
     assert [int(mark['data-year']) for mark in marks]==[2007,2010,2013]
     assert all(mark.name=='button' and mark.get('type')=='button' and mark.get('aria-label') for mark in marks)
+    slider=toolbar.select_one('.archive-year-slider')
+    assert slider.select_one('input[type="range"]') is not None
+    assert slider.select('.archive-year-marker')
     assert "querySelectorAll('.archive-year-marker')" in (Path(__file__).resolve().parents[1]/'public/archive-timeline.js').read_text()
     assert toolbar.select_one('input[type="range"]')['min']=='2007'
     assert toolbar.select_one('input[type="range"]')['max']=='2013'
@@ -918,7 +921,7 @@ def test_legacy_article_navigation_has_a_local_edition_index(tmp_path):
         assert index.find('a',href=base+'/2009/blog/2010/01/saved-post/')
         assert check(tmp_path/'_site',base)==[]
 
-def test_root_combines_blue_scholars_editions_on_one_activity_timeline(tmp_path):
+def test_root_is_card_only_and_archive_pages_share_blue_scholars_activity_timeline(tmp_path):
     fixture_root(tmp_path);s=State(tmp_path)
     write_json(tmp_path/'source/massline.json',{'resources':{}})
     (tmp_path/'public/archive-ui.css').write_text((Path(__file__).resolve().parents[1]/'public/archive-ui.css').read_text())
@@ -931,13 +934,14 @@ def test_root_combines_blue_scholars_editions_on_one_activity_timeline(tmp_path)
     assert root.find('h1',string='Blue Scholars archive')
     cards=root.select('a.blue-scholars-site-card')
     assert len(cards)==1
-    assert cards[0].select_one('.archive-site-title').get_text(strip=True)=='Blue Scholars website'
+    assert cards[0].select_one('.archive-site-title').get_text(strip=True)=='Blue Scholars homepage'
     assert json.loads(cards[0]['data-home-routes'])=={'2021':'/2013/'}
     assert cards[0]['href']=='/2013/?year=2021'
-    assert root.select_one('.archive-timeline[data-activity-years="[2021]"] #archive-year[min="2021"][max="2021"]')
-    assert root.select_one('.archive-year-markers [data-year="2021"]')
     assert root.select_one('a.blue-scholars-site-card[href="/2013/?year=2021"]')
-    assert not root.select_one('#archive-year-home-preview')
+    assert not root.select_one('.archive-year-global')
+    assert not root.select_one('input[type="range"]')
+    assert not root.select_one('.archive-year-marker')
+    assert 'archive-timeline.js' not in root.decode()
     shared_routes={"2021":"/2013/"}
     for generation in ('2007','2009','2013'):
         page=BeautifulSoup((tmp_path/'_site'/generation/'index.html').read_text(),'html.parser')
@@ -950,10 +954,6 @@ def test_root_combines_blue_scholars_editions_on_one_activity_timeline(tmp_path)
     assert root.select_one('.archive-site-card[data-available-years]')
     assert not root.select_one('.archive-site-card[href="/twitter-prometheusbrown/"][data-available-years]')
     assert all(card.select_one('.edition-action') for card in root.select('.archive-site-card'))
-    assert root.select_one('#archive-year[type="range"][min="2021"][max="2021"]')
-    assert root.select_one('#archive-year.archive-year-global-control')
-    assert root.select_one('.archive-year-home[href="/2013/?year=2021"]')
-    assert root.select_one('script[src*="archive-timeline.js"]')
     twitter=(tmp_path/'_site/twitter-prometheusbrown/index.html').read_text()
     assert 'No archived profile captures' in twitter
     assert root.select_one('a.recovery-status')
@@ -977,7 +977,7 @@ def test_single_root_archive_card_uses_project_prefix_and_compact_responsive_sty
         '/bluescholars/2013/?year=2021']
     styles=(tmp_path/'_candidate/assets/archive-ui.css').read_text()
     assert '.edition-grid' in styles and '@media' in styles
-    assert '.archive-year-global{gap:7px;padding:8px 10px;font-size:11px;flex-wrap:wrap}' in styles
+    assert '.archive-year-global .archive-year-slider{position:relative' in styles
 
 def test_unified_archive_landing_heading_and_copy_fit_mobile_width():
     styles=(Path(__file__).resolve().parents[1]/'public/archive-ui.css').read_text()

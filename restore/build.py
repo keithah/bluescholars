@@ -196,9 +196,11 @@ def add_global_year_navigation(text: str,year: int,base: str,ui_href: str,
         label=soup.new_tag('label',attrs={'for':'archive-year-global-control'});label.string='Year';section.append(label)
         output=soup.new_tag('output',attrs={'id':'archive-year-global-output','for':'archive-year-global-control'});output.string=str(year);section.append(output)
         control=soup.new_tag('input',attrs={'id':'archive-year-global-control','class':'archive-year-global-control','type':'range','min':str(min(activity_years,default=year)),'max':str(max(activity_years,default=year)),'step':'1','value':str(year),'data-default-year':str(year),'aria-label':'Choose a year and open that homepage','aria-valuetext':str(year)})
-        section.append(control)
         section['data-activity-years']=json.dumps(activity_years,separators=(',',':'))
-        section.append(_timeline_markers(soup,activity_years))
+        slider=soup.new_tag('div',attrs={'class':'archive-year-slider'})
+        slider.append(control)
+        slider.append(_timeline_markers(soup,activity_years))
+        section.append(slider)
         route=home_routes.get(year)
         open_home=soup.new_tag('a',attrs={'class':'archive-year-home','data-home-routes':json.dumps({str(k):v for k,v in sorted(home_routes.items())},separators=(',',':'))})
         if route and activity_years: open_home['href']=base+route+'?year='+str(year)
@@ -1246,18 +1248,11 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
     blue_routes,blue_activity_years=blue_scholars_timeline(page_report)
     default_year=blue_activity_years[0] if blue_activity_years else min(blue_routes,default=2007)
     default_route=blue_routes.get(default_year)
-    blue_route_json=html.escape(json.dumps({str(k):v for k,v in sorted(blue_routes.items())},separators=(',',':')),quote=True)
-    activity_json=html.escape(json.dumps(blue_activity_years,separators=(',',':')),quote=True)
-    markers=str(_timeline_markers(BeautifulSoup('', 'html.parser'),blue_activity_years))
-    activity_range=blue_activity_years or sorted(blue_routes)
-    range_min=min(activity_range,default=default_year);range_max=max(activity_range,default=default_year)
-    home_link=('<a class="archive-year-home" href="'+base+default_route+'?year='+str(default_year)+'">Open '+str(default_year)+' homepage</a>'
-               if default_route else '<a class="archive-year-home" aria-disabled="true">No homepage capture recovered</a>')
-    gateway='<p class="archive-home-intro">One Blue Scholars website across the recovered captures. Move the timeline to the closest year with archived activity.</p><section class="archive-timeline archive-year-global" data-home-routes="'+blue_route_json+'" data-activity-years="'+activity_json+'" data-base-path="'+html.escape(base,quote=True)+'" aria-labelledby="archive-year-label"><a class="archive-year-global-brand" href="'+html.escape(base+'/',quote=True)+'">Blue Scholars archive</a><label id="archive-year-label" for="archive-year">Explore a year</label><div class="archive-year-readout"><output id="archive-year-output" for="archive-year">'+str(default_year)+'</output><span id="archive-era-summary">Blue Scholars archive activity</span></div><input id="archive-year" class="archive-year-global-control" data-default-year="'+str(default_year)+'" type="range" min="'+str(range_min)+'" max="'+str(range_max)+'" step="1" value="'+str(default_year)+'" aria-label="Select an archived year" aria-valuetext="'+str(default_year)+'">'+markers+home_link+'</section><p id="archive-year-count" class="archive-year-count" aria-live="polite"></p><nav class="archive-site-grid archive-timeline-results" data-year="'+str(default_year)+'" aria-label="Archives available in the selected year">'
+    gateway='<p class="archive-home-intro">Choose an archive to browse its preserved pages and dated captures.</p><nav class="archive-site-grid" aria-label="Archived websites">'
     if blue_routes:
         route_json=html.escape(json.dumps({str(k):v for k,v in sorted(blue_routes.items())},separators=(',',':')),quote=True)
         available=','.join(map(str,blue_activity_years))
-        gateway+='<a class="archive-site-card blue-scholars-site-card" data-available-years="'+available+'" data-home-routes="'+route_json+'" href="'+base+default_route+'?year='+str(default_year)+'"><span class="archive-site-title">Blue Scholars website</span><span class="archive-site-detail">One site across the recovered 2007–2021 platform changes</span><span class="edition-action">Open selected homepage <span aria-hidden="true">↗</span></span></a>'
+        gateway+='<a class="archive-site-card blue-scholars-site-card" data-available-years="'+available+'" data-home-routes="'+route_json+'" href="'+base+default_route+'?year='+str(default_year)+'"><span class="archive-site-title">Blue Scholars homepage</span><span class="archive-site-detail">One site across the recovered 2007–2021 platform changes</span><span class="edition-action">Browse homepage <span aria-hidden="true">↗</span></span></a>'
     satellite_report=build_artist_sites(root,output,base,candidate)
     massline_report=build_massline_archive(root,output,base,candidate)
     myspace_report=build_myspace_archive(root,output,base)
@@ -1265,7 +1260,7 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
     twitter_report=build_twitter_archive(root,output,base)
     community_media_items=build_community_media(root,output,base,render_resources,aliases,ui_href,script_href)
     press_archive_report=build_press_archive(root,output,base,ui_href)
-    gateway+='</nav><h2 class="archive-sites-heading">Other captured editions</h2><p class="archive-sites-intro">All recovered archives are listed below. Move the slider to browse only material preserved in a particular year.</p><nav class="archive-site-grid archive-timeline-results" data-year="2007" aria-label="Other recovered archives">'
+    gateway+='</nav><h2 class="archive-sites-heading">Other archived sites</h2><nav class="archive-site-grid" aria-label="Other recovered archives">'
     related_sites=[
         ('/prometheusbrown/','Prometheus Brown','Artist site editions'),
         ('/sabzi/','Sabzi','Artist site editions'),
@@ -1287,14 +1282,13 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
         route_json=html.escape(json.dumps({str(k):v for k,v in sorted(home_routes.items())},separators=(',',':')),quote=True)
         available=','.join(map(str,sorted(home_routes)))
         start,end=min(home_routes),max(home_routes)
-        gateway+='<a class="archive-site-card timeline-related-card'+extra+'" data-available-years="'+available+'" data-home-routes="'+route_json+'" href="'+base+home_routes[start]+'"><span class="archive-site-title">'+html.escape(title)+'</span><span class="archive-site-detail">'+html.escape(detail)+' · '+str(start)+('–'+str(end) if end!=start else '')+'</span><span class="edition-action">Browse archive <span aria-hidden="true">↗</span></span></a>'
+        gateway+='<a class="archive-site-card timeline-related-card'+extra+'" href="'+base+home_routes[start]+'"><span class="archive-site-title">'+html.escape(title)+'</span><span class="archive-site-detail">'+html.escape(detail)+' · '+str(start)+('–'+str(end) if end!=start else '')+'</span><span class="edition-action">Browse archive <span aria-hidden="true">↗</span></span></a>'
     gateway+='</nav><nav class="archive-home-links" aria-label="Archive information">'
     if community_media_items:
         gateway+='<a href="'+base+'/community-media/">Supplemental community media <span aria-hidden="true">↗</span></a>'
     gateway+='<a class="recovery-status" href="'+base+'/archive-status/">Recovery status and source gaps <span aria-hidden="true">↗</span></a></nav>'
     hub=page_shell('Blue Scholars archive',gateway).replace('<main class="archive-gap-page">','<main class="archive-gap-page archive-home">')
-    timeline_tag='<script src="'+timeline_script_href+'" defer></script>' if timeline_script_text else ''
-    hub=hub.replace('</head>','<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="'+ui_href+'">'+timeline_tag+'</head>')
+    hub=hub.replace('</head>','<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="'+ui_href+'"></head>')
     _write_page(output,'/',hub)
     # Deduplicate identical findings without suppressing which page referenced a gap.
     issues=list({json.dumps(i,sort_keys=True):i for i in issues}.values())

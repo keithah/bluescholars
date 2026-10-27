@@ -62,3 +62,19 @@
 @media(max-width:560px){.archive-home h1{max-width:100%;font-size:clamp(36px,10vw,46px);overflow-wrap:anywhere}.archive-home-intro,.archive-sites-intro,.archive-year-count{overflow-wrap:anywhere}}
 @media(prefers-reduced-motion:reduce){.edition-card,.archive-site-card{transition:none}.edition-card:hover,.archive-site-card:hover{transform:none}}
 @media(max-width:600px){.archive-gap-page{margin-top:40px;padding-left:20px;padding-right:20px}.archive-restoration-notice{padding:10px 12px;font-size:11px}.archive-navigation nav{max-width:170px}.archive-gap-page .archive-lead{font-size:18px}}
+/* Keep archive activity marks on the enlarged slider track. */
+.archive-year-global .archive-year-slider{position:relative;isolation:isolate;display:block;box-sizing:border-box;flex:1 1 300px;min-width:160px;height:56px}
+.archive-year-global .archive-year-slider:before{content:"";position:absolute;left:13px;right:13px;top:50%;height:12px;transform:translateY(-50%);border:1px solid #cbd5db;border-radius:999px;background:linear-gradient(90deg,#28628b 0 var(--timeline-progress,0%),#e1e6e9 var(--timeline-progress,0%) 100%);box-shadow:inset 0 1px 2px rgba(20,40,54,.12)}
+.archive-year-global .archive-year-global-control{appearance:none;-webkit-appearance:none;position:absolute;inset:0;z-index:1;box-sizing:border-box;width:100%;min-width:0;height:56px;margin:0;padding:0;background:transparent;cursor:pointer;touch-action:pan-y}
+.archive-year-global-control::-webkit-slider-runnable-track{height:12px;border:0;border-radius:999px;background:transparent}
+.archive-year-global-control::-moz-range-track{height:12px;border:0;border-radius:999px;background:transparent}
+.archive-year-global-control::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;margin-top:-7px;border:3px solid #fff;border-radius:50%;background:#28628b;box-shadow:0 1px 5px rgba(23,43,58,.35)}
+.archive-year-global-control::-moz-range-thumb{width:20px;height:20px;border:3px solid #fff;border-radius:50%;background:#28628b;box-shadow:0 1px 5px rgba(23,43,58,.35)}
+.archive-year-global .archive-year-markers{position:absolute;inset:0 13px;z-index:2;flex:0 0 auto;height:auto;margin:0;padding:0;pointer-events:none}
+.archive-year-global .archive-year-marker{top:50%;z-index:1;width:16px;height:40px;transform:translate(-50%,-50%);border-radius:9px;pointer-events:auto}
+.archive-year-global .archive-year-marker:before{left:50%;top:50%;height:19px;border:0;border-radius:2px;background:#526f83;box-shadow:0 0 0 1px rgba(255,255,255,.45);transform:translate(-50%,-50%)}
+.archive-year-global .archive-year-marker:hover:before,.archive-year-global .archive-year-marker:focus-visible:before{top:50%;height:25px;border:0;background:#123f61}
+.archive-year-global .archive-year-marker[aria-current=true]{background:rgba(36,86,125,.14);box-shadow:0 0 0 2px rgba(36,86,125,.16)}
+.archive-year-global .archive-year-marker[aria-current=true]:before{width:4px;height:30px;background:#123f61;box-shadow:0 0 0 2px #fff,0 0 0 4px rgba(36,86,125,.28)}
+.archive-year-global output{display:inline-block;padding:4px 9px;border-radius:7px;background:#24567d;color:#fff;box-shadow:0 2px 6px rgba(20,52,76,.2)}
+@media(max-width:560px){.archive-year-global .archive-year-slider{flex:1 1 100%;width:100%;height:52px}.archive-year-global .archive-year-global-control{height:52px}.archive-year-global .archive-year-marker{width:14px;height:38px}}

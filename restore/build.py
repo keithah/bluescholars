@@ -203,10 +203,13 @@ def add_global_year_navigation(text: str,year: int,base: str,ui_href: str,
         slider.append(_timeline_markers(soup,activity_years,major_years,activity_counts))
         section.append(slider)
         legend=soup.new_tag('div',attrs={'class':'archive-timeline-legend','role':'note','aria-label':'Timeline mark key'})
-        for level,label_text in (('major','Major: site/edition snapshot'),('minor','Minor: page-only activity')):
+        for level,label_text in (('major','Major: homepage/edition capture'),('minor','Minor: page-only capture')):
             item=soup.new_tag('span',attrs={'class':'archive-timeline-key archive-timeline-key-'+level})
             symbol=soup.new_tag('span',attrs={'class':'archive-timeline-key-symbol','aria-hidden':'true'})
             item.append(symbol);item.append(label_text);legend.append(item)
+        size_note=soup.new_tag('span',attrs={'class':'archive-timeline-key-count'})
+        size_note.string='Mark size reflects saved-page volume'
+        legend.append(size_note)
         section.append(legend)
         route=home_routes.get(year)
         open_home=soup.new_tag('a',attrs={'class':'archive-year-home','data-home-routes':json.dumps({str(k):v for k,v in sorted(home_routes.items())},separators=(',',':'))})
@@ -256,12 +259,18 @@ def _timeline_markers(soup,years: list[int],major_years: list[int]|None=None,
         count=activity_counts.get(year)
         description='site/edition snapshot' if level=='major' else 'page-only activity'
         label=f'{level.title()} update in {year}: {description}'
+        marker_style='left:'+str(position)+'%'
         if count is not None:
-            count=int(count)
+            count=max(1,int(count))
             label+=f'; {count} indexed page'+('s' if count!=1 else '')
+            # Taller/thicker marks represent years with more recovered page captures.
+            size=13+min(12,count//16)
+            height=12+min(26,count//8)
+            width=2+min(3,count//80)
+            marker_style+=f'; --marker-size:{size}px; --marker-height:{height}px; --marker-width:{width}px'
         markers.append(soup.new_tag('button',attrs={'type':'button','class':'archive-year-marker archive-year-marker-'+level,
             'data-year':str(year),'data-level':level,**({'data-page-count':str(count)} if count is not None else {}),
-            'aria-label':label,'title':label,'style':'left:'+str(position)+'%'}))
+            'aria-label':label,'title':label,'style':marker_style}))
     return markers
 
 def timeline_major_years(page_report: list[dict],home_routes: dict[int,str]) -> list[int]:
@@ -320,13 +329,35 @@ def routes_for_activity(home_routes: dict[int,str],years: list[int]) -> dict[int
     available=sorted(home_routes)
     return {year:home_routes[min(available,key=lambda candidate:(abs(candidate-year),candidate))] for year in years}
 
-def archive_activity_years(page_report: list[dict],archive_path: str,home_routes: dict[int,str]) -> list[int]:
+def archive_activity_years(page_report: list[dict],archive_path: str,home_routes: dict[int,str],
+                           output: Path|None=None) -> list[int]:
     prefix=archive_path.rstrip('/')+'/'
     years={int(str(row.get('actual_capture',''))[:4]) for row in page_report
            if str(row.get('path','')).startswith(prefix)
            and str(row.get('actual_capture',''))[:4].isdigit()
            and 2006<=int(str(row.get('actual_capture',''))[:4])<=2026}
+    if output is not None:
+        years.update(timeline_output_page_counts(output,archive_path))
     return sorted(years or home_routes)
+
+
+def timeline_output_page_counts(output: Path,archive_path: str) -> dict[int,int]:
+    """Count local dated archive pages when their separate recovery isn't in page_report."""
+    output=Path(output)
+    archive_root=output/archive_path.strip('/')
+    if not archive_root.is_dir(): return {}
+    counts={}
+    for page in archive_root.rglob('*.html'):
+        relative=page.relative_to(output).as_posix()
+        for part in relative.split('/')[1:]:
+            year_text=next((part[index:index+4] for index in range(max(0,len(part)-3))
+                            if part[index:index+4].isdigit()
+                            and 2006<=int(part[index:index+4])<=2026),None)
+            if year_text:
+                year=int(year_text)
+                counts[year]=counts.get(year,0)+1
+                break
+    return counts
 
 def _default_year_for_path(path: str) -> int:
     parts=Path(path).parts
@@ -375,18 +406,16 @@ def decorate_archive_pages(output: Path,base: str,ui_href: str,timeline_script_h
         if archive_path not in home_routes_by_archive:
             routes=blue_routes if is_blue_scholars else archive_home_routes(output,archive_path)
             activity_years=(blue_activity_years if is_blue_scholars
-                else archive_activity_years(page_report,archive_path,routes))
+                else archive_activity_years(page_report,archive_path,routes,output))
             home_routes_by_archive[archive_path]=(routes if is_blue_scholars else routes_for_activity(routes,activity_years))
             activity_years_by_archive[archive_path]=activity_years
+            major_years_by_archive[archive_path]=(timeline_major_years(page_report,routes)
+                if is_blue_scholars else sorted(routes))
+            activity_counts_by_archive[archive_path]=(timeline_page_counts(page_report,('/2007/','/2009/','/2013/'))
+                if is_blue_scholars else timeline_output_page_counts(output,archive_path))
         activity_years=activity_years_by_archive[archive_path]
         home_routes=home_routes_by_archive[archive_path]
-        if archive_path not in major_years_by_archive:
-            major_years_by_archive[archive_path]=(timeline_major_years(page_report,home_routes)
-                if is_blue_scholars else sorted(home_routes))
         major_years=major_years_by_archive[archive_path]
-        if archive_path not in activity_counts_by_archive:
-            prefixes=('/2007/','/2009/','/2013/') if is_blue_scholars else (archive_path,)
-            activity_counts_by_archive[archive_path]=(timeline_page_counts(page_report,prefixes) if is_blue_scholars else {})
         activity_counts=activity_counts_by_archive[archive_path]
         updated=add_global_year_navigation(text,year,base,ui_href,timeline_script_href,page_years,
             home_routes,activity_years,major_years,activity_counts)

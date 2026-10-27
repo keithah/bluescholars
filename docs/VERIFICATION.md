@@ -188,3 +188,10 @@ A second local 200-URL pass recovered 11 additional host-page records and five f
 - A 75-resource recovery batch added six validated records and 6,000 capture rows. Latest main index: 12,822 resource URLs, 165,338 indexed captures, 4,981 recovered records (2,741 unique payloads / 171,623,580 bytes), 283 needing review, 4,898 queued, and 2,656 failed/retryable.
 - Refreshed project candidate: 1,054 recovered pages including 12 feeds; 2,221 explicit placeholders; one derived page; 1,568 main-site assets. Root and `/bluescholars/` builds/checks both pass with zero errors. The candidate records thousands of missing assets/media and is not a complete restoration.
 - `.venv311/bin/python -m pytest -q`: 262 passed on the previous complete run; targeted review tests after metadata update: 7 passed. Full suite is being rerun after this checkpoint update.
+
+## October 27, 2026 — activity-scaled timelines
+
+- Full suite: `.venv311/bin/python -m pytest -q` — **320 passed**. Python compileall, `node --check public/archive-timeline.js`, and `git diff --check` passed.
+- Fresh candidate builds from the main recovery checkout at `/` and `/bluescholars/` each report 1,108 recovered pages, 12 feed-recovered pages, 2,173 placeholders, and 1,879 local source assets. The root checker and `/bluescholars/` checker both return `ok: true`, zero errors.
+- Generated timeline inspection confirmed the landing page has no slider. Archive pages show page-count-scaled major homepage/edition circles and minor page-capture ticks; labels include counts. The Blue Scholars timeline has 3 major and 14 minor marks; Prometheus Brown Twitter 12 major / 1 minor; Mass Line forums 5 / 5; LiveJournal 5 / 1; press archive 20 / 1. Browser accessibility inspection confirmed markers and the key on the local `/bluescholars/2007/` page. No screenshot was saved and no human visual review is claimed.
+- Candidate remains an unreviewed preview; `visual_fidelity_verified` and `publish_approved` remain false. Pages refresh and live route verification are recorded below after completion.

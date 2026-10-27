@@ -5,7 +5,7 @@ import pytest
 from bs4 import BeautifulSoup
 from restore.render import render_html,render_css
 from restore.discover import discover_html
-from restore.build import build,promote,documented_asset_aliases,archive_availability,archive_home_routes,add_global_year_navigation,blue_scholars_timeline,timeline_major_years
+from restore.build import build,promote,documented_asset_aliases,archive_availability,archive_home_routes,add_global_year_navigation,blue_scholars_timeline,timeline_major_years,_timeline_markers,timeline_output_page_counts
 from restore.check import check
 from restore.state import State,write_json
 from restore.urls import HOME,TARGET,route,historical_route_prefix,route_capture_hint,livejournal_route
@@ -15,6 +15,26 @@ RES={
  'https://cdn.example/photo.jpg':{'kind':'image','local_path':'/assets/photo.jpg'},
  'https://cdn.example/bg.png':{'kind':'image','local_path':'/assets/bg.png'},
 }
+
+
+def test_timeline_marker_size_reflects_archive_activity_volume():
+    from bs4 import BeautifulSoup
+    soup=BeautifulSoup('<div></div>','html.parser')
+    markers=_timeline_markers(soup,[2007,2008],major_years=[2007],activity_counts={2007:10,2008:238})
+    major,minor=markers.select('button')
+    assert major['data-page-count']=='10'
+    assert minor['data-page-count']=='238'
+    assert '--marker-size:' in major['style']
+    assert '--marker-height:' in minor['style']
+    assert int(major['style'].split('--marker-size:')[1].split('px')[0]) < int(minor['style'].split('--marker-height:')[1].split('px')[0])
+
+
+def test_related_archive_timeline_counts_dated_local_pages(tmp_path):
+    for capture in ('20090804184918','20090812122122','20171014022611'):
+        page=tmp_path/'twitter-sabzi'/'captures'/capture/'index.html'
+        page.parent.mkdir(parents=True,exist_ok=True)
+        page.write_text(capture)
+    assert timeline_output_page_counts(tmp_path,'/twitter-sabzi/')=={2009:2,2017:1}
 
 def test_archive_year_ranges_follow_observed_capture_manifests(tmp_path):
     artist=tmp_path/'recovery/artist-sites/manifest.json'

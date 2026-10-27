@@ -58,6 +58,12 @@ def test_massline_routes_distinguish_forum_threads_and_pages():
     assert len({first, later, message}) == 3
 
 
+def test_massline_routes_static_php_pages_as_renderable_html():
+    assert massline_route("http://masslinemedia.com/news/archive.php") == "/masslinemedia/site/news/archive.html"
+    assert massline_route("http://masslinemedia.com/news/archive.php?page=2") == (
+        "/masslinemedia/site/news/archive-" + hashlib.sha256(b"page=2").hexdigest()[:12] + ".html")
+
+
 def test_massline_routes_map_boards_and_legacy_home():
     assert massline_route("http://masslinemedia.com/smf/?board=2.0") == "/massline-forums/board-2-page-0.html"
     assert massline_route("http://www.masslinemedia.com:80/") == "/masslinemedia/site/index.html"

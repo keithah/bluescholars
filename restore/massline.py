@@ -93,6 +93,12 @@ def massline_route(url: str) -> str:
         return f"/masslinemedia/site/index-{tag}.html"
     safe_segments = [quote(s, safe="@:+,;=~!$&'()[]-._") for s in source_path.split("/") if s not in ("", ".", "..")]
     suffix = "/".join(safe_segments) or "index.html"
+    # GitHub Pages serves .php with application/x-httpd-php, which browsers
+    # download instead of rendering. The recovered source is static HTML, so
+    # publish PHP-era page paths as .html and let the renderer localize links
+    # through this canonical route map.
+    if suffix.lower().endswith(".php"):
+        suffix = suffix[:-4] + ".html"
     if parts.query:
         tag = sha256(parts.query.encode("utf-8")).hexdigest()[:12]
         if "." in suffix.rsplit("/", 1)[-1]:

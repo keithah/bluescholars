@@ -5,7 +5,7 @@ import pytest
 from bs4 import BeautifulSoup
 from restore.render import render_html,render_css
 from restore.discover import discover_html
-from restore.build import build,promote,documented_asset_aliases,archive_availability,archive_home_routes,add_global_year_navigation,blue_scholars_timeline
+from restore.build import build,promote,documented_asset_aliases,archive_availability,archive_home_routes,add_global_year_navigation,blue_scholars_timeline,timeline_major_years
 from restore.check import check
 from restore.state import State,write_json
 from restore.urls import HOME,TARGET,route,historical_route_prefix,route_capture_hint,livejournal_route
@@ -150,6 +150,35 @@ def test_global_year_navigation_marks_capture_years_and_uses_combined_routes():
     assert "querySelectorAll('.archive-year-marker')" in (Path(__file__).resolve().parents[1]/'public/archive-timeline.js').read_text()
     assert toolbar.select_one('input[type="range"]')['min']=='2007'
     assert toolbar.select_one('input[type="range"]')['max']=='2013'
+
+def test_timeline_marks_explain_major_homepage_and_minor_page_activity():
+    pages=[
+        {'path':'/2007/','status':'recovered','actual_capture':'20070724082915'},
+        {'path':'/2007/news.html','status':'recovered','actual_capture':'20070725000000'},
+        {'path':'/2007/gallery.html','status':'recovered','actual_capture':'20080725000000'},
+        {'path':'/2009/','status':'recovered','actual_capture':'20090901000000'},
+        {'path':'/2009/not-recovered.html','status':'not_recovered','actual_capture':'20100101000000'},
+    ]
+    majors=timeline_major_years(pages,{2007:'/2007/',2008:'/2007/',2009:'/2009/',2010:'/2009/'})
+    rendered=add_global_year_navigation(
+        '<html><head></head><body>archive</body></html>',2008,'','/ui.css','/timeline.js',
+        home_routes={2007:'/2007/',2008:'/2007/',2009:'/2009/',2010:'/2009/'},
+        activity_years=[2007,2008,2009,2010],major_years=majors,
+        activity_counts={2007:2,2008:1,2009:1,2010:1})
+    soup=BeautifulSoup(rendered,'html.parser')
+    marks={int(mark['data-year']):mark for mark in soup.select('.archive-year-marker')}
+    assert [year for year,mark in marks.items() if mark['data-level']=='major']==[2007,2009]
+    assert marks[2007].get('aria-label','').startswith('Major update')
+    assert marks[2008].get('aria-label','').startswith('Minor update')
+    assert marks[2010]['data-level']=='minor'
+    assert marks[2010]['data-page-count']=='1'
+    assert '1 indexed page' in marks[2010]['aria-label']
+    legend=soup.select_one('.archive-timeline-legend')
+    assert legend and 'Major' in legend.get_text() and 'Minor' in legend.get_text()
+    styles=(Path(__file__).resolve().parents[1]/'public/archive-ui.css').read_text()
+    assert '.archive-year-marker-major:before' in styles
+    assert '.archive-year-marker-minor:before' in styles
+    assert '.archive-timeline-key-major' in styles and '.archive-timeline-key-minor' in styles
 
 HTML='''<!doctype html><html><head><title>BLUE SCHOLARS</title><base href="https://evil.example/">
 <link rel="stylesheet" href="/site.css"><script>alert(1)</script></head>

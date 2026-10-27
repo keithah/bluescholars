@@ -8,6 +8,7 @@ import tinycss2
 from .urls import HOME,TARGET,original_url,identity,is_site,route,base_path,livejournal_route,historical_route_prefix,route_capture_hint,kind_for
 
 NAV=[('BLOG','/blog/'),('SHOWS','/shows/'),('VIDEO','/video/'),('SHOP','/shop/'),('HOLLER','/holler/')]
+ARCHIVED_TWITTER_HANDLES={'prometheusbrown','bluescholars','sabzi','wongweezy','canhsolo'}
 CSP="default-src 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; font-src 'self'; connect-src 'none'; frame-src 'none'; media-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"
 
 def archived_companion_route(url: str,base: str) -> str|None:
@@ -22,8 +23,12 @@ def archived_companion_route(url: str,base: str) -> str|None:
         route='/sabzi/'
     elif host=='206proof.com' or host.endswith('.206proof.com'):
         route='/206proof/'
-    elif host in ('twitter.com','x.com') and path.strip('/').split('/',1)[0]=='prometheusbrown':
-        route='/twitter-prometheusbrown/'
+    elif host in ('twitter.com','mobile.twitter.com','x.com'):
+        parts=[part for part in path.strip('/').lower().split('/') if part]
+        if len(parts)==1 and parts[0] in ARCHIVED_TWITTER_HANDLES:
+            route='/twitter-'+parts[0]+'/'
+        else:
+            return None
     elif host=='myspace.com' and path.strip('/').split('/',1)[0] in ('bluescholars','bluescholarsmusic','blue_scholars'):
         route='/myspace/'
     else:

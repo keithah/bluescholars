@@ -1,0 +1,106 @@
+{
+  "source": "Internet Archive CDX",
+  "fields": [
+    "timestamp",
+    "original",
+    "statuscode",
+    "mimetype",
+    "digest",
+    "length"
+  ],
+  "queried_at": "2026-10-27T06:33:23Z",
+  "targets": [
+    {
+      "target_url": "https://twitter.com/sabzi?max_id=3075480641&page=2&twttr=true",
+      "parent_captures": [
+        "20090802130005"
+      ],
+      "queries": [
+        {
+          "url": "https://twitter.com/sabzi?max_id=3075480641&page=2&twttr=true",
+          "http_status": 200,
+          "result": "rows",
+          "rows": [
+            [
+              "20221013024235",
+              "https://twitter.com/sabzi?max_id=3075480641&page=2&twttr=true",
+              "200",
+              "text/html",
+              "PICBI777RK663LCOZYSOSBQ4CSZFO2WY",
+              "30949"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "target_url": "https://twitter.com/sabzi?max_id=3236329648&page=2&twttr=true",
+      "parent_captures": [
+        "20090813034417"
+      ],
+      "queries": [
+        {
+          "url": "https://twitter.com/sabzi?max_id=3236329648&page=2&twttr=true",
+          "http_status": 200,
+          "result": "rows",
+          "rows": [
+            [
+              "20221013024623",
+              "https://twitter.com/sabzi?max_id=3236329648&page=2&twttr=true",
+              "200",
+              "text/html",
+              "QLIWMJN4VDPGUHSFEFF6TVV44USFI535",
+              "30957"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "target_url": "https://twitter.com/sabzi?max_id=4337629488&page=2&twttr=true",
+      "parent_captures": [
+        "20090924095908"
+      ],
+      "queries": [
+        {
+          "url": "https://twitter.com/sabzi?max_id=4337629488&page=2&twttr=true",
+          "http_status": 200,
+          "result": "rows",
+          "rows": [
+            [
+              "20220814023459",
+              "https://twitter.com/sabzi?max_id=4337629488&page=2&twttr=true",
+              "200",
+              "text/html",
+              "LHFFLB3RPRWDRQR53IORNIBHX4EAVQXY",
+              "31319"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "target_url": "https://twitter.com/sabzi?max_id=5157438004&page=2&twttr=true",
+      "parent_captures": [
+        "20091027031117"
+      ],
+      "queries": [
+        {
+          "url": "https://twitter.com/sabzi?max_id=5157438004&page=2&twttr=true",
+          "http_status": 200,
+          "result": "rows",
+          "rows": [
+            [
+              "20221013024946",
+              "https://twitter.com/sabzi?max_id=5157438004&page=2&twttr=true",
+              "200",
+              "text/html",
+              "VHJQH7CGAKJR4J2DOCDZG4K5RVT4A2K4",
+              "30962"
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

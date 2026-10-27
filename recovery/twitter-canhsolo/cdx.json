@@ -1,0 +1,146 @@
+{
+  "source": "Internet Archive CDX",
+  "queried_at": "2026-10-27T05:30:21Z",
+  "queries": [
+    {
+      "query": {
+        "url": "twitter.com/canhsolo",
+        "output": "json",
+        "filter": [
+          "statuscode:200",
+          "mimetype:text/html"
+        ],
+        "fl": "timestamp,original,statuscode,mimetype,digest,length"
+      },
+      "query_url": "https://web.archive.org/cdx/search/cdx?url=twitter.com%2Fcanhsolo&output=json&filter=statuscode%3A200&filter=mimetype%3Atext%2Fhtml&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest%2Clength",
+      "rows": [
+        [
+          "20140709203912",
+          "https://twitter.com/canhsolo",
+          "200",
+          "text/html",
+          "DDILT2BC5RMJOAUPXQIO66DWIA67HXZ4",
+          "25066"
+        ],
+        [
+          "20140709203912",
+          "https://twitter.com/canhsolo",
+          "200",
+          "text/html",
+          "DDILT2BC5RMJOAUPXQIO66DWIA67HXZ4",
+          "25066",
+          "20140709203912-twitter-75484b"
+        ],
+        [
+          "20140714190404",
+          "https://twitter.com/canhsolo",
+          "200",
+          "text/html",
+          "PLIPYJXBMG5EASTPEB6RG3MFME6IM36H",
+          "24848",
+          "20140714190404-twitter-7f35bb"
+        ]
+      ]
+    },
+    {
+      "query": {
+        "url": "mobile.twitter.com/canhsolo",
+        "output": "json",
+        "filter": [
+          "statuscode:200",
+          "mimetype:text/html"
+        ],
+        "fl": "timestamp,original,statuscode,mimetype,digest,length"
+      },
+      "query_url": "https://web.archive.org/cdx/search/cdx?url=mobile.twitter.com%2Fcanhsolo&output=json&filter=statuscode%3A200&filter=mimetype%3Atext%2Fhtml&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest%2Clength",
+      "rows": [
+        [
+          "20140709203912",
+          "https://mobile.twitter.com/canhsolo",
+          "200",
+          "text/html",
+          "HDAROWJSZPLS32QCPUQ7ZSBVPRQS5JJN",
+          "14213"
+        ],
+        [
+          "20140709203912",
+          "https://mobile.twitter.com/canhsolo",
+          "200",
+          "text/html",
+          "HDAROWJSZPLS32QCPUQ7ZSBVPRQS5JJN",
+          "14213",
+          "20140709203912-mobile-7bc74d"
+        ],
+        [
+          "20140714190404",
+          "https://mobile.twitter.com/canhsolo",
+          "200",
+          "text/html",
+          "AIB2PTX3JGHSFFBNWDWOFEDI5EVOMGWB",
+          "14029",
+          "20140714190404-mobile-0adfad"
+        ]
+      ]
+    },
+    {
+      "query": {
+        "url": "x.com/canhsolo",
+        "output": "json",
+        "filter": [
+          "statuscode:200",
+          "mimetype:text/html"
+        ],
+        "fl": "timestamp,original,statuscode,mimetype,digest,length"
+      },
+      "query_url": "https://web.archive.org/cdx/search/cdx?url=x.com%2Fcanhsolo&output=json&filter=statuscode%3A200&filter=mimetype%3Atext%2Fhtml&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest%2Clength",
+      "rows": []
+    }
+  ],
+  "fields": [
+    "timestamp",
+    "original",
+    "statuscode",
+    "mimetype",
+    "digest",
+    "length",
+    "route_id"
+  ],
+  "rows": [
+    [
+      "20140709203912",
+      "https://mobile.twitter.com/canhsolo",
+      "200",
+      "text/html",
+      "HDAROWJSZPLS32QCPUQ7ZSBVPRQS5JJN",
+      "14213",
+      "20140709203912-mobile-7bc74d"
+    ],
+    [
+      "20140709203912",
+      "https://twitter.com/canhsolo",
+      "200",
+      "text/html",
+      "DDILT2BC5RMJOAUPXQIO66DWIA67HXZ4",
+      "25066",
+      "20140709203912-twitter-75484b"
+    ],
+    [
+      "20140714190404",
+      "https://mobile.twitter.com/canhsolo",
+      "200",
+      "text/html",
+      "AIB2PTX3JGHSFFBNWDWOFEDI5EVOMGWB",
+      "14029",
+      "20140714190404-mobile-0adfad"
+    ],
+    [
+      "20140714190404",
+      "https://twitter.com/canhsolo",
+      "200",
+      "text/html",
+      "PLIPYJXBMG5EASTPEB6RG3MFME6IM36H",
+      "24848",
+      "20140714190404-twitter-7f35bb"
+    ]
+  ]
+}

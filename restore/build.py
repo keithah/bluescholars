@@ -18,10 +18,9 @@ from .massline import build_massline_archive
 from .myspace import build_myspace_archive
 from .feeds import collect_feed_entries
 from .proof206 import build_206proof_archive
-from .twitter import build_twitter_archive
+from .twitter import build_twitter_archives
 from .redact import public_credential_fields, redact_public_credentials
 from .press_archive import build_press_archive
-from .twitter import build_twitter_archive
 
 CORE=[('/', 'Homepage'),('/blog/','Blog'),('/shows/','Shows'),('/video/','Video'),('/shop/','Shop'),('/holler/','Holler')]
 FALLBACK_UI='''.archive-restoration-notice,.archive-gap-page {font:16px/1.6 system-ui,sans-serif}
@@ -336,6 +335,7 @@ def _default_year_for_path(path: str) -> int:
             return int(part[:4])
     defaults={'2007':2007,'2009':2009,'2013':2021,'prometheusbrown':2008,
         'sabzi':2013,'myspace':2007,'twitter-prometheusbrown':2009,
+        'twitter-bluescholars':2009,'twitter-sabzi':2009,'twitter-wongweezy':2009,'twitter-canhsolo':2014,
         'masslinemedia':2006,'massline-forums':2006,'206proof':2007,'lj':2008,
         'other-archives':2007}
     return defaults.get(parts[0],2007) if parts else 2007
@@ -413,8 +413,11 @@ def archive_home_routes(output: Path,path: str) -> dict[int,str]:
     elif path=='/myspace/':
         for page in sorted((output/'myspace').glob('[0-9][0-9][0-9][0-9]/*.html')):
             add(page.parent.name,'/'+page.relative_to(output).as_posix())
-    elif path=='/twitter-prometheusbrown/':
-        for page in sorted((output/'twitter-prometheusbrown/captures').glob('[0-9]*/index.html')):
+    elif path.startswith('/twitter-'):
+        slug=path.strip('/')
+        for page in sorted((output/slug/'captures').glob('[0-9]*/index.html')):
+            if 'data-twitter-content-classification="platform_error"' in page.read_text(encoding='utf-8',errors='replace'):
+                continue
             add(page.parent.name[:4],'/'+page.parent.relative_to(output).as_posix()+'/')
     elif path=='/masslinemedia/':
         for page in sorted((output/'masslinemedia/site').glob('home-*.html')):
@@ -514,11 +517,13 @@ def archive_availability(root: Path, path: str) -> tuple[int, int] | None:
         if p.is_file():
             for item in json.loads(p.read_text()).get('records',[]):
                 if item.get('status')=='recovered': add(item.get('actual_capture') or item.get('timestamp'))
-    elif path=='/twitter-prometheusbrown/':
-        p=root/'recovery/twitter-prometheusbrown/manifest.json'
+    elif path.startswith('/twitter-'):
+        p=root/f'recovery/{path.strip("/")}/manifest.json'
         if p.is_file():
             for item in json.loads(p.read_text()).get('captures',[]):
-                if item.get('content_classification')=='profile_content' and item.get('fetch',{}).get('status')=='recovered': add(item.get('timestamp'))
+                if (item.get('fetch',{}).get('status')=='recovered'
+                        and item.get('content_classification')!='platform_error'):
+                    add(item.get('timestamp'))
     elif path in ('/masslinemedia/','/massline-forums/'):
         p=root/'recovery/massline/manifest.json'
         if p.is_file():
@@ -1315,7 +1320,7 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
     massline_report=build_massline_archive(root,output,base,candidate)
     myspace_report=build_myspace_archive(root,output,base)
     proof206_report=build_206proof_archive(root,output,base,candidate)
-    twitter_report=build_twitter_archive(root,output,base)
+    twitter_report=build_twitter_archives(root,output,base)
     community_media_items=build_community_media(root,output,base,render_resources,aliases,ui_href,script_href)
     press_archive_report=build_press_archive(root,output,base,ui_href)
     gateway+='</nav><h2 class="archive-sites-heading">Other archived sites</h2><nav class="archive-site-grid" aria-label="Other recovered archives">'
@@ -1323,8 +1328,11 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
         ('/prometheusbrown/','Prometheus Brown','Artist site editions'),
         ('/sabzi/','Sabzi','Artist site editions'),
         ('/myspace/','Blue Scholars on MySpace','Dated profile captures'),
-        ('/twitter-prometheusbrown/','Prometheus Brown on Twitter','Dated profile and tweet captures'),
     ]
+    for handle, label in (("prometheusbrown", "Prometheus Brown"), ("bluescholars", "Blue Scholars"),
+                          ("sabzi", "Sabzi"), ("wongweezy", "Wong Weezy"), ("canhsolo", "Canh Solo")):
+        if twitter_report.get(handle, {}).get('status') == 'built':
+            related_sites.append((f'/twitter-{handle}/', f'{label} on Twitter', 'Dated profile and tweet captures'))
     if massline_report.get('status')=='built':
         related_sites.append(('/masslinemedia/','Mass Line Media','Original site editions and captures'))
         related_sites.append(('/massline-forums/','Mass Line Forums','Separate SMF forum archive'))

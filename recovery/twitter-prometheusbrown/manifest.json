@@ -1,8 +1,11 @@
 {
+  "archive": "Internet Archive Wayback",
+  "account": "prometheusbrown",
+  "display_name": "Prometheus Brown",
   "profile": "https://twitter.com/prometheusbrown",
-  "archive": "Internet Archive Wayback Machine",
-  "inventory_method": "CDX exact URL, status 200, digest collapsed",
-  "queried_at": "2026-10-20",
+  "inventory_method": "Exact account URL through Internet Archive CDX; all status-200 HTML rows, preserving repeated timestamps",
+  "inventory_queried_at": "2026-10-27T05:36:12Z",
+  "inventory_count": 40,
   "captures": [
     {
       "timestamp": "20090725010529",
@@ -18,7 +21,11 @@
         "bytes": 33761,
         "sha256": "facf30689a827c9df1a36c34a5fea95e3a0d9dab5ed233f0d341b20303bca1b8",
         "content_type": "text/html; charset=utf-8",
-        "http_status": 200
+        "http_status": 200,
+        "cdx_sha1": "X6B2AOYHOOTOEDSOA5BRNJKLQSZ4NODE",
+        "cdx_sha1_verified": true,
+        "cdx_verification_method": "local raw-byte SHA-1 compared with the base32 digest in the exact CDX row",
+        "cdx_verified_at": "2026-10-27T05:36:12Z"
       },
       "title": "Geo of Blue Scholars (prometheusbrown) on Twitter",
       "content_classification": "profile_content",
@@ -32,7 +39,9 @@
         "status": "extracted",
         "method": "captured HTML tweet containers",
         "count": 20
-      }
+      },
+      "route_id": "20090725010529",
+      "length": 8274
     },
     {
       "timestamp": "20090919073730",
@@ -48,7 +57,11 @@
         "bytes": 33687,
         "sha256": "d15c1257786f5a3189cff9c44ce885e8d5a798d7e3f8f6a80920784facfb2c3d",
         "content_type": "text/html; charset=utf-8",
-        "http_status": 200
+        "http_status": 200,
+        "cdx_sha1": "AKXWSZG2PGJHIEQCDB2NAU4S63K5KQRC",
+        "cdx_sha1_verified": true,
+        "cdx_verification_method": "local raw-byte SHA-1 compared with the base32 digest in the exact CDX row",
+        "cdx_verified_at": "2026-10-27T05:36:12Z"
       },
       "title": "Geo of Blue Scholars (prometheusbrown) on Twitter",
       "content_classification": "profile_content",
@@ -62,7 +75,9 @@
         "status": "extracted",
         "method": "captured HTML tweet containers",
         "count": 20
-      }
+      },
+      "route_id": "20090919073730",
+      "length": 8271
     },
     {
       "timestamp": "20090919113427",
@@ -78,7 +93,11 @@
         "bytes": 34676,
         "sha256": "41595ec22c4e2531b2e7d82fbd302bb2c94fefb285c4e46097f00b3a3a7e997a",
         "content_type": "text/html; charset=utf-8",
-        "http_status": 200
+        "http_status": 200,
+        "cdx_sha1": "2G76UOJAKSADVJTNJKBCWOHWMA5UVU2N",
+        "cdx_sha1_verified": true,
+        "cdx_verification_method": "local raw-byte SHA-1 compared with the base32 digest in the exact CDX row",
+        "cdx_verified_at": "2026-10-27T05:36:12Z"
       },
       "title": "Geo of Blue Scholars (prometheusbrown) on Twitter",
       "content_classification": "profile_content",
@@ -92,7 +111,9 @@
         "status": "extracted",
         "method": "captured HTML tweet containers",
         "count": 20
-      }
+      },
+      "route_id": "20090919113427",
+      "length": 8258
     },
     {
       "timestamp": "20110317131039",
@@ -108,7 +129,11 @@
         "bytes": 50357,
         "sha256": "e1b59c0f5484ee0abe95ccedd41dc4932c1e5735dcbcf6bec7443d848c0b844c",
         "content_type": "text/html; charset=utf-8",
-        "http_status": 200
+        "http_status": 200,
+        "cdx_sha1": "B7FNFNI4UDCANSRRQNBFW33QTNWG4YSD",
+        "cdx_sha1_verified": true,
+        "cdx_verification_method": "local raw-byte SHA-1 compared with the base32 digest in the exact CDX row",
+        "cdx_verified_at": "2026-10-27T05:36:12Z"
       },
       "title": "Prometheus Brown (prometheusbrown) on Twitter",
       "content_classification": "profile_content",
@@ -122,7 +147,9 @@
         "status": "extracted",
         "method": "captured HTML tweet containers",
         "count": 20
-      }
+      },
+      "route_id": "20110317131039",
+      "length": 12013
     },
     {
       "timestamp": "20121111233041",
@@ -138,7 +165,11 @@
         "bytes": 182189,
         "sha256": "a22e0993ad2db2dda7d914677cc9d10c8fb44c3c2268e0d7dd5a081013cf3e9b",
         "content_type": "text/html; charset=utf-8",
-        "http_status": 200
+        "http_status": 200,
+        "cdx_sha1": "MZLE5C5PTVCZEDPD2JY6PPIO36V2OEOZ",
+        "cdx_sha1_verified": true,
+        "cdx_verification_method": "local raw-byte SHA-1 compared with the base32 digest in the exact CDX row",
+        "cdx_verified_at": "2026-10-27T05:36:12Z"
       },
       "title": "Prometheus Brown (prometheusbrown) on Twitter",
       "content_classification": "profile_content",
@@ -152,7 +183,9 @@
         "status": "extracted",
         "method": "captured HTML tweet containers",
         "count": 20
-      }
+      },
+      "route_id": "20121111233041",
+      "length": 23762
     },
     {
       "timestamp": "20130818135257",
@@ -168,7 +201,11 @@
         "bytes": 180603,
         "sha256": "6cb34814b61c9d808d768336577c181b2169b7a4f7112830edbf7c5511460881",
         "content_type": "text/html;charset=utf-8",
-        "http_status": 200
+        "http_status": 200,
+        "cdx_sha1": "P73FRRDBSFICBN6WSCQW5SV3JSSEQHSA",
+        "cdx_sha1_verified": true,
+        "cdx_verification_method": "local raw-byte SHA-1 compared with the base32 digest in the exact CDX row",
+        "cdx_verified_at": "2026-10-27T05:36:12Z"
       },
       "title": "Prometheus Brown (prometheusbrown) على تويتر",
       "content_classification": "profile_content",
@@ -182,7 +219,9 @@
         "status": "extracted",
         "method": "captured HTML tweet containers",
         "count": 20
-      }
+      },
+      "route_id": "20130818135257",
+      "length": 23183
     },
     {
       "timestamp": "20130917202141",
@@ -198,7 +237,11 @@
         "bytes": 182182,
         "sha256": "d2b48dc0257077bd996342ce0aefc6d0fde063ef82ceb8da3180a3ec771daf84",
         "content_type": "text/html;charset=utf-8",
-        "http_status": 200
+        "http_status": 200,
+        "cdx_sha1": "265UYL5ARS25EERU3OZA5S7RFRJVMR3R",
+        "cdx_sha1_verified": true,
+        "cdx_verification_method": "local raw-byte SHA-1 compared with the base32 digest in the exact CDX row",
+        "cdx_verified_at": "2026-10-27T05:36:12Z"
       },
       "title": "트위터의 Prometheus Brown (prometheusbrown)님",
       "content_classification": "profile_content",
@@ -212,7 +255,9 @@
         "status": "extracted",
         "method": "captured HTML tweet containers",
         "count": 20
-      }
+      },
+      "route_id": "20130917202141",
+      "length": 23164
     },
     {
       "timestamp": "20130918234913",
@@ -228,7 +273,11 @@
         "bytes": 187613,
         "sha256": "9a96cbc6ca3cd9825d658f3696b79ebcd326c7996c39227f9219f7db1362ca84",
         "content_type": "text/html;charset=utf-8",
-        "http_status": 200
+        "http_status": 200,
+        "cdx_sha1": "EUZCZMNJXYAKWY4J2ZCZPMHFO3Z4HM3N",
+        "cdx_sha1_verified": true,
+        "cdx_verification_method": "local raw-byte SHA-1 compared with the base32 digest in the exact CDX row",
+        "cdx_verified_at": "2026-10-27T05:36:12Z"
       },
       "title": "트위터의 Prometheus Brown (prometheusbrown)님",
       "content_classification": "profile_content",
@@ -242,7 +291,9 @@
         "status": "extracted",
         "method": "captured HTML tweet containers",
         "count": 20
-      }
+      },
+      "route_id": "20130918234913",
+      "length": 24368
     },
     {
       "timestamp": "20131102055929",
@@ -258,7 +309,11 @@
         "bytes": 186937,
         "sha256": "57ee38d7cef563f068a796e395729bfbc86b14d32af22b0a47a16e1af31b38a5",
         "content_type": "text/html;charset=utf-8",
-        "http_status": 200
+        "http_status": 200,
+        "cdx_sha1": "P3XNFLKCZCGZIOMCPNJEA4WIWVARG6RM",
+        "cdx_sha1_verified": true,
+        "cdx_verification_method": "local raw-byte SHA-1 compared with the base32 digest in the exact CDX row",
+        "cdx_verified_at": "2026-10-27T05:36:12Z"
       },
       "title": "Prometheus Brown (prometheusbrown) on Twitter",
       "content_classification": "profile_content",
@@ -272,7 +327,9 @@
         "status": "extracted",
         "method": "captured HTML tweet containers",
         "count": 20
-      }
+      },
+      "route_id": "20131102055929",
+      "length": 24488
     },
     {
       "timestamp": "20131110030510",
@@ -288,7 +345,11 @@
         "bytes": 189755,
         "sha256": "4116d79ad6c8e94b8b5a11b0240f01f6bc57d8ca468262dcbbfc448e45803d3f",
         "content_type": "text/html;charset=utf-8",
-        "http_status": 200
+        "http_status": 200,
+        "cdx_sha1": "54D2KN364X6ZI23TL2TQYQWNJMPBCPQH",
+        "cdx_sha1_verified": true,
+        "cdx_verification_method": "local raw-byte SHA-1 compared with the base32 digest in the exact CDX row",
+        "cdx_verified_at": "2026-10-27T05:36:12Z"
       },
       "title": "Prometheus Brown (prometheusbrown) sur Twitter",
       "content_classification": "profile_content",
@@ -302,7 +363,9 @@
         "status": "extracted",
         "method": "captured HTML tweet containers",
         "count": 20
-      }
+      },
+      "route_id": "20131110030510",
+      "length": 24894
     },
     {
       "timestamp": "20131227143908",
@@ -318,7 +381,11 @@
         "bytes": 180927,
         "sha256": "ae0bbe55a24cf163579a6a943c6ed65007d5c16103aeaa55dc8adda098bf9568",
         "content_type": "text/html;charset=utf-8",
-        "http_status": 200
+        "http_status": 200,
+        "cdx_sha1": "M5QSLIZLTP6K2O7WVARJLPPXU2OIQHNG",
+        "cdx_sha1_verified": true,
+        "cdx_verification_method": "local raw-byte SHA-1 compared with the base32 digest in the exact CDX row",
+        "cdx_verified_at": "2026-10-27T05:36:12Z"
       },
       "title": "Prometheus Brown (prometheusbrown) on Twitter",
       "content_classification": "profile_content",
@@ -332,7 +399,9 @@
         "status": "extracted",
         "method": "captured HTML tweet containers",
         "count": 20
-      }
+      },
+      "route_id": "20131227143908",
+      "length": 23224
     },
     {
       "timestamp": "20131231070156",
@@ -348,7 +417,11 @@
         "bytes": 183946,
         "sha256": "bb73e97dce3660ffac62dfd50451bac4d398dfc793d1f26d9ae3b43b35de9d08",
         "content_type": "text/html;charset=utf-8",
-        "http_status": 200
+        "http_status": 200,
+        "cdx_sha1": "Z6FB6OBTDX2OVPKA4ESSL5WB2CD76WM3",
+        "cdx_sha1_verified": true,
+        "cdx_verification_method": "local raw-byte SHA-1 compared with the base32 digest in the exact CDX row",
+        "cdx_verified_at": "2026-10-27T05:36:12Z"
       },
       "title": "Prometheus Brown (prometheusbrown) on Twitter",
       "content_classification": "profile_content",
@@ -362,7 +435,33 @@
         "status": "extracted",
         "method": "captured HTML tweet containers",
         "count": 20
-      }
+      },
+      "route_id": "20131231070156",
+      "length": 24439
+    },
+    {
+      "timestamp": "20131231070159",
+      "original": "https://mobile.twitter.com/prometheusbrown",
+      "route_id": "20131231070159",
+      "statuscode": "200",
+      "mimetype": "text/html",
+      "digest": "MBPBPTV7S6AUZWXDOYARBYGNMUFDL7BA",
+      "length": 15049,
+      "fetch": {
+        "status": "recovered",
+        "url": "https://web.archive.org/web/20131231070159id_/https://mobile.twitter.com/prometheusbrown",
+        "path": "raw/20131231070159.html",
+        "sha256": "6ec50ca0c0541ca02c6d423c2c4b574aa742e06bfb592e7c0784ea9bb7a41f09",
+        "cdx_sha1": "MBPBPTV7S6AUZWXDOYARBYGNMUFDL7BA",
+        "cdx_sha1_verified": true,
+        "bytes": 98733,
+        "content_type": "text/html; charset=utf-8",
+        "http_status": 200,
+        "cdx_verification_method": "local raw-byte SHA-1 compared with the base32 digest in the exact CDX row",
+        "cdx_verified_at": "2026-10-27T05:36:12Z"
+      },
+      "title": "Prometheus Brown (@prometheusbrown) on Twitter",
+      "content_classification": "profile_content"
     },
     {
       "timestamp": "20140204214247",
@@ -378,7 +477,11 @@
         "bytes": 185885,
         "sha256": "b6a3329efddd23ec821111f36e9979e41d4e3781d62b8cd6c918aa126abf1a8e",
         "content_type": "text/html;charset=utf-8",
-        "http_status": 200
+        "http_status": 200,
+        "cdx_sha1": "4XT57U6TN62INCR7XVOVCUU4VASYKZ5V",
+        "cdx_sha1_verified": true,
+        "cdx_verification_method": "local raw-byte SHA-1 compared with the base32 digest in the exact CDX row",
+        "cdx_verified_at": "2026-10-27T05:36:12Z"
       },
       "title": "Prometheus Brown (prometheusbrown) on Twitter",
       "content_classification": "profile_content",
@@ -392,7 +495,9 @@
         "status": "extracted",
         "method": "captured HTML tweet containers",
         "count": 20
-      }
+      },
+      "route_id": "20140204214247",
+      "length": 23769
     },
     {
       "timestamp": "20150323173743",
@@ -408,7 +513,11 @@
         "bytes": 248761,
         "sha256": "1ae81064f81e5ca630cd155338d81c9bd69f2c9ac1e051b5cd5f951090aea8d4",
         "content_type": "text/html;charset=utf-8",
-        "http_status": 200
+        "http_status": 200,
+        "cdx_sha1": "R4Q2A5G2QOAJJDGWDYSTL3GHSP5JJHPN",
+        "cdx_sha1_verified": true,
+        "cdx_verification_method": "local raw-byte SHA-1 compared with the base32 digest in the exact CDX row",
+        "cdx_verified_at": "2026-10-27T05:36:12Z"
       },
       "title": "Prometheus Brown (@prometheusbrown) | Twitter",
       "content_classification": "profile_content",
@@ -422,7 +531,9 @@
         "status": "extracted",
         "method": "captured HTML tweet containers",
         "count": 0
-      }
+      },
+      "route_id": "20150323173743",
+      "length": 31169
     },
     {
       "timestamp": "20150720101143",
@@ -438,7 +549,11 @@
         "bytes": 295336,
         "sha256": "0e9d511dfc552bae87ef52291ea988b8e8af7f8ee2dce45d9fd9ee9c0b43780a",
         "content_type": "text/html;charset=utf-8",
-        "http_status": 200
+        "http_status": 200,
+        "cdx_sha1": "UAQJVNTGJHFZGQERC5ZCW7B3MMHY4Z6K",
+        "cdx_sha1_verified": true,
+        "cdx_verification_method": "local raw-byte SHA-1 compared with the base32 digest in the exact CDX row",
+        "cdx_verified_at": "2026-10-27T05:36:12Z"
       },
       "title": "Prometheus Brown (@prometheusbrown) | Twitter",
       "content_classification": "profile_content",
@@ -452,7 +567,9 @@
         "status": "extracted",
         "method": "captured HTML tweet containers",
         "count": 19
-      }
+      },
+      "route_id": "20150720101143",
+      "length": 36159
     },
     {
       "timestamp": "20151207081424",
@@ -468,7 +585,11 @@
         "bytes": 271698,
         "sha256": "a3070ef7b0ada56c41fbe9b505e6ffc28bf130fa5d0aa7da4e4c937e8ed18bf6",
         "content_type": "text/html;charset=utf-8",
-        "http_status": 200
+        "http_status": 200,
+        "cdx_sha1": "AEGGQJMT7F4WCUDNPWG4OLEYOHZ2ZSVT",
+        "cdx_sha1_verified": true,
+        "cdx_verification_method": "local raw-byte SHA-1 compared with the base32 digest in the exact CDX row",
+        "cdx_verified_at": "2026-10-27T05:36:12Z"
       },
       "title": "Prometheus Brown (@prometheusbrown) | Twitter",
       "content_classification": "profile_content",
@@ -482,7 +603,9 @@
         "status": "extracted",
         "method": "captured HTML tweet containers",
         "count": 18
-      }
+      },
+      "route_id": "20151207081424",
+      "length": 32296
     },
     {
       "timestamp": "20160109135645",
@@ -498,7 +621,11 @@
         "bytes": 255609,
         "sha256": "fab09477dc8a02223df4da8e46c173b75ddda8154ac5026f50d2ac5db96ee05d",
         "content_type": "text/html;charset=utf-8",
-        "http_status": 200
+        "http_status": 200,
+        "cdx_sha1": "R4J2WZNBOUKWOIXM55Y46TWBFSBTE7EO",
+        "cdx_sha1_verified": true,
+        "cdx_verification_method": "local raw-byte SHA-1 compared with the base32 digest in the exact CDX row",
+        "cdx_verified_at": "2026-10-27T05:36:12Z"
       },
       "title": "Prometheus Brown (@prometheusbrown) | Twitter",
       "content_classification": "profile_content",
@@ -512,7 +639,9 @@
         "status": "extracted",
         "method": "captured HTML tweet containers",
         "count": 18
-      }
+      },
+      "route_id": "20160109135645",
+      "length": 30282
     },
     {
       "timestamp": "20160109135649",
@@ -528,7 +657,11 @@
         "bytes": 255634,
         "sha256": "65749545843760aba35cc016f7d954f6953c7a5f4d076ececf6294271e70e1cd",
         "content_type": "text/html;charset=utf-8",
-        "http_status": 200
+        "http_status": 200,
+        "cdx_sha1": "ZGYEEDMR7PF5LJZOF2MQ74VTX4OTHNMN",
+        "cdx_sha1_verified": true,
+        "cdx_verification_method": "local raw-byte SHA-1 compared with the base32 digest in the exact CDX row",
+        "cdx_verified_at": "2026-10-27T05:36:12Z"
       },
       "title": "Prometheus Brown (@prometheusbrown) | Twitter",
       "content_classification": "profile_content",
@@ -542,7 +675,9 @@
         "status": "extracted",
         "method": "captured HTML tweet containers",
         "count": 18
-      }
+      },
+      "route_id": "20160109135649",
+      "length": 30278
     },
     {
       "timestamp": "20161128125454",
@@ -558,7 +693,11 @@
         "bytes": 316801,
         "sha256": "6beb15d80634c68cac86b24058fdc617e50d5b126e0055a240f058064986fd55",
         "content_type": "text/html;charset=utf-8",
-        "http_status": 200
+        "http_status": 200,
+        "cdx_sha1": "FCMHDTBKSEHQ7L5B6J4T2O7BYX36YLR4",
+        "cdx_sha1_verified": true,
+        "cdx_verification_method": "local raw-byte SHA-1 compared with the base32 digest in the exact CDX row",
+        "cdx_verified_at": "2026-10-27T05:36:12Z"
       },
       "title": "Prometheus Brown (@prometheusbrown) | Twitter",
       "content_classification": "profile_content",
@@ -572,7 +711,33 @@
         "status": "extracted",
         "method": "captured HTML tweet containers",
         "count": 19
-      }
+      },
+      "route_id": "20161128125454",
+      "length": 42224
+    },
+    {
+      "timestamp": "20161228062327",
+      "original": "https://mobile.twitter.com/prometheusbrown",
+      "route_id": "20161228062327",
+      "statuscode": "200",
+      "mimetype": "text/html",
+      "digest": "COS3Z6THF3PECR25FNM5KQ3JCDFVPFGH",
+      "length": 7561,
+      "fetch": {
+        "status": "recovered",
+        "url": "https://web.archive.org/web/20161228062327id_/https://mobile.twitter.com/prometheusbrown",
+        "path": "raw/20161228062327.html",
+        "sha256": "1c976bcff46340de1b31f31a248730e530d5f275a7357b3a8664b4fc56bf4599",
+        "cdx_sha1": "COS3Z6THF3PECR25FNM5KQ3JCDFVPFGH",
+        "cdx_sha1_verified": true,
+        "bytes": 57798,
+        "content_type": "text/html;charset=utf-8",
+        "http_status": 200,
+        "cdx_verification_method": "local raw-byte SHA-1 compared with the base32 digest in the exact CDX row",
+        "cdx_verified_at": "2026-10-27T05:36:12Z"
+      },
+      "title": "Prometheus Brown (@prometheusbrown) on Twitter",
+      "content_classification": "profile_content"
     },
     {
       "timestamp": "20180804184552",
@@ -588,7 +753,11 @@
         "bytes": 420737,
         "sha256": "7d80e9f5927209cdb81f91e3f4e645e374960be0bde1553d83c0a7bd5862f1bd",
         "content_type": "text/html;charset=utf-8",
-        "http_status": 200
+        "http_status": 200,
+        "cdx_sha1": "HAXM45EJEFUIRWBBNBMUMLNBNAIOX3DM",
+        "cdx_sha1_verified": true,
+        "cdx_verification_method": "local raw-byte SHA-1 compared with the base32 digest in the exact CDX row",
+        "cdx_verified_at": "2026-10-27T05:36:12Z"
       },
       "title": "Prometheus Brown (@prometheusbrown) | Twitter",
       "content_classification": "profile_content",
@@ -602,7 +771,9 @@
         "status": "extracted",
         "method": "captured HTML tweet containers",
         "count": 20
-      }
+      },
+      "route_id": "20180804184552",
+      "length": 55449
     },
     {
       "timestamp": "20180823075921",
@@ -618,7 +789,11 @@
         "bytes": 443919,
         "sha256": "dab92a7d8d873d9c577f2bff15a04b755aaa855e438d1077a6a6ecc94c85540b",
         "content_type": "text/html;charset=utf-8",
-        "http_status": 200
+        "http_status": 200,
+        "cdx_sha1": "4KLFPMERDO62QEVW3KHUOQ4OVUTNCMR6",
+        "cdx_sha1_verified": true,
+        "cdx_verification_method": "local raw-byte SHA-1 compared with the base32 digest in the exact CDX row",
+        "cdx_verified_at": "2026-10-27T05:36:12Z"
       },
       "title": "Prometheus Brown (@prometheusbrown) | Twitter",
       "content_classification": "profile_content",
@@ -632,7 +807,9 @@
         "status": "extracted",
         "method": "captured HTML tweet containers",
         "count": 20
-      }
+      },
+      "route_id": "20180823075921",
+      "length": 55792
     },
     {
       "timestamp": "20181109155711",
@@ -648,7 +825,11 @@
         "bytes": 529251,
         "sha256": "5682bc3a38f2be9744803dd9a11b0912b0656c3cd49c9bf279e18b4bd3405c41",
         "content_type": "text/html;charset=utf-8",
-        "http_status": 200
+        "http_status": 200,
+        "cdx_sha1": "RJTW5TG662NKR75ZRFLU3RLVNFAUV37I",
+        "cdx_sha1_verified": true,
+        "cdx_verification_method": "local raw-byte SHA-1 compared with the base32 digest in the exact CDX row",
+        "cdx_verified_at": "2026-10-27T05:36:12Z"
       },
       "title": "Prometheus Brown (@prometheusbrown) | Twitter",
       "content_classification": "profile_content",
@@ -662,7 +843,9 @@
         "status": "extracted",
         "method": "captured HTML tweet containers",
         "count": 20
-      }
+      },
+      "route_id": "20181109155711",
+      "length": 68874
     },
     {
       "timestamp": "20181109232428",
@@ -678,7 +861,11 @@
         "bytes": 531036,
         "sha256": "da66faabb7b848218070bf9d7aabd1c17ae62955f65e44d9d705f7d6c75c9f9e",
         "content_type": "text/html;charset=utf-8",
-        "http_status": 200
+        "http_status": 200,
+        "cdx_sha1": "PWGVPY6BGY2NEQL5RKWGMITOSRNDBFL3",
+        "cdx_sha1_verified": true,
+        "cdx_verification_method": "local raw-byte SHA-1 compared with the base32 digest in the exact CDX row",
+        "cdx_verified_at": "2026-10-27T05:36:12Z"
       },
       "title": "Prometheus Brown (@prometheusbrown) | Twitter",
       "content_classification": "profile_content",
@@ -692,7 +879,9 @@
         "status": "extracted",
         "method": "captured HTML tweet containers",
         "count": 20
-      }
+      },
+      "route_id": "20181109232428",
+      "length": 69380
     },
     {
       "timestamp": "20191008144429",
@@ -708,7 +897,11 @@
         "bytes": 314731,
         "sha256": "7633c0c507c8eb4f87455870eeb700f5d447e0c9126e6ba71a55dc80bd9de628",
         "content_type": "text/html;charset=utf-8",
-        "http_status": 200
+        "http_status": 200,
+        "cdx_sha1": "SCA3ZHSTRHI66KLM2Z6GFIY73J4M5UWQ",
+        "cdx_sha1_verified": true,
+        "cdx_verification_method": "local raw-byte SHA-1 compared with the base32 digest in the exact CDX row",
+        "cdx_verified_at": "2026-10-27T05:36:12Z"
       },
       "title": "Prometheus Brown (@prometheusbrown) | Twitter",
       "content_classification": "profile_content",
@@ -722,7 +915,9 @@
         "status": "extracted",
         "method": "captured HTML tweet containers",
         "count": 20
-      }
+      },
+      "route_id": "20191008144429",
+      "length": 38729
     },
     {
       "timestamp": "20191015141527",
@@ -738,7 +933,11 @@
         "bytes": 314730,
         "sha256": "9710cdd859665e3e368d408700e52e9c0203032bdd19b122e9bd1fd7bb2c3222",
         "content_type": "text/html;charset=utf-8",
-        "http_status": 200
+        "http_status": 200,
+        "cdx_sha1": "YIIV2H66ABGKDLLSXIL5M7L3LI4LB5F2",
+        "cdx_sha1_verified": true,
+        "cdx_verification_method": "local raw-byte SHA-1 compared with the base32 digest in the exact CDX row",
+        "cdx_verified_at": "2026-10-27T05:36:12Z"
       },
       "title": "Prometheus Brown (@prometheusbrown) | Twitter",
       "content_classification": "profile_content",
@@ -752,7 +951,9 @@
         "status": "extracted",
         "method": "captured HTML tweet containers",
         "count": 20
-      }
+      },
+      "route_id": "20191015141527",
+      "length": 38483
     },
     {
       "timestamp": "20191029015034",
@@ -768,7 +969,11 @@
         "bytes": 569602,
         "sha256": "938e022ae11d9a59bfc1c97022877bce682b8e0be05794d47ce36517d9483f91",
         "content_type": "text/html;charset=utf-8",
-        "http_status": 200
+        "http_status": 200,
+        "cdx_sha1": "BRZGB5EVUYYS7LETL3EBG7PXD7VZOLZZ",
+        "cdx_sha1_verified": true,
+        "cdx_verification_method": "local raw-byte SHA-1 compared with the base32 digest in the exact CDX row",
+        "cdx_verified_at": "2026-10-27T05:36:12Z"
       },
       "title": "Prometheus Brown (@prometheusbrown) | Twitter",
       "content_classification": "profile_content",
@@ -782,7 +987,9 @@
         "status": "extracted",
         "method": "captured HTML tweet containers",
         "count": 20
-      }
+      },
+      "route_id": "20191029015034",
+      "length": 79605
     },
     {
       "timestamp": "20210316153116",
@@ -798,7 +1005,11 @@
         "bytes": 46028,
         "sha256": "74886fdc8ce60b5fe85b95c6a83b122116ccee7df309c9d5b51c428f27bc13b6",
         "content_type": "text/html; charset=utf-8",
-        "http_status": 200
+        "http_status": 200,
+        "cdx_sha1": "PVHDDNBNT3XOWEFHH2SLBUQ3WWLLEL24",
+        "cdx_sha1_verified": true,
+        "cdx_verification_method": "local raw-byte SHA-1 compared with the base32 digest in the exact CDX row",
+        "cdx_verified_at": "2026-10-27T05:36:12Z"
       },
       "title": "",
       "content_classification": "platform_error",
@@ -812,7 +1023,9 @@
         "status": "extracted",
         "method": "captured HTML tweet containers",
         "count": 0
-      }
+      },
+      "route_id": "20210316153116",
+      "length": 12975
     },
     {
       "timestamp": "20210625222343",
@@ -828,7 +1041,11 @@
         "bytes": 750725,
         "sha256": "a18d0196a892adf1e4abcc5b78750ce229f565802c715f28f55587760cbf83f6",
         "content_type": "text/html;charset=utf-8",
-        "http_status": 200
+        "http_status": 200,
+        "cdx_sha1": "QYKLKKCW3FTXNO7JAEPUQ3QY4XJ2AFHP",
+        "cdx_sha1_verified": true,
+        "cdx_verification_method": "local raw-byte SHA-1 compared with the base32 digest in the exact CDX row",
+        "cdx_verified_at": "2026-10-27T05:36:12Z"
       },
       "title": "Prometheus Brown (@prometheusbrown) | Twitter",
       "content_classification": "profile_content",
@@ -842,7 +1059,9 @@
         "status": "extracted",
         "method": "captured HTML tweet containers",
         "count": 19
-      }
+      },
+      "route_id": "20210625222343",
+      "length": 104932
     },
     {
       "timestamp": "20210626110538",
@@ -858,7 +1077,11 @@
         "bytes": 750523,
         "sha256": "92d758005ec71bfada0c95600d8e1493e367f89537fce49af7c51a44bb1a17ef",
         "content_type": "text/html;charset=utf-8",
-        "http_status": 200
+        "http_status": 200,
+        "cdx_sha1": "KT7UJYJQ2XMXW6ZZQBABZBCKJIYMPJMV",
+        "cdx_sha1_verified": true,
+        "cdx_verification_method": "local raw-byte SHA-1 compared with the base32 digest in the exact CDX row",
+        "cdx_verified_at": "2026-10-27T05:36:12Z"
       },
       "title": "Prometheus Brown (@prometheusbrown) | Twitter",
       "content_classification": "profile_content",
@@ -872,7 +1095,9 @@
         "status": "extracted",
         "method": "captured HTML tweet containers",
         "count": 19
-      }
+      },
+      "route_id": "20210626110538",
+      "length": 104864
     },
     {
       "timestamp": "20211017102603",
@@ -888,7 +1113,11 @@
         "bytes": 768848,
         "sha256": "16ab739703124e878eb649ade309fe9f08756d37bac8de005fd1dbda912ce99a",
         "content_type": "text/html;charset=utf-8",
-        "http_status": 200
+        "http_status": 200,
+        "cdx_sha1": "W23GGUA5ASY46C2EJCGE6E5PKHVCAAEI",
+        "cdx_sha1_verified": true,
+        "cdx_verification_method": "local raw-byte SHA-1 compared with the base32 digest in the exact CDX row",
+        "cdx_verified_at": "2026-10-27T05:36:12Z"
       },
       "title": "Prometheus Brown (@prometheusbrown) | Twitter",
       "content_classification": "profile_content",
@@ -902,7 +1131,9 @@
         "status": "extracted",
         "method": "captured HTML tweet containers",
         "count": 20
-      }
+      },
+      "route_id": "20211017102603",
+      "length": 114746
     },
     {
       "timestamp": "20211113002220",
@@ -918,7 +1149,11 @@
         "bytes": 84427,
         "sha256": "4722acd73e7590310c1a3808f8252a2820fffde04b76971eadce50a9b2f01c95",
         "content_type": "text/html; charset=utf-8",
-        "http_status": 200
+        "http_status": 200,
+        "cdx_sha1": "DLV57QODHDVKIYEHDC5JJ7YKUD4M32ZB",
+        "cdx_sha1_verified": true,
+        "cdx_verification_method": "local raw-byte SHA-1 compared with the base32 digest in the exact CDX row",
+        "cdx_verified_at": "2026-10-27T05:36:12Z"
       },
       "title": "",
       "content_classification": "platform_error",
@@ -932,7 +1167,9 @@
         "status": "extracted",
         "method": "captured HTML tweet containers",
         "count": 0
-      }
+      },
+      "route_id": "20211113002220",
+      "length": 19057
     },
     {
       "timestamp": "20220607005848",
@@ -948,7 +1185,11 @@
         "bytes": 740874,
         "sha256": "d81d6f69e3d8a6dda7f7221bae89d3f47154d2176f6fd792c7dd7aa03102ebf0",
         "content_type": "text/html;charset=utf-8",
-        "http_status": 200
+        "http_status": 200,
+        "cdx_sha1": "DPYLR23D6YFID6CAPLRUKQVHEMQMDKSS",
+        "cdx_sha1_verified": true,
+        "cdx_verification_method": "local raw-byte SHA-1 compared with the base32 digest in the exact CDX row",
+        "cdx_verified_at": "2026-10-27T05:36:12Z"
       },
       "title": "Prometheus Brown (@prometheusbrown) | Twitter",
       "content_classification": "profile_content",
@@ -962,7 +1203,9 @@
         "status": "extracted",
         "method": "captured HTML tweet containers",
         "count": 20
-      }
+      },
+      "route_id": "20220607005848",
+      "length": 105267
     },
     {
       "timestamp": "20221206172415",
@@ -978,7 +1221,11 @@
         "bytes": 144030,
         "sha256": "80ea706fb14fb58fcc3696539e5fcfa7328ec56fb8f0ae195a0da82bf162dd88",
         "content_type": "text/html; charset=utf-8",
-        "http_status": 200
+        "http_status": 200,
+        "cdx_sha1": "5PVATQWHF4USUQLDBGOHTRWE2UNWVULK",
+        "cdx_sha1_verified": true,
+        "cdx_verification_method": "local raw-byte SHA-1 compared with the base32 digest in the exact CDX row",
+        "cdx_verified_at": "2026-10-27T05:36:12Z"
       },
       "title": "",
       "content_classification": "platform_error",
@@ -992,6 +1239,22 @@
         "status": "extracted",
         "method": "captured HTML tweet containers",
         "count": 0
+      },
+      "route_id": "20221206172415",
+      "length": 19570
+    },
+    {
+      "timestamp": "20240605204749",
+      "original": "https://x.com/prometheusbrown",
+      "route_id": "20240605204749",
+      "statuscode": "200",
+      "mimetype": "text/html",
+      "digest": "HILZWAE5MCX7V6T7DVWQ5EDT3NF4ZDOE",
+      "length": 818,
+      "fetch": {
+        "status": "failed",
+        "url": "https://web.archive.org/web/20240605204749id_/https://x.com/prometheusbrown",
+        "error": "ValueError: Response did not contain an HTML document"
       }
     },
     {
@@ -1008,7 +1271,11 @@
         "bytes": 81785,
         "sha256": "fafe99ffe7cf385d1162f0bb2826c6cbc137bd8c46e1b0f619e90183d4701780",
         "content_type": "text/html; charset=utf-8",
-        "http_status": 200
+        "http_status": 200,
+        "cdx_sha1": "2OBABOZ7G24WSCEA3FO6RYDOUZZGHZOD",
+        "cdx_sha1_verified": true,
+        "cdx_verification_method": "local raw-byte SHA-1 compared with the base32 digest in the exact CDX row",
+        "cdx_verified_at": "2026-10-27T05:36:12Z"
       },
       "title": "SQUATTING (@prometheusbrown) / X",
       "content_classification": "later_account_takeover",
@@ -1022,7 +1289,81 @@
         "status": "extracted",
         "method": "captured HTML tweet containers",
         "count": 0
-      }
+      },
+      "route_id": "20241115224417",
+      "length": 22943
+    },
+    {
+      "timestamp": "20250325190231",
+      "original": "https://x.com/prometheusbrown",
+      "route_id": "20250325190231",
+      "statuscode": "200",
+      "mimetype": "text/html",
+      "digest": "4R42CALWWEZATQUOYFQGDDB3FP2QAUJQ",
+      "length": 41363,
+      "fetch": {
+        "status": "recovered",
+        "url": "https://web.archive.org/web/20250325190231id_/https://x.com/prometheusbrown",
+        "path": "raw/20250325190231.html",
+        "sha256": "748dd3a6ac1f28873da5d1a0f7abc23ef68dfba3ae2686115fc810b3f42c9b11",
+        "cdx_sha1": "4R42CALWWEZATQUOYFQGDDB3FP2QAUJQ",
+        "cdx_sha1_verified": true,
+        "bytes": 246773,
+        "content_type": "text/html; charset=utf-8",
+        "http_status": 200,
+        "cdx_verification_method": "local raw-byte SHA-1 compared with the base32 digest in the exact CDX row",
+        "cdx_verified_at": "2026-10-27T05:36:12Z"
+      },
+      "title": "",
+      "content_classification": "platform_error"
+    },
+    {
+      "timestamp": "20250724120616",
+      "original": "https://x.com/prometheusbrown",
+      "route_id": "20250724120616",
+      "statuscode": "200",
+      "mimetype": "text/html",
+      "digest": "5LFQOYXA37SLX2C37O6XYQWPQ2ZK3MVB",
+      "length": 63041,
+      "fetch": {
+        "status": "recovered",
+        "url": "https://web.archive.org/web/20250724120616id_/https://x.com/prometheusbrown",
+        "path": "raw/20250724120616.html",
+        "sha256": "e57dd6150938d52132ab182bd8353bcd8141d5673265a6c7da05c8332121e844",
+        "cdx_sha1": "5LFQOYXA37SLX2C37O6XYQWPQ2ZK3MVB",
+        "cdx_sha1_verified": true,
+        "bytes": 273926,
+        "content_type": "text/html; charset=utf-8",
+        "http_status": 200,
+        "cdx_verification_method": "local raw-byte SHA-1 compared with the base32 digest in the exact CDX row",
+        "cdx_verified_at": "2026-10-27T05:36:12Z"
+      },
+      "title": "",
+      "content_classification": "platform_error"
+    },
+    {
+      "timestamp": "20250815102930",
+      "original": "https://x.com/prometheusbrown",
+      "route_id": "20250815102930",
+      "statuscode": "200",
+      "mimetype": "text/html",
+      "digest": "7AK4EDKJAYKGDYJAY7HY6DN5TVEHERR7",
+      "length": 33752,
+      "fetch": {
+        "status": "recovered",
+        "url": "https://web.archive.org/web/20250815102930id_/https://x.com/prometheusbrown",
+        "path": "raw/20250815102930.html",
+        "sha256": "36527c41f4bcae7bd7f71264e1b25959c06e8aa9cb47351875aec8900b9d611d",
+        "cdx_sha1": "7AK4EDKJAYKGDYJAY7HY6DN5TVEHERR7",
+        "cdx_sha1_verified": true,
+        "bytes": 270289,
+        "content_type": "text/html; charset=utf-8",
+        "http_status": 200,
+        "cdx_verification_method": "local raw-byte SHA-1 compared with the base32 digest in the exact CDX row",
+        "cdx_verified_at": "2026-10-27T05:36:12Z"
+      },
+      "title": "",
+      "content_classification": "platform_error"
     }
   ],
   "assets": [
@@ -1096,10 +1437,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20090725010529",
@@ -1117,10 +1464,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20090725010529",
@@ -1138,10 +1491,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20090725010529",
@@ -1171,10 +1530,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20090725010529",
@@ -1213,10 +1578,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20090725010529",
@@ -1246,10 +1617,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20090725010529",
@@ -1279,10 +1656,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20090725010529",
@@ -1300,10 +1683,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20090725010529",
@@ -1357,10 +1746,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20090725010529",
@@ -1402,10 +1797,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20090725010529",
@@ -1435,10 +1836,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20090725010529",
@@ -1456,10 +1863,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20090725010529",
@@ -1489,10 +1902,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20090725010529",
@@ -1522,10 +1941,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20090725010529",
@@ -1543,10 +1968,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20090725010529",
@@ -1564,10 +1995,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20090725010529",
@@ -1597,10 +2034,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20090725010529",
@@ -1630,10 +2073,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20090725010529",
@@ -1663,10 +2112,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20090725010529",
@@ -2389,10 +2844,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20090919113427",
@@ -2821,10 +3282,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20110317131039",
@@ -2863,10 +3330,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20110317131039",
@@ -2884,10 +3357,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20110317131039",
@@ -2905,10 +3384,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20110317131039",
@@ -2926,10 +3411,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20110317131039",
@@ -2980,10 +3471,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20110317131039",
@@ -3001,10 +3498,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20110317131039",
@@ -3022,10 +3525,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20110317131039",
@@ -3055,10 +3564,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20110317131039",
@@ -3076,10 +3591,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20110317131039",
@@ -3097,10 +3618,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20110317131039",
@@ -3130,10 +3657,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20110317131039",
@@ -3163,10 +3696,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20110317131039",
@@ -3184,10 +3723,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20110317131039",
@@ -3217,10 +3762,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20110317131039",
@@ -3262,10 +3813,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20110317131039",
@@ -3283,10 +3840,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20110317131039",
@@ -3316,10 +3879,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20110317131039",
@@ -3349,10 +3918,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20110317131039",
@@ -3403,10 +3978,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20110317131039",
@@ -3436,10 +4017,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20110317131039",
@@ -3457,10 +4044,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20110317131039",
@@ -3478,10 +4071,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20110317131039",
@@ -3547,10 +4146,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20121111233041",
@@ -3580,10 +4185,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20121111233041",
@@ -3685,10 +4296,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20130818135257",
@@ -3943,10 +4560,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20131102055929",
@@ -3964,10 +4587,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20131102055929",
@@ -3985,10 +4614,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20131102055929",
@@ -4006,10 +4641,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20131102055929",
@@ -4027,10 +4668,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20131102055929",
@@ -4072,10 +4719,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20131102055929",
@@ -4117,10 +4770,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20131102055929",
@@ -4138,10 +4797,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20131102055929",
@@ -4159,10 +4824,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20131102055929",
@@ -4429,10 +5100,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20131227143908",
@@ -4639,10 +5316,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20140204214247",
@@ -4696,10 +5379,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20150323173743",
@@ -4774,10 +5463,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20150323173743",
@@ -4795,10 +5490,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20150323173743",
@@ -4816,10 +5517,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20150323173743",
@@ -4837,10 +5544,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20150323173743",
@@ -4858,10 +5571,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20150323173743",
@@ -4879,10 +5598,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20150323173743",
@@ -4900,10 +5625,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20150323173743",
@@ -4921,10 +5652,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20150323173743",
@@ -4942,10 +5679,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20150323173743",
@@ -4963,10 +5706,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20150323173743",
@@ -4984,10 +5733,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20150323173743",
@@ -5026,10 +5781,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20150323173743",
@@ -5059,10 +5820,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20150323173743",
@@ -5092,10 +5859,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20150323173743",
@@ -5113,10 +5886,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20150323173743",
@@ -5146,10 +5925,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20150323173743",
@@ -5191,10 +5976,16 @@
         {
           "attempt": 3,
           "error": "ValueError: HTTP 404"
+        },
+        {
+          "attempt": 4,
+          "error": "ValueError: HTTP 404",
+          "alternate_capture": false
         }
       ],
       "status": "failed",
-      "last_error": "ValueError: HTTP 404"
+      "last_error": "ValueError: HTTP 404",
+      "direct_error": "ValueError: HTTP 404"
     },
     {
       "timestamp": "20150323173743",
@@ -12190,34 +12981,439 @@
       "sha256": "afd5925c151352610e91fb90e1f9df569fba08fb885424ade1ff53bd6ba308ec",
       "content_type": "image/jpeg",
       "http_status": 200
+    },
+    {
+      "timestamp": "20131231070159",
+      "url": "https://ma.twimg.com/twitter-mobile/dd149e28079fd86ee33cf1bb9e71e8a62d40ac22/images/sprites/larry_28px.gif",
+      "kind": "image",
+      "attempts": [],
+      "status": "recovered",
+      "path": "assets/a063328516ca74bf229cd3f7cfe3124deb249b3788476c96936ea986d32cb6c8.gif",
+      "bytes": 1335,
+      "sha256": "a063328516ca74bf229cd3f7cfe3124deb249b3788476c96936ea986d32cb6c8",
+      "content_type": "image/gif",
+      "http_status": 200
+    },
+    {
+      "timestamp": "20131231070159",
+      "url": "https://ma.twimg.com/twitter-mobile/dd149e28079fd86ee33cf1bb9e71e8a62d40ac22/images/brandbar_divider.gif",
+      "kind": "image",
+      "attempts": [],
+      "status": "recovered",
+      "path": "assets/4bf1147d1b54839a00ebc538fbc81b026cd35f7dbd942bf2b8fe1f6c62206784.gif",
+      "bytes": 1097,
+      "sha256": "4bf1147d1b54839a00ebc538fbc81b026cd35f7dbd942bf2b8fe1f6c62206784",
+      "content_type": "image/gif",
+      "http_status": 200
+    },
+    {
+      "timestamp": "20131231070159",
+      "url": "https://ma.twimg.com/twitter-mobile/dd149e28079fd86ee33cf1bb9e71e8a62d40ac22/images/sprites/search_28px.gif",
+      "kind": "image",
+      "attempts": [],
+      "status": "recovered",
+      "path": "assets/b971dcd3d8ba07c94c82b7d5f96b884a4dc30b1a78a65ecbfc1eb546132c48d2.gif",
+      "bytes": 541,
+      "sha256": "b971dcd3d8ba07c94c82b7d5f96b884a4dc30b1a78a65ecbfc1eb546132c48d2",
+      "content_type": "image/gif",
+      "http_status": 200
+    },
+    {
+      "timestamp": "20131231070159",
+      "url": "https://pbs.twimg.com/profile_images/415074750415663104/BmXKh5GB_normal.jpeg",
+      "kind": "image",
+      "attempts": [],
+      "status": "recovered",
+      "path": "assets/a995bd7c7b0e90ab0df979f8eeec5204acdc2a70361b4390273f6ffa7bf3aff1.jpg",
+      "bytes": 1960,
+      "sha256": "a995bd7c7b0e90ab0df979f8eeec5204acdc2a70361b4390273f6ffa7bf3aff1",
+      "content_type": "image/jpeg",
+      "http_status": 200
+    },
+    {
+      "timestamp": "20131231070159",
+      "url": "https://ma.twimg.com/twitter-mobile/dd149e28079fd86ee33cf1bb9e71e8a62d40ac22/images/sprites/tweet_reply.gif",
+      "kind": "image",
+      "attempts": [],
+      "status": "recovered",
+      "path": "assets/989694c5738c8c67da6eb1dce9c966e6d9ff391bc5f2f28dd84416f3310eece5.gif",
+      "bytes": 126,
+      "sha256": "989694c5738c8c67da6eb1dce9c966e6d9ff391bc5f2f28dd84416f3310eece5",
+      "content_type": "image/gif",
+      "http_status": 200
+    },
+    {
+      "timestamp": "20131231070159",
+      "url": "https://ma.twimg.com/twitter-mobile/dd149e28079fd86ee33cf1bb9e71e8a62d40ac22/images/sprites/tweet_rt.gif",
+      "kind": "image",
+      "attempts": [],
+      "status": "recovered",
+      "path": "assets/3f731fb2c87e410685f5dd460b6194b69d80aaea78882cb432efe0e0617023ab.gif",
+      "bytes": 98,
+      "sha256": "3f731fb2c87e410685f5dd460b6194b69d80aaea78882cb432efe0e0617023ab",
+      "content_type": "image/gif",
+      "http_status": 200
+    },
+    {
+      "timestamp": "20131231070159",
+      "url": "https://ma.twimg.com/twitter-mobile/dd149e28079fd86ee33cf1bb9e71e8a62d40ac22/images/sprites/tweet_fav.gif",
+      "kind": "image",
+      "attempts": [],
+      "status": "recovered",
+      "path": "assets/ddba684dc6dac6d348a1ccfd82f5e3517a0b776fd5abf4b1a9128d1f9996470f.gif",
+      "bytes": 134,
+      "sha256": "ddba684dc6dac6d348a1ccfd82f5e3517a0b776fd5abf4b1a9128d1f9996470f",
+      "content_type": "image/gif",
+      "http_status": 200
+    },
+    {
+      "timestamp": "20131231070159",
+      "url": "https://pbs.twimg.com/profile_images/378800000825068846/e01677a8721e3086f9489a7fe51c2259_normal.jpeg",
+      "kind": "image",
+      "attempts": [],
+      "status": "recovered",
+      "path": "assets/bbbc52a89bd614e0bc7c5d89313c3d43c4949c6880a202cde60ec76b21665c0e.jpg",
+      "bytes": 1835,
+      "sha256": "bbbc52a89bd614e0bc7c5d89313c3d43c4949c6880a202cde60ec76b21665c0e",
+      "content_type": "image/jpeg",
+      "http_status": 200
+    },
+    {
+      "timestamp": "20131231070159",
+      "url": "https://pbs.twimg.com/profile_images/378800000349803064/c1c9a2eac22c5eb56f43e2f090068106_normal.png",
+      "kind": "image",
+      "attempts": [],
+      "status": "recovered",
+      "path": "assets/18703974b3615cc3fab6ce646815bde74b75c744a4e1a2a9ffc8c462b78fe41c.png",
+      "bytes": 7190,
+      "sha256": "18703974b3615cc3fab6ce646815bde74b75c744a4e1a2a9ffc8c462b78fe41c",
+      "content_type": "image/png",
+      "http_status": 200
+    },
+    {
+      "timestamp": "20131231070159",
+      "url": "https://pbs.twimg.com/profile_images/378800000733561752/ca8f6ed1ed447685846269886400e2b1_normal.jpeg",
+      "kind": "image",
+      "attempts": [],
+      "status": "recovered",
+      "path": "assets/4038ed27206c5c43b177bb288a53ab7467eafaed4cd41d3ec81f24d43ebe4a74.jpg",
+      "bytes": 2030,
+      "sha256": "4038ed27206c5c43b177bb288a53ab7467eafaed4cd41d3ec81f24d43ebe4a74",
+      "content_type": "image/jpeg",
+      "http_status": 200
+    },
+    {
+      "timestamp": "20131231070159",
+      "url": "https://pbs.twimg.com/profile_images/378800000657718787/ca953f0cef3a36e2d181350cc541baad_normal.jpeg",
+      "kind": "image",
+      "attempts": [],
+      "status": "recovered",
+      "path": "assets/84878c3b1eb43660c2deb280b9ac8550939a4845ea9841a6bb56e0f4909c9595.jpg",
+      "bytes": 7190,
+      "sha256": "84878c3b1eb43660c2deb280b9ac8550939a4845ea9841a6bb56e0f4909c9595",
+      "content_type": "image/jpeg",
+      "http_status": 200
+    },
+    {
+      "timestamp": "20161228062327",
+      "url": "https://ma.twimg.com/twitter-mobile/81201efba703672b064fb0266aa00d5a7f021a95/images/sprites/larry_28px.gif",
+      "kind": "image",
+      "attempts": [],
+      "status": "recovered",
+      "path": "assets/a8936b433b82778cbeb997c800fa7c852a6fd85dd933ad4cc4c7e7d77731dd1f.gif",
+      "bytes": 574,
+      "sha256": "a8936b433b82778cbeb997c800fa7c852a6fd85dd933ad4cc4c7e7d77731dd1f",
+      "content_type": "image/gif",
+      "http_status": 200
+    },
+    {
+      "timestamp": "20161228062327",
+      "url": "https://ma.twimg.com/twitter-mobile/81201efba703672b064fb0266aa00d5a7f021a95/images/brandbar_divider.gif",
+      "kind": "image",
+      "attempts": [],
+      "status": "recovered",
+      "path": "assets/4bf1147d1b54839a00ebc538fbc81b026cd35f7dbd942bf2b8fe1f6c62206784.gif",
+      "bytes": 1097,
+      "sha256": "4bf1147d1b54839a00ebc538fbc81b026cd35f7dbd942bf2b8fe1f6c62206784",
+      "content_type": "image/gif",
+      "http_status": 200
+    },
+    {
+      "timestamp": "20161228062327",
+      "url": "https://ma.twimg.com/twitter-mobile/81201efba703672b064fb0266aa00d5a7f021a95/images/sprites/search_28px.gif",
+      "kind": "image",
+      "attempts": [],
+      "status": "recovered",
+      "path": "assets/b971dcd3d8ba07c94c82b7d5f96b884a4dc30b1a78a65ecbfc1eb546132c48d2.gif",
+      "bytes": 541,
+      "sha256": "b971dcd3d8ba07c94c82b7d5f96b884a4dc30b1a78a65ecbfc1eb546132c48d2",
+      "content_type": "image/gif",
+      "http_status": 200
+    },
+    {
+      "timestamp": "20161228062327",
+      "url": "https://pbs.twimg.com/profile_images/684807864938975232/-fO3QQSV_normal.jpg",
+      "kind": "image",
+      "attempts": [],
+      "status": "recovered",
+      "path": "assets/70167b58ccb62d6b18361dbb0569605c4e1d87b7c81f3dadec48d7b97673c4ae.jpg",
+      "bytes": 1807,
+      "sha256": "70167b58ccb62d6b18361dbb0569605c4e1d87b7c81f3dadec48d7b97673c4ae",
+      "content_type": "image/jpeg",
+      "http_status": 200
+    },
+    {
+      "timestamp": "20161228062327",
+      "url": "https://pbs.twimg.com/media/C0edvEeVQAAdWrM.jpg:thumb",
+      "kind": "image",
+      "attempts": [],
+      "status": "recovered",
+      "path": "assets/18056c692064b360a0c33a333b6809e6fde9d0b90de89720feb6b3dab02e2ffb.jpg",
+      "bytes": 7819,
+      "sha256": "18056c692064b360a0c33a333b6809e6fde9d0b90de89720feb6b3dab02e2ffb",
+      "content_type": "image/jpeg",
+      "http_status": 200
+    },
+    {
+      "timestamp": "20161228062327",
+      "url": "https://pbs.twimg.com/media/C0OnJFaUsAAram8.jpg:thumb",
+      "kind": "image",
+      "attempts": [],
+      "status": "recovered",
+      "path": "assets/d01a4793d860f8d825b3b4ae16b7947b8dee3bdacdb45cda2af628f51b59193c.jpg",
+      "bytes": 8923,
+      "sha256": "d01a4793d860f8d825b3b4ae16b7947b8dee3bdacdb45cda2af628f51b59193c",
+      "content_type": "image/jpeg",
+      "http_status": 200
+    },
+    {
+      "timestamp": "20161228062327",
+      "url": "https://ma.twimg.com/twitter-mobile/81201efba703672b064fb0266aa00d5a7f021a95/images/sprites/tweet_reply.gif",
+      "kind": "image",
+      "attempts": [],
+      "status": "recovered",
+      "path": "assets/989694c5738c8c67da6eb1dce9c966e6d9ff391bc5f2f28dd84416f3310eece5.gif",
+      "bytes": 126,
+      "sha256": "989694c5738c8c67da6eb1dce9c966e6d9ff391bc5f2f28dd84416f3310eece5",
+      "content_type": "image/gif",
+      "http_status": 200
+    },
+    {
+      "timestamp": "20161228062327",
+      "url": "https://ma.twimg.com/twitter-mobile/81201efba703672b064fb0266aa00d5a7f021a95/images/sprites/tweet_rt.gif",
+      "kind": "image",
+      "attempts": [],
+      "status": "recovered",
+      "path": "assets/3f731fb2c87e410685f5dd460b6194b69d80aaea78882cb432efe0e0617023ab.gif",
+      "bytes": 98,
+      "sha256": "3f731fb2c87e410685f5dd460b6194b69d80aaea78882cb432efe0e0617023ab",
+      "content_type": "image/gif",
+      "http_status": 200
+    },
+    {
+      "timestamp": "20161228062327",
+      "url": "https://ma.twimg.com/twitter-mobile/81201efba703672b064fb0266aa00d5a7f021a95/images/sprites/tweet_heart.gif",
+      "kind": "image",
+      "attempts": [],
+      "status": "recovered",
+      "path": "assets/fffe60b1876005c412e94ee85a1b8da7beca0b964f928c68d3a4eadea3415f88.gif",
+      "bytes": 184,
+      "sha256": "fffe60b1876005c412e94ee85a1b8da7beca0b964f928c68d3a4eadea3415f88",
+      "content_type": "image/gif",
+      "http_status": 200
+    },
+    {
+      "timestamp": "20161228062327",
+      "url": "https://pbs.twimg.com/profile_images/624403015219351552/DpWL5YGO_normal.jpg",
+      "kind": "image",
+      "attempts": [],
+      "status": "recovered",
+      "path": "assets/b3fd222619c514be627f1d2f2f80044c02da996f37b3aa48aecad85d636edc8f.jpg",
+      "bytes": 1655,
+      "sha256": "b3fd222619c514be627f1d2f2f80044c02da996f37b3aa48aecad85d636edc8f",
+      "content_type": "image/jpeg",
+      "http_status": 200
+    },
+    {
+      "timestamp": "20161228062327",
+      "url": "https://pbs.twimg.com/profile_images/792131376862466048/wxR0IZc__normal.jpg",
+      "kind": "image",
+      "attempts": [],
+      "status": "recovered",
+      "path": "assets/43c79a1db67cad4d247bea61d62763cee6eea1d824180f568118f001c2624aa4.jpg",
+      "bytes": 1883,
+      "sha256": "43c79a1db67cad4d247bea61d62763cee6eea1d824180f568118f001c2624aa4",
+      "content_type": "image/jpeg",
+      "http_status": 200
+    },
+    {
+      "timestamp": "20161228062327",
+      "url": "https://pbs.twimg.com/profile_images/789249814152163328/zVp5u4yW_normal.jpg",
+      "kind": "image",
+      "attempts": [],
+      "status": "recovered",
+      "path": "assets/04ab28d05c8bbd0ab4197fdbf5c687684a5a70b2e9c364973b6392ac3d7388e0.jpg",
+      "bytes": 2035,
+      "sha256": "04ab28d05c8bbd0ab4197fdbf5c687684a5a70b2e9c364973b6392ac3d7388e0",
+      "content_type": "image/jpeg",
+      "http_status": 200
+    },
+    {
+      "timestamp": "20161228062327",
+      "url": "https://pbs.twimg.com/profile_images/784135868776747008/ni3z4oK3_normal.jpg",
+      "kind": "image",
+      "attempts": [],
+      "status": "recovered",
+      "path": "assets/a19c34eb262cb0793384d25c44ead388c45962d108246952364eb35b9b57e728.jpg",
+      "bytes": 1883,
+      "sha256": "a19c34eb262cb0793384d25c44ead388c45962d108246952364eb35b9b57e728",
+      "content_type": "image/jpeg",
+      "http_status": 200
+    },
+    {
+      "timestamp": "20161228062327",
+      "url": "https://pbs.twimg.com/profile_images/771904590375587841/Qa_oOgzS_normal.jpg",
+      "kind": "image",
+      "attempts": [],
+      "status": "recovered",
+      "path": "assets/3ad6e131e19d9ca9c2f10c140e1ed4be6e5b2748e2ac5cdea5d136719b8f83a2.jpg",
+      "bytes": 2339,
+      "sha256": "3ad6e131e19d9ca9c2f10c140e1ed4be6e5b2748e2ac5cdea5d136719b8f83a2",
+      "content_type": "image/jpeg",
+      "http_status": 200
+    },
+    {
+      "timestamp": "20161228062327",
+      "url": "https://mobile.twitter.com/i/anonymize?data=%5B%7B%22integration%22%3A%22ga%22%2C%22ref%22%3A%22https%3A%5C%2F%5C%2Ftwitter.com%5C%2Fprometheusbrown%22%2C%22mobileMetricsToken%22%3A%22148290620859021787%22%7D%5D",
+      "kind": "image",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": "ValueError: Invalid image payload (image/gif, 0 bytes)",
+          "alternate_capture": false
+        }
+      ],
+      "direct_error": "ValueError: Invalid image payload (image/gif, 0 bytes)",
+      "alternate_error": "ValueError: Alternate capture did not contain a valid asset payload",
+      "status": "failed",
+      "last_error": "ValueError: Invalid image payload (image/gif, 0 bytes)"
+    },
+    {
+      "timestamp": "20161228062327",
+      "url": "https://ma.twimg.com/twitter-mobile/81201efba703672b064fb0266aa00d5a7f021a95/assets/a.css",
+      "kind": "css",
+      "attempts": [],
+      "status": "recovered",
+      "path": "assets/474bb1b480b242100afa022b3f62a582c254d6585492b652a0a80949765840ea.css",
+      "bytes": 47600,
+      "sha256": "474bb1b480b242100afa022b3f62a582c254d6585492b652a0a80949765840ea",
+      "content_type": "text/css",
+      "http_status": 200
+    },
+    {
+      "timestamp": "20250325190231",
+      "url": "https://abs-0.twimg.com/emoji/v2/svg/26a0.svg",
+      "kind": "image",
+      "attempts": [],
+      "status": "recovered",
+      "path": "assets/03382ac2fd7fe0d58ae2f81964b332bd34dfc9cc5145a10e61cb5e776aef5e2b.svg",
+      "bytes": 548,
+      "sha256": "03382ac2fd7fe0d58ae2f81964b332bd34dfc9cc5145a10e61cb5e776aef5e2b",
+      "content_type": "image/svg+xml",
+      "http_status": 200
+    },
+    {
+      "timestamp": "20250724120616",
+      "url": "https://abs-0.twimg.com/emoji/v2/svg/26a0.svg",
+      "kind": "image",
+      "attempts": [],
+      "status": "recovered",
+      "path": "assets/03382ac2fd7fe0d58ae2f81964b332bd34dfc9cc5145a10e61cb5e776aef5e2b.svg",
+      "bytes": 548,
+      "sha256": "03382ac2fd7fe0d58ae2f81964b332bd34dfc9cc5145a10e61cb5e776aef5e2b",
+      "content_type": "image/svg+xml",
+      "http_status": 200
+    },
+    {
+      "timestamp": "20250815102930",
+      "url": "https://abs-0.twimg.com/emoji/v2/svg/26a0.svg",
+      "kind": "image",
+      "attempts": [],
+      "status": "recovered",
+      "path": "assets/03382ac2fd7fe0d58ae2f81964b332bd34dfc9cc5145a10e61cb5e776aef5e2b.svg",
+      "bytes": 548,
+      "sha256": "03382ac2fd7fe0d58ae2f81964b332bd34dfc9cc5145a10e61cb5e776aef5e2b",
+      "content_type": "image/svg+xml",
+      "http_status": 200
     }
   ],
-  "index_url": "https://web.archive.org/cdx/search/cdx?url=twitter.com%2Fprometheusbrown&output=json&filter=statuscode%3A200&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&collapse=digest",
-  "inventory_count": 34,
-  "capture_history_retained": "All distinct status-200 URL/digest rows from the exact Twitter profile CDX query.",
-  "inventory_queried_at": "2026-10-20",
-  "tweet_index": {
-    "status": "built",
-    "post_entries": 570,
-    "unique_text_entries": 424,
-    "pagination_gaps": [
-      {
-        "capture": "20090725010529",
-        "url": "https://twitter.com/prometheusbrown?max_id=2825970051&page=2&twttr=true"
-      },
-      {
-        "capture": "20090919073730",
-        "url": "https://twitter.com/prometheusbrown?max_id=4096960549&page=2&twttr=true"
-      },
-      {
-        "capture": "20090919113427",
-        "url": "https://twitter.com/prometheusbrown?max_id=4099427242&page=2&twttr=true"
-      },
-      {
-        "capture": "20110317131039",
-        "url": "https://twitter.com/prometheusbrown?max_id=48135414535565313&page=2&twttr=true"
-      }
-    ],
-    "index_json": "tweets/index.json"
+  "notes": [
+    "Each dated row is retained. Raw bytes are stored only when the replay matches its CDX SHA-1 digest.",
+    "Twitter/X account names and displayed content are captured evidence, not proof of account ownership at every later date."
+  ],
+  "recovery_summary": {
+    "indexed_mementos": 40,
+    "distinct_cdx_digests": 40,
+    "recovered_mementos": 39,
+    "verified_cdx_sha1": 39,
+    "unrecovered_mementos": 1,
+    "cdx_sha1_mismatches": 0,
+    "stopped_for_rate_limit": false
+  },
+  "last_recovery": {
+    "attempted": 1,
+    "recovered": 0,
+    "failures": 1,
+    "stopped_for_rate_limit": false
+  },
+  "pagination_pages": [],
+  "pagination_inventory": {
+    "method": "Exact query URL extracted from a checksum-verified profile capture, indexed and fetched via Internet Archive CDX",
+    "observed_targets": 4,
+    "indexed_mementos": 0,
+    "verified_pages": 0,
+    "not_indexed_targets": 4,
+    "queried_at": "2026-10-27T06:32:48Z",
+    "stopped_for_rate_limit": false
+  },
+  "pagination_targets": [
+    {
+      "target_url": "https://twitter.com/prometheusbrown?max_id=2825970051&page=2&twttr=true",
+      "parent_captures": [
+        "20090725010529"
+      ],
+      "status": "not_indexed"
+    },
+    {
+      "target_url": "https://twitter.com/prometheusbrown?max_id=4096960549&page=2&twttr=true",
+      "parent_captures": [
+        "20090919073730"
+      ],
+      "status": "not_indexed"
+    },
+    {
+      "target_url": "https://twitter.com/prometheusbrown?max_id=4099427242&page=2&twttr=true",
+      "parent_captures": [
+        "20090919113427"
+      ],
+      "status": "not_indexed"
+    },
+    {
+      "target_url": "https://twitter.com/prometheusbrown?max_id=48135414535565313&page=2&twttr=true",
+      "parent_captures": [
+        "20110317131039"
+      ],
+      "status": "not_indexed"
+    }
+  ],
+  "last_asset_recovery": {
+    "queried_at": "2026-10-27T06:25:54Z",
+    "method": "Fetch exact page-linked asset URL at its profile capture date, validate the payload signature and store SHA-256; on replay failure, try the nearest successful exact-URL CDX capture and require its SHA-1 digest.",
+    "attempted": 75,
+    "recovered": 0,
+    "failed": 75,
+    "alternate_capture_recovered": 0,
+    "rate_limited": false,
+    "remaining_after_run": 25
   }
 }

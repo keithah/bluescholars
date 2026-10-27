@@ -1,0 +1,150 @@
+{
+  "source": "Internet Archive CDX",
+  "fields": [
+    "timestamp",
+    "original",
+    "statuscode",
+    "mimetype",
+    "digest",
+    "length"
+  ],
+  "queried_at": "2026-10-27T06:33:19Z",
+  "targets": [
+    {
+      "target_url": "https://twitter.com/bluescholars?max_id=110499880606240768&page=2&twttr=true",
+      "parent_captures": [
+        "20110905043441"
+      ],
+      "queries": [
+        {
+          "url": "https://twitter.com/bluescholars?max_id=110499880606240768&page=2&twttr=true",
+          "http_status": 200,
+          "result": "no_rows"
+        },
+        {
+          "url": "http://twitter.com/bluescholars?max_id=110499880606240768&page=2&twttr=true",
+          "http_status": 200,
+          "result": "no_rows"
+        },
+        {
+          "url": "http://twitter.com:80/bluescholars?max_id=110499880606240768&page=2&twttr=true",
+          "http_status": 200,
+          "result": "no_rows"
+        },
+        {
+          "url": "https://mobile.twitter.com/bluescholars?max_id=110499880606240768&page=2&twttr=true",
+          "http_status": 200,
+          "result": "no_rows"
+        }
+      ]
+    },
+    {
+      "target_url": "https://twitter.com/bluescholars?max_id=11728217607&page=2&twttr=true",
+      "parent_captures": [
+        "20100407062334"
+      ],
+      "queries": [
+        {
+          "url": "https://twitter.com/bluescholars?max_id=11728217607&page=2&twttr=true",
+          "http_status": 200,
+          "result": "no_rows"
+        },
+        {
+          "url": "http://twitter.com/bluescholars?max_id=11728217607&page=2&twttr=true",
+          "http_status": 200,
+          "result": "no_rows"
+        },
+        {
+          "url": "http://twitter.com:80/bluescholars?max_id=11728217607&page=2&twttr=true",
+          "http_status": 200,
+          "result": "no_rows"
+        },
+        {
+          "url": "https://mobile.twitter.com/bluescholars?max_id=11728217607&page=2&twttr=true",
+          "http_status": 200,
+          "result": "no_rows"
+        }
+      ]
+    },
+    {
+      "target_url": "https://twitter.com/bluescholars?max_id=124790056824225793&page=2&twttr=true",
+      "parent_captures": [
+        "20111014113002"
+      ],
+      "queries": [
+        {
+          "url": "https://twitter.com/bluescholars?max_id=124790056824225793&page=2&twttr=true",
+          "http_status": 200,
+          "result": "no_rows"
+        },
+        {
+          "url": "http://twitter.com/bluescholars?max_id=124790056824225793&page=2&twttr=true",
+          "http_status": 200,
+          "result": "no_rows"
+        },
+        {
+          "url": "http://twitter.com:80/bluescholars?max_id=124790056824225793&page=2&twttr=true",
+          "http_status": 200,
+          "result": "no_rows"
+        },
+        {
+          "url": "https://mobile.twitter.com/bluescholars?max_id=124790056824225793&page=2&twttr=true",
+          "http_status": 200,
+          "result": "no_rows"
+        }
+      ]
+    },
+    {
+      "target_url": "https://twitter.com/bluescholars?max_id=3112555357&page=2&twttr=true",
+      "parent_captures": [
+        "20090804184918"
+      ],
+      "queries": [
+        {
+          "url": "https://twitter.com/bluescholars?max_id=3112555357&page=2&twttr=true",
+          "http_status": 200,
+          "result": "rows",
+          "rows": [
+            [
+              "20200221160110",
+              "https://twitter.com/bluescholars?max_id=3112555357&page=2&twttr=true",
+              "200",
+              "text/html",
+              "363A5DY4FP4WEP6GU6QDA5VCUP53N7CW",
+              "13443"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "target_url": "https://twitter.com/bluescholars?max_id=4096148734&page=2&twttr=true",
+      "parent_captures": [
+        "20090919073718",
+        "20090919113445"
+      ],
+      "queries": [
+        {
+          "url": "https://twitter.com/bluescholars?max_id=4096148734&page=2&twttr=true",
+          "http_status": 200,
+          "result": "no_rows"
+        },
+        {
+          "url": "http://twitter.com/bluescholars?max_id=4096148734&page=2&twttr=true",
+          "http_status": 200,
+          "result": "no_rows"
+        },
+        {
+          "url": "http://twitter.com:80/bluescholars?max_id=4096148734&page=2&twttr=true",
+          "http_status": 200,
+          "result": "no_rows"
+        },
+        {
+          "url": "https://mobile.twitter.com/bluescholars?max_id=4096148734&page=2&twttr=true",
+          "http_status": 200,
+          "result": "no_rows"
+        }
+      ]
+    }
+  ]
+}

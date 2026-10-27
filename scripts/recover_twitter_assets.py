@@ -16,11 +16,13 @@ def main() -> int:
     parser.add_argument("--delay", type=float, default=0.25)
     parser.add_argument("--timeout", type=int, default=30)
     parser.add_argument("--retry-failed", action="store_true")
+    parser.add_argument("--account", choices=("prometheusbrown", "bluescholars", "sabzi", "wongweezy", "canhsolo"),
+                        default="prometheusbrown", help="Twitter handle whose linked assets should be recovered")
     args = parser.parse_args()
     if args.max_files < 1 or args.delay < 0 or args.timeout < 1:
         parser.error("max-files and timeout must be positive; delay must not be negative")
     result = recover_linked_assets(args.root, args.max_files, args.delay,
-                                   args.timeout, args.retry_failed)
+                                   args.timeout, args.retry_failed, args.account)
     print(json.dumps(result, indent=2))
     return 0
 

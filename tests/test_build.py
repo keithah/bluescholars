@@ -31,6 +31,14 @@ def test_archive_year_ranges_follow_observed_capture_manifests(tmp_path):
     ]}))
     assert archive_availability(tmp_path,'/prometheusbrown/') == (2008,2019)
     assert archive_availability(tmp_path,'/twitter-prometheusbrown/') == (2009,2009)
+    other=tmp_path/'recovery/twitter-bluescholars/manifest.json'
+    other.parent.mkdir(parents=True)
+    other.write_text(json.dumps({'captures':[
+        {'timestamp':'20090804184918','fetch':{'status':'recovered'}},
+        {'timestamp':'20171014022611','fetch':{'status':'recovered'}},
+        {'timestamp':'20221209061840','content_classification':'platform_error','fetch':{'status':'recovered'}},
+    ]}))
+    assert archive_availability(tmp_path,'/twitter-bluescholars/') == (2009,2017)
 
 def test_archive_home_routes_are_exact_and_point_to_oldest_page_by_default(tmp_path):
     for year in ('2009','2011','2013'):
@@ -44,6 +52,23 @@ def test_archive_home_routes_are_exact_and_point_to_oldest_page_by_default(tmp_p
     toolbar=soup.select_one('.archive-year-global')
     assert json.loads(toolbar['data-home-routes'])=={'2009':'/prometheusbrown/2009/','2011':'/prometheusbrown/2011/','2013':'/prometheusbrown/2013/'}
     assert soup.select_one('.archive-year-home')['href']=='/bluescholars/prometheusbrown/2011/?year=2011'
+
+
+def test_twitter_archive_routes_keep_mobile_captures_and_skip_platform_errors(tmp_path):
+    paths = (
+        ('20090804184918', 'profile_content'),
+        ('20171014022611-mobile', 'profile_content'),
+        ('20221209061840', 'platform_error'),
+    )
+    for capture, classification in paths:
+        page=tmp_path/'twitter-bluescholars'/'captures'/capture/'index.html'
+        page.parent.mkdir(parents=True,exist_ok=True)
+        page.write_text(f'<main data-twitter-content-classification="{classification}"></main>')
+
+    routes=archive_home_routes(tmp_path,'/twitter-bluescholars/')
+
+    assert routes == {2009:'/twitter-bluescholars/captures/20090804184918/',
+                      2017:'/twitter-bluescholars/captures/20171014022611-mobile/'}
 
 def test_blue_scholars_timeline_combines_capture_years_from_all_generations():
     pages=[
@@ -118,6 +143,9 @@ def test_links_to_archived_companion_sites_stay_inside_the_restoration():
           '<a href="http://myspace.com/BlueScholars">MySpace</a>'
           '<a href="https://prometheusbrown.com/">Prometheus</a>'
           '<a href="https://sabzi.co/">Sabzi</a>'
+          '<a href="http://twitter.com:80/BlueScholars">Blue Scholars Twitter</a>'
+          '<a href="https://x.com/sabzi">Sabzi Twitter</a>'
+          '<a href="https://mobile.twitter.com/wongweezy">Wong Weezy Twitter</a>'
           '<a href="http://206proof.com/">206Proof</a>'
           '<a href="https://example.org/about">Other site</a></body></html>')
     rendered,_=render_html(page,HOME,{},'/bluescholars','/2013')
@@ -126,11 +154,17 @@ def test_links_to_archived_companion_sites_stay_inside_the_restoration():
     assert soup.find('a',string='MySpace')['href']=='/bluescholars/myspace/'
     assert soup.find('a',string='Prometheus')['href']=='/bluescholars/prometheusbrown/'
     assert soup.find('a',string='Sabzi')['href']=='/bluescholars/sabzi/'
+    assert soup.find('a',string='Blue Scholars Twitter')['href']=='/bluescholars/twitter-bluescholars/'
+    assert soup.find('a',string='Sabzi Twitter')['href']=='/bluescholars/twitter-sabzi/'
+    assert soup.find('a',string='Wong Weezy Twitter')['href']=='/bluescholars/twitter-wongweezy/'
     assert soup.find('a',string='206Proof')['href']=='/bluescholars/206proof/'
     assert soup.find('a',string='Other site')['href']=='https://example.org/about'
     dated,_=render_html(page,HOME,{HOME:{'kind':'html','local_path':'/2013/index.html','actual_capture':'20140601000000'}},'/bluescholars','/2013')
     dated_soup=BeautifulSoup(dated,'html.parser')
     assert dated_soup.find('a',string='Prometheus')['href']=='/bluescholars/prometheusbrown/?year=2014'
+    assert dated_soup.find('a',string='Blue Scholars Twitter')['href']=='/bluescholars/twitter-bluescholars/?year=2014'
+    assert dated_soup.find('a',string='Sabzi Twitter')['href']=='/bluescholars/twitter-sabzi/?year=2014'
+    assert dated_soup.find('a',string='Wong Weezy Twitter')['href']=='/bluescholars/twitter-wongweezy/?year=2014'
 
 def test_global_year_navigation_marks_capture_years_and_uses_combined_routes():
     page='<html><head></head><body><h1>Post</h1></body></html>'
@@ -993,6 +1027,28 @@ def test_root_is_card_only_and_archive_pages_share_blue_scholars_activity_timeli
         control=edition.select_one('.archive-year-global input[type="range"]')
         assert control, f'{year} homepage should have the shared year slider'
         assert edition.select_one('script[src*="archive-timeline.js"]')
+
+def test_root_lists_every_recovered_twitter_account_as_a_local_archive(tmp_path):
+    fixture_root(tmp_path)
+    accounts=(('prometheusbrown','Prometheus Brown'),('bluescholars','Blue Scholars'),
+              ('sabzi','Sabzi'),('wongweezy','Wong Weezy'),('canhsolo','Canh Solo'))
+    for handle,label in accounts:
+        manifest=tmp_path/f'recovery/twitter-{handle}/manifest.json'
+        manifest.parent.mkdir(parents=True,exist_ok=True)
+        timestamp='20140101000000'
+        raw=manifest.parent/'raw'/f'{timestamp}.html'
+        raw.parent.mkdir(parents=True,exist_ok=True)
+        raw.write_text(f'<html><head><title>{label}</title></head><body>Archived account page</body></html>')
+        write_json(manifest,{'account':handle,'display_name':label,'profile':f'https://twitter.com/{handle}',
+                             'captures':[{'timestamp':timestamp,'original':f'https://twitter.com/{handle}',
+                                          'digest':'fixture','fetch':{'status':'recovered','path':f'raw/{timestamp}.html'}}],
+                             'assets':[]})
+    build(tmp_path,tmp_path/'_candidate','/bluescholars',candidate=True)
+    root=BeautifulSoup((tmp_path/'_candidate/index.html').read_text(),'html.parser')
+    links={anchor.select_one('.archive-site-title').get_text(strip=True):anchor.get('href')
+           for anchor in root.select('a.archive-site-card')}
+    for handle,label in accounts:
+        assert links[f'{label} on Twitter']==f'/bluescholars/twitter-{handle}/captures/20140101000000/'
 
 def test_single_root_archive_card_uses_project_prefix_and_compact_responsive_styles(tmp_path):
     fixture_root(tmp_path);s=State(tmp_path)

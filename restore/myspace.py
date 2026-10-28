@@ -1,6 +1,7 @@
 """Build locally browsable, date-preserving Blue Scholars MySpace snapshots."""
 from __future__ import annotations
 
+from restore.cooldown import ArchiveCooldown, RecoverySession
 import hashlib
 import html
 import json
@@ -30,7 +31,7 @@ class MySpaceOriginClient:
 
     def __init__(self, session=None, delay: float = 0.5, timeout: int = 25,
                  max_bytes: int = 15_000_000, sleep=time.sleep):
-        self.session = session or requests.Session()
+        self.session = session or RecoverySession()
         self.session.headers.update({"User-Agent": "BlueScholarsRestoration/0.1 (linked MySpace image; paced request)"})
         self.delay, self.timeout, self.max_bytes, self.sleep = max(0.0, float(delay)), timeout, max_bytes, sleep
 
@@ -137,6 +138,8 @@ def recover_myspace_origin_assets(root: Path, max_files: int = 100, delay: float
                 placeholders += 1
             else:
                 recovered += 1
+        except ArchiveCooldown:
+            raise
         except Exception as exc:
             record.update(status="failed", error=f"{type(exc).__name__}: {exc}")
             failed += 1
@@ -230,7 +233,7 @@ def index_myspace_assets(root: Path, max_urls: int = 100, delay: float = 1.0, re
     saved = json.loads(path.read_text()) if path.exists() else {"records": []}
     rows = {r["url"]: r for r in saved.get("records", [])}
     cursor = saved.get("retry_cursor")
-    session = requests.Session()
+    session = RecoverySession()
     session.headers["User-Agent"] = "BlueScholarsRestoration/0.1 (historical preservation; paced requests)"
     attempted = 0
     queue = []
@@ -258,13 +261,14 @@ def index_myspace_assets(root: Path, max_urls: int = 100, delay: float = 1.0, re
                 response.raise_for_status()
                 data = response.json()
                 record["captures"] = [dict(zip(data[0], row)) for row in data[1:] if len(row) == len(data[0])]
+        except ArchiveCooldown:
+            raise
         except Exception as exc:
             record["index_error"] = f"{type(exc).__name__}: {exc}"
         rows[url] = record
         attempted += 1
         cursor = {"kind": record["kind"], "url": url}
-        if attempted % 10 == 0 or record.get("index_error", "").startswith("Wayback CDX HTTP 429"):
-            _write(path, json.dumps({"queried": len(rows), "inventory_total": len(linked), "retry_cursor": cursor, "records": [rows[k] for k in sorted(rows)]}, indent=2) + "\n")
+        _write(path, json.dumps({"queried": len(rows), "inventory_total": len(linked), "retry_cursor": cursor, "records": [rows[k] for k in sorted(rows)]}, indent=2) + "\n")
         if record.get("index_error", "").startswith("Wayback CDX HTTP 429"):
             break
         time.sleep(max(delay, 0))
@@ -313,12 +317,13 @@ def recover_myspace_assets(root: Path, max_files: int = 100, delay: float = 0.7,
             record.update(status="recovered", actual_capture=capture_from(response.url), raw_path=str(raw_path.relative_to(root)),
                           local_path="/myspace/assets/" + name, sha256=digest, bytes=len(response.body),
                           content_type=response.headers.get("Content-Type", ""))
+        except ArchiveCooldown:
+            raise
         except Exception as exc:
             record.update(status="failed", error=f"{type(exc).__name__}: {exc}")
         records[item["url"]] = record
         attempted += 1
-        if attempted % 10 == 0:
-            _write(path, json.dumps({"attempted": len(records), "assets": [records[k] for k in sorted(records)]}, indent=2) + "\n")
+        _write(path, json.dumps({"attempted": len(records), "assets": [records[k] for k in sorted(records)]}, indent=2) + "\n")
     result = {"attempted_this_run": attempted, "assets": len(records),
               "recovered": sum(r.get("status") == "recovered" for r in records.values()),
               "failed": sum(r.get("status") != "recovered" for r in records.values())}

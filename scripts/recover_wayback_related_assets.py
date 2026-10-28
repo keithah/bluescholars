@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Recover archived image dependencies from the new Wayback HTML mementos."""
 from __future__ import annotations
+from restore.cooldown import ArchiveCooldown, RecoverySession
 import argparse,hashlib,json,re,time
 from pathlib import Path
 from urllib.parse import urljoin,urlsplit
@@ -61,7 +62,7 @@ def recover(max_urls=50,max_files=50,delay=.6,source_contains='',alt_contains=''
  mp=OUT/'manifest.json';m=json.loads(mp.read_text()) if mp.exists() else {'version':1,'indexes':{},'assets':{}}
  indexes=m.setdefault('indexes',{});assets=m.setdefault('assets',{});leads=filter_leads(collect(),source_contains,alt_contains)
  ordered=sorted(leads.values(),key=lambda x:('blue scholar' not in ' '.join(x['alt_texts']+[(x['referrers'][0].get('page_title') or '') for _ in (0,)]).casefold(),x['original_url']))[:max_urls]
- session=requests.Session();session.headers['User-Agent']='BlueScholarsRestoration/0.1 (historical preservation)'
+ session=RecoverySession();session.headers['User-Agent']='BlueScholarsRestoration/0.1 (historical preservation)'
  report={'archive':'Internet Archive Wayback','source':'image references in recovery/wayback-related and recovery/wayback-versions HTML captures','source_url_filter':source_contains or None,'alt_text_filter':alt_contains or None,'candidate_images_total':len(leads),'candidate_images_queried':0,'index_rows':0,'images_with_mementos':0,'attempted':0,'recovered':0,'failures':[],'limitations':['Only image URLs explicitly referenced by the newly acquired HTML pages were considered.','At most one image memento nearest each referring HTML capture was selected.','Some image references may be third-party decorations or unrelated page assets; raw files remain review-only.']}
  for lead in ordered:
   url=lead['original_url']
@@ -75,6 +76,8 @@ def recover(max_urls=50,max_files=50,delay=.6,source_contains='',alt_contains=''
     indexes[url]={'cdx_rows':rows,'image_mementos':len(good),'referrers':lead['referrers'],'alt_texts':lead['alt_texts']}
     report['candidate_images_queried']+=1;report['index_rows']+=len(rows);report['images_with_mementos']+=bool(good)
     mp.write_text(json.dumps(m,indent=2,ensure_ascii=False)+'\n')
+   except ArchiveCooldown:
+       raise
    except Exception as e:
     indexes[url]={'cdx_rows':[],'image_mementos':0,'referrers':lead['referrers'],'error':f'{type(e).__name__}: {e}'}
     report['failures'].append({'url':url,'stage':'cdx','error':indexes[url]['error']});mp.write_text(json.dumps(m,indent=2,ensure_ascii=False)+'\n');time.sleep(delay);continue
@@ -98,6 +101,8 @@ def recover(max_urls=50,max_files=50,delay=.6,source_contains='',alt_contains=''
    rel=f'recovery/wayback-related-assets/raw/{digest}{ext}';dest=ROOT/rel
    if not dest.exists():dest.write_bytes(content)
    assets[key]={'original_url':row[1],'timestamp':row[0],'cdx_mime':row[3],'cdx_digest':row[4],'sha256':digest,'bytes':len(content),'mime':r.headers.get('Content-Type',''),'raw_path':rel,'source_archive':'Internet Archive Wayback','referrers':lead['referrers'],'alt_texts':lead['alt_texts'],'review_required_before_publication':True};report['recovered']+=1
+  except ArchiveCooldown:
+      raise
   except Exception as e:report['failures'].append({'url':row[1],'timestamp':row[0],'stage':'replay','error':f'{type(e).__name__}: {e}'})
   mp.write_text(json.dumps(m,indent=2,ensure_ascii=False)+'\n');time.sleep(delay)
  report['index_records_total']=len(indexes);report['asset_records_total']=len(assets);report['unique_payloads_total']=len({x['sha256'] for x in assets.values()})

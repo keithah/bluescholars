@@ -2,6 +2,7 @@
 """Preserve dated photographer and Seattle Weekly pages linked from the 2011 Blue Scholars VIP story."""
 from __future__ import annotations
 
+from restore.cooldown import ArchiveCooldown, RecoverySession
 import argparse
 import base64
 import hashlib
@@ -77,7 +78,7 @@ def recover_images(max_urls: int = 20, max_files: int = 100, delay: float = 1.5)
                    "title": capture.get("title", "")}
             if ref not in record["page_refs"]:
                 record["page_refs"].append(ref)
-    session = requests.Session()
+    session = RecoverySession()
     session.headers["User-Agent"] = "BlueScholarsHistoricalRecovery/0.1 (source preservation)"
     report = {"source": "2011 Blue Scholars VIP party / Cinemetropolis photographer and Seattle Weekly pages",
               "candidate_image_urls": len(urls), "queried": 0, "index_rows": 0,
@@ -100,6 +101,8 @@ def recover_images(max_urls: int = 20, max_files: int = 100, delay: float = 1.5)
             record["queried_at"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
             report["queried"] += 1
             report["index_rows"] += len(record["cdx_rows"])
+        except ArchiveCooldown:
+            raise
         except Exception as exc:
             record["query_error"] = f"{type(exc).__name__}: {exc}"
             report["failures"].append({"url": url, "stage": "cdx", "error": record["query_error"]})
@@ -157,6 +160,8 @@ def recover_images(max_urls: int = 20, max_files: int = 100, delay: float = 1.5)
                           "cdx_sha1_verified": True, "status": "recovered",
                           "rights_status": "review_required_before_publication"})
             report["recovered"] += 1
+        except ArchiveCooldown:
+            raise
         except Exception as exc:
             entry.update({"status": "failed", "error": f"{type(exc).__name__}: {exc}"})
             report["failures"].append({"url": original, "timestamp": timestamp, "stage": "replay", "error": entry["error"]})
@@ -184,7 +189,7 @@ def recover(delay: float = 1.5) -> dict:
     manifest = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {
         "version": 1, "source_story": "https://www.arminausejo.com/blue-scholars-kickstarter-vip-party/",
         "archive": "Internet Archive Wayback", "pages": {}, "captures": {}}
-    session = requests.Session()
+    session = RecoverySession()
     session.headers["User-Agent"] = "BlueScholarsHistoricalRecovery/0.1 (source preservation)"
     report = {"targets": len(TARGETS), "queried": 0, "capture_rows": 0, "replayed": 0,
               "verified_pages": 0, "failures": [], "rate_limited": False,
@@ -206,6 +211,8 @@ def recover(delay: float = 1.5) -> dict:
                 record["queried_at"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
                 report["queried"] += 1
                 report["capture_rows"] += len(record["cdx_rows"])
+            except ArchiveCooldown:
+                raise
             except Exception as exc:
                 record["query_error"] = f"{type(exc).__name__}: {exc}"
                 report["failures"].append({"url": url, "stage": "cdx", "error": record["query_error"]})
@@ -258,6 +265,8 @@ def recover(delay: float = 1.5) -> dict:
                     "images": images, "links": links}
                 report["replayed"] += 1
                 report["verified_pages"] += 1
+            except ArchiveCooldown:
+                raise
             except Exception as exc:
                 manifest["captures"][key] = {"original_url": original, "timestamp": timestamp,
                     "cdx_digest": digest, "replay_url": replay, "error": f"{type(exc).__name__}: {exc}"}

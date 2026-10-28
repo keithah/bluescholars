@@ -6,6 +6,7 @@ stops on archive rate limits, and checkpoints each successful replay.
 """
 from __future__ import annotations
 
+from restore.cooldown import ArchiveCooldown, RecoverySession
 import argparse
 import base64
 import hashlib
@@ -72,7 +73,7 @@ def recover(contains: str, before: str = "", after: str = "", max_files: int = 2
               "attempted": 0, "recovered": 0, "failures": [], "rate_limited": False,
               "limitations": ["Distinct CDX digests are sampled once per original URL; timestamp-level coverage remains in the parent CDX manifest.",
                               "All pages stay in recovery-only storage pending content, relevance, compatibility and rights review."]}
-    session = requests.Session()
+    session = RecoverySession()
     session.headers["User-Agent"] = "BlueScholarsRestoration/0.1 (historical preservation)"
     for key, record in pending:
         if report["attempted"] >= max_files:
@@ -108,6 +109,8 @@ def recover(contains: str, before: str = "", after: str = "", max_files: int = 2
                               "raw_path": raw_path, "raw_replay_url": replay,
                               "review_required_before_publication": True}
             report["recovered"] += 1
+        except ArchiveCooldown:
+            raise
         except Exception as exc:
             failure = {**record, "stage": "replay", "error": f"{type(exc).__name__}: {exc}"}
             report["failures"].append(failure)

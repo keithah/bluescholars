@@ -6,6 +6,7 @@ in ignored local recovery storage and require rights review before publication.
 """
 from __future__ import annotations
 
+from restore.cooldown import ArchiveCooldown, RecoverySession
 import hashlib
 import json
 import re
@@ -101,7 +102,7 @@ def recover(delay: float = 0.5, limit: int = 100) -> dict:
         "version": 1, "source_page_manifest": str(SOURCE.relative_to(ROOT)), "source_kind": "current publisher-hosted image copy",
         "images": {}}
     choices = candidates()
-    session = requests.Session()
+    session = RecoverySession()
     session.headers["User-Agent"] = "BlueScholarsHistoricalRecovery/0.1 (source preservation)"
     report = {"candidate_photo_urls": len(choices), "attempted": 0, "recovered": 0,
               "downloaded_bytes": 0, "failures": [], "rights_status": "review_required_before_publication",
@@ -141,6 +142,8 @@ def recover(delay: float = 0.5, limit: int = 100) -> dict:
                 "dimensions": dimensions_found, "rights_status": "review_required_before_publication"}
             report["recovered"] += 1
             report["downloaded_bytes"] += len(payload)
+        except ArchiveCooldown:
+            raise
         except Exception as exc:
             manifest["images"][url] = {**item, "source_url": url,
                 "status": "failed", "error": f"{type(exc).__name__}: {exc}",

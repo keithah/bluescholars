@@ -7,6 +7,7 @@ to the restored site.
 """
 from __future__ import annotations
 
+from restore.cooldown import ArchiveCooldown, RecoverySession
 import argparse
 import base64
 import hashlib
@@ -79,7 +80,7 @@ def recover(delay: float = 0.75, max_urls: int = 100, max_files: int = 200,
         existing["referrers"] = lead["referrers"]
         existing["alt_texts"] = lead["alt_texts"]
 
-    session = requests.Session()
+    session = RecoverySession()
     session.headers["User-Agent"] = "BlueScholarsRestoration/0.1 (historical preservation)"
     report = {"source_pages": str(PAGES.relative_to(ROOT)), "candidate_images": len(found),
               "queried": 0, "image_mementos": 0, "attempted_replays": 0,
@@ -120,6 +121,8 @@ def recover(delay: float = 0.75, max_urls: int = 100, max_files: int = 200,
             item.pop("query_error", None)
             item.pop("query_retry_after", None)
             report["queried"] += 1
+        except ArchiveCooldown:
+            raise
         except Exception as exc:
             item["query_error"] = f"{type(exc).__name__}: {exc}"
             item["query_retry_after"] = (datetime.now(timezone.utc) + timedelta(minutes=15)).isoformat()
@@ -187,6 +190,8 @@ def recover(delay: float = 0.75, max_urls: int = 100, max_files: int = 200,
                            "raw_path": raw_path.as_posix(), "status": "recovered",
                            "review_required_before_publication": True})
             report["recovered_records"] += 1
+        except ArchiveCooldown:
+            raise
         except Exception as exc:
             record.update({"status": "failed", "error": f"{type(exc).__name__}: {exc}"})
             report["failures"].append({"url": original, "timestamp": timestamp, "stage": "replay", "error": record["error"]})

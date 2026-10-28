@@ -5,6 +5,7 @@ Every lookup and replay is checkpointed with the page capture that exposed the
 URL. Files remain recovery-only; an Arquivo.pt record is not a reuse license.
 """
 from __future__ import annotations
+from restore.cooldown import ArchiveCooldown, RecoverySession
 import argparse, hashlib, json, time
 from pathlib import Path
 from urllib.parse import urlsplit
@@ -34,7 +35,7 @@ def recover(source_page='s100.chasejarvis.com/people/bluescholars',max_urls=20,m
     mp=OUT/'exact-assets-manifest.json'
     manifest=json.loads(mp.read_text(encoding='utf-8')) if mp.exists() else {'archive':'Arquivo.pt','assets':{}}
     assets=manifest.setdefault('assets',{})
-    session=requests.Session();session.headers['User-Agent']='BlueScholarsHistoricalRecovery/0.1 (archive research)'
+    session=RecoverySession();session.headers['User-Agent']='BlueScholarsHistoricalRecovery/0.1 (archive research)'
     report={'archive':'Arquivo.pt exact image history','source_page_filter':source_page,'candidate_urls':len(candidates),'queried_urls':0,'history_rows':0,'attempted_replays':0,'recovered':0,'failures':[],'not_found':[],'rights_status':'local-only pending rights review'}
     pending=[(url,refs) for url,refs in candidates.items() if url not in assets or assets[url].get('query_error')]
     for url,refs in pending[:max_urls]:
@@ -68,10 +69,14 @@ def recover(source_page='s100.chasejarvis.com/people/bluescholars',max_urls=20,m
                     if not path.exists():path.write_bytes(content)
                     entry.setdefault('payloads',[]).append({'archive_key':key,'timestamp':item.get('tstamp'),'archive_url':replay,'mime_type':mime,'archive_digest':item.get('digest'),'archive_length':item.get('contentLength'),'bytes':len(content),'sha256':sha,'raw_path':path.relative_to(ROOT).as_posix(),'source_pages':refs,'digest_semantics':'Arquivo.pt digest retained as supplied; local SHA-256 recorded, no equivalence assumption'})
                     report['recovered']+=1
+                except ArchiveCooldown:
+                    raise
                 except Exception as exc:
                     entry.setdefault('failures',[]).append({'timestamp':item.get('tstamp'),'archive_url':replay,'error':f'{type(exc).__name__}: {exc}'})
                 time.sleep(delay)
             report['queried_urls']+=1
+        except ArchiveCooldown:
+            raise
         except Exception as exc:
             entry['query_error']=f'{type(exc).__name__}: {exc}';report['failures'].append({'url':url,'stage':'history','error':entry['query_error']});report['queried_urls']+=1
         manifest['last_report']=report;mp.write_text(json.dumps(manifest,indent=2,ensure_ascii=False)+'\n')

@@ -2,6 +2,7 @@
 """Preserve KEXP's source-linked 2014 Blue Scholars photo gallery evidence."""
 from __future__ import annotations
 
+from restore.cooldown import ArchiveCooldown, RecoverySession
 import base64
 import hashlib
 import json
@@ -32,7 +33,7 @@ def recover(delay: float = 1.0) -> dict:
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8")) if MANIFEST.exists() else {
         "version": 1, "pages": {}, "images": {}}
     RAW.mkdir(parents=True, exist_ok=True)
-    session = requests.Session()
+    session = RecoverySession()
     session.headers["User-Agent"] = "BlueScholarsRestoration/0.1 (historical preservation)"
     failures = []
 
@@ -56,6 +57,8 @@ def recover(delay: float = 1.0) -> dict:
                 "replay_url": replay, "cdx_digest": cdx_digest, "cdx_length": int(cdx_length),
                 "bytes": len(payload), "sha256": sha, "raw_path": rel,
                 "rights_status": "KEXP page; local recovery only"}
+        except ArchiveCooldown:
+            raise
         except Exception as exc:
             failures.append({"stage": "wayback_page", "url": replay,
                              "error": f"{type(exc).__name__}: {exc}"})
@@ -95,6 +98,8 @@ def recover(delay: float = 1.0) -> dict:
                 "category": "band-performance" if label.startswith("Blue Scholars /") else "gallery-context",
                 "wayback_exact_url_rows": 0 if label.startswith("Blue Scholars /") else None,
                 "rights_status": "photographer credited by KEXP; redistribution license not established; local-only"}
+        except ArchiveCooldown:
+            raise
         except Exception as exc:
             failures.append({"stage": "source_image", "url": url,
                              "error": f"{type(exc).__name__}: {exc}"})

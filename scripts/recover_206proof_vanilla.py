@@ -2,6 +2,7 @@
 """Resume validated 2008–2012 206proof Vanilla pages from a local CDX checkpoint."""
 from __future__ import annotations
 
+from restore.cooldown import ArchiveCooldown
 import argparse
 import datetime as dt
 import hashlib
@@ -46,6 +47,8 @@ def recover(root: Path, limit: int = 160, delay: float = 0.6) -> dict:
                         resolved_url=response.url, content_type=response.headers.get("Content-Type"),
                         bytes=len(response.body), sha256=digest,
                         raw_path=str(raw_path.relative_to(root)))
+        except ArchiveCooldown:
+            raise
         except Exception as exc:  # Each failure is a durable, retryable source observation.
             item.update(result="failed", error=f"{type(exc).__name__}: {exc}")
         manifest["resources"].append(item)

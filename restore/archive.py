@@ -9,6 +9,7 @@ from urllib.parse import urlsplit,urljoin
 import requests
 from bs4 import BeautifulSoup
 from .urls import TARGET
+from .cooldown import ArchiveCooldown, Cooldown, RecoverySession
 
 @dataclass
 class Payload:
@@ -18,8 +19,9 @@ class Payload:
     headers: dict
 
 class ArchiveClient:
-    def __init__(self,session=None,delay=1.2,retries=3,timeout=30,max_bytes=25_000_000,sleep=time.sleep):
-        self.session=session or requests.Session()
+    def __init__(self,session=None,delay=1.2,retries=3,timeout=30,max_bytes=25_000_000,sleep=time.sleep,cooldown=None):
+        self.cooldown=cooldown if cooldown is not None else Cooldown()
+        self.session=session or RecoverySession(cooldown=self.cooldown)
         if hasattr(self.session,'headers'):
             self.session.headers.update({'User-Agent':'BlueScholarsRestoration/0.1 (historical site preservation; paced requests)'})
         self.delay=max(0,float(delay));self.retries=max(1,int(retries))
@@ -33,12 +35,19 @@ class ArchiveClient:
             response=None
             for attempt in range(self.retries):
                 self.sleep(self.delay)
+                self.cooldown.check()
                 try:
                     response=self.session.get(url,timeout=self.timeout,allow_redirects=False,stream=True)
                 except requests.RequestException:
                     if attempt+1==self.retries: raise
                     self.sleep(2**attempt);continue
-                if response.status_code==429 or 500<=response.status_code<600:
+                if response.status_code==429:
+                    try:
+                        deadline=self.cooldown.defer(response.headers.get('Retry-After'))
+                    finally:
+                        response.close()
+                    raise ArchiveCooldown(deadline)
+                if 500<=response.status_code<600:
                     wait=self._retry_wait(response.headers.get('Retry-After'),attempt)
                     response.close()
                     if attempt+1==self.retries:

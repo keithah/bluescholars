@@ -1,5 +1,6 @@
 """Run with `python -m restore --help`; network and offline operations are separate."""
 from __future__ import annotations
+from restore.cooldown import ArchiveCooldown
 import argparse
 import json
 from pathlib import Path
@@ -299,6 +300,9 @@ def main(argv=None) -> int:
             }
             write_json(root/'source/review.json',result)
         print(json.dumps(result,indent=2));return 0
+    except ArchiveCooldown as exc:
+        print(json.dumps({'status':'deferred','retry_at':exc.retry_at,'message':str(exc)}),file=sys.stderr)
+        return 75
     except (OSError,ValueError,KeyError) as exc:
         print(f'Error: {exc}',file=sys.stderr);return 1
 

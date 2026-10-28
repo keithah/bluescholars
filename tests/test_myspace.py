@@ -53,7 +53,7 @@ def test_rate_limited_myspace_retry_continues_after_saved_cursor(tmp_path, monke
             return Response(params["url"])
 
     session = Session()
-    monkeypatch.setattr("restore.myspace.requests.Session", lambda: session)
+    monkeypatch.setattr("restore.myspace.RecoverySession", lambda: session)
 
     report = index_myspace_assets(tmp_path, max_urls=2, delay=0, retry_errors=True)
 
@@ -87,7 +87,7 @@ def test_myspace_retry_queue_does_not_slice_negative_limits(tmp_path, monkeypatc
             raise AssertionError("nonpositive limit must not start a request")
 
     session = Session()
-    monkeypatch.setattr("restore.myspace.requests.Session", lambda: session)
+    monkeypatch.setattr("restore.myspace.RecoverySession", lambda: session)
     report = index_myspace_assets(tmp_path, max_urls=-1, delay=0, retry_errors=True)
     assert report["attempted_this_run"] == 0
     assert session.requested == []
@@ -119,7 +119,7 @@ def test_myspace_movie_param_is_indexed_as_flash(tmp_path, monkeypatch):
             return Response()
 
     session = Session()
-    monkeypatch.setattr("restore.myspace.requests.Session", lambda: session)
+    monkeypatch.setattr("restore.myspace.RecoverySession", lambda: session)
     index_myspace_assets(tmp_path, max_urls=1, delay=0)
     expected = "http://myspace.com/videos/Main.swf"
     assert session.urls == [expected]

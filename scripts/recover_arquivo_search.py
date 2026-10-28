@@ -5,6 +5,7 @@ Search responses and accepted HTML remain recovery-only, with query, URL, date,
 archive URL, digest, and local hash recorded for each response.
 """
 from __future__ import annotations
+from restore.cooldown import ArchiveCooldown, RecoverySession
 import argparse, hashlib, json, re, time
 from pathlib import Path
 from urllib.parse import urlsplit
@@ -81,7 +82,7 @@ def update_aggregate_summary(manifest, current_report):
 def recover(limit=100,delay=0.6,pages=3,start_page=1,queries=None):
     if limit<1 or delay<0 or pages<1 or start_page<1: raise ValueError('limit, pages and start_page must be positive and delay nonnegative')
     OUT.mkdir(parents=True,exist_ok=True)
-    session=requests.Session();session.headers['User-Agent']='BlueScholarsRestoration/0.1 (historical preservation)'
+    session=RecoverySession();session.headers['User-Agent']='BlueScholarsRestoration/0.1 (historical preservation)'
     mp=OUT/'manifest.json';manifest=json.loads(mp.read_text()) if mp.exists() else {'version':1,'captures':{}}
     captures=manifest.setdefault('captures',{}); response_pages=[]; leads={}
     report={'archive':'Arquivo.pt Full Text Search','endpoint':API,'queries':[], 'search_rows':0,
@@ -112,6 +113,8 @@ def recover(limit=100,delay=0.6,pages=3,start_page=1,queries=None):
                 if parsed.scheme!='https' or parsed.hostname not in ('arquivo.pt','www.arquivo.pt'):
                     raise ValueError('Rejected next page outside arquivo.pt')
                 time.sleep(delay)
+            except ArchiveCooldown:
+                raise
             except Exception as exc:
                 report['queries'].append({'query':query,'page':page,'error':f'{type(exc).__name__}: {exc}'})
                 break
@@ -141,6 +144,8 @@ def recover(limit=100,delay=0.6,pages=3,start_page=1,queries=None):
                            'mime':resp.headers.get('Content-Type',''),'source_archive':'Arquivo.pt',
                            'review_required_before_publication':True}
             report['recovered']+=1
+        except ArchiveCooldown:
+            raise
         except Exception as exc:report['failures'].append({'url':item.get('originalURL'),'timestamp':item.get('tstamp'),'title':item.get('title'),'error':f'{type(exc).__name__}: {exc}'})
         time.sleep(delay)
         manifest['last_report']=report;mp.write_text(json.dumps(manifest,indent=2,ensure_ascii=False)+'\n')

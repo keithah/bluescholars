@@ -1,5 +1,6 @@
 """Resumable CDX indexing and conservative raw-response acquisition."""
 from __future__ import annotations
+from restore.cooldown import ArchiveCooldown
 from datetime import datetime,timezone
 import hashlib
 from urllib.parse import urlencode,urlsplit
@@ -48,9 +49,14 @@ def index(state: State,client,max_pages: int=20,url: str='bluescholars.com',matc
                     if row not in requested['captures']: requested['captures'].append(row)
             checkpoint.update(resume_key=resume,complete=not bool(resume),pages=checkpoint['pages']+1,rows=checkpoint['rows']+len(rows),last_success=now())
             checkpoint.pop('last_error',None)
+            checkpoint.pop('retry_at',None)
             if key=='domain': state.data['index_complete']=checkpoint['complete']
             state.save()
             if not resume: break
+        except ArchiveCooldown as exc:
+            checkpoint.update(retry_at=exc.retry_at, last_error=str(exc))
+            state.save()
+            raise
         except (OSError,ValueError,UnicodeError) as exc:
             checkpoint['last_error']=str(exc)
             state.data['errors'].append({'stage':'index','url':url,'at':now(),'error':str(exc)})
@@ -98,7 +104,7 @@ def index_feed_resources(state:State,client,max_urls:int=30,max_pages:int=3,retr
         exact=state.data['index'].get('exact:'+record['url'],{})
         if exact.get('complete'):
             continue
-        if exact.get('last_error') and not retry_errors:
+        if exact.get('last_error') and not exact.get('retry_at') and not retry_errors:
             deferred_errors+=1
             continue
         pending.append(record)
@@ -176,6 +182,8 @@ def recover_feed_resources(state:State,client,max_files:int=30)->dict:
             state.save()
             report['recovered' if result['status']=='recovered' else 'needs_review']+=1
             report['captures'].append(result)
+        except ArchiveCooldown:
+            raise
         except Exception as exc:
             report['failures'].append({'url':record['url'],'timestamp':stamp,
                                        'error':f'{type(exc).__name__}: {exc}'})
@@ -298,7 +306,7 @@ def resource_priority(record: dict) -> tuple[int,int]:
     return 7,len(url)
 
 def failure_has_untried_work(record:dict,state:State)->bool:
-    attempted={a.get('requested_capture') for a in record.get('attempts',[])}
+    attempted={a.get('requested_capture') for a in record.get('attempts',[]) if a.get('result')!='deferred'}
     if any(capture not in attempted for capture in
            capture_candidates(record,state.data['target_capture'])):
         return True
@@ -322,8 +330,8 @@ def recover(state: State,client,max_files: int=150,retry_failed: bool=False,prog
         r=pending[0];url=r['url'];visited.add(url);processed+=1
         if r['kind'] in ('font','script','unsupported'):
             r['status']='excluded';r['reason']='No font/script/media binary redistribution';state.save();continue
-        r['status']='failed';budget=MAX_CAPTURE_ATTEMPTS_PER_RESOURCE
-        attempted_captures={a.get('requested_capture') for a in r.get('attempts',[])}
+        r['status']='queued';budget=MAX_CAPTURE_ATTEMPTS_PER_RESOURCE
+        attempted_captures={a.get('requested_capture') for a in r.get('attempts',[]) if a.get('result')!='deferred'}
         # Try only a few capture dates per URL per batch. Failed dates stay in
         # provenance and are skipped on resume, so one difficult URL cannot
         # consume the whole runner before untouched pages are reached.
@@ -357,6 +365,7 @@ def recover(state: State,client,max_files: int=150,retry_failed: bool=False,prog
                              raw_path=path,sha256=digest,bytes=len(response.body),actual_capture=actual,
                              final_url=response.url,final_original=final_original,
                              content_type=response.headers.get('Content-Type',''),retrieved_at=now())
+                    r.pop('retry_at',None)
                     attempt.update(result='downloaded',actual_capture=actual,sha256=digest)
                     if r['kind']=='html':
                         refs=discover_html(response.body.decode('utf-8',errors='replace'),final_original)
@@ -364,6 +373,12 @@ def recover(state: State,client,max_files: int=150,retry_failed: bool=False,prog
                         refs=[{'url':u,'kind':kind_for(u),'referrer':url} for u in discover_css(response.body.decode('utf-8',errors='replace'),final_original)]
                     else: refs=[]
                     for ref in refs: state.add(ref['url'],ref['kind'],ref['referrer'],actual)
+                except ArchiveCooldown as exc:
+                    attempt.update(result='deferred',retry_at=exc.retry_at,error=str(exc))
+                    r['attempts'].append(attempt)
+                    r.update(status='queued',retry_at=exc.retry_at,reason='Archive cooldown; capture remains queued')
+                    state.save()
+                    raise
                 except Exception as exc:
                     # A failed URL must not erase the rest of an interrupted crawl.
                     # KeyboardInterrupt/SystemExit are intentionally not caught.
@@ -487,6 +502,8 @@ def capture_era(state:State,client,era:str,max_files:int=2000)->dict:
                 report['recovered']+=1;report['captures'].append(result)
                 if actual:successful.setdefault(url,set()).add(actual)
                 break
+            except ArchiveCooldown:
+                raise
             except Exception as exc:
                 result=None
                 last_error=f'{type(exc).__name__}: {exc}'

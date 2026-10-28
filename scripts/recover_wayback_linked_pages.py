@@ -6,6 +6,7 @@ third-party page; each memento stays in recovery-only storage with both archive
 provenances recorded.
 """
 from __future__ import annotations
+from restore.cooldown import ArchiveCooldown, RecoverySession
 import argparse, hashlib, json, re, time
 from datetime import datetime
 from pathlib import Path
@@ -58,7 +59,7 @@ def recover(max_urls=120,max_files=100,delay=.5):
         terms=('youtube.com/user/bluescholars','youtube.com/watch','kexp.org','npr.org','mtv.com','seattlechannel.org','filmandmusic.seattle.gov','jamglue.com/contests/bluescholars','twitter.com/bluescholars','myspace.com/bluescholars')
         return min((i for i,t in enumerate(terms) if t in s),default=len(terms)),rec['original_url']
     ordered=sorted(candidates.values(),key=priority)[:max_urls]
-    session=requests.Session();session.headers['User-Agent']='BlueScholarsRestoration/0.1 (historical preservation)'
+    session=RecoverySession();session.headers['User-Agent']='BlueScholarsRestoration/0.1 (historical preservation)'
     report={'archive':'Internet Archive Wayback CDX','discovery_source':'All saved Archive-It search-result files','candidate_urls_total':len(candidates),'candidate_urls_queried':0,'index_rows':0,'urls_with_html_mementos':0,'attempted_replays':0,'recovered_payloads':0,'failures':[],'limitations':['This cross-check covers relevant original URLs found in saved Archive-It search-result files; unsaved ranges are not included.','One nearest dated HTML memento is selected per URL; other Wayback revisions remain indexed in this checkpoint.','Third-party pages remain recovery-only pending relevance and rights review.']}
     for rec in ordered:
         url=rec['original_url']
@@ -72,6 +73,8 @@ def recover(max_urls=120,max_files=100,delay=.5):
                 report['index_rows']+=len(rows)
                 if good:report['urls_with_html_mementos']+=1
                 mp.write_text(json.dumps(m,indent=2,ensure_ascii=False)+'\n')
+            except ArchiveCooldown:
+                raise
             except Exception as e:
                 indexes[url]={**rec,'cdx_rows':[],'query_error':f'{type(e).__name__}: {e}'}
                 report['failures'].append({'url':url,'stage':'cdx','error':indexes[url]['query_error']})
@@ -98,6 +101,8 @@ def recover(max_urls=120,max_files=100,delay=.5):
                 if not dest.exists():dest.write_bytes(payload)
                 captures[key]={'original_url':row[1],'timestamp':row[0],'cdx_mime':row[3],'cdx_digest':row[4],'cdx_length':row[5],'sha256':digest,'bytes':len(payload),'mime':response.headers.get('Content-Type',''),'raw_path':path,'source_archive':'Internet Archive Wayback','matched_archiveit_records':rec['source_captures'],'matched_titles':rec['titles'],'review_required_before_publication':True}
                 report['recovered_payloads']+=1
+            except ArchiveCooldown:
+                raise
             except Exception as e:report['failures'].append({'url':row[1],'timestamp':row[0],'stage':'replay','error':f'{type(e).__name__}: {e}'})
             mp.write_text(json.dumps(m,indent=2,ensure_ascii=False)+'\n')
             time.sleep(delay)

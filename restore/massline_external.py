@@ -1,6 +1,7 @@
 """Resumable exact-URL recovery for external assets linked by Mass Line pages."""
 from __future__ import annotations
 
+from restore.cooldown import ArchiveCooldown, RecoverySession
 from datetime import datetime, timezone, timedelta
 from email.utils import parsedate_to_datetime
 from hashlib import sha256
@@ -207,7 +208,7 @@ def index_external_assets(root: Path, max_assets: int = 50, delay: float = 0.8, 
                     "queued": sum(a.get("status") == "queued" for a in state["assets"]), "attempted": 0,
                     "cooldown_until": cooldown_until, "saved_to": EXTERNAL_PATH.as_posix()}
         state.pop("cooldown_until", None)
-    session = requests.Session()
+    session = RecoverySession()
     session.headers["User-Agent"] = "BlueScholarsRestoration/0.1 (source-linked external asset index; paced requests)"
     attempted = 0
     for item in sorted(state["assets"], key=external_asset_priority):
@@ -245,6 +246,8 @@ def index_external_assets(root: Path, max_assets: int = 50, delay: float = 0.8, 
                          "index_query": query, "indexed_at": datetime.now(timezone.utc).isoformat(),
                          "index_http_status": response.status_code})
             item.pop("index_error", None)
+        except ArchiveCooldown:
+            raise
         except Exception as exc:
             item.update({"status": "index_failed", "index_query": query,
                          "index_error": f"{type(exc).__name__}: {exc}",
@@ -318,7 +321,7 @@ def recover_external_assets(root: Path, max_files: int = 40, delay: float = 0.6,
     manifest_path = root / "recovery/massline/manifest.json"
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     downloaded = manifest.setdefault("external_resources", {})
-    session = requests.Session()
+    session = RecoverySession()
     session.headers["User-Agent"] = "BlueScholarsRestoration/0.1 (historical source-linked asset recovery; paced requests)"
     client = ArchiveClient(session=session, delay=delay, retries=3, timeout=45, max_bytes=64_000_000)
     attempted = 0
@@ -364,6 +367,8 @@ def recover_external_assets(root: Path, max_files: int = 40, delay: float = 0.6,
                          "raw_path": raw_path.as_posix(), "sha256": digest, "bytes": len(payload.body),
                          "content_type": payload.headers.get("Content-Type", "")})
             item.pop("recovery_error", None)
+        except ArchiveCooldown:
+            raise
         except Exception as exc:
             timestamp = capture["timestamp"]
             failed = item.setdefault("failed_capture_timestamps", [])

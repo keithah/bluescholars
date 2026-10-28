@@ -1,5 +1,6 @@
 """Search and extract independently archived Common Crawl WARC responses."""
 from __future__ import annotations
+from restore.cooldown import ArchiveCooldown, RecoverySession
 from concurrent.futures import ThreadPoolExecutor,as_completed
 import gzip
 import hashlib
@@ -64,7 +65,7 @@ def _request(session,url,**kw):
     raise OSError('Archive request retries exhausted')
 
 def query_index(index: dict) -> tuple[list[dict],dict]:
-    session=requests.Session();session.headers['User-Agent']='BlueScholarsRestoration/0.1 (historical research)'
+    session=RecoverySession();session.headers['User-Agent']='BlueScholarsRestoration/0.1 (historical research)'
     url=index['cdx-api']
     response=_request(session,url,params={'url':'bluescholars.com','matchType':'domain','output':'json',
         'filter':'status:200','collapse':'urlkey','fl':FIELDS})
@@ -80,7 +81,7 @@ def fetch_warc(row: dict) -> tuple[dict,bytes,dict]:
     start=int(row['offset']);length=int(row['length'])
     if length<1 or length>30_000_000: raise ValueError('WARC record outside 1..30MB safety limit')
     url='https://data.commoncrawl.org/'+row['filename']
-    session=requests.Session();session.headers['User-Agent']='BlueScholarsRestoration/0.1 (historical research)'
+    session=RecoverySession();session.headers['User-Agent']='BlueScholarsRestoration/0.1 (historical research)'
     response=_request(session,url,headers={'Range':f'bytes={start}-{start+length-1}'})
     if response.status_code!=206: raise OSError(f'WARC range request returned HTTP {response.status_code}')
     expected=f'bytes {start}-{start+length-1}/'
@@ -127,6 +128,8 @@ def import_rows(root:Path,collection:str,rows:list[dict])->dict:
                 'hints':[],'captures':[],'attempts':[],'retrieved_at':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())}
             for ref in refs:state.add(ref['url'],ref['kind'],ref['referrer'],row['timestamp'])
             report['recovered_records']+=1
+        except ArchiveCooldown:
+            raise
         except Exception as exc:
             report['failures'].append({'url':row.get('url',''),'timestamp':row.get('timestamp'),
                 'error':f'{type(exc).__name__}: {exc}'})
@@ -141,7 +144,7 @@ def harvest(root:Path,max_rows:int=1800,workers:int=4)->dict:
     collection and row; rerunning safely repeats queries and reuses hashed bodies.
     """
     root=Path(root);state=State(root)
-    response=_request(requests.Session(),INDEXES)
+    response=_request(RecoverySession(),INDEXES)
     if response.status_code!=200:raise OSError(f'Common Crawl index list HTTP {response.status_code}')
     indexes=json.loads(response.content)
     indexes=[x for x in indexes if x.get('id','').startswith('CC-MAIN-')]
@@ -171,6 +174,8 @@ def harvest(root:Path,max_rows:int=1800,workers:int=4)->dict:
             item=futures[future]
             try:
                 rows,meta=future.result();queried.append((item,rows));meta['outcome']='indexed'
+            except ArchiveCooldown:
+                raise
             except Exception as exc:
                 rows=[];queried.append((item,rows));meta={'id':item.get('id'),'outcome':'failed','error':f'{type(exc).__name__}: {exc}'}
             errors.append(meta)
@@ -227,6 +232,8 @@ def harvest(root:Path,max_rows:int=1800,workers:int=4)->dict:
                 state.data['resources'][store_key]=record
                 for ref in refs:state.add(ref['url'],ref['kind'],ref['referrer'],row['timestamp'])
                 report['recovered_records']+=1
+            except ArchiveCooldown:
+                raise
             except Exception as exc:
                 report['failures'].append({'collection':index['id'],'url':row.get('url',''),
                                            'error':f'{type(exc).__name__}: {exc}'})

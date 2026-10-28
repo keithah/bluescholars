@@ -2,6 +2,7 @@
 """Recover the Seattle Channel Blue Scholars program page and video mementos."""
 from __future__ import annotations
 
+from restore.cooldown import ArchiveCooldown, RecoverySession
 import hashlib
 import json
 import time
@@ -26,7 +27,7 @@ def recover(delay: float = 1.5) -> dict:
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8")) if MANIFEST.exists() else {
         "version": 1, "pages": {}, "videos": {}, "payloads": {}}
     RAW.mkdir(parents=True, exist_ok=True)
-    session = requests.Session()
+    session = RecoverySession()
     session.headers["User-Agent"] = "BlueScholarsRestoration/0.1 (historical preservation)"
     failures = []
 
@@ -69,6 +70,8 @@ def recover(delay: float = 1.5) -> dict:
                           "rights_status": "unresolved; local recovery only"}
                 bucket[key] = record
                 manifest["payloads"].setdefault(sha, {"raw_path": rel, "bytes": len(payload), "kind": kind})
+            except ArchiveCooldown:
+                raise
             except Exception as exc:
                 failures.append({"timestamp": timestamp, "original_url": cdx_original,
                                  "stage": kind, "error": f"{type(exc).__name__}: {exc}"})

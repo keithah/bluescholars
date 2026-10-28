@@ -6,6 +6,7 @@ Metadata, source URLs, hashes, sizes and rights notes stay in recovery/ia-media.
 """
 from __future__ import annotations
 
+from restore.cooldown import ArchiveCooldown, RecoverySession
 import hashlib
 import json
 import re
@@ -178,7 +179,7 @@ def recover() -> dict:
     manifest_path = OUT / "manifest.json"
     manifest = json.loads(manifest_path.read_text()) if manifest_path.exists() else {"version": 1, "items": {}}
     items = manifest.setdefault("items", {})
-    session = requests.Session()
+    session = RecoverySession()
     session.headers["User-Agent"] = "BlueScholarsRestoration/0.1 (historical media preservation)"
     searches = _search(session)
     # Include the broader source-phrase query saved during the October 22
@@ -297,6 +298,8 @@ def recover() -> dict:
                 report["downloaded_files"] += 1; report["downloaded_bytes"] += size
                 manifest_path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
                 time.sleep(0.5)
+        except ArchiveCooldown:
+            raise
         except Exception as exc:
             for temp in MEDIA.glob(f"{_safe_name(identifier)}--*.part"):
                 temp.unlink(missing_ok=True)

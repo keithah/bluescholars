@@ -6,6 +6,7 @@ queries. Exact timestamp, URL, CDX SHA-1, local SHA-256 and memento provenance
 are retained. Files remain in the local recovery store pending rights review.
 """
 from __future__ import annotations
+from restore.cooldown import ArchiveCooldown, RecoverySession
 import argparse,base64,hashlib,json,time
 from pathlib import Path
 from urllib.parse import urlsplit
@@ -37,7 +38,7 @@ def recover(max_files=50,delay=0.8):
   u=_canonical(row['original']);stamp=row.get('timestamp','');key=(u,stamp)
   if key in seen or key in failed:continue
   todo.append((key,row))
- session=requests.Session();session.headers['User-Agent']='BlueScholarsHistoricalRecovery/0.1 (source preservation)'
+ session=RecoverySession();session.headers['User-Agent']='BlueScholarsHistoricalRecovery/0.1 (source preservation)'
  report={'source':'saved uncollapsed masslinemedia.com CDX capture inventory','candidate_rows':len(candidates()),'pending':len(todo),'attempted':0,'recovered':0,'reused':0,'failed':0,'failures':[],'rights_status':'review_required_before_publication'}
  digests={}
  for item in [*resources.values(),*variants]:
@@ -70,6 +71,8 @@ def recover(max_files=50,delay=0.8):
     report['recovered']+=1
    rec['status']='recovered'
    variants.append(rec);seen.add((canonical,stamp))
+  except ArchiveCooldown:
+      raise
   except Exception as e:
    rec['error']=f'{type(e).__name__}: {e}';m['variant_failures'].append(rec);report['failed']+=1;report['failures'].append({'url':row['original'],'timestamp':stamp,'error':rec['error']})
   _write_massline_manifest(MANIFEST,m);time.sleep(delay)

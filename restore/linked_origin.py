@@ -5,6 +5,7 @@ misreported as Wayback captures. The allowlist is intentionally narrow.
 """
 from __future__ import annotations
 
+from restore.cooldown import ArchiveCooldown, RecoverySession
 from datetime import datetime, timezone
 import hashlib
 import time
@@ -27,7 +28,7 @@ class LinkedOriginClient:
 
     def __init__(self, session=None, delay: float = 0.5, timeout: int = 25,
                  max_bytes: int = 15_000_000, sleep=time.sleep):
-        self.session = session or requests.Session()
+        self.session = session or RecoverySession()
         self.session.headers.update({
             "User-Agent": "BlueScholarsRestoration/0.1 (linked historical image; paced request)"
         })
@@ -125,6 +126,8 @@ def recover_linked_origin_images(state: State, client, max_files: int = 100) -> 
                           source_capture=None)
             attempt.update(result="downloaded", sha256=digest, bytes=len(response.body))
             report["recovered"] += 1
+        except ArchiveCooldown:
+            raise
         except Exception as exc:
             attempt.update(result="failed", error=f"{type(exc).__name__}: {exc}")
             report["failed"] += 1

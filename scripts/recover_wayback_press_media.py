@@ -6,6 +6,7 @@ and rights status are checkpointed separately from the public website.
 """
 from __future__ import annotations
 
+from restore.cooldown import ArchiveCooldown, RecoverySession
 import argparse
 import base64
 import hashlib
@@ -42,7 +43,7 @@ def recover(delay: float = 1.0, max_files: int = 40) -> dict:
         "archive": "Internet Archive Wayback",
         "captures": {},
     }
-    session = requests.Session()
+    session = RecoverySession()
     session.headers["User-Agent"] = "BlueScholarsHistoricalRecovery/0.1 (source-linked media preservation)"
     report = {
         "source_page": PAGE,
@@ -71,6 +72,8 @@ def recover(delay: float = 1.0, max_files: int = 40) -> dict:
         rows = rows[1:] if rows else []
         manifest["cdx_rows"] = rows
         manifest["queried_at_utc"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+    except ArchiveCooldown:
+        raise
     except Exception as exc:
         report["failures"].append({"stage": "cdx", "url": SOURCE, "error": f"{type(exc).__name__}: {exc}"})
         manifest["last_report"] = report
@@ -127,6 +130,8 @@ def recover(delay: float = 1.0, max_files: int = 40) -> dict:
                 "rights_status": "unreviewed; local-only",
             }
             report["recovered"] += 1
+        except ArchiveCooldown:
+            raise
         except Exception as exc:
             report["failures"].append({
                 "stage": "replay", "url": original, "timestamp": timestamp,

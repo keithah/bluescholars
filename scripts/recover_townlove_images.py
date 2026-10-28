@@ -7,6 +7,7 @@ rights review. The manifest records every exact URL query and source memento.
 """
 from __future__ import annotations
 
+from restore.cooldown import ArchiveCooldown, RecoverySession
 import argparse
 import base64
 import hashlib
@@ -90,7 +91,7 @@ def recover(max_urls: int = 25, max_files: int = 100, delay: float = 1.5) -> dic
         "version": 1, "archive": "Internet Archive Wayback", "source": str(SOURCE.relative_to(ROOT)),
         "urls": {}, "revisions": {}}
     manifest["urls"].update(discover())
-    session = requests.Session()
+    session = RecoverySession()
     session.headers["User-Agent"] = "BlueScholarsHistoricalRecovery/0.1 (source preservation)"
     report = {"source": "Town Love independent Northwest hip-hop archive",
               "candidate_images": len(manifest["urls"]), "queried": 0, "index_rows": 0,
@@ -115,6 +116,8 @@ def recover(max_urls: int = 25, max_files: int = 100, delay: float = 1.5) -> dic
                 report["queried"] += 1
                 report["index_rows"] += len(record["cdx_rows"])
                 manifest_path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+            except ArchiveCooldown:
+                raise
             except Exception as exc:
                 report["failures"].append({"url": url, "stage": "cdx", "error": f"{type(exc).__name__}: {exc}"})
             time.sleep(delay)
@@ -171,6 +174,8 @@ def recover(max_urls: int = 25, max_files: int = 100, delay: float = 1.5) -> dic
                           "cdx_sha1_verified": True, "status": "recovered",
                           "rights_status": "review_required_before_publication"})
             report["recovered"] += 1
+        except ArchiveCooldown:
+            raise
         except Exception as exc:
             entry.update({"status": "failed", "error": f"{type(exc).__name__}: {exc}"})
             report["failures"].append({"url": original, "timestamp": timestamp, "stage": "replay", "error": entry["error"]})

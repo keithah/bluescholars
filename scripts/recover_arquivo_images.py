@@ -7,6 +7,7 @@ provenance for separate review.
 """
 from __future__ import annotations
 
+from restore.cooldown import ArchiveCooldown, RecoverySession
 import argparse
 import hashlib
 import json
@@ -60,7 +61,7 @@ def recover(limit: int = 100, delay: float = 0.5, pages: int = 3, start_page: in
     if limit < 1 or delay < 0 or pages < 1 or start_page < 1:
         raise ValueError("limit, pages and start_page must be positive and delay nonnegative")
     OUT.mkdir(parents=True, exist_ok=True)
-    session = requests.Session()
+    session = RecoverySession()
     session.headers["User-Agent"] = "BlueScholarsRestoration/0.1 (historical preservation)"
     responses = []
     leads: dict[str, dict] = {}
@@ -90,6 +91,8 @@ def recover(limit: int = 100, delay: float = 0.5, pages: int = 3, start_page: in
                         leads.setdefault(link, {**item, "matched_queries": []})["matched_queries"].append(query)
                 if len(items) < 50:
                     break
+            except ArchiveCooldown:
+                raise
             except Exception as exc:
                 report["queries"].append({"query": query, "offset": offset,
                                           "error": f"{type(exc).__name__}: {exc}"})
@@ -146,6 +149,8 @@ def recover(limit: int = 100, delay: float = 0.5, pages: int = 3, start_page: in
                            "matched_queries": lead["matched_queries"],
                            "review_required_before_publication": True}
             report["recovered"] += 1
+        except ArchiveCooldown:
+            raise
         except Exception as exc:
             report["failures"].append({"archive_url": link, "source_image_url": lead.get("imgSrc"),
                                        "error": f"{type(exc).__name__}: {exc}"})

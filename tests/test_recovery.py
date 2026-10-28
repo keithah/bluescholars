@@ -168,11 +168,14 @@ class Session:
         if isinstance(item,Exception): raise item
         return item
 
-def test_retry_after_respected():
-    waits=[];s=Session([Response(429,headers={'Retry-After':'7'}),Response()])
+def test_retry_after_stops_immediately():
+    from restore.cooldown import ArchiveCooldown
+    waits=[];s=Session([Response(429,headers={'Retry-After':'120'}),Response()])
     c=ArchiveClient(session=s,delay=0,sleep=waits.append)
-    assert c.get('https://web.archive.org/web/'+TARGET+'id_/'+HOME).body==VALID
-    assert 7 in waits and len(s.calls)==2
+    with pytest.raises(ArchiveCooldown):
+        c.get('https://web.archive.org/web/'+TARGET+'id_/'+HOME)
+    assert len(s.calls)==1 and 120 not in waits
+
 
 def test_live_redirect_refused():
     s=Session([Response(302,headers={'Location':'https://bluescholars.com/'})])
@@ -504,3 +507,34 @@ def test_download_failure_is_not_missing_forever(tmp_path):
     assert record['status']=='failed'
     assert record['attempts'] and not record.get('raw_path')
     assert not state.data['index_complete']
+
+
+def test_rate_limit_keeps_capture_queued_and_retries_same_date(tmp_path):
+    from restore.cooldown import ArchiveCooldown
+    state=State(tmp_path)
+    first=state.add(HOME,'html','seed',TARGET)
+    other=state.add(HOME+'second','html','seed',TARGET)
+    def blocked(url): raise ArchiveCooldown(2000000000)
+    client=Client(blocked)
+    with pytest.raises(ArchiveCooldown): recover(state,client,max_files=10)
+    assert len(client.calls)==1
+    saved=State(tmp_path).data['resources'][HOME]
+    assert saved['status']=='queued'
+    assert saved['attempts'][-1]['result']=='deferred'
+    assert other['attempts']==[]
+    good=Client(lambda url:Payload(VALID,url,200,{}))
+    recover(state,good,max_files=1)
+    assert first['status']=='recovered'
+    assert good.calls[0]==client.calls[0]
+
+
+def test_index_cooldown_preserves_cursor(tmp_path):
+    from restore.cooldown import ArchiveCooldown
+    state=State(tmp_path)
+    checkpoint={'resume_key':'next-page','complete':False,'pages':1,'rows':10}
+    state.data['index']['domain']=checkpoint
+    def blocked(url): raise ArchiveCooldown(2000000000)
+    with pytest.raises(ArchiveCooldown): index(state,Client(blocked))
+    saved=State(tmp_path).data['index']['domain']
+    assert saved['resume_key']=='next-page' and saved['pages']==1
+    assert saved['retry_at']==2000000000

@@ -6,7 +6,7 @@ import hashlib
 import json
 from pathlib import Path
 import time
-import requests
+from restore.cooldown import ArchiveCooldown, RecoverySession
 from restore.archive import validate_payload
 
 
@@ -23,7 +23,7 @@ def recover(root, max_files=25, retry_failed=False, delay=.7):
             report['attempted'] += 1
             attempt = {'at': datetime.now(timezone.utc).isoformat(), 'url': image['source_url']}
             try:
-                with requests.get(image['source_url'], timeout=(10, 25), stream=True) as response:
+                with RecoverySession().get(image['source_url'], timeout=(10, 25), stream=True) as response:
                     if response.status_code == 429:
                         report['rate_limited'] = True
                     response.raise_for_status()
@@ -44,6 +44,8 @@ def recover(root, max_files=25, retry_failed=False, delay=.7):
                                  resolved_url=response.url, content_type=response.headers.get('Content-Type'))
                     attempt['result'] = 'recovered'
                     report['recovered'] += 1
+            except ArchiveCooldown:
+                raise
             except Exception as exc:
                 image.update(status='failed', error=f'{type(exc).__name__}: {exc}')
                 attempt.update(result='failed', error=image['error'])

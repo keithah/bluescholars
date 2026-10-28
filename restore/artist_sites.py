@@ -6,6 +6,7 @@ Blue Scholars domain's source catalog.
 """
 from __future__ import annotations
 
+from restore.cooldown import ArchiveCooldown, RecoverySession
 import hashlib
 import json
 import re
@@ -356,7 +357,7 @@ def index_artist_sites(root: Path, delay: float = 0.2) -> dict:
     """Save complete CDX inventories for both artist domains and exact roots."""
     root = Path(root)
     path = root / "recovery/artist-sites/index.json"
-    session = requests.Session()
+    session = RecoverySession()
     session.headers["User-Agent"] = "BlueScholarsRestoration/0.1 (historical research; paced requests)"
     report = {"generated_at": datetime.now(timezone.utc).isoformat(), "archives": {}, "errors": []}
     all_rows = {}
@@ -381,6 +382,8 @@ def index_artist_sites(root: Path, delay: float = 0.2) -> dict:
                 report["archives"][domain]["captures_by_year"][year] = report["archives"][domain]["captures_by_year"].get(year, 0) + 1
                 mime = row.get("mimetype", "")
                 report["archives"][domain]["mime_types"][mime] = report["archives"][domain]["mime_types"].get(mime, 0) + 1
+        except ArchiveCooldown:
+            raise
         except Exception as exc:
             report["errors"].append({"domain": domain, "error": f"{type(exc).__name__}: {exc}"})
     _write_json(path, {"report": report, "rows": all_rows})
@@ -499,7 +502,7 @@ def recover_artist_sites(root: Path, max_files: int = 1800, delay: float = 0.6,
     manifest = json.loads(manifest_path.read_text(encoding="utf-8")) if manifest_path.exists() else {
         "version": 1, "editions": {}, "external_index": {}, "failures": []}
     rows_by_domain = index.get("rows", {})
-    session = requests.Session()
+    session = RecoverySession()
     session.headers["User-Agent"] = "BlueScholarsRestoration/0.1 (historical preservation; paced requests)"
     client = ArchiveClient(session=session, delay=delay, timeout=40, retries=3)
     attempts = 0
@@ -539,6 +542,8 @@ def recover_artist_sites(root: Path, max_files: int = 1800, delay: float = 0.6,
                         try:
                             source_rows = _index_url(canonical, session, delay)
                             manifest["external_index"][canonical] = source_rows
+                        except ArchiveCooldown:
+                            raise
                         except Exception as exc:
                             missing[canonical] = {"url": canonical, "kind": kind, "status": "index_failed", "error": f"{type(exc).__name__}: {exc}"}
                             _write_json(manifest_path, manifest)
@@ -567,6 +572,8 @@ def recover_artist_sites(root: Path, max_files: int = 1800, delay: float = 0.6,
                                           "digest": ""}
                             else:
                                 last_error = "excluded unsupported linked resource type: " + kind
+                        except ArchiveCooldown:
+                            raise
                         except Exception as exc:
                             last_error = f"{type(exc).__name__}: {exc}"
                     for row in candidates:
@@ -601,6 +608,8 @@ def recover_artist_sites(root: Path, max_files: int = 1800, delay: float = 0.6,
                                 chosen.update(actual_row)
                                 chosen["requested_capture"] = row["timestamp"]
                             body = response.body; break
+                        except ArchiveCooldown:
+                            raise
                         except Exception as exc:
                             last_error = f"{type(exc).__name__}: {exc}"
                     if chosen is None:

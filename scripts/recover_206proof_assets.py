@@ -1,3 +1,4 @@
+from restore.cooldown import ArchiveCooldown
 import sys,json,hashlib,datetime,re
 from pathlib import Path
 from urllib.parse import urlsplit,unquote
@@ -44,6 +45,8 @@ for row,g,ref in unique[:220]:
   digest=hashlib.sha256(resp.body).hexdigest();path=root/'raw'/(digest+ext);path.parent.mkdir(parents=True,exist_ok=True)
   if not path.exists():path.write_bytes(resp.body)
   item.update(result='recovered',actual_capture=capture_from(resp.url),resolved_url=resp.url,content_type=resp.headers.get('Content-Type'),bytes=len(resp.body),sha256=digest,raw_path=str(path))
+ except ArchiveCooldown:
+     raise
  except Exception as e:item.update(result='failed',error=f'{type(e).__name__}: {e}')
  m['resources'].append(item);attempted+=1
  if attempted%5==0:

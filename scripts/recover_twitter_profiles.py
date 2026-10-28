@@ -2,6 +2,7 @@
 """Inventory and checksum-verify dated Twitter profile captures per handle."""
 from __future__ import annotations
 
+from restore.cooldown import ArchiveCooldown, RecoverySession
 import argparse
 import base64
 import hashlib
@@ -32,7 +33,7 @@ def recover(accounts: list[str], max_files: int = 100, delay: float = 0.3,
             timeout: int = 45, retry_failed: bool = False) -> dict:
     if max_files < 1 or delay < 0 or timeout < 1:
         raise ValueError("max_files and timeout must be positive; delay must be nonnegative")
-    session = requests.Session()
+    session = RecoverySession()
     session.headers["User-Agent"] = "BlueScholarsRestoration/1.0 (historical preservation)"
     reports = {}
     attempted_total = 0
@@ -82,6 +83,8 @@ def recover(accounts: list[str], max_files: int = 100, delay: float = 0.3,
                      "queries": inventories, "fields": ["timestamp", "original", "statuscode", "mimetype", "digest", "length", "route_id"],
                      "rows": rows}
             index_path.write_text(json.dumps(index, indent=2, ensure_ascii=False) + "\n")
+        except ArchiveCooldown:
+            raise
         except Exception as exc:
             reports[handle] = {"status": "index_failed", "error": f"{type(exc).__name__}: {exc}"}
             continue
@@ -156,6 +159,8 @@ def recover(accounts: list[str], max_files: int = 100, delay: float = 0.3,
                            "content_type": response.headers.get("Content-Type", ""),
                            "http_status": response.status_code})
                 recovered += 1
+            except ArchiveCooldown:
+                raise
             except Exception as exc:
                 error = f"{type(exc).__name__}: {exc}"
                 if "CDX SHA-1 mismatch" in error and body:

@@ -6,6 +6,7 @@ third-party page to the public-site build.
 """
 from __future__ import annotations
 
+from restore.cooldown import ArchiveCooldown, RecoverySession
 import argparse
 import hashlib
 import json
@@ -75,7 +76,7 @@ def recover(max_urls: int = 50, delay: float = 0.35, offset: int = 0) -> dict:
     if max_urls < 1 or delay < 0 or offset < 0:
         raise ValueError("max_urls must be positive and delay nonnegative")
     OUT.mkdir(parents=True, exist_ok=True)
-    session = requests.Session()
+    session = RecoverySession()
     session.headers["User-Agent"] = "BlueScholarsRestoration/0.1 (historical preservation)"
     old_path = OUT / "manifest.json"
     manifest = json.loads(old_path.read_text(encoding="utf-8")) if old_path.exists() else {
@@ -138,9 +139,13 @@ def recover(max_urls: int = 50, delay: float = 0.35, offset: int = 0) -> dict:
                                          "source_collection": item.get("collection"),
                                          "queried_url": url, "title": item.get("title", "")}
                     report["recovered_payloads"] += 1
+                except ArchiveCooldown:
+                    raise
                 except Exception as exc:
                     report["failures"].append({"url": original, "timestamp": timestamp,
                                                "error": f"{type(exc).__name__}: {exc}"})
+        except ArchiveCooldown:
+            raise
         except Exception as exc:
             report["failures"].append({"url": url, "error": f"{type(exc).__name__}: {exc}"})
         old_path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")

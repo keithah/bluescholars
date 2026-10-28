@@ -6,6 +6,7 @@ kept distinct from Wayback mementos and are never promoted to the public site.
 """
 from __future__ import annotations
 
+from restore.cooldown import ArchiveCooldown, RecoverySession
 import argparse
 import base64
 import hashlib
@@ -189,7 +190,7 @@ def recover(delay: float = 1.0, retry_rate_limited: bool = False) -> dict:
                   "The 2011 J gallery images came from the recovered Capitol Hill Seattle article; three later search results are page-only leads.",
                   "Original-size images were not acquired after Flickr returned HTTP 429; the rate-limited resume flag stops at the first further 429.",
                   "Files remain in research storage and are not included in the public site."]}
-    session = requests.Session()
+    session = RecoverySession()
     session.headers["User-Agent"] = "BlueScholarsHistoricalRecovery/0.1 (source preservation)"
     report["flickr_cdn_rate_limited"] = not retry_rate_limited and any(
         "429" in str(x.get("image_error", "")) or x.get("largest_image_status") == "deferred_after_http_429"
@@ -208,6 +209,8 @@ def recover(delay: float = 1.0, retry_rate_limited: bool = False) -> dict:
             record[f"{key}_queried_at"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
             report["archive_urls_queried"] += 1
             report["archive_rows"] += len(record[key])
+        except ArchiveCooldown:
+            raise
         except Exception as exc:
             record[f"{key}_error"] = f"{type(exc).__name__}: {exc}"
             report["errors"].append({"url": url, "stage": key, "error": record[f"{key}_error"]})
@@ -256,6 +259,8 @@ def recover(delay: float = 1.0, retry_rate_limited: bool = False) -> dict:
                     "largest_page_linked_variant": variant,
                     "model_license_id": (extract_photo_model(body) or {}).get("license")})
                 report["source_pages_saved"] += 1
+            except ArchiveCooldown:
+                raise
             except Exception as exc:
                 record["source_page_error"] = f"{type(exc).__name__}: {exc}"
                 report["errors"].append({"url": page_url, "stage": "source_page", "error": record["source_page_error"]})
@@ -315,6 +320,8 @@ def recover(delay: float = 1.0, retry_rate_limited: bool = False) -> dict:
                         "image_response_content_type": response.headers.get("Content-Type", ""),
                         "image_source_kind": "current Flickr largest page-linked image copy", "rights_status": "CC BY-SA 2.0 stated by Flickr; held local pending site-level review"})
                     report["images_saved"] += 1
+                except ArchiveCooldown:
+                    raise
                 except Exception as exc:
                     record["image_error"] = f"{type(exc).__name__}: {exc}"
                     if record.get("largest_image_status") != "deferred_after_http_429":

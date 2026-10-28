@@ -1032,3 +1032,10 @@ PYTHONPATH=. .venv311/bin/python scripts/recover_press_archive_pages.py --only-s
 - Added 18 validated original-site URL mappings (10 CSS, eight images), and repaired 45 older Massline capture-status records representing six existing image payloads. All historical attempts remain preserved.
 - Fixed digest reuse validation and publisher-image format safety. All 337 tests pass. Full root and project-hosted builds and final output checks pass with zero errors. Browser checked mobile/desktop, local full-size photos, and exactly one timeline. See `docs/recovery-report/RECOVERY_2026-10-28.md`.
 - Preview approval flags remain unchanged. No new audio, complete recovery, or human review is claimed.
+
+## October 28, 2026 — shared Internet Archive cooldown
+
+- Recovery sessions share a persistent, locked cooldown at `~/.cache/bluescholars/wayback-cooldown.json` across processes and worktrees on the same computer. A 429 from archive.org or its subdomains closes the response and immediately raises a dedicated pause; no same-batch retry or fall-through to another capture is allowed.
+- The minimum cooldown is 60 seconds. A longer numeric or HTTP-date `Retry-After` is honored, and concurrent updates never shorten an existing deadline. Requests already in flight cannot be recalled; new requests check the shared deadline. Separate computers/runners do not share this local file.
+- Main recovery checkpoints record the interrupted capture as deferred/queued, preserving its capture date and index cursor. Deferred attempts do not count as exhausted captures. Restart the same recovery command after the reported deadline; the CLI exits with temporary-failure code 75 while paused. This does not schedule an automatic background run.
+- Standalone session-based recovery tools propagate the pause before writing a per-capture failure; their saved inventories remain retryable. Myspace and Twitter now checkpoint each completed item. Tests isolate the cooldown and block external HTTP, with local preview-server traffic allowed.

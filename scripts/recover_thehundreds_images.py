@@ -7,6 +7,7 @@ does not promote or publish the third-party files.
 """
 from __future__ import annotations
 
+from restore.cooldown import ArchiveCooldown, RecoverySession
 import hashlib
 import json
 import time
@@ -35,7 +36,7 @@ def recover(delay: float = 1.0) -> dict:
         "archive_status": "No exact Wayback CDX rows for the 11 image URL variants exposed by archived article pages.",
         "items": {},
     }
-    session = requests.Session()
+    session = RecoverySession()
     session.headers["User-Agent"] = "BlueScholarsRestoration/0.1 (historical preservation research)"
     for url in IMAGE_URLS:
         if url in manifest["items"]:
@@ -68,6 +69,8 @@ def recover(delay: float = 1.0) -> dict:
                 "local_path": str(local.relative_to(ROOT)),
                 "rights_status": "Unreviewed third-party editorial photograph; recovery-only, local-only, not published.",
             })
+        except ArchiveCooldown:
+            raise
         except Exception as exc:  # keep each source checkpoint even on partial failures
             record.update({"retrieved_at": datetime.now(timezone.utc).isoformat(), "error": f"{type(exc).__name__}: {exc}"})
         manifest["items"][url] = record

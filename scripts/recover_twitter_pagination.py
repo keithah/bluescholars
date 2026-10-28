@@ -2,6 +2,7 @@
 """Recover exact archived Twitter page-two URLs observed in saved profile HTML."""
 from __future__ import annotations
 
+from restore.cooldown import ArchiveCooldown, RecoverySession
 import argparse
 import hashlib
 import json
@@ -24,7 +25,7 @@ CDX = "https://web.archive.org/cdx/search/cdx"
 
 def recover(root: Path = ROOT, max_pages: int = 500, delay: float = 0.3,
             timeout: int = 45) -> dict:
-    session = requests.Session()
+    session = RecoverySession()
     session.headers["User-Agent"] = "BlueScholarsRestoration/1.0 (historical preservation)"
     report = {}
     attempted_total = 0
@@ -82,6 +83,8 @@ def recover(root: Path = ROOT, max_pages: int = 500, delay: float = 0.3,
                         break
                     response.raise_for_status()
                     candidate = response.json()
+                except ArchiveCooldown:
+                    raise
                 except Exception as exc:
                     index_error = f"{type(exc).__name__}: {exc}"
                     query_attempts.append({"url": query_url, "result": "request_failed",
@@ -167,6 +170,8 @@ def recover(root: Path = ROOT, max_pages: int = 500, delay: float = 0.3,
                                       "cdx_sha1": actual, "cdx_sha1_verified": True,
                                       "content_type": page.headers.get("Content-Type", ""),
                                       "http_status": page.status_code}
+                except ArchiveCooldown:
+                    raise
                 except Exception as exc:
                     entry["fetch"] = {"status": "unverified" if body else "failed", "url": replay,
                                       "bytes": len(body), "sha256": hashlib.sha256(body).hexdigest() if body else "",

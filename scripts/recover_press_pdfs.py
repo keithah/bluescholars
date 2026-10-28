@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Recover archive-indexed PDF scans containing Blue Scholars press material."""
 from __future__ import annotations
+from restore.cooldown import ArchiveCooldown, RecoverySession
 import argparse,base64,hashlib,json,time
 from pathlib import Path
 import requests
@@ -28,7 +29,7 @@ def recover(delay=1.0,max_files=20):
  if delay<0 or max_files<1:raise ValueError('positive max_files and nonnegative delay required')
  OUT.mkdir(parents=True,exist_ok=True);RAW.mkdir(exist_ok=True)
  mp=OUT/'manifest.json';m=json.loads(mp.read_text()) if mp.exists() else {'archive':'Internet Archive Wayback','sources':{},'captures':{}}
- s=requests.Session();s.headers['User-Agent']='BlueScholarsHistoricalRecovery/0.1 (publication preservation)'
+ s=RecoverySession();s.headers['User-Agent']='BlueScholarsHistoricalRecovery/0.1 (publication preservation)'
  report={'archive':'Internet Archive Wayback','sources':len(SOURCES),'queried_sources':0,'capture_rows':0,'attempted':0,'recovered':0,'failures':[],'not_found':[],'rights_status':'third-party magazine/newspaper scans; recovery-only pending rights review'}
  for label,url in SOURCES.items():
   if url not in m['sources'] or m['sources'][url].get('query_error'):
@@ -36,6 +37,8 @@ def recover(delay=1.0,max_files=20):
     r=s.get(CDX,params={'url':url,'matchType':'exact','output':'json','fl':FIELDS,'filter':'statuscode:200','limit':100},timeout=(10,50));r.raise_for_status();rows=r.json();rows=rows[1:] if rows else []
     m['sources'][url]={'url':url,'label':label,'cdx_rows':rows,'queried_at':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())}
     if not rows:report['not_found'].append(url)
+   except ArchiveCooldown:
+       raise
    except Exception as e:
     m['sources'][url]={'url':url,'label':label,'cdx_rows':[],'query_error':f'{type(e).__name__}: {e}'}
     report['failures'].append({'url':url,'stage':'cdx','error':m['sources'][url]['query_error']})
@@ -58,6 +61,8 @@ def recover(delay=1.0,max_files=20):
     if not path.exists():path.write_bytes(data)
     m['captures'][key]={'label':label,'source_url':original,'timestamp':ts,'replay_url':replay,'cdx_mime':mime,'cdx_digest':digest,'cdx_sha1_verified':bool(digest),'cdx_length':int(length),'bytes':len(data),'sha256':sha,'raw_path':path.relative_to(ROOT).as_posix(),'review_required_before_publication':True}
     report['recovered']+=1
+   except ArchiveCooldown:
+       raise
    except Exception as e:report['failures'].append({'label':label,'url':original,'timestamp':ts,'error':f'{type(e).__name__}: {e}'})
    report['capture_rows']+=1;mp.write_text(json.dumps(m,indent=2,ensure_ascii=False)+'\n');time.sleep(delay)
  report['total_capture_records']=len(m['captures']);report['unique_pdf_payloads']=len({r['sha256'] for r in m['captures'].values()})

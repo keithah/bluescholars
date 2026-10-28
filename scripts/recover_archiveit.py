@@ -6,6 +6,7 @@ third-party pages or media into the restored sites.
 """
 from __future__ import annotations
 
+from restore.cooldown import ArchiveCooldown, RecoverySession
 import argparse
 import hashlib
 import html
@@ -87,7 +88,7 @@ def recover(limit: int = 100, delay: float = 0.8, pages: int = 3, start_page: in
     if limit < 1 or delay < 0 or pages < 1 or start_page < 1:
         raise ValueError("limit, pages and start_page must be positive and delay nonnegative")
     OUT.mkdir(parents=True, exist_ok=True)
-    session = requests.Session()
+    session = RecoverySession()
     session.headers["User-Agent"] = "BlueScholarsRestoration/0.1 (historical preservation)"
     manifest_path = OUT / "manifest.json"
     manifest = json.loads(manifest_path.read_text(encoding="utf-8")) if manifest_path.exists() else {
@@ -146,6 +147,8 @@ def recover(limit: int = 100, delay: float = 0.8, pages: int = 3, start_page: in
                 report["search_cards"] += len(cards)
                 if not cards:
                     break
+            except ArchiveCooldown:
+                raise
             except Exception as exc:
                 report["queries"].append({"query": query, "page": page,
                                           "error": f"{type(exc).__name__}: {exc}"})
@@ -208,6 +211,8 @@ def recover(limit: int = 100, delay: float = 0.8, pages: int = 3, start_page: in
                                      "review_required_before_publication": True}
             attempts[source_url] = {"status": "success", "sha256": digest, "raw_path": path}
             report["new_payloads"] += 1
+        except ArchiveCooldown:
+            raise
         except Exception as exc:
             failure = {"replay_url": source_url, "title": candidate.get("title"),
                        "original_url": candidate.get("original_url"),

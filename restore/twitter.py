@@ -1,6 +1,7 @@
 """Offline rendering for captured Prometheus Brown Twitter profile pages."""
 from __future__ import annotations
 
+from restore.cooldown import ArchiveCooldown, RecoverySession
 import base64
 import html
 import hashlib
@@ -203,7 +204,7 @@ def recover_linked_assets(root: Path, max_files: int = 75, delay: float = 0.25,
     batch = pending[:max_files]
     asset_dir = data_root / "assets"
     asset_dir.mkdir(parents=True, exist_ok=True)
-    session = requests.Session()
+    session = RecoverySession()
     session.headers["User-Agent"] = "BlueScholarsRestoration/0.1 (historical preservation)"
     recovered = 0
     failures = 0
@@ -234,6 +235,8 @@ def recover_linked_assets(root: Path, max_files: int = 75, delay: float = 0.25,
                           content_type=response.headers.get("Content-Type", ""),
                           http_status=response.status_code)
             recovered += 1
+        except ArchiveCooldown:
+            raise
         except Exception as exc:
             if "HTTP 429" in str(exc) or "HTTP 429" in record.get("last_error", ""):
                 record.update(status="failed", last_error=f"{type(exc).__name__}: {exc}")
@@ -250,6 +253,8 @@ def recover_linked_assets(root: Path, max_files: int = 75, delay: float = 0.25,
             else:
                 try:
                     alternate = _alternate_asset(session, timestamp, url, kind, asset_dir, timeout)
+                except ArchiveCooldown:
+                    raise
                 except Exception as alternate_exc:
                     alternate = None
                     record["alternate_error"] = f"{type(alternate_exc).__name__}: {alternate_exc}"
@@ -267,9 +272,8 @@ def recover_linked_assets(root: Path, max_files: int = 75, delay: float = 0.25,
                                        "error": record.get("last_error", ""),
                                        "alternate_capture": bool(alternate)})
         assets[(timestamp, url)] = record
-        if index % 25 == 0 or index == len(batch):
-            manifest["assets"] = list(assets.values())
-            path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n")
+        manifest["assets"] = list(assets.values())
+        path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n")
         if delay and index < len(batch):
             if rate_limited:
                 break

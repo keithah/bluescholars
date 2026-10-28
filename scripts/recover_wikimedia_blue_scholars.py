@@ -5,6 +5,7 @@ The API is used to fetch per-file attribution and license metadata. Original
 bytes are retained only when the API checksum matches the downloaded payload.
 """
 from __future__ import annotations
+from restore.cooldown import ArchiveCooldown, RecoverySession
 import argparse,hashlib,json,re,time
 from pathlib import Path
 from urllib.parse import unquote
@@ -21,7 +22,7 @@ def recover(delay=.5,max_files=100):
  if delay<0 or max_files<1:raise ValueError('nonnegative delay and positive max_files required')
  OUT.mkdir(parents=True,exist_ok=True);RAW.mkdir(exist_ok=True)
  mp=OUT/'manifest.json';m=json.loads(mp.read_text()) if mp.exists() else {'archive':'Wikimedia Commons','category':CATEGORY,'files':{},'limitations':[]}
- s=requests.Session();s.headers['User-Agent']='BlueScholarsHistoricalRecovery/0.1 (cultural preservation)'
+ s=RecoverySession();s.headers['User-Agent']='BlueScholarsHistoricalRecovery/0.1 (cultural preservation)'
  params={'action':'query','list':'categorymembers','cmtitle':CATEGORY,'cmtype':'file','cmlimit':100,'format':'json'}
  response=s.get(API,params=params,timeout=40);response.raise_for_status();members=response.json().get('query',{}).get('categorymembers',[])
  titles=[x['title'] for x in members]
@@ -73,6 +74,8 @@ def recover(delay=.5,max_files=100):
     dest=RAW/name;dest.write_bytes(body)
     record.update({'status':'recovered_verified','raw_path':dest.relative_to(ROOT).as_posix(),'sha256':hashlib.sha256(body).hexdigest(),'bytes':len(body),'mediawiki_sha1_verified':True})
     report['downloaded_new']+=1;report['new_bytes']+=len(body)
+   except ArchiveCooldown:
+       raise
    except Exception as e:
     record.update({'status':'failed','error':f'{type(e).__name__}: {e}'});report['failed'].append({'title':page['title'],'error':record['error']})
    mp.write_text(json.dumps(m,indent=2,ensure_ascii=False)+'\n')

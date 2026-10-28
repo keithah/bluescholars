@@ -7,6 +7,7 @@ The recovery remains local-only pending rights review.
 """
 from __future__ import annotations
 
+from restore.cooldown import ArchiveCooldown, RecoverySession
 import hashlib
 import json
 import time
@@ -62,7 +63,7 @@ def recover(delay: float = 1.0) -> dict:
         "source_page_url": ARTICLE_URL,
         "captures": {},
     }
-    session = requests.Session()
+    session = RecoverySession()
     session.headers["User-Agent"] = "BlueScholarsHistoricalRecovery/0.1 (source-linked local preservation)"
     report = {"source_images": 0, "downloaded": 0, "reused": 0, "failures": [],
               "captured_at_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
@@ -110,6 +111,8 @@ def recover(delay: float = 1.0) -> dict:
                 "relevance_status": "source page explicitly identifies Blue Scholars or a named member",
             }
             report["downloaded"] += 1
+        except ArchiveCooldown:
+            raise
         except Exception as exc:
             report["failures"].append({"url": url, "error": f"{type(exc).__name__}: {exc}"})
         mpath.write_text(json.dumps(existing, indent=2, ensure_ascii=False) + "\n")

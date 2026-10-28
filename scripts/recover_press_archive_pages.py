@@ -6,6 +6,7 @@ CDX row, replay URL, CDX SHA-1 verification, local SHA-256, and source-page
 reference preserved. This never promotes third-party media to the public site.
 """
 from __future__ import annotations
+from restore.cooldown import ArchiveCooldown, RecoverySession
 import argparse, base64, hashlib, json, re, time
 from pathlib import Path
 from urllib.parse import urljoin, urlsplit
@@ -247,7 +248,7 @@ def recover(delay=.8, image_limit=100, only_image_url=None, only_source_page=Non
  page_sources=list(dict.fromkeys(PAGES+(additional_pages or [])))
  OUT.mkdir(parents=True,exist_ok=True);(OUT/'pages').mkdir(exist_ok=True);(OUT/'images').mkdir(exist_ok=True)
  mp=OUT/'manifest.json';m=json.loads(mp.read_text()) if mp.exists() else {'version':1,'sources':{},'page_captures':{},'image_urls':{},'image_captures':{}}
- s=requests.Session();s.headers['User-Agent']='BlueScholarsRestoration/0.1 (historical preservation research)'
+ s=RecoverySession();s.headers['User-Agent']='BlueScholarsRestoration/0.1 (historical preservation research)'
  report={'archive':'Internet Archive Wayback','sources':len(page_sources),'queried_page_sources':0,'page_capture_rows':0,'page_payloads_recovered':0,'image_urls_discovered':0,'image_urls_queried':0,'image_capture_rows':0,'image_payloads_recovered':0,'failures':[],'limitations':['Exact URL histories and source-page-linked images only; this is not an archive-wide export.','Third-party press pages/images are recovery evidence, not original Blue Scholars site pages.','Image files remain local-only until rights and relevance review.']}
  if only_image_url:
   report['focused_image_url']=only_image_url
@@ -262,6 +263,8 @@ def recover(delay=.8, image_limit=100, only_image_url=None, only_source_page=Non
     r=_get(s,CDX,params={'url':page,'matchType':'exact','output':'json','fl':FIELDS,'filter':'statuscode:200','limit':100})
     rows=r.json();rows=rows[1:] if rows else []
     m['sources'][page]={'source_url':page,'cdx_rows':rows,'queried_at':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())}
+   except ArchiveCooldown:
+       raise
    except Exception as e:
     m['sources'][page]={'source_url':page,'cdx_rows':[],'query_error':f'{type(e).__name__}: {e}'}
     report['failures'].append({'stage':'page_cdx','url':page,'error':m['sources'][page]['query_error']})
@@ -281,6 +284,8 @@ def recover(delay=.8, image_limit=100, only_image_url=None, only_source_page=Non
     sha=hashlib.sha256(body).hexdigest();rel=f'recovery/other-archives/press-articles/pages/{ts}-{sha}.html';p=ROOT/rel;p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(body)
     m['page_captures'][key]={'source_page_url':page,'original_url':orig,'timestamp':ts,'replay_url':replay,'cdx_mime':mime,'cdx_digest':cdxdigest,'cdx_length':int(length),'cdx_sha1_verified':True,'bytes':len(body),'sha256':sha,'raw_path':rel}
     report['page_payloads_recovered']+=1
+   except ArchiveCooldown:
+       raise
    except Exception as e:report['failures'].append({'stage':'page_replay','url':orig,'timestamp':ts,'error':f'{type(e).__name__}: {e}'})
    report['page_capture_rows']+=1;mp.write_text(json.dumps(m,indent=2,ensure_ascii=False)+'\n');time.sleep(delay)
  if pages_only:
@@ -335,6 +340,8 @@ def recover(delay=.8, image_limit=100, only_image_url=None, only_source_page=Non
     rows=r.json();rows=rows[1:] if rows else []
     rows=[x for x in rows if len(x)>5 and x[2]=='200' and x[3].lower().startswith('image/')]
     m['image_urls'][image_url]={'source_image_url':image_url,'source_pages':referrers,'cdx_rows':rows}
+   except ArchiveCooldown:
+       raise
    except Exception as e:
     m['image_urls'][image_url]={'source_image_url':image_url,'source_pages':referrers,'cdx_rows':[],'query_error':f'{type(e).__name__}: {e}'}
     report['failures'].append({'stage':'image_cdx','url':image_url,'error':m['image_urls'][image_url]['query_error']})
@@ -362,6 +369,8 @@ def recover(delay=.8, image_limit=100, only_image_url=None, only_source_page=Non
     rel=f'recovery/other-archives/press-articles/images/{ts}-{sha}{ext}';p=ROOT/rel;p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(body)
     m['image_captures'][key]={'source_image_url':image_url,'original_url':orig,'timestamp':ts,'replay_url':replay,'cdx_mime':mime,'cdx_digest':dig,'cdx_length':int(length),'cdx_sha1_verified':True,'bytes':len(body),'sha256':sha,'raw_path':rel,'source_pages':referrers,'rights_status':'unreviewed; local-only','relevance_status':'pending visual review'}
     report['image_payloads_recovered']+=1
+   except ArchiveCooldown:
+       raise
    except Exception as e:report['failures'].append({'stage':'image_replay','url':orig,'timestamp':ts,'error':f'{type(e).__name__}: {e}'})
    report['image_capture_rows']+=1;mp.write_text(json.dumps(m,indent=2,ensure_ascii=False)+'\n');time.sleep(delay)
   if report['image_payloads_recovered']>=image_limit:break

@@ -1,6 +1,7 @@
 """Resumable recovery and offline rendering for masslinemedia.com captures."""
 from __future__ import annotations
 
+from restore.cooldown import ArchiveCooldown, RecoverySession
 from collections import Counter
 from datetime import datetime, timezone
 from hashlib import sha256
@@ -318,7 +319,7 @@ def index_massline_history(root: Path, max_pages: int = 1, delay: float = 0.8, t
     history = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {
         "query": "masslinemedia.com/*", "rows": [], "pages": 0, "resume_key": None,
         "complete": False, "errors": []}
-    session = requests.Session()
+    session = RecoverySession()
     session.headers["User-Agent"] = "BlueScholarsRestoration/0.1 (historical research; paced requests)"
     pages = 0
     while pages < max_pages and not history.get("complete"):
@@ -349,6 +350,8 @@ def index_massline_history(root: Path, max_pages: int = 1, delay: float = 0.8, t
             pages += 1
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_text(json.dumps(history, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        except ArchiveCooldown:
+            raise
         except Exception as exc:
             history["errors"] = [f"{type(exc).__name__}: {exc}"]
             history["generated_at"] = datetime.now(timezone.utc).isoformat()
@@ -428,7 +431,7 @@ def recover_massline(root: Path, max_files: int = 250, delay: float = 0.6, retry
     rows = sorted(selected_rows, key=_priority)
     eligible = [row for row in rows if row.get("mimetype") not in (
         "application/x-javascript", "application/javascript", "application/x-shockwave-flash")]
-    session = requests.Session()
+    session = RecoverySession()
     session.headers["User-Agent"] = "BlueScholarsRestoration/0.1 (historical preservation; paced requests)"
     client = ArchiveClient(session=session, delay=delay, retries=3, timeout=40, max_bytes=32_000_000)
     attempted = 0
@@ -459,6 +462,8 @@ def recover_massline(root: Path, max_files: int = 250, delay: float = 0.6, retry
                               "timestamp": row["timestamp"], "kind": "html", "mimetype": row.get("mimetype", "text/html"),
                               "source": source, "status": "recovered", "raw_path": raw_path.as_posix(),
                               "sha256": digest, "bytes": len(payload.body), "content_type": payload.headers.get("Content-Type", "")}
+        except ArchiveCooldown:
+            raise
         except Exception as exc:
             variants[year] = {"year": year, "source_url": row["original"], "timestamp": row["timestamp"],
                               "status": "failed", "error": f"{type(exc).__name__}: {exc}", "source": source}
@@ -519,6 +524,8 @@ def recover_massline(root: Path, max_files: int = 250, delay: float = 0.6, retry
                 "bytes": len(payload.body), "content_type": payload.headers.get("Content-Type", ""),
             }
             failures.pop(canonical, None)
+        except ArchiveCooldown:
+            raise
         except Exception as exc:
             failures[canonical] = {**record, "status": "failed", "error": f"{type(exc).__name__}: {exc}"}
         manifest["failures"] = list(failures.values())
@@ -594,7 +601,7 @@ def recover_massline_capture_variants(root: Path, max_files: int = 250, delay: f
     pending = [(key, row) for key, row in sorted(indexed.items(), key=lambda pair: pair[0][1])
                if key not in existing and (retry_failed or key not in failed_keys)]
     attempted = downloaded = reused = failed = 0
-    session = requests.Session()
+    session = RecoverySession()
     session.headers["User-Agent"] = "BlueScholarsRestoration/0.1 (historical preservation; paced requests)"
     client = ArchiveClient(session=session, delay=delay, retries=3, timeout=40, max_bytes=32_000_000)
     for (canonical, timestamp), row in pending:
@@ -635,6 +642,8 @@ def recover_massline_capture_variants(root: Path, max_files: int = 250, delay: f
                     known_digests[row["digest"]] = record
             variants.append(record)
             existing[(canonical, timestamp)] = record
+        except ArchiveCooldown:
+            raise
         except Exception as exc:
             failed += 1
             failures.append({**record, "status": "failed", "error": f"{type(exc).__name__}: {exc}"})

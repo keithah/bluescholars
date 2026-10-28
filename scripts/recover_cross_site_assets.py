@@ -6,6 +6,7 @@ MySpace pages. Every exact CDX revision is checkpointed and locally retained
 only after image validation and CDX SHA-1 verification.
 """
 from __future__ import annotations
+from restore.cooldown import ArchiveCooldown, RecoverySession
 import argparse, base64, hashlib, json, re, time
 from pathlib import Path
 from urllib.parse import urljoin, urlsplit
@@ -29,6 +30,8 @@ def sources():
     for path in (ROOT/'recovery/artist-sites/raw').glob('*'):
         if path.suffix.lower() not in ('.html','.htm'):continue
         try:soup=BeautifulSoup(path.read_bytes(),'html.parser')
+        except ArchiveCooldown:
+            raise
         except Exception:continue
         title=soup.title.get_text(' ',strip=True) if soup.title else path.name
         for node in soup.find_all(['img','source']):
@@ -47,6 +50,8 @@ def sources():
     # Add exact image references present in locally captured MySpace bulletins.
     for path in (ROOT/'recovery/myspace-blue-scholars/raw').glob('*.html'):
         try:soup=BeautifulSoup(path.read_bytes(),'html.parser')
+        except ArchiveCooldown:
+            raise
         except Exception:continue
         for node in soup.find_all('img'):
             value=node.get('src')
@@ -68,7 +73,7 @@ def recover(max_urls=80,max_files=150,delay=1.0):
     assets=m['assets'];found=sources()
     for u,r in found.items():
         a=assets.setdefault(u,{**r,'cdx_rows':[],'revisions':{}});a['source_pages']=r['source_pages'];a['alt_texts']=r['alt_texts']
-    session=requests.Session();session.headers['User-Agent']='BlueScholarsHistoricalRecovery/0.1 (source preservation)'
+    session=RecoverySession();session.headers['User-Agent']='BlueScholarsHistoricalRecovery/0.1 (source preservation)'
     report={'source':'locally recovered Prometheus Brown pages and Blue Scholars MySpace bulletins','candidate_urls':len(found),'queried':0,'index_rows':0,'attempted_replays':0,'recovered_revisions':0,'failures':[],'rate_limited':False,'limitations':['Only exact image URLs embedded in recovered source pages are included.','Third-party/source-linked assets remain local-only pending rights review.','A missing CDX result means no exact URL memento was returned by this query; alternate URL spellings may still exist.']}
     for u,a in list(assets.items())[:max_urls]:
         if a.get('queried_at'):continue
@@ -76,6 +81,8 @@ def recover(max_urls=80,max_files=150,delay=1.0):
             r=session.get(CDX,params={'url':u,'matchType':'exact','output':'json','fl':FIELDS,'filter':'statuscode:200','limit':200},timeout=(10,45))
             if r.status_code==429:report['rate_limited']=True;raise RuntimeError('HTTP 429; stopped')
             r.raise_for_status();d=r.json();a['cdx_rows']=d[1:] if d else [];a['queried_at']=time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime());report['queried']+=1;report['index_rows']+=len(a['cdx_rows'])
+        except ArchiveCooldown:
+            raise
         except Exception as e:
             a['query_error']=f'{type(e).__name__}: {e}';report['failures'].append({'url':u,'stage':'cdx','error':a['query_error']})
         mp.write_text(json.dumps(m,indent=2,ensure_ascii=False)+'\n');time.sleep(delay)
@@ -108,6 +115,8 @@ def recover(max_urls=80,max_files=150,delay=1.0):
             h=hashlib.sha256(body).hexdigest();ext=Path(urlsplit(original).path).suffix.lower() or '.bin';dest=raw/f'{h}{ext}'
             if not dest.exists():dest.write_bytes(body)
             ent.update({'status':'recovered','sha256':h,'bytes':len(body),'raw_path':dest.relative_to(ROOT).as_posix(),'cdx_sha1_verified':True,'rights_status':'review_required_before_publication'});report['recovered_revisions']+=1
+        except ArchiveCooldown:
+            raise
         except Exception as e:ent['error']=f'{type(e).__name__}: {e}';report['failures'].append({'url':u,'timestamp':stamp,'stage':'replay','error':ent['error']})
         a['revisions'][key]=ent;mp.write_text(json.dumps(m,indent=2,ensure_ascii=False)+'\n');time.sleep(delay)
     report['candidate_urls_total']=len(assets);report['revision_records']=sum(len(a['revisions']) for a in assets.values());report['unique_payloads']=len({r['sha256'] for a in assets.values() for r in a['revisions'].values() if r.get('sha256')});m['last_report']=report;mp.write_text(json.dumps(m,indent=2,ensure_ascii=False)+'\n');(OUT/'report.json').write_text(json.dumps(report,indent=2,ensure_ascii=False)+'\n');return report

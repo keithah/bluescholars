@@ -1024,3 +1024,11 @@ PYTHONPATH=. .venv311/bin/python scripts/recover_press_archive_pages.py --only-s
 - Fitted fixed-width historical layouts to mobile screens while retaining desktop geometry; fixed LiveJournal header overlap and shared toolbar labels. Improved validation coverage/performance and separated CI hosting builds to avoid cumulative timeout.
 - Baseline 321 tests; final 332 passed. Complete root and project candidate builds and final resource/link checks passed. Audited 27,926 HTML files: zero duplicate timelines, no missing Mass Line content timelines, and no planned deployment deletions. Browser-checked all 14 entry destinations and key interactions. Screenshots and detailed scope/limitations are in `docs/recovery-report/CLEANUP_REVIEW_2026-10-28.md`.
 - Original dirty attached worktree, unrelated untracked backups, source provenance, and review flags were preserved. This remains a recovery preview, not a final historically complete or human-reviewed release.
+
+
+## October 28, 2026 — source-linked publisher photos and asset coverage
+
+- Recovered seven new Bumpershine concert photographs; retained publisher HTML, credits, exact URLs, hashes, and event/publication/retrieval dates. RapReviews contributes duplicate-image provenance; three UW photo leads remain rate-limited.
+- Added 18 validated original-site URL mappings (10 CSS, eight images), and repaired 45 older Massline capture-status records representing six existing image payloads. All historical attempts remain preserved.
+- Fixed digest reuse validation and publisher-image format safety. All 337 tests pass. Full root and project-hosted builds and final output checks pass with zero errors. Browser checked mobile/desktop, local full-size photos, and exactly one timeline. See `docs/recovery-report/RECOVERY_2026-10-28.md`.
+- Preview approval flags remain unchanged. No new audio, complete recovery, or human review is claimed.

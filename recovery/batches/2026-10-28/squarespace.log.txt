@@ -1,0 +1,18 @@
+{"stage": "recover", "progress": {"processed": 25, "limit": 40, "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/572/1371067617126/site.css?&filterFeatures=false", "status": "queued"}}
+{"stage": "recover", "progress": {"processed": 40, "limit": 40, "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/17/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/623-05142015/1371067617126/site.css?filterFeatures=false", "status": "needs_review"}}
+{
+  "resource_urls": 13062,
+  "statuses": {
+    "queued": 3339,
+    "recovered": 5875,
+    "needs_review": 316,
+    "failed": 3502,
+    "excluded": 30
+  },
+  "indexed_capture_records": 186178,
+  "index_complete": true,
+  "unique_downloaded_files": 2889,
+  "downloaded_bytes": 176714165,
+  "failed_attempts": 16128,
+  "generated_at": "2026-10-28T16:20:41.834399+00:00"
+}

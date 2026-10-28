@@ -37506,7 +37506,18 @@
       "url": "http://02cd02a.netsolhost.com/blog/wp-content/themes/modernpaper-10/favicon.ico"
     },
     "http://02cd02a.netsolhost.com/blog/wp-content/themes/modernpaper-10/images/comment.gif": {
-      "attempts": [],
+      "actual_capture": "20180814103843",
+      "attempts": [
+        {
+          "actual_capture": "20180814103843",
+          "at": "2026-10-28T16:28:54.066922+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://02cd02a.netsolhost.com/blog/wp-content/themes/modernpaper-10/images/comment.gif",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "d2239333451c0da67e834bb49a569c150672cfff90ee96728c6ae3c1254c7fda"
+        }
+      ],
+      "bytes": 1033,
       "captures": [
         {
           "digest": "TOJTG7TLJ3PR4QCLJKQAXBVFFVMQ54CD",
@@ -37537,18 +37548,27 @@
           "timestamp": "20180814103843"
         }
       ],
+      "content_type": "image/gif",
+      "final_original": "http://02cd02a.netsolhost.com/blog/wp-content/themes/modernpaper-10/images/comment.gif",
+      "final_url": "https://web.archive.org/web/20180814103843id_/http://02cd02a.netsolhost.com/blog/wp-content/themes/modernpaper-10/images/comment.gif",
       "hints": [
         "20141114090330",
         "20120226184958",
         "20110208170750"
       ],
       "kind": "image",
+      "raw_path": "source/raw/d2239333451c0da67e834bb49a569c150672cfff90ee96728c6ae3c1254c7fda.gif",
       "referrers": [
         "http://02cd02a.netsolhost.com/blog/wp-content/themes/modernpaper-10/style.css",
         "CDX:domain:02cd02a.netsolhost.com"
       ],
-      "status": "queued",
-      "url": "http://02cd02a.netsolhost.com/blog/wp-content/themes/modernpaper-10/images/comment.gif"
+      "retrieved_at": "2026-10-28T16:28:56.533325+00:00",
+      "sha256": "d2239333451c0da67e834bb49a569c150672cfff90ee96728c6ae3c1254c7fda",
+      "status": "recovered",
+      "url": "http://02cd02a.netsolhost.com/blog/wp-content/themes/modernpaper-10/images/comment.gif",
+      "source_reviewed": true,
+      "source_review_note": "2026-10-28: payload type/hash validated; existing image bytes visually inspected, historical CSS retained at its resolved capture date.",
+      "later_capture_approved": false
     },
     "http://02cd02a.netsolhost.com/blog/wp-content/themes/modernpaper-10/images/comment.gif@@wayback:20120311194305:d2239333451c": {
       "actual_capture": "20120311194305",
@@ -38392,7 +38412,18 @@
       "url": "http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/blog.png"
     },
     "http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/cinemetropolis.png": {
-      "attempts": [],
+      "actual_capture": "20130514055625",
+      "attempts": [
+        {
+          "actual_capture": "20130514055625",
+          "at": "2026-10-28T16:28:40.279124+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/cinemetropolis.png",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "e440c535aedd3858edb6edf8bda33a691408da1efa98c530ce90d7a42c3222db"
+        }
+      ],
+      "bytes": 5587,
       "captures": [
         {
           "digest": "KD7N7Q4SRKJE3TD34ICGNBXKZYFUWA7E",
@@ -38402,6 +38433,9 @@
           "timestamp": "20130514055625"
         }
       ],
+      "content_type": "image/png",
+      "final_original": "http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/cinemetropolis.png",
+      "final_url": "https://web.archive.org/web/20130514055625id_/http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/cinemetropolis.png",
       "hints": [
         "20110312094559",
         "20110312094603",
@@ -38477,6 +38511,7 @@
         "20110312131609"
       ],
       "kind": "image",
+      "raw_path": "source/raw/e440c535aedd3858edb6edf8bda33a691408da1efa98c530ce90d7a42c3222db.png",
       "referrers": [
         "CDX:domain:02cd02a.netsolhost.com",
         "http://02cd02a.netsolhost.com/blog/2010/11/",
@@ -38579,8 +38614,13 @@
         "http://02cd02a.netsolhost.com/blog/mlk-day-mon-117-workshop-end-police-violence-deportation-and-suvelliance-now/",
         "http://02cd02a.netsolhost.com/blog/jean-quan-from-cal-activist-to-mayor-of-oakland/"
       ],
-      "status": "queued",
-      "url": "http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/cinemetropolis.png"
+      "retrieved_at": "2026-10-28T16:28:42.326878+00:00",
+      "sha256": "e440c535aedd3858edb6edf8bda33a691408da1efa98c530ce90d7a42c3222db",
+      "status": "recovered",
+      "url": "http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/cinemetropolis.png",
+      "source_reviewed": true,
+      "source_review_note": "2026-10-28: payload type/hash validated; existing image bytes visually inspected, historical CSS retained at its resolved capture date.",
+      "later_capture_approved": false
     },
     "http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/cinemetropolis.png@@wayback:20130514055625:e440c535aedd": {
       "actual_capture": "20130514055625",
@@ -39338,7 +39378,18 @@
       "url": "http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/holler/sabzi.jpg"
     },
     "http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/logo.png": {
-      "attempts": [],
+      "actual_capture": "20130514055624",
+      "attempts": [
+        {
+          "actual_capture": "20130514055624",
+          "at": "2026-10-28T16:24:31.183971+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/logo.png",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "fe83c24a0d20fc7ecf6425516c7af0304463d8f337f077094b1db80e1add2b9c"
+        }
+      ],
+      "bytes": 4246,
       "captures": [
         {
           "digest": "QNS2ISQ4F2AAYY6FZ2XP3DZC6UBOZPPE",
@@ -39348,6 +39399,9 @@
           "timestamp": "20130514055624"
         }
       ],
+      "content_type": "image/png",
+      "final_original": "http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/logo.png",
+      "final_url": "https://web.archive.org/web/20130514055624id_/http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/logo.png",
       "hints": [
         "20110313072202",
         "20110313072220",
@@ -39429,6 +39483,7 @@
         "20110312131609"
       ],
       "kind": "image",
+      "raw_path": "source/raw/fe83c24a0d20fc7ecf6425516c7af0304463d8f337f077094b1db80e1add2b9c.png",
       "referrers": [
         "CDX:domain:02cd02a.netsolhost.com",
         "http://02cd02a.netsolhost.com/blog/bio/",
@@ -39542,8 +39597,13 @@
         "http://02cd02a.netsolhost.com/blog/mlk-day-mon-117-workshop-end-police-violence-deportation-and-suvelliance-now/",
         "http://02cd02a.netsolhost.com/blog/jean-quan-from-cal-activist-to-mayor-of-oakland/"
       ],
-      "status": "queued",
-      "url": "http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/logo.png"
+      "retrieved_at": "2026-10-28T16:24:33.059953+00:00",
+      "sha256": "fe83c24a0d20fc7ecf6425516c7af0304463d8f337f077094b1db80e1add2b9c",
+      "status": "recovered",
+      "url": "http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/logo.png",
+      "source_reviewed": true,
+      "source_review_note": "2026-10-28: payload type/hash validated; existing image bytes visually inspected, historical CSS retained at its resolved capture date.",
+      "later_capture_approved": false
     },
     "http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/logo.png@@wayback:20130514055624:fe83c24a0d20": {
       "actual_capture": "20130514055624",
@@ -39621,7 +39681,25 @@
       "url": "http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/mini-monthly-archive.gif"
     },
     "http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/mini-nav-left.gif": {
-      "attempts": [],
+      "actual_capture": "20130514055705",
+      "attempts": [
+        {
+          "at": "2026-10-28T16:28:21.337979+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20210529010817id_/http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/mini-nav-left.gif (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/mini-nav-left.gif",
+          "requested_capture": "20210529010817",
+          "result": "failed"
+        },
+        {
+          "actual_capture": "20130514055705",
+          "at": "2026-10-28T16:28:23.291871+00:00",
+          "request_url": "https://web.archive.org/web/20130514055705id_/http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/mini-nav-left.gif",
+          "requested_capture": "20130514055705",
+          "result": "downloaded",
+          "sha256": "2b575e49c06e44cf6f69fc876e1114d53604c004e3a14df4cf4ef75ddb6e0e43"
+        }
+      ],
+      "bytes": 1171,
       "captures": [
         {
           "digest": "YVI35F2T2DILYTHWWZVXLKTU6B2EXC5K",
@@ -39631,16 +39709,25 @@
           "timestamp": "20130514055705"
         }
       ],
+      "content_type": "image/gif",
+      "final_original": "http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/mini-nav-left.gif",
+      "final_url": "https://web.archive.org/web/20130514055705id_/http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/mini-nav-left.gif",
       "hints": [
         "20130514055621"
       ],
       "kind": "image",
+      "raw_path": "source/raw/2b575e49c06e44cf6f69fc876e1114d53604c004e3a14df4cf4ef75ddb6e0e43.gif",
       "referrers": [
         "CDX:domain:02cd02a.netsolhost.com",
         "http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/style.css"
       ],
-      "status": "queued",
-      "url": "http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/mini-nav-left.gif"
+      "retrieved_at": "2026-10-28T16:28:24.489681+00:00",
+      "sha256": "2b575e49c06e44cf6f69fc876e1114d53604c004e3a14df4cf4ef75ddb6e0e43",
+      "status": "recovered",
+      "url": "http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/mini-nav-left.gif",
+      "source_reviewed": true,
+      "source_review_note": "2026-10-28: payload type/hash validated; existing image bytes visually inspected, historical CSS retained at its resolved capture date.",
+      "later_capture_approved": false
     },
     "http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/mini-nav-left.gif@@wayback:20130514055705:2b575e49c06e": {
       "actual_capture": "20130514055705",
@@ -39666,7 +39753,18 @@
       "url": "http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/mini-nav-left.gif"
     },
     "http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/mini-nav-right.gif": {
-      "attempts": [],
+      "actual_capture": "20130514055705",
+      "attempts": [
+        {
+          "actual_capture": "20130514055705",
+          "at": "2026-10-28T16:28:43.535770+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/mini-nav-right.gif",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "0d7c004c7a28871d4bedb736799d50c054c621e9423de40307b9b9b489d6b989"
+        }
+      ],
+      "bytes": 1171,
       "captures": [
         {
           "digest": "PZRKROHDYBDLH6FE4S7IKY3CCLB53JHN",
@@ -39676,16 +39774,25 @@
           "timestamp": "20130514055705"
         }
       ],
+      "content_type": "image/gif",
+      "final_original": "http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/mini-nav-right.gif",
+      "final_url": "https://web.archive.org/web/20130514055705id_/http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/mini-nav-right.gif",
       "hints": [
         "20130514055621"
       ],
       "kind": "image",
+      "raw_path": "source/raw/0d7c004c7a28871d4bedb736799d50c054c621e9423de40307b9b9b489d6b989.gif",
       "referrers": [
         "CDX:domain:02cd02a.netsolhost.com",
         "http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/style.css"
       ],
-      "status": "queued",
-      "url": "http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/mini-nav-right.gif"
+      "retrieved_at": "2026-10-28T16:28:45.459024+00:00",
+      "sha256": "0d7c004c7a28871d4bedb736799d50c054c621e9423de40307b9b9b489d6b989",
+      "status": "recovered",
+      "url": "http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/mini-nav-right.gif",
+      "source_reviewed": true,
+      "source_review_note": "2026-10-28: payload type/hash validated; existing image bytes visually inspected, historical CSS retained at its resolved capture date.",
+      "later_capture_approved": false
     },
     "http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/mini-nav-right.gif@@wayback:20130514055705:0d7c004c7a28": {
       "actual_capture": "20130514055705",
@@ -40099,7 +40206,18 @@
       "url": "http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/projects/yourpledge.png"
     },
     "http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/rss.png": {
-      "attempts": [],
+      "actual_capture": "20130514055625",
+      "attempts": [
+        {
+          "actual_capture": "20130514055625",
+          "at": "2026-10-28T16:24:17.809972+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/rss.png",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "3c6e716996553be345a8e1a26464ce57db97ebd55c8c1970b04aacac40dee077"
+        }
+      ],
+      "bytes": 1861,
       "captures": [
         {
           "digest": "YLU3VIUVETPS4XGKXMVYW22EYZCGJ62I",
@@ -40109,6 +40227,9 @@
           "timestamp": "20130514055625"
         }
       ],
+      "content_type": "image/png",
+      "final_original": "http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/rss.png",
+      "final_url": "https://web.archive.org/web/20130514055625id_/http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/rss.png",
       "hints": [
         "20110313072202",
         "20110313072220",
@@ -40190,6 +40311,7 @@
         "20110312131609"
       ],
       "kind": "image",
+      "raw_path": "source/raw/3c6e716996553be345a8e1a26464ce57db97ebd55c8c1970b04aacac40dee077.png",
       "referrers": [
         "CDX:domain:02cd02a.netsolhost.com",
         "http://02cd02a.netsolhost.com/blog/bio/",
@@ -40303,8 +40425,13 @@
         "http://02cd02a.netsolhost.com/blog/mlk-day-mon-117-workshop-end-police-violence-deportation-and-suvelliance-now/",
         "http://02cd02a.netsolhost.com/blog/jean-quan-from-cal-activist-to-mayor-of-oakland/"
       ],
-      "status": "queued",
-      "url": "http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/rss.png"
+      "retrieved_at": "2026-10-28T16:24:20.823645+00:00",
+      "sha256": "3c6e716996553be345a8e1a26464ce57db97ebd55c8c1970b04aacac40dee077",
+      "status": "recovered",
+      "url": "http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/rss.png",
+      "source_reviewed": true,
+      "source_review_note": "2026-10-28: payload type/hash validated; existing image bytes visually inspected, historical CSS retained at its resolved capture date.",
+      "later_capture_approved": false
     },
     "http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/rss.png@@wayback:20130514055625:3c6e71699655": {
       "actual_capture": "20130514055625",
@@ -40330,7 +40457,18 @@
       "url": "http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/rss.png"
     },
     "http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/shirt.jpg": {
-      "attempts": [],
+      "actual_capture": "20130514055626",
+      "attempts": [
+        {
+          "actual_capture": "20130514055626",
+          "at": "2026-10-28T16:24:50.978920+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/shirt.jpg",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "2e24bf50fd2a7485b02909ff360d98da9af0b2c6249aa8baf1481815e484f647"
+        }
+      ],
+      "bytes": 7395,
       "captures": [
         {
           "digest": "VFOTXLVD7NSCUZNHVQR3HM4TTSYJR3ZC",
@@ -40340,6 +40478,9 @@
           "timestamp": "20130514055626"
         }
       ],
+      "content_type": "image/jpeg",
+      "final_original": "http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/shirt.jpg",
+      "final_url": "https://web.archive.org/web/20130514055626id_/http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/shirt.jpg",
       "hints": [
         "20110312094559",
         "20110312094603",
@@ -40415,6 +40556,7 @@
         "20110312131609"
       ],
       "kind": "image",
+      "raw_path": "source/raw/2e24bf50fd2a7485b02909ff360d98da9af0b2c6249aa8baf1481815e484f647.jpg",
       "referrers": [
         "CDX:domain:02cd02a.netsolhost.com",
         "http://02cd02a.netsolhost.com/blog/2010/11/",
@@ -40517,8 +40659,13 @@
         "http://02cd02a.netsolhost.com/blog/mlk-day-mon-117-workshop-end-police-violence-deportation-and-suvelliance-now/",
         "http://02cd02a.netsolhost.com/blog/jean-quan-from-cal-activist-to-mayor-of-oakland/"
       ],
-      "status": "queued",
-      "url": "http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/shirt.jpg"
+      "retrieved_at": "2026-10-28T16:24:53.032079+00:00",
+      "sha256": "2e24bf50fd2a7485b02909ff360d98da9af0b2c6249aa8baf1481815e484f647",
+      "status": "recovered",
+      "url": "http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/shirt.jpg",
+      "source_reviewed": true,
+      "source_review_note": "2026-10-28: payload type/hash validated; existing image bytes visually inspected, historical CSS retained at its resolved capture date.",
+      "later_capture_approved": false
     },
     "http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/shirt.jpg@@wayback:20130514055626:2e24bf50fd2a": {
       "actual_capture": "20130514055626",
@@ -40789,7 +40936,18 @@
       "url": "http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/twitter.png"
     },
     "http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/vimeo.png": {
-      "attempts": [],
+      "actual_capture": "20130514055657",
+      "attempts": [
+        {
+          "actual_capture": "20130514055657",
+          "at": "2026-10-28T16:24:54.168935+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/vimeo.png",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "108319ccc0b0e387ecde699f4dd10a308b87ad87c9c850a87afb8c7fb497979b"
+        }
+      ],
+      "bytes": 1770,
       "captures": [
         {
           "digest": "U7GUDJYKAAK455IJTCRKPRARSCPU7UJE",
@@ -40799,6 +40957,9 @@
           "timestamp": "20130514055657"
         }
       ],
+      "content_type": "image/png",
+      "final_original": "http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/vimeo.png",
+      "final_url": "https://web.archive.org/web/20130514055657id_/http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/vimeo.png",
       "hints": [
         "20110313072202",
         "20110313072220",
@@ -40880,6 +41041,7 @@
         "20110312131609"
       ],
       "kind": "image",
+      "raw_path": "source/raw/108319ccc0b0e387ecde699f4dd10a308b87ad87c9c850a87afb8c7fb497979b.png",
       "referrers": [
         "CDX:domain:02cd02a.netsolhost.com",
         "http://02cd02a.netsolhost.com/blog/bio/",
@@ -40993,8 +41155,13 @@
         "http://02cd02a.netsolhost.com/blog/mlk-day-mon-117-workshop-end-police-violence-deportation-and-suvelliance-now/",
         "http://02cd02a.netsolhost.com/blog/jean-quan-from-cal-activist-to-mayor-of-oakland/"
       ],
-      "status": "queued",
-      "url": "http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/vimeo.png"
+      "retrieved_at": "2026-10-28T16:24:56.053047+00:00",
+      "sha256": "108319ccc0b0e387ecde699f4dd10a308b87ad87c9c850a87afb8c7fb497979b",
+      "status": "recovered",
+      "url": "http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/vimeo.png",
+      "source_reviewed": true,
+      "source_review_note": "2026-10-28: payload type/hash validated; existing image bytes visually inspected, historical CSS retained at its resolved capture date.",
+      "later_capture_approved": false
     },
     "http://02cd02a.netsolhost.com/blog/wp-content/themes/tubird/images/vimeo.png@@wayback:20130514055657:108319ccc0b0": {
       "actual_capture": "20130514055657",
@@ -645171,7 +645338,18 @@
       "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/558/1371067617126/site.css?&filterFeatures=false&part=3"
     },
     "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/558/1371067617126/site.css?&filterFeatures=false&part=4": {
-      "attempts": [],
+      "actual_capture": "20150114102224",
+      "attempts": [
+        {
+          "actual_capture": "20150114102224",
+          "at": "2026-10-28T16:20:02.763943+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/558/1371067617126/site.css?&filterFeatures=false&part=4",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "57dccf9f015f68f255a961e196fef0a88e6795db233d4d3ae12569aa9fe841a6"
+        }
+      ],
+      "bytes": 277530,
       "captures": [
         {
           "digest": "TEFBXLWT3E2O6N733US3PVPIRGJ2H5AT",
@@ -645188,13 +645366,22 @@
           "timestamp": "20150114102224"
         }
       ],
+      "content_type": "text/css; charset=UTF-8",
+      "final_original": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/558/1371067617126/site.css?&filterFeatures=false&part=4",
+      "final_url": "https://web.archive.org/web/20150114102224id_/http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/558/1371067617126/site.css?&filterFeatures=false&part=4",
       "hints": [],
       "kind": "css",
+      "raw_path": "source/raw/57dccf9f015f68f255a961e196fef0a88e6795db233d4d3ae12569aa9fe841a6.css",
       "referrers": [
         "CDX:prefix:http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c"
       ],
-      "status": "queued",
-      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/558/1371067617126/site.css?&filterFeatures=false&part=4"
+      "retrieved_at": "2026-10-28T16:20:04.711875+00:00",
+      "sha256": "57dccf9f015f68f255a961e196fef0a88e6795db233d4d3ae12569aa9fe841a6",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/558/1371067617126/site.css?&filterFeatures=false&part=4",
+      "source_reviewed": true,
+      "source_review_note": "2026-10-28: payload type/hash validated; existing image bytes visually inspected, historical CSS retained at its resolved capture date.",
+      "later_capture_approved": false
     },
     "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/558/1371067617126/site.css?&filterFeatures=false&part=4@@wayback:20150113060702:57dccf9f015f": {
       "actual_capture": "20150113060702",
@@ -645505,7 +645692,18 @@
       "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/572/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=4"
     },
     "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/572/1371067617126/site.css?&filterFeatures=false&part=1": {
-      "attempts": [],
+      "actual_capture": "20150115144242",
+      "attempts": [
+        {
+          "actual_capture": "20150115144242",
+          "at": "2026-10-28T16:20:05.934387+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/572/1371067617126/site.css?&filterFeatures=false&part=1",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "b00b11d013dfca9c6ec94082bb211169a4e6955b937afd63e98a438e7216f9fd"
+        }
+      ],
+      "bytes": 50005,
       "captures": [
         {
           "digest": "Z4AXH4WJWE5M2FDJE5QRSHZQUV4L36YV",
@@ -645515,13 +645713,22 @@
           "timestamp": "20150115144242"
         }
       ],
+      "content_type": "text/css; charset=UTF-8",
+      "final_original": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/572/1371067617126/site.css?&filterFeatures=false&part=1",
+      "final_url": "https://web.archive.org/web/20150115144242id_/http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/572/1371067617126/site.css?&filterFeatures=false&part=1",
       "hints": [],
       "kind": "css",
+      "raw_path": "source/raw/b00b11d013dfca9c6ec94082bb211169a4e6955b937afd63e98a438e7216f9fd.css",
       "referrers": [
         "CDX:prefix:http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c"
       ],
-      "status": "queued",
-      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/572/1371067617126/site.css?&filterFeatures=false&part=1"
+      "retrieved_at": "2026-10-28T16:20:07.907359+00:00",
+      "sha256": "b00b11d013dfca9c6ec94082bb211169a4e6955b937afd63e98a438e7216f9fd",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/572/1371067617126/site.css?&filterFeatures=false&part=1",
+      "source_reviewed": true,
+      "source_review_note": "2026-10-28: payload type/hash validated; existing image bytes visually inspected, historical CSS retained at its resolved capture date.",
+      "later_capture_approved": false
     },
     "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/572/1371067617126/site.css?&filterFeatures=false&part=1@@wayback:20150115144242:b00b11d013df": {
       "actual_capture": "20150115144242",
@@ -645547,7 +645754,18 @@
       "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/572/1371067617126/site.css?&filterFeatures=false&part=1"
     },
     "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/572/1371067617126/site.css?&filterFeatures=false&part=2": {
-      "attempts": [],
+      "actual_capture": "20150115144244",
+      "attempts": [
+        {
+          "actual_capture": "20150115144244",
+          "at": "2026-10-28T16:20:09.119497+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/572/1371067617126/site.css?&filterFeatures=false&part=2",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "47a55062506110cc988addc7e335d98b2749b646ed0da76dbcae46a77f5a8b26"
+        }
+      ],
+      "bytes": 50779,
       "captures": [
         {
           "digest": "I5ENTR4PP7RFZMFZSZV5YUMCZDQZ4QTN",
@@ -645557,13 +645775,22 @@
           "timestamp": "20150115144244"
         }
       ],
+      "content_type": "text/css; charset=UTF-8",
+      "final_original": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/572/1371067617126/site.css?&filterFeatures=false&part=2",
+      "final_url": "https://web.archive.org/web/20150115144244id_/http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/572/1371067617126/site.css?&filterFeatures=false&part=2",
       "hints": [],
       "kind": "css",
+      "raw_path": "source/raw/47a55062506110cc988addc7e335d98b2749b646ed0da76dbcae46a77f5a8b26.css",
       "referrers": [
         "CDX:prefix:http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c"
       ],
-      "status": "queued",
-      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/572/1371067617126/site.css?&filterFeatures=false&part=2"
+      "retrieved_at": "2026-10-28T16:20:10.986495+00:00",
+      "sha256": "47a55062506110cc988addc7e335d98b2749b646ed0da76dbcae46a77f5a8b26",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/572/1371067617126/site.css?&filterFeatures=false&part=2",
+      "source_reviewed": true,
+      "source_review_note": "2026-10-28: payload type/hash validated; existing image bytes visually inspected, historical CSS retained at its resolved capture date.",
+      "later_capture_approved": false
     },
     "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/572/1371067617126/site.css?&filterFeatures=false&part=2@@wayback:20150115144244:47a550625061": {
       "actual_capture": "20150115144244",
@@ -645589,7 +645816,18 @@
       "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/572/1371067617126/site.css?&filterFeatures=false&part=2"
     },
     "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/572/1371067617126/site.css?&filterFeatures=false&part=3": {
-      "attempts": [],
+      "actual_capture": "20150115144245",
+      "attempts": [
+        {
+          "actual_capture": "20150115144245",
+          "at": "2026-10-28T16:20:12.143117+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/572/1371067617126/site.css?&filterFeatures=false&part=3",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "a3b768d210ce314259294e6ed2fac36dc4bb1929d3f478f8ccd77acd4f091ff9"
+        }
+      ],
+      "bytes": 202754,
       "captures": [
         {
           "digest": "DJSEEFNNN5QME4YPSUMW7KCZYNWC6YC2",
@@ -645599,13 +645837,22 @@
           "timestamp": "20150115144245"
         }
       ],
+      "content_type": "text/css; charset=UTF-8",
+      "final_original": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/572/1371067617126/site.css?&filterFeatures=false&part=3",
+      "final_url": "https://web.archive.org/web/20150115144245id_/http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/572/1371067617126/site.css?&filterFeatures=false&part=3",
       "hints": [],
       "kind": "css",
+      "raw_path": "source/raw/a3b768d210ce314259294e6ed2fac36dc4bb1929d3f478f8ccd77acd4f091ff9.css",
       "referrers": [
         "CDX:prefix:http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c"
       ],
-      "status": "queued",
-      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/572/1371067617126/site.css?&filterFeatures=false&part=3"
+      "retrieved_at": "2026-10-28T16:20:14.074949+00:00",
+      "sha256": "a3b768d210ce314259294e6ed2fac36dc4bb1929d3f478f8ccd77acd4f091ff9",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/572/1371067617126/site.css?&filterFeatures=false&part=3",
+      "source_reviewed": true,
+      "source_review_note": "2026-10-28: payload type/hash validated; existing image bytes visually inspected, historical CSS retained at its resolved capture date.",
+      "later_capture_approved": false
     },
     "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/572/1371067617126/site.css?&filterFeatures=false&part=3@@wayback:20150115144245:a3b768d210ce": {
       "actual_capture": "20150115144245",
@@ -645631,7 +645878,18 @@
       "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/572/1371067617126/site.css?&filterFeatures=false&part=3"
     },
     "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/572/1371067617126/site.css?&filterFeatures=false&part=4": {
-      "attempts": [],
+      "actual_capture": "20150115144247",
+      "attempts": [
+        {
+          "actual_capture": "20150115144247",
+          "at": "2026-10-28T16:20:15.296960+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/572/1371067617126/site.css?&filterFeatures=false&part=4",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "b15cb858d94b00e605c075b569e79625a712d29b4ce994a8f207c19b40d55b28"
+        }
+      ],
+      "bytes": 276627,
       "captures": [
         {
           "digest": "AY7CH6YY6JFDW7P5JYZ5HPOPEMIKMXPB",
@@ -645641,13 +645899,22 @@
           "timestamp": "20150115144247"
         }
       ],
+      "content_type": "text/css; charset=UTF-8",
+      "final_original": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/572/1371067617126/site.css?&filterFeatures=false&part=4",
+      "final_url": "https://web.archive.org/web/20150115144247id_/http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/572/1371067617126/site.css?&filterFeatures=false&part=4",
       "hints": [],
       "kind": "css",
+      "raw_path": "source/raw/b15cb858d94b00e605c075b569e79625a712d29b4ce994a8f207c19b40d55b28.css",
       "referrers": [
         "CDX:prefix:http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c"
       ],
-      "status": "queued",
-      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/572/1371067617126/site.css?&filterFeatures=false&part=4"
+      "retrieved_at": "2026-10-28T16:20:17.114678+00:00",
+      "sha256": "b15cb858d94b00e605c075b569e79625a712d29b4ce994a8f207c19b40d55b28",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/572/1371067617126/site.css?&filterFeatures=false&part=4",
+      "source_reviewed": true,
+      "source_review_note": "2026-10-28: payload type/hash validated; existing image bytes visually inspected, historical CSS retained at its resolved capture date.",
+      "later_capture_approved": false
     },
     "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/572/1371067617126/site.css?&filterFeatures=false&part=4@@wayback:20150115144247:b15cb858d94b": {
       "actual_capture": "20150115144247",
@@ -646195,7 +646462,18 @@
       "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&noMedia=true&part=4"
     },
     "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&part=1": {
-      "attempts": [],
+      "actual_capture": "20150628012634",
+      "attempts": [
+        {
+          "actual_capture": "20150628012634",
+          "at": "2026-10-28T16:20:18.313622+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&part=1",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "3ca14898a05cd035a41914da5d2584cdf86ad0532bb9e55db59ce0095b27b7e5"
+        }
+      ],
+      "bytes": 37264,
       "captures": [
         {
           "digest": "Z4AXH4WJWE5M2FDJE5QRSHZQUV4L36YV",
@@ -646247,13 +646525,22 @@
           "timestamp": "20150628012634"
         }
       ],
+      "content_type": "text/css; charset=UTF-8",
+      "final_original": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&part=1",
+      "final_url": "https://web.archive.org/web/20150628012634id_/http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&part=1",
       "hints": [],
       "kind": "css",
+      "raw_path": "source/raw/3ca14898a05cd035a41914da5d2584cdf86ad0532bb9e55db59ce0095b27b7e5.css",
       "referrers": [
         "CDX:prefix:http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c"
       ],
-      "status": "queued",
-      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&part=1"
+      "retrieved_at": "2026-10-28T16:20:21.515493+00:00",
+      "sha256": "3ca14898a05cd035a41914da5d2584cdf86ad0532bb9e55db59ce0095b27b7e5",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&part=1",
+      "source_reviewed": true,
+      "source_review_note": "2026-10-28: payload type/hash validated; existing image bytes visually inspected, historical CSS retained at its resolved capture date.",
+      "later_capture_approved": false
     },
     "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&part=1@@wayback:20150628012634:3ca14898a05c": {
       "actual_capture": "20150628012634",
@@ -646279,7 +646566,18 @@
       "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&part=1"
     },
     "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&part=2": {
-      "attempts": [],
+      "actual_capture": "20150628012448",
+      "attempts": [
+        {
+          "actual_capture": "20150628012448",
+          "at": "2026-10-28T16:20:23.124320+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&part=2",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "1ff788276a5c6112943ea5c0d159711115304f2a478323fdaff327dd0f5ce407"
+        }
+      ],
+      "bytes": 36676,
       "captures": [
         {
           "digest": "I5ENTR4PP7RFZMFZSZV5YUMCZDQZ4QTN",
@@ -646331,13 +646629,22 @@
           "timestamp": "20150628012448"
         }
       ],
+      "content_type": "text/css; charset=UTF-8",
+      "final_original": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&part=2",
+      "final_url": "https://web.archive.org/web/20150628012448id_/http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&part=2",
       "hints": [],
       "kind": "css",
+      "raw_path": "source/raw/1ff788276a5c6112943ea5c0d159711115304f2a478323fdaff327dd0f5ce407.css",
       "referrers": [
         "CDX:prefix:http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c"
       ],
-      "status": "queued",
-      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&part=2"
+      "retrieved_at": "2026-10-28T16:20:25.303510+00:00",
+      "sha256": "1ff788276a5c6112943ea5c0d159711115304f2a478323fdaff327dd0f5ce407",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&part=2",
+      "source_reviewed": true,
+      "source_review_note": "2026-10-28: payload type/hash validated; existing image bytes visually inspected, historical CSS retained at its resolved capture date.",
+      "later_capture_approved": false
     },
     "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&part=2@@wayback:20150628012448:1ff788276a5c": {
       "actual_capture": "20150628012448",
@@ -646363,7 +646670,18 @@
       "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&part=2"
     },
     "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&part=3": {
-      "attempts": [],
+      "actual_capture": "20150628012639",
+      "attempts": [
+        {
+          "actual_capture": "20150628012639",
+          "at": "2026-10-28T16:20:26.801515+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&part=3",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "f3b66f727e2081cc687490bdbbb72b02f712e82622fa43f5db84f83dafc473c1"
+        }
+      ],
+      "bytes": 137333,
       "captures": [
         {
           "digest": "7EM5HDWLPFM4HPJLC2D23KTIYWM5LGFQ",
@@ -646415,13 +646733,22 @@
           "timestamp": "20150628012639"
         }
       ],
+      "content_type": "text/css; charset=UTF-8",
+      "final_original": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&part=3",
+      "final_url": "https://web.archive.org/web/20150628012639id_/http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&part=3",
       "hints": [],
       "kind": "css",
+      "raw_path": "source/raw/f3b66f727e2081cc687490bdbbb72b02f712e82622fa43f5db84f83dafc473c1.css",
       "referrers": [
         "CDX:prefix:http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c"
       ],
-      "status": "queued",
-      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&part=3"
+      "retrieved_at": "2026-10-28T16:20:28.668718+00:00",
+      "sha256": "f3b66f727e2081cc687490bdbbb72b02f712e82622fa43f5db84f83dafc473c1",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&part=3",
+      "source_reviewed": true,
+      "source_review_note": "2026-10-28: payload type/hash validated; existing image bytes visually inspected, historical CSS retained at its resolved capture date.",
+      "later_capture_approved": false
     },
     "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&part=3@@wayback:20150628012639:f3b66f727e20": {
       "actual_capture": "20150628012639",
@@ -646447,7 +646774,18 @@
       "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&part=3"
     },
     "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&part=4": {
-      "attempts": [],
+      "actual_capture": "20150628012629",
+      "attempts": [
+        {
+          "actual_capture": "20150628012629",
+          "at": "2026-10-28T16:20:29.860256+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&part=4",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "5d04b8bf81a655d95f447bc10d64e0c60df5f2084326a8ca351316325ffb7ab4"
+        }
+      ],
+      "bytes": 359760,
       "captures": [
         {
           "digest": "AF7LWBKRRWLK6UXIHTA22GKYQRRS7XSK",
@@ -646499,13 +646837,22 @@
           "timestamp": "20150628012629"
         }
       ],
+      "content_type": "text/css; charset=UTF-8",
+      "final_original": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&part=4",
+      "final_url": "https://web.archive.org/web/20150628012629id_/http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&part=4",
       "hints": [],
       "kind": "css",
+      "raw_path": "source/raw/5d04b8bf81a655d95f447bc10d64e0c60df5f2084326a8ca351316325ffb7ab4.css",
       "referrers": [
         "CDX:prefix:http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c"
       ],
-      "status": "queued",
-      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&part=4"
+      "retrieved_at": "2026-10-28T16:20:31.687031+00:00",
+      "sha256": "5d04b8bf81a655d95f447bc10d64e0c60df5f2084326a8ca351316325ffb7ab4",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&part=4",
+      "source_reviewed": true,
+      "source_review_note": "2026-10-28: payload type/hash validated; existing image bytes visually inspected, historical CSS retained at its resolved capture date.",
+      "later_capture_approved": false
     },
     "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/5/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/577/1371067617126/site.css?&filterFeatures=false&part=4@@wayback:20150628012629:5d04b8bf81a6": {
       "actual_capture": "20150628012629",
@@ -656634,7 +656981,18 @@
       "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/8/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/623-05142015/1371067617126/site.css?&filterFeatures=false"
     },
     "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/8/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/623-05142015/1371067617126/site.css?filterFeatures=false": {
-      "attempts": [],
+      "actual_capture": "20210504132723",
+      "attempts": [
+        {
+          "actual_capture": "20210504132723",
+          "at": "2026-10-28T16:20:33.246742+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/8/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/623-05142015/1371067617126/site.css?filterFeatures=false",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "9f3db4d5d1c07e8c8908fce7cb595487d1eb7c8e94fde276a904769f58dea4a2"
+        }
+      ],
+      "bytes": 463280,
       "captures": [
         {
           "digest": "I5SGZEJ724POWOAXUYPPH3STUR2GJCNX",
@@ -656658,13 +657016,22 @@
           "timestamp": "20220206025024"
         }
       ],
+      "content_type": "text/css; charset=UTF-8",
+      "final_original": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/8/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/623-05142015/1371067617126/site.css?filterFeatures=false",
+      "final_url": "https://web.archive.org/web/20210504132723id_/http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/8/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/623-05142015/1371067617126/site.css?filterFeatures=false",
       "hints": [],
       "kind": "css",
+      "raw_path": "source/raw/9f3db4d5d1c07e8c8908fce7cb595487d1eb7c8e94fde276a904769f58dea4a2.css",
       "referrers": [
         "CDX:prefix:http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c"
       ],
-      "status": "queued",
-      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/8/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/623-05142015/1371067617126/site.css?filterFeatures=false"
+      "retrieved_at": "2026-10-28T16:20:35.656310+00:00",
+      "sha256": "9f3db4d5d1c07e8c8908fce7cb595487d1eb7c8e94fde276a904769f58dea4a2",
+      "status": "recovered",
+      "url": "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/8/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/623-05142015/1371067617126/site.css?filterFeatures=false",
+      "source_reviewed": true,
+      "source_review_note": "2026-10-28: payload type/hash validated; existing image bytes visually inspected, historical CSS retained at its resolved capture date.",
+      "later_capture_approved": false
     },
     "http://static1.squarespace.com/static/sitecss/51b8c20be4b0f1f8c9dcdf4c/8/4fb28dfb24ac7489f45b43a8/51b8c20de4b0f1f8c9dce08a/623-05142015/1371067617126/site.css?filterFeatures=false@@wayback:20220206025024:03021d57ac44": {
       "actual_capture": "20220206025024",
@@ -695630,7 +695997,9 @@
       "url": "http://www.bluescholars.com:80/images/MENUTEMP2006.gif"
     },
     "http://www.bluescholars.com:80/images/TheLongMarchBIG.gif": {
-      "attempts": [],
+      "actual_capture": "20060503190831",
+      "archive_url": "https://web.archive.org/web/20060503190831id_/http://www.bluescholars.com:80/images/TheLongMarchBIG.gif",
+      "bytes": 7557,
       "captures": [
         {
           "digest": "VXK3ZDFR52R3EOLWXXHQ3WQDIY3QJAFA",
@@ -695640,12 +696009,16 @@
           "timestamp": "20060503190831"
         }
       ],
-      "hints": [],
       "kind": "image",
+      "raw_path": "source/raw/6faf5db4bd01e1bc5a43c142905fef348cc9a7b152b5e64db9f78c88b48f54f4.gif",
       "referrers": [
         "CDX:domain"
       ],
-      "status": "queued",
+      "sha256": "6faf5db4bd01e1bc5a43c142905fef348cc9a7b152b5e64db9f78c88b48f54f4",
+      "source_archive": "Internet Archive Wayback Machine",
+      "source_reviewed": true,
+      "source_review_note": "Visually inspected as a Blue Scholars 'The Long March EP' cover graphic. The exact image URL has one successful May 3, 2006 Wayback capture; the domain index does not expose its page referrer, so specific placement is unknown and not asserted.",
+      "status": "recovered",
       "url": "http://www.bluescholars.com:80/images/TheLongMarchBIG.gif"
     },
     "http://www.bluescholars.com:80/images/TheLongMarch_web.jpg": {
@@ -697419,29 +697792,6 @@
       "bytes": 1213,
       "source_reviewed": true,
       "source_review_note": "Visually inspected as the 66×20 MEDIA rollover button. The June 2006 captured pages reference images/menu_media_on.gif in the rollover navigation, and its intrinsic dimensions match the captured 66×20 slot. Identical Wayback CDX digest rows are recorded in February, May, June, and October 2006. The locally saved response is the June 23, 2006 capture."
-    },
-    "http://www.bluescholars.com:80/images/TheLongMarchBIG.gif": {
-      "actual_capture": "20060503190831",
-      "archive_url": "https://web.archive.org/web/20060503190831id_/http://www.bluescholars.com:80/images/TheLongMarchBIG.gif",
-      "bytes": 7557,
-      "captures": [
-        {
-          "digest": "VXK3ZDFR52R3EOLWXXHQ3WQDIY3QJAFA",
-          "mimetype": "image/gif",
-          "original": "http://www.bluescholars.com:80/images/TheLongMarchBIG.gif",
-          "statuscode": "200",
-          "timestamp": "20060503190831"
-        }
-      ],
-      "kind": "image",
-      "raw_path": "source/raw/6faf5db4bd01e1bc5a43c142905fef348cc9a7b152b5e64db9f78c88b48f54f4.gif",
-      "referrers": ["CDX:domain"],
-      "sha256": "6faf5db4bd01e1bc5a43c142905fef348cc9a7b152b5e64db9f78c88b48f54f4",
-      "source_archive": "Internet Archive Wayback Machine",
-      "source_reviewed": true,
-      "source_review_note": "Visually inspected as a Blue Scholars 'The Long March EP' cover graphic. The exact image URL has one successful May 3, 2006 Wayback capture; the domain index does not expose its page referrer, so specific placement is unknown and not asserted.",
-      "status": "recovered",
-      "url": "http://www.bluescholars.com:80/images/TheLongMarchBIG.gif"
     },
     "http://www.bluescholars.com:80/images/menu_news.gif": {
       "attempts": [],

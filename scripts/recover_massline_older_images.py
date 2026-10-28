@@ -42,17 +42,19 @@ def recover(max_files=50,delay=0.8):
  digests={}
  for item in [*resources.values(),*variants]:
   p=ROOT/item.get('raw_path','missing')
-  if p.is_file() and item.get('status')=='recovered':
-   digests.setdefault(item.get('capture_digest'),item)
+  if p.is_file() and item.get('status')=='recovered' and item.get('capture_digest'):
+   data=p.read_bytes()
+   if sha1b(data)==item['capture_digest'] and hashlib.sha256(data).hexdigest()==item.get('sha256'):
+    digests.setdefault(item['capture_digest'],item)
  OUT.mkdir(parents=True,exist_ok=True)
  for (canonical,stamp),row in todo[:max_files]:
   kind=_kind(row);rec={'source_url':row['original'],'canonical_url':canonical,'timestamp':stamp,'mimetype':row['mimetype'],'kind':kind,'cdx_length':row.get('length',''),'capture_digest':row.get('digest'),'source':f"https://web.archive.org/web/{stamp}id_/{row['original']}",'status':'failed','recovery_scope':'older Blue Scholars related image'}
   report['attempted']+=1
   try:
-   known=digests.get(row.get('digest'))
+   known=digests.get(row.get('digest')) if row.get('digest') else None
    if known:
     for k in ('raw_path','sha256','bytes','content_type'):rec[k]=known[k]
-    rec['reused_digest_from']=known.get('timestamp');report['reused']+=1
+    rec['reused_digest_from']=known.get('timestamp');rec['cdx_sha1_verified']=True;report['reused']+=1
    else:
     resp=session.get(rec['source'],timeout=(10,60),stream=True);resp.raise_for_status();buf=bytearray()
     for chunk in resp.iter_content(128*1024):
@@ -63,7 +65,10 @@ def recover(max_files=50,delay=0.8):
     if row.get('digest') and sha1b(data)!=row['digest']:raise ValueError('CDX SHA-1 mismatch')
     h=hashlib.sha256(data).hexdigest();path=OUT/f'{h}{_extension(row,kind)}'
     if not path.exists():path.write_bytes(data)
-    rec.update({'raw_path':path.relative_to(ROOT).as_posix(),'sha256':h,'bytes':len(data),'content_type':resp.headers.get('Content-Type',''),'cdx_sha1_verified':bool(row.get('digest'))});digests[row.get('digest')]=rec;report['recovered']+=1
+    rec.update({'raw_path':path.relative_to(ROOT).as_posix(),'sha256':h,'bytes':len(data),'content_type':resp.headers.get('Content-Type',''),'cdx_sha1_verified':bool(row.get('digest'))})
+    if row.get('digest'):digests[row['digest']]=rec
+    report['recovered']+=1
+   rec['status']='recovered'
    variants.append(rec);seen.add((canonical,stamp))
   except Exception as e:
    rec['error']=f'{type(e).__name__}: {e}';m['variant_failures'].append(rec);report['failed']+=1;report['failures'].append({'url':row['original'],'timestamp':stamp,'error':rec['error']})

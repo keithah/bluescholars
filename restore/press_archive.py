@@ -130,6 +130,68 @@ def _load_media_manifests(root: Path) -> list[dict]:
     return records
 
 
+def build_publisher_photos(root: Path, output: Path, base: str, stylesheet: str) -> dict:
+    """Keep surviving publisher copies separate from dated archive mementos."""
+    directory = root / 'recovery/other-archives/publisher-current'
+    manifest = directory / 'manifest.json'
+    result = {'source_pages': 0, 'image_payloads': 0, 'routes': []}
+    if not manifest.is_file():
+        return result
+    cards = []
+    hashes = set()
+    for page in json.loads(manifest.read_text()).get('pages', []):
+        recovered = [image for image in page.get('images', []) if image.get('status') == 'recovered']
+        if not recovered:
+            continue
+        retrieved = page['retrieved_at']
+        if not re.fullmatch(r'20\d{2}-\d{2}-\d{2}', retrieved):
+            raise ValueError('Invalid publisher retrieval date')
+        route_name = f"{PRESS_ROOT}/publisher/{retrieved[:4]}/{_slug(page['source_url'])}"
+        title = page['title']
+        body = (f'<a class="press-back" href="{_esc(base + PRESS_ROOT + "/publisher/")}">← Publisher-hosted photos</a>'
+                f'<h1>{_esc(title)}</h1><p class="press-notice">These are surviving publisher-hosted copies, not Wayback captures. '
+                f'Retrieved {_esc(retrieved)}. Publication date: {_esc(page.get("publication_date", "unknown"))}.'
+                f' Event date: {_esc(page.get("event_date", "not specified"))}.</p>'
+                f'<p class="press-meta">Source: <a href="{_esc(page["source_url"])}">{_esc(page["source_url"])}</a></p>'
+                f'<p>{_esc(page.get("credit", "Photo credits remain with the original publisher."))}</p><div class="press-grid">')
+        for number, image in enumerate(recovered, 1):
+            path = (root / image['raw_path']).resolve()
+            if not path.is_relative_to(directory.resolve()):
+                raise ValueError('Publisher image path escapes collection')
+            data = path.read_bytes()
+            digest = hashlib.sha256(data).hexdigest()
+            if digest != image['sha256'] or len(data) != image['bytes']:
+                raise ValueError('Publisher image hash or byte count mismatch')
+            validate_payload(data, 'image')
+            if data.startswith(b'\xff\xd8\xff'):
+                suffix = '.jpg'
+            elif data.startswith(b'\x89PNG\r\n\x1a\n'):
+                suffix = '.png'
+            elif data.startswith((b'GIF87a', b'GIF89a')):
+                suffix = '.gif'
+            elif data.startswith(b'RIFF') and data[8:12] == b'WEBP':
+                suffix = '.webp'
+            else:
+                raise ValueError('Unsupported publisher image type')
+            asset = f'{PRESS_ROOT}/assets/publisher-{digest}{suffix}'
+            destination = output / asset.lstrip('/')
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            destination.write_bytes(data)
+            body += (f'<figure class="press-card"><a href="{_esc(base + asset)}"><img class="press-thumb" src="{_esc(base + asset)}" '
+                     f'alt="{_esc(image.get("alt") or title)}"></a><figcaption>Photo {number} · '
+                     f'<a href="{_esc(image["source_url"])}">publisher image</a></figcaption></figure>')
+            hashes.add(digest)
+        _write(output, route_name, _shell(title, body + '</div>', base, stylesheet))
+        cards.append(f'<a class="press-card" href="{_esc(base + route_name + "/")}"><strong>{_esc(title)}</strong><br>{len(recovered)} photos · retrieved {_esc(retrieved)}</a>')
+        result['routes'].append(route_name)
+    _write(output, PRESS_ROOT + '/publisher', _shell('Publisher-hosted photos',
+           f'<a class="press-back" href="{_esc(base + PRESS_ROOT + "/")}">← Press archive</a><h1>Publisher-hosted photos</h1>'
+           '<p>Current publisher copies of historical photographs. Retrieval dates and event dates are recorded separately.</p><div class="press-grid">'
+           + ''.join(cards) + '</div>', base, stylesheet))
+    result.update(source_pages=len(cards), image_payloads=len(hashes))
+    return result
+
+
 def build_press_archive(root: Path, output: Path, base: str, stylesheet: str) -> dict:
     """Render verified press captures, all dated media records, and explicit gaps."""
     root = Path(root).resolve()
@@ -509,6 +571,9 @@ def build_press_archive(root: Path, output: Path, base: str, stylesheet: str) ->
     # Re-write the article directory after image links and capture routes are finalized.
     _write(output, PRESS_ROOT + "/articles", article_html)
 
+    publisher_photos = build_publisher_photos(root, output, base, stylesheet)
+    publisher_card = (f'<a class="press-card" href="{_esc(base + PRESS_ROOT + "/publisher/")}"><strong>Publisher-hosted photos</strong><span class="press-meta"><br>{publisher_photos["image_payloads"]} preserved images · retrieval dates labeled separately</span></a>'
+                      if publisher_photos["source_pages"] else "")
     index_body = (f'<a class="press-back" href="{_esc(base + "/")}">← Blue Scholars archive</a>'
                   '<h1>Recovered press archive</h1>'
                   '<h2>Browse recovered press coverage</h2>'
@@ -518,6 +583,7 @@ def build_press_archive(root: Path, output: Path, base: str, stylesheet: str) ->
                   f'<a class="press-card" href="{_esc(base + PRESS_ROOT + "/articles/")}"><strong>Articles and interviews</strong><span class="press-meta"><br>{len(groups)} source URLs · {len(validated_pages)} dated page captures</span></a>'
                   f'<a class="press-card" href="{_esc(base + PRESS_ROOT + "/images/")}"><strong>Images</strong><span class="press-meta"><br>{len(image_records)} dated records · {len(images_by_hash)} verified payloads · {len(candidate_rows)} indexed image URL records</span></a>'
                   f'<a class="press-card" href="{_esc(base + PRESS_ROOT + "/audio/")}"><strong>Audio</strong><span class="press-meta"><br>{len(audio_records)} dated records · {len(audio_by_hash)} local recordings</span></a>'
+                  + publisher_card +
                   '</div><h2>Sources</h2><p>Articles are organized by publisher, with all discovered CDX rows and unavailable capture gaps recorded on each source page.</p>'
                   '<p>Capture dates are archive timestamps in UTC. A later capture may contain a changed publisher page; captures remain separate rather than being merged.</p>')
     index_body += '<p><a href="' + _esc(base + PRESS_ROOT + '/data/manifest.json') + '">Download the audio provenance manifest (JSON)</a>'
@@ -530,4 +596,5 @@ def build_press_archive(root: Path, output: Path, base: str, stylesheet: str) ->
             "image_capture_records": len(image_records), "image_payloads": len(images_by_hash),
             "image_url_records": len(candidate_rows),
             "unrecovered_image_url_records": sum(not any(identity(record.get("source_image_url") or record.get("original_url", "")) == identity(candidate["url"]) for record in image_records) for candidate in candidate_rows),
-            "audio_capture_records": len(audio_records), "audio_payloads": len(audio_by_hash)}
+            "audio_capture_records": len(audio_records), "audio_payloads": len(audio_by_hash),
+            "publisher_photos": publisher_photos}

@@ -58,7 +58,7 @@
 @media(max-width:760px){.archive-home{margin-top:54px;padding:0 22px 48px}.archive-home .archive-eyebrow{margin-bottom:32px}.edition-grid{grid-template-columns:1fr;gap:12px;margin:30px 0 18px}.edition-card{min-height:158px;padding:20px}.edition-year{font-size:40px}.archive-home-links{gap:16px;margin-top:26px}.archive-timeline{padding:20px 18px 14px;margin-top:28px}.archive-year-readout{gap:10px}.archive-year-readout span{font-size:13px}.archive-year-markers{font-size:11px}}
 @media(max-width:760px){.archive-site-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.archive-site-card{min-height:148px;padding:16px}.archive-home .archive-sites-heading{margin-top:48px}}
 @media(max-width:480px){.archive-site-grid{grid-template-columns:1fr}.archive-site-card{min-height:132px}}
-@media(max-width:560px){.archive-year-global{gap:7px;padding:8px 10px;font-size:11px;flex-wrap:wrap}.archive-year-global-brand{max-width:88px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.archive-year-global-control{min-width:72px;width:100%;flex:1 1 100%}.archive-year-global output{font-size:15px}.archive-year-home{max-width:92px;text-align:right}}
+@media(max-width:560px){.archive-year-global{gap:7px;padding:8px 10px;font-size:11px;flex-wrap:wrap}.archive-year-global-brand{max-width:none;white-space:nowrap}.archive-year-global-control{min-width:72px;width:100%;flex:1 1 100%}.archive-year-global output{font-size:15px}.archive-year-home{max-width:none;flex-basis:100%;text-align:left}}
 @media(max-width:560px){.archive-home h1{max-width:100%;font-size:clamp(36px,10vw,46px);overflow-wrap:anywhere}.archive-home-intro,.archive-sites-intro,.archive-year-count{overflow-wrap:anywhere}}
 @media(prefers-reduced-motion:reduce){.edition-card,.archive-site-card{transition:none}.edition-card:hover,.archive-site-card:hover{transform:none}}
 @media(max-width:600px){.archive-gap-page{margin-top:40px;padding-left:20px;padding-right:20px}.archive-restoration-notice{padding:10px 12px;font-size:11px}.archive-navigation nav{max-width:170px}.archive-gap-page .archive-lead{font-size:18px}}
@@ -92,3 +92,6 @@
 .archive-timeline-key-minor .archive-timeline-key-symbol:before{content:"";position:absolute;left:8px;top:2px;width:2px;height:12px;border-radius:2px;background:#526f83}
 @media(max-width:560px){.archive-timeline-legend{flex:1 1 100%;gap:8px 14px;margin-left:0;font-size:11px}.archive-timeline-key{white-space:normal}}
 .archive-timeline-key-count{color:#687781;font-size:11px;font-style:italic}
+
+/* Keep legacy journal platform chrome outside the archive toolbar on phones. */
+@media(max-width:600px){html.archive-lj-layout{min-width:0!important}html.archive-lj-layout body{min-width:0!important;width:auto!important;padding-top:0!important}.archive-lj-layout body>.s-header{position:relative!important;top:auto!important;overflow:hidden}.archive-lj-layout body>#shadowhack1{margin:0!important}.archive-artist-layout #content{overflow-wrap:anywhere}.archive-artist-layout #content img{max-width:100%;height:auto}}

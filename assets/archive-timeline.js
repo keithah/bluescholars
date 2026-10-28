@@ -14,12 +14,53 @@
   const closestYear = (value, years) => years.reduce((best, year) =>
     Math.abs(year - value) < Math.abs(best - value) ||
     (Math.abs(year - value) === Math.abs(best - value) && year < best) ? year : best, years[0]);
+  const enableYearKeyboard = (control, years) => {
+    control.addEventListener("keydown", (event) => {
+      if (!years.length || !["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown", "Home", "End"].includes(event.key)) return;
+      event.preventDefault();
+      const current = years.indexOf(closestYear(Number(control.value), years));
+      const next = event.key === "Home" ? 0 : event.key === "End" ? years.length - 1
+        : current + (["ArrowRight", "ArrowUp"].includes(event.key) ? 1 : -1);
+      control.value = String(years[Math.max(0, Math.min(years.length - 1, next))]);
+      control.dispatchEvent(new Event("input", { bubbles: true }));
+      control.dispatchEvent(new Event("change", { bubbles: true }));
+    });
+  };
   const closestRoute = (routes, year) => {
     const keys = Object.keys(routes || {}).map(Number).filter(validYear).sort((a, b) => a - b);
     if (!keys.length) return null;
     const selected = closestYear(Number(year), keys);
     return { year: selected, route: routes[String(selected)] };
   };
+  // Preserve the early site's table geometry while fitting it to small screens.
+  // Browser zoom scales image-map hit areas along with the original artwork.
+  if (/\/lj\//.test(location.pathname || "")) document.documentElement.classList.add("archive-lj-layout");
+  if (/\/(prometheusbrown|sabzi)\//.test(location.pathname || "")) document.documentElement.classList.add("archive-artist-layout");
+  const originalLayoutStyles = new WeakMap();
+  const fitEarlyLayout = () => {
+    const path = location.pathname || "";
+    let selector = "";
+    if (/\/(2007|2009|masslinemedia|massline-forums|206proof|lj)\//.test(path))
+      selector = "body > table, body > center, body > #page, body > #Header, body > #Body, body > #shadowhack1, body > .s-header";
+    if (/\/myspace\//.test(path)) selector = "body > table, body > div:not([class])";
+    if (/\/twitter-[^/]+\//.test(path)) selector = "body > .twitter-original";
+    if (!selector) return;
+    const available = Math.min(document.documentElement.clientWidth, document.body.clientWidth);
+    for (const container of document.querySelectorAll(selector)) {
+      if (!originalLayoutStyles.has(container)) originalLayoutStyles.set(container, {width:container.style.width, zoom:container.style.zoom});
+      const original = originalLayoutStyles.get(container);
+      container.style.width = original.width;
+      container.style.zoom = original.zoom;
+      if (window.innerWidth > 600) continue;
+      const width = Math.max(container.offsetWidth, container.scrollWidth);
+      if (width > available && available > 0) {
+        container.style.width = width + "px";
+        container.style.zoom = String(available / width);
+      }
+    }
+  };
+  fitEarlyLayout();
+  window.addEventListener("resize", fitEarlyLayout);
   const query = new URLSearchParams(location.search);
   const yearFromUrl = query.get("year");
   const embeddedHomepage = query.get("archive-embed") === "1";
@@ -30,6 +71,7 @@
   if (slider) {
     const activityYears = activityYearsFor(slider.closest(".archive-timeline"), routesFor(slider.closest(".archive-timeline")));
     if (activityYears.length) slider.value = String(closestYear(validYear(yearFromUrl) ? Number(yearFromUrl) : Number(slider.value), activityYears));
+    enableYearKeyboard(slider, activityYears);
     let yearSelected = validYear(yearFromUrl);
     const yearOut = document.getElementById("archive-year-output");
     const summary = document.getElementById("archive-era-summary");
@@ -130,6 +172,7 @@
     const homeLink = section.querySelector(".archive-year-home");
     const homeRoutes = routesFor(section);
     const activityYears = activityYearsFor(section, homeRoutes);
+    enableYearKeyboard(control, activityYears);
     const rawInitialYear = validYear(yearFromUrl) ? Number(yearFromUrl) : Number(control.dataset.defaultYear || control.value);
     const initialYear = activityYears.length ? closestYear(rawInitialYear, activityYears) : rawInitialYear;
     control.value = String(initialYear);

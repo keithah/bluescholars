@@ -9,9 +9,7 @@ permissions:
 jobs:
   test:
     runs-on: ubuntu-latest
-    # The source-backed root and project-subpath builds walk the complete
-    # recovered forum corpus; keep enough time for both build/check pairs.
-    timeout-minutes: 60
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-python@v7
@@ -20,16 +18,35 @@ jobs:
           cache: pip
       - run: python -m pip install -r requirements-dev.txt
       - run: python -m pytest -q
-      - name: Test root deployment
+  build:
+    needs: test
+    runs-on: ubuntu-latest
+    # Each full corpus build/check takes roughly 30 minutes. Separate jobs
+    # prevent a successful pair from timing out during artifact upload.
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: root
+            base_path: ''
+          - name: project
+            base_path: /bluescholars
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
+          cache: pip
+      - run: python -m pip install -r requirements-dev.txt
+      - name: Build and check hosting path
+        env:
+          BASE_PATH: ${{ matrix.base_path }}
         run: |
-          python -m restore build
-          python -m restore check
-      - name: Test project-subpath deployment
-        run: |
-          python -m restore build --base-path /bluescholars
-          python -m restore check --base-path /bluescholars
+          python -m restore build --base-path "$BASE_PATH"
+          python -m restore check --base-path "$BASE_PATH"
       - uses: actions/upload-artifact@v7
         with:
-          name: reviewed-source-preview
+          name: reviewed-source-preview-${{ matrix.name }}
           path: _site/
           retention-days: 14

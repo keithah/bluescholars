@@ -355,6 +355,7 @@ def render_html(text: str,url: str,resources: dict,base: str,route_prefix='',ali
     for control in soup.find_all(['input','button','select','textarea']):
         control['disabled']='disabled'
         for attr in ('formaction','form','action','src'): control.attrs.pop(attr,None)
+    archived_link_sources=[]
     for a in soup.find_all('a'):
         if a.get('href'):
             if ('archive-source-link' in a.get('class',[]) and
@@ -363,6 +364,8 @@ def render_html(text: str,url: str,resources: dict,base: str,route_prefix='',ali
             else:
                 target=resolver.link(a['href'],url)
             if target:
+                if archived_companion_route(original_url(a['href'],url),''):
+                    archived_link_sources.append((a,original_url(a['href'],url)))
                 a['href']=target
                 if urlsplit(target).scheme: a['rel']='noopener noreferrer'
             else:
@@ -391,6 +394,8 @@ def render_html(text: str,url: str,resources: dict,base: str,route_prefix='',ali
         if node.name not in ('img',) and node.get('src'): node.attrs.pop('src',None)
         if node.name not in ('a','area','link') and node.get('href'): node.attrs.pop('href',None)
         node.attrs.pop('srcset',None)
+    for anchor,source_url in archived_link_sources:
+        anchor['data-original-href']=source_url
     for svg in list(soup.find_all('svg')):
         # Inline vectors can carry active/external content; retain safe geometry only.
         from .svg import sanitize_svg

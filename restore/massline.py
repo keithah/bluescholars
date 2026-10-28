@@ -14,7 +14,7 @@ from pathlib import Path
 from urllib.parse import parse_qs, quote, unquote, urlencode, urljoin, urlsplit, urlunsplit
 
 import requests
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, UnicodeDammit
 
 from .archive import ArchiveClient, parse_cdx, validate_payload
 from .svg import sanitize_svg
@@ -97,7 +97,7 @@ def massline_route(url: str) -> str:
     # download instead of rendering. The recovered source is static HTML, so
     # publish PHP-era page paths as .html and let the renderer localize links
     # through this canonical route map.
-    if suffix.lower().endswith(".php"):
+    if suffix.lower().endswith(".php") and not parts.path.endswith("/"):
         suffix = suffix[:-4] + ".html"
     if parts.query:
         tag = sha256(parts.query.encode("utf-8")).hexdigest()[:12]
@@ -805,6 +805,11 @@ def rewrite_massline_css(source: str, source_url: str, mapping: dict[str, str], 
     return css
 
 
+def decode_massline_html(body: bytes) -> str:
+    """Honor the captured HTML encoding before writing normalized UTF-8 output."""
+    return UnicodeDammit(body, is_html=True).unicode_markup or body.decode("utf-8", errors="replace")
+
+
 def sanitize_massline_html(source: str, source_url: str, mapping: dict[str, str], capture: str = "", base: str = "",
                            source_link: str | None = None, source_label: str = "view source replay") -> tuple[str, list[str]]:
     """Keep captured text and layout while removing executable and remote behavior."""
@@ -818,6 +823,13 @@ def sanitize_massline_html(source: str, source_url: str, mapping: dict[str, str]
         soup.html.insert(0, soup.new_tag("head"))
     if soup.body is None:
         soup.html.append(soup.new_tag("body"))
+    # The raw capture remains untouched; rendered pages always use UTF-8.
+    for meta in list(soup.head.find_all("meta")):
+        if meta.get("charset") or str(meta.get("http-equiv", "")).lower() == "content-type":
+            meta.decompose()
+    soup.head.insert(0, soup.new_tag("meta", charset="utf-8"))
+    if not soup.head.find("meta", attrs={"name": "viewport"}):
+        soup.head.append(soup.new_tag("meta", attrs={"name": "viewport", "content": "width=device-width, initial-scale=1"}))
     gaps: list[str] = []
     for node in list(soup.find_all(["script", "base", "iframe", "object", "embed", "video", "audio"])):
         if not any(parent is soup for parent in node.parents):
@@ -859,6 +871,9 @@ def sanitize_massline_html(source: str, source_url: str, mapping: dict[str, str]
     for node in soup.find_all(True):
         if node.attrs is None:
             continue
+        if node.name in ("input", "button", "select", "textarea"):
+            node["disabled"] = "disabled"
+            node["title"] = "Historical control disabled in this archive"
         for attr in list(node.attrs):
             if attr.lower().startswith("on"):
                 del node.attrs[attr]
@@ -873,9 +888,12 @@ def sanitize_massline_html(source: str, source_url: str, mapping: dict[str, str]
                 node["rel"] = ["noopener", "noreferrer"]
                 continue
             original = node.get("href", "")
+            if original.startswith(("#", "mailto:", "tel:")):
+                continue
             local = _local_target(original, source_url, mapping)
             if local:
-                node["href"] = base.rstrip("/") + local
+                fragment = urlsplit(original).fragment
+                node["href"] = base.rstrip("/") + local + ("#" + fragment if fragment else "")
             else:
                 canonical = _canonical(original, source_url)
                 if canonical and capture.isdigit():
@@ -957,6 +975,21 @@ def _write_forum_redirect(output: Path, base: str, route: str, target_route: str
     _write_output(output, route, body)
 
 
+def _write_php_bookmark_redirect(output: Path, base: str, source_url: str, route: str, reserved_routes: set[str] | None = None) -> None:
+    parts = urlsplit(source_url)
+    if (not parts.path.lower().endswith(".php") or parts.path.rstrip("/") == "/smf/index.php"
+            or not route.endswith(".html")):
+        return
+    legacy = route[:-5] + ".php/"
+    if legacy + "index.html" in (reserved_routes or set()):
+        return
+    target = html.escape(base.rstrip("/") + route, quote=True)
+    _write_output(output, legacy,
+        '<!doctype html><html lang="en"><head><meta charset="utf-8">'
+        f'<meta http-equiv="refresh" content="0; url={target}"><title>Archived page moved</title>'
+        f'</head><body><p><a href="{target}">Open the archived page</a>.</p></body></html>')
+
+
 def _write_legacy_forum_redirects(output: Path, base: str, forum_routes: list[str],
                                   board_ids: set[str], topic_ids: set[str]) -> int:
     aliases = {LEGACY_FORUM_PREFIX + "index.html": FORUM_PREFIX + "index.html"}
@@ -1036,7 +1069,7 @@ def _forum_index_pages(output: Path, output_base: str, board_rows: list[dict], t
             group["title_counts"][title] += 1
         group["pages"].append({**item, "offset": offset})
 
-        source = board_bodies.get(item.get("url", ""), b"").decode("utf-8", errors="replace")
+        source = decode_massline_html(board_bodies.get(item.get("url", ""), b""))
         soup = BeautifulSoup(source, "html.parser")
         for anchor in soup.find_all("a", href=True):
             original = urljoin(item["url"], anchor["href"])
@@ -1290,6 +1323,7 @@ def build_massline_archive(root: Path, output: Path, base: str = "", candidate: 
         if sha256(body).hexdigest() != variant.get("sha256"):
             continue
         homepage_variants.append((variant, body))
+    reserved_routes = set(mapping.values()) | {route for _, _, route in recovered_resource_variants}
     page_gaps = []
     routes: dict[str, str] = {}
     for canonical, record in resources.items():
@@ -1301,9 +1335,10 @@ def build_massline_archive(root: Path, output: Path, base: str = "", candidate: 
             continue
         kind = record.get("kind")
         if kind == "html":
-            rendered, gaps = sanitize_massline_html(body.decode("utf-8", errors="replace"), canonical, mapping, record.get("timestamp", ""), base)
+            rendered, gaps = sanitize_massline_html(decode_massline_html(body), canonical, mapping, record.get("timestamp", ""), base)
             page_gaps.extend({"page": canonical, "url": gap} for gap in gaps if gap)
             _write_output(output, route.removeprefix(base), rendered)
+            _write_php_bookmark_redirect(output, base, canonical, route, reserved_routes)
             routes[canonical] = route
         elif kind == "image":
             if b"<svg" in body[:1000].lower():
@@ -1317,11 +1352,12 @@ def build_massline_archive(root: Path, output: Path, base: str = "", candidate: 
     for variant, body, route in recovered_resource_variants:
         if variant.get("kind") == "html":
             canonical = variant.get("canonical_url") or _canonical(variant.get("source_url", ""))
-            rendered, gaps = sanitize_massline_html(body.decode("utf-8", errors="replace"), canonical, mapping,
+            rendered, gaps = sanitize_massline_html(decode_massline_html(body), canonical, mapping,
                                                       variant.get("timestamp", ""), base,
                                                       variant.get("source"), variant.get("source_label", "view source replay"))
             page_gaps.extend({"page": canonical, "url": gap} for gap in gaps if gap)
             _write_output(output, route, rendered)
+            _write_php_bookmark_redirect(output, base, canonical, route, reserved_routes)
         elif variant.get("kind") == "image":
             if b"<svg" in body[:1000].lower():
                 body = sanitize_svg(body)
@@ -1333,7 +1369,7 @@ def build_massline_archive(root: Path, output: Path, base: str = "", candidate: 
         elif variant.get("kind") == "media":
             _write_output(output, route, body)
     for variant, body in homepage_variants:
-        rendered, gaps = sanitize_massline_html(body.decode("utf-8", errors="replace"), variant["canonical_url"], mapping,
+        rendered, gaps = sanitize_massline_html(decode_massline_html(body), variant["canonical_url"], mapping,
                                                   variant.get("timestamp", ""), base,
                                                   variant.get("source"), variant.get("source_label", "view source replay"))
         page_gaps.extend({"page": variant["canonical_url"], "url": gap} for gap in gaps if gap)

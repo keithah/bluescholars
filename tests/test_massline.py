@@ -598,3 +598,45 @@ def test_massline_forum_alternate_capture_recovery_resumes_and_reuses_known_dige
     recovered = json.loads(manifest_path.read_text())
     assert [r["timestamp"] for r in recovered["resource_variants"]] == ["20071001100000", "20071003100000"]
     assert recovered["resource_variants"][1]["raw_path"] == raw.as_posix()
+
+
+def test_massline_preserves_fragments_and_disables_orphan_controls():
+    from bs4 import BeautifulSoup
+    source='<html><head></head><body><a href="#top">Top</a><a href="/news/archive.php#entry">Entry</a><input name="email"><button>Join</button><div id="top">Text</div></body></html>'
+    rendered,_=sanitize_massline_html(source,'http://masslinemedia.com/',
+        {'http://masslinemedia.com/news/archive.php':'/masslinemedia/site/news/archive.html'},'20061231081225','/bluescholars')
+    soup=BeautifulSoup(rendered,'html.parser')
+    assert soup.find('a',string='Top')['href']=='#top'
+    assert soup.find('a',string='Entry')['href']=='/bluescholars/masslinemedia/site/news/archive.html#entry'
+    assert soup.input.has_attr('disabled') and soup.button.has_attr('disabled')
+    assert soup.find('meta',charset='utf-8')
+    assert soup.find('meta',attrs={'name':'viewport'})
+
+
+def test_massline_decodes_original_charset_without_losing_text():
+    from restore.massline import decode_massline_html
+    source=b'<html><head><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"></head><body>caf\xe9\xa0and music</body></html>'
+    decoded=decode_massline_html(source)
+    assert 'caf\xe9\xa0and music' in decoded
+    assert '\ufffd' not in decoded
+    rendered,_=sanitize_massline_html(decoded,'http://masslinemedia.com/',{},'20061231081225')
+    assert 'iso-8859-1' not in rendered
+
+
+def test_old_php_bookmarks_use_html_directory_redirects(tmp_path):
+    from restore.massline import _write_php_bookmark_redirect
+    _write_php_bookmark_redirect(tmp_path,'/bluescholars','http://masslinemedia.com/news/archive.php',
+                                 '/masslinemedia/site/news/archive.html')
+    alias=tmp_path/'masslinemedia/site/news/archive.php/index.html'
+    assert alias.is_file()
+    assert 'url=/bluescholars/masslinemedia/site/news/archive.html' in alias.read_text()
+    assert not list(p for p in tmp_path.rglob('*.php') if p.is_file())
+
+
+def test_php_bookmark_alias_does_not_replace_a_captured_directory(tmp_path):
+    from restore.massline import _write_php_bookmark_redirect
+    path=tmp_path/'masslinemedia/site/news/archive.php/index.html'
+    path.parent.mkdir(parents=True);path.write_text('Original captured directory')
+    _write_php_bookmark_redirect(tmp_path,'','http://masslinemedia.com/news/archive.php',
+        '/masslinemedia/site/news/archive.html',{'/masslinemedia/site/news/archive.php/index.html'})
+    assert path.read_text()=='Original captured directory'

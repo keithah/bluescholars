@@ -1462,3 +1462,61 @@ def test_promote_redacts_stripe_publishable_key_from_archived_source(tmp_path):
     assert saved['source_redaction']['count']==1
     assert saved['source_redaction']['field']=='Stripe publishable API key'
     assert (tmp_path/state.data['resources'][HOME]['raw_path']).read_bytes()==body
+
+
+def test_timeline_counts_only_dated_pages_not_digits_in_ids_or_assets(tmp_path):
+    files={
+        'massline-forums/topic-2012-page-0.html':'<aside class="massline-source-note">Historical capture · 2007-10-19 · source</aside>',
+        'massline-forums/topic-2008-page-0.html':'<p>Undated topic identifier is not a year.</p>',
+        'massline-forums/assets/abcdef2015.html':'<p>Asset identifier is not a year.</p>',
+        'massline-forums/topic-3-page-0--capture-20091019000000.html':'<p>Dated capture</p>',
+        'massline-forums/redirect.html':'<meta http-equiv="refresh" content="0; url=index.html">',
+    }
+    for name,body in files.items():
+        p=tmp_path/name;p.parent.mkdir(parents=True,exist_ok=True);p.write_text(body)
+    assert timeline_output_page_counts(tmp_path,'/massline-forums/')=={2007:1,2009:1}
+
+
+def test_massline_homepage_default_year_matches_capture_and_keeps_one_timeline(tmp_path):
+    from restore.build import decorate_archive_pages
+    for year in (2006,2009):
+        p=tmp_path/f'masslinemedia/site/home-{year}.html';p.parent.mkdir(parents=True,exist_ok=True)
+        p.write_text(f'<html><body><aside class="massline-source-note">Historical capture · {year}-08-13 · source</aside></body></html>')
+    decorate_archive_pages(tmp_path,'/bluescholars','/bluescholars/assets/ui.css','/bluescholars/assets/timeline.js',[])
+    page=BeautifulSoup((tmp_path/'masslinemedia/site/home-2009.html').read_text(),'html.parser')
+    assert page.select_one('.archive-year-global-control')['value']=='2009'
+    assert len(page.select('.archive-year-global'))==1
+
+
+def test_final_navigation_localizes_recovered_cross_site_links_without_changing_provenance(tmp_path):
+    from restore.build import decorate_archive_pages
+    files={
+      '2007/store.html/index.html':'<html><body>Store</body></html>',
+      'masslinemedia/site/home-2006.html':'''<html><body>
+        <aside class="massline-source-note">Historical capture · 2006-12-31 · <a href="https://web.archive.org/web/20061231081225/http://masslinemedia.com/">view source replay</a></aside>
+        <a class="massline-external-gap" href="https://web.archive.org/web/20061231081225/http://bluescholars.com/store.html">Store</a>
+        </body></html>''',
+    }
+    for name,body in files.items():
+        p=tmp_path/name;p.parent.mkdir(parents=True,exist_ok=True);p.write_text(body)
+    decorate_archive_pages(tmp_path,'/bluescholars','/bluescholars/ui.css','/bluescholars/timeline.js',[])
+    doc=BeautifulSoup((tmp_path/'masslinemedia/site/home-2006.html').read_text(),'html.parser')
+    assert doc.find('a',string='Store')['href']=='/bluescholars/2007/store.html'
+    assert doc.find('a',string='view source replay')['href'].startswith('https://web.archive.org/')
+
+
+def test_companion_original_target_survives_rendering_for_final_localization():
+    rendered,_=render_html('<html><body><a href="http://masslinemedia.com/smf/index.php?topic=10.0">Thread</a></body></html>',HOME,{},'/bluescholars')
+    anchor=BeautifulSoup(rendered,'html.parser').find('a',string='Thread')
+    assert anchor['data-original-href']=='http://masslinemedia.com/smf/index.php?topic=10.0'
+
+
+def test_checker_rejects_root_assets_that_escape_project_mount(tmp_path):
+    (tmp_path/'assets').mkdir();(tmp_path/'assets/photo.png').write_bytes(b'image')
+    (tmp_path/'index.html').write_text('<html><body><img src="/assets/photo.png"></body></html>')
+    assert any('escaped deployment base' in e for e in check(tmp_path,'/bluescholars'))
+
+
+def test_checker_rejects_html_published_with_php_content_type(tmp_path):
+    (tmp_path/'archive.php').write_text('<!doctype html><html><body>News</body></html>')
+    assert any('non-renderable' in e for e in check(tmp_path))

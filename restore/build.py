@@ -3,18 +3,19 @@ from __future__ import annotations
 import hashlib
 import html
 import json
+import re
 from pathlib import Path
 import shutil
 from urllib.parse import parse_qsl,unquote,urlencode,urlsplit,urlunsplit
 from bs4 import BeautifulSoup
 from .archive import validate_payload
 from .discover import discover_html
-from .render import render_html,render_css,resource_aliases,NAV
+from .render import render_html,render_css,resource_aliases,NAV,archived_companion_route
 from .svg import sanitize_svg
 from .state import State,write_json
 from .urls import HOME,TARGET,SQUARESPACE_START,identity,is_site,route,asset_route,base_path,livejournal_route,original_url,historical_route_prefix,route_capture_hint
 from .artist_sites import build_artist_sites
-from .massline import build_massline_archive
+from .massline import build_massline_archive,massline_route
 from .myspace import build_myspace_archive
 from .feeds import collect_feed_entries
 from .proof206 import build_206proof_archive
@@ -168,12 +169,35 @@ def _write_page(output: Path,path: str,text: str):
     destination=output/relative if relative.lower().endswith('.html') else output/relative/'index.html'
     destination.parent.mkdir(parents=True,exist_ok=True);destination.write_text(text,encoding='utf-8')
 
+def _existing_archive_link(value: str, year: int, base: str, output: Path) -> str | None:
+    original=original_url(value)
+    if not original: return None
+    parts=urlsplit(original);host=(parts.hostname or '').removeprefix('www.')
+    target=None
+    if is_site(original):
+        prefix=historical_route_prefix(original,'/2007' if year<2009 else '/2009' if year<2013 else '/2013',str(year)+'0101000000')
+        try: target=prefix+route(original)
+        except ValueError: return None
+    elif host=='masslinemedia.com':
+        try: target=massline_route(original)
+        except ValueError: return None
+    elif parts.path in ('','/') or host in ('twitter.com','mobile.twitter.com','x.com','myspace.com'):
+        target=archived_companion_route(original,'')
+    if not target: return None
+    file=(Path(output)/unquote(target.lstrip('/'))).resolve()
+    if not file.is_relative_to(Path(output).resolve()): return None
+    if file.is_dir(): file=file/'index.html'
+    if not file.is_file(): return None
+    fragment=urlsplit(value).fragment
+    return base+target+('#'+fragment if fragment else '')
+
+
 def add_global_year_navigation(text: str,year: int,base: str,ui_href: str,
                                timeline_script_href: str,page_years: dict[str,int]|None=None,
                                home_routes: dict[int,str]|None=None,
                                activity_years: list[int]|None=None,
                                major_years: list[int]|None=None,
-                               activity_counts: dict[int,int]|None=None) -> str:
+                               activity_counts: dict[int,int]|None=None,local_output: Path|None=None) -> str:
     """Add the shared year control and annotate links to dated local pages."""
     base=base_path(base);page_years=page_years or {}
     try: year=int(year)
@@ -231,6 +255,15 @@ def add_global_year_navigation(text: str,year: int,base: str,ui_href: str,
             directives.append(name+" 'self'")
         policy['content']='; '.join(directives)
     for anchor in soup.find_all('a',href=True):
+        if local_output is not None and (anchor.get('data-original-href') or 'massline-external-gap' in anchor.get('class',[])):
+            target=_existing_archive_link(anchor.get('data-original-href') or anchor['href'],year,base,local_output)
+            if target:
+                selected=next((value for key,value in parse_qsl(urlsplit(anchor['href']).query) if key=='year'),None)
+                if selected and re.fullmatch(r'20\d{2}',selected):
+                    parts=urlsplit(target)
+                    target=urlunsplit(('', '',parts.path,urlencode({'year':selected}),parts.fragment))
+                anchor['href']=target
+                anchor['class']=[name for name in anchor.get('class',[]) if name!='massline-external-gap']
         parts=urlsplit(anchor['href'])
         if parts.scheme or parts.netloc or not parts.path.startswith(base+'/'):
             continue
@@ -341,29 +374,34 @@ def archive_activity_years(page_report: list[dict],archive_path: str,home_routes
     return sorted(years or home_routes)
 
 
+def _capture_year_for_page(relative: str, text: str = '') -> int | None:
+    """Read dates from capture provenance or explicit date paths, never IDs/hashes."""
+    note=re.search(r'<aside\b[^>]*class=["\'][^"\']*massline-source-note[^"\']*["\'][^>]*>\s*Historical capture\s*·\s*(20\d{2})-',text,re.I)
+    if note: return int(note.group(1))
+    for pattern in (r'(?:^|/)(20\d{2})/', r'(?:^|/)(20\d{12})(?:[/-]|\.html|$)',
+                    r'--capture-(20\d{12})(?:[.-]|$)', r'(?:^|/)home-(20\d{2})(?:[-.]|$)'):
+        match=re.search(pattern,relative)
+        if match and 2006<=int(match.group(1)[:4])<=2026: return int(match.group(1)[:4])
+    return None
+
+
 def timeline_output_page_counts(output: Path,archive_path: str) -> dict[int,int]:
-    """Count local dated archive pages when their separate recovery isn't in page_report."""
-    output=Path(output)
-    archive_root=output/archive_path.strip('/')
+    """Count dated content pages, excluding assets and navigation redirects."""
+    output=Path(output);archive_root=output/archive_path.strip('/')
     if not archive_root.is_dir(): return {}
     counts={}
     for page in archive_root.rglob('*.html'):
-        relative=page.relative_to(output).as_posix()
-        for part in relative.split('/')[1:]:
-            year_text=next((part[index:index+4] for index in range(max(0,len(part)-3))
-                            if part[index:index+4].isdigit()
-                            and 2006<=int(part[index:index+4])<=2026),None)
-            if year_text:
-                year=int(year_text)
-                counts[year]=counts.get(year,0)+1
-                break
+        if not page.is_file() or 'assets' in page.relative_to(archive_root).parts: continue
+        text=page.read_text(encoding='utf-8',errors='replace')
+        if re.search(r'<meta\b[^>]*http-equiv=["\']refresh["\']',text,re.I): continue
+        year=_capture_year_for_page(page.relative_to(output).as_posix(),text)
+        if year is not None: counts[year]=counts.get(year,0)+1
     return counts
 
 def _default_year_for_path(path: str) -> int:
     parts=Path(path).parts
-    for part in parts:
-        if len(part)>=4 and part[:4].isdigit() and 2006<=int(part[:4])<=2026:
-            return int(part[:4])
+    captured=_capture_year_for_page(path)
+    if captured is not None: return captured
     defaults={'2007':2007,'2009':2009,'2013':2021,'prometheusbrown':2008,
         'sabzi':2013,'myspace':2007,'twitter-prometheusbrown':2009,
         'twitter-bluescholars':2009,'twitter-sabzi':2009,'twitter-wongweezy':2009,'twitter-canhsolo':2014,
@@ -389,12 +427,13 @@ def decorate_archive_pages(output: Path,base: str,ui_href: str,timeline_script_h
     for path in Path(output).rglob('*.html'):
         if not path.is_file(): continue
         relative=path.relative_to(output).as_posix()
-        if relative=='index.html': continue
+        if relative in ('index.html','404.html','archive-status/index.html'): continue
         text=path.read_text(encoding='utf-8',errors='replace')
+        if re.search(r'<meta\b[^>]*http-equiv=["\']refresh["\']',text,re.I): continue
         if 'class="archive-year-global"' in text or "class='archive-year-global'" in text: continue
         route='/'+relative.removesuffix('/index.html')
         if relative.endswith('/index.html'): route+='/'
-        year=page_years.get(route,_default_year_for_path(relative))
+        year=page_years.get(route,_capture_year_for_page(relative,text) or _default_year_for_path(relative))
         if relative in ('2007/index.html','2009/index.html','2013/index.html'):
             year={'2007/index.html':2007,'2009/index.html':2009,'2013/index.html':2021}[relative]
         if route.startswith('/other-archives/press/'):
@@ -405,20 +444,22 @@ def decorate_archive_pages(output: Path,base: str,ui_href: str,timeline_script_h
         is_blue_scholars=archive_path in ('/2007/','/2009/','/2013/')
         if archive_path not in home_routes_by_archive:
             routes=blue_routes if is_blue_scholars else archive_home_routes(output,archive_path)
+            counts=(timeline_page_counts(page_report,('/2007/','/2009/','/2013/'))
+                if is_blue_scholars else timeline_output_page_counts(output,archive_path))
             activity_years=(blue_activity_years if is_blue_scholars
-                else archive_activity_years(page_report,archive_path,routes,output))
+                else sorted(set(archive_activity_years(page_report,archive_path,routes)) | set(counts)))
             home_routes_by_archive[archive_path]=(routes if is_blue_scholars else routes_for_activity(routes,activity_years))
             activity_years_by_archive[archive_path]=activity_years
             major_years_by_archive[archive_path]=(timeline_major_years(page_report,routes)
                 if is_blue_scholars else sorted(routes))
-            activity_counts_by_archive[archive_path]=(timeline_page_counts(page_report,('/2007/','/2009/','/2013/'))
-                if is_blue_scholars else timeline_output_page_counts(output,archive_path))
+            activity_counts_by_archive[archive_path]=counts
         activity_years=activity_years_by_archive[archive_path]
         home_routes=home_routes_by_archive[archive_path]
         major_years=major_years_by_archive[archive_path]
         activity_counts=activity_counts_by_archive[archive_path]
+        if not home_routes: continue
         updated=add_global_year_navigation(text,year,base,ui_href,timeline_script_href,page_years,
-            home_routes,activity_years,major_years,activity_counts)
+            home_routes,activity_years,major_years,activity_counts,local_output=output)
         if updated!=text:
             path.write_text(updated,encoding='utf-8');changed+=1
     return changed

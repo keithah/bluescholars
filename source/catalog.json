@@ -707295,7 +707295,29 @@
       "source_archive": "Internet Archive Wayback"
     },
     "http://www.masslinemedia.com/images/ATL1/dna.jpg": {
-      "attempts": [],
+      "attempts": [
+        {
+          "at": "2026-10-22T06:10:34.890100+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20210529010817id_/http://www.masslinemedia.com/images/ATL1/dna.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://www.masslinemedia.com/images/ATL1/dna.jpg",
+          "requested_capture": "20210529010817",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-22T06:10:35.976277+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20170724002702id_/http://www.masslinemedia.com/images/ATL1/dna.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20170724002702id_/http://www.masslinemedia.com/images/ATL1/dna.jpg",
+          "requested_capture": "20170724002702",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-22T06:10:37.069449+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20170628191416id_/http://www.masslinemedia.com/images/ATL1/dna.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20170628191416id_/http://www.masslinemedia.com/images/ATL1/dna.jpg",
+          "requested_capture": "20170628191416",
+          "result": "failed"
+        }
+      ],
       "captures": [
         {
           "digest": "P4AN4MTT5XDCM36V735CLBJNT63LNHIT",
@@ -707321,6 +707343,7 @@
         "20170423174431"
       ],
       "kind": "image",
+      "reason": "Untried capture dates or exact-URL index pages remain",
       "referrers": [
         "http://bluescholars.livejournal.com/",
         "CDX:exact:http://www.masslinemedia.com/images/ATL1/dna.jpg",
@@ -707329,8 +707352,21 @@
         "http://bluescholars.livejournal.com/16015.html?thread=50319",
         "http://bluescholars.livejournal.com/16015.html?thread=49295"
       ],
-      "status": "queued",
-      "url": "http://www.masslinemedia.com/images/ATL1/dna.jpg"
+      "status": "recovered",
+      "url": "http://www.masslinemedia.com/images/ATL1/dna.jpg",
+      "sha256": "a37eac18e02912307d8695a67ace1d67a563f49dabacd53c9f3d27fb3de1e5a4",
+      "bytes": 147763,
+      "raw_path": "source/raw/a37eac18e02912307d8695a67ace1d67a563f49dabacd53c9f3d27fb3de1e5a4.jpg",
+      "content_type": "image/jpeg",
+      "actual_capture": "20081009134023",
+      "final_url": "https://web.archive.org/web/20081009134023id_/http://www.masslinemedia.com/images/ATL1/dna.jpg",
+      "final_original": "http://www.masslinemedia.com/images/ATL1/dna.jpg",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20081009134023",
+      "recovery_origin": "source/massline.json",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Exact source URL linked by saved LiveJournal posts. Reused existing validated Massline capture, not a new download. Contact sheet inspected; original capture timestamp and hash retained."
     },
     "http://www.masslinemedia.com/images/ATL1/dna.jpg@@wayback:20071013190358:a37eac18e029": {
       "actual_capture": "20071013190358",
@@ -707379,7 +707415,29 @@
       "url": "http://www.masslinemedia.com/images/ATL1/dna.jpg"
     },
     "http://www.masslinemedia.com/images/ATL1/kiashine.jpg": {
-      "attempts": [],
+      "attempts": [
+        {
+          "at": "2026-10-22T06:11:39.352859+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20210529010817id_/http://www.masslinemedia.com/images/ATL1/kiashine.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://www.masslinemedia.com/images/ATL1/kiashine.jpg",
+          "requested_capture": "20210529010817",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-22T06:11:40.429144+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20170724002702id_/http://www.masslinemedia.com/images/ATL1/kiashine.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20170724002702id_/http://www.masslinemedia.com/images/ATL1/kiashine.jpg",
+          "requested_capture": "20170724002702",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-22T06:11:41.523619+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20170628191416id_/http://www.masslinemedia.com/images/ATL1/kiashine.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20170628191416id_/http://www.masslinemedia.com/images/ATL1/kiashine.jpg",
+          "requested_capture": "20170628191416",
+          "result": "failed"
+        }
+      ],
       "captures": [
         {
           "digest": "L2IK2IS7MNKO6P62QELAH6SQWWSSEA5F",
@@ -707405,6 +707463,7 @@
         "20170423174431"
       ],
       "kind": "image",
+      "reason": "Untried capture dates or exact-URL index pages remain",
       "referrers": [
         "http://bluescholars.livejournal.com/",
         "CDX:exact:http://www.masslinemedia.com/images/ATL1/kiashine.jpg",
@@ -707413,8 +707472,21 @@
         "http://bluescholars.livejournal.com/16015.html?thread=50319",
         "http://bluescholars.livejournal.com/16015.html?thread=49295"
       ],
-      "status": "queued",
-      "url": "http://www.masslinemedia.com/images/ATL1/kiashine.jpg"
+      "status": "recovered",
+      "url": "http://www.masslinemedia.com/images/ATL1/kiashine.jpg",
+      "sha256": "593951cf87e1e590059e64af089eaae8eb05d96b07e164045517871a77481265",
+      "bytes": 215236,
+      "raw_path": "source/raw/593951cf87e1e590059e64af089eaae8eb05d96b07e164045517871a77481265.jpg",
+      "content_type": "image/jpeg",
+      "actual_capture": "20081009134032",
+      "final_url": "https://web.archive.org/web/20081009134032id_/http://www.masslinemedia.com/images/ATL1/kiashine.jpg",
+      "final_original": "http://www.masslinemedia.com/images/ATL1/kiashine.jpg",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20081009134032",
+      "recovery_origin": "source/massline.json",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Exact source URL linked by saved LiveJournal posts. Reused existing validated Massline capture, not a new download. Contact sheet inspected; original capture timestamp and hash retained."
     },
     "http://www.masslinemedia.com/images/ATL1/kiashine.jpg@@wayback:20071013190214:593951cf87e1": {
       "actual_capture": "20071013190214",
@@ -707463,7 +707535,29 @@
       "url": "http://www.masslinemedia.com/images/ATL1/kiashine.jpg"
     },
     "http://www.masslinemedia.com/images/ATL1/munki1.jpg": {
-      "attempts": [],
+      "attempts": [
+        {
+          "at": "2026-10-22T06:11:04.575549+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20210529010817id_/http://www.masslinemedia.com/images/ATL1/munki1.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://www.masslinemedia.com/images/ATL1/munki1.jpg",
+          "requested_capture": "20210529010817",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-22T06:11:05.684540+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20170724002702id_/http://www.masslinemedia.com/images/ATL1/munki1.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20170724002702id_/http://www.masslinemedia.com/images/ATL1/munki1.jpg",
+          "requested_capture": "20170724002702",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-22T06:11:06.751053+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20170628191416id_/http://www.masslinemedia.com/images/ATL1/munki1.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20170628191416id_/http://www.masslinemedia.com/images/ATL1/munki1.jpg",
+          "requested_capture": "20170628191416",
+          "result": "failed"
+        }
+      ],
       "captures": [
         {
           "digest": "TM3VZODPB2Z4MZT5KWV6KKBNBRSPYUIP",
@@ -707489,6 +707583,7 @@
         "20170423174431"
       ],
       "kind": "image",
+      "reason": "Untried capture dates or exact-URL index pages remain",
       "referrers": [
         "http://bluescholars.livejournal.com/",
         "CDX:exact:http://www.masslinemedia.com/images/ATL1/munki1.jpg",
@@ -707497,8 +707592,21 @@
         "http://bluescholars.livejournal.com/16015.html?thread=50319",
         "http://bluescholars.livejournal.com/16015.html?thread=49295"
       ],
-      "status": "queued",
-      "url": "http://www.masslinemedia.com/images/ATL1/munki1.jpg"
+      "status": "recovered",
+      "url": "http://www.masslinemedia.com/images/ATL1/munki1.jpg",
+      "sha256": "5767916d99f4a6cf82134daea011a619279182dbd1064ab4f0011f44cd873f95",
+      "bytes": 68659,
+      "raw_path": "source/raw/5767916d99f4a6cf82134daea011a619279182dbd1064ab4f0011f44cd873f95.jpg",
+      "content_type": "image/jpeg",
+      "actual_capture": "20081009134134",
+      "final_url": "https://web.archive.org/web/20081009134134id_/http://www.masslinemedia.com/images/ATL1/munki1.jpg",
+      "final_original": "http://www.masslinemedia.com/images/ATL1/munki1.jpg",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20081009134134",
+      "recovery_origin": "source/massline.json",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Exact source URL linked by saved LiveJournal posts. Reused existing validated Massline capture, not a new download. Contact sheet inspected; original capture timestamp and hash retained."
     },
     "http://www.masslinemedia.com/images/ATL1/munki1.jpg@@wayback:20071013190447:5767916d99f4": {
       "actual_capture": "20071013190447",
@@ -707547,7 +707655,29 @@
       "url": "http://www.masslinemedia.com/images/ATL1/munki1.jpg"
     },
     "http://www.masslinemedia.com/images/ATL1/munki2.jpg": {
-      "attempts": [],
+      "attempts": [
+        {
+          "at": "2026-10-22T06:11:08.926149+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20210529010817id_/http://www.masslinemedia.com/images/ATL1/munki2.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://www.masslinemedia.com/images/ATL1/munki2.jpg",
+          "requested_capture": "20210529010817",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-22T06:11:10.034778+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20170724002702id_/http://www.masslinemedia.com/images/ATL1/munki2.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20170724002702id_/http://www.masslinemedia.com/images/ATL1/munki2.jpg",
+          "requested_capture": "20170724002702",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-22T06:11:11.115534+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20170628191416id_/http://www.masslinemedia.com/images/ATL1/munki2.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20170628191416id_/http://www.masslinemedia.com/images/ATL1/munki2.jpg",
+          "requested_capture": "20170628191416",
+          "result": "failed"
+        }
+      ],
       "captures": [
         {
           "digest": "A3FRVODHRLPEKNEGL3ASI4UMZ6BT6BIM",
@@ -707573,6 +707703,7 @@
         "20170423174431"
       ],
       "kind": "image",
+      "reason": "Untried capture dates or exact-URL index pages remain",
       "referrers": [
         "http://bluescholars.livejournal.com/",
         "CDX:exact:http://www.masslinemedia.com/images/ATL1/munki2.jpg",
@@ -707581,8 +707712,21 @@
         "http://bluescholars.livejournal.com/16015.html?thread=50319",
         "http://bluescholars.livejournal.com/16015.html?thread=49295"
       ],
-      "status": "queued",
-      "url": "http://www.masslinemedia.com/images/ATL1/munki2.jpg"
+      "status": "recovered",
+      "url": "http://www.masslinemedia.com/images/ATL1/munki2.jpg",
+      "sha256": "88b80489eb3ab72a311f33ae6cdd599bd5804395c1fc01e4232816ba992e27f5",
+      "bytes": 382735,
+      "raw_path": "source/raw/88b80489eb3ab72a311f33ae6cdd599bd5804395c1fc01e4232816ba992e27f5.jpg",
+      "content_type": "image/jpeg",
+      "actual_capture": "20081009134152",
+      "final_url": "https://web.archive.org/web/20081009134152id_/http://www.masslinemedia.com/images/ATL1/munki2.jpg",
+      "final_original": "http://www.masslinemedia.com/images/ATL1/munki2.jpg",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20081009134152",
+      "recovery_origin": "source/massline.json",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Exact source URL linked by saved LiveJournal posts. Reused existing validated Massline capture, not a new download. Contact sheet inspected; original capture timestamp and hash retained."
     },
     "http://www.masslinemedia.com/images/ATL1/munki2.jpg@@wayback:20071013190433:88b80489eb3a": {
       "actual_capture": "20071013190433",
@@ -707631,7 +707775,29 @@
       "url": "http://www.masslinemedia.com/images/ATL1/munki2.jpg"
     },
     "http://www.masslinemedia.com/images/ATL1/munki3.jpg": {
-      "attempts": [],
+      "attempts": [
+        {
+          "at": "2026-10-22T06:11:13.292801+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20210529010817id_/http://www.masslinemedia.com/images/ATL1/munki3.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://www.masslinemedia.com/images/ATL1/munki3.jpg",
+          "requested_capture": "20210529010817",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-22T06:11:14.392283+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20170724002702id_/http://www.masslinemedia.com/images/ATL1/munki3.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20170724002702id_/http://www.masslinemedia.com/images/ATL1/munki3.jpg",
+          "requested_capture": "20170724002702",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-22T06:11:15.495370+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20170628191416id_/http://www.masslinemedia.com/images/ATL1/munki3.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20170628191416id_/http://www.masslinemedia.com/images/ATL1/munki3.jpg",
+          "requested_capture": "20170628191416",
+          "result": "failed"
+        }
+      ],
       "captures": [
         {
           "digest": "GBQDO5ZQQL674TZP5AMVLHGAPY6KY5FN",
@@ -707657,6 +707823,7 @@
         "20170423174431"
       ],
       "kind": "image",
+      "reason": "Untried capture dates or exact-URL index pages remain",
       "referrers": [
         "http://bluescholars.livejournal.com/",
         "CDX:exact:http://www.masslinemedia.com/images/ATL1/munki3.jpg",
@@ -707665,8 +707832,21 @@
         "http://bluescholars.livejournal.com/16015.html?thread=50319",
         "http://bluescholars.livejournal.com/16015.html?thread=49295"
       ],
-      "status": "queued",
-      "url": "http://www.masslinemedia.com/images/ATL1/munki3.jpg"
+      "status": "recovered",
+      "url": "http://www.masslinemedia.com/images/ATL1/munki3.jpg",
+      "sha256": "78c9c3180227df49176ee2754a753d7be07446325edf8bb3edbacc6e8ee8a0f3",
+      "bytes": 330603,
+      "raw_path": "source/raw/78c9c3180227df49176ee2754a753d7be07446325edf8bb3edbacc6e8ee8a0f3.jpg",
+      "content_type": "image/jpeg",
+      "actual_capture": "20081009133939",
+      "final_url": "https://web.archive.org/web/20081009133939id_/http://www.masslinemedia.com/images/ATL1/munki3.jpg",
+      "final_original": "http://www.masslinemedia.com/images/ATL1/munki3.jpg",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20081009133939",
+      "recovery_origin": "source/massline.json",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Exact source URL linked by saved LiveJournal posts. Reused existing validated Massline capture, not a new download. Contact sheet inspected; original capture timestamp and hash retained."
     },
     "http://www.masslinemedia.com/images/ATL1/munki3.jpg@@wayback:20071013190300:78c9c3180227": {
       "actual_capture": "20071013190300",
@@ -707715,7 +707895,29 @@
       "url": "http://www.masslinemedia.com/images/ATL1/munki3.jpg"
     },
     "http://www.masslinemedia.com/images/ATL1/nice.jpg": {
-      "attempts": [],
+      "attempts": [
+        {
+          "at": "2026-10-22T06:10:39.248297+00:00",
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20210529010817id_/http://www.masslinemedia.com/images/ATL1/nice.jpg (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x106e7a890>, 'Connection to web.archive.org timed out. (connect timeout=8)'))",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://www.masslinemedia.com/images/ATL1/nice.jpg",
+          "requested_capture": "20210529010817",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-22T06:10:48.346071+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20170724002702id_/http://www.masslinemedia.com/images/ATL1/nice.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20170724002702id_/http://www.masslinemedia.com/images/ATL1/nice.jpg",
+          "requested_capture": "20170724002702",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-22T06:10:49.419074+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20170628191416id_/http://www.masslinemedia.com/images/ATL1/nice.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20170628191416id_/http://www.masslinemedia.com/images/ATL1/nice.jpg",
+          "requested_capture": "20170628191416",
+          "result": "failed"
+        }
+      ],
       "captures": [
         {
           "digest": "3D4U7UHHV3ZBX5HPHTQRVZ43METGKZYQ",
@@ -707741,6 +707943,7 @@
         "20170423174431"
       ],
       "kind": "image",
+      "reason": "Untried capture dates or exact-URL index pages remain",
       "referrers": [
         "http://bluescholars.livejournal.com/",
         "CDX:exact:http://www.masslinemedia.com/images/ATL1/nice.jpg",
@@ -707749,8 +707952,21 @@
         "http://bluescholars.livejournal.com/16015.html?thread=50319",
         "http://bluescholars.livejournal.com/16015.html?thread=49295"
       ],
-      "status": "queued",
-      "url": "http://www.masslinemedia.com/images/ATL1/nice.jpg"
+      "status": "recovered",
+      "url": "http://www.masslinemedia.com/images/ATL1/nice.jpg",
+      "sha256": "13ac1df3fabcd5f17181ae6b0049f9e1f61bb145a76c5204d397959126f89e84",
+      "bytes": 171947,
+      "raw_path": "source/raw/13ac1df3fabcd5f17181ae6b0049f9e1f61bb145a76c5204d397959126f89e84.jpg",
+      "content_type": "image/jpeg",
+      "actual_capture": "20081009134013",
+      "final_url": "https://web.archive.org/web/20081009134013id_/http://www.masslinemedia.com/images/ATL1/nice.jpg",
+      "final_original": "http://www.masslinemedia.com/images/ATL1/nice.jpg",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20081009134013",
+      "recovery_origin": "source/massline.json",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Exact source URL linked by saved LiveJournal posts. Reused existing validated Massline capture, not a new download. Contact sheet inspected; original capture timestamp and hash retained."
     },
     "http://www.masslinemedia.com/images/ATL1/nice.jpg@@wayback:20071013190346:13ac1df3fabc": {
       "actual_capture": "20071013190346",
@@ -707799,7 +708015,29 @@
       "url": "http://www.masslinemedia.com/images/ATL1/nice.jpg"
     },
     "http://www.masslinemedia.com/images/ATL1/talib.jpg": {
-      "attempts": [],
+      "attempts": [
+        {
+          "at": "2026-10-22T06:10:51.590750+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20210529010817id_/http://www.masslinemedia.com/images/ATL1/talib.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://www.masslinemedia.com/images/ATL1/talib.jpg",
+          "requested_capture": "20210529010817",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-22T06:10:52.659100+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20170724002702id_/http://www.masslinemedia.com/images/ATL1/talib.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20170724002702id_/http://www.masslinemedia.com/images/ATL1/talib.jpg",
+          "requested_capture": "20170724002702",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-22T06:10:53.747193+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20170628191416id_/http://www.masslinemedia.com/images/ATL1/talib.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20170628191416id_/http://www.masslinemedia.com/images/ATL1/talib.jpg",
+          "requested_capture": "20170628191416",
+          "result": "failed"
+        }
+      ],
       "captures": [
         {
           "digest": "XZJ5TYBGIBZBGYU3IBUU2QNPCXCGYTKX",
@@ -707825,6 +708063,7 @@
         "20170423174431"
       ],
       "kind": "image",
+      "reason": "Untried capture dates or exact-URL index pages remain",
       "referrers": [
         "http://bluescholars.livejournal.com/",
         "CDX:exact:http://www.masslinemedia.com/images/ATL1/talib.jpg",
@@ -707833,8 +708072,21 @@
         "http://bluescholars.livejournal.com/16015.html?thread=50319",
         "http://bluescholars.livejournal.com/16015.html?thread=49295"
       ],
-      "status": "queued",
-      "url": "http://www.masslinemedia.com/images/ATL1/talib.jpg"
+      "status": "recovered",
+      "url": "http://www.masslinemedia.com/images/ATL1/talib.jpg",
+      "sha256": "325d7e882e6250caf1559accdae8c84d78f4d67d0eac0a138cb7b1380be38dd8",
+      "bytes": 192835,
+      "raw_path": "source/raw/325d7e882e6250caf1559accdae8c84d78f4d67d0eac0a138cb7b1380be38dd8.jpg",
+      "content_type": "image/jpeg",
+      "actual_capture": "20081009133958",
+      "final_url": "https://web.archive.org/web/20081009133958id_/http://www.masslinemedia.com/images/ATL1/talib.jpg",
+      "final_original": "http://www.masslinemedia.com/images/ATL1/talib.jpg",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20081009133958",
+      "recovery_origin": "source/massline.json",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Exact source URL linked by saved LiveJournal posts. Reused existing validated Massline capture, not a new download. Contact sheet inspected; original capture timestamp and hash retained."
     },
     "http://www.masslinemedia.com/images/ATL1/talib.jpg@@wayback:20071013190327:325d7e882e62": {
       "actual_capture": "20071013190327",
@@ -707883,7 +708135,29 @@
       "url": "http://www.masslinemedia.com/images/ATL1/talib.jpg"
     },
     "http://www.masslinemedia.com/images/ATL1/wrek1.jpg": {
-      "attempts": [],
+      "attempts": [
+        {
+          "at": "2026-10-22T06:10:55.918163+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20210529010817id_/http://www.masslinemedia.com/images/ATL1/wrek1.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://www.masslinemedia.com/images/ATL1/wrek1.jpg",
+          "requested_capture": "20210529010817",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-22T06:10:56.998804+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20170724002702id_/http://www.masslinemedia.com/images/ATL1/wrek1.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20170724002702id_/http://www.masslinemedia.com/images/ATL1/wrek1.jpg",
+          "requested_capture": "20170724002702",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-22T06:10:58.094580+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20170628191416id_/http://www.masslinemedia.com/images/ATL1/wrek1.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20170628191416id_/http://www.masslinemedia.com/images/ATL1/wrek1.jpg",
+          "requested_capture": "20170628191416",
+          "result": "failed"
+        }
+      ],
       "captures": [
         {
           "digest": "UZSI455QJ756IPFDW2ZK6K3NAR3HCP77",
@@ -707909,6 +708183,7 @@
         "20170423174431"
       ],
       "kind": "image",
+      "reason": "Untried capture dates or exact-URL index pages remain",
       "referrers": [
         "http://bluescholars.livejournal.com/",
         "CDX:exact:http://www.masslinemedia.com/images/ATL1/wrek1.jpg",
@@ -707917,8 +708192,21 @@
         "http://bluescholars.livejournal.com/16015.html?thread=50319",
         "http://bluescholars.livejournal.com/16015.html?thread=49295"
       ],
-      "status": "queued",
-      "url": "http://www.masslinemedia.com/images/ATL1/wrek1.jpg"
+      "status": "recovered",
+      "url": "http://www.masslinemedia.com/images/ATL1/wrek1.jpg",
+      "sha256": "ba0dee582820f60038b7a6444cb305e3741d0231dc11653ce2c831f45ecfd946",
+      "bytes": 154803,
+      "raw_path": "source/raw/ba0dee582820f60038b7a6444cb305e3741d0231dc11653ce2c831f45ecfd946.jpg",
+      "content_type": "image/jpeg",
+      "actual_capture": "20081009134118",
+      "final_url": "https://web.archive.org/web/20081009134118id_/http://www.masslinemedia.com/images/ATL1/wrek1.jpg",
+      "final_original": "http://www.masslinemedia.com/images/ATL1/wrek1.jpg",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20081009134118",
+      "recovery_origin": "source/massline.json",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Exact source URL linked by saved LiveJournal posts. Reused existing validated Massline capture, not a new download. Contact sheet inspected; original capture timestamp and hash retained."
     },
     "http://www.masslinemedia.com/images/ATL1/wrek1.jpg@@wayback:20071013190155:ba0dee582820": {
       "actual_capture": "20071013190155",
@@ -707967,7 +708255,29 @@
       "url": "http://www.masslinemedia.com/images/ATL1/wrek1.jpg"
     },
     "http://www.masslinemedia.com/images/ATL1/wrek2.jpg": {
-      "attempts": [],
+      "attempts": [
+        {
+          "at": "2026-10-22T06:11:00.264756+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20210529010817id_/http://www.masslinemedia.com/images/ATL1/wrek2.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://www.masslinemedia.com/images/ATL1/wrek2.jpg",
+          "requested_capture": "20210529010817",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-22T06:11:01.335654+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20170724002702id_/http://www.masslinemedia.com/images/ATL1/wrek2.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20170724002702id_/http://www.masslinemedia.com/images/ATL1/wrek2.jpg",
+          "requested_capture": "20170724002702",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-22T06:11:02.406663+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20170628191416id_/http://www.masslinemedia.com/images/ATL1/wrek2.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20170628191416id_/http://www.masslinemedia.com/images/ATL1/wrek2.jpg",
+          "requested_capture": "20170628191416",
+          "result": "failed"
+        }
+      ],
       "captures": [
         {
           "digest": "RSVA5LFH4ERD6SLZ2BRGV6WR3EULHXDU",
@@ -707993,6 +708303,7 @@
         "20170423174431"
       ],
       "kind": "image",
+      "reason": "Untried capture dates or exact-URL index pages remain",
       "referrers": [
         "http://bluescholars.livejournal.com/",
         "CDX:exact:http://www.masslinemedia.com/images/ATL1/wrek2.jpg",
@@ -708001,8 +708312,21 @@
         "http://bluescholars.livejournal.com/16015.html?thread=50319",
         "http://bluescholars.livejournal.com/16015.html?thread=49295"
       ],
-      "status": "queued",
-      "url": "http://www.masslinemedia.com/images/ATL1/wrek2.jpg"
+      "status": "recovered",
+      "url": "http://www.masslinemedia.com/images/ATL1/wrek2.jpg",
+      "sha256": "5e41e0a6e457ab040967f58b7a3c08716fe939aa243e2ffb6ac011f089b72b89",
+      "bytes": 202528,
+      "raw_path": "source/raw/5e41e0a6e457ab040967f58b7a3c08716fe939aa243e2ffb6ac011f089b72b89.jpg",
+      "content_type": "image/jpeg",
+      "actual_capture": "20081009134055",
+      "final_url": "https://web.archive.org/web/20081009134055id_/http://www.masslinemedia.com/images/ATL1/wrek2.jpg",
+      "final_original": "http://www.masslinemedia.com/images/ATL1/wrek2.jpg",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20081009134055",
+      "recovery_origin": "source/massline.json",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Exact source URL linked by saved LiveJournal posts. Reused existing validated Massline capture, not a new download. Contact sheet inspected; original capture timestamp and hash retained."
     },
     "http://www.masslinemedia.com/images/ATL1/wrek2.jpg@@wayback:20071013190249:5e41e0a6e457": {
       "actual_capture": "20071013190249",
@@ -708148,7 +708472,29 @@
       "url": "http://www.masslinemedia.com/images/jupiter/jupitersign.jpg"
     },
     "http://www.masslinemedia.com/images/jupiter/mack.jpg": {
-      "attempts": [],
+      "attempts": [
+        {
+          "at": "2026-10-22T06:11:17.655343+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20210529010817id_/http://www.masslinemedia.com/images/jupiter/mack.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://www.masslinemedia.com/images/jupiter/mack.jpg",
+          "requested_capture": "20210529010817",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-22T06:11:18.730245+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20111002074446id_/http://www.masslinemedia.com/images/jupiter/mack.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20111002074446id_/http://www.masslinemedia.com/images/jupiter/mack.jpg",
+          "requested_capture": "20111002074446",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-22T06:11:19.799653+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20111002074441id_/http://www.masslinemedia.com/images/jupiter/mack.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20111002074441id_/http://www.masslinemedia.com/images/jupiter/mack.jpg",
+          "requested_capture": "20111002074441",
+          "result": "failed"
+        }
+      ],
       "captures": [
         {
           "digest": "Z3IIIKZKMGEZY4UISVBRMTZGUDVJ3TSL",
@@ -708162,16 +708508,41 @@
         "20090125012333",
         "20110812180628",
         "20111002074201",
-        "20111002073201"
+        "20111002073201",
+        "20111002074446",
+        "20111002074004",
+        "20111002074400",
+        "20111002074441"
       ],
       "kind": "image",
+      "reason": "Untried capture dates or exact-URL index pages remain",
       "referrers": [
         "http://bluescholars.livejournal.com/16954.html",
         "http://bluescholars.livejournal.com/",
-        "CDX:exact:http://www.masslinemedia.com/images/jupiter/mack.jpg"
+        "CDX:exact:http://www.masslinemedia.com/images/jupiter/mack.jpg",
+        "http://bluescholars.livejournal.com/16954.html?mode=reply",
+        "https://bluescholars.livejournal.com/16954.html?thread=50490",
+        "http://bluescholars.livejournal.com/16954.html?thread=50490",
+        "https://bluescholars.livejournal.com/16954.html?thread=50746",
+        "http://bluescholars.livejournal.com/16954.html?thread=50746",
+        "http://bluescholars.livejournal.com/16954.html?thread=51002",
+        "https://bluescholars.livejournal.com/16954.html?thread=51002"
       ],
-      "status": "queued",
-      "url": "http://www.masslinemedia.com/images/jupiter/mack.jpg"
+      "status": "recovered",
+      "url": "http://www.masslinemedia.com/images/jupiter/mack.jpg",
+      "sha256": "f65a92da3b491be58c66fff05aaf681b578719947d2e8b2b9b207951ba2bf37e",
+      "bytes": 117626,
+      "raw_path": "source/raw/f65a92da3b491be58c66fff05aaf681b578719947d2e8b2b9b207951ba2bf37e.jpg",
+      "content_type": "image/jpeg",
+      "actual_capture": "20071014001417",
+      "final_url": "https://web.archive.org/web/20071014001417id_/http://www.masslinemedia.com/images/jupiter/mack.jpg",
+      "final_original": "http://www.masslinemedia.com/images/jupiter/mack.jpg",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20071014001417",
+      "recovery_origin": "source/massline.json",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Exact source URL linked by saved LiveJournal posts. Reused existing validated Massline capture, not a new download. Contact sheet inspected; original capture timestamp and hash retained."
     },
     "http://www.masslinemedia.com/images/jupiter/mack.jpg@@wayback:20071014001417:f65a92da3b49": {
       "actual_capture": "20071014001417",
@@ -708197,7 +708568,29 @@
       "url": "http://www.masslinemedia.com/images/jupiter/mack.jpg"
     },
     "http://www.masslinemedia.com/images/jupiter/pic1.jpg": {
-      "attempts": [],
+      "attempts": [
+        {
+          "at": "2026-10-22T06:11:21.976037+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20210529010817id_/http://www.masslinemedia.com/images/jupiter/pic1.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://www.masslinemedia.com/images/jupiter/pic1.jpg",
+          "requested_capture": "20210529010817",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-22T06:11:23.050722+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20111002074446id_/http://www.masslinemedia.com/images/jupiter/pic1.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20111002074446id_/http://www.masslinemedia.com/images/jupiter/pic1.jpg",
+          "requested_capture": "20111002074446",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-22T06:11:24.130910+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20111002074441id_/http://www.masslinemedia.com/images/jupiter/pic1.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20111002074441id_/http://www.masslinemedia.com/images/jupiter/pic1.jpg",
+          "requested_capture": "20111002074441",
+          "result": "failed"
+        }
+      ],
       "captures": [
         {
           "digest": "VTWUAMNNOK2FO454VPHVYDEZNSRRJFOP",
@@ -708211,16 +708604,41 @@
         "20090125012333",
         "20110812180628",
         "20111002074201",
-        "20111002073201"
+        "20111002073201",
+        "20111002074446",
+        "20111002074004",
+        "20111002074400",
+        "20111002074441"
       ],
       "kind": "image",
+      "reason": "Untried capture dates or exact-URL index pages remain",
       "referrers": [
         "http://bluescholars.livejournal.com/16954.html",
         "CDX:exact:http://www.masslinemedia.com/images/jupiter/pic1.jpg",
-        "http://bluescholars.livejournal.com/"
+        "http://bluescholars.livejournal.com/",
+        "http://bluescholars.livejournal.com/16954.html?mode=reply",
+        "https://bluescholars.livejournal.com/16954.html?thread=50490",
+        "http://bluescholars.livejournal.com/16954.html?thread=50490",
+        "https://bluescholars.livejournal.com/16954.html?thread=50746",
+        "http://bluescholars.livejournal.com/16954.html?thread=50746",
+        "http://bluescholars.livejournal.com/16954.html?thread=51002",
+        "https://bluescholars.livejournal.com/16954.html?thread=51002"
       ],
-      "status": "queued",
-      "url": "http://www.masslinemedia.com/images/jupiter/pic1.jpg"
+      "status": "recovered",
+      "url": "http://www.masslinemedia.com/images/jupiter/pic1.jpg",
+      "sha256": "5ad94ea2ac2220df3456fc3b108f6d53eb076bd87306c5bf027f4575130474ec",
+      "bytes": 179718,
+      "raw_path": "source/raw/5ad94ea2ac2220df3456fc3b108f6d53eb076bd87306c5bf027f4575130474ec.jpg",
+      "content_type": "image/jpeg",
+      "actual_capture": "20071014001353",
+      "final_url": "https://web.archive.org/web/20071014001353id_/http://www.masslinemedia.com/images/jupiter/pic1.jpg",
+      "final_original": "http://www.masslinemedia.com/images/jupiter/pic1.jpg",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20071014001353",
+      "recovery_origin": "source/massline.json",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Exact source URL linked by saved LiveJournal posts. Reused existing validated Massline capture, not a new download. Contact sheet inspected; original capture timestamp and hash retained."
     },
     "http://www.masslinemedia.com/images/jupiter/pic1.jpg@@wayback:20071014001353:5ad94ea2ac22": {
       "actual_capture": "20071014001353",
@@ -708246,7 +708664,29 @@
       "url": "http://www.masslinemedia.com/images/jupiter/pic1.jpg"
     },
     "http://www.masslinemedia.com/images/jupiter/pic2.jpg": {
-      "attempts": [],
+      "attempts": [
+        {
+          "at": "2026-10-22T06:11:26.290930+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20210529010817id_/http://www.masslinemedia.com/images/jupiter/pic2.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://www.masslinemedia.com/images/jupiter/pic2.jpg",
+          "requested_capture": "20210529010817",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-22T06:11:27.362400+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20111002074446id_/http://www.masslinemedia.com/images/jupiter/pic2.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20111002074446id_/http://www.masslinemedia.com/images/jupiter/pic2.jpg",
+          "requested_capture": "20111002074446",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-22T06:11:28.455581+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20111002074441id_/http://www.masslinemedia.com/images/jupiter/pic2.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20111002074441id_/http://www.masslinemedia.com/images/jupiter/pic2.jpg",
+          "requested_capture": "20111002074441",
+          "result": "failed"
+        }
+      ],
       "captures": [
         {
           "digest": "5XROKVCRHSARX27GLABFRG5NKDMRNRGZ",
@@ -708260,16 +708700,41 @@
         "20090125012333",
         "20110812180628",
         "20111002074201",
-        "20111002073201"
+        "20111002073201",
+        "20111002074446",
+        "20111002074004",
+        "20111002074400",
+        "20111002074441"
       ],
       "kind": "image",
+      "reason": "Untried capture dates or exact-URL index pages remain",
       "referrers": [
         "http://bluescholars.livejournal.com/16954.html",
         "CDX:exact:http://www.masslinemedia.com/images/jupiter/pic2.jpg",
-        "http://bluescholars.livejournal.com/"
+        "http://bluescholars.livejournal.com/",
+        "http://bluescholars.livejournal.com/16954.html?mode=reply",
+        "https://bluescholars.livejournal.com/16954.html?thread=50490",
+        "http://bluescholars.livejournal.com/16954.html?thread=50490",
+        "https://bluescholars.livejournal.com/16954.html?thread=50746",
+        "http://bluescholars.livejournal.com/16954.html?thread=50746",
+        "http://bluescholars.livejournal.com/16954.html?thread=51002",
+        "https://bluescholars.livejournal.com/16954.html?thread=51002"
       ],
-      "status": "queued",
-      "url": "http://www.masslinemedia.com/images/jupiter/pic2.jpg"
+      "status": "recovered",
+      "url": "http://www.masslinemedia.com/images/jupiter/pic2.jpg",
+      "sha256": "62d18b6e42601b6035f705dab1551ebc0c76b06646ae1a1ccbe2abbb8a030714",
+      "bytes": 173763,
+      "raw_path": "source/raw/62d18b6e42601b6035f705dab1551ebc0c76b06646ae1a1ccbe2abbb8a030714.jpg",
+      "content_type": "image/jpeg",
+      "actual_capture": "20071014001526",
+      "final_url": "https://web.archive.org/web/20071014001526id_/http://www.masslinemedia.com/images/jupiter/pic2.jpg",
+      "final_original": "http://www.masslinemedia.com/images/jupiter/pic2.jpg",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20071014001526",
+      "recovery_origin": "source/massline.json",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Exact source URL linked by saved LiveJournal posts. Reused existing validated Massline capture, not a new download. Contact sheet inspected; original capture timestamp and hash retained."
     },
     "http://www.masslinemedia.com/images/jupiter/pic2.jpg@@wayback:20071014001526:62d18b6e4260": {
       "actual_capture": "20071014001526",
@@ -708295,7 +708760,29 @@
       "url": "http://www.masslinemedia.com/images/jupiter/pic2.jpg"
     },
     "http://www.masslinemedia.com/images/jupiter/pic3.jpg": {
-      "attempts": [],
+      "attempts": [
+        {
+          "at": "2026-10-22T06:11:30.648202+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20210529010817id_/http://www.masslinemedia.com/images/jupiter/pic3.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://www.masslinemedia.com/images/jupiter/pic3.jpg",
+          "requested_capture": "20210529010817",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-22T06:11:31.726077+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20111002074446id_/http://www.masslinemedia.com/images/jupiter/pic3.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20111002074446id_/http://www.masslinemedia.com/images/jupiter/pic3.jpg",
+          "requested_capture": "20111002074446",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-22T06:11:32.810063+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20111002074441id_/http://www.masslinemedia.com/images/jupiter/pic3.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20111002074441id_/http://www.masslinemedia.com/images/jupiter/pic3.jpg",
+          "requested_capture": "20111002074441",
+          "result": "failed"
+        }
+      ],
       "captures": [
         {
           "digest": "OY75QT7PJGVLH4UC4YDP3QFMPYR7347Q",
@@ -708309,16 +708796,41 @@
         "20090125012333",
         "20110812180628",
         "20111002074201",
-        "20111002073201"
+        "20111002073201",
+        "20111002074446",
+        "20111002074004",
+        "20111002074400",
+        "20111002074441"
       ],
       "kind": "image",
+      "reason": "Untried capture dates or exact-URL index pages remain",
       "referrers": [
         "http://bluescholars.livejournal.com/16954.html",
         "CDX:exact:http://www.masslinemedia.com/images/jupiter/pic3.jpg",
-        "http://bluescholars.livejournal.com/"
+        "http://bluescholars.livejournal.com/",
+        "http://bluescholars.livejournal.com/16954.html?mode=reply",
+        "https://bluescholars.livejournal.com/16954.html?thread=50490",
+        "http://bluescholars.livejournal.com/16954.html?thread=50490",
+        "https://bluescholars.livejournal.com/16954.html?thread=50746",
+        "http://bluescholars.livejournal.com/16954.html?thread=50746",
+        "http://bluescholars.livejournal.com/16954.html?thread=51002",
+        "https://bluescholars.livejournal.com/16954.html?thread=51002"
       ],
-      "status": "queued",
-      "url": "http://www.masslinemedia.com/images/jupiter/pic3.jpg"
+      "status": "recovered",
+      "url": "http://www.masslinemedia.com/images/jupiter/pic3.jpg",
+      "sha256": "78c965f4731593d411cc3391db9eef49c4aa024147d51109152569c96b8e01c6",
+      "bytes": 145357,
+      "raw_path": "source/raw/78c965f4731593d411cc3391db9eef49c4aa024147d51109152569c96b8e01c6.jpg",
+      "content_type": "image/jpeg",
+      "actual_capture": "20071014001508",
+      "final_url": "https://web.archive.org/web/20071014001508id_/http://www.masslinemedia.com/images/jupiter/pic3.jpg",
+      "final_original": "http://www.masslinemedia.com/images/jupiter/pic3.jpg",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20071014001508",
+      "recovery_origin": "source/massline.json",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Exact source URL linked by saved LiveJournal posts. Reused existing validated Massline capture, not a new download. Contact sheet inspected; original capture timestamp and hash retained."
     },
     "http://www.masslinemedia.com/images/jupiter/pic3.jpg@@wayback:20071014001508:78c965f47315": {
       "actual_capture": "20071014001508",
@@ -708344,7 +708856,29 @@
       "url": "http://www.masslinemedia.com/images/jupiter/pic3.jpg"
     },
     "http://www.masslinemedia.com/images/jupiter/pic4.jpg": {
-      "attempts": [],
+      "attempts": [
+        {
+          "at": "2026-10-22T06:11:35.012115+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20210529010817id_/http://www.masslinemedia.com/images/jupiter/pic4.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://www.masslinemedia.com/images/jupiter/pic4.jpg",
+          "requested_capture": "20210529010817",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-22T06:11:36.104425+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20111002074446id_/http://www.masslinemedia.com/images/jupiter/pic4.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20111002074446id_/http://www.masslinemedia.com/images/jupiter/pic4.jpg",
+          "requested_capture": "20111002074446",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-22T06:11:37.189783+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20111002074441id_/http://www.masslinemedia.com/images/jupiter/pic4.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20111002074441id_/http://www.masslinemedia.com/images/jupiter/pic4.jpg",
+          "requested_capture": "20111002074441",
+          "result": "failed"
+        }
+      ],
       "captures": [
         {
           "digest": "4LK5OVQUXPA4Y2PH6DX67DIQPIP2ARDM",
@@ -708358,16 +708892,41 @@
         "20090125012333",
         "20110812180628",
         "20111002074201",
-        "20111002073201"
+        "20111002073201",
+        "20111002074446",
+        "20111002074004",
+        "20111002074400",
+        "20111002074441"
       ],
       "kind": "image",
+      "reason": "Untried capture dates or exact-URL index pages remain",
       "referrers": [
         "http://bluescholars.livejournal.com/16954.html",
         "http://bluescholars.livejournal.com/",
-        "CDX:exact:http://www.masslinemedia.com/images/jupiter/pic4.jpg"
+        "CDX:exact:http://www.masslinemedia.com/images/jupiter/pic4.jpg",
+        "http://bluescholars.livejournal.com/16954.html?mode=reply",
+        "https://bluescholars.livejournal.com/16954.html?thread=50490",
+        "http://bluescholars.livejournal.com/16954.html?thread=50490",
+        "https://bluescholars.livejournal.com/16954.html?thread=50746",
+        "http://bluescholars.livejournal.com/16954.html?thread=50746",
+        "http://bluescholars.livejournal.com/16954.html?thread=51002",
+        "https://bluescholars.livejournal.com/16954.html?thread=51002"
       ],
-      "status": "queued",
-      "url": "http://www.masslinemedia.com/images/jupiter/pic4.jpg"
+      "status": "recovered",
+      "url": "http://www.masslinemedia.com/images/jupiter/pic4.jpg",
+      "sha256": "8802cb4c147354260551fed26e48f46bd2022f4510f598a17bf41e284cedabfc",
+      "bytes": 190998,
+      "raw_path": "source/raw/8802cb4c147354260551fed26e48f46bd2022f4510f598a17bf41e284cedabfc.jpg",
+      "content_type": "image/jpeg",
+      "actual_capture": "20071014001455",
+      "final_url": "https://web.archive.org/web/20071014001455id_/http://www.masslinemedia.com/images/jupiter/pic4.jpg",
+      "final_original": "http://www.masslinemedia.com/images/jupiter/pic4.jpg",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20071014001455",
+      "recovery_origin": "source/massline.json",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Exact source URL linked by saved LiveJournal posts. Reused existing validated Massline capture, not a new download. Contact sheet inspected; original capture timestamp and hash retained."
     },
     "http://www.masslinemedia.com/images/jupiter/pic4.jpg@@wayback:20071014001455:8802cb4c1473": {
       "actual_capture": "20071014001455",
@@ -708393,7 +708952,29 @@
       "url": "http://www.masslinemedia.com/images/jupiter/pic4.jpg"
     },
     "http://www.masslinemedia.com/images/kirkland/blog1.jpg": {
-      "attempts": [],
+      "attempts": [
+        {
+          "at": "2026-10-22T06:11:43.705571+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20210529010817id_/http://www.masslinemedia.com/images/kirkland/blog1.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://www.masslinemedia.com/images/kirkland/blog1.jpg",
+          "requested_capture": "20210529010817",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-22T06:11:44.801937+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20111002074201id_/http://www.masslinemedia.com/images/kirkland/blog1.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20111002074201id_/http://www.masslinemedia.com/images/kirkland/blog1.jpg",
+          "requested_capture": "20111002074201",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-22T06:11:45.895198+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20110812180628id_/http://www.masslinemedia.com/images/kirkland/blog1.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20110812180628id_/http://www.masslinemedia.com/images/kirkland/blog1.jpg",
+          "requested_capture": "20110812180628",
+          "result": "failed"
+        }
+      ],
       "captures": [
         {
           "digest": "26GBDW6323RM675CNEAIPEF3B2PNB4JW",
@@ -708408,12 +708989,26 @@
         "20111002074201"
       ],
       "kind": "image",
+      "reason": "Untried capture dates or exact-URL index pages remain",
       "referrers": [
         "http://bluescholars.livejournal.com/",
         "CDX:exact:http://www.masslinemedia.com/images/kirkland/blog1.jpg"
       ],
-      "status": "queued",
-      "url": "http://www.masslinemedia.com/images/kirkland/blog1.jpg"
+      "status": "recovered",
+      "url": "http://www.masslinemedia.com/images/kirkland/blog1.jpg",
+      "sha256": "c723c1736068dee7bacc242dc278bfda9a45935701172ab13455a8692802e29b",
+      "bytes": 135174,
+      "raw_path": "source/raw/c723c1736068dee7bacc242dc278bfda9a45935701172ab13455a8692802e29b.jpg",
+      "content_type": "image/jpeg",
+      "actual_capture": "20071014001658",
+      "final_url": "https://web.archive.org/web/20071014001658id_/http://www.masslinemedia.com/images/kirkland/blog1.jpg",
+      "final_original": "http://www.masslinemedia.com/images/kirkland/blog1.jpg",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20071014001658",
+      "recovery_origin": "source/massline.json",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Exact source URL linked by saved LiveJournal posts. Reused existing validated Massline capture, not a new download. Contact sheet inspected; original capture timestamp and hash retained."
     },
     "http://www.masslinemedia.com/images/kirkland/blog1.jpg@@wayback:20071014001658:c723c1736068": {
       "actual_capture": "20071014001658",
@@ -708439,7 +709034,29 @@
       "url": "http://www.masslinemedia.com/images/kirkland/blog1.jpg"
     },
     "http://www.masslinemedia.com/images/kirkland/kirk1.jpg": {
-      "attempts": [],
+      "attempts": [
+        {
+          "at": "2026-10-22T06:11:48.061492+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20210529010817id_/http://www.masslinemedia.com/images/kirkland/kirk1.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://www.masslinemedia.com/images/kirkland/kirk1.jpg",
+          "requested_capture": "20210529010817",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-22T06:11:49.147375+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20111002074201id_/http://www.masslinemedia.com/images/kirkland/kirk1.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20111002074201id_/http://www.masslinemedia.com/images/kirkland/kirk1.jpg",
+          "requested_capture": "20111002074201",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-22T06:11:50.223825+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20110812180628id_/http://www.masslinemedia.com/images/kirkland/kirk1.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20110812180628id_/http://www.masslinemedia.com/images/kirkland/kirk1.jpg",
+          "requested_capture": "20110812180628",
+          "result": "failed"
+        }
+      ],
       "captures": [
         {
           "digest": "5WQ2PN32V7SMKYQ5ZAXAHQJ3BCVKS5OF",
@@ -708454,12 +709071,26 @@
         "20111002074201"
       ],
       "kind": "image",
+      "reason": "Untried capture dates or exact-URL index pages remain",
       "referrers": [
         "http://bluescholars.livejournal.com/",
         "CDX:exact:http://www.masslinemedia.com/images/kirkland/kirk1.jpg"
       ],
-      "status": "queued",
-      "url": "http://www.masslinemedia.com/images/kirkland/kirk1.jpg"
+      "status": "recovered",
+      "url": "http://www.masslinemedia.com/images/kirkland/kirk1.jpg",
+      "sha256": "b1f5a31df2643f2b1eba9d6ab7a2145db2b33436f10e9ae14e50641766f3f24d",
+      "bytes": 165183,
+      "raw_path": "source/raw/b1f5a31df2643f2b1eba9d6ab7a2145db2b33436f10e9ae14e50641766f3f24d.jpg",
+      "content_type": "image/jpeg",
+      "actual_capture": "20071014001644",
+      "final_url": "https://web.archive.org/web/20071014001644id_/http://www.masslinemedia.com/images/kirkland/kirk1.jpg",
+      "final_original": "http://www.masslinemedia.com/images/kirkland/kirk1.jpg",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20071014001644",
+      "recovery_origin": "source/massline.json",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Exact source URL linked by saved LiveJournal posts. Reused existing validated Massline capture, not a new download. Contact sheet inspected; original capture timestamp and hash retained."
     },
     "http://www.masslinemedia.com/images/kirkland/kirk1.jpg@@wayback:20071014001644:b1f5a31df264": {
       "actual_capture": "20071014001644",
@@ -708531,7 +709162,29 @@
       "url": "http://www.masslinemedia.com/images/kirkland/kirk2.jpg"
     },
     "http://www.masslinemedia.com/images/kirkland/kirk3.jpg": {
-      "attempts": [],
+      "attempts": [
+        {
+          "at": "2026-10-22T06:11:56.351836+00:00",
+          "error": "OSError: Archive HTTP 404: https://web.archive.org/web/20071014001623id_/http://www.masslinemedia.com/images/kirkland/kirk3.jpg",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://www.masslinemedia.com/images/kirkland/kirk3.jpg",
+          "requested_capture": "20210529010817",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-22T06:11:58.413901+00:00",
+          "error": "OSError: Archive HTTP 404: https://web.archive.org/web/20071014001623id_/http://www.masslinemedia.com/images/kirkland/kirk3.jpg",
+          "request_url": "https://web.archive.org/web/20111002074201id_/http://www.masslinemedia.com/images/kirkland/kirk3.jpg",
+          "requested_capture": "20111002074201",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-22T06:11:59.763661+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20110812180628id_/http://www.masslinemedia.com/images/kirkland/kirk3.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20110812180628id_/http://www.masslinemedia.com/images/kirkland/kirk3.jpg",
+          "requested_capture": "20110812180628",
+          "result": "failed"
+        }
+      ],
       "captures": [
         {
           "digest": "45O7OV3XTE5ZVKA6RWA7KUEBEGE3DFKZ",
@@ -708546,12 +709199,26 @@
         "20111002074201"
       ],
       "kind": "image",
+      "reason": "Untried capture dates or exact-URL index pages remain",
       "referrers": [
         "http://bluescholars.livejournal.com/",
         "CDX:exact:http://www.masslinemedia.com/images/kirkland/kirk3.jpg"
       ],
-      "status": "queued",
-      "url": "http://www.masslinemedia.com/images/kirkland/kirk3.jpg"
+      "status": "recovered",
+      "url": "http://www.masslinemedia.com/images/kirkland/kirk3.jpg",
+      "sha256": "02e4cf8eb3ca2996c0d7046be7423ba65cfb0dc15138fa7eb1175f5e29241b63",
+      "bytes": 149350,
+      "raw_path": "source/raw/02e4cf8eb3ca2996c0d7046be7423ba65cfb0dc15138fa7eb1175f5e29241b63.jpg",
+      "content_type": "image/jpeg",
+      "actual_capture": "20071014001623",
+      "final_url": "https://web.archive.org/web/20071014001623id_/http://www.masslinemedia.com/images/kirkland/kirk3.jpg",
+      "final_original": "http://www.masslinemedia.com/images/kirkland/kirk3.jpg",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20071014001623",
+      "recovery_origin": "source/massline.json",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Exact source URL linked by saved LiveJournal posts. Reused existing validated Massline capture, not a new download. Contact sheet inspected; original capture timestamp and hash retained."
     },
     "http://www.masslinemedia.com/images/kirkland/kirk3.jpg@@wayback:20071014001623:02e4cf8eb3ca": {
       "actual_capture": "20071014001623",
@@ -708577,7 +709244,29 @@
       "url": "http://www.masslinemedia.com/images/kirkland/kirk3.jpg"
     },
     "http://www.masslinemedia.com/images/kirkland/kirk4.jpg": {
-      "attempts": [],
+      "attempts": [
+        {
+          "at": "2026-10-22T06:12:01.968551+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20210529010817id_/http://www.masslinemedia.com/images/kirkland/kirk4.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://www.masslinemedia.com/images/kirkland/kirk4.jpg",
+          "requested_capture": "20210529010817",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-22T06:12:03.047473+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20111002074201id_/http://www.masslinemedia.com/images/kirkland/kirk4.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20111002074201id_/http://www.masslinemedia.com/images/kirkland/kirk4.jpg",
+          "requested_capture": "20111002074201",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-22T06:12:04.128658+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20110812180628id_/http://www.masslinemedia.com/images/kirkland/kirk4.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20110812180628id_/http://www.masslinemedia.com/images/kirkland/kirk4.jpg",
+          "requested_capture": "20110812180628",
+          "result": "failed"
+        }
+      ],
       "captures": [
         {
           "digest": "X3GOX36HLX6ZANUYOXF5DNKYLGE2JV6O",
@@ -708592,12 +709281,26 @@
         "20111002074201"
       ],
       "kind": "image",
+      "reason": "Untried capture dates or exact-URL index pages remain",
       "referrers": [
         "http://bluescholars.livejournal.com/",
         "CDX:exact:http://www.masslinemedia.com/images/kirkland/kirk4.jpg"
       ],
-      "status": "queued",
-      "url": "http://www.masslinemedia.com/images/kirkland/kirk4.jpg"
+      "status": "recovered",
+      "url": "http://www.masslinemedia.com/images/kirkland/kirk4.jpg",
+      "sha256": "c290153e93ab030aa52725c73dc3430320841f4a843bf286ca952c34e8d64180",
+      "bytes": 166147,
+      "raw_path": "source/raw/c290153e93ab030aa52725c73dc3430320841f4a843bf286ca952c34e8d64180.jpg",
+      "content_type": "image/jpeg",
+      "actual_capture": "20071014001736",
+      "final_url": "https://web.archive.org/web/20071014001736id_/http://www.masslinemedia.com/images/kirkland/kirk4.jpg",
+      "final_original": "http://www.masslinemedia.com/images/kirkland/kirk4.jpg",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20071014001736",
+      "recovery_origin": "source/massline.json",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Exact source URL linked by saved LiveJournal posts. Reused existing validated Massline capture, not a new download. Contact sheet inspected; original capture timestamp and hash retained."
     },
     "http://www.masslinemedia.com/images/kirkland/kirk4.jpg@@wayback:20071014001736:c290153e93ab": {
       "actual_capture": "20071014001736",
@@ -899041,6 +899744,414 @@
       "source_requested_capture": "20060205124442",
       "source_reviewed": true,
       "rights_note": "Original Blue Scholars domain; historical product artwork, dated capture."
+    },
+    "http://bluescholars.livejournal.com/friends@@wayback:20111002074355:390d82f8a33a": {
+      "actual_capture": "20111002074355",
+      "attempts": [],
+      "bytes": 19379,
+      "captures": [],
+      "content_type": "text/html; charset=utf-8",
+      "final_original": "http://bluescholars.livejournal.com/friends",
+      "final_url": "https://web.archive.org/web/20111002074355id_/http://bluescholars.livejournal.com/friends",
+      "hints": [],
+      "kind": "html",
+      "raw_path": "source/raw/390d82f8a33a94a45b2c6cb54cfba330fbb82f3f7ed72a9099ed4a053e9e623e.html",
+      "referrers": [
+        "explicit-capture-request"
+      ],
+      "retrieved_at": "2026-10-29T04:00:54.852874+00:00",
+      "sha256": "390d82f8a33a94a45b2c6cb54cfba330fbb82f3f7ed72a9099ed4a053e9e623e",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20111002074355",
+      "status": "recovered",
+      "url": "http://bluescholars.livejournal.com/friends",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Original LJ navigation graphic visually inspected, or page text inspected; provider-error and payload validation passed. Empty friends feed retained as navigation evidence, not new posts."
+    },
+    "http://l-stat.livejournal.com/horizon/livejournal.png@@wayback:20110811192730:864a58456105": {
+      "actual_capture": "20110811192730",
+      "attempts": [],
+      "bytes": 4257,
+      "captures": [],
+      "content_type": "image/png",
+      "final_original": "http://l-stat.livejournal.com/horizon/livejournal.png",
+      "final_url": "https://web.archive.org/web/20110811192730id_/http://l-stat.livejournal.com/horizon/livejournal.png",
+      "hints": [],
+      "kind": "image",
+      "raw_path": "source/raw/864a584561051384bc8bfff47ce4cb2817284627fda2cb9879c2dc7c5a6b097b.png",
+      "referrers": [
+        "explicit-capture-request"
+      ],
+      "retrieved_at": "2026-10-29T04:01:03.175441+00:00",
+      "sha256": "864a584561051384bc8bfff47ce4cb2817284627fda2cb9879c2dc7c5a6b097b",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20110812180252",
+      "status": "recovered",
+      "url": "http://l-stat.livejournal.com/horizon/livejournal.png",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Original LJ navigation graphic visually inspected, or page text inspected; provider-error and payload validation passed. Empty friends feed retained as navigation evidence, not new posts."
+    },
+    "http://l-stat.livejournal.com/horizon/logo.png@@wayback:20110811192735:fe76d8225686": {
+      "actual_capture": "20110811192735",
+      "attempts": [],
+      "bytes": 6414,
+      "captures": [],
+      "content_type": "image/png",
+      "final_original": "http://l-stat.livejournal.com/horizon/logo.png",
+      "final_url": "https://web.archive.org/web/20110811192735id_/http://l-stat.livejournal.com/horizon/logo.png",
+      "hints": [],
+      "kind": "image",
+      "raw_path": "source/raw/fe76d8225686287040bfbe993d3d986b2ac8e561ee82b16a408ef94bddff22a0.png",
+      "referrers": [
+        "explicit-capture-request"
+      ],
+      "retrieved_at": "2026-10-29T04:01:11.336227+00:00",
+      "sha256": "fe76d8225686287040bfbe993d3d986b2ac8e561ee82b16a408ef94bddff22a0",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20110812180252",
+      "status": "recovered",
+      "url": "http://l-stat.livejournal.com/horizon/logo.png",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Original LJ navigation graphic visually inspected, or page text inspected; provider-error and payload validation passed. Empty friends feed retained as navigation evidence, not new posts."
+    },
+    "http://l-stat.livejournal.com/img/userinfo.gif@@wayback:20110812165707:c1f7e7bfedf7": {
+      "actual_capture": "20110812165707",
+      "attempts": [],
+      "bytes": 258,
+      "captures": [],
+      "content_type": "image/gif",
+      "final_original": "http://l-stat.livejournal.com/img/userinfo.gif",
+      "final_url": "https://web.archive.org/web/20110812165707id_/http://l-stat.livejournal.com/img/userinfo.gif",
+      "hints": [],
+      "kind": "image",
+      "raw_path": "source/raw/c1f7e7bfedf7df17af19f191ff4712a17ab0daad7aa898db57c958bdd3f286f0.gif",
+      "referrers": [
+        "explicit-capture-request"
+      ],
+      "retrieved_at": "2026-10-29T04:01:27.582614+00:00",
+      "sha256": "c1f7e7bfedf7df17af19f191ff4712a17ab0daad7aa898db57c958bdd3f286f0",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20110812180252",
+      "status": "recovered",
+      "url": "http://l-stat.livejournal.com/img/userinfo.gif",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Original LJ navigation graphic visually inspected, or page text inspected; provider-error and payload validation passed. Empty friends feed retained as navigation evidence, not new posts."
+    },
+    "http://l-stat.livejournal.com/img/btn_memories.gif@@wayback:20110811093854:fc0cf687367c": {
+      "actual_capture": "20110811093854",
+      "attempts": [],
+      "bytes": 946,
+      "captures": [],
+      "content_type": "image/gif",
+      "final_original": "http://l-stat.livejournal.com/img/btn_memories.gif",
+      "final_url": "https://web.archive.org/web/20110811093854id_/http://l-stat.livejournal.com/img/btn_memories.gif",
+      "hints": [],
+      "kind": "image",
+      "raw_path": "source/raw/fc0cf687367c84f7f6839dc614c36f3de4ddf982c96442530d64ac4c44a89c3d.gif",
+      "referrers": [
+        "explicit-capture-request"
+      ],
+      "retrieved_at": "2026-10-29T04:01:35.494463+00:00",
+      "sha256": "fc0cf687367c84f7f6839dc614c36f3de4ddf982c96442530d64ac4c44a89c3d",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20110812180628",
+      "status": "recovered",
+      "url": "http://l-stat.livejournal.com/img/btn_memories.gif",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Original LJ navigation graphic visually inspected, or page text inspected; provider-error and payload validation passed. Empty friends feed retained as navigation evidence, not new posts."
+    },
+    "http://l-stat.livejournal.com/img/btn_tellfriend.gif@@wayback:20110818161328:2ca963950d05": {
+      "actual_capture": "20110818161328",
+      "attempts": [],
+      "bytes": 784,
+      "captures": [],
+      "content_type": "image/gif",
+      "final_original": "http://l-stat.livejournal.com/img/btn_tellfriend.gif",
+      "final_url": "https://web.archive.org/web/20110818161328id_/http://l-stat.livejournal.com/img/btn_tellfriend.gif",
+      "hints": [],
+      "kind": "image",
+      "raw_path": "source/raw/2ca963950d05be6d5a0fbf7b9ffbccf85f21f1b84854e7ce5866b7e7dea1630a.gif",
+      "referrers": [
+        "explicit-capture-request"
+      ],
+      "retrieved_at": "2026-10-29T04:01:43.991333+00:00",
+      "sha256": "2ca963950d05be6d5a0fbf7b9ffbccf85f21f1b84854e7ce5866b7e7dea1630a",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20110812180628",
+      "status": "recovered",
+      "url": "http://l-stat.livejournal.com/img/btn_tellfriend.gif",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Original LJ navigation graphic visually inspected, or page text inspected; provider-error and payload validation passed. Empty friends feed retained as navigation evidence, not new posts."
+    },
+    "http://l-stat.livejournal.com/img/community.gif@@wayback:20111004211337:9346708572a0": {
+      "actual_capture": "20111004211337",
+      "attempts": [],
+      "bytes": 163,
+      "captures": [],
+      "content_type": "image/gif",
+      "final_original": "http://l-stat.livejournal.com/img/community.gif",
+      "final_url": "https://web.archive.org/web/20111004211337id_/http://l-stat.livejournal.com/img/community.gif",
+      "hints": [],
+      "kind": "image",
+      "raw_path": "source/raw/9346708572a0939d6d1a0818e1d623a37d74f17b1f1a25b093dc615f0751f164.gif",
+      "referrers": [
+        "explicit-capture-request"
+      ],
+      "retrieved_at": "2026-10-29T04:01:51.829985+00:00",
+      "sha256": "9346708572a0939d6d1a0818e1d623a37d74f17b1f1a25b093dc615f0751f164",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20111002074015",
+      "status": "recovered",
+      "url": "http://l-stat.livejournal.com/img/community.gif",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Original LJ navigation graphic visually inspected, or page text inspected; provider-error and payload validation passed. Empty friends feed retained as navigation evidence, not new posts."
+    },
+    "http://l-stat.livejournal.com/img/profile_icons/user.gif@@wayback:20111004211326:7f9d52b861ea": {
+      "actual_capture": "20111004211326",
+      "attempts": [],
+      "bytes": 1507,
+      "captures": [],
+      "content_type": "image/gif",
+      "final_original": "http://l-stat.livejournal.com/img/profile_icons/user.gif",
+      "final_url": "https://web.archive.org/web/20111004211326id_/http://l-stat.livejournal.com/img/profile_icons/user.gif",
+      "hints": [],
+      "kind": "image",
+      "raw_path": "source/raw/7f9d52b861eab9f5d5f282f73b554bd9178240412780f70d1fa8b7267cd9f2db.gif",
+      "referrers": [
+        "explicit-capture-request"
+      ],
+      "retrieved_at": "2026-10-29T04:02:00.791139+00:00",
+      "sha256": "7f9d52b861eab9f5d5f282f73b554bd9178240412780f70d1fa8b7267cd9f2db",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20111002074015",
+      "status": "recovered",
+      "url": "http://l-stat.livejournal.com/img/profile_icons/user.gif",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Original LJ navigation graphic visually inspected, or page text inspected; provider-error and payload validation passed. Empty friends feed retained as navigation evidence, not new posts."
+    },
+    "http://l-stat.livejournal.com/palimg/controlstrip/ljlogo.gif/ptffffff000000@@wayback:20111004233203:7ccdb8af9d22": {
+      "actual_capture": "20111004233203",
+      "attempts": [],
+      "bytes": 630,
+      "captures": [],
+      "content_type": "image/gif",
+      "final_original": "http://l-stat.livejournal.com/palimg/controlstrip/ljlogo.gif/ptffffff000000",
+      "final_url": "https://web.archive.org/web/20111004233203id_/http://l-stat.livejournal.com/palimg/controlstrip/ljlogo.gif/ptffffff000000",
+      "hints": [],
+      "kind": "image",
+      "raw_path": "source/raw/7ccdb8af9d22492d8af4d5a0ef5706962f2a081ca32c97f63dc2c3885ada4d06.gif",
+      "referrers": [
+        "explicit-capture-request"
+      ],
+      "retrieved_at": "2026-10-29T04:02:08.620364+00:00",
+      "sha256": "7ccdb8af9d22492d8af4d5a0ef5706962f2a081ca32c97f63dc2c3885ada4d06",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20111002074219",
+      "status": "recovered",
+      "url": "http://l-stat.livejournal.com/palimg/controlstrip/ljlogo.gif/ptffffff000000",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Original LJ navigation graphic visually inspected, or page text inspected; provider-error and payload validation passed. Empty friends feed retained as navigation evidence, not new posts."
+    },
+    "http://l-stat.livejournal.com/horizon/livejournal.png?v=2747@@wayback:20111002150112:864a58456105": {
+      "actual_capture": "20111002150112",
+      "attempts": [],
+      "bytes": 4257,
+      "captures": [],
+      "content_type": "image/png",
+      "final_original": "http://l-stat.livejournal.com/horizon/livejournal.png?v=2747",
+      "final_url": "https://web.archive.org/web/20111002150112id_/http://l-stat.livejournal.com/horizon/livejournal.png?v=2747",
+      "hints": [],
+      "kind": "image",
+      "raw_path": "source/raw/864a584561051384bc8bfff47ce4cb2817284627fda2cb9879c2dc7c5a6b097b.png",
+      "referrers": [
+        "explicit-capture-request"
+      ],
+      "retrieved_at": "2026-10-29T04:05:30.696642+00:00",
+      "sha256": "864a584561051384bc8bfff47ce4cb2817284627fda2cb9879c2dc7c5a6b097b",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20111002073201",
+      "status": "recovered",
+      "url": "http://l-stat.livejournal.com/horizon/livejournal.png?v=2747",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Exact versioned URL captured, byte/type checked and graphic visually inspected."
+    },
+    "http://l-stat.livejournal.com/horizon/logo.png?v=2747@@wayback:20111002150111:fe76d8225686": {
+      "actual_capture": "20111002150111",
+      "attempts": [],
+      "bytes": 6414,
+      "captures": [],
+      "content_type": "image/png",
+      "final_original": "http://l-stat.livejournal.com/horizon/logo.png?v=2747",
+      "final_url": "https://web.archive.org/web/20111002150111id_/http://l-stat.livejournal.com/horizon/logo.png?v=2747",
+      "hints": [],
+      "kind": "image",
+      "raw_path": "source/raw/fe76d8225686287040bfbe993d3d986b2ac8e561ee82b16a408ef94bddff22a0.png",
+      "referrers": [
+        "explicit-capture-request"
+      ],
+      "retrieved_at": "2026-10-29T04:05:38.430502+00:00",
+      "sha256": "fe76d8225686287040bfbe993d3d986b2ac8e561ee82b16a408ef94bddff22a0",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20111002073201",
+      "status": "recovered",
+      "url": "http://l-stat.livejournal.com/horizon/logo.png?v=2747",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Exact versioned URL captured, byte/type checked and graphic visually inspected."
+    },
+    "http://l-stat.livejournal.com/horizon/nouserpic.png?v=2621@@wayback:20111002150111:55de522d096e": {
+      "actual_capture": "20111002150111",
+      "attempts": [],
+      "bytes": 30244,
+      "captures": [],
+      "content_type": "image/png",
+      "final_original": "http://l-stat.livejournal.com/horizon/nouserpic.png?v=2621",
+      "final_url": "https://web.archive.org/web/20111002150111id_/http://l-stat.livejournal.com/horizon/nouserpic.png?v=2621",
+      "hints": [],
+      "kind": "image",
+      "raw_path": "source/raw/55de522d096edbdbcab38cfca960b81dabaa78114f557246e57cd0c397280d0b.png",
+      "referrers": [
+        "explicit-capture-request"
+      ],
+      "retrieved_at": "2026-10-29T04:05:46.344036+00:00",
+      "sha256": "55de522d096edbdbcab38cfca960b81dabaa78114f557246e57cd0c397280d0b",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20111002073201",
+      "status": "recovered",
+      "url": "http://l-stat.livejournal.com/horizon/nouserpic.png?v=2621",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Exact versioned URL captured, byte/type checked and graphic visually inspected."
+    },
+    "http://l-stat.livejournal.com/img/userinfo.gif?v=3@@wayback:20110812115627:c1f7e7bfedf7": {
+      "actual_capture": "20110812115627",
+      "attempts": [],
+      "bytes": 258,
+      "captures": [],
+      "content_type": "image/gif",
+      "final_original": "http://l-stat.livejournal.com/img/userinfo.gif?v=3",
+      "final_url": "https://web.archive.org/web/20110812115627id_/http://l-stat.livejournal.com/img/userinfo.gif?v=3",
+      "hints": [],
+      "kind": "image",
+      "raw_path": "source/raw/c1f7e7bfedf7df17af19f191ff4712a17ab0daad7aa898db57c958bdd3f286f0.gif",
+      "referrers": [
+        "explicit-capture-request"
+      ],
+      "retrieved_at": "2026-10-29T04:05:54.161702+00:00",
+      "sha256": "c1f7e7bfedf7df17af19f191ff4712a17ab0daad7aa898db57c958bdd3f286f0",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20110812180252",
+      "status": "recovered",
+      "url": "http://l-stat.livejournal.com/img/userinfo.gif?v=3",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Exact versioned URL captured, byte/type checked and graphic visually inspected."
+    },
+    "http://l-stat.livejournal.com/img/btn_next.gif?v=1@@wayback:20110818154240:087aecffda48": {
+      "actual_capture": "20110818154240",
+      "attempts": [],
+      "bytes": 613,
+      "captures": [],
+      "content_type": "image/gif",
+      "final_original": "http://l-stat.livejournal.com/img/btn_next.gif?v=1",
+      "final_url": "https://web.archive.org/web/20110818154240id_/http://l-stat.livejournal.com/img/btn_next.gif?v=1",
+      "hints": [],
+      "kind": "image",
+      "raw_path": "source/raw/087aecffda48ecc1516b8416b74242996ee6671ae3ff7987cf6c8921d68bd40b.gif",
+      "referrers": [
+        "explicit-capture-request"
+      ],
+      "retrieved_at": "2026-10-29T04:06:02.006784+00:00",
+      "sha256": "087aecffda48ecc1516b8416b74242996ee6671ae3ff7987cf6c8921d68bd40b",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20110812180252",
+      "status": "recovered",
+      "url": "http://l-stat.livejournal.com/img/btn_next.gif?v=1",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Exact versioned URL captured, byte/type checked and graphic visually inspected."
+    },
+    "http://l-stat.livejournal.com/img/btn_prev.gif?v=1@@wayback:20110818154749:563e544ce37f": {
+      "actual_capture": "20110818154749",
+      "attempts": [],
+      "bytes": 628,
+      "captures": [],
+      "content_type": "image/gif",
+      "final_original": "http://l-stat.livejournal.com/img/btn_prev.gif?v=1",
+      "final_url": "https://web.archive.org/web/20110818154749id_/http://l-stat.livejournal.com/img/btn_prev.gif?v=1",
+      "hints": [],
+      "kind": "image",
+      "raw_path": "source/raw/563e544ce37fa5b1de98dbd15487614edc905893564ecae31776434df3a80740.gif",
+      "referrers": [
+        "explicit-capture-request"
+      ],
+      "retrieved_at": "2026-10-29T04:06:10.032229+00:00",
+      "sha256": "563e544ce37fa5b1de98dbd15487614edc905893564ecae31776434df3a80740",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20110812180252",
+      "status": "recovered",
+      "url": "http://l-stat.livejournal.com/img/btn_prev.gif?v=1",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Exact versioned URL captured, byte/type checked and graphic visually inspected."
+    },
+    "http://l-stat.livejournal.com/img/btn_share.gif?v=1@@wayback:20110812130539:e79628eaea29": {
+      "actual_capture": "20110812130539",
+      "attempts": [],
+      "bytes": 1231,
+      "captures": [],
+      "content_type": "image/gif",
+      "final_original": "http://l-stat.livejournal.com/img/btn_share.gif?v=1",
+      "final_url": "https://web.archive.org/web/20110812130539id_/http://l-stat.livejournal.com/img/btn_share.gif?v=1",
+      "hints": [],
+      "kind": "image",
+      "raw_path": "source/raw/e79628eaea299fde4e60269367089c825fb1a76455bb29a8a951ef83f5e3858a.gif",
+      "referrers": [
+        "explicit-capture-request"
+      ],
+      "retrieved_at": "2026-10-29T04:06:17.784008+00:00",
+      "sha256": "e79628eaea299fde4e60269367089c825fb1a76455bb29a8a951ef83f5e3858a",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20110812180252",
+      "status": "recovered",
+      "url": "http://l-stat.livejournal.com/img/btn_share.gif?v=1",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Exact versioned URL captured, byte/type checked and graphic visually inspected."
+    },
+    "http://l-stat.livejournal.com/img/memadd.gif?v=1@@wayback:20110818154415:b076ad1c51d2": {
+      "actual_capture": "20110818154415",
+      "attempts": [],
+      "bytes": 644,
+      "captures": [],
+      "content_type": "image/gif",
+      "final_original": "http://l-stat.livejournal.com/img/memadd.gif?v=1",
+      "final_url": "https://web.archive.org/web/20110818154415id_/http://l-stat.livejournal.com/img/memadd.gif?v=1",
+      "hints": [],
+      "kind": "image",
+      "raw_path": "source/raw/b076ad1c51d2a8b86b124a4249bea9bc10e224a84aa91637bf591eaf6c4f5927.gif",
+      "referrers": [
+        "explicit-capture-request"
+      ],
+      "retrieved_at": "2026-10-29T04:06:25.502752+00:00",
+      "sha256": "b076ad1c51d2a8b86b124a4249bea9bc10e224a84aa91637bf591eaf6c4f5927",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20110812180252",
+      "status": "recovered",
+      "url": "http://l-stat.livejournal.com/img/memadd.gif?v=1",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Exact versioned URL captured, byte/type checked and graphic visually inspected."
     }
   },
   "version": 1

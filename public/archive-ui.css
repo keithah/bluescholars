@@ -96,3 +96,4 @@
 /* Keep legacy journal platform chrome outside the archive toolbar on phones. */
 @media(max-width:600px){html.archive-lj-layout{min-width:0!important}html.archive-lj-layout body{min-width:0!important;width:auto!important;padding-top:0!important}.archive-lj-layout body>.s-header{position:relative!important;top:auto!important;overflow:hidden}.archive-lj-layout body>#shadowhack1{margin:0!important}.archive-artist-layout #content{overflow-wrap:anywhere}.archive-artist-layout #content img{max-width:100%;height:auto}}
 @media(max-width:600px){.archive-lj-layout #footer-links{max-width:100%;overflow-x:auto}}
+@media(max-width:600px){.archive-lj-layout .entrycontent img{max-width:100%;height:auto}}

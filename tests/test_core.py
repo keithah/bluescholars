@@ -138,3 +138,11 @@ def test_font_payload_validator_accepts_woff_and_rejects_html():
     validate_payload(b'wOFF\x00\x01font bytes', 'font')
     with pytest.raises(ValueError, match='font signature'):
         validate_payload(b'<html>archive error</html>', 'font')
+
+
+def test_livejournal_navigation_is_html_but_assets_keep_their_types():
+    for path in ('/2007/', '/2007/09/', '/2007/09/30/', '/calendar/', '/friends', '/profile/', '/tag/music', '/memories/', '/pics/catalog', '/video/'):
+        assert kind_for('https://bluescholars.livejournal.com'+path)=='html'
+    assert kind_for('https://bluescholars.livejournal.com/photo.jpg')=='image'
+    assert kind_for('https://bluescholars.livejournal.com/res/19020223/stylesheet','text/css')=='css'
+    assert kind_for('https://l-userpic.livejournal.com/123/456')=='image'

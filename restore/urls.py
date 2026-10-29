@@ -109,7 +109,10 @@ def kind_for(url: str, mime: str = '') -> str:
         return 'image'
     if ext in {'.mp3','.mp4','.m4a','.wav','.ogg','.webm','.mov','.pdf','.zip','.swf'}:
         return 'unsupported'
-    if host=='bluescholars.livejournal.com' and (path in ('','/','/profile') or path.endswith('.html')):
+    if host=='bluescholars.livejournal.com' and (
+            path.rstrip('/') in ('','/profile','/calendar','/friends','/memories','/pics/catalog','/video','/tag')
+            or path.startswith('/tag/') or re.fullmatch(r'/\d{4}(?:/\d{2}){0,2}/?',path)
+            or path.endswith('.html')):
         return 'html'
     if 'html' in mime or in_domain(url):
         return 'html'

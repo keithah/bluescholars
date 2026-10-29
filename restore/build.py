@@ -13,7 +13,7 @@ from .discover import discover_html
 from .render import render_html,render_css,resource_aliases,NAV,archived_companion_route
 from .svg import sanitize_svg
 from .state import State,write_json
-from .urls import HOME,TARGET,SQUARESPACE_START,identity,is_site,route,asset_route,base_path,livejournal_route,original_url,historical_route_prefix,route_capture_hint
+from .urls import HOME,TARGET,SQUARESPACE_START,identity,is_site,route,asset_route,base_path,livejournal_route,livejournal_path,original_url,historical_route_prefix,route_capture_hint
 from .artist_sites import build_artist_sites
 from .massline import build_massline_archive,massline_route
 from .myspace import build_myspace_archive
@@ -202,10 +202,10 @@ def add_global_year_navigation(text: str,year: int,base: str,ui_href: str,
     base=base_path(base);page_years=page_years or {}
     try: year=int(year)
     except (TypeError,ValueError): year=2007
-    year=max(2006,min(2026,year))
+    year=max(2005,min(2026,year))
     if home_routes is None:
         home_routes={y:('/2007/' if y<=2008 else '/2009/' if y<=2012 else '/2013/') for y in range(2006,2022)}
-    activity_years=sorted({int(value) for value in (activity_years or home_routes) if str(value).isdigit() and 2006<=int(value)<=2026})
+    activity_years=sorted({int(value) for value in (activity_years or home_routes) if str(value).isdigit() and 2005<=int(value)<=2026})
     if not activity_years and home_routes: activity_years=sorted(home_routes)
     if activity_years: year=min(activity_years,key=lambda value:(abs(value-year),value))
     soup=BeautifulSoup(text,'html.parser')
@@ -314,7 +314,7 @@ def timeline_major_years(page_report: list[dict],home_routes: dict[int,str]) -> 
         if row.get('status') not in ('recovered','derived_from_capture'): continue
         if _timeline_path(str(row.get('path',''))) not in home_paths: continue
         stamp=str(row.get('actual_capture',''))
-        if stamp[:4].isdigit() and 2006<=int(stamp[:4])<=2026: years.add(int(stamp[:4]))
+        if stamp[:4].isdigit() and 2005<=int(stamp[:4])<=2026: years.add(int(stamp[:4]))
     return sorted(years)
 
 def _timeline_path(path: str) -> str:
@@ -331,7 +331,7 @@ def timeline_page_counts(page_report: list[dict],archive_prefixes: tuple[str,...
         stamp=str(row.get('actual_capture',''))
         if not stamp[:4].isdigit(): continue
         year=int(stamp[:4])
-        if 2006<=year<=2026: counts[year]=counts.get(year,0)+1
+        if 2005<=year<=2026: counts[year]=counts.get(year,0)+1
     return counts
 
 def blue_scholars_timeline(page_report: list[dict]) -> tuple[dict[int,str],list[int]]:
@@ -343,7 +343,7 @@ def blue_scholars_timeline(page_report: list[dict]) -> tuple[dict[int,str],list[
         stamp=str(row.get('actual_capture',''))
         if not any(path.startswith(prefix) for prefix in official) or not stamp[:4].isdigit(): continue
         year=int(stamp[:4])
-        if not 2006<=year<=2026: continue
+        if not 2005<=year<=2026: continue
         activity.add(year)
         if path in official and row.get('status') in ('recovered','derived_from_capture'):
             homes.add(path)
@@ -368,7 +368,7 @@ def archive_activity_years(page_report: list[dict],archive_path: str,home_routes
     years={int(str(row.get('actual_capture',''))[:4]) for row in page_report
            if str(row.get('path','')).startswith(prefix)
            and str(row.get('actual_capture',''))[:4].isdigit()
-           and 2006<=int(str(row.get('actual_capture',''))[:4])<=2026}
+           and 2005<=int(str(row.get('actual_capture',''))[:4])<=2026}
     if output is not None:
         years.update(timeline_output_page_counts(output,archive_path))
     return sorted(years or home_routes)
@@ -381,7 +381,7 @@ def _capture_year_for_page(relative: str, text: str = '') -> int | None:
     for pattern in (r'(?:^|/)(20\d{2})/', r'(?:^|/)(20\d{12})(?:[/-]|\.html|$)',
                     r'--capture-(20\d{12})(?:[.-]|$)', r'(?:^|/)home-(20\d{2})(?:[-.]|$)'):
         match=re.search(pattern,relative)
-        if match and 2006<=int(match.group(1)[:4])<=2026: return int(match.group(1)[:4])
+        if match and 2005<=int(match.group(1)[:4])<=2026: return int(match.group(1)[:4])
     return None
 
 
@@ -775,7 +775,7 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
         if previous is None or variant.get('actual_capture','')>previous.get('actual_capture',''):
             usable_variant_by_identity[key]=variant
     lj_pages=[(key,r) for key,r in usable_variants.items()
-              if r['kind']=='html' and urlsplit(r['_source_url']).hostname=='bluescholars.livejournal.com']
+              if r['kind']=='html' and livejournal_path(r['_source_url']) is not None]
     linked_html_routes=[];linked_lj_routes=[]
     for source_key,r in list(usable_variants.items()):
         url=r['_source_url']
@@ -787,7 +787,7 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
                     lj_target=livejournal_route(discovered['url'])
                     if lj_target and lj_target.startswith(('/lj/posts/','/lj/comments/')):
                         linked_lj_routes.append(discovered['url'])
-                    elif not urlsplit(discovered['url']).hostname=='bluescholars.livejournal.com':
+                    elif livejournal_path(discovered['url']) is None:
                         destination_id=identity(discovered['url'])
                         destination_record=usable_variant_by_identity.get(destination_id)
                         discovered_record=destination_record or records.get(discovered['url'],{})
@@ -827,7 +827,7 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
         for ref in discover_html(raw[key].decode('utf-8',errors='replace'),r.get('final_original',r['_source_url'])):
             if ref.get('kind')!='html': continue
             lj_target=livejournal_route(ref['url'])
-            if lj_target and lj_target.startswith('/lj/comments/'):
+            if lj_target and lj_target.startswith(('/lj/comments/','/lj/posts/')):
                 linked_lj_routes.append(ref['url'])
     for url,r in usable.items():
         if r['kind'] in ('css','image'):
@@ -840,12 +840,12 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
     lj_route_by_key={}
     newest_by_url={}
     for key,r in lj_pages:
-        url=r['_source_url'];path=urlsplit(url).path;url_id=identity(url)
+        url=r['_source_url'];path=livejournal_path(url);url_id=identity(url)
         current=newest_by_url.get(url_id)
         if current is None or r.get('actual_capture','')>current.get('actual_capture',''):
             newest_by_url[url_id]=r
     for key,r in lj_pages:
-        url=r['_source_url'];path=urlsplit(url).path;is_latest=newest_by_url[identity(url)] is r
+        url=r['_source_url'];path=livejournal_path(url);is_latest=newest_by_url[identity(url)] is r
         if path in ('','/'):
             local='/lj/journal/' if is_latest else '/lj/captures/'+r.get('actual_capture','unknown')+'/'
         elif path=='/profile': local='/lj/profile/'
@@ -1239,34 +1239,40 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
             route_notices.append({'path':target_path,'status':'not_recovered'})
             continue
         root_url='http://bluescholars.livejournal.com/'
-        root_record=newest_by_url.get(identity(root_url))
-        extracted_entry=None;root_soup=None
-        if root_record:
-            root_soup=BeautifulSoup(raw[root_record['_source_key']],'html.parser')
-            for anchor in root_soup.find_all('a',href=True):
-                href=original_url(anchor['href'],root_record.get('final_original',root_url))
-                if href and identity(href)==identity(target_url):
+        root_record=None;extracted_entry=None;root_soup=None
+        for root_key,candidate_root in sorted(lj_pages,key=lambda item:item[1].get('actual_capture',''),reverse=True):
+            if livejournal_path(candidate_root['_source_url'])!='/': continue
+            candidate_soup=BeautifulSoup(raw[root_key],'html.parser')
+            for anchor in candidate_soup.select('.entrysubject a[href], .entryheader h3 a[href], a.subj-link[href], .talklinks a[href]'):
+                href=original_url(anchor['href'],candidate_root.get('final_original',candidate_root['_source_url']))
+                if href and livejournal_route(href)==target_path:
                     extracted_entry=anchor.find_parent('div',class_='entry')
                     if extracted_entry:
+                        root_record=candidate_root;root_soup=candidate_soup
+                        root_url=candidate_root.get('final_original',candidate_root['_source_url'])
                         break
+            if extracted_entry: break
         if extracted_entry:
-            title=(root_soup.find('a',href=lambda href: href and identity(original_url(href,root_url))==identity(target_url))
-                   .get_text(' ',strip=True))
+            heading=extracted_entry.select_one('.entrysubject, .entryheader h3, .subject, .entrytext b')
+            title=heading.get_text(' ',strip=True) if heading else 'Recovered LiveJournal entry'
             source_capture=root_record.get('actual_capture','unknown')
             note=('<p class="archive-source-note">This article view is extracted from the full-text entry on the '
                   +html.escape(source_capture)+' LiveJournal front-page capture. A separate standalone post response was not found. '
                   'The saved front page contains the article text shown here; a complete standalone comment thread is unavailable.</p>'
                   '<p><a href="'+root_url+'">Open the captured LiveJournal front page</a></p>')
             derived=page_shell(title,note+str(extracted_entry))
-            styles=''
+            styles=''.join(str(style) for style in root_soup.find_all('style'))
             for link in root_soup.find_all('link',href=True):
                 rel=link.get('rel',[])
                 href=original_url(link['href'],root_record.get('final_original',root_url))
                 if 'stylesheet' in rel and href and '/res/' in urlsplit(href).path:
-                    styles='<link rel="stylesheet" href="'+html.escape(href,quote=True)+'">'
+                    styles+='<link rel="stylesheet" href="'+html.escape(href,quote=True)+'">'
                     break
             derived=derived.replace('</head>','<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="'+ui_href+'">'+styles+'</head>')
             rendered,found=render_html(derived,root_record.get('final_original',root_url),render_resources,base,'/lj',ui_stylesheet=ui_href,ui_script=script_href)
+            source_route=lj_route_by_key[root_record['_source_key']]
+            rendered=rendered.replace('href="'+base+'/lj/journal/">Open the captured LiveJournal front page',
+                                      'href="'+base+source_route+'">Open the captured LiveJournal front page')
             issues.extend(found);_write_page(output,target_path,rendered)
             page_report.append({'path':target_path,'source':target_url,'canonical_url':target_url,
                                 'source_archive':root_record.get('source_archive'),

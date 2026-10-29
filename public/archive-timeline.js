@@ -1,6 +1,6 @@
 "use strict";
 (() => {
-  const validYear = (value) => /^\d{4}$/.test(String(value)) && Number(value) >= 2006 && Number(value) <= 2026;
+  const validYear = (value) => /^\d{4}$/.test(String(value)) && Number(value) >= 2005 && Number(value) <= 2026;
   const routesFor = (node) => {
     try { return JSON.parse(node?.dataset.homeRoutes || "{}"); } catch (_) { return {}; }
   };
@@ -36,6 +36,19 @@
   // Browser zoom scales image-map hit areas along with the original artwork.
   if (/\/lj\//.test(location.pathname || "")) document.documentElement.classList.add("archive-lj-layout");
   if (/\/(prometheusbrown|sabzi)\//.test(location.pathname || "")) document.documentElement.classList.add("archive-artist-layout");
+  // Keep the 2005 platform's absolute header coordinates inside its own page,
+  // below the restoration controls. Preserve the source background on that page.
+  if (/\/lj\//.test(location.pathname || "") && document.querySelector("body > #Logo")) {
+    const shell = document.createElement("div");
+    shell.className = "archive-lj-original";
+    shell.style.background = getComputedStyle(document.body).background;
+    for (const child of [...document.body.childNodes]) {
+      if (child.nodeType === 1 && child.matches(".archive-year-global, .archive-restoration-notice, script")) continue;
+      shell.appendChild(child);
+    }
+    document.body.appendChild(shell);
+    document.body.style.backgroundImage = "none";
+  }
   const originalLayoutStyles = new WeakMap();
   const fitEarlyLayout = () => {
     const path = location.pathname || "";

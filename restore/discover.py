@@ -4,7 +4,7 @@ import json
 from urllib.parse import urlsplit
 from bs4 import BeautifulSoup
 import tinycss2
-from .urls import original_url,is_site,kind_for
+from .urls import original_url,is_site,kind_for,livejournal_path
 
 def css_values(tokens):
     for token in tokens:
@@ -36,7 +36,7 @@ def discover_html(text: str,url: str) -> list[dict]:
     def add(value, kind=None, pages=False):
         u=original_url(value,url)
         host=urlsplit(u).hostname if u else None
-        if not u or (pages and not (is_site(u) or host=='bluescholars.livejournal.com')):
+        if not u or (pages and not (is_site(u) or livejournal_path(u) is not None)):
             return
         found[u]={'url':u,'kind':kind or kind_for(u),'referrer':url}
     for a in soup.find_all('a',href=True):

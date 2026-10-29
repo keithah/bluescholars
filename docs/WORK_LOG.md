@@ -1058,3 +1058,9 @@ Fixed extensionless LJ navigation classification with a failing-then-passing reg
 Restored stylesheet references on 47 journal pages by fixing malformed nested-link handling. Added 21 exact graphic URL records (12 image payloads), one individually reviewed 2023 tracklisting capture and its three stylesheets, and 13 documented older-theme fallback mappings. No new unique article text was found. Kept missing-icon geometry small and restored readable phone layout. Old account-prefix discovery timed out twice and remains resumable.
 
 347 tests passed; strengthened fixture assertion passed in the 36-test core suite. Full root/project checks: zero errors. Browser inspected desktop/mobile, local assets and one timeline. Global release-review flags unchanged. Report: `docs/recovery-report/LIVEJOURNAL_STYLING_2026-10-28.md`.
+
+## 2026-10-28 — original 2005 LiveJournal account
+
+Retried the old `/users/bluescholars/` prefix successfully: three CDX rows, including two actual December 2005 HTML captures. Recovered the six-entry homepage and the Freewheelin/EP post with comments, plus four source-linked platform stylesheets and nine image responses. Preserved the promotional graphic's December 24 date and one userpic's May 2006 date. Three missing artwork exact indexes completed with zero rows; failed replays remain documented.
+
+Added old-account discovery/identity/routing, 2005 timeline support, and per-entry reading views sourced from older front pages. Restricted entry selection to its own permalink/header controls so body cross-links cannot substitute the wrong article. Original inline styling is retained; six older entries are separately browseable with source notices. Full suite after review fixes: 351 passed. Browser/build/deployment evidence is recorded in `docs/recovery-report/LIVEJOURNAL_2005_2026-10-28.md`. Global review flags remain unchanged.

@@ -174,3 +174,21 @@ def test_missing_small_controls_keep_their_source_geometry():
     assert 'width:24px' in spans[0]['style']
     assert 'archive-missing-icon' in spans[1]['class']
     assert 'archive-missing-icon' not in spans[2]['class']
+
+
+def test_old_livejournal_account_addresses_share_local_routes():
+    from restore.urls import identity, livejournal_route
+    old='http://www.livejournal.com:80/users/bluescholars/'
+    assert identity(old)==identity('http://bluescholars.livejournal.com/')
+    assert livejournal_route(old)=='/lj/journal/'
+    assert livejournal_route(old+'8711.html?thread=12295')=='/lj/comments/8711.html/12295/'
+    assert livejournal_route('http://www.livejournal.com/users/someoneelse/8711.html') is None
+
+
+def test_timeline_preserves_2005_capture():
+    from restore.build import add_global_year_navigation
+    from bs4 import BeautifulSoup
+    result=add_global_year_navigation('<html><body>Journal</body></html>',2005,'','/ui.css','/timeline.js',home_routes={2005:'/lj/captures/20051205042344/',2011:'/lj/journal/'})
+    soup=BeautifulSoup(result,'html.parser')
+    assert soup.select_one('.archive-year-global')['data-default-year']=='2005'
+    assert soup.select_one('input[type=range]')['min']=='2005'

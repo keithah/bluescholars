@@ -100,3 +100,6 @@
 .archive-missing-image.archive-missing-icon{display:inline-block;padding:0;overflow:hidden;vertical-align:middle;line-height:1;box-sizing:border-box;font-size:10px}
 @media(max-width:600px){.archive-lj-layout #shadowhack1{width:auto!important;min-width:0;zoom:1!important}.archive-lj-layout #pagecontainer{margin:0 12px;display:flex;flex-direction:column}.archive-lj-layout #title{order:0;flex-shrink:0}.archive-lj-layout #main{order:1;float:none;width:auto;min-height:0;padding:0}.archive-lj-layout #paraphernalia{order:2;float:none;width:auto}.archive-lj-layout .entrycontent{font-size:14px;line-height:1.5}}
 @media(max-width:600px){.archive-lj-layout #server_sig{width:auto;max-width:100%}}
+@media(max-width:600px){.archive-lj-layout #Logo img{max-width:100%;height:auto}}
+.archive-lj-original{position:relative;display:flow-root}
+@media(max-width:600px){.archive-lj-original #NavMenuList{left:0;width:100%;box-sizing:border-box}.archive-lj-original .NavSubMenuList{left:0;max-width:100%;box-sizing:border-box}.archive-lj-original #NotLoggedInDiv{top:36px;font-size:9px;line-height:11px}}

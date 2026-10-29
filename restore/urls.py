@@ -50,6 +50,15 @@ def in_domain(url: str) -> bool:
     host=urlsplit(url).hostname or ''
     return host=='bluescholars.com' or host.endswith('.bluescholars.com')
 
+def livejournal_path(url: str) -> str | None:
+    """Recognize the journal's original account path and later subdomain."""
+    p=urlsplit(url)
+    if p.hostname=='bluescholars.livejournal.com': return p.path or '/'
+    prefix='/users/bluescholars'
+    if p.hostname in ('livejournal.com','www.livejournal.com') and (p.path==prefix or p.path.startswith(prefix+'/')):
+        return p.path[len(prefix):] or '/'
+    return None
+
 def identity(url: str) -> str:
     """Unify proven aliases while retaining meaningful query strings."""
     url=original_url(url)
@@ -58,8 +67,8 @@ def identity(url: str) -> str:
     p=urlsplit(url)
     if is_site(url):
         return urlunsplit(('http','bluescholars.com',p.path.rstrip('/') or '/',p.query,''))
-    if p.hostname=='bluescholars.livejournal.com':
-        return urlunsplit(('http',p.netloc,p.path or '/',p.query,''))
+    if (journal_path:=livejournal_path(url)) is not None:
+        return urlunsplit(('http','bluescholars.livejournal.com',journal_path,p.query,''))
     return url
 
 def historical_route_prefix(url: str, fallback: str = '', capture: str = '') -> str:
@@ -109,7 +118,10 @@ def kind_for(url: str, mime: str = '') -> str:
         return 'image'
     if ext in {'.mp3','.mp4','.m4a','.wav','.ogg','.webm','.mov','.pdf','.zip','.swf'}:
         return 'unsupported'
-    if host=='bluescholars.livejournal.com' and (
+    journal_path=livejournal_path(url)
+    if journal_path is not None:
+        path=journal_path.lower()
+    if journal_path is not None and (
             path.rstrip('/') in ('','/profile','/calendar','/friends','/memories','/pics/catalog','/video','/tag')
             or path.startswith('/tag/') or re.fullmatch(r'/\d{4}(?:/\d{2}){0,2}/?',path)
             or path.endswith('.html')):
@@ -165,13 +177,14 @@ def livejournal_route(url: str) -> str | None:
     if not url:
         return None
     parts=urlsplit(url)
-    if parts.hostname!='bluescholars.livejournal.com':
+    path=livejournal_path(url)
+    if path is None:
         return None
-    if parts.path in ('','/'):
+    if path in ('','/'):
         return '/lj/journal/'
-    if parts.path=='/profile':
+    if path=='/profile':
         return '/lj/profile/'
-    name=parts.path.rsplit('/',1)[-1]
+    name=path.rsplit('/',1)[-1]
     if not name.endswith('.html'):
         return None
     local='/lj/posts/'+quote(name,safe='.-_')

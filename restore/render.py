@@ -91,7 +91,7 @@ class Resolver:
         elif (archive_route:=archived_companion_route(u,self.base)):
             source_record=self._record(url)
             capture=str(source_record.get('actual_capture',''))[:4]
-            target=archive_route+('?year='+capture if capture.isdigit() and 2006<=int(capture)<=2026 else '')
+            target=archive_route+('?year='+capture if capture.isdigit() and 2005<=int(capture)<=2026 else '')
         else: target=u
         return target+('#'+fragment if fragment else '')
 

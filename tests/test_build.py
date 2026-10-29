@@ -1520,3 +1520,37 @@ def test_checker_rejects_root_assets_that_escape_project_mount(tmp_path):
 def test_checker_rejects_html_published_with_php_content_type(tmp_path):
     (tmp_path/'archive.php').write_text('<!doctype html><html><body>News</body></html>')
     assert any('non-renderable' in e for e in check(tmp_path))
+
+
+def test_old_livejournal_home_and_post_are_browseable_with_2005_timeline(tmp_path):
+    fixture_root(tmp_path);s=State(tmp_path)
+    (tmp_path/'public/archive-timeline.js').write_text('/* timeline fixture */')
+    old='http://www.livejournal.com:80/users/bluescholars/'
+    for url,stamp,body in [
+        (old,'20051205042344',b'<html><head><style>body{background:#909090}</style></head><body><a href="8711.html">Freewheelin</a></body></html>'),
+        (old+'8711.html','20051206131155',b'<html><body>Freewheelin announcement</body></html>'),
+        ('http://bluescholars.livejournal.com/','20111002074219',b'<html><body>Later journal</body></html>')]:
+        add_raw(s,url,'html',body);s.data['resources'][url]['actual_capture']=stamp
+    s.save();out=tmp_path/'_candidate';build(tmp_path,out,'/bluescholars',candidate=True)
+    home=BeautifulSoup((out/'lj/captures/20051205042344/index.html').read_text(),'html.parser')
+    assert home.select_one('a[href="/bluescholars/lj/posts/8711.html?year=2005"]')
+    assert home.select_one('.archive-year-global')['data-default-year']=='2005'
+    assert 'Freewheelin announcement' in (out/'lj/posts/8711.html').read_text()
+    assert not check(out,'/bluescholars')
+
+
+def test_older_livejournal_home_preserves_full_entries_as_local_post_views(tmp_path):
+    fixture_root(tmp_path);s=State(tmp_path)
+    old='http://www.livejournal.com/users/bluescholars/'
+    add_raw(s,old,'html',b'<html><head><style>.entrytext{color:#333300}</style></head><body><div class="entry"><div class="entrytext"><b>Only three days left!</b><p>Original 2005 announcement.</p></div><div class="talklinks"><a href="10246.html">5 Comments</a></div></div></body></html>')
+    s.data['resources'][old]['actual_capture']='20051205042344'
+    add_raw(s,'http://bluescholars.livejournal.com/','html',b'<html><body><div class="entry"><h3 class="entrysubject"><a href="/99999.html">Newer post</a></h3><div class="entrycontent">Unrelated article linking to <a href="http://www.livejournal.com/users/bluescholars/10246.html">old news</a></div></div></body></html>')
+    s.data['resources']['http://bluescholars.livejournal.com/']['actual_capture']='20111002074219';s.save()
+    out=tmp_path/'_candidate';report=build(tmp_path,out,'',candidate=True)
+    post=BeautifulSoup((out/'lj/posts/10246.html').read_text(),'html.parser')
+    assert 'Original 2005 announcement.' in post.get_text()
+    assert 'Only three days left!' in post.title.get_text()
+    assert '20051205042344' in post.get_text()
+    assert post.select_one('a[href="/lj/captures/20051205042344/"]')
+    assert 'color:#333300' in post.style.get_text()
+    assert not check(out,'')

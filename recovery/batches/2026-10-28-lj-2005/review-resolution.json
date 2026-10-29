@@ -1,0 +1,22 @@
+{
+  "findings": [
+    {
+      "issue": "Body-link mistaken for entry permalink",
+      "resolution": "Restrict matching to subject/header and talklinks anchors; regression covers misleading newer article."
+    },
+    {
+      "issue": "Old profile routed through official editions",
+      "resolution": "Exclude every recognized LiveJournal account path from official-edition gap/bridge routes."
+    }
+  ],
+  "final_review_findings": [
+    {
+      "issue": "Legacy captures not rendered",
+      "resolution": "Review references old published build.py. Current build uses livejournal_path; integration test and generated 2005 homepage/post confirm inclusion."
+    },
+    {
+      "issue": "Four platform styles missing from six derived entries",
+      "resolution": "The December 5 homepage has no stylesheet links and uses inline CSS, which is preserved. The four platform CSS files belong to the separate December 6 standalone post; do not transplant them into the older homepage entries."
+    }
+  ]
+}

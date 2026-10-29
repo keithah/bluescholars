@@ -714088,17 +714088,77 @@
       "url": "https://bluescholars.livejournal.com/4436.html"
     },
     "https://bluescholars.livejournal.com/4807.html": {
-      "attempts": [],
-      "captures": [],
+      "actual_capture": "20231104011704",
+      "attempts": [
+        {
+          "at": "2026-10-20T20:22:06.475683+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20210529010817id_/https://bluescholars.livejournal.com/4807.html (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20210529010817id_/https://bluescholars.livejournal.com/4807.html",
+          "requested_capture": "20210529010817",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-20T20:22:07.591564+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20181020222923id_/https://bluescholars.livejournal.com/4807.html (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20181020222923id_/https://bluescholars.livejournal.com/4807.html",
+          "requested_capture": "20181020222923",
+          "result": "failed"
+        },
+        {
+          "actual_capture": "20231104011704",
+          "at": "2026-10-20T20:48:05.646728+00:00",
+          "request_url": "https://web.archive.org/web/20231104011704id_/https://bluescholars.livejournal.com/4807.html",
+          "requested_capture": "20231104011704",
+          "result": "downloaded",
+          "sha256": "d2cbd5161874fedd9952022670ff6bc392c1265a6a75d9dfb87dd4ece8980f0c"
+        }
+      ],
+      "bytes": 610868,
+      "captures": [
+        {
+          "digest": "AKSXPKNZID3WQVVKCYHYQSJNQZL4QWEA",
+          "mimetype": "text/html",
+          "original": "https://bluescholars.livejournal.com/4807.html",
+          "statuscode": "200",
+          "timestamp": "20231104011704"
+        },
+        {
+          "digest": "NXLZWK3234VQOEGAGC455NI5IXR23OIH",
+          "mimetype": "text/html",
+          "original": "http://bluescholars.livejournal.com/4807.html",
+          "statuscode": "301",
+          "timestamp": "20250925115525"
+        }
+      ],
+      "content_type": "text/html; charset=utf-8",
+      "final_original": "https://bluescholars.livejournal.com/4807.html",
+      "final_url": "https://web.archive.org/web/20231104011704id_/https://bluescholars.livejournal.com/4807.html",
       "hints": [
-        "20181020222923"
+        "20181020222923",
+        "20231104011704"
       ],
       "kind": "html",
+      "raw_path": "source/raw/d2cbd5161874fedd9952022670ff6bc392c1265a6a75d9dfb87dd4ece8980f0c.html",
+      "reason": "Untried capture dates or exact-URL index pages remain",
       "referrers": [
-        "https://bluescholars.livejournal.com/4807.html?thread=1991"
+        "https://bluescholars.livejournal.com/4807.html?thread=1991",
+        "CDX:exact:https://bluescholars.livejournal.com/4807.html",
+        "https://bluescholars.livejournal.com/4807.html"
       ],
-      "status": "queued",
-      "url": "https://bluescholars.livejournal.com/4807.html"
+      "retrieved_at": "2026-10-20T20:48:06.463836+00:00",
+      "sha256": "d2cbd5161874fedd9952022670ff6bc392c1265a6a75d9dfb87dd4ece8980f0c",
+      "status": "recovered",
+      "url": "https://bluescholars.livejournal.com/4807.html",
+      "compatibility_review": {
+        "actor": "Codex agent",
+        "reviewed_at": "2026-10-29T04:51:42.661999+00:00",
+        "capture": "20231104011704",
+        "sha256": "d2cbd5161874fedd9952022670ff6bc392c1265a6a75d9dfb87dd4ece8980f0c",
+        "reason": "The January 23, 2005 article body exactly matches the preserved 2018 thread capture SHA-256 94e715db17e0096bb09f8f410930b90269fef34e5d59c4eff3c68c894bcd292f. Preserve this 2023 response as a separately dated capture; it is not evidence of a new article."
+      },
+      "source_reviewed": true,
+      "later_capture_approved": true,
+      "review_note": "Resource-specific source and payload validation; original capture and byte hash retained. Graphics inspected in context."
     },
     "https://bluescholars.livejournal.com/4807.html?mode=reply": {
       "attempts": [],
@@ -723187,18 +723247,45 @@
       "url": "https://l-stat.livejournal.net/?%3Fsvg%2Fflaticon.css%2Csvg%2Fheaderextra.css%2Cproximanova-opentype.css%3Fv=1748507624"
     },
     "https://l-stat.livejournal.net/??lj-basestrap.css,lj-basestrap-app.css,flatbutton.css,svg/flaticon.css,svg/headerextra.css,widgets/likes.css,updateform_v3.css,widgets/bubble-ljuser.css,commentmanage_v3.css,popup/popup-app.css,widgets/filter-settings.css,components/modal.css,components/form.css,widgets/rutos.css,widgets/login_v2.css,journalpromo/journalpromo_v3.css,widgets/calendar.css,msgsystem.css?v=1699001226": {
-      "attempts": [],
+      "actual_capture": "20231103084730",
+      "attempts": [
+        {
+          "actual_capture": "20231103084730",
+          "at": "2026-10-20T20:48:10.027278+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/https://l-stat.livejournal.net/??lj-basestrap.css,lj-basestrap-app.css,flatbutton.css,svg/flaticon.css,svg/headerextra.css,widgets/likes.css,updateform_v3.css,widgets/bubble-ljuser.css,commentmanage_v3.css,popup/popup-app.css,widgets/filter-settings.css,components/modal.css,components/form.css,widgets/rutos.css,widgets/login_v2.css,journalpromo/journalpromo_v3.css,widgets/calendar.css,msgsystem.css?v=1699001226",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "e61ea51bf77667c087f7209c9e156ed4ebdfee892dcc6d869d8fc2491b6d4c7a"
+        }
+      ],
+      "bytes": 410121,
       "captures": [],
+      "content_type": "text/css",
+      "final_original": "https://l-stat.livejournal.net/??lj-basestrap.css,lj-basestrap-app.css,flatbutton.css,svg/flaticon.css,svg/headerextra.css,widgets/likes.css,updateform_v3.css,widgets/bubble-ljuser.css,commentmanage_v3.css,popup/popup-app.css,widgets/filter-settings.css,components/modal.css,components/form.css,widgets/rutos.css,widgets/login_v2.css,journalpromo/journalpromo_v3.css,widgets/calendar.css,msgsystem.css?v=1699001226",
+      "final_url": "https://web.archive.org/web/20231103084730id_/https://l-stat.livejournal.net/??lj-basestrap.css,lj-basestrap-app.css,flatbutton.css,svg/flaticon.css,svg/headerextra.css,widgets/likes.css,updateform_v3.css,widgets/bubble-ljuser.css,commentmanage_v3.css,popup/popup-app.css,widgets/filter-settings.css,components/modal.css,components/form.css,widgets/rutos.css,widgets/login_v2.css,journalpromo/journalpromo_v3.css,widgets/calendar.css,msgsystem.css?v=1699001226",
       "hints": [
         "20231104011704"
       ],
-      "kind": "image",
+      "kind": "css",
+      "raw_path": "source/raw/e61ea51bf77667c087f7209c9e156ed4ebdfee892dcc6d869d8fc2491b6d4c7a.css",
       "referrers": [
         "https://bluescholars.livejournal.com/4807.html",
         "corrected extension/MIME classification after format support update"
       ],
-      "status": "queued",
-      "url": "https://l-stat.livejournal.net/??lj-basestrap.css,lj-basestrap-app.css,flatbutton.css,svg/flaticon.css,svg/headerextra.css,widgets/likes.css,updateform_v3.css,widgets/bubble-ljuser.css,commentmanage_v3.css,popup/popup-app.css,widgets/filter-settings.css,components/modal.css,components/form.css,widgets/rutos.css,widgets/login_v2.css,journalpromo/journalpromo_v3.css,widgets/calendar.css,msgsystem.css?v=1699001226"
+      "retrieved_at": "2026-10-20T20:48:11.322570+00:00",
+      "sha256": "e61ea51bf77667c087f7209c9e156ed4ebdfee892dcc6d869d8fc2491b6d4c7a",
+      "status": "recovered",
+      "url": "https://l-stat.livejournal.net/??lj-basestrap.css,lj-basestrap-app.css,flatbutton.css,svg/flaticon.css,svg/headerextra.css,widgets/likes.css,updateform_v3.css,widgets/bubble-ljuser.css,commentmanage_v3.css,popup/popup-app.css,widgets/filter-settings.css,components/modal.css,components/form.css,widgets/rutos.css,widgets/login_v2.css,journalpromo/journalpromo_v3.css,widgets/calendar.css,msgsystem.css?v=1699001226",
+      "compatibility_review": {
+        "actor": "Codex agent",
+        "reviewed_at": "2026-10-29T04:51:42.662303+00:00",
+        "capture": "20231103084730",
+        "sha256": "e61ea51bf77667c087f7209c9e156ed4ebdfee892dcc6d869d8fc2491b6d4c7a",
+        "reason": "Exact stylesheet URL linked by the individually inspected November 2023 tracklisting capture; archived November 3, 2023. Validate and localize this version for its source-linked context, without substituting it for earlier CSS URLs."
+      },
+      "source_reviewed": true,
+      "later_capture_approved": true,
+      "review_note": "Resource-specific source and payload validation; original capture and byte hash retained. Graphics inspected in context."
     },
     "https://l-stat.livejournal.net/??lj_base.css,flatbutton.css,widgets/calendar.css,widgets/filter-settings.css,components/modal.css,components/form.css,widgets/rutos.css,widgets/likes.css,widgets/login_v2.css,msgsystem.css?v=1748507624": {
       "attempts": [],
@@ -723831,18 +723918,45 @@
       "url": "https://l-stat.livejournal.net/??lj_base.css,flatbutton.css,widgets/calendar.css,widgets/filter-settings.css,widgets/rutos.css,widgets/likes.css,widgets/login_v2.css,lj_base-journal.css,widgets/threeposts.css,msgsystem.css?v=1506001462"
     },
     "https://l-stat.livejournal.net/??proximanova-opentype.css?v=1699001226": {
-      "attempts": [],
+      "actual_capture": "20231103084735",
+      "attempts": [
+        {
+          "actual_capture": "20231103084735",
+          "at": "2026-10-20T20:48:07.485769+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/https://l-stat.livejournal.net/??proximanova-opentype.css?v=1699001226",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "a37d1467823d92f3e59e540c225cc052b77f6152befc501a587fc315f24d35a8"
+        }
+      ],
+      "bytes": 455737,
       "captures": [],
+      "content_type": "text/css",
+      "final_original": "https://l-stat.livejournal.net/??proximanova-opentype.css?v=1699001226",
+      "final_url": "https://web.archive.org/web/20231103084735id_/https://l-stat.livejournal.net/??proximanova-opentype.css?v=1699001226",
       "hints": [
         "20231104011704"
       ],
-      "kind": "image",
+      "kind": "css",
+      "raw_path": "source/raw/a37d1467823d92f3e59e540c225cc052b77f6152befc501a587fc315f24d35a8.css",
       "referrers": [
         "https://bluescholars.livejournal.com/4807.html",
         "corrected extension/MIME classification after format support update"
       ],
-      "status": "queued",
-      "url": "https://l-stat.livejournal.net/??proximanova-opentype.css?v=1699001226"
+      "retrieved_at": "2026-10-20T20:48:09.019092+00:00",
+      "sha256": "a37d1467823d92f3e59e540c225cc052b77f6152befc501a587fc315f24d35a8",
+      "status": "recovered",
+      "url": "https://l-stat.livejournal.net/??proximanova-opentype.css?v=1699001226",
+      "compatibility_review": {
+        "actor": "Codex agent",
+        "reviewed_at": "2026-10-29T04:51:42.662305+00:00",
+        "capture": "20231103084735",
+        "sha256": "a37d1467823d92f3e59e540c225cc052b77f6152befc501a587fc315f24d35a8",
+        "reason": "Exact stylesheet URL linked by the individually inspected November 2023 tracklisting capture; archived November 3, 2023. Validate and localize this version for its source-linked context, without substituting it for earlier CSS URLs."
+      },
+      "source_reviewed": true,
+      "later_capture_approved": true,
+      "review_note": "Resource-specific source and payload validation; original capture and byte hash retained. Graphics inspected in context."
     },
     "https://l-stat.livejournal.net/??schemius_v4/header_v5.css,schemius_v4/header-journal.css,medius/scheme/components.css,lj_base-journal.css,common-post.css,adv/native.css,widgets/threeposts.css,recaptcha.css,categories/category-panel.css,core/components/tag.css,core/components/basepopup.css,core/components/lightcontrols.css,core/components/note-inner.css,core/components/alert.css,popup/popup-suggestion.css,popup/popup-trump.css,popup/popup-map-invite.css,popup/push-woosh-popup.css,widgets/reactions.css,notifications/list.css,widgets/polls.css,schemius_v4/asap-news.css,components/interest.css,components/cookies-banner.css,components/modal-repost.css,components/buttons.css,components/promo-video.css,components/banners/sherry.css?v=1748507624": {
       "attempts": [],
@@ -725329,18 +725443,45 @@
       "url": "https://l-stat.livejournal.net/??schemius_v4/header_v5.css,schemius_v4/header-journal.css,medius/scheme/components.css?v=1544009121"
     },
     "https://l-stat.livejournal.net/??schemius_v4/header_v5.css,schemius_v4/menu-aside.css,schemius_v4/header_v5-adaptive.css,schemius_v4/header-journal-adaptive.css,lj_base-journal.css,common-post.css,adv/native.css,widgets/threeposts.css,recaptcha.css,categories/category-panel.css,core/components/tag.css,core/components/basepopup.css,core/components/lightcontrols.css,popup/popup-suggestion.css,popup/popup-trump.css,popup/popup-map-invite.css,popup/push-woosh-popup.css,widgets/reactions.css,notifications/list.css,widgets/polls.css,schemius_v4/asap-news.css,components/interest.css,components/cookies-banner.css,components/modal-repost.css,components/buttons.css,components/promo-video.css,schemius_v4/header-journal.css,medius/scheme/components.css,schemius_v4/normalize.css,schemius_v4/layout.css,schemius_v4/print.css?v=1699001226": {
-      "attempts": [],
+      "actual_capture": "20231103084718",
+      "attempts": [
+        {
+          "actual_capture": "20231103084718",
+          "at": "2026-10-20T20:51:21.027509+00:00",
+          "request_url": "https://web.archive.org/web/20210529010817id_/https://l-stat.livejournal.net/??schemius_v4/header_v5.css,schemius_v4/menu-aside.css,schemius_v4/header_v5-adaptive.css,schemius_v4/header-journal-adaptive.css,lj_base-journal.css,common-post.css,adv/native.css,widgets/threeposts.css,recaptcha.css,categories/category-panel.css,core/components/tag.css,core/components/basepopup.css,core/components/lightcontrols.css,popup/popup-suggestion.css,popup/popup-trump.css,popup/popup-map-invite.css,popup/push-woosh-popup.css,widgets/reactions.css,notifications/list.css,widgets/polls.css,schemius_v4/asap-news.css,components/interest.css,components/cookies-banner.css,components/modal-repost.css,components/buttons.css,components/promo-video.css,schemius_v4/header-journal.css,medius/scheme/components.css,schemius_v4/normalize.css,schemius_v4/layout.css,schemius_v4/print.css?v=1699001226",
+          "requested_capture": "20210529010817",
+          "result": "downloaded",
+          "sha256": "93facb251b0d484a3b285561937e1e68123a22bc6ab14b6c9d87f00cc3fe0268"
+        }
+      ],
+      "bytes": 403717,
       "captures": [],
+      "content_type": "text/css",
+      "final_original": "https://l-stat.livejournal.net/??schemius_v4/header_v5.css,schemius_v4/menu-aside.css,schemius_v4/header_v5-adaptive.css,schemius_v4/header-journal-adaptive.css,lj_base-journal.css,common-post.css,adv/native.css,widgets/threeposts.css,recaptcha.css,categories/category-panel.css,core/components/tag.css,core/components/basepopup.css,core/components/lightcontrols.css,popup/popup-suggestion.css,popup/popup-trump.css,popup/popup-map-invite.css,popup/push-woosh-popup.css,widgets/reactions.css,notifications/list.css,widgets/polls.css,schemius_v4/asap-news.css,components/interest.css,components/cookies-banner.css,components/modal-repost.css,components/buttons.css,components/promo-video.css,schemius_v4/header-journal.css,medius/scheme/components.css,schemius_v4/normalize.css,schemius_v4/layout.css,schemius_v4/print.css?v=1699001226",
+      "final_url": "https://web.archive.org/web/20231103084718id_/https://l-stat.livejournal.net/??schemius_v4/header_v5.css,schemius_v4/menu-aside.css,schemius_v4/header_v5-adaptive.css,schemius_v4/header-journal-adaptive.css,lj_base-journal.css,common-post.css,adv/native.css,widgets/threeposts.css,recaptcha.css,categories/category-panel.css,core/components/tag.css,core/components/basepopup.css,core/components/lightcontrols.css,popup/popup-suggestion.css,popup/popup-trump.css,popup/popup-map-invite.css,popup/push-woosh-popup.css,widgets/reactions.css,notifications/list.css,widgets/polls.css,schemius_v4/asap-news.css,components/interest.css,components/cookies-banner.css,components/modal-repost.css,components/buttons.css,components/promo-video.css,schemius_v4/header-journal.css,medius/scheme/components.css,schemius_v4/normalize.css,schemius_v4/layout.css,schemius_v4/print.css?v=1699001226",
       "hints": [
         "20231104011704"
       ],
-      "kind": "image",
+      "kind": "css",
+      "raw_path": "source/raw/93facb251b0d484a3b285561937e1e68123a22bc6ab14b6c9d87f00cc3fe0268.css",
       "referrers": [
         "https://bluescholars.livejournal.com/4807.html",
         "corrected extension/MIME classification after format support update"
       ],
-      "status": "queued",
-      "url": "https://l-stat.livejournal.net/??schemius_v4/header_v5.css,schemius_v4/menu-aside.css,schemius_v4/header_v5-adaptive.css,schemius_v4/header-journal-adaptive.css,lj_base-journal.css,common-post.css,adv/native.css,widgets/threeposts.css,recaptcha.css,categories/category-panel.css,core/components/tag.css,core/components/basepopup.css,core/components/lightcontrols.css,popup/popup-suggestion.css,popup/popup-trump.css,popup/popup-map-invite.css,popup/push-woosh-popup.css,widgets/reactions.css,notifications/list.css,widgets/polls.css,schemius_v4/asap-news.css,components/interest.css,components/cookies-banner.css,components/modal-repost.css,components/buttons.css,components/promo-video.css,schemius_v4/header-journal.css,medius/scheme/components.css,schemius_v4/normalize.css,schemius_v4/layout.css,schemius_v4/print.css?v=1699001226"
+      "retrieved_at": "2026-10-20T20:51:22.264871+00:00",
+      "sha256": "93facb251b0d484a3b285561937e1e68123a22bc6ab14b6c9d87f00cc3fe0268",
+      "status": "recovered",
+      "url": "https://l-stat.livejournal.net/??schemius_v4/header_v5.css,schemius_v4/menu-aside.css,schemius_v4/header_v5-adaptive.css,schemius_v4/header-journal-adaptive.css,lj_base-journal.css,common-post.css,adv/native.css,widgets/threeposts.css,recaptcha.css,categories/category-panel.css,core/components/tag.css,core/components/basepopup.css,core/components/lightcontrols.css,popup/popup-suggestion.css,popup/popup-trump.css,popup/popup-map-invite.css,popup/push-woosh-popup.css,widgets/reactions.css,notifications/list.css,widgets/polls.css,schemius_v4/asap-news.css,components/interest.css,components/cookies-banner.css,components/modal-repost.css,components/buttons.css,components/promo-video.css,schemius_v4/header-journal.css,medius/scheme/components.css,schemius_v4/normalize.css,schemius_v4/layout.css,schemius_v4/print.css?v=1699001226",
+      "compatibility_review": {
+        "actor": "Codex agent",
+        "reviewed_at": "2026-10-29T04:51:42.662300+00:00",
+        "capture": "20231103084718",
+        "sha256": "93facb251b0d484a3b285561937e1e68123a22bc6ab14b6c9d87f00cc3fe0268",
+        "reason": "Exact stylesheet URL linked by the individually inspected November 2023 tracklisting capture; archived November 3, 2023. Validate and localize this version for its source-linked context, without substituting it for earlier CSS URLs."
+      },
+      "source_reviewed": true,
+      "later_capture_approved": true,
+      "review_note": "Resource-specific source and payload validation; original capture and byte hash retained. Graphics inspected in context."
     },
     "https://l-stat.livejournal.net/??svg/flaticon.css,svg/headerextra.css,proximanova-opentype.css?v=1500645429": {
       "actual_capture": "20171019020150",
@@ -900152,6 +900293,510 @@
       "source_reviewed": true,
       "later_capture_approved": false,
       "review_note": "Exact versioned URL captured, byte/type checked and graphic visually inspected."
+    },
+    "https://l-stat.livejournal.net/img/btn_next.gif?v=17312@@wayback:20170724015346:087aecffda48": {
+      "actual_capture": "20170724015346",
+      "attempts": [],
+      "bytes": 613,
+      "captures": [],
+      "content_type": "image/gif",
+      "final_original": "https://l-stat.livejournal.net/img/btn_next.gif?v=17312",
+      "final_url": "https://web.archive.org/web/20170724015346id_/https://l-stat.livejournal.net/img/btn_next.gif?v=17312",
+      "hints": [],
+      "kind": "image",
+      "raw_path": "source/raw/087aecffda48ecc1516b8416b74242996ee6671ae3ff7987cf6c8921d68bd40b.gif",
+      "referrers": [
+        "explicit-capture-request"
+      ],
+      "retrieved_at": "2026-10-29T04:43:22.035224+00:00",
+      "sha256": "087aecffda48ecc1516b8416b74242996ee6671ae3ff7987cf6c8921d68bd40b",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20170724002702",
+      "status": "recovered",
+      "url": "https://l-stat.livejournal.net/img/btn_next.gif?v=17312",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Resource-specific source and payload validation; original capture and byte hash retained. Graphics inspected in context."
+    },
+    "https://l-stat.livejournal.net/img/btn_prev.gif?v=17312@@wayback:20170724015345:563e544ce37f": {
+      "actual_capture": "20170724015345",
+      "attempts": [],
+      "bytes": 628,
+      "captures": [],
+      "content_type": "image/gif",
+      "final_original": "https://l-stat.livejournal.net/img/btn_prev.gif?v=17312",
+      "final_url": "https://web.archive.org/web/20170724015345id_/https://l-stat.livejournal.net/img/btn_prev.gif?v=17312",
+      "hints": [],
+      "kind": "image",
+      "raw_path": "source/raw/563e544ce37fa5b1de98dbd15487614edc905893564ecae31776434df3a80740.gif",
+      "referrers": [
+        "explicit-capture-request"
+      ],
+      "retrieved_at": "2026-10-29T04:43:30.629307+00:00",
+      "sha256": "563e544ce37fa5b1de98dbd15487614edc905893564ecae31776434df3a80740",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20170724002702",
+      "status": "recovered",
+      "url": "https://l-stat.livejournal.net/img/btn_prev.gif?v=17312",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Resource-specific source and payload validation; original capture and byte hash retained. Graphics inspected in context."
+    },
+    "https://l-stat.livejournal.net/img/userinfo_v8.png?v=166.1@@wayback:20170723234331:115790341125": {
+      "actual_capture": "20170723234331",
+      "attempts": [],
+      "bytes": 232,
+      "captures": [],
+      "content_type": "image/png",
+      "final_original": "https://l-stat.livejournal.net/img/userinfo_v8.png?v=166.1",
+      "final_url": "https://web.archive.org/web/20170723234331id_/https://l-stat.livejournal.net/img/userinfo_v8.png?v=166.1",
+      "hints": [],
+      "kind": "image",
+      "raw_path": "source/raw/115790341125a7c8e27c587256103db546af7a198acf7be8249d9641008e83ac.png",
+      "referrers": [
+        "explicit-capture-request"
+      ],
+      "retrieved_at": "2026-10-29T04:43:38.422582+00:00",
+      "sha256": "115790341125a7c8e27c587256103db546af7a198acf7be8249d9641008e83ac",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20170724002702",
+      "status": "recovered",
+      "url": "https://l-stat.livejournal.net/img/userinfo_v8.png?v=166.1",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Resource-specific source and payload validation; original capture and byte hash retained. Graphics inspected in context."
+    },
+    "https://l-stat.livejournal.net/img/userinfo_v8.png?v=184.1@@wayback:20170921185857:115790341125": {
+      "actual_capture": "20170921185857",
+      "attempts": [],
+      "bytes": 232,
+      "captures": [],
+      "content_type": "image/png",
+      "final_original": "https://l-stat.livejournal.net/img/userinfo_v8.png?v=184.1",
+      "final_url": "https://web.archive.org/web/20170921185857id_/https://l-stat.livejournal.net/img/userinfo_v8.png?v=184.1",
+      "hints": [],
+      "kind": "image",
+      "raw_path": "source/raw/115790341125a7c8e27c587256103db546af7a198acf7be8249d9641008e83ac.png",
+      "referrers": [
+        "explicit-capture-request"
+      ],
+      "retrieved_at": "2026-10-29T04:43:47.788653+00:00",
+      "sha256": "115790341125a7c8e27c587256103db546af7a198acf7be8249d9641008e83ac",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20170921224937",
+      "status": "recovered",
+      "url": "https://l-stat.livejournal.net/img/userinfo_v8.png?v=184.1",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Resource-specific source and payload validation; original capture and byte hash retained. Graphics inspected in context."
+    },
+    "https://l-stat.livejournal.net/img/userinfo_v8.png?v=192@@wayback:20171022031239:115790341125": {
+      "actual_capture": "20171022031239",
+      "attempts": [],
+      "bytes": 232,
+      "captures": [],
+      "content_type": "image/png",
+      "final_original": "https://l-stat.livejournal.net/img/userinfo_v8.png?v=192",
+      "final_url": "https://web.archive.org/web/20171022031239id_/https://l-stat.livejournal.net/img/userinfo_v8.png?v=192",
+      "hints": [],
+      "kind": "image",
+      "raw_path": "source/raw/115790341125a7c8e27c587256103db546af7a198acf7be8249d9641008e83ac.png",
+      "referrers": [
+        "explicit-capture-request"
+      ],
+      "retrieved_at": "2026-10-29T04:43:55.712380+00:00",
+      "sha256": "115790341125a7c8e27c587256103db546af7a198acf7be8249d9641008e83ac",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20171022044330",
+      "status": "recovered",
+      "url": "https://l-stat.livejournal.net/img/userinfo_v8.png?v=192",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Resource-specific source and payload validation; original capture and byte hash retained. Graphics inspected in context."
+    },
+    "https://l-stat.livejournal.net/img/userinfo_v8.png?v=200.1@@wayback:20171119095431:115790341125": {
+      "actual_capture": "20171119095431",
+      "attempts": [],
+      "bytes": 232,
+      "captures": [],
+      "content_type": "image/png",
+      "final_original": "https://l-stat.livejournal.net/img/userinfo_v8.png?v=200.1",
+      "final_url": "https://web.archive.org/web/20171119095431id_/https://l-stat.livejournal.net/img/userinfo_v8.png?v=200.1",
+      "hints": [],
+      "kind": "image",
+      "raw_path": "source/raw/115790341125a7c8e27c587256103db546af7a198acf7be8249d9641008e83ac.png",
+      "referrers": [
+        "explicit-capture-request"
+      ],
+      "retrieved_at": "2026-10-29T04:44:03.396006+00:00",
+      "sha256": "115790341125a7c8e27c587256103db546af7a198acf7be8249d9641008e83ac",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20171119081935",
+      "status": "recovered",
+      "url": "https://l-stat.livejournal.net/img/userinfo_v8.png?v=200.1",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Resource-specific source and payload validation; original capture and byte hash retained. Graphics inspected in context."
+    },
+    "https://l-stat.livejournal.net/img/userinfo_v8.png?v=207@@wayback:20171213123720:115790341125": {
+      "actual_capture": "20171213123720",
+      "attempts": [],
+      "bytes": 232,
+      "captures": [],
+      "content_type": "image/png",
+      "final_original": "https://l-stat.livejournal.net/img/userinfo_v8.png?v=207",
+      "final_url": "https://web.archive.org/web/20171213123720id_/https://l-stat.livejournal.net/img/userinfo_v8.png?v=207",
+      "hints": [],
+      "kind": "image",
+      "raw_path": "source/raw/115790341125a7c8e27c587256103db546af7a198acf7be8249d9641008e83ac.png",
+      "referrers": [
+        "explicit-capture-request"
+      ],
+      "retrieved_at": "2026-10-29T04:44:11.070163+00:00",
+      "sha256": "115790341125a7c8e27c587256103db546af7a198acf7be8249d9641008e83ac",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20171213130923",
+      "status": "recovered",
+      "url": "https://l-stat.livejournal.net/img/userinfo_v8.png?v=207",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Resource-specific source and payload validation; original capture and byte hash retained. Graphics inspected in context."
+    },
+    "https://l-stat.livejournal.net/img/userinfo_v8.png?v=222@@wayback:20180219093553:115790341125": {
+      "actual_capture": "20180219093553",
+      "attempts": [],
+      "bytes": 232,
+      "captures": [],
+      "content_type": "image/png",
+      "final_original": "https://l-stat.livejournal.net/img/userinfo_v8.png?v=222",
+      "final_url": "https://web.archive.org/web/20180219093553id_/https://l-stat.livejournal.net/img/userinfo_v8.png?v=222",
+      "hints": [],
+      "kind": "image",
+      "raw_path": "source/raw/115790341125a7c8e27c587256103db546af7a198acf7be8249d9641008e83ac.png",
+      "referrers": [
+        "explicit-capture-request"
+      ],
+      "retrieved_at": "2026-10-29T04:44:19.242315+00:00",
+      "sha256": "115790341125a7c8e27c587256103db546af7a198acf7be8249d9641008e83ac",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20180219080958",
+      "status": "recovered",
+      "url": "https://l-stat.livejournal.net/img/userinfo_v8.png?v=222",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Resource-specific source and payload validation; original capture and byte hash retained. Graphics inspected in context."
+    },
+    "https://l-stat.livejournal.net/img/userinfo_v8.png?v=240@@wayback:20180426062747:115790341125": {
+      "actual_capture": "20180426062747",
+      "attempts": [],
+      "bytes": 232,
+      "captures": [],
+      "content_type": "image/png",
+      "final_original": "https://l-stat.livejournal.net/img/userinfo_v8.png?v=240",
+      "final_url": "https://web.archive.org/web/20180426062747id_/https://l-stat.livejournal.net/img/userinfo_v8.png?v=240",
+      "hints": [],
+      "kind": "image",
+      "raw_path": "source/raw/115790341125a7c8e27c587256103db546af7a198acf7be8249d9641008e83ac.png",
+      "referrers": [
+        "explicit-capture-request"
+      ],
+      "retrieved_at": "2026-10-29T04:44:30.321964+00:00",
+      "sha256": "115790341125a7c8e27c587256103db546af7a198acf7be8249d9641008e83ac",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20180426051619",
+      "status": "recovered",
+      "url": "https://l-stat.livejournal.net/img/userinfo_v8.png?v=240",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Resource-specific source and payload validation; original capture and byte hash retained. Graphics inspected in context."
+    },
+    "https://l-stat.livejournal.net/img/userinfo_v8.png?v=246@@wayback:20180522135843:115790341125": {
+      "actual_capture": "20180522135843",
+      "attempts": [],
+      "bytes": 232,
+      "captures": [],
+      "content_type": "image/png",
+      "final_original": "https://l-stat.livejournal.net/img/userinfo_v8.png?v=246",
+      "final_url": "https://web.archive.org/web/20180522135843id_/https://l-stat.livejournal.net/img/userinfo_v8.png?v=246",
+      "hints": [],
+      "kind": "image",
+      "raw_path": "source/raw/115790341125a7c8e27c587256103db546af7a198acf7be8249d9641008e83ac.png",
+      "referrers": [
+        "explicit-capture-request"
+      ],
+      "retrieved_at": "2026-10-29T04:44:39.844377+00:00",
+      "sha256": "115790341125a7c8e27c587256103db546af7a198acf7be8249d9641008e83ac",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20180522170820",
+      "status": "recovered",
+      "url": "https://l-stat.livejournal.net/img/userinfo_v8.png?v=246",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Resource-specific source and payload validation; original capture and byte hash retained. Graphics inspected in context."
+    },
+    "https://l-stat.livejournal.net/img/userinfo_v8.svg?v=17080?v=222@@wayback:20180219090021:535f067852f7": {
+      "actual_capture": "20180219090021",
+      "attempts": [],
+      "bytes": 1304,
+      "captures": [],
+      "content_type": "image/svg+xml",
+      "final_original": "https://l-stat.livejournal.net/img/userinfo_v8.svg?v=17080?v=222",
+      "final_url": "https://web.archive.org/web/20180219090021id_/https://l-stat.livejournal.net/img/userinfo_v8.svg?v=17080?v=222",
+      "hints": [],
+      "kind": "image",
+      "raw_path": "source/raw/535f067852f7f5964da5b260304a60715398e18537479480fedfa7cc535949ea.svg",
+      "referrers": [
+        "explicit-capture-request"
+      ],
+      "retrieved_at": "2026-10-29T04:46:16.263667+00:00",
+      "sha256": "535f067852f7f5964da5b260304a60715398e18537479480fedfa7cc535949ea",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20180219081152",
+      "status": "recovered",
+      "url": "https://l-stat.livejournal.net/img/userinfo_v8.svg?v=17080?v=222",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Resource-specific source and payload validation; original capture and byte hash retained. Graphics inspected in context."
+    },
+    "https://l-stat.livejournal.net/img/schemius/print-logo.png?v=49361@@wayback:20180219050715:96a72c16787d": {
+      "actual_capture": "20180219050715",
+      "attempts": [],
+      "bytes": 2276,
+      "captures": [],
+      "content_type": "image/png",
+      "final_original": "https://l-stat.livejournal.net/img/schemius/print-logo.png?v=49361",
+      "final_url": "https://web.archive.org/web/20180219050715id_/https://l-stat.livejournal.net/img/schemius/print-logo.png?v=49361",
+      "hints": [],
+      "kind": "image",
+      "raw_path": "source/raw/96a72c16787d9e55cbe06f31bc91db028934a7ad24aad0e7ee7a7649a6b160ca.png",
+      "referrers": [
+        "explicit-capture-request"
+      ],
+      "retrieved_at": "2026-10-29T04:46:25.173413+00:00",
+      "sha256": "96a72c16787d9e55cbe06f31bc91db028934a7ad24aad0e7ee7a7649a6b160ca",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20180219081152",
+      "status": "recovered",
+      "url": "https://l-stat.livejournal.net/img/schemius/print-logo.png?v=49361",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Resource-specific source and payload validation; original capture and byte hash retained. Graphics inspected in context."
+    },
+    "https://l-stat.livejournal.net/img/btn_todo.gif?v=16329@@wayback:20180212115451:6b3548fd591e": {
+      "actual_capture": "20180212115451",
+      "attempts": [],
+      "bytes": 802,
+      "captures": [],
+      "content_type": "image/gif",
+      "final_original": "https://l-stat.livejournal.net/img/btn_todo.gif?v=16329",
+      "final_url": "https://web.archive.org/web/20180212115451id_/https://l-stat.livejournal.net/img/btn_todo.gif?v=16329",
+      "hints": [],
+      "kind": "image",
+      "raw_path": "source/raw/6b3548fd591ec9968b49093a86cf50bc934f728f04805c9d13e92d993ed2ccbe.gif",
+      "referrers": [
+        "explicit-capture-request"
+      ],
+      "retrieved_at": "2026-10-29T04:46:33.683986+00:00",
+      "sha256": "6b3548fd591ec9968b49093a86cf50bc934f728f04805c9d13e92d993ed2ccbe",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20180219081152",
+      "status": "recovered",
+      "url": "https://l-stat.livejournal.net/img/btn_todo.gif?v=16329",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Resource-specific source and payload validation; original capture and byte hash retained. Graphics inspected in context."
+    },
+    "https://l-stat.livejournal.net/img/btn_memories.gif?v=97312@@wayback:20180212115451:186b3e74932c": {
+      "actual_capture": "20180212115451",
+      "attempts": [],
+      "bytes": 820,
+      "captures": [],
+      "content_type": "image/gif",
+      "final_original": "https://l-stat.livejournal.net/img/btn_memories.gif?v=97312",
+      "final_url": "https://web.archive.org/web/20180212115451id_/https://l-stat.livejournal.net/img/btn_memories.gif?v=97312",
+      "hints": [],
+      "kind": "image",
+      "raw_path": "source/raw/186b3e74932cbcc3d2a8bf8fcb18bd5885ee9fefd925653800a519b2865571ad.png",
+      "referrers": [
+        "explicit-capture-request"
+      ],
+      "retrieved_at": "2026-10-29T04:46:41.481828+00:00",
+      "sha256": "186b3e74932cbcc3d2a8bf8fcb18bd5885ee9fefd925653800a519b2865571ad",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20180219081152",
+      "status": "recovered",
+      "url": "https://l-stat.livejournal.net/img/btn_memories.gif?v=97312",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Resource-specific source and payload validation; original capture and byte hash retained. Graphics inspected in context."
+    },
+    "https://l-stat.livejournal.net/img/btn_tellfriend.gif?v=16326@@wayback:20180212115451:2ca963950d05": {
+      "actual_capture": "20180212115451",
+      "attempts": [],
+      "bytes": 784,
+      "captures": [],
+      "content_type": "image/gif",
+      "final_original": "https://l-stat.livejournal.net/img/btn_tellfriend.gif?v=16326",
+      "final_url": "https://web.archive.org/web/20180212115451id_/https://l-stat.livejournal.net/img/btn_tellfriend.gif?v=16326",
+      "hints": [],
+      "kind": "image",
+      "raw_path": "source/raw/2ca963950d05be6d5a0fbf7b9ffbccf85f21f1b84854e7ce5866b7e7dea1630a.gif",
+      "referrers": [
+        "explicit-capture-request"
+      ],
+      "retrieved_at": "2026-10-29T04:46:49.052179+00:00",
+      "sha256": "2ca963950d05be6d5a0fbf7b9ffbccf85f21f1b84854e7ce5866b7e7dea1630a",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20180219081152",
+      "status": "recovered",
+      "url": "https://l-stat.livejournal.net/img/btn_tellfriend.gif?v=16326",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Resource-specific source and payload validation; original capture and byte hash retained. Graphics inspected in context."
+    },
+    "https://l-stat.livejournal.net/img/btn_search.gif?v=17312@@wayback:20180212115450:1fd8b99079ff": {
+      "actual_capture": "20180212115450",
+      "attempts": [],
+      "bytes": 644,
+      "captures": [],
+      "content_type": "image/gif",
+      "final_original": "https://l-stat.livejournal.net/img/btn_search.gif?v=17312",
+      "final_url": "https://web.archive.org/web/20180212115450id_/https://l-stat.livejournal.net/img/btn_search.gif?v=17312",
+      "hints": [],
+      "kind": "image",
+      "raw_path": "source/raw/1fd8b99079ff7667436fc74b99cdcb10cd41f11ca7d37e713143f143bfd8c54e.gif",
+      "referrers": [
+        "explicit-capture-request"
+      ],
+      "retrieved_at": "2026-10-29T04:46:56.745503+00:00",
+      "sha256": "1fd8b99079ff7667436fc74b99cdcb10cd41f11ca7d37e713143f143bfd8c54e",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20180219081152",
+      "status": "recovered",
+      "url": "https://l-stat.livejournal.net/img/btn_search.gif?v=17312",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Resource-specific source and payload validation; original capture and byte hash retained. Graphics inspected in context."
+    },
+    "https://l-stat.livejournal.net/img/btn_nudge.gif?v=6041@@wayback:20180212115449:3a7ba75db154": {
+      "actual_capture": "20180212115449",
+      "attempts": [],
+      "bytes": 679,
+      "captures": [],
+      "content_type": "image/gif",
+      "final_original": "https://l-stat.livejournal.net/img/btn_nudge.gif?v=6041",
+      "final_url": "https://web.archive.org/web/20180212115449id_/https://l-stat.livejournal.net/img/btn_nudge.gif?v=6041",
+      "hints": [],
+      "kind": "image",
+      "raw_path": "source/raw/3a7ba75db1544370801e2b63e21ca1ed47776924edb1d5dd76e97d0a6f5d6726.gif",
+      "referrers": [
+        "explicit-capture-request"
+      ],
+      "retrieved_at": "2026-10-29T04:47:04.619939+00:00",
+      "sha256": "3a7ba75db1544370801e2b63e21ca1ed47776924edb1d5dd76e97d0a6f5d6726",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20180219081152",
+      "status": "recovered",
+      "url": "https://l-stat.livejournal.net/img/btn_nudge.gif?v=6041",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Resource-specific source and payload validation; original capture and byte hash retained. Graphics inspected in context."
+    },
+    "https://l-stat.livejournal.net/img/btn_prev.gif?v=17312@@wayback:20180219060013:563e544ce37f": {
+      "actual_capture": "20180219060013",
+      "attempts": [],
+      "bytes": 628,
+      "captures": [],
+      "content_type": "image/gif",
+      "final_original": "https://l-stat.livejournal.net/img/btn_prev.gif?v=17312",
+      "final_url": "https://web.archive.org/web/20180219060013id_/https://l-stat.livejournal.net/img/btn_prev.gif?v=17312",
+      "hints": [],
+      "kind": "image",
+      "raw_path": "source/raw/563e544ce37fa5b1de98dbd15487614edc905893564ecae31776434df3a80740.gif",
+      "referrers": [
+        "explicit-capture-request"
+      ],
+      "retrieved_at": "2026-10-29T04:47:12.649879+00:00",
+      "sha256": "563e544ce37fa5b1de98dbd15487614edc905893564ecae31776434df3a80740",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20180219081152",
+      "status": "recovered",
+      "url": "https://l-stat.livejournal.net/img/btn_prev.gif?v=17312",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Resource-specific source and payload validation; original capture and byte hash retained. Graphics inspected in context."
+    },
+    "https://l-stat.livejournal.net/img/btn_sharethis.gif?v=18499@@wayback:20180219060014:380d55bf96a2": {
+      "actual_capture": "20180219060014",
+      "attempts": [],
+      "bytes": 1231,
+      "captures": [],
+      "content_type": "image/gif",
+      "final_original": "https://l-stat.livejournal.net/img/btn_sharethis.gif?v=18499",
+      "final_url": "https://web.archive.org/web/20180219060014id_/https://l-stat.livejournal.net/img/btn_sharethis.gif?v=18499",
+      "hints": [],
+      "kind": "image",
+      "raw_path": "source/raw/380d55bf96a2e68f13c81b16a7e29ccd0b039634b02bf2ed3ae62045394ce604.gif",
+      "referrers": [
+        "explicit-capture-request"
+      ],
+      "retrieved_at": "2026-10-29T04:47:20.485595+00:00",
+      "sha256": "380d55bf96a2e68f13c81b16a7e29ccd0b039634b02bf2ed3ae62045394ce604",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20180219081152",
+      "status": "recovered",
+      "url": "https://l-stat.livejournal.net/img/btn_sharethis.gif?v=18499",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Resource-specific source and payload validation; original capture and byte hash retained. Graphics inspected in context."
+    },
+    "https://l-stat.livejournal.net/img/btn_next.gif?v=17312@@wayback:20180219060015:087aecffda48": {
+      "actual_capture": "20180219060015",
+      "attempts": [],
+      "bytes": 613,
+      "captures": [],
+      "content_type": "image/gif",
+      "final_original": "https://l-stat.livejournal.net/img/btn_next.gif?v=17312",
+      "final_url": "https://web.archive.org/web/20180219060015id_/https://l-stat.livejournal.net/img/btn_next.gif?v=17312",
+      "hints": [],
+      "kind": "image",
+      "raw_path": "source/raw/087aecffda48ecc1516b8416b74242996ee6671ae3ff7987cf6c8921d68bd40b.gif",
+      "referrers": [
+        "explicit-capture-request"
+      ],
+      "retrieved_at": "2026-10-29T04:47:28.305440+00:00",
+      "sha256": "087aecffda48ecc1516b8416b74242996ee6671ae3ff7987cf6c8921d68bd40b",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20180219081152",
+      "status": "recovered",
+      "url": "https://l-stat.livejournal.net/img/btn_next.gif?v=17312",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Resource-specific source and payload validation; original capture and byte hash retained. Graphics inspected in context."
+    },
+    "https://l-stat.livejournal.net/img/community.gif?v=556?v=222@@wayback:20180219090021:9346708572a0": {
+      "actual_capture": "20180219090021",
+      "attempts": [],
+      "bytes": 163,
+      "captures": [],
+      "content_type": "image/gif",
+      "final_original": "https://l-stat.livejournal.net/img/community.gif?v=556?v=222",
+      "final_url": "https://web.archive.org/web/20180219090021id_/https://l-stat.livejournal.net/img/community.gif?v=556?v=222",
+      "hints": [],
+      "kind": "image",
+      "raw_path": "source/raw/9346708572a0939d6d1a0818e1d623a37d74f17b1f1a25b093dc615f0751f164.gif",
+      "referrers": [
+        "explicit-capture-request"
+      ],
+      "retrieved_at": "2026-10-29T04:47:36.254868+00:00",
+      "sha256": "9346708572a0939d6d1a0818e1d623a37d74f17b1f1a25b093dc615f0751f164",
+      "source_archive": "Internet Archive Wayback",
+      "source_requested_capture": "20180219081152",
+      "status": "recovered",
+      "url": "https://l-stat.livejournal.net/img/community.gif?v=556?v=222",
+      "source_reviewed": true,
+      "later_capture_approved": false,
+      "review_note": "Resource-specific source and payload validation; original capture and byte hash retained. Graphics inspected in context."
     }
   },
   "version": 1

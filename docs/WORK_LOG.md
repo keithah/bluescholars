@@ -1052,3 +1052,9 @@ PYTHONPATH=. .venv311/bin/python scripts/recover_press_archive_pages.py --only-s
 Recovered 16 original LJ graphic URLs and an empty-but-navigable 2011 Friends page. Reconciled 18 original Massline image records. Restored 20 existing photos into later LJ captures with 264 resource-specific proxy aliases proven by otherwise identical entry markup, image order, source URLs and hashes; 30 rendered journal pages gained photos. These photos were already present in older captures and are not new downloads. Preserved failed calendar/userpic attempts separately.
 
 Fixed extensionless LJ navigation classification with a failing-then-passing regression test and corrected 35 local queue entries. Added mobile-only photo sizing after a browser-observed 470px overflow; verified 375px document width at a 390px viewport, nine loaded Atlanta photos, and one timeline. Final root/project builds and checks: zero errors; suite: 345 passed. Release-review flags unchanged. Evidence, screenshot and next recovery command: `docs/recovery-report/LIVEJOURNAL_FILL_2026-10-28.md`; batch manifests: `recovery/batches/2026-10-28-lj-navigation/`.
+
+## 2026-10-28 — LiveJournal styling recovery
+
+Restored stylesheet references on 47 journal pages by fixing malformed nested-link handling. Added 21 exact graphic URL records (12 image payloads), one individually reviewed 2023 tracklisting capture and its three stylesheets, and 13 documented older-theme fallback mappings. No new unique article text was found. Kept missing-icon geometry small and restored readable phone layout. Old account-prefix discovery timed out twice and remains resumable.
+
+347 tests passed; strengthened fixture assertion passed in the 36-test core suite. Full root/project checks: zero errors. Browser inspected desktop/mobile, local assets and one timeline. Global release-review flags unchanged. Report: `docs/recovery-report/LIVEJOURNAL_STYLING_2026-10-28.md`.

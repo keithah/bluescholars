@@ -97,3 +97,6 @@
 @media(max-width:600px){html.archive-lj-layout{min-width:0!important}html.archive-lj-layout body{min-width:0!important;width:auto!important;padding-top:0!important}.archive-lj-layout body>.s-header{position:relative!important;top:auto!important;overflow:hidden}.archive-lj-layout body>#shadowhack1{margin:0!important}.archive-artist-layout #content{overflow-wrap:anywhere}.archive-artist-layout #content img{max-width:100%;height:auto}}
 @media(max-width:600px){.archive-lj-layout #footer-links{max-width:100%;overflow-x:auto}}
 @media(max-width:600px){.archive-lj-layout .entrycontent img{max-width:100%;height:auto}}
+.archive-missing-image.archive-missing-icon{display:inline-block;padding:0;overflow:hidden;vertical-align:middle;line-height:1;box-sizing:border-box;font-size:10px}
+@media(max-width:600px){.archive-lj-layout #shadowhack1{width:auto!important;min-width:0;zoom:1!important}.archive-lj-layout #pagecontainer{margin:0 12px;display:flex;flex-direction:column}.archive-lj-layout #title{order:0;flex-shrink:0}.archive-lj-layout #main{order:1;float:none;width:auto;min-height:0;padding:0}.archive-lj-layout #paraphernalia{order:2;float:none;width:auto}.archive-lj-layout .entrycontent{font-size:14px;line-height:1.5}}
+@media(max-width:600px){.archive-lj-layout #server_sig{width:auto;max-width:100%}}

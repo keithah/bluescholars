@@ -146,3 +146,31 @@ def test_livejournal_navigation_is_html_but_assets_keep_their_types():
     assert kind_for('https://bluescholars.livejournal.com/photo.jpg')=='image'
     assert kind_for('https://bluescholars.livejournal.com/res/19020223/stylesheet','text/css')=='css'
     assert kind_for('https://l-userpic.livejournal.com/123/456')=='image'
+
+
+def test_nested_livejournal_stylesheets_survive_malformed_empty_link():
+    from bs4 import BeautifulSoup
+    from restore.render import render_html
+    url='http://bluescholars.livejournal.com/16015.html'
+    css='https://l-stat.livejournal.net/??header.css?v=1'
+    from pathlib import Path
+    raw=(Path(__file__).parent/'fixtures/lj-nested-stylesheets.html').read_text()
+    assert BeautifulSoup(raw,'html.parser').find('link',href=css).parent.name=='link'
+    rendered,_=render_html(raw,url,{css:{'kind':'css','status':'recovered','local_path':'/assets/header.css'}},'/bluescholars')
+    soup=BeautifulSoup(rendered,'html.parser')
+    assert soup.find('link',href='/bluescholars/assets/header.css')
+    assert 'unsafe()' not in rendered
+    assert 'Original post' in rendered
+
+
+def test_missing_small_controls_keep_their_source_geometry():
+    from bs4 import BeautifulSoup
+    from restore.render import render_html
+    raw='<html><body><img src="missing.gif" width="24" height="24" alt="Previous Entry"><img class="i-ljuser-userhead" src="user.svg"><img src="photo.jpg" width="470" height="300" alt="Photo"></body></html>'
+    rendered,_=render_html(raw,'http://bluescholars.livejournal.com/16015.html',{},'')
+    spans=BeautifulSoup(rendered,'html.parser').select('.archive-missing-image')
+    assert 'archive-missing-icon' in spans[0]['class']
+    assert spans[0]['aria-label']=='Image not recovered — Previous Entry'
+    assert 'width:24px' in spans[0]['style']
+    assert 'archive-missing-icon' in spans[1]['class']
+    assert 'archive-missing-icon' not in spans[2]['class']

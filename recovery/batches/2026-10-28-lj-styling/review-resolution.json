@@ -1,0 +1,14 @@
+{
+  "review": "CodeRabbit uncommitted fresh review",
+  "findings": [
+    {
+      "finding": "Fixture does not reproduce nesting",
+      "resolution": "Not reproduced with project html.parser: stylesheet parent is link. Added explicit assertion; 36 core tests pass."
+    },
+    {
+      "finding": "Hard-coded resume directory",
+      "resolution": "Use repository root and configured Python environment in report."
+    }
+  ],
+  "manifest_records_hash_verified": 25
+}

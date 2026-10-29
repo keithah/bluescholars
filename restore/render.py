@@ -277,8 +277,10 @@ def render_html(text: str,url: str,resources: dict,base: str,route_prefix='',ali
             descriptor={'href':link.get('href',''),'rel':link.get('rel',[]),
                         'media':link.get('media'),'type':link.get('type')}
             stylesheet_links.append(descriptor);stylesheet_hrefs.add(descriptor['href'])
-            # A malformed void <link> can own later script tags in html.parser.
-            # Destroy the entire untrusted subtree and recreate a clean tag below.
+    # Collect every descriptor before removing malformed parent links, whose
+    # parsed subtrees may contain other valid stylesheet references.
+    for link in list(soup.find_all('link',href=True)):
+        if link.attrs is not None and 'stylesheet' in link.get('rel',[]):
             link.decompose()
     for comment in list(soup.find_all(string=lambda s:isinstance(s,Comment))):
         # Squarespace's 2013–2016 template placed its only stylesheet references
@@ -346,7 +348,16 @@ def render_html(text: str,url: str,resources: dict,base: str,route_prefix='',ali
             alt=img.get('alt','').strip()
             if alt.lower().startswith('post to '):
                 span['class'].append('archive-missing-control')
-            span.string='Image not recovered'+(' — '+alt if alt else '')
+            label='Image not recovered'+(' — '+alt if alt else '')
+            width,height=str(img.get('width','')),str(img.get('height',''))
+            if 'i-ljuser-userhead' in img.get('class',[]):
+                width,height='16','16'
+            if width.isdecimal() and height.isdecimal() and 0<int(width)<=32 and 0<int(height)<=32:
+                span['class'].append('archive-missing-icon')
+                span['style']=f'width:{int(width)}px;height:{int(height)}px'
+                span['title']=label;span['aria-label']=label;span.string='?'
+            else:
+                span.string=label
             img.replace_with(span)
     for form in list(soup.find_all('form')):
         form.name='div';form.attrs={'class':'archive-historical-form','aria-disabled':'true'}

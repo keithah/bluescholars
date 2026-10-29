@@ -1039,3 +1039,10 @@ PYTHONPATH=. .venv311/bin/python scripts/recover_press_archive_pages.py --only-s
 - The minimum cooldown is 60 seconds. A longer numeric or HTTP-date `Retry-After` is honored, and concurrent updates never shorten an existing deadline. Requests already in flight cannot be recalled; new requests check the shared deadline. Separate computers/runners do not share this local file.
 - Main recovery checkpoints record the interrupted capture as deferred/queued, preserving its capture date and index cursor. Deferred attempts do not count as exhausted captures. Restart the same recovery command after the reported deadline; the CLI exits with temporary-failure code 75 while paused. This does not schedule an automatic background run.
 - Standalone session-based recovery tools propagate the pause before writing a per-capture failure; their saved inventories remain retryable. Myspace and Twitter now checkpoint each completed item. Tests isolate the cooldown and block external HTTP, with local preview-server traffic allowed.
+
+
+## October 28, 2026 — integrate recovered LiveJournal icons and source mappings
+
+- Promoted 18 inspected records: six LiveJournal icon URLs from the preceding batch, seven original-site image mappings, and five exact 2009 blog captures. The latter twelve match earlier preserved payloads and are not counted as unique new content. Thirty-one saved LiveJournal pages gain icon references.
+- Corrected a mobile overflow caused by the historical LiveJournal footer table, keeping it horizontally scrollable within its own area. Browser verified local image loading, one timeline, root and project hosting, and mobile document width of 381px within a 390px viewport.
+- All 344 tests passed. Full root/project builds and final post-refresh checks each passed with zero errors. The deployment retains existing archive files and review flags. See `docs/recovery-report/SITE_FILL_2026-10-28.md` and the source-linked batch manifest.

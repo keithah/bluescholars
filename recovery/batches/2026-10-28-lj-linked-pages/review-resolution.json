@@ -1,0 +1,22 @@
+{
+  "review": "CodeRabbit uncommitted review completed with three findings",
+  "resolutions": [
+    {
+      "finding": "Image source_pages used strings",
+      "resolution": "Converted to page_url records; focused press build completed successfully."
+    },
+    {
+      "finding": "Tablet image CDX rows missing",
+      "resolution": "Stored all five returned rows; preserved full rows for the other newly indexed images as well."
+    },
+    {
+      "finding": "New capture payloads untracked",
+      "resolution": "Explicitly staged four HTML files and seven JPEG files alongside their manifest. Original bytes retained unchanged."
+    },
+    {
+      "finding": "Full-site checks found six publisher image-map URLs incorrectly treated as local routes",
+      "resolution": "Added press-specific image-map resolution through the shared URL resolver, with a failing-then-passing regression test. Original raw HTML remains unchanged; press sections rebuilt before final full checks."
+    }
+  ],
+  "original_payload_whitespace": "Raw archived HTML is preserved byte-for-byte; whitespace checks apply to authored code and reports."
+}

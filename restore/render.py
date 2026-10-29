@@ -343,6 +343,11 @@ def render_html(text: str,url: str,resources: dict,base: str,route_prefix='',ali
             img['src']=local;img['loading']='lazy';img['decoding']='async'
             for attr in ('srcset','data-src','data-image','data-original','data-srcset'): img.attrs.pop(attr,None)
             img.attrs.setdefault('alt','')
+            source_record=resolver._record(original_url(value,url))
+            if source_record.get('substitution_note'):
+                note=soup.new_tag('small',attrs={'class':'archive-asset-note'})
+                note.string=source_record['substitution_note']
+                img.insert_after(note)
         else:
             span=soup.new_tag('span',attrs={'class':'archive-missing-image','role':'img'})
             alt=img.get('alt','').strip()

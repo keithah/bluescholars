@@ -13,7 +13,7 @@ from urllib.parse import urlsplit, urlunsplit
 from bs4 import BeautifulSoup
 
 from .archive import validate_payload
-from .render import render_html, resource_aliases
+from .render import Resolver, render_html, resource_aliases
 from .urls import base_path, identity, route, historical_route_prefix, original_url, is_site
 
 
@@ -44,6 +44,45 @@ def _slug(url: str) -> str:
     source = (parts.hostname or "source") + "-" + parts.path + ("-" + parts.query if parts.query else "")
     stem = re.sub(r"[^a-z0-9]+", "-", source.lower()).strip("-")[:58].strip("-") or "source"
     return stem + "-" + hashlib.sha256(_group_key(url).encode()).hexdigest()[:10]
+
+
+def recovered_press_resources(root: Path) -> dict:
+    """Expose captured press destinations to the site's other archived pages."""
+    path = root / 'recovery/other-archives/press-articles/manifest.json'
+    if not path.exists():
+        return {}
+    manifest = json.loads(path.read_text())
+    groups = {}
+    for source in manifest.get('sources', {}).values():
+        url = source.get('source_url')
+        if url:
+            groups.setdefault(_group_key(url), url)
+    resources = {}
+    for capture in manifest.get('page_captures', {}).values():
+        url = capture.get('source_page_url') or capture.get('original_url')
+        if not url or not capture.get('cdx_sha1_verified'):
+            continue
+        canonical = groups.setdefault(_group_key(url), url)
+        record = {'kind': 'html', 'local_path': f'{PRESS_ROOT}/articles/{_slug(canonical)}/index.html'}
+        for original in (url, canonical, capture.get('original_url')):
+            if original:
+                resources[original] = record
+    return resources
+
+
+def render_press_html(text: str, source_url: str, resources: dict, base: str, **kwargs):
+    """Resolve legacy publisher image maps without treating them as local paths."""
+    if '<area' in text.lower():
+        doc = BeautifulSoup(text, 'html.parser')
+        resolver = Resolver(resources, base, [])
+        for area in doc.select('area[href]'):
+            target = resolver.link(area['href'], source_url)
+            if target:
+                area['href'] = target
+            else:
+                del area['href']
+        text = str(doc)
+    return render_html(text, source_url, resources, base, **kwargs)
 
 
 def _read_capture(root: Path, record: dict, kind: str, directory: str) -> bytes:
@@ -322,7 +361,7 @@ def build_press_archive(root: Path, output: Path, base: str, stylesheet: str) ->
     for capture in validated_pages:
         source_url = capture.get("original_url") or capture.get("source_page_url", "")
         resources = media_for_capture(capture)
-        rendered, _issues = render_html(capture["body"].decode("utf-8", errors="replace"), source_url,
+        rendered, _issues = render_press_html(capture["body"].decode("utf-8", errors="replace"), source_url,
                                         resources, base, aliases=resource_aliases(resources),
                                         ui_stylesheet=stylesheet,
                                         ui_script=base + "/assets/legacy.js")

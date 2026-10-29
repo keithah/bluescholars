@@ -21,7 +21,7 @@ from .feeds import collect_feed_entries
 from .proof206 import build_206proof_archive
 from .twitter import build_twitter_archives
 from .redact import public_credential_fields, redact_public_credentials
-from .press_archive import build_press_archive
+from .press_archive import build_press_archive, recovered_press_resources
 
 CORE=[('/', 'Homepage'),('/blog/','Blog'),('/shows/','Shows'),('/video/','Video'),('/shop/','Shop'),('/holler/','Holler')]
 FALLBACK_UI='''.archive-restoration-notice,.archive-gap-page {font:16px/1.6 system-ui,sans-serif}
@@ -679,6 +679,8 @@ def documented_asset_aliases(root: Path,usable_variants: dict) -> tuple[dict,lis
                            'source_url':source,'reason':'The documented capture/hash is not present as a validated local image or stylesheet.'})
             continue
         record=dict(record)
+        if item.get('substitution_note'):
+            record['substitution_note']=item['substitution_note']
         local=record.get('local_path','')
         if not local or record['sha256'] not in Path(local).name:
             suffix='.css' if source_kind=='css' else Path(record['raw_path']).suffix
@@ -878,6 +880,7 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
         original=r.get('url',key)
         if is_site(original):render_resources.setdefault(original,r)
     render_resources.update(usable)
+    render_resources.update(recovered_press_resources(root))
     aliases=resource_aliases(render_resources)
     compatibility_aliases,alias_issues=documented_asset_aliases(root,usable_variants)
     for key,record in compatibility_aliases.items():

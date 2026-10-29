@@ -9472,6 +9472,107 @@
       "source_url": "https://rapreviews.com/special/nov2007_bluescholars.html",
       "cdx_rows": [],
       "query_error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /cdx/search/cdx?url=https%3A%2F%2Frapreviews.com%2Fspecial%2Fnov2007_bluescholars.html&matchType=exact&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest%2Clength&filter=statuscode%3A200&limit=100 (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+    },
+    "http://www.ballerstatus.net/reviews/read/id/70216686/": {
+      "source_url": "http://www.ballerstatus.net/reviews/read/id/70216686/",
+      "cdx_rows": [
+        [
+          "20060814044207",
+          "http://www.ballerstatus.net:80/reviews/read/id/70216686/",
+          "200",
+          "text/html",
+          "6RE5JP6MHQDYMNIWBAM3ILELJL5YBXGI"
+        ],
+        [
+          "20061013020721",
+          "http://www.ballerstatus.net/reviews/read/id/70216686/",
+          "200",
+          "text/html",
+          "TLRG3KFZ3HPTW3HQUYYR2WPM2LF5IB3W"
+        ]
+      ],
+      "discovered_from": "http://www.livejournal.com:80/users/bluescholars/"
+    },
+    "http://www.thestranger.com/seattle/Content?oid=25361": {
+      "source_url": "http://www.thestranger.com/seattle/Content?oid=25361",
+      "cdx_rows": [
+        [
+          "20120209152714",
+          "http://www.thestranger.com:80/seattle/Content?oid=25361",
+          "200",
+          "text/html",
+          "25RZBX77ZFLYVZ7DNL4JFMHFTEKAZ5W6"
+        ],
+        [
+          "20120512185057",
+          "http://www.thestranger.com/seattle/Content?oid=25361",
+          "200",
+          "text/html",
+          "6SBZSWQY5YF7ASPP66FABTLO7NKHY2SK"
+        ],
+        [
+          "20121017112926",
+          "http://www.thestranger.com/seattle/Content?oid=25361",
+          "200",
+          "text/html",
+          "3CBQP63D3AHPPI65URIWVWX7ARFZYOG5"
+        ],
+        [
+          "20130116122840",
+          "http://www.thestranger.com/seattle/Content?oid=25361",
+          "200",
+          "text/html",
+          "YAPNQGTW7FU7YVXTJSSQUTOIDI7WRXSU"
+        ],
+        [
+          "20250124173812",
+          "http://www.thestranger.com/seattle/Content?oid=25361",
+          "301",
+          "unk",
+          "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ"
+        ],
+        [
+          "20250124174328",
+          "https://www.thestranger.com/seattle/Content?oid=25361",
+          "301",
+          "text/html",
+          "VXEDWGPHSNERWHDOUD6YWRWNT4ZOLEX4"
+        ]
+      ],
+      "discovered_from": "http://www.livejournal.com:80/users/bluescholars/"
+    },
+    "http://www.seattleweekly.com/features/0548/051130_music_bluescholars.php": {
+      "source_url": "http://www.seattleweekly.com/features/0548/051130_music_bluescholars.php",
+      "cdx_rows": [
+        [
+          "20051230032838",
+          "http://www.seattleweekly.com:80/features/0548/051130_music_bluescholars.php",
+          "200",
+          "text/html",
+          "M4ZHEUSD7SVXFP6GVQR7WLA6BOTF5GCQ"
+        ]
+      ],
+      "discovered_from": "http://www.livejournal.com:80/users/bluescholars/"
+    },
+    "http://www.tabletmag.com/103/features/103_schooling_the_unschooled.shtml": {
+      "source_url": "http://www.tabletmag.com/103/features/103_schooling_the_unschooled.shtml",
+      "cdx_rows": [
+        [
+          "20061112225251",
+          "http://www.tabletmag.com/103/features/103_schooling_the_unschooled.shtml",
+          "200",
+          "text/html",
+          "TEFYU7UCEDFNEEQX3RBDN45J3O7GHI4X"
+        ],
+        [
+          "20160123061943",
+          "http://www.tabletmag.com/103/features/103_schooling_the_unschooled.shtml",
+          "404",
+          "text/html",
+          "T3AQJDGWC4JGRJHRQHERX5JZGG76K5BO"
+        ]
+      ],
+      "discovered_from": "http://www.livejournal.com:80/users/bluescholars/"
     }
   },
   "page_captures": {
@@ -20693,6 +20794,62 @@
       "bytes": 84561,
       "sha256": "c87e771f3ffbea807138bdf4bb64045a1bf406cdb710d143ca83ab5e9c7c1fbf",
       "raw_path": "recovery/other-archives/press-articles/pages/20210922194619-c87e771f3ffbea807138bdf4bb64045a1bf406cdb710d143ca83ab5e9c7c1fbf.html"
+    },
+    "http://www.ballerstatus.net:80/reviews/read/id/70216686/@@20060814044207@@6RE5JP6MHQDYMNIWBAM3ILELJL5YBXGI": {
+      "source_page_url": "http://www.ballerstatus.net/reviews/read/id/70216686/",
+      "original_url": "http://www.ballerstatus.net:80/reviews/read/id/70216686/",
+      "timestamp": "20060814044207",
+      "replay_url": "https://web.archive.org/web/20060814044207id_/http://www.ballerstatus.net:80/reviews/read/id/70216686/",
+      "cdx_mime": "text/html",
+      "cdx_digest": "6RE5JP6MHQDYMNIWBAM3ILELJL5YBXGI",
+      "cdx_sha1_verified": true,
+      "bytes": 41109,
+      "sha256": "c0a7018899be9b4d38aaaf80ca01e358cf4c9e9c9b7da02bb90d20e763cc1b22",
+      "raw_path": "recovery/other-archives/press-articles/pages/20060814044207-c0a7018899be9b4d38aaaf80ca01e358cf4c9e9c9b7da02bb90d20e763cc1b22.html",
+      "discovered_from": "http://www.livejournal.com:80/users/bluescholars/",
+      "rights_status": "unreviewed"
+    },
+    "http://www.thestranger.com:80/seattle/Content?oid=25361@@20120209152714@@25RZBX77ZFLYVZ7DNL4JFMHFTEKAZ5W6": {
+      "source_page_url": "http://www.thestranger.com/seattle/Content?oid=25361",
+      "original_url": "http://www.thestranger.com:80/seattle/Content?oid=25361",
+      "timestamp": "20120209152714",
+      "replay_url": "https://web.archive.org/web/20120209152714id_/http://www.thestranger.com:80/seattle/Content?oid=25361",
+      "cdx_mime": "text/html",
+      "cdx_digest": "25RZBX77ZFLYVZ7DNL4JFMHFTEKAZ5W6",
+      "cdx_sha1_verified": true,
+      "bytes": 80965,
+      "sha256": "54ab1b8ec2b5ea1972c29cf8ce49caf38825ff973e0a8f1a8b8b68367d2fa296",
+      "raw_path": "recovery/other-archives/press-articles/pages/20120209152714-54ab1b8ec2b5ea1972c29cf8ce49caf38825ff973e0a8f1a8b8b68367d2fa296.html",
+      "discovered_from": "http://www.livejournal.com:80/users/bluescholars/",
+      "rights_status": "unreviewed"
+    },
+    "http://www.seattleweekly.com:80/features/0548/051130_music_bluescholars.php@@20051230032838@@M4ZHEUSD7SVXFP6GVQR7WLA6BOTF5GCQ": {
+      "source_page_url": "http://www.seattleweekly.com/features/0548/051130_music_bluescholars.php",
+      "original_url": "http://www.seattleweekly.com:80/features/0548/051130_music_bluescholars.php",
+      "timestamp": "20051230032838",
+      "replay_url": "https://web.archive.org/web/20051230032838id_/http://www.seattleweekly.com:80/features/0548/051130_music_bluescholars.php",
+      "cdx_mime": "text/html",
+      "cdx_digest": "M4ZHEUSD7SVXFP6GVQR7WLA6BOTF5GCQ",
+      "cdx_sha1_verified": true,
+      "bytes": 24951,
+      "sha256": "da6db06c126a90ea98fec1e8590afb206f1b022e4e9ad038f2f43e3c5d7c12b4",
+      "raw_path": "recovery/other-archives/press-articles/pages/20051230032838-da6db06c126a90ea98fec1e8590afb206f1b022e4e9ad038f2f43e3c5d7c12b4.html",
+      "discovered_from": "http://www.livejournal.com:80/users/bluescholars/",
+      "rights_status": "unreviewed"
+    },
+    "http://www.tabletmag.com/103/features/103_schooling_the_unschooled.shtml@@20061112225251@@TEFYU7UCEDFNEEQX3RBDN45J3O7GHI4X": {
+      "source_page_url": "http://www.tabletmag.com/103/features/103_schooling_the_unschooled.shtml",
+      "original_url": "http://www.tabletmag.com/103/features/103_schooling_the_unschooled.shtml",
+      "timestamp": "20061112225251",
+      "replay_url": "https://web.archive.org/web/20061112225251id_/http://www.tabletmag.com/103/features/103_schooling_the_unschooled.shtml",
+      "cdx_mime": "text/html",
+      "cdx_digest": "TEFYU7UCEDFNEEQX3RBDN45J3O7GHI4X",
+      "cdx_sha1_verified": true,
+      "bytes": 21934,
+      "sha256": "e685daab2e1b91a9b3f515cccbda14bef295aa1b2e0959cf41864a32ef860e0e",
+      "raw_path": "recovery/other-archives/press-articles/pages/20061112225251-e685daab2e1b91a9b3f515cccbda14bef295aa1b2e0959cf41864a32ef860e0e.html",
+      "discovered_from": "http://www.livejournal.com:80/users/bluescholars/",
+      "rights_status": "unreviewed"
     }
   },
   "image_urls": {
@@ -43354,6 +43511,227 @@
           "image/jpeg",
           "2T32DXC2AZQLTUX5ZOCGYGX5OJ7JRPVE",
           "40251"
+        ]
+      ]
+    },
+    "http://www.ballerstatus.net/images/coverart/bluescholars_bluescholars.jpg": {
+      "source_image_url": "http://www.ballerstatus.net/images/coverart/bluescholars_bluescholars.jpg",
+      "source_pages": [
+        {
+          "page_url": "http://www.ballerstatus.net/reviews/read/id/70216686/"
+        }
+      ],
+      "cdx_rows": [],
+      "checkpoint": {
+        "resume_key": null,
+        "complete": true,
+        "pages": 1,
+        "rows": 0,
+        "last_success": "2026-10-29T05:57:46.096078+00:00"
+      }
+    },
+    "http://www.seattleweekly.com/graphics/features/0548/051130_music_blue.jpg": {
+      "source_image_url": "http://www.seattleweekly.com/graphics/features/0548/051130_music_blue.jpg",
+      "source_pages": [
+        {
+          "page_url": "http://www.seattleweekly.com/features/0548/051130_music_bluescholars.php"
+        }
+      ],
+      "cdx_rows": [],
+      "checkpoint": {
+        "resume_key": null,
+        "complete": true,
+        "pages": 1,
+        "rows": 0,
+        "last_success": "2026-10-29T05:57:50.470593+00:00"
+      }
+    },
+    "http://www.tabletmag.com/103/features/images/103_blue_scholars.jpg": {
+      "source_image_url": "http://www.tabletmag.com/103/features/images/103_blue_scholars.jpg",
+      "source_pages": [
+        {
+          "page_url": "http://www.tabletmag.com/103/features/103_schooling_the_unschooled.shtml"
+        }
+      ],
+      "cdx_rows": [
+        [
+          "20070107165436",
+          "http://www.tabletmag.com:80/103/features/images/103_blue_scholars.jpg",
+          "200",
+          "image/jpeg",
+          "JYXKC4ADP46FVN57KZMR3RB6S2RRIMJS"
+        ],
+        [
+          "20070112095104",
+          "http://www.tabletmag.com:80/103/features/images/103_blue_scholars.jpg",
+          "200",
+          "image/jpeg",
+          "JYXKC4ADP46FVN57KZMR3RB6S2RRIMJS"
+        ],
+        [
+          "20070117060555",
+          "http://www.tabletmag.com:80/103/features/images/103_blue_scholars.jpg",
+          "200",
+          "image/jpeg",
+          "JYXKC4ADP46FVN57KZMR3RB6S2RRIMJS"
+        ],
+        [
+          "20070127180223",
+          "http://www.tabletmag.com:80/103/features/images/103_blue_scholars.jpg",
+          "200",
+          "image/jpeg",
+          "JYXKC4ADP46FVN57KZMR3RB6S2RRIMJS"
+        ]
+      ],
+      "checkpoint": {
+        "resume_key": null,
+        "complete": true,
+        "pages": 1,
+        "rows": 5,
+        "last_success": "2026-10-29T05:57:54.937161+00:00"
+      }
+    },
+    "http://www.thestranger.com/binary/62af/MUSIC-lead-160.jpg": {
+      "source_image_url": "http://www.thestranger.com/binary/62af/MUSIC-lead-160.jpg",
+      "source_pages": [
+        {
+          "page_url": "http://www.thestranger.com/seattle/Content?oid=25361"
+        }
+      ],
+      "cdx_rows": [
+        [
+          "20121017113036",
+          "http://www.thestranger.com/binary/62af/MUSIC-lead-160.jpg",
+          "200",
+          "image/jpeg",
+          "NXLZRZGRYYS5M4Z4DXK5MJSFW3XEQZDL"
+        ],
+        [
+          "20130214232148",
+          "http://www.thestranger.com/binary/62af/MUSIC-lead-160.jpg",
+          "200",
+          "image/jpeg",
+          "NXLZRZGRYYS5M4Z4DXK5MJSFW3XEQZDL"
+        ]
+      ]
+    },
+    "http://www.thestranger.com/binary/f7bf/MUSIC-lead-2-160.jpg": {
+      "source_image_url": "http://www.thestranger.com/binary/f7bf/MUSIC-lead-2-160.jpg",
+      "source_pages": [
+        {
+          "page_url": "http://www.thestranger.com/seattle/Content?oid=25361"
+        }
+      ],
+      "cdx_rows": [
+        [
+          "20121017113044",
+          "http://www.thestranger.com/binary/f7bf/MUSIC-lead-2-160.jpg",
+          "200",
+          "image/jpeg",
+          "A2L2ELHA6CFPO4QEEPVEQESN5AXP3M4N"
+        ],
+        [
+          "20130214232151",
+          "http://www.thestranger.com/binary/f7bf/MUSIC-lead-2-160.jpg",
+          "200",
+          "image/jpeg",
+          "A2L2ELHA6CFPO4QEEPVEQESN5AXP3M4N"
+        ]
+      ]
+    },
+    "http://www.thestranger.com/binary/9be9/MUSIC-lead-4-160.jpg": {
+      "source_image_url": "http://www.thestranger.com/binary/9be9/MUSIC-lead-4-160.jpg",
+      "source_pages": [
+        {
+          "page_url": "http://www.thestranger.com/seattle/Content?oid=25361"
+        }
+      ],
+      "cdx_rows": [
+        [
+          "20121017112950",
+          "http://www.thestranger.com/binary/9be9/MUSIC-lead-4-160.jpg",
+          "200",
+          "image/jpeg",
+          "HUXQ6S5EWEZGAKFAL5BDL6L5BR6KRVMH"
+        ],
+        [
+          "20130214232013",
+          "http://www.thestranger.com/binary/9be9/MUSIC-lead-4-160.jpg",
+          "200",
+          "image/jpeg",
+          "HUXQ6S5EWEZGAKFAL5BDL6L5BR6KRVMH"
+        ]
+      ]
+    },
+    "http://www.thestranger.com/binary/bf57/MUSIC-lead-3-160.jpg": {
+      "source_image_url": "http://www.thestranger.com/binary/bf57/MUSIC-lead-3-160.jpg",
+      "source_pages": [
+        {
+          "page_url": "http://www.thestranger.com/seattle/Content?oid=25361"
+        }
+      ],
+      "cdx_rows": [
+        [
+          "20121017112959",
+          "http://www.thestranger.com/binary/bf57/MUSIC-lead-3-160.jpg",
+          "200",
+          "image/jpeg",
+          "3K4IBAEJAF2ZGHFH4SFBDOJEFEDNAXBI"
+        ],
+        [
+          "20130214232139",
+          "http://www.thestranger.com/binary/bf57/MUSIC-lead-3-160.jpg",
+          "200",
+          "image/jpeg",
+          "3K4IBAEJAF2ZGHFH4SFBDOJEFEDNAXBI"
+        ]
+      ]
+    },
+    "http://www.thestranger.com/binary/cabd/MUSIC-lead-5-160.jpg": {
+      "source_image_url": "http://www.thestranger.com/binary/cabd/MUSIC-lead-5-160.jpg",
+      "source_pages": [
+        {
+          "page_url": "http://www.thestranger.com/seattle/Content?oid=25361"
+        }
+      ],
+      "cdx_rows": [
+        [
+          "20121017113312",
+          "http://www.thestranger.com/binary/cabd/MUSIC-lead-5-160.jpg",
+          "200",
+          "image/jpeg",
+          "ULL7OD26L24SD4FP3OYJTOWNJHLGWG7L"
+        ],
+        [
+          "20130214232142",
+          "http://www.thestranger.com/binary/cabd/MUSIC-lead-5-160.jpg",
+          "200",
+          "image/jpeg",
+          "ULL7OD26L24SD4FP3OYJTOWNJHLGWG7L"
+        ]
+      ]
+    },
+    "http://www.thestranger.com/binary/0255/MUSIC-lead-6-160.jpg": {
+      "source_image_url": "http://www.thestranger.com/binary/0255/MUSIC-lead-6-160.jpg",
+      "source_pages": [
+        {
+          "page_url": "http://www.thestranger.com/seattle/Content?oid=25361"
+        }
+      ],
+      "cdx_rows": [
+        [
+          "20121017113048",
+          "http://www.thestranger.com/binary/0255/MUSIC-lead-6-160.jpg",
+          "200",
+          "image/jpeg",
+          "LFKN4ZREVK4FFJWDDTL2ENWW3NSKBH7O"
+        ],
+        [
+          "20130214232145",
+          "http://www.thestranger.com/binary/0255/MUSIC-lead-6-160.jpg",
+          "200",
+          "image/jpeg",
+          "LFKN4ZREVK4FFJWDDTL2ENWW3NSKBH7O"
         ]
       ]
     }
@@ -81719,6 +82097,139 @@
       ],
       "rights_status": "unreviewed; local-only",
       "relevance_status": "visually_reviewed_unrelated_crosscut_series_index_news_card"
+    },
+    "http://www.tabletmag.com:80/103/features/images/103_blue_scholars.jpg@@20070107165436@@JYXKC4ADP46FVN57KZMR3RB6S2RRIMJS": {
+      "source_image_url": "http://www.tabletmag.com/103/features/images/103_blue_scholars.jpg",
+      "original_url": "http://www.tabletmag.com:80/103/features/images/103_blue_scholars.jpg",
+      "source_pages": [
+        {
+          "page_url": "http://www.tabletmag.com/103/features/103_schooling_the_unschooled.shtml"
+        }
+      ],
+      "timestamp": "20070107165436",
+      "replay_url": "https://web.archive.org/web/20070107165436id_/http://www.tabletmag.com:80/103/features/images/103_blue_scholars.jpg",
+      "cdx_mime": "image/jpeg",
+      "cdx_digest": "JYXKC4ADP46FVN57KZMR3RB6S2RRIMJS",
+      "cdx_sha1_verified": true,
+      "bytes": 7221,
+      "sha256": "7ddb0d75bf3668f773697b7bb861fe3129876832b2fa15f4dfa0dc25120c72ed",
+      "raw_path": "recovery/other-archives/press-articles/images/20070107165436-7ddb0d75bf3668f773697b7bb861fe3129876832b2fa15f4dfa0dc25120c72ed.jpg",
+      "rights_status": "unreviewed",
+      "relevance_status": "Visually inspected: two performers, matching the source article caption identifying Blue Scholars."
+    },
+    "http://www.thestranger.com/binary/62af/MUSIC-lead-160.jpg@@20121017113036@@NXLZRZGRYYS5M4Z4DXK5MJSFW3XEQZDL": {
+      "source_image_url": "http://www.thestranger.com/binary/62af/MUSIC-lead-160.jpg",
+      "original_url": "http://www.thestranger.com/binary/62af/MUSIC-lead-160.jpg",
+      "source_pages": [
+        {
+          "page_url": "http://www.thestranger.com/seattle/Content?oid=25361"
+        }
+      ],
+      "timestamp": "20121017113036",
+      "replay_url": "https://web.archive.org/web/20121017113036id_/http://www.thestranger.com/binary/62af/MUSIC-lead-160.jpg",
+      "cdx_mime": "image/jpeg",
+      "cdx_digest": "NXLZRZGRYYS5M4Z4DXK5MJSFW3XEQZDL",
+      "cdx_sha1_verified": true,
+      "bytes": 12206,
+      "sha256": "13bd58a936cc4a530da7910a091a6ea3ed426b9f76f228e80257d4828826fcaf",
+      "raw_path": "recovery/other-archives/press-articles/images/20121017113036-13bd58a936cc4a530da7910a091a6ea3ed426b9f76f228e80257d4828826fcaf.jpg",
+      "rights_status": "unreviewed",
+      "relevance_status": "Visually inspected: Framework photograph, with artist label printed in the original image; part of the linked Seattle hiphop feature."
+    },
+    "http://www.thestranger.com/binary/f7bf/MUSIC-lead-2-160.jpg@@20121017113044@@A2L2ELHA6CFPO4QEEPVEQESN5AXP3M4N": {
+      "source_image_url": "http://www.thestranger.com/binary/f7bf/MUSIC-lead-2-160.jpg",
+      "original_url": "http://www.thestranger.com/binary/f7bf/MUSIC-lead-2-160.jpg",
+      "source_pages": [
+        {
+          "page_url": "http://www.thestranger.com/seattle/Content?oid=25361"
+        }
+      ],
+      "timestamp": "20121017113044",
+      "replay_url": "https://web.archive.org/web/20121017113044id_/http://www.thestranger.com/binary/f7bf/MUSIC-lead-2-160.jpg",
+      "cdx_mime": "image/jpeg",
+      "cdx_digest": "A2L2ELHA6CFPO4QEEPVEQESN5AXP3M4N",
+      "cdx_sha1_verified": true,
+      "bytes": 11717,
+      "sha256": "b2412df5243f15380629a3f5721cce6d8babee7daf8b1591d97e1d91c419d160",
+      "raw_path": "recovery/other-archives/press-articles/images/20121017113044-b2412df5243f15380629a3f5721cce6d8babee7daf8b1591d97e1d91c419d160.jpg",
+      "rights_status": "unreviewed",
+      "relevance_status": "Visually inspected: Common Market photograph, with artist label printed in the original image; part of the linked Seattle hiphop feature."
+    },
+    "http://www.thestranger.com/binary/9be9/MUSIC-lead-4-160.jpg@@20121017112950@@HUXQ6S5EWEZGAKFAL5BDL6L5BR6KRVMH": {
+      "source_image_url": "http://www.thestranger.com/binary/9be9/MUSIC-lead-4-160.jpg",
+      "original_url": "http://www.thestranger.com/binary/9be9/MUSIC-lead-4-160.jpg",
+      "source_pages": [
+        {
+          "page_url": "http://www.thestranger.com/seattle/Content?oid=25361"
+        }
+      ],
+      "timestamp": "20121017112950",
+      "replay_url": "https://web.archive.org/web/20121017112950id_/http://www.thestranger.com/binary/9be9/MUSIC-lead-4-160.jpg",
+      "cdx_mime": "image/jpeg",
+      "cdx_digest": "HUXQ6S5EWEZGAKFAL5BDL6L5BR6KRVMH",
+      "cdx_sha1_verified": true,
+      "bytes": 15951,
+      "sha256": "91865d74ecb6007c611a667da6b20ba600ac6cc9390fa49e5d381c9bbe5873a1",
+      "raw_path": "recovery/other-archives/press-articles/images/20121017112950-91865d74ecb6007c611a667da6b20ba600ac6cc9390fa49e5d381c9bbe5873a1.jpg",
+      "rights_status": "unreviewed",
+      "relevance_status": "Visually inspected: Boom Bap Project photograph, with artist label printed in the original image; part of the linked Seattle hiphop feature."
+    },
+    "http://www.thestranger.com/binary/bf57/MUSIC-lead-3-160.jpg@@20121017112959@@3K4IBAEJAF2ZGHFH4SFBDOJEFEDNAXBI": {
+      "source_image_url": "http://www.thestranger.com/binary/bf57/MUSIC-lead-3-160.jpg",
+      "original_url": "http://www.thestranger.com/binary/bf57/MUSIC-lead-3-160.jpg",
+      "source_pages": [
+        {
+          "page_url": "http://www.thestranger.com/seattle/Content?oid=25361"
+        }
+      ],
+      "timestamp": "20121017112959",
+      "replay_url": "https://web.archive.org/web/20121017112959id_/http://www.thestranger.com/binary/bf57/MUSIC-lead-3-160.jpg",
+      "cdx_mime": "image/jpeg",
+      "cdx_digest": "3K4IBAEJAF2ZGHFH4SFBDOJEFEDNAXBI",
+      "cdx_sha1_verified": true,
+      "bytes": 11371,
+      "sha256": "5bd756029707f6e4eca3c01a468e418fb1eefbcdbd0946a54bc58fc72dba9c98",
+      "raw_path": "recovery/other-archives/press-articles/images/20121017112959-5bd756029707f6e4eca3c01a468e418fb1eefbcdbd0946a54bc58fc72dba9c98.jpg",
+      "rights_status": "unreviewed",
+      "relevance_status": "Visually inspected: Grayskul photograph, with artist label printed in the original image; part of the linked Seattle hiphop feature."
+    },
+    "http://www.thestranger.com/binary/cabd/MUSIC-lead-5-160.jpg@@20121017113312@@ULL7OD26L24SD4FP3OYJTOWNJHLGWG7L": {
+      "source_image_url": "http://www.thestranger.com/binary/cabd/MUSIC-lead-5-160.jpg",
+      "original_url": "http://www.thestranger.com/binary/cabd/MUSIC-lead-5-160.jpg",
+      "source_pages": [
+        {
+          "page_url": "http://www.thestranger.com/seattle/Content?oid=25361"
+        }
+      ],
+      "timestamp": "20121017113312",
+      "replay_url": "https://web.archive.org/web/20121017113312id_/http://www.thestranger.com/binary/cabd/MUSIC-lead-5-160.jpg",
+      "cdx_mime": "image/jpeg",
+      "cdx_digest": "ULL7OD26L24SD4FP3OYJTOWNJHLGWG7L",
+      "cdx_sha1_verified": true,
+      "bytes": 9284,
+      "sha256": "04a3b18ba1c4ee8c71b506dde0650ee82853a2940fb87a137bb28b335d8b7591",
+      "raw_path": "recovery/other-archives/press-articles/images/20121017113312-04a3b18ba1c4ee8c71b506dde0650ee82853a2940fb87a137bb28b335d8b7591.jpg",
+      "rights_status": "unreviewed",
+      "relevance_status": "Visually inspected: Cancer Rising photograph, with artist label printed in the original image; part of the linked Seattle hiphop feature."
+    },
+    "http://www.thestranger.com/binary/0255/MUSIC-lead-6-160.jpg@@20121017113048@@LFKN4ZREVK4FFJWDDTL2ENWW3NSKBH7O": {
+      "source_image_url": "http://www.thestranger.com/binary/0255/MUSIC-lead-6-160.jpg",
+      "original_url": "http://www.thestranger.com/binary/0255/MUSIC-lead-6-160.jpg",
+      "source_pages": [
+        {
+          "page_url": "http://www.thestranger.com/seattle/Content?oid=25361"
+        }
+      ],
+      "timestamp": "20121017113048",
+      "replay_url": "https://web.archive.org/web/20121017113048id_/http://www.thestranger.com/binary/0255/MUSIC-lead-6-160.jpg",
+      "cdx_mime": "image/jpeg",
+      "cdx_digest": "LFKN4ZREVK4FFJWDDTL2ENWW3NSKBH7O",
+      "cdx_sha1_verified": true,
+      "bytes": 11528,
+      "sha256": "7797ba7586b87e405937e55e6645797231021d1bf4e82cb60d2230900884051d",
+      "raw_path": "recovery/other-archives/press-articles/images/20121017113048-7797ba7586b87e405937e55e6645797231021d1bf4e82cb60d2230900884051d.jpg",
+      "rights_status": "unreviewed",
+      "relevance_status": "Visually inspected: Blue Scholars photograph, with artist label printed in the original image; part of the linked Seattle hiphop feature."
     }
   },
   "last_report": {

@@ -1,0 +1,82 @@
+{
+  "tests": {
+    "passed": 354,
+    "seconds": 48.8
+  },
+  "root": {
+    "base": "",
+    "mode": "full build followed by press image-map repair and press rebuild",
+    "errors": [],
+    "press_archive": {
+      "status": "built",
+      "source_pages": 187,
+      "page_capture_records": 867,
+      "image_capture_records": 1327,
+      "image_payloads": 137,
+      "image_url_records": 247,
+      "unrecovered_image_url_records": 117,
+      "audio_capture_records": 5,
+      "audio_payloads": 2,
+      "publisher_photos": {
+        "source_pages": 2,
+        "image_payloads": 8,
+        "routes": [
+          "/other-archives/press/publisher/2026/rapreviews-com-special-nov2007-bluescholars-html-586059945e",
+          "/other-archives/press/publisher/2026/www-bumpershine-com-2010-07-28-capitol-hill-block-party-da-dc5eec4e68"
+        ]
+      }
+    }
+  },
+  "project": {
+    "base": "/bluescholars",
+    "mode": "full build followed by press image-map repair and press rebuild",
+    "errors": [],
+    "press_archive": {
+      "status": "built",
+      "source_pages": 187,
+      "page_capture_records": 867,
+      "image_capture_records": 1327,
+      "image_payloads": 137,
+      "image_url_records": 247,
+      "unrecovered_image_url_records": 117,
+      "audio_capture_records": 5,
+      "audio_payloads": 2,
+      "publisher_photos": {
+        "source_pages": 2,
+        "image_payloads": 8,
+        "routes": [
+          "/other-archives/press/publisher/2026/rapreviews-com-special-nov2007-bluescholars-html-586059945e",
+          "/other-archives/press/publisher/2026/www-bumpershine-com-2010-07-28-capitol-hill-block-party-da-dc5eec4e68"
+        ]
+      }
+    }
+  },
+  "browser": {
+    "journal_root_and_project": {
+      "one_slider": true,
+      "four_local_press_links": true,
+      "cover_loaded": true,
+      "remote_automatic_assets": []
+    },
+    "journal_mobile": {
+      "viewport_width": 390,
+      "document_width": 375,
+      "one_slider": true,
+      "cover_loaded": true
+    },
+    "tablet_capture": {
+      "text_present": true,
+      "local_photo_loaded": true,
+      "remote_automatic_assets": [],
+      "mobile_viewport_width": 390,
+      "mobile_document_width": 819,
+      "limitation": "Original table layout requires horizontal scrolling"
+    }
+  },
+  "agent_review_only": true,
+  "human_review_claimed": false,
+  "new_standalone_lj_posts": 0,
+  "new_press_pages": 4,
+  "new_image_payloads": 7,
+  "preview_only": true
+}

@@ -5147,6 +5147,15 @@
       "actual_capture": "20111002074219",
       "sha256": "87560599e9fb5ddc5cdba0675164f3bd80324540d346fc6ae38c26878e2f34ce",
       "decision": "Use the preserved 2011 theme for the same Blue Scholars S2 layout ID 19020223 where the later exact theme URL is unavailable or unapproved. The saved later pages retain the same pagecontainer, paraphernalia, main and entrycontent structure. Comparison with the saved 2025 theme shows identical core journal layout, colors and typography; differences concern advertisement/control-strip rules and proxy asset URLs. This is an explicitly older theme fallback, not an exact acquisition of the requested later URL."
+    },
+    {
+      "url": "http://www.bluescholars.com/images/TheLongMarch.jpg",
+      "source_url": "http://www.bluescholars.com/images/TheLongMarch_web.jpg",
+      "actual_capture": "20060205124442",
+      "sha256": "88cd6d1ff1361c81490cf0fe8578763407787c022f90946476805793d12977d1",
+      "referrer": "http://www.livejournal.com/users/bluescholars/",
+      "decision": "The exact 2005 image has no indexed capture. Visually inspected official Long March EP cover from the alternate same-site filename, captured February 2006. This is a documented fallback, not proof of identical 2005 bytes.",
+      "substitution_note": "Album artwork: official-site copy captured February 5, 2006; the exact 2005 image is missing."
     }
   ]
 }

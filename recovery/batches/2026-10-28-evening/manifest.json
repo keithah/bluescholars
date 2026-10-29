@@ -1,0 +1,626 @@
+{
+  "started_at": "2026-10-29T01:54:00Z",
+  "local_date": "2026-10-28",
+  "timezone": "America/Los_Angeles",
+  "records": [
+    {
+      "actual_capture": "20110811070457",
+      "attempts": [
+        {
+          "at": "2026-10-22T06:13:55.002404+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20210529010817id_/http://l-userpic.livejournal.com/64499525/598187 (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://l-userpic.livejournal.com/64499525/598187",
+          "requested_capture": "20210529010817",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-22T06:13:56.084358+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20111002075730id_/http://l-userpic.livejournal.com/64499525/598187 (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20111002075730id_/http://l-userpic.livejournal.com/64499525/598187",
+          "requested_capture": "20111002075730",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-22T06:13:57.165092+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20111002075715id_/http://l-userpic.livejournal.com/64499525/598187 (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20111002075715id_/http://l-userpic.livejournal.com/64499525/598187",
+          "requested_capture": "20111002075715",
+          "result": "failed"
+        },
+        {
+          "actual_capture": "20110811070457",
+          "at": "2026-10-29T01:59:09.845562+00:00",
+          "request_url": "https://web.archive.org/web/20111002074950id_/http://l-userpic.livejournal.com/64499525/598187",
+          "requested_capture": "20111002074950",
+          "result": "downloaded",
+          "sha256": "b3f34820d7f6e5ab8bca2090ba444a8d6e1d45c2215de4f88459812c83f54cbf"
+        }
+      ],
+      "bytes": 6430,
+      "captures": [],
+      "content_type": "image/jpeg",
+      "final_original": "http://l-userpic.livejournal.com/64499525/598187",
+      "final_url": "https://web.archive.org/web/20110811070457id_/http://l-userpic.livejournal.com/64499525/598187",
+      "hints": [
+        "20110812180252",
+        "20111002073215",
+        "20111002074950",
+        "20111002075715",
+        "20111002074635",
+        "20111002075730"
+      ],
+      "kind": "image",
+      "raw_path": "recovery/batches/2026-10-28-evening/raw/b3f34820d7f6e5ab8bca2090ba444a8d6e1d45c2215de4f88459812c83f54cbf.jpg",
+      "reason": "Untried capture dates or exact-URL index pages remain",
+      "referrers": [
+        "http://bluescholars.livejournal.com/17222.html",
+        "http://bluescholars.livejournal.com/17222.html?thread=52038",
+        "http://bluescholars.livejournal.com/17222.html?thread=51782",
+        "http://bluescholars.livejournal.com/17222.html?thread=51526",
+        "http://bluescholars.livejournal.com/17222.html?replyto=52038",
+        "https://bluescholars.livejournal.com/17222.html?thread=51526",
+        "https://bluescholars.livejournal.com/17222.html?thread=51782",
+        "https://bluescholars.livejournal.com/17222.html?thread=52038"
+      ],
+      "retrieved_at": "2026-10-29T01:59:17.430288+00:00",
+      "sha256": "b3f34820d7f6e5ab8bca2090ba444a8d6e1d45c2215de4f88459812c83f54cbf",
+      "status": "recovered",
+      "url": "http://l-userpic.livejournal.com/64499525/598187",
+      "hash_in_prior_tracked_inventory": false,
+      "use_note": "LiveJournal user icon linked from preserved posts/comments; not attributed as a band photograph."
+    },
+    {
+      "actual_capture": "20110811070359",
+      "attempts": [
+        {
+          "at": "2026-10-22T06:13:59.323299+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20210529010817id_/http://l-userpic.livejournal.com/64500022/598187 (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://l-userpic.livejournal.com/64500022/598187",
+          "requested_capture": "20210529010817",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-22T06:14:00.403245+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20111002075008id_/http://l-userpic.livejournal.com/64500022/598187 (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20111002075008id_/http://l-userpic.livejournal.com/64500022/598187",
+          "requested_capture": "20111002075008",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-22T06:14:01.489377+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20111002074635id_/http://l-userpic.livejournal.com/64500022/598187 (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20111002074635id_/http://l-userpic.livejournal.com/64500022/598187",
+          "requested_capture": "20111002074635",
+          "result": "failed"
+        },
+        {
+          "actual_capture": "20110811070359",
+          "at": "2026-10-29T01:59:18.550597+00:00",
+          "request_url": "https://web.archive.org/web/20111002073215id_/http://l-userpic.livejournal.com/64500022/598187",
+          "requested_capture": "20111002073215",
+          "result": "downloaded",
+          "sha256": "5b8b5e9a82dffedb46520bc017a10db12533fe520e906f92daad35e2fc89e24d"
+        }
+      ],
+      "bytes": 2664,
+      "captures": [],
+      "content_type": "image/jpeg",
+      "final_original": "http://l-userpic.livejournal.com/64500022/598187",
+      "final_url": "https://web.archive.org/web/20110811070359id_/http://l-userpic.livejournal.com/64500022/598187",
+      "hints": [
+        "20110812180252",
+        "20111002073215",
+        "20111002074635",
+        "20111002075008"
+      ],
+      "kind": "image",
+      "raw_path": "recovery/batches/2026-10-28-evening/raw/5b8b5e9a82dffedb46520bc017a10db12533fe520e906f92daad35e2fc89e24d.jpg",
+      "reason": "Untried capture dates or exact-URL index pages remain",
+      "referrers": [
+        "http://bluescholars.livejournal.com/17222.html",
+        "http://bluescholars.livejournal.com/17222.html?thread=51526",
+        "http://bluescholars.livejournal.com/17222.html?replyto=51526",
+        "https://bluescholars.livejournal.com/17222.html?thread=51526"
+      ],
+      "retrieved_at": "2026-10-29T01:59:25.127754+00:00",
+      "sha256": "5b8b5e9a82dffedb46520bc017a10db12533fe520e906f92daad35e2fc89e24d",
+      "status": "recovered",
+      "url": "http://l-userpic.livejournal.com/64500022/598187",
+      "hash_in_prior_tracked_inventory": false,
+      "use_note": "LiveJournal user icon linked from preserved posts/comments; not attributed as a band photograph."
+    },
+    {
+      "actual_capture": "20171029063119",
+      "attempts": [
+        {
+          "at": "2026-10-22T06:14:03.667507+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20210529010817id_/http://l-userpic.livejournal.com/77204234/333484 (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://l-userpic.livejournal.com/77204234/333484",
+          "requested_capture": "20210529010817",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-22T06:14:04.743401+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20170628191350id_/http://l-userpic.livejournal.com/77204234/333484 (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20170628191350id_/http://l-userpic.livejournal.com/77204234/333484",
+          "requested_capture": "20170628191350",
+          "result": "failed"
+        },
+        {
+          "actual_capture": "20171029063119",
+          "at": "2026-10-29T01:59:30.596559+00:00",
+          "request_url": "https://web.archive.org/web/20171029063119id_/http://l-userpic.livejournal.com/77204234/333484",
+          "requested_capture": "20171029063119",
+          "result": "downloaded",
+          "sha256": "8f6d4aef3f500b2480bd514b054c48474f4fe47c4bb5309f8408e392168dcb8a"
+        }
+      ],
+      "bytes": 36113,
+      "captures": [
+        {
+          "digest": "CEHSOCJXUTF5LBAQ5WFRVZ72ZEDBJ3EK",
+          "mimetype": "image/gif",
+          "original": "http://l-userpic.livejournal.com/77204234/333484",
+          "statuscode": "200",
+          "timestamp": "20140706025738"
+        },
+        {
+          "digest": "CEHSOCJXUTF5LBAQ5WFRVZ72ZEDBJ3EK",
+          "mimetype": "image/gif",
+          "original": "http://l-userpic.livejournal.com/77204234/333484",
+          "statuscode": "200",
+          "timestamp": "20170526182907"
+        },
+        {
+          "digest": "CEHSOCJXUTF5LBAQ5WFRVZ72ZEDBJ3EK",
+          "mimetype": "image/gif",
+          "original": "https://l-userpic.livejournal.com/77204234/333484",
+          "statuscode": "200",
+          "timestamp": "20170823033005"
+        },
+        {
+          "digest": "CEHSOCJXUTF5LBAQ5WFRVZ72ZEDBJ3EK",
+          "mimetype": "image/gif",
+          "original": "https://l-userpic.livejournal.com/77204234/333484",
+          "statuscode": "200",
+          "timestamp": "20171029063119"
+        },
+        {
+          "digest": "JS627QUBP5GP75BJ4LACZVWLXAZF7DED",
+          "mimetype": "text/html",
+          "original": "https://l-userpic.livejournal.com/77204234/333484",
+          "statuscode": "302",
+          "timestamp": "20251214193152"
+        },
+        {
+          "digest": "JS627QUBP5GP75BJ4LACZVWLXAZF7DED",
+          "mimetype": "text/html",
+          "original": "https://l-userpic.livejournal.com/77204234/333484",
+          "statuscode": "302",
+          "timestamp": "20260122164338"
+        }
+      ],
+      "content_type": "image/gif",
+      "final_original": "http://l-userpic.livejournal.com/77204234/333484",
+      "final_url": "https://web.archive.org/web/20171029063119id_/http://l-userpic.livejournal.com/77204234/333484",
+      "hints": [
+        "20170628191350"
+      ],
+      "kind": "image",
+      "raw_path": "recovery/batches/2026-10-28-evening/raw/8f6d4aef3f500b2480bd514b054c48474f4fe47c4bb5309f8408e392168dcb8a.gif",
+      "reason": "Untried capture dates or exact-URL index pages remain",
+      "referrers": [
+        "http://bluescholars.livejournal.com/16015.html?thread=49039",
+        "CDX:exact:http://l-userpic.livejournal.com/77204234/333484"
+      ],
+      "retrieved_at": "2026-10-29T01:59:33.886653+00:00",
+      "sha256": "8f6d4aef3f500b2480bd514b054c48474f4fe47c4bb5309f8408e392168dcb8a",
+      "status": "recovered",
+      "url": "http://l-userpic.livejournal.com/77204234/333484",
+      "hash_in_prior_tracked_inventory": false,
+      "use_note": "LiveJournal user icon linked from preserved posts/comments; not attributed as a band photograph."
+    },
+    {
+      "actual_capture": "20110811070409",
+      "attempts": [
+        {
+          "at": "2026-10-22T06:14:08.038444+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20210529010817id_/http://l-userpic.livejournal.com/94551239/333484 (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20210529010817id_/http://l-userpic.livejournal.com/94551239/333484",
+          "requested_capture": "20210529010817",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-22T06:14:09.109477+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20111002075715id_/http://l-userpic.livejournal.com/94551239/333484 (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20111002075715id_/http://l-userpic.livejournal.com/94551239/333484",
+          "requested_capture": "20111002075715",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-22T06:14:10.212056+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20111002075605id_/http://l-userpic.livejournal.com/94551239/333484 (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20111002075605id_/http://l-userpic.livejournal.com/94551239/333484",
+          "requested_capture": "20111002075605",
+          "result": "failed"
+        },
+        {
+          "actual_capture": "20110811070409",
+          "at": "2026-10-29T01:59:35.126696+00:00",
+          "request_url": "https://web.archive.org/web/20111002075500id_/http://l-userpic.livejournal.com/94551239/333484",
+          "requested_capture": "20111002075500",
+          "result": "downloaded",
+          "sha256": "e935e093d5c9b6ff123ad42ba5987f9dd9441b52206f2e37dc02178c1dfdaccc"
+        }
+      ],
+      "bytes": 4374,
+      "captures": [],
+      "content_type": "image/jpeg",
+      "final_original": "http://l-userpic.livejournal.com/94551239/333484",
+      "final_url": "https://web.archive.org/web/20110811070409id_/http://l-userpic.livejournal.com/94551239/333484",
+      "hints": [
+        "20110812180252",
+        "20111002073215",
+        "20111002075020",
+        "20111002075500",
+        "20111002074836",
+        "20111002074950",
+        "20111002075715",
+        "20111002074635",
+        "20111002074850",
+        "20111002075605"
+      ],
+      "kind": "image",
+      "raw_path": "recovery/batches/2026-10-28-evening/raw/e935e093d5c9b6ff123ad42ba5987f9dd9441b52206f2e37dc02178c1dfdaccc.jpg",
+      "reason": "Untried capture dates or exact-URL index pages remain",
+      "referrers": [
+        "http://bluescholars.livejournal.com/17222.html",
+        "http://bluescholars.livejournal.com/17222.html?thread=53062",
+        "http://bluescholars.livejournal.com/17222.html?thread=52806",
+        "http://bluescholars.livejournal.com/17222.html?thread=52294",
+        "http://bluescholars.livejournal.com/17222.html?thread=52038",
+        "http://bluescholars.livejournal.com/17222.html?thread=51782",
+        "http://bluescholars.livejournal.com/17222.html?thread=51526",
+        "http://bluescholars.livejournal.com/17222.html?replyto=53062",
+        "http://bluescholars.livejournal.com/17222.html?replyto=52294",
+        "https://bluescholars.livejournal.com/17222.html?thread=51526",
+        "https://bluescholars.livejournal.com/17222.html?thread=51782",
+        "https://bluescholars.livejournal.com/17222.html?thread=52038",
+        "https://bluescholars.livejournal.com/17222.html?thread=52294",
+        "https://bluescholars.livejournal.com/17222.html?thread=52806"
+      ],
+      "retrieved_at": "2026-10-29T01:59:41.568989+00:00",
+      "sha256": "e935e093d5c9b6ff123ad42ba5987f9dd9441b52206f2e37dc02178c1dfdaccc",
+      "status": "recovered",
+      "url": "http://l-userpic.livejournal.com/94551239/333484",
+      "hash_in_prior_tracked_inventory": false,
+      "use_note": "LiveJournal user icon linked from preserved posts/comments; not attributed as a band photograph."
+    },
+    {
+      "actual_capture": "20110811062201",
+      "attempts": [
+        {
+          "at": "2026-10-22T06:14:12.378415+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20210529010817id_/https://l-userpic.livejournal.com/11561676/657301 (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20210529010817id_/https://l-userpic.livejournal.com/11561676/657301",
+          "requested_capture": "20210529010817",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-22T06:14:13.472270+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20181210163833id_/https://l-userpic.livejournal.com/11561676/657301 (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20181210163833id_/https://l-userpic.livejournal.com/11561676/657301",
+          "requested_capture": "20181210163833",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-22T06:14:14.550034+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20250602154420id_/https://l-userpic.livejournal.com/11561676/657301 (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20250602154420id_/https://l-userpic.livejournal.com/11561676/657301",
+          "requested_capture": "20250602154420",
+          "result": "failed"
+        },
+        {
+          "actual_capture": "20110811062201",
+          "at": "2026-10-29T01:59:48.104192+00:00",
+          "request_url": "https://web.archive.org/web/20110811062201id_/https://l-userpic.livejournal.com/11561676/657301",
+          "requested_capture": "20110811062201",
+          "result": "downloaded",
+          "sha256": "cd092a322d0874cce2e395e1eaeb9ad23a0dffc24781b8535a31371df750089b"
+        }
+      ],
+      "bytes": 3658,
+      "captures": [
+        {
+          "digest": "VAUSSR3JUDTEDM42V5Q3HSVWF27G7SEY",
+          "mimetype": "image/jpeg",
+          "original": "http://l-userpic.livejournal.com/11561676/657301",
+          "statuscode": "200",
+          "timestamp": "20110811062201"
+        },
+        {
+          "digest": "VAUSSR3JUDTEDM42V5Q3HSVWF27G7SEY",
+          "mimetype": "image/jpeg",
+          "original": "https://l-userpic.livejournal.com/11561676/657301",
+          "statuscode": "200",
+          "timestamp": "20250602154439"
+        }
+      ],
+      "content_type": "image/jpeg",
+      "final_original": "https://l-userpic.livejournal.com/11561676/657301",
+      "final_url": "https://web.archive.org/web/20110811062201id_/https://l-userpic.livejournal.com/11561676/657301",
+      "hints": [
+        "20181210163833",
+        "20250602154420"
+      ],
+      "kind": "image",
+      "raw_path": "recovery/batches/2026-10-28-evening/raw/cd092a322d0874cce2e395e1eaeb9ad23a0dffc24781b8535a31371df750089b.jpg",
+      "reason": "Untried capture dates or exact-URL index pages remain",
+      "referrers": [
+        "https://bluescholars.livejournal.com/16954.html",
+        "CDX:exact:https://l-userpic.livejournal.com/11561676/657301"
+      ],
+      "retrieved_at": "2026-10-29T01:59:52.278632+00:00",
+      "sha256": "cd092a322d0874cce2e395e1eaeb9ad23a0dffc24781b8535a31371df750089b",
+      "status": "recovered",
+      "url": "https://l-userpic.livejournal.com/11561676/657301",
+      "hash_in_prior_tracked_inventory": false,
+      "use_note": "LiveJournal user icon linked from preserved posts/comments; not attributed as a band photograph."
+    },
+    {
+      "actual_capture": "20130623104817",
+      "attempts": [
+        {
+          "at": "2026-10-22T06:14:16.727069+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20210529010817id_/https://l-userpic.livejournal.com/36650262/435162 (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20210529010817id_/https://l-userpic.livejournal.com/36650262/435162",
+          "requested_capture": "20210529010817",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-22T06:14:17.831128+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20180625014620id_/https://l-userpic.livejournal.com/36650262/435162 (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20180625014620id_/https://l-userpic.livejournal.com/36650262/435162",
+          "requested_capture": "20180625014620",
+          "result": "failed"
+        },
+        {
+          "at": "2026-10-22T06:14:18.910820+00:00",
+          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20180219081111id_/https://l-userpic.livejournal.com/36650262/435162 (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "request_url": "https://web.archive.org/web/20180219081111id_/https://l-userpic.livejournal.com/36650262/435162",
+          "requested_capture": "20180219081111",
+          "result": "failed"
+        },
+        {
+          "actual_capture": "20130623104817",
+          "at": "2026-10-29T01:59:53.440349+00:00",
+          "request_url": "https://web.archive.org/web/20171119082055id_/https://l-userpic.livejournal.com/36650262/435162",
+          "requested_capture": "20171119082055",
+          "result": "downloaded",
+          "sha256": "4330365364ad3a614dc947f0cde7fa211b066c7dc896a8bf548848a0749a94d9"
+        }
+      ],
+      "bytes": 5318,
+      "captures": [],
+      "content_type": "image/jpeg",
+      "final_original": "http://l-userpic.livejournal.com/36650262/435162",
+      "final_url": "https://web.archive.org/web/20130623104817id_/http://l-userpic.livejournal.com/36650262/435162",
+      "hints": [
+        "20171119082055",
+        "20180219081111",
+        "20180625014620"
+      ],
+      "kind": "image",
+      "raw_path": "recovery/batches/2026-10-28-evening/raw/4330365364ad3a614dc947f0cde7fa211b066c7dc896a8bf548848a0749a94d9.jpg",
+      "reason": "Untried capture dates or exact-URL index pages remain",
+      "referrers": [
+        "https://bluescholars.livejournal.com/16641.html"
+      ],
+      "retrieved_at": "2026-10-29T02:00:00.848778+00:00",
+      "sha256": "4330365364ad3a614dc947f0cde7fa211b066c7dc896a8bf548848a0749a94d9",
+      "status": "recovered",
+      "url": "https://l-userpic.livejournal.com/36650262/435162",
+      "hash_in_prior_tracked_inventory": false,
+      "use_note": "LiveJournal user icon linked from preserved posts/comments; not attributed as a band photograph."
+    }
+  ],
+  "attempts": [
+    {
+      "resource_url": "http://02cd02a.netsolhost.com/blog/wp-login.php?action=lostpassword",
+      "at": "2026-10-29T01:54:32.798921+00:00",
+      "error": "OSError: Archive HTTP 404: https://web.archive.org/web/20110310151907id_/http://02cd02a.netsolhost.com/blog/wp-login.php?action=lostpassword",
+      "request_url": "https://web.archive.org/web/20110310151907id_/http://02cd02a.netsolhost.com/blog/wp-login.php?action=lostpassword",
+      "requested_capture": "20110310151907",
+      "result": "failed"
+    },
+    {
+      "resource_url": "http://02cd02a.netsolhost.com/blog/wp-login.php?action=lostpassword",
+      "at": "2026-10-29T01:54:37.154895+00:00",
+      "error": "OSError: Archive HTTP 404: https://web.archive.org/web/20110310151900id_/http://02cd02a.netsolhost.com/blog/wp-login.php?action=lostpassword",
+      "request_url": "https://web.archive.org/web/20110310151900id_/http://02cd02a.netsolhost.com/blog/wp-login.php?action=lostpassword",
+      "requested_capture": "20110310151900",
+      "result": "failed"
+    },
+    {
+      "resource_url": "http://bluescholars.livejournal.com/2007/",
+      "at": "2026-10-29T01:55:33.249628+00:00",
+      "error": "OSError: Archive HTTP 404: https://web.archive.org/web/20111002075255id_/http://bluescholars.livejournal.com/2007/",
+      "request_url": "https://web.archive.org/web/20111002075255id_/http://bluescholars.livejournal.com/2007/",
+      "requested_capture": "20111002075255",
+      "result": "failed"
+    },
+    {
+      "resource_url": "http://bluescholars.livejournal.com/2007/",
+      "at": "2026-10-29T01:55:37.603431+00:00",
+      "error": "OSError: Archive HTTP 404: https://web.archive.org/web/20111002075139id_/http://bluescholars.livejournal.com/2007/",
+      "request_url": "https://web.archive.org/web/20111002075139id_/http://bluescholars.livejournal.com/2007/",
+      "requested_capture": "20111002075139",
+      "result": "failed"
+    },
+    {
+      "resource_url": "http://bluescholars.livejournal.com/2007/",
+      "at": "2026-10-29T01:55:42.049314+00:00",
+      "error": "OSError: Archive HTTP 404: https://web.archive.org/web/20111002075020id_/http://bluescholars.livejournal.com/2007/",
+      "request_url": "https://web.archive.org/web/20111002075020id_/http://bluescholars.livejournal.com/2007/",
+      "requested_capture": "20111002075020",
+      "result": "failed"
+    },
+    {
+      "resource_url": "http://bluescholars.livejournal.com/2007/10/",
+      "at": "2026-10-29T01:56:35.965385+00:00",
+      "error": "OSError: Archive HTTP 404: https://web.archive.org/web/20111002075255id_/http://bluescholars.livejournal.com/2007/10/",
+      "request_url": "https://web.archive.org/web/20111002075255id_/http://bluescholars.livejournal.com/2007/10/",
+      "requested_capture": "20111002075255",
+      "result": "failed"
+    },
+    {
+      "resource_url": "http://bluescholars.livejournal.com/2007/10/",
+      "at": "2026-10-29T01:56:40.629539+00:00",
+      "error": "OSError: Archive HTTP 404: https://web.archive.org/web/20111002075139id_/http://bluescholars.livejournal.com/2007/10/",
+      "request_url": "https://web.archive.org/web/20111002075139id_/http://bluescholars.livejournal.com/2007/10/",
+      "requested_capture": "20111002075139",
+      "result": "failed"
+    },
+    {
+      "resource_url": "http://bluescholars.livejournal.com/2007/10/",
+      "at": "2026-10-29T01:56:45.026465+00:00",
+      "error": "OSError: Archive HTTP 404: https://web.archive.org/web/20111002075020id_/http://bluescholars.livejournal.com/2007/10/",
+      "request_url": "https://web.archive.org/web/20111002075020id_/http://bluescholars.livejournal.com/2007/10/",
+      "requested_capture": "20111002075020",
+      "result": "failed"
+    },
+    {
+      "resource_url": "http://bluescholars.livejournal.com/friends",
+      "at": "2026-10-29T01:56:19.563489+00:00",
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "request_url": "https://web.archive.org/web/20111002074355id_/http://bluescholars.livejournal.com/friends",
+      "requested_capture": "20111002074355",
+      "result": "failed"
+    },
+    {
+      "resource_url": "http://l-userpic.livejournal.com/64499525/598187",
+      "actual_capture": "20110811070457",
+      "at": "2026-10-29T01:59:09.845562+00:00",
+      "request_url": "https://web.archive.org/web/20111002074950id_/http://l-userpic.livejournal.com/64499525/598187",
+      "requested_capture": "20111002074950",
+      "result": "downloaded",
+      "sha256": "b3f34820d7f6e5ab8bca2090ba444a8d6e1d45c2215de4f88459812c83f54cbf"
+    },
+    {
+      "resource_url": "http://l-userpic.livejournal.com/64500022/598187",
+      "actual_capture": "20110811070359",
+      "at": "2026-10-29T01:59:18.550597+00:00",
+      "request_url": "https://web.archive.org/web/20111002073215id_/http://l-userpic.livejournal.com/64500022/598187",
+      "requested_capture": "20111002073215",
+      "result": "downloaded",
+      "sha256": "5b8b5e9a82dffedb46520bc017a10db12533fe520e906f92daad35e2fc89e24d"
+    },
+    {
+      "resource_url": "http://l-userpic.livejournal.com/77204234/333484",
+      "actual_capture": "20171029063119",
+      "at": "2026-10-29T01:59:30.596559+00:00",
+      "request_url": "https://web.archive.org/web/20171029063119id_/http://l-userpic.livejournal.com/77204234/333484",
+      "requested_capture": "20171029063119",
+      "result": "downloaded",
+      "sha256": "8f6d4aef3f500b2480bd514b054c48474f4fe47c4bb5309f8408e392168dcb8a"
+    },
+    {
+      "resource_url": "http://l-userpic.livejournal.com/94551239/333484",
+      "actual_capture": "20110811070409",
+      "at": "2026-10-29T01:59:35.126696+00:00",
+      "request_url": "https://web.archive.org/web/20111002075500id_/http://l-userpic.livejournal.com/94551239/333484",
+      "requested_capture": "20111002075500",
+      "result": "downloaded",
+      "sha256": "e935e093d5c9b6ff123ad42ba5987f9dd9441b52206f2e37dc02178c1dfdaccc"
+    },
+    {
+      "resource_url": "https://bluescholars.livejournal.com/friends",
+      "at": "2026-10-29T01:56:56.810977+00:00",
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "request_url": "https://web.archive.org/web/20180625014356id_/https://bluescholars.livejournal.com/friends",
+      "requested_capture": "20180625014356",
+      "result": "failed"
+    },
+    {
+      "resource_url": "https://bluescholars.livejournal.com/friends",
+      "at": "2026-10-29T01:57:04.539165+00:00",
+      "error": "ValueError: Expected image bytes; received HTML or unknown content",
+      "request_url": "https://web.archive.org/web/20180522170820id_/https://bluescholars.livejournal.com/friends",
+      "requested_capture": "20180522170820",
+      "result": "failed"
+    },
+    {
+      "resource_url": "https://bluescholars.livejournal.com/friends",
+      "at": "2026-10-29T01:57:18.830062+00:00",
+      "error": "ReadTimeout: HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=20)",
+      "request_url": "https://web.archive.org/web/20180426052003id_/https://bluescholars.livejournal.com/friends",
+      "requested_capture": "20180426052003",
+      "result": "failed"
+    },
+    {
+      "resource_url": "https://bluescholars.livejournal.com/res/19020223/stylesheet?1513167819",
+      "at": "2026-10-29T01:54:58.755268+00:00",
+      "error": "OSError: Archive HTTP 404: https://web.archive.org/web/20171213130923id_/https://bluescholars.livejournal.com/res/19020223/stylesheet?1513167819",
+      "request_url": "https://web.archive.org/web/20171213130923id_/https://bluescholars.livejournal.com/res/19020223/stylesheet?1513167819",
+      "requested_capture": "20171213130923",
+      "result": "failed"
+    },
+    {
+      "resource_url": "https://bluescholars.livejournal.com/res/19020223/stylesheet?1518994411",
+      "at": "2026-10-29T01:55:08.765417+00:00",
+      "error": "OSError: Archive HTTP 404: https://web.archive.org/web/20180219081152id_/https://bluescholars.livejournal.com/res/19020223/stylesheet?1518994411",
+      "request_url": "https://web.archive.org/web/20180219081152id_/https://bluescholars.livejournal.com/res/19020223/stylesheet?1518994411",
+      "requested_capture": "20180219081152",
+      "result": "failed"
+    },
+    {
+      "resource_url": "https://bluescholars.livejournal.com/res/19020223/stylesheet?1518994411",
+      "at": "2026-10-29T01:55:13.143086+00:00",
+      "error": "OSError: Archive HTTP 404: https://web.archive.org/web/20180219081129id_/https://bluescholars.livejournal.com/res/19020223/stylesheet?1518994411",
+      "request_url": "https://web.archive.org/web/20180219081129id_/https://bluescholars.livejournal.com/res/19020223/stylesheet?1518994411",
+      "requested_capture": "20180219081129",
+      "result": "failed"
+    },
+    {
+      "resource_url": "https://bluescholars.livejournal.com/res/19020223/stylesheet?1518994411",
+      "at": "2026-10-29T01:55:17.577712+00:00",
+      "error": "OSError: Archive HTTP 404: https://web.archive.org/web/20180219081111id_/https://bluescholars.livejournal.com/res/19020223/stylesheet?1518994411",
+      "request_url": "https://web.archive.org/web/20180219081111id_/https://bluescholars.livejournal.com/res/19020223/stylesheet?1518994411",
+      "requested_capture": "20180219081111",
+      "result": "failed"
+    },
+    {
+      "resource_url": "https://bluescholars.livejournal.com/res/19020223/stylesheet?1524719550",
+      "at": "2026-10-29T01:55:23.014348+00:00",
+      "error": "OSError: Archive HTTP 404: https://web.archive.org/web/20180426051232id_/https://bluescholars.livejournal.com/res/19020223/stylesheet?1524719550",
+      "request_url": "https://web.archive.org/web/20180426051232id_/https://bluescholars.livejournal.com/res/19020223/stylesheet?1524719550",
+      "requested_capture": "20180426051232",
+      "result": "failed"
+    },
+    {
+      "resource_url": "https://l-userpic.livejournal.com/11561676/657301",
+      "actual_capture": "20110811062201",
+      "at": "2026-10-29T01:59:48.104192+00:00",
+      "request_url": "https://web.archive.org/web/20110811062201id_/https://l-userpic.livejournal.com/11561676/657301",
+      "requested_capture": "20110811062201",
+      "result": "downloaded",
+      "sha256": "cd092a322d0874cce2e395e1eaeb9ad23a0dffc24781b8535a31371df750089b"
+    },
+    {
+      "resource_url": "https://l-userpic.livejournal.com/36650262/435162",
+      "actual_capture": "20130623104817",
+      "at": "2026-10-29T01:59:53.440349+00:00",
+      "request_url": "https://web.archive.org/web/20171119082055id_/https://l-userpic.livejournal.com/36650262/435162",
+      "requested_capture": "20171119082055",
+      "result": "downloaded",
+      "sha256": "4330365364ad3a614dc947f0cde7fa211b066c7dc896a8bf548848a0749a94d9"
+    }
+  ],
+  "outcomes": {
+    "failed": 17,
+    "downloaded": 6
+  },
+  "new_unique_payloads": 6,
+  "review_status": "acquired and hash/type validated; not promoted to public site",
+  "rate_limited": false
+}

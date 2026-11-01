@@ -1064,3 +1064,11 @@ Restored stylesheet references on 47 journal pages by fixing malformed nested-li
 Retried the old `/users/bluescholars/` prefix successfully: three CDX rows, including two actual December 2005 HTML captures. Recovered the six-entry homepage and the Freewheelin/EP post with comments, plus four source-linked platform stylesheets and nine image responses. Preserved the promotional graphic's December 24 date and one userpic's May 2006 date. Three missing artwork exact indexes completed with zero rows; failed replays remain documented.
 
 Added old-account discovery/identity/routing, 2005 timeline support, and per-entry reading views sourced from older front pages. Restricted entry selection to its own permalink/header controls so body cross-links cannot substitute the wrong article. Original inline styling is retained; six older entries are separately browseable with source notices. Full suite after review fixes: 351 passed. Browser/build/deployment evidence is recorded in `docs/recovery-report/LIVEJOURNAL_2005_2026-10-28.md`. Global review flags remain unchanged.
+
+## 2026-11-01 — Common Crawl page recovery and spam-filter fix
+
+Recovered 72 previously missing HTML pages from Common Crawl WARC records: 34 bluescholars.com posts and archive pages from May–June 2013 (`CC-MAIN-2013-20`), and 38 Prometheus Brown blog pages (37 added to the 2010 edition, one to the 2009 edition; `CC-MAIN-2009-2010`). Truncated March 2010 copies were not used. Also recovered 13 Blue Scholars WordPress images from Wayback.
+
+Fixed the artist-site and Mass Line spam filters, which matched "cialis" inside "socialist", "socialism" and "Socialisme" and so rejected genuine political posts. Spam terms now match whole words only, in `restore/spam.py`, with regression tests. Wayback and the Common Crawl index both refused connections from this IP partway through the pass. False connection-failure records were removed, and the remaining work stays queued.
+
+356 tests passed. The `/bluescholars/` candidate build has 1,147 recovered pages (previously 1,108). The offline check errors are confined to `206proof/`, caused by its ignored raw files missing from this worktree. Report: `docs/recovery-report/COMMONCRAWL_PAGES_2026-11-01.md`. Evidence: `recovery/batches/2026-11-01-commoncrawl-pages/`. Review flags are unchanged.

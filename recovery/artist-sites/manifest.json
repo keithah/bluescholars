@@ -1,8 +1,8 @@
 {
   "editions": {
     "prometheusbrown.com/2008": {
-      "attempted": 126,
-      "complete": true,
+      "attempted": 0,
+      "complete": false,
       "domain": "prometheusbrown.com",
       "edition": {
         "capture": "20080706232724",
@@ -452,22 +452,16 @@
           "url": "http://i289.photobucket.com/albums/ll225/kiwizzo/PPT%20Seattle%20Portland/IMG_0874.jpg"
         },
         {
-          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20080706232724id_/http://i289.photobucket.com/albums/ll225/kiwizzo/PPT%20Seattle%20Portland/IMG_0875.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "error": "OSError: Archive HTTP 404: https://web.archive.org/web/20080706232724id_/http://i289.photobucket.com/albums/ll225/kiwizzo/PPT%20Seattle%20Portland/IMG_0875.jpg",
           "kind": "image",
           "status": "unavailable_or_excluded",
           "url": "http://i289.photobucket.com/albums/ll225/kiwizzo/PPT%20Seattle%20Portland/IMG_0875.jpg"
         },
         {
-          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20080706232724id_/http://i289.photobucket.com/albums/ll225/kiwizzo/PPT%20Seattle%20Portland/IMG_0909.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+          "error": "OSError: Archive HTTP 404: https://web.archive.org/web/20080706232724id_/http://i289.photobucket.com/albums/ll225/kiwizzo/PPT%20Seattle%20Portland/IMG_0909.jpg",
           "kind": "image",
           "status": "unavailable_or_excluded",
           "url": "http://i289.photobucket.com/albums/ll225/kiwizzo/PPT%20Seattle%20Portland/IMG_0909.jpg"
-        },
-        {
-          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20080706232724id_/http://t-shirtjunkies.com/images/uploads/sushitshirt.gif (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-          "kind": "image",
-          "status": "unavailable_or_excluded",
-          "url": "http://t-shirtjunkies.com/images/uploads/sushitshirt.gif"
         },
         {
           "error": "OSError: Archive HTTP 404: https://web.archive.org/web/20080706232724id_/http://i28.tinypic.com/20ubcld.jpg",
@@ -890,6 +884,20 @@
           "status": "recovered",
           "url": "http://somethingaboutfilm.files.wordpress.com/2008/03/walle.jpg"
         },
+        "http://t-shirtjunkies.com/images/uploads/sushitshirt.gif": {
+          "actual_capture": "20060828104348",
+          "bytes": 16373,
+          "capture_digest": "",
+          "kind": "image",
+          "mime": "image/gif",
+          "raw_path": "recovery/artist-sites/raw/273ddd064bbba24b5506e2f03e15746fba682c475492d58f3690e1e006f39953.gif",
+          "requested_capture": "20060828104348",
+          "sha256": "273ddd064bbba24b5506e2f03e15746fba682c475492d58f3690e1e006f39953",
+          "source_archive": "Internet Archive Wayback",
+          "source_original": "http://t-shirtjunkies.com/images/uploads/sushitshirt.gif",
+          "status": "recovered",
+          "url": "http://t-shirtjunkies.com/images/uploads/sushitshirt.gif"
+        },
         "http://tnmc.org/news/pics/cecil02.jpg": {
           "actual_capture": "20071128180055",
           "bytes": 24902,
@@ -1293,11 +1301,6 @@
           "kind": "image",
           "status": "not_indexed_before_edition",
           "url": "http://prometheusbrown.com/blog/2008/12/himala-ishmael-bernal-1982/"
-        },
-        {
-          "kind": "image",
-          "status": "not_indexed_before_edition",
-          "url": "http://prometheusbrown.com/blog/2008/11/battle-in-seattle-stuart-townsend-2008/"
         },
         {
           "kind": "image",
@@ -7840,6 +7843,24 @@
           "status": "recovered",
           "url": "http://prometheusbrown.com/blog/2008/10/maynila-sa-mga-kuko-ng-liwanagmanila-in-the-claws-of-neon-lino-brocka-1975/"
         },
+        "http://prometheusbrown.com/blog/2008/11/battle-in-seattle-stuart-townsend-2008/": {
+          "actual_capture": "20090705051614",
+          "bytes": 30249,
+          "capture_digest": "RHIMPMHV34GHE5N6F4NZUATOW4MENOF3",
+          "kind": "html",
+          "mime": "text/html",
+          "raw_path": "recovery/artist-sites/raw/6f57a655f1fe413ceb28250245c35d35fa28b4f1f5bb86195ff45b9802ed2227.html",
+          "requested_capture": "20090705051614",
+          "sha256": "6f57a655f1fe413ceb28250245c35d35fa28b4f1f5bb86195ff45b9802ed2227",
+          "source_archive": "Common Crawl",
+          "source_collection": "CC-MAIN-2009-2010",
+          "source_length": 8646,
+          "source_offset": 51101871,
+          "source_original": "http://prometheusbrown.com/blog/2008/11/battle-in-seattle-stuart-townsend-2008/",
+          "source_warc": "crawl-002/2009/09/17/17/1253239050401_17.arc.gz",
+          "status": "recovered",
+          "url": "http://prometheusbrown.com/blog/2008/11/battle-in-seattle-stuart-townsend-2008/"
+        },
         "http://prometheusbrown.com/blog/2008/11/slumdog-millionaire-danny-boyle-2008/": {
           "actual_capture": "20090418033239",
           "bytes": 36770,
@@ -12615,11 +12636,6 @@
         {
           "kind": "image",
           "status": "not_indexed_before_edition",
-          "url": "http://prometheusbrown.com/blog/archives/"
-        },
-        {
-          "kind": "image",
-          "status": "not_indexed_before_edition",
           "url": "http://prometheusbrown.com/videos"
         },
         {
@@ -13787,11 +13803,6 @@
         {
           "kind": "image",
           "status": "not_indexed_before_edition",
-          "url": "http://prometheusbrown.com/blog/2009/10/raymond-reds-himpapawid-manila-skies/"
-        },
-        {
-          "kind": "image",
-          "status": "not_indexed_before_edition",
           "url": "http://prometheusbrown.com/blog/2009/09/sakay-raymond-red-1993/"
         },
         {
@@ -14242,29 +14253,6 @@
         {
           "kind": "image",
           "status": "not_indexed_before_edition",
-          "url": "http://prometheusbrown.com/blog/2009/11/talaye-sorkhcrimson-gold-jafar-panahi-2003/"
-        },
-        {
-          "error": "excluded spam-injected capture",
-          "kind": "html",
-          "status": "unavailable_or_excluded",
-          "url": "http://prometheusbrown.com/blog/2009/11/humpday-lynn-shelton-2009/"
-        },
-        {
-          "error": "excluded spam-injected capture",
-          "kind": "html",
-          "status": "unavailable_or_excluded",
-          "url": "http://prometheusbrown.com/blog/2009/10/objectified-gary-hustwit-2009/"
-        },
-        {
-          "error": "excluded spam-injected capture",
-          "kind": "html",
-          "status": "unavailable_or_excluded",
-          "url": "http://prometheusbrown.com/blog/2009/10/hanyo-ki-young-kim-1960/"
-        },
-        {
-          "kind": "image",
-          "status": "not_indexed_before_edition",
           "url": "http://prometheusbrown.com/blog/2009/10/the-informant-steven-soderbergh-2009/"
         },
         {
@@ -14291,11 +14279,6 @@
           "kind": "image",
           "status": "not_indexed_before_edition",
           "url": "http://prometheusbrown.com/blog/2009/06/the-girlfriend-experience-steven-soderbergh-2009-vivre-sa-vie-jean-luc-godard-1962/"
-        },
-        {
-          "kind": "image",
-          "status": "not_indexed_before_edition",
-          "url": "http://prometheusbrown.com/blog/2009/06/the-hangover-todd-phillips-2009/"
         },
         {
           "kind": "image",
@@ -14336,11 +14319,6 @@
           "kind": "image",
           "status": "not_indexed_before_edition",
           "url": "http://prometheusbrown.com/blog/2009/03/video-meshes-of-the-afternoon-maya-deren-1943/"
-        },
-        {
-          "kind": "image",
-          "status": "not_indexed_before_edition",
-          "url": "http://prometheusbrown.com/blog/2009/03/thaswassup-what-price-watchmen-by-dj-daps1/"
         },
         {
           "kind": "image",
@@ -14390,22 +14368,12 @@
         {
           "kind": "image",
           "status": "not_indexed_before_edition",
-          "url": "http://prometheusbrown.com/blog/2008/12/the-murder-of-fred-hampton-howard-alk-1971/"
-        },
-        {
-          "kind": "image",
-          "status": "not_indexed_before_edition",
           "url": "http://prometheusbrown.com/blog/2008/12/bottle-rocket-wes-anderson-1996/"
         },
         {
           "kind": "image",
           "status": "not_indexed_before_edition",
           "url": "http://prometheusbrown.com/blog/2008/12/himala-ishmael-bernal-1982/"
-        },
-        {
-          "kind": "image",
-          "status": "not_indexed_before_edition",
-          "url": "http://prometheusbrown.com/blog/2008/11/battle-in-seattle-stuart-townsend-2008/"
         },
         {
           "kind": "image",
@@ -14451,11 +14419,6 @@
           "kind": "image",
           "status": "not_indexed_before_edition",
           "url": "http://prometheusbrown.com/blog/2008/10/rights-vol-1/"
-        },
-        {
-          "kind": "image",
-          "status": "not_indexed_before_edition",
-          "url": "http://prometheusbrown.com/blog/2008/10/oktyabr-sergei-eisenstein-1928/"
         },
         {
           "kind": "image",
@@ -14556,11 +14519,6 @@
           "kind": "image",
           "status": "not_indexed_before_edition",
           "url": "http://prometheusbrown.com/blog/2008/07/metropolis-fritz-lang-1927/"
-        },
-        {
-          "kind": "image",
-          "status": "not_indexed_before_edition",
-          "url": "http://prometheusbrown.com/blog/2008/07/in-bruges-martin-mcdonagh-2008/"
         },
         {
           "kind": "image",
@@ -14834,21 +14792,6 @@
         {
           "kind": "image",
           "status": "not_indexed_before_edition",
-          "url": "http://prometheusbrown.com/blog/2009/12/video-d-black-yesterday/"
-        },
-        {
-          "kind": "image",
-          "status": "not_indexed_before_edition",
-          "url": "http://prometheusbrown.com/blog/2009/10/video-shabazz-palaces-bellhaven-meridian-dir-kahlil-joseph/"
-        },
-        {
-          "kind": "image",
-          "status": "not_indexed_before_edition",
-          "url": "http://prometheusbrown.com/blog/2009/06/video-deep-foundation-f-jay-legaspi-sleep-dir-choz-belen/"
-        },
-        {
-          "kind": "image",
-          "status": "not_indexed_before_edition",
           "url": "http://prometheusbrown.com/blog/2009/04/video-kanye-west-f-young-jeezy-amazing-dir-hype-williams/"
         },
         {
@@ -14880,11 +14823,6 @@
           "kind": "image",
           "status": "not_indexed_before_edition",
           "url": "http://prometheusbrown.com/blog/2008/11/music-video-jake-one-f-freeway-brother-ali-the-truth/"
-        },
-        {
-          "kind": "image",
-          "status": "not_indexed_before_edition",
-          "url": "http://prometheusbrown.com/blog/2008/11/salute-filipino-ww2-veterans/"
         },
         {
           "kind": "image",
@@ -15219,12 +15157,6 @@
           "url": "http://prometheusbrown.com/blog/2008/11/november-4th/"
         },
         {
-          "error": "excluded spam-injected capture",
-          "kind": "html",
-          "status": "unavailable_or_excluded",
-          "url": "http://prometheusbrown.com/blog/2009/11/pacquiao-cotto-247/"
-        },
-        {
           "kind": "image",
           "status": "not_indexed_before_edition",
           "url": "http://prometheusbrown.com/blog/2009/04/pacquiaohatton-247/"
@@ -15233,11 +15165,6 @@
           "kind": "image",
           "status": "not_indexed_before_edition",
           "url": "http://prometheusbrown.com/blog/2009/04/in-praise-of-lost-season-five/"
-        },
-        {
-          "kind": "image",
-          "status": "not_indexed_before_edition",
-          "url": "http://prometheusbrown.com/blog/2009/02/anthony-bourdain-no-reservations-philippines/"
         },
         {
           "kind": "image",
@@ -15348,11 +15275,6 @@
           "kind": "image",
           "status": "not_indexed_before_edition",
           "url": "http://prometheusbrown.com/blog/2008/11/millionaire-slummers/"
-        },
-        {
-          "kind": "image",
-          "status": "not_indexed_before_edition",
-          "url": "http://prometheusbrown.com/blog/2009/01/free-hawaii/"
         },
         {
           "kind": "image",
@@ -15798,11 +15720,6 @@
         {
           "kind": "image",
           "status": "not_indexed_before_edition",
-          "url": "http://prometheusbrown.com/blog/2009/03/sxsw-2009-photo-gallery/"
-        },
-        {
-          "kind": "image",
-          "status": "not_indexed_before_edition",
           "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/03/photo-4-350x260.jpg"
         },
         {
@@ -15953,11 +15870,6 @@
         {
           "kind": "image",
           "status": "not_indexed_before_edition",
-          "url": "http://prometheusbrown.com/blog/2009/12/video-macklemore-the-town/"
-        },
-        {
-          "kind": "image",
-          "status": "not_indexed_before_edition",
           "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/12/The-Hurt-Locker-movie-image-2-450x253.jpg"
         },
         {
@@ -15979,30 +15891,6 @@
           "kind": "image",
           "status": "not_indexed_before_edition",
           "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/11/paranormal-activity-review.jpg"
-        },
-        {
-          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20091128100205id_/http://prometheusbrown.com:80/blog/2009/11/photos-minneapolis/ (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-          "kind": "html",
-          "status": "unavailable_or_excluded",
-          "url": "http://prometheusbrown.com/blog/2009/11/photos-minneapolis/"
-        },
-        {
-          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20091128124443id_/http://prometheusbrown.com:80/blog/2009/11/trailer-wapakman/ (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-          "kind": "html",
-          "status": "unavailable_or_excluded",
-          "url": "http://prometheusbrown.com/blog/2009/11/trailer-wapakman/"
-        },
-        {
-          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20091123151945id_/http://prometheusbrown.com:80/blog/2009/11/trailer-socialisme/ (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-          "kind": "html",
-          "status": "unavailable_or_excluded",
-          "url": "http://prometheusbrown.com/blog/2009/11/trailer-socialisme/"
-        },
-        {
-          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20091114204139id_/http://prometheusbrown.com:80/blog/2009/11/aoki-world-premiere/ (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-          "kind": "html",
-          "status": "unavailable_or_excluded",
-          "url": "http://prometheusbrown.com/blog/2009/11/aoki-world-premiere/"
         },
         {
           "kind": "image",
@@ -16139,11 +16027,6 @@
           "kind": "image",
           "status": "not_indexed_before_edition",
           "url": "http://prometheusbrown.com/blog/2009/08/hawaii-50-years-of-statehood/"
-        },
-        {
-          "kind": "image",
-          "status": "not_indexed_before_edition",
-          "url": "http://prometheusbrown.com/blog/2009/08/video-philippine-student-rally-at-mendiola/"
         },
         {
           "kind": "image",
@@ -17236,12 +17119,6 @@
           "kind": "html",
           "status": "unavailable_or_excluded",
           "url": "http://prometheusbrown.com/blog/2010/01/david-byrne-fatboy-slims-imelda-marcos-tribute-album/"
-        },
-        {
-          "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20100718125949id_/http://prometheusbrown.com:80/blog/2010/01/video-dumbfoundead-jam-session-2-0/ (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-          "kind": "html",
-          "status": "unavailable_or_excluded",
-          "url": "http://prometheusbrown.com/blog/2010/01/video-dumbfoundead-jam-session-2-0/"
         },
         {
           "kind": "image",
@@ -20943,6 +20820,24 @@
           "status": "recovered",
           "url": "http://prometheusbrown.com/blog/2008/07/city-after-dark-manila-by-night-ishmael-bernal-1980/"
         },
+        "http://prometheusbrown.com/blog/2008/07/in-bruges-martin-mcdonagh-2008/": {
+          "actual_capture": "20100903024013",
+          "bytes": 17753,
+          "capture_digest": "KZGQSMLRVLLEUN7TQORSDAVKG27DAAK3",
+          "kind": "html",
+          "mime": "text/html",
+          "raw_path": "recovery/artist-sites/raw/c7a8517845fdc90a023634e1539f1719fb38b61884a358deb19a128ce964a905.html",
+          "requested_capture": "20100903024013",
+          "sha256": "c7a8517845fdc90a023634e1539f1719fb38b61884a358deb19a128ce964a905",
+          "source_archive": "Common Crawl",
+          "source_collection": "CC-MAIN-2009-2010",
+          "source_length": 6528,
+          "source_offset": 40747251,
+          "source_original": "http://prometheusbrown.com/blog/2008/07/in-bruges-martin-mcdonagh-2008/",
+          "source_warc": "crawl-002/2010/09/24/27/1285383994830_27.arc.gz",
+          "status": "recovered",
+          "url": "http://prometheusbrown.com/blog/2008/07/in-bruges-martin-mcdonagh-2008/"
+        },
         "http://prometheusbrown.com/blog/2008/07/kidlat-tahimik-mababangong-bangungotperfumed-nightmare-1978-and-turumba-1983/": {
           "actual_capture": "20100905203900",
           "bytes": 27105,
@@ -20998,6 +20893,24 @@
           "source_original": "http://prometheusbrown.com:80/blog/2008/08/le-mepris-jean-luc-godard-1963/",
           "status": "recovered",
           "url": "http://prometheusbrown.com/blog/2008/08/le-mepris-jean-luc-godard-1963/"
+        },
+        "http://prometheusbrown.com/blog/2008/09/": {
+          "actual_capture": "20100903025632",
+          "bytes": 24722,
+          "capture_digest": "AAQTCEA5BK5RTOHATN36YP2Z2KUNQVMC",
+          "kind": "html",
+          "mime": "text/html",
+          "raw_path": "recovery/artist-sites/raw/1144c8e705ade820d3ac6646ec20d4dd541e432000f4082f10c5e6fe6970000d.html",
+          "requested_capture": "20100903025632",
+          "sha256": "1144c8e705ade820d3ac6646ec20d4dd541e432000f4082f10c5e6fe6970000d",
+          "source_archive": "Common Crawl",
+          "source_collection": "CC-MAIN-2009-2010",
+          "source_length": 8412,
+          "source_offset": 40753779,
+          "source_original": "http://prometheusbrown.com/blog/2008/09/",
+          "source_warc": "crawl-002/2010/09/24/27/1285383994830_27.arc.gz",
+          "status": "recovered",
+          "url": "http://prometheusbrown.com/blog/2008/09/"
         },
         "http://prometheusbrown.com/blog/2008/09/imelda-power-myth-illusion-ramona-s-diaz-2005/": {
           "actual_capture": "20090514075341",
@@ -21083,6 +20996,60 @@
           "status": "recovered",
           "url": "http://prometheusbrown.com/blog/2008/10/maynila-sa-mga-kuko-ng-liwanagmanila-in-the-claws-of-neon-lino-brocka-1975/"
         },
+        "http://prometheusbrown.com/blog/2008/10/oktyabr-sergei-eisenstein-1928/": {
+          "actual_capture": "20100903025344",
+          "bytes": 19680,
+          "capture_digest": "B6RJFPKNF2TMZKYJTQDNE3YYAXLZ4J7N",
+          "kind": "html",
+          "mime": "text/html",
+          "raw_path": "recovery/artist-sites/raw/2a9435b01b63f6bd4272712c6ae8e2782740b9d6596c3329d3d06c3410fb7dcf.html",
+          "requested_capture": "20100903025344",
+          "sha256": "2a9435b01b63f6bd4272712c6ae8e2782740b9d6596c3329d3d06c3410fb7dcf",
+          "source_archive": "Common Crawl",
+          "source_collection": "CC-MAIN-2009-2010",
+          "source_length": 7451,
+          "source_offset": 40762191,
+          "source_original": "http://prometheusbrown.com/blog/2008/10/oktyabr-sergei-eisenstein-1928/",
+          "source_warc": "crawl-002/2010/09/24/27/1285383994830_27.arc.gz",
+          "status": "recovered",
+          "url": "http://prometheusbrown.com/blog/2008/10/oktyabr-sergei-eisenstein-1928/"
+        },
+        "http://prometheusbrown.com/blog/2008/11/battle-in-seattle-stuart-townsend-2008/": {
+          "actual_capture": "20100903025517",
+          "bytes": 19802,
+          "capture_digest": "NOUEIBYHXZXQRWBNETZ6HAMONSYGVSRG",
+          "kind": "html",
+          "mime": "text/html",
+          "raw_path": "recovery/artist-sites/raw/7e716fda75206b923e2e7a70051ee4ba11e62d9a54cfb6de7166de38c44de95c.html",
+          "requested_capture": "20100903025517",
+          "sha256": "7e716fda75206b923e2e7a70051ee4ba11e62d9a54cfb6de7166de38c44de95c",
+          "source_archive": "Common Crawl",
+          "source_collection": "CC-MAIN-2009-2010",
+          "source_length": 7041,
+          "source_offset": 40769642,
+          "source_original": "http://prometheusbrown.com/blog/2008/11/battle-in-seattle-stuart-townsend-2008/",
+          "source_warc": "crawl-002/2010/09/24/27/1285383994830_27.arc.gz",
+          "status": "recovered",
+          "url": "http://prometheusbrown.com/blog/2008/11/battle-in-seattle-stuart-townsend-2008/"
+        },
+        "http://prometheusbrown.com/blog/2008/11/salute-filipino-ww2-veterans/": {
+          "actual_capture": "20100903024818",
+          "bytes": 21151,
+          "capture_digest": "NP4WFRJC42D5RRZTDVGOSNGWIK7R5QHR",
+          "kind": "html",
+          "mime": "text/html",
+          "raw_path": "recovery/artist-sites/raw/9d548e586a52fa669808b995e1955ff7614125804fb99af48e1eda3bb5730dd2.html",
+          "requested_capture": "20100903024818",
+          "sha256": "9d548e586a52fa669808b995e1955ff7614125804fb99af48e1eda3bb5730dd2",
+          "source_archive": "Common Crawl",
+          "source_collection": "CC-MAIN-2009-2010",
+          "source_length": 7368,
+          "source_offset": 40776683,
+          "source_original": "http://prometheusbrown.com/blog/2008/11/salute-filipino-ww2-veterans/",
+          "source_warc": "crawl-002/2010/09/24/27/1285383994830_27.arc.gz",
+          "status": "recovered",
+          "url": "http://prometheusbrown.com/blog/2008/11/salute-filipino-ww2-veterans/"
+        },
         "http://prometheusbrown.com/blog/2008/11/slumdog-millionaire-danny-boyle-2008/": {
           "actual_capture": "20090418033239",
           "bytes": 36770,
@@ -21124,6 +21091,24 @@
           "source_original": "http://prometheusbrown.com:80/blog/2008/12/eddie-murphy-the-riddler/",
           "status": "recovered",
           "url": "http://prometheusbrown.com/blog/2008/12/eddie-murphy-the-riddler/"
+        },
+        "http://prometheusbrown.com/blog/2008/12/kfox-fresh-tracks-1985-mp3/": {
+          "actual_capture": "20100903025226",
+          "bytes": 19236,
+          "capture_digest": "5Z34GZGDEHLZSFNJ5ISKY6UHK6VKRBAU",
+          "kind": "html",
+          "mime": "text/html",
+          "raw_path": "recovery/artist-sites/raw/f13ba48261b8aa2a8fcdd83eb519e0b5dafebc78e884a3817f6b3ac21cdbe2da.html",
+          "requested_capture": "20100903025226",
+          "sha256": "f13ba48261b8aa2a8fcdd83eb519e0b5dafebc78e884a3817f6b3ac21cdbe2da",
+          "source_archive": "Common Crawl",
+          "source_collection": "CC-MAIN-2009-2010",
+          "source_length": 6500,
+          "source_offset": 40794220,
+          "source_original": "http://prometheusbrown.com/blog/2008/12/kfox-fresh-tracks-1985-mp3/",
+          "source_warc": "crawl-002/2010/09/24/27/1285383994830_27.arc.gz",
+          "status": "recovered",
+          "url": "http://prometheusbrown.com/blog/2008/12/kfox-fresh-tracks-1985-mp3/"
         },
         "http://prometheusbrown.com/blog/2008/12/music-video-bambu-crooks-and-rooks-dir-patricio-ginelsa/": {
           "actual_capture": "20081230221456",
@@ -21195,6 +21180,24 @@
           "status": "recovered",
           "url": "http://prometheusbrown.com/blog/2008/12/synecdoche-new-york-charlie-kaufman-2008/"
         },
+        "http://prometheusbrown.com/blog/2008/12/the-murder-of-fred-hampton-howard-alk-1971/": {
+          "actual_capture": "20100903024902",
+          "bytes": 18680,
+          "capture_digest": "7R673V6AZH7F7MCPLXCGPKL6V73UYMXN",
+          "kind": "html",
+          "mime": "text/html",
+          "raw_path": "recovery/artist-sites/raw/b3da7f2556e2135eebbd8784880ea1de976dfc149ad65ba8bc013ea30f4f344d.html",
+          "requested_capture": "20100903024902",
+          "sha256": "b3da7f2556e2135eebbd8784880ea1de976dfc149ad65ba8bc013ea30f4f344d",
+          "source_archive": "Common Crawl",
+          "source_collection": "CC-MAIN-2009-2010",
+          "source_length": 6679,
+          "source_offset": 40800720,
+          "source_original": "http://prometheusbrown.com/blog/2008/12/the-murder-of-fred-hampton-howard-alk-1971/",
+          "source_warc": "crawl-002/2010/09/24/27/1285383994830_27.arc.gz",
+          "status": "recovered",
+          "url": "http://prometheusbrown.com/blog/2008/12/the-murder-of-fred-hampton-howard-alk-1971/"
+        },
         "http://prometheusbrown.com/blog/2008/12/trailer-hoodrats-2/": {
           "actual_capture": "20081230221507",
           "bytes": 23774,
@@ -21237,6 +21240,24 @@
           "status": "recovered",
           "url": "http://prometheusbrown.com/blog/2008/12/z-costa-gavras-1969/"
         },
+        "http://prometheusbrown.com/blog/2009/01/": {
+          "actual_capture": "20100903025546",
+          "bytes": 29981,
+          "capture_digest": "3V5ZNZUGHYLCET7YVBTP4QH2I2ZNJZJT",
+          "kind": "html",
+          "mime": "text/html",
+          "raw_path": "recovery/artist-sites/raw/bbf03a9ed65d00c5df6d07f55ff4b7fc028a34ef72dc695b55a00a90a0d5e0c3.html",
+          "requested_capture": "20100903025546",
+          "sha256": "bbf03a9ed65d00c5df6d07f55ff4b7fc028a34ef72dc695b55a00a90a0d5e0c3",
+          "source_archive": "Common Crawl",
+          "source_collection": "CC-MAIN-2009-2010",
+          "source_length": 10347,
+          "source_offset": 40813524,
+          "source_original": "http://prometheusbrown.com/blog/2009/01/",
+          "source_warc": "crawl-002/2010/09/24/27/1285383994830_27.arc.gz",
+          "status": "recovered",
+          "url": "http://prometheusbrown.com/blog/2009/01/"
+        },
         "http://prometheusbrown.com/blog/2009/01/50-cent-film-director/": {
           "actual_capture": "20090211061445",
           "bytes": 25709,
@@ -21278,6 +21299,24 @@
           "source_original": "http://prometheusbrown.com:80/blog/2009/01/doubt-john-patrick-shanley-2008/",
           "status": "recovered",
           "url": "http://prometheusbrown.com/blog/2009/01/doubt-john-patrick-shanley-2008/"
+        },
+        "http://prometheusbrown.com/blog/2009/01/free-hawaii/": {
+          "actual_capture": "20100903025209",
+          "bytes": 23079,
+          "capture_digest": "5BQWRVXUOCJYRJ3FJKLSBMBOI3QGUCQ2",
+          "kind": "html",
+          "mime": "text/html",
+          "raw_path": "recovery/artist-sites/raw/367e4523427aeef90010d36ec22141f8ab6178b5250bf19df8bf165992c4acf1.html",
+          "requested_capture": "20100903025209",
+          "sha256": "367e4523427aeef90010d36ec22141f8ab6178b5250bf19df8bf165992c4acf1",
+          "source_archive": "Common Crawl",
+          "source_collection": "CC-MAIN-2009-2010",
+          "source_length": 8334,
+          "source_offset": 40823871,
+          "source_original": "http://prometheusbrown.com/blog/2009/01/free-hawaii/",
+          "source_warc": "crawl-002/2010/09/24/27/1285383994830_27.arc.gz",
+          "status": "recovered",
+          "url": "http://prometheusbrown.com/blog/2009/01/free-hawaii/"
         },
         "http://prometheusbrown.com/blog/2009/01/gran-torino-clint-eastwood-2008/": {
           "actual_capture": "20090503170105",
@@ -21390,6 +21429,24 @@
           "source_original": "http://prometheusbrown.com:80/blog/2009/02/4-free-classic-philippine-films-screening-in-seattle/",
           "status": "recovered",
           "url": "http://prometheusbrown.com/blog/2009/02/4-free-classic-philippine-films-screening-in-seattle/"
+        },
+        "http://prometheusbrown.com/blog/2009/02/anthony-bourdain-no-reservations-philippines/": {
+          "actual_capture": "20100903024306",
+          "bytes": 39260,
+          "capture_digest": "XIS3U4I23QZQ2P457BH4SVNTUZR42SNH",
+          "kind": "html",
+          "mime": "text/html",
+          "raw_path": "recovery/artist-sites/raw/36a0529388f01bf9abbe605fa629aadbc13809043f14ed2d82f11e4aa2b16759.html",
+          "requested_capture": "20100903024306",
+          "sha256": "36a0529388f01bf9abbe605fa629aadbc13809043f14ed2d82f11e4aa2b16759",
+          "source_archive": "Common Crawl",
+          "source_collection": "CC-MAIN-2009-2010",
+          "source_length": 13361,
+          "source_offset": 40846352,
+          "source_original": "http://prometheusbrown.com/blog/2009/02/anthony-bourdain-no-reservations-philippines/",
+          "source_warc": "crawl-002/2010/09/24/27/1285383994830_27.arc.gz",
+          "status": "recovered",
+          "url": "http://prometheusbrown.com/blog/2009/02/anthony-bourdain-no-reservations-philippines/"
         },
         "http://prometheusbrown.com/blog/2009/02/download-a-song-for-ourselves-mixtape/": {
           "actual_capture": "20090303090722",
@@ -21853,6 +21910,24 @@
           "status": "recovered",
           "url": "http://prometheusbrown.com/blog/2009/03/some-top-fives/"
         },
+        "http://prometheusbrown.com/blog/2009/03/sxsw-2009-photo-gallery/": {
+          "actual_capture": "20100903024846",
+          "bytes": 19611,
+          "capture_digest": "GR4UR6WHOWIMIF67HIMQAKYQSRH76OWG",
+          "kind": "html",
+          "mime": "text/html",
+          "raw_path": "recovery/artist-sites/raw/e232f62cc73b1dc8222a411c1245328d2ac8354d2f2b5f2ef510c04005c650e3.html",
+          "requested_capture": "20100903024846",
+          "sha256": "e232f62cc73b1dc8222a411c1245328d2ac8354d2f2b5f2ef510c04005c650e3",
+          "source_archive": "Common Crawl",
+          "source_collection": "CC-MAIN-2009-2010",
+          "source_length": 5739,
+          "source_offset": 40899716,
+          "source_original": "http://prometheusbrown.com/blog/2009/03/sxsw-2009-photo-gallery/",
+          "source_warc": "crawl-002/2010/09/24/27/1285383994830_27.arc.gz",
+          "status": "recovered",
+          "url": "http://prometheusbrown.com/blog/2009/03/sxsw-2009-photo-gallery/"
+        },
         "http://prometheusbrown.com/blog/2009/03/sxsw-film-festival/": {
           "actual_capture": "20090324111857",
           "bytes": 27261,
@@ -21866,6 +21941,24 @@
           "source_original": "http://prometheusbrown.com:80/blog/2009/03/sxsw-film-festival/",
           "status": "recovered",
           "url": "http://prometheusbrown.com/blog/2009/03/sxsw-film-festival/"
+        },
+        "http://prometheusbrown.com/blog/2009/03/thaswassup-what-price-watchmen-by-dj-daps1/": {
+          "actual_capture": "20100903025416",
+          "bytes": 29257,
+          "capture_digest": "4GIYIRFOZLGXHFPZDNXTYXAAEDLUJKCL",
+          "kind": "html",
+          "mime": "text/html",
+          "raw_path": "recovery/artist-sites/raw/69578f4af4e4398e7947351e8b4806581936b6629a4e0a48986e1bd179c914df.html",
+          "requested_capture": "20100903025416",
+          "sha256": "69578f4af4e4398e7947351e8b4806581936b6629a4e0a48986e1bd179c914df",
+          "source_archive": "Common Crawl",
+          "source_collection": "CC-MAIN-2009-2010",
+          "source_length": 10716,
+          "source_offset": 40905455,
+          "source_original": "http://prometheusbrown.com/blog/2009/03/thaswassup-what-price-watchmen-by-dj-daps1/",
+          "source_warc": "crawl-002/2010/09/24/27/1285383994830_27.arc.gz",
+          "status": "recovered",
+          "url": "http://prometheusbrown.com/blog/2009/03/thaswassup-what-price-watchmen-by-dj-daps1/"
         },
         "http://prometheusbrown.com/blog/2009/03/video-brainstorm-of-dyme-def-say-you-will-freeverse/": {
           "actual_capture": "20090307205516",
@@ -21908,6 +22001,24 @@
           "source_original": "http://prometheusbrown.com:80/blog/2009/03/video-knaan-somalia/",
           "status": "recovered",
           "url": "http://prometheusbrown.com/blog/2009/03/video-knaan-somalia/"
+        },
+        "http://prometheusbrown.com/blog/2009/04/": {
+          "actual_capture": "20100903025603",
+          "bytes": 24987,
+          "capture_digest": "AOMI3RFKLJJ36ZBH7FIFAXEKLAZNM7FH",
+          "kind": "html",
+          "mime": "text/html",
+          "raw_path": "recovery/artist-sites/raw/a688d8ab0caa115709030e1e695d3057c429362a43ab9e3fed8229083a2ad2f0.html",
+          "requested_capture": "20100903025603",
+          "sha256": "a688d8ab0caa115709030e1e695d3057c429362a43ab9e3fed8229083a2ad2f0",
+          "source_archive": "Common Crawl",
+          "source_collection": "CC-MAIN-2009-2010",
+          "source_length": 8103,
+          "source_offset": 40916171,
+          "source_original": "http://prometheusbrown.com/blog/2009/04/",
+          "source_warc": "crawl-002/2010/09/24/27/1285383994830_27.arc.gz",
+          "status": "recovered",
+          "url": "http://prometheusbrown.com/blog/2009/04/"
         },
         "http://prometheusbrown.com/blog/2009/04/angela-markado-lino-brocka-1980/": {
           "actual_capture": "20090510092522",
@@ -22357,6 +22468,24 @@
           "status": "recovered",
           "url": "http://prometheusbrown.com/blog/2009/06/si-tatang-at-mga-himala-ng-ating-panahon-by-ricky-lee/"
         },
+        "http://prometheusbrown.com/blog/2009/06/the-hangover-todd-phillips-2009/": {
+          "actual_capture": "20100903025158",
+          "bytes": 23477,
+          "capture_digest": "TKXCSCFRDYOGGRH2OHW7UMJFM2NWEU4B",
+          "kind": "html",
+          "mime": "text/html",
+          "raw_path": "recovery/artist-sites/raw/1e0e81278792d66d9fdc17e33ac99adc76bafafb176341d920727aaa358e802b.html",
+          "requested_capture": "20100903025158",
+          "sha256": "1e0e81278792d66d9fdc17e33ac99adc76bafafb176341d920727aaa358e802b",
+          "source_archive": "Common Crawl",
+          "source_collection": "CC-MAIN-2009-2010",
+          "source_length": 8397,
+          "source_offset": 40947634,
+          "source_original": "http://prometheusbrown.com/blog/2009/06/the-hangover-todd-phillips-2009/",
+          "source_warc": "crawl-002/2010/09/24/27/1285383994830_27.arc.gz",
+          "status": "recovered",
+          "url": "http://prometheusbrown.com/blog/2009/06/the-hangover-todd-phillips-2009/"
+        },
         "http://prometheusbrown.com/blog/2009/06/the-resistance-of-philippine-cinema-coming-to-daly-city/": {
           "actual_capture": "20100718143103",
           "bytes": 21909,
@@ -22384,6 +22513,24 @@
           "source_original": "http://prometheusbrown.com:80/blog/2009/06/video-bambu-quit-dir-andrew-graziuso/",
           "status": "recovered",
           "url": "http://prometheusbrown.com/blog/2009/06/video-bambu-quit-dir-andrew-graziuso/"
+        },
+        "http://prometheusbrown.com/blog/2009/06/video-deep-foundation-f-jay-legaspi-sleep-dir-choz-belen/": {
+          "actual_capture": "20100903025523",
+          "bytes": 15897,
+          "capture_digest": "PQT5VDTATJZZ74CRMGVYKDN3NUXIS6IC",
+          "kind": "html",
+          "mime": "text/html",
+          "raw_path": "recovery/artist-sites/raw/4f091ca14f1604a9ce3389461d2d2ceeb6867715f7958c3d712094c9d4f52ead.html",
+          "requested_capture": "20100903025523",
+          "sha256": "4f091ca14f1604a9ce3389461d2d2ceeb6867715f7958c3d712094c9d4f52ead",
+          "source_archive": "Common Crawl",
+          "source_collection": "CC-MAIN-2009-2010",
+          "source_length": 5348,
+          "source_offset": 40963008,
+          "source_original": "http://prometheusbrown.com/blog/2009/06/video-deep-foundation-f-jay-legaspi-sleep-dir-choz-belen/",
+          "source_warc": "crawl-002/2010/09/24/27/1285383994830_27.arc.gz",
+          "status": "recovered",
+          "url": "http://prometheusbrown.com/blog/2009/06/video-deep-foundation-f-jay-legaspi-sleep-dir-choz-belen/"
         },
         "http://prometheusbrown.com/blog/2009/06/video-macklemore-35th-north-seattle-june-1-2009/": {
           "actual_capture": "20090609103441",
@@ -22651,6 +22798,24 @@
           "status": "recovered",
           "url": "http://prometheusbrown.com/blog/2009/08/video-blue-scholars-hi-808-dir-the-ohana/"
         },
+        "http://prometheusbrown.com/blog/2009/08/video-philippine-student-rally-at-mendiola/": {
+          "actual_capture": "20100903025425",
+          "bytes": 25986,
+          "capture_digest": "M3L43POFH53STUPJVEZ66MTUMJCEAZ5N",
+          "kind": "html",
+          "mime": "text/html",
+          "raw_path": "recovery/artist-sites/raw/728f6c214fe52b4c80995ed5449fe85a40cfdf37419da7b0742f378200c34712.html",
+          "requested_capture": "20100903025425",
+          "sha256": "728f6c214fe52b4c80995ed5449fe85a40cfdf37419da7b0742f378200c34712",
+          "source_archive": "Common Crawl",
+          "source_collection": "CC-MAIN-2009-2010",
+          "source_length": 8827,
+          "source_offset": 41000351,
+          "source_original": "http://prometheusbrown.com/blog/2009/08/video-philippine-student-rally-at-mendiola/",
+          "source_warc": "crawl-002/2010/09/24/27/1285383994830_27.arc.gz",
+          "status": "recovered",
+          "url": "http://prometheusbrown.com/blog/2009/08/video-philippine-student-rally-at-mendiola/"
+        },
         "http://prometheusbrown.com/blog/2009/09/all-the-real-girls-david-gordon-green-2003/": {
           "actual_capture": "20090914135055",
           "bytes": 20244,
@@ -22763,6 +22928,42 @@
           "status": "recovered",
           "url": "http://prometheusbrown.com/blog/2009/10/capitalism-a-love-story-michael-moore-2009/"
         },
+        "http://prometheusbrown.com/blog/2009/10/hanyo-ki-young-kim-1960/": {
+          "actual_capture": "20100903023352",
+          "bytes": 18141,
+          "capture_digest": "PLJNAKTUZNFJDKRWIFQBHJJRJCLALY3U",
+          "kind": "html",
+          "mime": "text/html",
+          "raw_path": "recovery/artist-sites/raw/a00c2bb22918e552df6f6efb626c796680fb738e69cec7c16f5b47d3afbcd69c.html",
+          "requested_capture": "20100903023352",
+          "sha256": "a00c2bb22918e552df6f6efb626c796680fb738e69cec7c16f5b47d3afbcd69c",
+          "source_archive": "Common Crawl",
+          "source_collection": "CC-MAIN-2009-2010",
+          "source_length": 6394,
+          "source_offset": 41021738,
+          "source_original": "http://prometheusbrown.com/blog/2009/10/hanyo-ki-young-kim-1960/",
+          "source_warc": "crawl-002/2010/09/24/27/1285383994830_27.arc.gz",
+          "status": "recovered",
+          "url": "http://prometheusbrown.com/blog/2009/10/hanyo-ki-young-kim-1960/"
+        },
+        "http://prometheusbrown.com/blog/2009/10/objectified-gary-hustwit-2009/": {
+          "actual_capture": "20100903025258",
+          "bytes": 17977,
+          "capture_digest": "XLLHG24OQNGCCCIYCE7HAPAMQJR6DIRL",
+          "kind": "html",
+          "mime": "text/html",
+          "raw_path": "recovery/artist-sites/raw/de8a359de8c2843cbdacfcf2bfdec93aef701beeb6e35cd01f411718264a8eea.html",
+          "requested_capture": "20100903025258",
+          "sha256": "de8a359de8c2843cbdacfcf2bfdec93aef701beeb6e35cd01f411718264a8eea",
+          "source_archive": "Common Crawl",
+          "source_collection": "CC-MAIN-2009-2010",
+          "source_length": 6387,
+          "source_offset": 41028132,
+          "source_original": "http://prometheusbrown.com/blog/2009/10/objectified-gary-hustwit-2009/",
+          "source_warc": "crawl-002/2010/09/24/27/1285383994830_27.arc.gz",
+          "status": "recovered",
+          "url": "http://prometheusbrown.com/blog/2009/10/objectified-gary-hustwit-2009/"
+        },
         "http://prometheusbrown.com/blog/2009/10/paranormal-activity-oren-peli-2009/": {
           "actual_capture": "20091128180513",
           "bytes": 47459,
@@ -22777,6 +22978,204 @@
           "status": "recovered",
           "url": "http://prometheusbrown.com/blog/2009/10/paranormal-activity-oren-peli-2009/"
         },
+        "http://prometheusbrown.com/blog/2009/10/raymond-reds-himpapawid-manila-skies/": {
+          "actual_capture": "20100903025311",
+          "bytes": 17875,
+          "capture_digest": "NQC546HSWKCBLB4LPXA2CA6L7VPOTWQ3",
+          "kind": "html",
+          "mime": "text/html",
+          "raw_path": "recovery/artist-sites/raw/9aef16e51e9b702fe15ed89f3cacfe14f58968c217e356be890a57a2ac8da284.html",
+          "requested_capture": "20100903025311",
+          "sha256": "9aef16e51e9b702fe15ed89f3cacfe14f58968c217e356be890a57a2ac8da284",
+          "source_archive": "Common Crawl",
+          "source_collection": "CC-MAIN-2009-2010",
+          "source_length": 6227,
+          "source_offset": 41041399,
+          "source_original": "http://prometheusbrown.com/blog/2009/10/raymond-reds-himpapawid-manila-skies/",
+          "source_warc": "crawl-002/2010/09/24/27/1285383994830_27.arc.gz",
+          "status": "recovered",
+          "url": "http://prometheusbrown.com/blog/2009/10/raymond-reds-himpapawid-manila-skies/"
+        },
+        "http://prometheusbrown.com/blog/2009/10/sonicsgate-2009-full-streaming-video/": {
+          "actual_capture": "20100903025250",
+          "bytes": 16507,
+          "capture_digest": "NBQZZ2QXHIPXM2TDATZ5EQPE6NGUIPPR",
+          "kind": "html",
+          "mime": "text/html",
+          "raw_path": "recovery/artist-sites/raw/f7c9d64504a66f8460823c8fcd6b8a34f7d34ee3137b5fccf89afd4f92ee1b54.html",
+          "requested_capture": "20100903025250",
+          "sha256": "f7c9d64504a66f8460823c8fcd6b8a34f7d34ee3137b5fccf89afd4f92ee1b54",
+          "source_archive": "Common Crawl",
+          "source_collection": "CC-MAIN-2009-2010",
+          "source_length": 5771,
+          "source_offset": 41047626,
+          "source_original": "http://prometheusbrown.com/blog/2009/10/sonicsgate-2009-full-streaming-video/",
+          "source_warc": "crawl-002/2010/09/24/27/1285383994830_27.arc.gz",
+          "status": "recovered",
+          "url": "http://prometheusbrown.com/blog/2009/10/sonicsgate-2009-full-streaming-video/"
+        },
+        "http://prometheusbrown.com/blog/2009/10/video-fake-empire-dir-ryan-lewis/": {
+          "actual_capture": "20100903023415",
+          "bytes": 15213,
+          "capture_digest": "ZNFH6UAXSV7CCWIH55YCNXJCVMCSWPD6",
+          "kind": "html",
+          "mime": "text/html",
+          "raw_path": "recovery/artist-sites/raw/abffe893d69c8432d17f74c2d01421908eb67ec32188e925b408c8975b13f491.html",
+          "requested_capture": "20100903023415",
+          "sha256": "abffe893d69c8432d17f74c2d01421908eb67ec32188e925b408c8975b13f491",
+          "source_archive": "Common Crawl",
+          "source_collection": "CC-MAIN-2009-2010",
+          "source_length": 5180,
+          "source_offset": 41053397,
+          "source_original": "http://prometheusbrown.com/blog/2009/10/video-fake-empire-dir-ryan-lewis/",
+          "source_warc": "crawl-002/2010/09/24/27/1285383994830_27.arc.gz",
+          "status": "recovered",
+          "url": "http://prometheusbrown.com/blog/2009/10/video-fake-empire-dir-ryan-lewis/"
+        },
+        "http://prometheusbrown.com/blog/2009/10/video-shabazz-palaces-bellhaven-meridian-dir-kahlil-joseph/": {
+          "actual_capture": "20100903023147",
+          "bytes": 17016,
+          "capture_digest": "5E3HRTO5ACUJGYIDBHP23F4Q7PDC22NI",
+          "kind": "html",
+          "mime": "text/html",
+          "raw_path": "recovery/artist-sites/raw/6dbe2dab08eb9202f0a2a9e8ff61eb06a475925afd329e75a0883991af9b3093.html",
+          "requested_capture": "20100903023147",
+          "sha256": "6dbe2dab08eb9202f0a2a9e8ff61eb06a475925afd329e75a0883991af9b3093",
+          "source_archive": "Common Crawl",
+          "source_collection": "CC-MAIN-2009-2010",
+          "source_length": 5731,
+          "source_offset": 41058577,
+          "source_original": "http://prometheusbrown.com/blog/2009/10/video-shabazz-palaces-bellhaven-meridian-dir-kahlil-joseph/",
+          "source_warc": "crawl-002/2010/09/24/27/1285383994830_27.arc.gz",
+          "status": "recovered",
+          "url": "http://prometheusbrown.com/blog/2009/10/video-shabazz-palaces-bellhaven-meridian-dir-kahlil-joseph/"
+        },
+        "http://prometheusbrown.com/blog/2009/11/aoki-world-premiere/": {
+          "actual_capture": "20100903025334",
+          "bytes": 16391,
+          "capture_digest": "3FD3EW2KLVUP526NUKZPVZZLKLQEA6GZ",
+          "kind": "html",
+          "mime": "text/html",
+          "raw_path": "recovery/artist-sites/raw/5a94ca03aa9cfe2aa35950e970ed3189efddff3cff6b73d836ef7a602a55e48f.html",
+          "requested_capture": "20100903025334",
+          "sha256": "5a94ca03aa9cfe2aa35950e970ed3189efddff3cff6b73d836ef7a602a55e48f",
+          "source_archive": "Common Crawl",
+          "source_collection": "CC-MAIN-2009-2010",
+          "source_length": 5683,
+          "source_offset": 41064308,
+          "source_original": "http://prometheusbrown.com/blog/2009/11/aoki-world-premiere/",
+          "source_warc": "crawl-002/2010/09/24/27/1285383994830_27.arc.gz",
+          "status": "recovered",
+          "url": "http://prometheusbrown.com/blog/2009/11/aoki-world-premiere/"
+        },
+        "http://prometheusbrown.com/blog/2009/11/humpday-lynn-shelton-2009/": {
+          "actual_capture": "20100903023448",
+          "bytes": 18087,
+          "capture_digest": "A65UYGXMMOQ73XDUVB3S6PEQDMJWEBQU",
+          "kind": "html",
+          "mime": "text/html",
+          "raw_path": "recovery/artist-sites/raw/66a875102835ff3c656797f8f41d86330c930bbd6d4058c0781d2ae0ae385202.html",
+          "requested_capture": "20100903023448",
+          "sha256": "66a875102835ff3c656797f8f41d86330c930bbd6d4058c0781d2ae0ae385202",
+          "source_archive": "Common Crawl",
+          "source_collection": "CC-MAIN-2009-2010",
+          "source_length": 6578,
+          "source_offset": 41069991,
+          "source_original": "http://prometheusbrown.com/blog/2009/11/humpday-lynn-shelton-2009/",
+          "source_warc": "crawl-002/2010/09/24/27/1285383994830_27.arc.gz",
+          "status": "recovered",
+          "url": "http://prometheusbrown.com/blog/2009/11/humpday-lynn-shelton-2009/"
+        },
+        "http://prometheusbrown.com/blog/2009/11/pacquiao-cotto-247/": {
+          "actual_capture": "20100903024719",
+          "bytes": 16161,
+          "capture_digest": "RJFFYVNHCXVVHNNRSKJ3DQTMJ5F7C4GJ",
+          "kind": "html",
+          "mime": "text/html",
+          "raw_path": "recovery/artist-sites/raw/5b58f8bd030ceec3d536a16c9975cfe3674877047501e8e99ac1cf8384a1f3ac.html",
+          "requested_capture": "20100903024719",
+          "sha256": "5b58f8bd030ceec3d536a16c9975cfe3674877047501e8e99ac1cf8384a1f3ac",
+          "source_archive": "Common Crawl",
+          "source_collection": "CC-MAIN-2009-2010",
+          "source_length": 5817,
+          "source_offset": 41076569,
+          "source_original": "http://prometheusbrown.com/blog/2009/11/pacquiao-cotto-247/",
+          "source_warc": "crawl-002/2010/09/24/27/1285383994830_27.arc.gz",
+          "status": "recovered",
+          "url": "http://prometheusbrown.com/blog/2009/11/pacquiao-cotto-247/"
+        },
+        "http://prometheusbrown.com/blog/2009/11/photos-minneapolis/": {
+          "actual_capture": "20100903023851",
+          "bytes": 16227,
+          "capture_digest": "NNRDRABJJWKMPFCK7G3F5UQ6KZ4DZGJ5",
+          "kind": "html",
+          "mime": "text/html",
+          "raw_path": "recovery/artist-sites/raw/8eff517af2765409f770c12ed03b50130533b36110bfd5606910c7aae7e532cb.html",
+          "requested_capture": "20100903023851",
+          "sha256": "8eff517af2765409f770c12ed03b50130533b36110bfd5606910c7aae7e532cb",
+          "source_archive": "Common Crawl",
+          "source_collection": "CC-MAIN-2009-2010",
+          "source_length": 5728,
+          "source_offset": 41082386,
+          "source_original": "http://prometheusbrown.com/blog/2009/11/photos-minneapolis/",
+          "source_warc": "crawl-002/2010/09/24/27/1285383994830_27.arc.gz",
+          "status": "recovered",
+          "url": "http://prometheusbrown.com/blog/2009/11/photos-minneapolis/"
+        },
+        "http://prometheusbrown.com/blog/2009/11/talaye-sorkhcrimson-gold-jafar-panahi-2003/": {
+          "actual_capture": "20100903025508",
+          "bytes": 19858,
+          "capture_digest": "E477JSXXRSDALP35XDEU4WAABC67KZIS",
+          "kind": "html",
+          "mime": "text/html",
+          "raw_path": "recovery/artist-sites/raw/a653286ce635889c6517ce0833727c859c6e20959e02e19ddd1dd3e6a77bea4e.html",
+          "requested_capture": "20100903025508",
+          "sha256": "a653286ce635889c6517ce0833727c859c6e20959e02e19ddd1dd3e6a77bea4e",
+          "source_archive": "Common Crawl",
+          "source_collection": "CC-MAIN-2009-2010",
+          "source_length": 6820,
+          "source_offset": 41088114,
+          "source_original": "http://prometheusbrown.com/blog/2009/11/talaye-sorkhcrimson-gold-jafar-panahi-2003/",
+          "source_warc": "crawl-002/2010/09/24/27/1285383994830_27.arc.gz",
+          "status": "recovered",
+          "url": "http://prometheusbrown.com/blog/2009/11/talaye-sorkhcrimson-gold-jafar-panahi-2003/"
+        },
+        "http://prometheusbrown.com/blog/2009/11/trailer-socialisme/": {
+          "actual_capture": "20100903023425",
+          "bytes": 14966,
+          "capture_digest": "VV6VATT24PI6L7HONZFDGGC3EEB62H4Q",
+          "kind": "html",
+          "mime": "text/html",
+          "raw_path": "recovery/artist-sites/raw/fc5f5175897c50a87cfe59c8486d94883bb9d44eb5b85de3cb03887a5ee5c434.html",
+          "requested_capture": "20100903023425",
+          "sha256": "fc5f5175897c50a87cfe59c8486d94883bb9d44eb5b85de3cb03887a5ee5c434",
+          "source_archive": "Common Crawl",
+          "source_collection": "CC-MAIN-2009-2010",
+          "source_length": 5216,
+          "source_offset": 41094934,
+          "source_original": "http://prometheusbrown.com/blog/2009/11/trailer-socialisme/",
+          "source_warc": "crawl-002/2010/09/24/27/1285383994830_27.arc.gz",
+          "status": "recovered",
+          "url": "http://prometheusbrown.com/blog/2009/11/trailer-socialisme/"
+        },
+        "http://prometheusbrown.com/blog/2009/11/trailer-wapakman/": {
+          "actual_capture": "20100903024727",
+          "bytes": 17988,
+          "capture_digest": "ZZZEOURZAJOK54ORBA5BKMPPGNEEMBCS",
+          "kind": "html",
+          "mime": "text/html",
+          "raw_path": "recovery/artist-sites/raw/9807be3af158ab504ffa97bc10eacd7722057dccd33cbcbca98fd88875fc6c37.html",
+          "requested_capture": "20100903024727",
+          "sha256": "9807be3af158ab504ffa97bc10eacd7722057dccd33cbcbca98fd88875fc6c37",
+          "source_archive": "Common Crawl",
+          "source_collection": "CC-MAIN-2009-2010",
+          "source_length": 6110,
+          "source_offset": 41100150,
+          "source_original": "http://prometheusbrown.com/blog/2009/11/trailer-wapakman/",
+          "source_warc": "crawl-002/2010/09/24/27/1285383994830_27.arc.gz",
+          "status": "recovered",
+          "url": "http://prometheusbrown.com/blog/2009/11/trailer-wapakman/"
+        },
         "http://prometheusbrown.com/blog/2009/12/photos-beacon-to-broadway/": {
           "actual_capture": "20091222071013",
           "bytes": 44102,
@@ -22790,6 +23189,24 @@
           "source_original": "http://prometheusbrown.com:80/blog/2009/12/photos-beacon-to-broadway/",
           "status": "recovered",
           "url": "http://prometheusbrown.com/blog/2009/12/photos-beacon-to-broadway/"
+        },
+        "http://prometheusbrown.com/blog/2009/12/photos-go-machine-part-1-bluescholars-com/": {
+          "actual_capture": "20100903024825",
+          "bytes": 15266,
+          "capture_digest": "YTA6MXYDU327GSXEKQWCM3E3J5L6O2KK",
+          "kind": "html",
+          "mime": "text/html",
+          "raw_path": "recovery/artist-sites/raw/13d2ad01897bfd38ecc7e95cdb7358b89b6363c69bfb179b0637f5c10b0ceb8e.html",
+          "requested_capture": "20100903024825",
+          "sha256": "13d2ad01897bfd38ecc7e95cdb7358b89b6363c69bfb179b0637f5c10b0ceb8e",
+          "source_archive": "Common Crawl",
+          "source_collection": "CC-MAIN-2009-2010",
+          "source_length": 5237,
+          "source_offset": 41106260,
+          "source_original": "http://prometheusbrown.com/blog/2009/12/photos-go-machine-part-1-bluescholars-com/",
+          "source_warc": "crawl-002/2010/09/24/27/1285383994830_27.arc.gz",
+          "status": "recovered",
+          "url": "http://prometheusbrown.com/blog/2009/12/photos-go-machine-part-1-bluescholars-com/"
         },
         "http://prometheusbrown.com/blog/2009/12/the-hurt-locker-kathryn-bigelow-2009/": {
           "actual_capture": "20091224213855",
@@ -22833,6 +23250,24 @@
           "status": "recovered",
           "url": "http://prometheusbrown.com/blog/2009/12/this-is-it-kenny-ortega-2009/"
         },
+        "http://prometheusbrown.com/blog/2009/12/video-d-black-yesterday/": {
+          "actual_capture": "20100903024746",
+          "bytes": 14787,
+          "capture_digest": "2MVMA32SZYA3QAFTDG7Z3GVYVHKPG3LT",
+          "kind": "html",
+          "mime": "text/html",
+          "raw_path": "recovery/artist-sites/raw/4907911642c52e2f18b7ddb4d2ee93a0e0259b9078dd44b6356e07b1814ce7e2.html",
+          "requested_capture": "20100903024746",
+          "sha256": "4907911642c52e2f18b7ddb4d2ee93a0e0259b9078dd44b6356e07b1814ce7e2",
+          "source_archive": "Common Crawl",
+          "source_collection": "CC-MAIN-2009-2010",
+          "source_length": 5081,
+          "source_offset": 41118652,
+          "source_original": "http://prometheusbrown.com/blog/2009/12/video-d-black-yesterday/",
+          "source_warc": "crawl-002/2010/09/24/27/1285383994830_27.arc.gz",
+          "status": "recovered",
+          "url": "http://prometheusbrown.com/blog/2009/12/video-d-black-yesterday/"
+        },
         "http://prometheusbrown.com/blog/2009/12/video-freeway-jake-one-know-what-i-mean/": {
           "actual_capture": "20091222143548",
           "bytes": 44323,
@@ -22860,6 +23295,24 @@
           "source_original": "http://prometheusbrown.com:80/blog/2009/12/video-head-like-a-kite-directors-cut/",
           "status": "recovered",
           "url": "http://prometheusbrown.com/blog/2009/12/video-head-like-a-kite-directors-cut/"
+        },
+        "http://prometheusbrown.com/blog/2009/12/video-macklemore-the-town/": {
+          "actual_capture": "20100903024919",
+          "bytes": 15574,
+          "capture_digest": "R2MQ6ACNEYKN75MAXE25BFSLIXYKUHCP",
+          "kind": "html",
+          "mime": "text/html",
+          "raw_path": "recovery/artist-sites/raw/5cc9dc6a7c59629b7e16957fbf7837e5e707bdce9a0a9f73dca5e230153c0332.html",
+          "requested_capture": "20100903024919",
+          "sha256": "5cc9dc6a7c59629b7e16957fbf7837e5e707bdce9a0a9f73dca5e230153c0332",
+          "source_archive": "Common Crawl",
+          "source_collection": "CC-MAIN-2009-2010",
+          "source_length": 5308,
+          "source_offset": 41134820,
+          "source_original": "http://prometheusbrown.com/blog/2009/12/video-macklemore-the-town/",
+          "source_warc": "crawl-002/2010/09/24/27/1285383994830_27.arc.gz",
+          "status": "recovered",
+          "url": "http://prometheusbrown.com/blog/2009/12/video-macklemore-the-town/"
         },
         "http://prometheusbrown.com/blog/2009/12/video-tabi-tabi-po-exhibit/": {
           "actual_capture": "20091222160020",
@@ -23042,6 +23495,24 @@
           "source_original": "http://prometheusbrown.com:80/blog/2010/01/up-in-the-air-jason-reitman-2009/",
           "status": "recovered",
           "url": "http://prometheusbrown.com/blog/2010/01/up-in-the-air-jason-reitman-2009/"
+        },
+        "http://prometheusbrown.com/blog/2010/01/video-dumbfoundead-jam-session-2-0/": {
+          "actual_capture": "20100903024624",
+          "bytes": 18617,
+          "capture_digest": "H46IKM3ZI4LCI47NBC73NATRDU2QFM6K",
+          "kind": "html",
+          "mime": "text/html",
+          "raw_path": "recovery/artist-sites/raw/7b236c5e56c6e32bd08b69235443b138c5156e564f799f2d7d1d3b3ba2ddcdcd.html",
+          "requested_capture": "20100903024624",
+          "sha256": "7b236c5e56c6e32bd08b69235443b138c5156e564f799f2d7d1d3b3ba2ddcdcd",
+          "source_archive": "Common Crawl",
+          "source_collection": "CC-MAIN-2009-2010",
+          "source_length": 6055,
+          "source_offset": 41158940,
+          "source_original": "http://prometheusbrown.com/blog/2010/01/video-dumbfoundead-jam-session-2-0/",
+          "source_warc": "crawl-002/2010/09/24/27/1285383994830_27.arc.gz",
+          "status": "recovered",
+          "url": "http://prometheusbrown.com/blog/2010/01/video-dumbfoundead-jam-session-2-0/"
         },
         "http://prometheusbrown.com/blog/2010/02/gomorrah-matteo-garrone-2008/": {
           "actual_capture": "20100718125955",
@@ -24247,6 +24718,24 @@
           "status": "recovered",
           "url": "http://prometheusbrown.com/blog/about/"
         },
+        "http://prometheusbrown.com/blog/archives/": {
+          "actual_capture": "20100903025614",
+          "bytes": 25797,
+          "capture_digest": "CEJ54IB2KWY2YVZL6ASRWEXKJR353K3A",
+          "kind": "html",
+          "mime": "text/html",
+          "raw_path": "recovery/artist-sites/raw/997a62676730f7b7f6c2bc9dab9691d606c6930b98a2c0305cf5286297380c01.html",
+          "requested_capture": "20100903025614",
+          "sha256": "997a62676730f7b7f6c2bc9dab9691d606c6930b98a2c0305cf5286297380c01",
+          "source_archive": "Common Crawl",
+          "source_collection": "CC-MAIN-2009-2010",
+          "source_length": 5425,
+          "source_offset": 41176819,
+          "source_original": "http://prometheusbrown.com/blog/archives/",
+          "source_warc": "crawl-002/2010/09/24/27/1285383994830_27.arc.gz",
+          "status": "recovered",
+          "url": "http://prometheusbrown.com/blog/archives/"
+        },
         "http://prometheusbrown.com/blog/category/archives/": {
           "actual_capture": "20090626063934",
           "bytes": 14193,
@@ -24765,6 +25254,24 @@
           "status": "recovered",
           "url": "http://prometheusbrown.com/blog/category/videos/"
         },
+        "http://prometheusbrown.com/blog/man-with-a-movie-camera/": {
+          "actual_capture": "20100903024252",
+          "bytes": 22229,
+          "capture_digest": "OWAMCIT23H5H75TJK77MSYK45UY4UH6Z",
+          "kind": "html",
+          "mime": "text/html",
+          "raw_path": "recovery/artist-sites/raw/0b660de2b1fb75d0b4d801db26637b394b27f9315167a46ad562ace2e4694abf.html",
+          "requested_capture": "20100903024252",
+          "sha256": "0b660de2b1fb75d0b4d801db26637b394b27f9315167a46ad562ace2e4694abf",
+          "source_archive": "Common Crawl",
+          "source_collection": "CC-MAIN-2009-2010",
+          "source_length": 8635,
+          "source_offset": 41195867,
+          "source_original": "http://prometheusbrown.com/blog/man-with-a-movie-camera/",
+          "source_warc": "crawl-002/2010/09/24/27/1285383994830_27.arc.gz",
+          "status": "recovered",
+          "url": "http://prometheusbrown.com/blog/man-with-a-movie-camera/"
+        },
         "http://prometheusbrown.com/blog/page/2/": {
           "actual_capture": "20100615215154",
           "bytes": 23966,
@@ -24806,6 +25313,24 @@
           "source_original": "http://prometheusbrown.com:80/blog/page/4/",
           "status": "recovered",
           "url": "http://prometheusbrown.com/blog/page/4/"
+        },
+        "http://prometheusbrown.com/blog/s_archives/prometheus-browns-top-10-films-of-2008/": {
+          "actual_capture": "20100903024244",
+          "bytes": 13198,
+          "capture_digest": "QF7Z6ZUHT3F6TG6NGWAT2GICNO4R2SDK",
+          "kind": "html",
+          "mime": "text/html",
+          "raw_path": "recovery/artist-sites/raw/6e3b4aac4c6866364df9eb8b49bfa8f16e042d216519b2c32509517915ccb3c8.html",
+          "requested_capture": "20100903024244",
+          "sha256": "6e3b4aac4c6866364df9eb8b49bfa8f16e042d216519b2c32509517915ccb3c8",
+          "source_archive": "Common Crawl",
+          "source_collection": "CC-MAIN-2009-2010",
+          "source_length": 4356,
+          "source_offset": 41204502,
+          "source_original": "http://prometheusbrown.com/blog/s_archives/prometheus-browns-top-10-films-of-2008/",
+          "source_warc": "crawl-002/2010/09/24/27/1285383994830_27.arc.gz",
+          "status": "recovered",
+          "url": "http://prometheusbrown.com/blog/s_archives/prometheus-browns-top-10-films-of-2008/"
         },
         "http://prometheusbrown.com/blog/tag/andrew-graziuso/": {
           "actual_capture": "20100718143203",
@@ -25114,6 +25639,24 @@
           "source_original": "http://prometheusbrown.com:80/blog/tag/xzibit/",
           "status": "recovered",
           "url": "http://prometheusbrown.com/blog/tag/xzibit/"
+        },
+        "http://prometheusbrown.com/blog/the-resistance-of-philippine-cinema/": {
+          "actual_capture": "20100903024235",
+          "bytes": 15912,
+          "capture_digest": "OGKXGPQBQHFNLHHA5MJS5FETDJLXIKAY",
+          "kind": "html",
+          "mime": "text/html",
+          "raw_path": "recovery/artist-sites/raw/f633ea8a3ac1761358392171ba555fd372bab4f48edbd547ab39b869e0a9fbe1.html",
+          "requested_capture": "20100903024235",
+          "sha256": "f633ea8a3ac1761358392171ba555fd372bab4f48edbd547ab39b869e0a9fbe1",
+          "source_archive": "Common Crawl",
+          "source_collection": "CC-MAIN-2009-2010",
+          "source_length": 6269,
+          "source_offset": 41208858,
+          "source_original": "http://prometheusbrown.com/blog/the-resistance-of-philippine-cinema/",
+          "source_warc": "crawl-002/2010/09/24/27/1285383994830_27.arc.gz",
+          "status": "recovered",
+          "url": "http://prometheusbrown.com/blog/the-resistance-of-philippine-cinema/"
         },
         "http://prometheusbrown.com/bluescholars": {
           "actual_capture": "20090331211807",
@@ -32069,22 +32612,22 @@
   },
   "failures": [],
   "report": {
-    "attempted_records": 37,
+    "attempted_records": 0,
     "editions": {
       "prometheusbrown.com/2008": {
-        "complete": true,
-        "missing": 97,
-        "recovered": 29
+        "complete": false,
+        "missing": 96,
+        "recovered": 30
       },
       "prometheusbrown.com/2009": {
         "complete": true,
-        "missing": 1072,
-        "recovered": 427
+        "missing": 1071,
+        "recovered": 428
       },
       "prometheusbrown.com/2010": {
         "complete": true,
-        "missing": 1420,
-        "recovered": 456
+        "missing": 1393,
+        "recovered": 493
       },
       "prometheusbrown.com/2013": {
         "complete": true,
@@ -32653,24 +33196,17 @@
       },
       {
         "edition": "prometheusbrown.com/2008",
-        "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20080706232724id_/http://i289.photobucket.com/albums/ll225/kiwizzo/PPT%20Seattle%20Portland/IMG_0875.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+        "error": "OSError: Archive HTTP 404: https://web.archive.org/web/20080706232724id_/http://i289.photobucket.com/albums/ll225/kiwizzo/PPT%20Seattle%20Portland/IMG_0875.jpg",
         "kind": "image",
         "status": "unavailable_or_excluded",
         "url": "http://i289.photobucket.com/albums/ll225/kiwizzo/PPT%20Seattle%20Portland/IMG_0875.jpg"
       },
       {
         "edition": "prometheusbrown.com/2008",
-        "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20080706232724id_/http://i289.photobucket.com/albums/ll225/kiwizzo/PPT%20Seattle%20Portland/IMG_0909.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+        "error": "OSError: Archive HTTP 404: https://web.archive.org/web/20080706232724id_/http://i289.photobucket.com/albums/ll225/kiwizzo/PPT%20Seattle%20Portland/IMG_0909.jpg",
         "kind": "image",
         "status": "unavailable_or_excluded",
         "url": "http://i289.photobucket.com/albums/ll225/kiwizzo/PPT%20Seattle%20Portland/IMG_0909.jpg"
-      },
-      {
-        "edition": "prometheusbrown.com/2008",
-        "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20080706232724id_/http://t-shirtjunkies.com/images/uploads/sushitshirt.gif (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-        "kind": "image",
-        "status": "unavailable_or_excluded",
-        "url": "http://t-shirtjunkies.com/images/uploads/sushitshirt.gif"
       },
       {
         "edition": "prometheusbrown.com/2008",
@@ -33168,12 +33704,6 @@
         "kind": "image",
         "status": "not_indexed_before_edition",
         "url": "http://prometheusbrown.com/blog/2008/12/himala-ishmael-bernal-1982/"
-      },
-      {
-        "edition": "prometheusbrown.com/2009",
-        "kind": "image",
-        "status": "not_indexed_before_edition",
-        "url": "http://prometheusbrown.com/blog/2008/11/battle-in-seattle-stuart-townsend-2008/"
       },
       {
         "edition": "prometheusbrown.com/2009",
@@ -39441,12 +39971,6 @@
         "edition": "prometheusbrown.com/2010",
         "kind": "image",
         "status": "not_indexed_before_edition",
-        "url": "http://prometheusbrown.com/blog/archives/"
-      },
-      {
-        "edition": "prometheusbrown.com/2010",
-        "kind": "image",
-        "status": "not_indexed_before_edition",
         "url": "http://prometheusbrown.com/videos"
       },
       {
@@ -40847,12 +41371,6 @@
         "edition": "prometheusbrown.com/2010",
         "kind": "image",
         "status": "not_indexed_before_edition",
-        "url": "http://prometheusbrown.com/blog/2009/10/raymond-reds-himpapawid-manila-skies/"
-      },
-      {
-        "edition": "prometheusbrown.com/2010",
-        "kind": "image",
-        "status": "not_indexed_before_edition",
         "url": "http://prometheusbrown.com/blog/2009/09/sakay-raymond-red-1993/"
       },
       {
@@ -41392,33 +41910,6 @@
         "edition": "prometheusbrown.com/2010",
         "kind": "image",
         "status": "not_indexed_before_edition",
-        "url": "http://prometheusbrown.com/blog/2009/11/talaye-sorkhcrimson-gold-jafar-panahi-2003/"
-      },
-      {
-        "edition": "prometheusbrown.com/2010",
-        "error": "excluded spam-injected capture",
-        "kind": "html",
-        "status": "unavailable_or_excluded",
-        "url": "http://prometheusbrown.com/blog/2009/11/humpday-lynn-shelton-2009/"
-      },
-      {
-        "edition": "prometheusbrown.com/2010",
-        "error": "excluded spam-injected capture",
-        "kind": "html",
-        "status": "unavailable_or_excluded",
-        "url": "http://prometheusbrown.com/blog/2009/10/objectified-gary-hustwit-2009/"
-      },
-      {
-        "edition": "prometheusbrown.com/2010",
-        "error": "excluded spam-injected capture",
-        "kind": "html",
-        "status": "unavailable_or_excluded",
-        "url": "http://prometheusbrown.com/blog/2009/10/hanyo-ki-young-kim-1960/"
-      },
-      {
-        "edition": "prometheusbrown.com/2010",
-        "kind": "image",
-        "status": "not_indexed_before_edition",
         "url": "http://prometheusbrown.com/blog/2009/10/the-informant-steven-soderbergh-2009/"
       },
       {
@@ -41450,12 +41941,6 @@
         "kind": "image",
         "status": "not_indexed_before_edition",
         "url": "http://prometheusbrown.com/blog/2009/06/the-girlfriend-experience-steven-soderbergh-2009-vivre-sa-vie-jean-luc-godard-1962/"
-      },
-      {
-        "edition": "prometheusbrown.com/2010",
-        "kind": "image",
-        "status": "not_indexed_before_edition",
-        "url": "http://prometheusbrown.com/blog/2009/06/the-hangover-todd-phillips-2009/"
       },
       {
         "edition": "prometheusbrown.com/2010",
@@ -41504,12 +41989,6 @@
         "kind": "image",
         "status": "not_indexed_before_edition",
         "url": "http://prometheusbrown.com/blog/2009/03/video-meshes-of-the-afternoon-maya-deren-1943/"
-      },
-      {
-        "edition": "prometheusbrown.com/2010",
-        "kind": "image",
-        "status": "not_indexed_before_edition",
-        "url": "http://prometheusbrown.com/blog/2009/03/thaswassup-what-price-watchmen-by-dj-daps1/"
       },
       {
         "edition": "prometheusbrown.com/2010",
@@ -41569,12 +42048,6 @@
         "edition": "prometheusbrown.com/2010",
         "kind": "image",
         "status": "not_indexed_before_edition",
-        "url": "http://prometheusbrown.com/blog/2008/12/the-murder-of-fred-hampton-howard-alk-1971/"
-      },
-      {
-        "edition": "prometheusbrown.com/2010",
-        "kind": "image",
-        "status": "not_indexed_before_edition",
         "url": "http://prometheusbrown.com/blog/2008/12/bottle-rocket-wes-anderson-1996/"
       },
       {
@@ -41582,12 +42055,6 @@
         "kind": "image",
         "status": "not_indexed_before_edition",
         "url": "http://prometheusbrown.com/blog/2008/12/himala-ishmael-bernal-1982/"
-      },
-      {
-        "edition": "prometheusbrown.com/2010",
-        "kind": "image",
-        "status": "not_indexed_before_edition",
-        "url": "http://prometheusbrown.com/blog/2008/11/battle-in-seattle-stuart-townsend-2008/"
       },
       {
         "edition": "prometheusbrown.com/2010",
@@ -41642,12 +42109,6 @@
         "kind": "image",
         "status": "not_indexed_before_edition",
         "url": "http://prometheusbrown.com/blog/2008/10/rights-vol-1/"
-      },
-      {
-        "edition": "prometheusbrown.com/2010",
-        "kind": "image",
-        "status": "not_indexed_before_edition",
-        "url": "http://prometheusbrown.com/blog/2008/10/oktyabr-sergei-eisenstein-1928/"
       },
       {
         "edition": "prometheusbrown.com/2010",
@@ -41768,12 +42229,6 @@
         "kind": "image",
         "status": "not_indexed_before_edition",
         "url": "http://prometheusbrown.com/blog/2008/07/metropolis-fritz-lang-1927/"
-      },
-      {
-        "edition": "prometheusbrown.com/2010",
-        "kind": "image",
-        "status": "not_indexed_before_edition",
-        "url": "http://prometheusbrown.com/blog/2008/07/in-bruges-martin-mcdonagh-2008/"
       },
       {
         "edition": "prometheusbrown.com/2010",
@@ -42101,24 +42556,6 @@
         "edition": "prometheusbrown.com/2010",
         "kind": "image",
         "status": "not_indexed_before_edition",
-        "url": "http://prometheusbrown.com/blog/2009/12/video-d-black-yesterday/"
-      },
-      {
-        "edition": "prometheusbrown.com/2010",
-        "kind": "image",
-        "status": "not_indexed_before_edition",
-        "url": "http://prometheusbrown.com/blog/2009/10/video-shabazz-palaces-bellhaven-meridian-dir-kahlil-joseph/"
-      },
-      {
-        "edition": "prometheusbrown.com/2010",
-        "kind": "image",
-        "status": "not_indexed_before_edition",
-        "url": "http://prometheusbrown.com/blog/2009/06/video-deep-foundation-f-jay-legaspi-sleep-dir-choz-belen/"
-      },
-      {
-        "edition": "prometheusbrown.com/2010",
-        "kind": "image",
-        "status": "not_indexed_before_edition",
         "url": "http://prometheusbrown.com/blog/2009/04/video-kanye-west-f-young-jeezy-amazing-dir-hype-williams/"
       },
       {
@@ -42156,12 +42593,6 @@
         "kind": "image",
         "status": "not_indexed_before_edition",
         "url": "http://prometheusbrown.com/blog/2008/11/music-video-jake-one-f-freeway-brother-ali-the-truth/"
-      },
-      {
-        "edition": "prometheusbrown.com/2010",
-        "kind": "image",
-        "status": "not_indexed_before_edition",
-        "url": "http://prometheusbrown.com/blog/2008/11/salute-filipino-ww2-veterans/"
       },
       {
         "edition": "prometheusbrown.com/2010",
@@ -42560,13 +42991,6 @@
       },
       {
         "edition": "prometheusbrown.com/2010",
-        "error": "excluded spam-injected capture",
-        "kind": "html",
-        "status": "unavailable_or_excluded",
-        "url": "http://prometheusbrown.com/blog/2009/11/pacquiao-cotto-247/"
-      },
-      {
-        "edition": "prometheusbrown.com/2010",
         "kind": "image",
         "status": "not_indexed_before_edition",
         "url": "http://prometheusbrown.com/blog/2009/04/pacquiaohatton-247/"
@@ -42576,12 +43000,6 @@
         "kind": "image",
         "status": "not_indexed_before_edition",
         "url": "http://prometheusbrown.com/blog/2009/04/in-praise-of-lost-season-five/"
-      },
-      {
-        "edition": "prometheusbrown.com/2010",
-        "kind": "image",
-        "status": "not_indexed_before_edition",
-        "url": "http://prometheusbrown.com/blog/2009/02/anthony-bourdain-no-reservations-philippines/"
       },
       {
         "edition": "prometheusbrown.com/2010",
@@ -42714,12 +43132,6 @@
         "kind": "image",
         "status": "not_indexed_before_edition",
         "url": "http://prometheusbrown.com/blog/2008/11/millionaire-slummers/"
-      },
-      {
-        "edition": "prometheusbrown.com/2010",
-        "kind": "image",
-        "status": "not_indexed_before_edition",
-        "url": "http://prometheusbrown.com/blog/2009/01/free-hawaii/"
       },
       {
         "edition": "prometheusbrown.com/2010",
@@ -43249,12 +43661,6 @@
         "edition": "prometheusbrown.com/2010",
         "kind": "image",
         "status": "not_indexed_before_edition",
-        "url": "http://prometheusbrown.com/blog/2009/03/sxsw-2009-photo-gallery/"
-      },
-      {
-        "edition": "prometheusbrown.com/2010",
-        "kind": "image",
-        "status": "not_indexed_before_edition",
         "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/03/photo-4-350x260.jpg"
       },
       {
@@ -43434,12 +43840,6 @@
         "edition": "prometheusbrown.com/2010",
         "kind": "image",
         "status": "not_indexed_before_edition",
-        "url": "http://prometheusbrown.com/blog/2009/12/video-macklemore-the-town/"
-      },
-      {
-        "edition": "prometheusbrown.com/2010",
-        "kind": "image",
-        "status": "not_indexed_before_edition",
         "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/12/The-Hurt-Locker-movie-image-2-450x253.jpg"
       },
       {
@@ -43465,34 +43865,6 @@
         "kind": "image",
         "status": "not_indexed_before_edition",
         "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/11/paranormal-activity-review.jpg"
-      },
-      {
-        "edition": "prometheusbrown.com/2010",
-        "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20091128100205id_/http://prometheusbrown.com:80/blog/2009/11/photos-minneapolis/ (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-        "kind": "html",
-        "status": "unavailable_or_excluded",
-        "url": "http://prometheusbrown.com/blog/2009/11/photos-minneapolis/"
-      },
-      {
-        "edition": "prometheusbrown.com/2010",
-        "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20091128124443id_/http://prometheusbrown.com:80/blog/2009/11/trailer-wapakman/ (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-        "kind": "html",
-        "status": "unavailable_or_excluded",
-        "url": "http://prometheusbrown.com/blog/2009/11/trailer-wapakman/"
-      },
-      {
-        "edition": "prometheusbrown.com/2010",
-        "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20091123151945id_/http://prometheusbrown.com:80/blog/2009/11/trailer-socialisme/ (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-        "kind": "html",
-        "status": "unavailable_or_excluded",
-        "url": "http://prometheusbrown.com/blog/2009/11/trailer-socialisme/"
-      },
-      {
-        "edition": "prometheusbrown.com/2010",
-        "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20091114204139id_/http://prometheusbrown.com:80/blog/2009/11/aoki-world-premiere/ (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-        "kind": "html",
-        "status": "unavailable_or_excluded",
-        "url": "http://prometheusbrown.com/blog/2009/11/aoki-world-premiere/"
       },
       {
         "edition": "prometheusbrown.com/2010",
@@ -43656,12 +44028,6 @@
         "kind": "image",
         "status": "not_indexed_before_edition",
         "url": "http://prometheusbrown.com/blog/2009/08/hawaii-50-years-of-statehood/"
-      },
-      {
-        "edition": "prometheusbrown.com/2010",
-        "kind": "image",
-        "status": "not_indexed_before_edition",
-        "url": "http://prometheusbrown.com/blog/2009/08/video-philippine-student-rally-at-mendiola/"
       },
       {
         "edition": "prometheusbrown.com/2010",
@@ -44957,13 +45323,6 @@
         "kind": "html",
         "status": "unavailable_or_excluded",
         "url": "http://prometheusbrown.com/blog/2010/01/david-byrne-fatboy-slims-imelda-marcos-tribute-album/"
-      },
-      {
-        "edition": "prometheusbrown.com/2010",
-        "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20100718125949id_/http://prometheusbrown.com:80/blog/2010/01/video-dumbfoundead-jam-session-2-0/ (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
-        "kind": "html",
-        "status": "unavailable_or_excluded",
-        "url": "http://prometheusbrown.com/blog/2010/01/video-dumbfoundead-jam-session-2-0/"
       },
       {
         "edition": "prometheusbrown.com/2010",
@@ -49465,6 +49824,18 @@
         "url": "http://somethingaboutfilm.files.wordpress.com/2008/03/walle.jpg"
       },
       {
+        "actual_capture": "20060828104348",
+        "bytes": 16373,
+        "capture_digest": "",
+        "compatibility_review_required": false,
+        "edition": "prometheusbrown.com/2008",
+        "kind": "image",
+        "sha256": "273ddd064bbba24b5506e2f03e15746fba682c475492d58f3690e1e006f39953",
+        "source_archive": "Internet Archive Wayback",
+        "source_original": "http://t-shirtjunkies.com/images/uploads/sushitshirt.gif",
+        "url": "http://t-shirtjunkies.com/images/uploads/sushitshirt.gif"
+      },
+      {
         "actual_capture": "20071128180055",
         "bytes": 24902,
         "capture_digest": "IQZ4PVKRIJISYATKIWOLQ6HJKYB5GD7Z",
@@ -49511,6 +49882,18 @@
         "source_archive": "Internet Archive Wayback",
         "source_original": "http://blogcatalog.com/images/buttons/blogcatalog5.gif",
         "url": "http://blogcatalog.com/images/buttons/blogcatalog5.gif"
+      },
+      {
+        "actual_capture": "20080917175446",
+        "bytes": 21590,
+        "capture_digest": "",
+        "compatibility_review_required": false,
+        "edition": "prometheusbrown.com/2009",
+        "kind": "image",
+        "sha256": "64f7683594f96032e0d2e83ad9d5c7b72a0aae9b0821c0f7a307ade4f73c7f45",
+        "source_archive": "Internet Archive Wayback",
+        "source_original": "http://bluescholars.com/images/blog/butterguns.jpg",
+        "url": "http://bluescholars.com/images/blog/butterguns.jpg"
       },
       {
         "actual_capture": "20110208170324",
@@ -49583,6 +49966,18 @@
         "source_archive": "Internet Archive Wayback",
         "source_original": "http://c4.ac-images.myspacecdn.com/images02/123/s_d966e151281e4c2a84cbabe734ead347.jpg",
         "url": "http://c4.ac-images.myspacecdn.com/images02/123/s_d966e151281e4c2a84cbabe734ead347.jpg"
+      },
+      {
+        "actual_capture": "20160128221336",
+        "bytes": 42678,
+        "capture_digest": "",
+        "compatibility_review_required": true,
+        "edition": "prometheusbrown.com/2009",
+        "kind": "image",
+        "sha256": "582fc4461bbfbba95d054834f1c2961d4ef7da1226275948e320d9f5a7ccb5be",
+        "source_archive": "Internet Archive Wayback",
+        "source_original": "http://cdbaby.name/p/o/powerstruggle.jpg",
+        "url": "http://cdbaby.name/p/o/powerstruggle.jpg"
       },
       {
         "actual_capture": "20091227183623",
@@ -50125,6 +50520,18 @@
         "url": "http://i126.photobucket.com/albums/p86/benpadero/tirador/TIRADOR-STILL-O2.jpg"
       },
       {
+        "actual_capture": "20120426175857",
+        "bytes": 128095,
+        "capture_digest": "",
+        "compatibility_review_required": true,
+        "edition": "prometheusbrown.com/2009",
+        "kind": "image",
+        "sha256": "b4dc221d4fe3d5b90e17f423b5bbefe21057fc343a29062a632b861814525db9",
+        "source_archive": "Internet Archive Wayback",
+        "source_original": "http://i29.photobucket.com/albums/c271/SCIONtificrecords/New%20CD%20art/CM_BPW_COV_digi_final.jpg",
+        "url": "http://i29.photobucket.com/albums/c271/SCIONtificrecords/New%20CD%20art/CM_BPW_COV_digi_final.jpg"
+      },
+      {
         "actual_capture": "20081010195621",
         "bytes": 82034,
         "capture_digest": "",
@@ -50303,6 +50710,18 @@
         "source_archive": "Internet Archive Wayback",
         "source_original": "http://pnoyapparel.com/img/sammy_logo.jpg",
         "url": "http://pnoyapparel.com/img/sammy_logo.jpg"
+      },
+      {
+        "actual_capture": "20090807204711",
+        "bytes": 36683,
+        "capture_digest": "",
+        "compatibility_review_required": false,
+        "edition": "prometheusbrown.com/2009",
+        "kind": "image",
+        "sha256": "f8368d6c0e3db255382e9f535d95856bd60d70904ce3d05bc998ba9cb7769d65",
+        "source_archive": "Internet Archive Wayback",
+        "source_original": "http://profile.ak.facebook.com/object3/2009/39/n24517327216_6545.jpg",
+        "url": "http://profile.ak.facebook.com/object3/2009/39/n24517327216_6545.jpg"
       },
       {
         "actual_capture": "20080807142416",
@@ -50507,6 +50926,18 @@
         "source_archive": "Internet Archive Wayback",
         "source_original": "http://prometheusbrown.com:80/blog/2008/10/maynila-sa-mga-kuko-ng-liwanagmanila-in-the-claws-of-neon-lino-brocka-1975/",
         "url": "http://prometheusbrown.com/blog/2008/10/maynila-sa-mga-kuko-ng-liwanagmanila-in-the-claws-of-neon-lino-brocka-1975/"
+      },
+      {
+        "actual_capture": "20090705051614",
+        "bytes": 30249,
+        "capture_digest": "RHIMPMHV34GHE5N6F4NZUATOW4MENOF3",
+        "compatibility_review_required": false,
+        "edition": "prometheusbrown.com/2009",
+        "kind": "html",
+        "sha256": "6f57a655f1fe413ceb28250245c35d35fa28b4f1f5bb86195ff45b9802ed2227",
+        "source_archive": "Common Crawl",
+        "source_original": "http://prometheusbrown.com/blog/2008/11/battle-in-seattle-stuart-townsend-2008/",
+        "url": "http://prometheusbrown.com/blog/2008/11/battle-in-seattle-stuart-townsend-2008/"
       },
       {
         "actual_capture": "20090418033239",
@@ -53785,6 +54216,18 @@
         "url": "http://reelmovienews.com/images/gallery/batman-the-joker_333x500.jpg"
       },
       {
+        "actual_capture": "20090724163533",
+        "bytes": 39265,
+        "capture_digest": "",
+        "compatibility_review_required": false,
+        "edition": "prometheusbrown.com/2009",
+        "kind": "image",
+        "sha256": "15d0cda38c681f7e76e47e40c19340ff1a4d6c76ad9add4b79e36c4fe4296fd3",
+        "source_archive": "Internet Archive Wayback",
+        "source_original": "http://seattlepi.nwsource.com/dayart/20080429/maydaymarchmap.gif",
+        "url": "http://seattlepi.nwsource.com/dayart/20080429/maydaymarchmap.gif"
+      },
+      {
         "actual_capture": "20091227182918",
         "bytes": 661,
         "capture_digest": "",
@@ -53855,6 +54298,18 @@
         "source_archive": "Internet Archive Wayback",
         "source_original": "http://woodsholefilmfestival.org/archive/2005/images/films/turumba.jpg",
         "url": "http://woodsholefilmfestival.org/archive/2005/images/films/turumba.jpg"
+      },
+      {
+        "actual_capture": "20101021004002",
+        "bytes": 22701,
+        "capture_digest": "",
+        "compatibility_review_required": true,
+        "edition": "prometheusbrown.com/2009",
+        "kind": "image",
+        "sha256": "e2fee0a176b1fd23c2fafc260d10b2186f5cee90a1c2913295ab0675210651c4",
+        "source_archive": "Internet Archive Wayback",
+        "source_original": "http://worldexecutive.com/cityguides/pics/denver/denver_1.jpg",
+        "url": "http://worldexecutive.com/cityguides/pics/denver/denver_1.jpg"
       },
       {
         "actual_capture": "20091226155350",
@@ -54551,78 +55006,6 @@
         "source_archive": "Internet Archive Wayback",
         "source_original": "http://x.myspacecdn.com/modules/webim/static/img/sprite_icons_misc_005.gif",
         "url": "http://x.myspacecdn.com/modules/webim/static/img/sprite_icons_misc_005.gif"
-      },
-      {
-        "actual_capture": "20101021004002",
-        "bytes": 22701,
-        "capture_digest": "",
-        "compatibility_review_required": true,
-        "edition": "prometheusbrown.com/2009",
-        "kind": "image",
-        "sha256": "e2fee0a176b1fd23c2fafc260d10b2186f5cee90a1c2913295ab0675210651c4",
-        "source_archive": "Internet Archive Wayback",
-        "source_original": "http://worldexecutive.com/cityguides/pics/denver/denver_1.jpg",
-        "url": "http://worldexecutive.com/cityguides/pics/denver/denver_1.jpg"
-      },
-      {
-        "actual_capture": "20160128221336",
-        "bytes": 42678,
-        "capture_digest": "",
-        "compatibility_review_required": true,
-        "edition": "prometheusbrown.com/2009",
-        "kind": "image",
-        "sha256": "582fc4461bbfbba95d054834f1c2961d4ef7da1226275948e320d9f5a7ccb5be",
-        "source_archive": "Internet Archive Wayback",
-        "source_original": "http://cdbaby.name/p/o/powerstruggle.jpg",
-        "url": "http://cdbaby.name/p/o/powerstruggle.jpg"
-      },
-      {
-        "actual_capture": "20120426175857",
-        "bytes": 128095,
-        "capture_digest": "",
-        "compatibility_review_required": true,
-        "edition": "prometheusbrown.com/2009",
-        "kind": "image",
-        "sha256": "b4dc221d4fe3d5b90e17f423b5bbefe21057fc343a29062a632b861814525db9",
-        "source_archive": "Internet Archive Wayback",
-        "source_original": "http://i29.photobucket.com/albums/c271/SCIONtificrecords/New%20CD%20art/CM_BPW_COV_digi_final.jpg",
-        "url": "http://i29.photobucket.com/albums/c271/SCIONtificrecords/New%20CD%20art/CM_BPW_COV_digi_final.jpg"
-      },
-      {
-        "actual_capture": "20080917175446",
-        "bytes": 21590,
-        "capture_digest": "",
-        "compatibility_review_required": false,
-        "edition": "prometheusbrown.com/2009",
-        "kind": "image",
-        "sha256": "64f7683594f96032e0d2e83ad9d5c7b72a0aae9b0821c0f7a307ade4f73c7f45",
-        "source_archive": "Internet Archive Wayback",
-        "source_original": "http://bluescholars.com/images/blog/butterguns.jpg",
-        "url": "http://bluescholars.com/images/blog/butterguns.jpg"
-      },
-      {
-        "actual_capture": "20090807204711",
-        "bytes": 36683,
-        "capture_digest": "",
-        "compatibility_review_required": false,
-        "edition": "prometheusbrown.com/2009",
-        "kind": "image",
-        "sha256": "f8368d6c0e3db255382e9f535d95856bd60d70904ce3d05bc998ba9cb7769d65",
-        "source_archive": "Internet Archive Wayback",
-        "source_original": "http://profile.ak.facebook.com/object3/2009/39/n24517327216_6545.jpg",
-        "url": "http://profile.ak.facebook.com/object3/2009/39/n24517327216_6545.jpg"
-      },
-      {
-        "actual_capture": "20090724163533",
-        "bytes": 39265,
-        "capture_digest": "",
-        "compatibility_review_required": false,
-        "edition": "prometheusbrown.com/2009",
-        "kind": "image",
-        "sha256": "15d0cda38c681f7e76e47e40c19340ff1a4d6c76ad9add4b79e36c4fe4296fd3",
-        "source_archive": "Internet Archive Wayback",
-        "source_original": "http://seattlepi.nwsource.com/dayart/20080429/maydaymarchmap.gif",
-        "url": "http://seattlepi.nwsource.com/dayart/20080429/maydaymarchmap.gif"
       },
       {
         "actual_capture": "20100926001504",
@@ -55393,6 +55776,18 @@
         "url": "http://prometheusbrown.com/blog/2008/07/city-after-dark-manila-by-night-ishmael-bernal-1980/"
       },
       {
+        "actual_capture": "20100903024013",
+        "bytes": 17753,
+        "capture_digest": "KZGQSMLRVLLEUN7TQORSDAVKG27DAAK3",
+        "compatibility_review_required": false,
+        "edition": "prometheusbrown.com/2010",
+        "kind": "html",
+        "sha256": "c7a8517845fdc90a023634e1539f1719fb38b61884a358deb19a128ce964a905",
+        "source_archive": "Common Crawl",
+        "source_original": "http://prometheusbrown.com/blog/2008/07/in-bruges-martin-mcdonagh-2008/",
+        "url": "http://prometheusbrown.com/blog/2008/07/in-bruges-martin-mcdonagh-2008/"
+      },
+      {
         "actual_capture": "20100905203900",
         "bytes": 27105,
         "capture_digest": "N6SEMAHMZECWDS3UAWWRO4KLLFHQUX7Q",
@@ -55439,6 +55834,18 @@
         "source_archive": "Internet Archive Wayback",
         "source_original": "http://prometheusbrown.com:80/blog/2008/08/le-mepris-jean-luc-godard-1963/",
         "url": "http://prometheusbrown.com/blog/2008/08/le-mepris-jean-luc-godard-1963/"
+      },
+      {
+        "actual_capture": "20100903025632",
+        "bytes": 24722,
+        "capture_digest": "AAQTCEA5BK5RTOHATN36YP2Z2KUNQVMC",
+        "compatibility_review_required": false,
+        "edition": "prometheusbrown.com/2010",
+        "kind": "html",
+        "sha256": "1144c8e705ade820d3ac6646ec20d4dd541e432000f4082f10c5e6fe6970000d",
+        "source_archive": "Common Crawl",
+        "source_original": "http://prometheusbrown.com/blog/2008/09/",
+        "url": "http://prometheusbrown.com/blog/2008/09/"
       },
       {
         "actual_capture": "20090514075341",
@@ -55513,6 +55920,42 @@
         "url": "http://prometheusbrown.com/blog/2008/10/maynila-sa-mga-kuko-ng-liwanagmanila-in-the-claws-of-neon-lino-brocka-1975/"
       },
       {
+        "actual_capture": "20100903025344",
+        "bytes": 19680,
+        "capture_digest": "B6RJFPKNF2TMZKYJTQDNE3YYAXLZ4J7N",
+        "compatibility_review_required": false,
+        "edition": "prometheusbrown.com/2010",
+        "kind": "html",
+        "sha256": "2a9435b01b63f6bd4272712c6ae8e2782740b9d6596c3329d3d06c3410fb7dcf",
+        "source_archive": "Common Crawl",
+        "source_original": "http://prometheusbrown.com/blog/2008/10/oktyabr-sergei-eisenstein-1928/",
+        "url": "http://prometheusbrown.com/blog/2008/10/oktyabr-sergei-eisenstein-1928/"
+      },
+      {
+        "actual_capture": "20100903025517",
+        "bytes": 19802,
+        "capture_digest": "NOUEIBYHXZXQRWBNETZ6HAMONSYGVSRG",
+        "compatibility_review_required": false,
+        "edition": "prometheusbrown.com/2010",
+        "kind": "html",
+        "sha256": "7e716fda75206b923e2e7a70051ee4ba11e62d9a54cfb6de7166de38c44de95c",
+        "source_archive": "Common Crawl",
+        "source_original": "http://prometheusbrown.com/blog/2008/11/battle-in-seattle-stuart-townsend-2008/",
+        "url": "http://prometheusbrown.com/blog/2008/11/battle-in-seattle-stuart-townsend-2008/"
+      },
+      {
+        "actual_capture": "20100903024818",
+        "bytes": 21151,
+        "capture_digest": "NP4WFRJC42D5RRZTDVGOSNGWIK7R5QHR",
+        "compatibility_review_required": false,
+        "edition": "prometheusbrown.com/2010",
+        "kind": "html",
+        "sha256": "9d548e586a52fa669808b995e1955ff7614125804fb99af48e1eda3bb5730dd2",
+        "source_archive": "Common Crawl",
+        "source_original": "http://prometheusbrown.com/blog/2008/11/salute-filipino-ww2-veterans/",
+        "url": "http://prometheusbrown.com/blog/2008/11/salute-filipino-ww2-veterans/"
+      },
+      {
         "actual_capture": "20090418033239",
         "bytes": 36770,
         "capture_digest": "SLC2LIDXTF4QX46L5BGCVNRXCBRT64KV",
@@ -55547,6 +55990,18 @@
         "source_archive": "Internet Archive Wayback",
         "source_original": "http://prometheusbrown.com:80/blog/2008/12/eddie-murphy-the-riddler/",
         "url": "http://prometheusbrown.com/blog/2008/12/eddie-murphy-the-riddler/"
+      },
+      {
+        "actual_capture": "20100903025226",
+        "bytes": 19236,
+        "capture_digest": "5Z34GZGDEHLZSFNJ5ISKY6UHK6VKRBAU",
+        "compatibility_review_required": false,
+        "edition": "prometheusbrown.com/2010",
+        "kind": "html",
+        "sha256": "f13ba48261b8aa2a8fcdd83eb519e0b5dafebc78e884a3817f6b3ac21cdbe2da",
+        "source_archive": "Common Crawl",
+        "source_original": "http://prometheusbrown.com/blog/2008/12/kfox-fresh-tracks-1985-mp3/",
+        "url": "http://prometheusbrown.com/blog/2008/12/kfox-fresh-tracks-1985-mp3/"
       },
       {
         "actual_capture": "20081230221456",
@@ -55609,6 +56064,18 @@
         "url": "http://prometheusbrown.com/blog/2008/12/synecdoche-new-york-charlie-kaufman-2008/"
       },
       {
+        "actual_capture": "20100903024902",
+        "bytes": 18680,
+        "capture_digest": "7R673V6AZH7F7MCPLXCGPKL6V73UYMXN",
+        "compatibility_review_required": false,
+        "edition": "prometheusbrown.com/2010",
+        "kind": "html",
+        "sha256": "b3da7f2556e2135eebbd8784880ea1de976dfc149ad65ba8bc013ea30f4f344d",
+        "source_archive": "Common Crawl",
+        "source_original": "http://prometheusbrown.com/blog/2008/12/the-murder-of-fred-hampton-howard-alk-1971/",
+        "url": "http://prometheusbrown.com/blog/2008/12/the-murder-of-fred-hampton-howard-alk-1971/"
+      },
+      {
         "actual_capture": "20081230221507",
         "bytes": 23774,
         "capture_digest": "JLQWL5SL3IGCLDEI5VVJ3AI6EUJPZ4P4",
@@ -55645,6 +56112,18 @@
         "url": "http://prometheusbrown.com/blog/2008/12/z-costa-gavras-1969/"
       },
       {
+        "actual_capture": "20100903025546",
+        "bytes": 29981,
+        "capture_digest": "3V5ZNZUGHYLCET7YVBTP4QH2I2ZNJZJT",
+        "compatibility_review_required": false,
+        "edition": "prometheusbrown.com/2010",
+        "kind": "html",
+        "sha256": "bbf03a9ed65d00c5df6d07f55ff4b7fc028a34ef72dc695b55a00a90a0d5e0c3",
+        "source_archive": "Common Crawl",
+        "source_original": "http://prometheusbrown.com/blog/2009/01/",
+        "url": "http://prometheusbrown.com/blog/2009/01/"
+      },
+      {
         "actual_capture": "20090211061445",
         "bytes": 25709,
         "capture_digest": "X4SZNBZDXMVJL2KMC5KSZ67MU5MMPEWC",
@@ -55679,6 +56158,18 @@
         "source_archive": "Internet Archive Wayback",
         "source_original": "http://prometheusbrown.com:80/blog/2009/01/doubt-john-patrick-shanley-2008/",
         "url": "http://prometheusbrown.com/blog/2009/01/doubt-john-patrick-shanley-2008/"
+      },
+      {
+        "actual_capture": "20100903025209",
+        "bytes": 23079,
+        "capture_digest": "5BQWRVXUOCJYRJ3FJKLSBMBOI3QGUCQ2",
+        "compatibility_review_required": false,
+        "edition": "prometheusbrown.com/2010",
+        "kind": "html",
+        "sha256": "367e4523427aeef90010d36ec22141f8ab6178b5250bf19df8bf165992c4acf1",
+        "source_archive": "Common Crawl",
+        "source_original": "http://prometheusbrown.com/blog/2009/01/free-hawaii/",
+        "url": "http://prometheusbrown.com/blog/2009/01/free-hawaii/"
       },
       {
         "actual_capture": "20090503170105",
@@ -55775,6 +56266,18 @@
         "source_archive": "Internet Archive Wayback",
         "source_original": "http://prometheusbrown.com:80/blog/2009/02/4-free-classic-philippine-films-screening-in-seattle/",
         "url": "http://prometheusbrown.com/blog/2009/02/4-free-classic-philippine-films-screening-in-seattle/"
+      },
+      {
+        "actual_capture": "20100903024306",
+        "bytes": 39260,
+        "capture_digest": "XIS3U4I23QZQ2P457BH4SVNTUZR42SNH",
+        "compatibility_review_required": false,
+        "edition": "prometheusbrown.com/2010",
+        "kind": "html",
+        "sha256": "36a0529388f01bf9abbe605fa629aadbc13809043f14ed2d82f11e4aa2b16759",
+        "source_archive": "Common Crawl",
+        "source_original": "http://prometheusbrown.com/blog/2009/02/anthony-bourdain-no-reservations-philippines/",
+        "url": "http://prometheusbrown.com/blog/2009/02/anthony-bourdain-no-reservations-philippines/"
       },
       {
         "actual_capture": "20090303090722",
@@ -56173,6 +56676,18 @@
         "url": "http://prometheusbrown.com/blog/2009/03/some-top-fives/"
       },
       {
+        "actual_capture": "20100903024846",
+        "bytes": 19611,
+        "capture_digest": "GR4UR6WHOWIMIF67HIMQAKYQSRH76OWG",
+        "compatibility_review_required": false,
+        "edition": "prometheusbrown.com/2010",
+        "kind": "html",
+        "sha256": "e232f62cc73b1dc8222a411c1245328d2ac8354d2f2b5f2ef510c04005c650e3",
+        "source_archive": "Common Crawl",
+        "source_original": "http://prometheusbrown.com/blog/2009/03/sxsw-2009-photo-gallery/",
+        "url": "http://prometheusbrown.com/blog/2009/03/sxsw-2009-photo-gallery/"
+      },
+      {
         "actual_capture": "20090324111857",
         "bytes": 27261,
         "capture_digest": "VXGNXY6U2Y5OHQQKKVD7PCFYI2YB3JH6",
@@ -56183,6 +56698,18 @@
         "source_archive": "Internet Archive Wayback",
         "source_original": "http://prometheusbrown.com:80/blog/2009/03/sxsw-film-festival/",
         "url": "http://prometheusbrown.com/blog/2009/03/sxsw-film-festival/"
+      },
+      {
+        "actual_capture": "20100903025416",
+        "bytes": 29257,
+        "capture_digest": "4GIYIRFOZLGXHFPZDNXTYXAAEDLUJKCL",
+        "compatibility_review_required": false,
+        "edition": "prometheusbrown.com/2010",
+        "kind": "html",
+        "sha256": "69578f4af4e4398e7947351e8b4806581936b6629a4e0a48986e1bd179c914df",
+        "source_archive": "Common Crawl",
+        "source_original": "http://prometheusbrown.com/blog/2009/03/thaswassup-what-price-watchmen-by-dj-daps1/",
+        "url": "http://prometheusbrown.com/blog/2009/03/thaswassup-what-price-watchmen-by-dj-daps1/"
       },
       {
         "actual_capture": "20090307205516",
@@ -56219,6 +56746,18 @@
         "source_archive": "Internet Archive Wayback",
         "source_original": "http://prometheusbrown.com:80/blog/2009/03/video-knaan-somalia/",
         "url": "http://prometheusbrown.com/blog/2009/03/video-knaan-somalia/"
+      },
+      {
+        "actual_capture": "20100903025603",
+        "bytes": 24987,
+        "capture_digest": "AOMI3RFKLJJ36ZBH7FIFAXEKLAZNM7FH",
+        "compatibility_review_required": false,
+        "edition": "prometheusbrown.com/2010",
+        "kind": "html",
+        "sha256": "a688d8ab0caa115709030e1e695d3057c429362a43ab9e3fed8229083a2ad2f0",
+        "source_archive": "Common Crawl",
+        "source_original": "http://prometheusbrown.com/blog/2009/04/",
+        "url": "http://prometheusbrown.com/blog/2009/04/"
       },
       {
         "actual_capture": "20090510092522",
@@ -56605,6 +57144,18 @@
         "url": "http://prometheusbrown.com/blog/2009/06/si-tatang-at-mga-himala-ng-ating-panahon-by-ricky-lee/"
       },
       {
+        "actual_capture": "20100903025158",
+        "bytes": 23477,
+        "capture_digest": "TKXCSCFRDYOGGRH2OHW7UMJFM2NWEU4B",
+        "compatibility_review_required": false,
+        "edition": "prometheusbrown.com/2010",
+        "kind": "html",
+        "sha256": "1e0e81278792d66d9fdc17e33ac99adc76bafafb176341d920727aaa358e802b",
+        "source_archive": "Common Crawl",
+        "source_original": "http://prometheusbrown.com/blog/2009/06/the-hangover-todd-phillips-2009/",
+        "url": "http://prometheusbrown.com/blog/2009/06/the-hangover-todd-phillips-2009/"
+      },
+      {
         "actual_capture": "20100718143103",
         "bytes": 21909,
         "capture_digest": "7XHCY56FWVDWU47YI5IJT5DTQDSO6O32",
@@ -56627,6 +57178,18 @@
         "source_archive": "Internet Archive Wayback",
         "source_original": "http://prometheusbrown.com:80/blog/2009/06/video-bambu-quit-dir-andrew-graziuso/",
         "url": "http://prometheusbrown.com/blog/2009/06/video-bambu-quit-dir-andrew-graziuso/"
+      },
+      {
+        "actual_capture": "20100903025523",
+        "bytes": 15897,
+        "capture_digest": "PQT5VDTATJZZ74CRMGVYKDN3NUXIS6IC",
+        "compatibility_review_required": false,
+        "edition": "prometheusbrown.com/2010",
+        "kind": "html",
+        "sha256": "4f091ca14f1604a9ce3389461d2d2ceeb6867715f7958c3d712094c9d4f52ead",
+        "source_archive": "Common Crawl",
+        "source_original": "http://prometheusbrown.com/blog/2009/06/video-deep-foundation-f-jay-legaspi-sleep-dir-choz-belen/",
+        "url": "http://prometheusbrown.com/blog/2009/06/video-deep-foundation-f-jay-legaspi-sleep-dir-choz-belen/"
       },
       {
         "actual_capture": "20090609103441",
@@ -56857,6 +57420,18 @@
         "url": "http://prometheusbrown.com/blog/2009/08/video-blue-scholars-hi-808-dir-the-ohana/"
       },
       {
+        "actual_capture": "20100903025425",
+        "bytes": 25986,
+        "capture_digest": "M3L43POFH53STUPJVEZ66MTUMJCEAZ5N",
+        "compatibility_review_required": false,
+        "edition": "prometheusbrown.com/2010",
+        "kind": "html",
+        "sha256": "728f6c214fe52b4c80995ed5449fe85a40cfdf37419da7b0742f378200c34712",
+        "source_archive": "Common Crawl",
+        "source_original": "http://prometheusbrown.com/blog/2009/08/video-philippine-student-rally-at-mendiola/",
+        "url": "http://prometheusbrown.com/blog/2009/08/video-philippine-student-rally-at-mendiola/"
+      },
+      {
         "actual_capture": "20090914135055",
         "bytes": 20244,
         "capture_digest": "GZOYAWWSAMQ4ZVURQY5C5MYO36JVYXTC",
@@ -56953,6 +57528,30 @@
         "url": "http://prometheusbrown.com/blog/2009/10/capitalism-a-love-story-michael-moore-2009/"
       },
       {
+        "actual_capture": "20100903023352",
+        "bytes": 18141,
+        "capture_digest": "PLJNAKTUZNFJDKRWIFQBHJJRJCLALY3U",
+        "compatibility_review_required": false,
+        "edition": "prometheusbrown.com/2010",
+        "kind": "html",
+        "sha256": "a00c2bb22918e552df6f6efb626c796680fb738e69cec7c16f5b47d3afbcd69c",
+        "source_archive": "Common Crawl",
+        "source_original": "http://prometheusbrown.com/blog/2009/10/hanyo-ki-young-kim-1960/",
+        "url": "http://prometheusbrown.com/blog/2009/10/hanyo-ki-young-kim-1960/"
+      },
+      {
+        "actual_capture": "20100903025258",
+        "bytes": 17977,
+        "capture_digest": "XLLHG24OQNGCCCIYCE7HAPAMQJR6DIRL",
+        "compatibility_review_required": false,
+        "edition": "prometheusbrown.com/2010",
+        "kind": "html",
+        "sha256": "de8a359de8c2843cbdacfcf2bfdec93aef701beeb6e35cd01f411718264a8eea",
+        "source_archive": "Common Crawl",
+        "source_original": "http://prometheusbrown.com/blog/2009/10/objectified-gary-hustwit-2009/",
+        "url": "http://prometheusbrown.com/blog/2009/10/objectified-gary-hustwit-2009/"
+      },
+      {
         "actual_capture": "20091128180513",
         "bytes": 47459,
         "capture_digest": "PWFERP4ASGH6JYPT5R6LMMNQK3UE45OA",
@@ -56965,6 +57564,138 @@
         "url": "http://prometheusbrown.com/blog/2009/10/paranormal-activity-oren-peli-2009/"
       },
       {
+        "actual_capture": "20100903025311",
+        "bytes": 17875,
+        "capture_digest": "NQC546HSWKCBLB4LPXA2CA6L7VPOTWQ3",
+        "compatibility_review_required": false,
+        "edition": "prometheusbrown.com/2010",
+        "kind": "html",
+        "sha256": "9aef16e51e9b702fe15ed89f3cacfe14f58968c217e356be890a57a2ac8da284",
+        "source_archive": "Common Crawl",
+        "source_original": "http://prometheusbrown.com/blog/2009/10/raymond-reds-himpapawid-manila-skies/",
+        "url": "http://prometheusbrown.com/blog/2009/10/raymond-reds-himpapawid-manila-skies/"
+      },
+      {
+        "actual_capture": "20100903025250",
+        "bytes": 16507,
+        "capture_digest": "NBQZZ2QXHIPXM2TDATZ5EQPE6NGUIPPR",
+        "compatibility_review_required": false,
+        "edition": "prometheusbrown.com/2010",
+        "kind": "html",
+        "sha256": "f7c9d64504a66f8460823c8fcd6b8a34f7d34ee3137b5fccf89afd4f92ee1b54",
+        "source_archive": "Common Crawl",
+        "source_original": "http://prometheusbrown.com/blog/2009/10/sonicsgate-2009-full-streaming-video/",
+        "url": "http://prometheusbrown.com/blog/2009/10/sonicsgate-2009-full-streaming-video/"
+      },
+      {
+        "actual_capture": "20100903023415",
+        "bytes": 15213,
+        "capture_digest": "ZNFH6UAXSV7CCWIH55YCNXJCVMCSWPD6",
+        "compatibility_review_required": false,
+        "edition": "prometheusbrown.com/2010",
+        "kind": "html",
+        "sha256": "abffe893d69c8432d17f74c2d01421908eb67ec32188e925b408c8975b13f491",
+        "source_archive": "Common Crawl",
+        "source_original": "http://prometheusbrown.com/blog/2009/10/video-fake-empire-dir-ryan-lewis/",
+        "url": "http://prometheusbrown.com/blog/2009/10/video-fake-empire-dir-ryan-lewis/"
+      },
+      {
+        "actual_capture": "20100903023147",
+        "bytes": 17016,
+        "capture_digest": "5E3HRTO5ACUJGYIDBHP23F4Q7PDC22NI",
+        "compatibility_review_required": false,
+        "edition": "prometheusbrown.com/2010",
+        "kind": "html",
+        "sha256": "6dbe2dab08eb9202f0a2a9e8ff61eb06a475925afd329e75a0883991af9b3093",
+        "source_archive": "Common Crawl",
+        "source_original": "http://prometheusbrown.com/blog/2009/10/video-shabazz-palaces-bellhaven-meridian-dir-kahlil-joseph/",
+        "url": "http://prometheusbrown.com/blog/2009/10/video-shabazz-palaces-bellhaven-meridian-dir-kahlil-joseph/"
+      },
+      {
+        "actual_capture": "20100903025334",
+        "bytes": 16391,
+        "capture_digest": "3FD3EW2KLVUP526NUKZPVZZLKLQEA6GZ",
+        "compatibility_review_required": false,
+        "edition": "prometheusbrown.com/2010",
+        "kind": "html",
+        "sha256": "5a94ca03aa9cfe2aa35950e970ed3189efddff3cff6b73d836ef7a602a55e48f",
+        "source_archive": "Common Crawl",
+        "source_original": "http://prometheusbrown.com/blog/2009/11/aoki-world-premiere/",
+        "url": "http://prometheusbrown.com/blog/2009/11/aoki-world-premiere/"
+      },
+      {
+        "actual_capture": "20100903023448",
+        "bytes": 18087,
+        "capture_digest": "A65UYGXMMOQ73XDUVB3S6PEQDMJWEBQU",
+        "compatibility_review_required": false,
+        "edition": "prometheusbrown.com/2010",
+        "kind": "html",
+        "sha256": "66a875102835ff3c656797f8f41d86330c930bbd6d4058c0781d2ae0ae385202",
+        "source_archive": "Common Crawl",
+        "source_original": "http://prometheusbrown.com/blog/2009/11/humpday-lynn-shelton-2009/",
+        "url": "http://prometheusbrown.com/blog/2009/11/humpday-lynn-shelton-2009/"
+      },
+      {
+        "actual_capture": "20100903024719",
+        "bytes": 16161,
+        "capture_digest": "RJFFYVNHCXVVHNNRSKJ3DQTMJ5F7C4GJ",
+        "compatibility_review_required": false,
+        "edition": "prometheusbrown.com/2010",
+        "kind": "html",
+        "sha256": "5b58f8bd030ceec3d536a16c9975cfe3674877047501e8e99ac1cf8384a1f3ac",
+        "source_archive": "Common Crawl",
+        "source_original": "http://prometheusbrown.com/blog/2009/11/pacquiao-cotto-247/",
+        "url": "http://prometheusbrown.com/blog/2009/11/pacquiao-cotto-247/"
+      },
+      {
+        "actual_capture": "20100903023851",
+        "bytes": 16227,
+        "capture_digest": "NNRDRABJJWKMPFCK7G3F5UQ6KZ4DZGJ5",
+        "compatibility_review_required": false,
+        "edition": "prometheusbrown.com/2010",
+        "kind": "html",
+        "sha256": "8eff517af2765409f770c12ed03b50130533b36110bfd5606910c7aae7e532cb",
+        "source_archive": "Common Crawl",
+        "source_original": "http://prometheusbrown.com/blog/2009/11/photos-minneapolis/",
+        "url": "http://prometheusbrown.com/blog/2009/11/photos-minneapolis/"
+      },
+      {
+        "actual_capture": "20100903025508",
+        "bytes": 19858,
+        "capture_digest": "E477JSXXRSDALP35XDEU4WAABC67KZIS",
+        "compatibility_review_required": false,
+        "edition": "prometheusbrown.com/2010",
+        "kind": "html",
+        "sha256": "a653286ce635889c6517ce0833727c859c6e20959e02e19ddd1dd3e6a77bea4e",
+        "source_archive": "Common Crawl",
+        "source_original": "http://prometheusbrown.com/blog/2009/11/talaye-sorkhcrimson-gold-jafar-panahi-2003/",
+        "url": "http://prometheusbrown.com/blog/2009/11/talaye-sorkhcrimson-gold-jafar-panahi-2003/"
+      },
+      {
+        "actual_capture": "20100903023425",
+        "bytes": 14966,
+        "capture_digest": "VV6VATT24PI6L7HONZFDGGC3EEB62H4Q",
+        "compatibility_review_required": false,
+        "edition": "prometheusbrown.com/2010",
+        "kind": "html",
+        "sha256": "fc5f5175897c50a87cfe59c8486d94883bb9d44eb5b85de3cb03887a5ee5c434",
+        "source_archive": "Common Crawl",
+        "source_original": "http://prometheusbrown.com/blog/2009/11/trailer-socialisme/",
+        "url": "http://prometheusbrown.com/blog/2009/11/trailer-socialisme/"
+      },
+      {
+        "actual_capture": "20100903024727",
+        "bytes": 17988,
+        "capture_digest": "ZZZEOURZAJOK54ORBA5BKMPPGNEEMBCS",
+        "compatibility_review_required": false,
+        "edition": "prometheusbrown.com/2010",
+        "kind": "html",
+        "sha256": "9807be3af158ab504ffa97bc10eacd7722057dccd33cbcbca98fd88875fc6c37",
+        "source_archive": "Common Crawl",
+        "source_original": "http://prometheusbrown.com/blog/2009/11/trailer-wapakman/",
+        "url": "http://prometheusbrown.com/blog/2009/11/trailer-wapakman/"
+      },
+      {
         "actual_capture": "20091222071013",
         "bytes": 44102,
         "capture_digest": "KV7UX42NJMEVE3T5QGKXZ7DUMNNLHTTT",
@@ -56975,6 +57706,18 @@
         "source_archive": "Internet Archive Wayback",
         "source_original": "http://prometheusbrown.com:80/blog/2009/12/photos-beacon-to-broadway/",
         "url": "http://prometheusbrown.com/blog/2009/12/photos-beacon-to-broadway/"
+      },
+      {
+        "actual_capture": "20100903024825",
+        "bytes": 15266,
+        "capture_digest": "YTA6MXYDU327GSXEKQWCM3E3J5L6O2KK",
+        "compatibility_review_required": false,
+        "edition": "prometheusbrown.com/2010",
+        "kind": "html",
+        "sha256": "13d2ad01897bfd38ecc7e95cdb7358b89b6363c69bfb179b0637f5c10b0ceb8e",
+        "source_archive": "Common Crawl",
+        "source_original": "http://prometheusbrown.com/blog/2009/12/photos-go-machine-part-1-bluescholars-com/",
+        "url": "http://prometheusbrown.com/blog/2009/12/photos-go-machine-part-1-bluescholars-com/"
       },
       {
         "actual_capture": "20091224213855",
@@ -57013,6 +57756,18 @@
         "url": "http://prometheusbrown.com/blog/2009/12/this-is-it-kenny-ortega-2009/"
       },
       {
+        "actual_capture": "20100903024746",
+        "bytes": 14787,
+        "capture_digest": "2MVMA32SZYA3QAFTDG7Z3GVYVHKPG3LT",
+        "compatibility_review_required": false,
+        "edition": "prometheusbrown.com/2010",
+        "kind": "html",
+        "sha256": "4907911642c52e2f18b7ddb4d2ee93a0e0259b9078dd44b6356e07b1814ce7e2",
+        "source_archive": "Common Crawl",
+        "source_original": "http://prometheusbrown.com/blog/2009/12/video-d-black-yesterday/",
+        "url": "http://prometheusbrown.com/blog/2009/12/video-d-black-yesterday/"
+      },
+      {
         "actual_capture": "20091222143548",
         "bytes": 44323,
         "capture_digest": "Q7KNY6BFXEDOV3RHMAS4KKC6G56OIQGK",
@@ -57035,6 +57790,18 @@
         "source_archive": "Internet Archive Wayback",
         "source_original": "http://prometheusbrown.com:80/blog/2009/12/video-head-like-a-kite-directors-cut/",
         "url": "http://prometheusbrown.com/blog/2009/12/video-head-like-a-kite-directors-cut/"
+      },
+      {
+        "actual_capture": "20100903024919",
+        "bytes": 15574,
+        "capture_digest": "R2MQ6ACNEYKN75MAXE25BFSLIXYKUHCP",
+        "compatibility_review_required": false,
+        "edition": "prometheusbrown.com/2010",
+        "kind": "html",
+        "sha256": "5cc9dc6a7c59629b7e16957fbf7837e5e707bdce9a0a9f73dca5e230153c0332",
+        "source_archive": "Common Crawl",
+        "source_original": "http://prometheusbrown.com/blog/2009/12/video-macklemore-the-town/",
+        "url": "http://prometheusbrown.com/blog/2009/12/video-macklemore-the-town/"
       },
       {
         "actual_capture": "20091222160020",
@@ -57191,6 +57958,18 @@
         "source_archive": "Internet Archive Wayback",
         "source_original": "http://prometheusbrown.com:80/blog/2010/01/up-in-the-air-jason-reitman-2009/",
         "url": "http://prometheusbrown.com/blog/2010/01/up-in-the-air-jason-reitman-2009/"
+      },
+      {
+        "actual_capture": "20100903024624",
+        "bytes": 18617,
+        "capture_digest": "H46IKM3ZI4LCI47NBC73NATRDU2QFM6K",
+        "compatibility_review_required": false,
+        "edition": "prometheusbrown.com/2010",
+        "kind": "html",
+        "sha256": "7b236c5e56c6e32bd08b69235443b138c5156e564f799f2d7d1d3b3ba2ddcdcd",
+        "source_archive": "Common Crawl",
+        "source_original": "http://prometheusbrown.com/blog/2010/01/video-dumbfoundead-jam-session-2-0/",
+        "url": "http://prometheusbrown.com/blog/2010/01/video-dumbfoundead-jam-session-2-0/"
       },
       {
         "actual_capture": "20100718125955",
@@ -58225,6 +59004,18 @@
         "url": "http://prometheusbrown.com/blog/about/"
       },
       {
+        "actual_capture": "20100903025614",
+        "bytes": 25797,
+        "capture_digest": "CEJ54IB2KWY2YVZL6ASRWEXKJR353K3A",
+        "compatibility_review_required": false,
+        "edition": "prometheusbrown.com/2010",
+        "kind": "html",
+        "sha256": "997a62676730f7b7f6c2bc9dab9691d606c6930b98a2c0305cf5286297380c01",
+        "source_archive": "Common Crawl",
+        "source_original": "http://prometheusbrown.com/blog/archives/",
+        "url": "http://prometheusbrown.com/blog/archives/"
+      },
+      {
         "actual_capture": "20090626063934",
         "bytes": 14193,
         "capture_digest": "U265EXQDBWT6RDO4ONRM65B3C3BFTB3E",
@@ -58669,6 +59460,18 @@
         "url": "http://prometheusbrown.com/blog/category/videos/"
       },
       {
+        "actual_capture": "20100903024252",
+        "bytes": 22229,
+        "capture_digest": "OWAMCIT23H5H75TJK77MSYK45UY4UH6Z",
+        "compatibility_review_required": false,
+        "edition": "prometheusbrown.com/2010",
+        "kind": "html",
+        "sha256": "0b660de2b1fb75d0b4d801db26637b394b27f9315167a46ad562ace2e4694abf",
+        "source_archive": "Common Crawl",
+        "source_original": "http://prometheusbrown.com/blog/man-with-a-movie-camera/",
+        "url": "http://prometheusbrown.com/blog/man-with-a-movie-camera/"
+      },
+      {
         "actual_capture": "20100615215154",
         "bytes": 23966,
         "capture_digest": "ONLWMDJE5BRE6V7TZO5DNWIYC3UB2GJH",
@@ -58703,6 +59506,18 @@
         "source_archive": "Internet Archive Wayback",
         "source_original": "http://prometheusbrown.com:80/blog/page/4/",
         "url": "http://prometheusbrown.com/blog/page/4/"
+      },
+      {
+        "actual_capture": "20100903024244",
+        "bytes": 13198,
+        "capture_digest": "QF7Z6ZUHT3F6TG6NGWAT2GICNO4R2SDK",
+        "compatibility_review_required": false,
+        "edition": "prometheusbrown.com/2010",
+        "kind": "html",
+        "sha256": "6e3b4aac4c6866364df9eb8b49bfa8f16e042d216519b2c32509517915ccb3c8",
+        "source_archive": "Common Crawl",
+        "source_original": "http://prometheusbrown.com/blog/s_archives/prometheus-browns-top-10-films-of-2008/",
+        "url": "http://prometheusbrown.com/blog/s_archives/prometheus-browns-top-10-films-of-2008/"
       },
       {
         "actual_capture": "20100718143203",
@@ -58967,6 +59782,18 @@
         "source_archive": "Internet Archive Wayback",
         "source_original": "http://prometheusbrown.com:80/blog/tag/xzibit/",
         "url": "http://prometheusbrown.com/blog/tag/xzibit/"
+      },
+      {
+        "actual_capture": "20100903024235",
+        "bytes": 15912,
+        "capture_digest": "OGKXGPQBQHFNLHHA5MJS5FETDJLXIKAY",
+        "compatibility_review_required": false,
+        "edition": "prometheusbrown.com/2010",
+        "kind": "html",
+        "sha256": "f633ea8a3ac1761358392171ba555fd372bab4f48edbd547ab39b869e0a9fbe1",
+        "source_archive": "Common Crawl",
+        "source_original": "http://prometheusbrown.com/blog/the-resistance-of-philippine-cinema/",
+        "url": "http://prometheusbrown.com/blog/the-resistance-of-philippine-cinema/"
       },
       {
         "actual_capture": "20090331211807",
@@ -63087,7 +63914,7 @@
         "url": "http://prometheusbrown.com/"
       }
     ],
-    "unique_sha256": 691
+    "unique_sha256": 729
   },
   "version": 1
 }

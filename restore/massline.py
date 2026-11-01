@@ -18,6 +18,7 @@ import requests
 from bs4 import BeautifulSoup, UnicodeDammit
 
 from .archive import ArchiveClient, parse_cdx, validate_payload
+from .spam import contains_spam_terms
 from .svg import sanitize_svg
 from .urls import original_url
 
@@ -450,7 +451,7 @@ def recover_massline(root: Path, max_files: int = 250, delay: float = 0.6, retry
             payload = client.get(source)
             validate_payload(payload.body, "html")
             text = payload.body.decode("utf-8", errors="replace").lower()
-            if any(term in text[:8000] for term in ("casino bonus", "viagra", "cialis", "domain is for sale")):
+            if contains_spam_terms(text[:8000]):
                 raise ValueError("Captured page is spam or a parked-domain response")
             digest = sha256(payload.body).hexdigest()
             raw_path = Path("recovery/massline/raw") / f"homepage-{year}-{digest}.html"
@@ -503,7 +504,7 @@ def recover_massline(root: Path, max_files: int = 250, delay: float = 0.6, retry
                 raise ValueError("Captured text response is empty or implausibly short")
             if kind == "html":
                 text = payload.body.decode("utf-8", errors="replace").lower()
-                if any(term in text[:8000] for term in ("casino bonus", "viagra", "cialis", "domain is for sale")):
+                if contains_spam_terms(text[:8000]):
                     raise ValueError("Captured page is spam or a parked-domain response")
             digest = sha256(payload.body).hexdigest()
             suffix = _extension(row, kind)
@@ -627,7 +628,7 @@ def recover_massline_capture_variants(root: Path, max_files: int = 250, delay: f
                     raise ValueError("Captured response is empty or implausibly short")
                 if kind == "html":
                     text = payload.body.decode("utf-8", errors="replace").lower()
-                    if any(term in text[:8000] for term in ("casino bonus", "viagra", "cialis", "domain is for sale")):
+                    if contains_spam_terms(text[:8000]):
                         raise ValueError("Captured page is spam or a parked-domain response")
                 digest = sha256(payload.body).hexdigest()
                 raw_path = Path("recovery/massline/raw") / (digest + _extension(row, kind))

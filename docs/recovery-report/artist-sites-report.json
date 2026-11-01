@@ -8,13 +8,13 @@
     },
     "prometheusbrown.com/2009": {
       "complete": true,
-      "missing": 1071,
-      "recovered": 428
+      "missing": 1081,
+      "recovered": 438
     },
     "prometheusbrown.com/2010": {
       "complete": true,
-      "missing": 1393,
-      "recovered": 493
+      "missing": 1510,
+      "recovered": 526
     },
     "prometheusbrown.com/2013": {
       "complete": true,
@@ -29,7 +29,7 @@
     "prometheusbrown.com/2019": {
       "complete": true,
       "missing": 4,
-      "recovered": 8
+      "recovered": 10
     },
     "prometheusbrown.com/2022": {
       "complete": true,
@@ -49,7 +49,7 @@
     "sabzi.co/2019": {
       "complete": true,
       "missing": 6,
-      "recovered": 61
+      "recovered": 158
     },
     "sabzi.co/2022": {
       "complete": true,
@@ -604,7 +604,7 @@
     },
     {
       "edition": "prometheusbrown.com/2008",
-      "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20080706232724id_/http://i28.tinypic.com/1znokfm.jpg (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
+      "error": "OSError: Archive HTTP 404: https://web.archive.org/web/20080706232724id_/http://i28.tinypic.com/1znokfm.jpg",
       "kind": "image",
       "status": "unavailable_or_excluded",
       "url": "http://i28.tinypic.com/1znokfm.jpg"
@@ -2148,13 +2148,6 @@
       "kind": "image",
       "status": "not_indexed_before_edition",
       "url": "http://prometheusbrown.com/blog/2009/01/reverse-shot-goes-n/"
-    },
-    {
-      "edition": "prometheusbrown.com/2009",
-      "error": "excluded spam-injected capture",
-      "kind": "html",
-      "status": "unavailable_or_excluded",
-      "url": "http://prometheusbrown.com/blog/2009/11/pacquiao-cotto-247/"
     },
     {
       "edition": "prometheusbrown.com/2009",
@@ -4674,48 +4667,6 @@
       "kind": "image",
       "status": "not_indexed_before_edition",
       "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/01/us_presidential_inauguration_2005-350x233.jpg"
-    },
-    {
-      "edition": "prometheusbrown.com/2009",
-      "error": "excluded spam-injected capture",
-      "kind": "html",
-      "status": "unavailable_or_excluded",
-      "url": "http://prometheusbrown.com/blog/2009/11/photos-minneapolis/"
-    },
-    {
-      "edition": "prometheusbrown.com/2009",
-      "error": "excluded spam-injected capture",
-      "kind": "html",
-      "status": "unavailable_or_excluded",
-      "url": "http://prometheusbrown.com/blog/2009/11/trailer-wapakman/"
-    },
-    {
-      "edition": "prometheusbrown.com/2009",
-      "error": "excluded spam-injected capture",
-      "kind": "html",
-      "status": "unavailable_or_excluded",
-      "url": "http://prometheusbrown.com/blog/2009/11/humpday-lynn-shelton-2009/"
-    },
-    {
-      "edition": "prometheusbrown.com/2009",
-      "error": "excluded spam-injected capture",
-      "kind": "html",
-      "status": "unavailable_or_excluded",
-      "url": "http://prometheusbrown.com/blog/2009/11/trailer-socialisme/"
-    },
-    {
-      "edition": "prometheusbrown.com/2009",
-      "error": "excluded spam-injected capture",
-      "kind": "html",
-      "status": "unavailable_or_excluded",
-      "url": "http://prometheusbrown.com/blog/2009/11/aoki-world-premiere/"
-    },
-    {
-      "edition": "prometheusbrown.com/2009",
-      "error": "excluded spam-injected capture",
-      "kind": "html",
-      "status": "unavailable_or_excluded",
-      "url": "http://prometheusbrown.com/blog/2009/10/objectified-gary-hustwit-2009/"
     },
     {
       "edition": "prometheusbrown.com/2009",
@@ -7349,6 +7300,109 @@
       "url": "http://newciv.org/pic/nl/artpic/420/000420-000010.jpg"
     },
     {
+      "edition": "prometheusbrown.com/2009",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2008/12/battleinseattlepic1.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2009",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2008/12/battleinseattle.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2009",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/2008/11/battle-in-seattle-stuart-townsend-2008/realbattleinseattle.org"
+    },
+    {
+      "edition": "prometheusbrown.com/2009",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2008/12/battleinseattle-350x188.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2009",
+      "kind": "image",
+      "reason": "Gravatar avatar endpoints are dynamic third-party profile images, not stable site-owned media; their dated replays were unavailable during this pass.",
+      "status": "excluded_dynamic_avatar",
+      "url": "http://gravatar.com/avatar/c9b74781fc1c8180e55e11ef11f6138d?s=50&d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D50&r=G"
+    },
+    {
+      "edition": "prometheusbrown.com/2009",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/11/Pacquiao-vs-Cotto-24-7.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2009",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/11/2008632378.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2009",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/11/2008632378-450x252.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2009",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/11/Aoki-Poster.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2009",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/11/Aoki-Poster-266x400.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2009",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/11/objectified_poster1.gif"
+    },
+    {
+      "edition": "prometheusbrown.com/2009",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/11/objectified_poster1-269x400.gif"
+    },
+    {
+      "edition": "prometheusbrown.com/2009",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/10/Hanyo01.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2009",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/10/alg_capitalism_michael_moore.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2009",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/10/alg_capitalism_michael_moore-450x273.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2009",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/11/53840023-3.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2009",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/2009/11/talaye-sorkhcrimson-gold-jafar-panahi-2003/"
+    },
+    {
       "edition": "prometheusbrown.com/2010",
       "kind": "image",
       "status": "not_indexed_before_edition",
@@ -7365,13 +7419,6 @@
       "kind": "image",
       "status": "not_indexed_before_edition",
       "url": "http://prometheusbrown.com/blog/about-2"
-    },
-    {
-      "edition": "prometheusbrown.com/2010",
-      "error": "excluded spam-injected capture",
-      "kind": "html",
-      "status": "unavailable_or_excluded",
-      "url": "http://prometheusbrown.com/blog/contact"
     },
     {
       "edition": "prometheusbrown.com/2010",
@@ -7510,13 +7557,6 @@
       "kind": "image",
       "status": "not_indexed_before_edition",
       "url": "http://prometheusbrown.com/blog/2010/07/music-native-guns-handcuffs/"
-    },
-    {
-      "edition": "prometheusbrown.com/2010",
-      "error": "excluded spam-injected capture",
-      "kind": "html",
-      "status": "unavailable_or_excluded",
-      "url": "http://prometheusbrown.com/blog/2010/07/toy-story-3-lee-unkrich-2010/"
     },
     {
       "edition": "prometheusbrown.com/2010",
@@ -9634,13 +9674,6 @@
       "kind": "image",
       "status": "not_indexed_before_edition",
       "url": "http://prometheusbrown.com/blog/2008/07/police-beat-robinson-devo-2006/"
-    },
-    {
-      "edition": "prometheusbrown.com/2010",
-      "error": "excluded spam-injected capture",
-      "kind": "html",
-      "status": "unavailable_or_excluded",
-      "url": "http://prometheusbrown.com/blog/2008/07/the-great-debaters-denzel-washington-2007-and-resolved-greg-whiteley-2008/"
     },
     {
       "edition": "prometheusbrown.com/2010",
@@ -15956,6 +15989,735 @@
       "url": "http://prometheusbrown.com/ppt/images/background.gif"
     },
     {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/s_archives"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/2010/09/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/2010/08/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/2010/07/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/2010/06/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/2010/05/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/2010/04/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/2010/03/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/2010/02/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/category/cinema/brit-cinema/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/category/cinema/coming-soon/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/category/film-reviews/guest-reviews/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2010/08/Picture-3-180x120.png"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2010/08/19twopix-articleLarge-180x120.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2010/08/jonjonaye-180x120.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2010/08/SNHLIVEREMIXSPONSORS640-180x120.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2010/08/mountain-thief_lg-180x120.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2010/08/COLLABO2-thumb-500x772-15474-180x120.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2010/07/inception-trailer2-header-180x120.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2010/08/bunuel1-180x120.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2010/07/DLRN-180x120.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/2009/12/d10-hidmo-seattle/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/2009/09/photos-typhoon-ondoy-slideshow/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/2009/08/video-jimi-hendrix-at-woodstock/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/2009/04/page/2/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/04/pacquiao-hatton-247-237x300.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/04/koshikei-350x185.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/2009/01/page/2/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/2008/09/page/2/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "error": "OSError: Archive HTTP 404: https://web.archive.org/web/20100925222301id_/http://ica.org.uk/thumbnail.php?max=408&id=4483",
+      "kind": "image",
+      "status": "unavailable_or_excluded",
+      "url": "http://ica.org.uk/thumbnail.php?max=408&id=4483"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "error": "OSError: Archive HTTP 404: https://web.archive.org/web/20150401051258id_/http://strangeink.files.wordpress.com/2007/08/dr2000-poster.jpg",
+      "kind": "image",
+      "status": "unavailable_or_excluded",
+      "url": "http://strangeink.files.wordpress.com/2007/08/dr2000-poster.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "error": "OSError: Archive HTTP 404: https://web.archive.org/web/20100925222301id_/http://images.nymag.com/daily/entertainment/27_traitor_lg.jpg",
+      "kind": "image",
+      "status": "unavailable_or_excluded",
+      "url": "http://images.nymag.com/daily/entertainment/27_traitor_lg.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/08/rss-logo.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/11/tumblr_kus6wbkH8x1qzax6yo1_500.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/tag/bao-phi/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/tag/brother-ali/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/tag/minneapolis/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/tag/sandra-garcia-rivera/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/tag/yashica-electro-35-gsn/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/2009/11/humpday-lynn-shelton-2009/humpday2/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/tag/humpday/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/tag/lynn-shelton/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/11/humpday2.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/11/Pacquiao-vs-Cotto-24-7.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/11/aoki-poster.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/tag/ben-wang/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/tag/mike-cheng/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/tag/richard-aoki/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/11/aoki-poster-640x960.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/10/objectified.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/tag/gary-hustwit/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/tag/helvetica/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/tag/objectified/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/10/objectified-269x400.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2010/07/ts3_lotso_buzz_woody.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/tag/lee-unkrich/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/tag/pixar/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/tag/toy-story-3/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/tag/dumbfoundead/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/tag/jam-session-2-0/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "error": "OSError: Archive HTTP 404: https://web.archive.org/web/20100925222301id_/http://bluescholars.com/blog/wp-content/uploads/2009/12/632400262.jpg",
+      "kind": "image",
+      "status": "unavailable_or_excluded",
+      "url": "http://bluescholars.com/blog/wp-content/uploads/2009/12/632400262.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/2009/11/talaye-sorkhcrimson-gold-jafar-panahi-2003/crimson_gold-001/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/tag/jafar-panahi/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/tag/talaye-sorkh/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/11/Crimson_Gold-001-450x337.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/10/hanyo1960.png"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/tag/hanyo/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/tag/ki-young-kim/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/tag/lee-eun-shim/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/10/himpapawid_raulplane2_a5dl1.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/tag/anino/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/10/himpapawid_raulplane2_a5dl1-450x283.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "error": "OSError: Archive HTTP 404: https://web.archive.org/web/20100925222301id_/http://anakbayanla.org/wp-content/uploads/2009/08/021.jpg",
+      "kind": "image",
+      "status": "unavailable_or_excluded",
+      "url": "http://anakbayanla.org/wp-content/uploads/2009/08/021.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "error": "OSError: Archive HTTP 404: https://web.archive.org/web/20100925222301id_/http://anakbayanla.org/wp-content/uploads/2009/08/15.jpg",
+      "kind": "image",
+      "status": "unavailable_or_excluded",
+      "url": "http://anakbayanla.org/wp-content/uploads/2009/08/15.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/06/the-hangover-01.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/tag/guest-reviews/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/tag/judd-apatow/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/tag/the-hangover/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/tag/todd-phillips/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/tag/zach-galifianakis/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/06/mskrish.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/03/img_0070.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/03/img_0074.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/03/img_0102.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/03/img_0108.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/03/img_0115.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/03/img_0149.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/03/img_0159.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/03/img_0178.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/03/img_0180.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/03/img_0188.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/03/img_0195.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/03/img_0070-150x150.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/03/img_0074-150x150.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/03/img_0102-150x150.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/03/img_0108-150x150.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/03/img_0115-150x150.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/03/img_0149-150x150.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/03/img_0159-150x150.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/03/img_0178-150x150.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/03/img_0180-150x150.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/03/img_0188-150x150.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/03/img_0195-150x150.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/03/francism-204x300.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "reason": "Gravatar avatar endpoints are dynamic third-party profile images, not stable site-owned media; their dated replays were unavailable during this pass.",
+      "status": "excluded_dynamic_avatar",
+      "url": "http://gravatar.com/avatar/9e0fbc3175c8ebcb83e1b293e85f572d?s=50&d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D50&r=G"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "reason": "Gravatar avatar endpoints are dynamic third-party profile images, not stable site-owned media; their dated replays were unavailable during this pass.",
+      "status": "excluded_dynamic_avatar",
+      "url": "http://gravatar.com/avatar/cc3ab566dbef1139d119b133ac484f26?s=50&d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D50&r=G"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/03/img_01161-225x300.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2009/02/2971005271_b18121e7d4-350x233.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2008/12/picture_nasty_ness_sir_mix_a_loot.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2008/12/picture_nasty_ness_sir_mix_a_loot-241x300.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2008/12/screens_dvd-395051.jpeg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2008/12/screens_dvd-395051-211x300.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2008/12/battleinseattlepic1.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2008/12/battleinseattle.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/2008/11/battle-in-seattle-stuart-townsend-2008/realbattleinseattle.org"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2008/12/battleinseattle-350x188.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/wp-content/uploads/2008/11/october_film_lenin.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "error": "OSError: Archive HTTP 404: https://web.archive.org/web/20100925222301id_/http://a330.g.akamai.net/7/330/23382/20070625223048/www.variety.com/graphics/photos/reviewr/rresolved.jpg",
+      "kind": "image",
+      "status": "unavailable_or_excluded",
+      "url": "http://a330.g.akamai.net/7/330/23382/20070625223048/www.variety.com/graphics/photos/reviewr/rresolved.jpg"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/tag/macklemore/"
+    },
+    {
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "status": "not_indexed_before_edition",
+      "url": "http://prometheusbrown.com/blog/tag/the-town/"
+    },
+    {
       "edition": "prometheusbrown.com/2013",
       "error": "ConnectionError: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20080706232724id_/http://prometheusbrown.com/ (Caused by NewConnectionError(\"HTTPSConnection(host='web.archive.org', port=443): Failed to establish a new connection: [Errno 61] Connection refused\"))",
       "kind": "html",
@@ -19671,6 +20433,42 @@
       "url": "http://prometheusbrown.com/blog/2009/09/zertthe-joke-jaromil-jires-1968/"
     },
     {
+      "actual_capture": "20091130094750",
+      "bytes": 48944,
+      "capture_digest": "NYHA3CBJWY57T42XZDKWTW3AJA3TIW7P",
+      "compatibility_review_required": false,
+      "edition": "prometheusbrown.com/2009",
+      "kind": "html",
+      "sha256": "c9aa577524cfff5c8665a450a1906d6b2574db6fc52497b39ac83a1109c7399f",
+      "source_archive": "Internet Archive Wayback",
+      "source_original": "http://prometheusbrown.com:80/blog/2009/10/capitalism-a-love-story-michael-moore-2009/",
+      "url": "http://prometheusbrown.com/blog/2009/10/capitalism-a-love-story-michael-moore-2009/"
+    },
+    {
+      "actual_capture": "20091130075544",
+      "bytes": 49189,
+      "capture_digest": "FFXB65P6J3QQFKOV7XVR2QT4FA6QWNSJ",
+      "compatibility_review_required": false,
+      "edition": "prometheusbrown.com/2009",
+      "kind": "html",
+      "sha256": "5e719a5a2b8376b81899a9a21380dfce56b825d891bfa8eb621de7b910f89fd9",
+      "source_archive": "Internet Archive Wayback",
+      "source_original": "http://prometheusbrown.com:80/blog/2009/10/hanyo-ki-young-kim-1960/",
+      "url": "http://prometheusbrown.com/blog/2009/10/hanyo-ki-young-kim-1960/"
+    },
+    {
+      "actual_capture": "20091128141506",
+      "bytes": 45330,
+      "capture_digest": "APSXMJYMSOOLKK2W5BY7INHFJ2E7B4TM",
+      "compatibility_review_required": false,
+      "edition": "prometheusbrown.com/2009",
+      "kind": "html",
+      "sha256": "218840ba0a6c4cb1d299e3f6a1ead2d18e441946da929ed5ce4b013cb9513114",
+      "source_archive": "Internet Archive Wayback",
+      "source_original": "http://prometheusbrown.com:80/blog/2009/10/objectified-gary-hustwit-2009/",
+      "url": "http://prometheusbrown.com/blog/2009/10/objectified-gary-hustwit-2009/"
+    },
+    {
       "actual_capture": "20091128180513",
       "bytes": 47459,
       "capture_digest": "PWFERP4ASGH6JYPT5R6LMMNQK3UE45OA",
@@ -19683,6 +20481,18 @@
       "url": "http://prometheusbrown.com/blog/2009/10/paranormal-activity-oren-peli-2009/"
     },
     {
+      "actual_capture": "20091201185926",
+      "bytes": 41521,
+      "capture_digest": "3WFJIJREWWZKY2KPB6CK36HMARICRWD3",
+      "compatibility_review_required": false,
+      "edition": "prometheusbrown.com/2009",
+      "kind": "html",
+      "sha256": "d74223a136f46a220a605d2ea3c92cdb0a81aa523a63e501911d29ab74a0b22a",
+      "source_archive": "Internet Archive Wayback",
+      "source_original": "http://prometheusbrown.com:80/blog/2009/10/sonicsgate-2009-full-streaming-video/",
+      "url": "http://prometheusbrown.com/blog/2009/10/sonicsgate-2009-full-streaming-video/"
+    },
+    {
       "actual_capture": "20091006184220",
       "bytes": 22473,
       "capture_digest": "JFC2UMOCHM5BPVVB6JZLK6AGZNQGLBCS",
@@ -19693,6 +20503,78 @@
       "source_archive": "Internet Archive Wayback",
       "source_original": "http://prometheusbrown.com:80/blog/2009/10/video-chee-unit/",
       "url": "http://prometheusbrown.com/blog/2009/10/video-chee-unit/"
+    },
+    {
+      "actual_capture": "20091114204139",
+      "bytes": 44275,
+      "capture_digest": "4YAMDZSBGV2ABRSBQM62VXA6GSRCJZNN",
+      "compatibility_review_required": false,
+      "edition": "prometheusbrown.com/2009",
+      "kind": "html",
+      "sha256": "2a6e5c5a50d0c9b921c7f64bd3593269b8884a281e77201b7faba168532b229c",
+      "source_archive": "Internet Archive Wayback",
+      "source_original": "http://prometheusbrown.com:80/blog/2009/11/aoki-world-premiere/",
+      "url": "http://prometheusbrown.com/blog/2009/11/aoki-world-premiere/"
+    },
+    {
+      "actual_capture": "20091128131007",
+      "bytes": 45511,
+      "capture_digest": "CEJF5QFZQEIVQKBHFFRPMR4FAEDP7B4N",
+      "compatibility_review_required": false,
+      "edition": "prometheusbrown.com/2009",
+      "kind": "html",
+      "sha256": "42d68bd76c0bde13159297b6b655a2d34e547d0e4fcdb66c3ba0fc0894794a74",
+      "source_archive": "Internet Archive Wayback",
+      "source_original": "http://prometheusbrown.com:80/blog/2009/11/humpday-lynn-shelton-2009/",
+      "url": "http://prometheusbrown.com/blog/2009/11/humpday-lynn-shelton-2009/"
+    },
+    {
+      "actual_capture": "20091118061432",
+      "bytes": 48344,
+      "capture_digest": "5PA2SBQCACHIJMAQDUW3DS6J5KYFKXZY",
+      "compatibility_review_required": false,
+      "edition": "prometheusbrown.com/2009",
+      "kind": "html",
+      "sha256": "8e043283d224b06dbb2bdc178afd0ad2f8bb668625b57e39c9fbe114ff7b41d9",
+      "source_archive": "Internet Archive Wayback",
+      "source_original": "http://prometheusbrown.com:80/blog/2009/11/pacquiao-cotto-247/",
+      "url": "http://prometheusbrown.com/blog/2009/11/pacquiao-cotto-247/"
+    },
+    {
+      "actual_capture": "20091128100205",
+      "bytes": 40088,
+      "capture_digest": "OS7TXIEDQCKMXZAPEGDTEL7GK6YCYRVQ",
+      "compatibility_review_required": false,
+      "edition": "prometheusbrown.com/2009",
+      "kind": "html",
+      "sha256": "510b247b947e639fcdd6cb4f7dfb3a0af8d2a293010f50df71dceaf547951e4c",
+      "source_archive": "Internet Archive Wayback",
+      "source_original": "http://prometheusbrown.com:80/blog/2009/11/photos-minneapolis/",
+      "url": "http://prometheusbrown.com/blog/2009/11/photos-minneapolis/"
+    },
+    {
+      "actual_capture": "20091123151945",
+      "bytes": 44459,
+      "capture_digest": "DTOX5R3FB57ZGRJEWSMX6HSG2HESDWRJ",
+      "compatibility_review_required": false,
+      "edition": "prometheusbrown.com/2009",
+      "kind": "html",
+      "sha256": "487fc9756c635118f535bdd26f1787474b6645d02e02b5fe9a1b4f91cbdfabe3",
+      "source_archive": "Internet Archive Wayback",
+      "source_original": "http://prometheusbrown.com:80/blog/2009/11/trailer-socialisme/",
+      "url": "http://prometheusbrown.com/blog/2009/11/trailer-socialisme/"
+    },
+    {
+      "actual_capture": "20091128124443",
+      "bytes": 45008,
+      "capture_digest": "C5TUKWTI5URABYKT24MHWY3QLU4A66VZ",
+      "compatibility_review_required": false,
+      "edition": "prometheusbrown.com/2009",
+      "kind": "html",
+      "sha256": "0cc33319974554f72c72ad013f9621822ecdb7686b5c02fbd686184d3d500db3",
+      "source_archive": "Internet Archive Wayback",
+      "source_original": "http://prometheusbrown.com:80/blog/2009/11/trailer-wapakman/",
+      "url": "http://prometheusbrown.com/blog/2009/11/trailer-wapakman/"
     },
     {
       "actual_capture": "20091222071013",
@@ -22707,6 +23589,18 @@
       "url": "http://film.virtual-history.com/photo/07/large/07211.jpg"
     },
     {
+      "actual_capture": "20100116035011",
+      "bytes": 29454,
+      "capture_digest": "",
+      "compatibility_review_required": false,
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "sha256": "33156d532efcf21622535d2225608b4e8a645fd3ec9a7aa52cd531aeeb95ecbf",
+      "source_archive": "Internet Archive Wayback",
+      "source_original": "http://franceinlondon.com/media/pictures/FilUserFiles/Tell%20no%20one2(2).jpg",
+      "url": "http://franceinlondon.com/media/pictures/FilUserFiles/Tell%20no%20one2(2).jpg"
+    },
+    {
       "actual_capture": "20090305051810",
       "bytes": 71263,
       "capture_digest": "",
@@ -22717,6 +23611,18 @@
       "source_archive": "Internet Archive Wayback",
       "source_original": "http://gizmodo.com/assets/resources/2008/07/watchmentrailer.jpg",
       "url": "http://gizmodo.com/assets/resources/2008/07/watchmentrailer.jpg"
+    },
+    {
+      "actual_capture": "20091002204447",
+      "bytes": 40097,
+      "capture_digest": "",
+      "compatibility_review_required": false,
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "sha256": "866931d025ca26468832b55776966bd56e9ff704b03d717cc15e1aa25169e24c",
+      "source_archive": "Internet Archive Wayback",
+      "source_original": "http://graphics8.nytimes.com/images/2007/12/25/arts/debatespan.jpg",
+      "url": "http://graphics8.nytimes.com/images/2007/12/25/arts/debatespan.jpg"
     },
     {
       "actual_capture": "20080711213027",
@@ -22873,6 +23779,18 @@
       "source_archive": "Internet Archive Wayback",
       "source_original": "http://i113.photobucket.com/albums/n225/tomservo13/Zoo.jpg",
       "url": "http://i113.photobucket.com/albums/n225/tomservo13/Zoo.jpg"
+    },
+    {
+      "actual_capture": "20101225114523",
+      "bytes": 39350,
+      "capture_digest": "",
+      "compatibility_review_required": true,
+      "edition": "prometheusbrown.com/2010",
+      "kind": "image",
+      "sha256": "89a9808d6b83360c5443071456e40290d738f2c3c017af20596b82781960929d",
+      "source_archive": "Internet Archive Wayback",
+      "source_original": "http://image.guardian.co.uk/sys-images/Film/Pix/pictures/2007/05/29/paulnewman460.jpg",
+      "url": "http://image.guardian.co.uk/sys-images/Film/Pix/pictures/2007/05/29/paulnewman460.jpg"
     },
     {
       "actual_capture": "20101225132911",
@@ -23115,6 +24033,30 @@
       "url": "http://prometheusbrown.com/blog/"
     },
     {
+      "actual_capture": "20091003000436",
+      "bytes": 15691,
+      "capture_digest": "RBSD7CQ5424BOI3OBWFPY7H5BOHU6ULS",
+      "compatibility_review_required": false,
+      "edition": "prometheusbrown.com/2010",
+      "kind": "html",
+      "sha256": "ff5aff00c69626a874a694ec968faa39eafe4d0ddf851d7b4ee2cfe09f872e5e",
+      "source_archive": "Internet Archive Wayback",
+      "source_original": "http://prometheusbrown.com:80/blog/2008/02/",
+      "url": "http://prometheusbrown.com/blog/2008/02/"
+    },
+    {
+      "actual_capture": "20100201093111",
+      "bytes": 402149,
+      "capture_digest": "WZDZQIWOGLV45CWK3F2RFVS66TR7V5XV",
+      "compatibility_review_required": false,
+      "edition": "prometheusbrown.com/2010",
+      "kind": "html",
+      "sha256": "e4882824d3d88ed797b7c111e427c032ebe2959d9e7a9687e4687aeab4ded073",
+      "source_archive": "Internet Archive Wayback",
+      "source_original": "http://prometheusbrown.com:80/blog/2008/03/",
+      "url": "http://prometheusbrown.com/blog/2008/03/"
+    },
+    {
       "actual_capture": "20100201091111",
       "bytes": 412643,
       "capture_digest": "TQTC5FMTBQS6GSGXXFVSGUPRU5ITY4KH",
@@ -23125,6 +24067,30 @@
       "source_archive": "Internet Archive Wayback",
       "source_original": "http://prometheusbrown.com:80/blog/2008/03/obama-on-race-finally/",
       "url": "http://prometheusbrown.com/blog/2008/03/obama-on-race-finally/"
+    },
+    {
+      "actual_capture": "20100201091525",
+      "bytes": 403863,
+      "capture_digest": "WVF2HYJBZRCBQHIDBUXAXNIBNGXFEE5N",
+      "compatibility_review_required": false,
+      "edition": "prometheusbrown.com/2010",
+      "kind": "html",
+      "sha256": "7017f72b3547d40be0c94b98e39908e31292487a927c6606a2dae9b9db0054ec",
+      "source_archive": "Internet Archive Wayback",
+      "source_original": "http://prometheusbrown.com:80/blog/2008/04/",
+      "url": "http://prometheusbrown.com/blog/2008/04/"
+    },
+    {
+      "actual_capture": "20100201095933",
+      "bytes": 406832,
+      "capture_digest": "QYTRLCVKNKJ6LSYEINDWW6SJUINK2LSV",
+      "compatibility_review_required": false,
+      "edition": "prometheusbrown.com/2010",
+      "kind": "html",
+      "sha256": "1162f5b104e33e133057726d1088739986b6e9f732629e6684ee3a5e6e66f017",
+      "source_archive": "Internet Archive Wayback",
+      "source_original": "http://prometheusbrown.com:80/blog/2008/05/",
+      "url": "http://prometheusbrown.com/blog/2008/05/"
     },
     {
       "actual_capture": "20090529002202",
@@ -23139,6 +24105,18 @@
       "url": "http://prometheusbrown.com/blog/2008/05/siff-blog-slingshot/"
     },
     {
+      "actual_capture": "20100201091112",
+      "bytes": 406923,
+      "capture_digest": "I57L5L6R56UMJYG5GEZ2Y2HJBR44P3XP",
+      "compatibility_review_required": false,
+      "edition": "prometheusbrown.com/2010",
+      "kind": "html",
+      "sha256": "af2b2eb65d430007d4bfe87014642032ae845aa3d48ee2e7578479f57ec542ab",
+      "source_archive": "Internet Archive Wayback",
+      "source_original": "http://prometheusbrown.com:80/blog/2008/06/",
+      "url": "http://prometheusbrown.com/blog/2008/06/"
+    },
+    {
       "actual_capture": "20100803153355",
       "bytes": 20286,
       "capture_digest": "3HCFLSICVAG2CCVEK7DM4VT7O3WKJ7ZR",
@@ -23149,6 +24127,18 @@
       "source_archive": "Internet Archive Wayback",
       "source_original": "http://prometheusbrown.com:80/blog/2008/06/siff-blog-young-people-fucking/",
       "url": "http://prometheusbrown.com/blog/2008/06/siff-blog-young-people-fucking/"
+    },
+    {
+      "actual_capture": "20100201092219",
+      "bytes": 413100,
+      "capture_digest": "UQEU3RC2DOLE3S6F3DTQDHUOIARK5MWH",
+      "compatibility_review_required": false,
+      "edition": "prometheusbrown.com/2010",
+      "kind": "html",
+      "sha256": "a6031a436114ce148bb092e4ea69f9719f96665da932defe948706b457d6c0fc",
+      "source_archive": "Internet Archive Wayback",
+      "source_original": "http://prometheusbrown.com:80/blog/2008/07/",
+      "url": "http://prometheusbrown.com/blog/2008/07/"
     },
     {
       "actual_capture": "20100905203406",
@@ -23211,6 +24201,30 @@
       "url": "http://prometheusbrown.com/blog/2008/07/the-dark-knight-christopher-nolan-2008/"
     },
     {
+      "actual_capture": "20090330180256",
+      "bytes": 27148,
+      "capture_digest": "AHHG2TUVQFJUS4JKDCBD6RI4WTSTPZ54",
+      "compatibility_review_required": false,
+      "edition": "prometheusbrown.com/2010",
+      "kind": "html",
+      "sha256": "6b137e9213a85d0fa66ece421127f75765ddfed2144967d6e79e62df75a017ec",
+      "source_archive": "Internet Archive Wayback",
+      "source_original": "http://prometheusbrown.com:80/blog/2008/07/the-great-debaters-denzel-washington-2007-and-resolved-greg-whiteley-2008/",
+      "url": "http://prometheusbrown.com/blog/2008/07/the-great-debaters-denzel-washington-2007-and-resolved-greg-whiteley-2008/"
+    },
+    {
+      "actual_capture": "20091003000441",
+      "bytes": 24492,
+      "capture_digest": "DKTOESCNNMZFBHW2FBMTWB2UX5GNQRAI",
+      "compatibility_review_required": false,
+      "edition": "prometheusbrown.com/2010",
+      "kind": "html",
+      "sha256": "ea665c151d2da925c00b73136fee8aa7ff2f6d17149f0fb1976643dfb258da28",
+      "source_archive": "Internet Archive Wayback",
+      "source_original": "http://prometheusbrown.com:80/blog/2008/08/",
+      "url": "http://prometheusbrown.com/blog/2008/08/"
+    },
+    {
       "actual_capture": "20090923203454",
       "bytes": 26089,
       "capture_digest": "XAJBM6Q736E6Q4JOBBNZ5FFAUR4XBHD6",
@@ -23271,6 +24285,18 @@
       "url": "http://prometheusbrown.com/blog/2008/09/wall-street-oliver-stone-1987/"
     },
     {
+      "actual_capture": "20091203033438",
+      "bytes": 53380,
+      "capture_digest": "6HBWQGAEKF7AVIQJHCT5B5QQEGFLNJFJ",
+      "compatibility_review_required": false,
+      "edition": "prometheusbrown.com/2010",
+      "kind": "html",
+      "sha256": "5b8866aa356df024c73da2ee8a5a8468df8c9f4647f4b9590c602f55b537aa48",
+      "source_archive": "Internet Archive Wayback",
+      "source_original": "http://prometheusbrown.com:80/blog/2008/10/",
+      "url": "http://prometheusbrown.com/blog/2008/10/"
+    },
+    {
       "actual_capture": "20090306044408",
       "bytes": 26254,
       "capture_digest": "N2BR7UWT4AVY5K44Y3KYTHKEZQ7BMXNK",
@@ -23319,6 +24345,18 @@
       "url": "http://prometheusbrown.com/blog/2008/10/oktyabr-sergei-eisenstein-1928/"
     },
     {
+      "actual_capture": "20091203033447",
+      "bytes": 51667,
+      "capture_digest": "BHEAGR2MQKOYH4CZAYIK7IDRUDOUEWJ4",
+      "compatibility_review_required": false,
+      "edition": "prometheusbrown.com/2010",
+      "kind": "html",
+      "sha256": "342c5c6f20e5b3f1f2a70bbd0141e0004c436a28f1a9b2deb87a06f9cdbe3dfb",
+      "source_archive": "Internet Archive Wayback",
+      "source_original": "http://prometheusbrown.com:80/blog/2008/11/",
+      "url": "http://prometheusbrown.com/blog/2008/11/"
+    },
+    {
       "actual_capture": "20100903025517",
       "bytes": 19802,
       "capture_digest": "NOUEIBYHXZXQRWBNETZ6HAMONSYGVSRG",
@@ -23353,6 +24391,18 @@
       "source_archive": "Internet Archive Wayback",
       "source_original": "http://prometheusbrown.com:80/blog/2008/11/slumdog-millionaire-danny-boyle-2008/",
       "url": "http://prometheusbrown.com/blog/2008/11/slumdog-millionaire-danny-boyle-2008/"
+    },
+    {
+      "actual_capture": "20100201091531",
+      "bytes": 422539,
+      "capture_digest": "AKOZUYA55NOHAPBKID7BQNXVLXFYG2BH",
+      "compatibility_review_required": false,
+      "edition": "prometheusbrown.com/2010",
+      "kind": "html",
+      "sha256": "501cc9bda6c469d9204ad75f8c19da9bb4070df84d4136a8588ad901f8366ea8",
+      "source_archive": "Internet Archive Wayback",
+      "source_original": "http://prometheusbrown.com:80/blog/2008/12/",
+      "url": "http://prometheusbrown.com/blog/2008/12/"
     },
     {
       "actual_capture": "20081230221450",
@@ -23631,6 +24681,18 @@
       "url": "http://prometheusbrown.com/blog/2009/01/the-best-tv-mini-series-ever/"
     },
     {
+      "actual_capture": "20091218225123",
+      "bytes": 53536,
+      "capture_digest": "7WL62TRKKOAV2LPGQEQHUAZUDLMHQHLM",
+      "compatibility_review_required": false,
+      "edition": "prometheusbrown.com/2010",
+      "kind": "html",
+      "sha256": "91f5b547634fa44a98c358b8b26c52e18964adef4e487855401fdb01f5dfa207",
+      "source_archive": "Internet Archive Wayback",
+      "source_original": "http://prometheusbrown.com:80/blog/2009/02/",
+      "url": "http://prometheusbrown.com/blog/2009/02/"
+    },
+    {
       "actual_capture": "20090211061643",
       "bytes": 22812,
       "capture_digest": "V5EA2QTSEJ4QWHDBUZCQ5DCHNAGQIIDU",
@@ -23907,6 +24969,18 @@
       "url": "http://prometheusbrown.com/blog/2009/02/wendy-and-lucy-kelly-reichardt-2008/"
     },
     {
+      "actual_capture": "20100201131724",
+      "bytes": 417075,
+      "capture_digest": "47ROPSI3C2SJX7GUOBSEZGKIS23YPMIJ",
+      "compatibility_review_required": false,
+      "edition": "prometheusbrown.com/2010",
+      "kind": "html",
+      "sha256": "600773f94e137b5560ecf20ebd62cfc9b3d87cd6ef3673285397afa27d3558f8",
+      "source_archive": "Internet Archive Wayback",
+      "source_original": "http://prometheusbrown.com:80/blog/2009/03/",
+      "url": "http://prometheusbrown.com/blog/2009/03/"
+    },
+    {
       "actual_capture": "20090319194605",
       "bytes": 25425,
       "capture_digest": "UIHVUFD5KXR5TRIJIRRC2MEWAPHYGXTP",
@@ -23965,6 +25039,18 @@
       "source_archive": "Internet Archive Wayback",
       "source_original": "http://prometheusbrown.com:80/blog/2009/03/march-2009-the-wrap-up/",
       "url": "http://prometheusbrown.com/blog/2009/03/march-2009-the-wrap-up/"
+    },
+    {
+      "actual_capture": "20090325071200",
+      "bytes": 25889,
+      "capture_digest": "JFBEJBIXWBMHB3I4KP4GPI7NXRVOLT73",
+      "compatibility_review_required": false,
+      "edition": "prometheusbrown.com/2010",
+      "kind": "html",
+      "sha256": "f2d06e7b422d4d25e602e2ef85476d0db76856ed5ff88fcd7006e3a32bd78e3d",
+      "source_archive": "Internet Archive Wayback",
+      "source_original": "http://prometheusbrown.com:80/blog/2009/03/music-prometheus-brown-mga-kababayan-tribute-to-francis-m/",
+      "url": "http://prometheusbrown.com/blog/2009/03/music-prometheus-brown-mga-kababayan-tribute-to-francis-m/"
     },
     {
       "actual_capture": "20090412012126",
@@ -24327,6 +25413,18 @@
       "url": "http://prometheusbrown.com/blog/2009/04/video-zion-i-geek-to-the-beat-dir-mayo/"
     },
     {
+      "actual_capture": "20100201092224",
+      "bytes": 412391,
+      "capture_digest": "RR2ZJTK6OQZ7IUSWCHNV7IWC5VIYUNUT",
+      "compatibility_review_required": false,
+      "edition": "prometheusbrown.com/2010",
+      "kind": "html",
+      "sha256": "83de8e4eee1a57d2b8177c659c3de033c6ebdc1048643fdc0fd8956e8a82465e",
+      "source_archive": "Internet Archive Wayback",
+      "source_original": "http://prometheusbrown.com:80/blog/2009/05/",
+      "url": "http://prometheusbrown.com/blog/2009/05/"
+    },
+    {
       "actual_capture": "20090529191259",
       "bytes": 26831,
       "capture_digest": "HFZRN5BVZH4IGS2DZLSNJIEEWVLRASGV",
@@ -24457,6 +25555,18 @@
       "source_archive": "Internet Archive Wayback",
       "source_original": "http://prometheusbrown.com:80/blog/2009/05/video-jake-one-home-dir-zia-mohajerjasbi/",
       "url": "http://prometheusbrown.com/blog/2009/05/video-jake-one-home-dir-zia-mohajerjasbi/"
+    },
+    {
+      "actual_capture": "20091216031125",
+      "bytes": 51464,
+      "capture_digest": "UXDKNY252TVTOLWL53VYCLOQ6SQTTXFA",
+      "compatibility_review_required": false,
+      "edition": "prometheusbrown.com/2010",
+      "kind": "html",
+      "sha256": "4e442f8d9f485981169ed043795ed6a85ce225d9d695bf7779170f8146ec3658",
+      "source_archive": "Internet Archive Wayback",
+      "source_original": "http://prometheusbrown.com:80/blog/2009/06/",
+      "url": "http://prometheusbrown.com/blog/2009/06/"
     },
     {
       "actual_capture": "20090809145844",
@@ -24591,6 +25701,18 @@
       "url": "http://prometheusbrown.com/blog/2009/06/video-macklemore-35th-north-seattle-june-1-2009/"
     },
     {
+      "actual_capture": "20100201131740",
+      "bytes": 406413,
+      "capture_digest": "MMLQMRAZ4NKL6OPHHO663FACLF2HOBHG",
+      "compatibility_review_required": false,
+      "edition": "prometheusbrown.com/2010",
+      "kind": "html",
+      "sha256": "7aaee8e3e182795bd9f792777f6be2e4d58a3d02ed6de5edfcc6bfc35d82b65f",
+      "source_archive": "Internet Archive Wayback",
+      "source_original": "http://prometheusbrown.com:80/blog/2009/07/",
+      "url": "http://prometheusbrown.com/blog/2009/07/"
+    },
+    {
       "actual_capture": "20090803001507",
       "bytes": 29816,
       "capture_digest": "WEH6BLRKUUXF2SRWQM4ZWCTSVIMMYGL4",
@@ -24685,6 +25807,18 @@
       "source_archive": "Internet Archive Wayback",
       "source_original": "http://prometheusbrown.com:80/blog/2009/07/video-i-am-melissa-roxas/",
       "url": "http://prometheusbrown.com/blog/2009/07/video-i-am-melissa-roxas/"
+    },
+    {
+      "actual_capture": "20091216031626",
+      "bytes": 52313,
+      "capture_digest": "HQH4N3CCZYB2AW6HFBUE6GOGCBUSS36Q",
+      "compatibility_review_required": false,
+      "edition": "prometheusbrown.com/2010",
+      "kind": "html",
+      "sha256": "bf61612709f2902e4f061712abb5a7a36223589a0bd5784c8f835d2d47ca0cd3",
+      "source_archive": "Internet Archive Wayback",
+      "source_original": "http://prometheusbrown.com:80/blog/2009/08/",
+      "url": "http://prometheusbrown.com/blog/2009/08/"
     },
     {
       "actual_capture": "20090829080413",
@@ -24819,6 +25953,18 @@
       "url": "http://prometheusbrown.com/blog/2009/08/video-philippine-student-rally-at-mendiola/"
     },
     {
+      "actual_capture": "20100201093937",
+      "bytes": 409873,
+      "capture_digest": "IJULBNLXKLRJOUWYBX4D5KOLYEXGNGBO",
+      "compatibility_review_required": false,
+      "edition": "prometheusbrown.com/2010",
+      "kind": "html",
+      "sha256": "90e130e1e710d44ab92ba722ec3941e0ac114c56c7ba49ef438ab6a728d7c486",
+      "source_archive": "Internet Archive Wayback",
+      "source_original": "http://prometheusbrown.com:80/blog/2009/09/",
+      "url": "http://prometheusbrown.com/blog/2009/09/"
+    },
+    {
       "actual_capture": "20090914135055",
       "bytes": 20244,
       "capture_digest": "GZOYAWWSAMQ4ZVURQY5C5MYO36JVYXTC",
@@ -24903,6 +26049,18 @@
       "url": "http://prometheusbrown.com/blog/2009/09/zertthe-joke-jaromil-jires-1968/"
     },
     {
+      "actual_capture": "20100201131745",
+      "bytes": 407946,
+      "capture_digest": "6CRNYEFYBBPJEGLA5OE666RYBBIKTEFU",
+      "compatibility_review_required": false,
+      "edition": "prometheusbrown.com/2010",
+      "kind": "html",
+      "sha256": "22d3f415d1bc0b0dbecced615339bd21a688c5e3ce46cc98a497d08e02a80dde",
+      "source_archive": "Internet Archive Wayback",
+      "source_original": "http://prometheusbrown.com:80/blog/2009/10/",
+      "url": "http://prometheusbrown.com/blog/2009/10/"
+    },
+    {
       "actual_capture": "20091130094750",
       "bytes": 48944,
       "capture_digest": "NYHA3CBJWY57T42XZDKWTW3AJA3TIW7P",
@@ -24975,6 +26133,18 @@
       "url": "http://prometheusbrown.com/blog/2009/10/sonicsgate-2009-full-streaming-video/"
     },
     {
+      "actual_capture": "20091006184220",
+      "bytes": 22473,
+      "capture_digest": "JFC2UMOCHM5BPVVB6JZLK6AGZNQGLBCS",
+      "compatibility_review_required": false,
+      "edition": "prometheusbrown.com/2010",
+      "kind": "html",
+      "sha256": "b10b7caec443468aa67d947161cce06eba801b1593f590d92202756d3498b3cf",
+      "source_archive": "Internet Archive Wayback",
+      "source_original": "http://prometheusbrown.com:80/blog/2009/10/video-chee-unit/",
+      "url": "http://prometheusbrown.com/blog/2009/10/video-chee-unit/"
+    },
+    {
       "actual_capture": "20100903023415",
       "bytes": 15213,
       "capture_digest": "ZNFH6UAXSV7CCWIH55YCNXJCVMCSWPD6",
@@ -24997,6 +26167,18 @@
       "source_archive": "Common Crawl",
       "source_original": "http://prometheusbrown.com/blog/2009/10/video-shabazz-palaces-bellhaven-meridian-dir-kahlil-joseph/",
       "url": "http://prometheusbrown.com/blog/2009/10/video-shabazz-palaces-bellhaven-meridian-dir-kahlil-joseph/"
+    },
+    {
+      "actual_capture": "20100201131152",
+      "bytes": 404964,
+      "capture_digest": "XAMBZVJ674IYYGKKVPIZAZLTZVEI5NL6",
+      "compatibility_review_required": false,
+      "edition": "prometheusbrown.com/2010",
+      "kind": "html",
+      "sha256": "b500e8c0611d125de8fbd32b7897714d7e29d3842db09d0776b0b7f63597cf2c",
+      "source_archive": "Internet Archive Wayback",
+      "source_original": "http://prometheusbrown.com:80/blog/2009/11/",
+      "url": "http://prometheusbrown.com/blog/2009/11/"
     },
     {
       "actual_capture": "20100903025334",
@@ -25083,6 +26265,30 @@
       "url": "http://prometheusbrown.com/blog/2009/11/trailer-wapakman/"
     },
     {
+      "actual_capture": "20091222154148",
+      "bytes": 48852,
+      "capture_digest": "NF4FXTNTLMZNVTBCM26BAGVJ6YYGR2RB",
+      "compatibility_review_required": false,
+      "edition": "prometheusbrown.com/2010",
+      "kind": "html",
+      "sha256": "050bef9028383d82681a6e72b8ebf9685ac56cbc24ddfad356f4a377d6fa82b6",
+      "source_archive": "Internet Archive Wayback",
+      "source_original": "http://prometheusbrown.com:80/blog/2009/12/",
+      "url": "http://prometheusbrown.com/blog/2009/12/"
+    },
+    {
+      "actual_capture": "20091222154203",
+      "bytes": 45426,
+      "capture_digest": "6MQNCZCFHGSAUGY2V5YURSF7RWMNV26C",
+      "compatibility_review_required": false,
+      "edition": "prometheusbrown.com/2010",
+      "kind": "html",
+      "sha256": "22148f65654b8c9a50fc4201d0e3dde549c9a076b36cc9e1520eaa4023c0a428",
+      "source_archive": "Internet Archive Wayback",
+      "source_original": "http://prometheusbrown.com:80/blog/2009/12/a-world-to-change-human-rights-video-installation/",
+      "url": "http://prometheusbrown.com/blog/2009/12/a-world-to-change-human-rights-video-installation/"
+    },
+    {
       "actual_capture": "20091222071013",
       "bytes": 44102,
       "capture_digest": "KV7UX42NJMEVE3T5QGKXZ7DUMNNLHTTT",
@@ -25117,6 +26323,18 @@
       "source_archive": "Internet Archive Wayback",
       "source_original": "http://prometheusbrown.com:80/blog/2009/12/the-hurt-locker-kathryn-bigelow-2009/",
       "url": "http://prometheusbrown.com/blog/2009/12/the-hurt-locker-kathryn-bigelow-2009/"
+    },
+    {
+      "actual_capture": "20091208040324",
+      "bytes": 44417,
+      "capture_digest": "QI7HMAN4Y5XFLYJHVT5XZISJYZ5ABSU5",
+      "compatibility_review_required": false,
+      "edition": "prometheusbrown.com/2010",
+      "kind": "html",
+      "sha256": "8e8d29aa65bb1bd59ebd866571cbadafd17c7b46453b691d9f775261994e8b60",
+      "source_archive": "Internet Archive Wayback",
+      "source_original": "http://prometheusbrown.com:80/blog/2009/12/the-murder-of-fred-hampton-revisited/",
+      "url": "http://prometheusbrown.com/blog/2009/12/the-murder-of-fred-hampton-revisited/"
     },
     {
       "actual_capture": "20091221231908",
@@ -25213,6 +26431,18 @@
       "source_archive": "Internet Archive Wayback",
       "source_original": "http://prometheusbrown.com:80/blog/2009/12/when-will-white-people-stop-making-movies-like-avatar/",
       "url": "http://prometheusbrown.com/blog/2009/12/when-will-white-people-stop-making-movies-like-avatar/"
+    },
+    {
+      "actual_capture": "20100125010604",
+      "bytes": 129155,
+      "capture_digest": "F7YMQHWTEXM6RKBSWLON3CI2D5LXUOWT",
+      "compatibility_review_required": false,
+      "edition": "prometheusbrown.com/2010",
+      "kind": "html",
+      "sha256": "c365ee1e540f28e882e7fdc27dcdf56696bac2b147ccba91e866bfb56f6bcea9",
+      "source_archive": "Internet Archive Wayback",
+      "source_original": "http://prometheusbrown.com:80/blog/2010/01/",
+      "url": "http://prometheusbrown.com/blog/2010/01/"
     },
     {
       "actual_capture": "20100718075417",
@@ -25897,6 +27127,18 @@
       "source_archive": "Internet Archive Wayback",
       "source_original": "http://prometheusbrown.com:80/blog/2010/07/three-philippine-films-screening-at-the-asian-american-international-film-festival-2010-new-york-july-15-24/",
       "url": "http://prometheusbrown.com/blog/2010/07/three-philippine-films-screening-at-the-asian-american-international-film-festival-2010-new-york-july-15-24/"
+    },
+    {
+      "actual_capture": "20100905024952",
+      "bytes": 18068,
+      "capture_digest": "RNFZCBET6KXL2YITZJZLROVN2VTLHKQZ",
+      "compatibility_review_required": false,
+      "edition": "prometheusbrown.com/2010",
+      "kind": "html",
+      "sha256": "ebef9d287c04f381bf2063c81d600c7a3eafc0cf8ee0e011abebbbb2aff5fa49",
+      "source_archive": "Internet Archive Wayback",
+      "source_original": "http://prometheusbrown.com:80/blog/2010/07/toy-story-3-lee-unkrich-2010/",
+      "url": "http://prometheusbrown.com/blog/2010/07/toy-story-3-lee-unkrich-2010/"
     },
     {
       "actual_capture": "20100916203450",
@@ -26847,6 +28089,30 @@
       "url": "http://prometheusbrown.com/blog/category/videos/"
     },
     {
+      "actual_capture": "20091128180542",
+      "bytes": 38961,
+      "capture_digest": "TIQULYS4ITGFPMG5HYPHSPS5GOBK5RXE",
+      "compatibility_review_required": false,
+      "edition": "prometheusbrown.com/2010",
+      "kind": "html",
+      "sha256": "f84326eadd09fa48dae1e35778073e5ed258f02ad6197f34eec8abf45dad5551",
+      "source_archive": "Internet Archive Wayback",
+      "source_original": "http://prometheusbrown.com:80/blog/contact/",
+      "url": "http://prometheusbrown.com/blog/contact"
+    },
+    {
+      "actual_capture": "20091128180542",
+      "bytes": 38961,
+      "capture_digest": "TIQULYS4ITGFPMG5HYPHSPS5GOBK5RXE",
+      "compatibility_review_required": false,
+      "edition": "prometheusbrown.com/2010",
+      "kind": "html",
+      "sha256": "f84326eadd09fa48dae1e35778073e5ed258f02ad6197f34eec8abf45dad5551",
+      "source_archive": "Internet Archive Wayback",
+      "source_original": "http://prometheusbrown.com:80/blog/contact/",
+      "url": "http://prometheusbrown.com/blog/contact/"
+    },
+    {
       "actual_capture": "20100903024252",
       "bytes": 22229,
       "capture_digest": "OWAMCIT23H5H75TJK77MSYK45UY4UH6Z",
@@ -27181,6 +28447,18 @@
       "source_archive": "Common Crawl",
       "source_original": "http://prometheusbrown.com/blog/the-resistance-of-philippine-cinema/",
       "url": "http://prometheusbrown.com/blog/the-resistance-of-philippine-cinema/"
+    },
+    {
+      "actual_capture": "20091128131522",
+      "bytes": 38555,
+      "capture_digest": "IAOXNRMHLWVY4X5E243FNS7WIIAT46LC",
+      "compatibility_review_required": false,
+      "edition": "prometheusbrown.com/2010",
+      "kind": "html",
+      "sha256": "002142397d9eb1e8fc443eaa7c9fa975e6b2eb0a47091bb11048e49f272c5a5e",
+      "source_archive": "Internet Archive Wayback",
+      "source_original": "http://prometheusbrown.com:80/blog/what-the-f___-is-rss/",
+      "url": "http://prometheusbrown.com/blog/what-the-f___-is-rss/"
     },
     {
       "actual_capture": "20090331211807",
@@ -28515,6 +29793,18 @@
       "url": "http://prometheusbrown.com/"
     },
     {
+      "actual_capture": "20170228164242",
+      "bytes": 1979,
+      "capture_digest": "ZW5BQBOFSYAUBQUIEJKKB5JISSFOGGZP",
+      "compatibility_review_required": false,
+      "edition": "prometheusbrown.com/2019",
+      "kind": "html",
+      "sha256": "37512ce4060895463f3f987cad40fb937500547e22be679a9fc85279a2569908",
+      "source_archive": "Common Crawl",
+      "source_original": "http://prometheusbrown.com/index.html",
+      "url": "http://prometheusbrown.com/index.html"
+    },
+    {
       "actual_capture": "20190924092604",
       "bytes": 50756,
       "capture_digest": "VYWJ6SNJUGPHNXQKV5GUIXV5AIC77QOU",
@@ -28537,6 +29827,18 @@
       "source_archive": "Internet Archive Wayback",
       "source_original": "https://www.prometheusbrown.com/new-page-2",
       "url": "http://prometheusbrown.com/new-page-2"
+    },
+    {
+      "actual_capture": "20170228164238",
+      "bytes": 5027,
+      "capture_digest": "EWD33IANXIA7KLIM7NKZBY2LNCCSMW63",
+      "compatibility_review_required": false,
+      "edition": "prometheusbrown.com/2019",
+      "kind": "html",
+      "sha256": "d16a2dcfad8cde2b283eb826776203652e9a198157dbe35a345d79aed20d7887",
+      "source_archive": "Common Crawl",
+      "source_original": "http://prometheusbrown.com/philippinecinema.html",
+      "url": "http://prometheusbrown.com/philippinecinema.html"
     },
     {
       "actual_capture": "20200719215226",
@@ -30807,6 +32109,1086 @@
       "url": "http://sabzi.co/"
     },
     {
+      "actual_capture": "20190218045613",
+      "bytes": 35869,
+      "capture_digest": "N7YPWVFYBTPVLGXNVCMQMFUQRC44BKUH",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "bba30557a2040926347703544070eca4fe76973b6cd40e12fa84389964f9685c",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/01ravenna",
+      "url": "http://sabzi.co/01ravenna"
+    },
+    {
+      "actual_capture": "20190218041012",
+      "bytes": 35857,
+      "capture_digest": "3RXZOGOVHW6WFV6UPXWQNKQQIS6CBIZ7",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "257181410cb86cf2afa5784406cd54054d59a5a097d35fcbaeb7b61b0e876a82",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/02dakota",
+      "url": "http://sabzi.co/02dakota"
+    },
+    {
+      "actual_capture": "20190218040136",
+      "bytes": 35907,
+      "capture_digest": "TBV52GV4OSSW6ASR7WVXAKTNOA62R7OY",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "04c8c4fa038b0aa9dcc4918c5769f76af4180d0ffba1634fd380f78879af7274",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/03maplewood",
+      "url": "http://sabzi.co/03maplewood"
+    },
+    {
+      "actual_capture": "20190218043457",
+      "bytes": 35893,
+      "capture_digest": "7H22LIMESFY2E2CEOGGI4IBTCFUWYBXJ",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "a5b337e53466986249ea1891f6daacafb5b7fa6734fde9e42ca94a76531b1399",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/04glorious",
+      "url": "http://sabzi.co/04glorious"
+    },
+    {
+      "actual_capture": "20190218050109",
+      "bytes": 35882,
+      "capture_digest": "SKQXZHTYJL6FH2H74YIPVYYULAT4UOOE",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "ab614da880a87ab5c0819db0d00d1392a9b2364e53e75c1ba1a341458c1ef36c",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/05tobacco1",
+      "url": "http://sabzi.co/05tobacco1"
+    },
+    {
+      "actual_capture": "20190218043512",
+      "bytes": 35882,
+      "capture_digest": "EGJHZCJHA2AEY744Q6URV4VP5Z3IOWUJ",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "52b0f41d270c40d87f112013a12dba839235aa2dd6113ae3160607185b79f08b",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/06tobacco2",
+      "url": "http://sabzi.co/06tobacco2"
+    },
+    {
+      "actual_capture": "20190218042357",
+      "bytes": 35848,
+      "capture_digest": "QDUHTWCZCUBQ2ENRDKEPSS7O2RSMUG6L",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "487e3eeebc9dcf36c7ffbce80d0398c46e67929e7bb6979208ae7b2f86dd387b",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/07poly",
+      "url": "http://sabzi.co/07poly"
+    },
+    {
+      "actual_capture": "20190218040431",
+      "bytes": 35851,
+      "capture_digest": "EJO34UGRQ6KDX6AIQ3JCL5V2BS7LKKIE",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "0715417cb61e8351c78a045d88d32925ce589850c6c59f394437652c80f39d79",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/08brief",
+      "url": "http://sabzi.co/08brief"
+    },
+    {
+      "actual_capture": "20190218045238",
+      "bytes": 35840,
+      "capture_digest": "3ASHOAHK6VLPYCXHHT3W5MKXYIO5LD4T",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "82c0a4bea33c9eb89a9508a9275e46cf0a75ed02f8730857bf5f601485c23220",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/09cine",
+      "url": "http://sabzi.co/09cine"
+    },
+    {
+      "actual_capture": "20190122043003",
+      "bytes": 40491,
+      "capture_digest": "WWRT22VK3ONY2TGKPSNVPFGSG7IDTXKJ",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "9cd0dc78af789f7123f51f1cd0519a2826f568bd79dd53d6c23f9db2614e8065",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/16th-ave-sw-taken-with-instagram",
+      "url": "http://sabzi.co/blog/16th-ave-sw-taken-with-instagram"
+    },
+    {
+      "actual_capture": "20190122043815",
+      "bytes": 39535,
+      "capture_digest": "DX4NJDPUT25HBB5BMC3TQ2TOVF7KBO5M",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "4dd18970e93f47c5f0c7b858d42e7f10d7f9a77ffc2f6b3621545da64b5158fc",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/2-25-monday-minutes-to-kill",
+      "url": "http://sabzi.co/blog/2-25-monday-minutes-to-kill"
+    },
+    {
+      "actual_capture": "20190122041133",
+      "bytes": 41119,
+      "capture_digest": "LRQMMDUD7IWW3772KD6473HWZAPOCZGE",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "50317324ada7eeb8cf529f8dee46056a664429d53dab60ed723ad755b7149e6e",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/2013/11/12/-",
+      "url": "http://sabzi.co/blog/2013/11/12/-"
+    },
+    {
+      "actual_capture": "20190122040817",
+      "bytes": 40254,
+      "capture_digest": "HDKDJQWW6S4YYJFV6DZMZWUDQFGVEPIK",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "d85e1531e04a97d025df809e6e22fcb87940bcd41641cd3ea51ff736301164e5",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/2013/7/27/skratch",
+      "url": "http://sabzi.co/blog/2013/7/27/skratch"
+    },
+    {
+      "actual_capture": "20190218041230",
+      "bytes": 40549,
+      "capture_digest": "FI4VJXS4UPPNIW5XQGOOI22TPEGCLR3W",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "b61dad263d50870b5ec1ea811bbb3100b7e227b2e187cf9a167a550f7cffd423",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/also-this-coming-soon",
+      "url": "http://sabzi.co/blog/also-this-coming-soon"
+    },
+    {
+      "actual_capture": "20190218040052",
+      "bytes": 40332,
+      "capture_digest": "HCOQS2TC5DIALYSK2KPI77FUHYNJDJEE",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "29b0ba202f1cb9dd5bf1a9a7cbd0c52643b82f2522a5dc0fa373746c0caddf3a",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/alt-artwerkz",
+      "url": "http://sabzi.co/blog/alt-artwerkz"
+    },
+    {
+      "actual_capture": "20190122051204",
+      "bytes": 39554,
+      "capture_digest": "F24AMNNWGENE6N5K26D27MDEWVWASFML",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "3f4a518bc1ed1e39793c2d7d9e24b1550b88ec83756e9ffc2b5a2c11d3891730",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/bambu-x-abzi-boxd-up",
+      "url": "http://sabzi.co/blog/bambu-x-abzi-boxd-up"
+    },
+    {
+      "actual_capture": "20190122052207",
+      "bytes": 40050,
+      "capture_digest": "PZSOCNTS67KBWSDJHKWCRXQV6BOCR6EE",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "0063d0da24906fb769232620de9c63be9cab7eba6de7a17db569e6ace0bd5c1f",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/beacon-ave",
+      "url": "http://sabzi.co/blog/beacon-ave"
+    },
+    {
+      "actual_capture": "20190122044640",
+      "bytes": 40119,
+      "capture_digest": "DECZQGRILE5GETTWCT3XSNCEIPPQ6UQQ",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "e78eace9f7132eb2f8309b41807cbb5bb870fc2ae73b9695a9717f7f09431ce1",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/bellingham",
+      "url": "http://sabzi.co/blog/bellingham"
+    },
+    {
+      "actual_capture": "20181216080230",
+      "bytes": 40556,
+      "capture_digest": "XLN2CSQQ7PVWUSKFKWNIY4IROTSY77QE",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "cdec0065a7edc48f33a8164bf1a8c926f17e2c694eab913943d6d95e92fe8091",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/bfamusic-s-laptops-bridging-the-neighborhood",
+      "url": "http://sabzi.co/blog/bfamusic-s-laptops-bridging-the-neighborhood"
+    },
+    {
+      "actual_capture": "20190122040723",
+      "bytes": 40491,
+      "capture_digest": "VXNZQFSSW6QJOOYZUVAMMVVEZROYAKUT",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "ee55eb4560c0bc1c05c6b3bf46c144f8f991a527f0404af89d3d9b3bdff4c1fe",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/bollywood-45s-taken-with-instagram",
+      "url": "http://sabzi.co/blog/bollywood-45s-taken-with-instagram"
+    },
+    {
+      "actual_capture": "20190122050820",
+      "bytes": 40722,
+      "capture_digest": "OITEB4JANE57WODHWDTUFA5G7MWQ52KF",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "4a00944212ae8fbc585f151533466a162d09d5d906323425a0de3e0dc8bdc975",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/branding-some-of-my-fav-spots-to-eat-today-taken",
+      "url": "http://sabzi.co/blog/branding-some-of-my-fav-spots-to-eat-today-taken"
+    },
+    {
+      "actual_capture": "20190122040947",
+      "bytes": 40455,
+      "capture_digest": "T7S27V7ZNOI5BKD3MAC3EWIM5AO7KXDK",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "ae091334f04017daa43b0af731a299186444e7a5e9f5d4e35beef3281357cf8e",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/breakfast-taken-with-instagram",
+      "url": "http://sabzi.co/blog/breakfast-taken-with-instagram"
+    },
+    {
+      "actual_capture": "20190122040654",
+      "bytes": 40395,
+      "capture_digest": "PTYQND7PH7HGW7XJHSDI7MD7XMQD6N77",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "41a6c3836a607a6fc3540aaf8250101bbd805bcc303234b198869d9f10eee0b3",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/click-the-photo-to-download-son",
+      "url": "http://sabzi.co/blog/click-the-photo-to-download-son"
+    },
+    {
+      "actual_capture": "20190122051431",
+      "bytes": 40145,
+      "capture_digest": "4LYPYL6XB2KD6HLIW6IBLMGZDSL2HNDK",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "da95d7530ec5ce640bc73f4e418a676cb0a19a16275872a5cf6f5fd522d0852c",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/coming-soon",
+      "url": "http://sabzi.co/blog/coming-soon"
+    },
+    {
+      "actual_capture": "20190122040839",
+      "bytes": 40150,
+      "capture_digest": "572A2NUDOTE33CNXXP4VP3S6LGY5WCBZ",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "d3455ea9275c16f13b2966184689b0aa31e669096fd571cb9e6a0d863c1c7cd4",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/coming-very-soon",
+      "url": "http://sabzi.co/blog/coming-very-soon"
+    },
+    {
+      "actual_capture": "20190122045200",
+      "bytes": 39459,
+      "capture_digest": "MCFQ77ZIENP6PG32AZ3KYWWS3GTPVF5J",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "ea1a72cb5afc4067368bbee5afd9bee2b05c92ddeaccf660af6d69b676f25a7c",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/dont-do-it-baaaby",
+      "url": "http://sabzi.co/blog/dont-do-it-baaaby"
+    },
+    {
+      "actual_capture": "20190218044821",
+      "bytes": 40606,
+      "capture_digest": "QUJCSLMGLUN34OLB7LBBHVR4OEZE3D22",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "044d9480d2108c2de0f8d8a00920e83e5e4c239a41f1fbdaa512cf0d0a307b4f",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/download",
+      "url": "http://sabzi.co/blog/download"
+    },
+    {
+      "actual_capture": "20190122040832",
+      "bytes": 55685,
+      "capture_digest": "FD2SVTR43GKWDCMYU6JI5AAMNFXYAHQR",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "bde9a832a53e6251925049dbab57fc65e9542a546629463e4b9434133e8ec2f0",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/download-as-a-west-coast-kid-i-think-i-secretly",
+      "url": "http://sabzi.co/blog/download-as-a-west-coast-kid-i-think-i-secretly"
+    },
+    {
+      "actual_capture": "20190122040820",
+      "bytes": 44232,
+      "capture_digest": "RPAWC33XVE6QSRNA7ISCG24CXFOAU3IA",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "fde3b78288e3462a83a9e5efc06a0addcf46bb35a305d92b4f2101cf80c5a437",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/download-dakota-these-instros-explore-similar",
+      "url": "http://sabzi.co/blog/download-dakota-these-instros-explore-similar"
+    },
+    {
+      "actual_capture": "20190122040716",
+      "bytes": 43334,
+      "capture_digest": "PWPOEGF3MKLWAMJOSVMM3RYUUSOHQP2R",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "02b7e461c354eca100353e0221b4e4822ba9000c99987ee11836f0089c7cf137",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/download-glorious-melancholia-2006-was-kind-of-a",
+      "url": "http://sabzi.co/blog/download-glorious-melancholia-2006-was-kind-of-a"
+    },
+    {
+      "actual_capture": "20190122040828",
+      "bytes": 40975,
+      "capture_digest": "RF6MOEPAYB5OB75W67L2UNIXGGGG62UL",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "92435b438a6d51543c2f5469e119a7f489be3a05be7c2d0788eaeff564899766",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/download-new-beat-tape-yall-now-go-party-and",
+      "url": "http://sabzi.co/blog/download-new-beat-tape-yall-now-go-party-and"
+    },
+    {
+      "actual_capture": "20190122040728",
+      "bytes": 44779,
+      "capture_digest": "5ZSYB5A45IMA6L7IJUYQOPOVC7X32Y3R",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "f77f7379eb2186441b24eec8e26efa28fccfd1b7ebf79ee8153b6dc4cbb437db",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/download-the-maplewood-playfield-a-bulk-of-these",
+      "url": "http://sabzi.co/blog/download-the-maplewood-playfield-a-bulk-of-these"
+    },
+    {
+      "actual_capture": "20190122040710",
+      "bytes": 51296,
+      "capture_digest": "TTK27IZRMMS3PRQWBAUGTMU4AW2MEV6S",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "5021e1c656ee99b41ec525cb49d82bc8b9691ee443ba4aa9e29544d69e9a526a",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/download-tobacco-1-2-like-many-college",
+      "url": "http://sabzi.co/blog/download-tobacco-1-2-like-many-college"
+    },
+    {
+      "actual_capture": "20190122041931",
+      "bytes": 38755,
+      "capture_digest": "YCXJCJJE4SUJRLUHSHJLFFVEQHWCFNMU",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "ec23c5d9e46002a1b49c780df98dc96d7c28da951e7c5f9686c680bc8f2d7673",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/duplicate-tracks-on-ravenna-fixed",
+      "url": "http://sabzi.co/blog/duplicate-tracks-on-ravenna-fixed"
+    },
+    {
+      "actual_capture": "20190122041535",
+      "bytes": 43419,
+      "capture_digest": "HQWY3UFEQWMYWY3F6LPINUDTBYPQEL7M",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "a7a53da70a246a6fcbee0c3fbb22943d66088586d711d63abb79b02b3a49ac51",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/get-it-here-naw-ruz-mobarak-its-the-first-day",
+      "url": "http://sabzi.co/blog/get-it-here-naw-ruz-mobarak-its-the-first-day"
+    },
+    {
+      "actual_capture": "20190122043652",
+      "bytes": 40481,
+      "capture_digest": "JSZNV6HAMKH5OAZKLA5TJ3EGAG4B27ZH",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "1ec70168176a705f6c623acfdbbbd375c1cd7203e35081736d5d261679203da4",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/get-the-cin-riddims-here",
+      "url": "http://sabzi.co/blog/get-the-cin-riddims-here"
+    },
+    {
+      "actual_capture": "20190122040737",
+      "bytes": 39825,
+      "capture_digest": "NYWH3P4CU5G4IFY4MFLPAMDZPTCRBKJM",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "15f0ab2f8f4c2c046107f8c6e4ce3059d02869079f9c795481d5c27f50c2ea66",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/get-this-artwork-in-your-life-support-the",
+      "url": "http://sabzi.co/blog/get-this-artwork-in-your-life-support-the"
+    },
+    {
+      "actual_capture": "20190122042302",
+      "bytes": 40419,
+      "capture_digest": "3BL7TRVPFHTYMOVKLUUR4ZD7CZ2NRBTW",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "e84bd0c72c66be58ebd29b1f9c8680a8ed89cc516fb185c4257e81898e8e1b0e",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/get-yesler-here",
+      "url": "http://sabzi.co/blog/get-yesler-here"
+    },
+    {
+      "actual_capture": "20190218044028",
+      "bytes": 38083,
+      "capture_digest": "BMCIK67XWQAGBX7R6UFG64AMRLI5QNDU",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "7b56cf1bba6c16b0ecdacedef36180be6c7a37257ca3df19a7291d5a64dcb185",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/have-you-released-the-instrumental-for-the-same-tattoos",
+      "url": "http://sabzi.co/blog/have-you-released-the-instrumental-for-the-same-tattoos"
+    },
+    {
+      "actual_capture": "20190122040643",
+      "bytes": 40551,
+      "capture_digest": "F747CMGEKB6K5RRFIK7E6KTJSDSABNZS",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "fd999629e3cf0d685d4e99c54fefb69e6b6f47799694e5dd53fa97fbe477e1e7",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/hidmo-family-reunion-taken-with-instagram",
+      "url": "http://sabzi.co/blog/hidmo-family-reunion-taken-with-instagram"
+    },
+    {
+      "actual_capture": "20190122043909",
+      "bytes": 40615,
+      "capture_digest": "KTXA3CXJMETYD7SKVMBMWSZKRB6QAYOC",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "76fd902a5468c338a75eff69ccbf45d8974e6185d470e77c48e2d36c1df3c273",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/homemade-hawt-saowse-hella-hat-taken-with",
+      "url": "http://sabzi.co/blog/homemade-hawt-saowse-hella-hat-taken-with"
+    },
+    {
+      "actual_capture": "20190122040740",
+      "bytes": 37755,
+      "capture_digest": "7RFTT4YDMN6X3LTGUMM25NANIV4IV7WW",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "ec3a4f8ce8c3f298465a7ef9ee634bd0cd22c7a5818905e285566821ff9459b0",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/how-much-would-you-charge-my-high-school-if-you-agreed",
+      "url": "http://sabzi.co/blog/how-much-would-you-charge-my-high-school-if-you-agreed"
+    },
+    {
+      "actual_capture": "20190122040704",
+      "bytes": 39595,
+      "capture_digest": "AMF4ZACSIHRKMJQEG4ZMJIRVC7LFAPH7",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "a1feccdbf44377c90f7cc1e9fd89adf7de95da54ac33383d88dca621b628889e",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/http-sabzi-bandcamp-com",
+      "url": "http://sabzi.co/blog/http-sabzi-bandcamp-com"
+    },
+    {
+      "actual_capture": "20190122052546",
+      "bytes": 40491,
+      "capture_digest": "N63CL4NAKB46UASO7LF5M6T5CN7VKU6C",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "a6cadb9b038b050c1150a4d682ce51b0d470c8c083acbd7e6f72ea9035576446",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/hung-far-low-taken-with-instagram",
+      "url": "http://sabzi.co/blog/hung-far-low-taken-with-instagram"
+    },
+    {
+      "actual_capture": "20190122044643",
+      "bytes": 37752,
+      "capture_digest": "6YPFRI3QZ2TEQURTKM4MVVZV6567SW24",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "15f3153bda5d8dcab74fd69129f37ba4acae08aaf63449d7c2e9efc0e73cad31",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/if-youre-willing-to-release-that-information-whats",
+      "url": "http://sabzi.co/blog/if-youre-willing-to-release-that-information-whats"
+    },
+    {
+      "actual_capture": "20190122040824",
+      "bytes": 37711,
+      "capture_digest": "EVRJNLTQDDBLIIXDAKYLLACG6RNP63BM",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "3b8995f8756ca69a99e4bf346c7b2b15842b3f35473fd274382e648409deb46b",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/im-not-trying-to-sound-like-a-cheap-asshole-but-why",
+      "url": "http://sabzi.co/blog/im-not-trying-to-sound-like-a-cheap-asshole-but-why"
+    },
+    {
+      "actual_capture": "20190122040802",
+      "bytes": 39804,
+      "capture_digest": "BJLNPE7IDLK45AVGPVNYMYLTK4GVRLA3",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "e79ea8a5274ca1e31a78d0456dd7df2bde62aba8ca36e075de2fbc3c4b2c00f0",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/justo-from-thephysics-lookin-all-handsome-and",
+      "url": "http://sabzi.co/blog/justo-from-thephysics-lookin-all-handsome-and"
+    },
+    {
+      "actual_capture": "20190122043447",
+      "bytes": 40600,
+      "capture_digest": "KQILZYUKU2YALUUPFDRLFJMYEPCI5DVG",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "9fbbbb386bc2d12d591da46d4605c1d38c635048558b0409f5d3095af91c8351",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/laughing-cow-smilin-at-me-taken-with-instagram",
+      "url": "http://sabzi.co/blog/laughing-cow-smilin-at-me-taken-with-instagram"
+    },
+    {
+      "actual_capture": "20190122040756",
+      "bytes": 40585,
+      "capture_digest": "4BZTZMCAVGY2FHD2MXK5CPBHKYCW5O3W",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "c19187af1424733229a0545674acc686e63de57d71b930cb8eec1d2fa3bcfb86",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/movin-outta-the-storage-unit-taken-with",
+      "url": "http://sabzi.co/blog/movin-outta-the-storage-unit-taken-with"
+    },
+    {
+      "actual_capture": "20190122041715",
+      "bytes": 40563,
+      "capture_digest": "RH4I3LXZXOWVW5V6BJO5X2NOT6PXQ4Z5",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "7fb4f99c367f75b7bfd0cf220d1abe3451162e97c0aa5b0fd42b53137e3eaf96",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/new-tape-dropping-tomorrow-taken-with",
+      "url": "http://sabzi.co/blog/new-tape-dropping-tomorrow-taken-with"
+    },
+    {
+      "actual_capture": "20190218040551",
+      "bytes": 40696,
+      "capture_digest": "XZIQCVJTKWLQQ3LNNTQMESYYINJN3OZ5",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "a53a7e71f9701688769530665a0701a47634020ccfbd3691b566695d2fab860a",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/new-tape-to-kick-off-the-month",
+      "url": "http://sabzi.co/blog/new-tape-to-kick-off-the-month"
+    },
+    {
+      "actual_capture": "20190122040807",
+      "bytes": 40287,
+      "capture_digest": "BKU2UFASRW7S44EQ5IQVBULOO7HY4FBT",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "03e4ce88aead2b5b9f8a616418cc6e5af3ef482b6ffc5b857c13ebf015b881dc",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/now-at-soundcloud-com-sabzi",
+      "url": "http://sabzi.co/blog/now-at-soundcloud-com-sabzi"
+    },
+    {
+      "actual_capture": "20190218044322",
+      "bytes": 40906,
+      "capture_digest": "M4GRSIFN7L54LYLODGC3REJZDQ4HNLF4",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "61ea906c5471ebf2c81823e0aab3cfe15d73cf270a68217b5383591d00826b84",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/owours-super-ill-van-taken-with-instagram",
+      "url": "http://sabzi.co/blog/owours-super-ill-van-taken-with-instagram"
+    },
+    {
+      "actual_capture": "20190122051454",
+      "bytes": 40570,
+      "capture_digest": "AJ62KINCQ2L3JACW7NCJA2WYEOYKEVGY",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "d0683d7eb2309082567416fc8e5d844e4bca6ed5b04ae4e57be58d9817233099",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/ph-life",
+      "url": "http://sabzi.co/blog/ph-life"
+    },
+    {
+      "actual_capture": "20190122052115",
+      "bytes": 40568,
+      "capture_digest": "4QYSA5R6DJFAIEUVTHGZMRBN2VYXVK3L",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "695448b46fd0df5fa39d8987e1a51eafe7a60ef99b41ee9963d8176fbe215f9f",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/phlaming-ph",
+      "url": "http://sabzi.co/blog/phlaming-ph"
+    },
+    {
+      "actual_capture": "20190218040141",
+      "bytes": 40381,
+      "capture_digest": "2DLA5VOITGI3L77NWD73UANNXRY2JETG",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "0b063efbd2e725e6343a82f94cd03265f70d2d1f9865d1557c8a07b83fc5366a",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/portland",
+      "url": "http://sabzi.co/blog/portland"
+    },
+    {
+      "actual_capture": "20190218041819",
+      "bytes": 40834,
+      "capture_digest": "QISWNG757IOTF3CESDZDWEO2AWFAP3H6",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "2fa7f608798b31b0a4ea3046c8cf9231ced84f2dafb4efb3356ebb13cdbd6d78",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/rainier-beanies-available-now-at-shawp-townfo-lk",
+      "url": "http://sabzi.co/blog/rainier-beanies-available-now-at-shawp-townfo-lk"
+    },
+    {
+      "actual_capture": "20190122052619",
+      "bytes": 40612,
+      "capture_digest": "6P4PWMJO6YCXVJJ4IGAYLG2AX26QXRB3",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "f5a0331e20ab9d411c75cb6cfb116cb405e15bc65634e5ae3c469f6eed16a6db",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/rainier-sticker-preview-taken-with-instagram",
+      "url": "http://sabzi.co/blog/rainier-sticker-preview-taken-with-instagram"
+    },
+    {
+      "actual_capture": "20190122040734",
+      "bytes": 40123,
+      "capture_digest": "5QMV5I4KNKPGTKSV446BLGITOTLZ3NWY",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "f7beccc55053dd96ecf0a4542b1768459ca1a4c5de857d02e1a5b2abf118dc97",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/remembering-august",
+      "url": "http://sabzi.co/blog/remembering-august"
+    },
+    {
+      "actual_capture": "20190122040835",
+      "bytes": 41544,
+      "capture_digest": "E7OHYI7PKB2D7YCSEBZOFEGK2FRPHJMV",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "7789c202a409b10affbb68fbf45ad3f6cd60ddd3cb8c92d707c097b24ec661eb",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/sabuji-1-kuruhji-mahsehyo-2-shilmahng-eh",
+      "url": "http://sabzi.co/blog/sabuji-1-kuruhji-mahsehyo-2-shilmahng-eh"
+    },
+    {
+      "actual_capture": "20190122040810",
+      "bytes": 40572,
+      "capture_digest": "XEFRUHBBX5SJIHGH3EKOZQUL25KTBR6G",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "ad6788a90b22adaa0e12e7eeee1e689b08871d172f79d572096aae2e3b7fc534",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/sea-garden-3am-tho-taken-with-instagram",
+      "url": "http://sabzi.co/blog/sea-garden-3am-tho-taken-with-instagram"
+    },
+    {
+      "actual_capture": "20190122040627",
+      "bytes": 40530,
+      "capture_digest": "IX24CHJPHPARAEJBSBJHQ6BYLANL2FN3",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "f208af08f8ca9cda3b9433f80da458e30908ba5ef378548fc2ad2dc2c88c18c2",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/sea-town-ballers-taken-with-instagram",
+      "url": "http://sabzi.co/blog/sea-town-ballers-taken-with-instagram"
+    },
+    {
+      "actual_capture": "20190122044452",
+      "bytes": 40074,
+      "capture_digest": "ADLJUNNK7SRK2SE6FL6GP7WIYZJGGSGK",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "dadc05bbda82a023768ef6c35ddf2ccc9e305ce227f2c71cc1eca6eb449a7993",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/seattle-1",
+      "url": "http://sabzi.co/blog/seattle-1"
+    },
+    {
+      "actual_capture": "20181216084514",
+      "bytes": 40071,
+      "capture_digest": "AQAED3Q2PJ3HTYPR5DVV7EEUJMLCBENN",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "470f325d83032798471712936874500c2880ed5cc2cedc5741b35a05d5f07489",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/seattle-2",
+      "url": "http://sabzi.co/blog/seattle-2"
+    },
+    {
+      "actual_capture": "20190122051831",
+      "bytes": 42521,
+      "capture_digest": "H2L65UWWT2W3MCSMUE3EDT7JHMNAAS4K",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "9c7d9882f536dc39074f4594bedfb5ecc451a7ced38d543f41bcac38b36e5ab0",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/some-local-buddies-cut-up-some-stickers-for-us",
+      "url": "http://sabzi.co/blog/some-local-buddies-cut-up-some-stickers-for-us"
+    },
+    {
+      "actual_capture": "20190218042910",
+      "bytes": 39766,
+      "capture_digest": "KXO7GTLH7NQGPSB47WDQHFXMIBEBBKSZ",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "799eb27d56fa13a5c823cabf0c083e636ef8976fb31219914c23d77c6c8e627d",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/soooooooooooookhi",
+      "url": "http://sabzi.co/blog/soooooooooooookhi"
+    },
+    {
+      "actual_capture": "20190218050646",
+      "bytes": 40750,
+      "capture_digest": "GVIFY6HKPA6UKTWTYQJ5AABPWV3PTOD4",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "0a38475383ed86909a978830ebe342ec67aa286bd3b0c22245cc986d56d1824b",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/spaceman-taken-with-instagram",
+      "url": "http://sabzi.co/blog/spaceman-taken-with-instagram"
+    },
+    {
+      "actual_capture": "20190122045242",
+      "bytes": 41126,
+      "capture_digest": "YL4T2HKCEC7TF7U5UZHREOTFTH3MIXDI",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "099eb60188ff540f51e44376333895f075c316ef3779edea9272bfff00618c62",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/spent-some-time-catching-up-on-mad-men-this-past",
+      "url": "http://sabzi.co/blog/spent-some-time-catching-up-on-mad-men-this-past"
+    },
+    {
+      "actual_capture": "20190122040623",
+      "bytes": 40738,
+      "capture_digest": "PA2YONHZPMV4UZ3VOWMZ5DVM74LWHZXN",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "23f5bcad6d1522ea19f7e9286818f91ab61a1bf9a39912fe8d2624713768c1b9",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/taiwanese-pork-baos-delishus-taken-with",
+      "url": "http://sabzi.co/blog/taiwanese-pork-baos-delishus-taken-with"
+    },
+    {
+      "actual_capture": "20190122051518",
+      "bytes": 40328,
+      "capture_digest": "NFVIOVKGBYLAAHVHKC42WJCCT67S7PB7",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "cbc5a036730db441f699b2f455f83a3f3556aa4d5484865b33d8a235df61cde8",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/taken-with-instagram",
+      "url": "http://sabzi.co/blog/taken-with-instagram"
+    },
+    {
+      "actual_capture": "20190218042948",
+      "bytes": 40397,
+      "capture_digest": "UKMO7RZ2U2HFRV3M3N35ZX222J2DBOR7",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "787943bd685b209863e93e7a12b752ae428919499d13e61f435442fa1a15e8c7",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/th-ba-11-13",
+      "url": "http://sabzi.co/blog/th-ba-11-13"
+    },
+    {
+      "actual_capture": "20190122040650",
+      "bytes": 40433,
+      "capture_digest": "4NXJM3XEXYF4SRR3TCZKFESQ6RIOVBE6",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "5a9729d680ae89c28994ba1f61a91e44a67028965edce71c04d1e3662359c0a9",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/thanh-th-o-taken-with-instagram",
+      "url": "http://sabzi.co/blog/thanh-th-o-taken-with-instagram"
+    },
+    {
+      "actual_capture": "20190122041921",
+      "bytes": 40467,
+      "capture_digest": "QXC5CF6M3G24D76JG53DH3MB43MEIWGI",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "d7623065cd20d19b4755f0cfcab2adc66f0f84f4064951cf7e1750d7ab3d3de9",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/thaswassup-taken-with-instagram",
+      "url": "http://sabzi.co/blog/thaswassup-taken-with-instagram"
+    },
+    {
+      "actual_capture": "20190218041941",
+      "bytes": 40345,
+      "capture_digest": "SJXR3CGY6NIMJHR44GMV5JT2TX5RRB4U",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "5212dd82437541fb2b8013a0fa6d3a848e8da7d3862f18a037bfcfc123df0fa9",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/the-cow",
+      "url": "http://sabzi.co/blog/the-cow"
+    },
+    {
+      "actual_capture": "20190122051507",
+      "bytes": 40518,
+      "capture_digest": "FZR2XDU27TPQOJSHTI36JSJSCNPR7YQG",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "54bae96c76f0043d1a718534f042612ccc77882d7770a44876f7a5ec78fe0293",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/the-georgefather-taken-with-instagram",
+      "url": "http://sabzi.co/blog/the-georgefather-taken-with-instagram"
+    },
+    {
+      "actual_capture": "20190122040751",
+      "bytes": 40094,
+      "capture_digest": "75DSJO5JAPJHBTMK3WC53RX3ZWQ2CWHW",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "5ce55e79b7224a2e81324c031e163045eec850e96aef35605ae0acb45cbe02ae",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/the-rooster",
+      "url": "http://sabzi.co/blog/the-rooster"
+    },
+    {
+      "actual_capture": "20190122043551",
+      "bytes": 40118,
+      "capture_digest": "FRJBL5ZIA455WGQ3SQMNV75GHEI3K5SF",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "52ab05cc79a53739aeac191a3c1586d0c4280e6315ea19fa93cf491c191f4b24",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/the-sticks",
+      "url": "http://sabzi.co/blog/the-sticks"
+    },
+    {
+      "actual_capture": "20190122042941",
+      "bytes": 40550,
+      "capture_digest": "JLWFH3GGRONUSXININTJQR6KDXFYCJ75",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "73b9c641b8e89b39ad641914fbbdf10843b6a5c997f0fcd33bf578b98782e849",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/theyre-ready-tho-taken-with-instagram",
+      "url": "http://sabzi.co/blog/theyre-ready-tho-taken-with-instagram"
+    },
+    {
+      "actual_capture": "20190218051245",
+      "bytes": 40105,
+      "capture_digest": "C62JJ66NJPYJ3A6JGHRBK5KZE75H5X3P",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "c376ffab31da41ba23a1a608e5d0c245775e39572cacfba429e6a9eb94e96b22",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/this-people-all-of-them-have-pictured-a-god-in",
+      "url": "http://sabzi.co/blog/this-people-all-of-them-have-pictured-a-god-in"
+    },
+    {
+      "actual_capture": "20190122040814",
+      "bytes": 41785,
+      "capture_digest": "Z52XY25DBRYM7M7SKOIVZPP3TW5ZVKEB",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "c430fa7653ff0b1ae489b694b3cb6c37e4c9c2da65c763cca8ae1d51e512469a",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/townfolk-instro-chronicz-numero-ocho-between",
+      "url": "http://sabzi.co/blog/townfolk-instro-chronicz-numero-ocho-between"
+    },
+    {
+      "actual_capture": "20190122040744",
+      "bytes": 40060,
+      "capture_digest": "5RR43RGI3W4FORVNGXWSGLDPC7QKO63G",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "fc3e52878321008656655c0a91adb5f2483c1af6a7c8923b39d8eb65303f470c",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/tuesday",
+      "url": "http://sabzi.co/blog/tuesday"
+    },
+    {
+      "actual_capture": "20190122040748",
+      "bytes": 40692,
+      "capture_digest": "BOFFMN7SNM77QDRIENY62IGJY5D3AMMJ",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "735c4639d38e823723b5431071722e4df4ec7dc738c2171d20a2ec22a3095447",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/update-the-ph-life-project-moniker-has-been",
+      "url": "http://sabzi.co/blog/update-the-ph-life-project-moniker-has-been"
+    },
+    {
+      "actual_capture": "20190122040759",
+      "bytes": 40388,
+      "capture_digest": "NMWDP5JS2BLJMFSAA4FBYALKRYT4JZUY",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "e38320e2992988ceccb142a7c3921264f806211744e05e9ac43914937c9a4ba6",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/vi-t-tv-folk-holla-holla-holla",
+      "url": "http://sabzi.co/blog/vi-t-tv-folk-holla-holla-holla"
+    },
+    {
+      "actual_capture": "20181216080201",
+      "bytes": 40486,
+      "capture_digest": "GNT7EGBQERFAIQETPZKB4UCORMVUXSEI",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "51f0b78e7b73551b9320c4b04883c684b3e332d3212036f01838e1a11abf6fcf",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/we-need-more-tchallah-modeling-in-our-lives",
+      "url": "http://sabzi.co/blog/we-need-more-tchallah-modeling-in-our-lives"
+    },
+    {
+      "actual_capture": "20190122043310",
+      "bytes": 37762,
+      "capture_digest": "7C4LDA47REE7VJ7VHYAWDGHEVKI647TA",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "2a082ee6028ac07e7e4f0d804ce6b3e1699776a2a474faae4a0e1783d94efb92",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/what-do-you-think-was-the-most-crucial-component-of",
+      "url": "http://sabzi.co/blog/what-do-you-think-was-the-most-crucial-component-of"
+    },
+    {
+      "actual_capture": "20190122040631",
+      "bytes": 37442,
+      "capture_digest": "XTC2CBMAIHTOC7I4HWLFCS2DBJ7DLOBX",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "fe5bde416280e6bdd1288ffa1f3998afd5e2988c9f765f838aa4596ef5d306ec",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/why-dont-you-rap",
+      "url": "http://sabzi.co/blog/why-dont-you-rap"
+    },
+    {
+      "actual_capture": "20190122043701",
+      "bytes": 39819,
+      "capture_digest": "E34P2ZCI6IGPNB36RBYAJYCXH5FWIFA6",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "71cfbbd88d82f62f277383728a52f415cd050581366b059a2e13e655683079b7",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/you-guys-seemed-to-like-to-the-last-one-so-here",
+      "url": "http://sabzi.co/blog/you-guys-seemed-to-like-to-the-last-one-so-here"
+    },
+    {
+      "actual_capture": "20190218050944",
+      "bytes": 41303,
+      "capture_digest": "ZGWXMHUIYOJOJL2Y5TDXXROH6O64WJTU",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "e88a3bcf8dffdd90c348107201a3f83826cdbf866dee52de3550b410d8bc9543",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/blog/your-boy-paolo-esco-paolo-escobar-with-the-ill",
+      "url": "http://sabzi.co/blog/your-boy-paolo-esco-paolo-escobar-with-the-ill"
+    },
+    {
+      "actual_capture": "20190218040114",
+      "bytes": 35856,
+      "capture_digest": "UEF3ROLINXLK7KZ6C7H57OXLCVUVRJ64",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "45774e875a36786e59381a39541f6861e2dcd822412898cb0d4dc3d6d47a6818",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/delridge",
+      "url": "http://sabzi.co/delridge"
+    },
+    {
+      "actual_capture": "20190218045042",
+      "bytes": 35862,
+      "capture_digest": "EXWTNTE2X3CPL2ZBPM5G46TANAS5MLAR",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "66553728449d2547b28d5cb15ccf6c6ca931d813819cc7029862b90de33cf79d",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/exit-163a",
+      "url": "http://sabzi.co/exit-163a"
+    },
+    {
       "actual_capture": "20190923132015",
       "bytes": 44198,
       "capture_digest": "IJZATWFE3BKYTCPTIYCIEK27QXWP23YY",
@@ -30817,6 +33199,66 @@
       "source_archive": "Internet Archive Wayback",
       "source_original": "http://sabzi.co/holla",
       "url": "http://sabzi.co/holla"
+    },
+    {
+      "actual_capture": "20190218040133",
+      "bytes": 37581,
+      "capture_digest": "A4JBZLVFVP7SYUC7KXVTKN3J5N44K52F",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "c9af6f6e31313c0feb5610f09cf0f6aa9257f35035e1b1020cc8554c4278d3a0",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/index",
+      "url": "http://sabzi.co/index"
+    },
+    {
+      "actual_capture": "20190218040129",
+      "bytes": 35884,
+      "capture_digest": "JKVNS7JNFQTSO3GPSC6HKDQ5ZIYMCHSP",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "417af490cf05f3444bb9d5970a71a18da0a24feb900742935225e19e02d8aa42",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/mythical",
+      "url": "http://sabzi.co/mythical"
+    },
+    {
+      "actual_capture": "20190218041049",
+      "bytes": 35868,
+      "capture_digest": "TXTBKFDMHQSQPLDFBGYQ7LJI4VIIBIU5",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "e89b4a93733354b0862882d99fbbb453904c9efe1fd4d57e0af9b67c9dcf2b7d",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/parthenia",
+      "url": "http://sabzi.co/parthenia"
+    },
+    {
+      "actual_capture": "20190218045443",
+      "bytes": 39933,
+      "capture_digest": "EZLCXSHN3M2MDC6DO4K6LJJXURYIFNME",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "9221e2fb1eabeb01013b4038f11a3b05979ed89f834bcc04b6d297699f0ce474",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/pho99",
+      "url": "http://sabzi.co/pho99"
+    },
+    {
+      "actual_capture": "20190218040119",
+      "bytes": 35844,
+      "capture_digest": "BMO7IZTB42CFPVWWMTZ7LXDGZOFCKMHC",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "964b4e04fcc2fbacd3ddcc96c55b6a31c8d8a021e2ff51852886825a4a811eac",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/rainier",
+      "url": "http://sabzi.co/rainier"
     },
     {
       "actual_capture": "20190923131934",
@@ -30865,6 +33307,30 @@
       "source_archive": "Internet Archive Wayback",
       "source_original": "http://sabzi.co/shop/ph-package",
       "url": "http://sabzi.co/shop/ph-package"
+    },
+    {
+      "actual_capture": "20190218040104",
+      "bytes": 35889,
+      "capture_digest": "ONWNIOIB7JTMGZ3Q7ODOXW2CIT7U4VHF",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "9d9b38029677421eb27a5355e838e42625786eabb8422f866a70f06e29db8693",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/the-w-ds",
+      "url": "http://sabzi.co/the-w-ds"
+    },
+    {
+      "actual_capture": "20190218042328",
+      "bytes": 35832,
+      "capture_digest": "CPAD4RGXD4FCV3DWPRJW5VQ6AMYZVJNT",
+      "compatibility_review_required": false,
+      "edition": "sabzi.co/2019",
+      "kind": "html",
+      "sha256": "a801fd4d7b9ec4eeac36cd4cf7303cc2dc7d06466c00ffb52fe552c09cf5a84f",
+      "source_archive": "Common Crawl",
+      "source_original": "http://sabzi.co/yesler",
+      "url": "http://sabzi.co/yesler"
     },
     {
       "actual_capture": "20200315052520",
@@ -31301,5 +33767,5 @@
       "url": "http://prometheusbrown.com/"
     }
   ],
-  "unique_sha256": 729
+  "unique_sha256": 866
 }

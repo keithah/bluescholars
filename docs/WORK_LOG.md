@@ -1072,3 +1072,11 @@ Recovered 72 previously missing HTML pages from Common Crawl WARC records: 34 bl
 Fixed the artist-site and Mass Line spam filters, which matched "cialis" inside "socialist", "socialism" and "Socialisme" and so rejected genuine political posts. Spam terms now match whole words only, in `restore/spam.py`, with regression tests. Wayback and the Common Crawl index both refused connections from this IP partway through the pass. False connection-failure records were removed, and the remaining work stays queued.
 
 356 tests passed. The `/bluescholars/` candidate build has 1,147 recovered pages (previously 1,108). The offline check errors are confined to `206proof/`, caused by its ignored raw files missing from this worktree. Report: `docs/recovery-report/COMMONCRAWL_PAGES_2026-11-01.md`. Evidence: `recovery/batches/2026-11-01-commoncrawl-pages/`. Review flags are unchanged.
+
+## 2026-11-01 — second Common Crawl and Wayback pass
+
+Answered all 614 failed Common Crawl index queries from the raw `cluster.idx`/CDX shard files on `data.commoncrawl.org` (`scripts/commoncrawl_cluster_scan.py`), because the index server refused this IP. The same method searched the hosting alias and four MySpace profiles. All 1,290 queries finished: 368 with rows, 922 empty.
+
+Recovered 97 Sabzi pages (2019 edition), 2 Prometheus Brown pages, 4 bluescholars.com pages, 1 LiveJournal thread and 15 MySpace revisions (8 complete) from Common Crawl. From Wayback, recovered 40 Prometheus Brown pages and 3 images, including all ten 2009 pages the old spam filter had excluded. Also recovered 22 LiveJournal pages and a stylesheet. The bluescholars.com Wayback queue gave 1 page in 130: the rest have only 404 captures or none.
+
+356 tests passed. The candidate build has 1,171 recovered pages; check errors remain confined to `206proof/` (worktree environment). Sabzi build-620 stylesheet parts are unavailable in both archives. Report: `docs/recovery-report/COMMONCRAWL_PAGES_2026-11-01.md`. Review flags unchanged.

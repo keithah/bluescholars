@@ -52,3 +52,45 @@ Run main-state recovery from the main checkout, not from a worktree that links t
 ## Verification
 
 All 356 tests pass. The `/bluescholars/` candidate build succeeded with 1,147 recovered Blue Scholars pages; the previous build had 1,108. The new pages render, for example `/2009/jean-quan-from-cal-activist-to-mayor-of-oakland/` and `/prometheusbrown/2010/blog/2009/01/free-hawaii/`. The offline check reported 5,354 errors, all under `206proof/`. They come from this worktree's environment: its ignored `recovery/206proof/raw/` has 4 of the 6,744 files present in the main checkout. They are not caused by this change, and no other area had check errors. No human visual review was done. `visual_fidelity_verified` and `publish_approved` remain false.
+
+## Second pass — November 1, 2026 (evening)
+
+The Internet Archive and the Common Crawl index accepted connections again at 18:18 UTC. This pass continued from the resume list above.
+
+### Common Crawl without the index server
+
+The Common Crawl index server (`index.commoncrawl.org`) soon refused this IP again. The 614 failed collection/domain queries were therefore answered from Common Crawl's raw index files on `data.commoncrawl.org`. `scripts/commoncrawl_cluster_scan.py` binary-searches each collection's `cluster.idx` with byte-range requests, then fetches only the compressed CDX blocks that can contain a domain. On two pairs the index API had already answered (`CC-MAIN-2009-2010|prometheusbrown.com`, 92 rows; `CC-MAIN-2013-20|bluescholars.com`, 78 rows), it returned the same rows.
+
+All 614 pairs completed. The same method then queried every collection for five more keys: the hosting alias `02cd02a.netsolhost.com` and the MySpace profiles `bluescholars`, `prometheusbrown`, `sabzi` and `masslinemedia`. Of 1,290 collection/key queries, 368 returned rows and 922 returned none; none failed. Every outcome is in `cc-index-scan.json`.
+
+Recovered from those rows (WARC records listed in `cc-warc-fetch-2.json`):
+
+- **Sabzi: 97 pages** added to the 2019 Squarespace edition. These are the beat-tape pages (01RAVENNA through 09CINE, DELRIDGE, EXIT163A, MYTHICAL, PARTHENIA, PHO99, RAINIER, YESLER, the wøøds) and the blog posts, including the beat-tape download notes, "duplicate tracks on RAVENNA fixed!", SKRATCH and the Instagram posts. Captures are from September 2018 to February 2019, before the edition's October 2019 homepage. The latest complete capture of each page was used.
+- **Prometheus Brown: 2 pages** (`index.html` and "The Resistance of Philippine Cinema", February 2017) added to the 2019 edition.
+- **bluescholars.com: 4 pages** from `CC-MAIN-2012`: "NEW TRACK: Blue Scholars 'Summertime in the SEA'", post-index pages 15 and 69, and one Loft Honolulu photoset attachment page. Two of them were previously marked failed in the Wayback state.
+- **LiveJournal: 1 comment thread** (`16015.html?thread=49807`, 2017), previously failed in Wayback.
+- **MySpace: 15 profile revisions** (bluescholars ×10, masslinemedia ×3, sabzi ×2; 2008–2013), added to `recovery/wayback-versions/manifest.json` with `source_archive: "Common Crawl"`. 8 are complete. The two July 2008 bluescholars records carry the same content digests as the two Wayback captures that failed gzip decoding. Common Crawl stored them truncated at 131,073 bytes, so they are flagged `complete_html: false` and cross-referenced from the failure records.
+
+Not used:
+- 8 Prometheus Brown 2008 post URLs captured in April 2020: each is a provider error page.
+- `masslinemedia.com/smf/` topics 132 and 517 (2016–2017): each is a 1,556-byte JavaScript cookie check, not a forum page.
+- The later German jewelry pages on `masslinemedia.com`, and a 2026 parked `sabzi.co/lander` page.
+- The hosting-alias rows were all already recovered.
+
+### Wayback
+
+- **Prometheus Brown: 40 pages and 3 images** (`wayback-artist-retry.json`). With the whole-word spam filter, all ten 2009 pages wrongly excluded before were recovered: "TRAILER: Socialisme", "AOKI: World Premiere", "Pacquiao-Cotto 24/7", "Humpday", "Objectified", "Capitalism: A Love Story", "Hanyo", "Sonicsgate", "Photos: Minneapolis" and "TRAILER: Wapakman". The 2010 edition gained 30 pages, mostly the 2008–2010 monthly archives plus the contact page, "What the f___ is RSS?", "The Murder of Fred Hampton Revisited" and "Mga Kababayan (tribute to Francis M)". This retry skipped the edition's other known failures (mostly dead image hosts).
+- **LiveJournal: 22 pages and 1 stylesheet**: the profile, friends lists and filtered views, memories, and 15 reply pages from entries 16954 and 17222 (October 2011). Three later captures (2025) are marked `needs_review`.
+- **bluescholars.com:** 130 queued page URLs were tried, and one was recovered: a 2023 capture of the "Coffee and Snow 2" video post, marked `needs_review`. Most of the others were malformed URLs with Tumblr markup inside the path, or real post URLs whose only captures are HTTP 404 responses. The exact URL-index query found no other captures. Outcomes are in `wayback-pages-pass.json`.
+
+Wayback refused connections twice more during this pass. The first time came after about 20 requests at a 5-second interval; the second came after about 50 at an 8-second interval. Each time the guarded runner stopped and left the work queued; no false failure records were written.
+
+### Gaps
+
+- The new Sabzi pages link four `site.css?…part=N` stylesheets of Squarespace build `620-05142015`. Neither Common Crawl nor Wayback has those parts; Wayback has only the combined `site.css` of that build (2023). The pages build and pass the check, but they will lack the site styling offline. The existing 2019 pages use builds 621 and 622, which are recovered.
+- Mass Line: the two 2007 forum captures excluded by the old filter were not retried in this pass.
+- About 120 real bluescholars.com post and attachment URLs remain queued or failed with no usable capture in Wayback or Common Crawl.
+
+### Verification
+
+All 356 tests pass. The `/bluescholars/` candidate build succeeded with 1,171 recovered pages (1,147 after the first pass). Spot-checked built pages include `/prometheusbrown/2009/blog/2009/11/aoki-world-premiere/`, `/prometheusbrown/2010/blog/contact/` and `/sabzi/2019/blog/seattle-1/`. The candidate check again reported 5,354 errors, all under `206proof/`, for the worktree environment reason given above. No human visual review was done. `visual_fidelity_verified` and `publish_approved` remain false.

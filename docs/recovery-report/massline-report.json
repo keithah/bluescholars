@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-10-19T20:30:37.329254+00:00",
+  "generated_at": "2026-11-02T04:15:08.870572+00:00",
   "index_rows": 7121,
   "urlkey_rows": 5356,
   "eligible_rows": 5207,
-  "recovered": 4742,
+  "recovered": 4744,
   "homepage_variants": 5,
-  "failed": 473,
+  "failed": 474,
   "skipped": [],
-  "alternate_source_versions_preserved": 1215,
+  "alternate_source_versions_preserved": 1260,
   "remaining": 0,
   "complete": true,
-  "batch_attempted": 988,
+  "batch_attempted": 5,
   "source_period_end": "2009-08-31",
   "resume": "python -m restore massline-recover --max-files 250 --delay 0.4",
   "coverage_note": "The uncollapsed status-200 CDX query is checkpointed and complete for this domain pattern (7,121 capture events). This exhausts the returned query, not other archives, blocked responses, or unqueried subdomains.",
@@ -112,12 +112,12 @@
     "cooldown_until": null
   },
   "resources": {
-    "html": 4419,
+    "html": 4421,
     "css": 6,
     "images": 313,
     "media": 4,
     "homepage_versions": 5,
-    "bytes": 208406758
+    "bytes": 208457358
   },
   "failures": [
     {
@@ -2550,17 +2550,6 @@
       "source": "https://web.archive.org/web/20071019145644id_/http://masslinemedia.com/smf/index.php?action=;topic=3335.0;prev_next=next",
       "status": "failed",
       "error": "ValueError: Expected a full HTML document"
-    },
-    {
-      "source_url": "http://masslinemedia.com/smf/index.php?action=printpage;topic=3335.0",
-      "canonical_url": "http://masslinemedia.com/smf/index.php?action=printpage;topic=3335.0",
-      "timestamp": "20071019145656",
-      "mimetype": "text/html",
-      "kind": "html",
-      "cdx_length": "3210",
-      "source": "https://web.archive.org/web/20071019145656id_/http://masslinemedia.com/smf/index.php?action=printpage;topic=3335.0",
-      "status": "failed",
-      "error": "ValueError: Captured page is spam or a parked-domain response"
     },
     {
       "source_url": "http://masslinemedia.com/smf/index.php?topic=3335.msg37468",
@@ -5071,17 +5060,6 @@
       "error": "ValueError: Expected a full HTML document"
     },
     {
-      "source_url": "http://masslinemedia.com/smf/index.php?action=profile;u=77;sa=showPosts",
-      "canonical_url": "http://masslinemedia.com/smf/index.php?action=profile;u=77;sa=showPosts",
-      "timestamp": "20071020073728",
-      "mimetype": "text/html",
-      "kind": "html",
-      "cdx_length": "11999",
-      "source": "https://web.archive.org/web/20071020073728id_/http://masslinemedia.com/smf/index.php?action=profile;u=77;sa=showPosts",
-      "status": "failed",
-      "error": "ValueError: Captured page is spam or a parked-domain response"
-    },
-    {
       "source_url": "http://masslinemedia.com/smf/index.php?action=profile;u=740;sa=statPanel",
       "canonical_url": "http://masslinemedia.com/smf/index.php?action=profile;u=740;sa=statPanel",
       "timestamp": "20071020075957",
@@ -5322,17 +5300,50 @@
       "source": "https://web.archive.org/web/20070916144203id_/http://masslinemedia.com:80/cal/eventform.php?",
       "status": "failed",
       "error": "ValueError: Expected a full HTML document"
+    },
+    {
+      "source_url": "http://masslinemedia.com:80/smf/index.php?topic=3648.new",
+      "canonical_url": "http://masslinemedia.com/smf/index.php?topic=3648.new",
+      "timestamp": "20080225065842",
+      "mimetype": "text/html",
+      "kind": "html",
+      "cdx_length": "330",
+      "source": "https://web.archive.org/web/20080225065842id_/http://masslinemedia.com:80/smf/index.php?topic=3648.new",
+      "status": "failed",
+      "error": "ValueError: Expected a full HTML document"
+    },
+    {
+      "source_url": "http://masslinemedia.com:80/smf/index.php?topic=4185.new",
+      "canonical_url": "http://masslinemedia.com/smf/index.php?topic=4185.new",
+      "timestamp": "20080319014205",
+      "mimetype": "text/html",
+      "kind": "html",
+      "cdx_length": "330",
+      "source": "https://web.archive.org/web/20080319014205id_/http://masslinemedia.com:80/smf/index.php?topic=4185.new",
+      "status": "failed",
+      "error": "ValueError: Expected a full HTML document"
+    },
+    {
+      "source_url": "http://masslinemedia.com:80/smf/index.php?action=profile;u=2691",
+      "canonical_url": "http://masslinemedia.com/smf/index.php?action=profile;u=2691",
+      "timestamp": "20071222124238",
+      "mimetype": "text/html",
+      "kind": "html",
+      "cdx_length": "331",
+      "source": "https://web.archive.org/web/20071222124238id_/http://masslinemedia.com:80/smf/index.php?action=profile;u=2691",
+      "status": "failed",
+      "error": "ValueError: Expected a full HTML document"
     }
   ],
   "capture_variants": {
     "discovered": 5276,
-    "already_recovered": 4780,
-    "previously_failed": 496,
-    "processed": 0,
+    "already_recovered": 4782,
+    "previously_failed": 491,
+    "processed": 3,
     "downloaded": 0,
     "reused_by_digest": 0,
-    "failed_this_batch": 0,
-    "failed": 496,
+    "failed_this_batch": 3,
+    "failed": 576,
     "remaining": 0,
     "complete": true,
     "resume": "python -m restore massline-variants --max-files 250 --delay 0.4"
@@ -7870,17 +7881,6 @@
       "error": "ValueError: Expected a full HTML document"
     },
     {
-      "source_url": "http://masslinemedia.com/smf/index.php?action=printpage;topic=3335.0",
-      "canonical_url": "http://masslinemedia.com/smf/index.php?action=printpage;topic=3335.0",
-      "timestamp": "20071019145656",
-      "mimetype": "text/html",
-      "kind": "html",
-      "cdx_length": "3210",
-      "source": "https://web.archive.org/web/20071019145656id_/http://masslinemedia.com/smf/index.php?action=printpage;topic=3335.0",
-      "status": "failed",
-      "error": "ValueError: Captured page is spam or a parked-domain response"
-    },
-    {
       "source_url": "http://masslinemedia.com/smf/index.php?topic=3335.msg37468",
       "canonical_url": "http://masslinemedia.com/smf/index.php?topic=3335.msg37468",
       "timestamp": "20071019145709",
@@ -9498,17 +9498,6 @@
       "error": "ValueError: Expected a full HTML document"
     },
     {
-      "source_url": "http://masslinemedia.com/smf/index.php?action=profile;u=77;sa=showPosts",
-      "canonical_url": "http://masslinemedia.com/smf/index.php?action=profile;u=77;sa=showPosts",
-      "timestamp": "20071020073728",
-      "mimetype": "text/html",
-      "kind": "html",
-      "cdx_length": "11999",
-      "source": "https://web.archive.org/web/20071020073728id_/http://masslinemedia.com/smf/index.php?action=profile;u=77;sa=showPosts",
-      "status": "failed",
-      "error": "ValueError: Captured page is spam or a parked-domain response"
-    },
-    {
       "source_url": "http://masslinemedia.com/smf/index.php?topic=3311.msg37301",
       "canonical_url": "http://masslinemedia.com/smf/index.php?topic=3311.msg37301",
       "timestamp": "20071020073830",
@@ -10763,39 +10752,6 @@
       "error": "ContentDecodingError: ('Received response with content-encoding: gzip, but failed to decode it.', error('Error -3 while decompressing data: incorrect header check'))"
     },
     {
-      "source_url": "http://masslinemedia.com:80/smf/index.php?",
-      "canonical_url": "http://masslinemedia.com/smf/index.php",
-      "timestamp": "20090407080655",
-      "mimetype": "text/html",
-      "kind": "html",
-      "cdx_length": "3869",
-      "source": "https://web.archive.org/web/20090407080655id_/http://masslinemedia.com:80/smf/index.php?",
-      "status": "failed",
-      "error": "ValueError: Captured page is spam or a parked-domain response"
-    },
-    {
-      "source_url": "http://masslinemedia.com:80/smf/",
-      "canonical_url": "http://masslinemedia.com/smf/",
-      "timestamp": "20090407081936",
-      "mimetype": "text/html",
-      "kind": "html",
-      "cdx_length": "3872",
-      "source": "https://web.archive.org/web/20090407081936id_/http://masslinemedia.com:80/smf/",
-      "status": "failed",
-      "error": "ValueError: Captured page is spam or a parked-domain response"
-    },
-    {
-      "source_url": "http://masslinemedia.com:80/smf/",
-      "canonical_url": "http://masslinemedia.com/smf/",
-      "timestamp": "20090524040017",
-      "mimetype": "text/html",
-      "kind": "html",
-      "cdx_length": "3944",
-      "source": "https://web.archive.org/web/20090524040017id_/http://masslinemedia.com:80/smf/",
-      "status": "failed",
-      "error": "ValueError: Captured page is spam or a parked-domain response"
-    },
-    {
       "source_url": "http://masslinemedia.com:80/smf/index.php",
       "canonical_url": "http://masslinemedia.com/smf/index.php",
       "timestamp": "20070314220123",
@@ -11696,6 +11652,39 @@
       "source": "https://web.archive.org/web/20071018164710id_/http://masslinemedia.com/smf/index.php?topic=488;prev_next=next",
       "status": "failed",
       "error": "ValueError: Expected a full HTML document"
+    },
+    {
+      "source_url": "http://masslinemedia.com:80/smf/index.php?",
+      "canonical_url": "http://masslinemedia.com/smf/index.php",
+      "timestamp": "20090407080655",
+      "mimetype": "text/html",
+      "kind": "html",
+      "cdx_length": "3869",
+      "source": "https://web.archive.org/web/20090407080655id_/http://masslinemedia.com:80/smf/index.php?",
+      "status": "failed",
+      "error": "ValueError: Captured page is spam or a parked-domain response"
+    },
+    {
+      "source_url": "http://masslinemedia.com:80/smf/",
+      "canonical_url": "http://masslinemedia.com/smf/",
+      "timestamp": "20090407081936",
+      "mimetype": "text/html",
+      "kind": "html",
+      "cdx_length": "3872",
+      "source": "https://web.archive.org/web/20090407081936id_/http://masslinemedia.com:80/smf/",
+      "status": "failed",
+      "error": "ValueError: Captured page is spam or a parked-domain response"
+    },
+    {
+      "source_url": "http://masslinemedia.com:80/smf/",
+      "canonical_url": "http://masslinemedia.com/smf/",
+      "timestamp": "20090524040017",
+      "mimetype": "text/html",
+      "kind": "html",
+      "cdx_length": "3944",
+      "source": "https://web.archive.org/web/20090524040017id_/http://masslinemedia.com:80/smf/",
+      "status": "failed",
+      "error": "ValueError: Captured page is spam or a parked-domain response"
     }
   ]
 }

@@ -1064,3 +1064,25 @@ Restored stylesheet references on 47 journal pages by fixing malformed nested-li
 Retried the old `/users/bluescholars/` prefix successfully: three CDX rows, including two actual December 2005 HTML captures. Recovered the six-entry homepage and the Freewheelin/EP post with comments, plus four source-linked platform stylesheets and nine image responses. Preserved the promotional graphic's December 24 date and one userpic's May 2006 date. Three missing artwork exact indexes completed with zero rows; failed replays remain documented.
 
 Added old-account discovery/identity/routing, 2005 timeline support, and per-entry reading views sourced from older front pages. Restricted entry selection to its own permalink/header controls so body cross-links cannot substitute the wrong article. Original inline styling is retained; six older entries are separately browseable with source notices. Full suite after review fixes: 351 passed. Browser/build/deployment evidence is recorded in `docs/recovery-report/LIVEJOURNAL_2005_2026-10-28.md`. Global review flags remain unchanged.
+
+## 2026-11-01 — Common Crawl page recovery and spam-filter fix
+
+Recovered 72 previously missing HTML pages from Common Crawl WARC records: 34 bluescholars.com posts and archive pages from May–June 2013 (`CC-MAIN-2013-20`), and 38 Prometheus Brown blog pages (37 added to the 2010 edition, one to the 2009 edition; `CC-MAIN-2009-2010`). Truncated March 2010 copies were not used. Also recovered 13 Blue Scholars WordPress images from Wayback.
+
+Fixed the artist-site and Mass Line spam filters, which matched "cialis" inside "socialist", "socialism" and "Socialisme" and so rejected genuine political posts. Spam terms now match whole words only, in `restore/spam.py`, with regression tests. Wayback and the Common Crawl index both refused connections from this IP partway through the pass. False connection-failure records were removed, and the remaining work stays queued.
+
+356 tests passed. The `/bluescholars/` candidate build has 1,147 recovered pages (previously 1,108). The offline check errors are confined to `206proof/`, caused by its ignored raw files missing from this worktree. Report: `docs/recovery-report/COMMONCRAWL_PAGES_2026-11-01.md`. Evidence: `recovery/batches/2026-11-01-commoncrawl-pages/`. Review flags are unchanged.
+
+## 2026-11-01 — second Common Crawl and Wayback pass
+
+Answered all 614 failed Common Crawl index queries from the raw `cluster.idx`/CDX shard files on `data.commoncrawl.org` (`scripts/commoncrawl_cluster_scan.py`), because the index server refused this IP. The same method searched the hosting alias and four MySpace profiles. All 1,290 queries finished: 368 with rows, 922 empty.
+
+Recovered 97 Sabzi pages (2019 edition), 2 Prometheus Brown pages, 4 bluescholars.com pages, 1 LiveJournal thread and 15 MySpace revisions (8 complete) from Common Crawl. From Wayback, recovered 40 Prometheus Brown pages and 3 images, including all ten 2009 pages the old spam filter had excluded. Also recovered 22 LiveJournal pages and a stylesheet. The bluescholars.com Wayback queue gave 1 page in 130: the rest have only 404 captures or none.
+
+356 tests passed. The candidate build has 1,171 recovered pages; check errors remain confined to `206proof/` (worktree environment). Sabzi build-620 stylesheet parts are unavailable in both archives. Report: `docs/recovery-report/COMMONCRAWL_PAGES_2026-11-01.md`. Review flags unchanged.
+
+## 2026-11-02 — third Wayback pass
+
+Recovered 3 more LiveJournal reply pages (entry 17222) from Wayback at an 8-second interval. Retried the Mass Line captures the old substring spam filter had rejected. The two 2007 forum pages (the topic 3335 print view and member u=77's posts) are genuine and are now recovered. The three 2009 `/smf/` captures still match whole-word spam terms and remain excluded.
+
+356 tests passed. The candidate build has 1,174 recovered pages; check errors remain confined to `206proof/`. Evidence: `recovery/batches/2026-11-01-commoncrawl-pages/wayback-third-pass.json`. Review flags unchanged.

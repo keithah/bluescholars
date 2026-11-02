@@ -20,6 +20,7 @@ import requests
 
 from .archive import ArchiveClient, parse_cdx, validate_payload
 from .discover import discover_css
+from .spam import contains_spam_terms
 from .redact import public_credential_fields, redact_public_credentials
 from .svg import sanitize_svg
 from .urls import capture_from, kind_for
@@ -430,8 +431,7 @@ def _is_compromised_html(body: bytes) -> bool:
     soup = BeautifulSoup(body, "html.parser")
     title = soup.title.get_text(" ", strip=True).lower() if soup.title else ""
     text = " ".join(soup.get_text(" ", strip=True).lower().split())[:12000]
-    spam_terms = ("cialis", "viagra", "levitra", "phentermine", "online pharmacy", "casino bonus")
-    return any(term in title or term in text[:3000] for term in spam_terms)
+    return contains_spam_terms(title) or contains_spam_terms(text[:3000])
 
 
 def _discover_artist_links(body: bytes, url: str, domain: str) -> list[tuple[str, str]]:

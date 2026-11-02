@@ -1080,3 +1080,9 @@ Answered all 614 failed Common Crawl index queries from the raw `cluster.idx`/CD
 Recovered 97 Sabzi pages (2019 edition), 2 Prometheus Brown pages, 4 bluescholars.com pages, 1 LiveJournal thread and 15 MySpace revisions (8 complete) from Common Crawl. From Wayback, recovered 40 Prometheus Brown pages and 3 images, including all ten 2009 pages the old spam filter had excluded. Also recovered 22 LiveJournal pages and a stylesheet. The bluescholars.com Wayback queue gave 1 page in 130: the rest have only 404 captures or none.
 
 356 tests passed. The candidate build has 1,171 recovered pages; check errors remain confined to `206proof/` (worktree environment). Sabzi build-620 stylesheet parts are unavailable in both archives. Report: `docs/recovery-report/COMMONCRAWL_PAGES_2026-11-01.md`. Review flags unchanged.
+
+## 2026-11-02 — third Wayback pass
+
+Recovered 3 more LiveJournal reply pages (entry 17222) from Wayback at an 8-second interval. Retried the Mass Line captures the old substring spam filter had rejected. The two 2007 forum pages (the topic 3335 print view and member u=77's posts) are genuine and are now recovered. The three 2009 `/smf/` captures still match whole-word spam terms and remain excluded.
+
+356 tests passed. The candidate build has 1,174 recovered pages; check errors remain confined to `206proof/`. Evidence: `recovery/batches/2026-11-01-commoncrawl-pages/wayback-third-pass.json`. Review flags unchanged.

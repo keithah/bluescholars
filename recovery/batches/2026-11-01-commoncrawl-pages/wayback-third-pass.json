@@ -1,0 +1,127 @@
+{
+  "generated_at": "2026-11-02",
+  "pacing_seconds": 8,
+  "livejournal_wayback": [
+    {
+      "url": "http://bluescholars.livejournal.com/2007/",
+      "status": "queued",
+      "actual_capture": null,
+      "sha256": null,
+      "reason": "Untried capture dates or exact-URL index pages remain"
+    },
+    {
+      "url": "http://bluescholars.livejournal.com/2007/10/",
+      "status": "failed",
+      "actual_capture": null,
+      "sha256": null,
+      "reason": "All indexed capture dates failed validation or retrieval"
+    },
+    {
+      "url": "http://bluescholars.livejournal.com/2007/10/04/",
+      "status": "queued",
+      "actual_capture": null,
+      "sha256": null,
+      "reason": "Untried capture dates or exact-URL index pages remain"
+    },
+    {
+      "url": "http://bluescholars.livejournal.com/data/atom",
+      "status": "failed",
+      "actual_capture": null,
+      "sha256": null,
+      "reason": "All indexed capture dates failed validation or retrieval"
+    },
+    {
+      "url": "http://bluescholars.livejournal.com/data/rss",
+      "status": "failed",
+      "actual_capture": null,
+      "sha256": null,
+      "reason": "All indexed capture dates failed validation or retrieval"
+    },
+    {
+      "url": "https://bluescholars.livejournal.com/17222.html?replyto=55622",
+      "status": "recovered",
+      "actual_capture": "20111002074507",
+      "sha256": "000cd90218ca85377dd6f30840f23d9fe3bab4bc8a728c7ebfe5e467dc2a7acf",
+      "reason": "Untried capture dates or exact-URL index pages remain"
+    },
+    {
+      "url": "https://bluescholars.livejournal.com/17222.html?replyto=56134",
+      "status": "recovered",
+      "actual_capture": "20111002074639",
+      "sha256": "2081db72eb9f2112589325d2afb0eaf2aac881d2d98652708ddb35d9f0c6ff2d",
+      "reason": "Untried capture dates or exact-URL index pages remain"
+    },
+    {
+      "url": "https://bluescholars.livejournal.com/17222.html?replyto=56902",
+      "status": "recovered",
+      "actual_capture": "20111002075710",
+      "sha256": "cb525fced4f864d7c649e7ee8a238e97b23c5fc5da4377d39229c47ebf835e09",
+      "reason": "Untried capture dates or exact-URL index pages remain"
+    },
+    {
+      "url": "https://bluescholars.livejournal.com/data/atom",
+      "status": "failed",
+      "actual_capture": null,
+      "sha256": null,
+      "reason": "All indexed capture dates failed validation or retrieval"
+    },
+    {
+      "url": "https://bluescholars.livejournal.com/data/rss",
+      "status": "failed",
+      "actual_capture": null,
+      "sha256": null,
+      "reason": "All indexed capture dates failed validation or retrieval"
+    },
+    {
+      "url": "https://bluescholars.livejournal.com/data/rss/",
+      "status": "failed",
+      "actual_capture": null,
+      "sha256": null,
+      "reason": "All indexed capture dates failed validation or retrieval"
+    },
+    {
+      "url": "https://bluescholars.livejournal.com/feed/",
+      "status": "failed",
+      "actual_capture": null,
+      "sha256": null,
+      "reason": "All indexed capture dates failed validation or retrieval"
+    }
+  ],
+  "massline_spam_filter_retry": {
+    "recovered": [
+      {
+        "source_url": "http://masslinemedia.com/smf/index.php?action=printpage;topic=3335.0",
+        "timestamp": "20071019145656",
+        "status": "recovered",
+        "raw_path": "recovery/massline/raw/109b9ec104c89202336176a513378ce549a4225251dc9a7e8a285cc290475d84.php",
+        "sha256": "109b9ec104c89202336176a513378ce549a4225251dc9a7e8a285cc290475d84",
+        "bytes": 6462
+      },
+      {
+        "source_url": "http://masslinemedia.com/smf/index.php?action=profile;u=77;sa=showPosts",
+        "timestamp": "20071020073728",
+        "status": "recovered",
+        "raw_path": "recovery/massline/raw/adf0ac3625252a2dfc71c1cfe54d2298a72d0f942a981143da488ad465f0d761.php",
+        "sha256": "adf0ac3625252a2dfc71c1cfe54d2298a72d0f942a981143da488ad465f0d761",
+        "bytes": 44138
+      }
+    ],
+    "still_excluded_whole_word_spam": [
+      {
+        "source_url": "http://masslinemedia.com:80/smf/index.php?",
+        "timestamp": "20090407080655",
+        "error": "ValueError: Captured page is spam or a parked-domain response"
+      },
+      {
+        "source_url": "http://masslinemedia.com:80/smf/",
+        "timestamp": "20090407081936",
+        "error": "ValueError: Captured page is spam or a parked-domain response"
+      },
+      {
+        "source_url": "http://masslinemedia.com:80/smf/",
+        "timestamp": "20090524040017",
+        "error": "ValueError: Captured page is spam or a parked-domain response"
+      }
+    ]
+  }
+}

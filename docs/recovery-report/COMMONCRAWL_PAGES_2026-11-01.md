@@ -88,9 +88,19 @@ Wayback refused connections twice more during this pass. The first time came aft
 ### Gaps
 
 - The new Sabzi pages link four `site.css?…part=N` stylesheets of Squarespace build `620-05142015`. Neither Common Crawl nor Wayback has those parts; Wayback has only the combined `site.css` of that build (2023). The pages build and pass the check, but they will lack the site styling offline. The existing 2019 pages use builds 621 and 622, which are recovered.
-- Mass Line: the two 2007 forum captures excluded by the old filter were not retried in this pass.
+- Mass Line: the two 2007 forum captures excluded by the old filter were not retried in this pass (recovered in the third pass below).
 - About 120 real bluescholars.com post and attachment URLs remain queued or failed with no usable capture in Wayback or Common Crawl.
 
 ### Verification
 
 All 356 tests pass. The `/bluescholars/` candidate build succeeded with 1,171 recovered pages (1,147 after the first pass). Spot-checked built pages include `/prometheusbrown/2009/blog/2009/11/aoki-world-premiere/`, `/prometheusbrown/2010/blog/contact/` and `/sabzi/2019/blog/seattle-1/`. The candidate check again reported 5,354 errors, all under `206proof/`, for the worktree environment reason given above. No human visual review was done. `visual_fidelity_verified` and `publish_approved` remain false.
+
+## Third pass — November 2, 2026
+
+Wayback, at an 8-second interval, with no connection refusals this time. Outcomes are in `recovery/batches/2026-11-01-commoncrawl-pages/wayback-third-pass.json`.
+
+- **LiveJournal: 3 pages.** These are reply pages from entry 17222 (`replyto=55622`, `56134` and `56902`). Seven other queued URLs failed again, and two stay queued.
+- **Mass Line: 2 forum pages.** These are the two 2007 captures the old substring filter rejected because they contain "Socialist". One is the print view of topic 3335, "Counter Intel in the Central District" by JulieC (September 25, 2007). The other is the showPosts page for member GCL1 (`u=77`, October 20, 2007). Both are genuine forum content and now build at `/massline-forums/topic-3335-page-0-e7d9e99332.html` and `/massline-forums/capture-592ca8cb376e.html`.
+- The three 2009 `/smf/` captures (`20090407080655`, `20090407081936` and `20090524040017`) still match whole-word spam terms. They remain excluded.
+
+Verification: all 356 tests pass. The candidate build has 1,174 recovered pages. The check again reports 5,354 errors, all under `206proof/`.

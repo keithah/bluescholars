@@ -1086,3 +1086,9 @@ Recovered 97 Sabzi pages (2019 edition), 2 Prometheus Brown pages, 4 bluescholar
 Recovered 3 more LiveJournal reply pages (entry 17222) from Wayback at an 8-second interval. Retried the Mass Line captures the old substring spam filter had rejected. The two 2007 forum pages (the topic 3335 print view and member u=77's posts) are genuine and are now recovered. The three 2009 `/smf/` captures still match whole-word spam terms and remain excluded.
 
 356 tests passed. The candidate build has 1,174 recovered pages; check errors remain confined to `206proof/`. Evidence: `recovery/batches/2026-11-01-commoncrawl-pages/wayback-third-pass.json`. Review flags unchanged.
+
+## 2026-11-10 — open the closest saved copy instead of placeholders
+
+Browsing now opens the closest recovered copy of a page when the edition being browsed did not save it (`restore/fallback.py`). A Blue Scholars placeholder becomes a redirect to the latest copy captured no later than its edition (2007: end of 2008; 2009: end of 2012; 2013: any), or the earliest later copy if none is older. Copies are matched by exact URL, then by the same path ignoring `.htm`/`.html`/`.php` and query strings (so reply, tag and author views open the post or blog index), then by WordPress post slug across date-based and flat permalinks. Query-only URLs such as `/?p=12` never fall back to the homepage. Links to those placeholders are rewritten to the saved copy with its capture year. Artist-site editions open pages kept by another edition of the same site the same way.
+
+The candidate build has 1,236 Blue Scholars placeholders redirecting to saved copies (of 2,265); the rest have no saved copy anywhere. 361 tests passed. Check errors remain confined to `206proof/`.

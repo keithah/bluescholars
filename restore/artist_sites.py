@@ -20,6 +20,7 @@ import requests
 
 from .archive import ArchiveClient, parse_cdx, validate_payload
 from .discover import discover_css
+from .fallback import choose, redirect_page
 from .spam import contains_spam_terms
 from .redact import public_credential_fields, redact_public_credentials
 from .svg import sanitize_svg
@@ -710,11 +711,25 @@ def build_artist_sites(root: Path, output: Path, base: str = "", candidate: bool
             })
     summary: dict = {"editions": {}, "source": "candidate" if candidate else "reviewed"}
     base = "/" + base.strip("/") if base and base.strip("/") else ""
+    # Saved pages of every edition, so an edition missing a page can open
+    # the closest copy another edition of the same site kept.
+    saved: dict[tuple[str, str], list[dict]] = {}
+    for site in manifest.get("editions", {}).values():
+        for url, record in site.get("resources", {}).items():
+            if record.get("kind") != "html" or not record.get("raw_path"):
+                continue
+            try:
+                path = edition_route(site["domain"], site["edition"]["id"], url)
+            except ValueError:
+                continue
+            saved.setdefault((site["domain"], _canonical(url)), []).append(
+                {"path": path, "actual_capture": record.get("actual_capture", "")})
     for key, site in manifest.get("editions", {}).items():
         domain = site["domain"]
         edition = site["edition"]["id"]
         resources = site.get("resources", {})
         urlmap: dict[str, str] = {}
+        borrowed: dict[str, dict] = {}
         unrenderable: set[str] = set()
         for url, record in resources.items():
             if not record.get("raw_path"):
@@ -737,6 +752,10 @@ def build_artist_sites(root: Path, output: Path, base: str = "", candidate: bool
                 local = local_asset_path(domain, edition, url, Path(record.get("raw_path", "")).suffix.lstrip("."))
             record["local_path"] = local
             urlmap[_canonical(url)] = base + local
+        for (owner, canonical), rows in saved.items():
+            if owner == domain and canonical not in urlmap:
+                borrowed[canonical] = choose(rows, site["edition"]["capture"])
+                urlmap[canonical] = base + borrowed[canonical]["path"]
         for missing in site.get("missing", []):
             url = missing.get("url", "")
             if missing.get("kind") == "html" and _canonical(url) not in urlmap:
@@ -792,6 +811,19 @@ def build_artist_sites(root: Path, output: Path, base: str = "", candidate: bool
             url = missing.get("url", "")
             if missing.get("kind") != "html" or not url:
                 continue
+            copy = borrowed.get(_canonical(url))
+            if copy:
+                # This edition's own route opens the copy another edition kept.
+                try:
+                    own = edition_route(domain, edition, url)
+                except ValueError:
+                    continue
+                destination = (output / own.lstrip("/")).resolve()
+                if destination.is_relative_to(output.resolve()) and not destination.exists():
+                    destination.parent.mkdir(parents=True, exist_ok=True)
+                    destination.write_text(redirect_page(urlmap[_canonical(url)], copy["actual_capture"]),
+                                           encoding="utf-8")
+                continue
             local = urlmap.get(_canonical(url))
             if not local:
                 continue
@@ -817,6 +849,7 @@ def build_artist_sites(root: Path, output: Path, base: str = "", candidate: bool
                 encoding="utf-8")
             gaps += 1
         summary["editions"][key] = {"recovered_pages": pages, "local_assets": assets,
+                                    "pages_from_other_editions": len(borrowed),
                                     "source_gaps": gaps, "indexed_missing": len(site.get("missing", [])),
                                     "unrenderable_assets": sorted(unrenderable),
                                     "later_captures_needing_review": sum(1 for record in resources.values()

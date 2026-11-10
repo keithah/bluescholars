@@ -1209,8 +1209,10 @@ def test_unrecovered_livejournal_comment_links_get_local_gap_pages(tmp_path):
     build(tmp_path,tmp_path/'_candidate','/bluescholars',candidate=True)
     gap=tmp_path/'_candidate/lj/comments/16954.html/999999/index.html'
     page=BeautifulSoup(gap.read_text(),'html.parser')
-    assert 'comment thread was not recovered' in page.get_text(' ',strip=True).lower()
-    assert page.select_one('a[href="/bluescholars/lj/posts/16954.html"]')
+    # The thread itself was not saved, so its gap page opens the saved post.
+    refresh=page.find('meta',attrs={'http-equiv':'refresh'})
+    assert refresh and '/bluescholars/lj/posts/16954.html' in refresh['content']
+    assert page.select_one('a[href^="/bluescholars/lj/posts/16954.html"]')
     assert check(tmp_path/'_candidate','/bluescholars')==[]
 
 def test_livejournal_captured_stylesheet_is_served_locally(tmp_path):

@@ -22,6 +22,7 @@ from .proof206 import build_206proof_archive
 from .twitter import build_twitter_archives
 from .redact import public_credential_fields, redact_public_credentials
 from .press_archive import build_press_archive, recovered_press_resources
+from .fallback import page_fallbacks, redirect_page
 
 CORE=[('/', 'Homepage'),('/blog/','Blog'),('/shows/','Shows'),('/video/','Video'),('/shop/','Shop'),('/holler/','Holler')]
 FALLBACK_UI='''.archive-restoration-notice,.archive-gap-page {font:16px/1.6 system-ui,sans-serif}
@@ -197,9 +198,13 @@ def add_global_year_navigation(text: str,year: int,base: str,ui_href: str,
                                home_routes: dict[int,str]|None=None,
                                activity_years: list[int]|None=None,
                                major_years: list[int]|None=None,
-                               activity_counts: dict[int,int]|None=None,local_output: Path|None=None) -> str:
-    """Add the shared year control and annotate links to dated local pages."""
-    base=base_path(base);page_years=page_years or {}
+                               activity_counts: dict[int,int]|None=None,local_output: Path|None=None,
+                               fallbacks: dict[str,str]|None=None) -> str:
+    """Add the shared year control and annotate links to dated local pages.
+
+    Links to unrecovered pages listed in fallbacks open the saved copy instead.
+    """
+    base=base_path(base);page_years=page_years or {};fallbacks=fallbacks or {}
     try: year=int(year)
     except (TypeError,ValueError): year=2007
     year=max(2005,min(2026,year))
@@ -268,6 +273,13 @@ def add_global_year_navigation(text: str,year: int,base: str,ui_href: str,
         if parts.scheme or parts.netloc or not parts.path.startswith(base+'/'):
             continue
         local_path=parts.path[len(base):]
+        saved=fallbacks.get(local_path) or fallbacks.get(local_path.rstrip('/')+'/')
+        if saved:
+            # The saved copy has its own capture year; drop the source page's.
+            query=[(key,value) for key,value in parse_qsl(parts.query,keep_blank_values=True) if key!='year']
+            local_path=saved
+            parts=urlsplit(urlunsplit(('', '',base+saved,urlencode(query),parts.fragment)))
+            anchor['href']=urlunsplit(parts)
         target_year=page_years.get(local_path)
         if target_year is None:
             target_year=page_years.get(local_path.rstrip('/')+'/')
@@ -410,7 +422,7 @@ def _default_year_for_path(path: str) -> int:
     return defaults.get(parts[0],2007) if parts else 2007
 
 def decorate_archive_pages(output: Path,base: str,ui_href: str,timeline_script_href: str,
-                           page_report: list[dict]) -> int:
+                           page_report: list[dict],fallbacks: dict[str,str]|None=None) -> int:
     """Install the shared slider on every page except the already interactive hub."""
     if not timeline_script_href: return 0
     page_years={}
@@ -459,7 +471,8 @@ def decorate_archive_pages(output: Path,base: str,ui_href: str,timeline_script_h
         activity_counts=activity_counts_by_archive[archive_path]
         if not home_routes: continue
         updated=add_global_year_navigation(text,year,base,ui_href,timeline_script_href,page_years,
-            home_routes,activity_years,major_years,activity_counts,local_output=output)
+            home_routes,activity_years,major_years,activity_counts,local_output=output,
+            fallbacks=fallbacks)
         if updated!=text:
             path.write_text(updated,encoding='utf-8');changed+=1
     return changed
@@ -1435,11 +1448,21 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
     hub=page_shell('Blue Scholars archive',gateway).replace('<main class="archive-gap-page">','<main class="archive-gap-page archive-home">')
     hub=hub.replace('</head>','<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="'+ui_href+'"></head>')
     _write_page(output,'/',hub)
+    # Placeholders open the closest recovered copy of the same page instead.
+    fallbacks=page_fallbacks(page_report)
+    for row in page_report:
+        saved=fallbacks.get(row['path'])
+        if not saved: continue
+        year=str(saved.get('actual_capture') or '')[:4]
+        target=base+saved['path']+('?year='+year if year.isdigit() else '')
+        _write_page(output,row['path'],redirect_page(target,saved.get('actual_capture')))
+        row['fallback']=saved['path']
     # Deduplicate identical findings without suppressing which page referenced a gap.
     issues=list({json.dumps(i,sort_keys=True):i for i in issues}.values())
     report={'mode':'unreviewed_candidate' if candidate else 'reviewed_source_build','base_path':base,
             'recovered_pages':recovered,'feed_recovered_pages':feed_recovered,
             'placeholder_pages':placeholders,
+            'fallback_redirects':len(fallbacks),
             'derived_pages':sum(p['status']=='derived_from_capture' for p in page_report),
             'local_source_assets':sum(r['kind'] in ('css','image') for r in usable.values()),
             'visual_fidelity_verified':bool(review.get('visual_reviewed')) and not candidate,
@@ -1466,6 +1489,7 @@ def build(root: Path,output: Path,base: str='',candidate: bool=False,release: bo
     write_json(output/'archive-status/report.json',report)
     missing,_=render_html(page_shell('Page not recovered','<p>This historical page is not included in this restoration.</p><p><a href="/archive-status/">View the recovery inventory</a></p>'),HOME,render_resources,base,aliases=aliases,ui_stylesheet=ui_href,ui_script=script_href)
     (output/'404.html').write_text(missing)
-    decorate_archive_pages(output,base,ui_href,timeline_script_href,page_report)
+    decorate_archive_pages(output,base,ui_href,timeline_script_href,page_report,
+                           {path:row['path'] for path,row in fallbacks.items()})
     (output/'.nojekyll').touch()
     return report
